@@ -18,96 +18,271 @@
 
 <h1>Ohm's Law and Resistance</h1>
 <p class="subtitle">
-The mathematical model of steady-state dissipation and the failure of pure kinematics.
+The steady-state solution of Newton's law under momentum relaxation.
 </p>
 
 <section>
-<h2>1. The Need for Ohm's Law: A Kinematic Failure</h2>
+<h2>The Need for Ohm's Law: Failure of Pure Kinematics</h2>
+
 <p>
-To understand the necessity of Ohm's Law, we must look at what happens if we only apply Newtonian mechanics to a charge in an electric field.
+Consider an electron in vacuum subjected to a constant electric field \(\vec{E}\).
 </p>
+
 <p>
-If an electric field \(\vec{E}\) is applied inside a vacuum, an electron experiences a constant force \(\vec{F} = -e\vec{E}\). According to Newton's Second Law, this produces a constant acceleration:
+It experiences a force:
 </p>
-\[\vec{a} = -\frac{e\vec{E}}{m}\]
+
+\[
+\vec{F} = -e\vec{E}
+\]
+
 <p>
-Kinematics (\(v = u + at\)) dictates that the electron's velocity should increase continuously towards infinity as long as the field is applied. Consequently, the current should also increase continuously over time. 
+By Newton's Second Law:
 </p>
+
+\[
+\vec{a} = -\frac{e\vec{E}}{m}
+\]
+
+<p>
+If this were the whole story, kinematics predicts:
+</p>
+
+\[
+v = u + at
+\]
+
+<p>
+Velocity would increase without bound as long as the field exists. Consequently, current would grow indefinitely.
+</p>
+
 <div class="insightbox">
-<strong>The Contradiction:</strong> In reality, when we connect a battery to a wire, the current does not increase infinitely; it instantly settles to a constant, steady value. Pure kinematics fails to describe steady-state current.
+<strong>The Contradiction:</strong> In real conductors, current does not grow indefinitely. After a very short transient time (~10<sup>-14</sup> s in metals), it settles to a steady constant value.
 </div>
+
 <p>
-We need a law that accounts for the fact that conductors are not vacuums. Electrons constantly collide with the vibrating lattice ions, losing their kinetic energy. Ohm's law is the necessary mathematical model that equates the input of energy from the field with the dissipation of energy through collisions, resulting in a steady drift velocity.
+Pure Newtonian acceleration fails because a conductor is not vacuum. Electrons constantly collide with vibrating lattice ions. These collisions randomize momentum and prevent indefinite acceleration.
+</p>
+
+<p>
+The system reaches a steady state when:
+</p>
+
+\[
+\langle m a \rangle = 0
+\]
+
+<p>
+This does <em>not</em> mean the electric force vanishes. It means the average acceleration becomes zero because momentum gained from the field is continuously lost in collisions.
+</p>
+
+<p>
+Ohm’s law is the mathematical model describing this steady-state balance.
 </p>
 
 </section>
 
+<hr>
+
 <section>
-<h2>2. The Microscopic Form (The Fundamental Truth)</h2>
+<h2>Microscopic Picture: Momentum Relaxation</h2>
+
 <p>
-Because the collisions limit the velocity, the drift velocity \(v_d\) becomes strictly proportional to the applied electric field \(E\), rather than accelerating continuously.
+The motion of an electron inside a conductor can be modeled as:
 </p>
-\[v_d = \left(\frac{e\tau}{m}\right) E\]
+
+\[
+m \frac{dv}{dt} = -eE - \frac{m v}{\tau}
+\]
+
 <p>
-We established previously that current density is \(J = nev_d\). Substituting \(v_d\) into this equation yields:
+The second term represents momentum relaxation due to collisions. It plays the role of a friction-like force.
 </p>
-\[J = n e \left(\frac{e\tau}{m}\right) E = \left(\frac{ne^2\tau}{m}\right) E\]
+
 <p>
-The term in the parentheses consists entirely of material properties (electron density \(n\)) and thermal state properties (relaxation time \(\tau\)). We bundle these into a single constant called <strong>Conductivity (\(\sigma\))</strong>.
+In steady state, \( dv/dt = 0 \), giving:
 </p>
+
+\[
+v_d = \frac{e\tau}{m} E
+\]
+
+<p>
+This is the <strong>drift velocity</strong>: a constant average velocity proportional to the applied field.
+</p>
+
+<p>
+Current density is:
+</p>
+
+\[
+J = ne v_d
+\]
+
+<p>
+Substituting:
+</p>
+
+\[
+J = \left(\frac{ne^2 \tau}{m}\right) E
+\]
+
+<p>
+The grouped quantity is defined as <strong>Conductivity (\(\sigma\))</strong>:
+</p>
+
+\[
+\sigma = \frac{ne^2 \tau}{m}
+\]
+
 <div class="model-box">
-    <h3>Microscopic Ohm's Law</h3>
-    \[\vec{J} = \sigma \vec{E}\]
-    <p>Where conductivity \(\sigma = \frac{ne^2\tau}{m}\). The reciprocal of conductivity is <strong>Resistivity (\(\rho = 1/\sigma\))</strong>, which represents the material's intrinsic opposition to charge flow.</p>
-</div>
+<h3>Microscopic Ohm's Law</h3>
+\[
+\vec{J} = \sigma \vec{E}
+\]
 <p>
-This is the fundamental physical truth of Ohm's Law: Local current density is directly proportional to the local electric field.
+Resistivity is defined as \( \rho = 1/\sigma \).
 </p>
+</div>
+
+<p>
+This is the fundamental transport law: Local current density is proportional to local electric field.
+</p>
+
 </section>
 
+<hr>
+
 <section>
-<h2>3. The Macroscopic Form (Circuit Application)</h2>
+<h2>Macroscopic Form (Circuit Level)</h2>
+
 <p>
-While \(\vec{J} = \sigma \vec{E}\) is structurally pure, we cannot easily measure \(\vec{J}\) or \(\vec{E}\) with standard lab equipment. We measure macroscopic variables: Current (\(I\)) and Potential Difference (\(V\)).
+We measure current (\(I\)) and potential difference (\(V\)), not \(J\) and \(E\).
 </p>
+
 <p>
-Consider a uniform cylindrical conductor of length \(L\) and cross-sectional area \(A\). 
+For a uniform cylindrical conductor of length \(L\) and cross-sectional area \(A\):
 </p>
+
 <ul>
-    <li>The uniform electric field is related to potential difference by \(E = V/L\).</li>
-    <li>The current density is related to total current by \(J = I/A\).</li>
+<li>\(E = V/L\)</li>
+<li>\(J = I/A\)</li>
 </ul>
 
 <p>
-Substituting these into the microscopic law:
+Substituting into microscopic law:
 </p>
-\[\frac{I}{A} = \sigma \left(\frac{V}{L}\right)\]
-\[V = I \left(\frac{L}{\sigma A}\right)\]
+
+\[
+\frac{I}{A} = \sigma \frac{V}{L}
+\]
+
+\[
+V = I \left(\frac{L}{\sigma A}\right)
+\]
+
 <p>
-Since \(\rho = 1/\sigma\), we define the geometric and material grouping as <strong>Resistance (\(R\))</strong>:
+Defining:
 </p>
-\[R = \rho \frac{L}{A}\]
+
+\[
+R = \rho \frac{L}{A}
+\]
+
 <div class="model-box">
-    <h3>Macroscopic Ohm's Law</h3>
-    \[V = I R\]
-    <p>This formulation allows us to analyze the entire component dynamically without worrying about the internal microscopic collisions.</p>
+<h3>Macroscopic Ohm's Law</h3>
+\[
+V = IR
+\]
+<p>
+This allows circuit-level analysis without tracking microscopic collisions.
+</p>
 </div>
+
 </section>
 
+<hr>
+
 <section>
-<h2>4. The Structural Meaning of Resistance</h2>
+<h2>The Structural Meaning of Resistance</h2>
+
 <p>
-Resistance is not merely an "obstruction" or a blockade. If it were a physical blockade, charge would pile up and violate the conservation of charge. 
+Resistance is not a physical blockade. If it were, charge would accumulate and violate charge conservation.
 </p>
+
 <div class="insightbox">
-Structurally, Resistance (\(R\)) is the mathematical parameter that quantifies the rate at which electrical potential energy is irreversibly converted into thermal energy (Joule heating). It is the electrical analogue to mechanical friction.
+Resistance quantifies the rate at which electrical potential energy is irreversibly converted into thermal energy (Joule heating). It is the electrical analogue of mechanical friction. Just like how kinetic friction does not physically blockade motion but oppose motion. Just like a mechanical body that is moving on a rough surface with constant velocity, needs a constant force to be applied against kinetic friction and it doesn't accelerate. 
 </div>
+
+<p>
+Current is conserved. Energy is dissipated.
+</p>
+
+<p>
+Ohm’s law is therefore not a fundamental force law. It is an emergent linear-response transport law.
+</p>
+
+</section>
+
+<hr>
+
+<section>
+<h2>Domain of Validity</h2>
+
+<p>
+Ohm’s law holds in the <strong>linear response regime</strong>, where:
+</p>
+
+<ul>
+<li>Drift velocity is much smaller than thermal velocity.</li>
+<li>Temperature changes are negligible.</li>
+<li>Relaxation time \(\tau\) remains constant.</li>
+</ul>
+
+<p>
+At very high electric fields, heating alters \(\tau\), and conduction becomes nonlinear.
+In such regimes, \(J \neq \sigma E\).
+</p>
+
+</section>
+
+<hr>
+
+<section>
+<h2>Classification of Variables in Drift Model</h2>
+
+<h3>1. Material Properties</h3>
+<ul>
+<li>\(n\) — Charge carrier density</li>
+<li>\(\tau\) — Relaxation time</li>
+</ul>
+
+<h3>2. Geometric Properties</h3>
+<ul>
+<li>\(A\) — Cross-sectional area</li>
+<li>\(L\) — Length</li>
+</ul>
+
+<h3>3. Universal Constants</h3>
+<ul>
+<li>\(e\) — Elementary charge</li>
+<li>\(m\) — Electron mass</li>
+</ul>
+
+<h3>4. Dynamic Variables</h3>
+<ul>
+<li>\(E\) — Electric field</li>
+<li>\(v_d\) — Drift velocity</li>
+<li>\(I\) — Current</li>
+</ul>
+
 </section>
 
 <footer>
-    <hr>
-    <p>By Hitendra K K</p>
+<hr>
+<p>By Hitendra K K</p>
 </footer>
+
 </div>
 </body>
 </html>
