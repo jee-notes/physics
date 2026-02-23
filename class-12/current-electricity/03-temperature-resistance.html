@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current Electricity | Temperature Dependence</title>
+
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+    <a href="./index.html" class="back-btn">
+        <span>&larr;</span> Back to Current Electricity
+    </a>
+</nav>
+
+<h1>Temperature Dependence of Resistance</h1>
+<p class="subtitle">
+How the thermal state alters the microscopic parameters of conduction.
+</p>
+
+<section>
+<h2>The Microscopic Origin</h2>
+<p>
+To understand why macroscopic resistance changes with temperature, we must return to the fundamental microscopic definition of resistivity:
+</p>
+\[
+\rho = \frac{m}{n e^2 \tau}
+\]
+<p>
+Since \(m\) and \(e\) are universal constants, the resistivity of any material is entirely governed by two temperature-dependent variables:
+</p>
+<ol>
+    <li><strong>\(n\) (Number Density of Charge Carriers):</strong> How many free charges are available to flow.</li>
+    <li><strong>\(\tau\) (Relaxation Time):</strong> How long a charge can accelerate before colliding with the lattice.</li>
+</ol>
+<p>
+Different classes of materials (metals vs. semiconductors) react to heat differently because temperature affects \(n\) and \(\tau\) in opposing ways.
+</p>
+</section>
+
+<section>
+<h2>1. Metallic Conductors</h2>
+<p>
+In a typical metal, the outermost electrons are already free at absolute zero. Heating the metal does not significantly increase the number density \(n\); it is essentially a constant.
+</p>
+<p>
+However, as temperature increases, the thermal energy of the positive lattice ions increases. They vibrate with greater amplitude about their mean positions. This increases the collision cross-section, causing drifting electrons to collide more frequently. 
+</p>
+<div class="insightbox">
+Because collisions are more frequent, the average relaxation time \(\tau\) <strong>decreases</strong>. Since \(\rho \propto 1/\tau\), the resistivity of metallic conductors <strong>increases</strong> with temperature.
+</div>
+
+
+
+<h3>The Macroscopic Mathematical Model</h3>
+<p>
+Over limited temperature ranges (typically near room temperature), the fractional increase in resistivity is directly proportional to the change in temperature:
+</p>
+\[
+d\rho \propto \rho \, dT \implies d\rho = \alpha \rho \, dT
+\]
+<p>
+Integrating this gives the linear approximation:
+</p>
+\[
+\rho_T = \rho_0 [1 + \alpha (T - T_0)]
+\]
+<p>
+Where:
+</p>
+<ul>
+    <li>\(\rho_T\) is the resistivity at temperature \(T\).</li>
+    <li>\(\rho_0\) is the reference resistivity at a reference temperature \(T_0\) (often \(20^\circ\text{C}\)).</li>
+    <li>\(\alpha\) is the <strong>Temperature Coefficient of Resistivity</strong>. For metals, \(\alpha\) is positive.</li>
+</ul>
+<p>
+Since resistance \(R = \rho L/A\), and the dimensional expansion of the solid is usually negligible compared to the change in \(\rho\), we can write the identical structural form for resistance:
+</p>
+\[
+R_T = R_0 [1 + \alpha (T - T_0)]
+\]
+</section>
+
+<section>
+<h2>2. Semiconductors and Insulators</h2>
+<p>
+In semiconductors (like Silicon or Germanium) and insulators, the valence electrons are tightly bound in covalent bonds at low temperatures. The initial charge carrier density \(n\) is extremely small.
+</p>
+<p>
+As temperature increases, the thermal energy becomes sufficient to break these covalent bonds, promoting electrons to the conduction band and leaving behind holes. The number density \(n\) <strong>increases exponentially</strong> with temperature.
+</p>
+<div class="insightbox">
+While the increased lattice vibrations still cause \(\tau\) to decrease, the exponential explosion in the number of free carriers \(n\) overwhelmingly dominates the equation. Therefore, the overall resistivity of semiconductors <strong>decreases</strong> as temperature increases.
+</div>
+
+
+
+<p>
+Because resistivity drops with heating, semiconductors possess a <strong>negative</strong> temperature coefficient of resistivity (\(\alpha < 0\)).
+</p>
+</section>
+
+<section>
+<h2>3. Alloys (Manganin, Constantan, Nichrome)</h2>
+<p>
+Standard alloys are structurally designed to have a high baseline resistivity (due to irregular atomic lattice structures maximizing collisions), but a very weak dependence on temperature.
+</p>
+<p>
+Their \(\alpha\) value is positive, but extremely small—often an order of magnitude smaller than pure metals. 
+</p>
+<div class="insightbox">
+<strong>Laboratory Application:</strong> Because their resistance remains practically constant over wide temperature variations, alloys like Manganin and Constantan are exclusively used to make standard resistance coils, wire-wound resistors, and the potentiometer wires you will study later in this chapter.
+</div>
+</section>
+
+<footer>
+    <hr>
+    <p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

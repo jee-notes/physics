@@ -15,242 +15,206 @@
         <span>&larr;</span> Back to Current Electricity
     </a>
 </nav>
-
 <h1>Ohm's Law and Resistance</h1>
 <p class="subtitle">
 The steady-state solution of Newton's law under momentum relaxation.
 </p>
-
 <section>
-<h2>The Need for Ohm's Law: Failure of Pure Kinematics</h2>
-
+<h2>Thermal Motion and the Origin of Drift</h2>
 <p>
-Consider an electron in vacuum subjected to a constant electric field \(\vec{E}\).
+In a metallic conductor at room temperature, free electrons move with high thermal speeds (\(\sim 10^6 \, \text{m/s}\)). Their motion is completely random due to frequent collisions with vibrating lattice ions.
 </p>
-
+<div class="model-box">
+<h3>No External Field (\(\vec{E}=0\))</h3>
 <p>
-It experiences a force:
+For any cross-section, the number of electrons crossing in one direction equals the number crossing in the opposite direction. The average velocity is:
 </p>
-
+\[
+\vec{u}_{\text{avg}} = 0
+\]
+<p>
+There is motion, but no net current.
+</p>
+</div>
+<p>
+When an electric field is applied, each electron experiences a force:
+</p>
 \[
 \vec{F} = -e\vec{E}
 \]
-
 <p>
-By Newton's Second Law:
+If the conductor were vacuum, electrons would accelerate indefinitely under the force \( \vec{F} = -e\vec{E} \), and the current would increase continuously with time. However, in a real conductor, electrons undergo frequent collisions with lattice ions. These collisions randomize momentum and prevent indefinite acceleration. As a result, the system reaches a steady state with constant current.
 </p>
-
+</section>
+<hr>
+<section>
+<h2>Microscopic Picture with Averaging</h2>
+<p>
+Consider a particular cross-section inside a conductor. We need to consider electrons at that cross-section location. They are moving in random directions, each having a random thermal velocity:
+</p>
+\[
+\vec{u}_1, \quad \vec{u}_2, \quad \vec{u}_3, \dots
+\]
+<p>
+When a steady electric field \(\vec{E}\) is applied, each electron experiences a force \(\vec{F} = -e\vec{E}\), and therefore an acceleration:
+</p>
 \[
 \vec{a} = -\frac{e\vec{E}}{m}
 \]
-
 <p>
-If this were the whole story, kinematics predicts:
+Now, the i-th electron will accelerate till time \(t_i\) and collide with lattice atoms. After collision, it will lose some velocity (momentum) in some random direction and again start with a random velocity \(\vec{u}_i'\). But, between two successive collisions, the electron accelerates for a time interval \(t_i\). This acceleration is not in any random direction. We quantify the gain in velocity (momentum) only due to \(\vec{E}\) as it is response to excitation source:
 </p>
-
 \[
-v = u + at
+\vec{v}_i = \vec{u}_i - \frac{e\vec{E}}{m} t_i
 \]
-
 <p>
-Velocity would increase without bound as long as the field exists. Consequently, current would grow indefinitely.
+Here:
 </p>
-
-<div class="insightbox">
-<strong>The Contradiction:</strong> In real conductors, current does not grow indefinitely. After a very short transient time (~10<sup>-14</sup> s in metals), it settles to a steady constant value.
-</div>
-
+<ul>
+<li>\(\vec{u}_i\) = random thermal velocity immediately after previous collision</li>
+<li>\(t_i\) = time interval before next collision</li>
+</ul>
 <p>
-Pure Newtonian acceleration fails because a conductor is not vacuum. Electrons constantly collide with vibrating lattice ions. These collisions randomize momentum and prevent indefinite acceleration.
+After collision, the velocity is randomized again:
 </p>
-
-<p>
-The system reaches a steady state when:
-</p>
-
 \[
-\langle m a \rangle = 0
+\vec{v}_i \rightarrow \vec{u}_i'
 \]
-
-<p>
-This does <em>not</em> mean the electric force vanishes. It means the average acceleration becomes zero because momentum gained from the field is continuously lost in collisions.
-</p>
-
-<p>
-Ohm’s law is the mathematical model describing this steady-state balance.
-</p>
-
-</section>
-
 <hr>
+<h3>Taking Average for Macroscopic</h3>
+<p>
+Now consider a large number \(N\) of electrons crossing a chosen cross-section. We define averages over this ensemble:
+</p>
+\[
+\langle \vec{u} \rangle
+=
+\frac{1}{N} \sum_{i=1}^{N} \vec{u}_i
+\]
+\[
+\langle t \rangle
+=
+\frac{1}{N} \sum_{i=1}^{N} t_i
+\]
+\[
+\langle \vec{v} \rangle
+=
+\frac{1}{N} \sum_{i=1}^{N} \vec{v}_i
+\]
+<p>
+Because the thermal motion is completely random:
+</p>
+\[
+\langle \vec{u} \rangle = 0
+\]
+<p>
+Substituting \(\vec{v}_i = \vec{u}_i - \frac{e\vec{E}}{m} t_i\) into the average:
+</p>
+\[
+\langle \vec{v} \rangle
+=
+\left\langle \vec{u} \right\rangle
+-
+\frac{e\vec{E}}{m} \left\langle t \right\rangle
+\]
 
+\[
+\langle \vec{v} \rangle
+=
+-
+\frac{e\vec{E}}{m} \tau
+\]
+<p>
+where
+</p>
+\[
+\tau = \langle t \rangle
+\]
+<p>
+is the <strong>mean free time</strong> (average time between successive collisions). It is a function of material (lattice structure) and temperature. high temperature  -> lower tau.
+</p>
+<div class="insightbox">
+Drift velocity is the ensemble average of electron velocities:
+\[
+\vec{v}_d = \langle \vec{v} \rangle
+\]
+and the relaxation time \( \tau \) is the ensemble average of collision intervals.
+<p>
+Drift velocity is extremely small (\(\sim 10^{-4} \text{ m/s}\)), yet the enormous number of charge carriers produces measurable macroscopic current.
+</p>
+</div>
+<p>
+Thus, although each electron moves randomly at very high speed, the electric field introduces a small systematic bias in the average velocity. This tiny average velocity is called the <strong>drift velocity</strong>.
+</p>
+</section>
 <section>
-<h2>Microscopic Picture: Momentum Relaxation</h2>
-
+<h2>Drift Current Equation</h2>
 <p>
-The motion of an electron inside a conductor can be modeled as:
+Consider a conductor of cross-sectional area \(A\) and free electron density \(n\).
 </p>
-
+<p>
+Free electron density is \(n = \text{no. of free electrons} / m^3\). It is a property of material. Conductor has extremely high n and constant wrt temperature. For a semi-conductor - n increases with temperature. Now, in time \(dt\), electrons drift a distance \(v_d dt\).    
+</p>
 \[
-m \frac{dv}{dt} = -eE - \frac{m v}{\tau}
+dQ = n e A v_d dt
 \]
-
-<p>
-The second term represents momentum relaxation due to collisions. It plays the role of a friction-like force.
-</p>
-
-<p>
-In steady state, \( dv/dt = 0 \), giving:
-</p>
-
 \[
-v_d = \frac{e\tau}{m} E
+i = \frac{dQ}{dt} = n e A v_d
 \]
-
 <p>
-This is the <strong>drift velocity</strong>: a constant average velocity proportional to the applied field.
+This bridges microscopic motion to macroscopic current.
 </p>
-
+</section>
+<hr>
+<section>
+<h2>Current Density and Microscopic Ohm’s Law</h2>
 <p>
-Current density is:
+Current density is defined as:
 </p>
-
+\[
+J = \frac{I}{A}
+\]
 \[
 J = ne v_d
 \]
-
 <p>
-Substituting:
+Substituting the expression for drift velocity:
 </p>
-
 \[
 J = \left(\frac{ne^2 \tau}{m}\right) E
 \]
-
 <p>
-The grouped quantity is defined as <strong>Conductivity (\(\sigma\))</strong>:
+Define conductivity:
 </p>
-
 \[
 \sigma = \frac{ne^2 \tau}{m}
 \]
-
+<p>
+Here, \(e\) and \(m\) are universal constants, while \(n\) and \(\tau\) depend on the material and temperature.
+</p>
+<ul>
+<li>In metals, \(n\) is nearly constant, while \(\tau\) decreases with temperature. Hence conductivity \(\sigma\) decreases and resistance increases with temperature.</li>
+<li>In semiconductors, \(n\) increases strongly with temperature. Although \(\tau\) decreases, the increase in \(n\) dominates, so conductivity increases and resistance decreases with temperature.</li>
+</ul>
 <div class="model-box">
 <h3>Microscopic Ohm's Law</h3>
 \[
 \vec{J} = \sigma \vec{E}
 \]
-<p>
-Resistivity is defined as \( \rho = 1/\sigma \).
-</p>
+\[
+I/A = \sigma V/L
+\]
+<p>Resistivity: \( \rho = 1/\sigma \)</p>
+\[
+V = I \rho L/A
+\]
 </div>
-
 <p>
-This is the fundamental transport law: Local current density is proportional to local electric field.
+This is the fundamental transport law: local current density is proportional to local electric field.
 </p>
-
 </section>
-
 <hr>
-
-<section>
-<h2>Macroscopic Form (Circuit Level)</h2>
-
-<p>
-We measure current (\(I\)) and potential difference (\(V\)), not \(J\) and \(E\).
-</p>
-
-<p>
-For a uniform cylindrical conductor of length \(L\) and cross-sectional area \(A\):
-</p>
-
-<ul>
-<li>\(E = V/L\)</li>
-<li>\(J = I/A\)</li>
-</ul>
-
-<p>
-Substituting into microscopic law:
-</p>
-
-\[
-\frac{I}{A} = \sigma \frac{V}{L}
-\]
-
-\[
-V = I \left(\frac{L}{\sigma A}\right)
-\]
-
-<p>
-Defining:
-</p>
-
-\[
-R = \rho \frac{L}{A}
-\]
-
-<div class="model-box">
-<h3>Macroscopic Ohm's Law</h3>
-\[
-V = IR
-\]
-<p>
-This allows circuit-level analysis without tracking microscopic collisions.
-</p>
-</div>
-
-</section>
-
-<hr>
-
-<section>
-<h2>The Structural Meaning of Resistance</h2>
-
-<p>
-Resistance is not a physical blockade. If it were, charge would accumulate and violate charge conservation.
-</p>
-
-<div class="insightbox">
-Resistance quantifies the rate at which electrical potential energy is irreversibly converted into thermal energy (Joule heating). It is the electrical analogue of mechanical friction. Just like how kinetic friction does not physically blockade motion but oppose motion. Just like a mechanical body that is moving on a rough surface with constant velocity, needs a constant force to be applied against kinetic friction and it doesn't accelerate. 
-</div>
-
-<p>
-Current is conserved. Energy is dissipated.
-</p>
-
-<p>
-Ohm’s law is therefore not a fundamental force law. It is an emergent linear-response transport law.
-</p>
-
-</section>
-
-<hr>
-
-<section>
-<h2>Domain of Validity</h2>
-
-<p>
-Ohm’s law holds in the <strong>linear response regime</strong>, where:
-</p>
-
-<ul>
-<li>Drift velocity is much smaller than thermal velocity.</li>
-<li>Temperature changes are negligible.</li>
-<li>Relaxation time \(\tau\) remains constant.</li>
-</ul>
-
-<p>
-At very high electric fields, heating alters \(\tau\), and conduction becomes nonlinear.
-In such regimes, \(J \neq \sigma E\).
-</p>
-
-</section>
-
-<hr>
-
 <section>
 <h2>Classification of Variables in Drift Model</h2>
-
 <h3>1. Material Properties</h3>
 <ul>
 <li>\(n\) — Charge carrier density</li>
@@ -262,7 +226,6 @@ In such regimes, \(J \neq \sigma E\).
 <li>\(A\) — Cross-sectional area</li>
 <li>\(L\) — Length</li>
 </ul>
-
 <h3>3. Universal Constants</h3>
 <ul>
 <li>\(e\) — Elementary charge</li>
@@ -275,9 +238,79 @@ In such regimes, \(J \neq \sigma E\).
 <li>\(v_d\) — Drift velocity</li>
 <li>\(I\) — Current</li>
 </ul>
-
 </section>
-
+<hr>
+<section>
+<h2>Alternative Mechanical Interpretation</h2>
+<p>
+The drift model can also be described using a simple mechanical analogy. We model the motion of an electron under two competing effects:
+</p>
+<ul>
+<li>The electric force \( -eE \), which accelerates the electron.</li>
+<li>Collisions with lattice ions, which oppose motion and reduce momentum.</li>
+</ul>
+<p>
+To represent the average effect of collisions, we introduce a damping (momentum relaxation) term proportional to velocity:
+</p>
+\[
+m \frac{dv}{dt} = -eE - \frac{m v}{\tau}
+\]
+<p>
+Here:
+</p>
+<ul>
+<li>\( -eE \) is the electric force.</li>
+<li>\( \frac{m v}{\tau} \) represents average momentum loss due to collisions.</li>
+<li>\( \tau \) is the mean free time between collisions.</li>
+</ul>
+<p>
+In steady state, the average velocity becomes constant. Therefore:
+</p>
+\[
+\frac{dv}{dt} = 0
+\]
+<p>
+Substituting into the equation:
+</p>
+\[
+0 = -eE - \frac{m v_d}{\tau}
+\]
+\[
+v_d = \frac{e\tau}{m}E
+\]
+<p>
+This shows that drift velocity arises from a balance between:
+</p>
+<ul>
+<li>Acceleration due to the electric field</li>
+<li>Momentum loss due to collisions</li>
+</ul>
+<div class="insightbox">
+<p>
+This model gives a better description of what is actually happening than the statistical averaging one. Its the steady state condition that governs the value of \( v_d \). The situation with \( \vec{E} \neq 0 \) is dynamic and 2 opposing tendencies are working to create a balance in steady state. What the electric field introduces is a small, ordered component of motion (the drift). This ordered momentum is continuously opposed by collisions.\( \vec{E} \) trying to increase \( v_d \) and collision trying to decrease \( v_d \). 
+</p>
+<p>
+At steady state, this dynamically stable:
+</p>
+<ul>
+<li>If \( v \gt v_d \), the damping term \( \frac{m v}{\tau} \) becomes larger than the electric force, so velocity decreases.</li>
+<li>If \( v \lt v_d \), electric acceleration dominates, so velocity increases.</li>
+</ul>
+Electric acceleration = Average collisional momentum loss.
+<p>
+Thus the system naturally settles to the steady drift velocity \( v_d \).
+</p>
+<p>
+In steady state, the electric force does not continuously increase velocity. Instead, the energy supplied by the electric field is continuously transferred to the lattice as heat through collisions.
+</p>
+<p>
+The random thermal motion of electrons already existed in equilibrium. Collisions do not systematically reduce this thermal energy — they only randomize direction. So only the extra kinetic energy gained by external excitation \( \vec{E} \) gets dissipated
+</p>
+</div>
+<p>
+This picture is known as the <strong>momentum relaxation model</strong>.
+</p>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>

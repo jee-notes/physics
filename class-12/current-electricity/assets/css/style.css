@@ -95,3 +95,22 @@ footer {
     color:#7f8c8d; 
     font-size:0.9rem; 
 }
+.examplebox {
+    background:#f9fbfd;
+    border-left:5px solid var(--secondary);
+    padding:20px 25px;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+.examplebox h3 {
+    margin-top:0;
+    color:var(--primary);
+}
+
+.examplebox hr {
+    margin:20px 0;
+    border:none;
+    height:1px;
+    background:#ddd;
+}

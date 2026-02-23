@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirchhoff's Laws | Electric Current and Drift</title>
+
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+    <a href="./index.html" class="back-btn">
+        <span>&larr;</span> Back to Current Electricity
+    </a>
+</nav>
+<h1>Kirchhoff's Laws and Circuit Analysis</h1>
+<p class="subtitle">
+The universal algebraic formulation for general network topologies.
+</p>
+
+<section>
+<h2>5.1 The Failure of Series-Parallel Reduction</h2>
+<p>
+Series and parallel formulas are highly specialized shortcuts. They fail completely when a circuit contains multiple active elements (batteries) in different branches or when the topology cannot be reduced to simple nodes (e.g., a bridge circuit).
+</p>
+<p>
+To solve general networks, we abandon geometric reduction and return to fundamental conservation laws to generate a system of solvable linear equations.
+</p>
+</section>
+
+<section>
+<h2>5.2 Kirchhoff's Current Law (KCL): The Junction Rule</h2>
+<p>
+KCL is the macroscopic statement of the <strong>Conservation of Charge</strong>. In a steady-state circuit, charge cannot accumulate or deplete at any junction (node).
+</p>
+
+<div class="model-box">
+    <h3>The Junction Rule</h3>
+    <p>The algebraic sum of all currents meeting at any junction in a circuit is strictly zero.</p>
+    \[\sum I = 0\]
+    <p><strong>Sign Convention:</strong> Currents entering the junction are taken as positive; currents leaving are taken as negative. Equivalently: \(\sum I_{\text{in}} = \sum I_{\text{out}}\).</p>
+</div>
+</section>
+
+<section>
+<h2>5.3 Kirchhoff's Voltage Law (KVL): The Loop Rule</h2>
+<p>
+KVL is the macroscopic statement of the <strong>Conservation of Energy</strong>. Because the electrostatic field is conservative, the work done in moving a charge around any closed path in the field is zero.
+</p>
+
+<div class="model-box">
+    <h3>The Loop Rule</h3>
+    <p>The algebraic sum of all changes in potential (voltage drops and gains) around any closed loop in a network is strictly zero.</p>
+    \[\sum \Delta V = 0\]
+    <p><strong>Sign Convention for Traversal:</strong></p>
+    <ul>
+        <li><strong>Resistor (\(R\)):</strong> Traversing <em>with</em> the current direction is a drop (\(-IR\)). Traversing <em>against</em> current is a gain (\(+IR\)).</li>
+        <li><strong>Battery (\(E\)):</strong> Traversing from negative to positive terminal is a gain (\(+E\)). Traversing from positive to negative is a drop (\(-E\)).</li>
+    </ul>
+</div>
+<div class="insightbox">
+A network with \(N\) unknown branch currents requires \(N\) independent equations. KCL provides the nodal equations, and KVL provides the loop equations. Solving this linear system completely defines the dynamic state of the network.
+</div>
+</section>
+
+<footer>
+    <hr>
+    <p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

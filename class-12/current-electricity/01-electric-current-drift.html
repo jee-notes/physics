@@ -7,6 +7,7 @@
 
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -16,17 +17,16 @@
     </a>
 </nav>
 
-<h1>Electric Current and Drift Velocity</h1>
+<h1>Electric Current</h1>
 <p class="subtitle">
 The macroscopic flow of charge and its microscopic mechanical origin.
 </p>
 
 <section>
-<h2>1. The Definition of Current: Motion vs. Flow</h2>
+<h2>The Definition of Current: Motion vs. Flow</h2>
 <p>
-Electric current is not merely the presence of moving charges; it is the macroscopic <strong>flow</strong> of charge. Flow is a mathematical concept that requires a defined boundary—a surface or "gate"—through which the entity passes.
+Electric current is not merely the presence of moving charges; it is the macroscopic <strong>flow</strong> of charge. Flow is a mathematical concept that requires a defined boundary — a surface or "gate" — through which the entity passes. A conductor already has charges (electrons) in random thermal motion. But still it does not imply that conductor has non-zero current flowing through it.
 </p>
-
 <p>
 If a net charge \(\Delta Q\) crosses a specific cross-sectional area in time \(\Delta t\), the average current is defined as:
 </p>
@@ -34,95 +34,121 @@ If a net charge \(\Delta Q\) crosses a specific cross-sectional area in time \(\
 <p>
 For instantaneous flow, we take the limit as \(\Delta t \to 0\):
 </p>
-\[I = \frac{dQ}{dt}\]
+\[i = \frac{dQ}{dt}\]
 <div class="insightbox">
 The SI unit of current is the Ampere (\(\text{A}\)), where \(1 \text{ A} = 1 \text{ C/s}\). By convention, the direction of macroscopic current is taken as the direction of flow of positive charges, which is opposite to the actual physical flow of electrons.
 </div>
 </section>
 
 <section>
-<h2>2. Frame Invariance of Current</h2>
+<h2>Current Density</h2>
 <p>
-A crucial structural consequence of defining current with respect to a physical "gate" (the cross-sectional area of the conductor) is that classical current is a frame-invariant quantity.
+Current is a scalar quantity defined for a given cross-section. To describe the flow locally at a point inside the conductor, we introduce a vector field called <strong>current density</strong>, denoted by \( \vec{J} \).
 </p>
 <p>
-Consider an observer moving at a constant velocity parallel to a current-carrying wire. To the moving observer, the absolute velocity of the electrons changes. However, the absolute velocity of the wire (the gate) also changes by the exact same amount.
+For a small surface element \( d\vec{A} \), the infinitesimal current flowing through it is:
+</p>
+\[
+di = \vec{J} \cdot d\vec{A}
+\]
+<p>
+Integrating over the entire cross-section gives the total current:
+</p>
+\[
+I = \int \vec{J} \cdot d\vec{A}
+\]
+<div class="insightbox">
+Current is therefore the <em>flux of current density</em> through a surface — completely analogous to electric flux in electrostatics.
+</div>
+</section>
+<section>
+<h2>Frame Invariance of Current</h2>
+<p>
+A consequence of defining current with respect to a physical "gate" (the cross-sectional area of the conductor) is that steady state current flowing in conductor is frame-invariant quantity.
+</p>
+<p>
+Consider an observer moving at a constant velocity parallel to a current-carrying wire. To the moving observer, the velocity of the flowing electrons changes. However, the velocity of flowing electrons wrt the area remains same as it is wrt to the wire (conductor) itself.
 </p>
 <div class="insightbox">
 Current is determined by the <em>relative velocity</em> between the charge carriers and the physical cross-section of the wire. Since Galilean transformations shift both velocities equally, the relative velocity remains constant. Therefore, the rate of charge crossing the gate (\(dQ/dt\)) is invariant regardless of the observer's inertial frame.
 </div>
 </section>
-
 <section>
-<h2>3. Thermal Motion vs. Drift Velocity</h2>
-<p>
-In a typical metallic conductor at room temperature, free electrons are not stationary. They exist in a state of chaotic thermal motion, colliding frequently with the heavy, fixed positive ions of the lattice.
-</p>
-[Image comparing random thermal motion of electrons to organized drift velocity under an electric field]
-
-<div class="model-box">
-    <h3>State 1: No External Field (\(\vec{E} = 0\))</h3>
-    <p>
-    The electrons move at high thermal speeds (\(\sim 10^5 \text{ m/s}\)), but the motion is entirely random. For any chosen cross-sectional area, the number of electrons crossing from left to right exactly equals the number crossing from right to left.
-    </p>
-    \[\vec{u}_{\text{avg}} = \frac{1}{N} \sum_{i=1}^{N} \vec{u}_i = 0\]
-    <p>Since the net directional velocity is zero, there is motion, but no net flow. \(I = 0\).</p>
-</div>
-
-<div class="model-box">
-    <h3>State 2: External Field Applied (\(\vec{E} \neq 0\))</h3>
-    <p>
-    When a potential difference is applied, an electric field \(\vec{E}\) is established inside the conductor. This exerts a constant force \(\vec{F} = -e\vec{E}\) on every electron, causing an acceleration \(\vec{a} = -e\vec{E}/m\).
-    </p>
-    <p>
-    This acceleration imposes a very slow, organized directional shift onto the chaotic thermal motion. This net directional velocity is the <strong>drift velocity (\(\vec{v}_d\))</strong>.
-    </p>
-</div>
+<h2>Ways in Which Current Can Arise</h2>
 
 <p>
-If \(\tau\) is the average relaxation time (the average time between successive collisions), the drift velocity is derived from basic kinematics (\(\vec{v} = \vec{u} + \vec{a}t\)):
+Electric current can be produced in several physical situations. It is not restricted to metallic wires.
 </p>
-\[\vec{v}_d = -\frac{e \vec{E}}{m} \tau\]
+
+<p>
+When a metal is heated to sufficiently high temperatures, it emits electrons. These emitted electrons travel through space. If we consider any surface perpendicular to their velocity, charge crosses that surface — and therefore a current exists through it.
+</p>
+
+<p>
+In electrolytic solutions, both positive and negative ions move. When an external electric field is applied, positive ions drift along the field while negative ions drift opposite to it. Both motions contribute to a net current in the direction of the electric field. This is important to note because current is due to flow of net charge and not 1 type of charge alone. If positive (+) negative (-) both are moving in the same direction, then too net current will be a subtraction. But if they are moving in opposite directions, then net charge flowing through a cross-section adds up.
+</p>
+
+<p>
+When a battery is connected across a capacitor, charges move through the connecting wires toward the capacitor plates. As long as charge continues to cross any cross-section of the wire, there is a current in the circuit.
+</p>
+
 <div class="insightbox">
-Drift velocity is extremely small (\(\sim 10^{-4} \text{ m/s}\)), yet the collective movement of the massive number of free electrons is the sole cause of macroscopic current.
+Current is a universal transport phenomenon — it occurs whenever charge crosses a defined surface, regardless of the physical medium.
 </div>
-</section>
 
+<p>
+In this chapter, our focus will be on electric current in conductors when an electric field is established inside them.
+</p>
+</section>
 <section>
-<h2>4. The Drift Current Equation</h2>
+<h2>Solved Example</h2>
+<div class="examplebox">
+<h3>Question 1</h3>
 <p>
-We bridge the microscopic kinematics (\(v_d\)) to the macroscopic flow (\(I\)). Consider a conductor of cross-sectional area \(A\) and free electron density \(n\) (number of electrons per unit volume).
+An electron beam has a circular aperture of area \(1.0 \, \text{mm}^2\). 
+A total of \(6.0 \times 10^{16}\) electrons pass through any perpendicular cross-section per second. 
+Find:
 </p>
+<ul>
+<li>(a) The electric current in the beam</li>
+<li>(b) The current density in the beam</li>
+</ul>
+<hr>
+<h4>Solution</h4>
+<p><strong>(a) Current</strong></p>
 <p>
-In a time interval \(dt\), the distance the electron cloud drifts is \(dx = v_d dt\). The volume of the charge cylinder that crosses the "gate" \(A\) in this time is:
+Total charge crossing per second:
 </p>
-\[dV = A \cdot dx = A v_d dt\]
+\[
+q = ne = (6.0 \times 10^{16})(1.6 \times 10^{-19}) \, \text{C}
+\]
+\[
+q = 9.6 \times 10^{-3} \, \text{C}
+\]
+\[
+I = \frac{q}{t} = 9.6 \times 10^{-3} \, \text{A}
+\]
 <p>
-The total number of free electrons in this volume is \(N = n \cdot dV = n A v_d dt\). Since each electron carries a charge \(e\), the total charge crossing the area is:
+Since electrons carry negative charge, the conventional current direction is opposite to the direction of motion of the electron beam.
 </p>
-\[dQ = N e = n e A v_d dt\]
+<p><strong>(b) Current Density</strong></p>
 <p>
-Dividing by \(dt\) yields the fundamental structural equation of current:
+Convert area:
 </p>
-\[I = n e A v_d\]
+\[
+1.0 \, \text{mm}^2 = 1.0 \times 10^{-6} \, \text{m}^2
+\]
+\[
+J = \frac{I}{A} = \frac{9.6 \times 10^{-3}}{1.0 \times 10^{-6}}
+\]
+\[
+J = 9.6 \times 10^{3} \, \text{A m}^{-2}
+\]
+</div>
+<p>
+This section can contain other questions like i vs t graphs or q vs t graphs or equations etc. Just functions and calculus questions from maths masked as physics questions
+</p>
 </section>
-
-<section>
-<h2>5. Current Density (\(\vec{J}\))</h2>
-<p>
-While current \(I\) is a scalar, it is often necessary to describe flow at a specific point in space. We define <strong>Current Density (\(\vec{J}\))</strong> as the current per unit area taken normal to the direction of flow.
-</p>
-\[J = \frac{I}{A} = n e v_d\]
-<p>
-Current density is a vector quantity, pointing in the direction of positive charge flow (the direction of \(\vec{E}\)):
-</p>
-\[\vec{J} = -n e \vec{v}_d\]
-<p>
-This definition allows us to formally define total macroscopic current as the surface integral of the microscopic current density over the cross-sectional area \(S\):
-</p>
-\[I = \int_S \vec{J} \cdot d\vec{A}\]
-</section>
-
 <footer>
     <hr>
     <p>By Hitendra K K</p>

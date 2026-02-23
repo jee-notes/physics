@@ -5,260 +5,266 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Current Electricity | JEE Physics Notes</title>
 <script src="./assets/js/math.js"></script>
+
 <style>
-        :root { 
-            --primary:#2c3e50; 
-            --secondary:#2980b9; 
-            --accent:#3498db; 
-            --bg:#f4f7fa; 
-        }
+:root { 
+    --primary:#2c3e50; 
+    --secondary:#2980b9; 
+    --accent:#3498db; 
+    --bg:#f4f7fa; 
+}
 
-        body { 
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height:1.7; 
-            background:var(--bg); 
-            color:#333; 
-            margin:0; 
-            padding:30px; 
-        }
+body { 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height:1.7; 
+    background:var(--bg); 
+    color:#333; 
+    margin:0; 
+    padding:30px; 
+}
 
-        .container { 
-            max-width:950px; 
-            margin:auto; 
-            background:#fff; 
-            padding:50px; 
-            border-radius:16px; 
-            box-shadow:0 12px 30px rgba(0,0,0,0.08); 
-        }
+.container { 
+    max-width:950px; 
+    margin:auto; 
+    background:#fff; 
+    padding:50px; 
+    border-radius:16px; 
+    box-shadow:0 12px 30px rgba(0,0,0,0.08); 
+}
 
-        h1, h2 { color:var(--primary); }
+h1, h2 { color:var(--primary); }
 
-        h1 { 
-            border-bottom:3px solid var(--secondary); 
-            padding-bottom:12px; 
-            text-align:center; 
-            margin-bottom:10px;
-        }
+h1 { 
+    border-bottom:3px solid var(--secondary); 
+    padding-bottom:12px; 
+    text-align:center; 
+    margin-bottom:10px;
+}
 
-        .subtitle {
-            text-align:center;
-            opacity:0.7;
-            margin-bottom:35px;
-            font-size:0.95rem;
-        }
+.subtitle {
+    text-align:center;
+    opacity:0.7;
+    margin-bottom:35px;
+    font-size:0.95rem;
+}
 
-        h2 { 
-            margin-top:40px; 
-            margin-bottom:15px;
-        }
+h2 { 
+    margin-top:40px; 
+    margin-bottom:15px;
+}
 
-        section {
-            margin-bottom:40px;
-        }
+section {
+    margin-bottom:40px;
+}
 
-        section:not(:last-of-type)::after {
-            content:"";
-            display:block;
-            height:1px;
-            margin-top:40px;
-            background:linear-gradient(to right, transparent, #ddd, transparent);
-        }
+section:not(:last-of-type)::after {
+    content:"";
+    display:block;
+    height:1px;
+    margin-top:40px;
+    background:linear-gradient(to right, transparent, #ddd, transparent);
+}
 
-        .top-nav {
-            margin-bottom:35px;
-        }
+.top-nav {
+    margin-bottom:35px;
+}
 
-        .back-btn {
-            display:inline-flex;
-            align-items:center;
-            gap:8px;
-            padding:8px 14px;
-            background:#eef5fb;
-            border-radius:8px;
-            font-weight:600;
-            text-decoration:none;
-            color:var(--primary);
-            transition:all 0.25s ease;
-        }
+.back-btn {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 14px;
+    background:#eef5fb;
+    border-radius:8px;
+    font-weight:600;
+    text-decoration:none;
+    color:var(--primary);
+    transition:all 0.25s ease;
+}
 
-        .back-btn:hover {
-            background:#dcecf9;
-            transform:translateX(-3px);
-        }
+.back-btn:hover {
+    background:#dcecf9;
+    transform:translateX(-3px);
+}
 
-        ul {
-            margin-top:10px;
-            padding-left:20px;
-        }
+.chapter-list {
+    margin-top:25px;
+}
 
-        .chapter-list {
-            margin-top:25px;
-        }
+.chapter-list a {
+    display:block;
+    padding:18px 20px;
+    margin-bottom:15px;
+    background:#f9fbfd;
+    border-left:5px solid var(--secondary);
+    border-radius:10px;
+    text-decoration:none;
+    color:#2c3e50;
+    font-weight:500;
+    transition:all 0.25s ease;
+    position:relative;
+}
 
-        .chapter-list a {
-            display:block;
-            padding:18px 20px;
-            margin-bottom:15px;
-            background:#f9fbfd;
-            border-left:5px solid var(--secondary);
-            border-radius:10px;
-            text-decoration:none;
-            color:#2c3e50;
-            font-weight:500;
-            transition:all 0.25s ease;
-            position:relative;
-        }
+.chapter-list a::after {
+    content: "→";
+    position:absolute;
+    right:20px;
+    opacity:0.4;
+    transition:all 0.25s ease;
+}
 
-        .chapter-list a::after {
-            content: "→";
-            position:absolute;
-            right:20px;
-            opacity:0.4;
-            transition:all 0.25s ease;
-        }
+.chapter-list a:hover {
+    background:#eef5fb;
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.08);
+}
 
-        .chapter-list a:hover {
-            background:#eef5fb;
-            transform:translateY(-3px);
-            box-shadow:0 8px 18px rgba(0,0,0,0.08);
-        }
+.chapter-list a:hover::after {
+    opacity:1;
+    right:15px;
+}
 
-        .chapter-list a:hover::after {
-            opacity:1;
-            right:15px;
-        }
+.concept-box {
+    background:#eef5fb;
+    border-left:4px solid var(--secondary);
+    padding:15px 20px;
+    border-radius:8px;
+    margin:20px 0;
+}
 
-        footer { 
-            text-align:center; 
-            margin-top:60px; 
-            color:#7f8c8d; 
-            font-size:0.9rem; 
-        }
+footer { 
+    text-align:center; 
+    margin-top:60px; 
+    color:#7f8c8d; 
+    font-size:0.9rem; 
+}
 
-        hr {
-            margin:40px 0;
-            border:none;
-            height:1px;
-            background:linear-gradient(to right, transparent, #ccc, transparent);
-        }
-
+hr {
+    margin:40px 0;
+    border:none;
+    height:1px;
+    background:linear-gradient(to right, transparent, #ccc, transparent);
+}
 </style>
 </head>
+
 <body>
 <div class="container">
+
 <nav class="top-nav">
 <a href="../../index.html" class="back-btn">
 <span>&larr;</span> Back to Syllabus
 </a>
 </nav>
+
 <h1>Current Electricity</h1>
 <p class="subtitle">
-The transition from particle kinematics to the macroscopic flow of charge.
+From electrostatic equilibrium to steady transport of charge.
 </p>
 
 <section>
-<h2>Conceptual Overview</h2>
+<h2>Conceptual Shift</h2>
+
+<div class="concept-box">
+Electrostatics → Charge in equilibrium ( \( E = 0 \) inside conductor )<br>
+Current Electricity → Charge in steady motion ( \( E \neq 0 \) inside conductor )
+</div>
+
 <p>
-Electrostatics studies charges in a state of equilibrium, where the electric field inside a conductor is strictly zero. Current Electricity marks the departure from this static equilibrium. It is the study of steady-state charge dynamics, driven by a maintained potential difference.
+Electrostatics deals with charge at rest. In that state, the electric field inside a conductor vanishes due to electrostatic equilibrium.
 </p>
+
 <p>
-By introducing a continuous energy source (like a battery), we sustain a non-zero electric field inside the conductor. This field imposes order on the otherwise chaotic thermal motion of electrons, resulting in a steady, measurable flow.
+Current Electricity begins when this equilibrium is deliberately disturbed by an external energy source. A sustained electric field is established inside the conductor, producing a steady transport of charge.
+</p>
+
+<p>
+The system is no longer static — it is in a non-equilibrium steady state.
 </p>
 </section>
+
 <section>
-<h2>Motion vs. Flow</h2>
+<h2>Motion vs Flow</h2>
+
 <p>
-To understand current, we must distinguish between the kinematics of a single particle and the collective behavior of an ensemble.
+Individual electrons in a conductor already move randomly due to thermal energy. Yet this random motion produces no net current. Even when the current in conductor is 0, it does not imply that electrons are at rest individually. They are in a state of random motion but the average motion of all electrons is such that there is no net current measured.
 </p>
-<h3>1. Motion (Particle Kinematics)</h3>
+
 <p>
-Motion describes a discrete entity. It focuses on the velocity \( v \) and trajectory of an individual charge. In a conductor at room temperature, electrons are in constant thermal motion at very high speeds, but their random directions yield zero net displacement.
+Current is not about motion of electrons alone — it is about <strong>flow across an area</strong>.
 </p>
-<h3>2. Flow (Current and Flux)</h3>
+
 <p>
-Flow requires a boundary—a "gate." It measures how much charge crosses a specific cross-sectional area per unit time. We describe this macroscopically with Current \( I \) and microscopically with Current Density \( \vec{J} \).
+We measure how much charge crosses a given cross-section per unit time:
 </p>
-<p>
-The mathematical bridge connecting the microscopic motion to the macroscopic flow is the drift velocity equation:
-</p>
+
 \[
 I = n e A v_d
 \]
+
 <p>
-Where \( v_d \) is the net directional drift imposed by the external field. If the particles merely move but do not cross the area \( A \), there is motion, but no flow.
+The drift velocity \( v_d \) represents the tiny directional bias imposed by the external electric field. It is not the actual speed of electrons. It is similar to drift caused in swimmer river problems due to river velocity.
 </p>
 </section>
+
 <section>
-<h2>The Dual Forms of Ohm's Law</h2>
+<h2>Two Scales of Ohm’s Law</h2>
+
 <p>
-Just as electrostatics utilizes both force and energy perspectives, current electricity describes resistance from both a macroscopic and a microscopic viewpoint.
+Current electricity operates simultaneously at two descriptive levels:
 </p>
-<p>
-<strong>Macroscopic Form:</strong> Formulated for practical circuits, relating total potential difference to total current via the geometry-dependent Resistance \( R \).
-</p>
+
+<p><strong>Macroscopic:</strong></p>
 \[
-V = I R
+V = IR
 \]
-<p>
-<strong>Microscopic Form:</strong> The fundamental physical truth inside the material, relating the local electric field to the local current density via the material's intrinsic Conductivity \( \sigma \).
-</p>
+
+<p><strong>Microscopic:</strong></p>
 \[
 \vec{J} = \sigma \vec{E}
 \]
+
 <p>
-Resistance is not merely an obstruction; it is the physical process of dissipating electrical potential energy into thermal energy through lattice collisions.
+Resistance emerges from the intrinsic material property (resistivity) combined with the geometry of the conductor as a macroscopic property. At the microscopic level, electrical energy is continuously converted into thermal energy through interactions between electrons and the lattice.
 </p>
 </section>
+
 <section>
 <h2>Organisation of Circuit Analysis</h2>
+
 <p>
-The mathematical analysis of circuits scales in complexity based on the network structure:
+Circuit analysis progresses from structural simplification to universal conservation laws:
 </p>
-<h3>I. Equivalent Resistance (Series/Parallel)</h3>
-<p>
-For simple, reducible networks, we collapse multiple resistors into a single equivalent resistance. This relies heavily on identifying nodes with identical potentials.
-</p>
-<h3>II. Symmetry and Structural Reduction</h3>
-<p>
-For complex geometric networks (like grids, cubes, or infinite ladders), direct series/parallel reduction fails. We deploy structural arguments: folding symmetry, equipotential nodes, and Wheatstone bridge principles to simplify the geometry before calculating.
-</p>
-<h3>III. Kirchhoff's Laws (General Network Theory)</h3>
-<p>
-When multiple active sources (batteries) are present in different branches, structural reduction is insufficient. We rely on two fundamental conservation laws to generate solvable linear equations:
-</p>
+
 <ul>
-<li><strong>KCL (Junction Rule):</strong> Based on the conservation of charge. \( \sum I = 0 \)</li>
-<li><strong>KVL (Loop Rule):</strong> Based on the conservation of energy. \( \sum \Delta V = 0 \)</li>
+<li><strong>Level 1 — Equivalent Resistance:</strong> Series and parallel reduction.</li>
+<li><strong>Level 2 — Symmetry & Structural Arguments:</strong> Equipotential nodes and bridge logic.</li>
+<li><strong>Level 3 — Kirchhoff’s Laws:</strong> Conservation of charge and energy for general networks.</li>
 </ul>
 </section>
+
 <section>
-<h2>Core Topics</h2>
-<ul class="points-list">
-    <li><strong>Drift Velocity</strong> — The microscopic origin of macroscopic current.</li>
-    <li><strong>Ohm's Law & Resistance</strong> — Material properties, temperature dependence, and energy dissipation.</li>
-    <li><strong>Electromotive Force (EMF)</strong> — The non-electrostatic mechanism that maintains potential difference.</li>
-    <li><strong>Kirchhoff's Laws</strong> — The universal algorithmic approach to complex circuit analysis.</li>
-    <li><strong>Electrical Measuring Instruments</strong> — The structural translation of current to observable mechanical deflection (Galvanometer).</li>
-</ul>
-</section>
-<section>
-<h2>Chapter Structure</h2>
+<h2>Core Topics Covered</h2>
+
 <div class="chapter-list">
-<a href="./01-electric-current-drift.html">1. Electric Current and Drift Velocity</a>
+<a href="./01-electric-current-drift.html">1. Electric Current</a>
 <a href="./02-ohms-law-resistance.html">2. Ohm’s Law and Resistivity</a>
-<a href="./03-resistor-combinations.html">3. Series and Parallel Combinations</a>
-<a href="./04-cell-emf-internal-resistance.html">4. Cell EMF and Internal Resistance</a>
-<a href="./05-kirchhoffs-laws.html">5. Kirchhoff’s Laws and Circuit Analysis</a>
-<a href="./06-symmetry-wheatstone.html">6. Wheatstone Bridge and Symmetrical Circuits</a>
-<a href="./07-heating-effect.html">7. Heating Effects of Current</a>
-<a href="./08-galvanometer-ammeter-voltmeter.html">8. Galvanometer, Ammeter, and Voltmeter</a>
-<a href="./09-potentiometer-meter-bridge.html">9. Potentiometer and Meter Bridge</a>
+<a href="./03-temperature-resistance.html">3. Temperature Dependence of Resistance</a>
+<a href="./04-resistor-combinations.html">4. Series and Parallel Combinations</a>
+<a href="./05-symmetry-wheatstone.html">5. Wheatstone Bridge and Symmetrical Circuits</a>
+<a href="./06-cell-emf-internal-resistance.html">6. Cell EMF and Internal Resistance</a>
+<a href="./07-kirchhoffs-laws.html">7. Kirchhoff’s Laws and Circuit Analysis</a>
+<a href="./08-power-in-circuits.html">8. Power in Electrical Circuits</a>
+<a href="./09-galvanometer-ammeter-voltmeter.html">9. Galvanometer, Ammeter, and Voltmeter</a>
+<a href="./10-meter-bridge.html">10. Meter Bridge and Measuring Instruments</a>
 </div>
 </section>
+
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
+
 </div>
 </body>
 </html>

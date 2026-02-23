@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cell EMF and Internal Resistance | Electric Current and Drift</title>
+
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+    <a href="./index.html" class="back-btn">
+        <span>&larr;</span> Back to Current Electricity
+    </a>
+</nav>
+<h1>Cell EMF and Internal Resistance</h1>
+<p class="subtitle">
+The mechanism that sustains steady-state dynamics.
+</p>
+<section>
+<h2>The Need for a Cell</h2>
+<p>
+In a closed circuit, charges naturally move from higher potential to lower potential through conductors under the influence of the electric field. If this were the only process occurring, charge would quickly redistribute and current would stop.
+</p>
+<p>
+To sustain a steady current, there must be a device in the circuit that continuously moves charge from lower potential back to higher potential — against the electrostatic force.
+</p>
+<div class="insightbox">
+A cell is not a source of charge. It is an <strong>energy pump</strong> that maintains steady transport by supplying energy. It plays the same role as a water pump in a water fountain. If you see a water fountain, you know that it must contain a water pump else how is water being carried "uphill"?
+</div>
+<p>
+Inside the cell, a movable charge experiences two forces:
+</p>
+<ul>
+<li><strong>Electrostatic force</strong> \( \vec{F}_e \), which pushes charge from high to low potential. This force exists in both resistors and batteries.</li>
+<li><strong>Non-electrostatic force</strong> \( \vec{F}_n \), which pushes charge from low to high potential. This differentiates between a battery and a resistor.</li>
+</ul>
+<p>
+The origin of \( \vec{F}_n \) depends on the device:
+</p>
+<ul>
+<li>Chemical forces in a battery</li>
+<li>Magnetic forces in a generator</li>
+<li>Mechanical forces in electrostatic machines</li>
+</ul>
+<p>
+The combined action of these forces maintains continuous current in the circuit.
+</p>
+</section>
+<section>
+<h2>Electromotive Force (EMF)</h2>
+<p>
+Despite its historical name, EMF (\(E\) or \(\varepsilon\)) is not a force. It is defined as the work done by the non-electrostatic agency (\( \vec{F}_n \)) in moving a unit positive charge from the lower potential terminal to the higher potential terminal.
+</p>
+\[E = \frac{W_{\text{non-electrostatic}}}{q}\]
+<div class="insightbox">
+EMF is an intrinsic characteristic of the cell's chemistry. It represents the maximum possible potential difference across the cell terminals when absolutely no current is drawn (an open circuit).
+</div>
+</section>
+<section>
+<h2>Energy Transfer in a Cell</h2>
+<h3>Open Circuit (No Current)</h3>
+<p>
+When the terminals are not connected, no current flows. Charges accumulate at the terminals until the electrostatic force exactly balances the non-electrostatic force inside the cell. The total force on any movable charge is 0.
+</p>
+\[
+\vec{F}_e = \vec{F}_n
+\]
+<p>
+In this condition:
+</p>
+\[
+V_{\text{terminal}} = \varepsilon
+\]
+<p>
+No energy is delivered to an external circuit.
+</p>
+<p>
+Although forces are balanced, an electric field still exists inside the cell. What vanishes is the net force, not the individual forces.
+</p>
+<hr>
+<h3>Closed Circuit (Current Flows)</h3>
+<p>
+When the terminals are connected through an external circuit, charges begin to flow from external path. As charge leaves the positive terminal, the surface charge density \( \sigma \) reduces slightly. This reduces the electrostatic force \( \vec{F}_e \) inside the cell.
+</p>
+<p>
+Now the non-electrostatic force becomes slightly greater than the electrostatic force:
+</p>
+\[
+\vec{F}_n > \vec{F}_e
+\]
+<p>
+This small imbalance produces continuous motion of charges inside the cell. The non-electrostatic forces do work on the charges, supplying energy to the external circuit.
+</p>
+<p>
+Part of this supplied energy is delivered to the external resistance, and part is dissipated inside the cell due to its internal resistance.
+</p>
+<div class="insightbox">
+In a steady circuit, the electrostatic field drives current in the external conductors, while non-electrostatic forces drive current inside the cell. Together they form a continuous energy transfer loop.
+</div>
+</section>
+<section>
+<h2>Internal Resistance and Terminal Voltage</h2>
+<p>
+The electrolyte inside a cell is not a perfect conductor. Moving charges experience resistance inside the cell itself. This opposition is called <strong>internal resistance</strong> \( r \).
+</p>
+<p>
+Because of internal resistance, some energy supplied by the cell is dissipated as heat inside it. Therefore, the voltage available to the external circuit — the <strong>terminal voltage</strong> — differs from the EMF when current flows.
+</p>
+<div class="model-box">
+<h3>Discharging (Cell as Source)</h3>
+<p>
+Current \( I \) leaves the positive terminal. Energy is delivered to the external circuit, but a potential drop \( Ir \) occurs inside the cell.
+</p>
+\[
+V = \varepsilon - Ir
+\]
+</div>
+<div class="model-box">
+<h3>Charging (Cell as Load)</h3>
+<p>
+If a stronger external source drives current into the positive terminal, the external source must overcome both the EMF and the internal resistance.
+</p>
+\[
+V = \varepsilon + Ir
+\]
+</div>
+</section>
+<footer>
+    <hr>
+    <p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
