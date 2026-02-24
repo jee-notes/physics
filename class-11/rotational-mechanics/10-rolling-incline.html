@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Rolling on Inclines and Friction</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Rolling on Inclines and Friction</h1>
+        <p class="subtitle">
+            Dynamics of rolling bodies on slopes — acceleration, friction requirements, and why shape matters.
+        </p>
+
+        <section>
+            <h2>Rolling Down an Incline</h2>
+            <p>
+                A body of mass \(M\), radius \(R\), and moment of inertia \(I_{\text{CM}} = Mk^2\) rolls without
+                slipping down a rough incline of angle \(\theta\). Two equations govern the motion:
+            </p>
+            <p><strong>Translation (along the incline):</strong></p>
+            \[Mg\sin\theta - f = Ma\]
+            <p><strong>Rotation (about the CM):</strong></p>
+            \[fR = I_{\text{CM}}\alpha = Mk^2 \cdot \frac{a}{R}\]
+            <p>
+                Solving these simultaneously:
+            </p>
+            \[a = \frac{g\sin\theta}{1 + k^2/R^2}\]
+            <p>
+                And the friction force:
+            </p>
+            \[f = \frac{Mg\sin\theta \cdot k^2/R^2}{1 + k^2/R^2}\]
+            <div class="insightbox">
+                The acceleration depends on the <em>shape</em> of the body (through \(k^2/R^2\)) but not on its mass or
+                radius. A solid sphere and a tiny solid marble accelerate equally — the larger mass is exactly
+                compensated by the larger inertia.
+            </div>
+        </section>
+
+        <section>
+            <h2>Race of Rolling Bodies</h2>
+            <p>
+                Since acceleration \(a = \frac{g\sin\theta}{1 + k^2/R^2}\), bodies with smaller \(k^2/R^2\) accelerate
+                faster. The ranking from fastest to slowest down the same incline:
+            </p>
+            <ul>
+                <li><strong>Solid sphere</strong> (\(k^2/R^2 = 2/5\)) — fastest</li>
+                <li><strong>Solid cylinder / disc</strong> (\(k^2/R^2 = 1/2\))</li>
+                <li><strong>Hollow sphere</strong> (\(k^2/R^2 = 2/3\))</li>
+                <li><strong>Thin ring / hollow cylinder</strong> (\(k^2/R^2 = 1\)) — slowest</li>
+            </ul>
+            <p>
+                A sliding block (no rotation, \(k^2/R^2 = 0\) effectively) has \(a = g\sin\theta\) and always beats all
+                rolling bodies.
+            </p>
+        </section>
+
+        <section>
+            <h2>Minimum Friction for Pure Rolling</h2>
+            <p>
+                For the body to roll without slipping, the required friction must not exceed the maximum available
+                static friction:
+            </p>
+            \[f \leq \mu_s N = \mu_s Mg\cos\theta\]
+            <p>
+                Substituting the expression for \(f\):
+            </p>
+            \[\frac{Mg\sin\theta \cdot k^2/R^2}{1 + k^2/R^2} \leq \mu_s Mg\cos\theta\]
+            \[\mu_s \geq \frac{\tan\theta \cdot k^2/R^2}{1 + k^2/R^2}\]
+            <p>
+                If \(\mu_s\) is less than this critical value, the body slips and slides down the incline (kinetic
+                friction applies, and the problem becomes more complex).
+            </p>
+        </section>
+
+        <section>
+            <h2>Energy Method for Rolling on Inclines</h2>
+            <p>
+                Since static friction does no work in pure rolling, energy conservation provides a clean alternative:
+            </p>
+            \[Mgh = \frac{1}{2}Mv^2 + \frac{1}{2}I_{\text{CM}}\omega^2 = \frac{1}{2}Mv^2\left(1 +
+            \frac{k^2}{R^2}\right)\]
+            \[v = \sqrt{\frac{2gh}{1 + k^2/R^2}}\]
+            <p>
+                where \(h\) is the vertical height descended. This gives the speed at the bottom without needing to find
+                friction or acceleration explicitly.
+            </p>
+        </section>
+
+        <section>
+            <h2>Rolling Up an Incline</h2>
+            <p>
+                A body projected up a rough incline decelerates. Friction now acts <em>up</em> the incline (to maintain
+                the rolling condition as gravity decelerates both translation and rotation). The deceleration is the
+                same magnitude as the acceleration going down:
+            </p>
+            \[a = \frac{g\sin\theta}{1 + k^2/R^2}\]
+            <p>
+                The body comes to a momentary stop and then rolls back down with the same acceleration. No energy is
+                lost if rolling is maintained throughout.
+            </p>
+        </section>
+
+        <section>
+            <h2>Transition from Sliding to Rolling</h2>
+            <p>
+                A sphere placed on a rough horizontal surface with initial velocity \(v_0\) (no spin) will slide and
+                spin up due to kinetic friction. The sliding decelerates (friction reduces \(v\)) while spinning
+                accelerates (friction provides torque to increase \(\omega\)). Eventually:
+            </p>
+            \[v = \omega R \qquad \text{(pure rolling achieved)}\]
+            <p>
+                After this point, friction becomes static and does no further work. The final rolling speed for a solid
+                sphere:
+            </p>
+            \[v_f = \frac{5}{7}v_0\]
+            <p>
+                The lost kinetic energy is dissipated as heat during the sliding phase.
+            </p>
+            <div class="insightbox">
+                The transition problem is solved using kinetic friction for both translation (deceleration) and rotation
+                (angular acceleration) until the rolling condition is met. After that, dynamics change fundamentally —
+                kinetic friction becomes static friction.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

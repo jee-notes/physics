@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Rigid Body and Types of Motion</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Rigid Body and Types of Motion</h1>
+        <p class="subtitle">
+            The idealisation that bridges particle dynamics and the real world of extended objects.
+        </p>
+
+        <section>
+            <h2>What is a Rigid Body?</h2>
+            <p>
+                A <strong>rigid body</strong> is a system of particles in which the distance between every pair of
+                particles remains constant, regardless of what forces act on it. No real object is perfectly rigid — all
+                materials deform under stress — but many objects deform so little that the rigid-body approximation is
+                excellent.
+            </p>
+            <p>
+                The rigid body constraint dramatically simplifies analysis: instead of tracking the positions and
+                velocities of \(10^{23}\) molecules, we need only a few variables to describe the entire body's motion.
+            </p>
+        </section>
+
+        <section>
+            <h2>Types of Motion</h2>
+            <h3>1. Pure Translation</h3>
+            <p>
+                Every particle of the body has the same velocity at every instant. The body moves without rotating — all
+                lines drawn in the body remain parallel to their original directions.
+            </p>
+            <p>
+                Examples: a box sliding on a frictionless floor, a car moving in a straight line (to a first
+                approximation).
+            </p>
+
+            <h3>2. Pure Rotation</h3>
+            <p>
+                The body rotates about a fixed axis. Every particle moves in a circle centred on the axis, and every
+                particle has the same angular velocity \(\omega\). A particle at distance \(r\) from the axis has linear
+                speed \(v = r\omega\).
+            </p>
+            <p>
+                Examples: a spinning top about its tip (approximately), a ceiling fan, the Earth about its axis.
+            </p>
+
+            <h3>3. Combined Translation and Rotation</h3>
+            <p>
+                The most general motion of a rigid body in a plane is a combination of translation of the centre of mass
+                and rotation about the centre of mass. Every possible planar motion can be decomposed this way.
+            </p>
+            <p>
+                Example: a ball rolling on the ground, a cylinder rolling down an incline.
+            </p>
+            <div class="insightbox">
+                Any planar rigid-body motion can also be viewed as pure rotation about an instantaneous axis. This axis
+                — called the <em>instantaneous centre of rotation</em> — may lie outside the body and changes from
+                instant to instant.
+            </div>
+        </section>
+
+        <section>
+            <h2>Degrees of Freedom</h2>
+            <p>
+                A free particle in 3D has 3 degrees of freedom (coordinates \(x, y, z\)). A rigid body in 3D has 6
+                degrees of freedom:
+            </p>
+            <ul>
+                <li><strong>3 translational</strong> — position of the centre of mass \((x, y, z)\).</li>
+                <li><strong>3 rotational</strong> — orientation of the body (Euler angles or equivalent).</li>
+            </ul>
+            <p>
+                For planar motion (motion confined to a plane), this reduces to 3: two translational (\(x, y\) of COM)
+                and one rotational (\(\theta\)). Adding constraints (like a fixed axis) reduces the count further.
+            </p>
+        </section>
+
+        <section>
+            <h2>Fixed-Axis vs Free Rotation</h2>
+            <ul>
+                <li><strong>Fixed-axis rotation:</strong> The axis of rotation is fixed in space and does not move. The
+                    body's motion is fully described by a single variable \(\theta(t)\). Examples: a door hinged at one
+                    edge, a wheel on a fixed axle.</li>
+                <li><strong>Free rotation:</strong> The axis of rotation can change direction. This is far more complex
+                    and includes phenomena like precession and nutation. For JEE purposes, most problems involve
+                    fixed-axis or constrained-axis rotation.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

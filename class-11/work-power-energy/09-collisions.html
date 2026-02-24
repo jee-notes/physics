@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Collisions</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+
+        <h1>Collisions</h1>
+        <p class="subtitle">
+            Short-duration interactions where momentum is always conserved and kinetic energy may or may not be.
+        </p>
+
+        <section>
+            <h2>What is a Collision?</h2>
+            <p>
+                A collision is a brief, intense interaction between two or more objects during which they exert large
+                forces on each other over a very short time. The key feature is that the impulsive forces during the
+                collision are so large compared to external forces (gravity, friction) that the latter can be neglected
+                during the event.
+            </p>
+            <p>
+                As a result, the total momentum of the system is conserved across any collision. The total kinetic
+                energy, however, is conserved only in special (elastic) collisions.
+            </p>
+            <div class="insightbox">
+                Momentum is always conserved in a collision (as long as no significant external impulse acts). Kinetic
+                energy conservation is an additional constraint that separates elastic from inelastic collisions.
+            </div>
+        </section>
+
+        <section>
+            <h2>Classification of Collisions</h2>
+            <h3>1. Elastic Collision</h3>
+            <p>
+                Both momentum and kinetic energy are conserved. No permanent deformation occurs; the objects bounce off
+                each other without any energy loss.
+            </p>
+            \[\vec{p}_{\text{initial}} = \vec{p}_{\text{final}} \qquad K_{\text{initial}} = K_{\text{final}}\]
+            <p>
+                Examples: collisions between ideal billiard balls, atomic/molecular collisions in gases.
+            </p>
+
+            <h3>2. Inelastic Collision</h3>
+            <p>
+                Momentum is conserved, but kinetic energy is not — some is converted to heat, sound, or deformation
+                energy. The objects may or may not stick together.
+            </p>
+            \[\vec{p}_{\text{initial}} = \vec{p}_{\text{final}} \qquad K_{\text{initial}} > K_{\text{final}}\]
+
+            <h3>3. Perfectly Inelastic Collision</h3>
+            <p>
+                The most extreme case: the objects stick together and move with a common final velocity. Maximum kinetic
+                energy loss occurs (subject to momentum conservation).
+            </p>
+            \[(m_1 + m_2)\,v_f = m_1 v_1 + m_2 v_2\]
+            <div class="insightbox">
+                Note: "perfectly inelastic" does not mean "zero final kinetic energy" — it means maximum possible
+                kinetic energy loss while still conserving momentum.
+            </div>
+        </section>
+
+        <section>
+            <h2>Head-On Elastic Collision: Result Formulae</h2>
+            <p>
+                For a 1D elastic collision between mass \(m_1\) (velocity \(u_1\)) and \(m_2\) (velocity \(u_2\)),
+                solving the two conservation equations simultaneously gives:
+            </p>
+            \[v_1 = \frac{(m_1 - m_2)u_1 + 2m_2 u_2}{m_1 + m_2}\]
+            \[v_2 = \frac{(m_2 - m_1)u_2 + 2m_1 u_1}{m_1 + m_2}\]
+            <h3>Special Cases</h3>
+            <ul>
+                <li><strong>Equal masses (\(m_1 = m_2\)):</strong> The velocities exchange — \(v_1 = u_2,\; v_2 = u_1\).
+                    A striking billiard ball stops and the struck one moves off at the original speed.</li>
+                <li><strong>Very heavy projectile (\(m_1 \gg m_2\)):</strong> \(v_1 \approx u_1\) (barely slows down),
+                    \(v_2 \approx 2u_1\) (target shoots forward at twice the projectile speed).</li>
+                <li><strong>Very light projectile (\(m_1 \ll m_2\)):</strong> \(v_1 \approx -u_1\) (bounces back), \(v_2
+                    \approx 0\) (target barely moves). Example: a ball bouncing off a wall.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Coefficient of Restitution</h2>
+            <p>
+                The coefficient of restitution \(e\) characterises the "bounciness" of a collision. It is defined as the
+                ratio of the relative speed of separation to the relative speed of approach along the line of collision:
+            </p>
+            \[e = \frac{v_2 - v_1}{u_1 - u_2}\]
+            <ul>
+                <li>\(e = 1\) → perfectly elastic collision</li>
+                <li>\(0 < e < 1\) → partially inelastic collision</li>
+                <li>\(e = 0\) → perfectly inelastic collision (objects stick)</li>
+            </ul>
+            <div class="insightbox">
+                The coefficient of restitution is an empirical property of the material pair. It is not derivable from
+                Newton's laws alone — it encapsulates the microscopic physics of deformation and recovery in a single
+                number.
+            </div>
+        </section>
+
+        <section>
+            <h2>Energy Lost in a Perfectly Inelastic Collision</h2>
+            <p>
+                For a perfectly inelastic collision where \(m_2\) is initially at rest:
+            </p>
+            \[v_f = \frac{m_1 u_1}{m_1 + m_2}\]
+            <p>
+                The kinetic energy lost is:
+            </p>
+            \[\Delta K = \frac{1}{2}m_1 u_1^2 - \frac{1}{2}(m_1+m_2)v_f^2 = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1+m_2}
+            \cdot u_1^2\]
+            <p>
+                This energy appears as heat, sound, and deformation. It is always positive — you can never gain kinetic
+                energy in a collision.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

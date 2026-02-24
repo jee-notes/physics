@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Angular Momentum</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Angular Momentum</h1>
+        <p class="subtitle">
+            The rotational analogue of linear momentum — the quantity that relates torque to rotational state.
+        </p>
+
+        <section>
+            <h2>Angular Momentum of a Particle</h2>
+            <p>
+                The angular momentum of a particle of mass \(m\), with position vector \(\vec{r}\) and linear momentum
+                \(\vec{p} = m\vec{v}\), about a point \(O\) is:
+            </p>
+            \[\vec{L} = \vec{r} \times \vec{p} = \vec{r} \times (m\vec{v})\]
+            <p>
+                The magnitude is:
+            </p>
+            \[L = mvr\sin\theta = mv \cdot r_\perp = mr \cdot v_\perp\]
+            <p>
+                where \(r_\perp\) is the perpendicular distance from \(O\) to the line of motion, and \(v_\perp\) is the
+                component of velocity perpendicular to \(\vec{r}\).
+            </p>
+            <div class="insightbox">
+                A particle moving in a straight line has angular momentum about any point not on the line. Angular
+                momentum is not exclusive to circular or rotational motion — it is a general property of any motion
+                viewed from a reference point.
+            </div>
+        </section>
+
+        <section>
+            <h2>Angular Momentum of a Rigid Body</h2>
+            <p>
+                For a rigid body rotating about a fixed axis with angular velocity \(\omega\), the angular momentum
+                about that axis is:
+            </p>
+            \[L = I\omega\]
+            <p>
+                where \(I\) is the moment of inertia about the axis. This is the rotational analogue of \(p = mv\).
+            </p>
+            <p>
+                The direction of \(\vec{L}\) is along the axis, given by the right-hand rule: it points in the direction
+                of \(\vec{\omega}\).
+            </p>
+        </section>
+
+        <section>
+            <h2>Torque and Angular Momentum</h2>
+            <p>
+                Newton's second law in its most general rotational form states:
+            </p>
+            \[\vec{\tau}_{\text{net}} = \frac{d\vec{L}}{dt}\]
+            <p>
+                This is the rotational analogue of \(\vec{F} = \frac{d\vec{p}}{dt}\). For a rigid body about a fixed
+                axis (where \(I\) is constant):
+            </p>
+            \[\tau = \frac{dL}{dt} = I\frac{d\omega}{dt} = I\alpha\]
+            <p>
+                which recovers the familiar \(\tau = I\alpha\). But the general form \(\vec{\tau} =
+                \frac{d\vec{L}}{dt}\) is more powerful — it applies even when \(I\) changes (as in the spinning skater
+                problem).
+            </p>
+        </section>
+
+        <section>
+            <h2>Angular Momentum of a Particle in Circular Motion</h2>
+            <p>
+                A particle of mass \(m\) in a circle of radius \(r\) with speed \(v\):
+            </p>
+            \[L = mvr = mr^2\omega\]
+            <p>
+                This matches \(L = I\omega\) with \(I = mr^2\) — the moment of inertia of a point mass.
+            </p>
+        </section>
+
+        <section>
+            <h2>Angular Momentum About the COM</h2>
+            <p>
+                For a system of particles (or a rigid body), the total angular momentum about a fixed point can be
+                decomposed as:
+            </p>
+            \[\vec{L}_{\text{total}} = \vec{L}_{\text{orbital}} + \vec{L}_{\text{spin}}\]
+            <ul>
+                <li>\(\vec{L}_{\text{orbital}} = M\vec{R}_{\text{CM}} \times \vec{V}_{\text{CM}}\) — angular momentum of
+                    the COM (as if all mass were concentrated there).</li>
+                <li>\(\vec{L}_{\text{spin}} = I_{\text{CM}}\vec{\omega}\) — angular momentum about the COM (intrinsic
+                    rotation).</li>
+            </ul>
+            <p>
+                For a rolling object, both terms contribute. For a spinning body at rest, only the spin term survives.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

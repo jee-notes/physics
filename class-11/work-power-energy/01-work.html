@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Work</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+
+        <h1>Work</h1>
+        <p class="subtitle">
+            The bridge between force and energy — how a force produces a change in the state of motion.
+        </p>
+
+        <section>
+            <h2>What is Work?</h2>
+            <p>
+                In everyday language, "work" means any physical or mental effort. In physics, work has a precise,
+                quantitative meaning: work is done by a force when it causes a displacement of the object it acts on,
+                and the two are not perpendicular to each other.
+            </p>
+            <p>
+                Work is a scalar quantity — it has magnitude but no direction. It can be positive, negative, or zero
+                depending on the angle between the force and the displacement.
+            </p>
+            <div class="insightbox">
+                Work is not a property of an object; it is a quantity associated with a force acting over a
+                displacement. Different forces acting on the same object do different amounts of work.
+            </div>
+        </section>
+
+        <section>
+            <h2>Definition: Constant Force</h2>
+            <p>
+                When a constant force \(\vec{F}\) acts on a body that undergoes a displacement \(\vec{s}\), the work
+                done by that force is defined as the scalar (dot) product of the force and the displacement:
+            </p>
+            \[W = \vec{F} \cdot \vec{s} = Fs\cos\theta\]
+            <p>
+                Here, \(\theta\) is the angle between the direction of the force and the direction of the displacement.
+                \(F\) and \(s\) are the magnitudes of \(\vec{F}\) and \(\vec{s}\) respectively.
+            </p>
+            <p>
+                The SI unit of work is the Joule (J), where \(1\,\text{J} = 1\,\text{N} \cdot \text{m}\).
+            </p>
+        </section>
+
+        <section>
+            <h2>Positive, Negative, and Zero Work</h2>
+            <p>
+                The sign of work conveys physical meaning:
+            </p>
+            <ul>
+                <li>
+                    <strong>Positive Work (\(\theta < 90°\)):</strong> The force has a component along the displacement.
+                            The force aids the motion and transfers energy to the object. Example: a person pushing a
+                            box in the direction it moves.
+                </li>
+                <li>
+                    <strong>Negative Work (\(90° < \theta \leq 180°\)):</strong> The force has a component opposing the
+                            displacement. The force removes energy from the object. Example: friction acting on a
+                            sliding block.
+                </li>
+                <li>
+                    <strong>Zero Work (\(\theta = 90°\)):</strong> The force is perpendicular to the displacement. No
+                    energy transfer occurs. Example: the normal reaction on a horizontally moving body, or the
+                    centripetal force on an object in uniform circular motion.
+                </li>
+            </ul>
+            <div class="insightbox">
+                A force that does no work does not mean the force is absent. The centripetal force continuously acts on
+                a satellite in circular orbit, yet it does zero work because it is always perpendicular to the velocity.
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Done by Multiple Forces</h2>
+            <p>
+                When several forces act simultaneously on an object, the work done by each force is computed separately
+                using \(W = \vec{F} \cdot \vec{s}\). The total (net) work done on the object is the algebraic sum of
+                works done by all individual forces:
+            </p>
+            \[W_{\text{net}} = W_1 + W_2 + \cdots + W_n\]
+            <p>
+                Alternatively, since superposition holds, we may first find the net force and then compute its work:
+            </p>
+            \[W_{\text{net}} = \vec{F}_{\text{net}} \cdot \vec{s}\]
+            <div class="insightbox">
+                Both approaches are equivalent when the displacement is the same for all force applications (i.e., a
+                single rigid body). When computing individual force contributions, always use the full displacement
+                vector, not just its component.
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Along a Curved Path</h2>
+            <p>
+                The definition \(W = \vec{F} \cdot \vec{s}\) applies only when both the force and the displacement are
+                constant (in magnitude and direction). In general, along a curved path, we must break the path into
+                infinitesimal segments \(d\vec{r}\) and sum the contributions:
+            </p>
+            \[W = \int_{\vec{r}_1}^{\vec{r}_2} \vec{F} \cdot d\vec{r}\]
+            <p>
+                This is the general definition of work, of which the constant-force formula is a special case. The
+                integral reduces to \(Fs\cos\theta\) when \(\vec{F}\) is constant throughout the displacement.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

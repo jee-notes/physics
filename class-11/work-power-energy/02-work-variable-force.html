@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Work by a Variable Force</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+
+        <h1>Work by a Variable Force</h1>
+        <p class="subtitle">
+            When force changes with position, integration replaces simple multiplication.
+        </p>
+
+        <section>
+            <h2>Why Integration is Required</h2>
+            <p>
+                The formula \(W = Fs\cos\theta\) assumes that the force is constant in both magnitude and direction
+                throughout the displacement. In many physical situations — a spring being compressed, a rocket burning
+                fuel, a charge moving through a non-uniform field — the force varies from point to point along the path.
+            </p>
+            <p>
+                In such cases, we divide the entire path into infinitesimally small segments. Over each segment \(dx\),
+                the force \(F(x)\) is effectively constant, and the work done over that segment is \(dW = F(x)\,dx\).
+                Summing over all segments gives:
+            </p>
+            \[W = \int_{x_1}^{x_2} F(x)\,dx\]
+            <div class="insightbox">
+                This integral is the general definition of work in one dimension. For motion in 3D along a curve, the
+                analogous expression is \(W = \int \vec{F} \cdot d\vec{r}\).
+            </div>
+        </section>
+
+        <section>
+            <h2>Graphical Interpretation: Area Under the F–x Graph</h2>
+            <p>
+                The integral \(\int_{x_1}^{x_2} F(x)\,dx\) represents the area enclosed between the \(F\text{–}x\)
+                curve, the \(x\)-axis, and the vertical lines at \(x = x_1\) and \(x = x_2\).
+            </p>
+            <ul>
+                <li>If the curve lies above the \(x\)-axis (force in the direction of displacement), the work is
+                    positive.</li>
+                <li>If the curve lies below the \(x\)-axis (force opposing displacement), the work is negative.</li>
+                <li>The net work is the algebraic sum of all such areas.</li>
+            </ul>
+            <div class="insightbox">
+                Graphical methods are extremely useful in JEE problems where \(F(x)\) is given as a piecewise linear
+                function or a simple shape. Count the area above the axis as positive and below as negative.
+            </div>
+        </section>
+
+        <section>
+            <h2>The Spring Force: A Key Example</h2>
+            <p>
+                A spring obeying Hooke's Law exerts a restoring force proportional to its extension or compression:
+            </p>
+            \[F = -kx\]
+            <p>
+                Here, \(k\) is the spring constant (stiffness) and \(x\) is the displacement from the natural
+                (unstretched) length. The negative sign indicates the force is always directed back towards the
+                equilibrium position.
+            </p>
+            <p>
+                The work done by the spring force when the spring is compressed or stretched by \(x\) from its natural
+                length is:
+            </p>
+            \[W_{\text{spring}} = \int_0^x (-kx')\,dx' = -\frac{1}{2}kx^2\]
+            <p>
+                The work done by an external agent stretching the spring from 0 to \(x\) is:
+            </p>
+            \[W_{\text{external}} = +\frac{1}{2}kx^2\]
+            <div class="insightbox">
+                The work done by the spring force is always negative when the spring is being deformed from its natural
+                length, because the spring force opposes the displacement. This energy is stored as elastic potential
+                energy.
+            </div>
+        </section>
+
+        <section>
+            <h2>General Work by Spring Between Two Positions</h2>
+            <p>
+                When a spring moves from compression/extension \(x_1\) to \(x_2\), the work done by the spring force is:
+            </p>
+            \[W_{\text{spring}} = \int_{x_1}^{x_2} (-kx)\,dx = \frac{1}{2}kx_1^2 - \frac{1}{2}kx_2^2\]
+            <p>
+                This equals the decrease in the spring's potential energy, which is the defining property of a
+                conservative force.
+            </p>
+        </section>
+
+        <section>
+            <h2>Important Observations</h2>
+            <ul>
+                <li>Work depends on the path and the force law — for non-conservative forces, the same starting and
+                    ending positions can yield different work for different paths.</li>
+                <li>For a linear force like the spring, the \(F\text{–}x\) graph is a straight line through the origin,
+                    and the area is a triangle: \(W = \frac{1}{2} \times \text{base} \times \text{height}\).</li>
+                <li>When the displacement is in the same direction as the axis and the force is one-dimensional, the
+                    vector integral reduces to the scalar integral shown above.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Damped Oscillations</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Oscillations
+            </a>
+        </nav>
+
+        <h1>Damped Oscillations</h1>
+        <p class="subtitle">
+            Real oscillators lose energy — the amplitude decays, the frequency shifts, and eventually the motion dies
+            out.
+        </p>
+
+        <section>
+            <h2>Damping Force</h2>
+            <p>
+                In real systems, friction, air resistance, or internal dissipation exert a resisting force. For a
+                viscous (velocity-dependent) damping force:
+            </p>
+            \[F_{\text{damp}} = -bv = -b\frac{dx}{dt}\]
+            <p>
+                where \(b\) is the damping coefficient (units: kg/s or N·s/m). The equation of motion becomes:
+            </p>
+            \[m\frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = 0\]
+        </section>
+
+        <section>
+            <h2>Solution: Underdamped Case</h2>
+            <p>
+                For light damping (\(b < 2\sqrt{km}\)), the solution is: </p>
+                    \[x(t) = A_0 e^{-\gamma t}\sin(\omega' t + \phi)\]
+                    <p>
+                        where:
+                    </p>
+                    <ul>
+                        <li>\(\gamma = \frac{b}{2m}\) — the damping rate (determines how fast amplitude decays)</li>
+                        <li>\(\omega' = \sqrt{\omega_0^2 - \gamma^2}\) — the damped angular frequency (slightly less
+                            than natural frequency \(\omega_0 = \sqrt{k/m}\))</li>
+                        <li>\(A_0 e^{-\gamma t}\) — the exponentially decaying amplitude envelope</li>
+                    </ul>
+                    <div class="insightbox">
+                        The oscillation frequency decreases slightly due to damping (\(\omega' < \omega_0\)), but for
+                            light damping this shift is negligible. The dramatic effect is on the amplitude, which
+                            decays exponentially. </div>
+        </section>
+
+        <section>
+            <h2>Three Damping Regimes</h2>
+            <ul>
+                <li><strong>Underdamped (\(b < 2\sqrt{km}\)):</strong> The body oscillates with decreasing amplitude.
+                            Most physical oscillators fall in this category.</li>
+                <li><strong>Critically damped (\(b = 2\sqrt{km}\)):</strong> The body returns to equilibrium in the
+                    shortest time without oscillating. Used in door closers, shock absorbers, electrical meters.</li>
+                <li><strong>Overdamped (\(b > 2\sqrt{km}\)):</strong> The body returns to equilibrium slowly, without
+                    oscillating. Sluggish response.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Energy Decay</h2>
+            <p>
+                Since energy is proportional to amplitude squared:
+            </p>
+            \[E(t) = E_0 e^{-2\gamma t} = E_0 e^{-bt/m}\]
+            <p>
+                Energy decays exponentially at twice the rate of amplitude decay. The rate of energy loss equals the
+                power dissipated by the damping force.
+            </p>
+        </section>
+
+        <section>
+            <h2>Quality Factor</h2>
+            <p>
+                The <strong>quality factor</strong> \(Q\) measures how many oscillations the system undergoes before its
+                energy drops significantly:
+            </p>
+            \[Q = 2\pi \times \frac{\text{energy stored}}{\text{energy lost per cycle}} = \frac{\omega_0}{2\gamma} =
+            \frac{m\omega_0}{b}\]
+            <ul>
+                <li>High \(Q\) → lightly damped, many oscillations before dying out (e.g., tuning fork)</li>
+                <li>Low \(Q\) → heavily damped, few oscillations (e.g., oscillation in honey)</li>
+            </ul>
+            <p>
+                A tuning fork may have \(Q \sim 1000\); a guitar string \(Q \sim 500\); a pendulum clock \(Q \sim 100\).
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

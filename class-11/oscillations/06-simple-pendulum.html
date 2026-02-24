@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Simple Pendulum</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Oscillations
+            </a>
+        </nav>
+
+        <h1>Simple Pendulum</h1>
+        <p class="subtitle">
+            A point mass on a massless inextensible string — the classic oscillator, valid for small angles.
+        </p>
+
+        <section>
+            <h2>Setup and Restoring Force</h2>
+            <p>
+                A simple pendulum consists of a point mass (bob) \(m\) suspended by a light, inextensible string of
+                length \(l\) from a rigid support. For small angular displacement \(\theta\):
+            </p>
+            \[\text{Restoring force} = -mg\sin\theta \approx -mg\theta = -\frac{mg}{l}s\]
+            <p>
+                where \(s = l\theta\) is the arc displacement from equilibrium. This is a linear restoring force (\(F
+                \propto s\)), so the motion is SHM.
+            </p>
+        </section>
+
+        <section>
+            <h2>Time Period</h2>
+            \[T = 2\pi\sqrt{\frac{l}{g}}\]
+            <ul>
+                <li>Independent of mass of the bob</li>
+                <li>Independent of amplitude (for small \(\theta\))</li>
+                <li>Depends only on length and gravitational acceleration</li>
+            </ul>
+            <div class="insightbox">
+                The independence from mass was one of the earliest observed features of pendulum motion (Galileo). It
+                arises because both the inertia (\(m\)) and the restoring force (\(mg\sin\theta\)) are proportional to
+                \(m\), so mass cancels.
+            </div>
+        </section>
+
+        <section>
+            <h2>Effective Length</h2>
+            <p>
+                The effective length of a pendulum is the distance from the point of suspension to the centre of mass of
+                the bob. For a uniform sphere of radius \(r\) on a string of length \(L\):
+            </p>
+            \[l_{\text{eff}} = L + r\]
+            <p>
+                Always use the effective length in the time-period formula.
+            </p>
+        </section>
+
+        <section>
+            <h2>Effective Gravity</h2>
+            <p>
+                When a pendulum is in a non-inertial frame or additional forces act, replace \(g\) with an effective
+                gravitational acceleration \(g_{\text{eff}}\):
+            </p>
+            <h3>In a Lift</h3>
+            <ul>
+                <li>Accelerating upward: \(g_{\text{eff}} = g + a\) → \(T\) decreases (faster oscillation)</li>
+                <li>Accelerating downward: \(g_{\text{eff}} = g - a\) → \(T\) increases (slower oscillation)</li>
+                <li>Free fall (\(a = g\)): \(g_{\text{eff}} = 0\) → \(T \to \infty\) (no oscillation)</li>
+            </ul>
+
+            <h3>With a Horizontal Acceleration</h3>
+            <p>
+                If the support accelerates horizontally with acceleration \(a\):
+            </p>
+            \[g_{\text{eff}} = \sqrt{g^2 + a^2}\]
+            <p>
+                The equilibrium is no longer vertical — the string makes an angle \(\tan^{-1}(a/g)\) with the vertical.
+            </p>
+
+            <h3>In a Satellite (Weightlessness)</h3>
+            <p>
+                \(g_{\text{eff}} = 0\). A pendulum cannot oscillate in orbit.
+            </p>
+        </section>
+
+        <section>
+            <h2>Second's Pendulum</h2>
+            <p>
+                A <strong>second's pendulum</strong> has a time period of exactly 2 seconds (one second for each
+                half-swing). Its length:
+            </p>
+            \[T = 2 \text{ s} \implies l = \frac{gT^2}{4\pi^2} = \frac{g}{\pi^2} \approx 1 \text{ m}\]
+        </section>
+
+        <section>
+            <h2>Large-Angle Corrections</h2>
+            <p>
+                For large amplitudes \(\theta_0\), the small-angle approximation breaks down. The exact period is given
+                by an elliptic integral, but to first correction:
+            </p>
+            \[T = 2\pi\sqrt{\frac{l}{g}}\left(1 + \frac{\theta_0^2}{16} + \cdots\right)\]
+            <p>
+                The period increases with amplitude — the pendulum is no longer isochronous. For \(\theta_0 = 15°\), the
+                correction is less than 0.5%.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Forced Oscillations and Resonance</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Oscillations
+            </a>
+        </nav>
+
+        <h1>Forced Oscillations and Resonance</h1>
+        <p class="subtitle">
+            When an external periodic force drives a damped oscillator — the steady state, amplitude response, and the
+            dramatic phenomenon of resonance.
+        </p>
+
+        <section>
+            <h2>Equation of Motion</h2>
+            <p>
+                A damped oscillator driven by an external periodic force \(F_0\cos\omega_d t\):
+            </p>
+            \[m\frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = F_0\cos\omega_d t\]
+            <p>
+                where \(\omega_d\) is the driving (angular) frequency. After initial transients die out, the system
+                settles into a <strong>steady-state</strong> oscillation at the driving frequency.
+            </p>
+        </section>
+
+        <section>
+            <h2>Steady-State Solution</h2>
+            \[x(t) = A(\omega_d)\cos(\omega_d t - \delta)\]
+            <p>
+                The amplitude of the steady-state response:
+            </p>
+            \[A(\omega_d) = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega_d^2)^2 + (2\gamma\omega_d)^2}}\]
+            <p>
+                The phase lag behind the driving force:
+            </p>
+            \[\tan\delta = \frac{2\gamma\omega_d}{\omega_0^2 - \omega_d^2}\]
+            <div class="insightbox">
+                The system always oscillates at the driving frequency \(\omega_d\), not at its natural frequency
+                \(\omega_0\). The driving force "forces" the system to follow its rhythm — the system's "choice" is only
+                the amplitude and the phase lag with which it responds.
+            </div>
+        </section>
+
+        <section>
+            <h2>Resonance</h2>
+            <p>
+                The amplitude \(A(\omega_d)\) is maximum when \(\omega_d\) is close to \(\omega_0\). For light damping:
+            </p>
+            \[\omega_d^{\text{res}} \approx \omega_0 \qquad (\text{resonant frequency})\]
+            <p>
+                At resonance:
+            </p>
+            \[A_{\max} \approx \frac{F_0}{b\omega_0} = \frac{F_0 Q}{k}\]
+            <p>
+                where \(Q\) is the quality factor. High \(Q\) means a tall, narrow resonance peak; low \(Q\) means a
+                broad, flat peak.
+            </p>
+            <ul>
+                <li>At \(\omega_d \ll \omega_0\): the amplitude approaches \(F_0/k\) (quasi-static limit — displacement
+                    follows force)</li>
+                <li>At \(\omega_d = \omega_0\): amplitude is maximum (\(Q\) times the static displacement)</li>
+                <li>At \(\omega_d \gg \omega_0\): amplitude decreases; the massive body cannot follow the rapid driving
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Phase Response</h2>
+            <ul>
+                <li>\(\omega_d \ll \omega_0\): \(\delta \approx 0\) — oscillation is in phase with the driving force.
+                </li>
+                <li>\(\omega_d = \omega_0\): \(\delta = \frac{\pi}{2}\) — oscillation lags by 90° (velocity is in phase
+                    with force → maximum power transfer).</li>
+                <li>\(\omega_d \gg \omega_0\): \(\delta \approx \pi\) — oscillation is nearly 180° out of phase.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Sharpness of Resonance</h2>
+            <p>
+                The width of the resonance peak (at half-maximum power, or \(1/\sqrt{2}\) of maximum amplitude) is:
+            </p>
+            \[\Delta\omega = 2\gamma = \frac{b}{m} = \frac{\omega_0}{Q}\]
+            <p>
+                A high-\(Q\) system has a sharp, narrow resonance (very selective in frequency); a low-\(Q\) system has
+                a broad resonance (responds to a wide range of frequencies).
+            </p>
+        </section>
+
+        <section>
+            <h2>Examples of Resonance</h2>
+            <ul>
+                <li><strong>Tuning a radio:</strong> The LC circuit is adjusted so its natural frequency matches the
+                    broadcast frequency — resonance amplifies only the desired signal.</li>
+                <li><strong>Tacoma Narrows Bridge:</strong> Wind-driven oscillations at the bridge's natural frequency
+                    caused catastrophic resonance.</li>
+                <li><strong>Pushing a swing:</strong> Pushing at the natural frequency (in phase with velocity) builds
+                    up amplitude efficiently.</li>
+                <li><strong>MRI:</strong> Radio waves at the Larmor frequency cause nuclear spins to resonate.</li>
+            </ul>
+            <div class="insightbox">
+                Resonance can be beneficial (musical instruments, radio tuning) or destructive (bridge collapse, machine
+                vibrations). Engineering design must account for natural frequencies to avoid unintended resonance.
+            </div>
+        </section>
+
+        <section>
+            <h2>Power Absorbed at Resonance</h2>
+            <p>
+                The time-averaged power absorbed by the oscillator from the driving force is:
+            </p>
+            \[\langle P \rangle = \frac{F_0^2}{2b} \cdot \frac{1}{1 + \left(\frac{\omega_0^2 -
+            \omega_d^2}{2\gamma\omega_d}\right)^2}\]
+            <p>
+                This is maximum at \(\omega_d = \omega_0\), where \(\langle P \rangle_{\max} = \frac{F_0^2}{2b}\). At
+                resonance, all the absorbed power goes to sustaining the oscillation against damping.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

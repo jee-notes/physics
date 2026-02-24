@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Vertical Circular Motion</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+
+        <h1>Vertical Circular Motion</h1>
+        <p class="subtitle">
+            Circular motion in a vertical plane where gravity and the normal (or tension) force together provide
+            centripetal acceleration — analysed elegantly through energy conservation.
+        </p>
+
+        <section>
+            <h2>Why Energy is the Right Tool</h2>
+            <p>
+                In vertical circular motion, both the speed of the object and the direction of the centripetal force
+                change continuously. Solving Newton's second law at every point would require knowing the speed at that
+                point — which itself requires integration. Energy conservation provides the speed at any height
+                directly, making it the natural starting point.
+            </p>
+            <p>
+                Newton's second law in the radial direction then gives the tension or normal force at that point,
+                completing the analysis.
+            </p>
+        </section>
+
+        <section>
+            <h2>Object on a String (Complete Loop)</h2>
+            <p>
+                Consider a ball of mass \(m\) tied to a string of length \(R\) and whirled in a vertical circle. The
+                critical point is the top of the loop, where the string is most likely to go slack.
+            </p>
+            <h3>Condition at the Top</h3>
+            <p>
+                At the top, both the tension \(T\) and gravity act downward (toward the centre), providing centripetal
+                force:
+            </p>
+            \[T + mg = \frac{mv_{\text{top}}^2}{R}\]
+            <p>
+                For the string to remain taut, \(T \geq 0\). The minimum speed at the top corresponds to \(T = 0\):
+            </p>
+            \[mg = \frac{mv_{\min, \text{top}}^2}{R} \implies v_{\min, \text{top}} = \sqrt{gR}\]
+            <div class="insightbox">
+                \(v_{\min, \text{top}} = \sqrt{gR}\) is the threshold speed at the top for maintaining a taut string.
+                Below this, the string goes slack before reaching the top and the ball leaves circular motion.
+            </div>
+            <h3>Minimum Speed at the Bottom</h3>
+            <p>
+                Using energy conservation from bottom to top (height gain \(= 2R\)):
+            </p>
+            \[\frac{1}{2}mv_{\text{bottom}}^2 = \frac{1}{2}mv_{\text{top}}^2 + mg(2R)\]
+            <p>
+                Substituting \(v_{\text{top}} = \sqrt{gR}\):
+            </p>
+            \[\frac{1}{2}mv_{\text{bottom}}^2 = \frac{1}{2}m(gR) + 2mgR = \frac{5mgR}{2}\]
+            \[v_{\min, \text{bottom}} = \sqrt{5gR}\]
+        </section>
+
+        <section>
+            <h2>Object on a Track (Inner Surface of a Loop)</h2>
+            <p>
+                For a ball rolling on the inner surface of a circular loop (like a loop-the-loop track), the normal
+                force \(N\) replaces tension. At the top, \(N\) acts downward:
+            </p>
+            \[N + mg = \frac{mv_{\text{top}}^2}{R}\]
+            <p>
+                The condition \(N \geq 0\) gives the same threshold:
+            </p>
+            \[v_{\min, \text{top}} = \sqrt{gR} \qquad v_{\min, \text{bottom}} = \sqrt{5gR}\]
+            <p>
+                The physics is identical; only the origin of the centripetal force (string tension vs. normal force)
+                differs.
+            </p>
+        </section>
+
+        <section>
+            <h2>Object on the Outer Surface (Ball on Top of a Sphere)</h2>
+            <p>
+                A ball placed on top of a smooth sphere of radius \(R\) and given a slight nudge slides off. At angle
+                \(\theta\) from the top, the normal force acts outward (away from centre) and gravity acts downward. The
+                radial equation is:
+            </p>
+            \[mg\cos\theta - N = \frac{mv^2}{R}\]
+            <p>
+                Energy conservation from top (speed \(\approx 0\)) to angle \(\theta\) (height drop \(= R -
+                R\cos\theta\)):
+            </p>
+            \[\frac{1}{2}mv^2 = mgR(1 - \cos\theta)\]
+            <p>
+                Substituting \(v^2 = 2gR(1-\cos\theta)\):
+            </p>
+            \[N = mg\cos\theta - \frac{2mg(1-\cos\theta)}{1} = mg(3\cos\theta - 2)\]
+            <p>
+                The ball leaves the sphere when \(N = 0\):
+            </p>
+            \[3\cos\theta = 2 \implies \cos\theta = \frac{2}{3} \implies \theta \approx 48.2°\]
+            <div class="insightbox">
+                The ball always leaves the sphere at \(\cos\theta = 2/3\), independent of the radius or the mass. The
+                height at which it leaves is \(h = R\cos\theta = \frac{2R}{3}\) from the centre.
+            </div>
+        </section>
+
+        <section>
+            <h2>Tension and Normal Force as a Function of Position</h2>
+            <p>
+                For the string-in-a-loop problem, using energy conservation from the bottom (speed \(v_0\)) to angle
+                \(\theta\) measured from the bottom (height \(= R - R\cos\theta = R(1-\cos\theta)\)):
+            </p>
+            \[\frac{1}{2}mv^2 = \frac{1}{2}mv_0^2 - mgR(1-\cos\theta)\]
+            <p>
+                At angle \(\theta\) from the bottom, the radial Newton equation gives:
+            </p>
+            \[T - mg\cos\alpha = \frac{mv^2}{R}\]
+            <p>
+                where \(\alpha\) is the angle from the vertical. Substituting the expression for \(v^2\) yields tension
+                as a function of position, allowing analysis of the most and least stressed points of the string.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

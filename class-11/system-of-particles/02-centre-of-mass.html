@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of Particles | Centre of Mass</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to System of Particles
+            </a>
+        </nav>
+
+        <h1>Centre of Mass</h1>
+        <p class="subtitle">
+            The mass-weighted average position of a system — the single point that represents the entire distribution.
+        </p>
+
+        <section>
+            <h2>Definition: Discrete Particles</h2>
+            <p>
+                For a system of \(n\) particles with masses \(m_1, m_2, \ldots, m_n\) at position vectors \(\vec{r}_1,
+                \vec{r}_2, \ldots, \vec{r}_n\), the position of the centre of mass is:
+            </p>
+            \[\vec{R}_{\text{CM}} = \frac{\sum_{i=1}^{n} m_i \vec{r}_i}{\sum_{i=1}^{n} m_i} = \frac{1}{M} \sum_{i=1}^{n}
+            m_i \vec{r}_i\]
+            <p>
+                In component form:
+            </p>
+            \[x_{\text{CM}} = \frac{\sum m_i x_i}{M}, \qquad y_{\text{CM}} = \frac{\sum m_i y_i}{M}, \qquad
+            z_{\text{CM}} = \frac{\sum m_i z_i}{M}\]
+            <div class="insightbox">
+                The centre of mass is a weighted average — heavier particles pull the COM closer to themselves. For two
+                particles, the COM lies on the line joining them, dividing it in the inverse ratio of their masses.
+            </div>
+        </section>
+
+        <section>
+            <h2>Two-Particle System</h2>
+            <p>
+                For two particles \(m_1\) and \(m_2\) separated by distance \(d\), taking the origin at \(m_1\):
+            </p>
+            \[x_{\text{CM}} = \frac{m_2 \cdot d}{m_1 + m_2}\]
+            <p>
+                The COM divides the line segment from \(m_1\) to \(m_2\) such that:
+            </p>
+            \[\frac{r_1}{r_2} = \frac{m_2}{m_1}\]
+            <p>
+                where \(r_1\) and \(r_2\) are the distances of the COM from \(m_1\) and \(m_2\) respectively. Equal
+                masses → COM at the midpoint. Unequal masses → COM closer to the heavier particle.
+            </p>
+        </section>
+
+        <section>
+            <h2>Definition: Continuous Bodies</h2>
+            <p>
+                For a continuous mass distribution, the sum becomes an integral. Replacing \(m_i\) with an infinitesimal
+                mass element \(dm\):
+            </p>
+            \[\vec{R}_{\text{CM}} = \frac{1}{M} \int \vec{r}\,dm\]
+            <p>
+                The mass element \(dm\) depends on the type of distribution:
+            </p>
+            <ul>
+                <li>Linear (rod, wire): \(dm = \lambda\,dl\), where \(\lambda\) is the linear mass density.</li>
+                <li>Surface (disc, plate): \(dm = \sigma\,dA\), where \(\sigma\) is the surface mass density.</li>
+                <li>Volume (sphere, cube): \(dm = \rho\,dV\), where \(\rho\) is the volume mass density.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Standard Results</h2>
+            <h3>Uniform Bodies with Symmetry</h3>
+            <p>
+                For any uniform body with a geometrical centre of symmetry, the COM lies at the geometric centre. This
+                includes:
+            </p>
+            <ul>
+                <li>Uniform rod → midpoint</li>
+                <li>Uniform rectangular plate → intersection of diagonals</li>
+                <li>Uniform disc / ring → centre</li>
+                <li>Uniform sphere / spherical shell → centre</li>
+                <li>Uniform cube → body centre</li>
+            </ul>
+
+            <h3>Bodies Without Full Symmetry</h3>
+            <ul>
+                <li>Semicircular ring of radius \(R\): \(y_{\text{CM}} = \dfrac{2R}{\pi}\) from centre</li>
+                <li>Semicircular disc of radius \(R\): \(y_{\text{CM}} = \dfrac{4R}{3\pi}\) from centre</li>
+                <li>Hemisphere (solid) of radius \(R\): \(y_{\text{CM}} = \dfrac{3R}{8}\) from centre</li>
+                <li>Hemispherical shell of radius \(R\): \(y_{\text{CM}} = \dfrac{R}{2}\) from centre</li>
+                <li>Triangular lamina: at the centroid (intersection of medians), \(\frac{1}{3}\) of the way from each
+                    side</li>
+                <li>Solid cone of height \(h\): \(y_{\text{CM}} = \dfrac{h}{4}\) from base</li>
+                <li>Hollow cone of height \(h\): \(y_{\text{CM}} = \dfrac{h}{3}\) from base</li>
+            </ul>
+            <div class="insightbox">
+                These results are derived by integration and should be memorised for rapid use in JEE problems. The
+                pattern is clear: hollow bodies have their COM further from the base than solid bodies.
+            </div>
+        </section>
+
+        <section>
+            <h2>COM of Bodies with Cavities</h2>
+            <p>
+                To find the COM of a body with a cavity, treat it as the original complete body minus the removed
+                portion. If the complete body has mass \(M\) and COM at \(\vec{R}_1\), and the removed portion has mass
+                \(m\) and COM at \(\vec{R}_2\):
+            </p>
+            \[\vec{R}_{\text{CM}} = \frac{M\vec{R}_1 - m\vec{R}_2}{M - m}\]
+            <p>
+                This "negative mass" trick avoids complex integration with irregular boundaries.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

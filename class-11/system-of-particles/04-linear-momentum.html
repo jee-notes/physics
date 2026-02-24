@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of Particles | Linear Momentum</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to System of Particles
+            </a>
+        </nav>
+
+        <h1>Linear Momentum of a System</h1>
+        <p class="subtitle">
+            The total momentum of a system equals the total mass times the velocity of the centre of mass.
+        </p>
+
+        <section>
+            <h2>Definition</h2>
+            <p>
+                The linear momentum of a single particle of mass \(m\) and velocity \(\vec{v}\) is:
+            </p>
+            \[\vec{p} = m\vec{v}\]
+            <p>
+                For a system of \(n\) particles, the total linear momentum is the vector sum of the individual momenta:
+            </p>
+            \[\vec{P} = \sum_{i=1}^n m_i \vec{v}_i\]
+            <p>
+                Since \(\vec{v}_{\text{CM}} = \frac{1}{M}\sum m_i \vec{v}_i\), this gives the fundamental relation:
+            </p>
+            \[\vec{P} = M\,\vec{v}_{\text{CM}}\]
+            <div class="insightbox">
+                The total momentum of any system — no matter how many particles, no matter how complex their motions —
+                is simply the total mass times the velocity of the centre of mass. This remarkable result makes the COM
+                the natural representative point for the system.
+            </div>
+        </section>
+
+        <section>
+            <h2>Newton's Second Law in Momentum Form</h2>
+            <p>
+                Newton's second law, in its most general form, relates force to the rate of change of momentum:
+            </p>
+            \[\vec{F}_{\text{net}} = \frac{d\vec{p}}{dt}\]
+            <p>
+                For a system of particles (where internal forces cancel):
+            </p>
+            \[\vec{F}_{\text{ext}} = \frac{d\vec{P}}{dt} = M\,\vec{a}_{\text{CM}}\]
+            <p>
+                This is the same equation we derived from COM kinematics, but now written in terms of momentum. It is
+                the more fundamental form because it also holds for variable-mass systems (like rockets), where \(M\)
+                itself changes with time.
+            </p>
+        </section>
+
+        <section>
+            <h2>Momentum as a Vector</h2>
+            <p>
+                Momentum is a vector quantity. In two or three dimensions, momentum conservation must be applied
+                component-wise:
+            </p>
+            \[P_x = \sum m_i v_{ix} = \text{const (if } F_{\text{ext},x} = 0)\]
+            \[P_y = \sum m_i v_{iy} = \text{const (if } F_{\text{ext},y} = 0)\]
+            <p>
+                One component can be conserved even if the other is not. For example, during a projectile explosion,
+                horizontal momentum is conserved (no horizontal external force) while vertical momentum is not (gravity
+                acts).
+            </p>
+        </section>
+
+        <section>
+            <h2>Kinetic Energy and Momentum</h2>
+            <p>
+                Kinetic energy and momentum are related by:
+            </p>
+            \[K = \frac{p^2}{2m} \qquad \text{(single particle)}\]
+            <p>
+                For a system, the total kinetic energy splits into two parts:
+            </p>
+            \[K_{\text{total}} = \underbrace{\frac{1}{2}Mv_{\text{CM}}^2}_{\text{KE of COM}} +
+            \underbrace{K_{\text{rel}}}_{\text{KE relative to COM}}\]
+            <p>
+                The first term is the kinetic energy of the centre-of-mass motion. The second term is the kinetic energy
+                of particles <em>relative</em> to the COM. Only the second term is available for conversion during
+                interactions; the first is locked by momentum conservation.
+            </p>
+            <div class="insightbox">
+                This decomposition explains why a perfectly inelastic collision does not lose all kinetic energy — the
+                COM kinetic energy is preserved by momentum conservation. Only the relative kinetic energy is lost.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of Particles | Collisions</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to System of Particles
+            </a>
+        </nav>
+
+        <h1>Collisions</h1>
+        <p class="subtitle">
+            Short-duration interactions analysed through momentum conservation, energy bookkeeping, and the coefficient
+            of restitution.
+        </p>
+
+        <section>
+            <h2>What is a Collision?</h2>
+            <p>
+                A collision is a brief, intense interaction during which two or more objects exert large impulsive
+                forces on each other. The defining characteristic is that the collision duration \(\Delta t\) is so
+                small that external forces have negligible impulse during that interval.
+            </p>
+            <p>
+                Consequently, the total momentum of the colliding system is conserved across the collision. Whether
+                kinetic energy is also conserved determines the type of collision.
+            </p>
+        </section>
+
+        <section>
+            <h2>Types of Collisions</h2>
+            <h3>1. Elastic Collision</h3>
+            <p>
+                Both momentum and kinetic energy are conserved:
+            </p>
+            \[\vec{P}_i = \vec{P}_f \qquad K_i = K_f\]
+            <p>
+                Objects bounce off each other without any permanent deformation. The relative speed of separation equals
+                the relative speed of approach.
+            </p>
+
+            <h3>2. Inelastic Collision</h3>
+            <p>
+                Momentum is conserved; kinetic energy is not. Some kinetic energy is converted to internal energy (heat,
+                deformation, sound):
+            </p>
+            \[\vec{P}_i = \vec{P}_f \qquad K_i > K_f\]
+
+            <h3>3. Perfectly Inelastic Collision</h3>
+            <p>
+                The extreme case: objects stick together and move with a common velocity. This produces the maximum
+                kinetic energy loss consistent with momentum conservation:
+            </p>
+            \[v_f = \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}\]
+            <div class="insightbox">
+                "Perfectly inelastic" does not mean "all kinetic energy is lost." The COM kinetic energy
+                \(\frac{1}{2}(m_1+m_2)v_f^2\) is always preserved. Only the kinetic energy relative to the COM is fully
+                lost.
+            </div>
+        </section>
+
+        <section>
+            <h2>Head-On Elastic Collision: Formulae</h2>
+            <p>
+                For a 1D elastic collision between \(m_1\) (speed \(u_1\)) and \(m_2\) (speed \(u_2\)), solving momentum
+                and energy conservation simultaneously:
+            </p>
+            \[v_1 = \frac{(m_1 - m_2)\,u_1 + 2m_2\,u_2}{m_1 + m_2}\]
+            \[v_2 = \frac{(m_2 - m_1)\,u_2 + 2m_1\,u_1}{m_1 + m_2}\]
+            <h3>Special Cases</h3>
+            <ul>
+                <li><strong>Equal masses (\(m_1 = m_2\)):</strong> Velocities exchange. \(v_1 = u_2,\; v_2 = u_1\).</li>
+                <li><strong>Heavy projectile (\(m_1 \gg m_2\)):</strong> \(v_1 \approx u_1\); \(v_2 \approx 2u_1 -
+                    u_2\). Target shoots off at nearly twice the projectile speed.</li>
+                <li><strong>Light projectile (\(m_1 \ll m_2\)):</strong> \(v_1 \approx -u_1 + 2u_2\); \(v_2 \approx
+                    u_2\). Projectile bounces back, target barely moves.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Coefficient of Restitution</h2>
+            <p>
+                The coefficient of restitution \(e\) is the ratio of the relative speed of separation to the relative
+                speed of approach along the line of impact:
+            </p>
+            \[e = \frac{v_2 - v_1}{u_1 - u_2}\]
+            <ul>
+                <li>\(e = 1\) → elastic</li>
+                <li>\(0 < e < 1\) → partially inelastic</li>
+                <li>\(e = 0\) → perfectly inelastic</li>
+            </ul>
+            <p>
+                Using \(e\) together with momentum conservation gives two equations for two unknowns (\(v_1, v_2\)),
+                making it a complete and efficient method for solving collision problems even when energy conservation
+                cannot be applied directly.
+            </p>
+            <div class="insightbox">
+                The coefficient of restitution is an empirical property of the material and surface pair. It
+                encapsulates all the microscopic physics of deformation and recovery in a single dimensionless number.
+            </div>
+        </section>
+
+        <section>
+            <h2>Energy Lost in a Perfectly Inelastic Collision</h2>
+            <p>
+                For \(m_2\) initially at rest:
+            </p>
+            \[\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1 + m_2} \cdot u_1^2\]
+            <p>
+                This is the kinetic energy relative to the COM — exactly the fraction that can be converted to
+                non-mechanical forms.
+            </p>
+            <p>
+                In general (with coefficient of restitution \(e\)):
+            </p>
+            \[\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1 + m_2} \cdot (1 - e^2)(u_1 - u_2)^2\]
+        </section>
+
+        <section>
+            <h2>Oblique (2D) Collisions</h2>
+            <p>
+                When two objects collide at an angle, the analysis is performed along two axes:
+            </p>
+            <ul>
+                <li><strong>Along the line of impact (normal):</strong> Apply momentum conservation and the
+                    \(e\)-relation.</li>
+                <li><strong>Perpendicular to the line of impact (tangent):</strong> If surfaces are smooth, velocity
+                    components along this direction remain unchanged.</li>
+            </ul>
+            <p>
+                This reduces the 2D problem to a 1D collision along the normal, plus unchanged tangential velocities.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

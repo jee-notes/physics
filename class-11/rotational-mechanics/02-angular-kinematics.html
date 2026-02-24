@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Angular Kinematics</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Angular Kinematics</h1>
+        <p class="subtitle">
+            Describing rotational motion with angular displacement, velocity, and acceleration — the rotational
+            counterparts of \(s, v, a\).
+        </p>
+
+        <section>
+            <h2>Angular Variables</h2>
+            <p>
+                For a rigid body rotating about a fixed axis, every particle traces a circle. The rotation is described
+                by:
+            </p>
+            <ul>
+                <li><strong>Angular displacement \(\theta\)</strong> — the angle (in radians) swept by a reference line
+                    in the body.</li>
+                <li><strong>Angular velocity \(\omega\)</strong> — the rate of change of angular displacement:
+                    \[\omega = \frac{d\theta}{dt}\]
+                    SI unit: rad/s. Related to frequency: \(\omega = 2\pi f\) and \(\omega = \frac{2\pi}{T}\).</li>
+                <li><strong>Angular acceleration \(\alpha\)</strong> — the rate of change of angular velocity:
+                    \[\alpha = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2}\]
+                    SI unit: rad/s².</li>
+            </ul>
+            <div class="insightbox">
+                All particles of a rigid body share the same \(\omega\) and \(\alpha\), but their linear velocities and
+                accelerations depend on their distance from the axis.
+            </div>
+        </section>
+
+        <section>
+            <h2>Equations of Rotational Kinematics</h2>
+            <p>
+                For <strong>constant angular acceleration</strong>, the equations mirror the linear kinematics equations
+                exactly:
+            </p>
+            \[\omega = \omega_0 + \alpha t\]
+            \[\theta = \omega_0 t + \tfrac{1}{2}\alpha t^2\]
+            \[\omega^2 = \omega_0^2 + 2\alpha\theta\]
+            \[\theta = \tfrac{1}{2}(\omega_0 + \omega)t\]
+            <p>
+                These are used in exactly the same way as their linear counterparts. Simply replace \(s \to \theta\),
+                \(u \to \omega_0\), \(v \to \omega\), and \(a \to \alpha\).
+            </p>
+        </section>
+
+        <section>
+            <h2>Linear–Angular Relations</h2>
+            <p>
+                A particle at distance \(r\) from the axis has:
+            </p>
+            <ul>
+                <li>Linear speed: \(v = r\omega\)</li>
+                <li>Tangential acceleration: \(a_t = r\alpha\)</li>
+                <li>Centripetal (radial) acceleration: \(a_c = r\omega^2 = \frac{v^2}{r}\)</li>
+                <li>Net acceleration: \(a = \sqrt{a_t^2 + a_c^2}\)</li>
+            </ul>
+            <p>
+                The direction of \(\vec{v}\) is tangent to the circle; \(\vec{a}_t\) is tangent (in the direction of
+                increasing or decreasing speed); \(\vec{a}_c\) is radially inward.
+            </p>
+        </section>
+
+        <section>
+            <h2>Angular Velocity as a Vector</h2>
+            <p>
+                Angular velocity is a pseudovector directed along the axis of rotation. Its direction is given by the
+                <strong>right-hand rule</strong>: curl the fingers of the right hand in the direction of rotation, and
+                the thumb points along \(\vec{\omega}\).
+            </p>
+            <p>
+                The velocity of any particle is then:
+            </p>
+            \[\vec{v} = \vec{\omega} \times \vec{r}\]
+            <p>
+                This cross-product formulation is essential for problems involving three-dimensional geometry and for
+                understanding the vector nature of torque and angular momentum.
+            </p>
+            <div class="insightbox">
+                Only for fixed-axis rotation is \(\omega\) simply a scalar (positive or negative). In general 3D
+                rotation, the full vector nature of \(\vec{\omega}\) must be used.
+            </div>
+        </section>
+
+        <section>
+            <h2>Non-Uniform Rotation</h2>
+            <p>
+                When angular acceleration varies with time, the kinematic equations above do not apply. Instead, use
+                calculus:
+            </p>
+            \[\omega = \int \alpha\,dt + \omega_0\]
+            \[\theta = \int \omega\,dt + \theta_0\]
+            <p>
+                If \(\alpha\) is given as a function of \(\theta\) (common in dynamics problems), use:
+            </p>
+            \[\alpha = \omega\frac{d\omega}{d\theta}\]
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

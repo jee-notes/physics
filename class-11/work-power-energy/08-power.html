@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Power</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+
+        <h1>Power</h1>
+        <p class="subtitle">
+            The rate of doing work — how quickly energy is transferred or converted.
+        </p>
+
+        <section>
+            <h2>Definition</h2>
+            <p>
+                Power is the rate at which work is done, or equivalently, the rate at which energy is transferred or
+                converted. A powerful machine does the same amount of work as a less powerful one, but in less time.
+            </p>
+            <p>
+                The SI unit of power is the Watt (W), where \(1\,\text{W} = 1\,\text{J/s} =
+                1\,\text{kg\,m}^2\,\text{s}^{-3}\).
+            </p>
+            <div class="insightbox">
+                Power describes <em>how fast</em> work is done, not how much. A human climbing stairs and an elevator
+                doing the same job have the same total work, but the elevator delivers far greater power because it
+                completes it faster.
+            </div>
+        </section>
+
+        <section>
+            <h2>Average Power</h2>
+            <p>
+                Average power over a time interval \(\Delta t\) is the total work \(W\) done divided by the elapsed
+                time:
+            </p>
+            \[P_{\text{avg}} = \frac{W}{\Delta t}\]
+            <p>
+                This gives the average rate of energy transfer, smoothed out over the interval. It does not capture how
+                the power varies within the interval.
+            </p>
+        </section>
+
+        <section>
+            <h2>Instantaneous Power</h2>
+            <p>
+                Instantaneous power is the limit of average power as \(\Delta t \to 0\):
+            </p>
+            \[P = \lim_{\Delta t \to 0} \frac{\Delta W}{\Delta t} = \frac{dW}{dt}\]
+            <p>
+                Since \(dW = \vec{F} \cdot d\vec{r}\), dividing by \(dt\):
+            </p>
+            \[P = \vec{F} \cdot \frac{d\vec{r}}{dt} = \vec{F} \cdot \vec{v}\]
+            <p>
+                This is the most useful form: instantaneous power equals the dot product of the force and velocity
+                vectors at that instant.
+            </p>
+            <div class="insightbox">
+                In component form: \(P = Fv\cos\alpha\), where \(\alpha\) is the angle between the force and velocity.
+                When force and velocity are parallel (e.g., a car accelerating on a straight road), \(P = Fv\).
+            </div>
+        </section>
+
+        <section>
+            <h2>Power and Efficiency</h2>
+            <p>
+                No machine is perfectly efficient. Some of the input power is always dissipated as heat or other losses.
+                The efficiency \(\eta\) of a machine is:
+            </p>
+            \[\eta = \frac{P_{\text{output}}}{P_{\text{input}}} \times 100\%\]
+            <p>
+                An efficiency of 80% means that 80% of the input power is converted to useful output, and 20% is wasted.
+            </p>
+        </section>
+
+        <section>
+            <h2>Practical Units and Orders of Magnitude</h2>
+            <ul>
+                <li>1 horsepower (hp) = 746 W ≈ 0.75 kW (unit used for engines)</li>
+                <li>1 kWh (kilowatt-hour) = \(3.6 \times 10^6\,\text{J}\) — the commercial unit of electrical energy
+                </li>
+                <li>Human body at rest: ~80 W; during intense exercise: ~500–1000 W</li>
+                <li>A 100 W bulb converts 100 J of electrical energy to light and heat every second</li>
+            </ul>
+            <div class="insightbox">
+                The kilowatt-hour is a unit of <em>energy</em>, not power — it equals 1000 W sustained for 3600 seconds.
+                Confusing power and energy is a common error: power is the rate, energy is the total amount.
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Distinctions</h2>
+            <ul>
+                <li>Large force does not imply large power — if the velocity is small, power is small.</li>
+                <li>Large displacement does not imply large power — if the time is long, average power is small.</li>
+                <li>Zero displacement in \(dt\) means zero work in \(dt\), so \(P = 0\) for a stationary force
+                    application (even if the force is huge, e.g., pushing a wall).</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

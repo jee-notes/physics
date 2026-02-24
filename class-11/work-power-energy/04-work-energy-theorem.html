@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Work–Energy Theorem</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+
+        <h1>Work–Energy Theorem</h1>
+        <p class="subtitle">
+            Newton's second law recast in scalar form: net work equals the change in kinetic energy.
+        </p>
+
+        <section>
+            <h2>Statement</h2>
+            <p>
+                The work–energy theorem states that the net work done on a body by all forces acting on it equals the
+                change in the kinetic energy of the body:
+            </p>
+            \[W_{\text{net}} = \Delta K = K_f - K_i = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2\]
+            <p>
+                Here, \(W_{\text{net}}\) is the total work done by all forces (conservative, non-conservative, normal,
+                tension, etc.) acting on the body. This is a result of Newton's second law expressed in the language of
+                energy.
+            </p>
+            <div class="insightbox">
+                The theorem involves net work — work done by every force on the body. If you include all forces
+                correctly, this relation is exact and requires no assumptions about the nature of the forces (constant
+                or variable) or the path.
+            </div>
+        </section>
+
+        <section>
+            <h2>Proof for Variable Force</h2>
+            <p>
+                Starting from Newton's second law along the direction of motion:
+            </p>
+            \[F_{\text{net}} = ma = m\frac{dv}{dt}\]
+            <p>
+                Multiply both sides by \(v = \frac{dx}{dt}\):
+            </p>
+            \[F_{\text{net}} \cdot v = mv\frac{dv}{dt}\]
+            <p>
+                Integrating both sides with respect to time from \(t_1\) to \(t_2\):
+            </p>
+            \[\int_{t_1}^{t_2} F_{\text{net}} \cdot v\,dt = \int_{t_1}^{t_2} mv\frac{dv}{dt}\,dt\]
+            <p>
+                The left side is \(\int F_{\text{net}}\,dx = W_{\text{net}}\); the right side evaluates to
+                \(\frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2\). Hence:
+            </p>
+            \[W_{\text{net}} = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2\]
+        </section>
+
+        <section>
+            <h2>Key Points of Application</h2>
+            <ul>
+                <li><strong>All forces count:</strong> Include gravity, normal force, friction, tension, applied force —
+                    everything. Forces that do zero work (e.g., normal force on a horizontal surface) contribute 0 and
+                    can be identified and dropped without affecting the result.</li>
+                <li><strong>Path independent from the theorem's perspective:</strong> The theorem relates the states at
+                    the beginning and end. You do not need to know the intermediate details of the path.</li>
+                <li><strong>No direction involved:</strong> Because work and kinetic energy are scalars, this theorem
+                    involves no vector addition. This is its principal advantage over Newton's second law in vector
+                    form.</li>
+                <li><strong>Valid for variable forces:</strong> The derivation above holds for any force, constant or
+                    not.</li>
+            </ul>
+            <div class="insightbox">
+                The work–energy theorem is Newton's second law in disguise. It contains exactly the same physics, but
+                rearranged to relate two scalar quantities at two instants rather than a vector equation at every
+                instant.
+            </div>
+        </section>
+
+        <section>
+            <h2>When to Use It</h2>
+            <p>
+                The work–energy theorem is the preferred approach when:
+            </p>
+            <ul>
+                <li>You need to find the speed at a certain position, given the forces acting.</li>
+                <li>Forces are variable (e.g., spring force, gravity on a curved path).</li>
+                <li>The path is complex, but only the endpoints matter.</li>
+                <li>You want to find the work done by one particular force, knowing the others.</li>
+            </ul>
+            <p>
+                It is not directly useful when you need the time of motion or the force at a specific instant — for
+                those, Newton's second law in its original form is required.
+            </p>
+        </section>
+
+        <section>
+            <h2>Extension: Including Non-Conservative Work</h2>
+            <p>
+                When separating conservative and non-conservative work, the theorem can be rewritten as:
+            </p>
+            \[W_{\text{conservative}} + W_{\text{non-conservative}} = \Delta K\]
+            <p>
+                Since \(W_{\text{conservative}} = -\Delta U\) (work by a conservative force equals the decrease in
+                potential energy), this gives:
+            </p>
+            \[W_{\text{non-conservative}} = \Delta K + \Delta U = \Delta E_{\text{mech}}\]
+            <p>
+                This is the generalised form of the energy conservation principle: non-conservative work (e.g.,
+                friction) equals the change in total mechanical energy.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

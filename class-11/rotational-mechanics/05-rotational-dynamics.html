@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Newton's Second Law for Rotation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Newton's Second Law for Rotation</h1>
+        <p class="subtitle">
+            \(\tau = I\alpha\) — the equation that governs all fixed-axis rotation dynamics.
+        </p>
+
+        <section>
+            <h2>The Law</h2>
+            <p>
+                For a rigid body rotating about a fixed axis, the net external torque about that axis equals the moment
+                of inertia times the angular acceleration:
+            </p>
+            \[\tau_{\text{net}} = I\alpha\]
+            <p>
+                This is the rotational analogue of \(F = ma\). It is derived by applying \(F = ma\) to every particle in
+                the body and summing the torques (internal torques cancel by Newton's third law).
+            </p>
+            <div class="insightbox">
+                Like \(F = ma\), this equation links cause (torque) to effect (angular acceleration) through an inertia
+                parameter (\(I\)). It is valid only about a fixed axis (or about the centre of mass, even if the CM
+                accelerates).
+            </div>
+        </section>
+
+        <section>
+            <h2>Applying the Law: Method</h2>
+            <p>
+                The standard approach for fixed-axis dynamics problems:
+            </p>
+            <ul>
+                <li><strong>Step 1:</strong> Identify the axis of rotation and draw a free-body diagram showing all
+                    forces on the body.</li>
+                <li><strong>Step 2:</strong> Calculate the moment of inertia \(I\) about the axis.</li>
+                <li><strong>Step 3:</strong> Calculate the net torque \(\tau_{\text{net}}\) about the axis (using \(\tau
+                    = r_\perp F\) or \(\tau = rF\sin\theta\)).</li>
+                <li><strong>Step 4:</strong> Apply \(\tau_{\text{net}} = I\alpha\) to find \(\alpha\).</li>
+                <li><strong>Step 5:</strong> If needed, use kinematics (\(\omega = \omega_0 + \alpha t\), etc.) to find
+                    velocities and displacements.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example: Pulley with Mass</h2>
+            <p>
+                A pulley of mass \(M\), radius \(R\), treated as a uniform disc (\(I = \frac{1}{2}MR^2\)), has a block
+                of mass \(m\) hanging from a string wrapped around it. For the block:
+            </p>
+            \[mg - T = ma\]
+            <p>
+                For the pulley (torque about its axis):
+            </p>
+            \[TR = I\alpha = \tfrac{1}{2}MR^2 \cdot \frac{a}{R}\]
+            \[T = \tfrac{1}{2}Ma\]
+            <p>
+                Solving these simultaneously:
+            </p>
+            \[a = \frac{mg}{m + \frac{M}{2}}\]
+            <p>
+                The pulley's inertia reduces the acceleration compared to a massless pulley (\(a = g\)).
+            </p>
+        </section>
+
+        <section>
+            <h2>About the Centre of Mass</h2>
+            <p>
+                A powerful generalisation: \(\tau = I\alpha\) also holds about the centre of mass, even if the CM is
+                accelerating. This is used extensively in combined translation–rotation problems (like rolling):
+            </p>
+            \[\tau_{\text{CM}} = I_{\text{CM}}\alpha\]
+            <p>
+                Together with Newton's second law for the COM (\(\vec{F}_{\text{ext}} = M\vec{a}_{\text{CM}}\)), these
+                two equations fully determine the motion of a rigid body in a plane.
+            </p>
+        </section>
+
+        <section>
+            <h2>Rotational Equilibrium Revisited</h2>
+            <p>
+                If \(\alpha = 0\), then \(\tau_{\text{net}} = 0\). This is the condition for rotational equilibrium. The
+                body either does not rotate or rotates at constant angular velocity.
+            </p>
+            <p>
+                In static problems (body at rest), both \(\sum \vec{F} = 0\) and \(\sum \vec{\tau} = 0\) must hold
+                simultaneously. Classic applications include:
+            </p>
+            <ul>
+                <li>Ladders leaning against walls</li>
+                <li>Balanced beams and seesaws</li>
+                <li>Hanging signs supported by cables and hinges</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

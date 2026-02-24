@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of Particles | Variable Mass Systems</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to System of Particles
+            </a>
+        </nav>
+
+        <h1>Variable Mass Systems</h1>
+        <p class="subtitle">
+            When the mass of the system changes during the motion — rockets, conveyor belts, and rain on moving carts.
+        </p>
+
+        <section>
+            <h2>Why Newton's Second Law Needs Modification</h2>
+            <p>
+                Newton's second law in the form \(\vec{F} = m\vec{a}\) assumes that the mass \(m\) of the object is
+                constant. For a rocket burning fuel, a conveyor belt collecting material, or a raindrop growing as it
+                falls, the mass changes with time.
+            </p>
+            <p>
+                The correct form of Newton's second law — valid for all cases — is the momentum form:
+            </p>
+            \[\vec{F}_{\text{ext}} = \frac{d\vec{P}}{dt} = \frac{d(m\vec{v})}{dt}\]
+            <p>
+                When \(m\) is not constant, expanding this gives:
+            </p>
+            \[\vec{F}_{\text{ext}} = m\frac{d\vec{v}}{dt} + \vec{v}\frac{dm}{dt}\]
+            <div class="insightbox">
+                This expanded form is not the standard way to handle variable-mass problems. The correct method uses the
+                concept of <em>thrust</em>, derived by applying momentum conservation to the complete system (object +
+                ejected/acquired mass).
+            </div>
+        </section>
+
+        <section>
+            <h2>The Rocket Equation</h2>
+            <p>
+                A rocket of instantaneous mass \(m\) ejects fuel at a rate \(\frac{dm}{dt}\) (negative, since mass
+                decreases) with an exhaust velocity \(\vec{v}_e\) relative to the rocket. Using momentum conservation
+                for the system (rocket + exhaust), we derive the thrust force:
+            </p>
+            \[\vec{F}_{\text{thrust}} = -\vec{v}_e \frac{dm}{dt} = \vec{v}_e \left|\frac{dm}{dt}\right|\]
+            <p>
+                The equation of motion for the rocket (in the absence of gravity and other external forces) is:
+            </p>
+            \[m\frac{dv}{dt} = v_e \left|\frac{dm}{dt}\right|\]
+            <p>
+                Integrating:
+            </p>
+            \[v - v_0 = v_e \ln\frac{m_0}{m}\]
+            <p>
+                This is the <strong>Tsiolkovsky rocket equation</strong>. It gives the velocity gain in terms of the
+                exhaust speed and the ratio of initial to final mass.
+            </p>
+            <div class="insightbox">
+                The logarithmic dependence on mass ratio means that to achieve large velocity changes, a rocket must
+                carry a very large proportion of its initial mass as fuel. This is the fundamental limitation of
+                chemical rockets and the reason multi-stage rockets are needed for space missions.
+            </div>
+        </section>
+
+        <section>
+            <h2>Rocket with Gravity</h2>
+            <p>
+                When a rocket ascends vertically against gravity, the equation of motion becomes:
+            </p>
+            \[m\frac{dv}{dt} = v_e \left|\frac{dm}{dt}\right| - mg\]
+            <p>
+                The condition for liftoff is:
+            </p>
+            \[v_e \left|\frac{dm}{dt}\right| > mg \qquad \text{(thrust exceeds weight)}\]
+            <p>
+                The velocity after time \(t\) (if fuel burn rate is constant) is:
+            </p>
+            \[v = v_e \ln\frac{m_0}{m_0 - \mu t} - gt\]
+            <p>
+                where \(\mu = \left|\frac{dm}{dt}\right|\) is the rate of fuel ejection.
+            </p>
+        </section>
+
+        <section>
+            <h2>Conveyor Belt Problems</h2>
+            <p>
+                A conveyor belt moves at constant speed \(v\). Material is dropped onto it at a rate \(\frac{dm}{dt}\).
+                The force required to keep the belt moving at constant speed is:
+            </p>
+            \[F = v\frac{dm}{dt}\]
+            <p>
+                The power delivered by the motor:
+            </p>
+            \[P = Fv = v^2 \frac{dm}{dt}\]
+            <p>
+                The rate of increase of kinetic energy of the material:
+            </p>
+            \[\frac{dK}{dt} = \frac{1}{2}v^2 \frac{dm}{dt}\]
+            <p>
+                Half the input power goes into kinetic energy; the other half is lost to friction (heat) as the material
+                accelerates to belt speed.
+            </p>
+            <div class="insightbox">
+                This 50% efficiency is a fundamental result, independent of belt speed or material flow rate. It arises
+                because the material must be accelerated from rest to belt speed, and during that process, the relative
+                sliding between material and belt dissipates energy.
+            </div>
+        </section>
+
+        <section>
+            <h2>Rain Falling on a Moving Cart</h2>
+            <p>
+                A cart of mass \(M\) moves on a frictionless surface with initial speed \(v_0\). Rain falls vertically
+                (zero horizontal momentum) at a rate \(\frac{dm}{dt}\). Since no horizontal external force acts:
+            </p>
+            \[P_x = (M + m)v = Mv_0 = \text{const}\]
+            \[v(t) = \frac{M v_0}{M + m(t)}\]
+            <p>
+                The cart slows down as it accumulates mass (horizontal momentum is shared over increasing mass).
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

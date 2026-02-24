@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Conservation of Mechanical Energy</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+
+        <h1>Conservation of Mechanical Energy</h1>
+        <p class="subtitle">
+            When only conservative forces act, the total mechanical energy of a system remains constant.
+        </p>
+
+        <section>
+            <h2>Statement</h2>
+            <p>
+                If only conservative forces do work on a system, the total mechanical energy — the sum of kinetic energy
+                and potential energy — remains constant throughout the motion:
+            </p>
+            \[E_{\text{mech}} = K + U = \text{constant}\]
+            \[K_i + U_i = K_f + U_f\]
+            <p>
+                This is the principle of conservation of mechanical energy. It is one of the most powerful tools in
+                classical mechanics because it relates the state at any two instants without requiring knowledge of the
+                motion in between.
+            </p>
+            <div class="insightbox">
+                Conservation of mechanical energy is a special case of the broader law of conservation of energy. When
+                non-conservative forces (like friction) act, mechanical energy is not conserved, but the total energy
+                (including heat and other forms) always is.
+            </div>
+        </section>
+
+        <section>
+            <h2>Derivation</h2>
+            <p>
+                From the work–energy theorem: \(W_{\text{net}} = \Delta K\).
+            </p>
+            <p>
+                When only conservative forces act, \(W_{\text{net}} = W_{\text{conservative}} = -\Delta U\).
+            </p>
+            <p>
+                Substituting:
+            </p>
+            \[-\Delta U = \Delta K\]
+            \[\Delta K + \Delta U = 0\]
+            \[\Delta (K + U) = 0\]
+            \[K + U = \text{constant}\]
+            <p>
+                Thus, conservation of mechanical energy follows directly from the work–energy theorem and the definition
+                of potential energy.
+            </p>
+        </section>
+
+        <section>
+            <h2>When Non-Conservative Forces Are Present</h2>
+            <p>
+                When friction or other non-conservative forces also do work, mechanical energy is not conserved. The
+                generalised equation is:
+            </p>
+            \[W_{\text{non-conservative}} = \Delta E_{\text{mech}} = (K_f + U_f) - (K_i + U_i)\]
+            <p>
+                Since non-conservative forces like friction always remove energy from the mechanical system:
+            </p>
+            \[W_{\text{friction}} = -f_k \cdot d < 0\] \[K_f + U_f=K_i + U_i - f_k \cdot d\] <p>
+                where \(f_k\) is the kinetic friction force and \(d\) is the distance over which it acts.
+                </p>
+                <div class="insightbox">
+                    The energy removed by friction does not vanish — it reappears as heat. The first law of
+                    thermodynamics guarantees that total energy (mechanical + thermal + all other forms) is always
+                    conserved, even when mechanical energy alone is not.
+                </div>
+        </section>
+
+        <section>
+            <h2>Standard Applications</h2>
+            <h3>1. Object Falling from Rest</h3>
+            <p>
+                An object of mass \(m\) released from height \(h\) above the ground:
+            </p>
+            \[mgh + 0 = 0 + \frac{1}{2}mv^2 \implies v = \sqrt{2gh}\]
+            <p>
+                The result is independent of the shape of the path — whether it falls vertically, slides down a
+                frictionless incline, or rolls down a frictionless curve. This universality is the power of energy
+                methods.
+            </p>
+            <h3>2. Spring–Block System</h3>
+            <p>
+                A block of mass \(m\) attached to a spring (\(k\)) compressed by \(x_0\) and released:
+            </p>
+            \[\frac{1}{2}kx_0^2 = \frac{1}{2}mv_{\max}^2 \implies v_{\max} = x_0\sqrt{\frac{k}{m}}\]
+            <p>
+                Maximum speed occurs at the equilibrium position (\(x = 0\)) where \(U = 0\) and all energy is kinetic.
+            </p>
+        </section>
+
+        <section>
+            <h2>Energy Diagrams</h2>
+            <p>
+                A plot of \(U(x)\) versus \(x\) is called a potential energy diagram. From it, we can read off:
+            </p>
+            <ul>
+                <li><strong>Equilibrium positions:</strong> where \(dU/dx = 0\) (slope is zero → force is zero).</li>
+                <li><strong>Turning points:</strong> where \(K = 0\), i.e., where \(U = E_{\text{total}}\). The object
+                    cannot pass beyond these points (classically).</li>
+                <li><strong>Maximum speed:</strong> where \(U\) is minimum and \(K\) is maximum.</li>
+                <li><strong>Forbidden regions:</strong> where \(U > E_{\text{total}}\) — kinetic energy would have to be
+                    negative, which is impossible.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Moment of Inertia</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Moment of Inertia</h1>
+        <p class="subtitle">
+            The rotational analogue of mass — measuring a body's resistance to angular acceleration.
+        </p>
+
+        <section>
+            <h2>Definition</h2>
+            <p>
+                The moment of inertia of a system about a given axis is the sum of the products of each particle's mass
+                and the square of its perpendicular distance from the axis:
+            </p>
+            \[I = \sum m_i r_i^2 \qquad \text{(discrete)}\]
+            \[I = \int r^2\,dm \qquad \text{(continuous)}\]
+            <p>
+                SI unit: kg·m². Moment of inertia depends on:
+            </p>
+            <ul>
+                <li>Total mass of the body</li>
+                <li>Distribution of mass relative to the axis</li>
+                <li>Choice of axis</li>
+            </ul>
+            <div class="insightbox">
+                Mass resists changes in linear velocity; moment of inertia resists changes in angular velocity. A body
+                with the same mass can have very different moments of inertia depending on how its mass is distributed.
+            </div>
+        </section>
+
+        <section>
+            <h2>Radius of Gyration</h2>
+            <p>
+                The radius of gyration \(k\) is the distance from the axis at which the entire mass of the body could be
+                concentrated to give the same moment of inertia:
+            </p>
+            \[I = Mk^2 \implies k = \sqrt{\frac{I}{M}}\]
+            <p>
+                It provides a single length that characterises how "spread out" the mass is about the axis.
+            </p>
+        </section>
+
+        <section>
+            <h2>Standard Results</h2>
+            <h3>Common Bodies (about natural symmetry axis)</h3>
+            <ul>
+                <li><strong>Thin ring / hollow cylinder</strong> (about central axis): \(I = MR^2\)</li>
+                <li><strong>Solid disc / solid cylinder</strong> (about central axis): \(I = \frac{1}{2}MR^2\)</li>
+                <li><strong>Solid sphere</strong> (about any diameter): \(I = \frac{2}{5}MR^2\)</li>
+                <li><strong>Hollow sphere</strong> (about any diameter): \(I = \frac{2}{3}MR^2\)</li>
+                <li><strong>Thin rod</strong> (about centre, perpendicular): \(I = \frac{1}{12}ML^2\)</li>
+                <li><strong>Thin rod</strong> (about one end, perpendicular): \(I = \frac{1}{3}ML^2\)</li>
+                <li><strong>Rectangular plate</strong> (about centre, perp. to plane): \(I = \frac{M(a^2 + b^2)}{12}\)
+                </li>
+            </ul>
+            <div class="insightbox">
+                These results must be memorised. Every rolling and rotation problem starts by identifying the moment of
+                inertia, and incorrect values will cascade through the entire solution.
+            </div>
+        </section>
+
+        <section>
+            <h2>Parallel Axis Theorem</h2>
+            <p>
+                If the moment of inertia about an axis through the centre of mass is \(I_{\text{CM}}\), then the moment
+                of inertia about any parallel axis a distance \(d\) away is:
+            </p>
+            \[I = I_{\text{CM}} + Md^2\]
+            <p>
+                The parallel axis theorem always <em>increases</em> the moment of inertia — the CM axis gives the
+                minimum value among all parallel axes.
+            </p>
+        </section>
+
+        <section>
+            <h2>Perpendicular Axis Theorem</h2>
+            <p>
+                For a <strong>planar (2D) body</strong> lying in the \(xy\)-plane, the moment of inertia about the
+                \(z\)-axis (perpendicular to the plane) equals the sum of the moments about the \(x\)- and \(y\)-axes:
+            </p>
+            \[I_z = I_x + I_y\]
+            <p>
+                This theorem applies <strong>only</strong> to flat laminae — not to three-dimensional bodies like
+                spheres or cylinders.
+            </p>
+            <p>
+                Example: For a uniform ring, \(I_x = I_y\) by symmetry, and \(I_z = MR^2\). Therefore \(I_x = I_y =
+                \frac{1}{2}MR^2\) — the moment about any diameter.
+            </p>
+        </section>
+
+        <section>
+            <h2>Composite Bodies</h2>
+            <p>
+                For a body made of multiple parts, the total moment of inertia is the sum of the moments of the
+                individual parts (about the same axis):
+            </p>
+            \[I_{\text{total}} = I_1 + I_2 + I_3 + \cdots\]
+            <p>
+                For a body with a cavity, subtract the moment of the removed part:
+            </p>
+            \[I_{\text{with cavity}} = I_{\text{full}} - I_{\text{removed}}\]
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

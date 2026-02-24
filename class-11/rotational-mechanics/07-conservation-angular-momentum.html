@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Conservation of Angular Momentum</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Conservation of Angular Momentum</h1>
+        <p class="subtitle">
+            When the net external torque vanishes, angular momentum is preserved — with dramatic consequences.
+        </p>
+
+        <section>
+            <h2>Statement</h2>
+            <p>
+                If the net external torque on a system about a point (or axis) is zero, the total angular momentum about
+                that point (or axis) remains constant:
+            </p>
+            \[\vec{\tau}_{\text{ext}} = 0 \implies \vec{L} = \text{constant}\]
+            <p>
+                For a rigid body about a fixed axis:
+            </p>
+            \[I_1 \omega_1 = I_2 \omega_2\]
+            <p>
+                If the moment of inertia decreases, the angular velocity must increase to keep \(L\) constant, and vice
+                versa.
+            </p>
+        </section>
+
+        <section>
+            <h2>Classic Applications</h2>
+            <h3>1. Spinning Figure Skater</h3>
+            <p>
+                A skater spins slowly with arms extended (\(I\) large, \(\omega\) small). Pulling arms in reduces \(I\);
+                angular velocity \(\omega\) increases dramatically to conserve \(L\). The skater spins faster without
+                any external torque.
+            </p>
+
+            <h3>2. Diver's Tuck</h3>
+            <p>
+                A diver leaves the board with a certain angular momentum. By tucking (reducing \(I\)), the diver spins
+                faster to complete somersaults, then extends to slow the rotation before entering the water.
+            </p>
+
+            <h3>3. Collapsing Star</h3>
+            <p>
+                A rotating star that collapses under gravity shrinks to a fraction of its original size. Its moment of
+                inertia decreases enormously (\(I \propto R^2\)), so its angular velocity increases by the same factor.
+                Neutron stars spin at hundreds of revolutions per second.
+            </p>
+
+            <h3>4. Rotating Platform</h3>
+            <p>
+                A person stands on a freely rotating turntable holding a spinning wheel. Flipping the wheel reverses its
+                angular momentum; the platform must rotate in the opposite direction to compensate, keeping total \(L\)
+                constant.
+            </p>
+        </section>
+
+        <section>
+            <h2>Angular Momentum in Two-Body Problems</h2>
+            <p>
+                When two bodies interact (e.g., a disc and a ring dropped onto it), their internal torques are equal and
+                opposite. The total angular momentum is conserved:
+            </p>
+            \[I_1\omega_1 + I_2\omega_2 = (I_1 + I_2)\omega_f\]
+            <p>
+                This is the rotational analogue of a perfectly inelastic collision. Energy is not conserved — friction
+                between surfaces converts kinetic energy to heat until both rotate at the same \(\omega_f\).
+            </p>
+            <div class="insightbox">
+                Energy loss in such problems can be found by comparing initial and final rotational KE:
+                \[\Delta K = \frac{1}{2} \cdot \frac{I_1 I_2}{I_1 + I_2} \cdot (\omega_1 - \omega_2)^2\]
+                This is entirely analogous to the kinetic energy loss in a linear perfectly inelastic collision.
+            </div>
+        </section>
+
+        <section>
+            <h2>When Torque is Zero About One Point but Not Another</h2>
+            <p>
+                Angular momentum conservation applies about the specific point or axis where the net torque is zero. A
+                common situation: gravity exerts no torque about the centre of the Earth, but it does exert torque about
+                other points.
+            </p>
+            <p>
+                In collision problems, if impulsive forces act at a hinge, angular momentum is conserved about the hinge
+                (impulsive force exerts no torque about the hinge because its lever arm is zero), but <em>not</em> about
+                other points.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Kinetic Energy</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+
+        <h1>Kinetic Energy</h1>
+        <p class="subtitle">
+            The energy possessed by an object by virtue of its motion.
+        </p>
+
+        <section>
+            <h2>What is Kinetic Energy?</h2>
+            <p>
+                Kinetic energy is the energy that an object possesses due to its state of motion. Any object with mass
+                that is in motion has kinetic energy. It is always non-negative, because it depends on the square of the
+                speed.
+            </p>
+            <p>
+                For an object of mass \(m\) moving with speed \(v\), the kinetic energy is:
+            </p>
+            \[K = \frac{1}{2}mv^2\]
+            <p>
+                The unit of kinetic energy is the Joule (J), the same as the unit of work — as it must be, since work
+                can be converted into kinetic energy.
+            </p>
+            <div class="insightbox">
+                Kinetic energy depends on the square of the speed. Doubling the speed quadruples the kinetic energy.
+                This is why high-speed collisions are so much more destructive than low-speed ones.
+            </div>
+        </section>
+
+        <section>
+            <h2>Derivation from Work</h2>
+            <p>
+                The kinetic energy formula is not postulated — it is derived directly from Newton's second law and the
+                definition of work. Consider an object of mass \(m\) initially at rest, acted upon by a constant net
+                force \(F\) over a displacement \(s\):
+            </p>
+            <p>
+                From Newton's second law: \(F = ma\). Using kinematics: \(v^2 = u^2 + 2as\), so \(as = \frac{v^2 -
+                u^2}{2}\).
+            </p>
+            <p>
+                The work done by the net force is:
+            </p>
+            \[W = Fs = (ma)s = m \cdot as = m \cdot \frac{v^2 - u^2}{2} = \frac{1}{2}mv^2 - \frac{1}{2}mu^2\]
+            <p>
+                This is the work–energy theorem: the work done equals the change in kinetic energy. The kinetic energy
+                at speed \(v\) is therefore \(K = \frac{1}{2}mv^2\).
+            </p>
+            <div class="insightbox">
+                This derivation assumed constant force for simplicity. The same result holds for variable forces when
+                integration is used — the work–energy theorem is a general result, not limited to constant forces.
+            </div>
+        </section>
+
+        <section>
+            <h2>Kinetic Energy and Momentum</h2>
+            <p>
+                Kinetic energy and momentum \(p = mv\) are related. Expressing kinetic energy in terms of momentum:
+            </p>
+            \[K = \frac{1}{2}mv^2 = \frac{(mv)^2}{2m} = \frac{p^2}{2m}\]
+            <p>
+                This relation is extremely useful in collision problems and quantum mechanics. It shows that for two
+                objects with the same momentum, the lighter one has more kinetic energy.
+            </p>
+            <ul>
+                <li>Same momentum, different mass → different kinetic energy: \(K \propto \frac{1}{m}\)</li>
+                <li>Same kinetic energy, different mass → different momentum: \(p \propto \sqrt{m}\)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Frame Dependence</h2>
+            <p>
+                Kinetic energy is a frame-dependent quantity. The same object can have different kinetic energies as
+                observed from different inertial frames, because speed changes with the choice of reference frame.
+            </p>
+            <p>
+                For example, a ball thrown at \(10\,\text{m/s}\) in the forward direction from a train moving at
+                \(20\,\text{m/s}\) has speed \(30\,\text{m/s}\) relative to the ground frame and speed
+                \(10\,\text{m/s}\) relative to the train frame. The kinetic energies differ by a factor of 9.
+            </p>
+            <div class="insightbox">
+                Unlike charge in electrostatics, kinetic energy is not Lorentz-invariant. However, within a given
+                inertial frame, the work–energy theorem holds exactly, making internal consistency guaranteed as long as
+                we fix the reference frame.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

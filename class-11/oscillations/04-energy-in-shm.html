@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Energy in SHM</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Oscillations
+            </a>
+        </nav>
+
+        <h1>Energy in SHM</h1>
+        <p class="subtitle">
+            A perpetual exchange between kinetic and potential energy — with total energy locked to the amplitude
+            squared.
+        </p>
+
+        <section>
+            <h2>Kinetic Energy</h2>
+            \[K = \frac{1}{2}mv^2 = \frac{1}{2}m\omega^2(A^2 - x^2)\]
+            <ul>
+                <li>Maximum at \(x = 0\) (mean position): \(K_{\max} = \frac{1}{2}m\omega^2 A^2\)</li>
+                <li>Zero at \(x = \pm A\) (extreme positions)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Potential Energy</h2>
+            \[U = \frac{1}{2}kx^2 = \frac{1}{2}m\omega^2 x^2\]
+            <ul>
+                <li>Zero at \(x = 0\) (reference at mean position)</li>
+                <li>Maximum at \(x = \pm A\): \(U_{\max} = \frac{1}{2}m\omega^2 A^2\)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Total Energy</h2>
+            \[E = K + U = \frac{1}{2}m\omega^2 A^2 = \frac{1}{2}kA^2 = \text{constant}\]
+            <p>
+                Total energy is proportional to the square of amplitude and independent of position. It does not change
+                with time — energy merely transfers between kinetic and potential forms.
+            </p>
+            <div class="insightbox">
+                Doubling the amplitude quadruples the total energy. The total energy depends on the system parameters
+                (\(k\)) and the initial conditions (how far you pull the spring or push the pendulum), but once set, it
+                remains constant.
+            </div>
+        </section>
+
+        <section>
+            <h2>Energy as Functions of Time</h2>
+            <p>
+                Taking \(x = A\sin\omega t\):
+            </p>
+            \[K(t) = \frac{1}{2}m\omega^2 A^2 \cos^2\omega t\]
+            \[U(t) = \frac{1}{2}m\omega^2 A^2 \sin^2\omega t\]
+            <p>
+                Both \(K\) and \(U\) oscillate with frequency \(2\omega\) (twice the displacement frequency) and period
+                \(T/2\). When plotted, they are mirror images that always sum to \(E\).
+            </p>
+        </section>
+
+        <section>
+            <h2>Average Values</h2>
+            \[\langle K \rangle = \frac{E}{2} = \frac{1}{4}m\omega^2 A^2\]
+            \[\langle U \rangle = \frac{E}{2} = \frac{1}{4}m\omega^2 A^2\]
+            <p>
+                Over a complete cycle, the time-averaged KE equals the time-averaged PE, each being half the total
+                energy.
+            </p>
+        </section>
+
+        <section>
+            <h2>The Equipartition Point</h2>
+            <p>
+                At what displacement are KE and PE equal?
+            </p>
+            \[K = U \implies \frac{1}{2}m\omega^2(A^2 - x^2) = \frac{1}{2}m\omega^2 x^2\]
+            \[x = \pm\frac{A}{\sqrt{2}}\]
+            <p>
+                At \(x = \frac{A}{\sqrt{2}} \approx 0.707A\), kinetic and potential energies are each equal to \(E/2\).
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

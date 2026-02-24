@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of Particles | Conservation of Momentum</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to System of Particles
+            </a>
+        </nav>
+
+        <h1>Conservation of Linear Momentum</h1>
+        <p class="subtitle">
+            If no net external force acts on a system, its total momentum remains constant — in magnitude and direction.
+        </p>
+
+        <section>
+            <h2>Statement</h2>
+            <p>
+                If the net external force on a system of particles is zero, the total linear momentum of the system is
+                conserved:
+            </p>
+            \[\vec{F}_{\text{ext}} = 0 \implies \vec{P} = \text{constant}\]
+            \[\sum m_i \vec{v}_{i,\text{initial}} = \sum m_i \vec{v}_{i,\text{final}}\]
+            <p>
+                This is a direct consequence of Newton's second law applied to the system: \(\vec{F}_{\text{ext}} =
+                \frac{d\vec{P}}{dt}\). If \(\vec{F}_{\text{ext}} = 0\), then \(\frac{d\vec{P}}{dt} = 0\), so \(\vec{P}\)
+                does not change.
+            </p>
+            <div class="insightbox">
+                The conservation of momentum is more fundamental than any individual Newton's law. It holds even in
+                domains where Newton's laws fail — in relativistic mechanics and in quantum mechanics. It is ultimately
+                a consequence of the translational symmetry of empty space.
+            </div>
+        </section>
+
+        <section>
+            <h2>Direction-Wise Conservation</h2>
+            <p>
+                Momentum is a vector, so conservation applies independently in each direction:
+            </p>
+            <ul>
+                <li>If \(F_{\text{ext},x} = 0\), then \(P_x = \text{const}\) — even if \(P_y\) and \(P_z\) change.</li>
+                <li>This selective conservation is the key tool in problems involving projectile explosions, collisions
+                    on inclined planes, and interactions in the presence of gravity.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Applications</h2>
+            <h3>1. Recoil of a Gun</h3>
+            <p>
+                A gun of mass \(M\) fires a bullet of mass \(m\) at speed \(v\). Before firing, total momentum is zero.
+                After firing:
+            </p>
+            \[0 = mv + MV \implies V = -\frac{m}{M}v\]
+            <p>
+                The gun recoils backward with speed \(\frac{m}{M}v\). The heavier the gun, the smaller the recoil speed.
+            </p>
+
+            <h3>2. Explosion of a Stationary Object</h3>
+            <p>
+                A bomb at rest explodes into fragments. Total initial momentum is zero, so:
+            </p>
+            \[\sum m_i \vec{v}_i = 0\]
+            <p>
+                If it splits into two fragments, they move in opposite directions with momenta of equal magnitude. If
+                into three or more, the vector sum of all fragment momenta must be zero.
+            </p>
+
+            <h3>3. Man on a Boat</h3>
+            <p>
+                A man of mass \(m\) walks a distance \(d\) on a boat of mass \(M\) on frictionless water. The boat moves
+                in the opposite direction by:
+            </p>
+            \[\Delta x_{\text{boat}} = \frac{m \cdot d}{m + M}\]
+            <p>
+                The COM of the man–boat system remains stationary throughout (no external horizontal force).
+            </p>
+        </section>
+
+        <section>
+            <h2>Approximate Conservation During Collisions</h2>
+            <p>
+                In a collision, external forces (like gravity) are still present, but they are negligible compared to
+                the impulsive internal forces during the very short collision duration \(\Delta t\). The impulse from
+                gravity is \(mg\Delta t \approx 0\) when \(\Delta t\) is tiny, while the impulse from the collision
+                force \(F_{\text{collision}} \cdot \Delta t\) is finite.
+            </p>
+            <p>
+                Therefore, we can treat the system as isolated during the collision and apply momentum conservation:
+            </p>
+            \[\vec{P}_{\text{just before}} = \vec{P}_{\text{just after}}\]
+            <div class="insightbox">
+                This "impulse approximation" is valid only during the collision interval. Before and after the
+                collision, the particles follow ordinary dynamics under external forces. The conservation law bridges
+                the two regimes.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

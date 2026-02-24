@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Mass–Spring Systems</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Oscillations
+            </a>
+        </nav>
+
+        <h1>Mass–Spring Systems</h1>
+        <p class="subtitle">
+            The prototype SHM system — horizontal and vertical springs, combinations, and effective spring constants.
+        </p>
+
+        <section>
+            <h2>Horizontal Spring</h2>
+            <p>
+                A block of mass \(m\) attached to a spring of constant \(k\) on a frictionless horizontal surface
+                executes SHM. The equilibrium is at the natural length of the spring:
+            </p>
+            \[T = 2\pi\sqrt{\frac{m}{k}}, \qquad \omega = \sqrt{\frac{k}{m}}\]
+            <p>
+                The time period depends only on \(m\) and \(k\) — not on the amplitude, the direction of displacement,
+                or gravity.
+            </p>
+        </section>
+
+        <section>
+            <h2>Vertical Spring</h2>
+            <p>
+                A mass hung from a vertical spring stretches it by \(x_0 = \frac{mg}{k}\) to a new equilibrium. If
+                displaced from this equilibrium and released, it oscillates with the same period as the horizontal case:
+            </p>
+            \[T = 2\pi\sqrt{\frac{m}{k}}\]
+            <p>
+                Gravity shifts the equilibrium position but does not affect the time period. The SHM occurs about the
+                new (stretched) equilibrium, not the natural length.
+            </p>
+            <div class="insightbox">
+                To find the time period, measure displacement from the equilibrium position (where the spring force
+                balances gravity). The resulting equation of motion is \(ma = -kx\) — identical to the horizontal case.
+                Gravity drops out.
+            </div>
+        </section>
+
+        <section>
+            <h2>Springs in Combination</h2>
+            <h3>Springs in Parallel</h3>
+            <p>
+                Two springs (constants \(k_1, k_2\)) attached side-by-side to the same mass share the displacement
+                equally. The effective spring constant is:
+            </p>
+            \[k_{\text{eff}} = k_1 + k_2\]
+            \[T = 2\pi\sqrt{\frac{m}{k_1 + k_2}}\]
+
+            <h3>Springs in Series</h3>
+            <p>
+                Two springs connected end-to-end. The total extension is the sum of individual extensions under the same
+                force:
+            </p>
+            \[\frac{1}{k_{\text{eff}}} = \frac{1}{k_1} + \frac{1}{k_2} \implies k_{\text{eff}} = \frac{k_1 k_2}{k_1 +
+            k_2}\]
+            \[T = 2\pi\sqrt{\frac{m(k_1 + k_2)}{k_1 k_2}}\]
+        </section>
+
+        <section>
+            <h2>Two-Mass Spring System</h2>
+            <p>
+                Two blocks \(m_1\) and \(m_2\) connected by a spring on a frictionless surface oscillate relative to
+                each other. The reduced mass governs the SHM:
+            </p>
+            \[\mu = \frac{m_1 m_2}{m_1 + m_2}\]
+            \[T = 2\pi\sqrt{\frac{\mu}{k}}\]
+            <p>
+                The centre of mass of the system remains stationary (or moves uniformly), and both blocks oscillate
+                about the COM.
+            </p>
+        </section>
+
+        <section>
+            <h2>Cutting a Spring</h2>
+            <p>
+                A uniform spring of constant \(k\) and natural length \(L\) is cut into two pieces of lengths \(L_1\)
+                and \(L_2\). The spring constant is inversely proportional to length:
+            </p>
+            \[kL = k_1 L_1 = k_2 L_2\]
+            <p>
+                So cutting a spring into a fraction \(n/N\) of its length gives a piece with spring constant
+                \(\frac{N}{n}k\). A shorter piece is <em>stiffer</em>.
+            </p>
+            <div class="insightbox">
+                This result follows from the fact that the spring constant of a section depends on the number of coils:
+                fewer coils mean less stretch per unit force, hence a larger spring constant.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

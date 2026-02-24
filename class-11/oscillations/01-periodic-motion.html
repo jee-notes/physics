@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Periodic and Oscillatory Motion</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Oscillations
+            </a>
+        </nav>
+
+        <h1>Periodic and Oscillatory Motion</h1>
+        <p class="subtitle">
+            Distinguishing between periodic, oscillatory, and simple harmonic motion — the hierarchy of repetitive
+            motions.
+        </p>
+
+        <section>
+            <h2>Periodic Motion</h2>
+            <p>
+                A motion is <strong>periodic</strong> if it repeats itself at regular intervals of time. The smallest
+                time interval after which the motion repeats is called the <strong>time period</strong> \(T\).
+            </p>
+            <ul>
+                <li>The Earth's revolution around the Sun (\(T \approx 365.25\) days)</li>
+                <li>Rotation of the Earth about its axis (\(T = 24\) hours)</li>
+                <li>The motion of a planet in an elliptical orbit</li>
+                <li>Uniform circular motion</li>
+            </ul>
+            <p>
+                Not all periodic motions involve back-and-forth movement. A planet orbiting a star traces the same path
+                periodically but does not oscillate.
+            </p>
+        </section>
+
+        <section>
+            <h2>Oscillatory Motion</h2>
+            <p>
+                <strong>Oscillatory motion</strong> (or vibratory motion) is a periodic to-and-fro motion about a fixed
+                equilibrium position. The body moves in one direction, reaches a maximum displacement, reverses, passes
+                through equilibrium, reaches the extreme on the other side, and returns — completing one cycle.
+            </p>
+            <ul>
+                <li>A pendulum swinging</li>
+                <li>A mass on a spring bouncing up and down</li>
+                <li>A tuning fork vibrating</li>
+                <li>The needle of a sewing machine</li>
+            </ul>
+            <div class="insightbox">
+                All oscillatory motions are periodic, but not all periodic motions are oscillatory. Uniform circular
+                motion is periodic but not oscillatory — there is no equilibrium position about which the motion occurs.
+            </div>
+        </section>
+
+        <section>
+            <h2>Period, Frequency, and Angular Frequency</h2>
+            <p>
+                Three interrelated quantities describe the timing of any periodic motion:
+            </p>
+            <ul>
+                <li><strong>Time period \(T\)</strong> — the time for one complete cycle (seconds).</li>
+                <li><strong>Frequency \(f\)</strong> — the number of cycles per second: \(f = \frac{1}{T}\) (hertz, Hz).
+                </li>
+                <li><strong>Angular frequency \(\omega\)</strong> — the rate of change of phase: \(\omega = 2\pi f =
+                    \frac{2\pi}{T}\) (rad/s).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Equilibrium and Restoring Force</h2>
+            <p>
+                For oscillatory motion to occur, two conditions must be met:
+            </p>
+            <ul>
+                <li><strong>A stable equilibrium position exists</strong> — a point where the net force on the body is
+                    zero, and small displacements lead to forces that push the body <em>back</em> toward this point.
+                </li>
+                <li><strong>The restoring force increases with displacement</strong> — the further the body moves from
+                    equilibrium, the stronger the force pushing it back.</li>
+            </ul>
+            <p>
+                If the restoring force is proportional to displacement, the resulting motion is the simplest kind:
+                <em>simple harmonic motion</em>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Examples of Non-SHM Oscillations</h2>
+            <p>
+                Not all oscillatory motions are simple harmonic. The restoring force may be nonlinear:
+            </p>
+            <ul>
+                <li>A ball bouncing between two walls (force is impulsive, not proportional to displacement)</li>
+                <li>A pendulum at large angles (\(\sin\theta \neq \theta\))</li>
+                <li>A particle in a potential \(U = \alpha x^4\) (restoring force \(\propto x^3\))</li>
+            </ul>
+            <p>
+                These oscillations are still periodic, but their time period depends on amplitude, and the motion is not
+                sinusoidal.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

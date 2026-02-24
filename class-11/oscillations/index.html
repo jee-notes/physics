@@ -1,212 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oscillations | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
+    <script src="./assets/js/math.js"></script>
     <style>
-        :root { --primary: #2c3e50; --secondary: #e74c3c; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #fdecea; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+        :root {
+            --primary: #2c3e50;
+            --secondary: #8e44ad;
+            --accent: #9b59b6;
+            --bg: #f9f5fc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            background: var(--bg);
+            color: #333;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        h1,
+        h2 {
+            color: var(--primary);
+        }
+
+        h1 {
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 12px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.7;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section:not(:last-of-type)::after {
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 40px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+        }
+
+        .top-nav {
+            margin-bottom: 35px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: #f4ecf7;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            background: #e8daef;
+            transform: translateX(-3px);
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .chapter-list {
+            margin-top: 25px;
+        }
+
+        .chapter-list a {
+            display: block;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            background: #faf5fc;
+            border-left: 5px solid var(--secondary);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position: absolute;
+            right: 20px;
+            opacity: 0.4;
+            transition: all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background: #f4ecf7;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity: 1;
+            right: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+        }
     </style>
 </head>
+
 <body>
-
-<div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
-
-    <h1>Oscillations</h1>
-    <p style="text-align: center;"><em>Motion that repeats itself in time.</em></p>
-
-    <section id="oscillatory-motion">
-        <h2>1. Oscillatory Motion</h2>
-        <p>
-            <strong>Oscillatory motion</strong> is a periodic to-and-fro motion
-            of a body about a fixed equilibrium position.
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+        <h1>Oscillations</h1>
+        <p class="subtitle">
+            Periodic motion, simple harmonic oscillations, energy exchange, and the physics of swinging and vibrating
+            systems.
         </p>
 
-        <ul>
-            <li>Motion repeats in time</li>
-            <li>Occurs about a stable equilibrium</li>
-        </ul>
+        <section>
+            <h2>Conceptual Overview</h2>
+            <p>
+                Oscillatory motion is one of the most pervasive phenomena in physics. From the swinging of a pendulum to
+                the vibration of atoms in a crystal, from alternating electrical circuits to gravitational waves,
+                oscillation appears at every scale. This chapter develops the theory of the simplest and most important
+                type — <em>simple harmonic motion</em> (SHM).
+            </p>
+            <p>
+                SHM arises whenever a system experiences a restoring force proportional to its displacement from
+                equilibrium. The resulting motion is perfectly sinusoidal, fully characterised by just three quantities:
+                amplitude, angular frequency, and initial phase.
+            </p>
+        </section>
 
-        <div class="insightbox">
-            Not all periodic motions are oscillatory,
-            but all oscillations are periodic.
-        </div>
-    </section>
-
-    <section id="shm">
-        <h2>2. Simple Harmonic Motion (SHM)</h2>
-        <p>
-            A particle executes <strong>simple harmonic motion</strong> if
-            the restoring force acting on it is directly proportional
-            to its displacement from equilibrium and directed toward it.
-        </p>
-
-        <div class="formula-block">
+        <section>
+            <h2>The Central Equation</h2>
+            <p>
+                The defining equation of SHM is the second-order differential equation:
+            </p>
             \[
-            F = -kx
+            \frac{d^2x}{dt^2} = -\omega^2 x
             \]
-        </div>
-
-        <p>
-            Using Newton’s second law:
-        </p>
-
-        <div class="formula-block">
+            <p>
+                Its general solution is:
+            </p>
             \[
-            a = -\omega^2 x
-            \quad \text{where } \omega = \sqrt{\frac{k}{m}}
+            x(t) = A\sin(\omega t + \phi)
             \]
-        </div>
+            <p>
+                Every SHM problem reduces to identifying the angular frequency \(\omega\) from the physics and then
+                applying this solution. The angular frequency depends <em>only</em> on the system parameters (spring
+                constant and mass, pendulum length and gravity, etc.) — never on amplitude.
+            </p>
+        </section>
 
-        <div class="insightbox">
-            SHM is defined by the *nature of force*,
-            not by the shape of motion.
-        </div>
-    </section>
-
-    <section id="solution">
-        <h2>3. Displacement, Velocity & Acceleration</h2>
-
-        <div class="formula-block">
-            Displacement:
+        <section>
+            <h2>Energy in Oscillations</h2>
+            <p>
+                SHM is a perpetual exchange between kinetic and potential energy. At the equilibrium position, all
+                energy is kinetic; at the extreme positions, all energy is potential. The total mechanical energy
+                remains constant:
+            </p>
             \[
-            x = A\sin(\omega t + \phi)
+            E = \frac{1}{2}m\omega^2 A^2 = \text{constant}
             \]
-            <br><br>
-            Velocity:
-            \[
-            v = \omega\sqrt{A^2 - x^2}
-            \]
-            <br><br>
-            Acceleration:
-            \[
-            a = -\omega^2 x
-            \]
-        </div>
+            <p>
+                This energy is proportional to the square of the amplitude — doubling the amplitude quadruples the
+                energy. The energy oscillates between kinetic and potential forms at <em>twice</em> the frequency of the
+                displacement.
+            </p>
+        </section>
 
-        <ul>
-            <li>Velocity maximum at mean position</li>
-            <li>Acceleration maximum at extremes</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Beyond Ideal SHM</h2>
+            <p>
+                Real oscillators lose energy to their environment through friction and air resistance. This leads to
+                <strong>damped oscillations</strong>, where the amplitude gradually decreases. If an external periodic
+                force drives the system, <strong>forced oscillations</strong> result, and the phenomenon of
+                <strong>resonance</strong> occurs when the driving frequency matches the natural frequency — the
+                amplitude grows dramatically.
+            </p>
+        </section>
 
-    <section id="time-period">
-        <h2>4. Time Period & Frequency</h2>
+        <section>
+            <h2>Core Topics</h2>
+            <ul class="points-list">
+                <li><strong>Periodic and Oscillatory Motion</strong> — Definitions; period, frequency, and angular
+                    frequency.</li>
+                <li><strong>Simple Harmonic Motion</strong> — Defining equation \(a = -\omega^2 x\); force law \(F =
+                    -kx\).</li>
+                <li><strong>Kinematics of SHM</strong> — Displacement, velocity, acceleration; phase and initial
+                    conditions.</li>
+                <li><strong>Energy in SHM</strong> — KE, PE, total energy; energy graphs and average values.</li>
+                <li><strong>Mass–Spring Systems</strong> — Horizontal and vertical springs; series and parallel
+                    combinations.</li>
+                <li><strong>Simple Pendulum</strong> — Small-angle approximation; effective length and effective
+                    gravity.</li>
+                <li><strong>Physical and Torsional Pendulums</strong> — Compound pendulum; minimum time period;
+                    torsional restoring torque.</li>
+                <li><strong>Superposition of SHMs</strong> — Adding oscillations; phasor method; Lissajous figures.</li>
+                <li><strong>Damped Oscillations</strong> — Damping force; quality factor; amplitude decay.</li>
+                <li><strong>Forced Oscillations and Resonance</strong> — Driving force; resonance condition; sharpness
+                    of resonance.</li>
+            </ul>
+        </section>
 
-        <div class="formula-block">
-            \[
-            T = \frac{2\pi}{\omega}
-            \quad\quad
-            f = \frac{1}{T}
-            \]
-        </div>
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-periodic-motion.html">1. Periodic and Oscillatory Motion</a>
+                <a href="./02-shm-definition.html">2. Simple Harmonic Motion</a>
+                <a href="./03-shm-kinematics.html">3. Kinematics of SHM</a>
+                <a href="./04-energy-in-shm.html">4. Energy in SHM</a>
+                <a href="./05-spring-systems.html">5. Mass–Spring Systems</a>
+                <a href="./06-simple-pendulum.html">6. Simple Pendulum</a>
+                <a href="./07-physical-pendulum.html">7. Physical and Torsional Pendulums</a>
+                <a href="./08-superposition.html">8. Superposition of SHMs</a>
+                <a href="./09-damped-oscillations.html">9. Damped Oscillations</a>
+                <a href="./10-forced-oscillations.html">10. Forced Oscillations and Resonance</a>
+            </div>
+        </section>
 
-        <p>
-            The time period depends only on system parameters,
-            not on amplitude (for SHM).
-        </p>
-
-        <div class="insightbox">
-            Isochronism is a defining feature of SHM.
-        </div>
-    </section>
-
-    <section id="energy">
-        <h2>5. Energy in SHM</h2>
-
-        <div class="formula-block">
-            Kinetic Energy:
-            \[
-            K = \frac{1}{2}m\omega^2(A^2 - x^2)
-            \]
-            <br><br>
-            Potential Energy:
-            \[
-            U = \frac{1}{2}m\omega^2 x^2
-            \]
-            <br><br>
-            Total Energy:
-            \[
-            E = \frac{1}{2}m\omega^2 A^2
-            \]
-        </div>
-
-        <div class="insightbox">
-            Energy continuously transforms
-            between kinetic and potential forms.
-        </div>
-    </section>
-
-    <section id="spring">
-        <h2>6. Mass–Spring System</h2>
-        <p>
-            A block attached to an ideal spring on a frictionless surface
-            executes SHM.
-        </p>
-
-        <div class="formula-block">
-            \[
-            T = 2\pi\sqrt{\frac{m}{k}}
-            \]
-        </div>
-    </section>
-
-    <section id="pendulum">
-        <h2>7. Simple Pendulum</h2>
-        <p>
-            A simple pendulum performs SHM for small angular displacements.
-        </p>
-
-        <div class="formula-block">
-            \[
-            T = 2\pi\sqrt{\frac{l}{g}}
-            \]
-        </div>
-
-        <ul>
-            <li>Valid only for small angles</li>
-            <li>Independent of mass of bob</li>
-        </ul>
-
-        <div class="insightbox">
-            Pendulum SHM arises from angular approximation:
-            \(\sin\theta \approx \theta\).
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>8. Common Mistakes</h2>
-        <ul>
-            <li>Calling all periodic motion SHM</li>
-            <li>Forgetting small-angle condition</li>
-            <li>Using SHM formulas outside validity</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
-</div>
-
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
 </body>
+
 </html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Superposition of SHMs</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Oscillations
+            </a>
+        </nav>
+
+        <h1>Superposition of SHMs</h1>
+        <p class="subtitle">
+            Adding two or more harmonic motions — the phasor method, beats, and Lissajous patterns.
+        </p>
+
+        <section>
+            <h2>Principle of Superposition</h2>
+            <p>
+                When two (or more) simple harmonic motions act on a particle simultaneously, the resultant displacement
+                is the algebraic sum of the individual displacements:
+            </p>
+            \[x = x_1 + x_2\]
+            <p>
+                For two SHMs along the same direction:
+            </p>
+            \[x_1 = A_1\sin(\omega t + \phi_1), \qquad x_2 = A_2\sin(\omega t + \phi_2)\]
+        </section>
+
+        <section>
+            <h2>Same Frequency — Phasor Method</h2>
+            <p>
+                When two SHMs have the <strong>same frequency</strong>, their sum is also SHM of the same frequency:
+            </p>
+            \[x = A\sin(\omega t + \phi)\]
+            <p>
+                The resultant amplitude \(A\) and phase \(\phi\) are found by treating each SHM as a rotating vector
+                (phasor) and performing vector addition:
+            </p>
+            \[A = \sqrt{A_1^2 + A_2^2 + 2A_1 A_2\cos(\phi_2 - \phi_1)}\]
+            \[\tan\phi = \frac{A_1\sin\phi_1 + A_2\sin\phi_2}{A_1\cos\phi_1 + A_2\cos\phi_2}\]
+            <p>
+                Special cases:
+            </p>
+            <ul>
+                <li><strong>In phase (\(\Delta\phi = 0\)):</strong> \(A = A_1 + A_2\) (constructive)</li>
+                <li><strong>Opposite phase (\(\Delta\phi = \pi\)):</strong> \(A = |A_1 - A_2|\) (destructive)</li>
+                <li><strong>Quadrature (\(\Delta\phi = \pi/2\)):</strong> \(A = \sqrt{A_1^2 + A_2^2}\)</li>
+            </ul>
+            <div class="insightbox">
+                The phasor method converts trigonometric addition into simple vector addition in 2D. This is far faster
+                than expanding and simplifying trig identities, especially for three or more SHMs.
+            </div>
+        </section>
+
+        <section>
+            <h2>Different Frequencies — Beats</h2>
+            <p>
+                When two SHMs of nearly equal frequencies \(\omega_1\) and \(\omega_2\) (with equal amplitudes \(A\))
+                are superposed:
+            </p>
+            \[x = x_1 + x_2 = 2A\cos\left(\frac{\omega_1 - \omega_2}{2}t\right)\sin\left(\frac{\omega_1 +
+            \omega_2}{2}t\right)\]
+            <p>
+                This describes an oscillation at the average frequency \(\frac{\omega_1 + \omega_2}{2}\) with an
+                amplitude that slowly varies at the difference frequency \(\frac{|\omega_1 - \omega_2|}{2}\).
+            </p>
+            <p>
+                The <strong>beat frequency</strong> (rate of amplitude maxima) is:
+            </p>
+            \[f_{\text{beat}} = |f_1 - f_2|\]
+        </section>
+
+        <section>
+            <h2>Perpendicular SHMs — Lissajous Figures</h2>
+            <p>
+                When two SHMs act in perpendicular directions:
+            </p>
+            \[x = A\sin(\omega_1 t), \qquad y = B\sin(\omega_2 t + \delta)\]
+            <p>
+                the particle traces a two-dimensional path called a <strong>Lissajous figure</strong>.
+            </p>
+            <ul>
+                <li>If \(\omega_1 = \omega_2\) and \(\delta = 0\): straight line</li>
+                <li>If \(\omega_1 = \omega_2\) and \(\delta = \pi/2\): ellipse (circle when \(A = B\))</li>
+                <li>If \(\omega_1/\omega_2 =\) simple ratio: closed curves (figure-8, etc.)</li>
+                <li>If \(\omega_1/\omega_2\) is irrational: the path never closes</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Superposition of Many SHMs</h2>
+            <p>
+                For \(N\) SHMs of the same frequency with amplitudes \(A_1, A_2, \ldots, A_N\) and phases \(\phi_1,
+                \phi_2, \ldots, \phi_N\), the phasor method extends naturally:
+            </p>
+            \[A_x = \sum_{i=1}^{N} A_i\cos\phi_i, \qquad A_y = \sum_{i=1}^{N} A_i\sin\phi_i\]
+            \[A = \sqrt{A_x^2 + A_y^2}, \qquad \tan\phi = \frac{A_y}{A_x}\]
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

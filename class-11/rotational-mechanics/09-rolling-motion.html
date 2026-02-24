@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Rolling Motion</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Rolling Motion</h1>
+        <p class="subtitle">
+            The combination of translation and rotation with the constraint \(v_{\text{CM}} = \omega R\).
+        </p>
+
+        <section>
+            <h2>What is Rolling Without Slipping?</h2>
+            <p>
+                Rolling without slipping (pure rolling) means the point of the body in contact with the surface is
+                instantaneously at rest. The body both translates (COM moves) and rotates (spins about an axis through
+                the COM), with a strict kinematic link:
+            </p>
+            \[v_{\text{CM}} = \omega R\]
+            <p>
+                where \(R\) is the radius. Differentiating:
+            </p>
+            \[a_{\text{CM}} = \alpha R\]
+            <p>
+                This condition eliminates one variable, making rolling problems one degree of freedom simpler than
+                general combined motion.
+            </p>
+            <div class="insightbox">
+                The rolling condition \(v = \omega R\) relates the translational and rotational speeds. If \(v > \omega
+                R\), there is forward slipping (skidding). If \(v < \omega R\), there is backward slipping (spinning in
+                    place). Pure rolling lies exactly at the boundary. </div>
+        </section>
+
+        <section>
+            <h2>Velocity Distribution in Rolling</h2>
+            <p>
+                For a disc rolling to the right with COM velocity \(v\):
+            </p>
+            <ul>
+                <li><strong>Bottom point (contact):</strong> \(v_{\text{trans}} - v_{\text{rot}} = v - \omega R = 0\).
+                    Instantaneously at rest.</li>
+                <li><strong>Centre (COM):</strong> \(v_{\text{trans}} = v\). Only translational velocity.</li>
+                <li><strong>Top point:</strong> \(v_{\text{trans}} + v_{\text{rot}} = v + \omega R = 2v\). Fastest point
+                    on the body.</li>
+            </ul>
+            <p>
+                In general, the velocity of any point at angle \(\phi\) from the bottom is:
+            </p>
+            \[v_{\text{point}} = 2v\sin\left(\frac{\phi}{2}\right)\]
+        </section>
+
+        <section>
+            <h2>Instantaneous Axis of Rotation</h2>
+            <p>
+                Rolling can be viewed as pure rotation about the contact point (the <strong>instantaneous axis of
+                    rotation</strong>). The moment of inertia about this axis is:
+            </p>
+            \[I_{\text{contact}} = I_{\text{CM}} + MR^2 \qquad \text{(parallel axis theorem)}\]
+            <p>
+                The total kinetic energy can then be written as:
+            </p>
+            \[K = \frac{1}{2}I_{\text{contact}}\omega^2 = \frac{1}{2}(I_{\text{CM}} + MR^2)\omega^2\]
+            <p>
+                This equals \(\frac{1}{2}Mv^2 + \frac{1}{2}I_{\text{CM}}\omega^2\) — confirming that both viewpoints
+                give the same result.
+            </p>
+        </section>
+
+        <section>
+            <h2>Kinetic Energy of Rolling</h2>
+            <p>
+                The total KE of a body rolling without slipping:
+            </p>
+            \[K = \frac{1}{2}Mv^2 + \frac{1}{2}I_{\text{CM}}\omega^2 = \frac{1}{2}Mv^2\left(1 + \frac{k^2}{R^2}\right)\]
+            <p>
+                where \(k\) is the radius of gyration (\(I_{\text{CM}} = Mk^2\)). The fraction of total KE that is
+                rotational:
+            </p>
+            \[\frac{K_{\text{rot}}}{K_{\text{total}}} = \frac{k^2/R^2}{1 + k^2/R^2}\]
+            <ul>
+                <li>Solid sphere (\(k^2/R^2 = 2/5\)): 2/7 of KE is rotational</li>
+                <li>Solid cylinder (\(k^2/R^2 = 1/2\)): 1/3 of KE is rotational</li>
+                <li>Hollow sphere (\(k^2/R^2 = 2/3\)): 2/5 of KE is rotational</li>
+                <li>Thin ring (\(k^2/R^2 = 1\)): 1/2 of KE is rotational</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>The Role of Friction in Rolling</h2>
+            <p>
+                Static friction is essential for rolling without slipping — it provides the torque needed to maintain
+                the constraint \(v = \omega R\). However:
+            </p>
+            <ul>
+                <li>The contact point has zero velocity, so static friction does <strong>no work</strong>.</li>
+                <li>Mechanical energy is therefore conserved in pure rolling (if no other dissipative forces act).</li>
+                <li>If external forces would cause the body to slip, friction acts to prevent slipping. If the required
+                    friction exceeds \(\mu_s N\), the body begins to slip.</li>
+            </ul>
+            <div class="insightbox">
+                This is a crucial subtlety: friction is present and essential, yet does no work. It redirects energy
+                between translational and rotational forms without dissipating any.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

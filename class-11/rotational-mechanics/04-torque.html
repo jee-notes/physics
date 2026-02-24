@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotational Mechanics | Torque</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Rotational Mechanics
+            </a>
+        </nav>
+
+        <h1>Torque</h1>
+        <p class="subtitle">
+            The rotational analogue of force — the cause of angular acceleration.
+        </p>
+
+        <section>
+            <h2>Definition</h2>
+            <p>
+                The torque of a force \(\vec{F}\) about a point \(O\) is defined as the cross product of the position
+                vector \(\vec{r}\) (from \(O\) to the point of application) and the force:
+            </p>
+            \[\vec{\tau} = \vec{r} \times \vec{F}\]
+            <p>
+                The magnitude is:
+            </p>
+            \[\tau = rF\sin\theta = F \cdot d\]
+            <p>
+                where \(\theta\) is the angle between \(\vec{r}\) and \(\vec{F}\), and \(d = r\sin\theta\) is the
+                <strong>perpendicular distance</strong> from \(O\) to the line of action — also called the <strong>lever
+                    arm</strong> or <strong>moment arm</strong>.
+            </p>
+            <div class="insightbox">
+                Torque is zero when the force passes through the pivot (lever arm = 0), or when the force is parallel to
+                the position vector (\(\sin\theta = 0\)). A large force does not guarantee a large torque — the lever
+                arm matters equally.
+            </div>
+        </section>
+
+        <section>
+            <h2>Direction of Torque</h2>
+            <p>
+                By the right-hand rule for cross products, the torque vector is perpendicular to the plane containing
+                \(\vec{r}\) and \(\vec{F}\). For rotation in a plane:
+            </p>
+            <ul>
+                <li>Counterclockwise (CCW) torque → positive (out of the page)</li>
+                <li>Clockwise (CW) torque → negative (into the page)</li>
+            </ul>
+            <p>
+                The sign convention is chosen to match the axis direction using the right-hand rule.
+            </p>
+        </section>
+
+        <section>
+            <h2>Couple</h2>
+            <p>
+                A <strong>couple</strong> consists of two equal and opposite forces whose lines of action do not
+                coincide. The net force is zero, but the net torque is non-zero:
+            </p>
+            \[\tau_{\text{couple}} = F \cdot d\]
+            <p>
+                where \(d\) is the perpendicular distance between the two lines of action. The remarkable property of a
+                couple is:
+            </p>
+            <ul>
+                <li>The torque is the same about <em>every</em> point. (It does not depend on the choice of pivot.)</li>
+                <li>A couple produces pure rotation without any translation.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Torque About an Axis</h2>
+            <p>
+                In fixed-axis rotation problems, we need the component of torque along the rotation axis. If the axis is
+                along \(\hat{n}\):
+            </p>
+            \[\tau_{\text{axis}} = \hat{n} \cdot (\vec{r} \times \vec{F})\]
+            <p>
+                Only forces (or components of forces) that tend to rotate the body about the given axis contribute.
+                Forces parallel to the axis or forces whose line of action intersects the axis produce zero torque about
+                that axis.
+            </p>
+        </section>
+
+        <section>
+            <h2>Conditions for Equilibrium</h2>
+            <p>
+                A rigid body is in <strong>static equilibrium</strong> (no translation and no rotation) when:
+            </p>
+            \[\sum \vec{F} = 0 \qquad \text{(translational equilibrium)}\]
+            \[\sum \vec{\tau} = 0 \qquad \text{(rotational equilibrium)}\]
+            <p>
+                The torque equilibrium condition must hold about <em>any</em> point (if the net force is zero, the net
+                torque is the same about all points). In practice, choose a pivot that eliminates unknown forces from
+                the torque equation.
+            </p>
+            <div class="insightbox">
+                Smart choice of pivot can dramatically simplify equilibrium problems. Choose a point where the most
+                unknown forces act — their torques vanish, leaving fewer unknowns.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

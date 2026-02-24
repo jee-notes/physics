@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscillations | Kinematics of SHM</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Oscillations
+            </a>
+        </nav>
+
+        <h1>Kinematics of SHM</h1>
+        <p class="subtitle">
+            Displacement, velocity, and acceleration — three sinusoidal functions locked in a permanent phase
+            relationship.
+        </p>
+
+        <section>
+            <h2>Displacement</h2>
+            \[x(t) = A\sin(\omega t + \phi)\]
+            <p>
+                The displacement oscillates between \(-A\) and \(+A\). The argument of the sine — \((\omega t + \phi)\)
+                — is called the <strong>phase</strong> of the motion.
+            </p>
+        </section>
+
+        <section>
+            <h2>Velocity</h2>
+            <p>
+                Differentiating displacement:
+            </p>
+            \[v(t) = \frac{dx}{dt} = A\omega\cos(\omega t + \phi)\]
+            <p>
+                In terms of displacement:
+            </p>
+            \[v = \pm\omega\sqrt{A^2 - x^2}\]
+            <ul>
+                <li>Maximum at equilibrium (\(x = 0\)): \(v_{\max} = A\omega\)</li>
+                <li>Zero at extremes (\(x = \pm A\))</li>
+            </ul>
+            <p>
+                Velocity leads displacement by a phase of \(\frac{\pi}{2}\) (90°).
+            </p>
+        </section>
+
+        <section>
+            <h2>Acceleration</h2>
+            <p>
+                Differentiating velocity:
+            </p>
+            \[a(t) = \frac{dv}{dt} = -A\omega^2\sin(\omega t + \phi) = -\omega^2 x\]
+            <ul>
+                <li>Maximum at extremes (\(x = \pm A\)): \(a_{\max} = A\omega^2\)</li>
+                <li>Zero at equilibrium (\(x = 0\))</li>
+            </ul>
+            <p>
+                Acceleration leads displacement by a phase of \(\pi\) (180°) — it is always opposite in direction to
+                displacement.
+            </p>
+            <div class="insightbox">
+                The phase relationships are: velocity is 90° ahead of displacement, acceleration is 180° ahead (i.e.,
+                opposite). When displacement is maximum, velocity is zero and acceleration is maximum (pointing back
+                toward equilibrium). When displacement is zero, velocity is maximum and acceleration is zero.
+            </div>
+        </section>
+
+        <section>
+            <h2>Phase and Initial Conditions</h2>
+            <p>
+                The phase constant \(\phi\) is determined by the initial conditions \(x(0) = x_0\) and \(v(0) = v_0\):
+            </p>
+            \[x_0 = A\sin\phi, \qquad v_0 = A\omega\cos\phi\]
+            \[\tan\phi = \frac{\omega x_0}{v_0}, \qquad A = \sqrt{x_0^2 + \left(\frac{v_0}{\omega}\right)^2}\]
+            <p>
+                Common initial conditions:
+            </p>
+            <ul>
+                <li>Released from extreme (\(x_0 = A, v_0 = 0\)): \(\phi = \frac{\pi}{2}\), so \(x = A\cos\omega t\).
+                </li>
+                <li>Passing through mean position moving right (\(x_0 = 0, v_0 > 0\)): \(\phi = 0\), so \(x =
+                    A\sin\omega t\).</li>
+                <li>Passing through mean position moving left (\(x_0 = 0, v_0 < 0\)): \(\phi=\pi\).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Graphs of SHM</h2>
+            <p>
+                The \(x\text{–}t\), \(v\text{–}t\), and \(a\text{–}t\) graphs are all sinusoidal with the same period
+                \(T\), but shifted by quarter periods:
+            </p>
+            <ul>
+                <li>\(x\text{–}t\): sine wave, amplitude \(A\)</li>
+                <li>\(v\text{–}t\): cosine wave (shifted left by \(T/4\)), amplitude \(A\omega\)</li>
+                <li>\(a\text{–}t\): negative sine wave (shifted left by \(T/2\)), amplitude \(A\omega^2\)</li>
+            </ul>
+            <p>
+                The \(v\text{–}x\) graph is an ellipse: \(\frac{v^2}{(A\omega)^2} + \frac{x^2}{A^2} = 1\).
+            </p>
+            <p>
+                The \(a\text{–}x\) graph is a straight line through the origin with slope \(-\omega^2\).
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>
