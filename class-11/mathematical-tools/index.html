@@ -1,234 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathematical Tools | JEE Physics Notes</title>
-    <script src="./assets/js/math.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #e67e22;
-            --accent: #f39c12;
-            --bg: #f4f7fa;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematical Tools | JEE Physics Notes</title>
+<script src="./assets/js/math.js"></script>
+<style>
+:root {
+--primary: #2c3e50;
+--secondary: #e67e22;
+--accent: #f39c12;
+--bg: #f4f7fa;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            background: var(--bg);
-            color: #333;
-            margin: 0;
-            padding: 30px;
-        }
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.7;
+background: var(--bg);
+color: #333;
+margin: 0;
+padding: 30px;
+}
 
-        .container {
-            max-width: 950px;
-            margin: auto;
-            background: #fff;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
+.container {
+max-width: 950px;
+margin: auto;
+background: #fff;
+padding: 50px;
+border-radius: 16px;
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
 
-        h1,
-        h2,
-        h3 {
-            color: var(--primary);
-        }
+h1,
+h2,
+h3 {
+color: var(--primary);
+}
 
-        h1 {
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 12px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
+h1 {
+border-bottom: 3px solid var(--secondary);
+padding-bottom: 12px;
+text-align: center;
+margin-bottom: 10px;
+}
 
-        .subtitle {
-            text-align: center;
-            opacity: 0.7;
-            margin-bottom: 35px;
-            font-size: 0.95rem;
-        }
+.subtitle {
+text-align: center;
+opacity: 0.7;
+margin-bottom: 35px;
+font-size: 0.95rem;
+}
 
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 15px;
-        }
+h2 {
+margin-top: 40px;
+margin-bottom: 15px;
+}
 
-        section {
-            margin-bottom: 40px;
-        }
+section {
+margin-bottom: 40px;
+}
 
-        section:not(:last-of-type)::after {
-            content: "";
-            display: block;
-            height: 1px;
-            margin-top: 40px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
-        }
+section:not(:last-of-type)::after {
+content: "";
+display: block;
+height: 1px;
+margin-top: 40px;
+background: linear-gradient(to right, transparent, #ddd, transparent);
+}
 
-        .top-nav {
-            margin-bottom: 35px;
-        }
+.top-nav {
+margin-bottom: 35px;
+}
 
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            background: #fff3e0;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--primary);
-            transition: all 0.25s ease;
-        }
+.back-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 8px 14px;
+background: #fff3e0;
+border-radius: 8px;
+font-weight: 600;
+text-decoration: none;
+color: var(--primary);
+transition: all 0.25s ease;
+}
 
-        .back-btn:hover {
-            background: #ffe0b2;
-            transform: translateX(-3px);
-        }
+.back-btn:hover {
+background: #ffe0b2;
+transform: translateX(-3px);
+}
 
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
+ul {
+margin-top: 10px;
+padding-left: 20px;
+}
 
-        .chapter-list {
-            margin-top: 25px;
-        }
+.chapter-list {
+margin-top: 25px;
+}
 
-        .chapter-list a {
-            display: block;
-            padding: 18px 20px;
-            margin-bottom: 15px;
-            background: #fdfaf9;
-            border-left: 5px solid var(--secondary);
-            border-radius: 10px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: all 0.25s ease;
-            position: relative;
-        }
+.chapter-list a {
+display: block;
+padding: 18px 20px;
+margin-bottom: 15px;
+background: #fdfaf9;
+border-left: 5px solid var(--secondary);
+border-radius: 10px;
+text-decoration: none;
+color: #2c3e50;
+font-weight: 500;
+transition: all 0.25s ease;
+position: relative;
+}
 
-        .chapter-list a::after {
-            content: "→";
-            position: absolute;
-            right: 20px;
-            opacity: 0.4;
-            transition: all 0.25s ease;
-        }
+.chapter-list a::after {
+content: "→";
+position: absolute;
+right: 20px;
+opacity: 0.4;
+transition: all 0.25s ease;
+}
 
-        .chapter-list a:hover {
-            background: #fff3e0;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-        }
+.chapter-list a:hover {
+background: #fff3e0;
+transform: translateY(-3px);
+box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
 
-        .chapter-list a:hover::after {
-            opacity: 1;
-            right: 15px;
-        }
+.chapter-list a:hover::after {
+opacity: 1;
+right: 15px;
+}
 
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
+footer {
+text-align: center;
+margin-top: 60px;
+color: #7f8c8d;
+font-size: 0.9rem;
+}
 
-        hr {
-            margin: 40px 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #ccc, transparent);
-        }
-    </style>
+hr {
+margin: 40px 0;
+border: none;
+height: 1px;
+background: linear-gradient(to right, transparent, #ccc, transparent);
+}
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
-        <h1>Mathematical Tools</h1>
-        <p class="subtitle">
-            The logic and language used to describe the laws of physics.
-        </p>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Mathematical Tools</h1>
+<p class="subtitle">
+The logic and language used to describe the laws of physics.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Physics is the study of the universe, but Mathematics is the language it is written in. To understand how forces act, how energy flows, or how particles move, we must first master the tools that allow us to quantify change and describe structure.
+</p>
+<p>
+From the basics of Algebra to the dynamic shifts of Calculus and the directional logic of Vectors, these tools are not just formulas—they are the lenses through which we see physical reality.
+</p>
+</section>
 
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                Physics is the study of the universe, but Mathematics is the language it is written in. To understand
-                how forces act, how energy flows, or how particles move, we must first master the tools that allow us to
-                quantify change and describe structure.
-            </p>
-            <p>
-                From the basics of Algebra to the dynamic shifts of Calculus and the directional logic of Vectors, these
-                tools are not just formulas—they are the lenses through which we see physical reality.
-            </p>
-        </section>
+<section>
+<h2>Approximations in Physics</h2>
+<p>
+In the real world, things are often messy. Physics simplifies this by using approximations. Whether it's the <strong>Binomial Theorem</strong> for small changes or treating a complex shape as a uniform sphere, knowing when and how to simplify is what separates a student from a physicist.
+</p>
+</section>
 
-        <section>
-            <h2>Approximations in Physics</h2>
-            <p>
-                In the real world, things are often messy. Physics simplifies this by using approximations. Whether it's
-                the <strong>Binomial Theorem</strong> for small changes or treating a complex shape as a uniform sphere,
-                knowing when and how to simplify is what separates a student from a physicist.
-            </p>
-        </section>
-
-        <section>
-            <h2>Sign Management</h2>
-            <p>
-                In Mathematics, a minus sign is just a subtraction. In Physics, it indicates direction, loss, or
-                attraction. Graphical analysis is our primary tool for managing these signs, helping us visualize where
-                a system starts, where it ends, and how it behaves in between.
-            </p>
-            <div class="insightbox">
-                A consistent sign convention is more important than the calculation itself. Most errors in JEE physics
-                are not mathematical, but directional.
-            </div>
-        </section>
-
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>Algebra & Approximations</strong> — Quadratic systems and the power of the Binomial
-                    expansion.</li>
-                <li><strong>Geometry & Mensuration</strong> — Calculating volumes and areas of idealized physical
-                    bodies.</li>
-                <li><strong>Functions & Graphs</strong> — Understanding relationships and visual sign management.</li>
-                <li><strong>Differentiation</strong> — The study of instantaneous rates of change (Velocity,
-                    Acceleration).</li>
-                <li><strong>Integration</strong> — Summing up small elements to find total work, flux, or energy.</li>
-                <li><strong>Vector Basics</strong> — Directional quantities and their algebraic manipulations.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-algebra-and-approximations.html">1. Algebra & Binomial Approximations</a>
-                <a href="./02-geometry-and-mensuration.html">2. Geometry of Physical Shapes</a>
-                <a href="./03-functions-and-graphs.html">3. Functions and Graphical Analysis</a>
-                <a href="./04-calculus-differentiation.html">4. Differentiation: The Rate of Change</a>
-                <a href="./05-calculus-integration.html">5. Integration: Accumulation of Quantities</a>
-                <a href="./06-vectors-basics.html">6. Vectors: Magnitude and Direction</a>
-				<a href="./07-position-vectors-reg-polygon.html">7. Vector Regular Polygon</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<section>
+<h2>Sign Management</h2>
+<p>
+In Mathematics, a minus sign is just a subtraction. In Physics, it indicates direction, loss, or attraction. Graphical analysis is our primary tool for managing these signs, helping us visualize where a system starts, where it ends, and how it behaves in between.
+</p>
+<div class="insightbox">
+A consistent sign convention is more important than the calculation itself. Most errors in problem solving are not mathematical, but directional.
+</div>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+<li><strong>Algebra</strong> — Quadratic systems and the power of the Binomial expansion.</li>
+<li><strong>Geometry</strong> — Calculating volumes and areas of idealized physical bodies.</li>
+<li><strong>Trigonometry</strong> — Relating Lengths and Angles and Periodic Functions.</li>
+<li><strong>Functions</strong> — Understanding relationships and visual sign management.</li>
+<li><strong>Differentiation</strong> — The study of instantaneous rates of change (Velocity, Acceleration).</li>
+<li><strong>Integration</strong> — Summing up small elements to find total work, flux, or energy.</li>
+<li><strong>Graphs</strong> — Together  with Functions and Calculus, we can plot graphs.</li>
+<li><strong>Vector Basics</strong> — Directional quantities and their algebraic manipulations.</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-algebra-and-approximations.html">1. Algebra & Binomial Approximations</a>
+<a href="./02-geometry-and-mensuration.html">2. Geometry of Physical Shapes</a>
+<a href="./03-functions-and-graphs.html">3. Functions and Graphical Analysis</a>
+<a href="./04-calculus-differentiation.html">4. Differentiation: The Rate of Change</a>
+<a href="./05-calculus-integration.html">5. Integration: Accumulation of Quantities</a>
+<a href="./06-vectors-basics.html">6. Vectors: Magnitude and Direction</a>
+<a href="./07-position-vectors-reg-polygon.html">7. Vector Regular Polygon</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
