@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Motion | Vertical Motion</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Circular Motion
+            </a>
+        </nav>
+
+        <h1>Vertical Circular Motion and Energy</h1>
+        <p class="subtitle">
+            Non-uniform circular motion influenced by gravity.
+        </p>
+
+        <section>
+            <h2>1. Non-Uniform Nature</h2>
+            <p>
+                When an object tethered to a string moves in a vertical circle, gravity acts as a tangential force,
+                changing the object's speed at every point. This is a classic application of the Work-Energy Theorem.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Tension Analysis</h2>
+            <p>
+                At any point (angle \(\theta\) from the bottom), the tension \(T\) in the string is:
+            </p>
+            <div class="formula-block">
+                \[ T - mg \cos \theta = \frac{mv^2}{R} \]
+            </div>
+            <ul>
+                <li><strong>At Bottom (\(\theta = 0\)):</strong> \( T_L = mg + \frac{mv_L^2}{R} \) (Maximum Tension)
+                </li>
+                <li><strong>At Top (\(\theta = \pi\)):</strong> \( T_H = \frac{mv_H^2}{R} - mg \) (Minimum Tension)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Critical Values for a String</h2>
+            <p>
+                For the object to complete the circle without the string slacking, the tension at the top must satisfy
+                \(T_H \geq 0\).
+            </p>
+            <div class="formula-block">
+                \[ v_{Top} \geq \sqrt{gR} \]
+                \[ v_{Bottom} \geq \sqrt{5gR} \]
+            </div>
+            <div class="insightbox">
+                If the velocity at the bottom is between \(\sqrt{2gR}\) and \(\sqrt{5gR}\), the string will slack
+                somewhere in the upper half, and the particle will follow a parabolic path until the string becomes taut
+                again.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

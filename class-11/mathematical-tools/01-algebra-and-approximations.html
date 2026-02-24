@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Tools | Algebra & Approximations</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Mathematical Tools
+            </a>
+        </nav>
+
+        <h1>Algebra & Binomial Approximations</h1>
+        <p class="subtitle">
+            Simplifying complex expressions for physical analysis.
+        </p>
+
+        <section>
+            <h2>1. Quadratic Equations</h2>
+            <p>
+                Quadratic equations frequently appear in Kinematics, especially when solving the displacement-time
+                relationship \(s = ut + \frac{1}{2}at^2\).
+            </p>
+            <div class="formula-block">
+                \[ ax^2 + bx + c = 0 \implies x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
+            </div>
+            <div class="insightbox">
+                In physics, we often must choose only one of the two roots based on physical constraints (e.g., time
+                \(t\) cannot be negative).
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Binomial Approximation</h2>
+            <p>
+                This is one of the most powerful tools for JEE physics. It allows us to simplify expressions involving
+                powers when one term is much smaller than the other.
+            </p>
+            <div class="formula-block">
+                \[ (1 + x)^n \approx 1 + nx \quad \text{for } |x| \ll 1 \]
+            </div>
+            <h3>Applications:</h3>
+            <ul>
+                <li><strong>Gravitation:</strong> Finding variation of \(g\) at height \(h\) where \(h \ll R_e\).</li>
+                <li><strong>Thermal Expansion:</strong> Calculating changes in area and volume from linear expansion.
+                </li>
+                <li><strong>Error Analysis:</strong> Propagating small fractional errors in compound quantities.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Logarithms and Exponents</h2>
+            <p>
+                Wait useful for Radioactive Decay (\(N = N_0 e^{-\lambda t}\)) and Thermodynamics.
+            </p>
+            <div class="formula-block">
+                \[ \ln(x) = \log_e(x) \approx 2.303 \log_{10}(x) \]
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

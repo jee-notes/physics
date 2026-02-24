@@ -1,98 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Units & Dimensions | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <title>Units and Dimensions | JEE Physics Notes</title>
+    <script src="./assets/js/math.js"></script>
     <style>
-        :root { --primary: #2c3e50; --secondary: #16a085; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .chapter-list a { display: block; padding: 8px 0; text-decoration: none; color: #2c3e50; }
-        .chapter-list a:hover { color: var(--secondary); }
-        .insightbox { background: #e8f8f5; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+        :root {
+            --primary: #2c3e50;
+            --secondary: #16a085;
+            --accent: #1abc9c;
+            --bg: #f4f7fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            background: var(--bg);
+            color: #333;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+        }
+
+        h1 {
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 12px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.7;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section:not(:last-of-type)::after {
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 40px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+        }
+
+        .top-nav {
+            margin-bottom: 35px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: #e8f8f5;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            background: #d1f2eb;
+            transform: translateX(-3px);
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .chapter-list {
+            margin-top: 25px;
+        }
+
+        .chapter-list a {
+            display: block;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            background: #f9fdfc;
+            border-left: 5px solid var(--secondary);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position: absolute;
+            right: 20px;
+            opacity: 0.4;
+            transition: all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background: #e8f8f5;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity: 1;
+            right: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+        }
     </style>
 </head>
+
 <body>
-
-<div class="container">
-
-    <nav>
-        <a href="../../index.html">← Back to Syllabus</a>
-    </nav>
-
-    <h1>Units & Dimensions</h1>
-    <p style="text-align: center;">
-        <em>The formal structure that makes physical equations meaningful.</em>
-    </p>
-
-    <section>
-        <h2>Chapter Overview</h2>
-
-        <p>
-            Physics expresses natural phenomena quantitatively.
-            Every measurable statement must be written as
-            a numerical value multiplied by a unit.
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+        <h1>Units and Dimensions</h1>
+        <p class="subtitle">
+            The formal structure that makes physical equations meaningful.
         </p>
 
-        <p>
-            This chapter establishes the formal system that ensures
-            such expressions are consistent, universal, and logically valid.
-        </p>
+        <section>
+            <h2>Conceptual Overview</h2>
+            <p>
+                Physics is inherently a quantitative science. Every physical law is expressed as an equation relating
+                measurable properties of the universe. For these equations to mean anything, we must agree on a standard
+                way to measure these properties.
+            </p>
+            <p>
+                Units tell us what "one" of something looks like, while Dimensions tell us the fundamental physical
+                nature of a quantity, regardless of the unit used to measure it.
+            </p>
+        </section>
 
-        <div class="insightbox">
-            Units give physical meaning to numbers.  
-            Dimensions ensure equations are structurally consistent.
-        </div>
+        <section>
+            <h2>Why Formalize?</h2>
+            <p>
+                Without a formal system of units (like the SI system), communication between scientists would be
+                impossible. Formalization ensures that a "meter" in Tokyo is exactly the same as a "meter" in London,
+                and that the laws of physics remain universal.
+            </p>
+        </section>
 
-        <p>
-            Without this framework, mathematical expressions
-            would be physically meaningless.
-        </p>
-    </section>
+        <section>
+            <h2>The Essence of Measurement</h2>
+            <p>
+                Every measurement consists of two parts: a <strong>number</strong> and a <strong>unit</strong>.
+                Mathematically, the measured value \(Q = nu\). If we change our unit, the number changes inversely
+                (\(n_1u_1 = n_2u_2\)), but the physical quantity itself remains constant.
+            </p>
+            <div class="insightbox">
+                Units are human conventions, but dimensions are properties of nature. You can measure length in meters
+                or feet, but its dimension is always $[L]$.
+            </div>
+        </section>
 
-    <section>
-        <h2>What This Chapter Does</h2>
-        <ul>
-            <li>Defines physical quantities rigorously</li>
-            <li>Introduces systems of units (SI system)</li>
-            <li>Distinguishes fundamental and derived quantities</li>
-            <li>Explains dimensions and dimensional formulae</li>
-            <li>Establishes the principle of dimensional homogeneity</li>
-            <li>Clarifies the power and limits of dimensional analysis</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Core Topics</h2>
+            <ul class="points-list">
+                <li><strong>Physical Quantities</strong> — What can be measured and how we express it.</li>
+                <li><strong>Systems of Units</strong> — The hierarchy of measurement standards (SI System).</li>
+                <li><strong>Fundamental vs Derived</strong> — The seven building blocks of physical measurement.</li>
+                <li><strong>Dimensions</strong> — The qualitative nature of physical quantities.</li>
+                <li><strong>Dimensional Homogeneity</strong> — Why you can't add mass to length.</li>
+                <li><strong>Applications & Limits</strong> — Using dimensions to check, convert, and derive laws.</li>
+            </ul>
+        </section>
 
-<section>
-    <h2>Chapter Sections</h2>
-    <div class="chapter-list">
-        <a href="./01-physical-quantity.html">1. What is a Physical Quantity?</a>
-        <a href="./02-what-is-a-unit.html">2. What is a Unit?</a>
-        <a href="./03-fundamental-vs-derived.html">3. Fundamental vs Derived Quantities</a>
-        <a href="./04-si-system.html">4. The SI System</a>
-        <a href="./05-dimensions.html">5. Dimensions</a>
-        <a href="./06-dimensional-homogeneity.html">6. Dimensional Homogeneity</a>
-        <a href="./07-uses-of-dimensional-analysis.html">7. Uses of Dimensional Analysis</a>
-        <a href="./08-limitations.html">8. Limitations of Dimensional Methods</a>
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-physical-quantities.html">1. What is a Physical Quantity?</a>
+                <a href="./02-systems-of-units.html">2. Units and the SI System</a>
+                <a href="./03-fundamental-vs-derived.html">3. Fundamental vs Derived Quantities</a>
+                <a href="./04-dimensions.html">4. Dimensions and Dimensional Formulae</a>
+                <a href="./05-dimensional-homogeneity.html">5. Principle of Dimensional Homogeneity</a>
+                <a href="./06-dimensional-analysis-uses.html">6. Uses of Dimensional Analysis</a>
+                <a href="./07-limitations.html">7. Limitations of Dimensional Analysis</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
     </div>
-</section>
-
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
-
-</div>
-
 </body>
+
 </html>

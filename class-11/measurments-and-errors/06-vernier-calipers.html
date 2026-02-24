@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurements and Errors | Vernier Calipers</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Measurements and Errors
+            </a>
+        </nav>
+
+        <h1>Practical: Vernier Calipers</h1>
+        <p class="subtitle">
+            Precision measurement of length, diameter, and depth.
+        </p>
+
+        <section>
+            <h2>1. Least Count (LC)</h2>
+            <p>
+                The <strong>Least Count</strong> is the minimum measurement that can be taken accurately with the
+                instrument.
+            </p>
+            <div class="formula-block">
+                \[ LC = 1 \text{ MSD} - 1 \text{ VSD} \]
+                \[ LC = 1 \text{ MSD} \times \left( 1 - \frac{n}{m} \right) \]
+            </div>
+            <p>Where \(n\) VSD coincides with \(m\) MSD. For a standard instrument, LC = 0.01 cm or 0.1 mm.</p>
+        </section>
+
+        <section>
+            <h2>2. Taking a Reading</h2>
+            <p>
+                The total reading consists of the Main Scale Reading (MSR) and the Vernier Scale Reading (VSR).
+            </p>
+            <div class="formula-block">
+                \[ \text{Total Reading} = \text{MSR} + (\text{VSR} \times LC) \]
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Zero Error</h2>
+            <p>
+                When the jaws are closed, if the zero of the vernier scale does not coincide with the zero of the main
+                scale, there is a zero error.
+            </p>
+            <ul>
+                <li><strong>Positive Zero Error:</strong> Vernier zero is to the <strong>right</strong> of main scale
+                    zero. (Subtract it from reading).</li>
+                <li><strong>Negative Zero Error:</strong> Vernier zero is to the <strong>left</strong> of main scale
+                    zero. (Add its magnitude to reading).</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

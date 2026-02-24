@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurements and Errors | Error Calculation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Measurements and Errors
+            </a>
+        </nav>
+
+        <h1>Calculating Error Metrics</h1>
+        <p class="subtitle">
+            Quantifying the magnitude and significance of uncertainty.
+        </p>
+
+        <section>
+            <h2>1. True Value (Arithmetic Mean)</h2>
+            <p>
+                In the absence of a known standard, the arithmetic mean of multiple readings is taken as the "true
+                value" (\(a_{mean}\)).
+            </p>
+            <div class="formula-block">
+                \[ a_{mean} = \frac{a_1 + a_2 + ... + a_n}{n} \]
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Absolute Error (\(\Delta a\))</h2>
+            <p>
+                The magnitude of the difference between the true value and the individual measured value.
+            </p>
+            <div class="formula-block">
+                \[ \Delta a_i = |a_{mean} - a_i| \]
+            </div>
+            <p><strong>Mean Absolute Error:</strong> The arithmetic mean of all absolute errors.</p>
+            <div class="formula-block">
+                \[ \Delta a_{mean} = \frac{|\Delta a_1| + |\Delta a_2| + ... + |\Delta a_n|}{n} \]
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Relative and Percentage Error</h2>
+            <p>
+                These metrics represent the error relative to the size of the quantity being measured.
+            </p>
+            <div class="formula-block">
+                \[ \text{Relative Error} = \frac{\Delta a_{mean}}{a_{mean}} \]
+                \[ \text{Percentage Error} = \frac{\Delta a_{mean}}{a_{mean}} \times 100\% \]
+            </div>
+            <div class="insightbox">
+                Percentage error tells you how "significant" the error is. A 1cm error in a 10cm measurement is huge
+                (10%), but a 1cm error in a 1km measurement is negligible (0.001%).
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

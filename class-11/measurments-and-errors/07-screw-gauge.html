@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurements and Errors | Screw Gauge</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Measurements and Errors
+            </a>
+        </nav>
+
+        <h1>Practical: Micrometer Screw Gauge</h1>
+        <p class="subtitle">
+            High-precision measurement of thin objects like wires and sheets.
+        </p>
+
+        <section>
+            <h2>1. Pitch and Least Count</h2>
+            <p>
+                The <strong>Pitch</strong> is the distance moved by the screw on the linear scale in one complete
+                rotation of the circular head.
+            </p>
+            <div class="formula-block">
+                \[ \text{Least Count (LC)} = \frac{\text{Pitch}}{\text{Total number of divisions on circular scale}} \]
+            </div>
+            <p>For a standard screw gauge (Pitch = 1mm, Divisions = 100), LC = 0.01 mm or 0.001 cm.</p>
+        </section>
+
+        <section>
+            <h2>2. Taking a Reading</h2>
+            <p>
+                The total reading consists of the Pitch Scale Reading (PSR) and the Circular Scale Reading (CSR).
+            </p>
+            <div class="formula-block">
+                \[ \text{Total Reading} = \text{PSR} + (\text{CSR} \times LC) \]
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Zero Error</h2>
+            <p>
+                When the anvil and spindle are in contact, if the zero of the circular scale does not coincide with the
+                reference line of the main scale:
+            </p>
+            <ul>
+                <li><strong>Positive Zero Error:</strong> Zero of circular scale is <strong>below</strong> the reference
+                    line. (Subtract it).</li>
+                <li><strong>Negative Zero Error:</strong> Zero of circular scale is <strong>above</strong> the reference
+                    line. (Add its magnitude).</li>
+            </ul>
+            <div class="insightbox">
+                Remember: While Vernier Calipers have a resolution of 0.1 mm, the Screw Gauge is ten times more precise
+                with a resolution of 0.01 mm.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

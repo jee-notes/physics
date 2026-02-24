@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Motion | Banking of Roads</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Circular Motion
+            </a>
+        </nav>
+
+        <h1>Banking of Roads and Level Turns</h1>
+        <p class="subtitle">
+            How geometry helps vehicles navigate curves safely.
+        </p>
+
+        <section>
+            <h2>1. Negotiating a Curve on a Level Road</h2>
+            <p>
+                On a flat, level road, the only force providing the necessary centripetal force is <strong>static
+                    friction</strong> between the tires and the road.
+            </p>
+            <div class="formula-block">
+                \[ f_s = \frac{mv^2}{R} \leq \mu_s N \]
+                \[ \implies v_{max} = \sqrt{\mu_s Rg} \]
+            </div>
+            <div class="insightbox">
+                If the speed exceeds this value, the required centripetal force will be greater than the maximum
+                available friction, and the car will skid outwards.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Why Bank Roads?</h2>
+            <p>
+                Banking means raising the outer edge of the road relative to the inner edge. This allows a component of
+                the <strong>Normal Reaction force</strong> to contribute to the centripetal force, reducing reliance on
+                friction.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. The Ideal Banking Angle</h2>
+            <p>
+                In the absence of friction (or to minimize tire wear), we can find an "optimum speed" (\(v_o\)) where
+                the horizontal component of the normal force provides <em>exactly</em> the required centripetal force.
+            </p>
+            <div class="formula-block">
+                \[ N \cos \theta = mg \]
+                \[ N \sin \theta = \frac{mv^2}{R} \]
+                \[ \implies \tan \theta = \frac{v^2}{Rg} \]
+            </div>
+        </section>
+
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

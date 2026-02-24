@@ -1,159 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motion in Two Dimensions | JEE Physics Notes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion in Two Dimensions | JEE Physics Notes</title>
+<script src="./assets/js/math.js"></script>
+<style>
+        :root { 
+            --primary:#2c3e50; 
+            --secondary:#c0392b; 
+            --accent:#2980b9; 
+            --bg:#f4f7fa; 
+        }
 
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        body { 
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height:1.7; 
+            background:var(--bg); 
+            color:#333; 
+            margin:0; 
+            padding:30px; 
+        }
 
-    <style>
-        :root { --primary: #2c3e50; --secondary: #c0392b; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #fdecea; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+        .container { 
+            max-width:950px; 
+            margin:auto; 
+            background:#fff; 
+            padding:50px; 
+            border-radius:16px; 
+            box-shadow:0 12px 30px rgba(0,0,0,0.08); 
+        }
+
+        h1, h2, h3 { color:var(--primary); }
+
+        h1 { 
+            border-bottom:3px solid var(--secondary); 
+            padding-bottom:12px; 
+            text-align:center; 
+            margin-bottom:10px;
+        }
+
+        .subtitle {
+            text-align:center;
+            opacity:0.7;
+            margin-bottom:35px;
+            font-size:0.95rem;
+        }
+
+        h2 { 
+            margin-top:40px; 
+            margin-bottom:15px;
+        }
+
+        section {
+            margin-bottom:40px;
+        }
+
+        section:not(:last-of-type)::after {
+            content:"";
+            display:block;
+            height:1px;
+            margin-top:40px;
+            background:linear-gradient(to right, transparent, #ddd, transparent);
+        }
+
+        .top-nav {
+            margin-bottom:35px;
+        }
+
+        .back-btn {
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            padding:8px 14px;
+            background:#eef5fb;
+            border-radius:8px;
+            font-weight:600;
+            text-decoration:none;
+            color:var(--primary);
+            transition:all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            background:#dcecf9;
+            transform:translateX(-3px);
+        }
+
+        ul {
+            margin-top:10px;
+            padding-left:20px;
+        }
+
+        .chapter-list {
+            margin-top:25px;
+        }
+
+        .chapter-list a {
+            display:block;
+            padding:18px 20px;
+            margin-bottom:15px;
+            background:#f9fbfd;
+            border-left:5px solid var(--secondary);
+            border-radius:10px;
+            text-decoration:none;
+            color:#2c3e50;
+            font-weight:500;
+            transition:all 0.25s ease;
+            position:relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position:absolute;
+            right:20px;
+            opacity:0.4;
+            transition:all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background:#eef5fb;
+            transform:translateY(-3px);
+            box-shadow:0 8px 18px rgba(0,0,0,0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity:1;
+            right:15px;
+        }
+
+        footer { 
+            text-align:center; 
+            margin-top:60px; 
+            color:#7f8c8d; 
+            font-size:0.9rem; 
+        }
+
+        hr {
+            margin:40px 0;
+            border:none;
+            height:1px;
+            background:linear-gradient(to right, transparent, #ccc, transparent);
+        }
+
+</style>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Motion in Two Dimensions</h1>
+<p class="subtitle">
+Motion where direction matters as much as magnitude.
+</p>
 
-    <h1>Motion in Two Dimensions</h1>
-    <p style="text-align: center;"><em>Motion where direction matters as much as magnitude.</em></p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Motion in two dimensions, often called plane motion, is a fundamental expansion of kinematics. While 1D motion is restricted to a single line, 2D motion allows for a particle to move anywhere within a plane. This transition requires the constant use of vector notation to track position, velocity, and acceleration.
+</p>
+<p>
+The most powerful tool in analyzing 2D motion is the principle of physical independence of perpendicular components. By resolving motion into two orthogonal directions, we can treat a complex 2D problem as two simpler 1D problems that share a common time variable.
+</p>
+</section>
 
-    <section id="position-vector">
-        <h2>1. Position Vector & Plane Motion</h2>
-        <p>When motion is not restricted to a straight line, we describe position using vectors in a plane.</p>
+<section>
+<h2>Independence of Motion</h2>
+<p>
+Galileo was the first to propose that the horizontal and vertical motions of a projectile are independent of each other. This means that a constant horizontal velocity has no effect on a vertical acceleration due to gravity, and vice versa.
+</p>
+<p>
+This principle allows us to solve for displacement, velocity, and time in the X-axis and Y-axis separately using the standard kinematic equations. The "bridge" between these two independent motions is <strong>time</strong>.
+</p>
+</section>
 
-        <div class="formula-block">
-            \[
-            \vec r = x\,\hat i + y\,\hat j
-            \]
-        </div>
+<section>
+<h2>Vector Nature of Kinematics</h2>
+<p>
+In two dimensions, physical quantities like position, displacement, and velocity are no longer just numbers with plus or minus signs. They are vectors that possess both magnitude and a specific coordinate direction.
+</p>
+\[
+\vec{r} = x\hat{i} + y\hat{j}, \quad \vec{v} = v_x\hat{i} + v_y\hat{j}, \quad \vec{a} = a_x\hat{i} + a_y\hat{j}
+\]
+<p>
+Velocity is always tangent to the trajectory of the particle, while acceleration can be at any angle to the velocity vector, leading to changes in both speed and direction.
+</p>
+</section>
 
-        <div class="insightbox">
-            Motion in 2D is not “more physics” —  
-            it is the same physics, expressed vectorially.
-        </div>
-    </section>
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+    <li><strong>Position and Displacement</strong> — Using vector notation to describe locations in a plane.</li>
+    <li><strong>Component Resolution</strong> — Projecting vectors onto X and Y axes for independent analysis.</li>
+    <li><strong>Projectile Motion</strong> — The canonical example of constant acceleration in one dimension (vertical) and zero acceleration in the other (horizontal).</li>
+    <li><strong>Equation of Trajectory</strong> — Finding the geometric path \(y = f(x)\) by eliminating time.</li>
+    <li><strong>Relative Motion</strong> — Analyzing motion from different moving reference frames (River-Boat, Rain-Man).</li>
+</ul>
+</section>
 
-    <section id="displacement-velocity">
-        <h2>2. Displacement, Velocity & Acceleration</h2>
-        <p>All kinematic quantities in 2D are vectors.</p>
-
-        <div class="formula-block">
-            \[
-            \vec v = \frac{d\vec r}{dt}, \qquad
-            \vec a = \frac{d\vec v}{dt}
-            \]
-        </div>
-
-        <ul>
-            <li>Velocity is always tangent to the path</li>
-            <li>Acceleration need not be along velocity</li>
-        </ul>
-    </section>
-
-    <section id="component-analysis">
-        <h2>3. Component Resolution</h2>
-        <p>Any vector in a plane can be resolved into perpendicular components.</p>
-
-        <div class="formula-block">
-            \[
-            \vec v = v_x \hat i + v_y \hat j
-            \]
-        </div>
-
-        <div class="grid">
-            <div>
-                \( v_x = v \cos\theta \)
-            </div>
-            <div>
-                \( v_y = v \sin\theta \)
-            </div>
-        </div>
-
-        <div class="insightbox">
-            In kinematics, components evolve independently  
-            as long as acceleration components are independent.
-        </div>
-    </section>
-
-    <section id="projectile">
-        <h2>4. Projectile Motion</h2>
-        <p>Projectile motion is a special case of 2D motion under uniform gravity.</p>
-
-        <ul>
-            <li>Horizontal motion → constant velocity</li>
-            <li>Vertical motion → uniformly accelerated</li>
-        </ul>
-
-        <div class="formula-block">
-            Time of flight:
-            \[
-            T = \frac{2u\sin\theta}{g}
-            \]
-            Range:
-            \[
-            R = \frac{u^2\sin 2\theta}{g}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Projectile motion is simply  
-            two independent 1D motions sharing time.
-        </div>
-    </section>
-
-    <section id="relative-motion">
-        <h2>5. Relative Motion in Two Dimensions</h2>
-        <p>Motion is often analyzed relative to another moving object.</p>
-
-        <div class="formula-block">
-            \[
-            \vec v_{A/B} = \vec v_A - \vec v_B
-            \]
-        </div>
-
-        <ul>
-            <li>Essential for rain–man, river–boat, and chase problems</li>
-            <li>Reference frame choice simplifies analysis</li>
-        </ul>
-    </section>
-
-    <section id="trajectory">
-        <h2>6. Trajectory</h2>
-        <p>The <strong>trajectory</strong> is the path traced by a particle during motion.</p>
-
-        <div class="formula-block">
-            For projectile motion:
-            \[
-            y = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Trajectory is a geometric consequence  
-            of time-dependent motion.
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-position-velocity-acceleration.html">1. Position, Velocity, and Acceleration in 2D</a>
+<a href="./02-component-analysis.html">2. Component Resolution and Independence</a>
+<a href="./03-projectile-motion.html">3. Projectile Motion: Oblique Projection</a>
+<a href="./04-trajectory-equation.html">4. Equation of Trajectory and Parabolic Path</a>
+<a href="./05-relative-motion-2d.html">5. Relative Motion in a Plane</a>
+<a href="./06-uniform-circular-motion.html">6. Introduction to Uniform Circular Motion</a>
 </div>
+</section>
 
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>

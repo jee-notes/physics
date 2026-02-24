@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units and Dimensions | Dimensional Homogeneity</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Units and Dimensions
+            </a>
+        </nav>
+
+        <h1>Principle of Dimensional Homogeneity</h1>
+        <p class="subtitle">
+            The rule of consistency in physical equations.
+        </p>
+
+        <section>
+            <h2>1. The Fundamental Rule</h2>
+            <p>
+                The <strong>Principle of Dimensional Homogeneity</strong> states that only physical quantities of the
+                same dimensions can be added, subtracted, or equated.
+            </p>
+            <div class="insightbox">
+                You can add 5 meters to 10 meters, but you cannot add 5 meters to 10 kilograms.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Mathematical Expression</h2>
+            <p>
+                In any physical equation of the form \(A + B = C\):
+            </p>
+            <div class="formula-block">
+                \[ [A] = [B] = [C] \]
+            </div>
+            <p>This principle is used to check the correctness of physical equations.</p>
+        </section>
+
+        <section>
+            <h2>3. Transcendental Functions</h2>
+            <p>
+                The arguments of mathematical functions like \(\sin(\theta)\), \(\cos(\theta)\), \(e^x\), and
+                \(\log(x)\) must always be <strong>dimensionless</strong>.
+            </p>
+            <div class="formula-block">
+                In \(y = A \sin(kt - \omega x)\):
+                <br>\([kt] = [M^0L^0T^0]\)
+                <br>\([\omega x] = [M^0L^0T^0]\)
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

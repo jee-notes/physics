@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Tools | Differentiation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Mathematical Tools
+            </a>
+        </nav>
+
+        <h1>Differentiation: Instantaneous Change</h1>
+        <p class="subtitle">
+            Finding the slope of a curve at a single point.
+        </p>
+
+        <section>
+            <h2>1. The Concept of Derivative</h2>
+            <p>
+                Differentiation allows us to find the "rate of change" of a function at any given instant. In physics,
+                this is how we transition from "average" quantities to "instantaneous" ones.
+            </p>
+            <div class="formula-block">
+                \[ \text{Rate of change} = \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} \]
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Frequently Used Rules</h2>
+            <div class="formula-block">
+                \[ \frac{d}{dx}(x^n) = nx^{n-1} \]
+                \[ \frac{d}{dx}(\sin x) = \cos x \]
+                \[ \frac{d}{dx}(\cos x) = -\sin x \]
+                \[ \frac{d}{dx}(C) = 0 \quad (\text{where C is a constant}) \]
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Physical Meanings</h2>
+            <p>
+                The derivative is the mathematical tool for kinematics:
+            </p>
+            <div class="formula-block">
+                \[ v = \frac{ds}{dt} \quad \text{(Velocity is the derivative of Position)} \]
+                \[ a = \frac{dv}{dt} \quad \text{(Acceleration is the derivative of Velocity)} \]
+            </div>
+            <div class="insightbox">
+                If you know the equation for position, differentiation tells you the velocity at <strong>any</strong>
+                moment in time.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

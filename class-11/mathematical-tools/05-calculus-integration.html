@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Tools | Integration</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Mathematical Tools
+            </a>
+        </nav>
+
+        <h1>Integration: Summing Up Elements</h1>
+        <p class="subtitle">
+            Finding the total accumulation or area under a curve.
+        </p>
+
+        <section>
+            <h2>1. Integration as Inverse Derivative</h2>
+            <p>
+                If differentiation breaks a function down into rates, integration builds it back up. It is the
+                mathematical equivalent of summing up an infinite number of tiny pieces.
+            </p>
+            <div class="formula-block">
+                \[ \int x^n \, dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1) \]
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Definite Integration</h2>
+            <p>
+                In physics, we usually integrate between limits (initial and final states). This gives us a numerical
+                value representing a change.
+            </p>
+            <div class="formula-block">
+                \[ \int_a^b f(x) \, dx = [F(x)]_a^b = F(b) - F(a) \]
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Physical Meanings</h2>
+            <p>
+                Integration is the primary tool for finding Work, Energy, and Flux:
+            </p>
+            <div class="formula-block">
+                \[ \Delta s = \int v \, dt \quad \text{(Displacement is the integral of Velocity)} \]
+                \[ W = \int F \, ds \quad \text{(Work is the integral of Force over displacement)} \]
+            </div>
+            <div class="insightbox">
+                Whenever a force is <strong>variable</strong> (changes with position or time), you cannot multiply
+                simple values—you <strong>must</strong> integrate.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

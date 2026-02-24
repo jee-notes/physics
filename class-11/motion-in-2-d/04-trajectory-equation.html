@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion in 2D | Equation of Trajectory</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Motion in 2D
+            </a>
+        </nav>
+
+        <h1>Equation of Trajectory</h1>
+        <p class="subtitle">
+            The geometric path of a particle in a plane.
+        </p>
+
+        <section>
+            <h2>1. Definition</h2>
+            <p>
+                The equation of trajectory is a mathematical relation between the coordinates $(x, y)$ of a moving
+                particle, describing its path in space without explicit reference to time $t$.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Derivation for a Projectile</h2>
+            <p>
+                For a projectile fired at velocity $u$ and angle $\theta$:
+            </p>
+            <div class="grid">
+                <div>
+                    <strong>X-coordinate:</strong><br>
+                    \(x = (u\cos\theta)t \implies t = \frac{x}{u\cos\theta}\)
+                </div>
+                <div>
+                    <strong>Y-coordinate:</strong><br>
+                    \(y = (u\sin\theta)t - \frac{1}{2}gt^2\)
+                </div>
+            </div>
+            <p>
+                Substituting $t$ into the $y$ equation:
+            </p>
+            <div class="formula-block">
+                \[ y = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta} \]
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Parabolic Nature</h2>
+            <p>
+                The resulting equation is of the form \(y = ax + bx^2\), which is the standard equation of a
+                <strong>parabola</strong>. This proves that neglecting air resistance, the path of any projectile is a
+                parabolic arc.
+            </p>
+            <div class="insightbox">
+                If the projectile is fired from a height, or if the target is at a different elevation, the trajectory
+                remains parabolic but the origin shift must be accounted for.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

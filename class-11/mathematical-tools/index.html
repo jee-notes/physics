@@ -1,128 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathematical Tools | JEE Physics Notes</title>
-    
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+    <script src="./assets/js/math.js"></script>
     <style>
-        :root { --primary: #2c3e50; --secondary: #e67e22; --accent: #3498db; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #fff3e0; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e67e22;
+            --accent: #f39c12;
+            --bg: #f4f7fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            background: var(--bg);
+            color: #333;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+        }
+
+        h1 {
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 12px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.7;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section:not(:last-of-type)::after {
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 40px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+        }
+
+        .top-nav {
+            margin-bottom: 35px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: #fff3e0;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            background: #ffe0b2;
+            transform: translateX(-3px);
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .chapter-list {
+            margin-top: 25px;
+        }
+
+        .chapter-list a {
+            display: block;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            background: #fdfaf9;
+            border-left: 5px solid var(--secondary);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position: absolute;
+            right: 20px;
+            opacity: 0.4;
+            transition: all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background: #fff3e0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity: 1;
+            right: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+        }
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+        <h1>Mathematical Tools</h1>
+        <p class="subtitle">
+            The logic and language used to describe the laws of physics.
+        </p>
 
-<div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+        <section>
+            <h2>Conceptual Overview</h2>
+            <p>
+                Physics is the study of the universe, but Mathematics is the language it is written in. To understand
+                how forces act, how energy flows, or how particles move, we must first master the tools that allow us to
+                quantify change and describe structure.
+            </p>
+            <p>
+                From the basics of Algebra to the dynamic shifts of Calculus and the directional logic of Vectors, these
+                tools are not just formulas—they are the lenses through which we see physical reality.
+            </p>
+        </section>
 
-    <h1>Mathematical Tools for Physics</h1>
-    <p style="text-align: center;"><em>The language and syntax used to model the physical world.</em></p>
+        <section>
+            <h2>Approximations in Physics</h2>
+            <p>
+                In the real world, things are often messy. Physics simplifies this by using approximations. Whether it's
+                the <strong>Binomial Theorem</strong> for small changes or treating a complex shape as a uniform sphere,
+                knowing when and how to simplify is what separates a student from a physicist.
+            </p>
+        </section>
 
-    <section id="algebra">
-        <h2>1. Algebra: Relationships and Approximations</h2>
-        <p>In physics, algebra is used to solve for unknown states of a system. We focus on two main areas: solving equations and simplifying complex expressions.</p>
-        
-        <h3>Systems of Equations</h3>
-        <ul>
-            <li><strong>Simultaneous Equations:</strong> Used when multiple physical laws apply to the same system (e.g., Tension and Acceleration in pulley problems).</li>
-            <li><strong>Quadratic Equations:</strong> Frequently appear in Kinematics (e.g., solving for time \(t\) in displacement equations).</li>
-        </ul>
-
-        <div class="insightbox">
-            <strong>Binomial Approximation:</strong> 
-            For many JEE problems involving small changes, we use the approximation:
-            $$(1 + x)^n \approx 1 + nx \quad \text{for } |x| \ll 1$$
-            This is critical in Gravitation (heights near Earth's surface) and Thermal Expansion.
-        </div>
-    </section>
-
-    <section id="geometry">
-        <h2>2. Geometry & Mensuration</h2>
-        <p>Physics often models matter as idealized shapes. Knowing their geometric properties is the first step to calculating physical quantities like Flux or Pressure.</p>
-        <div class="grid">
-            <div>
-                <strong>Key Shapes:</strong>
-                <ul>
-                    <li>Sphere: \(V = \frac{4}{3}\pi r^3\), \(A = 4\pi r^2\)</li>
-                    <li>Cylinder: \(V = \pi r^2 h\), \(A_{\text{curved}} = 2\pi rh\)</li>
-                </ul>
+        <section>
+            <h2>Sign Management</h2>
+            <p>
+                In Mathematics, a minus sign is just a subtraction. In Physics, it indicates direction, loss, or
+                attraction. Graphical analysis is our primary tool for managing these signs, helping us visualize where
+                a system starts, where it ends, and how it behaves in between.
+            </p>
+            <div class="insightbox">
+                A consistent sign convention is more important than the calculation itself. Most errors in JEE physics
+                are not mathematical, but directional.
             </div>
-            <div>
-                <strong>Application:</strong>
-                Used in <em>Gauss's Law</em> and <em>Fluid Mechanics</em> to define boundaries for calculation.
+        </section>
+
+        <section>
+            <h2>Core Topics</h2>
+            <ul class="points-list">
+                <li><strong>Algebra & Approximations</strong> — Quadratic systems and the power of the Binomial
+                    expansion.</li>
+                <li><strong>Geometry & Mensuration</strong> — Calculating volumes and areas of idealized physical
+                    bodies.</li>
+                <li><strong>Functions & Graphs</strong> — Understanding relationships and visual sign management.</li>
+                <li><strong>Differentiation</strong> — The study of instantaneous rates of change (Velocity,
+                    Acceleration).</li>
+                <li><strong>Integration</strong> — Summing up small elements to find total work, flux, or energy.</li>
+                <li><strong>Vector Basics</strong> — Directional quantities and their algebraic manipulations.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-algebra-and-approximations.html">1. Algebra & Binomial Approximations</a>
+                <a href="./02-geometry-and-mensuration.html">2. Geometry of Physical Shapes</a>
+                <a href="./03-functions-and-graphs.html">3. Functions and Graphical Analysis</a>
+                <a href="./04-calculus-differentiation.html">4. Differentiation: The Rate of Change</a>
+                <a href="./05-calculus-integration.html">5. Integration: Accumulation of Quantities</a>
+                <a href="./06-vectors-basics.html">6. Vectors: Magnitude and Direction</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="functions">
-        <h2>3. Functions & Graphical Analysis</h2>
-        <p>A <strong>function</strong> relates a cause (Independent Variable) to an effect (Dependent Variable). In Physics, we don't just solve equations; we "read" graphs to manage signs.</p>
-        
-        
-        
-        <ul>
-            <li><strong>Visual Sign Management:</strong> An <em>increasing</em> graph indicates a positive rate of change; a <em>decreasing</em> graph indicates a negative rate.</li>
-            <li><strong>Intercepts:</strong> Represent initial conditions (e.g., initial velocity at \(t=0\)).</li>
-        </ul>
-    </section>
-
-    <section id="calculus">
-        <h2>4. Calculus: The Study of Change</h2>
-        <p>Calculus allows us to describe the "Plot" of the physical world—how things change at every instant.</p>
-
-        <h3>Differentiation (Rates)</h3>
-        <p>Measures how a quantity changes relative to another. Example: Velocity is the derivative of position.</p>
-        <div class="formula-block">
-            \(v = \frac{dx}{dt} \quad \text{and} \quad a = \frac{dv}{dt}\)
-        </div>
-
-        <h3>Integration (Accumulation)</h3>
-        <p>The inverse of differentiation. It is the process of summing up small changes over an interval. Example: Work is the integral of Force over displacement.</p>
-        <div class="formula-block">
-            \(W = \int F \cdot dx\)
-        </div>
-        
-        
-    </section>
-
-    <section id="vectors">
-        <h2>5. Vectors: Directional Quantities</h2>
-        <p>Many physical "Actors" like Force, Velocity, and Momentum possess both magnitude and direction. A scalar description is insufficient for these entities.</p>
-        
-        <div class="grid">
-            <div>
-                <strong>Addition:</strong>
-                Using the Triangle or Parallelogram law to find the resultant force.
-            </div>
-            <div>
-                <strong>Resolution:</strong>
-                Breaking a vector into rectangular components:
-                \[ A_x = A \cos\theta, \quad A_y = A \sin\theta \]
-            </div>
-        </div>
-        
-        
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
-</div>
-
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
 </body>
+
 </html>

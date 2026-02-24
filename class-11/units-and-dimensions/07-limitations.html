@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units and Dimensions | Limitations</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Units and Dimensions
+            </a>
+        </nav>
+
+        <h1>Limitations of Dimensional Analysis</h1>
+        <p class="subtitle">
+            When and why dimensional methods fail.
+        </p>
+
+        <section>
+            <h2>1. The Numerical Constant Problem</h2>
+            <p>
+                Dimensional analysis cannot provide the value of the proportionality constant (\(K\)). For example, it
+                can show that \(s \propto at^2\), but it cannot tell you that the constant is \(1/2\).
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Dependency Limits</h2>
+            <p>
+                We cannot derive a relation if a physical quantity depends on more than three fundamental quantities, as
+                we only have three primary equations (for M, L, and T).
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Functional Blindness</h2>
+            <p>
+                Dimensional analysis fails for relations involving:
+            </p>
+            <ul>
+                <li>Trigonometric functions (\(\sin, \cos, \tan\))</li>
+                <li>Logarithmic functions (\(\log, \ln\))</li>
+                <li>Exponential functions (\(e^x\))</li>
+                <li>Addition/Subtraction of multiple terms in a derivation</li>
+            </ul>
+            <div class="insightbox">
+                Even if an equation is dimensionally consistent, we need experimental verification or deeper theoretical
+                derivation to prove its physical validity.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

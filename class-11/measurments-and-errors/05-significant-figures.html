@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurements and Errors | Significant Figures</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Measurements and Errors
+            </a>
+        </nav>
+
+        <h1>Significant Figures and Rounding</h1>
+        <p class="subtitle">
+            Reflecting the reliability and resolution of your measurement data.
+        </p>
+
+        <section>
+            <h2>1. Rules for Significant Figures</h2>
+            <ol>
+                <li>All non-zero digits are significant.</li>
+                <li>Zeros between two non-zero digits are significant.</li>
+                <li>Leading zeros (to the left of the first non-zero digit) are <strong>never</strong> significant.</li>
+                <li>Trailing zeros in a number without a decimal point are NOT significant.</li>
+                <li>Trailing zeros in a number with a decimal point <strong>are</strong> significant.</li>
+            </ol>
+            <div class="insightbox">
+                Example: 0.0050 has 2 significant figures. 500 has 1. 500.0 has 4.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Rules for Arithmetic Operations</h2>
+            <ul>
+                <li><strong>Addition/Subtraction:</strong> The result should have the same number of <strong>decimal
+                        places</strong> as the measurement with the fewest decimal places.</li>
+                <li><strong>Multiplication/Division:</strong> The result should have the same number of
+                    <strong>significant figures</strong> as the measurement with the fewest significant figures.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Rounding Off</h2>
+            <p>
+                If the digit to be dropped is 5:
+            </p>
+            <ul>
+                <li>If 5 is followed by non-zero digits, round up.</li>
+                <li>If 5 is the last digit or followed by zeros:
+                    <ul>
+                        <li>Round down if the preceding digit is even (e.g., 6.25 \(\to\) 6.2).</li>
+                        <li>Round up if the preceding digit is odd (e.g., 6.35 \(\to\) 6.4).</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

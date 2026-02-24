@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Tools | Vectors</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Mathematical Tools
+            </a>
+        </nav>
+
+        <h1>Vectors: Directional Quantities</h1>
+        <p class="subtitle">
+            Managing entities with both magnitude and orientation.
+        </p>
+
+        <section>
+            <h2>1. Scalars vs. Vectors</h2>
+            <p>
+                Most quantities in physics (Force, Velocity, Field) require more than just a number to be fully
+                described.
+            </p>
+            <ul>
+                <li><strong>Scalars:</strong> Numerical value only (e.g., Mass, Time, Temperature).</li>
+                <li><strong>Vectors:</strong> Numerical value AND direction (e.g., Displacement, Acceleration,
+                    Momentum).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Vector Addition and Resolution</h2>
+            <p>
+                Vectors cannot be added like simple numbers. They follow geometric laws.
+            </p>
+            <h3>Resolution of Vectors:</h3>
+            <p>Breaking a vector \(\vec{A}\) into rectangular components along the x and y axes:</p>
+            <div class="formula-block">
+                \[ A_x = A \cos \theta, \quad A_y = A \sin \theta \]
+                \[ |\vec{A}| = \sqrt{A_x^2 + A_y^2} \]
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Vector Products</h2>
+            <p>
+                How we multiply "directions" defines different physical outcomes.
+            </p>
+            <ul>
+                <li><strong>Dot Product (Scalar):</strong> Used for Work and Flux.
+                    <br>\( \vec{A} \cdot \vec{B} = AB \cos \theta \)
+                </li>
+                <li><strong>Cross Product (Vector):</strong> Used for Torque and Magnetic Force.
+                    <br>\( \vec{A} \times \vec{B} = (AB \sin \theta) \hat{n} \)
+                </li>
+            </ul>
+            <div class="insightbox">
+                The Dot Product tells you how much one vector "projects" onto another; the Cross Product tells you how
+                much they are "perpendicular" to each other.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

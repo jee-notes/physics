@@ -1,160 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laws of Motion | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="./assets/js/math.js"></script>
     <style>
-        :root { --primary: #2c3e50; --secondary: #d35400; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #fef2e6; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+        :root {
+            --primary: #2c3e50;
+            --secondary: #d35400;
+            --accent: #2980b9;
+            --bg: #f4f7fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            background: var(--bg);
+            color: #333;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+        }
+
+        h1 {
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 12px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.7;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section:not(:last-of-type)::after {
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 40px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+        }
+
+        .top-nav {
+            margin-bottom: 35px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: #eef5fb;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            background: #dcecf9;
+            transform: translateX(-3px);
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .chapter-list {
+            margin-top: 25px;
+        }
+
+        .chapter-list a {
+            display: block;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            background: #f9fbfd;
+            border-left: 5px solid var(--secondary);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position: absolute;
+            right: 20px;
+            opacity: 0.4;
+            transition: all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background: #eef5fb;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity: 1;
+            right: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+        }
     </style>
 </head>
+
 <body>
-
-<div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
-
-    <h1>Laws of Motion</h1>
-    <p style="text-align: center;"><em>How forces govern changes in motion.</em></p>
-
-    <section id="force">
-        <h2>1. Force & Inertia</h2>
-        <p>A <strong>force</strong> is an external interaction capable of changing the state of motion of a body.</p>
-
-        <ul>
-            <li>Change in speed</li>
-            <li>Change in direction</li>
-            <li>Change in shape</li>
-        </ul>
-
-        <div class="insightbox">
-            Motion does not require force.  
-            Change of motion does.
-        </div>
-    </section>
-
-    <section id="first-law">
-        <h2>2. Newton’s First Law</h2>
-        <p>
-            A body continues in its state of rest or uniform straight-line motion unless acted upon by a net external force.
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+        <h1>Laws of Motion</h1>
+        <p class="subtitle">
+            The causal link between force and the change in motion.
         </p>
 
-        <div class="formula-block">
-            Net external force = 0 ⇒ acceleration = 0
-        </div>
+        <section>
+            <h2>Conceptual Overview</h2>
+            <p>
+                Dynamics is the branch of mechanics that investigates why objects move the way they do. While kinematics
+                describes the path and timing of motion, dynamics identifies <strong>Force</strong> as the agent
+                responsible for any change in a body's state of rest or uniform motion.
+            </p>
+            <p>
+                Sir Isaac Newton formalized these principles into three laws that form the bedrock of classical
+                mechanics. These laws explain how the internal and external environments of a system interact to dictate
+                its future evolution.
+            </p>
+        </section>
 
-        <p>
-            This law defines <strong>inertial frames of reference</strong>.
-        </p>
+        <section>
+            <h2>Historical Evolution</h2>
+            <p>
+                Before Newton, the Aristotelian view held that a force was necessary to maintain motion. Galileo
+                challenged this, proposing the concept of <strong>Inertia</strong>—the inherent tendency of an object to
+                resist changes to its state of motion.
+            </p>
+            <p>
+                Newton synthesized Galileo's observations into a comprehensive mathematical framework, proving that
+                force is not required for motion itself, but for <em>acceleration</em>.
+            </p>
+        </section>
 
-        <div class="insightbox">
-            The first law is not a special case of the second —  
-            it defines the condition under which the second law applies.
-        </div>
-    </section>
+        <section>
+            <h2>Force as a Vector</h2>
+            <p>
+                Force is a vector quantity, meaning it has both magnitude and direction. It follows the principle of
+                superposition; when multiple forces act on a body, their effect is equivalent to a single <strong>Net
+                    Force</strong> (\(\Sigma \vec{F}\)) obtained through vector addition.
+            </p>
+            <div class="insightbox">
+                A body is in equilibrium if the vector sum of all forces acting on it is zero. Equilibrium does not
+                necessarily mean rest; it means the velocity is constant.
+            </div>
+        </section>
 
-    <section id="second-law">
-        <h2>3. Newton’s Second Law</h2>
-        <p>
-            The rate of change of momentum of a body is proportional to the net external force acting on it and occurs in the direction of that force.
-        </p>
+        <section>
+            <h2>Core Topics</h2>
+            <ul class="points-list">
+                <li><strong>Inertia and First Law</strong> — Defining the resistance to change and inertial frames.</li>
+                <li><strong>Momentum and Second Law</strong> — Quantitative relationship between force, mass, and
+                    acceleration.</li>
+                <li><strong>Reaction and Third Law</strong> — The reciprocal nature of interactions between two bodies.
+                </li>
+                <li><strong>Free Body Diagrams</strong> — The systematic method for isolating a system and identifying
+                    forces.</li>
+                <li><strong>Friction</strong> — The resistive force that opposes relative motion or the tendency of
+                    motion.</li>
+            </ul>
+        </section>
 
-        <div class="formula-block">
-            \[
-            \vec F = \frac{d\vec p}{dt}
-            \]
-        </div>
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-concept-of-force.html">1. Concept of Force and Newton's First Law</a>
+                <a href="./02-second-law-and-momentum.html">2. Momentum and Newton's Second Law</a>
+                <a href="./03-third-law-of-motion.html">3. Newton's Third Law and Interactions</a>
+                <a href="./04-free-body-diagrams.html">4. Free Body Diagrams and Equilibrium</a>
+                <a href="./05-connected-motion.html">5. Connected Bodies and Pulley Systems</a>
+                <a href="./06-friction-basics.html">6. Introduction to Friction</a>
+            </div>
+        </section>
 
-        <p>For constant mass:</p>
-
-        <div class="formula-block">
-            \[
-            \vec F = m\vec a
-            \]
-        </div>
-
-        <div class="insightbox">
-            Newton’s second law is the *equation of motion* of classical mechanics.
-        </div>
-    </section>
-
-    <section id="third-law">
-        <h2>4. Newton’s Third Law</h2>
-        <p>
-            For every action, there is an equal and opposite reaction.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \vec F_{AB} = -\vec F_{BA}
-            \]
-        </div>
-
-        <ul>
-            <li>Action–reaction forces act on different bodies</li>
-            <li>They never cancel each other</li>
-        </ul>
-
-        <div class="insightbox">
-            The third law explains interaction,  
-            not equilibrium.
-        </div>
-    </section>
-
-    <section id="mass">
-        <h2>5. Mass & Inertia</h2>
-        <p>
-            <strong>Mass</strong> is a measure of a body's resistance to change in motion.
-        </p>
-
-        <ul>
-            <li>Inertial mass → resistance to acceleration</li>
-            <li>Gravitational mass → interaction with gravity</li>
-        </ul>
-
-        <div class="insightbox">
-            In classical mechanics, inertial and gravitational mass are equivalent.
-        </div>
-    </section>
-
-    <section id="free-body">
-        <h2>6. Free Body Diagrams</h2>
-        <p>
-            A <strong>free body diagram (FBD)</strong> shows all external forces acting on a body.
-        </p>
-
-        <ul>
-            <li>Choose the body clearly</li>
-            <li>Show only forces acting *on* the body</li>
-            <li>Resolve forces along convenient axes</li>
-        </ul>
-
-        <div class="insightbox">
-            Most mistakes in dynamics are diagrammatic,  
-            not algebraic.
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
-</div>
-
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
 </body>
-</html>
 
+</html>

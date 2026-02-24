@@ -1,175 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Circular Motion | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
+    <script src="./assets/js/math.js"></script>
     <style>
-        :root { --primary: #2c3e50; --secondary: #16a085; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #e8f8f5; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
+        :root {
+            --primary: #2c3e50;
+            --secondary: #8e44ad;
+            --accent: #9b59b6;
+            --bg: #f4f7fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            background: var(--bg);
+            color: #333;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary);
+        }
+
+        h1 {
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 12px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            opacity: 0.7;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        section:not(:last-of-type)::after {
+            content: "";
+            display: block;
+            height: 1px;
+            margin-top: 40px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+        }
+
+        .top-nav {
+            margin-bottom: 35px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: #f5eefb;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.25s ease;
+        }
+
+        .back-btn:hover {
+            background: #eddef9;
+            transform: translateX(-3px);
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .chapter-list {
+            margin-top: 25px;
+        }
+
+        .chapter-list a {
+            display: block;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            background: #fdf9ff;
+            border-left: 5px solid var(--secondary);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .chapter-list a::after {
+            content: "→";
+            position: absolute;
+            right: 20px;
+            opacity: 0.4;
+            transition: all 0.25s ease;
+        }
+
+        .chapter-list a:hover {
+            background: #f5eefb;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .chapter-list a:hover::after {
+            opacity: 1;
+            right: 15px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+        }
     </style>
 </head>
+
 <body>
-
-<div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
-
-    <h1>Circular Motion</h1>
-    <p style="text-align: center;"><em>Motion with constant speed but continuously changing velocity.</em></p>
-
-    <section id="intro">
-        <h2>1. What Makes Circular Motion Special?</h2>
-        <p>
-            In circular motion, the magnitude of velocity may remain constant,
-            but its direction changes continuously.
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+        <h1>Circular Motion</h1>
+        <p class="subtitle">
+            Studying objects traveling along curved paths and the forces that bind them.
         </p>
 
-        <div class="insightbox">
-            Any change in velocity — magnitude or direction — implies acceleration.
-        </div>
-    </section>
+        <section>
+            <h2>Conceptual Overview</h2>
+            <p>
+                Circular motion is a fundamental type of two-dimensional motion. Unlike linear motion, even when an
+                object moves at a constant speed in a circle, its velocity is constantly changing because its direction
+                is always shifting. This inherent change requires a continuous inward acceleration.
+            </p>
+            <p>
+                From the orbit of satellites to the turning of a car on a road, understanding the interplay between
+                inertia and central forces is key to mastering dynamics.
+            </p>
+        </section>
 
-    <section id="angular">
-        <h2>2. Angular Variables</h2>
-        <p>
-            Motion along a circle is conveniently described using angular quantities.
-        </p>
+        <section>
+            <h2>Kinematics vs Dynamics</h2>
+            <p>
+                The study is divided into two parts: <strong>Kinematics</strong>, which describes the motion using
+                angular displacement (\(\theta\)), angular velocity (\(\omega\)), and angular acceleration (\(\alpha\));
+                and <strong>Dynamics</strong>, which investigates the physical forces (like tension, friction, or
+                gravity) that provide the necessary centripetal force.
+            </p>
+        </section>
 
-        <div class="formula-block">
-            Angular displacement: \( \theta \)  
-            <br>Angular velocity: \( \omega = \frac{d\theta}{dt} \)  
-            <br>Angular acceleration: \( \alpha = \frac{d\omega}{dt} \)
-        </div>
-    </section>
+        <section>
+            <h2>The Geometry of Rotation</h2>
+            <p>
+                Circular motion is defined by its radius (\(r\)). The relationship between linear variables (\(v, a\))
+                and angular variables (\(\omega, \alpha\)) is bridged by this radius. The most critical realization for
+                a student is that "centripetal force" is not a new type of force, but a label for any net force that
+                points toward the center.
+            </p>
+            <div class="insightbox">
+                If you see an object moving in a circle, there <strong>must</strong> be a real, physical force pulling
+                it toward the center. Identifying that force is the first step in solving any problem.
+            </div>
+        </section>
 
-    <section id="linear-angular">
-        <h2>3. Linear–Angular Relations</h2>
+        <section>
+            <h2>Core Topics</h2>
+            <ul class="points-list">
+                <li><strong>Circular Kinematics</strong> — Angular variables and their relationship to linear motion.
+                </li>
+                <li><strong>Centripetal Acceleration</strong> — Why speed doesn't have to change for acceleration to
+                    exist.</li>
+                <li><strong>Dynamics of Circular Motion</strong> — Identifying the physical agents of centripetal force.
+                </li>
+                <li><strong>Banking of Roads</strong> — Engineering solutions for safe high-speed turns.</li>
+                <li><strong>Vertical Circular Motion</strong> — The role of gravity and energy conservation in
+                    non-uniform paths.</li>
+                <li><strong>Centrifugal Force</strong> — Understanding the apparent force in rotating frames.</li>
+            </ul>
+        </section>
 
-        <div class="formula-block">
-            \( v = r\omega \)  
-            <br>\( a_t = r\alpha \)
-        </div>
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-kinematics-of-circular-motion.html">1. Kinematics: Angular Variables</a>
+                <a href="./02-centripetal-acceleration.html">2. Acceleration in Curved Paths</a>
+                <a href="./03-dynamics-of-circular-motion.html">3. Dynamics and Centripetal Force</a>
+                <a href="./04-banking-of-roads.html">4. Banking of Roads and Level Turns</a>
+                <a href="./05-vertical-circular-motion.html">5. Vertical Circular Motion & Energy</a>
+                <a href="./06-centrifugal-force.html">6. Centrifugal Force & Artificial Gravity</a>
+            </div>
+        </section>
 
-        <p>
-            These relations hold for a particle moving in a circle of radius \(r\).
-        </p>
-
-        <div class="insightbox">
-            Angular variables describe *geometry*,  
-            linear variables describe *motion*.
-        </div>
-    </section>
-
-    <section id="centripetal">
-        <h2>4. Centripetal Acceleration</h2>
-        <p>
-            Even at constant speed, a particle in circular motion experiences acceleration
-            directed toward the center of the circle.
-        </p>
-
-        <div class="formula-block">
-            \[
-            a_c = \frac{v^2}{r} = r\omega^2
-            \]
-        </div>
-
-        <ul>
-            <li>Direction: radially inward</li>
-            <li>Perpendicular to instantaneous velocity</li>
-        </ul>
-
-        <div class="insightbox">
-            Centripetal acceleration changes direction,  
-            not speed.
-        </div>
-    </section>
-
-    <section id="centripetal-force">
-        <h2>5. Centripetal Force</h2>
-        <p>
-            The required inward force to maintain circular motion is called
-            <strong>centripetal force</strong>.
-        </p>
-
-        <div class="formula-block">
-            \[
-            F_c = m\frac{v^2}{r}
-            \]
-        </div>
-
-        <ul>
-            <li>Not a new force</li>
-            <li>Provided by tension, friction, gravity, or normal reaction</li>
-        </ul>
-
-        <div class="insightbox">
-            “Centripetal force” describes a role,  
-            not a physical agent.
-        </div>
-    </section>
-
-    <section id="cases">
-        <h2>6. Common Circular Motion Scenarios</h2>
-
-        <ul>
-            <li>Stone tied to a string</li>
-            <li>Vehicle on a circular track</li>
-            <li>Vertical circular motion</li>
-        </ul>
-
-        <p>
-            In each case, identify <em>which real force</em> provides the required centripetal force.
-        </p>
-    </section>
-
-    <section id="banking">
-        <h2>7. Banking of Roads</h2>
-        <p>
-            Roads are banked to reduce dependence on friction during turns.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \tan\theta = \frac{v^2}{rg}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Banking uses geometry to supply centripetal force.
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>8. Common Mistakes</h2>
-        <ul>
-            <li>Assuming centripetal force is an extra force</li>
-            <li>Forgetting direction of acceleration</li>
-            <li>Mixing up tangential and radial components</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
-</div>
-
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
 </body>
+
 </html>
