@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Operations | Addition</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-vectors-basics.html" class="back-btn">
+<span>&larr;</span> Back to Vectors
+</a>
+</nav>
+<h1>Vector Addition: Composition of Effects</h1>
+<p class="subtitle">
+Determining the net result of multiple simultaneous directional influences.
+</p>
+<section>
+<h2>The Geometry of Addition</h2>
+<p>
+Unlike scalars, where \( 3 + 4 \) is always \( 7 \), the sum of two vectors depends on their relative orientation. We define the "sum" as a single <strong>Resultant Vector</strong> \( (\vec{R}) \) that produces the same physical effect as the individual vectors combined.
+</p>
+<p>
+Geometrically, we use two primary laws:
+</p>
+<ul>
+<li><strong>Triangle Law:</strong> Used for vectors acting in sequence (head-to-tail). If \( \vec{A} \) and \( \vec{B} \) are two sides of a triangle, \( \vec{R} \) is the third side closing the triangle.</li>
+<li><strong>Parallelogram Law:</strong> Used for vectors acting at the same point (co-initial). The resultant is the diagonal of the parallelogram formed by \( \vec{A} \) and \( \vec{B} \).</li>
+</ul>
+</section>
+<section>
+<h2>Analytical Method (The Resultant Formula)</h2>
+<p>
+To calculate the magnitude and direction of the resultant \( \vec{R} \) for two vectors \( \vec{A} \) and \( \vec{B} \) inclined at an angle \( \theta \), we project the vectors onto a common coordinate system.
+</p>
+<div class="formula-block">
+\[ R = |\vec{R}| = \sqrt{A^2 + B^2 + 2AB \cos \theta} \]
+</div>
+<p>
+The direction of the resultant is specified by the angle \( \alpha \) it makes with vector \( \vec{A} \):
+</p>
+<div class="formula-block">
+\[ \tan \alpha = \frac{B \sin \theta}{A + B \cos \theta} \]
+</div>
+</section>
+<section>
+<h2>Physical Significance</h2>
+<p>
+In mechanics, vector addition is the foundation for finding the <strong>Net Force</strong> \( (\sum \vec{F}) \). If multiple forces act on a mass, the acceleration is determined only by the resultant direction and magnitude.
+</p>
+<div class="insightbox">
+A common pitfall is to add magnitudes directly. Remember: the magnitude of the sum is <strong>not</strong> the sum of the magnitudes unless the vectors are perfectly parallel \( (\theta = 0^\circ) \).
+</div>
+<div class="formula-block">
+\[ |A - B| \leq R \leq |A + B| \]
+</div>
+<p>
+The resultant magnitude is bounded by the difference and the sum of the individual magnitudes.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

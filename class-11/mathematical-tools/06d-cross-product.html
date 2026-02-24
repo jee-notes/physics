@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Operations | Cross Product</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-vectors-basics.html" class="back-btn">
+<span>&larr;</span> Back to Vectors
+</a>
+</nav>
+<h1>Cross Product: Generating Rotation</h1>
+<p class="subtitle">
+Finding a mutually perpendicular vector to describe rotational effects.
+</p>
+<section>
+<h2>The Geometry of Twist</h2>
+<p>
+Unlike the dot product, the cross product (or vector product) results in a new <strong>vector</strong>. This new vector is unique because it is perpendicular to both original vectors, representing an axis of rotation or a "twist" in space.
+</p>
+<p>
+The direction is determined by the <strong>Right-Hand Thumb Rule</strong>: curl your fingers from the first vector to the second, and your thumb points in the direction of the cross product.
+</p>
+
+</section>
+<section>
+<h2>Mathematical Definition</h2>
+<p>
+The magnitude of the cross product depends on the sine of the angle \( \theta \) between the vectors:
+</p>
+<div class="formula-block">
+\[ \vec{A} \times \vec{B} = (AB \sin \theta) \hat{n} \]
+</div>
+<p>
+Here, \( \hat{n} \) is the unit vector perpendicular to the plane containing \( \vec{A} \) and \( \vec{B} \). In component form, we use a determinant:
+</p>
+<div class="formula-block">
+\[ \vec{A} \times \vec{B} = \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ A_x & A_y & A_z \\ B_x & B_y & B_z \end{vmatrix} \]
+</div>
+</section>
+<section>
+<h2>Physical Significance</h2>
+<p>
+The cross product is essential for describing <strong>Torque</strong> \( (\vec{\tau}) \) and <strong>Angular Momentum</strong> \( (\vec{L}) \). It captures how a force applied at a distance from an axis causes an object to rotate.
+</p>
+<div class="formula-block">
+\[ \vec{\tau} = \vec{r} \times \vec{F} \]
+</div>
+<div class="insightbox">
+The cross product is <strong>not</strong> commutative (\( \vec{A} \times \vec{B} = -\vec{B} \times \vec{A} \)). Reversing the order of vectors flips the direction of the resulting vector by 180 degrees.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

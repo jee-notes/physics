@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Operations | Optimizations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-vectors-basics.html" class="back-btn">
+<span>&larr;</span> Back to Vectors
+</a>
+</nav>
+<h1>Vector Optimizations: Finding Extremes</h1>
+<p class="subtitle">
+Determining maximum and minimum values in directional problems.
+</p>
+<section>
+<h2>Relative Orientation for Extremes</h2>
+<p>
+Many physics problems ask for the "minimum force" or "maximum displacement." Since vector operations often involve trigonometric functions like \( \cos \theta \) and \( \sin \theta \), these extremes occur at specific geometric alignments.
+</p>
+<p>
+For the resultant of two vectors, the range is strictly defined:
+</p>
+<ul>
+<li><strong>Maximum Resultant:</strong> Occurs at \( \theta = 0^\circ \), where \( R = A + B \).</li>
+<li><strong>Minimum Resultant:</strong> Occurs at \( \theta = 180^\circ \), where \( R = |A - B| \).</li>
+</ul>
+</section>
+<section>
+<h2>Optimizing the Dot and Cross Product</h2>
+<p>
+In energy problems, work is maximized when the force is parallel to displacement (\( \cos 0^\circ = 1 \)). Conversely, in rotational mechanics, torque is maximized when the force is applied perpendicularly to the lever arm (\( \sin 90^\circ = 1 \)).
+</p>
+<div class="insightbox">
+When looking for a minimum value (like the shortest distance between two moving objects), we often set the derivative of the magnitude function to zero or use the geometric condition that the relative velocity must be perpendicular to the position vector.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

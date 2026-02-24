@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Operations | Resolution</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-vectors-basics.html" class="back-btn">
+<span>&larr;</span> Back to Vectors
+</a>
+</nav>
+
+<h1>Vector Resolution: Breaking Down Effects</h1>
+<p class="subtitle">
+Splitting a single vector into independent components along specific directions.
+</p>
+
+<section>
+<h2>The Logic of Components</h2>
+<p>
+Resolution is the inverse of vector addition. While addition combines multiple vectors into one resultant, resolution breaks a single vector into two or more vectors called <strong>components</strong>. In physics, we do this to analyze motion along independent axes—usually horizontal and vertical.
+</p>
+<p>
+A vector is fully described by its components. If we know how much a force pushes "forward" and how much it pushes "upward," we have effectively described the force itself.
+</p>
+
+</section>
+
+<section>
+<h2>Orthogonal Resolution</h2>
+<p>
+The most useful way to resolve a vector is into two directions that are perpendicular (orthogonal) to each other. For a vector \( \vec{A} \) making an angle \( \theta \) with the x-axis, the magnitudes of its components are:
+</p>
+<div class="formula-block">
+\[ A_x = A \cos \theta \quad \text{(Horizontal Component)} \]
+\[ A_y = A \sin \theta \quad \text{(Vertical Component)} \]
+</div>
+<p>
+The original vector can then be expressed in terms of unit vectors \( \hat{i} \) and \( \hat{j} \):
+</p>
+<div class="formula-block">
+\[ \vec{A} = A_x \hat{i} + A_y \hat{j} \]
+</div>
+</section>
+
+<section>
+<h2>Physical Significance</h2>
+<p>
+Resolution allows us to apply Newton's Laws independently to each dimension. For instance, in projectile motion, gravity only affects the vertical component of velocity, while the horizontal component remains constant (in the absence of air resistance).
+</p>
+<div class="insightbox">
+The choice of axes is arbitrary but should be strategic. Often, it is easier to resolve vectors parallel and perpendicular to an <strong>inclined plane</strong> rather than using standard horizontal and vertical lines.
+</div>
+<p>
+Regardless of the choice of axes, the magnitude of the original vector is always preserved through the Pythagorean relation:
+</p>
+<div class="formula-block">
+\[ A = \sqrt{A_x^2 + A_y^2} \]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

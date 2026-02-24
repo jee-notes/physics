@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Operations | Constraints</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-vectors-basics.html" class="back-btn">
+<span>&larr;</span> Back to Vectors
+</a>
+</nav>
+<h1>Vector Constraints: Bound Motion</h1>
+<p class="subtitle">
+Using vector components to define the limits of physical systems.
+</p>
+<section>
+<h2>The Principle of Rigid Connection</h2>
+<p>
+Constraint relations arise when the motion of one body is restricted by another, such as two blocks connected by a string or a rod. The fundamental vector rule is: <strong>The components of velocities of two points along the line joining them must be equal</strong> if the distance between them is constant.
+</p>
+
+</section>
+<section>
+<h2>Component Analysis in Constraints</h2>
+<p>
+If a rod of length \( L \) is sliding against a wall, the velocity of its ends (\( \vec{v}_A \) and \( \vec{v}_B \)) are constrained. We resolve these velocities along the length of the rod:
+</p>
+<div class="formula-block">
+\[ v_A \cos \theta_1 = v_B \cos \theta_2 \]
+</div>
+<p>
+This ensures the rod neither stretches nor compresses, maintaining its physical integrity through the vector dot product of velocity and the unit vector along the rod.
+</p>
+<div class="insightbox">
+Constraints allow us to reduce the number of independent variables in a system. If you know the vector direction of the constraint (like a string), you can solve for unknown motion in other directions.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

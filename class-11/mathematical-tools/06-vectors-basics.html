@@ -6,6 +6,147 @@
 <title>Mathematical Tools | Vectors</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
+<style>
+:root {
+--primary: #2c3e50;
+--secondary: #e67e22;
+--accent: #f39c12;
+--bg: #f4f7fa;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.7;
+background: var(--bg);
+color: #333;
+margin: 0;
+padding: 30px;
+}
+
+.container {
+max-width: 950px;
+margin: auto;
+background: #fff;
+padding: 50px;
+border-radius: 16px;
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2,
+h3 {
+color: var(--primary);
+}
+
+h1 {
+border-bottom: 3px solid var(--secondary);
+padding-bottom: 12px;
+text-align: center;
+margin-bottom: 10px;
+}
+
+.subtitle {
+text-align: center;
+opacity: 0.7;
+margin-bottom: 35px;
+font-size: 0.95rem;
+}
+
+h2 {
+margin-top: 40px;
+margin-bottom: 15px;
+}
+
+section {
+margin-bottom: 40px;
+}
+
+section:not(:last-of-type)::after {
+content: "";
+display: block;
+height: 1px;
+margin-top: 40px;
+background: linear-gradient(to right, transparent, #ddd, transparent);
+}
+
+.top-nav {
+margin-bottom: 35px;
+}
+
+.back-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 8px 14px;
+background: #fff3e0;
+border-radius: 8px;
+font-weight: 600;
+text-decoration: none;
+color: var(--primary);
+transition: all 0.25s ease;
+}
+
+.back-btn:hover {
+background: #ffe0b2;
+transform: translateX(-3px);
+}
+
+ul {
+margin-top: 10px;
+padding-left: 20px;
+}
+
+.chapter-list {
+margin-top: 25px;
+}
+
+.chapter-list a {
+display: block;
+padding: 18px 20px;
+margin-bottom: 15px;
+background: #fdfaf9;
+border-left: 5px solid var(--secondary);
+border-radius: 10px;
+text-decoration: none;
+color: #2c3e50;
+font-weight: 500;
+transition: all 0.25s ease;
+position: relative;
+}
+
+.chapter-list a::after {
+content: "→";
+position: absolute;
+right: 20px;
+opacity: 0.4;
+transition: all 0.25s ease;
+}
+
+.chapter-list a:hover {
+background: #fff3e0;
+transform: translateY(-3px);
+box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.chapter-list a:hover::after {
+opacity: 1;
+right: 15px;
+}
+
+footer {
+text-align: center;
+margin-top: 60px;
+color: #7f8c8d;
+font-size: 0.9rem;
+}
+
+hr {
+margin: 40px 0;
+border: none;
+height: 1px;
+background: linear-gradient(to right, transparent, #ccc, transparent);
+}
+</style>
 </head>
 <body>
 <div class="container">
@@ -57,148 +198,105 @@ Direction refers to orientation in space. Mathematically, it is described using 
 </div>
 </section>
 <section>
-<h2>Geometric Representation of Vectors</h2>
+<h2>Mathematical representation of Vectors</h2>
 <p>
-A vector is represented geometrically as a directed line segment. The length of the segment represents magnitude, and the arrow indicates direction.
+A vector is represented geometrically as a directed line segment — often idealized as a ray. The length of this segment represents the <strong>magnitude</strong> of the vector, and the arrow indicates its <strong>direction</strong>.
 </p>
 <p>
-In two dimensions, we write:
-</p>
-<div class="formula-block">
-\[
-\vec{A} = A_x \hat{i} + A_y \hat{j}
-\]
-</div>
-<p>
-where \( \hat{i} \) and \( \hat{j} \) are unit vectors along the x and y axes. This representation converts geometric direction into algebraic components.
+Geometrically, the vector tells us two things: how much (length) and where (orientation in space). This picture is intuitive and physically meaningful.
 </p>
 <p>
-The magnitude of the vector is:
+However, geometry alone is not sufficient for calculation. To perform algebraic operations, we need a way to encode direction symbolically. For this purpose, we introduce the concept of a <strong>unit vector</strong>.
 </p>
-<div class="formula-block">
-\[
-|\vec{A}| = \sqrt{A_x^2 + A_y^2}
-\]
-</div>
 </section>
 <section>
-<h2>Vector Addition and Resolution</h2>
+<h2>Unit Vector and Vector Magnitude</h2>
 <p>
-Vectors cannot be added like ordinary numbers. They obey geometric rules such as the triangle law and parallelogram law.
+From earlier examples, we expressed vectors verbally as:
 </p>
 <p>
-If two vectors are placed head-to-tail, their resultant is the vector drawn from the tail of the first to the head of the second.
+Displacement is 5 m east. Force is 5 N right.
 </p>
-<h3>Resolution of Vectors</h3>
 <p>
-Any vector making an angle \( \theta \) with the x-axis can be resolved into rectangular components:
+In these statements: 5 m and 5 N represent magnitudes, while east and right represent directions.
 </p>
-<div class="formula-block">
+<p>
+To describe a vector algebraically, we separate these two components explicitly:
+</p>
 \[
-A_x = A \cos \theta, \quad A_y = A \sin \theta
+\vec{A} = A \hat{a}
 \]
-</div>
 <p>
-This converts a geometric problem into algebra. Component-wise addition greatly simplifies force analysis, projectile motion and field calculations.
-</p>
-<div class="insightbox">
-Resolution transforms geometry into algebra —  one of the most powerful strategies in physics.
-</div>
-</section>
-<section>
-<h2>Unit Vectors and Direction Cosines</h2>
-<p>
-A unit vector has magnitude 1 and specifies only direction. Any vector can be written as:
-</p>
-<div class="formula-block">
-\[
-\hat{A} = \frac{\vec{A}}{|\vec{A}|}
-\]
-</div>
-<p>
-In three dimensions:
-</p>
-<div class="formula-block">
-\[
-\vec{A} = A_x \hat{i} + A_y \hat{j} + A_z \hat{k}
-\]
-</div>
-<p>
-The orientation of a vector in space can be described using direction cosines:
-</p>
-<div class="formula-block">
-\[
-\cos \alpha = \frac{A_x}{|\vec{A}|}, \quad
-\cos \beta = \frac{A_y}{|\vec{A}|}, \quad
-\cos \gamma = \frac{A_z}{|\vec{A}|}
-\]
-</div>
-<p>
-These satisfy the identity:
-</p>
-<div class="formula-block">
-\[
-\cos^2 \alpha + \cos^2 \beta + \cos^2 \gamma = 1
-\]
-</div>
-</section>
-<section>
-<h2>Vector Products</h2>
-<p>
-Multiplication of vectors produces different physical meanings, depending on how they interact.
+Here:
 </p>
 <ul>
-<li>
-<strong>Dot Product (Scalar Product):</strong> Measures the extent to which one vector projects onto another.
-</li>
+<li>\( \vec{A} \) is the vector quantity (denoted by an arrow).</li>
+<li>\( A = |\vec{A}| \) is its magnitude (a scalar).</li>
+<li>\( \hat{a} \) is a unit vector in the direction of \( \vec{A} \).</li>
 </ul>
-<div class="formula-block">
-\[
-\vec{A} \cdot \vec{B} = AB \cos \theta
-\]
-</div>
 <p>
-It is maximum when vectors are parallel and zero when perpendicular. Used in Work, Flux and Power.
+A unit vector has magnitude 1 and carries only directional information. Thus, a vector is fundamentally the product of a scalar magnitude and a pure direction.
+</p>
+<p>
+For example, when we say "Force is 5 N right", we write:
+</p>
+\[
+\vec{F} = 5 \hat{f}
+\]
+<p>
+Here:
 </p>
 <ul>
-<li>
-<strong>Cross Product (Vector Product):</strong>
-Measures the perpendicular interaction between two vectors.
-</li>
+<li>\( |\vec{F}| = 5 \text{ N} \)</li>
+<li>\( \hat{f} \) represents the unit vector pointing toward the right.</li>
 </ul>
-<div class="formula-block">
-\[
-\vec{A} \times \vec{B} = (AB \sin \theta)\,\hat{n}
-\]
-</div>
 <p>
-Its direction is determined by the right-hand rule. Used in Torque, Angular Momentum, and Magnetic Force.
+Instead of repeatedly writing "right", we just encode that direction once and for all using \( \hat{f} \). Once defined (expressed mathematically), this unit vector can be reused consistently for other  physical quantities.
+</p>
+<p>
+For example:
+</p>
+\[
+\vec{S} = 5 \hat{f} \quad (\text{displacement of 5 m right})
+\]
+\[
+\vec{V} = -5 \hat{f} \quad (\text{velocity of 5 m/s left})
+\]
+<p>
+Notice the minus sign in the second expression. Left is exactly 180° opposite to right. Since these two directions lie along the same straight line, they are linearly related. Changing direction along the same line simply introduces a negative sign.
+</p>
+<p>
+Thus, once a reference direction is fixed, opposite directions are handled algebraically through sign. This is the simplest example of how geometry becomes algebra in vector representation.
+</p>
+</section>
+<section>
+<h2>Vector Algebra in Physics</h2>
+<p>
+In physics, we define physical quantities in such a way that they can be manipulated mathematically. Laws of physics are expressed as mathematical relations between quantities, and therefore the operations performed on those quantities must be mathematically well-defined.
+</p>
+<p>
+For scalars, the familiar operations of addition, subtraction, multiplication and division are sufficient. However, vectors carry direction in addition to magnitude. Because of this additional structure, scalar algebra is no longer adequate.
+</p>
+<p>
+Vectors obey their own rules of combination — collectively known as <strong>Vector Algebra</strong>. These rules are not arbitrary; they arise from the geometric nature of vectors in space. This is a full separate chapter in 12th Maths.
+</p>
+<p>
+In physics, we focus on vector operations as they appear in physical laws: how forces combine, how projections determine work, and how perpendicular interactions generate rotation.
 </p>
 <div class="insightbox">
-Dot Product → Measures parallel effect (projection). Cross Product → Measures perpendicular effect (rotation).
+Scalar algebra is sufficient for quantities without direction. Vector algebra is required when geometry becomes part of the physics.
 </div>
 </section>
 <section>
-<h2>Why Vectors Matter in Physics</h2>
-<p>
-Most fundamental physical laws are vector equations:
-</p>
-<div class="formula-block">
-\[
-\vec{F} = m\vec{a}
-\]
+<h2>Core Vector Operations</h2>
+<div class="chapter-list">
+<a href="./06a-addition.html">1. Addition of Vectors</a>
+<a href="./06b-resolution.html">2. Resolution of Vectors</a>
+<a href="./06c-dot-product.html">3. Dot Product of Vectors</a>
+<a href="./06d-cross-product.html">4. Cross Product of Vectors</a>
+<a href="./06e-optimizations.html">5. Vector Optimizations</a>
+<a href="./06f-constrains.html">6. Vector Constraints</a>
 </div>
-<div class="formula-block">
-\[
-\vec{E} = \frac{\vec{F}}{q}
-\]
-</div>
-<p>
-Ignoring direction leads to incorrect conclusions. Vectors embed geometry directly into equations.
-</p>
-<p>
-Understanding vectors is foundational to mechanics, electromagnetism, wave physics, and rotational dynamics. They are not just mathematical tools — they are the language of spatial interaction.
-</p>
 </section>
 <footer>
 <hr>

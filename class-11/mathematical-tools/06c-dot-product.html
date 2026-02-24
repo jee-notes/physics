@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Operations | Dot Product</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-vectors-basics.html" class="back-btn">
+<span>&larr;</span> Back to Vectors
+</a>
+</nav>
+<h1>Dot Product: The Scalar Projection</h1>
+<p class="subtitle">
+Measuring how much of one vector lies in the direction of another.
+</p>
+<section>
+<h2>Concept of Projection</h2>
+<p>
+The dot product (or scalar product) is an operation that takes two vectors and returns a single scalar number. Physically, it represents the product of the magnitude of one vector and the projection of the second vector onto the first.
+</p>
+<p>
+If two vectors are perpendicular, the projection is zero. If they are parallel, the projection is at its maximum. This operation effectively filters out the parts of vectors that don't "align."
+</p>
+
+</section>
+<section>
+<h2>Mathematical Definition</h2>
+<p>
+For two vectors \( \vec{A} \) and \( \vec{B} \) with an angle \( \theta \) between them, the dot product is defined as:
+</p>
+<div class="formula-block">
+\[ \vec{A} \cdot \vec{B} = AB \cos \theta \]
+</div>
+<p>
+In Cartesian component form, where \( \vec{A} = A_x \hat{i} + A_y \hat{j} + A_z \hat{k} \), the calculation becomes straightforward multiplication of corresponding parts:
+</p>
+<div class="formula-block">
+\[ \vec{A} \cdot \vec{B} = A_x B_x + A_y B_y + A_z B_z \]
+</div>
+</section>
+<section>
+<h2>Physical Significance</h2>
+<p>
+The dot product is the primary tool for calculating <strong>Work Done</strong>. Work is defined as the product of the force and the displacement in the direction of the force.
+</p>
+<div class="formula-block">
+\[ W = \vec{F} \cdot \vec{s} = Fs \cos \theta \]
+</div>
+<div class="insightbox">
+The dot product is commutative (\( \vec{A} \cdot \vec{B} = \vec{B} \cdot \vec{A} \)). It is most useful for finding the angle between two vectors or checking for orthogonality: if \( \vec{A} \cdot \vec{B} = 0 \), then the vectors are perpendicular.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
