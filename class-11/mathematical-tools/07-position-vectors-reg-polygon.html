@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematical Tools | Regular Polygon Vector Sum</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Mathematical Tools
+</a>
+</nav>
+<h1>Position Vectors of Regular Polygon (PVRP)</h1>
+<p class="subtitle">
+A powerful symmetry result connecting geometry, vectors, and complex numbers.
+</p>
+<section>
+<h2>Statement of the Result</h2>
+<p>
+A regular polygon is a figure that has symmetric properties like a circle as well as we can use polygon tools like relating sides and angles commonly used in triangles. Earlier in ancient times, regular polygons were used to derive values of \( \pi \). This tool is used in many geometric problems related to rotational symmetry. Consider a regular polygon of <strong>n sides</strong> inscribed in a circle of radius \(R\), with its center at the origin. This is true as all vertices of a regular polygon are con-cyclic.  
+If \( \vec r_1, \vec r_2, \dots, \vec r_n \) are the position vectors of its vertices, then:
+</p>
+<div class="formula-block">
+\[
+\vec r_1 + \vec r_2 + \dots + \vec r_n = 0
+\]
+</div>
+<p>
+That is, the vector sum of position vectors of all vertices of a regular polygon is zero. This result is independent of how the polygon is oriented in the plane.
+</p>
+</section>
+<section>
+<h2>Geometric Symmetry Proof</h2>
+<p>
+Each vertex lies at equally spaced angular positions:
+</p>
+<div class="formula-block">
+\[
+\theta_k = \frac{2\pi k}{n}, \quad k = 0,1,2,\dots,n-1
+\]
+</div>
+<p>
+The entire configuration is invariant under rotation by \( \frac{2\pi}{n} \). Suppose the sum of all vectors equals some vector \( \vec S \). After rotating the entire polygon by \( \frac{2\pi}{n} \), the vector sum must also rotate.
+</p>
+<p>
+But due to symmetry, the physical configuration is unchanged. Therefore:
+</p>
+<div class="formula-block">
+\[
+\vec S = \text{Rotation}(\vec S)
+\]
+</div>
+<p>
+The only vector unchanged by a non-trivial rotation is:
+</p>
+<div class="formula-block">
+\[
+\vec S = 0
+\]
+</div>
+<div class="insightbox">
+Rotational symmetry forces equilibrium. The symmetry alone guarantees cancellation.
+</div>
+</section>
+<section>
+<h2>Algebraic Proof (Using Complex Numbers)</h2>
+<p>
+As polygon is a 2D figure, we can use complex number algebra of argand plane to prove the result. Represent each vertex as a complex number:
+</p>
+<div class="formula-block">
+\[
+z_k = R e^{i 2\pi k/n}
+\]
+</div>
+<p>
+Then the sum becomes:
+</p>
+<div class="formula-block">
+\[
+S = R \sum_{k=0}^{n-1} e^{i2\pi k/n}
+\]
+</div>
+<p>
+This is a geometric series:
+</p>
+\[
+S = R \{ e^{\frac{i2\pi}{n}0} + e^{\frac{i2\pi}{n}1} + e^{\frac{i2\pi}{n}2} + \dots + e^{\frac{i2\pi}{n}(n-1)}\}
+\]
+\[
+a = 1, \,\,\, r = e^{\frac{i2\pi}{n}}, \,\,\, n \,\,\, \text{terms}
+\]
+<div class="formula-block">
+\[
+S = R \frac{1 - e^{i2\pi}}{1 - e^{i2\pi/n}}
+\]
+</div>
+<p>
+Since:
+</p>
+<div class="formula-block">
+\[
+e^{i2\pi} = 1
+\]
+</div>
+<p>
+The numerator becomes zero, giving:
+</p>
+<div class="formula-block">
+\[
+S = 0
+\]
+</div>
+<p>
+Thus the vector sum of all vertices of a regular polygon is zero.
+</p>
+</section>
+<section>
+<h2>Visual Demonstration (Regular Hexagon Example)</h2>
+<p>
+Below is a regular hexagon inscribed in a circle. Each blue line is a position vector from the origin.
+</p>
+<svg width="450" height="450" viewBox="-225 -225 450 450">
+<!-- Circle -->
+<circle cx="0" cy="0" r="180" fill="none" stroke="#888" stroke-dasharray="5"/>
+
+<!-- Hexagon -->
+<polygon 
+points="
+180,0
+90,155.9
+-90,155.9
+-180,0
+-90,-155.9
+90,-155.9
+"
+fill="none"
+stroke="#f5c542"
+stroke-width="2"/>
+
+<!-- Position Vectors -->
+<line x1="0" y1="0" x2="180" y2="0" stroke="#4aa3ff" stroke-width="2"/>
+<line x1="0" y1="0" x2="90" y2="155.9" stroke="#4aa3ff" stroke-width="2"/>
+<line x1="0" y1="0" x2="-90" y2="155.9" stroke="#4aa3ff" stroke-width="2"/>
+<line x1="0" y1="0" x2="-180" y2="0" stroke="#4aa3ff" stroke-width="2"/>
+<line x1="0" y1="0" x2="-90" y2="-155.9" stroke="#4aa3ff" stroke-width="2"/>
+<line x1="0" y1="0" x2="90" y2="-155.9" stroke="#4aa3ff" stroke-width="2"/>
+
+<!-- Origin -->
+<circle cx="0" cy="0" r="4" fill="red"/>
+</svg>
+<p>
+Notice how the vectors are evenly distributed over \(2\pi\) radians. Their directions cancel symmetrically, forcing the total sum to zero.
+</p>
+</section>
+<section>
+<h2>Deeper Mathematical Insight</h2>
+<p>
+This result is equivalent to the fundamental identity:
+</p>
+<div class="formula-block">
+\[
+1 + \omega + \omega^2 + \dots + \omega^{n-1} = 0
+\]
+</div>
+<p>
+where \( \omega = e^{2\pi i/n} \) is an nth root of unity.
+</p>
+<div class="insightbox">
+Regular polygons encode rotational symmetry. The zero sum reflects perfect angular balance. This idea also appears in graduate level topics. From exam point of view, this symmetry is asked in many problems indirectly and  it is purely a mathematical concept. We can call it as Position Vector sum of Regular Polygon or <b>PVRP</b>.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
