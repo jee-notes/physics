@@ -11,16 +11,14 @@
 <body>
 <div class="container">
 <nav class="top-nav">
-    <a href="./index.html" class="back-btn">
-        <span>&larr;</span> Back to Current Electricity
-    </a>
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Current Electricity
+</a>
 </nav>
-
 <h1>Temperature Dependence of Resistance</h1>
 <p class="subtitle">
 How the thermal state alters the microscopic parameters of conduction.
 </p>
-
 <section>
 <h2>The Microscopic Origin</h2>
 <p>
@@ -33,16 +31,15 @@ To understand why macroscopic resistance changes with temperature, we must retur
 Since \(m\) and \(e\) are universal constants, the resistivity of any material is entirely governed by two temperature-dependent variables:
 </p>
 <ol>
-    <li><strong>\(n\) (Number Density of Charge Carriers):</strong> How many free charges are available to flow.</li>
-    <li><strong>\(\tau\) (Relaxation Time):</strong> How long a charge can accelerate before colliding with the lattice.</li>
+<li><strong>\(n\) (Number Density of Charge Carriers):</strong> How many free charges are available to flow.</li>
+<li><strong>\(\tau\) (Relaxation Time):</strong> How long a charge can accelerate before colliding with the lattice.</li>
 </ol>
 <p>
 Different classes of materials (metals vs. semiconductors) react to heat differently because temperature affects \(n\) and \(\tau\) in opposing ways.
 </p>
 </section>
-
 <section>
-<h2>1. Metallic Conductors</h2>
+<h2>Metallic Conductors</h2>
 <p>
 In a typical metal, the outermost electrons are already free at absolute zero. Heating the metal does not significantly increase the number density \(n\); it is essentially a constant.
 </p>
@@ -52,15 +49,12 @@ However, as temperature increases, the thermal energy of the positive lattice io
 <div class="insightbox">
 Because collisions are more frequent, the average relaxation time \(\tau\) <strong>decreases</strong>. Since \(\rho \propto 1/\tau\), the resistivity of metallic conductors <strong>increases</strong> with temperature.
 </div>
-
-
-
 <h3>The Macroscopic Mathematical Model</h3>
 <p>
 Over limited temperature ranges (typically near room temperature), the fractional increase in resistivity is directly proportional to the change in temperature:
 </p>
 \[
-d\rho \propto \rho \, dT \implies d\rho = \alpha \rho \, dT
+\frac{d\rho}{\rho} \propto dT \implies d\rho = \alpha \rho \, dT
 \]
 <p>
 Integrating this gives the linear approximation:
@@ -72,9 +66,9 @@ Integrating this gives the linear approximation:
 Where:
 </p>
 <ul>
-    <li>\(\rho_T\) is the resistivity at temperature \(T\).</li>
-    <li>\(\rho_0\) is the reference resistivity at a reference temperature \(T_0\) (often \(20^\circ\text{C}\)).</li>
-    <li>\(\alpha\) is the <strong>Temperature Coefficient of Resistivity</strong>. For metals, \(\alpha\) is positive.</li>
+<li>\(\rho_T\) is the resistivity at temperature \(T\).</li>
+<li>\(\rho_0\) is the reference resistivity at a reference temperature \(T_0\).</li>
+<li>\(\alpha\) is the <strong>Temperature Coefficient of Resistivity</strong>. For metals, \(\alpha\) is positive.</li>
 </ul>
 <p>
 Since resistance \(R = \rho L/A\), and the dimensional expansion of the solid is usually negligible compared to the change in \(\rho\), we can write the identical structural form for resistance:
@@ -83,9 +77,8 @@ Since resistance \(R = \rho L/A\), and the dimensional expansion of the solid is
 R_T = R_0 [1 + \alpha (T - T_0)]
 \]
 </section>
-
 <section>
-<h2>2. Semiconductors and Insulators</h2>
+<h2>Semiconductors and Insulators</h2>
 <p>
 In semiconductors (like Silicon or Germanium) and insulators, the valence electrons are tightly bound in covalent bonds at low temperatures. The initial charge carrier density \(n\) is extremely small.
 </p>
@@ -95,30 +88,274 @@ As temperature increases, the thermal energy becomes sufficient to break these c
 <div class="insightbox">
 While the increased lattice vibrations still cause \(\tau\) to decrease, the exponential explosion in the number of free carriers \(n\) overwhelmingly dominates the equation. Therefore, the overall resistivity of semiconductors <strong>decreases</strong> as temperature increases.
 </div>
-
-
-
 <p>
-Because resistivity drops with heating, semiconductors possess a <strong>negative</strong> temperature coefficient of resistivity (\(\alpha < 0\)).
+Because resistivity drops with heating, semiconductors possess a <strong>negative</strong> temperature coefficient of resistivity (\(\alpha \lt 0\)).
 </p>
 </section>
-
 <section>
-<h2>3. Alloys (Manganin, Constantan, Nichrome)</h2>
+<h2>Alloys (Manganin, Constantan, Nichrome)</h2>
 <p>
-Standard alloys are structurally designed to have a high baseline resistivity (due to irregular atomic lattice structures maximizing collisions), but a very weak dependence on temperature.
+Alloys are designed to have a relatively high resistivity and a very weak dependence on temperature.
 </p>
 <p>
-Their \(\alpha\) value is positive, but extremely small—often an order of magnitude smaller than pure metals. 
+In pure metals, resistivity mainly increases with temperature because lattice vibrations increase collisions of drifting electrons.
+</p>
+<p>
+In alloys, the presence of different types of atoms in the lattice structure disturbs its regularity. This irregular structure causes frequent electron collisions even at low temperatures.
+</p>
+<p>
+Since a large part of the resistivity is already due to this structural irregularity, the additional effect of temperature becomes comparatively small.
+</p>
+<p>
+Therefore, the temperature coefficient of resistivity \( \alpha \) is positive but much smaller than that of pure metals.
 </p>
 <div class="insightbox">
-<strong>Laboratory Application:</strong> Because their resistance remains practically constant over wide temperature variations, alloys like Manganin and Constantan are exclusively used to make standard resistance coils, wire-wound resistors, and the potentiometer wires you will study later in this chapter.
+<p>
+<strong>Laboratory Application:</strong> Because their resistance remains nearly constant over a wide temperature range, alloys such as Manganin and Constantan are used to manufacture standard resistance coils, precision wire-wound resistors and potentiometer wires.
+</p>
+<p>
+They are preferred over copper when precision is required. Although copper has lower resistivity \( \rho \), its temperature coefficient \( \alpha \) is much larger, making its resistance more sensitive to temperature variations.
+</p>
 </div>
 </section>
-
+<section>
+<h2>Solved Example</h2>
+<div class="examplebox">
+<h3>Platinum Resistance Thermometer</h3>
+<p>
+The resistance of a platinum wire is:
+</p>
+\[
+R(0^\circ C) = 8\Omega
+\]
+\[
+R(100^\circ C) = 10\Omega
+\]
+<p>
+Find the resistance at \(400^\circ C\).
+</p>
+<hr>
+<h4>Solution</h4>
+<p>
+For metallic conductors over a limited temperature range:
+</p>
+\[
+R_T = R_0 [1 + \alpha (T - T_0)]
+\]
+<p>
+The temperature coefficient \( \alpha \) is always defined with respect to a chosen reference temperature \(T_0\). Here, we choose \(T_0 = 0^\circ C\), since \(R(0)\) is given.
+</p>
+<hr>
+<p>
+<strong>Step 1: Calculate \( \alpha \) using reference \(0^\circ C\)</strong>
+</p>
+\[
+\alpha = \frac{R(100) - R(0)}{R(0)(100 - 0)}
+\]
+\[
+\alpha = \frac{10 - 8}{8 \times 100}
+\]
+\[
+\alpha = \frac{2}{800} = \frac{1}{400}
+\]
+<hr>
+<p>
+<strong>Step 2: Use the same reference to find \(R(400)\)</strong>
+</p>
+\[
+R(400) = R_0 [1 + \alpha (400 - 0)]
+\]
+\[
+R(400) = 8 \left[1 + \frac{1}{400} \times 400 \right]
+\]
+\[
+R(400) = 8 (1 + 1)
+\]
+\[
+R(400) = 16\Omega
+\]
+<hr>
+<div class="insightbox">
+<strong>Important Structural Rule:</strong><br>
+The value of \( \alpha \) calculated above is defined with respect to the reference resistance \(R_0 = R(0^\circ C)\). If we now use the same \( \alpha = 1/400 \) but switch the reference to \(R(100)\), we are mixing two different definitions of \( \alpha \), which is mathematically inconsistent.
+</div>
+<p>
+If one incorrectly writes:
+</p>
+\[
+R(400) = R_{100} [1 + \alpha (400 - 100)]
+\]
+\[
+R(400) = 10 \left[1 + \frac{1}{400} \times 300 \right]
+\]
+\[
+R(400) = 10 (1 + 3/4)
+\]
+\[
+R(400) = 17.5\Omega
+\]
+<p>
+This result is incorrect because the value \( \alpha = 1/400 \) was not defined with respect to \(R(100)\).
+</p>
+</div>
+</section>
+<section>
+<h2>Solved Example — Equivalent Temperature Coefficient</h2>
+<div class="examplebox">
+<h3>Two Resistors with Different Temperature Coefficients</h3>
+<p>
+Two resistors have resistances \(R\) and \(2R\) at reference temperature \(T_0\). Their temperature coefficients are \( \alpha \) and \( 3\alpha \) respectively. Find the equivalent temperature coefficient \( \alpha_{eq} \) when they are connected:
+</p>
+<ul>
+<li>(a) In Series</li>
+<li>(b) In Parallel</li>
+</ul>
+<hr>
+<h4>(a) Series Combination</h4>
+<p>
+At ref temperature \(T_0\):
+</p>
+\[
+R_1 = R, \, R_2 = 2R, \, R_{eq} = R_1 + R_2 = R + 2R = 3R
+\]
+<p>
+At temperature \(T\), by definition of \(\alpha\):
+</p>
+\[
+R_1 = R(1+2\alpha \Delta T)
+\]
+\[
+R_2 = 2R(1+3\alpha \Delta T)
+\]
+\[
+R_{eq} = 3R(1+\alpha_{eq}\Delta T)
+\]
+<p>
+Equivalent resistance:
+</p>
+\[
+R_{eq} = R_1 + R_2
+\]
+\[
+R_{eq} = R(1+2\alpha \Delta T) + 2R(1+3\alpha \Delta T)
+\]
+\[
+R_{eq} = 3R + 8R\alpha \Delta T
+\]
+<p>
+We equate this to \(R_{eq}\) by definition of \(\alpha\):
+</p>
+\[
+3R + 3R\alpha_{eq}\Delta T = 3R + 8R\alpha\Delta T
+\]
+\[
+\boxed{\alpha_{eq} = \frac{8\alpha}{3}}
+\]
+<hr>
+<h4>(b) Parallel Combination</h4>
+<p>
+At reference temperature \(T_0\):
+</p>
+\[
+R_1 = R, \quad R_2 = 2R
+\]
+\[
+R_{eq} = \frac{R_1 R_2}{R_1 + R_2}
+= \frac{R \cdot 2R}{R + 2R}
+= \frac{2R}{3}
+\]
+<p>
+At temperature \(T\):
+</p>
+\[
+R_1 = R(1+2\alpha \Delta T)
+\]
+\[
+R_2 = 2R(1+3\alpha \Delta T)
+\]
+<p>
+Using the parallel formula:
+</p>
+\[
+\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2}
+\]
+<p>
+For small temperature changes, use the first-order approximation:
+</p>
+\[
+\frac{1}{1+x} \approx 1 - x
+\]
+\[
+\frac{1}{R_1} = \frac{1}{R}(1 - 2\alpha \Delta T)
+\]
+\[
+\frac{1}{R_2} = \frac{1}{2R}(1 - 3\alpha \Delta T)
+\]
+\[
+\frac{1}{R_{eq}} =
+\frac{1}{R}(1 - 2\alpha \Delta T)
++
+\frac{1}{2R}(1 - 3\alpha \Delta T)
+\]
+\[
+\frac{1}{R_{eq}} =
+\frac{3}{2R}
+-
+\frac{7\alpha}{2R}\Delta T
+\]
+<p>
+But by definition:
+</p>
+\[
+R_{eq} = \frac{2R}{3}(1+\alpha_{eq}\Delta T)
+\]
+\[
+\Rightarrow
+\frac{1}{R_{eq}} =
+\frac{3}{2R}(1-\alpha_{eq}\Delta T)
+\]
+<p>
+Equating coefficients:
+</p>
+\[
+\frac{3}{2R} - \frac{3}{2R}\alpha_{eq}\Delta T
+=
+\frac{3}{2R} - \frac{7\alpha}{2R}\Delta T
+\]
+\[
+\frac{3}{2R}\alpha_{eq} = \frac{7\alpha}{2R}
+\]
+\[
+\boxed{\alpha_{eq} = \frac{7\alpha}{3}}
+\]
+<hr>
+<div class="insightbox">
+<p>
+The equivalent temperature coefficient is not an intrinsic material constant. It depends on the circuit configuration.
+</p>
+<p>
+For resistors connected in series:
+</p>
+\[
+\alpha_{eq} =
+\frac{\sum R_i \alpha_i}{\sum R_i}
+\]
+<p>
+For resistors connected in parallel:
+</p>
+\[
+\alpha_{eq} =
+\frac{\sum \frac{\alpha_i}{R_i}}{\sum \frac{1}{R_i}}
+\]
+<p>
+Thus, temperature behaviour of a network depends on how the individual resistances are arranged.
+</p>
+</div>
+</div>
+</section>
 <footer>
-    <hr>
-    <p>By Hitendra K K</p>
+<hr>
+<p>By Hitendra K K</p>
 </footer>
 </div>
 </body>
