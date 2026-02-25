@@ -1,132 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Current Electricity | Electric Current and Drift</title>
-
-<link rel="stylesheet" href="./assets/css/style.css">
-<script src="./assets/js/math.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Electricity | Galvanometer, Ammeter, and Voltmeter</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
 </head>
+
 <body>
-<div class="container">
-<nav class="top-nav">
-    <a href="./index.html" class="back-btn">
-        <span>&larr;</span> Back to Current Electricity
-    </a>
-</nav>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Current Electricity
+            </a>
+        </nav>
 
-<h1>Electric Current and Drift Velocity</h1>
-<p class="subtitle">
-The macroscopic flow of charge and its microscopic mechanical origin.
-</p>
+        <h1>Galvanometer, Ammeter, and Voltmeter</h1>
+        <p class="subtitle">
+            Measuring current and voltage — converting a sensitive galvanometer into practical instruments.
+        </p>
 
-<section>
-<h2>1. The Definition of Current: Motion vs. Flow</h2>
-<p>
-Electric current is not merely the presence of moving charges; it is the macroscopic <strong>flow</strong> of charge. Flow is a mathematical concept that requires a defined boundary—a surface or "gate"—through which the entity passes.
-</p>
+        <section>
+            <h2>The Moving Coil Galvanometer</h2>
+            <p>
+                A <strong>galvanometer</strong> is a sensitive instrument that detects and measures small electric
+                currents. It works on the principle that a current-carrying coil in a magnetic field experiences a
+                torque. The coil deflects until this magnetic torque is balanced by a restoring torque from a spiral
+                spring.
+            </p>
+            <p>
+                At equilibrium, deflection \( \theta \propto I \). Key parameters of a galvanometer:
+            </p>
+            <ul>
+                <li><strong>Full-scale deflection current \( I_g \)</strong>: the current that gives maximum pointer
+                    deflection (typically \( 10^{-3} \) A to \( 10^{-5} \) A).</li>
+                <li><strong>Galvanometer resistance \( G \)</strong>: the resistance of the coil (typically \( 10
+                    \,\Omega \) to \( 100 \,\Omega \)).</li>
+            </ul>
+            <div class="insightbox">
+                A galvanometer is delicate — it can only carry a very small current \( I_g \) without being damaged. To
+                measure larger currents or voltages, we must modify it by adding external resistors.
+            </div>
+        </section>
 
-<p>
-If a net charge \(\Delta Q\) crosses a specific cross-sectional area in time \(\Delta t\), the average current is defined as:
-</p>
-\[I_{\text{avg}} = \frac{\Delta Q}{\Delta t}\]
-<p>
-For instantaneous flow, we take the limit as \(\Delta t \to 0\):
-</p>
-\[I = \frac{dQ}{dt}\]
-<div class="insightbox">
-The SI unit of current is the Ampere (\(\text{A}\)), where \(1 \text{ A} = 1 \text{ C/s}\). By convention, the direction of macroscopic current is taken as the direction of flow of positive charges, which is opposite to the actual physical flow of electrons.
-</div>
-</section>
+        <section>
+            <h2>Converting to an Ammeter (Shunt Resistor)</h2>
+            <p>
+                An ammeter measures current and must be connected in <strong>series</strong> in the circuit. It must
+                have very low resistance so it does not alter the circuit's current.
+            </p>
+            <p>
+                To convert a galvanometer to an ammeter that can measure up to current \( I \): connect a small
+                resistance <strong>\( S \) (shunt)</strong> in <em>parallel</em> with the galvanometer. The shunt
+                diverts most of the current, allowing only \( I_g \) through the galvanometer.
+            </p>
+            <div class="model-box">
+                <h3>Derivation</h3>
+                <p>At full-scale deflection, voltage across galvanometer = voltage across shunt:</p>
+                \[I_g \cdot G = (I - I_g) \cdot S\]
+                \[\boxed{S = \frac{I_g \cdot G}{I - I_g}}\]
+                <p>The effective resistance of the ammeter:</p>
+                \[R_A = \frac{G \cdot S}{G + S} = \frac{G \cdot S}{G + S}\]
+                <p>For \( I \gg I_g \): \( S \ll G \), so \( R_A \approx S \) — very small, as required.</p>
+            </div>
+            <ul>
+                <li>Ideal ammeter: \( R_A = 0 \).</li>
+                <li>A smaller shunt allows measurement of larger currents.</li>
+                <li>Different shunts can be switched to select different current ranges.</li>
+            </ul>
+        </section>
 
-<section>
-<h2>2. Frame Invariance of Current</h2>
-<p>
-A crucial structural consequence of defining current with respect to a physical "gate" (the cross-sectional area of the conductor) is that classical current is a frame-invariant quantity.
-</p>
-<p>
-Consider an observer moving at a constant velocity parallel to a current-carrying wire. To the moving observer, the absolute velocity of the electrons changes. However, the absolute velocity of the wire (the gate) also changes by the exact same amount.
-</p>
-<div class="insightbox">
-Current is determined by the <em>relative velocity</em> between the charge carriers and the physical cross-section of the wire. Since Galilean transformations shift both velocities equally, the relative velocity remains constant. Therefore, the rate of charge crossing the gate (\(dQ/dt\)) is invariant regardless of the observer's inertial frame.
-</div>
-</section>
+        <section>
+            <h2>Converting to a Voltmeter (Series Resistor)</h2>
+            <p>
+                A voltmeter measures potential difference and must be connected in <strong>parallel</strong> across the
+                element. It must have very high resistance so it draws negligible current and does not disturb the
+                circuit.
+            </p>
+            <p>
+                To convert a galvanometer to a voltmeter that measures up to voltage \( V \): connect a large resistance
+                <strong>\( R_h \) (high resistance)</strong> in <em>series</em> with the galvanometer. The series
+                resistor limits the current to \( I_g \) when the full-scale voltage is applied.
+            </p>
+            <div class="model-box">
+                <h3>Derivation</h3>
+                <p>At full-scale deflection, total voltage across galvanometer + series resistance = \( V \):</p>
+                \[I_g(G + R_h) = V\]
+                \[\boxed{R_h = \frac{V}{I_g} - G}\]
+                <p>The effective resistance of the voltmeter:</p>
+                \[R_V = G + R_h = \frac{V}{I_g}\]
+            </div>
+            <ul>
+                <li>Ideal voltmeter: \( R_V = \infty \).</li>
+                <li>A larger \( R_h \) allows measurement of higher voltages.</li>
+                <li>Sensitivity of a voltmeter: \( 1/I_g \), measured in \( \Omega/\text{V} \). Higher sensitivity (\(
+                    \Omega/\text{V} \)) means less loading effect on the circuit.</li>
+            </ul>
+        </section>
 
-<section>
-<h2>3. Thermal Motion vs. Drift Velocity</h2>
-<p>
-In a typical metallic conductor at room temperature, free electrons are not stationary. They exist in a state of chaotic thermal motion, colliding frequently with the heavy, fixed positive ions of the lattice.
-</p>
-[Image comparing random thermal motion of electrons to organized drift velocity under an electric field]
+        <section>
+            <h2>Comparison: Ideal vs. Real Instruments</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Property</th>
+                            <th style="text-align:left; padding:8px;">Ammeter</th>
+                            <th style="text-align:left; padding:8px;">Voltmeter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Connected</td>
+                            <td style="padding:8px;">In series</td>
+                            <td style="padding:8px;">In parallel</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Ideal resistance</td>
+                            <td style="padding:8px;">\( R_A = 0 \)</td>
+                            <td style="padding:8px;">\( R_V = \infty \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Modification</td>
+                            <td style="padding:8px;">Shunt \( S \) in parallel</td>
+                            <td style="padding:8px;">High \( R_h \) in series</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Effect when non-ideal</td>
+                            <td style="padding:8px;">Reduces circuit current</td>
+                            <td style="padding:8px;">Reduces measured voltage</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-<div class="model-box">
-    <h3>State 1: No External Field (\(\vec{E} = 0\))</h3>
-    <p>
-    The electrons move at high thermal speeds (\(\sim 10^5 \text{ m/s}\)), but the motion is entirely random. For any chosen cross-sectional area, the number of electrons crossing from left to right exactly equals the number crossing from right to left.
-    </p>
-    \[\vec{u}_{\text{avg}} = \frac{1}{N} \sum_{i=1}^{N} \vec{u}_i = 0\]
-    <p>Since the net directional velocity is zero, there is motion, but no net flow. \(I = 0\).</p>
-</div>
+        <section>
+            <h2>Errors Due to Meter Resistance</h2>
+            <p>
+                <strong>Ammeter error:</strong> Since an ammeter has resistance \( R_A \), inserting it increases the
+                total circuit resistance, so the measured current is slightly less than the true current.
+            </p>
+            \[
+            I_{\text{measured}} = \frac{V}{R + R_A} < \frac{V}{R}=I_{\text{true}} \] <p>
+                <strong>Voltmeter error:</strong> Since a voltmeter has finite resistance \( R_V \), connecting it in
+                parallel reduces the effective resistance, so the measured voltage is slightly less than the true
+                voltage.
+                </p>
+                \[
+                V_{\text{measured}} = I \cdot \frac{R \cdot R_V}{R + R_V} < I \cdot R=V_{\text{true}} \] <p>
+                    Both errors are reduced by using better instruments (\( R_A \to 0 \), \( R_V \to \infty \)).
+                    </p>
+        </section>
 
-<div class="model-box">
-    <h3>State 2: External Field Applied (\(\vec{E} \neq 0\))</h3>
-    <p>
-    When a potential difference is applied, an electric field \(\vec{E}\) is established inside the conductor. This exerts a constant force \(\vec{F} = -e\vec{E}\) on every electron, causing an acceleration \(\vec{a} = -e\vec{E}/m\).
-    </p>
-    <p>
-    This acceleration imposes a very slow, organized directional shift onto the chaotic thermal motion. This net directional velocity is the <strong>drift velocity (\(\vec{v}_d\))</strong>.
-    </p>
-</div>
-
-<p>
-If \(\tau\) is the average relaxation time (the average time between successive collisions), the drift velocity is derived from basic kinematics (\(\vec{v} = \vec{u} + \vec{a}t\)):
-</p>
-\[\vec{v}_d = -\frac{e \vec{E}}{m} \tau\]
-<div class="insightbox">
-Drift velocity is extremely small (\(\sim 10^{-4} \text{ m/s}\)), yet the collective movement of the massive number of free electrons is the sole cause of macroscopic current.
-</div>
-</section>
-
-<section>
-<h2>4. The Drift Current Equation</h2>
-<p>
-We bridge the microscopic kinematics (\(v_d\)) to the macroscopic flow (\(I\)). Consider a conductor of cross-sectional area \(A\) and free electron density \(n\) (number of electrons per unit volume).
-</p>
-<p>
-In a time interval \(dt\), the distance the electron cloud drifts is \(dx = v_d dt\). The volume of the charge cylinder that crosses the "gate" \(A\) in this time is:
-</p>
-\[dV = A \cdot dx = A v_d dt\]
-<p>
-The total number of free electrons in this volume is \(N = n \cdot dV = n A v_d dt\). Since each electron carries a charge \(e\), the total charge crossing the area is:
-</p>
-\[dQ = N e = n e A v_d dt\]
-<p>
-Dividing by \(dt\) yields the fundamental structural equation of current:
-</p>
-\[I = n e A v_d\]
-</section>
-
-<section>
-<h2>5. Current Density (\(\vec{J}\))</h2>
-<p>
-While current \(I\) is a scalar, it is often necessary to describe flow at a specific point in space. We define <strong>Current Density (\(\vec{J}\))</strong> as the current per unit area taken normal to the direction of flow.
-</p>
-\[J = \frac{I}{A} = n e v_d\]
-<p>
-Current density is a vector quantity, pointing in the direction of positive charge flow (the direction of \(\vec{E}\)):
-</p>
-\[\vec{J} = -n e \vec{v}_d\]
-<p>
-This definition allows us to formally define total macroscopic current as the surface integral of the microscopic current density over the cross-sectional area \(S\):
-</p>
-\[I = \int_S \vec{J} \cdot d\vec{A}\]
-</section>
-
-<footer>
-    <hr>
-    <p>By Hitendra K K</p>
-</footer>
-</div>
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
 </body>
+
 </html>
