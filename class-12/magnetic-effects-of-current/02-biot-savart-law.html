@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Effects | Biot-Savart Law</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Magnetic Effects of Current
+</a>
+</nav>
+<h1>Biot-Savart Law</h1>
+<p class="subtitle">
+The fundamental law for computing magnetic fields from current distributions.
+</p>
+<section>
+<h2>What is the Biot-Savart Law?</h2>
+<p>
+The Biot-Savart Law is to magnetostatics what Coulomb's Law is to electrostatics. It gives the magnetic field contributed by a single infinitesimal current element, and from it — through integration — we can compute the field due to any current distribution.
+</p>
+<p>
+It was formulated experimentally by Jean-Baptiste Biot and Félix Savart in 1820, shortly after Ørsted's discovery that currents affect compass needles.
+</p>
+</section>
+<section>
+<h2>The Biot-Savart Formula</h2>
+<p>
+Consider a thin wire carrying current \( I \). Let \( d\vec{l} \) be an infinitesimal element of the wire (a vector in the direction of current flow). Let \( \vec{r} \) be the displacement vector from the current element to the field point \( P \), with magnitude \( r \).
+</p>
+<p>
+The magnetic field contribution \( d\vec{B} \) at point \( P \) due to this element is:
+</p>
+\[
+d\vec{B} = \frac{\mu_0}{4\pi} \frac{I\, d\vec{l} \times \hat{r}}{r^2}
+\]
+<p>
+In scalar form, the magnitude is:
+</p>
+\[
+dB = \frac{\mu_0}{4\pi} \frac{I\, dl\, \sin\theta}{r^2}
+\]
+<p>
+where \( \theta \) is the angle between \( d\vec{l} \) and \( \hat{r} \).
+</p>
+<div class="insightbox">
+\( \mu_0 = 4\pi \times 10^{-7} \text{ T·m/A} \) is the permeability of free space — the magnetic
+analogue of \( \varepsilon_0 \) in electrostatics.
+</div>
+<h3>Key Features of the Formula</h3>
+<ul>
+<li>The field falls off as \( 1/r^2 \) — an inverse-square law, just like Coulomb's law.</li>
+<li>The cross product \( d\vec{l} \times \hat{r} \) means the field is always perpendicular to both the
+element and the displacement vector.</li>
+<li>A current element parallel to \( \hat{r} \) (\( \theta = 0° \)) produces no field at \( P \).</li>
+<li>A current element perpendicular to \( \hat{r} \) (\( \theta = 90° \)) produces the maximum field.
+</li>
+</ul>
+</section>
+<section>
+<h2>Direction of the Field — The Right-Hand Rule</h2>
+<p>
+The direction of \( d\vec{B} \) is given by the cross product \( d\vec{l} \times \hat{r} \). Physically, you can use the right-hand rule:
+</p>
+<ul>
+<li>Point the thumb of your right hand in the direction of current flow.</li>
+<li>Your curled fingers indicate the direction in which the magnetic field circles around the wire.</li>
+</ul>
+<p>
+This curling nature of the magnetic field — circling around its source — is the geometric signature that distinguishes it from the radial electric field.
+</p>
+</section>
+<section>
+<h2>Principle of Superposition</h2>
+<p>
+The Biot-Savart Law, combined with the principle of superposition, allows us to compute the field of any current distribution. The total field at any point is the vector sum of contributions from all current elements:
+</p>
+\[
+\vec{B} = \frac{\mu_0}{4\pi} \int \frac{I\, d\vec{l} \times \hat{r}}{r^2}
+\]
+<p>
+This integral is taken over the entire length of the current path. The challenge in applying the Biot-Savart Law is almost always a geometric one: setting up the integral carefully, exploiting symmetry to simplify components, and evaluating the resulting expression.
+</p>
+<div class="insightbox">
+Symmetry is your most powerful tool. Before integrating, always identify which components of \( d\vec{B} \) cancel by symmetry — this can reduce a three-dimensional integral to a scalar one.
+</div>
+</section>
+<section>
+<h2>Biot-Savart vs Ampere's Law</h2>
+<p>
+Biot-Savart Law is the more general tool — it works for any current geometry. Ampere's Circuital Law works only when the field distribution has a strong geometrical symmetry (e.g., infinite straight wire, solenoid, toroid). In those special cases, Ampere's Law is far more efficient.
+</p>
+<p>
+Just as Gauss' Law can be derived from Coulomb's Law, Ampere's Law follows from the Biot-Savart Law through integration. Both describe the same physical field.
+</p>
+</section>
+<section>
+<h2>Core Applications</h2>
+<div class="chapter-list">
+<a href="./02a-straight-wire.html">1. Magnetic Field due to a Straight Wire</a>
+<a href="./02b-circular-loop.html">2. Magnetic Field due to a Circular Loop</a>
+<a href="./02c-solenoid.html">3. Magnetic Field due to a Solenoid &amp; Toroid</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+
+</html>

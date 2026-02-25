@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromagnetic Induction | Faraday's Law and Lenz's Law</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Electromagnetic Induction
+            </a>
+        </nav>
+
+        <h1>Faraday's Law and Lenz's Law</h1>
+        <p class="subtitle">
+            The two laws that define how and in which direction EMF is induced.
+        </p>
+
+        <section>
+            <h2>Faraday's Law of Electromagnetic Induction</h2>
+            <p>
+                Michael Faraday discovered in 1831 that an EMF is induced in a conducting loop whenever the magnetic
+                flux through the loop changes. The magnitude of the induced EMF is proportional to the rate of change of
+                flux:
+            </p>
+            \[
+            |\mathcal{E}| = \frac{d\Phi_B}{dt}
+            \]
+            <p>
+                For a coil of \( N \) turns, each turn links the same flux \( \Phi_B \), so the total flux linkage is \(
+                N\Phi_B \), and:
+            </p>
+            \[
+            \boxed{\mathcal{E} = -N\frac{d\Phi_B}{dt}}
+            \]
+            <p>
+                The negative sign is the mathematical statement of Lenz's Law — it tells us the direction of the induced
+                EMF (and hence the induced current).
+            </p>
+            <div class="insightbox">
+                Faraday's Law is not about the cause of the flux change — it doesn't matter whether \( B \) changes, the
+                area changes, or the orientation changes. Only the rate of change of flux \( d\Phi_B/dt \) determines
+                the EMF.
+            </div>
+        </section>
+
+        <section>
+            <h2>Lenz's Law</h2>
+            <p>
+                Lenz's Law states: <em>the induced current flows in a direction such that its magnetic effect opposes
+                    the change in flux that caused it.</em>
+            </p>
+            <p>
+                To apply it:
+            </p>
+            <ul>
+                <li>Determine how the flux through the loop is changing (increasing or decreasing).</li>
+                <li>The induced current must create a field that opposes this change.</li>
+                <li>Use the right-hand rule to find the direction of current that produces that field.</li>
+            </ul>
+            <div class="insightbox">
+                Lenz's Law is a consequence of energy conservation. If the induced current reinforced the flux change
+                instead of opposing it, it would create more flux, inducing more current, amplifying itself indefinitely
+                — a perpetual motion machine. Nature forbids this.
+            </div>
+        </section>
+
+        <section>
+            <h2>Applications of Lenz's Law</h2>
+
+            <h3>Magnet Approaching a Loop</h3>
+            <p>
+                When the north pole of a magnet approaches a conducting loop, the flux through the loop increases
+                (pointing toward the loop). The induced current flows to create a field opposing this increase — i.e.,
+                pointing away from the approaching magnet. By the right-hand rule, the induced current flows
+                anticlockwise when viewed from the magnet's side.
+            </p>
+            <p>
+                This induced current also creates a north pole facing the approaching magnet — a repulsive force. Work
+                must be done to push the magnet in; this work becomes the electrical energy in the induced current.
+            </p>
+
+            <h3>Magnet Receding from a Loop</h3>
+            <p>
+                As the north pole moves away, flux decreases. The induced current flows to oppose the decrease — it
+                creates a field in the same direction as the original flux, i.e., a north pole on the far side,
+                attracting the magnet. Again, external work must be done to pull the magnet away.
+            </p>
+        </section>
+
+        <section>
+            <h2>Quantitative Example</h2>
+            <p>
+                A rectangular coil of 200 turns and area \( 0.02 \text{ m}^2 \) is placed in a magnetic field that
+                changes at \( 0.5 \text{ T/s} \). The induced EMF is:
+            </p>
+            \[
+            \mathcal{E} = N\frac{d\Phi_B}{dt} = N \cdot A \cdot \frac{dB}{dt} = 200 \times 0.02 \times 0.5 = 2\text{ V}
+            \]
+        </section>
+
+        <section>
+            <h2>Core Sub-Topics</h2>
+            <div class="chapter-list">
+                <a href="./01a-motional-emf.html">1a. Motional EMF</a>
+                <a href="./01b-methods-of-inducing-emf.html">1b. Methods of Inducing EMF</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

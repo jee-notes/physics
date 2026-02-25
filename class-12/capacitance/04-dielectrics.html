@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Dielectrics and Polarisation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Capacitance
+            </a>
+        </nav>
+
+        <h1>Dielectrics and Polarisation</h1>
+        <p class="subtitle">
+            How insulators respond to electric fields — and why they multiply capacitance.
+        </p>
+
+        <section>
+            <h2>What is a Dielectric?</h2>
+            <p>
+                A dielectric is an insulating material that, when placed in an electric field, develops electric dipoles
+                throughout its volume. It does not allow charge to flow (unlike a conductor), but it responds to the
+                field by internally reorganising its charge distribution.
+            </p>
+            <p>
+                In the absence of a field, the positive and negative charge centres in each molecule coincide — no net
+                dipole. When a field is applied, these charges shift slightly: positive charges shift in the direction
+                of \( \vec{E} \), negative charges against it. Each molecule becomes an electric dipole. This process is
+                called <strong>polarisation</strong>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Types of Dielectrics</h2>
+            <h3>Non-Polar Dielectrics</h3>
+            <p>
+                Molecules with no permanent dipole moment (e.g., \( \text{O}_2 \), \( \text{H}_2 \), \( \text{CO}_2 \)).
+                Dipoles are induced only when a field is applied. The induced dipole moment is proportional to the
+                applied field.
+            </p>
+            <h3>Polar Dielectrics</h3>
+            <p>
+                Molecules with a permanent dipole moment (e.g., \( \text{H}_2\text{O} \), \( \text{HCl} \)). In the
+                absence of a field, the dipoles are randomly oriented due to thermal motion, giving zero net
+                polarisation. An external field partially aligns them — both rotating the existing dipoles and inducing
+                a small additional moment.
+            </p>
+        </section>
+
+        <section>
+            <h2>Polarisation Vector</h2>
+            <p>
+                The <strong>polarisation</strong> \( \vec{P} \) is defined as the electric dipole moment per unit
+                volume:
+            </p>
+            \[
+            \vec{P} = \frac{\text{net dipole moment}}{\text{volume}} \quad \text{(unit: C/m}^2\text{)}
+            \]
+            <p>
+                For a linear dielectric, \( \vec{P} \) is proportional to the applied electric field:
+            </p>
+            \[
+            \vec{P} = \varepsilon_0 \chi_e \vec{E}
+            \]
+            <p>
+                where \( \chi_e \) is the electric susceptibility of the dielectric. The dielectric constant (relative
+                permittivity) is related by \( K = \varepsilon_r = 1 + \chi_e \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Bound Charges and the Reduced Field</h2>
+            <p>
+                The aligned dipoles produce a layer of positive bound charge on one surface of the dielectric slab and
+                negative bound charge on the opposite surface. These bound surface charges set up a field \( \vec{E}_p
+                \) inside the dielectric that <em>opposes</em> the applied field:
+            </p>
+            \[
+            E_{\text{inside}} = E_0 - E_p = \frac{E_0}{K}
+            \]
+            <p>
+                The surface charge density of the bound charges is:
+            </p>
+            \[
+            \sigma_b = P = \varepsilon_0 \chi_e E_{\text{inside}}
+            \]
+            <div class="insightbox">
+                The net effect of inserting a dielectric is to reduce the electric field inside by a factor \( K \).
+                Since \( C = Q/V \) and \( V = Ed \), a smaller \( E \) means a smaller \( V \) for the same \( Q \) —
+                so \( C \) increases by factor \( K \).
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Sub-Topics</h2>
+            <div class="chapter-list">
+                <a href="./04a-effect-on-capacitance.html">4a. Effect of Dielectric on Capacitance</a>
+                <a href="./04b-capacitor-with-dielectric.html">4b. Partially Filled Capacitor</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

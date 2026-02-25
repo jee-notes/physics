@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternating Current | Phasor Representation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./01-ac-basics.html" class="back-btn">
+                <span>&larr;</span> Back to AC Quantities: Peak, RMS, and Phase
+            </a>
+        </nav>
+
+        <h1>Phasor Representation</h1>
+        <p class="subtitle">
+            Rotating vectors that encode both amplitude and phase — making AC circuit analysis algebraic.
+        </p>
+
+        <section>
+            <h2>What is a Phasor?</h2>
+            <p>
+                A <strong>phasor</strong> is a rotating vector whose magnitude equals the amplitude (peak value) of a
+                sinusoidal quantity, and whose angle with the positive x-axis equals the instantaneous phase. The
+                projection of the phasor onto the y-axis gives the instantaneous value of the sinusoid at time \( t \).
+            </p>
+            <p>
+                For a voltage \( v = V_0\sin(\omega t + \phi) \):
+            </p>
+            <ul>
+                <li>The phasor has length \( V_0 \).</li>
+                <li>It rotates anticlockwise with angular velocity \( \omega \).</li>
+                <li>At \( t = 0 \), it makes angle \( \phi \) with the x-axis.</li>
+                <li>Its y-projection at any time gives \( v(t) \).</li>
+            </ul>
+            <div class="insightbox">
+                All phasors in a circuit rotate at the same angular frequency \( \omega \). So we can "freeze" time and
+                compare them at \( t = 0 \) — their relative positions (angles) give the phase differences, and their
+                lengths give the amplitudes. This is the power of phasor analysis.
+            </div>
+        </section>
+
+        <section>
+            <h2>Adding Sinusoids via Phasors</h2>
+            <p>
+                Adding two sinusoids of the same frequency but different phases cannot be done by simply adding their
+                amplitudes. But the corresponding phasors can be added as vectors (tip-to-tail or parallelogram rule),
+                and the resultant phasor gives the amplitude and phase of the sum.
+            </p>
+            <p>
+                Example: \( v_1 = V_{01}\sin(\omega t) \) and \( v_2 = V_{02}\sin(\omega t + 90°) \).
+            </p>
+            <p>
+                Phasor 1 is along the y-axis (magnitude \( V_{01} \)), phasor 2 is along the x-axis (magnitude \( V_{02}
+                \), leading by \( 90° \)). Their sum:
+            </p>
+            \[
+            V_0 = \sqrt{V_{01}^2 + V_{02}^2}, \quad \phi = \arctan\left(\frac{V_{02}}{V_{01}}\right)
+            \]
+            <p>
+                This is exactly the calculation needed for the voltage across R and L in series.
+            </p>
+        </section>
+
+        <section>
+            <h2>Phasor Diagrams for Circuit Elements</h2>
+
+            <h3>Resistor (R)</h3>
+            <p>
+                Current and voltage are in phase (\( \Delta\phi = 0 \)). The phasors \( V_R \) and \( I \) point in the
+                same direction.
+            </p>
+
+            <h3>Inductor (L)</h3>
+            <p>
+                \( v_L = L\,di/dt \). If \( i = I_0\sin(\omega t) \), then \( v_L = \omega L I_0\cos(\omega t) = X_L
+                I_0\sin(\omega t + 90°) \).
+            </p>
+            <p>
+                Voltage leads current by \( 90° \). The \( V_L \) phasor is \( 90° \) ahead of \( I \) phasor
+                (anticlockwise).
+            </p>
+
+            <h3>Capacitor (C)</h3>
+            <p>
+                \( i = C\,dv/dt \). If \( v = V_0\sin(\omega t) \), then \( i = \omega C V_0\cos(\omega t) =
+                I_0\sin(\omega t + 90°) \).
+            </p>
+            <p>
+                Current leads voltage by \( 90° \), i.e., voltage lags current by \( 90°\). The \( V_C \) phasor is \(
+                90° \) behind \( I \) phasor (clockwise).
+            </p>
+
+            <h3>Series RLC</h3>
+            <p>
+                Taking \( I \) as reference, the phasors are:
+            </p>
+            <ul>
+                <li>\( V_R \): along \( I \) (same direction).</li>
+                <li>\( V_L \): perpendicular, \( 90° \) ahead of \( I \).</li>
+                <li>\( V_C \): perpendicular, \( 90° \) behind \( I \).</li>
+            </ul>
+            <p>
+                Net reactive phasor \( = V_L - V_C \) (since they oppose). Resultant voltage:
+            </p>
+            \[
+            V_0 = \sqrt{V_R^2 + (V_L - V_C)^2}
+            \]
+        </section>
+
+        <section>
+            <h2>Complex Number Representation</h2>
+            <p>
+                Phasors are naturally represented using complex numbers. The impedances of circuit elements are:
+            </p>
+            \[
+            Z_R = R, \quad Z_L = j\omega L = jX_L, \quad Z_C = \frac{1}{j\omega C} = -jX_C
+            \]
+            <p>
+                For a series RLC circuit, the complex impedance is:
+            </p>
+            \[
+            Z = R + j(X_L - X_C) = R + j\left(\omega L - \frac{1}{\omega C}\right)
+            \]
+            \[
+            |Z| = \sqrt{R^2 + (X_L - X_C)^2}, \quad \angle Z = \arctan\!\left(\frac{X_L - X_C}{R}\right)
+            \]
+            <p>
+                This makes AC circuit analysis equivalent to DC analysis with complex (phasor) quantities — exactly
+                analogous to Ohm's law: \( \tilde{V} = \tilde{I} Z \).
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

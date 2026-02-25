@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromagnetic Waves | Maxwell's Equations and Displacement Current</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Electromagnetic Waves
+            </a>
+        </nav>
+
+        <h1>Maxwell's Equations and Displacement Current</h1>
+        <p class="subtitle">
+            The four equations that unify electricity and magnetism — and the insight that made it work.
+        </p>
+
+        <section>
+            <h2>Maxwell's Four Equations</h2>
+            <p>
+                Maxwell synthesised all of classical electromagnetism into four elegant equations (integral form):
+            </p>
+
+            <h3>1. Gauss's Law for Electricity</h3>
+            \[
+            \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}
+            \]
+            <p>
+                Electric field lines originate from positive charges and terminate at negative charges. The total
+                electric flux through any closed surface equals the enclosed charge divided by \( \varepsilon_0 \).
+            </p>
+
+            <h3>2. Gauss's Law for Magnetism</h3>
+            \[
+            \oint \vec{B} \cdot d\vec{A} = 0
+            \]
+            <p>
+                Magnetic field lines form closed loops — there are no magnetic monopoles. The net magnetic flux through
+                any closed surface is always zero.
+            </p>
+
+            <h3>3. Faraday's Law of Induction</h3>
+            \[
+            \oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}
+            \]
+            <p>
+                A changing magnetic flux induces an electric field (even in empty space). This is the basis of
+                electromagnetic induction and the electric generator.
+            </p>
+
+            <h3>4. Ampere's Law (Modified by Maxwell)</h3>
+            \[
+            \oint \vec{B} \cdot d\vec{l} = \mu_0\left(I + \varepsilon_0\frac{d\Phi_E}{dt}\right)
+            \]
+            <p>
+                A current <em>or</em> a changing electric flux produces a magnetic field. Maxwell's addition of the \(
+                \varepsilon_0\,d\Phi_E/dt \) term (displacement current) was the key that made the equations consistent
+                and predicted EM waves.
+            </p>
+            <div class="insightbox">
+                Equations 3 and 4 taken together say: a changing \( \vec{B} \) creates \( \vec{E} \), and a changing \(
+                \vec{E} \) creates \( \vec{B} \). This mutual generation is what sustains a self-propagating
+                electromagnetic wave.
+            </div>
+        </section>
+
+        <section>
+            <h2>Symmetry of Maxwell's Equations</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Equation</th>
+                            <th style="text-align:left; padding:8px;">Physical Meaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Gauss (E)</td>
+                            <td style="padding:8px;">Charges are sources of \( \vec{E} \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Gauss (B)</td>
+                            <td style="padding:8px;">No magnetic monopoles; \( \vec{B} \) lines always close</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Faraday</td>
+                            <td style="padding:8px;">Changing \( \vec{B} \) → induced \( \vec{E} \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Ampere–Maxwell</td>
+                            <td style="padding:8px;">Current or changing \( \vec{E} \) → \( \vec{B} \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                The asymmetry between equations 1 and 2 (charges exist, monopoles don't) and between 3 and 4 (Faraday
+                has no current source term on the right) reflects the observed asymmetry of nature. If magnetic
+                monopoles existed, all four equations would be perfectly symmetric.
+            </p>
+        </section>
+
+        <section>
+            <h2>Core Sub-Topic</h2>
+            <div class="chapter-list">
+                <a href="./01a-displacement-current.html">1a. Displacement Current in Detail</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

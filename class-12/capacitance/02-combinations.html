@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Capacitors in Series and Parallel</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Capacitance
+            </a>
+        </nav>
+
+        <h1>Capacitors in Series and Parallel</h1>
+        <p class="subtitle">
+            Equivalent capacitance — and why combinations behave oppositely to resistors.
+        </p>
+
+        <section>
+            <h2>Capacitors in Parallel</h2>
+            <p>
+                When capacitors are connected in parallel, both plates of each capacitor are connected to the same two
+                nodes. Therefore, all capacitors have the <strong>same potential difference</strong> \( V \) across
+                them. The total charge stored is:
+            </p>
+            \[
+            Q_{\text{total}} = Q_1 + Q_2 + Q_3 + \cdots = C_1 V + C_2 V + C_3 V + \cdots
+            \]
+            <p>
+                The equivalent capacitance is:
+            </p>
+            \[
+            \boxed{C_{\text{parallel}} = C_1 + C_2 + C_3 + \cdots}
+            \]
+            <div class="insightbox">
+                Capacitors in parallel add directly — just like resistors in series. The total plate area is effectively
+                increased, which is why more capacitance is available.
+            </div>
+        </section>
+
+        <section>
+            <h2>Capacitors in Series</h2>
+            <p>
+                When capacitors are connected in series, the same charge \( Q \) is stored on each capacitor (the inner
+                plates are isolated, so charge transfers by induction). The total potential difference is the sum:
+            </p>
+            \[
+            V_{\text{total}} = V_1 + V_2 + V_3 + \cdots = \frac{Q}{C_1} + \frac{Q}{C_2} + \frac{Q}{C_3} + \cdots
+            \]
+            <p>
+                The equivalent capacitance satisfies:
+            </p>
+            \[
+            \boxed{\frac{1}{C_{\text{series}}} = \frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3} + \cdots}
+            \]
+            <p>
+                For two capacitors in series:
+            </p>
+            \[
+            C_{\text{series}} = \frac{C_1 C_2}{C_1 + C_2}
+            \]
+            <div class="insightbox">
+                Capacitors in series behave like resistors in parallel — the equivalent capacitance is always less than
+                the smallest individual capacitor. The effective plate separation increases, reducing capacitance.
+            </div>
+        </section>
+
+        <section>
+            <h2>Voltage Distribution in Series</h2>
+            <p>
+                Since charge \( Q \) is the same on all series capacitors, the voltage across each is:
+            </p>
+            \[
+            V_i = \frac{Q}{C_i}
+            \]
+            <p>
+                A smaller capacitor takes a larger share of the voltage. For two capacitors \( C_1 \) and \( C_2 \) in
+                series across total voltage \( V \):
+            </p>
+            \[
+            V_1 = \frac{C_2}{C_1 + C_2} V, \qquad V_2 = \frac{C_1}{C_1 + C_2} V
+            \]
+            <p>
+                Note how the voltages are weighted by the <em>other</em> capacitor — the smaller capacitor gets the
+                larger voltage.
+            </p>
+        </section>
+
+        <section>
+            <h2>Charge Distribution in Parallel</h2>
+            <p>
+                Since voltage \( V \) is the same across all parallel capacitors, the charge on each is:
+            </p>
+            \[
+            Q_i = C_i V
+            \]
+            <p>
+                A larger capacitor stores more charge. For two capacitors in parallel, the charge splits in proportion
+                to capacitance:
+            </p>
+            \[
+            \frac{Q_1}{Q_2} = \frac{C_1}{C_2}
+            \]
+        </section>
+
+        <section>
+            <h2>Summary Comparison</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Property</th>
+                            <th style="text-align:left; padding:8px;">Series</th>
+                            <th style="text-align:left; padding:8px;">Parallel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Same quantity</td>
+                            <td style="padding:8px;">Charge \( Q \)</td>
+                            <td style="padding:8px;">Voltage \( V \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Equivalent \( C \)</td>
+                            <td style="padding:8px;">\( \dfrac{1}{C} = \sum \dfrac{1}{C_i} \)</td>
+                            <td style="padding:8px;">\( C = \sum C_i \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">\( C_{\text{eq}} \) vs individual</td>
+                            <td style="padding:8px;">Less than smallest</td>
+                            <td style="padding:8px;">Greater than largest</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Analogy</td>
+                            <td style="padding:8px;">Resistors in parallel</td>
+                            <td style="padding:8px;">Resistors in series</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

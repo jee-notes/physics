@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Partially Filled Capacitor</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./04-dielectrics.html" class="back-btn">
+                <span>&larr;</span> Back to Dielectrics and Polarisation
+            </a>
+        </nav>
+
+        <h1>Partially Filled Capacitor</h1>
+        <p class="subtitle">
+            When dielectric fills only part of the gap — series or parallel slab problems.
+        </p>
+
+        <section>
+            <h2>Slab Inserted Parallel to Plates (Series Combination)</h2>
+            <p>
+                Consider a parallel plate capacitor of plate area \( A \) and separation \( d \). A dielectric slab of
+                thickness \( t \) and dielectric constant \( K \) is inserted between the plates (parallel to them),
+                leaving gaps of total thickness \( (d - t) \) in air.
+            </p>
+            <p>
+                The system is equivalent to <strong>two capacitors in series</strong>:
+            </p>
+            <ul>
+                <li>Air gap: \( C_{\text{air}} = \dfrac{\varepsilon_0 A}{d - t} \)</li>
+                <li>Dielectric slab: \( C_{\text{diel}} = \dfrac{K\varepsilon_0 A}{t} \)</li>
+            </ul>
+            \[
+            \frac{1}{C} = \frac{1}{C_{\text{air}}} + \frac{1}{C_{\text{diel}}} = \frac{d - t}{\varepsilon_0 A} +
+            \frac{t}{K\varepsilon_0 A}
+            \]
+            \[
+            \boxed{C = \frac{\varepsilon_0 A}{(d - t) + t/K} = \frac{\varepsilon_0 A}{d - t(1 - 1/K)}}
+            \]
+            <p>
+                Special cases:
+            </p>
+            <ul>
+                <li>\( K = 1 \): \( C = \varepsilon_0 A / d \) — no change (air dielectric).</li>
+                <li>\( K \to \infty \) (conducting slab): \( C = \varepsilon_0 A / (d - t) \) — same as reducing the gap
+                    by \( t \).</li>
+                <li>\( t = d \): \( C = K\varepsilon_0 A / d = KC_0 \) — fully filled.</li>
+            </ul>
+            <div class="insightbox">
+                Since \( 1 - 1/K \geq 0 \) for \( K \geq 1 \), the effective gap is reduced compared to the real gap, so
+                \( C \geq C_0 \). Inserting any dielectric slab (even partial) always increases (or maintains) the
+                capacitance.
+            </div>
+        </section>
+
+        <section>
+            <h2>Slab Inserted Perpendicular to Plates (Parallel Combination)</h2>
+            <p>
+                If the dielectric partially fills the capacitor such that it occupies area \( A_1 \) and the remaining
+                area \( A_2 = A - A_1 \) is in air, the two regions are in <strong>parallel</strong> (same voltage):
+            </p>
+            \[
+            C = \frac{K\varepsilon_0 A_1}{d} + \frac{\varepsilon_0 A_2}{d} = \frac{\varepsilon_0}{d}(KA_1 + A_2)
+            \]
+            <p>
+                If the slab fills fraction \( f = A_1/A \) of the area:
+            </p>
+            \[
+            C = \frac{\varepsilon_0 A}{d}(Kf + 1 - f) = C_0 [1 + f(K-1)]
+            \]
+            <p>
+                This ranges from \( C_0 \) (when \( f = 0 \)) to \( KC_0 \) (when \( f = 1 \)), varying linearly with
+                the fraction filled.
+            </p>
+        </section>
+
+        <section>
+            <h2>Two Dielectric Slabs Side by Side (Parallel)</h2>
+            <p>
+                Two dielectric slabs of constants \( K_1 \) and \( K_2 \), each of thickness \( d \) and area \( A/2 \):
+            </p>
+            \[
+            C = \frac{\varepsilon_0 (A/2)}{d}(K_1 + K_2) = \frac{\varepsilon_0 A (K_1 + K_2)}{2d}
+            \]
+        </section>
+
+        <section>
+            <h2>Two Dielectric Slabs Stacked (Series)</h2>
+            <p>
+                Two dielectrics stacked on top of each other, each of thickness \( d/2 \), constants \( K_1 \) and \(
+                K_2 \), area \( A \):
+            </p>
+            \[
+            \frac{1}{C} = \frac{d/2}{K_1 \varepsilon_0 A} + \frac{d/2}{K_2 \varepsilon_0 A} = \frac{d}{2\varepsilon_0
+            A}\left(\frac{1}{K_1} + \frac{1}{K_2}\right)
+            \]
+            \[
+            C = \frac{2\varepsilon_0 A \, K_1 K_2}{d(K_1 + K_2)}
+            \]
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

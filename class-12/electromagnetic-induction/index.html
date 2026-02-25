@@ -4,97 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Physics | EMI</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #e67e22;
-            --bg: #fdfdfd;
-        }
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: var(--bg);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 10px;
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-top: 30px;
-            border-left: 5px solid var(--secondary);
-            padding-left: 15px;
-        }
-
-        .formula-box {
-            background: #f0f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            text-align: center;
-            margin: 20px 0;
-            border: 1px solid #d1d9e1;
-        }
-
-        .points-list {
-            padding-left: 20px;
-        }
-
-        nav {
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
-        }
-    </style>
+    <title>Electromagnetic Induction | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-        <h1>Electromagnetic Induction (EMI)</h1>
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+
+        <h1>Electromagnetic Induction</h1>
+        <p class="subtitle">
+            A changing magnetic field creates an electric field — the principle behind every generator and transformer.
+        </p>
+
         <section>
             <h2>Conceptual Overview</h2>
-            <p>Electromagnetic induction is the phenomenon of generating an electromotive force (EMF) by changing the
-                magnetic flux through a conductor.</p>
+            <p>
+                Oersted showed that electricity produces magnetism. Faraday spent years searching for the reverse — can
+                magnetism produce electricity? In 1831 he found the answer: a <em>changing</em> magnetic field produces
+                an electric field. The key word is <em>changing</em>. A static magnetic field, no matter how strong,
+                produces no current. Only flux in motion — or changing — does.
+            </p>
+            <p>
+                This discovery unlocked the entire modern world of electrical power. Every generator, every transformer,
+                every induction motor operates on a single law: Faraday's Law of Electromagnetic Induction.
+            </p>
         </section>
+
         <section>
-            <h2>Core Formulas</h2>
-            <div class="formula-box">
-                \[ \epsilon = -\frac{d\Phi_B}{dt}, \quad \Phi_B = \vec{B} \cdot \vec{A}, \quad \epsilon = Blv \]
-            </div>
+            <h2>Faraday's Law — The Central Idea</h2>
+            <p>
+                The induced EMF in any closed loop is equal to the negative rate of change of the magnetic flux through
+                the loop:
+            </p>
+            \[
+            \mathcal{E} = -\frac{d\Phi_B}{dt}
+            \]
+            <p>
+                The negative sign — captured in Lenz's Law — tells us the direction of the induced current: it always
+                opposes the change in flux that caused it. This is the electromagnetic manifestation of energy
+                conservation.
+            </p>
+            <p>
+                The magnetic flux \( \Phi_B \) through a surface bounded by the loop is:
+            </p>
+            \[
+            \Phi_B = \int \vec{B} \cdot d\vec{A} = BA\cos\theta
+            \]
+            <p>
+                Flux can change in three ways — \( B \) can change, \( A \) can change, or \( \theta \) can change — and
+                each produces an EMF.
+            </p>
         </section>
+
         <section>
-            <h2>Key Discussion Points</h2>
+            <h2>Self and Mutual Inductance</h2>
+            <p>
+                Any circuit carrying a changing current produces a changing magnetic flux through itself — inducing an
+                EMF in itself. This self-opposition is characterised by the <strong>self-inductance</strong> \( L \):
+            </p>
+            \[
+            \mathcal{E}_{\text{self}} = -L\frac{dI}{dt}
+            \]
+            <p>
+                When two circuits are nearby, a changing current in one induces an EMF in the other — characterised by
+                the <strong>mutual inductance</strong> \( M \):
+            </p>
+            \[
+            \mathcal{E}_2 = -M\frac{dI_1}{dt}
+            \]
+            <p>
+                Transformers operate entirely on mutual inductance, converting power between voltage levels with
+                near-perfect efficiency.
+            </p>
+        </section>
+
+        <section>
+            <h2>Energy in the Magnetic Field</h2>
+            <p>
+                An inductor carrying current \( I \) stores energy in the magnetic field throughout its volume. The
+                energy stored is:
+            </p>
+            \[
+            U = \frac{1}{2}LI^2
+            \]
+            <p>
+                Just as a capacitor stores energy in the electric field with density \( \frac{1}{2}\varepsilon_0 E^2 \),
+                an inductor stores energy in the magnetic field with density:
+            </p>
+            \[
+            u_B = \frac{B^2}{2\mu_0}
+            \]
+        </section>
+
+        <section>
+            <h2>Core Topics</h2>
             <ul class="points-list">
-                <li>Faraday's Law of Induction and Lenz's Law (direction of induced current).</li>
-                <li>Motional EMF: EMF induced in a moving conductor.</li>
-                <li>Self-Induction ($L$) and Mutual Induction ($M$): Storage of energy in magnetic fields.</li>
-                <li>Eddy currents and their practical applications/drawbacks.</li>
+                <li><strong>Magnetic Flux</strong> — Definition, calculation, and the conditions for changing flux.</li>
+                <li><strong>Faraday's Law</strong> — The fundamental law relating induced EMF to rate of change of flux.
+                </li>
+                <li><strong>Lenz's Law</strong> — Direction of induced current; energy conservation in induction.</li>
+                <li><strong>Motional EMF</strong> — EMF in a conductor moving through a magnetic field.</li>
+                <li><strong>Methods of Inducing EMF</strong> — Changing \( B \), \( A \), and \( \theta \).</li>
+                <li><strong>Self Inductance</strong> — Definition, solenoid formula, and back-EMF.</li>
+                <li><strong>Mutual Inductance</strong> — Coupled coils, transformer principle, Neumann formula.</li>
+                <li><strong>Energy in an Inductor</strong> — \( U = \frac{1}{2}LI^2 \) and magnetic field energy
+                    density.</li>
+                <li><strong>Eddy Currents</strong> — Induced currents in bulk conductors; losses and applications.</li>
             </ul>
         </section>
+
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-faraday-law.html">1. Faraday's Law and Lenz's Law</a>
+                <a href="./02-flux-and-induction.html">2. Magnetic Flux and Induced EMF</a>
+                <a href="./03-self-inductance.html">3. Self Inductance</a>
+                <a href="./04-mutual-inductance.html">4. Mutual Inductance</a>
+                <a href="./05-energy-in-inductor.html">5. Energy Stored in an Inductor</a>
+                <a href="./06-eddy-currents.html">6. Eddy Currents and Applications</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
     </div>
 </body>
 

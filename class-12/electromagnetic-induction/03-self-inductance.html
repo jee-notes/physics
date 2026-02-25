@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromagnetic Induction | Self Inductance</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Electromagnetic Induction
+            </a>
+        </nav>
+
+        <h1>Self Inductance</h1>
+        <p class="subtitle">
+            A circuit's opposition to its own changing current — the inertia of electromagnetism.
+        </p>
+
+        <section>
+            <h2>What is Self Inductance?</h2>
+            <p>
+                When current flows through a coil, it creates a magnetic field and hence magnetic flux through the coil
+                itself. If the current changes, the flux changes, inducing an EMF in the coil itself — opposing the
+                change. This property is called <strong>self inductance</strong>.
+            </p>
+            <p>
+                The self-induced EMF is proportional to the rate of change of current:
+            </p>
+            \[
+            \mathcal{E}_L = -L\frac{dI}{dt}
+            \]
+            <p>
+                where \( L \) is the <strong>self inductance</strong> (or simply inductance) of the coil. The negative
+                sign reflects Lenz's Law — it opposes the change.
+            </p>
+            <div class="insightbox">
+                An inductor is the electromagnetic analogue of inertia. Just as mass resists changes in velocity,
+                inductance resists changes in current. A large inductor maintains its current even after the driving EMF
+                is removed.
+            </div>
+        </section>
+
+        <section>
+            <h2>Definition via Flux Linkage</h2>
+            <p>
+                The flux linkage \( \Lambda \) through a coil is proportional to the current producing it:
+            </p>
+            \[
+            \Lambda = N\Phi_B = LI
+            \]
+            \[
+            L = \frac{N\Phi_B}{I} = \frac{\Lambda}{I}
+            \]
+            <p>
+                The SI unit of inductance is the <strong>Henry (H)</strong>: \( 1\text{ H} = 1\text{ Wb/A} = 1\text{
+                V·s/A} \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Self Inductance of a Solenoid</h2>
+            <p>
+                For a solenoid of \( N \) turns, length \( l \), and cross-sectional area \( A \), with \( n = N/l \)
+                turns per unit length, carrying current \( I \):
+            </p>
+            <p>
+                The field inside is \( B = \mu_0 nI \). The flux through one turn is \( \Phi_B = BA = \mu_0 nIA \).
+                Total flux linkage:
+            </p>
+            \[
+            \Lambda = N\Phi_B = (nl)(\mu_0 nIA) = \mu_0 n^2 l A \cdot I
+            \]
+            \[
+            \boxed{L = \mu_0 n^2 lA = \mu_0 \frac{N^2}{l} A = \frac{\mu_0 N^2 A}{l}}
+            \]
+            <p>
+                Key observations:
+            </p>
+            <ul>
+                <li>\( L \propto N^2 \) — doubling turns quadruples inductance.</li>
+                <li>\( L \propto A \) — larger cross-section means more flux per turn.</li>
+                <li>\( L \propto 1/l \) — shorter solenoid has more turns per unit length for same \( N \).</li>
+                <li>With a core of relative permeability \( \mu_r \): \( L = \mu_r \mu_0 N^2 A / l \).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Back EMF and Its Role in Circuits</h2>
+            <p>
+                When the current through an inductor increases, the self-induced EMF \( \mathcal{E}_L = -L\, dI/dt \)
+                opposes the increase — it acts like a "back EMF" that resists the rise of current. When current
+                decreases, \( \mathcal{E}_L \) opposes the decrease — it tries to maintain the current.
+            </p>
+            <p>
+                This is why:
+            </p>
+            <ul>
+                <li>Inductors cause current to lag behind voltage in AC circuits.</li>
+                <li>When an inductive circuit is suddenly broken, the large \( dI/dt \) produces a very large back EMF —
+                    this causes the spark seen when switching off a high-current inductor.</li>
+            </ul>
+            <div class="insightbox">
+                A 1 H inductor carrying 1 A stores 0.5 J of energy. When the circuit is broken, this energy must go
+                somewhere — if the switch creates an air gap, it can ionize the air and produce a visible arc. This is
+                why inductors can be dangerous to switch abruptly.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

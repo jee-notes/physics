@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Effects | Magnetic Dipole and Current Loop</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetic Effects of Current
+            </a>
+        </nav>
+
+        <h1>Magnetic Dipole and Current Loop</h1>
+        <p class="subtitle">
+            The current loop as the fundamental unit of magnetic matter.
+        </p>
+
+        <section>
+            <h2>The Magnetic Dipole Moment</h2>
+            <p>
+                A planar current loop is the most fundamental magnetic object. It is the magnetic analogue of the
+                electric dipole. We characterise it by its <strong>magnetic dipole moment</strong> \( \vec{m} \):
+            </p>
+            \[
+            \vec{m} = I A \hat{n}
+            \]
+            <p>
+                where \( I \) is the current, \( A \) is the area of the loop, and \( \hat{n} \) is the unit normal to
+                the plane of the loop. The direction of \( \hat{n} \) is given by the right-hand rule: curl your right
+                hand's fingers in the direction of current flow; your thumb points in the direction of \( \vec{m} \).
+            </p>
+            <p>
+                The SI unit of magnetic moment is A·m².
+            </p>
+            <div class="insightbox">
+                A bar magnet, a compass needle, a proton, and an electron all behave as magnetic dipoles in appropriate
+                limits. The concept of magnetic dipole moment unifies these apparently different phenomena.
+            </div>
+        </section>
+
+        <section>
+            <h2>Torque on a Dipole in a Uniform Field</h2>
+            <p>
+                When a magnetic dipole \( \vec{m} \) is placed in a uniform magnetic field \( \vec{B} \), it experiences
+                a torque:
+            </p>
+            \[
+            \vec{\tau} = \vec{m} \times \vec{B}
+            \]
+            <p>
+                The magnitude is:
+            </p>
+            \[
+            \tau = mB\sin\theta
+            \]
+            <p>
+                where \( \theta \) is the angle between \( \vec{m} \) and \( \vec{B} \).
+            </p>
+            <ul>
+                <li>\( \theta = 0° \): \( \tau = 0 \) — stable equilibrium (dipole aligned with field).</li>
+                <li>\( \theta = 90° \): \( \tau = mB \) — maximum torque.</li>
+                <li>\( \theta = 180° \): \( \tau = 0 \) — unstable equilibrium (dipole anti-aligned with field).</li>
+            </ul>
+            <p>
+                The torque always acts to align the dipole with the external field — this is why compass needles point
+                north.
+            </p>
+        </section>
+
+        <section>
+            <h2>Potential Energy of a Dipole in a Field</h2>
+            <p>
+                The potential energy of a magnetic dipole in a uniform external field is:
+            </p>
+            \[
+            U = -\vec{m} \cdot \vec{B} = -mB\cos\theta
+            \]
+            <ul>
+                <li>\( \theta = 0° \): \( U = -mB \) — minimum energy (stable equilibrium).</li>
+                <li>\( \theta = 90° \): \( U = 0 \) — reference position.</li>
+                <li>\( \theta = 180° \): \( U = +mB \) — maximum energy (unstable equilibrium).</li>
+            </ul>
+            <p>
+                The work done in rotating the dipole from angle \( \theta_1 \) to \( \theta_2 \) against the torque:
+            </p>
+            \[
+            W = \Delta U = mB(\cos\theta_1 - \cos\theta_2)
+            \]
+            <div class="insightbox">
+                The formula \( U = -\vec{m} \cdot \vec{B} \) is identical in form to the electric dipole result \( U =
+                -\vec{p} \cdot \vec{E} \). This is one of many deep structural analogies between electrostatics and
+                magnetostatics.
+            </div>
+        </section>
+
+        <section>
+            <h2>Force on a Dipole in a Non-Uniform Field</h2>
+            <p>
+                A magnetic dipole in a uniform field experiences zero net force (only torque). In a <em>non-uniform</em>
+                field, however, there is a net force. For a dipole aligned along the \( z \)-axis in a field varying
+                along \( z \):
+            </p>
+            \[
+            F_z = m \frac{dB}{dz}
+            \]
+            <p>
+                This force pulls the dipole toward stronger field regions if \( \vec{m} \) is aligned with \( \vec{B} \)
+                (paramagnetic behavior), and pushes it toward weaker field regions if anti-aligned (diamagnetic
+                behavior). This underlies the Stern-Gerlach experiment and magnetic separation techniques.
+            </p>
+        </section>
+
+        <section>
+            <h2>Analogy with Electric Dipole</h2>
+            <p>
+                The electric dipole \( \vec{p} \) and the magnetic dipole \( \vec{m} \) show a profound mathematical
+                parallel. This analogy is structural and deep — both arise from the multipole expansion of a field:
+            </p>
+            <div class="model-box">
+                <table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #e0e0e0;">
+                            <th style="text-align:left; padding: 8px;">Property</th>
+                            <th style="text-align:left; padding: 8px;">Electric Dipole \( \vec{p} \)</th>
+                            <th style="text-align:left; padding: 8px;">Magnetic Dipole \( \vec{m} \)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Definition</td>
+                            <td style="padding:8px;">\( \vec{p} = q\vec{d} \)</td>
+                            <td style="padding:8px;">\( \vec{m} = IA\hat{n} \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Torque</td>
+                            <td style="padding:8px;">\( \vec{\tau} = \vec{p} \times \vec{E} \)</td>
+                            <td style="padding:8px;">\( \vec{\tau} = \vec{m} \times \vec{B} \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Potential Energy</td>
+                            <td style="padding:8px;">\( U = -\vec{p} \cdot \vec{E} \)</td>
+                            <td style="padding:8px;">\( U = -\vec{m} \cdot \vec{B} \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Axial far field</td>
+                            <td style="padding:8px;">\( \propto p/r^3 \)</td>
+                            <td style="padding:8px;">\( \propto m/r^3 \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Isolated monopole?</td>
+                            <td style="padding:8px;">Yes (point charge)</td>
+                            <td style="padding:8px;">No (no magnetic monopole observed)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

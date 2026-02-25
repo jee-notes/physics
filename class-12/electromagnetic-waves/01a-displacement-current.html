@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromagnetic Waves | Displacement Current</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./01-maxwells-equations.html" class="back-btn">
+                <span>&larr;</span> Back to Maxwell's Equations and Displacement Current
+            </a>
+        </nav>
+
+        <h1>Displacement Current in Detail</h1>
+        <p class="subtitle">
+            Maxwell's correction to Ampere's Law — and how it resolves the charging capacitor paradox.
+        </p>
+
+        <section>
+            <h2>The Problem with Ampere's Law</h2>
+            <p>
+                The original Ampere's Law relates the magnetic field around a closed loop to the net current threading
+                through any surface bounded by that loop:
+            </p>
+            \[
+            \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}}
+            \]
+            <p>
+                The surface chosen to apply Ampere's Law is arbitrary — any surface bounded by the loop should give the
+                same answer. However, consider a parallel plate capacitor being charged by a current \( I \):
+            </p>
+            <ul>
+                <li>For a flat surface cutting through the wire: \( I_{\text{enc}} = I \). ✓</li>
+                <li>For a bulging surface passing through the gap between the plates: <strong>no conduction current
+                        passes through it</strong>. \( I_{\text{enc}} = 0 \). ✗</li>
+            </ul>
+            <p>
+                Two surfaces bounded by the same loop give different answers — a fundamental inconsistency. Ampere's Law
+                was incomplete.
+            </p>
+            <div class="insightbox">
+                Maxwell recognized this problem in 1861. His resolution was both elegant and profound: the changing
+                electric field between the capacitor plates acts as an effective "current" — the displacement current —
+                and it is exactly equal to the conduction current \( I \) in the wire.
+            </div>
+        </section>
+
+        <section>
+            <h2>Maxwell's Resolution — Displacement Current</h2>
+            <p>
+                The electric field between the plates of a capacitor with charge \( Q \) and plate area \( A \) is:
+            </p>
+            \[
+            E = \frac{Q}{\varepsilon_0 A} \implies \frac{dE}{dt} = \frac{1}{\varepsilon_0 A}\frac{dQ}{dt} =
+            \frac{I}{\varepsilon_0 A}
+            \]
+            <p>
+                The electric flux through the gap is \( \Phi_E = EA \), so:
+            </p>
+            \[
+            \varepsilon_0\frac{d\Phi_E}{dt} = \varepsilon_0 A \cdot \frac{dE}{dt} = \varepsilon_0 A \cdot
+            \frac{I}{\varepsilon_0 A} = I
+            \]
+            <p>
+                Maxwell defined the <strong>displacement current</strong> as:
+            </p>
+            \[
+            \boxed{I_d = \varepsilon_0\frac{d\Phi_E}{dt}}
+            \]
+            <p>
+                In the capacitor gap, \( I_d = I \) — exactly equal to the conduction current in the wire. Adding \( I_d
+                \) to the right side of Ampere's Law removes the inconsistency: the bulging surface now gives \( \mu_0(0
+                + I_d) = \mu_0 I \), the same as the flat surface.
+            </p>
+        </section>
+
+        <section>
+            <h2>The Modified Ampere's Law</h2>
+            \[
+            \oint \vec{B} \cdot d\vec{l} = \mu_0(I_c + I_d) = \mu_0 I_c + \mu_0\varepsilon_0\frac{d\Phi_E}{dt}
+            \]
+            <p>
+                where \( I_c \) is the conduction current (due to moving charges) and \( I_d \) is the displacement
+                current (due to changing electric flux). In free space with no charges, \( I_c = 0 \), and only the
+                displacement current term survives.
+            </p>
+        </section>
+
+        <section>
+            <h2>Key Points</h2>
+            <ul class="points-list">
+                <li>Displacement current is <em>not</em> a physical current of moving charges — it is a mathematical
+                    term that represents the effect of a changing electric field.</li>
+                <li>Despite being a fictitious current in that sense, it produces a real magnetic field — just like
+                    conduction current.</li>
+                <li>At all times, in all regions of space: \( I_c + I_d = \) constant through any cross-section of a
+                    circuit. This restores the consistency of Ampere's Law.</li>
+                <li>The displacement current density is: \( \vec{J}_d = \varepsilon_0 \dfrac{\partial \vec{E}}{\partial
+                    t} \).</li>
+                <li>Between capacitor plates: \( I_c = 0 \) and \( I_d = \varepsilon_0 A\, dE/dt \). In the wire: \( I_c
+                    = I \) and \( I_d = 0 \).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>EM Waves from Displacement Current</h2>
+            <p>
+                The displacement current term is what makes EM waves possible. Consider a region of space with no
+                charges or conduction currents. Maxwell's equations give:
+            </p>
+            \[
+            \oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt} \quad \text{(Faraday)}
+            \]
+            \[
+            \oint \vec{B} \cdot d\vec{l} = \mu_0\varepsilon_0\frac{d\Phi_E}{dt} \quad \text{(Ampere–Maxwell, no
+            charges)}
+            \]
+            <p>
+                These two equations together form a coupled system: changing \( \vec{B} \) drives changing \( \vec{E}
+                \), and changing \( \vec{E} \) drives changing \( \vec{B} \). Together they produce a wave that
+                propagates at speed:
+            </p>
+            \[
+            c = \frac{1}{\sqrt{\mu_0\varepsilon_0}} = 3 \times 10^8 \text{ m/s}
+            \]
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

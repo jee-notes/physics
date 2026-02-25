@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromagnetic Waves | Nature and Properties of EM Waves</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Electromagnetic Waves
+            </a>
+        </nav>
+
+        <h1>Nature and Properties of EM Waves</h1>
+        <p class="subtitle">
+            What electromagnetic waves are — how they travel, carry energy, and exert pressure.
+        </p>
+
+        <section>
+            <h2>Structure of an EM Wave</h2>
+            <p>
+                An electromagnetic wave consists of oscillating electric and magnetic fields, perpendicular to each
+                other and to the direction of propagation. For a plane wave travelling in the \( +x \) direction:
+            </p>
+            \[
+            \vec{E} = E_0\sin(kx - \omega t)\,\hat{j}
+            \]
+            \[
+            \vec{B} = B_0\sin(kx - \omega t)\,\hat{k}
+            \]
+            <p>
+                where \( k = 2\pi/\lambda \) is the wave number and \( \omega = 2\pi f \) is the angular frequency. The
+                three directions \( \hat{i} \) (propagation), \( \hat{j} \) (\( \vec{E} \)), and \( \hat{k} \) (\(
+                \vec{B} \)) are mutually perpendicular, forming a right-handed coordinate system.
+            </p>
+            <div class="insightbox">
+                The direction of propagation of an EM wave is along \( \vec{E} \times \vec{B} \). This cross product
+                also defines the direction of energy flow — captured mathematically by the Poynting vector.
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Properties</h2>
+
+            <h3>1. Transverse Nature</h3>
+            <p>
+                EM waves are transverse waves — the oscillating fields are perpendicular to the direction of travel.
+                Unlike sound (longitudinal), EM waves can be polarised.
+            </p>
+
+            <h3>2. Speed in Free Space</h3>
+            \[
+            c = \frac{1}{\sqrt{\mu_0\varepsilon_0}} = 3 \times 10^8 \text{ m/s}
+            \]
+            <p>
+                All EM waves travel at the same speed \( c \) in vacuum, regardless of frequency. In a medium with
+                refractive index \( n \):
+            </p>
+            \[
+            v = \frac{c}{n} = \frac{1}{\sqrt{\mu\varepsilon}}
+            \]
+
+            <h3>3. Ratio of E and B Amplitudes</h3>
+            <p>
+                From Maxwell's equations, the amplitudes are related by:
+            </p>
+            \[
+            \frac{E_0}{B_0} = c \quad \Rightarrow \quad E_0 = cB_0
+            \]
+            <p>
+                At every instant, \( E/B = c \). The electric and magnetic fields are always in phase (they peak and
+                zero simultaneously).
+            </p>
+
+            <h3>4. No Medium Required</h3>
+            <p>
+                EM waves are self-sustaining oscillations of field — they travel through vacuum. This distinguished them
+                from all previously known waves (mechanical waves require a medium). Speed in vacuum is maximum and
+                equals \( c \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Energy Carried by EM Waves</h2>
+            <p>
+                The energy densities stored in the electric and magnetic fields of an EM wave are:
+            </p>
+            \[
+            u_E = \frac{1}{2}\varepsilon_0 E^2, \qquad u_B = \frac{B^2}{2\mu_0}
+            \]
+            <p>
+                Since \( E = cB \) and \( c = 1/\sqrt{\mu_0\varepsilon_0} \):
+            </p>
+            \[
+            u_E = \frac{1}{2}\varepsilon_0 E^2 = \frac{1}{2}\varepsilon_0 c^2 B^2 = \frac{B^2}{2\mu_0} = u_B
+            \]
+            <p>
+                The electric and magnetic fields carry <strong>equal amounts of energy</strong>. The total energy
+                density:
+            </p>
+            \[
+            u = u_E + u_B = \varepsilon_0 E^2 = \frac{B^2}{\mu_0}
+            \]
+        </section>
+
+        <section>
+            <h2>Intensity and Poynting Vector</h2>
+            <p>
+                The <strong>Poynting vector</strong> \( \vec{S} \) represents the energy flux — energy per unit time per
+                unit area flowing in the direction of the wave:
+            </p>
+            \[
+            \vec{S} = \frac{1}{\mu_0}(\vec{E} \times \vec{B})
+            \]
+            <p>
+                Its magnitude gives the instantaneous intensity. The average intensity (over a complete cycle) is:
+            </p>
+            \[
+            I = \langle S \rangle = \frac{E_0 B_0}{2\mu_0} = \frac{E_0^2}{2\mu_0 c} = \frac{c\varepsilon_0 E_0^2}{2} =
+            \frac{c B_0^2}{2\mu_0}
+            \]
+            <p>
+                In terms of RMS values \( E_{\text{rms}} = E_0/\sqrt{2} \):
+            </p>
+            \[
+            I = c\varepsilon_0 E_{\text{rms}}^2 = \frac{c B_{\text{rms}}^2}{\mu_0}
+            \]
+        </section>
+
+        <section>
+            <h2>Radiation Pressure and Momentum</h2>
+            <p>
+                EM waves carry momentum, and when absorbed by a surface, they exert a <strong>radiation
+                    pressure</strong>. For a wave of intensity \( I \):
+            </p>
+            \[
+            P_{\text{rad}} = \frac{I}{c} \quad (\text{perfectly absorbing surface})
+            \]
+            \[
+            P_{\text{rad}} = \frac{2I}{c} \quad (\text{perfectly reflecting surface})
+            \]
+            <p>
+                The momentum of an EM wave with energy \( U \) is:
+            </p>
+            \[
+            p = \frac{U}{c}
+            \]
+            <div class="insightbox">
+                Radiation pressure is tiny under normal conditions (sunlight exerts about \( 4.7 \times 10^{-6} \) Pa),
+                but it is measurable and has been experimentally confirmed. It is significant in stellar astrophysics —
+                radiation pressure can balance the gravitational collapse of very massive stars.
+            </div>
+        </section>
+
+        <section>
+            <h2>Summary of Key Relations</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Quantity</th>
+                            <th style="text-align:left; padding:8px;">Expression</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Speed in vacuum</td>
+                            <td style="padding:8px;">\( c = 1/\sqrt{\mu_0\varepsilon_0} = 3\times10^8 \) m/s</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Amplitude ratio</td>
+                            <td style="padding:8px;">\( E_0/B_0 = c \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Equal energy densities</td>
+                            <td style="padding:8px;">\( u_E = u_B \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Average intensity</td>
+                            <td style="padding:8px;">\( I = c\varepsilon_0 E_{\text{rms}}^2 \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Radiation pressure (absorbed)</td>
+                            <td style="padding:8px;">\( P = I/c \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Momentum of wave</td>
+                            <td style="padding:8px;">\( p = U/c \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

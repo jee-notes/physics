@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetism and Matter | Paramagnetism and Curie's Law</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./03-magnetic-materials.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetic Properties of Materials
+            </a>
+        </nav>
+
+        <h1>Paramagnetism and Curie's Law</h1>
+        <p class="subtitle">
+            Permanent atomic dipoles that partially align — and why heat disrupts them.
+        </p>
+
+        <section>
+            <h2>What is Paramagnetism?</h2>
+            <p>
+                Paramagnetism occurs in materials whose atoms (or ions) have a permanent, non-zero magnetic dipole
+                moment — due to unpaired electrons with uncompensated spin or orbital angular momentum. In the absence
+                of an external field, these dipoles point in random directions due to thermal agitation, and the net
+                magnetisation is zero.
+            </p>
+            <p>
+                When an external field \( \vec{B} \) is applied, the dipoles experience a torque \( \vec{\tau} =
+                \vec{\mu} \times \vec{B} \) that tends to align them along \( \vec{B} \). The result is a weak positive
+                magnetisation in the direction of the applied field.
+            </p>
+            <div class="insightbox">
+                Paramagnetism is a competition between two tendencies: the magnetic field tries to align the dipoles,
+                while thermal energy tries to randomise them. At high temperature or low field, thermal agitation wins
+                and the alignment is poor.
+            </div>
+        </section>
+
+        <section>
+            <h2>Characteristic Properties</h2>
+            <ul>
+                <li>Magnetic susceptibility \( \chi_m \) is small and <strong>positive</strong>: typically \( 10^{-6} \)
+                    to \( 10^{-3} \).</li>
+                <li>Relative permeability \( \mu_r \) is slightly greater than 1.</li>
+                <li>The material is <strong>weakly attracted</strong> toward regions of stronger field.</li>
+                <li>\( \chi_m \) <strong>decreases with temperature</strong> — as temperature rises, thermal agitation
+                    increasingly randomises the alignment.</li>
+                <li>Magnetisation disappears completely when the field is removed.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Curie's Law</h2>
+            <p>
+                Pierre Curie experimentally established that the magnetic susceptibility of a paramagnetic material is
+                inversely proportional to its absolute temperature \( T \):
+            </p>
+            \[
+            \chi_m = \frac{C}{T}
+            \]
+            <p>
+                where \( C \) is the <strong>Curie constant</strong>, characteristic of the material. This is
+                <strong>Curie's Law</strong>.
+            </p>
+            <p>
+                It can be rewritten in terms of magnetisation \( M \) and applied field \( H \):
+            </p>
+            \[
+            M = \frac{C}{T} H
+            \]
+            <p>
+                Physical meaning: At low \( T \), thermal energy is small relative to \( \mu B \), so alignment is good
+                and \( \chi_m \) is large. At high \( T \), random thermal motion overwhelms alignment and \( \chi_m \)
+                is small. The \( 1/T \) dependence is the quantitative expression of this.
+            </p>
+            <div class="insightbox">
+                Curie's Law breaks down when the field is very strong and the temperature very low — in this saturation
+                regime, all dipoles are aligned and increasing the field no longer increases the magnetisation.
+            </div>
+        </section>
+
+        <section>
+            <h2>Examples</h2>
+            <ul>
+                <li>Aluminium (Al), Sodium (Na), Platinum (Pt)</li>
+                <li>Liquid Oxygen (O\(_2\)) — visibly attracted to magnets</li>
+                <li>Chromium (Cr) in some oxidation states</li>
+                <li>Many transition metal salts and rare earth compounds</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Langevin Theory (Qualitative)</h2>
+            <p>
+                The classical Langevin model treats the paramagnetic material as a collection of permanent dipoles of
+                magnitude \( \mu \) in thermal equilibrium at temperature \( T \). The ratio of magnetic potential
+                energy to thermal energy determines the degree of alignment:
+            </p>
+            \[
+            x = \frac{\mu B}{k_B T}
+            \]
+            <p>
+                When \( x \ll 1 \) (weak field, high temperature):
+            </p>
+            \[
+            M \approx \frac{n\mu^2}{3k_B T} B = \frac{C}{T} H
+            \]
+            <p>
+                This gives Curie's Law with \( C = n\mu^2\mu_0 / (3k_B) \). The quantum mechanical treatment (using
+                discrete spin levels) gives the same result in the high-temperature, low-field limit.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Effect of Dielectric on Capacitance</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./04-dielectrics.html" class="back-btn">
+                <span>&larr;</span> Back to Dielectrics and Polarisation
+            </a>
+        </nav>
+
+        <h1>Effect of Dielectric on Capacitance</h1>
+        <p class="subtitle">
+            How inserting an insulator multiplies capacitance by the dielectric constant.
+        </p>
+
+        <section>
+            <h2>The Key Result</h2>
+            <p>
+                When a dielectric of dielectric constant \( K \) (also called relative permittivity \( \varepsilon_r \))
+                completely fills the space between the plates of a capacitor:
+            </p>
+            \[
+            \boxed{C' = K\, C_0}
+            \]
+            <p>
+                where \( C_0 = \varepsilon_0 A / d \) is the capacitance in vacuum. The capacitance increases by factor
+                \( K \). Since \( K &gt; 1 \) for all dielectrics, inserting a dielectric always increases capacitance.
+            </p>
+        </section>
+
+        <section>
+            <h2>Mechanism — Why C Increases</h2>
+            <p>
+                When charge \( Q_{\text{free}} \) is placed on the plates:
+            </p>
+            <ul>
+                <li>The free charges produce a field \( E_0 = Q_{\text{free}} / (\varepsilon_0 A) \).</li>
+                <li>The dielectric polarises — bound surface charges \( \sigma_b \) appear on the dielectric faces.</li>
+                <li>The bound charges set up a field \( E_p = \sigma_b / \varepsilon_0 \) opposing \( E_0 \).</li>
+                <li>Net field: \( E = E_0 - E_p = E_0 / K \).</li>
+                <li>Potential difference: \( V = Ed = E_0 d / K = V_0 / K \).</li>
+                <li>Capacitance: \( C = Q/V = Q K / V_0 = K C_0 \). ✓</li>
+            </ul>
+            <div class="insightbox">
+                The dielectric reduces the effective electric field for the same free charge — which means a smaller
+                potential difference — which means a larger capacitance \( C = Q/V \).
+            </div>
+        </section>
+
+        <section>
+            <h2>Parallel Plate Capacitor with Dielectric</h2>
+            <p>
+                For a parallel plate capacitor completely filled with a dielectric of constant \( K \):
+            </p>
+            \[
+            C' = \frac{K\varepsilon_0 A}{d} = \frac{\varepsilon A}{d}
+            \]
+            <p>
+                where \( \varepsilon = K\varepsilon_0 = \varepsilon_r \varepsilon_0 \) is the absolute permittivity of
+                the dielectric. The formulas for field and potential become:
+            </p>
+            \[
+            E = \frac{\sigma}{\varepsilon} = \frac{\sigma}{K\varepsilon_0}, \qquad V = Ed = \frac{\sigma
+            d}{K\varepsilon_0}
+            \]
+        </section>
+
+        <section>
+            <h2>Effect on Field, Voltage, and Energy</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Quantity</th>
+                            <th style="text-align:left; padding:8px;">Isolated Capacitor (const. Q)</th>
+                            <th style="text-align:left; padding:8px;">Battery Connected (const. V)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Capacitance \( C \)</td>
+                            <td style="padding:8px;">Increases by \( K \)</td>
+                            <td style="padding:8px;">Increases by \( K \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Charge \( Q \)</td>
+                            <td style="padding:8px;">Unchanged</td>
+                            <td style="padding:8px;">Increases by \( K \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Electric field \( E \)</td>
+                            <td style="padding:8px;">Decreases by \( K \)</td>
+                            <td style="padding:8px;">Unchanged</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Voltage \( V \)</td>
+                            <td style="padding:8px;">Decreases by \( K \)</td>
+                            <td style="padding:8px;">Unchanged</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Stored energy \( U \)</td>
+                            <td style="padding:8px;">Decreases by \( K \)</td>
+                            <td style="padding:8px;">Increases by \( K \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

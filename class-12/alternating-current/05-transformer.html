@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternating Current | Transformers and AC Transmission</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Alternating Current
+            </a>
+        </nav>
+
+        <h1>Transformers and AC Transmission</h1>
+        <p class="subtitle">
+            Stepping voltage up and down — and why high voltage is essential for long-distance power transmission.
+        </p>
+
+        <section>
+            <h2>Principle of the Transformer</h2>
+            <p>
+                A transformer is a device that transfers AC electrical energy between two circuits at different voltage
+                (and current) levels, using mutual induction. It consists of:
+            </p>
+            <ul>
+                <li><strong>Primary coil</strong>: \( N_p \) turns, connected to the AC input voltage.</li>
+                <li><strong>Secondary coil</strong>: \( N_s \) turns, connected to the load.</li>
+                <li><strong>Soft iron core</strong>: Channels the magnetic flux between the coils.</li>
+            </ul>
+            <p>
+                The changing current in the primary creates a changing magnetic flux in the core. By Faraday's Law, this
+                induces an EMF in the secondary.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ideal Transformer Equations</h2>
+            <p>
+                For an ideal transformer (no flux leakage, no resistance losses):
+            </p>
+            <p>
+                The same flux \( \Phi \) links both coils. The EMFs are:
+            </p>
+            \[
+            \mathcal{E}_p = N_p\frac{d\Phi}{dt}, \qquad \mathcal{E}_s = N_s\frac{d\Phi}{dt}
+            \]
+            \[
+            \frac{V_s}{V_p} = \frac{N_s}{N_p} = n \quad \text{(turns ratio)}
+            \]
+            <p>
+                By conservation of energy (input power = output power for an ideal transformer):
+            </p>
+            \[
+            V_p I_p = V_s I_s \implies \frac{I_s}{I_p} = \frac{V_p}{V_s} = \frac{N_p}{N_s}
+            \]
+            \[
+            \boxed{\frac{V_s}{V_p} = \frac{N_s}{N_p}, \qquad \frac{I_s}{I_p} = \frac{N_p}{N_s}}
+            \]
+            <ul>
+                <li><strong>Step-up transformer</strong>: \( N_s > N_p \) — output voltage higher, output current lower.
+                </li>
+                <li><strong>Step-down transformer</strong>: \( N_s < N_p \) — output voltage lower, output current
+                        higher.</li>
+            </ul>
+            <div class="insightbox">
+                A transformer does not create energy — it trades voltage for current (or vice versa) while keeping power
+                constant. The ratio \( V_p I_p = V_s I_s \) is the statement of power conservation across the
+                transformer.
+            </div>
+        </section>
+
+        <section>
+            <h2>Energy Losses in Real Transformers</h2>
+            <p>
+                Real transformers have losses that reduce efficiency below 100%:
+            </p>
+            <ul>
+                <li><strong>Eddy current losses (iron loss)</strong>: Circulating currents induced in the core. Reduced
+                    by using a laminated soft iron core (thin sheets insulated from each other).</li>
+                <li><strong>Hysteresis loss</strong>: Energy dissipated in repeatedly magnetising and demagnetising the
+                    core with alternating current. Minimised by using soft iron (low hysteresis area in B-H loop).</li>
+                <li><strong>Copper loss (resistive loss)</strong>: \( I^2R \) heating in the primary and secondary
+                    windings. Reduced by using thick copper wire.</li>
+                <li><strong>Flux leakage</strong>: Some flux does not link both coils. Minimised by winding the coils on
+                    the same limb and using a closed-core geometry.</li>
+            </ul>
+            <p>
+                Efficiency of a transformer: \( \eta = P_s/P_p \times 100\% \). Power transformers typically achieve
+                95–99% efficiency.
+            </p>
+        </section>
+
+        <section>
+            <h2>Why Use High Voltage for Transmission?</h2>
+            <p>
+                Electrical power is transmitted from generating stations to consumers over long distances through
+                transmission lines. These lines have a resistance \( R_{\text{line}} \). The power dissipated in the
+                line is:
+            </p>
+            \[
+            P_{\text{loss}} = I^2 R_{\text{line}}
+            \]
+            <p>
+                Since power transmitted \( P = VI \), for the same power:
+            </p>
+            \[
+            I = \frac{P}{V}
+            \]
+            <p>
+                At higher voltage, the current is lower, and the line loss \( P_{\text{loss}} = I^2 R_{\text{line}} =
+                P^2 R_{\text{line}} / V^2 \) is drastically reduced.
+            </p>
+            <div class="insightbox">
+                Doubling the transmission voltage reduces line losses by a factor of 4! India transmits power at 400 kV
+                or higher — step-up transformers at the generating station take 11 kV to 400 kV, and step-down
+                transformers at substations reduce it for local use.
+            </div>
+
+            <h3>The Grid Voltage Journey</h3>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Stage</th>
+                            <th style="text-align:left; padding:8px;">Typical Voltage</th>
+                            <th style="text-align:left; padding:8px;">Transformer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Generator output</td>
+                            <td style="padding:8px;">11 kV</td>
+                            <td style="padding:8px;">—</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Transmission grid</td>
+                            <td style="padding:8px;">132 kV – 400 kV</td>
+                            <td style="padding:8px;">Step-up transformer</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">City substation</td>
+                            <td style="padding:8px;">33 kV</td>
+                            <td style="padding:8px;">Step-down transformer</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Distribution</td>
+                            <td style="padding:8px;">11 kV</td>
+                            <td style="padding:8px;">Step-down transformer</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Home supply</td>
+                            <td style="padding:8px;">230 V</td>
+                            <td style="padding:8px;">Step-down transformer</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

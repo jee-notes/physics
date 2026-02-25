@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetism and Matter | Gauss's Law for Magnetism</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./01-bar-magnet.html" class="back-btn">
+                <span>&larr;</span> Back to Bar Magnet and Magnetic Dipole
+            </a>
+        </nav>
+
+        <h1>Gauss's Law for Magnetism</h1>
+        <p class="subtitle">
+            Why magnetic monopoles do not exist — and what this means for the field.
+        </p>
+
+        <section>
+            <h2>Statement of the Law</h2>
+            <p>
+                Gauss's Law for Magnetism states that the total magnetic flux \( \Phi_B \) through any closed surface is
+                always zero:
+            </p>
+            \[
+            \oint \vec{B} \cdot d\vec{A} = 0
+            \]
+            <p>
+                This is one of Maxwell's four fundamental equations of electromagnetism. It holds universally — for any
+                closed surface, any magnetic field configuration, at any point in space.
+            </p>
+        </section>
+
+        <section>
+            <h2>What Does It Mean?</h2>
+            <p>
+                Recall Gauss's Law for electricity:
+            </p>
+            \[
+            \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}
+            \]
+            <p>
+                The right-hand side is non-zero whenever charge is enclosed. For magnetism, the right-hand side is
+                <strong>always zero</strong> — meaning no magnetic "charge" (monopole) exists inside any closed surface.
+            </p>
+            <div class="insightbox">
+                Mathematically, Gauss's Law for magnetism states that \( \nabla \cdot \vec{B} = 0 \) everywhere. This
+                means \( \vec{B} \) is a solenoidal (divergence-free) field — it has no sources or sinks. Every field
+                line that enters a closed region must also exit it.
+            </div>
+        </section>
+
+        <section>
+            <h2>No Magnetic Monopoles</h2>
+            <p>
+                If a magnetic monopole existed — an isolated north pole or isolated south pole — it would act as a
+                source (or sink) of magnetic field lines, giving a non-zero surface integral. Since we always observe \(
+                \oint \vec{B} \cdot d\vec{A} = 0 \) experimentally, we conclude that isolated magnetic monopoles do not
+                exist in nature.
+            </p>
+            <p>
+                This is the deep physical content of the law. Every magnet must have both a north and south pole.
+                Magnetic field lines form closed loops — they do not begin or end on any source. They emerge from one
+                pole and re-enter at the other, continuing through the interior of the magnet.
+            </p>
+        </section>
+
+        <section>
+            <h2>Contrast with Gauss's Law for Electricity</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Feature</th>
+                            <th style="text-align:left; padding:8px;">Electric (Gauss)</th>
+                            <th style="text-align:left; padding:8px;">Magnetic (Gauss)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Law</td>
+                            <td style="padding:8px;">\( \oint \vec{E} \cdot d\vec{A} = Q_{\text{enc}}/\varepsilon_0 \)
+                            </td>
+                            <td style="padding:8px;">\( \oint \vec{B} \cdot d\vec{A} = 0 \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Monopoles exist?</td>
+                            <td style="padding:8px;">Yes — point charges</td>
+                            <td style="padding:8px;">No — not observed</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Field line topology</td>
+                            <td style="padding:8px;">Start at \( + \), end at \( - \)</td>
+                            <td style="padding:8px;">Always closed loops</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Differential form</td>
+                            <td style="padding:8px;">\( \nabla \cdot \vec{E} = \rho/\varepsilon_0 \)</td>
+                            <td style="padding:8px;">\( \nabla \cdot \vec{B} = 0 \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Implication for Bar Magnet Field Lines</h2>
+            <p>
+                Draw a closed surface (Gaussian surface) that encloses only the north pole of a bar magnet. The field
+                lines emerge from the north pole through the surface — but they must return through the same surface via
+                a path that curves around outside the magnet and re-enters at the south pole end of the magnet.
+            </p>
+            <p>
+                In addition, field lines pass through the interior of the magnet from south to north. Counting all flux
+                through any closed surface — those exiting through the equatorial regions cancel with those entering —
+                the net flux is always zero.
+            </p>
+            <div class="insightbox">
+                The continuity of magnetic field lines through the interior of the magnet (from S to N) is why the field
+                inside a bar magnet points from its south pole to its north pole, while outside the magnet it points
+                from north to south — yet the lines are continuous closed loops.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

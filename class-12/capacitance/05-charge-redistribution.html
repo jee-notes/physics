@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Charge Redistribution and Sharing</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Capacitance
+            </a>
+        </nav>
+
+        <h1>Charge Redistribution and Sharing</h1>
+        <p class="subtitle">
+            When two charged capacitors are connected — charge flows, energy is lost.
+        </p>
+
+        <section>
+            <h2>Connecting Two Capacitors</h2>
+            <p>
+                When two charged capacitors are connected to each other (positive plate to positive plate, negative to
+                negative), charge redistributes until the potential difference across both is equal.
+            </p>
+            <p>
+                Let capacitor 1 have capacitance \( C_1 \) initially charged to \( V_1 \) (charge \( Q_1 = C_1 V_1 \)),
+                and capacitor 2 have \( C_2 \) initially charged to \( V_2 \) (charge \( Q_2 = C_2 V_2 \)).
+            </p>
+
+            <h3>Common Voltage After Sharing</h3>
+            <p>
+                By conservation of charge (charge cannot be created or destroyed, only redistributed):
+            </p>
+            \[
+            Q_1 + Q_2 = Q_1' + Q_2' = (C_1 + C_2) V_f
+            \]
+            \[
+            \boxed{V_f = \frac{Q_1 + Q_2}{C_1 + C_2} = \frac{C_1 V_1 + C_2 V_2}{C_1 + C_2}}
+            \]
+            <p>
+                This is a weighted average of the initial voltages, weighted by capacitance.
+            </p>
+        </section>
+
+        <section>
+            <h2>Final Charges on Each Capacitor</h2>
+            <p>
+                After equilibrium, both capacitors are at \( V_f \):
+            </p>
+            \[
+            Q_1' = C_1 V_f = \frac{C_1(C_1 V_1 + C_2 V_2)}{C_1 + C_2}
+            \]
+            \[
+            Q_2' = C_2 V_f = \frac{C_2(C_1 V_1 + C_2 V_2)}{C_1 + C_2}
+            \]
+            <p>
+                Special case — one capacitor initially uncharged (\( V_2 = 0 \)):
+            </p>
+            \[
+            V_f = \frac{C_1 V_1}{C_1 + C_2}, \quad Q_1' = \frac{C_1^2 V_1}{C_1 + C_2}, \quad Q_2' = \frac{C_1 C_2
+            V_1}{C_1 + C_2}
+            \]
+        </section>
+
+        <section>
+            <h2>Energy Lost During Charge Sharing</h2>
+            <p>
+                The total initial energy is:
+            </p>
+            \[
+            U_i = \frac{Q_1^2}{2C_1} + \frac{Q_2^2}{2C_2} = \frac{1}{2}C_1 V_1^2 + \frac{1}{2}C_2 V_2^2
+            \]
+            <p>
+                The total final energy is:
+            </p>
+            \[
+            U_f = \frac{1}{2}(C_1 + C_2)V_f^2 = \frac{(C_1 V_1 + C_2 V_2)^2}{2(C_1 + C_2)}
+            \]
+            <p>
+                The energy lost is:
+            </p>
+            \[
+            \Delta U = U_i - U_f = \frac{C_1 C_2 (V_1 - V_2)^2}{2(C_1 + C_2)}
+            \]
+            <div class="insightbox">
+                Energy is <em>always</em> lost when two capacitors at different potentials are connected — even through
+                ideal, resistance-free wires. The energy is dissipated as electromagnetic radiation (or heat in any real
+                resistance). This loss is proportional to \( (V_1 - V_2)^2 \) and is zero only when the initial voltages
+                are equal.
+            </div>
+        </section>
+
+        <section>
+            <h2>Opposite Polarity Connection</h2>
+            <p>
+                If the capacitors are connected with opposite polarities (positive plate of one to negative plate of the
+                other):
+            </p>
+            \[
+            Q_{\text{net}} = Q_1 - Q_2 = C_1 V_1 - C_2 V_2
+            \]
+            \[
+            V_f = \frac{C_1 V_1 - C_2 V_2}{C_1 + C_2}
+            \]
+            <p>
+                The sign of \( V_f \) indicates which capacitor's polarity "wins." If \( C_1 V_1 = C_2 V_2 \), the final
+                voltage is zero — complete cancellation of charge.
+            </p>
+        </section>
+
+        <section>
+            <h2>JEE Key Points</h2>
+            <ul class="points-list">
+                <li>Use <strong>conservation of charge</strong> to find \( V_f \) — not conservation of energy (energy
+                    is not conserved due to radiation losses).</li>
+                <li>The formula \( \Delta U = C_1 C_2 (V_1 - V_2)^2 / [2(C_1 + C_2)] \) gives the energy dissipated —
+                    always positive.</li>
+                <li>For same-polarity connection: charges add. For opposite-polarity: charges subtract.</li>
+                <li>If \( C_1 = C_2 = C \) and \( V_2 = 0 \): \( V_f = V_1/2 \), energy lost = \( CV_1^2/4 = U_i/2 \).
+                    Half the energy is always lost.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

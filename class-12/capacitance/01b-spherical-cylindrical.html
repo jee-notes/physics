@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Spherical and Cylindrical Capacitors</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./01-capacitance-basics.html" class="back-btn">
+                <span>&larr;</span> Back to Capacitance and Capacitor Geometries
+            </a>
+        </nav>
+
+        <h1>Spherical and Cylindrical Capacitors</h1>
+        <p class="subtitle">
+            Deriving capacitance for curved conductor geometries using Gauss's Law.
+        </p>
+
+        <section>
+            <h2>Spherical Capacitor</h2>
+            <p>
+                A spherical capacitor consists of two concentric conducting spherical shells — an inner shell of radius
+                \( a \) carrying charge \( +Q \) and an outer shell of radius \( b \) carrying charge \( -Q \).
+            </p>
+
+            <h3>Electric Field in the Gap</h3>
+            <p>
+                By Gauss's Law, the field in the region \( a &lt; r &lt; b \) is the same as if all the charge were at
+                the centre:
+            </p>
+            \[
+            E = \frac{Q}{4\pi\varepsilon_0 r^2}
+            \]
+            <p>
+                The field is zero for \( r &lt; a \) (inside the inner conductor) and for \( r &gt; b \) (the outside
+                field due to \( +Q \) and \( -Q \) cancels).
+            </p>
+
+            <h3>Potential Difference</h3>
+            \[
+            V = \int_a^b E\, dr = \frac{Q}{4\pi\varepsilon_0}\int_a^b \frac{dr}{r^2} =
+            \frac{Q}{4\pi\varepsilon_0}\left(\frac{1}{a} - \frac{1}{b}\right)
+            \]
+
+            <h3>Capacitance</h3>
+            \[
+            \boxed{C = \frac{4\pi\varepsilon_0 ab}{b - a}}
+            \]
+            <p>
+                Special cases:
+            </p>
+            <ul>
+                <li>If \( b \to \infty \): \( C \to 4\pi\varepsilon_0 a \) — the self-capacitance of an isolated sphere.
+                </li>
+                <li>As \( b - a = d \to 0 \) with \( a \approx b \approx R \): \( C \approx 4\pi\varepsilon_0 R^2/d =
+                    \varepsilon_0 A/d \) — reduces to the parallel plate formula (locally flat geometry).</li>
+            </ul>
+            <div class="insightbox">
+                The \( b \to \infty \) result is physically important: it means even an isolated sphere has a
+                capacitance — the second "plate" is conceptually at infinity with potential zero.
+            </div>
+        </section>
+
+        <section>
+            <h2>Cylindrical Capacitor</h2>
+            <p>
+                A cylindrical capacitor consists of two coaxial conducting cylinders — inner cylinder of radius \( a \),
+                outer cylinder of radius \( b \), both of length \( L \) (where \( L \gg b \) to treat end effects as
+                negligible).
+            </p>
+
+            <h3>Field in the Gap</h3>
+            <p>
+                Using a Gaussian cylinder of radius \( r \) (\( a &lt; r &lt; b \)) and length \( l \):
+            </p>
+            \[
+            E \cdot 2\pi r l = \frac{\lambda l}{\varepsilon_0} \implies E = \frac{\lambda}{2\pi\varepsilon_0 r}
+            \]
+            <p>
+                where \( \lambda = Q/L \) is the linear charge density.
+            </p>
+
+            <h3>Potential Difference</h3>
+            \[
+            V = \int_a^b E\, dr = \frac{\lambda}{2\pi\varepsilon_0} \ln\left(\frac{b}{a}\right)
+            \]
+
+            <h3>Capacitance</h3>
+            \[
+            \boxed{C = \frac{2\pi\varepsilon_0 L}{\ln(b/a)}}
+            \]
+            <p>
+                The capacitance per unit length is \( C/L = 2\pi\varepsilon_0 / \ln(b/a) \), a useful quantity for
+                coaxial cables.
+            </p>
+        </section>
+
+        <section>
+            <h2>Comparison of Geometries</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Geometry</th>
+                            <th style="text-align:left; padding:8px;">Field Law Used</th>
+                            <th style="text-align:left; padding:8px;">Capacitance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Parallel Plate</td>
+                            <td style="padding:8px;">Gauss (planar)</td>
+                            <td style="padding:8px;">\( \varepsilon_0 A/d \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Spherical</td>
+                            <td style="padding:8px;">Gauss (spherical)</td>
+                            <td style="padding:8px;">\( 4\pi\varepsilon_0 ab/(b-a) \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Cylindrical</td>
+                            <td style="padding:8px;">Gauss (cylindrical)</td>
+                            <td style="padding:8px;">\( 2\pi\varepsilon_0 L/\ln(b/a) \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

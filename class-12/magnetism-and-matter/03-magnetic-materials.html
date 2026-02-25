@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetism and Matter | Magnetic Properties of Materials</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetism and Matter
+            </a>
+        </nav>
+
+        <h1>Magnetic Properties of Materials</h1>
+        <p class="subtitle">
+            Why every material responds differently to a magnetic field.
+        </p>
+
+        <section>
+            <h2>Magnetisation</h2>
+            <p>
+                When a material is placed in an external magnetic field, it develops a net magnetic dipole moment per
+                unit volume called the <strong>magnetisation</strong> \( \vec{M} \):
+            </p>
+            \[
+            \vec{M} = \frac{\text{net magnetic moment}}{\text{volume}} \quad \text{(unit: A/m)}
+            \]
+            <p>
+                The total magnetic field inside a material has contributions from the external field and from the
+                magnetised material itself. The auxiliary field \( \vec{H} \) (magnetic intensity) is defined to
+                separate these:
+            </p>
+            \[
+            \vec{B} = \mu_0(\vec{H} + \vec{M})
+            \]
+        </section>
+
+        <section>
+            <h2>Magnetic Susceptibility and Permeability</h2>
+            <p>
+                For linear magnetic materials, the magnetisation is proportional to \( \vec{H} \):
+            </p>
+            \[
+            \vec{M} = \chi_m \vec{H}
+            \]
+            <p>
+                where \( \chi_m \) is the dimensionless <strong>magnetic susceptibility</strong>. Substituting:
+            </p>
+            \[
+            \vec{B} = \mu_0(1 + \chi_m)\vec{H} = \mu_r \mu_0 \vec{H} = \mu \vec{H}
+            \]
+            <p>
+                where \( \mu_r = 1 + \chi_m \) is the <strong>relative permeability</strong> and \( \mu = \mu_r \mu_0 \)
+                is the absolute permeability of the material.
+            </p>
+            <div class="insightbox">
+                For vacuum: \( \chi_m = 0 \), \( \mu_r = 1 \), and \( \vec{B} = \mu_0 \vec{H} \). The material
+                parameters \( \chi_m \) and \( \mu_r \) tell us how much the material amplifies or reduces the magnetic
+                field compared to vacuum.
+            </div>
+        </section>
+
+        <section>
+            <h2>Three Classes of Magnetic Materials</h2>
+            <p>
+                The sign and magnitude of \( \chi_m \) determine the magnetic character of a material:
+            </p>
+            <div class="model-box">
+                <table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #e0e0e0;">
+                            <th style="text-align:left; padding: 8px;">Property</th>
+                            <th style="text-align:left; padding: 8px;">Diamagnetic</th>
+                            <th style="text-align:left; padding: 8px;">Paramagnetic</th>
+                            <th style="text-align:left; padding: 8px;">Ferromagnetic</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">\( \chi_m \)</td>
+                            <td style="padding:8px;">Small, negative \( (-10^{-6} \text{ to } -10^{-5}) \)</td>
+                            <td style="padding:8px;">Small, positive \( (10^{-6} \text{ to } 10^{-3}) \)</td>
+                            <td style="padding:8px;">Large, positive \( (10^3 \text{ to } 10^5) \)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">\( \mu_r \)</td>
+                            <td style="padding:8px;">Slightly less than 1</td>
+                            <td style="padding:8px;">Slightly greater than 1</td>
+                            <td style="padding:8px;">Very much greater than 1</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Behavior in field</td>
+                            <td style="padding:8px;">Weakly repelled</td>
+                            <td style="padding:8px;">Weakly attracted</td>
+                            <td style="padding:8px;">Strongly attracted</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Temperature effect</td>
+                            <td style="padding:8px;">Independent</td>
+                            <td style="padding:8px;">Curie's Law applies</td>
+                            <td style="padding:8px;">Loses property above Curie point</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Examples</td>
+                            <td style="padding:8px;">Bi, Cu, water, gold</td>
+                            <td style="padding:8px;">Al, Na, liquid O\(_2\)</td>
+                            <td style="padding:8px;">Fe, Ni, Co, Alnico</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Sub-Topics</h2>
+            <div class="chapter-list">
+                <a href="./03a-diamagnetism.html">3a. Diamagnetism</a>
+                <a href="./03b-paramagnetism.html">3b. Paramagnetism and Curie's Law</a>
+                <a href="./03c-ferromagnetism.html">3c. Ferromagnetism, Domains, and Hysteresis</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Effects | Magnetic Force and Lorentz Force</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetic Effects of Current
+            </a>
+        </nav>
+
+        <h1>Magnetic Force and the Lorentz Force Law</h1>
+        <p class="subtitle">
+            The force that curves trajectories but never changes speed.
+        </p>
+
+        <section>
+            <h2>What is Magnetic Force?</h2>
+            <p>
+                A magnetic field exerts a force on any charged particle that is in motion through it. Unlike the
+                electric force — which acts along the field direction — the magnetic force acts perpendicular to both
+                the particle's velocity and the magnetic field. This perpendicularity is the defining geometric
+                character of the magnetic interaction.
+            </p>
+            <p>
+                A charge at rest in a magnetic field experiences no force. Only motion through a magnetic field
+                generates a magnetic interaction. This immediately distinguishes static electricity from magnetic
+                phenomena.
+            </p>
+            <div class="insightbox">
+                Magnetism is not an independent force — it is the relativistic consequence of charge in motion. A moving
+                charge in one frame of reference appears as a current in another, generating what we observe as a
+                magnetic field.
+            </div>
+        </section>
+
+        <section>
+            <h2>The Lorentz Force Law</h2>
+            <p>
+                The complete electromagnetic force on a charge \( q \) moving with velocity \( \vec{v} \) in the
+                presence of both an electric field \( \vec{E} \) and a magnetic field \( \vec{B} \) is given by the
+                Lorentz Force Law:
+            </p>
+            \[
+            \vec{F} = q(\vec{E} + \vec{v} \times \vec{B})
+            \]
+            <p>
+                The magnetic component of this force is:
+            </p>
+            \[
+            \vec{F}_{\text{mag}} = q(\vec{v} \times \vec{B})
+            \]
+            <p>
+                The magnitude of the magnetic force is:
+            </p>
+            \[
+            F = qvB\sin\theta
+            \]
+            <p>
+                where \( \theta \) is the angle between the velocity vector \( \vec{v} \) and the magnetic field vector
+                \( \vec{B} \).
+            </p>
+            <div class="insightbox">
+                When \( \vec{v} \parallel \vec{B} \) (i.e., \( \theta = 0° \) or \( 180° \)), the magnetic force is
+                zero. Maximum force occurs when \( \vec{v} \perp \vec{B} \) (i.e., \( \theta = 90° \)), giving \( F =
+                qvB \).
+            </div>
+        </section>
+
+        <section>
+            <h2>Direction of the Magnetic Force — The Right-Hand Rule</h2>
+            <p>
+                The direction of \( \vec{v} \times \vec{B} \) is determined by the right-hand rule for the cross
+                product:
+            </p>
+            <ul>
+                <li>Point the fingers of your right hand in the direction of \( \vec{v} \).</li>
+                <li>Curl them toward \( \vec{B} \).</li>
+                <li>Your thumb points in the direction of \( \vec{v} \times \vec{B} \).</li>
+            </ul>
+            <p>
+                For a <strong>positive</strong> charge, the force \( \vec{F} = q(\vec{v} \times \vec{B}) \) is in the
+                direction of \( \vec{v} \times \vec{B} \).
+                For a <strong>negative</strong> charge, the force is in the <em>opposite</em> direction.
+            </p>
+            <div class="insightbox">
+                A common JEE approach: use the right-hand rule to find \( \vec{v} \times \vec{B} \), then flip the
+                direction if the charge is negative.
+            </div>
+        </section>
+
+        <section>
+            <h2>Key Properties of the Magnetic Force</h2>
+
+            <h3>1. Always Perpendicular to Velocity</h3>
+            <p>
+                Since \( \vec{F}_{\text{mag}} = q(\vec{v} \times \vec{B}) \), and cross products are always
+                perpendicular to both input vectors, the magnetic force is always perpendicular to \( \vec{v} \).
+            </p>
+
+            <h3>2. Does No Work</h3>
+            <p>
+                Work done by a force is \( dW = \vec{F} \cdot d\vec{s} = \vec{F} \cdot \vec{v}\,dt \). Since \(
+                \vec{F}_{\text{mag}} \perp \vec{v} \), their dot product is zero. Therefore:
+            </p>
+            \[
+            W_{\text{mag}} = 0
+            \]
+            <p>
+                The magnetic force <strong>never changes the kinetic energy or speed</strong> of a particle. It only
+                changes the direction of motion.
+            </p>
+
+            <h3>3. Produces Circular and Helical Motion</h3>
+            <p>
+                A charge entering a uniform magnetic field with velocity perpendicular to \( \vec{B} \) undergoes
+                uniform circular motion. The magnetic force provides the centripetal force.
+                If the velocity has a component along \( \vec{B} \), the motion is helical.
+            </p>
+
+            <h3>4. Depends on the Sign of the Charge</h3>
+            <p>
+                Positive and negative charges moving in the same direction deflect in opposite directions in the same
+                magnetic field. This forms the basis of mass spectrometers and charge-to-mass ratio measurements.
+            </p>
+        </section>
+
+        <section>
+            <h2>Force on a Current-Carrying Element</h2>
+            <p>
+                A current-carrying conductor is a collection of moving charges. The force on an infinitesimal current
+                element \( Id\vec{l} \) in a magnetic field \( \vec{B} \) is:
+            </p>
+            \[
+            d\vec{F} = I\,d\vec{l} \times \vec{B}
+            \]
+            <p>
+                This is derived directly from the Lorentz force on charge carriers. If \( n \) is the carrier density,
+                \( A \) the cross-sectional area, and \( v_d \) the drift velocity, then \( I = nqv_dA \), and summing
+                over all charges in element \( d\vec{l} \) gives the above expression.
+            </p>
+            <p>
+                The total force on a straight conductor of length \( L \) in a uniform field is:
+            </p>
+            \[
+            \vec{F} = I\vec{L} \times \vec{B}
+            \]
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

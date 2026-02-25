@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Effects | Ampere's Circuital Law</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetic Effects of Current
+            </a>
+        </nav>
+
+        <h1>Ampere's Circuital Law</h1>
+        <p class="subtitle">
+            The symmetry-based shortcut for magnetic field computation.
+        </p>
+
+        <section>
+            <h2>Statement of Ampere's Law</h2>
+            <p>
+                Ampere's Circuital Law states that the line integral of the magnetic field \( \vec{B} \) around any
+                closed loop (called an Amperian loop) is equal to \( \mu_0 \) times the total current enclosed by the
+                loop:
+            </p>
+            \[
+            \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}}
+            \]
+            <p>
+                Here \( I_{\text{enc}} \) is the net current threading through any surface bounded by the chosen loop.
+                The sign of the current is determined by the right-hand rule: if the fingers of the right hand curl in
+                the direction of the integration path, the thumb indicates the positive current direction.
+            </p>
+            <div class="insightbox">
+                Ampere's Law is to magnetostatics what Gauss' Law is to electrostatics. Both relate a field integral to
+                the source inside — flux of \( \vec{E} \) through a closed surface, vs. circulation of \( \vec{B} \)
+                around a closed loop.
+            </div>
+        </section>
+
+        <section>
+            <h2>When Can Ampere's Law be Used Directly?</h2>
+            <p>
+                While Ampere's Law is always true, it can be used to <em>directly compute</em> \( \vec{B} \) only when
+                the field is uniform in magnitude along the Amperian loop and either parallel or perpendicular to the
+                path everywhere. This requires strong geometric symmetry.
+            </p>
+            <p>
+                The three standard symmetries that permit direct application:
+            </p>
+            <ul>
+                <li><strong>Cylindrical symmetry</strong> — infinite straight wire, coaxial cable, solid cylindrical
+                    conductor.</li>
+                <li><strong>Planar symmetry</strong> — infinite flat current sheet.</li>
+                <li><strong>Toroidal symmetry</strong> — toroid or solenoid (approximated as having cylindrical symmetry
+                    on each small cross-section).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Application 1: Infinite Straight Wire</h2>
+            <p>
+                By symmetry, the magnetic field at distance \( r \) from an infinite wire must be tangential
+                (perpendicular to \( \hat{r} \)) and have constant magnitude on any circle of radius \( r \) centred on
+                the wire. Choose a circular Amperian loop of radius \( r \):
+            </p>
+            \[
+            \oint \vec{B} \cdot d\vec{l} = B \cdot 2\pi r = \mu_0 I
+            \]
+            \[
+            \boxed{B = \frac{\mu_0 I}{2\pi r}}
+            \]
+            <p>
+                This confirms the result from Biot-Savart integration — but is obtained in two lines instead of a full
+                integral.
+            </p>
+        </section>
+
+        <section>
+            <h2>Application 2: Solid Cylindrical Conductor</h2>
+            <p>
+                A solid cylinder of radius \( R \) carries uniform current \( I \). The current density is \( J = I/(\pi
+                R^2) \).
+            </p>
+            <h3>Outside the conductor (\( r > R \))</h3>
+            \[
+            B = \frac{\mu_0 I}{2\pi r}
+            \]
+            <h3>Inside the conductor (\( r < R \))</h3>
+                    <p>
+                        The enclosed current is \( I_{\text{enc}} = J \cdot \pi r^2 = I \cdot r^2/R^2 \). Applying
+                        Ampere's Law:
+                    </p>
+                    \[
+                    B \cdot 2\pi r = \mu_0 \cdot \frac{Ir^2}{R^2}
+                    \]
+                    \[
+                    \boxed{B = \frac{\mu_0 I r}{2\pi R^2}} \quad (r \leq R)
+                    \]
+                    <p>
+                        The field increases linearly with \( r \) inside, peaks at the surface, then falls off as \( 1/r
+                        \) outside. This is directly analogous to the electric field of a uniformly charged solid sphere
+                        from Gauss' Law.
+                    </p>
+        </section>
+
+        <section>
+            <h2>Application 3: Ideal Solenoid</h2>
+            <p>
+                Choose a rectangular Amperian loop: one long side of length \( l \) lies inside the solenoid parallel to
+                the axis, and the opposite long side lies outside where \( B = 0 \). The two short sides are
+                perpendicular to \( \vec{B} \) and contribute nothing.
+            </p>
+            \[
+            \oint \vec{B} \cdot d\vec{l} = B \cdot l + 0 + 0 + 0 = \mu_0 (nl) I
+            \]
+            \[
+            \boxed{B = \mu_0 n I}
+            \]
+            <p>
+                where \( n \) is turns per unit length. The elegance of Ampere's Law here is undeniable: what requires a
+                complex integration via Biot-Savart reduces to one line of algebra.
+            </p>
+        </section>
+
+        <section>
+            <h2>Application 4: Toroid</h2>
+            <p>
+                For a toroid with \( N \) turns and mean radius \( r \), a circular Amperian loop of radius \( r \)
+                inside the toroid encloses all \( N \) turns:
+            </p>
+            \[
+            B \cdot 2\pi r = \mu_0 N I \implies \boxed{B = \frac{\mu_0 N I}{2\pi r}}
+            \]
+            <p>
+                For a circular loop in the central hole or outside the toroid, the net enclosed current is zero (equal
+                numbers of turns carry current in and out), so \( B = 0 \) in those regions.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

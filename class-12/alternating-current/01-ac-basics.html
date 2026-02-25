@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternating Current | AC Quantities: Peak, RMS, and Phase</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Alternating Current
+            </a>
+        </nav>
+
+        <h1>AC Quantities: Peak, RMS, and Phase</h1>
+        <p class="subtitle">
+            Describing the sinusoidal variation of voltage and current — and the RMS values that make sense of power.
+        </p>
+
+        <section>
+            <h2>Instantaneous and Peak Values</h2>
+            <p>
+                An AC source produces a voltage that varies sinusoidally with time:
+            </p>
+            \[
+            v(t) = V_0 \sin(\omega t)
+            \]
+            <p>
+                where \( V_0 \) is the <strong>peak voltage</strong> (amplitude) and \( \omega = 2\pi f \) is the
+                angular frequency (rad/s). For a purely resistive circuit, the current is in phase with the voltage:
+            </p>
+            \[
+            i(t) = I_0 \sin(\omega t), \quad I_0 = \frac{V_0}{R}
+            \]
+            <p>
+                The time period is \( T = 1/f = 2\pi/\omega \). For the Indian power grid: \( f = 50 \) Hz, \( T = 20 \)
+                ms, \( \omega = 100\pi \) rad/s.
+            </p>
+        </section>
+
+        <section>
+            <h2>Root Mean Square (RMS) Values</h2>
+            <p>
+                The average of a sinusoid over a complete cycle is zero — so the average voltage or current is not a
+                useful measure of power. Instead, we use the <strong>RMS value</strong>, defined as the square root of
+                the time-average of the square:
+            </p>
+            \[
+            V_{\text{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{1}{T}\int_0^T V_0^2\sin^2(\omega t)\,dt}
+            \]
+            <p>
+                Since \( \langle \sin^2(\omega t) \rangle = 1/2 \):
+            </p>
+            \[
+            \boxed{V_{\text{rms}} = \frac{V_0}{\sqrt{2}}, \qquad I_{\text{rms}} = \frac{I_0}{\sqrt{2}}}
+            \]
+            <div class="insightbox">
+                The RMS value of an AC voltage is the DC voltage that would produce the same average power dissipation
+                in a resistor. When we say "230 V mains supply," we mean \( V_{\text{rms}} = 230 \) V — the peak voltage
+                is \( V_0 = 230\sqrt{2} \approx 325 \) V.
+            </div>
+        </section>
+
+        <section>
+            <h2>Phase and Phase Difference</h2>
+            <p>
+                In the general sinusoidal form \( v(t) = V_0\sin(\omega t + \phi) \), the quantity \( \phi \) is the
+                <strong>initial phase</strong>. When two quantities oscillate at the same frequency but with different
+                initial phases:
+            </p>
+            \[
+            v = V_0\sin(\omega t + \phi_v), \quad i = I_0\sin(\omega t + \phi_i)
+            \]
+            <p>
+                the <strong>phase difference</strong> is \( \Delta\phi = \phi_v - \phi_i \).
+            </p>
+            <ul>
+                <li>If \( \Delta\phi > 0 \): voltage <strong>leads</strong> current (or current lags voltage) —
+                    inductive.</li>
+                <li>If \( \Delta\phi < 0 \): voltage <strong>lags</strong> current (or current leads voltage) —
+                        capacitive.</li>
+                <li>If \( \Delta\phi = 0 \): voltage and current are <strong>in phase</strong> — purely resistive.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Angular Frequency, Frequency, and Period</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Quantity</th>
+                            <th style="text-align:left; padding:8px;">Symbol</th>
+                            <th style="text-align:left; padding:8px;">Relation</th>
+                            <th style="text-align:left; padding:8px;">Unit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Time period</td>
+                            <td style="padding:8px;">\( T \)</td>
+                            <td style="padding:8px;">\( T = 1/f \)</td>
+                            <td style="padding:8px;">seconds (s)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Frequency</td>
+                            <td style="padding:8px;">\( f \)</td>
+                            <td style="padding:8px;">\( f = \omega/2\pi \)</td>
+                            <td style="padding:8px;">Hertz (Hz)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Angular frequency</td>
+                            <td style="padding:8px;">\( \omega \)</td>
+                            <td style="padding:8px;">\( \omega = 2\pi f \)</td>
+                            <td style="padding:8px;">rad/s</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Peak value</td>
+                            <td style="padding:8px;">\( V_0, I_0 \)</td>
+                            <td style="padding:8px;">Amplitude of sinusoid</td>
+                            <td style="padding:8px;">V, A</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">RMS value</td>
+                            <td style="padding:8px;">\( V_{\text{rms}}, I_{\text{rms}} \)</td>
+                            <td style="padding:8px;">\( = \text{Peak}/\sqrt{2} \)</td>
+                            <td style="padding:8px;">V, A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Core Sub-Topic</h2>
+            <div class="chapter-list">
+                <a href="./01a-phasors.html">1a. Phasor Representation</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

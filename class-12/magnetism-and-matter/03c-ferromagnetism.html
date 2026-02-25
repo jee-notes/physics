@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetism and Matter | Ferromagnetism, Domains, and Hysteresis</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./03-magnetic-materials.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetic Properties of Materials
+            </a>
+        </nav>
+
+        <h1>Ferromagnetism, Domains, and Hysteresis</h1>
+        <p class="subtitle">
+            Permanent magnetism, memory, and the non-linear world of iron.
+        </p>
+
+        <section>
+            <h2>What is Ferromagnetism?</h2>
+            <p>
+                Ferromagnetism is the phenomenon behind permanent magnets. It occurs in materials where atomic magnetic
+                dipoles interact strongly with their neighbours through a quantum mechanical effect called the
+                <strong>exchange interaction</strong>. This interaction causes large regions — called magnetic domains —
+                within the material to have all their atomic dipoles aligned in the same direction, even without any
+                external field.
+            </p>
+            <p>
+                The result is an enormously large susceptibility (\( \chi_m \sim 10^3 \) to \( 10^5 \)) and the ability
+                to retain strong magnetisation after the external field is removed.
+            </p>
+            <div class="insightbox">
+                Unlike paramagnetism (which is a competition with thermal energy), ferromagnetism arises from the
+                quantum mechanical exchange interaction that locks neighbouring spins together. Thermal energy disrupts
+                this only above the Curie temperature.
+            </div>
+        </section>
+
+        <section>
+            <h2>Magnetic Domains</h2>
+            <p>
+                A piece of unmagnetised iron is not made up of randomly oriented atomic dipoles — it contains regions
+                called <strong>magnetic domains</strong>, each of which is spontaneously magnetised to saturation.
+                Within a single domain, all dipoles point in the same direction. The domains themselves point in
+                different directions, so the bulk material has zero net magnetisation.
+            </p>
+            <p>
+                The boundaries between domains are called <strong>domain walls</strong> (or Bloch walls). The energy of
+                the system is minimised by a balance between the energy stored in the magnetic field outside the
+                material and the energy of the domain walls.
+            </p>
+            <p>
+                When an external field is applied:
+            </p>
+            <ul>
+                <li><strong>Weak field</strong>: Domain walls move — domains aligned with the field grow at the expense
+                    of others. This is reversible.</li>
+                <li><strong>Stronger field</strong>: Domains not aligned begin to rotate toward the field. This stage is
+                    largely irreversible.</li>
+                <li><strong>Saturation</strong>: All domains align with the field. The material is fully magnetised.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>The Hysteresis Loop</h2>
+            <p>
+                If we plot magnetisation \( M \) (or \( B \)) against the applied field \( H \) as \( H \) is cycled
+                from a large positive value to a large negative value and back, we trace out a closed curve called the
+                <strong>hysteresis loop</strong>.
+            </p>
+            <p>
+                Key points on the hysteresis loop:
+            </p>
+            <ul>
+                <li><strong>Saturation magnetisation \( M_s \)</strong>: The maximum magnetisation reached when all
+                    domains are aligned.</li>
+                <li><strong>Retentivity (Remanence) \( M_r \)</strong>: The magnetisation remaining when \( H \) is
+                    reduced to zero. This is why permanent magnets exist.</li>
+                <li><strong>Coercivity \( H_c \)</strong>: The reverse field required to bring \( M \) back to zero. A
+                    measure of how "hard" the magnet is — how difficult it is to demagnetise.</li>
+                <li><strong>Area of the loop</strong>: Represents energy dissipated as heat per cycle of magnetisation.
+                    This is the hysteresis loss.</li>
+            </ul>
+            <div class="insightbox">
+                The area enclosed by the hysteresis loop is proportional to the energy dissipated as heat per unit
+                volume per magnetisation cycle. In transformers, this is an important energy loss that must be
+                minimised.
+            </div>
+        </section>
+
+        <section>
+            <h2>Hard vs Soft Magnetic Materials</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Property</th>
+                            <th style="text-align:left; padding:8px;">Soft (e.g., soft iron)</th>
+                            <th style="text-align:left; padding:8px;">Hard (e.g., Alnico, steel)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Coercivity \( H_c \)</td>
+                            <td style="padding:8px;">Low</td>
+                            <td style="padding:8px;">High</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Retentivity \( M_r \)</td>
+                            <td style="padding:8px;">Moderate</td>
+                            <td style="padding:8px;">High</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Hysteresis loop area</td>
+                            <td style="padding:8px;">Small (narrow loop)</td>
+                            <td style="padding:8px;">Large (wide loop)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Energy loss per cycle</td>
+                            <td style="padding:8px;">Low</td>
+                            <td style="padding:8px;">High</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Application</td>
+                            <td style="padding:8px;">Transformer cores, electromagnet cores</td>
+                            <td style="padding:8px;">Permanent magnets, memory storage</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>The Curie Temperature</h2>
+            <p>
+                Above a critical temperature called the <strong>Curie temperature \( T_C \)</strong>, the thermal energy
+                becomes large enough to overcome the exchange interaction. The domain structure collapses, and the
+                material becomes paramagnetic, obeying the <strong>Curie-Weiss Law</strong>:
+            </p>
+            \[
+            \chi_m = \frac{C}{T - T_C} \quad (T > T_C)
+            \]
+            <p>
+                Below \( T_C \), the material is ferromagnetic. Above \( T_C \), it is paramagnetic. This transition is
+                a phase transition.
+            </p>
+            <ul>
+                <li>Iron (Fe): \( T_C \approx 1043\text{ K} \approx 770°\text{C} \)</li>
+                <li>Nickel (Ni): \( T_C \approx 631\text{ K} \approx 358°\text{C} \)</li>
+                <li>Cobalt (Co): \( T_C \approx 1388\text{ K} \approx 1115°\text{C} \)</li>
+            </ul>
+            <div class="insightbox">
+                Heating a permanent magnet above its Curie temperature destroys its magnetism. This is why fire or
+                strong heating is one of the classical methods of demagnetisation.
+            </div>
+        </section>
+
+        <section>
+            <h2>Methods of Demagnetisation</h2>
+            <ul>
+                <li><strong>Heating above \( T_C \)</strong> — destroys domain structure.</li>
+                <li><strong>Mechanical shock</strong> — jarring the magnet randomises domain orientation.</li>
+                <li><strong>Alternating field of decreasing amplitude</strong> — gradually shrinks the hysteresis loop
+                    toward zero, leaving the material in an unmagnetised state.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

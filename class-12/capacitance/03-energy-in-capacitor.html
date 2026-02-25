@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Energy Stored in a Capacitor</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Capacitance
+            </a>
+        </nav>
+
+        <h1>Energy Stored in a Capacitor</h1>
+        <p class="subtitle">
+            Work done to charge a capacitor is stored as potential energy in the electric field.
+        </p>
+
+        <section>
+            <h2>Work Done in Charging</h2>
+            <p>
+                When we charge a capacitor, we move charge from one plate to the other against the growing electric
+                field. At any instant when charge \( q \) has already been transferred, the potential difference between
+                the plates is \( v = q/C \). The work needed to transfer an additional element of charge \( dq \) is:
+            </p>
+            \[
+            dW = v\, dq = \frac{q}{C}\, dq
+            \]
+            <p>
+                Integrating from \( q = 0 \) to \( q = Q \):
+            </p>
+            \[
+            W = \int_0^Q \frac{q}{C}\, dq = \frac{1}{C} \cdot \frac{Q^2}{2}
+            \]
+            \[
+            \boxed{U = \frac{Q^2}{2C} = \frac{1}{2}CV^2 = \frac{1}{2}QV}
+            \]
+            <p>
+                All three forms are equivalent — use whichever suits the given information.
+            </p>
+            <div class="insightbox">
+                The factor of \( 1/2 \) appears because the average voltage during charging is \( V_{\text{avg}} = V/2
+                \). The first charge element is moved against zero potential; the last against full potential \( V \).
+                So \( U = Q \cdot (V/2) \), not \( Q \cdot V \).
+            </div>
+        </section>
+
+        <section>
+            <h2>Energy Density of the Electric Field</h2>
+            <p>
+                For a parallel plate capacitor (\( C = \varepsilon_0 A/d \), \( V = Ed \)), the stored energy is:
+            </p>
+            \[
+            U = \frac{1}{2}CV^2 = \frac{1}{2} \cdot \frac{\varepsilon_0 A}{d} \cdot (Ed)^2 = \frac{1}{2}\varepsilon_0
+            E^2 \cdot (Ad)
+            \]
+            <p>
+                Since \( Ad \) is the volume of the capacitor:
+            </p>
+            \[
+            u = \frac{U}{Ad} = \frac{1}{2}\varepsilon_0 E^2
+            \]
+            <p>
+                This is the <strong>energy density</strong> of the electric field — the energy stored per unit volume.
+                It applies universally, not just inside capacitors.
+            </p>
+            <div class="insightbox">
+                The energy is not stored in the charges — it is stored in the electric field. This is not merely a
+                bookkeeping convention; the field carries the energy even in free space, far from any charges.
+            </div>
+        </section>
+
+        <section>
+            <h2>Energy at Constant Charge vs. Constant Voltage</h2>
+            <p>
+                Two important scenarios arise when the geometry of a capacitor is changed (e.g., plates are pulled
+                apart):
+            </p>
+
+            <h3>Isolated Capacitor (constant Q)</h3>
+            <p>
+                If the capacitor is isolated (not connected to a battery), \( Q \) is fixed. Using \( U = Q^2/(2C) \):
+            </p>
+            <ul>
+                <li>Increasing \( d \) decreases \( C \), so \( U \) <strong>increases</strong>.</li>
+                <li>The extra energy comes from the work done by the external agent pulling the plates apart (against
+                    the attractive force).</li>
+            </ul>
+
+            <h3>Capacitor in a Circuit (constant V)</h3>
+            <p>
+                If the capacitor remains connected to a battery, \( V \) is fixed. Using \( U = \frac{1}{2}CV^2 \):
+            </p>
+            <ul>
+                <li>Increasing \( d \) decreases \( C \), so \( U \) <strong>decreases</strong>.</li>
+                <li>Charge returns to the battery; the total work done by the external agent is negative (the system
+                    does work on the agent).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Energy When Dielectric is Inserted</h2>
+            <p>
+                When a dielectric of constant \( K \) is inserted into a capacitor:
+            </p>
+            <ul>
+                <li><strong>Isolated (constant Q):</strong> \( C \) increases by \( K \), so \( U = Q^2/(2C) \)
+                    decreases by factor \( K \). The electric field and voltage both decrease. Energy is released — it
+                    goes into the dielectric (polarisation).</li>
+                <li><strong>Battery-connected (constant V):</strong> \( C \) increases by \( K \), so \( U =
+                    \frac{1}{2}CV^2 \) increases by factor \( K \). Extra charge flows from the battery — the battery
+                    does more work than the energy stored (the other half goes into the dielectric and heat).</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

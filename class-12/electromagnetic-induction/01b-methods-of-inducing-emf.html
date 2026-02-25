@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromagnetic Induction | Methods of Inducing EMF</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./01-faraday-law.html" class="back-btn">
+                <span>&larr;</span> Back to Faraday's Law and Lenz's Law
+            </a>
+        </nav>
+
+        <h1>Methods of Inducing EMF</h1>
+        <p class="subtitle">
+            Changing \( B \), changing \( A \), or changing \( \theta \) — all produce EMF.
+        </p>
+
+        <section>
+            <h2>Overview</h2>
+            <p>
+                The magnetic flux through a loop is \( \Phi_B = BA\cos\theta \). An EMF is induced whenever this product
+                changes. There are exactly three independent ways to change it, each corresponding to a distinct class
+                of devices:
+            </p>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Method</th>
+                            <th style="text-align:left; padding:8px;">What Changes</th>
+                            <th style="text-align:left; padding:8px;">Device</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Change \( B \)</td>
+                            <td style="padding:8px;">Magnetic field intensity</td>
+                            <td style="padding:8px;">Transformer (primary coil)</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Change \( A \)</td>
+                            <td style="padding:8px;">Area enclosed by circuit</td>
+                            <td style="padding:8px;">Motional EMF (sliding rod)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Change \( \theta \)</td>
+                            <td style="padding:8px;">Angle between \( \vec{B} \) and \( \hat{n} \)</td>
+                            <td style="padding:8px;">AC Generator</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Method 1 — Changing Magnetic Field</h2>
+            <p>
+                A stationary loop in a time-varying field \( B(t) \), with area \( A \) and orientation fixed (\( \theta
+                = 0 \)):
+            </p>
+            \[
+            \Phi_B = B(t) \cdot A \implies \mathcal{E} = -NA\frac{dB}{dt}
+            \]
+            <p>
+                This is the <strong>transformer EMF</strong>. The primary coil of a transformer carries an AC current,
+                creating a time-varying \( B \). The secondary coil, linked by the same core, has this changing \( B \)
+                through it — inducing an EMF proportional to the number of turns:
+            </p>
+            \[
+            \frac{\mathcal{E}_s}{\mathcal{E}_p} = \frac{N_s}{N_p}
+            \]
+            <div class="insightbox">
+                In a transformer, no conductor moves. The induced EMF is purely due to a changing \( B \). This is the
+                non-motional EMF, described by the Maxwell equation \( \nabla \times \vec{E} = -\partial\vec{B}/\partial
+                t \) — an electric field created in space by a changing magnetic field.
+            </div>
+        </section>
+
+        <section>
+            <h2>Method 2 — Changing Area (Motional EMF)</h2>
+            <p>
+                A rod moving on rails in a steady field — the circuit area grows at rate \( dA/dt = lv \):
+            </p>
+            \[
+            \mathcal{E} = -B\frac{dA}{dt} = -Blv
+            \]
+            <p>
+                General form for any moving conductor element \( d\vec{l} \) moving with velocity \( \vec{v} \) in field
+                \( \vec{B} \):
+            </p>
+            \[
+            d\mathcal{E} = (\vec{v} \times \vec{B}) \cdot d\vec{l}
+            \]
+            <p>
+                Total motional EMF for the entire conductor:
+            </p>
+            \[
+            \mathcal{E} = \int_{\text{conductor}} (\vec{v} \times \vec{B}) \cdot d\vec{l}
+            \]
+        </section>
+
+        <section>
+            <h2>Method 3 — Rotating Coil (AC Generator)</h2>
+            <p>
+                A rectangular coil of \( N \) turns and area \( A \) rotates with angular velocity \( \omega \) in a
+                uniform field \( B \):
+            </p>
+            \[
+            \theta = \omega t \implies \Phi_B = NBA\cos(\omega t)
+            \]
+            \[
+            \mathcal{E} = -\frac{d(N\Phi_B)}{dt} = NBA\omega\sin(\omega t)
+            \]
+            <p>
+                This is sinusoidal — an alternating EMF. The peak value is:
+            </p>
+            \[
+            \mathcal{E}_0 = NBA\omega
+            \]
+            <ul>
+                <li>EMF is maximum when the coil plane is parallel to \( \vec{B} \) (\( \theta = 90° \)) — flux is zero
+                    but changing fastest.</li>
+                <li>EMF is zero when the coil plane is perpendicular to \( \vec{B} \) (\( \theta = 0° \)) — flux is
+                    maximum but not changing.</li>
+            </ul>
+            <div class="insightbox">
+                The AC generator converts mechanical energy (rotation) into electrical energy. The frequency of the AC
+                output equals the frequency of rotation: \( f = \omega/(2\pi) \). For India's grid, \( f = 50 \) Hz.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

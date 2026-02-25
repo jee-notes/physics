@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternating Current | Pure R, L, C in AC Circuits</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Alternating Current
+            </a>
+        </nav>
+
+        <h1>Pure R, L, C in AC Circuits</h1>
+        <p class="subtitle">
+            How each circuit element individually responds to AC — resistance, reactance, and phase.
+        </p>
+
+        <section>
+            <h2>Pure Resistive Circuit (AC through R)</h2>
+            <p>
+                For an AC source \( v = V_0\sin(\omega t) \) connected to a pure resistor \( R \), Ohm's law applies at
+                every instant:
+            </p>
+            \[
+            i = \frac{v}{R} = \frac{V_0}{R}\sin(\omega t) = I_0\sin(\omega t)
+            \]
+            <p>
+                Peak current: \( I_0 = V_0/R \). Phase difference: \( \Delta\phi = 0 \) — voltage and current are
+                <strong>in phase</strong>.
+            </p>
+            <p>
+                The resistor dissipates power continuously. Average power: \( P = \frac{1}{2}I_0 V_0 =
+                I_{\text{rms}}V_{\text{rms}} \).
+            </p>
+            <div class="insightbox">
+                A resistor is the same in DC and AC — it has no reactance and introduces no phase shift. It is the
+                reference element against which inductors and capacitors are compared.
+            </div>
+        </section>
+
+        <section>
+            <h2>Pure Inductive Circuit (AC through L)</h2>
+            <p>
+                For a pure inductor \( L \), the voltage across it is \( v_L = L\,di/dt \). With \( v = V_0\sin(\omega
+                t) \):
+            </p>
+            \[
+            L\frac{di}{dt} = V_0\sin(\omega t) \implies i = -\frac{V_0}{\omega L}\cos(\omega t) = \frac{V_0}{\omega
+            L}\sin\left(\omega t - \frac{\pi}{2}\right)
+            \]
+            \[
+            I_0 = \frac{V_0}{\omega L} = \frac{V_0}{X_L}, \quad X_L = \omega L
+            \]
+            <p>
+                The current <strong>lags the voltage by 90°</strong>. The opposition \( X_L = \omega L \) is called
+                <strong>inductive reactance</strong> (unit: ohm).
+            </p>
+            <ul>
+                <li>\( X_L \propto \omega \) — at higher frequency, inductor opposes more (harder for current to change
+                    rapidly).</li>
+                <li>At DC (\( \omega = 0 \)): \( X_L = 0 \) — the inductor is a short circuit.</li>
+                <li>As \( \omega \to \infty \): \( X_L \to \infty \) — the inductor is an open circuit.</li>
+            </ul>
+            <div class="insightbox">
+                An inductor passes DC freely but blocks high-frequency AC — the classic low-pass filter element.
+            </div>
+        </section>
+
+        <section>
+            <h2>Pure Capacitive Circuit (AC through C)</h2>
+            <p>
+                For a pure capacitor \( C \), the charge \( q = Cv \), so \( i = dq/dt = C\,dv/dt \). With \( v =
+                V_0\sin(\omega t) \):
+            </p>
+            \[
+            i = C\omega V_0\cos(\omega t) = \omega C V_0\sin\left(\omega t + \frac{\pi}{2}\right)
+            \]
+            \[
+            I_0 = \frac{V_0}{1/(\omega C)} = \frac{V_0}{X_C}, \quad X_C = \frac{1}{\omega C}
+            \]
+            <p>
+                The current <strong>leads the voltage by 90°</strong>. The opposition \( X_C = 1/(\omega C) \) is called
+                <strong>capacitive reactance</strong> (unit: ohm).
+            </p>
+            <ul>
+                <li>\( X_C \propto 1/\omega \) — at higher frequency, capacitor opposes less (charges and discharges
+                    faster).</li>
+                <li>At DC (\( \omega = 0 \)): \( X_C \to \infty \) — the capacitor is an open circuit (blocks DC).</li>
+                <li>As \( \omega \to \infty \): \( X_C \to 0 \) — the capacitor is a short circuit.</li>
+            </ul>
+            <div class="insightbox">
+                A capacitor blocks DC but passes high-frequency AC — the classic high-pass filter element. It is
+                complementary to the inductor.
+            </div>
+        </section>
+
+        <section>
+            <h2>Comparison of R, L, C in AC</h2>
+            <div class="model-box">
+                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+                    <thead>
+                        <tr style="border-bottom:2px solid #e0e0e0;">
+                            <th style="text-align:left; padding:8px;">Element</th>
+                            <th style="text-align:left; padding:8px;">Opposition</th>
+                            <th style="text-align:left; padding:8px;">Symbol</th>
+                            <th style="text-align:left; padding:8px;">Phase (\( v \) vs \( i \))</th>
+                            <th style="text-align:left; padding:8px;">Freq. Dependence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding:8px;">Resistor \( R \)</td>
+                            <td style="padding:8px;">Resistance</td>
+                            <td style="padding:8px;">\( R \)</td>
+                            <td style="padding:8px;">In phase</td>
+                            <td style="padding:8px;">None</td>
+                        </tr>
+                        <tr style="background:#fafafa;">
+                            <td style="padding:8px;">Inductor \( L \)</td>
+                            <td style="padding:8px;">Inductive reactance</td>
+                            <td style="padding:8px;">\( X_L = \omega L \)</td>
+                            <td style="padding:8px;">\( v \) leads \( i \) by \( 90° \)</td>
+                            <td style="padding:8px;">\( \propto \omega \)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding:8px;">Capacitor \( C \)</td>
+                            <td style="padding:8px;">Capacitive reactance</td>
+                            <td style="padding:8px;">\( X_C = 1/\omega C \)</td>
+                            <td style="padding:8px;">\( v \) lags \( i \) by \( 90° \)</td>
+                            <td style="padding:8px;">\( \propto 1/\omega \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

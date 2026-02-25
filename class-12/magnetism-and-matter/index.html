@@ -4,98 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Physics | Magnetism and Matter</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #e67e22;
-            --bg: #fdfdfd;
-        }
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: var(--bg);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 10px;
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-top: 30px;
-            border-left: 5px solid var(--secondary);
-            padding-left: 15px;
-        }
-
-        .formula-box {
-            background: #f0f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            text-align: center;
-            margin: 20px 0;
-            border: 1px solid #d1d9e1;
-        }
-
-        .points-list {
-            padding-left: 20px;
-        }
-
-        nav {
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
-        }
-    </style>
+    <title>Magnetism and Matter | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+
         <h1>Magnetism and Matter</h1>
+        <p class="subtitle">
+            From bar magnets to ferromagnets — the deep structure of magnetic matter.
+        </p>
+
         <section>
             <h2>Conceptual Overview</h2>
-            <p>Covers the properties of magnets, Earth's magnetism, and the categorization of materials based on their
-                magnetic properties (Para, Dia, and Ferro).</p>
+            <p>
+                Every material in nature has a magnetic character. Some are strongly magnetic, some weakly, and some are
+                actively repelled by a magnetic field. This chapter explains <em>why</em> — using the concept of the
+                magnetic dipole as the fundamental building block of all magnetic matter.
+            </p>
+            <p>
+                A bar magnet, a current loop, a spinning electron — these are all magnetic dipoles. The macroscopic
+                magnetic behavior of any material is determined by how these microscopic dipoles align, partially align,
+                or oppose an applied magnetic field.
+            </p>
         </section>
+
         <section>
-            <h2>Core Formulas</h2>
-            <div class="formula-box">
-                \[ \vec{\tau} = \vec{m} \times \vec{B}, \quad B = \frac{\mu_0}{4\pi} \frac{2m}{r^3}, \quad B_h = B
-                \cos\theta \]
-            </div>
+            <h2>The Bar Magnet as a Magnetic Dipole</h2>
+            <p>
+                A bar magnet is the macroscopic embodiment of a magnetic dipole. Its two poles — north and south — are
+                inseparable. Unlike electric charges, no isolated magnetic monopole has ever been observed. This is the
+                content of Gauss's Law for Magnetism:
+            </p>
+            \[
+            \oint \vec{B} \cdot d\vec{A} = 0
+            \]
+            <p>
+                The magnetic field of a bar magnet outside the magnet is identical in form to the electric field of an
+                electric dipole. On the axial line (along the dipole axis), the field points from south to north. On the
+                equatorial line (perpendicular bisector), it points from north to south — opposite to the dipole
+                direction.
+            </p>
         </section>
+
         <section>
-            <h2>Key Discussion Points</h2>
+            <h2>Earth as a Magnet</h2>
+            <p>
+                The Earth itself behaves like a giant magnetic dipole. Its geographic and magnetic poles do not coincide
+                — the magnetic south pole lies near the geographic north pole. Three quantities called the
+                <strong>magnetic elements</strong> completely describe the Earth's field at any location:
+            </p>
+            <ul>
+                <li><strong>Magnetic Declination</strong> — the horizontal angle between geographic north and magnetic
+                    north.</li>
+                <li><strong>Magnetic Dip (Inclination)</strong> — the angle the total field vector makes with the
+                    horizontal.</li>
+                <li><strong>Horizontal Component</strong> \( B_H \) — the component of Earth's field in the horizontal
+                    plane.</li>
+            </ul>
+            <p>
+                These three elements are related by: \( \tan\delta = B_V / B_H \) and \( B = \sqrt{B_H^2 + B_V^2} \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Classification of Magnetic Materials</h2>
+            <p>
+                When a material is placed in an external magnetic field \( \vec{B}_0 \), it develops a magnetisation \(
+                \vec{M} \) — a magnetic dipole moment per unit volume. The material is characterised by its magnetic
+                susceptibility \( \chi_m \):
+            </p>
+            \[
+            \vec{M} = \chi_m \vec{H}
+            \]
+            <p>
+                The total field inside the material is \( \vec{B} = \mu_0(\vec{H} + \vec{M}) = \mu_0(1 + \chi_m)\vec{H}
+                = \mu_r \mu_0 \vec{H} \).
+            </p>
+            <p>
+                Based on the sign and magnitude of \( \chi_m \), all materials fall into three classes:
+            </p>
             <ul class="points-list">
-                <li>Magnetic dipole moment and torque in a uniform magnetic field.</li>
-                <li>Gauss's Law for Magnetism: Total magnetic flux through a closed surface is zero.</li>
-                <li>Earth's magnetic elements: Declination, Dip (inclination), and Horizontal component.</li>
-                <li>Classification of materials: Diamagnetism, Paramagnetism, and Ferromagnetism.</li>
+                <li><strong>Diamagnetic</strong> — \( \chi_m \) is small and negative; the material is weakly repelled
+                    by a magnet.</li>
+                <li><strong>Paramagnetic</strong> — \( \chi_m \) is small and positive; the material is weakly
+                    attracted.</li>
+                <li><strong>Ferromagnetic</strong> — \( \chi_m \) is large and positive (\( \sim 10^3 \to 10^5 \)); the
+                    material is strongly attracted and can be permanently magnetised.</li>
             </ul>
         </section>
+
+        <section>
+            <h2>Core Topics</h2>
+            <ul class="points-list">
+                <li><strong>Bar Magnet</strong> — Dipole moment, axial and equatorial fields, torque and potential
+                    energy.</li>
+                <li><strong>Gauss's Law for Magnetism</strong> — No magnetic monopoles; total magnetic flux through any
+                    closed surface is zero.</li>
+                <li><strong>Earth's Magnetism</strong> — Magnetic elements: declination, dip, horizontal component.</li>
+                <li><strong>Magnetisation and Susceptibility</strong> — \( \vec{M} \), \( \chi_m \), \( \mu_r \), and
+                    the \( \vec{B}\text{-}\vec{H}\text{-}\vec{M} \) relationship.</li>
+                <li><strong>Diamagnetism</strong> — Lenz's law at the atomic level; negative susceptibility.</li>
+                <li><strong>Paramagnetism</strong> — Curie's Law and thermal alignment of dipoles.</li>
+                <li><strong>Ferromagnetism</strong> — Domains, hysteresis, retentivity, and coercivity.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-bar-magnet.html">1. The Bar Magnet and Magnetic Dipole</a>
+                <a href="./02-earths-magnetism.html">2. Earth's Magnetism</a>
+                <a href="./03-magnetic-materials.html">3. Magnetic Properties of Materials</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
     </div>
 </body>
 

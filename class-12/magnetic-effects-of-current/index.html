@@ -1,102 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Physics | Magnetic Effects</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #e67e22;
-            --bg: #fdfdfd;
-        }
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: var(--bg);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 10px;
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-top: 30px;
-            border-left: 5px solid var(--secondary);
-            padding-left: 15px;
-        }
-
-        .formula-box {
-            background: #f0f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            text-align: center;
-            margin: 20px 0;
-            border: 1px solid #d1d9e1;
-        }
-
-        .points-list {
-            padding-left: 20px;
-        }
-
-        nav {
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Effects of Current | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-        <h1>Magnetic Effects of Current</h1>
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>Moving charges or electric currents produce magnetic fields in the surrounding space. This chapter
-                explores the Biot-Savart Law and Lorentz Force.</p>
-        </section>
-        <section>
-            <h2>Core Formulas</h2>
-            <div class="formula-box">
-                \[ d\vec{B} = \frac{\mu_0}{4\pi} \frac{I d\vec{l} \times \hat{r}}{r^2}, \quad \vec{F} = q(\vec{v} \times
-                \vec{B}) \]
-            </div>
-        </section>
-        <section>
-            <h2>Key Discussion Points</h2>
-            <ul class="points-list">
-                <li>Biot-Savart Law and Ampere's Circuital Law.</li>
-                <li>Magnetic field due to straight wire, circular loop, and solenoid.</li>
-                <li>Force between two parallel long current-carrying conductors.</li>
-                <li>Cyclotron frequency and motion of charge in magnetic field.</li>
-            </ul>
-        </section>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Magnetic Effects of Current</h1>
+<p class="subtitle">
+How moving charges reshape the fabric of space around them.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Magnetism arises from motion. A stationary charge produces only an electric field. But when that charge moves — as current through a wire — it creates a new entity in space: the magnetic field. This is the central insight of this chapter.
+</p>
+<p>
+The magnetic field \( \vec{B} \) is a vector field, assigning a magnitude and direction to every point in space around a current-carrying conductor. Like the electric field, it is a real physical entity — it stores energy, exerts force, and mediates interactions between currents.
+</p>
+</section>
+<section>
+<h2>The Magnetic Field as a Field Concept</h2>
+<p>
+Just as Coulomb's law describes the electric field of a point charge, Biot-Savart Law describes the magnetic field of a current element. Both follow an inverse-square dependence on distance. Both obey the principle of superposition.
+</p>
+<p>
+However, unlike the electric field — which points radially away from or toward the source charge — the magnetic field curls around the current. Its direction is always perpendicular to both the current element and the displacement vector to the field point.
+</p>
+<p>
+This perpendicularity is the defining geometric signature of the magnetic field, and it arises directly from the cross product in the Biot-Savart Law:
+</p>
+\[
+d\vec{B} = \frac{\mu_0}{4\pi} \frac{I\, d\vec{l} \times \hat{r}}{r^2}
+\]
+</section>
+<section>
+<h2>Biot-Savart Law vs Ampere's Circuital Law</h2>
+<p>
+This chapter presents two distinct but equivalent approaches to computing magnetic fields — directly analogous to Coulomb's Law and Gauss' Law in electrostatics.
+</p>
+<hr>
+<h3>Biot-Savart Law: Field from Current Elements</h3>
+<p>
+The Biot-Savart Law builds the magnetic field by integrating contributions from each infinitesimal current element \( I\,d\vec{l} \). It is the most general method and works for any geometry. It is essential when the current distribution lacks symmetry.
+</p>
+<hr>
+<h3>Ampere's Circuital Law: Field from Enclosed Current</h3>
+<p>
+Ampere's Law relates the line integral of the magnetic field around a closed loop to the current passing through it:
+</p>
+\[
+\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enc}}
+\]
+<p>
+When strong symmetry exists (infinite straight wire, solenoid, toroid), Ampere's Law allows direct computation of \( \vec{B} \) without integration over current elements. It is the magnetic analogue of Gauss' Law.
+</p>
+<hr>
+<h3>Key Relationship</h3>
+<ul>
+<li>Biot-Savart Law builds the field from pieces — it is more general.</li>
+<li>Ampere's Law uses global symmetry to bypass integration — it is more powerful in symmetric cases.</li>
+<li>Both describe the same physical field.</li>
+</ul>
+</section>
+<section>
+<h2>The Lorentz Force</h2>
+<p>
+A magnetic field acts on matter by exerting force on moving charges. The force on a charge \( q \) moving with velocity \( \vec{v} \) in a field \( \vec{B} \) is given by the Lorentz force:
+</p>
+\[
+\vec{F} = q(\vec{v} \times \vec{B})
+\]
+<p>
+The magnetic force is always perpendicular to the velocity. It therefore does no work and cannot change the speed of a particle — only its direction. This leads to circular and helical trajectories, the cyclotron, and the velocity selector.
+</p>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+<li><strong>Lorentz Force</strong> — Force on a moving charge in a magnetic field; right-hand rule for direction.</li>
+<li><strong>Biot-Savart Law</strong> — The fundamental law for computing \( \vec{B} \) from current elements.</li>
+<li><strong>Magnetic Fields of Common Geometries</strong> — Straight wire, circular loop, solenoid, and toroid.</li>
+<li><strong>Ampere's Circuital Law</strong> — Symmetry-based method for determining magnetic fields.</li>
+<li><strong>Motion in a Magnetic Field</strong> — Circular motion, helical paths, and cyclotron frequency.</li>
+<li><strong>Force Between Currents</strong> — Parallel conductors and the definition of the Ampere.</li>
+<li><strong>Magnetic Dipole</strong> — Current loop as a magnetic dipole, torque, and potential energy.</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-magnetic-force.html">1. Magnetic Force and the Lorentz Force Law</a>
+<a href="./02-biot-savart-law.html">2. Biot-Savart Law</a>
+<a href="./03-ampere-law.html">3. Ampere's Circuital Law</a>
+<a href="./04-moving-charge-in-field.html">4. Motion of a Charged Particle in a Magnetic Field</a>
+<a href="./05-force-on-current.html">5. Force on Current-Carrying Conductors</a>
+<a href="./06-magnetic-dipole.html">6. Magnetic Dipole and Current Loop</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

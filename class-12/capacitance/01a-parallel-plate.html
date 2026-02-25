@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Parallel Plate Capacitor</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./01-capacitance-basics.html" class="back-btn">
+                <span>&larr;</span> Back to Capacitance and Capacitor Geometries
+            </a>
+        </nav>
+
+        <h1>Parallel Plate Capacitor</h1>
+        <p class="subtitle">
+            The most important capacitor geometry — and the derivation of its capacitance.
+        </p>
+
+        <section>
+            <h2>Setup</h2>
+            <p>
+                A parallel plate capacitor consists of two large, flat conducting plates of area \( A \), separated by a
+                distance \( d \) (with \( d \ll \sqrt{A} \) so edge effects are negligible). One plate carries charge \(
+                +Q \) and the other \( -Q \).
+            </p>
+            <p>
+                The surface charge density on each plate is:
+            </p>
+            \[
+            \sigma = \frac{Q}{A}
+            \]
+        </section>
+
+        <section>
+            <h2>Electric Field Between the Plates</h2>
+            <p>
+                Using Gauss's Law with a pillbox surface straddling one plate, the field due to a single conducting
+                plate with surface charge density \( \sigma \) is \( E = \sigma/\varepsilon_0 \). Two plates of opposite
+                charge reinforce in the gap and cancel outside.
+            </p>
+            <p>
+                The field between the plates is uniform and directed from positive to negative plate:
+            </p>
+            \[
+            E = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\varepsilon_0 A}
+            \]
+            <p>
+                The field outside the capacitor is zero (fields from the two plates exactly cancel).
+            </p>
+            <div class="insightbox">
+                The field is strictly uniform inside a parallel plate capacitor (in the ideal case). This makes it ideal
+                for theoretical analysis and for practical devices requiring a well-controlled field.
+            </div>
+        </section>
+
+        <section>
+            <h2>Potential Difference and Capacitance</h2>
+            <p>
+                The potential difference between the plates is:
+            </p>
+            \[
+            V = E \cdot d = \frac{Qd}{\varepsilon_0 A}
+            \]
+            <p>
+                Therefore the capacitance is:
+            </p>
+            \[
+            C = \frac{Q}{V} = \frac{Q}{\displaystyle\frac{Qd}{\varepsilon_0 A}}
+            \]
+            \[
+            \boxed{C = \frac{\varepsilon_0 A}{d}}
+            \]
+            <p>
+                Key observations:
+            </p>
+            <ul>
+                <li>\( C \) increases with plate area \( A \) — more plate area allows more charge at the same voltage.
+                </li>
+                <li>\( C \) decreases with separation \( d \) — a wider gap means a lower field for the same charge, so
+                    more charge is needed to reach a given \( V \).</li>
+                <li>\( C \) is independent of \( Q \) and \( V \) — it is a purely geometric property.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Effect of a Conducting Slab Between the Plates</h2>
+            <p>
+                If a conducting slab of thickness \( t \) (where \( t &lt; d \)) is inserted between the plates, the
+                field inside the conductor is zero, and the effective separation is reduced to \( (d - t) \):
+            </p>
+            \[
+            C' = \frac{\varepsilon_0 A}{d - t}
+            \]
+            <p>
+                The capacitance increases — the conducting slab effectively shortens the gap. In particular, if the slab
+                fills the gap completely (\( t = d \)), the capacitance becomes infinite (the two plates are directly
+                connected — not really a capacitor anymore).
+            </p>
+        </section>
+
+        <section>
+            <h2>Force Between the Plates</h2>
+            <p>
+                The field acting on one plate is only due to the other plate, which has field \( E/2 =
+                \sigma/(2\varepsilon_0) \). The electrostatic force on plate of area \( A \) with charge \( Q \) is:
+            </p>
+            \[
+            F = Q \cdot \frac{\sigma}{2\varepsilon_0} = \frac{Q^2}{2\varepsilon_0 A} = \frac{\sigma^2 A}{2\varepsilon_0}
+            \]
+            <p>
+                This is an attractive force (the plates attract each other). It can also be derived as the negative
+                gradient of stored energy with respect to separation:
+            </p>
+            \[
+            F = -\frac{dU}{dd}\bigg|_Q = -\frac{d}{dd}\left(\frac{Q^2 d}{2\varepsilon_0 A}\right) =
+            -\frac{Q^2}{2\varepsilon_0 A}
+            \]
+            <p>
+                The negative sign confirms attraction.
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

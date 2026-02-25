@@ -4,98 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Physics | Alternating Current</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #e67e22;
-            --bg: #fdfdfd;
-        }
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: var(--bg);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 10px;
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-top: 30px;
-            border-left: 5px solid var(--secondary);
-            padding-left: 15px;
-        }
-
-        .formula-box {
-            background: #f0f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            text-align: center;
-            margin: 20px 0;
-            border: 1px solid #d1d9e1;
-        }
-
-        .points-list {
-            padding-left: 20px;
-        }
-
-        nav {
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
-        }
-    </style>
+    <title>Alternating Current | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-        <h1>Alternating Current (AC)</h1>
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+
+        <h1>Alternating Current</h1>
+        <p class="subtitle">
+            Sinusoidal voltages, impedance, resonance — and how power travels across continents.
+        </p>
+
         <section>
             <h2>Conceptual Overview</h2>
-            <p>Alternating current (AC) is electric current that periodically reverses its direction and changes its
-                magnitude continuously with time. It is the dominant form of power distribution.</p>
+            <p>
+                Alternating current (AC) is the form in which virtually all electrical power is generated and
+                distributed. Unlike direct current, the voltage and current in an AC system vary sinusoidally with time
+                — oscillating between positive and negative values at a fixed frequency (50 Hz in India).
+            </p>
+            <p>
+                The reason AC dominates power transmission is the transformer — a device that can step voltage up or
+                down almost without loss, using the principle of electromagnetic induction. High voltage, low current
+                transmission losses are minimal; local step-down makes it safe for homes.
+            </p>
         </section>
+
         <section>
-            <h2>Core Formulas</h2>
-            <div class="formula-box">
-                \[ V = V_0 \sin(\omega t), \quad V_{rms} = \frac{V_0}{\sqrt{2}}, \quad Z = \sqrt{R^2 + (X_L - X_C)^2} \]
-            </div>
+            <h2>The AC Source</h2>
+            <p>
+                An AC generator produces a sinusoidal EMF. The instantaneous voltage is:
+            </p>
+            \[
+            v(t) = V_0 \sin(\omega t + \phi)
+            \]
+            <p>
+                where \( V_0 \) is the peak voltage, \( \omega = 2\pi f \) is the angular frequency, and \( \phi \) is
+                the initial phase. The same sinusoidal form applies to the current \( i(t) = I_0\sin(\omega t + \phi')
+                \), but with (in general) a different phase \( \phi' \) — the phase difference \( \phi - \phi' \)
+                depends on the circuit elements.
+            </p>
         </section>
+
         <section>
-            <h2>Key Discussion Points</h2>
+            <h2>Impedance — The AC Analogue of Resistance</h2>
+            <p>
+                In a DC circuit, Ohm's Law relates voltage, current, and resistance: \( V = IR \). In an AC circuit,
+                resistors, inductors, and capacitors all oppose current, but with important differences. The generalised
+                opposition is called <strong>impedance</strong> \( Z \):
+            </p>
+            \[
+            V_0 = I_0 Z, \quad Z = \sqrt{R^2 + (X_L - X_C)^2}
+            \]
+            <p>
+                where \( X_L = \omega L \) is the inductive reactance and \( X_C = 1/(\omega C) \) is the capacitive
+                reactance. Impedance depends on frequency — making AC circuits fundamentally frequency-dependent in a
+                way DC circuits are not.
+            </p>
+        </section>
+
+        <section>
+            <h2>Resonance</h2>
+            <p>
+                In a series RLC circuit, there exists a special frequency \( \omega_0 \) at which the inductive and
+                capacitive reactances exactly cancel:
+            </p>
+            \[
+            \omega_0 = \frac{1}{\sqrt{LC}}
+            \]
+            <p>
+                At this resonant frequency, the impedance is purely resistive (\( Z = R \)), the current is maximum, and
+                the phase difference between voltage and current is zero. Resonance is the basis of radio tuning, signal
+                filters, and oscillators.
+            </p>
+        </section>
+
+        <section>
+            <h2>Core Topics</h2>
             <ul class="points-list">
-                <li>Phasors and phase relationships in R, L, and C circuits.</li>
-                <li>Impedance ($Z$) and Reactance ($X_L, X_C$).</li>
-                <li>Series LCR circuit and the phenomenon of resonance ($\omega_0 = 1/\sqrt{LC}$).</li>
-                <li>Power in AC circuits: Real power, Apparent power, and Power Factor.</li>
-                <li>Transformers: Principle of operation and energy losses.</li>
+                <li><strong>AC Quantities</strong> — Instantaneous, peak, and RMS values; phase and angular frequency.
+                </li>
+                <li><strong>Phasor Representation</strong> — Rotating vectors to visualise amplitude and phase
+                    relationships.</li>
+                <li><strong>Pure R, L, C Circuits</strong> — Individual behaviour; reactance; phase relationships.</li>
+                <li><strong>Series RLC Circuit</strong> — Impedance triangle, phase angle, and phasor diagram.</li>
+                <li><strong>Resonance</strong> — Resonant frequency, bandwidth, and quality factor \( Q \).</li>
+                <li><strong>Power in AC</strong> — Instantaneous, average, reactive power; power factor.</li>
+                <li><strong>Transformers</strong> — Ideal transformer equations; AC power transmission.</li>
             </ul>
         </section>
+
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-ac-basics.html">1. AC Quantities: Peak, RMS, and Phase</a>
+                <a href="./02-ac-circuits.html">2. Pure R, L, C in AC Circuits</a>
+                <a href="./03-series-rlc.html">3. Series RLC Circuit</a>
+                <a href="./04-power-in-ac.html">4. Power in AC Circuits</a>
+                <a href="./05-transformer.html">5. Transformers and AC Transmission</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
     </div>
 </body>
 

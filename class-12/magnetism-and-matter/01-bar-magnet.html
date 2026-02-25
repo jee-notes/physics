@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetism and Matter | Bar Magnet and Magnetic Dipole</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetism and Matter
+            </a>
+        </nav>
+
+        <h1>The Bar Magnet and Magnetic Dipole</h1>
+        <p class="subtitle">
+            The macroscopic magnet as a perfect magnetic dipole.
+        </p>
+
+        <section>
+            <h2>What is a Magnetic Dipole?</h2>
+            <p>
+                A magnetic dipole is the simplest possible magnetic system — one with a north pole and a south pole. It
+                is the magnetic analogue of the electric dipole. Unlike the electric dipole, however, the two poles of a
+                magnetic dipole cannot be separated: every magnet always has both a north and a south pole.
+            </p>
+            <p>
+                Cut a bar magnet in half, and each half becomes a complete magnet with its own north and south pole.
+                This is the experimental basis of Gauss's Law for Magnetism — there are no magnetic monopoles.
+            </p>
+            <div class="insightbox">
+                A current loop and a bar magnet are equivalent descriptions of the same physical object at the
+                macroscopic level. Any bar magnet can be modelled as an equivalent current loop with the same magnetic
+                dipole moment.
+            </div>
+        </section>
+
+        <section>
+            <h2>Magnetic Dipole Moment of a Bar Magnet</h2>
+            <p>
+                For a bar magnet of pole strength \( m \) and magnetic length \( 2l \) (the distance between the poles),
+                the magnetic dipole moment \( \vec{M} \) is:
+            </p>
+            \[
+            \vec{M} = m \cdot (2l)\,\hat{l}
+            \]
+            <p>
+                where \( \hat{l} \) points from the south pole to the north pole. The magnitude is:
+            </p>
+            \[
+            M = m \cdot 2l \quad \text{(SI unit: A·m}^2\text{)}
+            \]
+            <p>
+                The magnetic length \( 2l \) is slightly less than the geometric length of the magnet because the poles
+                are located slightly inward from the ends.
+            </p>
+        </section>
+
+        <section>
+            <h2>Torque and Potential Energy in a Uniform Field</h2>
+            <p>
+                When a bar magnet (dipole moment \( \vec{M} \)) is placed in a uniform external magnetic field \(
+                \vec{B} \), it experiences a torque:
+            </p>
+            \[
+            \vec{\tau} = \vec{M} \times \vec{B}, \quad \tau = MB\sin\theta
+            \]
+            <p>
+                where \( \theta \) is the angle between \( \vec{M} \) and \( \vec{B} \). The torque tends to align the
+                magnet along the field direction.
+            </p>
+            <p>
+                The potential energy of the dipole in the field is:
+            </p>
+            \[
+            U = -\vec{M} \cdot \vec{B} = -MB\cos\theta
+            \]
+            <ul>
+                <li>\( \theta = 0° \): \( U = -MB \) — stable equilibrium (magnet aligned with field).</li>
+                <li>\( \theta = 180° \): \( U = +MB \) — unstable equilibrium.</li>
+            </ul>
+            <p>
+                Work done in rotating from \( \theta_1 \) to \( \theta_2 \):
+            </p>
+            \[
+            W = MB(\cos\theta_1 - \cos\theta_2)
+            \]
+        </section>
+
+        <section>
+            <h2>Core Sub-Topics</h2>
+            <div class="chapter-list">
+                <a href="./01a-dipole-fields.html">1a. Magnetic Field of a Dipole — Axial and Equatorial</a>
+                <a href="./01b-gauss-magnetism.html">1b. Gauss's Law for Magnetism</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

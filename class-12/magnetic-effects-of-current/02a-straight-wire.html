@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Effects | Field due to a Straight Wire</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./02-biot-savart-law.html" class="back-btn">
+                <span>&larr;</span> Back to Biot-Savart Law
+            </a>
+        </nav>
+
+        <h1>Magnetic Field due to a Straight Wire</h1>
+        <p class="subtitle">
+            Integrating the Biot-Savart Law along a linear current source.
+        </p>
+
+        <section>
+            <h2>Setup and Geometry</h2>
+            <p>
+                Consider a thin straight wire carrying current \( I \). We wish to find the magnetic field at a point \(
+                P \) located at a perpendicular distance \( d \) from the wire.
+            </p>
+            <p>
+                Place the wire along the \( x \)-axis. The point \( P \) lies in the \( xy \)-plane at position \( (0,\,
+                d,\, 0) \). A current element at position \( (x, 0, 0) \) is \( d\vec{l} = dx\,\hat{x} \).
+            </p>
+            <p>
+                The displacement vector from the element to \( P \) is:
+            </p>
+            \[
+            \vec{r} = -x\,\hat{x} + d\,\hat{y}, \quad r = \sqrt{x^2 + d^2}
+            \]
+            <p>
+                The angle \( \phi \) is defined from the perpendicular drawn from \( P \) to the wire: as the element
+                scans from one end to the other, \( \phi \) varies from \( \phi_1 \) to \( \phi_2 \).
+            </p>
+        </section>
+
+        <section>
+            <h2>Applying the Biot-Savart Law</h2>
+            <p>
+                The cross product gives \( d\vec{l} \times \hat{r} = d\vec{l} \times \vec{r}/r \), which points in the
+                \( +\hat{z} \) direction (out of the \( xy \)-plane) for all elements — by symmetry, there is no
+                cancellation and all contributions add up in the same direction.
+            </p>
+            <p>
+                The scalar magnitude of \( d\vec{B} \) from element at angle \( \phi \) is:
+            </p>
+            \[
+            dB = \frac{\mu_0 I}{4\pi} \frac{\sin\theta}{r^2}\, dl
+            \]
+            <p>
+                Substituting \( x = d\tan\phi \), \( dx = d\sec^2\phi\, d\phi \), and \( r = d/\cos\phi = d\sec\phi \):
+            </p>
+            \[
+            dB = \frac{\mu_0 I}{4\pi d}\cos\phi\, d\phi
+            \]
+            <p>
+                Integrating from \( \phi_1 \) to \( \phi_2 \):
+            </p>
+            \[
+            \boxed{B = \frac{\mu_0 I}{4\pi d}(\sin\phi_2 - \sin\phi_1)}
+            \]
+            <div class="insightbox">
+                The angles \( \phi_1 \) and \( \phi_2 \) are measured from the perpendicular at \( P \) to the two ends
+                of the wire. For a point beyond one end of a semi-infinite wire, one angle is \( 0° \) and the other is
+                \( 90° \).
+            </div>
+        </section>
+
+        <section>
+            <h2>Special Case: Infinite Straight Wire</h2>
+            <p>
+                For an infinite wire, both ends extend to infinity: \( \phi_1 = -90° \) and \( \phi_2 = +90° \).
+                Substituting:
+            </p>
+            \[
+            B = \frac{\mu_0 I}{4\pi d}(\sin 90° - \sin(-90°)) = \frac{\mu_0 I}{4\pi d}(1+1)
+            \]
+            \[
+            \boxed{B = \frac{\mu_0 I}{2\pi d}}
+            \]
+            <p>
+                The field lines of an infinite straight wire are concentric circles around the wire. The direction is
+                given by the right-hand rule: curl the right hand's fingers around the wire in the direction of current;
+                the thumb points in the direction of the field.
+            </p>
+        </section>
+
+        <section>
+            <h2>Special Case: Semi-Infinite Wire</h2>
+            <p>
+                For a wire extending from \( x = 0 \) to \( x = +\infty \), with \( P \) at perpendicular distance \( d
+                \) from the near end:
+            </p>
+            \[
+            \phi_1 = 0°, \quad \phi_2 = 90° \implies B = \frac{\mu_0 I}{4\pi d}
+            \]
+            <p>
+                This result is exactly half the field of an infinite wire at the same distance — which makes intuitive
+                sense from superposition.
+            </p>
+        </section>
+
+        <section>
+            <h2>Behaviour of the Field</h2>
+            <ul>
+                <li>The field is stronger closer to the wire: \( B \propto 1/d \).</li>
+                <li>The field circles the wire — it is not radial like an electric field, but tangential.</li>
+                <li>Two parallel wires carrying currents in the same direction attract; in opposite directions, they
+                    repel.</li>
+            </ul>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

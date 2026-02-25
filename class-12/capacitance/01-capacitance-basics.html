@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capacitance | Capacitance and Capacitor Geometries</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Capacitance
+            </a>
+        </nav>
+
+        <h1>Capacitance and Capacitor Geometries</h1>
+        <p class="subtitle">
+            How much charge a conductor system can hold per volt of potential difference.
+        </p>
+
+        <section>
+            <h2>Definition of Capacitance</h2>
+            <p>
+                The capacitance \( C \) of a system of conductors is defined as the charge \( Q \) stored on the
+                positive conductor per unit potential difference \( V \) between the conductors:
+            </p>
+            \[
+            C = \frac{Q}{V}
+            \]
+            <p>
+                The SI unit of capacitance is the <strong>Farad (F)</strong>: \( 1 \text{ F} = 1 \text{ C/V} \). One
+                Farad is an enormous capacitance — practical capacitors range from picofarads (\( 10^{-12} \) F) to
+                millifarads (\( 10^{-3} \) F).
+            </p>
+            <div class="insightbox">
+                Capacitance is a purely geometric property — it depends only on the shape, size, and relative position
+                of the conductors, not on the charge placed on them or the potential to which they are raised. Doubling
+                \( Q \) doubles \( V \) in exact proportion, keeping \( C = Q/V \) constant.
+            </div>
+        </section>
+
+        <section>
+            <h2>How a Capacitor Works</h2>
+            <p>
+                A capacitor consists of two conductors (plates) separated by an insulator. When a charge \( +Q \) is
+                placed on one plate, it induces \( -Q \) on the facing surface of the other plate (which is earthed or
+                connected to a return path). The electric field exists only in the gap between the plates.
+            </p>
+            <p>
+                The potential difference between the plates is determined by the field in the gap. Since \( E \propto Q
+                \) and \( V = Ed \), we get \( V \propto Q \) — confirming that \( C = Q/V \) is indeed a constant
+                determined only by geometry.
+            </p>
+        </section>
+
+        <section>
+            <h2>Self-Capacitance of an Isolated Sphere</h2>
+            <p>
+                For an isolated conducting sphere of radius \( R \), the potential when charged to \( Q \) is:
+            </p>
+            \[
+            V = \frac{Q}{4\pi\varepsilon_0 R}
+            \]
+            <p>
+                Therefore the self-capacitance is:
+            </p>
+            \[
+            \boxed{C_{\text{sphere}} = 4\pi\varepsilon_0 R}
+            \]
+            <p>
+                The self-capacitance only depends on the radius. Earth's self-capacitance (\( R \approx 6.4 \times 10^6
+                \) m) is about 711 µF — still far less than 1 F.
+            </p>
+        </section>
+
+        <section>
+            <h2>Core Applications</h2>
+            <div class="chapter-list">
+                <a href="./01a-parallel-plate.html">1a. Parallel Plate Capacitor</a>
+                <a href="./01b-spherical-cylindrical.html">1b. Spherical and Cylindrical Capacitors</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

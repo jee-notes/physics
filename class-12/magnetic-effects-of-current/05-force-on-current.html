@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Effects | Force on Current-Carrying Conductors</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetic Effects of Current
+            </a>
+        </nav>
+
+        <h1>Force on Current-Carrying Conductors</h1>
+        <p class="subtitle">
+            How currents interact with fields and with each other.
+        </p>
+
+        <section>
+            <h2>Force on a Current Element in a Field</h2>
+            <p>
+                A current-carrying conductor placed in an external magnetic field experiences a force. Microscopically,
+                this is the Lorentz force accumulating over all the drifting charge carriers. Macroscopically, for an
+                infinitesimal element \( Id\vec{l} \) of the conductor:
+            </p>
+            \[
+            d\vec{F} = I\, d\vec{l} \times \vec{B}
+            \]
+            <p>
+                For a straight conductor of length \( L \) in a uniform field \( \vec{B} \):
+            </p>
+            \[
+            \vec{F} = I\vec{L} \times \vec{B}, \quad F = BIL\sin\theta
+            \]
+            <p>
+                where \( \theta \) is the angle between the current direction and \( \vec{B} \). The direction of the
+                force is given by the right-hand rule for the cross product \( \vec{L} \times \vec{B} \).
+            </p>
+            <div class="insightbox">
+                A conductor carrying current parallel to \( \vec{B} \) experiences no force. Maximum force occurs when
+                the current is perpendicular to \( \vec{B} \). This is the principle behind the electric motor.
+            </div>
+        </section>
+
+        <section>
+            <h2>Force on a Curved Conductor</h2>
+            <p>
+                For a curved conductor in a uniform field, we integrate \( d\vec{F} = I\, d\vec{l} \times \vec{B} \)
+                along the path. Since \( \vec{B} \) is uniform, it can be pulled out:
+            </p>
+            \[
+            \vec{F} = I \left(\int d\vec{l}\right) \times \vec{B}
+            \]
+            <p>
+                The integral \( \int d\vec{l} \) is simply the net displacement vector from the start to the end of the
+                conductor. Therefore, for any curved conductor in a uniform field, the force is the same as that on a
+                straight conductor connecting the two endpoints.
+            </p>
+            <div class="insightbox">
+                A closed current loop in a <em>uniform</em> magnetic field experiences zero net force (since the net
+                displacement vector is zero). It does, however, experience a net <em>torque</em>.
+            </div>
+        </section>
+
+        <section>
+            <h2>Force Between Two Parallel Current-Carrying Wires</h2>
+            <p>
+                Consider two long parallel wires separated by distance \( d \), carrying currents \( I_1 \) and \( I_2
+                \) respectively. Wire 1 produces a magnetic field at the location of Wire 2:
+            </p>
+            \[
+            B_1 = \frac{\mu_0 I_1}{2\pi d}
+            \]
+            <p>
+                The force per unit length on Wire 2 in this field is:
+            </p>
+            \[
+            \frac{F}{L} = I_2 B_1 = \frac{\mu_0 I_1 I_2}{2\pi d}
+            \]
+            <div class="insightbox">
+                <strong>Direction:</strong> When currents flow in the <em>same</em> direction, the wires attract each
+                other. When currents flow in <em>opposite</em> directions, they repel. This can be verified using the
+                right-hand rule on each wire's field.
+            </div>
+        </section>
+
+        <section>
+            <h2>Definition of the Ampere</h2>
+            <p>
+                The SI unit of current, the Ampere (A), was historically defined using the force between parallel wires.
+                One Ampere is defined as that constant current which, when flowing through two straight, infinite
+                parallel conductors of negligible circular cross-section, placed 1 metre apart in vacuum, produces a
+                force per unit length of \( 2 \times 10^{-7} \) N/m between them.
+            </p>
+            <p>
+                From the formula \( F/L = \mu_0 I^2 / (2\pi d) \), with \( I_1 = I_2 = 1\text{ A} \) and \( d = 1\text{
+                m} \):
+            </p>
+            \[
+            \frac{F}{L} = \frac{4\pi \times 10^{-7} \times 1 \times 1}{2\pi \times 1} = 2 \times 10^{-7} \text{ N/m}
+            \]
+            <p>
+                This confirms the consistency of the definition. (Note: Since 2019, the SI system redefines the Ampere
+                more fundamentally via a fixed value of the elementary charge \( e \).)
+            </p>
+        </section>
+
+        <section>
+            <h2>Torque on a Current Loop in a Uniform Field</h2>
+            <p>
+                A rectangular current loop of sides \( a \) and \( b \) carrying current \( I \) is placed in a uniform
+                field \( \vec{B} \). Let \( \theta \) be the angle between the plane of the loop and \( \vec{B} \)
+                (equivalently, \( 90° - \theta \) is the angle between the normal to the loop and \( \vec{B} \)).
+            </p>
+            <p>
+                The two sides of length \( a \) (parallel to the axis of rotation) each experience forces \( F = BIb \)
+                in opposite directions, forming a couple. The net torque about the central axis is:
+            </p>
+            \[
+            \tau = B I a b \cos\theta = B I A \cos\theta
+            \]
+            <p>
+                where \( A = ab \) is the area of the loop. In vector form, defining the magnetic moment \( \vec{m} = I
+                A\hat{n} \) where \( \hat{n} \) is the normal to the loop:
+            </p>
+            \[
+            \vec{\tau} = \vec{m} \times \vec{B}
+            \]
+            <p>
+                The torque is maximum when the plane of the loop is parallel to \( \vec{B} \) (\( \theta = 0° \)), and
+                zero when the normal to the loop is aligned with \( \vec{B} \) (equilibrium position).
+            </p>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

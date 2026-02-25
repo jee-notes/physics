@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Effects | Motion of Charged Particle in Magnetic Field</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Magnetic Effects of Current
+            </a>
+        </nav>
+
+        <h1>Motion of a Charged Particle in a Magnetic Field</h1>
+        <p class="subtitle">
+            Circular orbits, helical paths, and the machinery of particle accelerators.
+        </p>
+
+        <section>
+            <h2>Circular Motion in a Uniform \( \vec{B} \)</h2>
+            <p>
+                When a charged particle of mass \( m \), charge \( q \), and speed \( v \) enters a region of uniform
+                magnetic field \( \vec{B} \) with its velocity <em>perpendicular</em> to \( \vec{B} \), the magnetic
+                force is always perpendicular to the velocity. This is exactly the condition for uniform circular
+                motion.
+            </p>
+            <p>
+                The magnetic force provides the centripetal force:
+            </p>
+            \[
+            qvB = \frac{mv^2}{r}
+            \]
+            <p>
+                Solving for the radius of the circular orbit (the cyclotron radius or Larmor radius):
+            </p>
+            \[
+            \boxed{r = \frac{mv}{qB}}
+            \]
+            <div class="insightbox">
+                A heavier particle orbits in a larger circle. A faster particle also orbits in a larger circle. But for
+                a given speed, a stronger field curves the orbit more tightly. This forms the basis of mass
+                spectrometry.
+            </div>
+        </section>
+
+        <section>
+            <h2>Cyclotron Frequency and Time Period</h2>
+            <p>
+                The time period of the circular orbit is:
+            </p>
+            \[
+            T = \frac{2\pi r}{v} = \frac{2\pi m}{qB}
+            \]
+            <p>
+                The cyclotron frequency (angular frequency) is:
+            </p>
+            \[
+            \omega_c = \frac{2\pi}{T} = \frac{qB}{m}
+            \]
+            <p>
+                And the cyclotron frequency in Hz:
+            </p>
+            \[
+            \nu_c = \frac{qB}{2\pi m}
+            \]
+            <div class="insightbox">
+                The cyclotron frequency \( \omega_c = qB/m \) is independent of the particle's speed. Faster particles
+                orbit in larger circles but complete the circle in exactly the same time. This remarkable fact is
+                exploited in the cyclotron particle accelerator.
+            </div>
+        </section>
+
+        <section>
+            <h2>Helical Motion</h2>
+            <p>
+                If the velocity of the particle has a component <em>along</em> \( \vec{B} \) (let's call it \(
+                v_\parallel \)) in addition to the perpendicular component \( v_\perp \), the motion is helical:
+            </p>
+            <ul>
+                <li>The perpendicular component \( v_\perp \) drives circular motion in the plane perpendicular to \(
+                    \vec{B} \), with radius \( r = mv_\perp / (qB) \).</li>
+                <li>The parallel component \( v_\parallel \) is unaffected by the magnetic force (since \(
+                    \vec{v}_\parallel \times \vec{B} = 0 \)).</li>
+                <li>The result is a helix — the particle spirals along the direction of \( \vec{B} \).</li>
+            </ul>
+            <p>
+                The pitch of the helix (distance advanced along \( \vec{B} \) per revolution) is:
+            </p>
+            \[
+            p = v_\parallel \cdot T = \frac{2\pi m v_\parallel}{qB}
+            \]
+            <p>
+                Helical motion explains why charged particles in Earth's magnetic field are trapped and spiral along
+                field lines — this is the origin of the Van Allen radiation belts and auroras.
+            </p>
+        </section>
+
+        <section>
+            <h2>The Velocity Selector</h2>
+            <p>
+                A velocity selector uses crossed electric and magnetic fields to select particles of a specific speed.
+                Set up \( \vec{E} \) and \( \vec{B} \) perpendicular to each other and to the particle beam.
+            </p>
+            <p>
+                For a particle to travel in a straight line, the electric force must balance the magnetic force:
+            </p>
+            \[
+            qE = qvB \implies \boxed{v = \frac{E}{B}}
+            \]
+            <p>
+                Only particles with <em>exactly</em> this speed pass through undeflected. Faster or slower particles are
+                deflected and blocked by a slit. This device is used in the front end of mass spectrometers.
+            </p>
+        </section>
+
+        <section>
+            <h2>The Cyclotron</h2>
+            <p>
+                The cyclotron is a particle accelerator that exploits the fact that \( \omega_c = qB/m \) is independent
+                of speed. It consists of two D-shaped metallic chambers (dees) placed in a uniform magnetic field,
+                separated by a gap across which an alternating electric field is applied.
+            </p>
+            <ul>
+                <li>A particle enters the gap, is accelerated by the electric field, and then curves in a semicircle
+                    inside the dee.</li>
+                <li>After exactly half a revolution, it returns to the gap — at which point the electric field has
+                    reversed sign, and it is accelerated again.</li>
+                <li>Because the period of revolution is constant (independent of speed), the AC frequency can be locked
+                    to \( \nu_c = qB/(2\pi m) \) — the cyclotron resonance condition.</li>
+                <li>The particle spirals outward in ever-larger semicircles, gaining energy at each gap crossing.</li>
+            </ul>
+            <p>
+                The maximum kinetic energy achieved when the particle exits at radius \( R \) is:
+            </p>
+            \[
+            KE_{\max} = \frac{q^2 B^2 R^2}{2m}
+            \]
+            <div class="insightbox">
+                The cyclotron fails at relativistic speeds. As the particle approaches the speed of light, its
+                relativistic mass increases, making \( \omega_c = qB/m \) smaller — the particle falls out of phase with
+                the alternating field. This is corrected by the synchrocyclotron (which varies the frequency) and the
+                synchrotron (which varies both field and frequency).
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

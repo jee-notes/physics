@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternating Current | Series RLC Circuit</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Alternating Current
+            </a>
+        </nav>
+
+        <h1>Series RLC Circuit</h1>
+        <p class="subtitle">
+            Combining resistance, inductance, and capacitance — impedance, phase angle, and resonance.
+        </p>
+
+        <section>
+            <h2>Setup</h2>
+            <p>
+                A series RLC circuit has a resistor \( R \), inductor \( L \), and capacitor \( C \) connected in series
+                with an AC source \( v = V_0\sin(\omega t) \). The same current \( i \) flows through all three
+                elements.
+            </p>
+            <p>
+                The instantaneous voltages across each element are:
+            </p>
+            \[
+            v_R = iR, \quad v_L = L\frac{di}{dt}, \quad v_C = \frac{1}{C}\int i\,dt
+            \]
+            <p>
+                Their sum equals the source voltage. Since \( v_R \), \( v_L \), and \( v_C \) are not in phase with
+                each other, we cannot simply add their magnitudes — we must add them as phasors.
+            </p>
+        </section>
+
+        <section>
+            <h2>Phasor Analysis</h2>
+            <p>
+                Taking current \( i = I_0\sin(\omega t) \) as reference phasor:
+            </p>
+            <ul>
+                <li>\( V_R = I_0 R \) — in phase with current.</li>
+                <li>\( V_L = I_0 X_L = I_0\omega L \) — leads current by \( 90° \).</li>
+                <li>\( V_C = I_0 X_C = I_0/(\omega C) \) — lags current by \( 90° \).</li>
+            </ul>
+            <p>
+                Since \( V_L \) and \( V_C \) are in opposite directions, the net reactive phasor has magnitude \( |V_L
+                - V_C| \). The resultant source voltage phasor:
+            </p>
+            \[
+            V_0 = \sqrt{V_R^2 + (V_L - V_C)^2} = \sqrt{(I_0 R)^2 + (I_0 X_L - I_0 X_C)^2}
+            \]
+            \[
+            \boxed{V_0 = I_0 Z, \quad Z = \sqrt{R^2 + (X_L - X_C)^2}}
+            \]
+        </section>
+
+        <section>
+            <h2>Impedance and Phase Angle</h2>
+            <p>
+                The <strong>impedance</strong> \( Z \) (in ohms) is the effective AC resistance of the series
+                combination:
+            </p>
+            \[
+            Z = \sqrt{R^2 + \left(\omega L - \frac{1}{\omega C}\right)^2}
+            \]
+            <p>
+                The <strong>phase angle</strong> \( \phi \) is the angle by which the voltage leads the current:
+            </p>
+            \[
+            \tan\phi = \frac{X_L - X_C}{R} = \frac{\omega L - 1/(\omega C)}{R}
+            \]
+            <ul>
+                <li>\( \phi > 0 \): \( X_L > X_C \) — circuit is inductive; voltage leads current.</li>
+                <li>\( \phi < 0 \): \( X_C> X_L \) — circuit is capacitive; voltage lags current.</li>
+                <li>\( \phi = 0 \): \( X_L = X_C \) — circuit is resistive; resonance.</li>
+            </ul>
+            <div class="insightbox">
+                The impedance triangle has \( R \) as the base, \( (X_L - X_C) \) as the perpendicular, and \( Z \) as
+                the hypotenuse — exactly like a right-angle triangle with \( \phi \) as the angle at the base.
+            </div>
+        </section>
+
+        <section>
+            <h2>Instantaneous Current</h2>
+            <p>
+                The current in the series RLC circuit driven by \( v = V_0\sin(\omega t) \) is:
+            </p>
+            \[
+            i(t) = \frac{V_0}{Z}\sin(\omega t - \phi) = I_0\sin(\omega t - \phi)
+            \]
+            <p>
+                where \( I_0 = V_0/Z \) and \( \phi = \arctan\!\left(\frac{X_L - X_C}{R}\right) \). For an inductive
+                circuit (\( \phi > 0 \)), the current lags behind the voltage.
+            </p>
+        </section>
+
+        <section>
+            <h2>Core Sub-Topic</h2>
+            <div class="chapter-list">
+                <a href="./03a-resonance.html">3a. Resonance and Quality Factor</a>
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>
