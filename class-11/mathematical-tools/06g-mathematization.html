@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Operations | Maths of Space</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-vectors-basics.html" class="back-btn">
+<span>&larr;</span> Back to Vectors
+</a>
+</nav>
+<h1>Vector as Mathematization of Space</h1>
+<p class="subtitle">
+How geometry of space becomes algebra.
+</p>
+<section>
+<h2>Space is Geometry first, then Algebra</h2>
+<p>
+Before we introduce vectors, let us pause and think about space itself. Mathematics does not create space — it only helps us describe it. So first we ask: what does space naturally allow us to experience?
+</p>
+<p>
+Whenever we talk about something in space, two basic ideas are always present:
+</p>
+<ul>
+<li><strong>Extent</strong> — how much (length, distance, magnitude).</li>
+<li><strong>Orientation</strong> — where (direction in space).</li>
+</ul>
+<p>
+Suppose I tell you: “Move 5 meters.” You will immediately ask, “Which direction?” The statement feels incomplete. But if I say, “Move 5 meters east,” now the instruction is complete. I have told you both how much and where.
+</p>
+<p>
+So any spatial description automatically contains two parts: a magnitude and a direction. Geometry gives us this structure naturally, even before algebra enters the picture.
+</p>
+<div class="insightbox">
+Space = Extent + Orientation. Vectors appear when we decide to describe both using mathematics.
+</div>
+<p>
+Now notice something interesting. The word “east” is not the same as the word “right.”
+</p>
+<p>
+“East” is a fixed direction. It does not change from person to person. It is the same everywhere. But “right” depends on how someone is facing.
+</p>
+<p>
+If a person is facing North, then East is to their right.  
+If they face South, East becomes left.  
+If they face West, East is behind them.  
+If they face East, East is forward.
+</p>
+<p>
+So “right” depends on the observer, but “east” does not. In that sense, “east” behaves like a standard direction in space — just like “5 meters” behaves like a standard length. One tells us how far; the other tells us which way.
+</p>
+<p>
+When we build mathematics, we need a way to encode both of these clearly and consistently.
+</p>
+</section>
+<section>
+<h2>Arithmetization of Extent</h2>
+<p>
+Let us first understand how length becomes a number.
+</p>
+<p>
+Suppose you draw two line segments on paper. You can compare them. One may be longer, shorter, or equal. You can place one after another and form a longer segment. You can also say one segment is twice another.
+</p>
+<p>
+All these operations — comparing, adding, scaling — suggest something important. Length behaves in a way that can be captured numerically.
+</p>
+<p>
+If one segment is twice another, we do not need to draw both every time. We simply say its length is 2 units instead of 1 unit. In this way, geometry slowly turns into arithmetic.
+</p>
+<p>
+This idea leads to the number line.
+</p>
+<p>
+On a number line, every point represents a certain distance from a chosen reference point (usually zero). Moving to the right increases length positively. Moving to the left decreases it. Addition of numbers corresponds to joining lengths.
+</p>
+<p>
+So the number line is not just a drawing — it is the algebraic encoding of pure extent. It allows us to replace physical segments with real numbers.
+</p>
+<p>
+In this way:
+</p>
+<p>
+Extent → Real Numbers (ℝ)
+</p>
+<p>
+Length, which was originally geometric, becomes arithmetic.
+</p>
+</section>
+<section>
+<h2>Arithmetization of Direction</h2>
+<p>
+Now comes the more subtle part — direction.
+</p>
+<p>
+Unlike length, direction cannot be described by a single number in the same simple way. There is no natural ordering of directions. We cannot say east is "greater" than north. Directions do not behave like quantities that increase or decrease.
+</p>
+<p>
+Instead, directions are distinguished by how they are oriented relative to one another. And the natural way to compare orientations is through angles.
+</p>
+<p>
+In two dimensions, imagine standing at a point and looking in different directions. As you slowly rotate, your facing direction changes continuously. All possible directions you can face lie along a circle around you.
+</p>
+<p>
+If we draw a circle of radius 1 (a unit circle), every point on that circle corresponds to exactly one direction. Rotating by an angle changes your direction. So in two dimensions, direction is encoded by angle — and visually represented by the unit circle. We often talk about a 360 degree viewpoint  or coverage. It simply means that all directions are covered.
+</p>
+<p>
+In three dimensions, something similar happens. From a single point, you can look in infinitely many directions — not just in a flat circle, but in all directions around you. These directions form a sphere. If we take a sphere of radius 1 (a unit sphere), every point on that sphere corresponds to one possible direction in space.
+</p>
+<p>
+A unit vector is simply a mathematical symbol that represents one such direction. Its magnitude is 1, so it carries no information about length — only orientation.
+</p>
+<p>
+So we can say:
+</p>
+<p>
+Direction → Unit Circle (2D) / Unit Sphere (3D)
+</p>
+<div class="insightbox">
+<p>
+Just as the number line encodes length, the unit circle encodes direction.
+</p>
+<p>
+Even in three dimensions, the angle between two directions is always measured in the plane containing them — so direction is fundamentally described using plane angles, not solid angles.
+</p>
+</div>
+</section>
+<section>
+<h2>Combining Extent and Direction</h2>
+<p>
+A vector is formed when we combine magnitude and direction into a single object.
+</p>
+\[
+\vec{A} = A \hat{a}
+\]
+<p>
+Here:
+</p>
+<ul>
+<li>\( A \) represents extent (a scalar magnitude).</li>
+<li>\( \hat{a} \) represents pure orientation (a unit direction).</li>
+</ul>
+<p>
+This combination transforms geometry into algebra. A spatial displacement becomes something we can calculate with.
+</p>
+<p>
+Geometrically:
+</p>
+<ul>
+<li>Magnitude stretches along a direction.</li>
+<li>Direction determines orientation in space.</li>
+</ul>
+<p>
+Algebraically:
+</p>
+<ul>
+<li>Magnitude becomes a number.</li>
+<li>Direction becomes a unit vector symbol.</li>
+</ul>
+</section>
+<section>
+<h2>Why Addition is Possible</h2>
+<p>
+Now let us think about movement. Suppose you walk 2 steps forward and then 1 more step forward. What really happened? You simply walked 3 steps forward. Nothing mysterious.
+</p>
+<p>
+If you walk 2 steps forward and then 1 step backward, you effectively walked 1 step forward. Along a straight line, everything reduces to simple addition and subtraction.
+</p>
+<p>
+But space allows something more interesting. Suppose you walk 2 steps north and then 1 step east. Your final position is not purely north or purely east. It is somewhere diagonally from where you started.
+</p>
+<p>
+Space allows movements in different directions to combine into one overall movement. That is a geometric fact. It happens physically whether or not we write equations for it.
+</p>
+<p>
+Vector addition is simply our mathematical way of describing this head-to-tail combination of movements.
+</p>
+<div class="insightbox">
+Vector algebra is not invented out of thin air. It is a way of describing how space naturally allows movements to combine.
+</div>
+<p>
+When we write something like 2N + 1E, we are just encoding what actually happened in space. Later, we will learn how to calculate the total displacement and how much of it lies in one particular direction. But the basic idea comes from experience: space allows independent directions to combine.
+</p>
+<p>
+So addition works because space itself allows composition of directions. Algebra simply follows geometry.
+</p>
+</section>
+<section>
+<h2>Why Orthogonality Matters</h2>
+<p>
+Now we come to something very important — perpendicular directions.
+</p>
+<p>
+Imagine you move a small distance \(dx\) in one direction, and then a small distance \(dy\) in another direction. Together, these two movements create a tiny patch of area.
+</p>
+<p>
+But what kind of patch is it?
+</p>
+<p>
+If the two directions are perpendicular, the patch formed is a rectangle. And the area of a rectangle is simple:
+</p>
+\[
+dA = dx \, dy
+\]
+<p>
+Just length multiplied by length.
+</p>
+<p>
+But suppose the two directions are not perpendicular. Suppose the second direction is slightly tilted toward the first. Then the patch formed is no longer a perfect rectangle — it becomes a slanted parallelogram.
+</p>
+<p>
+In that case, not all of \(dy\) contributes independently. A part of it “leans into” the first direction. So the true area becomes smaller than \(dx \, dy\). We must multiply by an extra factor that depends on the angle between the directions.
+</p>
+<p>
+So something special happens when directions are perpendicular. When they are orthogonal, neither direction “overlaps” with the other. Each contributes fully and independently to the area.
+</p>
+<p>
+This is what we mean by maximal independence.
+</p>
+<p>
+If two directions are almost parallel, they overlap heavily, and the area between them becomes very small. If they are exactly parallel, there is no area at all — only a line.
+</p>
+<p>
+As the angle between them increases, their independence increases. When the angle reaches 90°, the independence is complete. No part of one direction lies inside the other.
+</p>
+<p>
+That is why the simple formula
+</p>
+\[
+dA = dx \, dy
+\]
+<p>
+works only in perpendicular coordinates.
+</p>
+<p>
+Orthogonality is not just a visual convenience. It ensures that each direction contributes purely and without interference.
+</p>
+<p>
+Because of this independence, spatial measures “factorize cleanly.” That means we can calculate area by multiplying contributions from each direction separately.
+</p>
+<p>
+The same idea extends further. In three dimensions, volume becomes:
+</p>
+\[
+dV = dx \, dy \, dz
+\]
+<p>
+But this clean multiplication works only when all three directions are mutually perpendicular.
+</p>
+<p>
+So perpendicularity is not just about right angles — it is about independence. It allows space to be built dimension by dimension, without overlap.
+</p>
+<div class="insightbox">
+Orthogonality means zero directional overlap. Zero overlap means full independence. Full independence allows clean multiplication of spatial measures.
+</div>
+</section>
+<section>
+<h2>Final Structural View</h2>
+<p>
+Vectors are not merely arrows with numbers attached. They are the mathematical encoding of how space itself behaves.
+</p>
+<p>
+Space allows:
+</p>
+<ul>
+<li>Measurement of length</li>
+<li>Specification of direction</li>
+<li>Combination of movements</li>
+<li>Independence of perpendicular orientations</li>
+</ul>
+<p>
+Vector algebra is the symbolic system that captures these geometric realities.
+</p>
+<div class="insightbox">
+A vector is the mathematization of spatial experience.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
