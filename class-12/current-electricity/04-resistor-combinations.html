@@ -2,153 +2,151 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Current Electricity | Series and Parallel Combinations</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current Electricity | Series and Parallel Combinations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Current Electricity
-            </a>
-        </nav>
-
-        <h1>Series and Parallel Combinations</h1>
-        <p class="subtitle">
-            Structural reduction of linear networks into equivalent black-box parameters.
-        </p>
-
-        <section>
-            <h2>The Concept of Equivalent Resistance</h2>
-            <p>
-                The core principle of circuit reduction is replacement without external alteration. If a complex network
-                of resistors is placed inside a "black box" with two emerging terminals, the <strong>equivalent
-                    resistance \( R_{\text{eq}} \)</strong> is the value of a single resistor that could replace the
-                entire box such that for the same applied potential difference \( V \), the exact same total current \(
-                I \) is drawn from the source.
-            </p>
-        </section>
-
-        <section>
-            <h2>Series Combination</h2>
-            <p>
-                Resistors are in series if they are connected end-to-end with no branching nodes between them. Because
-                charge cannot accumulate at any point in a steady-state conductor, the <strong>same current \( I
-                    \)</strong> flows through every resistor.
-            </p>
-            <div class="model-box">
-                <h3>Derivation</h3>
-                <p>The total potential drop must equal the sum of individual drops (Conservation of Energy):</p>
-                \[V_{\text{total}} = V_1 + V_2 + V_3 + \cdots\]
-                <p>Applying Ohm's Law (\( V = IR \)) to each:</p>
-                \[I R_{\text{eq}} = IR_1 + IR_2 + IR_3 + \cdots\]
-                \[\boxed{R_{\text{eq}} = R_1 + R_2 + R_3 + \cdots}\]
-            </div>
-            <ul>
-                <li>\( R_{\text{eq}} \) is always <em>greater</em> than the largest individual resistance.</li>
-                <li>Voltage divides in proportion to resistance: \( V_i = V \cdot R_i/R_{\text{eq}} \).</li>
-                <li>The series combination acts as a <strong>voltage divider</strong>.</li>
-            </ul>
-            <div class="insightbox">
-                If one element in a series chain breaks (open circuits), the entire current stops — the chain is
-                interrupted. This is why old-style Christmas lights failed completely when one bulb burned out.
-            </div>
-        </section>
-
-        <section>
-            <h2>Parallel Combination</h2>
-            <p>
-                Resistors are in parallel if all their starting ends share one common node and all their terminating
-                ends share another. All resistors therefore have the <strong>same potential difference \( V \)</strong>
-                across them.
-            </p>
-            <div class="model-box">
-                <h3>Derivation</h3>
-                <p>Total current entering the junction equals the sum of branch currents (Conservation of Charge):</p>
-                \[I_{\text{total}} = I_1 + I_2 + I_3 + \cdots\]
-                <p>Applying Ohm's Law (\( I = V/R \)) to each branch:</p>
-                \[\frac{V}{R_{\text{eq}}} = \frac{V}{R_1} + \frac{V}{R_2} + \frac{V}{R_3} + \cdots\]
-                \[\boxed{\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots}\]
-            </div>
-            <ul>
-                <li>\( R_{\text{eq}} \) is always <em>less</em> than the smallest individual resistance.</li>
-                <li>Current divides inversely with resistance: \( I_i = I \cdot R_{\text{eq}}/R_i \).</li>
-                <li>For two resistors: \( R_{\text{eq}} = R_1 R_2/(R_1 + R_2) \).</li>
-                <li>The parallel combination acts as a <strong>current divider</strong>.</li>
-            </ul>
-            <div class="insightbox">
-                If one branch in a parallel circuit breaks, the other branches are unaffected — they still see the same
-                voltage. Household appliances are wired in parallel so each device operates at 230 V and can be switched
-                independently.
-            </div>
-        </section>
-
-        <section>
-            <h2>Series and Parallel — Comparison</h2>
-            <div class="model-box">
-                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
-                    <thead>
-                        <tr style="border-bottom:2px solid #e0e0e0;">
-                            <th style="text-align:left; padding:8px;">Property</th>
-                            <th style="text-align:left; padding:8px;">Series</th>
-                            <th style="text-align:left; padding:8px;">Parallel</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding:8px;">Same across all</td>
-                            <td style="padding:8px;">Current \( I \)</td>
-                            <td style="padding:8px;">Voltage \( V \)</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Equivalent R</td>
-                            <td style="padding:8px;">\( R_{\text{eq}} = \sum R_i \)</td>
-                            <td style="padding:8px;">\( 1/R_{\text{eq}} = \sum 1/R_i \)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:8px;">\( R_{\text{eq}} \) vs. individual</td>
-                            <td style="padding:8px;">Greater than largest</td>
-                            <td style="padding:8px;">Less than smallest</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Role</td>
-                            <td style="padding:8px;">Voltage divider</td>
-                            <td style="padding:8px;">Current divider</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:8px;">Failure effect</td>
-                            <td style="padding:8px;">All branches fail</td>
-                            <td style="padding:8px;">Other branches OK</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section>
-            <h2>n Identical Resistors</h2>
-            <p>
-                A useful special case worth memorising:
-            </p>
-            <ul>
-                <li><strong>Series:</strong> \( R_{\text{eq}} = nR \) — resistance multiplied by \( n \).</li>
-                <li><strong>Parallel:</strong> \( R_{\text{eq}} = R/n \) — resistance divided by \( n \).</li>
-            </ul>
-            <p>
-                The ratio of series to parallel equivalent: \( R_{\text{series}}/R_{\text{parallel}} = n^2 \). For \( n
-                = 3 \) identical resistors, this ratio is 9.
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Current Electricity
+</a>
+</nav>
+<h1>Series and Parallel Combinations</h1>
+<p class="subtitle">
+Reduction of linear networks into equivalent black-box parameters.
+</p>
+<section>
+<h2>The Concept of Equivalent Resistance</h2>
+<p>
+The core principle of circuit reduction is replacement without external alteration. If a complex network of resistors is placed inside a "black box" with two emerging terminals, the <strong>equivalent resistance \( R_{\text{eq}} \)</strong> is the value of a single resistor that could replace the entire box such that for the same applied potential difference \( V \), the exact same total current \( I \) is drawn from the source.
+</p>
+</section>
+<section>
+<h2>Series Combination</h2>
+<p>
+Resistors are in series if they are connected end-to-end with no branching nodes between them. Because charge cannot accumulate at any point in a steady-state conductor, the <strong>same current \( I \)</strong> flows through every resistor.
+</p>
+<div class="model-box">
+<h3>Derivation</h3>
+<p>
+The total potential drop must equal the sum of individual drops (Conservation of Energy):
+</p>
+\[V_{\text{total}} = V_1 + V_2 + V_3 + \cdots\]
+<p>
+Applying Ohm's Law (\( V = IR \)) to each:
+</p>
+\[I R_{\text{eq}} = IR_1 + IR_2 + IR_3 + \cdots\]
+\[\boxed{R_{\text{eq}} = R_1 + R_2 + R_3 + \cdots}\]
+</div>
+<ul>
+<li>\( R_{\text{eq}} \) is always <em>greater</em> than the largest individual resistance.</li>
+<li>Voltage divides in proportion to resistance: \( V_i = V \cdot R_i/R_{\text{eq}} \).</li>
+<li>The series combination acts as a <strong>voltage divider</strong>.</li>
+</ul>
+<div class="insightbox">
+<p>
+\( R_{\text{eq}} \) of Series combination is dominated by the greatest resistor in the circuit. 
+</p>
+<p>
+If one element in a series chain breaks (open circuits), the entire current stops — the chain is interrupted. This is why old-style Christmas lights failed completely when one bulb burned out.
+</p>
+</div>
+</section>
+<section>
+<h2>Parallel Combination</h2>
+<p>
+Resistors are in parallel if all their starting ends share one common node and all their terminating ends share another. All resistors therefore have the <strong>same potential difference \( V \)</strong> across them.
+</p>
+<div class="model-box">
+<h3>Derivation</h3>
+<p>
+Total current entering the junction equals the sum of branch currents (Conservation of Charge):
+</p>
+\[I_{\text{total}} = I_1 + I_2 + I_3 + \cdots\]
+<p>
+Applying Ohm's Law (\( I = V/R \)) to each branch:
+</p>
+\[\frac{V}{R_{\text{eq}}} = \frac{V}{R_1} + \frac{V}{R_2} + \frac{V}{R_3} + \cdots\]
+\[\boxed{\frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3} + \cdots}\]
+</div>
+<ul>
+<li>\( R_{\text{eq}} \) is always <em>less</em> than the smallest individual resistance.</li>
+<li>Current divides inversely with resistance: \( I_i = I \cdot R_{\text{eq}}/R_i \).</li>
+<li>For two resistors: \( R_{\text{eq}} = R_1 R_2/(R_1 + R_2) \).</li>
+<li>The parallel combination acts as a <strong>current divider</strong>.</li>
+</ul>
+<div class="insightbox">
+<p>
+\( R_{\text{eq}} \) of Parallel combination is dominated by the smallest resistor in the circuit. 
+</p>
+<p>
+If one branch in a parallel circuit breaks, the other branches are unaffected — they still see the same voltage. Household appliances are wired in parallel so each device operates at 230 V and can be switched independently.
+</p>
+</div>
+</section>
+<section>
+<h2>Series and Parallel — Comparison</h2>
+<div class="model-box">
+<table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+<thead>
+<tr style="border-bottom:2px solid #e0e0e0;">
+<th style="text-align:left; padding:8px;">Property</th>
+<th style="text-align:left; padding:8px;">Series</th>
+<th style="text-align:left; padding:8px;">Parallel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:8px;">Same across all</td>
+<td style="padding:8px;">Current \( I \)</td>
+<td style="padding:8px;">Voltage \( V \)</td>
+</tr>
+<tr style="background:#fafafa;">
+<td style="padding:8px;">Equivalent R</td>
+<td style="padding:8px;">\( R_{\text{eq}} = \sum R_i \)</td>
+<td style="padding:8px;">\( 1/R_{\text{eq}} = \sum 1/R_i \)</td>
+</tr>
+<tr>
+<td style="padding:8px;">\( R_{\text{eq}} \) vs. individual</td>
+<td style="padding:8px;">Greater than largest</td>
+<td style="padding:8px;">Less than smallest</td>
+</tr>
+<tr style="background:#fafafa;">
+<td style="padding:8px;">Role</td>
+<td style="padding:8px;">Voltage divider</td>
+<td style="padding:8px;">Current divider</td>
+</tr>
+<tr>
+<td style="padding:8px;">Failure effect</td>
+<td style="padding:8px;">All branches fail</td>
+<td style="padding:8px;">Other branches OK</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section>
+<h2>n Identical Resistors</h2>
+<p>
+A useful special case worth memorising:
+</p>
+<ul>
+<li><strong>Series:</strong> \( R_{\text{eq}} = nR \) — resistance multiplied by \( n \).</li>
+<li><strong>Parallel:</strong> \( R_{\text{eq}} = R/n \) — resistance divided by \( n \).</li>
+</ul>
+<p>
+The ratio of series to parallel equivalent: \( R_{\text{series}}/R_{\text{parallel}} = n^2 \). For \( n = 3 \) identical resistors, this ratio is 9.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>
