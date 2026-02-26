@@ -3,63 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vector Operations | Addition</title>
+<title>Addition of Vectors</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
 <nav class="top-nav">
-<a href="./06-vectors-basics.html" class="back-btn">
+<a href="./06-vectors.html" class="back-btn">
 <span>&larr;</span> Back to Vectors
 </a>
 </nav>
-<h1>Vector Addition: Composition of Effects</h1>
+<h1>Addition of Vectors</h1>
 <p class="subtitle">
-Determining the net result of multiple simultaneous directional influences.
+How movements and effects combine in space.
 </p>
 <section>
-<h2>The Geometry of Addition</h2>
+<h2>The Need for Vector Addition</h2>
 <p>
-Unlike scalars, where \( 3 + 4 \) is always \( 7 \), the sum of two vectors depends on their relative orientation. We define the "sum" as a single <strong>Resultant Vector</strong> \( (\vec{R}) \) that produces the same physical effect as the individual vectors combined.
+Suppose you walk 3 steps forward, then 2 more steps forward. Clearly, you have moved 5 steps forward. Along a straight line, combining movements is simple — we just add numbers. The geometry collapses into arithmetic because there is only one possible direction of motion.
 </p>
 <p>
-Geometrically, we use two primary laws:
+But space is not limited to a single line. What if you walk 3 steps north and then 4 steps east? You are no longer moving along a single straight path; you have changed your orientation in space. Now your total displacement is neither purely north nor purely east. It is something new — a combination of both.
 </p>
-<ul>
-<li><strong>Triangle Law:</strong> Used for vectors acting in sequence (head-to-tail). If \( \vec{A} \) and \( \vec{B} \) are two sides of a triangle, \( \vec{R} \) is the third side closing the triangle.</li>
-<li><strong>Parallelogram Law:</strong> Used for vectors acting at the same point (co-initial). The resultant is the diagonal of the parallelogram formed by \( \vec{A} \) and \( \vec{B} \).</li>
-</ul>
-</section>
-<section>
-<h2>Analytical Method (The Resultant Formula)</h2>
 <p>
-To calculate the magnitude and direction of the resultant \( \vec{R} \) for two vectors \( \vec{A} \) and \( \vec{B} \) inclined at an angle \( \theta \), we project the vectors onto a common coordinate system.
-</p>
-<div class="formula-block">
-\[ R = |\vec{R}| = \sqrt{A^2 + B^2 + 2AB \cos \theta} \]
-</div>
-<p>
-The direction of the resultant is specified by the angle \( \alpha \) it makes with vector \( \vec{A} \):
-</p>
-<div class="formula-block">
-\[ \tan \alpha = \frac{B \sin \theta}{A + B \cos \theta} \]
-</div>
-</section>
-<section>
-<h2>Physical Significance</h2>
-<p>
-In mechanics, vector addition is the foundation for finding the <strong>Net Force</strong> \( (\sum \vec{F}) \). If multiple forces act on a mass, the acceleration is determined only by the resultant direction and magnitude.
+Ordinary arithmetic is no longer sufficient because arithmetic alone does not track orientation. We need a mathematical rule that respects both magnitude and direction.
 </p>
 <div class="insightbox">
-A common pitfall is to add magnitudes directly. Remember: the magnitude of the sum is <strong>not</strong> the sum of the magnitudes unless the vectors are perfectly parallel \( (\theta = 0^\circ) \).
+Vector addition is the mathematical way of describing how successive or simultaneous influences combine in space.
 </div>
-<div class="formula-block">
-\[ |A - B| \leq R \leq |A + B| \]
-</div>
+</section>
+<section>
+<h2>The Unifying Principle</h2>
 <p>
-The resultant magnitude is bounded by the difference and the sum of the individual magnitudes.
+Whether we are dealing with forces, velocities, or displacements, the underlying geometric idea is the same: <strong>displacements compose</strong>. If one influence acts and then another, the overall effect depends only on the starting point and the final point.
 </p>
+<p>
+Vector addition is often introduced using the Triangle Law. But before drawing triangles, we must understand something deeper: even though the Triangle Law of Vector Addition is applicable in spirit to all vectors, the method of its application depends on the geometric structure of the vectors involved.
+</p>
+<p>
+All vectors obey the same geometric principle that successive displacements compose. What changes is the operational method:
+</p>
+<ul>
+<li><strong>Collinear vectors</strong> → Add as signed numbers because everything lies on one straight line.</li>
+<li><strong>Free vectors</strong> → Translate and apply geometric construction since location does not matter.</li>
+<li><strong>Bound vectors</strong> → Chain only when endpoints match because location is part of their identity.</li>
+</ul>
+<p>
+The principle is unified; the procedure adapts to structure.
+</p>
+</section>
+<section>
+<h2>Addition of Collinear Vectors</h2>
+<p>
+Collinear vectors lie along the same straight line. In this case, there are only two possible orientations: along the chosen positive direction or opposite to it.
+</p>
+<p>
+Here, vector addition reduces to ordinary arithmetic with signs because the geometry is one-dimensional.
+</p>
+<p>
+If you move 3 steps forward and then 2 steps backward, you move 1 step forward. If both movements are forward, they simply add.
+</p>
+<p>
+There is no need for triangle diagrams or geometric construction; the vectors behave exactly like real numbers placed on a number line.
+</p>
+<div class="insightbox">
+In one dimension, vector addition becomes signed number addition.
+</div>
+</section>
+<section>
+<h2>Addition of Free Vectors</h2>
+<p>
+Free vectors are defined only by magnitude and direction. Their physical location in space does not matter.
+</p>
+<p>
+Because they are not attached to a specific point, we are allowed to <strong>translate</strong> them — slide them parallel to themselves — without changing their meaning.
+</p>
+<p>
+This translational freedom is not a minor detail. It is precisely what allows geometric construction methods such as triangles and parallelograms. Without the ability to move an arrow freely, we could not place one vector at the head of another.
+</p>
+<div class="insightbox">
+For free vectors, addition is implemented by geometric translation and the head-to-tail construction.
+</div>
+</section>
+<section>
+<h2>Geometric Laws: Triangle and Parallelogram</h2>
+<p>
+The most common way to add free vectors is the <strong>Triangle Law</strong>. You place the tail of the second vector at the head of the first. The vector drawn from the initial starting point to the final point represents the resultant (\( \vec{R} \)).
+</p>
+\[
+\vec{R} = \vec{A} + \vec{B}
+\]
+<p>
+Alternatively, the <strong>Parallelogram Law</strong> places both vectors starting from the same point. The resultant is the diagonal of the parallelogram formed by them.
+</p>
+<p>
+Both constructions describe the same geometric reality. They are simply two different visualizations of the same net displacement.
+</p>
+</section>
+<section>
+<h2>Addition of Bound Vectors</h2>
+<p>
+Bound vectors are attached to specific points. Their initial and final positions are part of their identity.
+</p>
+<p>
+Because of this, they cannot be translated arbitrarily. Addition is possible only when the head of one vector naturally coincides with the tail of the other.
+</p>
+<p>
+This expresses path composition:
+</p>
+\[
+\vec{r}_{AB} + \vec{r}_{BC} = \vec{r}_{AC}
+\]
+<p>
+Moving from A to B and then from B to C is equivalent to moving directly from A to C. If the endpoints do not match, these specific vectors cannot be added, because their geometric relationship is incomplete.
+</p>
+</section>
+<section>
+<h2>Important Properties</h2>
+<p>
+These properties reflect the fact that space is <strong>homogeneous</strong> — movements combine freely regardless of where you are in space. the physical event of "moving 2 steps north" is exactly the same, irrespective of whether it is from here or from there.
+</p>
+<ul>
+<li><strong>Commutative Property:</strong> \( \vec{A} + \vec{B} = \vec{B} + \vec{A} \). The final displacement is independent of the order in which the influences act.</li>
+<li><strong>Associative Property:</strong> \( (\vec{A} + \vec{B}) + \vec{C} = \vec{A} + (\vec{B} + \vec{C}) \). Grouping does not affect the final result because only the overall start and end matter.</li>
+<li><strong>Zero Vector:</strong> Adding zero displacement changes nothing. It represents no movement.</li>
+</ul>
+<p>
+These are not arbitrary algebraic rules; they arise from the structure of space itself.
+</p>
+</section>
+<section>
+<h2>Component Form of Addition</h2>
+<p>
+To calculate sums numerically, we use the fact that perpendicular directions are independent.
+</p>
+<p>
+A movement in the x-direction does not interfere with a movement in the y-direction. Because of this independence, we can resolve vectors into components and add each component separately:
+</p>
+\[
+\vec{A} + \vec{B} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j}
+\]
+<p>
+This works because orthogonal directions do not overlap. Each direction contributes independently to the total displacement.
+</p>
+</section>
+<section>
+<h2>Resultant and Physical Meaning</h2>
+<p>
+In physics, the sum of vectors often represents a <strong>Resultant</strong> — a single vector that has the same physical effect as multiple vectors acting together.
+</p>
+\[
+\vec{F}_{\text{net}} = \vec{F}_1 + \vec{F}_2 + \vec{F}_3 + \dots
+\]
+<p>
+This does not always mean one thing happens after another. It can mean multiple forces act simultaneously. Instead of tracking each separately, we replace them with one equivalent arrow that produces the same acceleration or motion.
+</p>
+<p>
+If two forces are opposite in direction, their result appears as subtraction of magnitudes. But mathematically, we are still performing vector addition — one vector simply carries the opposite orientation.
+</p>
+<div class="insightbox">
+Vector addition is geometry first, algebra second. It is the mathematization of how space allows independent directions to combine.
+</div>
 </section>
 <footer>
 <hr>
