@@ -1,130 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capacitance | JEE Physics Notes</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitance | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
-
-        <h1>Capacitance</h1>
-        <p class="subtitle">
-            Storing electric charge — and the energy locked inside the field.
-        </p>
-
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                A capacitor is a device that stores electric charge and, with it, electric energy. At its heart, a
-                capacitor is simply two conductors separated by an insulator. When charge is placed on one conductor, an
-                equal and opposite charge is induced on the other — and the space between them contains a strong
-                electric field that holds the stored energy.
-            </p>
-            <p>
-                Capacitance is the chapter that bridges electrostatics and circuit physics. The concepts of electric
-                field, potential, and energy from electrostatics combine here with the practical questions of how
-                capacitors behave in circuits — in series, in parallel, and in the presence of dielectric materials.
-            </p>
-        </section>
-
-        <section>
-            <h2>Capacitance as a Geometric Property</h2>
-            <p>
-                The capacitance \( C \) of a conductor system is defined as the charge stored per unit potential
-                difference between the conductors:
-            </p>
-            \[
-            C = \frac{Q}{V}
-            \]
-            <p>
-                Crucially, \( C \) depends only on the geometry of the conductor arrangement — not on the charge or the
-                potential. For a given geometry, the ratio \( Q/V \) is always the same. This is why capacitance is
-                called a geometric property.
-            </p>
-            \[
-            C_{\text{parallel plate}} = \frac{\varepsilon_0 A}{d}, \quad C_{\text{sphere}} = 4\pi\varepsilon_0 R
-            \]
-        </section>
-
-        <section>
-            <h2>Energy Stored in a Capacitor</h2>
-            <p>
-                Charging a capacitor involves doing work against the electric field that builds up between the plates.
-                This work is stored as potential energy in the electric field itself. The energy stored is:
-            </p>
-            \[
-            U = \frac{1}{2}CV^2 = \frac{Q^2}{2C} = \frac{QV}{2}
-            \]
-            <p>
-                All three forms are equivalent and useful in different problem contexts. The energy resides not in the
-                charges but in the electric field everywhere between the plates — with an energy density:
-            </p>
-            \[
-            u = \frac{1}{2}\varepsilon_0 E^2
-            \]
-        </section>
-
-        <section>
-            <h2>Dielectrics</h2>
-            <p>
-                When an insulating material (dielectric) is placed between the plates of a capacitor, it becomes
-                polarised in the electric field. The polarisation produces bound surface charges that partially cancel
-                the free charges on the plates, reducing the field and raising the capacitance. The capacitance
-                increases by the dielectric constant \( K \):
-            </p>
-            \[
-            C' = KC_0
-            \]
-            <p>
-                where \( C_0 \) is the capacitance in vacuum. Understanding dielectrics is essential for the real-world
-                design of capacitors, where insulators both prevent discharge and multiply the capacitance.
-            </p>
-        </section>
-
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>Capacitance</strong> — Definition, units (Farad), and its purely geometric nature.</li>
-                <li><strong>Parallel Plate Capacitor</strong> — Field, potential, and capacitance formula with
-                    derivation.</li>
-                <li><strong>Other Geometries</strong> — Spherical and cylindrical capacitors.</li>
-                <li><strong>Series and Parallel Combinations</strong> — Equivalent capacitance and charge/voltage
-                    sharing.</li>
-                <li><strong>Energy in a Capacitor</strong> — Three equivalent forms and energy density of the electric
-                    field.</li>
-                <li><strong>Dielectrics</strong> — Polarisation, dielectric constant, and effect on capacitance and
-                    energy.</li>
-                <li><strong>Charge Redistribution</strong> — When two capacitors are connected; energy loss during
-                    sharing.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-capacitance-basics.html">1. Capacitance and Capacitor Geometries</a>
-                <a href="./02-combinations.html">2. Capacitors in Series and Parallel</a>
-                <a href="./03-energy-in-capacitor.html">3. Energy Stored in a Capacitor</a>
-                <a href="./04-dielectrics.html">4. Dielectrics and Polarisation</a>
-                <a href="./05-charge-redistribution.html">5. Charge Redistribution and Sharing</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Capacitance</h1>
+<p class="subtitle">
+Storing electric charge — and the energy locked inside the field.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+A capacitor is a device that stores electric charge and, with it, electric energy. When we say "stores charge", it is the net charge (excess charge \( \neq 0 \)) that it can hold on its conductors. The two conductors combined together may still be neutral overall or may have some excess charge — but what matters is the separation of equal and opposite charges between them.
+</p>
+<p>
+At its heart, a capacitor is simply two conductors separated by an insulator. When charge is placed on one conductor, an equal and opposite charge is induced on the other — and the space between them contains a strong electric field that holds the stored energy. It somewhat resembles a conductor with some charge in an inner cavity — except now the "cavity" is accessible space between two separate conductors. In both situations, it is the electric field configuration that determines how charge arranges itself. The mechanism is interaction + isolation: interaction through electric forces, isolation through the insulating medium.
+</p>
+<p>
+Capacitance is the chapter that bridges electrostatics and circuit physics. The concepts of electric field, potential, and energy from electrostatics combine here with the practical questions of how capacitors behave in circuits — in series, in parallel, and in the presence of dielectric materials. It is where field theory meets circuitry, and where abstract field concepts become directly measurable electrical behavior.
+</p>
+</section>
+<section>
+<h2>Capacitance as a Geometric Property</h2>
+<p>
+The capacitance \( C \) of a conductor system is defined as the charge stored per unit potential difference between the conductors:
+</p>
+\[
+C = \frac{Q}{V}
+\]
+<p>
+Crucially, \( C \) depends only on the geometry of the conductor arrangement — not on the charge or the potential. For a given geometry, the ratio \( Q/V \) is always the same. This happens because electric field is proportional to charge, potential difference is proportional to electric field, and therefore \( V \propto Q \), making \( Q/V \) constant.
+</p>
+<p>
+This is why capacitance is called a geometric property. It is similar to how \( R = V/I \) in circuits but fundamentally \( R = \rho L/A \), as resistance depends on material, temperature, and geometric dimensions. In contrast, capacitance in vacuum depends only on geometry.
+</p>
+\[
+C_{\text{parallel plate}} = \frac{\varepsilon_0 A}{d}
+\]
+\[
+C_{\text{sphere}} = 4\pi\varepsilon_0 R
+\]
+<p>
+Observe the pattern: larger area allows more field lines and hence more charge storage; smaller separation increases interaction and hence capacitance; larger sphere radius lowers potential rise per unit charge and hence increases capacitance. Capacitance measures how easily a system can store charge without building up large potential.
+</p>
+</section>
+<section>
+<h2>Energy Stored in a Capacitor</h2>
+<p>
+Charging a capacitor involves doing work against the electric field that builds up between the plates. As charge accumulates, the electric field strengthens, the potential difference increases, and additional charge must be pushed against growing opposition.
+</p>
+<p>
+This work is stored as potential energy in the electric field itself. The energy stored is:
+</p>
+\[
+U = \frac{1}{2}CV^2 = \frac{Q^2}{2C} = \frac{QV}{2}
+\]
+<p>
+All three forms are equivalent and useful in different problem contexts. The energy resides not in the charges but in the electric field everywhere between the plates — with an energy density:
+</p>
+\[
+u = \frac{1}{2}\varepsilon_0 E^2
+\]
+<p>
+This concept — that "The energy resides not in the charges but in the electric field everywhere between the plates" — is a major paradigm shift in thinking. It reflects the development of Field Theory that led to newer discoveries by Faraday and Maxwell.
+</p>
+<p>
+Even though the formula is derived for a capacitor, it is universal. It is similar to when an elastic wire is pulled and is under tension: the potential energy is stored along the entire length of the wire. Similarly, in a field, energy gets stored throughout the entire field region. However, potential energy of elasticity requires a medium as it is stored in inter-molecular bonds. A field can store energy even in vacuum.
+</p>
+</section>
+<section>
+<h2>Dielectrics</h2>
+<p>
+When an insulating material (dielectric) is placed between the plates of a capacitor, it becomes polarised in the electric field. The polarisation produces bound surface charges that partially cancel the free charges on the plates, reducing the field and raising the capacitance.
+</p>
+<p>
+The capacitance increases by the dielectric constant \( K \):
+</p>
+\[
+C' = K C_0
+\]
+<p>
+where \( C_0 \) is the capacitance in vacuum. Understanding dielectrics is essential for the real-world design of capacitors, where insulators both prevent discharge and multiply the capacitance. Dielectrics are not merely passive separators; they actively modify the electric field structure inside the capacitor.
+</p>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+<li><strong>Capacitance</strong> — Definition, units (Farad), and its purely geometric nature.</li>
+<li><strong>Parallel Plate Capacitor</strong> — Field, potential, and capacitance formula with derivation.</li>
+<li><strong>Other Geometries</strong> — Spherical and cylindrical capacitors.</li>
+<li><strong>Series and Parallel Combinations</strong> — Equivalent capacitance and charge/voltage sharing.</li>
+<li><strong>Energy in a Capacitor</strong> — Three equivalent forms and energy density of the electric field.</li>
+<li><strong>Dielectrics</strong> — Polarisation, dielectric constant, and effect on capacitance and energy.</li>
+<li><strong>Charge Redistribution</strong> — When two capacitors are connected; energy loss during sharing and where that energy goes.</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-capacitance-basics.html">1. Capacitance and Capacitor Geometries</a>
+<a href="./02-combinations.html">2. Capacitors in Series and Parallel</a>
+<a href="./03-energy-in-capacitor.html">3. Energy Stored in a Capacitor</a>
+<a href="./04-dielectrics.html">4. Dielectrics and Polarisation</a>
+<a href="./05-charge-redistribution.html">5. Charge Redistribution and Sharing</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

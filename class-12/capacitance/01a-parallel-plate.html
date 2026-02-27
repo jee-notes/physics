@@ -1,136 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capacitance | Parallel Plate Capacitor</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitance | Parallel Plate Capacitor</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./01-capacitance-basics.html" class="back-btn">
-                <span>&larr;</span> Back to Capacitance and Capacitor Geometries
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-capacitance-basics.html" class="back-btn">
+<span>&larr;</span> Back to Capacitance
+</a>
+</nav>
+<h1>Parallel Plate Capacitor</h1>
+<p class="subtitle">
+The most important capacitor geometry — and the derivation of its capacitance.
+</p>
+<section>
+<h2>Geometric Setup</h2>
+<p>
+Parallel plate capacitor is the crown geometry of this chapter. From electrostatics, we already know the electric field of a large uniformly charged conducting plate using Gauss’ law. This makes the parallel plate system analytically simple and structurally important.
+</p>
+<p>
+A parallel plate capacitor consists of two large, flat conducting plates separated by a distance \( d \) (with \( d \ll \sqrt{A} \) so edge effects are negligible). One plate carries charge \( +Q \) and the other \( -Q \). The area \( A \) refers specifically to the overlapping area of the inner-facing surfaces. The total physical surface area of each conductor plate may be different.
+</p>
+<p>
+Due to the strong electrostatic attraction between opposite charges, free charges redistribute themselves so that, in electrostatic equilibrium, the electric field inside the bulk of each conductor is zero. For the usual capacitor configuration where the two plates carry equal and opposite charges, this results in charge residing entirely on the inner facing surfaces.
+</p>
+<p>
+Therefore, the surface charge density relevant for the capacitor field is:
+</p>
+\[
+\sigma_{\text{inner}} = \frac{Q}{A}
+\]
+<p>
+For this symmetric capacitor case, the outer surface charge density is zero:
+</p>
+\[
+\sigma_{\text{outer}} = 0
+\]
+<p>
+More generally, if plate 1 has total charge \( Q_1 \) and plate 2 has \( Q_2 \), then:
+</p>
+\[
+\text{Outer surface charge} = \frac{Q_1 + Q_2}{2}
+\]
+\[
+\text{Inner surface charge on plate 1} = \frac{Q_1 - Q_2}{2}
+\]
+\[
+\text{Inner surface charge on plate 2} = -\frac{Q_1 - Q_2}{2}
+\]
+<p>
+For capacitor behaviour, we focus on the inner surface charge because it determines the electric field in the region between the two plates. In the ideal parallel-plate model (large plates, negligible edge effects), this field is uniform and exactly known from Gauss’ law.
+</p>
+<p>
+If outer surface charge exists (for example when \( Q_1 \neq -Q_2 \)), there will also be an electric field outside the plates. In principle, the potential difference between the plates can be computed using the full electric field along any path, since electrostatic fields are conservative and the result is path independent.
+</p>
+<p>
+However, in the standard capacitor configuration, the inner field is known and thus the potential difference between the plates gets determinable. The outer field (of single plate) contributes to the absolute potential relative to infinity. Therefore, for determining capacitance, we compute the potential difference using the field in the gap.
+</p>
+<p>
+If we know \( E_{\text{outer}} \) (of single plate) perfectly, then we can mathematically determine \( V_{\text{plate1}} \) and \( V_{\text{plate2}} \) individually and then use \( \Delta V = V_{\text{plate1}} - V_{\text{plate2}} \). But, due to the geometric configuration of a parallel plate capacitor, we take \( E_{\text{inner}} \) as uniform and determinable and determine \( \Delta V \) using \( E_{\text{inner}} \).
+</p>
+</section>
+<section>
+<h2>Electric Field Between the Plates</h2>
+<p>
+The field due to a single conducting plate with surface charge density \( \sigma \) is \( E = \sigma/\varepsilon_0 \). Two plates of opposite charge reinforce in the gap and cancel outside.
+</p>
+<p>
+The field between the plates is uniform and directed from the positive to the negative plate:
+</p>
+\[
+E = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\varepsilon_0 A}
+\]
+<p>
+In the ideal case of large plates with negligible edge effects, the field outside the capacitor is zero because the fields due to the two plates cancel.
+</p>
+<div class="insightbox">
+The field is strictly uniform inside a parallel plate capacitor (in the ideal case). This makes it ideal for theoretical analysis and for practical devices requiring a well-controlled field.
+</div>
+<p>
+In the case of plates having different charges \( Q_1 \) and \( Q_2 \), the formula for \( E_{\text{inner}} = \sigma / \varepsilon_0 \) is the same. Only the surface charge density changes to \( \sigma = \frac{Q_1 - Q_2}{2A_{\text{inner}}} \).
+</p>
+</section>
+<section>
+<h2>Potential Difference and Capacitance</h2>
+<p>
+The potential difference between the plates is:
+</p>
+\[
+V = E_{\text{inner}} \cdot d = \frac{Qd}{\varepsilon_0 A}
+\]
+<p>
+Therefore the capacitance is:
+</p>
+\[
+C = \frac{Q}{V} = \frac{Q}{\displaystyle\frac{Qd}{\varepsilon_0 A}}
+\]
+\[
+\boxed{C = \frac{\varepsilon_0 A}{d}}
+\]
+<p>
+Key observations:
+</p>
+<ul class="points-list">
+<li>\( C \) increases with plate area \( A \) — more area allows more charge to be stored for the same potential difference.</li>
+<li>\( C \) decreases with separation \( d \) — for a fixed charge \( Q \), the electric field between the plates is independent of \( d \), but the potential difference \( V = Ed \) increases with \( d \). Hence a larger separation produces a larger potential rise for the same charge, resulting in smaller capacitance.</li>
+<li>\( C \) is independent of \( Q \) and \( V \) — it depends only on geometry and the medium between the plates.</li>
+</ul>
+</section>
+<section>
+<h2>Effect of a Conducting Slab Between the Plates</h2>
+<p>
+If a conducting slab of thickness \( t \) (where \( t \lt d \)) is inserted between the plates, the field inside the conductor is zero, and the effective separation is reduced to \( (d - t) \):
+</p>
+\[
+C' = \frac{\varepsilon_0 A}{d - t}
+\]
+<p>
+The capacitance increases — the conducting slab effectively shortens the gap. In particular, if the slab fills the gap completely (\( t = d \)), the capacitance becomes infinite (the two plates are directly connected — not really a capacitor anymore).
+</p>
+</section>
+<section>
+<h2>Force of Attraction Between Plates of a Charged Capacitor</h2>
+<p>
+Consider an ideal parallel plate capacitor with plates of area \( A \), carrying charges \( +Q \) and \( -Q \), separated by distance \( d \). We assume large plates so edge effects are negligible.
+</p>
+<!-- SVG Diagram -->
+<svg width="500" height="260" viewBox="0 0 500 260" xmlns="http://www.w3.org/2000/svg">
 
-        <h1>Parallel Plate Capacitor</h1>
-        <p class="subtitle">
-            The most important capacitor geometry — and the derivation of its capacitance.
-        </p>
+  <!-- Left plate -->
+  <rect x="140" y="40" width="20" height="180" fill="#2d6cdf"/>
+  <text x="130" y="30" font-size="18" fill="#2d6cdf">+Q</text>
 
-        <section>
-            <h2>Setup</h2>
-            <p>
-                A parallel plate capacitor consists of two large, flat conducting plates of area \( A \), separated by a
-                distance \( d \) (with \( d \ll \sqrt{A} \) so edge effects are negligible). One plate carries charge \(
-                +Q \) and the other \( -Q \).
-            </p>
-            <p>
-                The surface charge density on each plate is:
-            </p>
-            \[
-            \sigma = \frac{Q}{A}
-            \]
-        </section>
+  <!-- Right plate -->
+  <rect x="320" y="40" width="20" height="180" fill="#d9534f"/>
+  <text x="315" y="30" font-size="18" fill="#d9534f">-Q</text>
 
-        <section>
-            <h2>Electric Field Between the Plates</h2>
-            <p>
-                Using Gauss's Law with a pillbox surface straddling one plate, the field due to a single conducting
-                plate with surface charge density \( \sigma \) is \( E = \sigma/\varepsilon_0 \). Two plates of opposite
-                charge reinforce in the gap and cancel outside.
-            </p>
-            <p>
-                The field between the plates is uniform and directed from positive to negative plate:
-            </p>
-            \[
-            E = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\varepsilon_0 A}
-            \]
-            <p>
-                The field outside the capacitor is zero (fields from the two plates exactly cancel).
-            </p>
-            <div class="insightbox">
-                The field is strictly uniform inside a parallel plate capacitor (in the ideal case). This makes it ideal
-                for theoretical analysis and for practical devices requiring a well-controlled field.
-            </div>
-        </section>
+  <!-- Distance arrow -->
+  <line x1="160" y1="230" x2="320" y2="230" stroke="black" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+  <text x="235" y="250" font-size="16">d</text>
 
-        <section>
-            <h2>Potential Difference and Capacitance</h2>
-            <p>
-                The potential difference between the plates is:
-            </p>
-            \[
-            V = E \cdot d = \frac{Qd}{\varepsilon_0 A}
-            \]
-            <p>
-                Therefore the capacitance is:
-            </p>
-            \[
-            C = \frac{Q}{V} = \frac{Q}{\displaystyle\frac{Qd}{\varepsilon_0 A}}
-            \]
-            \[
-            \boxed{C = \frac{\varepsilon_0 A}{d}}
-            \]
-            <p>
-                Key observations:
-            </p>
-            <ul>
-                <li>\( C \) increases with plate area \( A \) — more plate area allows more charge at the same voltage.
-                </li>
-                <li>\( C \) decreases with separation \( d \) — a wider gap means a lower field for the same charge, so
-                    more charge is needed to reach a given \( V \).</li>
-                <li>\( C \) is independent of \( Q \) and \( V \) — it is a purely geometric property.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Effect of a Conducting Slab Between the Plates</h2>
-            <p>
-                If a conducting slab of thickness \( t \) (where \( t &lt; d \)) is inserted between the plates, the
-                field inside the conductor is zero, and the effective separation is reduced to \( (d - t) \):
-            </p>
-            \[
-            C' = \frac{\varepsilon_0 A}{d - t}
-            \]
-            <p>
-                The capacitance increases — the conducting slab effectively shortens the gap. In particular, if the slab
-                fills the gap completely (\( t = d \)), the capacitance becomes infinite (the two plates are directly
-                connected — not really a capacitor anymore).
-            </p>
-        </section>
-
-        <section>
-            <h2>Force Between the Plates</h2>
-            <p>
-                The field acting on one plate is only due to the other plate, which has field \( E/2 =
-                \sigma/(2\varepsilon_0) \). The electrostatic force on plate of area \( A \) with charge \( Q \) is:
-            </p>
-            \[
-            F = Q \cdot \frac{\sigma}{2\varepsilon_0} = \frac{Q^2}{2\varepsilon_0 A} = \frac{\sigma^2 A}{2\varepsilon_0}
-            \]
-            <p>
-                This is an attractive force (the plates attract each other). It can also be derived as the negative
-                gradient of stored energy with respect to separation:
-            </p>
-            \[
-            F = -\frac{dU}{dd}\bigg|_Q = -\frac{d}{dd}\left(\frac{Q^2 d}{2\varepsilon_0 A}\right) =
-            -\frac{Q^2}{2\varepsilon_0 A}
-            \]
-            <p>
-                The negative sign confirms attraction.
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+  <!-- Arrow definition -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="black"/>
+    </marker>
+  </defs>
+</svg>
+<p>
+The surface charge density on each inner surface is:
+</p>
+\[
+\sigma = \frac{Q}{A}
+\]
+<p>
+The electric field produced by a single infinite charged plate is:
+</p>
+\[
+E_{\text{single}} = \frac{\sigma}{2\varepsilon_0}
+\]
+<p>
+The total field between the plates is:
+</p>
+\[
+E_{\text{between}} = \frac{\sigma}{\varepsilon_0}
+\]
+<p>
+However, when calculating force on one plate, we must use only the field produced by the <strong>other plate</strong>. A plate does not exert force on itself.
+</p>
+<p>
+Thus, the field acting on the negative plate due to the positive plate is:
+</p>
+\[
+E_{\text{other}} = \frac{\sigma}{2\varepsilon_0}
+\]
+<p>
+The force on the negative plate is:
+</p>
+\[
+F = Q \cdot E_{\text{other}}
+\]
+\[
+F = Q \cdot \frac{\sigma}{2\varepsilon_0}
+\]
+Substituting \( \sigma = \frac{Q}{A} \):
+\[
+F = \frac{Q^2}{2A\varepsilon_0}
+\]
+<p>
+This attractive force can also be derived as the negative gradient of stored energy with respect to separation:
+</p>
+\[
+F = -\frac{dU}{dd}\bigg|_Q = -\frac{d}{dd}\left(\frac{Q^2 d}{2\varepsilon_0 A}\right) = -\frac{Q^2}{2\varepsilon_0 A}
+\]
+<p>
+The negative sign confirms attraction.
+</p>
+<p>
+More generally, if the plates carry arbitrary charges \( Q_1 \) and \( Q_2 \), the force of interaction between the plates is determined by those initial charges:
+</p>
+\[
+F = \frac{Q_1 Q_2}{2A\varepsilon_0}
+\]
+<p>
+This fundamental force is independent of the dielectric medium. Even if a dielectric is inserted between the plates, the direct electrostatic force exerted by one plate on the other remains \( \frac{Q_1 Q_2}{2A\varepsilon_0} \). This is because \( E_{\text{plate1}} \) at a point just near plate2 is \( \frac{Q_1}{2\varepsilon_0 A} \), where \( A = A_{\text{inner}} \). \( A \) is area of single face is sometimes cause of confusion.  
+</p>
+<p>
+Under constant charge condition (isolated capacitor (no battery)), the force between parallel plates is independent of the dielectric medium. You do not write \(F = \frac{Q^2}{2A \varepsilon_r \varepsilon_0}\). It is always \(F = \frac{Q^2}{2A\varepsilon_0}\) even when there is dielectric of relative permittivity \( \varepsilon_r \) between the plates.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

@@ -1,95 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capacitance | Capacitance and Capacitor Geometries</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitance | Capacitance and Capacitor Geometries</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Capacitance
-            </a>
-        </nav>
-
-        <h1>Capacitance and Capacitor Geometries</h1>
-        <p class="subtitle">
-            How much charge a conductor system can hold per volt of potential difference.
-        </p>
-
-        <section>
-            <h2>Definition of Capacitance</h2>
-            <p>
-                The capacitance \( C \) of a system of conductors is defined as the charge \( Q \) stored on the
-                positive conductor per unit potential difference \( V \) between the conductors:
-            </p>
-            \[
-            C = \frac{Q}{V}
-            \]
-            <p>
-                The SI unit of capacitance is the <strong>Farad (F)</strong>: \( 1 \text{ F} = 1 \text{ C/V} \). One
-                Farad is an enormous capacitance — practical capacitors range from picofarads (\( 10^{-12} \) F) to
-                millifarads (\( 10^{-3} \) F).
-            </p>
-            <div class="insightbox">
-                Capacitance is a purely geometric property — it depends only on the shape, size, and relative position
-                of the conductors, not on the charge placed on them or the potential to which they are raised. Doubling
-                \( Q \) doubles \( V \) in exact proportion, keeping \( C = Q/V \) constant.
-            </div>
-        </section>
-
-        <section>
-            <h2>How a Capacitor Works</h2>
-            <p>
-                A capacitor consists of two conductors (plates) separated by an insulator. When a charge \( +Q \) is
-                placed on one plate, it induces \( -Q \) on the facing surface of the other plate (which is earthed or
-                connected to a return path). The electric field exists only in the gap between the plates.
-            </p>
-            <p>
-                The potential difference between the plates is determined by the field in the gap. Since \( E \propto Q
-                \) and \( V = Ed \), we get \( V \propto Q \) — confirming that \( C = Q/V \) is indeed a constant
-                determined only by geometry.
-            </p>
-        </section>
-
-        <section>
-            <h2>Self-Capacitance of an Isolated Sphere</h2>
-            <p>
-                For an isolated conducting sphere of radius \( R \), the potential when charged to \( Q \) is:
-            </p>
-            \[
-            V = \frac{Q}{4\pi\varepsilon_0 R}
-            \]
-            <p>
-                Therefore the self-capacitance is:
-            </p>
-            \[
-            \boxed{C_{\text{sphere}} = 4\pi\varepsilon_0 R}
-            \]
-            <p>
-                The self-capacitance only depends on the radius. Earth's self-capacitance (\( R \approx 6.4 \times 10^6
-                \) m) is about 711 µF — still far less than 1 F.
-            </p>
-        </section>
-
-        <section>
-            <h2>Core Applications</h2>
-            <div class="chapter-list">
-                <a href="./01a-parallel-plate.html">1a. Parallel Plate Capacitor</a>
-                <a href="./01b-spherical-cylindrical.html">1b. Spherical and Cylindrical Capacitors</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Capacitance
+</a>
+</nav>
+<h1>Capacitance and Capacitor Geometries</h1>
+<p class="subtitle">
+How much charge a conductor system can hold per volt of potential difference.
+</p>
+<section>
+<h2>Definition of Capacitance</h2>
+<p>
+The capacitance \( C \) of a system of conductors is defined as the charge \( Q \) stored on the positive conductor per unit potential difference \( V \) between the conductors:
+</p>
+\[
+C = \frac{Q}{V}
+\]
+<p>
+The SI unit of capacitance is the <strong>Farad (F)</strong>: \( 1 \text{ F} = 1 \text{ C/V} \). One Farad is an enormous capacitance — practical capacitors range from picofarads (\( 10^{-12} \) F) to millifarads (\( 10^{-3} \) F).
+</p>
+<p>
+Every conductor behaves as a capacitor because for any isolated conductor \( V \propto Q \); that is, potential scales proportionally with charge. However, in practice we study particular geometries and configurations of one or more conductors, since the shape, size, and relative arrangement determine the capacitance of the system.
+</p>
+<div class="insightbox"> 
+Capacitance is primarily a geometric property — it depends only on the shape, size, and relative position of the conductors. Doubling \( Q \) doubles \( V \) in exact proportion, keeping \( C = Q/V \) constant. It also depends on the permittivity of the surrounding medium.
+</div>
+<p>
+From the viewpoint of field theory, energy is stored in the electric field. Consider a field line from point A to point B. The existence of a field line implies \( V_A > V_B \) and \( dV = V_A - V_B \). We may think of this equivalently as placing a small charge \( +dq \) at A and \( -dq \) at B, so that the field originates at A and terminates at B. Then locally, we may interpret capacitance as \( C = dq/dV \). In this sense, capacitance measures how much charge separation is required to establish a given potential difference.
+</p>
+</section>
+<section>
+<h2>How a Capacitor Works</h2>
+<p>
+The field-theory interpretation of \( C = \frac{dq}{dV} \) must be manifested physically. Capacitance is not an abstract ratio floating in mathematics — it must arise from a physical mechanism that allows charge separation while maintaining a well-defined potential difference. This is achieved using conductors.
+</p>
+<p>
+A conductor acts as a container of free charges. Charges inside a conductor are free to move, and in electrostatic equilibrium the entire conductor body becomes equipotential. This equipotential nature is crucial: it ensures that the potential difference between two conductors is well-defined and measurable.
+</p>
+<p>
+Generally, a commonly used capacitor consists of two conductors (plates) separated by an insulator. The insulator provides isolation, while the conductors provide mobility of charge. This combination — mobility + isolation — allows controlled charge separation.
+</p>
+<p>
+When a charge \( +Q \) is placed on one plate, free charges redistribute. Due to electrostatic induction, a charge \( -Q \) appears on the facing surface of the other plate (provided a proper configuration constraint such as grounding or external connection exists). The outer surfaces adjust accordingly to maintain overall charge conservation and boundary conditions.
+</p>
+<p>
+The electric field exists primarily in the gap between the plates, while inside each conductor the electric field is zero (electrostatic equilibrium condition). For ideal large plates, the field outside the capacitor is approximately zero because the fields due to opposite charges cancel.
+</p>
+<p>
+This situation is analogous to a conductor having a charge \( +Q \) inside a cavity with the outer surface grounded. In both cases, induced charges rearrange themselves so that field lines are confined to a specific region. The geometry determines how field lines distribute, and hence how potential varies.
+</p>
+<p>
+The potential difference between the plates is determined entirely by the electric field in the gap:
+</p>
+\[
+V = \int \vec{E} \cdot d\vec{l}
+\]
+<p>
+For uniform fields (as in an ideal parallel-plate capacitor), this reduces to:
+</p>
+\[
+V = Ed
+\]
+<p>
+Since the electric field in the gap is proportional to the surface charge density \( \sigma \), and \( \sigma \propto Q \), we obtain:
+</p>
+\[
+E \propto Q
+\]
+<p>
+Thus,
+</p>
+\[
+V \propto Q
+\]
+<p>
+This proportionality confirms that:
+</p>
+\[
+C = \frac{Q}{V}
+\]
+<p>
+is a constant determined solely by geometry and the medium between the plates. In other words, the geometry controls how much potential rise occurs per unit charge. A configuration that produces smaller potential rise for the same charge has larger capacitance.
+</p>
+<p>
+Physically, capacitance measures how effectively a conductor system can separate charge while confining the electric field within a controlled region of space.
+</p>
+</section>
+<section>
+<h2>Self-Capacitance of an Isolated Sphere</h2>
+<p>
+For an isolated conducting sphere of radius \( R \), the potential when charged to \( Q \) is:
+</p>
+\[
+V = \frac{Q}{4\pi\varepsilon_0 R}
+\]
+<p>
+This potential is the potential of the entire conductor body, since a conductor in electrostatic equilibrium is equipotential and \( E = 0 \) inside the conductor.
+</p>
+<p>
+But this raises an important question: if the electric field inside is zero, and energy is stored in the electric field, then where is the field?
+</p>
+<p>
+The electric field exists outside the sphere. It begins at the surface and extends outward, terminating effectively at infinity. Inside the conductor, \( E = 0 \); outside the conductor, the field is:
+</p>
+\[
+E(r) = \frac{Q}{4\pi\varepsilon_0 r^2}, \quad r \ge R
+\]
+<p>
+Thus, the energy is stored not inside the metal, but in the electric field distributed in the space surrounding the sphere — from \( r = R \) all the way to infinity.
+</p>
+<p>
+To define capacitance, we must consider a potential difference. But between which two points? Since the field extends to infinity, the natural reference point is infinity itself. By convention, we take:
+</p>
+\[
+V(\infty) = 0
+\]
+<p>
+Therefore, the relevant potential difference is between the surface of the sphere and infinity:
+</p>
+\[
+\Delta V = V_{\text{surface}} - V_{\infty} = V_{\text{surface}}
+\]
+<p>
+So the charge on the sphere is \( Q \), and the potential difference associated with that charge is \( V_{\text{surface}} \). Hence, the self-capacitance is:
+</p>
+\[
+\boxed{C_{\text{sphere}} = \frac{Q}{V} = 4\pi\varepsilon_0 R}
+\]
+<p>
+The self-capacitance depends only on the radius. Larger radius means the electric field spreads over a larger region, resulting in a smaller potential rise per unit charge — and hence larger capacitance.
+</p>
+<p>
+Physically, a larger sphere can distribute charge more effectively, producing weaker field intensity near its surface for the same charge.
+</p>
+<p>
+Earth's self-capacitance (\( R \approx 6.4 \times 10^6 \) m) is about 711 µF — still less than 1 F. This shows how enormous 1 Farad actually is.
+</p>
+</section>
+<section>
+<h2>What Exactly is the Charge \( Q \)?</h2>
+<p>
+We say \( C = \frac{Q}{\Delta V} \). But what exactly is this \( Q \)? It is not merely “net charge of a body”. It represents separated charge — created by doing work against electrostatic attraction.
+</p>
+<p>
+Imagine initially a neutral situation: a tiny pair \( +dq \) and \( -dq \) at the same point. Net charge is zero. There is no macroscopic electric field in space and hence no stored field energy. We may take this location to be at reference potential \( V = 0 \), but the absolute value is not important — only potential difference matters.
+</p>
+<p>
+Now suppose we separate them. We pull \( +dq \) away and leave \( -dq \) behind. To do this, we must exert force against electrostatic attraction. Work must be done. As separation increases, an electric field is established in the space between them. That field occupies space and stores energy.
+</p>
+<p>
+The work done in separating the charges is not stored in the charges themselves — it is stored in the electric field created in space. This is the essence of field theory: energy resides in the field, not in the material body.
+</p>
+<p>
+Now scale this idea to a capacitor. Instead of separating a single pair \( +dq \) and \( -dq \), we repeatedly separate small amounts of charge from one conductor and transfer them to another. One conductor accumulates \( +Q \), the other \( -Q \). The total system may still be neutral, but charge separation has been created.
+</p>
+<p>
+At some intermediate stage, if the potential difference between the conductors is \( V \), moving an additional small charge \( dq \) requires work:
+</p>
+\[
+dU = V \, dq
+\]
+<p>
+Integrating from zero charge to final charge \( Q \):
+</p>
+\[
+U = \int_0^Q V \, dq
+\]
+<p>
+Since \( V \propto Q \) for a fixed geometry, this leads to:
+</p>
+\[
+U = \frac{1}{2} Q V
+\]
+<p>
+Thus, the charge \( Q \) in the formula \( C = \frac{Q}{\Delta V} \) represents the total separated charge created by doing work against electrostatic forces. Capacitance measures how much charge separation is required to produce a given potential difference.
+</p>
+<p>
+In other words, capacitance quantifies the ease with which a configuration allows charge separation, and the energy required to create that separation is stored in the electric field distributed in space.
+</p>
+</section>
+<section>
+<h2>General Process for Determining Capacitance</h2>
+<p>
+Capacitance of any conductor system is fundamentally determined through the electric field it produces. The electric field is primary; potential difference is derived from it.
+</p>
+<p><strong>1. Determine the extent and structure of the electric field.</strong><br>
+Identify where the electric field exists and where it vanishes. Field lines must originate on positive charge and terminate on negative charge (or at infinity). The region in which the field is present is the region where energy is stored.
+</p>
+<p><strong>2. Introduce a small charge separation.</strong><br>
+Place a small charge \( +dq \) at the originating end and \( -dq \) at the terminating end. This defines the field configuration. The geometry and boundary conditions determine how the field distributes itself in space.
+</p>
+<p><strong>3. Calculate the electric field \( \vec{E} \).</strong><br>
+Using symmetry, Gauss’ law, or other field laws, determine \( \vec{E} \) everywhere it exists. In a parallel plate capacitor, the field is uniform. In a spherical conductor, the field extends outward and decays as \( 1/r^2 \). This is already done in electrostatics chapter.
+</p>
+<p><strong>4. Compute the potential difference from the field.</strong><br>
+The potential difference between the two boundaries is obtained from:
+</p>
+\[
+\Delta V = \int \vec{E} \cdot d\vec{l}
+\]
+<p>
+For example, in a parallel plate capacitor with uniform field, this reduces to \( \Delta V = Ed \).
+</p>
+<p><strong>5. Define capacitance.</strong><br>
+Capacitance is then:
+</p>
+\[
+C = \frac{dq}{\Delta V}
+\]
+<p>
+Since for a fixed geometry \( \Delta V \propto dq \), the ratio is constant, and we write:
+</p>
+\[
+C = \frac{Q}{\Delta V}
+\]
+<p>
+Thus, capacitance is determined entirely by how the geometry shapes the electric field for a given charge separation.
+</p>
+</section>
+<section>
+<h2>Why Two Conductors? The Need for a Confined Field</h2>
+<p>
+An isolated conductor possesses self-capacitance, but practical capacitors almost always consist of two conductors. The reason is fundamentally about controlling the electric field.
+</p>
+<p>
+Capacitance depends on how the electric field distributes itself in space for a given charge separation. If the field extends to infinity, the potential difference must be evaluated over an unbounded region. This leads to a larger potential rise for a given charge, and therefore smaller capacitance.
+</p>
+<ul class="points-list">
+<li>
+<strong>Maximising Capacitance through Field Confinement:</strong>
+For a single isolated conductor, the electric field extends outward to infinity. The potential difference 
+\(
+\Delta V = \int \vec{E} \cdot d\vec{l}
+\)
+is evaluated from the surface to infinity. Even though the field weakens with distance, the integration occurs over a large spatial region, producing a significant potential rise for a modest charge.
+<br><br>
+When a second conductor carrying opposite charge is brought nearby (separation \( d \)), field lines terminate on that conductor instead of extending indefinitely. The integration for potential difference now occurs primarily across the small gap between them. For the same charge \( Q \), the potential difference becomes much smaller, and therefore the capacitance \( C = Q/\Delta V \) increases dramatically.
+</li>
+<li>
+<strong>Energy Localisation and Circuit Isolation:</strong>
+Energy is stored in the electric field with density 
+\(
+u = \frac{1}{2}\varepsilon_0 E^2
+\).
+If the field extends to infinity, the stored energy is distributed throughout an unbounded region of space. Such a field will also induce charges on nearby objects, making the system sensitive to its environment.
+<br><br>
+By using two closely spaced conductors, the macroscopic electric field — and therefore the stored energy — is largely confined to the region between them. The capacitor becomes a localized energy-storage element whose behaviour is determined primarily by its own geometry, not by distant surroundings.
+</li>
+</ul>
+<p>
+Thus, two conductors are not used merely for symmetry, but to confine the electric field, increase capacitance, and localize stored energy within a controlled region of space.
+</p>
+</section>
+<section>
+<h2>Core Applications</h2>
+<div class="chapter-list">
+<a href="./01a-parallel-plate.html">1. Parallel Plate Capacitor</a>
+<a href="./01b-spherical-cylindrical.html">2. Spherical and Cylindrical Capacitors</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
