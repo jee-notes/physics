@@ -21,14 +21,29 @@ Two types of Potential energy for System of Charges.
 <section>
 <h2>Self-Energy vs. Interaction Energy</h2>
 <p>
-For any system of charged conductors, the total electrostatic potential energy consists of two distinct components:
+For any system of charged bodies, the total electrostatic potential energy does not come from a single source. It can be understood as arising from two conceptually distinct processes:
 </p>
 <ul class="points-list">
-<li><strong>Self-Energy:</strong> The work done against electrostatic repulsion to assemble a single continuous charge distribution from infinity (e.g., charging a single sphere).</li>
-<li><strong>Interaction Energy:</strong> The work done to bring two or more already-charged bodies into proximity from infinity (e.g., the potential energy between two point charges or two separate spheres).</li>
+<li>
+<strong>Self-Energy:</strong> The work done in assembling a single continuous charge distribution from infinity.  
+This is the energy required to build the charge configuration against its own electrostatic repulsion.
+</li>
+<li>
+<strong>Interaction Energy:</strong> The work done in bringing two or more already-charged bodies from infinity to their final separation.
+</li>
 </ul>
 <p>
-In this section, we focus strictly on calculating the <strong>Self-Energy</strong> of a single conductor.
+In Electrostatics chapter, when we studied two point charges, the potential energy \( U = \dfrac{1}{4\pi\varepsilon_0}\dfrac{q_1 q_2}{r} \) was purely <em>interaction energy</em>. Each charge was assumed to already exist. We only calculated the energy due to their mutual interaction.
+</p>
+
+<p>
+But in a continuous conductor — like a spherical shell — the entire charge distribution must first be created. The energy required to build that distribution against electrostatic repulsion is called <strong>self-energy</strong>.
+</p>
+<div class="insightbox">
+Self-energy is not the energy of one charge due to another charge. It is the energy required to assemble a charge distribution against its own repulsion.
+</div>
+<p>
+In this section, we focus strictly on calculating the <strong>self-energy</strong> of a single isolated conductor.
 </p>
 </section>
 <section>
@@ -167,6 +182,451 @@ The self-energy of a charged spherical shell can be derived in two completely di
 </ul>
 Both methods give the same result.  
 This confirms that electrostatic energy resides in the electric field configuration outside the conductor — not inside the metal and not in the charges themselves.
+</div>
+</section>
+<section>
+<h2>Self-Energy of a Uniformly Charged Non-Conducting Sphere</h2>
+<p>
+Consider a solid non-conducting sphere of radius \( R \) carrying total charge \( Q \), uniformly distributed throughout its volume.
+</p>
+<p>
+Since the charge is distributed in the volume (not only on the surface), the electric field exists both <strong>inside</strong> and <strong>outside</strong> the sphere.
+</p>
+<hr>
+<h3>Method 1: Assembly of Charge Distribution</h3>
+<p>
+Let the sphere be built gradually by bringing thin spherical shells of charge from infinity and depositing them concentrically. It is critical that the charge dq is deposited <strong>concentrically</strong> such that the density is always uniform.
+</p>
+<p>
+At an intermediate stage, suppose a sphere of radius \( r \) has already been assembled, containing charge:
+</p>
+\[
+q(r) = Q \frac{r^3}{R^3}
+\]
+<p>
+The charge density is uniform:
+</p>
+\[
+\rho = \frac{Q}{\frac{4}{3}\pi R^3}
+\]
+<p>
+A thin spherical layer of thickness \( dr \) contains charge:
+</p>
+\[
+dq = \rho \cdot 4\pi r^2 dr
+= \frac{3Q}{R^3} r^2 dr
+\]
+<p>
+The potential at radius \( r \) due to the already assembled inner charge \( q(r) \) is:
+</p>
+\[
+V(r) = \frac{1}{4\pi\varepsilon_0} \frac{q(r)}{r}
+= \frac{1}{4\pi\varepsilon_0} \frac{Q r^2}{R^3}
+\]
+<p>
+Work required to bring \( dq \) from infinity:
+</p>
+\[
+dU = V(r)\, dq
+\]
+Substitute:
+\[
+dU =
+\frac{1}{4\pi\varepsilon_0}
+\frac{Q r^2}{R^3}
+\cdot
+\frac{3Q}{R^3} r^2 dr
+\]
+\[
+=
+\frac{3Q^2}{4\pi\varepsilon_0 R^6}
+r^4 dr
+\]
+Now integrate from \( r = 0 \) to \( R \):
+\[
+U =
+\frac{3Q^2}{4\pi\varepsilon_0 R^6}
+\int_0^R r^4 dr
+\]
+\[
+=
+\frac{3Q^2}{4\pi\varepsilon_0 R^6}
+\cdot
+\frac{R^5}{5}
+\]
+\[
+\boxed{
+U = \frac{3Q^2}{20\pi\varepsilon_0 R}
+}
+\]
+<hr>
+<h3>Method 2: Using Energy Density of Electric Field</h3>
+<p>
+Energy density:
+</p>
+\[
+u = \frac{1}{2}\varepsilon_0 E^2
+\]
+<p>
+Electric field:
+</p>
+<ul class="points-list">
+<li>
+Inside (\( r \lt R \)):
+\[
+E_{\text{inside}} = \frac{1}{4\pi\varepsilon_0}
+\frac{Q r}{R^3}
+\]
+</li>
+<li>
+Outside (\( r \ge R \)):
+\[
+E_{\text{outside}} =
+\frac{1}{4\pi\varepsilon_0}
+\frac{Q}{r^2}
+\]
+</li>
+</ul>
+<p>
+Total energy:
+</p>
+\[
+U = U_{\text{inside}} + U_{\text{outside}}
+\]
+<p>
+The outside contribution equals the self-energy of a conducting shell:
+</p>
+\[
+U_{\text{outside}} = \frac{Q^2}{8\pi\varepsilon_0 R}
+\]
+<p>
+The inside contribution is:
+</p>
+\[
+U_{\text{inside}} =
+\int_0^R
+\frac{1}{2}\varepsilon_0 E_{\text{inside}}^2
+4\pi r^2 dr
+=
+\frac{Q^2}{40\pi\varepsilon_0 R}
+\]
+Adding:
+\[
+U =
+\frac{Q^2}{8\pi\varepsilon_0 R}
++
+\frac{Q^2}{40\pi\varepsilon_0 R}
+=
+\frac{3Q^2}{20\pi\varepsilon_0 R}
+\]
+\[
+\boxed{
+U = \frac{3Q^2}{20\pi\varepsilon_0 R}
+}
+\]
+<hr>
+<div class="insightbox">
+The self-energy of a uniformly charged solid sphere is greater than that of a conducting shell of the same radius:
+\[
+U_{\text{solid}} = \frac{3Q^2}{20\pi\varepsilon_0 R}
+\quad
+\text{vs}
+\quad
+U_{\text{shell}} = \frac{Q^2}{8\pi\varepsilon_0 R}
+\]
+This happens because charge is distributed throughout the volume, creating an additional electric field inside the sphere. More field volume → more stored energy.
+</div>
+</section>
+<section>
+<h2>Solved Example: Expansion of a Charged Spherical Shell</h2>
+<p>
+A conducting spherical shell of radius \( R_1 \) carries a uniform charge \( q \). It is slowly expanded (without loss of charge) to a new radius \( R_2 \). Find the work performed by the electric forces during this process.
+</p>
+<hr>
+<h3>Step 1: Initial and Final Electrostatic Energy</h3>
+<p>
+The self-energy of a charged conducting spherical shell of radius \( R \) is:
+</p>
+\[
+U = \frac{q^2}{8\pi\varepsilon_0 R}
+\]
+<p>
+Therefore,
+</p>
+\[
+U_1 = \frac{q^2}{8\pi\varepsilon_0 R_1}
+\]
+\[
+U_2 = \frac{q^2}{8\pi\varepsilon_0 R_2}
+\]
+<hr>
+<h3>Step 2: Work Done by Electric Forces</h3>
+<p>
+Work done by electric forces equals the decrease in electrostatic potential energy:
+</p>
+\[
+W_{\text{electric}} = U_1 - U_2
+\]
+\[
+= \frac{q^2}{8\pi\varepsilon_0}
+\left(
+\frac{1}{R_1} - \frac{1}{R_2}
+\right)
+\]
+<hr>
+<h3>Step 3: Physical Interpretation</h3>
+<ul class="points-list">
+<li>If \( R_2 > R_1 \), then \( U_2 < U_1 \).</li>
+<li>The electrostatic energy decreases as the shell expands.</li>
+<li>Therefore, the electric forces perform positive work during expansion.</li>
+</ul>
+<p>
+This is expected because like charges repel. The shell naturally tends to expand under electrostatic repulsion, and the system releases stored energy as it expands.
+</p>
+<hr>
+<div class="insightbox">
+Electrostatic energy of a charged conductor decreases as its radius increases:
+\[
+U \propto \frac{1}{R}
+\]
+Larger radius → weaker electric field near the surface → lower energy density → lower total stored energy. The work done by electric forces during expansion equals the reduction in self-energy.
+</div>
+</section>
+<section>
+<h2>Solved Example: Total Energy of Two Concentric Charged Spherical Shells</h2>
+<p>
+Two thin concentric conducting spherical shells have radii \( R_1 \) and \( R_2 \) (\( R_2 > R_1 \)) and carry charges \( q_1 \) and \( q_2 \), respectively. Find:
+</p>
+<ul class="points-list">
+<li>The self-energy of each shell</li>
+<li>The interaction energy</li>
+<li>The total electrostatic energy of the system</li>
+</ul>
+<hr>
+<h3>Method 1: Self-Energy + Interaction Energy</h3>
+<h4>1. Self-Energy of Inner Shell</h4>
+\[
+W_1 = \frac{q_1^2}{8\pi\varepsilon_0 R_1}
+\]
+<h4>2. Self-Energy of Outer Shell</h4>
+\[
+W_2 = \frac{q_2^2}{8\pi\varepsilon_0 R_2}
+\]
+<h4>3. Interaction Energy</h4>
+<p>
+The inner shell produces a potential at radius \( R_2 \):
+</p>
+\[
+V_{1}(R_2) = \frac{1}{4\pi\varepsilon_0}\frac{q_1}{R_2}
+\]
+<p>
+Interaction energy equals charge of outer shell times potential due to inner shell:
+</p>
+\[
+W_{12} = q_2 V_{1}(R_2)
+= \frac{q_1 q_2}{4\pi\varepsilon_0 R_2}
+\]
+<h4>4. Total Energy</h4>
+\[
+W_{\text{total}} = W_1 + W_2 + W_{12}
+\]
+\[
+\boxed{
+W =
+\frac{q_1^2}{8\pi\varepsilon_0 R_1}
++
+\frac{q_2^2}{8\pi\varepsilon_0 R_2}
++
+\frac{q_1 q_2}{4\pi\varepsilon_0 R_2}
+}
+\]
+<hr>
+<h3>Method 2: Capacitor Decomposition</h3>
+<p>
+The system can be interpreted as two capacitors:
+</p>
+<ul class="points-list">
+<li>
+Capacitor 1: Between the two shells  
+Capacitance:
+\[
+C_1 = \frac{4\pi\varepsilon_0 R_1 R_2}{R_2 - R_1}
+\]
+</li>
+<li>
+Capacitor 2: Outer shell with infinity  
+Capacitance:
+\[
+C_2 = 4\pi\varepsilon_0 R_2
+\]
+</li>
+</ul>
+<p>
+Now determine charges on each capacitor.
+</p>
+<ul class="points-list">
+<li>
+Charge on inner capacitor (between shells) = \( q_1 \) (on inner sphere outer surface and outer sphere inner surface)
+</li>
+<li>
+Charge on outer capacitor = total charge seen outside = \( q_1 + q_2 \)
+</li>
+</ul>
+<p>
+Energy stored:
+</p>
+\[
+U_1 = \frac{q_1^2}{2C_1}
+\]
+\[
+U_2 = \frac{(q_1 + q_2)^2}{2C_2}
+\]
+Substitute capacitances:
+\[
+U_1 =
+\frac{q_1^2 (R_2 - R_1)}
+{8\pi\varepsilon_0 R_1 R_2}
+\]
+\[
+U_2 =
+\frac{(q_1 + q_2)^2}
+{8\pi\varepsilon_0 R_2}
+\]
+Now add:
+\[
+W = U_1 + U_2
+\]
+After simplification, this reduces exactly to:
+\[
+\boxed{
+W =
+\frac{q_1^2}{8\pi\varepsilon_0 R_1}
++
+\frac{q_2^2}{8\pi\varepsilon_0 R_2}
++
+\frac{q_1 q_2}{4\pi\varepsilon_0 R_2}
+}
+\]
+<hr>
+<div class="insightbox">
+Both methods give the same result. Method 1 separates energy into:
+<ul>
+<li>Self-energy of each conductor</li>
+<li>Mutual interaction energy</li>
+</ul>
+Method 2 treats the system as a combination of capacitors. This demonstrates that: Electrostatic energy can be interpreted either as field energy or as capacitor energy — both viewpoints are completely equivalent.
+</div>
+</section>
+<section>
+<h2>Conceptual Clarifications for Two Concentric Shells</h2>
+<p>
+This problem is subtle because several different physical ideas are interacting simultaneously: charge redistribution on conductors, self-energy, interaction energy, and equivalent capacitor interpretation. Let us carefully clarify the three main conceptual points.
+</p>
+<hr>
+<h3>1. Charge Redistribution on Conductors</h3>
+<p>
+When two conducting shells carry charges \( q_1 \) and \( q_2 \), the charges do not remain arbitrarily spread. They rearrange themselves to maintain:
+</p>
+<ul class="points-list">
+<li>Zero electric field inside the metal</li>
+<li>Electrostatic equilibrium</li>
+</ul>
+<p>
+For the outer shell:
+</p>
+<ul class="points-list">
+<li>Charge on its inner surface = \( -q_1 \)</li>
+<li>Charge on its outer surface = \( q_1 + q_2 \)</li>
+</ul>
+<p>
+Why? Because the inner shell produces field in the cavity region. To cancel field inside the metal of the outer shell, an induced charge \( -q_1 \) must appear on its inner surface.
+</p>
+<p>
+Since total charge of outer shell is \( q_2 \), the outer surface must then carry:
+</p>
+\[
+q_{\text{outer surface}} = q_2 - (-q_1) = q_1 + q_2
+\]
+<p>
+This redistribution is automatic due to conductor physics.
+</p>
+<hr>
+<h3>2. Why Interaction Energy Uses Only Sphere 1 as a Point Charge</h3>
+<p>
+Interaction energy is:
+</p>
+\[
+W_{12} = q_2 V_1(R_2)
+\]
+<p>
+Here is the key:
+</p>
+<ul class="points-list">
+<li>The inner sphere produces the same field as a point charge at the center (by spherical symmetry).</li>
+<li>The outer shell does <strong>not</strong> produce field inside its own metal or cavity.</li>
+</ul>
+<p>
+Therefore, at radius \( R_2 \), the potential due to sphere 1 is:
+</p>
+\[
+V_1(R_2) = \frac{1}{4\pi\varepsilon_0}\frac{q_1}{R_2}
+\]
+<p>
+We multiply this by total charge of shell 2 (which is \( q_2 \)).
+</p>
+<p>
+We do NOT treat shell 2 as a point charge for interaction energy, because interaction energy is computed as:
+</p>
+\[
+\text{charge} \times \text{potential due to the other}
+\]
+<p>
+The symmetry argument applies only to the field created by sphere 1.
+</p>
+<hr>
+<h3>3. Why Self-Energy of Outer Shell is Based on Total Charge \( q_2 \)</h3>
+<p>
+Even though outer shell has surface charges:
+</p>
+<ul class="points-list">
+<li>Inner surface: \( -q_1 \)</li>
+<li>Outer surface: \( q_1 + q_2 \)</li>
+</ul>
+<p>
+Its total charge remains:
+</p>
+\[
+q_2
+\]
+<p>
+Self-energy depends only on the total charge residing on that conductor, not on how it splits between surfaces.
+</p>
+<p>
+For a thin conducting shell of radius \( R_2 \), the self-energy formula is:
+</p>
+\[
+W_2 = \frac{q_2^2}{8\pi\varepsilon_0 R_2}
+\]
+<p>
+This works because:
+</p>
+<ul class="points-list">
+<li>All charge resides effectively at radius \( R_2 \)</li>
+<li>The field outside depends only on total charge \( q_2 \)</li>
+<li>The field inside the metal is zero</li>
+</ul>
+<p>
+Self-energy is computed as work required to assemble total charge \( q_2 \) on that shell. Induced charge redistribution does not change the total assembly energy of that conductor.
+</p>
+<hr>
+<div class="insightbox">
+This problem is difficult because three different energy concepts are overlapping:
+<ul>
+<li>Self-energy of each conductor (depends on its total charge)</li>
+<li>Interaction energy between conductors (depends on potential due to the other)</li>
+<li>Charge redistribution required to maintain electrostatic equilibrium</li>
+</ul>
+Once these three roles are separated mentally, the problem becomes clean and structured.
 </div>
 </section>
 <footer>
