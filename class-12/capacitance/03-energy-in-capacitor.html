@@ -1,129 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capacitance | Energy Stored in a Capacitor</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitance | Energy Stored in a Capacitor</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Capacitance
-            </a>
-        </nav>
-
-        <h1>Energy Stored in a Capacitor</h1>
-        <p class="subtitle">
-            Work done to charge a capacitor is stored as potential energy in the electric field.
-        </p>
-
-        <section>
-            <h2>Work Done in Charging</h2>
-            <p>
-                When we charge a capacitor, we move charge from one plate to the other against the growing electric
-                field. At any instant when charge \( q \) has already been transferred, the potential difference between
-                the plates is \( v = q/C \). The work needed to transfer an additional element of charge \( dq \) is:
-            </p>
-            \[
-            dW = v\, dq = \frac{q}{C}\, dq
-            \]
-            <p>
-                Integrating from \( q = 0 \) to \( q = Q \):
-            </p>
-            \[
-            W = \int_0^Q \frac{q}{C}\, dq = \frac{1}{C} \cdot \frac{Q^2}{2}
-            \]
-            \[
-            \boxed{U = \frac{Q^2}{2C} = \frac{1}{2}CV^2 = \frac{1}{2}QV}
-            \]
-            <p>
-                All three forms are equivalent — use whichever suits the given information.
-            </p>
-            <div class="insightbox">
-                The factor of \( 1/2 \) appears because the average voltage during charging is \( V_{\text{avg}} = V/2
-                \). The first charge element is moved against zero potential; the last against full potential \( V \).
-                So \( U = Q \cdot (V/2) \), not \( Q \cdot V \).
-            </div>
-        </section>
-
-        <section>
-            <h2>Energy Density of the Electric Field</h2>
-            <p>
-                For a parallel plate capacitor (\( C = \varepsilon_0 A/d \), \( V = Ed \)), the stored energy is:
-            </p>
-            \[
-            U = \frac{1}{2}CV^2 = \frac{1}{2} \cdot \frac{\varepsilon_0 A}{d} \cdot (Ed)^2 = \frac{1}{2}\varepsilon_0
-            E^2 \cdot (Ad)
-            \]
-            <p>
-                Since \( Ad \) is the volume of the capacitor:
-            </p>
-            \[
-            u = \frac{U}{Ad} = \frac{1}{2}\varepsilon_0 E^2
-            \]
-            <p>
-                This is the <strong>energy density</strong> of the electric field — the energy stored per unit volume.
-                It applies universally, not just inside capacitors.
-            </p>
-            <div class="insightbox">
-                The energy is not stored in the charges — it is stored in the electric field. This is not merely a
-                bookkeeping convention; the field carries the energy even in free space, far from any charges.
-            </div>
-        </section>
-
-        <section>
-            <h2>Energy at Constant Charge vs. Constant Voltage</h2>
-            <p>
-                Two important scenarios arise when the geometry of a capacitor is changed (e.g., plates are pulled
-                apart):
-            </p>
-
-            <h3>Isolated Capacitor (constant Q)</h3>
-            <p>
-                If the capacitor is isolated (not connected to a battery), \( Q \) is fixed. Using \( U = Q^2/(2C) \):
-            </p>
-            <ul>
-                <li>Increasing \( d \) decreases \( C \), so \( U \) <strong>increases</strong>.</li>
-                <li>The extra energy comes from the work done by the external agent pulling the plates apart (against
-                    the attractive force).</li>
-            </ul>
-
-            <h3>Capacitor in a Circuit (constant V)</h3>
-            <p>
-                If the capacitor remains connected to a battery, \( V \) is fixed. Using \( U = \frac{1}{2}CV^2 \):
-            </p>
-            <ul>
-                <li>Increasing \( d \) decreases \( C \), so \( U \) <strong>decreases</strong>.</li>
-                <li>Charge returns to the battery; the total work done by the external agent is negative (the system
-                    does work on the agent).</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Energy When Dielectric is Inserted</h2>
-            <p>
-                When a dielectric of constant \( K \) is inserted into a capacitor:
-            </p>
-            <ul>
-                <li><strong>Isolated (constant Q):</strong> \( C \) increases by \( K \), so \( U = Q^2/(2C) \)
-                    decreases by factor \( K \). The electric field and voltage both decrease. Energy is released — it
-                    goes into the dielectric (polarisation).</li>
-                <li><strong>Battery-connected (constant V):</strong> \( C \) increases by \( K \), so \( U =
-                    \frac{1}{2}CV^2 \) increases by factor \( K \). Extra charge flows from the battery — the battery
-                    does more work than the energy stored (the other half goes into the dielectric and heat).</li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Capacitance
+</a>
+</nav>
+<h1>Energy Stored in a Capacitor</h1>
+<p class="subtitle">
+Work done to charge a capacitor is stored as potential energy in the electric field.
+</p>
+<section>
+<h2>Where is Energy Stored?</h2>
+<p>
+Saying "energy is stored in a capacitor" is incomplete. A common misconception is that the capacitor is merely the physical conductor body holding charge. In reality, the energy is stored in the <strong>electric field</strong> created between the displaced charges.
+</p>
+<p>
+Consider an ideal parallel plate capacitor with vacuum between the plates. Under the ideal assumption (large plates, negligible edge effects), the electric field exists only in the region between the plates. Therefore, the energy is localized in that region of space — not inside the metal, but in the field.
+</p>
+<p>
+How is that energy stored?
+</p>
+<ol class="points-list">
+<li>Initially, the capacitor is uncharged and has no stored energy.</li>
+<li>It is connected to a battery of potential difference \( V \).</li>
+<li>Charge redistributes: \( q = CV \) accumulates on the plates.</li>
+<li>The separated charges create an electric field between the plates.</li>
+<li>The work done in establishing this field becomes stored energy.</li>
+</ol>
+<p>
+The battery does not supply net charge to the capacitor. The total charge given is zero. It merely <strong>displaces</strong> charge from one plate to the other. One plate gains \( +Q \), the other gains \( -Q \). Energy is supplied in doing this separation against electrostatic forces.
+</p>
+<p>
+For analogy purpose, we can imagine that capacitor is like a balloon. Battery pumps energy in the capacitor - similar to how a balloon is filled with air-pump. The difference being - battery pumps energy and not charge but air-pump pumps material air in the balloon. The battery pumped energy by <b>moving</b> charge from plate1 to plate2 creating like an imaginary stretched membrane in field. 
+</p>
+<p>
+So, to calculate the energy stored in the field, we need to imagine "movement" of charge against the field (or potential difference). This movement should be <b>sustained</b> after the driving force is removed. Then we say that energy got stored.  
+</p>
+<div class="insightbox">
+Energy storage requires sustained separation of charge. If the external agency is removed and the configuration remains (charges stay separated, field persists), then energy is stored in the system.
+</div>
+</section>
+<section>
+<h2>Charging / Discharging Capacitor</h2>
+<p>
+The terminology <b>"charging" and "discharging" of a capacitor</b> can be misleading. It is not about the capacitor supplying or withdrawing charge from an external system. But it is about displaced charge on the plates. The capacitor redistributes charge internally.</p>
+<p>
+When a capacitor is said to be charged by \( Q \), it means a net charge \( Q \) has been displaced from one terminal of the capacitor to the other. The total charge of the capacitor as a whole remains zero.
+</p>
+<p>
+When it is discharged, the separated charges recombine, neutralizing the electric field between the plates.
+</p>
+<p>
+During charging, an external agent (such as a battery) performs positive work. During discharging, the stored field energy is released.
+</p>
+</section>
+<section>
+<h2>Work Done in Charging</h2>
+<p>
+At an intermediate stage of charging, when charge \( q \) is already transferred, the potential difference across the capacitor is:
+</p>
+\[
+v = \frac{q}{C}
+\]
+<p>
+To move an additional small charge \( dq \), the required work is:
+</p>
+\[
+dW = v \, dq = \frac{q}{C} \, dq
+\]
+<p>
+Integrating from \( 0 \) to \( Q \):
+</p>
+\[
+W = \int_0^Q \frac{q}{C} \, dq
+= \frac{Q^2}{2C}
+\]
+\[
+\boxed{U = \frac{Q^2}{2C} = \frac{1}{2}CV^2 = \frac{1}{2}QV}
+\]
+<div class="insightbox">
+<strong>Why is the work done on the first charge element zero?</strong>
+<p>
+In the quasi-static charging model of a capacitor, the potential difference at any instant is given by
+</p>
+\[
+V = \frac{q}{C}
+\]
+<p>
+At the beginning of the process, before any charge separation has occurred, \( q = 0 \). Therefore, the potential difference between the plates is zero.
+</p>
+<p>
+When the first infinitesimal charge element \( dq \) is transferred, the work required is
+</p>
+\[
+dW = V \, dq
+\]
+<p>
+Since \( V = 0 \) at \( q = 0 \), the work required for the first infinitesimal transfer is zero.
+</p>
+<p>
+This does not mean that "nothing happens" physically. The very act of separating the first \( dq \) establishes the boundary condition that creates the electric field configuration of the capacitor. Before this separation, no field exists between the plates. After this infinitesimal separation, a correspondingly infinitesimal electric field appears.
+</p>
+<p>
+The key point is that the electric field is proportional to the separated charge. Therefore, at the instant when \( dq \to 0 \), the opposing field is also infinitesimal. The work required scales as \( dq^2 \), which vanishes in the continuous limit.
+</p>
+<p>
+Thus, in electrostatics, the first charge element is not moved against a pre-existing capacitor field. Instead, it establishes the boundary condition from which the field solution emerges. Energy accumulates gradually as the field builds up from zero to its final configuration.
+</p>
+<p>
+This is why the total stored energy becomes
+</p>
+\[
+U = \int_0^Q \frac{q}{C}\, dq = \frac{1}{2}QV
+\]
+<p>
+The factor \( \frac{1}{2} \) reflects the fact that the potential difference increases linearly from zero to \( V \) during charging. The earliest transferred charge experiences nearly zero potential difference, while the final transferred charge is moved against the full potential \( V \).
+</p>
+<p>
+In this framework, energy is not stored in the charges themselves but in the electric field configuration that progressively builds as charge separation increases.
+</p>
+</div>
+</section>
+<section>
+<h2>Energy Density of the Electric Field</h2>
+<p>
+For a parallel plate capacitor:
+</p>
+\[
+C = \frac{\varepsilon_0 A}{d}, 
+\quad V = Ed
+\]
+<p>
+Substituting into \( U = \frac{1}{2}CV^2 \):
+</p>
+\[
+U = \frac{1}{2}\varepsilon_0 E^2 (Ad)
+\]
+<p>
+Since \( Ad \) is the volume between the plates:
+</p>
+\[
+\boxed{u = \frac{1}{2}\varepsilon_0 E^2}
+\]
+<p>
+This is the energy stored per unit volume of electric field.
+</p>
+<div class="insightbox">
+Energy is not stored in the charges themselves. It is stored in the electric field configuration in space. Even in vacuum, empty space can store energy through an electric field.
+</div>
+</section>
+<section>
+<h2>Core Applications</h2>
+<div class="chapter-list">
+<a href="./03a-energy-spherical-capacitor.html">1. Energy Configurations for Spherical</a>
+<a href="./03b-energy-cc-vs-cv.html">2. Energy at constant charge v/s constant voltage</a>
+<a href="./03c-energy-dielectric.html">3. Energy with dielectrics</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capacitance | Energy of Spherical Capacitor</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-energy-in-capacitor.html" class="back-btn">
+<span>&larr;</span> Back to Energy in Capacitor
+</a>
+</nav>
+<h1>Energy of Spherical Capacitor</h1>
+<p class="subtitle">
+Two types of Potential energy for System of Charges.
+</p>
+<section>
+<h2>Self-Energy vs. Interaction Energy</h2>
+<p>
+For any system of charged conductors, the total electrostatic potential energy consists of two distinct components:
+</p>
+<ul class="points-list">
+<li><strong>Self-Energy:</strong> The work done against electrostatic repulsion to assemble a single continuous charge distribution from infinity (e.g., charging a single sphere).</li>
+<li><strong>Interaction Energy:</strong> The work done to bring two or more already-charged bodies into proximity from infinity (e.g., the potential energy between two point charges or two separate spheres).</li>
+</ul>
+<p>
+In this section, we focus strictly on calculating the <strong>Self-Energy</strong> of a single conductor.
+</p>
+</section>
+<section>
+<h2>Self-Energy of a Charged Conducting Spherical Shell</h2>
+<p>
+Consider a thin conducting spherical shell of radius \( R \), carrying total charge \( Q \). We want to determine the electrostatic self-energy of this configuration — that is, the work required to assemble this charge distribution from infinity.
+</p>
+<h3>Method 1: Using Potential During Assembly</h3>
+<p>
+When the sphere has charge \( q \), its potential is:
+</p>
+\[
+V = \frac{q}{4\pi\varepsilon_0 R}
+\]
+<p>
+To bring an additional small charge \( dq \) from infinity and deposit it on the sphere, the required work is:
+</p>
+\[
+dU = V \, dq = \frac{q}{4\pi\varepsilon_0 R} \, dq
+\]
+<p>
+Integrating from \( q = 0 \) to \( q = Q \):
+</p>
+\[
+U = \int_0^Q \frac{q}{4\pi\varepsilon_0 R} \, dq
+= \frac{1}{4\pi\varepsilon_0 R} \cdot \frac{Q^2}{2}
+\]
+\[
+\boxed{
+U_{\text{self}} = \frac{Q^2}{8\pi\varepsilon_0 R}
+}
+\]
+<p>
+This is the electrostatic self-energy of a charged conducting spherical shell.
+</p>
+<hr>
+<h3>Relation to Capacitance Formula</h3>
+<p>
+The self-capacitance of an isolated sphere is:
+</p>
+\[
+C = 4\pi\varepsilon_0 R
+\]
+<p>
+Using the general capacitor energy expression:
+</p>
+\[
+U = \frac{Q^2}{2C}
+\]
+<p>
+Substituting:
+</p>
+\[
+U = \frac{Q^2}{2(4\pi\varepsilon_0 R)}
+= \frac{Q^2}{8\pi\varepsilon_0 R}
+\]
+<p>
+Thus, the self-energy derived from assembly matches exactly with the capacitor energy formula.
+</p>
+<hr>
+<h3>Method 2: Using Energy Density of the Electric Field</h3>
+<p>
+Energy in electrostatics can also be computed using field energy density:
+</p>
+\[
+u = \frac{1}{2}\varepsilon_0 E^2
+\]
+<p>
+For a charged conducting spherical shell:
+</p>
+<ul class="points-list">
+<li>\( E = 0 \) for \( r \lt R \)</li>
+<li>\( E(r) = \dfrac{Q}{4\pi\varepsilon_0 r^2} \) for \( r \ge R \)</li>
+</ul>
+<p>
+The energy is stored only in the region \( r \ge R \).
+</p>
+<p>
+Consider a thin spherical shell of radius \( r \) and thickness \( dr \). Its volume element is:
+</p>
+\[
+dV = 4\pi r^2 dr
+\]
+<p>
+Energy in this element:
+</p>
+\[
+dU = \frac{1}{2}\varepsilon_0 E^2 \, dV
+\]
+Substitute \( E(r) \):
+\[
+dU =
+\frac{1}{2}\varepsilon_0
+\left(
+\frac{Q}{4\pi\varepsilon_0 r^2}
+\right)^2
+4\pi r^2 dr
+\]
+Simplifying:
+\[
+dU =
+\frac{Q^2}{32\pi^2\varepsilon_0 r^4}
+\cdot
+4\pi r^2 dr
+=
+\frac{Q^2}{8\pi\varepsilon_0}
+\frac{dr}{r^2}
+\]
+Now integrate from \( R \) to \( \infty \):
+\[
+U =
+\frac{Q^2}{8\pi\varepsilon_0}
+\int_R^\infty
+\frac{dr}{r^2}
+\]
+\[
+=
+\frac{Q^2}{8\pi\varepsilon_0}
+\left[
+-\frac{1}{r}
+\right]_R^\infty
+=
+\frac{Q^2}{8\pi\varepsilon_0 R}
+\]
+\[
+\boxed{
+U = \frac{Q^2}{8\pi\varepsilon_0 R}
+}
+\]
+<hr>
+<div class="insightbox">
+The self-energy of a charged spherical shell can be derived in two completely different ways:
+<ul>
+<li>By calculating the work required to assemble the charge distribution.</li>
+<li>By integrating the energy density of the electric field in space.</li>
+</ul>
+Both methods give the same result.  
+This confirms that electrostatic energy resides in the electric field configuration outside the conductor — not inside the metal and not in the charges themselves.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

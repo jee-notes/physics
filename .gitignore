@@ -1,2 +1,6 @@
 .gemini/
 /brain
+class-12/current-electricity/topics.json
+class-12/electrostatics/topics.json
+class-12/capacitance/topics.json
+.gitignore
