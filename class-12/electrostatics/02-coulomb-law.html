@@ -1,108 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrostatics | Coulomb's Law</title>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electrostatics | Coulomb's Law</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-    <nav class="top-nav">
-        <a href="./index.html" class="back-btn">
-            <span>&larr;</span> Back to Electrostatics
-        </a>
-    </nav>
-    
-    <h1>Coulomb's Law and Superposition</h1>
-    <p class="subtitle">
-        The quantitative foundation of electrostatic force and multi-charge interactions.
-    </p>
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electrostatics
+</a>
+</nav>
+<h1>Coulomb's Law and Superposition</h1>
+<p class="subtitle">
+The quantitative foundation of electrostatic force and multi-charge interactions.
+</p>
+<section>
+<h2>What is Coulomb's Law?</h2>
+<p>
+Coulomb's Law defines the magnitude and direction of the electrostatic force acting between two stationary point charges. It states that the electrostatic force is directly proportional to the product of the magnitudes of the charges and inversely proportional to the square of the distance separating them.
+</p>
+<p>
+The force acts along the straight line joining the two charges. It is an attractive force if the charges are of opposite signs and a repulsive force if they are of the same sign.
+</p>
+</section>
+<section>
+<h2>How do we calculate the force? (Scalar Form)</h2>
+<p>
+For two point charges \(q_1\) and \(q_2\) separated by a distance \(r\) in a vacuum, the magnitude of the electrostatic force \(F\) is given by:
+</p>
+\[F = \frac{1}{4\pi\varepsilon_0} \frac{|q_1 q_2|}{r^2}\]
+<p>
+Here, \(\varepsilon_0\) is the permittivity of free space, representing how much the vacuum permits electric field lines to establish themselves. Its value is approximately \(8.85 \times 10^{-12} \text{ C}^2\text{N}^{-1}\text{m}^{-2}\). The constant factor \(\frac{1}{4\pi\varepsilon_0}\) is often denoted as \(k\), with a value of \(9 \times 10^9 \text{ N m}^2\text{C}^{-2}\).
+</p>
+<div class="insightbox">
+When calculating force magnitude using this scalar form, we use the absolute values of the charges. The direction (attraction or repulsion) is determined conceptually by observing the signs of the charges.
+</div>
+</section>
+<section>
+<h2>Coulomb's Law in Vector Form (3D Space)</h2>
+<p>
+In mechanics and real-world JEE problems, charges exist in three-dimensional space. To define the force rigorously and eliminate directional ambiguity, we must use vector notation. This automatically accounts for the direction without needing to rely on conceptual checks.
+</p>
+<p>
+Let charge \(q_1\) be at position vector \(\vec{r}_1\) and charge \(q_2\) be at position vector \(\vec{r}_2\) with respect to a common origin. 
+</p>
+<p>
+The displacement vector pointing from \(q_1\) to \(q_2\) is:
+</p>
+\[\vec{r}_{21} = \vec{r}_2 - \vec{r}_1\]
+<p>
+The force exerted <strong>on</strong> charge \(q_2\) <strong>by</strong> charge \(q_1\), denoted as \(\vec{F}_{21}\), is:
+</p>
+\[\vec{F}_{21} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{|\vec{r}_2 - \vec{r}_1|^3} (\vec{r}_2 - \vec{r}_1)\]
+<div class="insightbox">
+<strong>Critical Rule:</strong> In the vector formulation, you <strong>must</strong> substitute the charges \(q_1\) and \(q_2\) with their actual algebraic signs. The vector mathematics will automatically yield the correct direction. A positive product yields a repulsive vector pointing away from \(q_1\), while a negative product yields an attractive vector pointing toward \(q_1\).
+</div>
+</section>
+<section>
+<h2>The Principle of Superposition</h2>
+<p>
+Coulomb's Law rigorously defines the force between <em>two</em> charges. But how do we determine the net force on a charge when multiple source charges are present?
+</p>
+<p>
+The Principle of Superposition states that the net electrostatic force on any given charge is the vector sum of the individual forces exerted on it by all other charges in the system. 
+</p>
+<p>
+Crucially, the two-body force between any specific pair of charges is completely unaffected by the presence or absence of other charges in the vicinity. If we want the net force \(\vec{F}_{\text{net}}\) on charge \(q_0\) due to an assembly of charges \(q_1, q_2, \dots, q_n\):
+</p>
+\[\vec{F}_{\text{net}} = \vec{F}_{01} + \vec{F}_{02} + \dots + \vec{F}_{0n}\]
+\[\vec{F}_{\text{net}} = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{n} \frac{q_0 q_i}{|\vec{r}_0 - \vec{r}_i|^3} (\vec{r}_0 - \vec{r}_i)\]
+</section>
+<section>
+<h2>Exceptions and Limitations</h2>
+<p>
+Coulomb's law is a fundamental pillar of electrostatics, but it is strictly valid only under specific boundary conditions. 
+</p>
+<ul>
+<li><strong>Point Charges Only:</strong> The law assumes the charges have no spatial extent. For extended bodies (like charged rods or discs), Coulomb's law cannot be applied directly to the macroscopic body. We must slice the body into infinitesimal point charges (\(dq\)) and integrate using the superposition principle. <br><em>Exception:</em> Spherical charge distributions behave identically to point charges when observing the field from outside the sphere.
+</li>
+<li><strong>Static Charges:</strong> The charges must be at rest. If the source charges are moving, they generate magnetic fields in addition to electric fields, requiring the application of the Lorentz force law.
+</li>
+<li><strong>Nuclear Distances:</strong> At distances smaller than \(10^{-15} \text{ m}\), the strong nuclear force overwhelmingly dominates the electrostatic repulsion. This is why atomic nuclei hold together despite the immense repulsive Coulomb forces between tightly packed protons.
+</li>
+</ul>
+</section>
+<section>
+<h2>Choosing the Correct Geometry in 3D Coulomb Problems</h2>
+<p>
+In three-dimensional Coulomb problems, the main difficulty is not physics — it is geometry selection. The correct strategy is to reduce the 3D problem to a 2D symmetry plane before resolving components.
+</p>
+<p>
+For a square pyramid with apex O and square base ABCD (center O′), the correct plane to analyze the field at O is the diagonal symmetry plane AOC — not triangle AOB.
+</p>
+<div class="insightbox">
+<strong>Geometry Selection Principle:</strong><br>
+Always choose a plane that:
+<ul>
+<li>Contains the point of evaluation (O)</li>
+<li>Contains the source charge</li>
+<li>Contains a symmetry axis (OO′)</li>
+</ul>
+This reduces a 3D vector problem to a 2D one.
+</div>
+<svg width="1000" height="420" viewBox="0 0 1000 420">
 
-    <section>
-        <h2>What is Coulomb's Law?</h2>
-        <p>
-            Coulomb's Law defines the magnitude and direction of the electrostatic force acting between two stationary point charges. It states that the electrostatic force is directly proportional to the product of the magnitudes of the charges and inversely proportional to the square of the distance separating them.
-        </p>
-        <p>
-            The force acts along the straight line joining the two charges. It is an attractive force if the charges are of opposite signs and a repulsive force if they are of the same sign.
-        </p>
-    </section>
+  <!-- ================= LEFT: CORRECT PLANE AOC ================= -->
 
-    <section>
-        <h2>How do we calculate the force? (Scalar Form)</h2>
-        <p>
-            For two point charges \(q_1\) and \(q_2\) separated by a distance \(r\) in a vacuum, the magnitude of the electrostatic force \(F\) is given by:
-        </p>
-        \[F = \frac{1}{4\pi\varepsilon_0} \frac{|q_1 q_2|}{r^2}\]
-        <p>
-            Here, \(\varepsilon_0\) is the permittivity of free space, representing how much the vacuum permits electric field lines to establish themselves. Its value is approximately \(8.85 \times 10^{-12} \text{ C}^2\text{N}^{-1}\text{m}^{-2}\). The constant factor \(\frac{1}{4\pi\varepsilon_0}\) is often denoted as \(k\), with a value of \(9 \times 10^9 \text{ N m}^2\text{C}^{-2}\).
-        </p>
-        <div class="insightbox">
-            When calculating force magnitude using this scalar form, we use the absolute values of the charges. The direction (attraction or repulsion) is determined conceptually by observing the signs of the charges.
-        </div>
-    </section>
+  <!-- Base square -->
+  <polygon points="150,320 350,320 400,250 200,250"
+   fill="none" stroke="black" stroke-width="2"/>
 
-    <section>
-        <h2>Coulomb's Law in Vector Form (3D Space)</h2>
-        <p>
-            In mechanics and real-world JEE problems, charges exist in three-dimensional space. To define the force rigorously and eliminate directional ambiguity, we must use vector notation. This automatically accounts for the direction without needing to rely on conceptual checks.
-        </p>
-        <p>
-            Let charge \(q_1\) be at position vector \(\vec{r}_1\) and charge \(q_2\) be at position vector \(\vec{r}_2\) with respect to a common origin. 
-        </p>
-        
-        
+  <!-- Apex -->
+  <circle cx="275" cy="120" r="4" fill="black"/>
+  <text x="285" y="115">O</text>
 
-        <p>
-            The displacement vector pointing from \(q_1\) to \(q_2\) is:
-        </p>
-        \[\vec{r}_{21} = \vec{r}_2 - \vec{r}_1\]
-        <p>
-            The force exerted <strong>on</strong> charge \(q_2\) <strong>by</strong> charge \(q_1\), denoted as \(\vec{F}_{21}\), is:
-        </p>
-        \[\vec{F}_{21} = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{|\vec{r}_2 - \vec{r}_1|^3} (\vec{r}_2 - \vec{r}_1)\]
-        <div class="insightbox">
-            <strong>Critical Rule:</strong> In the vector formulation, you <strong>must</strong> substitute the charges \(q_1\) and \(q_2\) with their actual algebraic signs. The vector mathematics will automatically yield the correct direction. A positive product yields a repulsive vector pointing away from \(q_1\), while a negative product yields an attractive vector pointing toward \(q_1\).
-        </div>
-    </section>
+  <!-- Base vertices -->
+  <circle cx="150" cy="320" r="4" fill="black"/>
+  <text x="135" y="340">A</text>
 
-    <section>
-        <h2>The Principle of Superposition</h2>
-        <p>
-            Coulomb's Law rigorously defines the force between <em>two</em> charges. But how do we determine the net force on a charge when multiple source charges are present?
-        </p>
-        <p>
-            The Principle of Superposition states that the net electrostatic force on any given charge is the vector sum of the individual forces exerted on it by all other charges in the system. 
-        </p>
-        
-        
+  <circle cx="350" cy="320" r="4" fill="black"/>
+  <text x="360" y="340">B</text>
 
-        <p>
-            Crucially, the two-body force between any specific pair of charges is completely unaffected by the presence or absence of other charges in the vicinity. If we want the net force \(\vec{F}_{\text{net}}\) on charge \(q_0\) due to an assembly of charges \(q_1, q_2, \dots, q_n\):
-        </p>
-        \[\vec{F}_{\text{net}} = \vec{F}_{01} + \vec{F}_{02} + \dots + \vec{F}_{0n}\]
-        \[\vec{F}_{\text{net}} = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{n} \frac{q_0 q_i}{|\vec{r}_0 - \vec{r}_i|^3} (\vec{r}_0 - \vec{r}_i)\]
-    </section>
+  <circle cx="400" cy="250" r="4" fill="black"/>
+  <text x="410" y="250">C</text>
 
-    <section>
-        <h2>Exceptions and Limitations</h2>
-        <p>
-            Coulomb's law is a fundamental pillar of electrostatics, but it is strictly valid only under specific boundary conditions. 
-        </p>
-        <ul>
-            <li><strong>Point Charges Only:</strong> The law assumes the charges have no spatial extent. For extended bodies (like charged rods or discs), Coulomb's law cannot be applied directly to the macroscopic body. We must slice the body into infinitesimal point charges (\(dq\)) and integrate using the superposition principle. <br><em>Exception:</em> Spherical charge distributions behave identically to point charges when observing the field from outside the sphere.</li>
-            <li><strong>Static Charges:</strong> The charges must be at rest. If the source charges are moving, they generate magnetic fields in addition to electric fields, requiring the application of the Lorentz force law.</li>
-            <li><strong>Nuclear Distances:</strong> At distances smaller than \(10^{-15} \text{ m}\), the strong nuclear force overwhelmingly dominates the electrostatic repulsion. This is why atomic nuclei hold together despite the immense repulsive Coulomb forces between tightly packed protons.</li>
-        </ul>
-    </section>
+  <circle cx="200" cy="250" r="4" fill="black"/>
+  <text x="180" y="240">D</text>
 
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+  <!-- Edges -->
+  <line x1="275" y1="120" x2="150" y2="320" stroke="black"/>
+  <line x1="275" y1="120" x2="350" y2="320" stroke="black"/>
+  <line x1="275" y1="120" x2="400" y2="250" stroke="black"/>
+  <line x1="275" y1="120" x2="200" y2="250" stroke="black"/>
+
+  <!-- Base center -->
+  <circle cx="275" cy="285" r="4" fill="black"/>
+  <text x="285" y="290">O′</text>
+
+  <!-- Axis -->
+  <line x1="275" y1="120" x2="275" y2="285"
+stroke="blue" stroke-dasharray="6"/>
+
+  <!-- Correct plane AOC -->
+  <polygon points="275,120 150,320 400,250"
+   fill="rgba(0,150,0,0.2)"
+   stroke="green"
+   stroke-width="3"/>
+
+  <text x="210" y="200" fill="green" font-weight="bold">
+Correct: Symmetry Plane AOC
+  </text>
+
+
+  <!-- ================= RIGHT: WRONG PLANE BOC ================= -->
+
+  <!-- Shift everything +500 in x direction -->
+
+  <!-- Base square -->
+  <polygon points="650,320 850,320 900,250 700,250"
+   fill="none" stroke="black" stroke-width="2"/>
+
+  <!-- Apex -->
+  <circle cx="775" cy="120" r="4" fill="black"/>
+  <text x="785" y="115">O</text>
+
+  <!-- Base vertices -->
+  <circle cx="650" cy="320" r="4" fill="black"/>
+  <text x="635" y="340">A</text>
+
+  <circle cx="850" cy="320" r="4" fill="black"/>
+  <text x="860" y="340">B</text>
+
+  <circle cx="900" cy="250" r="4" fill="black"/>
+  <text x="910" y="250">C</text>
+
+  <circle cx="700" cy="250" r="4" fill="black"/>
+  <text x="680" y="240">D</text>
+
+  <!-- Edges -->
+  <line x1="775" y1="120" x2="650" y2="320" stroke="black"/>
+  <line x1="775" y1="120" x2="850" y2="320" stroke="black"/>
+  <line x1="775" y1="120" x2="900" y2="250" stroke="black"/>
+  <line x1="775" y1="120" x2="700" y2="250" stroke="black"/>
+
+  <!-- Base center -->
+  <circle cx="775" cy="285" r="4" fill="black"/>
+  <text x="785" y="290">O′</text>
+
+  <!-- Axis -->
+  <line x1="775" y1="120" x2="775" y2="285"
+stroke="blue" stroke-dasharray="6"/>
+
+  <!-- Wrong plane BOC -->
+  <polygon points="775,120 850,320 900,250"
+   fill="rgba(200,0,0,0.25)"
+   stroke="red"
+   stroke-width="3"/>
+
+  <text x="690" y="200" fill="red" font-weight="bold">
+Wrong: Plane BOC (No Symmetry)
+  </text>
+
+</svg>
+<p>
+The plane AOC contains:
+<ul>
+<li>The apex O</li>
+<li>The diagonal AC</li>
+<li>The symmetry axis OO′</li>
+</ul>
+All electric field vectors due to charges at A and C lie in this plane.
+Their horizontal components cancel by symmetry, and vertical components add.
+</p>
+</section>
+<section>
+<h2>The 2D to 3D Transition: Diagonal Planes</h2>
+<p>
+The primary difficulty in 3D vector problems is identifying the correct plane of symmetry. It is common to default to the outer boundary faces (like triangle BOC), but the correct symmetry lies internally. We can derive the 3D symmetry planes directly by translating the 2D base.
+</p>
+<h3>Step 1: The 2D Foundation</h3>
+<p>
+Consider four equal charges placed at the corners of a square ABCD. To find the electric field at the geometric center \( O' \), we use the diagonal lines AC and BD.
+</p>
+<ul>
+<li>The electric field vectors due to charges at A and C lie entirely along the diagonal line AC. Their horizontal components cancel exactly.</li>
+<li>The field vectors due to charges at B and D lie entirely along the diagonal line BD and also cancel exactly.</li>
+</ul>
+<h3>Step 2: The Vertical Translation to 3D</h3>
+<p>
+Now, translate the center point \( O' \) upward along the perpendicular z-axis to form the apex \( O \) of a square pyramid. 
+</p>
+<ul>
+<li>The 2D diagonal <strong>line AC</strong> extends vertically to form the 3D <strong>plane AOC</strong>.</li>
+<li>The 2D diagonal <strong>line BD</strong> extends vertically to form the 3D <strong>plane BOD</strong>.</li>
+</ul>
+<h3>Step 3: The Symmetry Rule</h3>
+<p>
+Because the diagonal lines governed the symmetry in the 2D square, the diagonal planes govern the symmetry in the 3D pyramid. 
+</p>
+<div class="insightbox">
+<strong>Why the Face Planes Fail:</strong> The triangular face BOC is constructed on the edge BC, not on a diagonal. It does not contain geometrically opposed charges (like A and C), so it lacks the necessary condition for horizontal component cancellation. The resultant field from charges B and C does not align with the central axis \( OO' \).
+</div>
+<p>
+By evaluating the field exclusively within the diagonal planes (AOC and BOD), the 3D vector addition is strictly reduced to two independent 2D problems.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
 </div>
 </body>
 </html>
