@@ -4,145 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Electrostatics | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
-<style>
-        :root { 
-            --primary:#2c3e50; 
-            --secondary:#2980b9; 
-            --accent:#3498db; 
-            --bg:#f4f7fa; 
-        }
-
-        body { 
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height:1.7; 
-            background:var(--bg); 
-            color:#333; 
-            margin:0; 
-            padding:30px; 
-        }
-
-        .container { 
-            max-width:950px; 
-            margin:auto; 
-            background:#fff; 
-            padding:50px; 
-            border-radius:16px; 
-            box-shadow:0 12px 30px rgba(0,0,0,0.08); 
-        }
-
-        h1, h2 { color:var(--primary); }
-
-        h1 { 
-            border-bottom:3px solid var(--secondary); 
-            padding-bottom:12px; 
-            text-align:center; 
-            margin-bottom:10px;
-        }
-
-        .subtitle {
-            text-align:center;
-            opacity:0.7;
-            margin-bottom:35px;
-            font-size:0.95rem;
-        }
-
-        h2 { 
-            margin-top:40px; 
-            margin-bottom:15px;
-        }
-
-        section {
-            margin-bottom:40px;
-        }
-
-        section:not(:last-of-type)::after {
-            content:"";
-            display:block;
-            height:1px;
-            margin-top:40px;
-            background:linear-gradient(to right, transparent, #ddd, transparent);
-        }
-
-        .top-nav {
-            margin-bottom:35px;
-        }
-
-        .back-btn {
-            display:inline-flex;
-            align-items:center;
-            gap:8px;
-            padding:8px 14px;
-            background:#eef5fb;
-            border-radius:8px;
-            font-weight:600;
-            text-decoration:none;
-            color:var(--primary);
-            transition:all 0.25s ease;
-        }
-
-        .back-btn:hover {
-            background:#dcecf9;
-            transform:translateX(-3px);
-        }
-
-        ul {
-            margin-top:10px;
-            padding-left:20px;
-        }
-
-        .chapter-list {
-            margin-top:25px;
-        }
-
-        .chapter-list a {
-            display:block;
-            padding:18px 20px;
-            margin-bottom:15px;
-            background:#f9fbfd;
-            border-left:5px solid var(--secondary);
-            border-radius:10px;
-            text-decoration:none;
-            color:#2c3e50;
-            font-weight:500;
-            transition:all 0.25s ease;
-            position:relative;
-        }
-
-        .chapter-list a::after {
-            content: "→";
-            position:absolute;
-            right:20px;
-            opacity:0.4;
-            transition:all 0.25s ease;
-        }
-
-        .chapter-list a:hover {
-            background:#eef5fb;
-            transform:translateY(-3px);
-            box-shadow:0 8px 18px rgba(0,0,0,0.08);
-        }
-
-        .chapter-list a:hover::after {
-            opacity:1;
-            right:15px;
-        }
-
-        footer { 
-            text-align:center; 
-            margin-top:60px; 
-            color:#7f8c8d; 
-            font-size:0.9rem; 
-        }
-
-        hr {
-            margin:40px 0;
-            border:none;
-            height:1px;
-            background:linear-gradient(to right, transparent, #ccc, transparent);
-        }
-
-</style>
 </head>
 <body>
 <div class="container">
@@ -155,17 +18,29 @@
 <p class="subtitle">
 The first complete mathematical formulation of the concept of field.
 </p>
-
 <section>
 <h2>Conceptual Overview</h2>
 <p>
-Electrostatics studies electric charges at rest and the physical quantities associated with them — force, electric field, and electric potential. It marks the transition in physics from describing interactions as direct action-at-a-distance to describing them through a field that exists throughout space.
+Electrostatics studies electric charges at rest and the physical quantities associated with them — force, electric field, and electric potential.
 </p>
 <p>
-Instead of saying that one charge directly pulls another, electrostatics introduces the idea that a charge modifies the space around it. That modification is the electric field.
+It marks a decisive shift in physics: from describing interactions as direct action-at-a-distance to describing them through a field that exists throughout space.
 </p>
+<p>
+Instead of saying that one charge directly pulls another, electrostatics asserts that a charge produces an electric field in the surrounding region of space. This field is a real physical entity. Other charges respond locally to this field.
+</p>
+<div class="insightbox">
+<p>
+At everyday scales outside the atomic nucleus, the fundamental forces governing matter–matter interactions are gravitational and electromagnetic. Both are field-mediated.
+</p>
+<p>
+In classical physics, space and time form the passive geometric arena. They do not carry energy or momentum. Matter and fields do.
+</p>
+<p>
+Thus, what appears as matter–matter interaction is structurally matter → field → matter. There is no direct transfer of energy or momentum between separated bodies without a mediating field.
+</p>
+</div>
 </section>
-
 <section>
 <h2>Field as the Central Idea</h2>
 <p>
@@ -175,24 +50,25 @@ The core concept of electrostatics is the electric field. A field assigns a phys
 Matter carries intrinsic properties such as mass or charge. A field carries measurable parameters such as electric field strength and potential. Both matter and field can store energy, and both influence the evolution of physical systems.
 </p>
 <p>
-Electrostatics is therefore not merely the study of charges, but the first systematic mathematical theory of a physical field.
+Electrostatics is therefore not merely the study of charges, but the first systematic mathematical theory of a physical field. In 11th chapter of gravitation, we study gravitation as a particle-particle interaction. But after electrostatics, we again study gravitation as field.
+</p>
+<p>
+Newton described gravitation as action at a distance. Field theory was majorly studied by Faraday and Maxwell in electromagnetism.
 </p>
 </section>
 <section>
 <h2>Field Strength and Potential</h2>
 <p>
-In mechanics, force is a vector quantity while energy is a scalar quantity.
-They describe the same physical system from different perspectives:
-force determines how motion changes locally, while energy provides a global measure of the system.
+In mechanics, force is a vector quantity while energy is a scalar quantity. They describe the same physical system from different perspectives: force determines how motion changes of a particular particle, while energy provides a global measure of the system.
 </p>
 <p>
 Electrostatics exhibits a similar dual description. The electric field \( \vec{E} \) is a vector quantity that determines the force on a charge at a point. The electric potential \( V \) is a scalar quantity that encodes the same field information in an integrated form.
 </p>
 \[
-\vec{E} = - \nabla V
+dV = - \vec{E} \cdot d\vec{l}
 \]
 <p>
-Thus, potential is not a separate physical entity; it is another mathematical representation of the same field.
+Thus, potential is not about a separate physical entity; it is another mathematical representation (physical quantity) of the same field interaction.
 </p>
 <p>
 Visually, \( \vec{E} \) is represented by field lines, while \( V \) is represented by equipotential surfaces. Together, they provide complementary descriptions of the electric field.
@@ -228,7 +104,7 @@ Thus, Coulomb’s law builds the field by summing contributions from individual 
 Gauss’ law relates the electric flux through a closed surface to the total charge enclosed:
 </p>
 \[
-\oint \vec{E} \cdot d\vec{S}
+\Phi = \oint \vec{E} \cdot d\vec{S}
 =
 \frac{Q_{\text{enc}}}{\varepsilon_0}
 \]
@@ -240,7 +116,7 @@ It does not directly give the field at a point. Instead, it provides a global co
 <ul>
 <li>Coulomb’s law constructs the field locally from charge elements.</li>
 <li>Gauss’ law describes how the field behaves globally.</li>
-<li>In fact, Gauss’ law can be derived from Coulomb’s law using calculus.</li>
+<li>In fact, Gauss’ law and Coulomb's law can be derived from each other.</li>
 <li>Both are consistent descriptions of the same physical field.</li>
 </ul>
 <p>
@@ -255,7 +131,7 @@ Electrostatics develops in two distinct structural layers:
 <hr>
 <h3>I. Direct Integration (Coulomb World)</h3>
 <p>
-We begin with Coulomb’s law and the principle of superposition. Electric field and potential are obtained by integrating contributions  from infinitesimal charge elements \( dq \).
+We begin with Coulomb’s law and the principle of superposition. Electric field and potential are obtained by integrating contributions from infinitesimal charge elements \( dq \).
 </p>
 <p>
 This method is used for:
@@ -302,7 +178,6 @@ Gauss’ law does not replace Coulomb’s law. It accelerates computation when s
 </section>
 <section>
 <h2>Core Topics</h2>
-
 <ul class="points-list">
     <li><strong>Coulomb’s Law</strong> — Inverse-square interaction between point charges; foundation of electrostatic force.</li>
     <li><strong>Electric Field</strong> — Definition, superposition principle, and visualization through field lines.</li>
@@ -310,7 +185,6 @@ Gauss’ law does not replace Coulomb’s law. It accelerates computation when s
     <li><strong>Equipotential Surfaces</strong> — Geometric representation of constant potential and their relation to \( \vec{E} \).</li>
     <li><strong>Gauss’ Law</strong> — Symmetry-based method for determining electric fields.</li>
 </ul>
-
 </section>
 <section>
 <h2>Chapter Structure</h2>
@@ -331,7 +205,6 @@ Gauss’ law does not replace Coulomb’s law. It accelerates computation when s
 <a href="./14-electrostatic-pressure.html">14. Electrostatic Pressure</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>
