@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,22 +24,23 @@ The fundamental law for computing magnetic fields from current distributions.
 The Biot-Savart Law is to magnetostatics what Coulomb's Law is to electrostatics. It gives the magnetic field contributed by a single infinitesimal current element, and from it — through integration — we can compute the field due to any current distribution.
 </p>
 <p>
-It was formulated experimentally by Jean-Baptiste Biot and Félix Savart in 1820, shortly after Ørsted's discovery that currents affect compass needles.
+It was formulated experimentally, shortly after Ørsted's discovery that currents affect compass needles.
 </p>
 </section>
 <section>
-<h2>The Biot-Savart Formula</h2>
+<h2>The Biot–Savart Formula</h2>
 <p>
-Consider a thin wire carrying current \( I \). Let \( d\vec{l} \) be an infinitesimal element of the wire (a vector in the direction of current flow). Let \( \vec{r} \) be the displacement vector from the current element to the field point \( P \), with magnitude \( r \).
+Consider a thin wire carrying steady current \( I \). Let \( d\vec{l} \) be an infinitesimal element of the wire directed along the current. Let \( \vec{r} \) be the displacement vector from this current element to a field point \( P \), with magnitude \( r \) and unit vector \( \hat{r} \).
 </p>
 <p>
-The magnetic field contribution \( d\vec{B} \) at point \( P \) due to this element is:
+The infinitesimal magnetic field contribution at point \( P \) due to this current element is given by the Biot–Savart law:
 </p>
 \[
 d\vec{B} = \frac{\mu_0}{4\pi} \frac{I\, d\vec{l} \times \hat{r}}{r^2}
 \]
+
 <p>
-In scalar form, the magnitude is:
+In magnitude form:
 </p>
 \[
 dB = \frac{\mu_0}{4\pi} \frac{I\, dl\, \sin\theta}{r^2}
@@ -48,21 +48,53 @@ dB = \frac{\mu_0}{4\pi} \frac{I\, dl\, \sin\theta}{r^2}
 <p>
 where \( \theta \) is the angle between \( d\vec{l} \) and \( \hat{r} \).
 </p>
+<p>
+The factor \( 1/r^2 \) describes how the contribution of a small current element decreases with distance from that element. However, the total magnetic field due to an extended current distribution depends on geometry and symmetry, since the vector contributions must be integrated over the entire current path.
+</p>
 <div class="insightbox">
-\( \mu_0 = 4\pi \times 10^{-7} \text{ T·m/A} \) is the permeability of free space — the magnetic
-analogue of \( \varepsilon_0 \) in electrostatics.
+The \(1/r^2\) dependence applies to the contribution of a current element. The final magnetic field of a complete current configuration may vary as \(1/r\), \(1/r^3\), or even remain approximately constant depending on symmetry.
 </div>
-<h3>Key Features of the Formula</h3>
+<h3>Unit and Dimensions of Magnetic Field</h3>
+<p>
+The SI unit of magnetic field \( \vec{B} \) is the <strong>Tesla (T)</strong>.
+</p>
+<p>
+From the Lorentz force law,
+\[
+\vec{F} = q(\vec{v} \times \vec{B}),
+\]
+we obtain:
+\[
+B = \frac{F}{qv}.
+\]
+</p>
+<p>
+Therefore,
+</p>
+\[
+1 \text{ Tesla} = 1 \frac{\text{Newton}}{\text{Ampere} \cdot \text{meter}}
+\]
+<p>
+Dimensional formula of magnetic field:
+</p>
+\[
+[B] = M^1 T^{-2} I^{-1}
+\]
+<p>
+This shows that magnetic field represents force per unit charge per unit velocity.
+</p>
+<div class="insightbox">
+\( \mu_0 = 4\pi \times 10^{-7} \, \text{T·m/A} \) is the permeability of free space — the magnetic analogue of \( \varepsilon_0 \) in electrostatics.
+</div>
+<h3>Key Features of the Biot–Savart Law</h3>
 <ul>
-<li>The field falls off as \( 1/r^2 \) — an inverse-square law, just like Coulomb's law.</li>
-<li>The cross product \( d\vec{l} \times \hat{r} \) means the field is always perpendicular to both the
-element and the displacement vector.</li>
-<li>A current element parallel to \( \hat{r} \) (\( \theta = 0° \)) produces no field at \( P \).</li>
-<li>A current element perpendicular to \( \hat{r} \) (\( \theta = 90° \)) produces the maximum field.
-</li>
+<li>The elemental contribution decreases as \( 1/r^2 \).</li>
+<li>The cross product \( d\vec{l} \times \hat{r} \) ensures that the magnetic field is perpendicular to both the current element and the line joining the element to the field point.</li>
+<li>If \( d\vec{l} \parallel \hat{r} \) (\( \theta = 0^\circ \) or \( 180^\circ \)), then \( d\vec{B} = 0 \).</li>
+<li>If \( d\vec{l} \perp \hat{r} \) (\( \theta = 90^\circ \)), the contribution is maximum.</li>
+<li>The direction of \( d\vec{B} \) follows the right-hand rule and forms closed loops around the current.</li>
 </ul>
 </section>
-<section>
 <h2>Direction of the Field — The Right-Hand Rule</h2>
 <p>
 The direction of \( d\vec{B} \) is given by the cross product \( d\vec{l} \times \hat{r} \). Physically, you can use the right-hand rule:
@@ -73,6 +105,59 @@ The direction of \( d\vec{B} \) is given by the cross product \( d\vec{l} \times
 </ul>
 <p>
 This curling nature of the magnetic field — circling around its source — is the geometric signature that distinguishes it from the radial electric field.
+</p>
+</section>
+<section>
+<h2>Applicability of Gauss Law</h2>
+<p>
+When we say Gauss law is <strong>applicable</strong> to a field, we mean the following:
+</p>
+<ol>
+<li>
+The field has a source called a <em>pole</em> of strength \( S \), and the field magnitude at distance \( r \) from the pole is of the form
+\[
+|\vec{F}| = \frac{kS}{r^2}
+\]
+that is, it follows an inverse-square dependence.
+</li>
+<li>
+If we evaluate the flux through any closed surface enclosing the pole,
+\[
+\oint \vec{F}\cdot d\vec{A},
+\]
+the result is proportional only to the enclosed pole strength \( S \), and is independent of the size or shape of the surface.
+</li>
+</ol>
+<p>
+The inverse-square dependence is essential. Only when the field varies as \(1/r^2\) does the surface area factor \(4\pi r^2\) cancel the radial fall-off, making the flux independent of the size of the enclosing surface. This guarantees that the enclosed source strength is well-defined and conserved.
+</p>
+<div class="insightbox">
+A Gauss-type law is meaningful for a monopole field only when the field has an inverse-square radial dependence.
+</div>
+</section>
+<section>
+<h2>Application to Magnetism</h2>
+<p>
+We may apply the same Gauss-type reasoning to magnetic fields. If magnetic monopoles existed, the magnetic field due to an isolated monopole of strength \( g \) would have the form
+\[
+|\vec{B}| = \frac{k g}{r^2}.
+\]
+In that case, the magnetic flux through any closed surface enclosing the monopole would be proportional to \( g \).
+</p>
+<p>
+However, when we evaluate the magnetic flux experimentally,
+\[
+\oint \vec{B}\cdot d\vec{A},
+\]
+the result is always zero for every closed surface.
+</p>
+<div class="insightbox">
+\[
+\oint \vec{B}\cdot d\vec{A} = 0
+\]
+</div>
+<p>
+This means that the enclosed magnetic pole strength is zero. Hence, isolated magnetic monopoles do not exist in classical electromagnetism. Magnetic fields are therefore fundamentally dipolar in nature, and magnetic field lines always form closed loops.
 </p>
 </section>
 <section>
@@ -113,5 +198,4 @@ Just as Gauss' Law can be derived from Coulomb's Law, Ampere's Law follows from 
 </footer>
 </div>
 </body>
-
 </html>

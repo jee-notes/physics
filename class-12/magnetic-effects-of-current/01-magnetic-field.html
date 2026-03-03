@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Field | Magnetic Field Basics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Magnetic Effects of Current
+</a>
+</nav>
+<h1>Magnetic Field Basics</h1>
+<p class="subtitle">
+Magnetic field is a dynamical aspect of the electromagnetic field.
+</p>
+<section>
+<h2>What is Magnetic Field?</h2>
+<p>
+In the early study of electricity and magnetism, these two phenomena were considered completely separate. Magnetism was believed to be a special property possessed only by certain materials such as lodestone. Electricity, on the other hand, was associated with charges at rest. This separation changed dramatically after the experiment performed by Oersted, which showed that a current-carrying wire deflects a magnetic needle.
+</p>
+<div class="figure-container">
+<svg width="820" height="340" viewBox="0 0 820 340">
+
+  <!-- LEFT TITLE -->
+  <text x="200" y="30" font-size="16" text-anchor="middle">
+    Stationary Charge Near Current
+  </text>
+
+  <!-- Wire -->
+  <line x1="200" y1="70" x2="200" y2="280" stroke="black" stroke-width="4"/>
+
+  <!-- Current arrow -->
+  <line x1="200" y1="70" x2="200" y2="50" stroke="black" stroke-width="2"/>
+  <polygon points="195,55 205,55 200,45" fill="black"/>
+  <text x="215" y="60" font-size="14">I</text>
+
+  <!-- Magnetic field circular lines (subtle arcs) -->
+  <path d="M160 120 A40 40 0 0 1 240 120" fill="none" stroke="gray" stroke-dasharray="4"/>
+  <path d="M160 200 A40 40 0 0 0 240 200" fill="none" stroke="gray" stroke-dasharray="4"/>
+
+  <!-- Stationary charge -->
+  <circle cx="290" cy="170" r="20" fill="none" stroke="black" stroke-width="2"/>
+  <text x="282" y="175" font-size="16">q</text>
+
+  <!-- v=0 label -->
+  <text x="290" y="210" font-size="14" text-anchor="middle">
+    v = 0
+  </text>
+
+  <!-- No force label -->
+  <text x="290" y="240" font-size="14" text-anchor="middle">
+    No Magnetic Force
+  </text>
+
+  <!-- RIGHT TITLE -->
+  <text x="620" y="30" font-size="16" text-anchor="middle">
+    Compass Near Current
+  </text>
+
+  <!-- Wire -->
+  <line x1="620" y1="70" x2="620" y2="280" stroke="black" stroke-width="4"/>
+
+  <!-- Current arrow -->
+  <line x1="620" y1="70" x2="620" y2="50" stroke="black" stroke-width="2"/>
+  <polygon points="615,55 625,55 620,45" fill="black"/>
+  <text x="635" y="60" font-size="14">I</text>
+
+  <!-- Magnetic field arcs -->
+  <path d="M580 120 A40 40 0 0 1 660 120" fill="none" stroke="gray" stroke-dasharray="4"/>
+  <path d="M580 200 A40 40 0 0 0 660 200" fill="none" stroke="gray" stroke-dasharray="4"/>
+
+  <!-- Compass body -->
+  <circle cx="710" cy="170" r="28" fill="none" stroke="black" stroke-width="2"/>
+
+  <!-- Deflected needle -->
+  <line x1="710" y1="170" x2="730" y2="155" stroke="black" stroke-width="3"/>
+  <line x1="710" y1="170" x2="690" y2="185" stroke="black" stroke-width="3"/>
+
+  <!-- Torque indication -->
+  <path d="M750 150 A30 30 0 0 1 750 190" fill="none" stroke="black"/>
+  <polygon points="745,185 755,185 750,195" fill="black"/>
+
+  <!-- Label -->
+  <text x="710" y="235" font-size="14" text-anchor="middle">
+    Needle Deflects (Magnetic Effect)
+  </text>
+</svg>
+</div>
+<div class="insightbox">
+Electric field is detected using a stationary test charge. Magnetic field requires a moving charge or a magnetic dipole for detection.
+</div>
+<p>
+This experiment revealed a profound fact: magnetic effects are produced not by special materials, but by electric charge in motion. A stationary charge produces only an electric field. However, when that same charge begins to move, the field configuration in space changes. In addition to the electric field, a magnetic field appears.
+</p>
+<div class="insightbox">
+Magnetism is not an independent substance or material property. It is an effect that arises whenever electric charge is in motion.
+</div>
+<p>
+The magnetic field, denoted by \( \vec{B} \), is a vector field defined at every point in space. Around a moving charge or a current-carrying conductor, it assigns a magnitude and a direction to each point. It is not confined to the material producing it; rather, it exists in the surrounding space, stores energy, and exerts forces on other moving charges.
+</p>
+</section>
+<section>
+<h2>But Motion is Relative</h2>
+<p>
+If magnetism arises from motion, an important question immediately appears: motion relative to what? In physics, motion is not absolute — it is always described with respect to a chosen frame of reference.
+</p>
+<p>
+Suppose a charge is moving relative to an observer. The observer detects both an electric field and a magnetic field. But what if we move along with the charge so that, relative to us, the charge appears stationary? In that frame, only an electric field remains, and the magnetic field disappears.
+</p>
+<p>
+This tells us something profound: electric and magnetic fields are not fundamentally separate entities. They are different aspects of a single electromagnetic field, and their observed form depends on the state of motion of the observer. What appears purely electric in one frame can appear partly magnetic in another.
+</p>
+<p>
+Thus, magnetism is deeply connected to the relativity of motion. It is not merely "caused by motion" in a mechanical sense — it reflects how electric fields transform when charges are observed from different states of motion.
+</p>
+</section>
+<section>
+<h2>Current Need Not Be Steady</h2>
+<p>
+Magnetism arises whenever charge moves. This motion does not have to be in the form of a steady current inside a metallic conductor. A single point charge moving through space produces a magnetic field. Similarly, charges drifting collectively inside a wire produce a magnetic field.
+</p>
+<p>
+In many practical situations, we analyze steady currents because they simplify calculations and produce time-independent magnetic fields. However, the underlying principle is more general: any moving charge — whether accelerating, oscillating, or flowing steadily — generates magnetic effects.
+</p>
+<p>
+In this chapter, we will often describe magnetism in terms of steady currents, because that allows us to define current elements and apply systematic laws such as the Biot–Savart Law and Ampere’s Circuital Law. But it is important to remember that the true source of magnetism is charge in motion, not merely “current” as a circuit concept.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
