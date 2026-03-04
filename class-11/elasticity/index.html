@@ -1,221 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elasticity | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #1abc9c; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #e8f8f5; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
 </head>
+
 <body>
-
-<div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
-
-    <h1>Elasticity</h1>
-    <p style="text-align: center;"><em>How materials respond to applied forces.</em></p>
-
-    <section id="deformation">
-        <h2>1. Deformation</h2>
-        <p>
-            <strong>Deformation</strong> is the change in shape or size of a body
-            under the action of external forces.
+    <div class="container">
+        <nav class="top-nav">
+            <a href="../../index.html" class="back-btn">
+                <span>&larr;</span> Back to Syllabus
+            </a>
+        </nav>
+        <h1>Elasticity</h1>
+        <p class="subtitle">
+            How materials respond to applied forces.
         </p>
 
-        <ul>
-            <li>Change in length</li>
-            <li>Change in volume</li>
-            <li>Change in shape</li>
-        </ul>
+        <section>
+            <h2>Conceptual Overview</h2>
+            <p>
+                When external forces are applied to a body, its shape or size may change. This process is called
+                deformation. However, many materials possess an inherent ability to resist these changes and return to
+                their original state once the forces are removed. This property of regaining original shape and size is
+                known as elasticity.
+            </p>
+            <p>
+                In the study of elasticity, we do not treat bodies as perfectly rigid. Instead, we investigate how real
+                materials respond to varying types of stresses—such as stretching, compressing, or shearing. Hooke’s Law
+                forms the cornerstone of this study, establishing a fundamental relationship between the applied stress
+                and the resulting strain within the elastic limit.
+            </p>
+            <p>
+                Understanding elastic behavior is critical not only for fundamental physics but also for engineering
+                applications, as it dictates the strength and durability of materials under everyday mechanical loads.
+            </p>
+        </section>
 
-        <div class="insightbox">
-            Deformation is a geometric change;
-            elasticity is a material property.
-        </div>
-    </section>
+        <section>
+            <h2>Core Topics</h2>
+            <ul class="points-list">
+                <li><strong>Deformation &amp; Elasticity</strong> — Understanding geometric changes and material
+                    properties.</li>
+                <li><strong>Stress and Strain</strong> — Analyzing internal restoring forces and fractional changes in
+                    dimensions.</li>
+                <li><strong>Hooke's Law</strong> — The proportional relationship between stress and strain.</li>
+                <li><strong>Elastic Moduli</strong> — Young's, Bulk, and Shear moduli specifying material stiffness.
+                </li>
+                <li><strong>Poisson's Ratio</strong> — The relationship between lateral and longitudinal strain.</li>
+                <li><strong>Elastic Potential Energy</strong> — The energy stored within deformed materials.</li>
+                <li><strong>Stress-Strain Curve</strong> — Analyzing material limits, ductility, and breaking points.
+                </li>
+            </ul>
+        </section>
 
-    <section id="elasticity">
-        <h2>2. Elasticity</h2>
-        <p>
-            <strong>Elasticity</strong> is the ability of a material to regain its
-            original shape and size after removal of deforming forces.
-        </p>
-
-        <ul>
-            <li>Perfectly elastic bodies are idealizations</li>
-            <li>Real materials have elastic limits</li>
-        </ul>
-    </section>
-
-    <section id="stress-strain">
-        <h2>3. Stress and Strain</h2>
-
-        <div class="grid">
-            <div>
-                <strong>Stress</strong>
-                <ul>
-                    <li>Internal restoring force per unit area</li>
-                    <li>Cause of deformation</li>
-                </ul>
+        <section>
+            <h2>Chapter Structure</h2>
+            <div class="chapter-list">
+                <a href="./01-deformation-and-elasticity.html">1. Deformation and Elasticity</a>
+                <a href="./02-stress-and-strain.html">2. Stress and Strain</a>
+                <a href="./03-hookes-law.html">3. Hooke's Law</a>
+                <a href="./04-elastic-moduli.html">4. Elastic Moduli</a>
+                <a href="./05-poissons-ratio.html">5. Poisson's Ratio</a>
+                <a href="./06-elastic-potential-energy.html">6. Elastic Potential Energy</a>
+                <a href="./07-stress-strain-curve.html">7. Stress-Strain Curve &amp; Mistakes</a>
             </div>
-            <div>
-                <strong>Strain</strong>
-                <ul>
-                    <li>Fractional change in dimension</li>
-                    <li>Effect of stress</li>
-                </ul>
-            </div>
-        </div>
+        </section>
 
-        <div class="formula-block">
-            Normal Stress:
-            \[
-            \sigma = \frac{F}{A}
-            \]
-            <br><br>
-            Longitudinal Strain:
-            \[
-            \varepsilon = \frac{\Delta L}{L}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Stress has units; strain does not.
-        </div>
-    </section>
-
-    <section id="hooke">
-        <h2>4. Hooke’s Law</h2>
-        <p>
-            Within elastic limit, stress is directly proportional to strain.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \text{Stress} \propto \text{Strain}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Hooke’s law is a linear approximation,
-            not a universal truth.
-        </div>
-    </section>
-
-    <section id="moduli">
-        <h2>5. Elastic Moduli</h2>
-
-        <h3>Young’s Modulus</h3>
-        <div class="formula-block">
-            \[
-            Y = \frac{\text{longitudinal stress}}{\text{longitudinal strain}}
-            \]
-        </div>
-
-        <h3>Bulk Modulus</h3>
-        <div class="formula-block">
-            \[
-            K = \frac{\text{volume stress}}{\text{volume strain}}
-            \]
-        </div>
-
-        <h3>Shear Modulus</h3>
-        <div class="formula-block">
-            \[
-            G = \frac{\text{shear stress}}{\text{shear strain}}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Higher modulus → greater stiffness,
-            not greater strength.
-        </div>
-    </section>
-
-    <section id="poisson">
-        <h2>6. Poisson’s Ratio</h2>
-        <p>
-            When a body is stretched, it contracts laterally.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \nu = -\frac{\text{lateral strain}}{\text{longitudinal strain}}
-            \]
-        </div>
-
-        <ul>
-            <li>Dimensionless quantity</li>
-            <li>Typical values: 0 to 0.5</li>
-        </ul>
-    </section>
-
-    <section id="energy">
-        <h2>7. Elastic Potential Energy</h2>
-        <p>
-            Energy stored in a body due to elastic deformation.
-        </p>
-
-        <div class="formula-block">
-            For a spring:
-            \[
-            U = \frac{1}{2}kx^2
-            \]
-        </div>
-
-        <div class="insightbox">
-            Elastic energy is recoverable energy.
-        </div>
-    </section>
-
-    <section id="stress-strain-curve">
-        <h2>8. Stress–Strain Curve</h2>
-        <ul>
-            <li>Proportional limit</li>
-            <li>Elastic limit</li>
-            <li>Yield point</li>
-            <li>Breaking point</li>
-        </ul>
-
-        <div class="insightbox">
-            Ductility and brittleness are read
-            from the stress–strain curve.
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>9. Common Mistakes</h2>
-        <ul>
-            <li>Confusing elasticity with strength</li>
-            <li>Applying Hooke’s law beyond elastic limit</li>
-            <li>Forgetting sign convention in Poisson’s ratio</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
-</div>
-
+        <footer>
+            <hr>
+            <p>By Hitendra K K | Managed via GitHub Pages</p>
+        </footer>
+    </div>
 </body>
+
 </html>
