@@ -14,31 +14,168 @@
 <span>&larr;</span> Back to Vectors
 </a>
 </nav>
-<h1>Vector Optimizations: Finding Extremes</h1>
+<h1>Vector Optimizations: Maximum and Minimum Values</h1>
 <p class="subtitle">
-Determining maximum and minimum values in directional problems.
+Determining extreme values in problems involving vector quantities.
 </p>
+<section>
+<h2>Optimization in Vector Problems</h2>
+<p>
+Many physics problems require us to determine the <strong>maximum</strong> or <strong>minimum</strong> value of a quantity involving vectors. These are known as optimization problems.
+</p>
+<p>
+Since a vector has both magnitude and direction, expressions involving vectors often depend on the angle between them. In many situations the magnitudes of the vectors remain fixed while the <em>relative orientation</em> between them changes.
+</p>
+<p>
+The extreme values then occur at particular geometric alignments of the vectors.
+</p>
+<div class="insightbox">
+In most vector optimization problems, the magnitudes are fixed and the angle between the vectors varies. The maximum or minimum values occur at specific orientations.
+</div>
+</section>
 <section>
 <h2>Relative Orientation for Extremes</h2>
 <p>
-Many physics problems ask for the "minimum force" or "maximum displacement." Since vector operations often involve trigonometric functions like \( \cos \theta \) and \( \sin \theta \), these extremes occur at specific geometric alignments.
+Many vector expressions involve trigonometric factors such as \( \cos \theta \) or \( \sin \theta \). Since these functions have known maximum and minimum values, the extreme values of vector expressions occur at specific angles.
 </p>
 <p>
-For the resultant of two vectors, the range is strictly defined:
+Consider the resultant of two vectors \( \vec A \) and \( \vec B \). The magnitude of the resultant depends on the angle between them.
 </p>
 <ul>
-<li><strong>Maximum Resultant:</strong> Occurs at \( \theta = 0^\circ \), where \( R = A + B \).</li>
-<li><strong>Minimum Resultant:</strong> Occurs at \( \theta = 180^\circ \), where \( R = |A - B| \).</li>
+<li>
+<strong>Maximum resultant</strong> occurs when the vectors are parallel \( (\theta = 0^\circ) \).
+</li>
+<li>
+<strong>Minimum resultant</strong> occurs when the vectors are opposite \( (\theta = 180^\circ) \).
+</li>
 </ul>
+<p>
+The magnitude of the resultant then becomes:
+</p>
+\[
+R_{\text{max}} = A + B
+\]
+\[
+R_{\text{min}} = |A - B|
+\]
 </section>
 <section>
-<h2>Optimizing the Dot and Cross Product</h2>
+<h2>Optimizing Dot and Cross Products</h2>
 <p>
-In energy problems, work is maximized when the force is parallel to displacement (\( \cos 0^\circ = 1 \)). Conversely, in rotational mechanics, torque is maximized when the force is applied perpendicularly to the lever arm (\( \sin 90^\circ = 1 \)).
+Many physical quantities are directly related to dot or cross products of vectors. The extreme values occur when the vectors assume specific orientations.
+</p>
+<ul>
+<li>
+<strong>Work</strong> is given by the dot product
+\[
+W = \vec{F} \cdot \vec{s} = Fs\cos\theta
+\]
+Work is maximum when the force and displacement are parallel \( (\theta = 0^\circ) \).
+</li>
+<li>
+<strong>Torque</strong> depends on the cross product
+\[
+\tau = rF\sin\theta
+\]
+Torque is maximum when the force acts perpendicular to the lever arm \( (\theta = 90^\circ) \).
+</li>
+</ul>
+<p>
+Thus, maximum or minimum values in vector expressions often arise from simple geometric alignments.
+</p>
+</section>
+<section>
+<h2>Optimization with Fixed Direction</h2>
+<p>
+Some problems involve motion along a fixed path. In such cases, the direction of motion remains fixed while the position of the particle changes.
+</p>
+<p>
+Example: An observer is located at the origin \( (0,0) \). A particle moves along a straight line from \( (-4,2) \) to \( (4,2) \).
+</p>
+<p>
+We want to determine the point on this path where the distance from the observer is minimum.
+</p>
+<p>
+From geometry, the shortest distance from a point to a straight line is the <strong>perpendicular distance</strong>. Therefore, the minimum distance occurs when the line joining the observer and the particle is perpendicular to the path of motion.
+</p>
+<p>
+In this example, that point is \( (0,2) \).
+</p>
+<p>
+The same result can also be interpreted using the concept of <strong>velocity of approach</strong>.
+</p>
+<p>
+Let \( \vec r \) be the position vector of the particle and \( \vec v \) its velocity. The rate at which the distance from the observer changes depends on the dot product \( \vec r \cdot \vec v \).
+</p>
+<ul>
+<li>If \( \vec r \cdot \vec v \lt 0 \), the particle is approaching the observer.</li>
+<li>If \( \vec r \cdot \vec v \gt 0 \), the particle is moving away.</li>
+</ul>
+<p>
+The minimum distance occurs at the instant when this quantity changes sign. Before reaching the point \( (0,2) \), the particle approaches the observer and the distance keeps decreasing. After passing this point, the particle begins to move away and the distance increases.
 </p>
 <div class="insightbox">
-When looking for a minimum value (like the shortest distance between two moving objects), we often set the derivative of the magnitude function to zero or use the geometric condition that the relative velocity must be perpendicular to the position vector.
+This problem depends only on the <strong>direction of motion</strong>. The speed of the particle does not affect the location of the minimum distance. Once the direction of the path is fixed, the closest point is determined purely by geometry.
 </div>
+</section>
+<section>
+<h2>Optimization with Fixed Direction of Resultant</h2>
+<p>
+Some vector problems involve a situation where the <strong>direction of the resultant vector is fixed</strong>. In such cases, we must determine the minimum magnitude of another vector that must be added to a given vector so that the resultant points in the required direction.
+</p>
+<p>
+A common example appears in <strong>river–swimmer problems</strong>. The velocity of the river relative to the ground is fixed:
+</p>
+\[
+\vec{v}_{rg} = v_{rg}\,\hat{i}
+\]
+<p>
+Suppose a swimmer wants to reach a point directly across the river. The velocity of the swimmer relative to the ground must therefore point along the direction \( \hat{i} + \hat{j} \).
+</p>
+<p>
+The relation between velocities is
+</p>
+\[
+\vec{v}_{mr} + \vec{v}_{rg} = \vec{v}_{mg}
+\]
+<p>
+Here:
+</p>
+<ul>
+<li>\( \vec{v}_{mr} \) – swimmer's velocity relative to the river</li>
+<li>\( \vec{v}_{rg} \) – river velocity relative to the ground</li>
+<li>\( \vec{v}_{mg} \) – swimmer's velocity relative to the ground (the resultant)</li>
+</ul>
+<p>
+The direction of \( \vec{v}_{mg} \) is fixed (along \( \hat{i} + \hat{j} \)). We must determine the minimum magnitude of \( \vec{v}_{mr} \) that can produce this resultant.
+</p>
+<p>
+Geometrically, draw the river velocity \( \vec{v}_{rg} \) horizontally. Then draw the resultant \( \vec{v}_{mg} \) along the required direction (45° above the horizontal).
+</p>
+<p>
+From the head of \( \vec{v}_{rg} \), draw the vector \( \vec{v}_{mr} \) such that the vector equation
+</p>
+\[
+\vec{v}_{mr} + \vec{v}_{rg} = \vec{v}_{mg}
+\]
+<p>
+is satisfied.
+</p>
+<p>
+The magnitude of \( \vec{v}_{mr} \) becomes <strong>minimum</strong> when it is perpendicular to the resultant \( \vec{v}_{mg} \).
+</p>
+<p>
+We can also understand this without using geometry. When the swimmer enters the river, he automatically gains the velocity of the river \( \vec{v}_{rg} \). Part of this velocity may already lie along the desired direction \( (\hat{i}+\hat{j}) \).
+</p>
+<p>
+However, the component of the river velocity perpendicular to the desired direction will push the swimmer away from the required path. Therefore the swimmer must swim in such a way that his velocity relative to the river cancels this perpendicular component.
+</p>
+<p>
+To cancel the perpendicular component most efficiently, the swimmer's velocity relative to the river must be directed exactly opposite to that perpendicular component. This happens when \( \vec{v}_{mr} \) is perpendicular to the resultant direction \( \vec{v}_{mg} \).
+</p>
+<p>
+Although the problem initially appears to involve river flow and swimming directions, it is fundamentally a problem where the <strong>direction of the resultant vector is fixed</strong>.
+</p>
 </section>
 <footer>
 <hr>
