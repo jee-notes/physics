@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Inelastic Collisions</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./09-collisions.html" class="back-btn">
+                <span>&larr;</span> Back to Collisions
+            </a>
+        </nav>
+
+        <h1>Inelastic and Perfectly Inelastic Collisions</h1>
+        <p class="subtitle">
+            Interactions where momentum is conserved but macroscopic kinetic energy is lost to internal forms.
+        </p>
+
+        <section>
+            <h2>Understanding Inelastic Collisions</h2>
+            <p>
+                In an inelastic collision, some of the initial kinetic energy is converted into other forms of energy
+                such as thermal energy, sound, or potential energy of deformation during the impact. While total energy
+                is always conserved in the universe, the mechanical kinetic energy of the interacting macroscopic bodies
+                is not.
+            </p>
+            <p>
+                Despite this loss of kinetic energy, the total momentum of the system remains strictly conserved,
+                provided there are no significant external impulse forces acting during the short interaction time.
+            </p>
+        </section>
+
+        <section>
+            <h2>Energy Lost in a Perfectly Inelastic Collision</h2>
+            <p>
+                A completely or perfectly inelastic collision occurs when the relative velocity of separation is
+                zero—that is, the objects stick together and move with a common final mass and velocity.
+            </p>
+            <p>
+                For a perfectly inelastic collision where mass \(m_1\) with velocity \(u_1\) strikes a stationary mass
+                \(m_2\):
+            </p>
+            \[v_f = \frac{m_1 u_1}{m_1 + m_2}\]
+            <p>
+                The total kinetic energy lost in such a collision is the difference between initial and final kinetic
+                energies:
+            </p>
+            \[\Delta K = K_i - K_f = \frac{1}{2}m_1 u_1^2 - \frac{1}{2}(m_1+m_2)v_f^2\]
+            <p>
+                Substituting the expression for \(v_f\) gives the standard loss formula:
+            </p>
+            \[\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1+m_2} u_1^2\]
+            <p>
+                This energy appears as heat, sound, and structural deformation. This mathematical form utilizes the
+                "reduced mass" \( \mu = \frac{m_1 m_2}{m_1+m_2} \). Note that this energy loss is always positive — you
+                can never spontaneously gain macroscopic kinetic energy in an inelastic collision.
+            </p>
+        </section>
+
+        <section>
+            <h2>The Ballistic Pendulum: Application of Inelastic Collisions</h2>
+            <p>
+                A classic physics problem combining perfectly inelastic collisions and mechanical energy conservation is
+                the ballistic pendulum, used to measure projectile speed.
+            </p>
+            <p>
+                A bullet of mass \(m\) is fired at speed \(v\) into a large wooden block of mass \(M\) suspended by
+                strings. The bullet embeds itself (perfectly inelastic collision). Then the momentum conservation
+                immediately after impact yields the block's initial swing velocity \(V\):
+            </p>
+            \[mv = (m + M)V \implies V = \frac{mv}{m+M}\]
+            <p>
+                Following this collision, the block-bullet system swings upward like a pendulum, where its kinetic
+                energy is converted entirely to gravitational potential energy at its maximum height \(h\):
+            </p>
+            \[\frac{1}{2}(m + M)V^2 = (m + M)gh \implies V = \sqrt{2gh}\]
+            <p>
+                Combining these allows the calculation of the bullet's original speed:
+            </p>
+            \[v = \frac{m+M}{m} \sqrt{2gh}\]
+            <div class="insightbox">
+                <strong>Critical Concept:</strong> We cannot use energy conservation from the very beginning (bullet to
+                maximum height) because a substantial amount of mechanical energy is dissipated as heat when the bullet
+                buries itself in the wood! Energy is only conserved *after* the collision concludes.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

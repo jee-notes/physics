@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Coefficient of Restitution</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./09-collisions.html" class="back-btn">
+                <span>&larr;</span> Back to Collisions
+            </a>
+        </nav>
+
+        <h1>Coefficient of Restitution</h1>
+        <p class="subtitle">
+            A metric defining the "bounciness" of a collision, characterizing inelasticity.
+        </p>
+
+        <section>
+            <h2>Coefficient of Restitution (\(e\))</h2>
+            <p>
+                The coefficient of restitution \(e\) is a dimensionless quantity that characterizes the degree of
+                elasticity in a collision. It is defined as the
+                ratio of the relative speed of separation after collision to the relative speed of approach before
+                collision along the line of impact:
+            </p>
+            \[e = \frac{v_2 - v_1}{u_1 - u_2}\]
+            <ul>
+                <li>\(e = 1\) → perfectly elastic collision (no kinetic energy loss).</li>
+                <li>\(0 < e < 1\) → partially inelastic collision.</li>
+                <li>\(e = 0\) → perfectly inelastic collision (objects stick together, relative speed of separation is
+                    zero).</li>
+            </ul>
+            <div class="insightbox">
+                The coefficient of restitution is an empirical property of the material pair interacting. It is not
+                derivable from
+                Newton's laws alone — it encapsulates the microscopic physics of structural deformation and recovery in
+                a single
+                number.
+            </div>
+        </section>
+
+        <section>
+            <h2>Fractional Loss of Kinetic Energy</h2>
+            <p>
+                In a collision characterized by coefficient of restitution \(e\), the kinetic energy lost can be
+                computed effectively.
+                For a head-on collision between a mass \(m_1\) and a stationary mass \(m_2\) (\(u_2 = 0\)), the
+                fractional loss of kinetic energy is:
+            </p>
+            \[\frac{\Delta K}{K_i} = \frac{(1 - e^2)m_2}{m_1 + m_2}\]
+            <p>
+                Notice that for a perfectly elastic collision (\(e = 1\)), the fractional loss is exactly zero. For a
+                completely inelastic collision (\(e = 0\)), the fraction lost simplifies to \(\frac{m_2}{m_1+m_2}\).
+            </p>
+        </section>
+
+        <section>
+            <h2>Application: Bouncing Ball</h2>
+            <p>
+                A very common application of the coefficient of restitution is determining the rebound height of a ball
+                dropped onto a hard horizontal surface (like a floor, where the floor's mass \(M \to \infty\)).
+            </p>
+            <p>
+                If a ball is dropped from a height \(h\), its speed just before impact is \(v = \sqrt{2gh}\).
+                The floor is stationary, so the relative speed of approach is \(v\).
+            </p>
+            <p>
+                After the collision, the ball rebounds with speed \(v' = ev\). It will rise to a new height \(h'\):
+            </p>
+            \[h' = \frac{(v')^2}{2g} = \frac{(ev)^2}{2g} = e^2 \frac{v^2}{2g} = e^2 h\]
+            <p>
+                After \(n\) bounces, the height reached by the ball is given by:
+            </p>
+            \[h_n = e^{2n} h\]
+            <div class="insightbox">
+                <strong>Limiting Case:</strong> Since \(e < 1\) for real balls, the sequence of heights \(h, e^2h, e^4h
+                    \dots\) forms a geometric progression that eventually tends to zero as the macroscopic energy
+                    dissipates into heat. </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

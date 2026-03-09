@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work, Power & Energy | Elastic Collisions</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./09-collisions.html" class="back-btn">
+                <span>&larr;</span> Back to Collisions
+            </a>
+        </nav>
+
+        <h1>Elastic Collisions</h1>
+        <p class="subtitle">
+            Interactions where both momentum and kinetic energy are conserved.
+        </p>
+
+        <section>
+            <h2>Head-On Elastic Collision: Result Formulae</h2>
+            <p>
+                For a 1D elastic collision between mass \(m_1\) (initial velocity \(u_1\)) and \(m_2\) (initial velocity
+                \(u_2\)),
+                solving the two conservation equations simultaneously gives the final velocities \(v_1\) and \(v_2\):
+            </p>
+            \[v_1 = \frac{(m_1 - m_2)u_1 + 2m_2 u_2}{m_1 + m_2}\]
+            \[v_2 = \frac{(m_2 - m_1)u_2 + 2m_1 u_1}{m_1 + m_2}\]
+            <h3>Special Cases in 1D</h3>
+            <ul>
+                <li><strong>Equal masses (\(m_1 = m_2\)):</strong> The velocities exchange — \(v_1 = u_2,\; v_2 = u_1\).
+                    A striking billiard ball stops and the struck one moves off at the original speed.</li>
+                <li><strong>Very heavy projectile (\(m_1 \gg m_2\)) striking a stationary target (\(u_2 = 0\)):</strong>
+                    \(v_1 \approx u_1\) (barely slows down),
+                    \(v_2 \approx 2u_1\) (target shoots forward at twice the projectile speed).</li>
+                <li><strong>Very light projectile (\(m_1 \ll m_2\)) striking a stationary target:</strong> \(v_1 \approx
+                    -u_1\) (bounces back), \(v_2
+                    \approx 0\) (target barely moves). Example: a light ball bouncing off a massive stationary wall.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Mathematical Derivation of 1D Formulae</h2>
+            <p>
+                The two fundamental equations for perfectly elastic 1D collisions are:
+            </p>
+            <ol>
+                <li>Conservation of Momentum: \(m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2\)</li>
+                <li>Conservation of Kinetic Energy: \(\frac{1}{2}m_1 u_1^2 + \frac{1}{2}m_2 u_2^2 = \frac{1}{2}m_1 v_1^2
+                    + \frac{1}{2}m_2 v_2^2\)</li>
+            </ol>
+            <p>
+                By rearranging and factoring the energy equation into a difference of squares, we can divide it by the
+                rearranged momentum equation to obtain the simple relative velocity relation:
+            </p>
+            \[u_1 - u_2 = v_2 - v_1\]
+            <p>
+                This shows that in a perfectly elastic collision, the relative speed of approach equals the relative
+                speed of separation. Substituting this linear relation back into the momentum equation yields the final
+                velocities.
+            </p>
+        </section>
+
+        <section>
+            <h2>Elastic Collisions in 2D (Glancing Collisions)</h2>
+            <p>
+                If the collision is not head-on (i.e. the centers of mass do not align along the initial velocity
+                vector), the objects will scatter at angles in a 2D plane. Momentum conservation must be applied in two
+                orthogonal directions:
+            </p>
+            <p><strong>x-direction:</strong></p>
+            \[m_1 u_1 = m_1 v_{1x} + m_2 v_{2x}\]
+            <p><strong>y-direction:</strong></p>
+            \[0 = m_1 v_{1y} + m_2 v_{2y}\]
+            <p>
+                Kinetic Energy conservation yields a single scalar equation. Since there are four unknown velocity
+                components and only three equations, one scattering angle must usually be measured or given to solve the
+                system completely.
+            </p>
+            <div class="insightbox">
+                <strong>Important Property for Equal Masses in 2D:</strong> If two equal-mass objects undergo an elastic
+                glancing collision and one is initially at rest, they will scatter at exactly a 90° angle to each other.
+            </div>
+        </section>
+
+        <footer>
+            <hr>
+            <p>By Hitendra K K</p>
+        </footer>
+    </div>
+</body>
+
+</html>

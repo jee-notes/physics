@@ -72,58 +72,12 @@
         </section>
 
         <section>
-            <h2>Head-On Elastic Collision: Result Formulae</h2>
-            <p>
-                For a 1D elastic collision between mass \(m_1\) (velocity \(u_1\)) and \(m_2\) (velocity \(u_2\)),
-                solving the two conservation equations simultaneously gives:
-            </p>
-            \[v_1 = \frac{(m_1 - m_2)u_1 + 2m_2 u_2}{m_1 + m_2}\]
-            \[v_2 = \frac{(m_2 - m_1)u_2 + 2m_1 u_1}{m_1 + m_2}\]
-            <h3>Special Cases</h3>
-            <ul>
-                <li><strong>Equal masses (\(m_1 = m_2\)):</strong> The velocities exchange — \(v_1 = u_2,\; v_2 = u_1\).
-                    A striking billiard ball stops and the struck one moves off at the original speed.</li>
-                <li><strong>Very heavy projectile (\(m_1 \gg m_2\)):</strong> \(v_1 \approx u_1\) (barely slows down),
-                    \(v_2 \approx 2u_1\) (target shoots forward at twice the projectile speed).</li>
-                <li><strong>Very light projectile (\(m_1 \ll m_2\)):</strong> \(v_1 \approx -u_1\) (bounces back), \(v_2
-                    \approx 0\) (target barely moves). Example: a ball bouncing off a wall.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Coefficient of Restitution</h2>
-            <p>
-                The coefficient of restitution \(e\) characterises the "bounciness" of a collision. It is defined as the
-                ratio of the relative speed of separation to the relative speed of approach along the line of collision:
-            </p>
-            \[e = \frac{v_2 - v_1}{u_1 - u_2}\]
-            <ul>
-                <li>\(e = 1\) → perfectly elastic collision</li>
-                <li>\(0 < e < 1\) → partially inelastic collision</li>
-                <li>\(e = 0\) → perfectly inelastic collision (objects stick)</li>
-            </ul>
-            <div class="insightbox">
-                The coefficient of restitution is an empirical property of the material pair. It is not derivable from
-                Newton's laws alone — it encapsulates the microscopic physics of deformation and recovery in a single
-                number.
+            <h2>Detailed Collision Types</h2>
+            <div class="chapter-list">
+                <a href="./09a-elastic-collisions.html">1. Elastic Collisions and Derivations</a>
+                <a href="./09b-inelastic-collisions.html">2. Inelastic Collisions & Ballistic Pendulum</a>
+                <a href="./09c-coefficient-of-restitution.html">3. Coefficient of Restitution</a>
             </div>
-        </section>
-
-        <section>
-            <h2>Energy Lost in a Perfectly Inelastic Collision</h2>
-            <p>
-                For a perfectly inelastic collision where \(m_2\) is initially at rest:
-            </p>
-            \[v_f = \frac{m_1 u_1}{m_1 + m_2}\]
-            <p>
-                The kinetic energy lost is:
-            </p>
-            \[\Delta K = \frac{1}{2}m_1 u_1^2 - \frac{1}{2}(m_1+m_2)v_f^2 = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1+m_2}
-            \cdot u_1^2\]
-            <p>
-                This energy appears as heat, sound, and deformation. It is always positive — you can never gain kinetic
-                energy in a collision.
-            </p>
         </section>
 
         <footer>
