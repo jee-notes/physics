@@ -1,244 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Physical World | JEE Physics Notes</title>
-
-    <style>
-        :root { 
-            --primary:#2c3e50; 
-            --secondary:#2980b9; 
-            --accent:#3498db; 
-            --bg:#f4f7fa; 
-        }
-
-        body { 
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height:1.7; 
-            background:var(--bg); 
-            color:#333; 
-            margin:0; 
-            padding:30px; 
-        }
-
-        .container { 
-            max-width:950px; 
-            margin:auto; 
-            background:#fff; 
-            padding:50px; 
-            border-radius:16px; 
-            box-shadow:0 12px 30px rgba(0,0,0,0.08); 
-        }
-
-        h1, h2 { color:var(--primary); }
-
-        h1 { 
-            border-bottom:3px solid var(--secondary); 
-            padding-bottom:12px; 
-            text-align:center; 
-            margin-bottom:10px;
-        }
-
-        .subtitle {
-            text-align:center;
-            opacity:0.7;
-            margin-bottom:35px;
-            font-size:0.95rem;
-        }
-
-        h2 { 
-            margin-top:40px; 
-            margin-bottom:15px;
-        }
-
-        section {
-            margin-bottom:40px;
-        }
-
-        section:not(:last-of-type)::after {
-            content:"";
-            display:block;
-            height:1px;
-            margin-top:40px;
-            background:linear-gradient(to right, transparent, #ddd, transparent);
-        }
-
-        /* Navigation */
-        .top-nav {
-            margin-bottom:35px;
-        }
-
-        .back-btn {
-            display:inline-flex;
-            align-items:center;
-            gap:8px;
-            padding:8px 14px;
-            background:#eef5fb;
-            border-radius:8px;
-            font-weight:600;
-            text-decoration:none;
-            color:var(--primary);
-            transition:all 0.25s ease;
-        }
-
-        .back-btn:hover {
-            background:#dcecf9;
-            transform:translateX(-3px);
-        }
-
-        ul {
-            margin-top:10px;
-            padding-left:20px;
-        }
-
-        /* Chapter Cards */
-        .chapter-list {
-            margin-top:25px;
-        }
-
-        .chapter-list a {
-            display:block;
-            padding:18px 20px;
-            margin-bottom:15px;
-            background:#f9fbfd;
-            border-left:5px solid var(--secondary);
-            border-radius:10px;
-            text-decoration:none;
-            color:#2c3e50;
-            font-weight:500;
-            transition:all 0.25s ease;
-            position:relative;
-        }
-
-        .chapter-list a::after {
-            content: "→";
-            position:absolute;
-            right:20px;
-            opacity:0.4;
-            transition:all 0.25s ease;
-        }
-
-        .chapter-list a:hover {
-            background:#eef5fb;
-            transform:translateY(-3px);
-            box-shadow:0 8px 18px rgba(0,0,0,0.08);
-        }
-
-        .chapter-list a:hover::after {
-            opacity:1;
-            right:15px;
-        }
-
-        footer { 
-            text-align:center; 
-            margin-top:60px; 
-            color:#7f8c8d; 
-            font-size:0.9rem; 
-        }
-
-        hr {
-            margin:40px 0;
-            border:none;
-            height:1px;
-            background:linear-gradient(to right, transparent, #ccc, transparent);
-        }
-
-    </style>
+<meta charset="UTF-8">
+<title>Physical World | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-
 <div class="container">
-
-    <nav class="top-nav">
-        <a href="../../index.html" class="back-btn">
-            <span>&larr;</span> Back to Syllabus
-        </a>
-    </nav>
-
-    <h1>Physical World</h1>
-    <p class="subtitle">
-        Foundational assumptions behind all of physics.
-    </p>
-
-    <section>
-        <h2>Why This Chapter Comes First</h2>
-        <p>
-            Before solving problems, we must clarify what we are solving.
-            Physics does not begin with equations.
-            It begins with identifying what exists,
-            what can be measured,
-            and how knowledge about it is organized.
-        </p>
-
-        <p>
-            This chapter is not computational.
-            It is structural.
-            It defines the framework within which all later mathematics operates.
-        </p>
-    </section>
-
-    <section>
-        <h2>Working Definitions</h2>
-
-        <p>
-            <strong>Physical World:</strong> The objective reality that exists
-            independent of individual perception.
-        </p>
-
-        <p>
-            <strong>Physics:</strong> The quantitative study of matter and energy
-            as they exist and change in space and time.
-        </p>
-    </section>
-
-    <section>
-        <h2>How This Chapter Should Be Read</h2>
-
-        <p>
-            This chapter does not introduce formulas.
-            It introduces assumptions.
-            Many of these assumptions are so fundamental
-            that textbooks rarely state them explicitly.
-        </p>
-
-        <p>
-            Here, we make them explicit.
-            Because solving problems requires clarity about
-            the structure of the world we are modeling.
-        </p>
-    </section>
-
-    <section>
-        <h2>Scope of This Chapter</h2>
-        <p>This chapter clarifies:</p>
-        <ul>
-            <li>What we mean by the physical world</li>
-            <li>What physics studies</li>
-            <li>How scientific knowledge is structured</li>
-            <li>Why measurement and units come first</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Chapter Sections</h2>
-
-        <div class="chapter-list">
-            <a href="./01-physical-world-structure.html">1. The Physical World</a>
-            <a href="./02-introduction-to-physics.html">2. Introduction to Physics</a>
-            <a href="./03-scientific-method.html">3. Scientific Method</a>
-            <a href="./04-law-vs-theory.html">4. Laws and Theories</a>
-            <a href="./05-unification-reductionism.html">5. Unification and Reductionism</a>
-            <a href="./06-measurement.html">6. Measurement and Physical Quantities</a>
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
-
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Physical World</h1>
+<p class="subtitle">
+Foundational assumptions behind all of physics.
+</p>
+<section>
+<h2>Why This Chapter Comes First</h2>
+<p>
+Before solving problems, we must clarify what we are solving. Physics does not begin with equations. It begins with identifying what exists, what can be measured, and how knowledge about it is organized.
+</p>
+<p>
+This chapter is not computational. It is structural. It defines the framework within which all later mathematics operates.
+</p>
+</section>
+<section>
+<h2>Working Definitions</h2>
+<p>
+<strong>Physical World:</strong> The objective reality that exists independent of individual perception.
+</p>
+<p>
+<strong>Physics:</strong> The quantitative study of matter and energy as they exist and change in space and time.
+</p>
+</section>
+<section>
+<h2>How This Chapter Should Be Read</h2>
+<p>
+This chapter does not introduce formulas. It introduces assumptions. Many of these assumptions are so fundamental that textbooks rarely state them explicitly.
+</p>
+<p>
+Here, we make them explicit. Because solving problems requires clarity about the structure of the world we are modeling.
+</p>
+</section>
+<section>
+<h2>Scope of This Chapter</h2>
+<p>This chapter clarifies:</p>
+<ul>
+<li>What we mean by the physical world</li>
+<li>What physics studies</li>
+<li>How scientific knowledge is structured</li>
+<li>Why measurement and units come first</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Sections</h2>
+<div class="chapter-list">
+<a href="./01-physical-world-structure.html">1. The Physical World</a>
+<a href="./02-introduction-to-physics.html">2. Introduction to Physics</a>
+<a href="./03-scientific-method.html">3. Scientific Method</a>
+<a href="./04-law-vs-theory.html">4. Laws and Theories</a>
+<a href="./05-unification-reductionism.html">5. Unification and Reductionism</a>
+<a href="./06-measurement.html">6. Measurement and Physical Quantities</a>
 </div>
-
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
