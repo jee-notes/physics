@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wedge–Block–Rope System</title>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+body{
+font-family: system-ui;
+background:#f6f8fb;
+margin:40px;
+line-height:1.6;
+color:#2f3640;
+}
+h1{
+text-align:center;
+}
+.container{
+max-width:900px;
+margin:auto;
+}
+.diagram{
+text-align:center;
+margin:40px 0;
+}
+svg{
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+padding:20px;
+}
+section{
+background:white;
+padding:25px;
+margin:25px 0;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+h2{
+margin-top:0;
+color:#2c3e50;
+}
+.method{
+border-left:4px solid #3498db;
+padding-left:16px;
+}
+.result{
+background:#f3f7ff;
+padding:10px 15px;
+border-radius:6px;
+margin-top:10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Work, Power &amp; Energy
+            </a>
+        </nav>
+<div class="container">
+<h1>Wedge–Block–Rope System</h1>
+<p>
+A wedge of mass \(M\) rests on a smooth horizontal surface. A block of mass \(m\) is placed on its incline of angle \( \theta \). A light rope connects the block to a fixed wall after passing over a frictionless pulley at the top of the wedge. Find accelerations of wedge and block, Tension in the rope, Normal between block and wedge and Normal from ground.
+</p>
+<div class="diagram">
+<svg width="520" height="260">
+<!-- ground -->
+<line x1="30" y1="220" x2="490" y2="220" stroke="black" stroke-width="3"/>
+<!-- wedge -->
+<polygon points="140,220 340,220 340,120"
+fill="#dfe6e9" stroke="black" stroke-width="2"/>
+<!-- block -->
+<g transform="rotate(-26.6 140 220)">
+<rect x="210" y="190"
+width="30" height="30"
+fill="#74b9ff"
+stroke="black"/>
+<text x="218" y="205" font-size="16">m</text>
+<line x1="240" y1="205" x2="360" y2="205" stroke="black" stroke-width="2"/>
+</g>
+<!-- pulley -->
+<circle cx="340" cy="120" r="15"
+fill="white"
+stroke="black"
+stroke-width="2"/>
+<!-- wall -->
+<line x1="470" y1="80" x2="470" y2="200"
+stroke="black"
+stroke-width="3"/>
+<!-- rope segment -->
+<line x1="340" y1="105" x2="470" y2="105" stroke="black" stroke-width="2"/>
+<!-- labels -->
+<text x="250" y="200" font-size="16">M</text>
+<text x="170" y="217" font-size="16">θ</text>
+</svg>
+</div>
+<section class="method">
+<h2>Assumptions and Constraints</h2>
+<p>The assumptions and constraints are common to all methods.</p>
+<p>Let wedge acceleration wrt ground be \(a_w\). The direction of \(\vec{a}_{w}\) is rightward towards the wall. Let block acceleration wrt wedge be \(a_{b/w}\). The direction of \(\vec{a}_{b/w}\) is down the incline.</p>
+\[
+\vec{a}_{b/w} = - a_{b/w} \cos \theta \,\hat{i} - a_{b/w} \sin \theta \,\hat{j}  
+\]
+\[
+\vec{a}_{w} = a_{w} \,\hat{i}  
+\]
+<p>To find expression for acceleration of block wrt ground \(a_b\), we use:</p>
+\[
+\vec{a}_{b} = \vec{a}_{b/w} + \vec{a}_{w}  
+\]
+\[
+\vec{a}_{b} = (a_{w} - a_{b/w} \cos \theta) \,\,\hat{i} - a_{b/w} \sin \theta \,\hat{j}  
+\]
+<p>
+Next we apply the <strong>constant length constraint of the rope</strong>. The method used here is: <em>with respect to the pulley, the velocity of approach of one end of the rope equals the velocity of separation of the other end</em>. In this method we do not analyse the rope itself; instead we only consider the motion of the two rope ends relative to the pulley.
+</p>
+<p>
+The pulley is rigidly attached to the wedge, therefore it shares the same motion as the wedge. Hence we analyse the motion in a frame attached to the pulley at the top of the wedge.
+</p>
+<p>
+As the wedge accelerates to the right with acceleration \(a_w\), the pulley also accelerates to the right. Since the wall is fixed in the ground frame, it appears (with respect to the pulley) to approach the pulley. Consequently, the length of the rope segment between the wall and the pulley tends to <strong>decrease</strong>.
+</p>
+<p>
+At the other end of the rope, the block moves down the incline relative to the wedge. Thus, with respect to the pulley, the block moves away from the pulley along the rope, causing the length of the rope segment between the block and the pulley to <strong>increase</strong>.
+</p>
+<p>
+Since the total length of the rope is constant, the rate at which one segment shortens must equal the rate at which the other segment lengthens. Therefore, the magnitude of the block's acceleration relative to the wedge must equal the magnitude of the wedge's acceleration:
+</p>
+\[
+|\vec{a}_{b/w}| = |\vec{a}_w| = a
+\]
+<p>
+We denote this common magnitude of acceleration by \(a\). The tension in the massless rope is denoted as \(T\).  The normal between block and wedge is denoted as \(N\). The normal between ground and wedge is denoted as \(N_g\).
+</p>
+</section>
+<section class="method">
+<h2>Method 1 — Newton's Laws (NLM)</h2>
+<p>
+In Method 1 we apply <strong>Newton’s Laws of Motion</strong> to each mass separately. Since the wedge is accelerating, it is convenient to analyse the motion of the block in the <strong>non-inertial frame of the wedge</strong>. In this frame we introduce a <strong>pseudo force</strong> of magnitude \(m a_w\) acting on the block opposite to the acceleration of the wedge.
+</p>
+<p>
+The free body diagram of the block (with respect to the wedge frame) therefore contains:
+</p>
+<ul>
+<li>Weight \(mg\) acting vertically downward</li>
+<li>Pseudo force \(m a_w\) acting horizontally towards the left</li>
+<li>Normal reaction \(N\) from the incline, perpendicular to the surface</li>
+<li>Tension \(T\) in the string acting along the incline upward</li>
+</ul>
+<p>
+The acceleration of the block relative to the wedge, \(a_{b/w}\), is along the incline downwards. Hence the forces are resolved along two convenient directions:
+</p>
+<ul>
+<li><strong>Along the incline</strong> (direction of \(a_{b/w}\)) to obtain the equation of motion</li>
+<li><strong>Perpendicular to the incline</strong> to determine the normal reaction</li>
+</ul>
+<p>
+These equations, together with the rope-length constraint, allow us to determine the accelerations and the tension in the string.
+</p>
+<p>Block equation along incline:</p>
+\[
+mg\sin\theta + m a_w\cos\theta - T = m a_{b/w}
+\]
+<p>Block equation perpendicular to incline:</p>
+\[
+m a_w\sin\theta + N = mg\cos\theta
+\]
+<p>
+Using the rope constraint obtained earlier:
+</p>
+\[
+a_{b/w} = a_w = a
+\]
+<p>
+Substituting in the equation along the incline:
+</p>
+\[
+mg\sin\theta + ma\cos\theta - T = ma
+\]
+<p>
+Rearranging,
+</p>
+\[
+T = mg\sin\theta + ma(\cos\theta - 1)
+\]
+<p>
+From the equation perpendicular to the incline:
+</p>
+\[
+ma\sin\theta + N = mg\cos\theta
+\]
+<p>
+Hence,
+</p>
+\[
+N = mg\cos\theta - ma\sin\theta
+\]
+<p>
+Now apply Newton’s second law to the wedge along the horizontal direction:
+</p>
+\[
+Ma = T - T\cos\theta + N\sin\theta
+\]
+<p>
+Substitute the expressions for \(T\) and \(N\):
+</p>
+\[
+Ma = \left[mg\sin\theta + ma(\cos\theta-1)\right] - \left[mg\sin\theta + ma(\cos\theta-1)\right]\cos\theta + \left[mg\cos\theta - ma\sin\theta\right]\sin\theta
+\]
+<p>
+Expand the terms:
+</p>
+\[
+Ma = mg\sin\theta + ma(\cos\theta-1) - mg\sin\theta\cos\theta - ma(\cos\theta-1)\cos\theta + mg\cos\theta\sin\theta - ma\sin^2\theta
+\]
+<p>
+Observe that the terms \(mg\sin\theta\cos\theta\) cancel:
+</p>
+\[
+Ma = mg\sin\theta + ma(\cos\theta-1) - ma(\cos\theta-1)\cos\theta - ma\sin^2\theta
+\]
+<p>
+Factor \(ma\) from the remaining terms:
+</p>
+\[
+Ma = mg\sin\theta + ma\left[(\cos\theta-1) - (\cos\theta-1)\cos\theta - \sin^2\theta \right]
+\]
+<p>
+Using the identity \( \sin^2\theta = 1-\cos^2\theta = (1-\cos\theta)(1+\cos\theta)\), the bracket simplifies to
+</p>
+\[
+\left[(\cos\theta-1) - (\cos\theta-1)\cos\theta - \sin^2\theta \right] = \left[(\cos\theta-1)(1-\cos\theta) - (1-\cos\theta)(1+\cos\theta) \right] = -(2(1-\cos\theta))
+\]
+<p>
+Thus,
+</p>
+\[
+Ma = mg\sin\theta - 2ma(1-\cos\theta)
+\]
+<p>
+Rearranging,
+</p>
+\[
+a\left[M + 2m(1-\cos\theta)\right] = mg\sin\theta
+\]
+<p>
+Hence the acceleration of the wedge is
+</p>
+\[
+a_w = a =
+\frac{mg\sin\theta}{M + 2m(1-\cos\theta)}
+\]
+<p>
+The Normal from ground is obtained from balancing vertical forces on wedge:
+</p>
+\[
+N_g = N\cos\theta + Mg
+\]
+</section>
+<section class="method">
+<h2>Method 2 — Centre of Mass (COM) / System Approach</h2>
+<p>
+In this method we treat the <strong>wedge + block + rope as a single system</strong>. For any system of particles,
+</p>
+\[
+\sum \vec{F}_{ext} = (M+m)\vec{a}_{CM}
+\]
+<p>
+where \(\vec{a}_{CM}\) is the acceleration of the centre of mass. All forces between the block, the wedge and the rope are internal and therefore cancel when the system is considered as a whole.
+</p>
+<p>
+In the horizontal direction the only external force acting on the system is the tension \(T\) from the wall to which rope is attached. Hence,
+</p>
+\[
+\sum F_x = T
+\]
+<p>
+From the kinematics obtained earlier: 
+</p>
+\[
+a_{bx} = a_w - a_{b/w}\cos\theta
+\]
+<p>
+and as per rope constraint
+</p>
+\[
+a_{b/w} = a_w = a
+\]
+<p>
+the horizontal acceleration of the block becomes
+</p>
+\[
+a_{bx} = a(1-\cos\theta)
+\]
+<p>
+The horizontal acceleration of the centre of mass is therefore
+</p>
+\[
+a_{CM,x} =
+\frac{M a_w + m a_{bx}}{M+m}
+=
+\frac{Ma + ma(1-\cos\theta)}{M+m}
+\]
+<p>
+Applying Newton’s second law to the system,
+</p>
+\[
+T = (M+m)a_{CM,x}
+\]
+\[
+T = Ma + ma(1-\cos\theta)
+\]
+\[
+T = a\left[M + m(1-\cos\theta)\right]
+\]
+<p>
+From the block equation along the incline (obtained in Method 1),
+</p>
+\[
+T = mg\sin\theta + ma(\cos\theta - 1)
+\]
+<p>
+Equating the two expressions for tension,
+</p>
+\[
+a\left[M + m(1-\cos\theta)\right] = mg\sin\theta + ma(\cos\theta - 1)
+\]
+<p>
+Rearranging,
+</p>
+\[
+a\left[M + 2m(1-\cos\theta)\right] = mg\sin\theta
+\]
+<p>
+Hence the acceleration of the wedge is
+</p>
+\[
+a_w = a = \frac{mg\sin\theta}{M + 2m(1-\cos\theta)}
+\]
+<p>
+The acceleration of the block with respect to ground is
+</p>
+\[
+a_{bx} = a(1-\cos\theta), \qquad
+a_{by} = -a\sin\theta
+\]
+<p>
+The remaining quantities \(T\), \(N\), and \(N_g\) follow from the relations derived in Method 1. In this method it is not necessary to analyse forces perpendicular to the incline in order to determine the acceleration.
+</p>
+</section>
+<section class="method">
+<h2>Method 3 — Work–Energy Principle (System Method)</h2>
+<p>
+In this method we apply the <strong>Work–Energy Principle</strong> to the system consisting of the <strong>wedge + block + rope</strong>.
+</p>
+<p>
+The external forces acting on the system are:
+</p>
+<ul>
+<li>Gravity acting on the block</li>
+<li>Normal reaction from the ground on the wedge</li>
+<li>Tension exerted by the wall on the rope</li>
+</ul>
+<p>
+The ground normal does <strong>no work</strong> because the wedge moves only horizontally while the normal is vertical. The tension also does <strong>no work</strong> since its point of application on the wall is fixed. Hence the only force doing work on the system is the weight of the block.
+</p>
+<p>
+Therefore the change in kinetic energy of the system equals the work done by gravity:
+</p>
+\[
+\Delta K = W_g
+\]
+<p>
+From the kinematics obtained earlier: 
+</p>
+\[
+\vec{a}_{b} = a(1 - \cos\theta) \,\hat{i} - a \sin \theta \,\hat{j}
+\]
+\[
+|\vec{a}_{b}|^2 = a^2((1 - \cos\theta)^2 + (\sin\theta)^2) = a^2(1 - \cos\theta)((1 - \cos\theta) + (1 + \cos\theta)) = 2a^2(1 - \cos\theta)
+\]
+\[
+|\vec{a}_{b}|^2 = 2|\vec{a}_{w}|^2(1 - \cos\theta)
+\]
+<p>
+As all are constants and system starts from rest, the same relation holds between velocities and distances. 
+</p>
+<p>
+If the wedge velocity is \(V\) wrt ground, the velocity of the block relative to the wedge is also \(V\) along the incline. We need velocity of block wrt ground to use energy conservation. For velocity wrt ground, we use the relation obtained earlier,
+</p>
+\[
+v_b^2 = 2V^2(1-\cos\theta)
+\]
+<p>
+Let the wedge move horizontally by a distance \(X\). The block simultaneously moves down the incline by the same distance relative to the wedge. So wrt wedge, it dropped vertically downward by:
+</p>
+\[
+h = X\sin\theta
+\]
+<p>
+This vertical drop is wrt wedge. But as wedge has no vertical motion, its the same wrt ground. 
+</p>
+<p>
+Thus the loss of gravitational potential energy is
+</p>
+\[
+W_g = mgX\sin\theta
+\]
+<p>
+The kinetic energies of the bodies are
+</p>
+<p>Wedge:</p>
+\[
+K_w = \frac12 MV^2
+\]
+<p>Block:</p>
+\[
+K_b = \frac12 m v_b^2 = mV^2(1-\cos\theta)
+\]
+<p>
+Total kinetic energy of the system:
+</p>
+\[
+K = \frac12[M + 2m(1-\cos\theta)]V^2
+\]
+<p>
+Applying energy conservation,
+</p>
+\[
+mgX\sin\theta = \frac12[M + 2m(1-\cos\theta)]V^2
+\]
+<p>
+Differentiating with respect to time gives the acceleration of the wedge:
+</p>
+<div class="result">
+\[
+a_w =
+\frac{mg\sin\theta}{M + 2m(1-\cos\theta)}
+\]
+</div>
+</section>
+</div>
+</body>
+</html>
