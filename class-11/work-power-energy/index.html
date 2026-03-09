@@ -1,320 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work, Power & Energy | JEE Physics Notes</title>
-    <script src="./assets/js/math.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #c0392b;
-            --accent: #e74c3c;
-            --bg: #fdfafa;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            background: var(--bg);
-            color: #333;
-            margin: 0;
-            padding: 30px;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: auto;
-            background: #fff;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        h1,
-        h2 {
-            color: var(--primary);
-        }
-
-        h1 {
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 12px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-            opacity: 0.7;
-            margin-bottom: 35px;
-            font-size: 0.95rem;
-        }
-
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 15px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        section:not(:last-of-type)::after {
-            content: "";
-            display: block;
-            height: 1px;
-            margin-top: 40px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
-        }
-
-        .top-nav {
-            margin-bottom: 35px;
-        }
-
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            background: #fdedec;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--primary);
-            transition: all 0.25s ease;
-        }
-
-        .back-btn:hover {
-            background: #fadbd8;
-            transform: translateX(-3px);
-        }
-
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .chapter-list {
-            margin-top: 25px;
-        }
-
-        .chapter-list a {
-            display: block;
-            padding: 18px 20px;
-            margin-bottom: 15px;
-            background: #fef9f9;
-            border-left: 5px solid var(--secondary);
-            border-radius: 10px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: all 0.25s ease;
-            position: relative;
-        }
-
-        .chapter-list a::after {
-            content: "→";
-            position: absolute;
-            right: 20px;
-            opacity: 0.4;
-            transition: all 0.25s ease;
-        }
-
-        .chapter-list a:hover {
-            background: #fdedec;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-        }
-
-        .chapter-list a:hover::after {
-            opacity: 1;
-            right: 15px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-
-        hr {
-            margin: 40px 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #ccc, transparent);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work, Power & Energy | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
-        <h1>Work, Power &amp; Energy</h1>
-        <p class="subtitle">
-            The scalar framework for understanding motion, interaction, and change.
-        </p>
-
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                Work, energy, and power constitute the scalar framework of classical mechanics. While Newton's laws
-                describe motion in terms of forces and accelerations at every instant, the energy framework provides a
-                global description — it tells us what changes over an interval rather than what is happening at a single
-                moment.
-            </p>
-            <p>
-                This chapter introduces the concept of work done by a force, derives kinetic energy from it, and then
-                extends to potential energy stored in a system by virtue of configuration. Together, these ideas yield
-                the principle of conservation of mechanical energy — one of the most powerful tools in problem-solving.
-            </p>
-        </section>
-
-        <section>
-            <h2>Energy as the Central Idea</h2>
-            <p>
-                Energy is the unifying concept throughout all of physics. In mechanics, it appears in two forms: kinetic
-                energy (associated with motion) and potential energy (associated with position or configuration). Both
-                are scalar quantities — they have magnitude but no direction — which makes energy methods particularly
-                powerful.
-            </p>
-            <p>
-                Unlike forces, which must be added vectorially and tracked at every point along a path, energy allows us
-                to compare the state of a system at two instants without knowing the details of the path between them.
-            </p>
-            <p>
-                This is what makes the energy approach superior to Newton's laws for many classes of problems —
-                particularly those involving variable forces, complex trajectories, or constraints.
-            </p>
-        </section>
-
-        <section>
-            <h2>Kinetic and Potential Energy</h2>
-            <p>
-                Kinetic energy \( K \) and potential energy \( U \) represent two complementary ways a mechanical system
-                stores energy:
-            </p>
-            \[
-            K = \frac{1}{2}mv^2 \qquad U = \text{depends on configuration}
-            \]
-            <p>
-                This is closely analogous to the dual description of fields in electrostatics: the electric field \(
-                \vec{E} \) (local, vectorial) corresponds to force, while the potential \( V \) (global, scalar)
-                corresponds to energy. In both cases, the scalar quantity encodes the same information in a more
-                convenient form.
-            </p>
-            <p>
-                For conservative forces, potential energy is uniquely defined and the total mechanical energy \( E = K +
-                U \) is conserved.
-            </p>
-        </section>
-
-        <section>
-            <h2>Work and the Work–Energy Theorem</h2>
-            <p>
-                Work is defined as the scalar product of force and displacement. It connects force — the cause of motion
-                change — with energy — the measure of that change:
-            </p>
-            \[
-            W = \vec{F} \cdot \vec{s} = Fs\cos\theta
-            \]
-            <p>
-                The work–energy theorem is Newton's second law expressed in scalar form. It states that the net work
-                done on an object equals the change in its kinetic energy:
-            </p>
-            \[
-            W_{\text{net}} = \Delta K
-            \]
-            <p>
-                This result holds regardless of whether the forces are constant or variable, making it a far more
-                general statement than it first appears.
-            </p>
-        </section>
-
-        <section>
-            <h2>Conservative and Non-Conservative Forces</h2>
-            <p>
-                Forces in mechanics divide into two fundamental classes based on how the work they do depends on the
-                path taken:
-            </p>
-            <hr>
-            <h3>Conservative Forces</h3>
-            <p>
-                A force is conservative if the work done by it between two points is independent of the path taken.
-                Equivalently, the work done in any closed loop is zero. For such forces, potential energy can be
-                uniquely defined.
-            </p>
-            <p>
-                Examples include gravity and the spring force. The defining relation is:
-            </p>
-            \[
-            F = -\frac{dU}{dx}
-            \]
-            <hr>
-            <h3>Non-Conservative Forces</h3>
-            <p>
-                For non-conservative forces such as friction, the work done depends on the path. Mechanical energy is
-                not conserved — the "lost" energy is converted to heat or other forms. The work–energy theorem still
-                holds; total mechanical energy does not.
-            </p>
-            <hr>
-            <h3>The Key Distinction</h3>
-            <ul>
-                <li>Conservative forces allow us to define potential energy and apply conservation of mechanical energy.
-                </li>
-                <li>Non-conservative forces dissipate mechanical energy; the work–energy theorem accounts for them
-                    through \( W_{\text{net}} \).</li>
-                <li>Both types are fully governed by Newton's second law; the distinction is about whether a potential
-                    energy function exists.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>Work</strong> — Definition via scalar product; positive, negative, and zero work cases.</li>
-                <li><strong>Work by Variable Forces</strong> — Integration; area under the \(F\text{–}x\) graph.</li>
-                <li><strong>Kinetic Energy</strong> — Energy due to motion; frame dependence.</li>
-                <li><strong>Work–Energy Theorem</strong> — Net work equals change in kinetic energy.</li>
-                <li><strong>Potential Energy</strong> — Gravitational and elastic; defined for conservative forces.</li>
-                <li><strong>Conservative Forces</strong> — Path independence; relationship \( F = -dU/dx \).</li>
-                <li><strong>Conservation of Mechanical Energy</strong> — \( K + U = \text{constant} \) when only
-                    conservative forces act.</li>
-                <li><strong>Power</strong> — Rate of doing work; instantaneous power \( P = \vec{F} \cdot \vec{v} \).
-                </li>
-                <li><strong>Collisions</strong> — Elastic and inelastic; momentum and energy bookkeeping.</li>
-                <li><strong>Vertical Circular Motion</strong> — Minimum speed conditions; tension analysis using energy.
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-work.html">1. Work</a>
-                <a href="./02-work-variable-force.html">2. Work by a Variable Force</a>
-                <a href="./03-kinetic-energy.html">3. Kinetic Energy</a>
-                <a href="./04-work-energy-theorem.html">4. Work–Energy Theorem</a>
-                <a href="./05-potential-energy.html">5. Potential Energy</a>
-                <a href="./06-conservative-forces.html">6. Conservative and Non-Conservative Forces</a>
-                <a href="./07-energy-conservation.html">7. Conservation of Mechanical Energy</a>
-                <a href="./08-power.html">8. Power</a>
-                <a href="./09-collisions.html">9. Collisions</a>
-                <a href="./10-vertical-circular-motion.html">10. Vertical Circular Motion</a>
-				<a href="./wedge-block-system.html">11. Wedge Block System</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Work, Power &amp; Energy</h1>
+<p class="subtitle">
+The scalar framework for understanding motion, interaction, and change.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Work, energy, and power constitute the scalar framework of classical mechanics. While Newton's laws describe motion in terms of forces and accelerations at every instant, the energy framework provides a global description — it tells us what changes over an interval rather than what is happening at a single
+moment.
+</p>
+<p>
+This chapter introduces the concept of work done by a force, derives kinetic energy from it, and then extends to potential energy stored in a system by virtue of configuration. Together, these ideas yield the principle of conservation of mechanical energy — one of the most powerful tools in problem-solving.
+</p>
+</section>
+<section>
+<h2>Energy as the Central Idea</h2>
+<p>
+Energy is the unifying concept throughout all of physics. In mechanics, it appears in two forms: kinetic energy (associated with motion) and potential energy (associated with position or configuration). Both are scalar quantities — they have magnitude but no direction — which makes energy methods particularly powerful.
+</p>
+<p>
+Unlike forces, which must be added vectorially and tracked at every point along a path, energy allows us to compare the state of a system at two instants without knowing the details of the path between them.
+</p>
+<p>
+This is what makes the energy approach superior to Newton's laws for many classes of problems — particularly those involving variable forces, complex trajectories, or constraints.
+</p>
+</section>
+<section>
+<h2>Kinetic and Potential Energy</h2>
+<p>
+Kinetic energy \( K \) and potential energy \( U \) represent two complementary ways a mechanical system
+stores energy:
+</p>
+\[
+K = \frac{1}{2}mv^2 \qquad U = \text{depends on configuration}
+\]
+<p>
+This is closely analogous to the dual description of fields in electrostatics: the electric field \( \vec{E} \) (local, vectorial) corresponds to force, while the potential \( V \) (global, scalar) corresponds to energy. In both cases, the scalar quantity encodes the same information in a more convenient form.
+</p>
+<p>
+For conservative forces, potential energy is uniquely defined and the total mechanical energy \( E = K +
+U \) is conserved.
+</p>
+</section>
+<section>
+<h2>Work and the Work–Energy Theorem</h2>
+<p>
+Work is defined as the scalar product of force and displacement. It connects force — the cause of motion change — with energy — the measure of that change:
+</p>
+\[
+W = \vec{F} \cdot \vec{s} = Fs\cos\theta
+\]
+<p>
+The work–energy theorem is Newton's second law expressed in scalar form. It states that the net work done on an object equals the change in its kinetic energy:
+</p>
+\[
+W_{\text{net}} = \Delta K
+\]
+<p>
+This result holds regardless of whether the forces are constant or variable, making it a far more general statement than it first appears.
+</p>
+</section>
+<section>
+<h2>Conservative and Non-Conservative Forces</h2>
+<p>
+Forces in mechanics divide into two fundamental classes based on how the work they do depends on the path taken:
+</p>
+<hr>
+<h3>Conservative Forces</h3>
+<p>
+A force is conservative if the work done by it between two points is independent of the path taken. Equivalently, the work done in any closed loop is zero. For such forces, potential energy can be uniquely defined.
+</p>
+<p>
+Examples include gravity and the spring force. The defining relation is:
+</p>
+\[
+F = -\frac{dU}{dx}
+\]
+<hr>
+<h3>Non-Conservative Forces</h3>
+<p>
+For non-conservative forces such as friction, the work done depends on the path. Mechanical energy is not conserved — the "lost" energy is converted to heat or other forms. The work–energy theorem still holds; total mechanical energy does not.
+</p>
+<hr>
+<h3>The Key Distinction</h3>
+<ul>
+<li>Conservative forces allow us to define potential energy and apply conservation of mechanical energy.
+</li>
+<li>Non-conservative forces dissipate mechanical energy; the work–energy theorem accounts for them
+through \( W_{\text{net}} \).</li>
+<li>Both types are fully governed by Newton's second law; the distinction is about whether a potential
+energy function exists.</li>
+</ul>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+<li><strong>Work</strong> — Definition via scalar product; positive, negative, and zero work cases.</li>
+<li><strong>Work by Variable Forces</strong> — Integration; area under the \(F\text{–}x\) graph.</li>
+<li><strong>Kinetic Energy</strong> — Energy due to motion; frame dependence.</li>
+<li><strong>Work–Energy Theorem</strong> — Net work equals change in kinetic energy.</li>
+<li><strong>Potential Energy</strong> — Gravitational and elastic; defined for conservative forces.</li>
+<li><strong>Conservative Forces</strong> — Path independence; relationship \( F = -dU/dx \).</li>
+<li><strong>Conservation of Mechanical Energy</strong> — \( K + U = \text{constant} \) when only
+conservative forces act.</li>
+<li><strong>Power</strong> — Rate of doing work; instantaneous power \( P = \vec{F} \cdot \vec{v} \).
+</li>
+<li><strong>Collisions</strong> — Elastic and inelastic; momentum and energy bookkeeping.</li>
+<li><strong>Vertical Circular Motion</strong> — Minimum speed conditions; tension analysis using energy.
+</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-work.html">1. Work</a>
+<a href="./02-work-variable-force.html">2. Work by a Variable Force</a>
+<a href="./03-kinetic-energy.html">3. Kinetic Energy</a>
+<a href="./04-work-energy-theorem.html">4. Work–Energy Theorem</a>
+<a href="./05-potential-energy.html">5. Potential Energy</a>
+<a href="./06-conservative-forces.html">6. Conservative and Non-Conservative Forces</a>
+<a href="./07-energy-conservation.html">7. Conservation of Mechanical Energy</a>
+<a href="./08-power.html">8. Power</a>
+<a href="./09-collisions.html">9. Collisions</a>
+<a href="./10-vertical-circular-motion.html">10. Vertical Circular Motion</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
