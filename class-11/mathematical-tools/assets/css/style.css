@@ -85,7 +85,7 @@ ul{
 li{
     margin-bottom:6px;
 }
-/* ------------------Blocks and Boxes ------------------ */
+/* ------------------ Blocks and Boxes ------------------ */
 .math-block{
 background:#fafbfd;
 padding:18px;
@@ -203,6 +203,7 @@ footer{
     color:#7f8c8d;
     font-size:0.9rem;
 }
+
 /* ------------------ Responsive ------------------ */
 @media (max-width:700px){
     body{
@@ -217,4 +218,14 @@ footer{
     h2{
         font-size:1.35rem;
     }
+}
+/* ------------------ Diagrams ------------------ */
+.diagram {
+text-align: center;
+}
+svg {
+background: white;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+padding: 20px;
 }

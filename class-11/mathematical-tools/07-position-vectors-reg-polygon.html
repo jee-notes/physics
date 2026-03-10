@@ -25,7 +25,7 @@ A powerful symmetry result connecting geometry, vectors, and complex numbers.
 A regular polygon is a figure that has symmetric properties like a circle as well as we can use polygon tools like relating sides and angles commonly used in triangles. Earlier in ancient times, regular polygons were used to derive values of \( \pi \). This tool is used in many geometric problems related to rotational symmetry. Consider a regular polygon of <strong>n sides</strong> inscribed in a circle of radius \(R\), with its center at the origin. This is true as all vertices of a regular polygon are con-cyclic.  
 If \( \vec r_1, \vec r_2, \dots, \vec r_n \) are the position vectors of its vertices, then:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 \vec r_1 + \vec r_2 + \dots + \vec r_n = 0
 \]
@@ -39,7 +39,7 @@ That is, the vector sum of position vectors of all vertices of a regular polygon
 <p>
 Each vertex lies at equally spaced angular positions:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 \theta_k = \frac{2\pi k}{n}, \quad k = 0,1,2,\dots,n-1
 \]
@@ -50,7 +50,7 @@ The entire configuration is invariant under rotation by \( \frac{2\pi}{n} \). Su
 <p>
 But due to symmetry, the physical configuration is unchanged. Therefore:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 \vec S = \text{Rotation}(\vec S)
 \]
@@ -58,7 +58,7 @@ But due to symmetry, the physical configuration is unchanged. Therefore:
 <p>
 The only vector unchanged by a non-trivial rotation is:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 \vec S = 0
 \]
@@ -72,7 +72,7 @@ Rotational symmetry forces equilibrium. The symmetry alone guarantees cancellati
 <p>
 As polygon is a 2D figure, we can use complex number algebra of argand plane to prove the result. Represent each vertex as a complex number:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 z_k = R e^{i 2\pi k/n}
 \]
@@ -80,7 +80,7 @@ z_k = R e^{i 2\pi k/n}
 <p>
 Then the sum becomes:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 S = R \sum_{k=0}^{n-1} e^{i2\pi k/n}
 \]
@@ -94,7 +94,7 @@ S = R \{ e^{\frac{i2\pi}{n}0} + e^{\frac{i2\pi}{n}1} + e^{\frac{i2\pi}{n}2} + \d
 \[
 a = 1, \,\,\, r = e^{\frac{i2\pi}{n}}, \,\,\, n \,\,\, \text{terms}
 \]
-<div class="formula-block">
+<div class="math-block">
 \[
 S = R \frac{1 - e^{i2\pi}}{1 - e^{i2\pi/n}}
 \]
@@ -102,7 +102,7 @@ S = R \frac{1 - e^{i2\pi}}{1 - e^{i2\pi/n}}
 <p>
 Since:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 e^{i2\pi} = 1
 \]
@@ -110,7 +110,7 @@ e^{i2\pi} = 1
 <p>
 The numerator becomes zero, giving:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 S = 0
 \]
@@ -124,6 +124,7 @@ Thus the vector sum of all vertices of a regular polygon is zero.
 <p>
 Below is a regular hexagon inscribed in a circle. Each blue line is a position vector from the origin.
 </p>
+<div class="diagram">
 <svg width="450" height="450" viewBox="-225 -225 450 450">
 <!-- Circle -->
 <circle cx="0" cy="0" r="180" fill="none" stroke="#888" stroke-dasharray="5"/>
@@ -153,6 +154,7 @@ stroke-width="2"/>
 <!-- Origin -->
 <circle cx="0" cy="0" r="4" fill="red"/>
 </svg>
+</div>
 <p>
 Notice how the vectors are evenly distributed over \(2\pi\) radians. Their directions cancel symmetrically, forcing the total sum to zero.
 </p>
@@ -162,7 +164,7 @@ Notice how the vectors are evenly distributed over \(2\pi\) radians. Their direc
 <p>
 This result is equivalent to the fundamental identity:
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
 1 + \omega + \omega^2 + \dots + \omega^{n-1} = 0
 \]
