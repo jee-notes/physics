@@ -2,16 +2,12 @@
     --primary:#134e4a;
     --secondary:#f97316;
     --accent:#fb923c;
-
     --bg:#f0fdfa;
     --card:#ffffff;
-
     --bg-soft:#ffedd5;
     --bg-box:#f6fffd;
-
     --text:#1f2933;
     --muted:#6b7280;
-
     --border:#d1f0ea;
 }
 /* ------------------ Global ------------------ */
@@ -85,7 +81,7 @@ ul{
 li{
     margin-bottom:6px;
 }
-/* ------------------Blocks and Boxes ------------------ */
+/* ------------------ Blocks and Boxes ------------------ */
 .math-block{
 background:#fafbfd;
 padding:18px;
@@ -203,6 +199,7 @@ footer{
     color:#7f8c8d;
     font-size:0.9rem;
 }
+
 /* ------------------ Responsive ------------------ */
 @media (max-width:700px){
     body{
@@ -217,4 +214,14 @@ footer{
     h2{
         font-size:1.35rem;
     }
+}
+/* ------------------ Diagrams ------------------ */
+.diagram {
+text-align: center;
+}
+svg {
+background: white;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+padding: 20px;
 }
