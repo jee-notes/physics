@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Effects | Field due to a Straight Wire</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-biot-savart-law.html" class="back-btn">
+<span>&larr;</span> Back to Biot-Savart Law
+</a>
+</nav>
+<h1>Magnetic Field on the Axis of a Circular Loop</h1>
+<p class="subtitle">
+Field at an arbitrary point on the axis of a current loop.
+</p>
+
+<section>
+<h2>Setup and Geometry</h2>
+
+<p>
+Consider a circular loop of radius \(R\) carrying a steady current \(I\). The loop lies in the <b>XY-plane</b> and is centered at the origin.
+</p>
+
+<p>
+We wish to determine the magnetic field at a point <b>P</b> located on the <b>Z-axis</b> at a distance \(z\) from the center of the loop.
+</p>
+
+<p>
+Every point on the loop is at the same distance \(R\) from the center. A differential current element located at position \((x,y)\) on the loop has tangent vector \(d\vec l\).
+</p>
+
+<p>
+The position vector from this current element to the observation point \(P\) is
+</p>
+
+\[
+\vec r = z\hat{k} - (x\hat{i} + y\hat{j})
+\]
+
+<p>
+The magnitude of this vector is
+</p>
+
+\[
+r = \sqrt{R^2 + z^2}
+\]
+
+<p>
+Because the point \(P\) lies on the axis of the loop, every current element is at the same distance from \(P\). This symmetry greatly simplifies the calculation.
+</p>
+
+<div class="diagram">
+
+<svg width="600" height="420">
+<style>
+.axis{stroke:#444;stroke-width:1}
+.wire{stroke:#111;stroke-width:3;fill:none}
+.vector{stroke:#2563eb;stroke-width:2}
+.label{font-family:Arial,sans-serif;font-size:14px;fill:#111}
+.small{font-size:13px}
+</style>
+
+<!-- axes -->
+<line x1="300" y1="40" x2="300" y2="380" class="axis"/>
+<text x="310" y="50" class="label">z</text>
+
+<!-- loop (side view ellipse) -->
+<ellipse cx="300" cy="240" rx="120" ry="40" class="wire"/>
+
+<!-- center -->
+<circle cx="300" cy="240" r="4" fill="#111"/>
+<text x="310" y="255" class="label">O</text>
+
+<!-- point P -->
+<circle cx="300" cy="120" r="4" fill="#111"/>
+<text x="310" y="120" class="label">P</text>
+
+<!-- z distance -->
+<line x1="300" y1="240" x2="300" y2="120" stroke="#10b981" stroke-width="2" stroke-dasharray="5,4"/>
+<text x="310" y="185" class="label small">z</text>
+
+<!-- current element -->
+<circle cx="410" cy="240" r="4" fill="#111"/>
+<text x="420" y="240" class="label small">(x,y)</text>
+
+<!-- r vector -->
+<line x1="410" y1="240" x2="300" y2="120" class="vector"/>
+<text x="350" y="180" class="label small">r</text>
+
+</svg>
+
+</div>
+
+</section>
+
+<section>
+<h2>Applying the Biot–Savart Law</h2>
+
+<p>
+The Biot–Savart law gives the magnetic field contribution from a small current element:
+</p>
+
+\[
+d\vec B =
+\frac{\mu_0}{4\pi}
+\frac{I\, d\vec l \times \hat r}{r^2}
+\]
+
+<p>
+The differential current element \(d\vec l\) lies along the tangent to the circular loop in the <b>XY-plane</b>.
+</p>
+
+<p>
+The vector \( \vec r \) connecting the current element to point \(P\) has both radial and axial components.
+</p>
+
+<p>
+As a result, the magnetic field contribution \(d\vec B\) from each element also has two components:
+</p>
+
+<ul>
+<li>A component along the <b>Z-axis</b></li>
+<li>A component in the radial direction within the <b>XY-plane</b></li>
+</ul>
+
+<p>
+However, for every current element on the loop there exists another element diametrically opposite to it. The radial components of their magnetic field contributions cancel due to symmetry.
+</p>
+
+<p>
+Only the components along the <b>Z-axis</b> add constructively.
+</p>
+
+<p>
+Thus the net magnetic field at point \(P\) must lie along the <b>Z-axis</b>.
+</p>
+
+</section>
+
+<section>
+<h2>Evaluating the Axial Component</h2>
+
+<p>
+The magnitude of the magnetic field contribution from a current element is
+</p>
+
+\[
+dB =
+\frac{\mu_0 I}{4\pi}
+\frac{dl \sin\alpha}{r^2}
+\]
+
+<p>
+where \( \alpha \) is the angle between \(d\vec l\) and \(\vec r\).
+</p>
+
+<p>
+From the geometry of the loop,
+</p>
+
+\[
+\sin\alpha = \frac{R}{r}
+\]
+
+<p>
+Substituting this relation gives
+</p>
+
+\[
+dB =
+\frac{\mu_0 I}{4\pi}
+\frac{R\,dl}{r^3}
+\]
+
+<p>
+Only the component along the axis contributes to the net field. This component is
+</p>
+
+\[
+dB_z = dB \cos\theta
+\]
+
+<p>
+where
+</p>
+
+\[
+\cos\theta = \frac{z}{r}
+\]
+
+<p>
+Substituting,
+</p>
+
+\[
+dB_z =
+\frac{\mu_0 I}{4\pi}
+\frac{R z}{r^4}\, dl
+\]
+
+</section>
+
+<section>
+<h2>Integration over the Loop</h2>
+
+<p>
+Since \(r = \sqrt{R^2+z^2}\) is constant for all elements of the loop, the only variable in the integral is \(dl\).
+</p>
+
+\[
+\int dl = 2\pi R
+\]
+
+<p>
+Therefore
+</p>
+
+\[
+B_z =
+\frac{\mu_0 I}{4\pi}
+\frac{R z}{r^4} (2\pi R)
+\]
+
+<p>
+Substituting \(r = \sqrt{R^2+z^2}\),
+</p>
+
+\[
+\boxed{
+B =
+\frac{\mu_0 I R^2}{2(R^2+z^2)^{3/2}}
+}
+\]
+
+<p>
+The magnetic field at any point on the axis of a circular current loop is directed along the axis of the loop.
+</p>
+
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

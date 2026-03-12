@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Effects | Field due to a Circular Loop</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-biot-savart-law.html" class="back-btn">
+<span>&larr;</span> Back to Biot-Savart Law
+</a>
+</nav>
+<h1>Magnetic Field due to a Circular Loop</h1>
+<p class="subtitle">
+The prototype of a magnetic dipole — a current loop in closed form.
+</p>
+<section>
+<h2>Setup and Geometry</h2>
+<p>
+Consider a circular loop of radius \(R\) carrying a steady current \(I\). The loop lies in the <b>XY-plane</b> and is centred at the origin. Our goal is to determine the magnetic field produced by this current at the center of the loop, denoted by point <b>O</b>.
+</p>
+<p>
+Every point on the loop is at the same distance \(R\) from the center. This symmetry is the key reason the calculation becomes very simple.
+</p>
+<div class="diagram">
+<svg width="700" height="500" viewBox="0 0 400 400">
+
+<style>
+.axis{stroke:#444;stroke-width:1.5}
+.wire{stroke:#000;stroke-width:3;fill:none}
+.vector{stroke:#2563eb;stroke-width:3}
+.dl{stroke:#ff00aa;stroke-width:4;fill:none}
+.label{font-family:Arial;font-size:16px}
+</style>
+
+<!-- axes -->
+<line x1="200" y1="40" x2="200" y2="360" class="axis"/>
+<line x1="40" y1="200" x2="360" y2="200" class="axis"/>
+
+<text x="365" y="205" class="label">x</text>
+<text x="205" y="35" class="label">y</text>
+
+<!-- circular loop -->
+<circle cx="200" cy="200" r="120" class="wire"/>
+
+<!-- center -->
+<circle cx="200" cy="200" r="4"/>
+<text x="210" y="220" class="label">O</text>
+
+<!-- current element point -->
+<circle cx="290" cy="120" r="4"/>
+<text x="300" y="115" class="label">(x,y)</text>
+
+<!-- vector r -->
+<line x1="290" y1="120" x2="200" y2="200" class="vector"/>
+<text x="240" y="175" class="label">r</text>
+
+<!-- tiny arc element dl -->
+<path d="M 284 112 A 120 120 0 0 1 298 126" class="dl"/>
+<text x="305" y="130" class="label">dl</text>
+
+</svg>
+</div>
+<p>
+For the purpose of this derivation, the current is taken to flow in the <b>anticlockwise direction</b> when viewed from above the plane of the loop.
+</p>
+</section>
+<section>
+<h2>Applying the Biot–Savart Law</h2>
+<p>
+According to the Biot–Savart law, a small current element \(I\,d\vec{l}\) produces a magnetic field contribution
+</p>
+\[
+d\vec B = \frac{\mu_0}{4\pi} \frac{I\, d\vec l \times \hat r}{r^2}
+\]
+<p>
+The differential current element \(d\vec l\) lies along the tangent to the circular loop. Since the loop lies in the <b>XY-plane</b>, this tangent direction also lies in the same plane.
+</p>
+<p>
+The observation point <b>O</b> is at the center of the circle. The position vector from any current element on the loop to the center therefore has magnitude
+</p>
+\[
+r = R
+\]
+<p>
+and points radially inward toward the center.
+</p>
+<p>
+Thus both the vectors \(d\vec l\) and \(\vec r\) lie in the <b>XY-plane</b>. Their cross product \(d\vec l \times \hat r\) must therefore point perpendicular to this plane — along the <b>\(+\hat{k}\)</b> direction (out of the page).
+</p>
+<p>
+An important consequence follows from this symmetry: every current element on the circular loop produces a magnetic field at the center pointing in exactly the same direction.
+</p>
+<p>
+Therefore none of the contributions cancel each other. Instead, all the infinitesimal magnetic field contributions add constructively along the same direction.
+</p>
+<p>
+Because the direction is already determined by symmetry, we can work only with the magnitudes of the contributions while keeping the direction understood.
+</p>
+<p>
+The magnitude of the magnetic field contribution from an element \(dl\) is therefore
+</p>
+\[
+dB = \frac{\mu_0 I}{4\pi R^2}\, dl
+\]
+<p>
+Notice that the distance \(R\) is constant for every point on the loop. Therefore the only variable in this expression is the length element \(dl\).
+</p>
+</section>
+<section>
+<h2>Magnetic Field due to the Full Circular Loop</h2>
+<p>
+For a complete circular loop, the element \(dl\) runs along the entire circumference of the circle.
+</p>
+\[
+\int dl = 2\pi R
+\]
+<p>
+Substituting into the Biot–Savart expression gives
+</p>
+\[
+B =
+\int \frac{\mu_0 I}{4\pi R^2} dl
+=
+\frac{\mu_0 I}{4\pi R^2}(2\pi R)
+\]
+\[
+\boxed{B = \frac{\mu_0 I}{2R}}
+\]
+<p>
+The magnetic field at the center of a circular loop therefore depends only on the current and the radius of the loop.
+</p>
+</section>
+<section>
+<h2>Magnetic Field due to a Circular Arc</h2>
+<p>
+The same reasoning can be used to determine the magnetic field at the center due to a circular arc.
+</p>
+<p>
+If the arc subtends an angle \( \theta \) at the center, then its length is
+</p>
+\[
+L = R\theta
+\]
+<p>
+Integrating the Biot–Savart expression over this arc length gives
+</p>
+\[
+B = \int \frac{\mu_0 I}{4\pi R^2} dl = \frac{\mu_0 I}{4\pi R^2}(R\theta)
+\]
+\[
+\boxed{B = \frac{\mu_0 I}{4\pi R}\theta}
+\]
+<p>
+Thus the magnetic field produced at the center by a circular arc is directly proportional to the angle subtended by the arc.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+
+</html>
