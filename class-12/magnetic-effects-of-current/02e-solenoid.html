@@ -1,164 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnetic Effects | Solenoid and Toroid</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Effects | Field due to a Solenoid</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./02-biot-savart-law.html" class="back-btn">
-                <span>&larr;</span> Back to Biot-Savart Law
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-biot-savart-law.html" class="back-btn">
+<span>&larr;</span> Back to Biot-Savart Law
+</a>
+</nav>
+<h1>Magnetic Field due to a Solenoid</h1>
+<p class="subtitle">
+Constructing nearly uniform magnetic fields through wound coils.
+</p>
+<section>
+<h2>The Solenoid — A Stack of Loops</h2>
+<p>
+A solenoid is a long helical coil of wire wound uniformly. It can be thought of as a stack of \( N \) closely packed circular loops, each of radius \( R \). If the total length is \( L \) and the number of turns per unit length is \( n = N/L \), then each infinitesimal slice \( dx \) of the solenoid contains \( n\,dx \) turns.
+</p>
+<div class="diagram">
+<svg width="600" height="300" viewBox="0 0 600 300">
+<style>
+.wire{fill:#b91c1c;stroke:#7f1d1d;stroke-width:2}
+.dot{fill:#fff}
+.cross{stroke:#fff;stroke-width:2}
+.field{stroke:#10b981;stroke-width:2}
+.label{font-family:Arial,sans-serif;font-size:14px;fill:#111}
+.axis{stroke:#444;stroke-width:1;stroke-dasharray:5,4}
+.amperian{stroke:#2563eb;stroke-width:2;stroke-dasharray:5,4;fill:rgba(37,99,235,0.05)}
+</style>
 
-        <h1>Magnetic Field due to a Solenoid &amp; Toroid</h1>
-        <p class="subtitle">
-            Constructing nearly uniform magnetic fields through wound coils.
-        </p>
+<!-- Solenoid axis -->
+<line x1="50" y1="150" x2="550" y2="150" class="axis"/>
+<text x="560" y="155" class="label">Axis</text>
 
-        <section>
-            <h2>The Solenoid — A Stack of Loops</h2>
-            <p>
-                A solenoid is a long helical coil of wire wound uniformly. It can be thought of as a stack of \( N \)
-                closely packed circular loops, each of radius \( R \). If the total length is \( L \) and the number of
-                turns per unit length is \( n = N/L \), then each infinitesimal slice \( dx \) of the solenoid contains
-                \( n\,dx \) turns.
-            </p>
-            <p>
-                The field on the axis from a thin slice at position \( x \) (treating it as a single loop) is:
-            </p>
-            \[
-            dB = \frac{\mu_0 (n\,dx) I R^2}{2(R^2 + x^2)^{3/2}}
-            \]
-            <p>
-                Integrating over the full length (with angular substitution \( x = R\cot\phi \)) yields the general
-                result for a finite solenoid. For a point at the centre of a very long solenoid, the result simplifies
-                dramatically.
-            </p>
-        </section>
+<!-- Magnetic field lines inside -->
+<line x1="100" y1="150" x2="500" y2="150" class="field"/>
+<polygon points="500,150 490,145 490,155" fill="#10b981"/>
 
-        <section>
-            <h2>Field Inside an Ideal (Infinite) Solenoid</h2>
-            <p>
-                For an infinitely long solenoid with \( n \) turns per unit length carrying current \( I \), the
-                magnetic field inside is:
-            </p>
-            \[
-            \boxed{B = \mu_0 n I}
-            \]
-            <p>
-                Key features of this result:
-            </p>
-            <ul>
-                <li>The field is <strong>uniform</strong> throughout the interior — independent of position.</li>
-                <li>The field is directed along the solenoid axis.</li>
-                <li>The field <strong>outside</strong> an ideal infinite solenoid is exactly zero.</li>
-                <li>The direction is given by the right-hand rule: curl the fingers in the direction of current winding;
-                    the thumb indicates \( \vec{B} \).</li>
-            </ul>
-            <div class="insightbox">
-                This result is most cleanly derived using Ampere's Circuital Law (see Section 3), where the rectangular
-                Amperian loop immediately gives \( B = \mu_0 n I \) inside and \( B = 0 \) outside. The Biot-Savart
-                integration confirms this limiting result.
-            </div>
-        </section>
+<line x1="100" y1="110" x2="500" y2="110" class="field"/>
+<polygon points="500,110 490,105 490,115" fill="#10b981"/>
 
-        <section>
-            <h2>Field at the Ends of a Finite Solenoid</h2>
-            <p>
-                At either end (open face) of a finite solenoid, the field is exactly half that at the centre:
-            </p>
-            \[
-            B_{\text{end}} = \frac{\mu_0 n I}{2}
-            \]
-            <p>
-                This is because the integration covers only half the angular range (\( 0° \) to \( 90° \)) compared to
-                the interior (\( 0° \) to \( 180° \)).
-            </p>
-        </section>
+<line x1="100" y1="190" x2="500" y2="190" class="field"/>
+<polygon points="500,190 490,185 490,195" fill="#10b981"/>
+<text x="510" y="130" class="label" style="fill:#10b981;font-weight:bold;">B</text>
 
-        <section>
-            <h2>The Toroid</h2>
-            <p>
-                A toroid is a solenoid bent into a closed ring (a doughnut shape). If the mean radius of the toroid is
-                \( r \), it has \( N \) total turns, and carries current \( I \), the magnetic field inside the toroid
-                is found using Ampere's Law with a circular Amperian loop of radius \( r \):
-            </p>
-            \[
-            B \cdot 2\pi r = \mu_0 N I
-            \]
-            \[
-            \boxed{B = \frac{\mu_0 N I}{2\pi r} = \mu_0 n I}
-            \]
-            <p>
-                where \( n = N/(2\pi r) \) is the number of turns per unit length along the mean circumference.
-            </p>
-            <p>
-                The magnetic field of a toroid is:
-            </p>
-            <ul>
-                <li><strong>Confined entirely inside the toroid</strong> — it is zero both in the central hole and
-                    outside the ring.</li>
-                <li>Not perfectly uniform — it is slightly stronger near the inner edge (smaller \( r \)) and weaker
-                    near the outer edge (larger \( r \)).</li>
-                <li>Becomes uniform in the idealization of a tightly wound toroid where the cross-sectional radius \(
-                    \ll r \).</li>
-            </ul>
-        </section>
+<!-- Amperian Loop -->
+<rect x="250" y="60" width="100" height="90" class="amperian"/>
+<text x="300" y="50" class="label" fill="#2563eb" text-anchor="middle">Amperian Loop</text>
+<text x="300" y="75" class="label" fill="#2563eb" text-anchor="middle">L</text>
 
-        <section>
-            <h2>Comparison: Solenoid vs Toroid</h2>
-            <div class="model-box">
-                <table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
-                    <thead>
-                        <tr style="border-bottom: 2px solid #e0e0e0;">
-                            <th style="text-align:left; padding: 8px;">Property</th>
-                            <th style="text-align:left; padding: 8px;">Solenoid</th>
-                            <th style="text-align:left; padding: 8px;">Toroid</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding:8px;">Shape</td>
-                            <td style="padding:8px;">Straight cylinder</td>
-                            <td style="padding:8px;">Closed ring (torus)</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Field inside</td>
-                            <td style="padding:8px;">\( \mu_0 nI \) (uniform)</td>
-                            <td style="padding:8px;">\( \mu_0 nI \) (nearly uniform)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:8px;">Field outside</td>
-                            <td style="padding:8px;">~Zero (infinite case)</td>
-                            <td style="padding:8px;">Exactly zero</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Field at ends</td>
-                            <td style="padding:8px;">\( \mu_0 nI / 2 \)</td>
-                            <td style="padding:8px;">No ends (closed)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:8px;">Application</td>
-                            <td style="padding:8px;">Electromagnets, inductors</td>
-                            <td style="padding:8px;">Transformers, inductors with zero leakage</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
+<!-- Top wires (current coming out) -->
+<g transform="translate(0, 80)">
+<circle cx="150" cy="0" r="10" class="wire"/> <circle cx="150" cy="0" r="2" class="dot"/>
+<circle cx="190" cy="0" r="10" class="wire"/> <circle cx="190" cy="0" r="2" class="dot"/>
+<circle cx="230" cy="0" r="10" class="wire"/> <circle cx="230" cy="0" r="2" class="dot"/>
+<circle cx="270" cy="0" r="10" class="wire"/> <circle cx="270" cy="0" r="2" class="dot"/>
+<circle cx="310" cy="0" r="10" class="wire"/> <circle cx="310" cy="0" r="2" class="dot"/>
+<circle cx="350" cy="0" r="10" class="wire"/> <circle cx="350" cy="0" r="2" class="dot"/>
+<circle cx="390" cy="0" r="10" class="wire"/> <circle cx="390" cy="0" r="2" class="dot"/>
+<circle cx="430" cy="0" r="10" class="wire"/> <circle cx="430" cy="0" r="2" class="dot"/>
+</g>
+<text x="140" y="60" class="label">Current out ⊙</text>
 
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<!-- Bottom wires (current going in) -->
+<g transform="translate(0, 220)">
+<circle cx="150" cy="0" r="10" class="wire"/> <path d="M145,-5 L155,5 M155,-5 L145,5" class="cross"/>
+<circle cx="190" cy="0" r="10" class="wire"/> <path d="M185,-5 L195,5 M195,-5 L185,5" class="cross"/>
+<circle cx="230" cy="0" r="10" class="wire"/> <path d="M225,-5 L235,5 M235,-5 L225,5" class="cross"/>
+<circle cx="270" cy="0" r="10" class="wire"/> <path d="M265,-5 L275,5 M275,-5 L265,5" class="cross"/>
+<circle cx="310" cy="0" r="10" class="wire"/> <path d="M305,-5 L315,5 M315,-5 L305,5" class="cross"/>
+<circle cx="350" cy="0" r="10" class="wire"/> <path d="M345,-5 L355,5 M355,-5 L345,5" class="cross"/>
+<circle cx="390" cy="0" r="10" class="wire"/> <path d="M385,-5 L395,5 M395,-5 L385,5" class="cross"/>
+<circle cx="430" cy="0" r="10" class="wire"/> <path d="M425,-5 L435,5 M435,-5 L425,5" class="cross"/>
+</g>
+<text x="140" y="250" class="label">Current in ⊗</text>
+
+</svg>
+</div>
+<p>
+The field on the axis from a thin slice at position \( x \) (treating it as a single loop) is:
+</p>
+\[
+dB = \frac{\mu_0 (n\,dx) I R^2}{2(R^2 + x^2)^{3/2}}
+\]
+<p>
+Integrating over the full length (with angular substitution \( x = R\cot\phi \)) yields the general result for a finite solenoid. For a point at the centre of a very long solenoid, the result simplifies dramatically.
+</p>
+</section>
+<section>
+<h2>Field Inside an Ideal (Infinite) Solenoid</h2>
+<p>
+For an infinitely long solenoid with \( n \) turns per unit length carrying current \( I \), the magnetic field inside is:
+</p>
+\[
+\boxed{B = \mu_0 n I}
+\]
+<p>
+Key features of this result:
+</p>
+<ul>
+<li>The field is <strong>uniform</strong> throughout the interior — independent of position.</li>
+<li>The field is directed along the solenoid axis.</li>
+<li>The field <strong>outside</strong> an ideal infinite solenoid is exactly zero.</li>
+<li>The direction is given by the right-hand rule: curl the fingers in the direction of current winding;
+the thumb indicates \( \vec{B} \).</li>
+</ul>
+<div class="insightbox">
+This result is most cleanly derived using Ampere's Circuital Law, where the rectangular Amperian loop (shown in the diagram, length \(L\)) immediately gives \( BL = \mu_0 (nL) I \) inside and \( B = 0 \) outside. The Biot-Savart integration confirms this limiting result.
+</div>
+</section>
+<section>
+<h2>Field at the Ends of a Finite Solenoid</h2>
+<p>
+At either end (open face) of a finite solenoid, the field is exactly half that at the centre:
+</p>
+\[
+B_{\text{end}} = \frac{\mu_0 n I}{2}
+\]
+<p>
+This is because the integration covers only half the angular range (\( 0^\circ \) to \( 90^\circ \)) compared to the interior (\( 0^\circ \) to \( 180^\circ \)).
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

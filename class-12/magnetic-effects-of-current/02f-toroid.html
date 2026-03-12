@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Magnetic Effects | Field due to a Straight Wire</title>
+<title>Magnetic Effects | Field due to a Toroid</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,242 +14,161 @@
 <span>&larr;</span> Back to Biot-Savart Law
 </a>
 </nav>
-<h1>Magnetic Field due to a Straight Wire</h1>
+<h1>Magnetic Field due to a Toroid</h1>
 <p class="subtitle">
-Integrating the Biot-Savart Law along a linear current source.
+A continuous closed coil carrying steady current resulting in zero leakage flux.
 </p>
 <section>
-<h2>Setup and Geometry</h2>
+<h2>The Toroid</h2>
 <p>
-Consider a thin straight wire carrying a steady current <b>I</b>. Our objective is to determine the magnetic field produced by this current at a point <b>P</b> located at a perpendicular distance <b>d</b> from the wire.
+A toroid can be thought of as a very long solenoid bent into a closed ring (a doughnut shape) so that its ends join. It consists of a large number of turns of wire wrapped uniformly around a circular core.
 </p>
 <p>
-To make the geometry precise, we place the straight wire along the <b>X-axis</b>. The observation point <b>P</b> lies on the <b>Y-axis</b> at position <b>(0,d,0)</b>. A small current element on the wire located at position <b>(x,0,0)</b> has vector length
-</p>
-\[
-d\vec{l} = dx\,\hat{i}
-\]
-<p>
-This differential element represents a tiny segment of the wire through which the same current <b>I</b> flows.
-</p>
-<p>
-The position vector from the current element to the observation point <b>P</b> is
-</p>
-\[
-\vec{r} = -x\,\hat{i} + d\,\hat{j}
-\]
-<p>
-The magnitude of this vector is therefore
-</p>
-\[
-r = \sqrt{x^2 + d^2}
-\]
-<p>
-This simple relation emerges from the right triangle formed by the horizontal separation <b>x</b> and the perpendicular distance <b>d</b>.
-</p>
-<p>
-A useful geometric angle naturally appears in this triangle. Define the angle \( \theta \) as the angle between the vector \( \vec{r} \) and the perpendicular drawn from <b>P</b> to the wire. In other words, the perpendicular from <b>P</b> acts as the reference direction from which the direction of the current element is measured.
-</p>
-<p>
-As the differential current element moves along the wire from one end to the other, it sweeps through different angles with the perpendicular reference. Consequently, the angle \( \theta \) varies continuously. The differential current element at the left end of the wire is at an angle \( -\theta_1 \) and the one at the right end is at an angle \( \theta_2 \), with perpendicular reference. During integration the variable \( \theta \) ranges from
-</p>
-\[
--\theta_1 \quad \text{to} \quad \theta_2
-\]
-<p>
-This angular description of the geometry is extremely useful because it allows the spatial coordinate \(x\) to be replaced by a trigonometric variable, which simplifies the integration.
+If the mean radius of the toroid is \( r \), it has \( N \) total turns, and carries a steady current \( I \), the magnetic field inside the toroid is found using Ampère's Circuital Law.
 </p>
 <div class="diagram">
-<svg width="520" height="340">
+<svg width="600" height="400" viewBox="0 0 600 400">
 <style>
-.axis{stroke:#444;stroke-width:1}
-.wire{stroke:#111;stroke-width:4}
-.vector{stroke:#2563eb;stroke-width:2}
-.perp{stroke:#10b981;stroke-width:2;stroke-dasharray:5,4}
-.ends{stroke:#444;stroke-width:2;stroke-dasharray:5,4}
-.label{font-family:Arial, sans-serif;font-size:14px;fill:#111}
-.small{font-size:13px}
-.theta{stroke:#ef4444;stroke-width:2;fill:none}
+.core{fill:#f1f5f9;stroke:#94a3b8;stroke-width:2}
+.wire{fill:#b91c1c;stroke:#7f1d1d;stroke-width:2}
+.dot{fill:#fff}
+.cross{stroke:#fff;stroke-width:2}
+.field{stroke:#10b981;stroke-width:2;fill:none}
+.label{font-family:Arial,sans-serif;font-size:14px;fill:#111}
+.amperian{stroke:#2563eb;stroke-width:2;stroke-dasharray:5,4;fill:none}
 </style>
-<!-- axes -->
-<line x1="40" y1="250" x2="500" y2="250" class="axis"/>
-<line x1="260" y1="300" x2="260" y2="40" class="axis"/>
-<text x="500" y="160" class="label">x</text>
-<text x="270" y="50" class="label">y</text>
-<!-- straight wire -->
-<line x1="70" y1="250" x2="470" y2="250" class="wire"/>
-<text x="410" y="270" class="label">Current I →</text>
-<!-- point P -->
-<circle cx="260" cy="90" r="7" fill="#111"/>
-<text x="268" y="85" class="label">P (0,d)</text>
-<!-- ends -->
-<line x1="260" y1="90" x2="70" y2="250" class="ends"/>
-<line x1="260" y1="90" x2="470" y2="250" class="ends"/>
-<!-- current element -->
-<circle cx="350" cy="250" r="4" fill="#111"/>
-<text x="350" y="270" class="label small">(x,0)</text>
-<text x="350" y="230" class="label small">dl = dx î</text>
-<!-- perpendicular distance -->
-<line x1="260" y1="90" x2="260" y2="250" class="perp"/>
-<text x="270" y="185" class="label small">d</text>
-<!-- r vector -->
-<line x1="350" y1="250" x2="260" y2="90" class="vector"/>
-<text x="320" y="180" class="label">r</text>
-<!-- theta angle -->
-<path d="M260 130 A40 40 0 0 0 282 125" class="theta"/>
-<text x="265" y="125" class="label">θ</text>
+<!-- Toroid core -->
+<circle cx="300" cy="200" r="140" class="core"/>
+<circle cx="300" cy="200" r="80" class="core" style="fill:#fff"/>
+
+<!-- Center -->
+<circle cx="300" cy="200" r="4" fill="#111"/>
+<text x="300" y="220" class="label" text-anchor="middle">O</text>
+
+<!-- Amperian loop -->
+<circle cx="300" cy="200" r="110" class="amperian"/>
+<text x="300" y="80" class="label" fill="#2563eb" text-anchor="middle">Amperian Loop (radius r)</text>
+
+<!-- radius line -->
+<line x1="300" y1="200" x2="410" y2="200" stroke="#444" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="350" y="195" class="label">r</text>
+
+<!-- Magnetic field inside -->
+<circle cx="300" cy="200" r="110" class="field" style="stroke-dasharray: 10, 5"/>
+<!-- arrow head -->
+<polygon points="410,200 405,190 415,190" fill="#10b981"/>
+<text x="420" y="210" class="label" style="fill:#10b981;font-weight:bold;">B</text>
+
+<!-- Draw dots (Inner wires, current OUT) and crosses (Outer wires, current IN) -->
+<g id="wires">
+<!-- 0 deg -->
+<circle cx="380" cy="200" r="8" class="wire"/> <circle cx="380" cy="200" r="2" class="dot"/>
+<circle cx="440" cy="200" r="8" class="wire"/> <path d="M436,196 L444,204 M444,196 L436,204" class="cross"/>
+<circle cx="369.3" cy="240" r="8" class="wire"/> <circle cx="369.3" cy="240" r="2" class="dot"/>
+<circle cx="421.2" cy="270" r="8" class="wire"/> <path d="M417.2,266 L425.2,274 M425.2,266 L417.2,274" class="cross"/>
+<!-- 60 deg -->
+<circle cx="340" cy="269.3" r="8" class="wire"/> <circle cx="340" cy="269.3" r="2" class="dot"/>
+<circle cx="370" cy="321.2" r="8" class="wire"/> <path d="M366,317.2 L374,325.2 M374,317.2 L366,325.2" class="cross"/>
+<!-- 90 deg -->
+<circle cx="300" cy="280" r="8" class="wire"/> <circle cx="300" cy="280" r="2" class="dot"/>
+<circle cx="300" cy="340" r="8" class="wire"/> <path d="M296,336 L304,344 M304,336 L296,344" class="cross"/>
+<!-- 120 deg -->
+<circle cx="260" cy="269.3" r="8" class="wire"/> <circle cx="260" cy="269.3" r="2" class="dot"/>
+<circle cx="230" cy="321.2" r="8" class="wire"/> <path d="M226,317.2 L234,325.2 M234,317.2 L226,325.2" class="cross"/>
+<!-- 150 deg -->
+<circle cx="230.7" cy="240" r="8" class="wire"/> <circle cx="230.7" cy="240" r="2" class="dot"/>
+<circle cx="178.8" cy="270" r="8" class="wire"/> <path d="M174.8,266 L182.8,274 M182.8,266 L174.8,274" class="cross"/>
+<!-- 180 deg -->
+<circle cx="220" cy="200" r="8" class="wire"/> <circle cx="220" cy="200" r="2" class="dot"/>
+<circle cx="160" cy="200" r="8" class="wire"/> <path d="M156,196 L164,204 M164,196 L156,204" class="cross"/>
+<!-- 210 deg -->
+<circle cx="230.7" cy="160" r="8" class="wire"/> <circle cx="230.7" cy="160" r="2" class="dot"/>
+<circle cx="178.8" cy="130" r="8" class="wire"/> <path d="M174.8,126 L182.8,134 M182.8,126 L174.8,134" class="cross"/>
+<!-- 240 deg -->
+<circle cx="260" cy="130.7" r="8" class="wire"/> <circle cx="260" cy="130.7" r="2" class="dot"/>
+<circle cx="230" cy="78.8" r="8" class="wire"/> <path d="M226,74.8 L234,82.8 M234,74.8 L226,82.8" class="cross"/>
+<!-- 270 deg -->
+<circle cx="300" cy="120" r="8" class="wire"/> <circle cx="300" cy="120" r="2" class="dot"/>
+<circle cx="300" cy="60" r="8" class="wire"/> <path d="M296,56 L304,64 M304,56 L296,64" class="cross"/>
+<!-- 300 deg -->
+<circle cx="340" cy="130.7" r="8" class="wire"/> <circle cx="340" cy="130.7" r="2" class="dot"/>
+<circle cx="370" cy="78.8" r="8" class="wire"/> <path d="M366,74.8 L374,82.8 M374,74.8 L366,82.8" class="cross"/>
+<!-- 330 deg -->
+<circle cx="369.3" cy="160" r="8" class="wire"/> <circle cx="369.3" cy="160" r="2" class="dot"/>
+<circle cx="421.2" cy="130" r="8" class="wire"/> <path d="M417.2,126 L425.2,134 M425.2,126 L417.2,134" class="cross"/>
+</g>
 </svg>
 </div>
-</section>
-<section>
-<h2>Applying the Biot-Savart Law</h2>
 <p>
-According to the Biot–Savart law, a small current element produces a magnetic field contribution
+We construct a circular Amperian loop of radius \( r \) exactly spanning the interior of the toroid's windings. By symmetry, the magnetic field \( \vec{B} \) is tangent to this loop everywhere and constant in magnitude.
+</p>
+<p>
+Applying Ampère's Circuital Law:
 </p>
 \[
-d\vec{B} =
-\frac{\mu_0}{4\pi}
-\frac{I\, d\vec{l} \times \hat{r}}{r^2}
-\]
-<p>
-The direction of the magnetic field is determined by the cross product \( d\vec{l} \times \hat{r} \). In our geometry the current element \( d\vec{l} \) points along the <b>X-axis</b> while the vector \( \vec{r} \) lies in the <b>XY-plane</b>. Their cross product therefore points perpendicular to this plane — along the <b>\(+\hat{k}\)</b> direction (out of the page).
-</p>
-<p>
-An important observation follows from this geometry. Every current element on the wire produces a magnetic field at point <b>P</b> pointing in exactly the same direction. Because of this, the contributions from different elements do not cancel each other vectorially. Instead, all the infinitesimal contributions add constructively along the same direction.
-</p>
-<p>
-This symmetry allows us to work only with the scalar magnitudes of the contributions while keeping the direction understood. This is important step to understand how we go from vector form to scalar form of Biot-Savart Law, using symmetry to resolve directional complexities.
-</p>
-<p>
-The magnitude of the field contribution from an element at angle \( \theta \) is
-</p>
-\[
-dB = \frac{\mu_0 I}{4\pi} \frac{\sin(90 + \theta)}{r^2}\, dl
-\]
-<p>
-The trigonometric factor arises from the angle between the vectors \( d\vec{l} \) and \( \vec{r} \) which is equal to \( 90 + \theta \). This trigonometric factor impacts the magnitude of \( d\vec{B} \) at P due to \( d\vec{l} \) at \( \vec{r} \), and not its direction.
-</p>
-<p>
-To perform the integration conveniently, we express the spatial coordinate \(x\) in terms of the angle \( \theta \). The differential current element \(d\vec{l}\) represents an infinitesimal length of the conductor along the direction of current flow. This element is defined by the geometry of the wire itself, not by the coordinate system used to describe space.
-</p>
-<p>
-For this reason we choose the wire to lie along the X-axis. With this choice, the coordinate differential along the wire coincides with the physical current element, giving
-</p>
-\[
-dl = |d\vec{l}| = dx
-\]
-<p>
-Had the wire been oriented differently, the position of the element could still be described using a general spatial position vector, but its differential would not directly equal the current element. Aligning the conductor with the X-axis therefore allows the integration to be carried out directly in terms of the coordinate \(x\).
-</p>
-<p>
-From the right triangle formed by the horizontal separation \(x\), the perpendicular distance \(d\), and the distance \(r\) from the element to point \(P\),
-</p>
-\[
-x = d\tan\theta
-\]
-<p>
-Differentiating gives
-</p>
-\[
-dx = d\sec^2\theta\, d\theta
-\]
-<p>
-and the distance from the element to the point becomes
-</p>
-\[
-r = \frac{d}{\cos\theta} = d\sec\theta
-\]
-<p>
-Substituting these relations into the Biot–Savart expression simplifies the integrand dramatically, giving
-</p>
-\[
-dB = \frac{\mu_0 I}{4\pi d}\cos\theta\, d\theta
-\]
-<p>
-Integrating over all current elements from the angle subtended by one end of the wire to that subtended by the other end yields
-</p>
-\[
-\boxed{B = \frac{\mu_0 I}{4\pi d}(\sin\theta_2 + \sin\theta_1)}
-\]
-<div class="insightbox">
-<p>
-The angles \( \theta_1 \) and \( \theta_2 \) are measured from the perpendicular drawn from point <b>P</b> to the wire. Importantly, these angles must be taken <b>with direction</b>, which means their signs depend on whether the corresponding end of the wire lies to the left or right of the perpendicular.
-</p>
-<p>
-This expression is generic. Different physical situations correspond simply to different angular limits.
-</p>
-<p>
-For example, both ends of the wire might lie on the positive X-axis, or one end may extend to infinity while the other is at a finite location. Each of these situations corresponds to a different pair of angles \( \theta_1 \) and \( \theta_2 \).
-</p>
-</div>
-</section>
-<section>
-<h2>Special Case: Infinite Straight Wire</h2>
-<p>
-For an infinitely long wire, the wire extends without limit in both directions. In this case both the ends of the wire appear at right angles
-</p>
-\[
-\theta_1 = 90^\circ, \qquad \theta_2 = 90^\circ
-\]
-<div class="insightbox">
-<p>
-A common misunderstanding at this stage is that students again substitute \( \theta_1 = -90^\circ \).
-</p>
-<p>
-This is incorrect. In the derived formula
-\[
-B=\frac{\mu_0 I}{4\pi d}(\sin\theta_2+\sin\theta_1)
-\]
-the sign of the angle has already been accounted for during the derivation when the integration limits were taken from \( -\theta_1 \) to \( \theta_2 \). Therefore \( \theta_1 \) and \( \theta_2 \) in the final expression represent positive angular magnitudes subtended by the ends of the wire.
-</p>
-</div>
-<p>
-Substituting into the general expression,
-</p>
-\[
-B = \frac{\mu_0 I}{4\pi d} (\sin 90^\circ + \sin 90^\circ) = \frac{\mu_0 I}{4\pi d}(1+1)
+\oint \vec{B} \cdot d\vec{l} = \mu_0 I_{\text{enclosed}}
 \]
 \[
-\boxed{B = \frac{\mu_0 I}{2\pi d}}
+B \cdot 2\pi r = \mu_0 N I
+\]
+\[
+\boxed{B = \frac{\mu_0 N I}{2\pi r}}
 \]
 <p>
-Thus the magnetic field produced by an infinitely long straight current-carrying wire decreases inversely with the perpendicular distance from the wire.
-</p>
-<p>
-The magnetic field lines form concentric circles centered on the wire. The direction of these circular field lines is determined by the right-hand rule: if the thumb of the right hand points in the direction of current, the curled fingers indicate the direction of the magnetic field.
-</p>
-</section>
-<section>
-<h2>Special Case: Semi-Infinite Wire</h2>
-<p>
-Consider now a wire that begins at \( x=0 \) and extends infinitely in the positive X direction. If the observation point <b>P</b> lies a perpendicular distance \(d\) from the near end of the wire, the angles subtended by the ends are
-</p>
-\[ \theta_1 = 0^\circ, \qquad \theta_2 = 90^\circ
-\]
-<p>
-Substituting these values into the general result gives
+If we designate \( n = \frac{N}{2\pi r} \) as the number of turns per unit length along the mean circumference, the field takes the familiar solenoid form:
 </p>
 \[
-B =
-\frac{\mu_0 I}{4\pi d}
+\boxed{B = \mu_0 n I}
 \]
 <p>
-This is exactly half the magnetic field produced by an infinite wire at the same distance. The result is consistent with the principle of superposition: an infinite wire can be thought of as two semi-infinite wires joined end-to-end, each contributing half the total field.
+Key properties of the toroid's magnetic field:
 </p>
-</section>
-<section>
-<h2>Behaviour of the Field</h2>
 <ul>
-<li>
-The magnetic field becomes stronger as we approach the wire, varying inversely with the distance: \( B \propto 1/d \).
-</li>
-<li>
-Unlike the electric field of a point charge, which points radially outward, the magnetic field around a current-carrying wire forms circular loops. The field is therefore tangential rather than radial.
-</li>
-<li>
-For a fixed finite length L of a straight (line segment) current carrying conductor, P is any point at fixed perpendicular distance d, free to move along L parallely. The point where \( |\vec{B}| \) is maximum is when P is at the mid-point of L. Mathematically this can be proven because \( d\vec{B} \propto \cos \theta \), but not important for exam.    
-</li>
+<li><strong>Confined entirely inside the toroid</strong> — using Ampère's Law on loops in the empty central hole (\(r \lt R_{inner}\)) gives \( I_{\text{enc}} = 0 \), so \( B = 0 \). Outside the ring (\(r > R_{outer}\)), each loop encloses equal numbers of inward and outward currents, giving zero net enclosed current and thus \( B = 0 \).</li>
+<li>Not perfectly uniform — since \( B \propto 1/r \), the field is slightly stronger near the inner edge and weaker near the outer edge.</li>
+<li>Becomes uniform in the idealization of a tightly wound toroid where the cross-sectional width is very small compared to the radius \(r \).</li>
 </ul>
+</section>
+<section>
+<h2>Comparison: Solenoid vs Toroid</h2>
+<div class="model-box">
+<table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
+<thead>
+<tr style="border-bottom: 2px solid #e0e0e0;">
+<th style="text-align:left; padding: 8px;">Property</th>
+<th style="text-align:left; padding: 8px;">Solenoid</th>
+<th style="text-align:left; padding: 8px;">Toroid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:8px;">Shape</td>
+<td style="padding:8px;">Straight cylinder</td>
+<td style="padding:8px;">Closed ring (torus)</td>
+</tr>
+<tr style="background:#fafafa;">
+<td style="padding:8px;">Field inside structure</td>
+<td style="padding:8px;">\( \mu_0 nI \) (uniform)</td>
+<td style="padding:8px;">\( \mu_0 nI \) (nearly uniform)</td>
+</tr>
+<tr>
+<td style="padding:8px;">Field outside structure</td>
+<td style="padding:8px;">~Zero (infinite case)</td>
+<td style="padding:8px;">Exactly zero everywhere</td>
+</tr>
+<tr style="background:#fafafa;">
+<td style="padding:8px;">Field at ends</td>
+<td style="padding:8px;">\( \mu_0 nI / 2 \)</td>
+<td style="padding:8px;">No ends (closed loop)</td>
+</tr>
+<tr>
+<td style="padding:8px;">Core Application</td>
+<td style="padding:8px;">Electromagnets, linear inductors</td>
+<td style="padding:8px;">Transformers, inductors with zero magnetic leakage flux</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <footer>
 <hr>

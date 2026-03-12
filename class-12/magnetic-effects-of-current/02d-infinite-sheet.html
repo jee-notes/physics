@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Magnetic Effects | Field due to a Straight Wire</title>
+<title>Magnetic Effects | Field due to an Infinite Current Sheet</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,240 +14,145 @@
 <span>&larr;</span> Back to Biot-Savart Law
 </a>
 </nav>
-<h1>Magnetic Field due to a Straight Wire</h1>
+<h1>Magnetic Field due to an Infinite Current Sheet</h1>
 <p class="subtitle">
-Integrating the Biot-Savart Law along a linear current source.
+Integrating infinite straight wires to find the field of a continuous sheet.
 </p>
 <section>
 <h2>Setup and Geometry</h2>
 <p>
-Consider a thin straight wire carrying a steady current <b>I</b>. Our objective is to determine the magnetic field produced by this current at a point <b>P</b> located at a perpendicular distance <b>d</b> from the wire.
+Consider an infinite flat sheet lying in the <b>YZ-plane</b> carrying a uniform surface current in the <b>+Z-direction</b> (out of the page in our 2D cross-section). We wish to find the magnetic field at a point <b>P</b> located at a perpendicular distance \( d \) from the sheet along the <b>X-axis</b>.
 </p>
 <p>
-To make the geometry precise, we place the straight wire along the <b>X-axis</b>. The observation point <b>P</b> lies on the <b>Y-axis</b> at position <b>(0,d,0)</b>. A small current element on the wire located at position <b>(x,0,0)</b> has vector length
+Let the surface current density (current per unit width) be \( K \) (Amperes per meter). The sheet can be viewed as an infinite array of parallel, infinitely long straight wires running along the Z-axis.
+</p>
+<p>
+Consider an infinitesimal strip of width \( dy \) located at coordinate \( y \). This strip acts like an infinite thin straight wire carrying a current:
 </p>
 \[
-d\vec{l} = dx\,\hat{i}
+dI = K \, dy
 \]
 <p>
-This differential element represents a tiny segment of the wire through which the same current <b>I</b> flows.
-</p>
-<p>
-The position vector from the current element to the observation point <b>P</b> is
+The distance from this strip to the point <b>P</b> (which is at coordinate \((d, 0, 0)\)) is:
 </p>
 \[
-\vec{r} = -x\,\hat{i} + d\,\hat{j}
+r = \sqrt{d^2 + y^2}
 \]
-<p>
-The magnitude of this vector is therefore
-</p>
-\[
-r = \sqrt{x^2 + d^2}
-\]
-<p>
-This simple relation emerges from the right triangle formed by the horizontal separation <b>x</b> and the perpendicular distance <b>d</b>.
-</p>
-<p>
-A useful geometric angle naturally appears in this triangle. Define the angle \( \theta \) as the angle between the vector \( \vec{r} \) and the perpendicular drawn from <b>P</b> to the wire. In other words, the perpendicular from <b>P</b> acts as the reference direction from which the direction of the current element is measured.
-</p>
-<p>
-As the differential current element moves along the wire from one end to the other, it sweeps through different angles with the perpendicular reference. Consequently, the angle \( \theta \) varies continuously. The differential current element at the left end of the wire is at an angle \( -\theta_1 \) and the one at the right end is at an angle \( \theta_2 \), with perpendicular reference. During integration the variable \( \theta \) ranges from
-</p>
-\[
--\theta_1 \quad \text{to} \quad \theta_2
-\]
-<p>
-This angular description of the geometry is extremely useful because it allows the spatial coordinate \(x\) to be replaced by a trigonometric variable, which simplifies the integration.
-</p>
 <div class="diagram">
-<svg width="520" height="340">
+<svg width="600" height="420" viewBox="0 0 600 420">
 <style>
 .axis{stroke:#444;stroke-width:1}
-.wire{stroke:#111;stroke-width:4}
+.sheet{fill:#e0f2fe;stroke:#0284c7;stroke-width:2;opacity:0.8}
+.wire{stroke:#b91c1c;stroke-width:4}
 .vector{stroke:#2563eb;stroke-width:2}
-.perp{stroke:#10b981;stroke-width:2;stroke-dasharray:5,4}
-.ends{stroke:#444;stroke-width:2;stroke-dasharray:5,4}
-.label{font-family:Arial, sans-serif;font-size:14px;fill:#111}
+.field{stroke:#10b981;stroke-width:2}
+.label{font-family:Arial,sans-serif;font-size:14px;fill:#111}
 .small{font-size:13px}
-.theta{stroke:#ef4444;stroke-width:2;fill:none}
+.dashed{stroke-dasharray:5,4}
 </style>
 <!-- axes -->
-<line x1="40" y1="250" x2="500" y2="250" class="axis"/>
-<line x1="260" y1="300" x2="260" y2="40" class="axis"/>
-<text x="500" y="160" class="label">x</text>
-<text x="270" y="50" class="label">y</text>
-<!-- straight wire -->
-<line x1="70" y1="250" x2="470" y2="250" class="wire"/>
-<text x="410" y="270" class="label">Current I →</text>
+<line x1="250" y1="360" x2="250" y2="40" class="axis"/>
+<text x="260" y="50" class="label">y</text>
+<line x1="250" y1="200" x2="550" y2="200" class="axis"/>
+<text x="540" y="190" class="label">x</text>
+<!-- sheet (cross section view) -->
+<line x1="250" y1="360" x2="250" y2="40" class="sheet" style="stroke-width:12; stroke:#93c5fd" />
+<text x="90" y="50" class="label">Sheet in YZ-plane</text>
+<text x="90" y="70" class="label">Current K ⊙ (out)</text>
 <!-- point P -->
-<circle cx="260" cy="90" r="7" fill="#111"/>
-<text x="268" y="85" class="label">P (0,d)</text>
-<!-- ends -->
-<line x1="260" y1="90" x2="70" y2="250" class="ends"/>
-<line x1="260" y1="90" x2="470" y2="250" class="ends"/>
-<!-- current element -->
-<circle cx="350" cy="250" r="4" fill="#111"/>
-<text x="350" y="270" class="label small">(x,0)</text>
-<text x="350" y="230" class="label small">dl = dx î</text>
-<!-- perpendicular distance -->
-<line x1="260" y1="90" x2="260" y2="250" class="perp"/>
-<text x="270" y="185" class="label small">d</text>
+<circle cx="400" cy="200" r="4" fill="#111"/>
+<text x="410" y="215" class="label">P (d, 0)</text>
+<!-- elementary wire dy at y -->
+<circle cx="250" cy="100" r="5" fill="#b91c1c"/>
+<text x="220" y="105" class="label small">+y</text>
+<text x="160" y="125" class="label small">dI = K dy</text>
 <!-- r vector -->
-<line x1="350" y1="250" x2="260" y2="90" class="vector"/>
-<text x="320" y="180" class="label">r</text>
-<!-- theta angle -->
-<path d="M260 130 A40 40 0 0 0 282 125" class="theta"/>
-<text x="265" y="125" class="label">θ</text>
+<line x1="250" y1="100" x2="400" y2="200" class="vector"/>
+<text x="330" y="140" class="label">r</text>
+<!-- corresponding symmetric wire at -y -->
+<circle cx="250" cy="300" r="5" fill="#b91c1c"/>
+<text x="225" y="305" class="label small">-y</text>
+<line x1="250" y1="300" x2="400" y2="200" class="vector dashed"/>
+<!-- angle theta at P -->
+<path d="M360 200 A40 40 0 0 1 367 178" stroke="#ef4444" stroke-width="2" fill="none"/>
+<text x="345" y="195" class="label small">θ</text>
+<!-- magnetic field vector dB from +y element -->
+<line x1="400" y1="200" x2="440" y2="140" class="field"/>
+<text x="445" y="135" class="label">dB₁</text>
+<!-- magnetic field vector dB from -y element -->
+<line x1="400" y1="200" x2="360" y2="140" class="field"/>
+<text x="330" y="135" class="label">dB₂</text>
+<!-- Resultant field B -->
+<line x1="400" y1="200" x2="400" y2="80" class="field" style="stroke-width:3; stroke:#059669;"/>
+<text x="410" y="90" class="label">dB_net</text>
+<!-- Parallelogram completion -->
+<path d="M 360 140 L 400 80 L 440 140" fill="none" stroke="#666" class="dashed"/>
 </svg>
 </div>
 </section>
 <section>
-<h2>Applying the Biot-Savart Law</h2>
+<h2>Integration Using Biot-Savart Law</h2>
 <p>
-According to the Biot–Savart law, a small current element produces a magnetic field contribution
+The magnitude of the magnetic field \( dB \) produced by this single infinite geometric "wire" strip at point \(P\) is given by the exact formula for an infinite straight wire:
 </p>
 \[
-d\vec{B} =
-\frac{\mu_0}{4\pi}
-\frac{I\, d\vec{l} \times \hat{r}}{r^2}
+dB = \frac{\mu_0 dI}{2\pi r} = \frac{\mu_0 K \, dy}{2\pi \sqrt{d^2 + y^2}}
 \]
 <p>
-The direction of the magnetic field is determined by the cross product \( d\vec{l} \times \hat{r} \). In our geometry the current element \( d\vec{l} \) points along the <b>X-axis</b> while the vector \( \vec{r} \) lies in the <b>XY-plane</b>. Their cross product therefore points perpendicular to this plane — along the <b>\(+\hat{k}\)</b> direction (out of the page).
+From the right hand rule, the vector \( d\vec{B} \) is perpendicular to both the current direction (+Z) and the position vector \( \vec{r} \). This means \( d\vec{B} \) lies in the XY-plane. Looking at the geometry, \( d\vec{B} \) has two components:
+</p>
+<ul>
+<li>An X-component \( dB_x = dB \sin\theta \) (pointing parallel to the X-axis)</li>
+<li>A Y-component \( dB_y = dB \cos\theta \) (pointing parallel to the Y-axis)</li>
+</ul>
+<p>
+where \( \theta \) is the angle between the X-axis and \( \vec{r} \). From the geometry, \( \cos\theta = \frac{d}{r} \) and \( \sin\theta = \frac{|y|}{r} \).
 </p>
 <p>
-An important observation follows from this geometry. Every current element on the wire produces a magnetic field at point <b>P</b> pointing in exactly the same direction. Because of this, the contributions from different elements do not cancel each other vectorially. Instead, all the infinitesimal contributions add constructively along the same direction.
+Crucially, for every current strip located at a positive coordinate \(+y\), there exists a symmetrically located strip at \(-y\). While their Y-components add up perfectly, their X-components point in opposite directions (one inward towards the X-axis, one outward) and sum exactly to zero.
 </p>
 <p>
-This symmetry allows us to work only with the scalar magnitudes of the contributions while keeping the direction understood. This is important step to understand how we go from vector form to scalar form of Biot-Savart Law, using symmetry to resolve directional complexities.
-</p>
-<p>
-The magnitude of the field contribution from an element at angle \( \theta \) is
+Thus, the net magnetic field has only a Y-component:
 </p>
 \[
-dB = \frac{\mu_0 I}{4\pi} \frac{\sin(90 + \theta)}{r^2}\, dl
+B = \int dB_y = \int_{-\infty}^{\infty} dB \cos\theta
+\]
+\[
+B = \int_{-\infty}^{\infty} \frac{\mu_0 K \, dy}{2\pi \sqrt{d^2 + y^2}} \left(\frac{d}{\sqrt{d^2+y^2}}\right)
+\]
+\[
+B = \frac{\mu_0 K d}{2\pi} \int_{-\infty}^{\infty} \frac{dy}{d^2 + y^2}
 \]
 <p>
-The trigonometric factor arises from the angle between the vectors \( d\vec{l} \) and \( \vec{r} \) which is equal to \( 90 + \theta \). This trigonometric factor impacts the magnitude of \( d\vec{B} \) at P due to \( d\vec{l} \) at \( \vec{r} \), and not its direction.
-</p>
-<p>
-To perform the integration conveniently, we express the spatial coordinate \(x\) in terms of the angle \( \theta \). The differential current element \(d\vec{l}\) represents an infinitesimal length of the conductor along the direction of current flow. This element is defined by the geometry of the wire itself, not by the coordinate system used to describe space.
-</p>
-<p>
-For this reason we choose the wire to lie along the X-axis. With this choice, the coordinate differential along the wire coincides with the physical current element, giving
+This is a standard trigonometric integral. It evaluates to:
 </p>
 \[
-dl = |d\vec{l}| = dx
+\int_{-\infty}^{\infty} \frac{dy}{d^2 + y^2} = \left[ \frac{1}{d} \tan^{-1}\left(\frac{y}{d}\right) \right]_{-\infty}^{\infty} = \frac{1}{d} \left( \frac{\pi}{2} - \left(-\frac{\pi}{2}\right) \right) = \frac{\pi}{d}
 \]
 <p>
-Had the wire been oriented differently, the position of the element could still be described using a general spatial position vector, but its differential would not directly equal the current element. Aligning the conductor with the X-axis therefore allows the integration to be carried out directly in terms of the coordinate \(x\).
-</p>
-<p>
-From the right triangle formed by the horizontal separation \(x\), the perpendicular distance \(d\), and the distance \(r\) from the element to point \(P\),
+Substituting this result back into our expression for \(B\):
 </p>
 \[
-x = d\tan\theta
+B = \frac{\mu_0 K d}{2\pi} \left( \frac{\pi}{d} \right)
 \]
-<p>
-Differentiating gives
-</p>
 \[
-dx = d\sec^2\theta\, d\theta
+\boxed{B = \frac{\mu_0 K}{2}}
 \]
-<p>
-and the distance from the element to the point becomes
-</p>
-\[
-r = \frac{d}{\cos\theta} = d\sec\theta
-\]
-<p>
-Substituting these relations into the Biot–Savart expression simplifies the integrand dramatically, giving
-</p>
-\[
-dB = \frac{\mu_0 I}{4\pi d}\cos\theta\, d\theta
-\]
-<p>
-Integrating over all current elements from the angle subtended by one end of the wire to that subtended by the other end yields
-</p>
-\[
-\boxed{B = \frac{\mu_0 I}{4\pi d}(\sin\theta_2 + \sin\theta_1)}
-\]
-<div class="insightbox">
-<p>
-The angles \( \theta_1 \) and \( \theta_2 \) are measured from the perpendicular drawn from point <b>P</b> to the wire. Importantly, these angles must be taken <b>with direction</b>, which means their signs depend on whether the corresponding end of the wire lies to the left or right of the perpendicular.
-</p>
-<p>
-This expression is generic. Different physical situations correspond simply to different angular limits.
-</p>
-<p>
-For example, both ends of the wire might lie on the positive X-axis, or one end may extend to infinity while the other is at a finite location. Each of these situations corresponds to a different pair of angles \( \theta_1 \) and \( \theta_2 \).
-</p>
-</div>
 </section>
 <section>
-<h2>Special Case: Infinite Straight Wire</h2>
-<p>
-For an infinitely long wire, the wire extends without limit in both directions. In this case both the ends of the wire appear at right angles
-</p>
-\[
-\theta_1 = 90^\circ, \qquad \theta_2 = 90^\circ
-\]
-<div class="insightbox">
-<p>
-A common misunderstanding at this stage is that students again substitute \( \theta_1 = -90^\circ \).
-</p>
-<p>
-This is incorrect. In the derived formula
-\[
-B=\frac{\mu_0 I}{4\pi d}(\sin\theta_2+\sin\theta_1)
-\]
-the sign of the angle has already been accounted for during the derivation when the integration limits were taken from \( -\theta_1 \) to \( \theta_2 \). Therefore \( \theta_1 \) and \( \theta_2 \) in the final expression represent positive angular magnitudes subtended by the ends of the wire.
-</p>
-</div>
-<p>
-Substituting into the general expression,
-</p>
-\[
-B = \frac{\mu_0 I}{4\pi d} (\sin 90^\circ + \sin 90^\circ) = \frac{\mu_0 I}{4\pi d}(1+1)
-\]
-\[
-\boxed{B = \frac{\mu_0 I}{2\pi d}}
-\]
-<p>
-Thus the magnetic field produced by an infinitely long straight current-carrying wire decreases inversely with the perpendicular distance from the wire.
-</p>
-<p>
-The magnetic field lines form concentric circles centered on the wire. The direction of these circular field lines is determined by the right-hand rule: if the thumb of the right hand points in the direction of current, the curled fingers indicate the direction of the magnetic field.
-</p>
-</section>
-<section>
-<h2>Special Case: Semi-Infinite Wire</h2>
-<p>
-Consider now a wire that begins at \( x=0 \) and extends infinitely in the positive X direction. If the observation point <b>P</b> lies a perpendicular distance \(d\) from the near end of the wire, the angles subtended by the ends are
-</p>
-\[ \theta_1 = 0^\circ, \qquad \theta_2 = 90^\circ
-\]
-<p>
-Substituting these values into the general result gives
-</p>
-\[
-B =
-\frac{\mu_0 I}{4\pi d}
-\]
-<p>
-This is exactly half the magnetic field produced by an infinite wire at the same distance. The result is consistent with the principle of superposition: an infinite wire can be thought of as two semi-infinite wires joined end-to-end, each contributing half the total field.
-</p>
-</section>
-<section>
-<h2>Behaviour of the Field</h2>
+<h2>Key Insights</h2>
 <ul>
 <li>
-The magnetic field becomes stronger as we approach the wire, varying inversely with the distance: \( B \propto 1/d \).
+The magnetic field produced by an infinite uniform sheet of current is <b>entirely independent of the distance \(d\)</b> from the sheet. It is perfectly uniform in the entire space on either side of the sheet.
 </li>
 <li>
-Unlike the electric field of a point charge, which points radially outward, the magnetic field around a current-carrying wire forms circular loops. The field is therefore tangential rather than radial.
+The field direction is always parallel to the plane of the sheet and perpendicular to the current. As confirmed exactly by the right hand rule, it points in the +Y direction for \(x > 0\) and -Y direction for \(x < 0\).
 </li>
 <li>
-For a fixed finite length L of a straight (line segment) current carrying conductor, P is any point at fixed perpendicular distance d, free to move along L parallely. The point where \( |\vec{B}| \) is maximum is when P is at the mid-point of L. Mathematically this can be proven because \( d\vec{B} \propto \cos \theta \), but not important for exam.    
+This result \( B = \frac{\mu_0 K}{2} \) is the magnetic counterpart to the electric field \( E = \frac{\sigma}{2\epsilon_0} \) produced by an infinite sheet of charge. They share identical mathematical distance independence.
+</li>
+<li>
+While derived here with integration, this result can also be found swiftly using <b>Ampère's Circuital Law</b>. By drawing a rectangular Amperian loop intersecting the sheet, the symmetry demands \( \oint \vec{B} \cdot d\vec{l} = 2BL = \mu_0(KL) \), immediately giving the same \( B = \mu_0 K / 2 \).
 </li>
 </ul>
 </section>
