@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Effects | Magnetic Dipole and Current Loop</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Magnetic Effects of Current
+</a>
+</nav>
+<h1>Magnetic Dipole Moment of Coils in Different Planes</h1>
+<p class="subtitle">
+Vector nature of magnetic dipole moment and superposition of multiple loops.
+</p>
+<section>
+<h2>Magnetic Dipole Moment is a Vector</h2>
+<p>
+The magnetic dipole moment of a current loop is defined as
+</p>
+\[
+\vec{\mu} = N I \vec{A}
+\]
+<p>
+The direction of \( \vec{A} \) is perpendicular to the plane of the loop, determined using the right-hand rule.
+</p>
+<p>
+Because the dipole moment is a vector, the total magnetic dipole moment of a system of loops is the <b>vector sum</b> of the individual moments.
+</p>
+</section>
+<section>
+<h2>Two Coils in the Same Plane</h2>
+<p>
+If two coils lie in the same plane and carry currents in the same direction, their dipole moments are parallel.
+</p>
+\[
+\vec{\mu}_{total} = \vec{\mu}_1 + \vec{\mu}_2
+\]
+<p>
+The magnitude simply becomes
+</p>
+\[
+\mu_{total} = \mu_1 + \mu_2
+\]
+<p>
+If currents flow in opposite directions, the dipole moments oppose each other.
+</p>
+</section>
+<section>
+<h2>Two Coils in Perpendicular Planes</h2>
+<p>
+If two coils lie in mutually perpendicular planes, their dipole moments are also perpendicular vectors.
+</p>
+<p>
+For example:
+</p>
+<ul>
+<li>Loop 1 in the XY plane → \( \vec{\mu}_1 \parallel \hat{k} \)</li>
+<li>Loop 2 in the YZ plane → \( \vec{\mu}_2 \parallel \hat{i} \)</li>
+</ul>
+<p>
+The resultant dipole moment is given by vector addition.
+</p>
+\[
+\mu = \sqrt{\mu_1^2 + \mu_2^2}
+\]
+<div class="insightbox">
+<p>
+Many JEE problems use perpendicular loops so that the resultant dipole moment can be obtained using the Pythagorean relation between vector components.
+</p>
+</div>
+<div class="diagram">
+<svg width="420" height="260">
+<style>
+.loop{stroke:#111;stroke-width:2;fill:none}
+.vec{stroke:#ef4444;stroke-width:2}
+.label{font-family:Arial;font-size:14px}
+</style>
+
+<circle cx="150" cy="150" r="50" class="loop"/>
+<ellipse cx="260" cy="150" rx="20" ry="50" class="loop"/>
+
+<line x1="150" y1="150" x2="150" y2="80" class="vec"/>
+<line x1="260" y1="150" x2="330" y2="150" class="vec"/>
+
+<text x="155" y="80" class="label">μ₁</text>
+<text x="335" y="155" class="label">μ₂</text>
+</svg>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Effects | Magnetic Dipole and Current Loop</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Magnetic Effects of Current
+</a>
+</nav>
+<h1>Torque and Potential Energy of a Magnetic Dipole</h1>
+<p class="subtitle">
+Interaction of a current loop with an external magnetic field.
+</p>
+<section>
+<h2>Magnetic Dipole in an External Field</h2>
+<p>
+A current carrying loop behaves like a magnetic dipole with magnetic dipole moment
+</p>
+\[
+\vec{\mu} = N I \vec{A}
+\]
+<p>
+where \(N\) is the number of turns, \(I\) is the current in the loop, and \(A\) is the area vector perpendicular to the plane of the loop.
+</p>
+<p>
+When this dipole is placed in a magnetic field \( \vec{B} \), forces act on different segments of the loop. Although these forces may cancel translationally, they produce a <b>net torque</b> that tends to rotate the loop.
+</p>
+</section>
+<section>
+<h2>Torque on a Current Loop</h2>
+<p>
+The torque experienced by a magnetic dipole in a uniform magnetic field is given by
+</p>
+\[
+\vec{\tau} = \vec{\mu} \times \vec{B}
+\]
+<p>
+The magnitude of the torque is
+</p>
+\[
+\tau = \mu B \sin\theta
+\]
+<p>
+where \( \theta \) is the angle between the dipole moment and the magnetic field.
+</p>
+<p>
+This torque tends to align the dipole moment with the magnetic field direction.
+</p>
+<div class="insightbox">
+<p>
+A uniform magnetic field cannot produce a net force on a current loop, but it can produce a torque. The loop therefore rotates but does not translate.
+</p>
+</div>
+<div class="diagram">
+<svg width="420" height="260">
+<style>
+.loop{stroke:#111;stroke-width:3;fill:none}
+.field{stroke:#2563eb;stroke-width:2}
+.mu{stroke:#ef4444;stroke-width:2}
+.label{font-family:Arial;font-size:14px}
+</style>
+
+<ellipse cx="210" cy="150" rx="80" ry="30" class="loop"/>
+<line x1="210" y1="150" x2="210" y2="80" class="mu"/>
+<text x="215" y="80" class="label">μ</text>
+
+<line x1="60" y1="60" x2="360" y2="60" class="field"/>
+<text x="365" y="65" class="label">B</text>
+</svg>
+</div>
+</section>
+<section>
+<h2>Potential Energy of a Magnetic Dipole</h2>
+<p>
+When the dipole rotates in a magnetic field, work is done against the magnetic torque. This leads to potential energy associated with the orientation of the dipole.
+</p>
+<p>
+The potential energy of a magnetic dipole in a magnetic field is
+</p>
+\[
+U = -\vec{\mu} \cdot \vec{B}
+\]
+<p>
+or
+</p>
+\[
+U = -\mu B \cos\theta
+\]
+</section>
+<section>
+<h2>Energy Interpretation</h2>
+<ul>
+<li>Minimum energy occurs when \( \vec{\mu} \) is aligned with \( \vec{B} \).</li>
+<li>Maximum energy occurs when the dipole is anti-parallel to the field.</li>
+<li>The system naturally tends toward the minimum energy configuration.</li>
+</ul>
+<div class="insightbox">
+<p>
+The magnetic dipole behaves very similarly to an electric dipole placed in an electric field. In both cases, the field tends to rotate the dipole to align with itself.
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+
+</html>

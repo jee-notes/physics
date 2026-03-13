@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Effects | Galvanometer Construction</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Magnetic Effects of Current
+</a>
+</nav>
+<h1>Moving Coil Galvanometer</h1>
+<p class="subtitle">
+Conversion of electrical current into mechanical rotation using magnetic torque.
+</p>
+<section>
+<h2>Working Principle</h2>
+<p>
+A moving coil galvanometer operates on the principle that a current-carrying coil placed in a magnetic field experiences a torque. The current loop behaves as a <b>magnetic dipole</b>.
+</p>
+<p>
+For a coil of <b>N</b> turns carrying current <b>I</b> and having area vector \( \vec{A} \), the magnetic dipole moment is
+</p>
+\[
+\vec{\mu} = N I \vec{A}
+\]
+<p>
+When this magnetic dipole is placed in an external magnetic field \( \vec{B} \), it experiences a torque
+</p>
+\[
+\vec{\tau} = \vec{\mu} \times \vec{B}
+\]
+<p>
+The magnitude of this torque is
+</p>
+\[
+\tau = N I A B \sin\theta
+\]
+<p>
+where \( \theta \) is the angle between the area vector of the coil and the magnetic field.
+</p>
+<p>
+In a moving coil galvanometer, the magnet is designed to produce a <b>radial magnetic field</b>. This means the magnetic field lines are always directed along the radius of the circular motion of the coil.
+</p>
+<p>
+Because of this special geometry, the magnetic field remains <b>perpendicular to the plane of the coil for all deflections</b>. As the coil rotates, the field direction changes in sync with the orientation of the magnetic moment.
+</p>
+<p>
+Therefore the angle between \( \vec{\mu} \) and \( \vec{B} \) always remains \(90^\circ\), giving
+</p>
+\[
+\sin\theta = 1
+\]
+<p>
+Hence the magnetic torque becomes
+</p>
+\[
+\tau = N I A B
+\]
+<div class="insightbox">
+<p>
+In most situations involving magnetic dipoles, the torque depends on the angle \( \theta \). The moving coil galvanometer deliberately avoids this complication by creating a radial magnetic field. As a result the torque becomes independent of the deflection angle. This ensures that the instrument has a <b>linear response</b>, which is essential for accurate measurement.
+</p>
+</div>
+<div class="diagram">
+<svg width="420" height="300">
+<style>
+.magnet{stroke:#111;stroke-width:2;fill:none}
+.field{stroke:#2563eb;stroke-width:2}
+.coil{stroke:#111;stroke-width:3;fill:none}
+.arrow{stroke:#ef4444;stroke-width:2}
+.label{font-family:Arial;font-size:14px}
+</style>
+
+<!-- magnet poles -->
+<rect x="40" y="80" width="60" height="140" class="magnet"/>
+<rect x="320" y="80" width="60" height="140" class="magnet"/>
+
+<text x="65" y="70" class="label">N</text>
+<text x="345" y="70" class="label">S</text>
+
+<!-- radial field lines -->
+<line x1="100" y1="120" x2="320" y2="120" class="field"/>
+<line x1="100" y1="150" x2="320" y2="150" class="field"/>
+<line x1="100" y1="180" x2="320" y2="180" class="field"/>
+
+<!-- coil -->
+<rect x="180" y="110" width="60" height="80" class="coil"/>
+
+<!-- torque arrow -->
+<path d="M200 210 A40 40 0 0 0 240 210" class="arrow"/>
+<text x="205" y="235" class="label">rotation</text>
+
+</svg>
+</div>
+</section>
+<section>
+<h2>Construction</h2>
+<p>
+A moving coil galvanometer consists of a lightweight rectangular coil placed between the poles of a strong horseshoe magnet.
+</p>
+<ul>
+<li>
+<b>Horseshoe Magnet:</b> The magnet is shaped so that the magnetic field between its poles becomes nearly radial. This ensures that the torque on the coil remains independent of its angular position.
+</li>
+<li>
+<b>Moving Coil:</b> A rectangular coil of fine insulated copper wire wound on a light metallic frame. The coil is free to rotate about its axis.
+</li>
+<li>
+<b>Soft Iron Core:</b> A cylindrical soft iron core is placed inside the coil. This strengthens the magnetic field and also helps make it radial.
+</li>
+<li>
+<b>Spiral Springs:</b> Two spiral springs are attached to the coil. These serve two purposes: they supply current to the coil and provide the restoring torque that brings the coil back to equilibrium.
+</li>
+<li>
+<b>Pointer and Scale:</b> A pointer attached to the coil moves over a calibrated scale to indicate the deflection.
+</li>
+</ul>
+<div class="insightbox">
+<p>
+The soft iron core not only strengthens the magnetic field but also helps distribute the field lines radially. Without this design feature, the torque would vary with angle and the scale of the galvanometer would become non-linear.
+</p>
+</div>
+</section>
+<section>
+<h2>Mathematical Simplification</h2>
+<p>
+When current flows through the coil, it experiences a magnetic torque
+</p>
+\[
+\tau_{mag} = N B I A
+\]
+<p>
+The spiral springs provide a restoring torque proportional to the angular deflection \( \theta \)
+</p>
+\[
+\tau_{restoring} = k \theta
+\]
+<p>
+where \(k\) is the torsional constant of the spring.
+</p>
+<p>
+At equilibrium, the magnetic torque is balanced by the restoring torque.
+</p>
+\[
+N B I A = k\theta
+\]
+<p>
+Rearranging gives
+</p>
+\[
+I = \frac{k}{NAB}\theta
+\]
+<p>
+Thus the deflection of the galvanometer is directly proportional to the current flowing through it.
+</p>
+\[
+I \propto \theta
+\]
+<div class="insightbox">
+<p>
+This linear relation between current and angular deflection is the fundamental reason why galvanometers can be calibrated with a uniform scale.
+</p>
+</div>
+</section>
+<section>
+<h2>Sensitivity Parameters</h2>
+<p>
+The performance of a galvanometer is characterized using its <b>sensitivity</b>. In general, sensitivity represents how much output is produced for a given input.
+</p>
+<p>
+For a galvanometer:
+</p>
+<ul>
+<li>
+Input → Electric current or potential difference
+</li>
+<li>
+Output → Angular deflection of the pointer
+</li>
+</ul>
+<p>
+A highly sensitive instrument produces a large deflection even for a small electrical input.
+</p>
+</section>
+<section>
+<h2>Current Sensitivity</h2>
+<p>
+Current sensitivity is defined as the deflection produced per unit current.
+</p>
+\[
+S_i = \frac{\theta}{I}
+\]
+<p>
+Using the equilibrium relation
+</p>
+\[
+N B I A = k\theta
+\]
+<p>
+we obtain
+</p>
+\[
+S_i = \frac{\theta}{I} = \frac{NAB}{k}
+\]
+<p>
+Thus current sensitivity increases when
+</p>
+<ul>
+<li>Number of turns \(N\) increases</li>
+<li>Area of coil \(A\) increases</li>
+<li>Magnetic field strength \(B\) increases</li>
+<li>Torsional constant \(k\) decreases</li>
+</ul>
+<div class="insightbox">
+<p>
+Increasing the number of turns increases the magnetic dipole moment of the coil. This allows the same current to produce a larger torque and therefore a larger angular deflection.
+</p>
+</div>
+</section>
+<section>
+<h2>Voltage Sensitivity</h2>
+<p>
+Voltage sensitivity measures the deflection produced per unit potential difference.
+</p>
+\[
+S_v = \frac{\theta}{V}
+\]
+<p>
+Using Ohm's law
+</p>
+\[
+V = IR
+\]
+<p>
+we obtain
+</p>
+\[
+S_v = \frac{\theta}{IR} = \frac{1}{R}\frac{\theta}{I}
+\]
+\[
+S_v = \frac{NAB}{kR}
+\]
+<p>
+Thus voltage sensitivity depends not only on the coil parameters but also on the resistance of the galvanometer.
+</p>
+<ul>
+<li>High voltage sensitivity requires <b>large current sensitivity</b></li>
+<li>and <b>low resistance</b></li>
+</ul>
+<div class="insightbox">
+<p>
+While increasing the number of turns improves current sensitivity, it also increases the resistance of the coil. This introduces a design trade-off between current sensitivity and voltage sensitivity in practical galvanometers.
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
