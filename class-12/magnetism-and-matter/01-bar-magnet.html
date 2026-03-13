@@ -1,110 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnetism and Matter | Bar Magnet and Magnetic Dipole</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetism and Matter | Bar Magnet and Magnetic Dipole</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Magnetism and Matter
-            </a>
-        </nav>
-
-        <h1>The Bar Magnet and Magnetic Dipole</h1>
-        <p class="subtitle">
-            The macroscopic magnet as a perfect magnetic dipole.
-        </p>
-
-        <section>
-            <h2>What is a Magnetic Dipole?</h2>
-            <p>
-                A magnetic dipole is the simplest possible magnetic system — one with a north pole and a south pole. It
-                is the magnetic analogue of the electric dipole. Unlike the electric dipole, however, the two poles of a
-                magnetic dipole cannot be separated: every magnet always has both a north and a south pole.
-            </p>
-            <p>
-                Cut a bar magnet in half, and each half becomes a complete magnet with its own north and south pole.
-                This is the experimental basis of Gauss's Law for Magnetism — there are no magnetic monopoles.
-            </p>
-            <div class="insightbox">
-                A current loop and a bar magnet are equivalent descriptions of the same physical object at the
-                macroscopic level. Any bar magnet can be modelled as an equivalent current loop with the same magnetic
-                dipole moment.
-            </div>
-        </section>
-
-        <section>
-            <h2>Magnetic Dipole Moment of a Bar Magnet</h2>
-            <p>
-                For a bar magnet of pole strength \( m \) and magnetic length \( 2l \) (the distance between the poles),
-                the magnetic dipole moment \( \vec{M} \) is:
-            </p>
-            \[
-            \vec{M} = m \cdot (2l)\,\hat{l}
-            \]
-            <p>
-                where \( \hat{l} \) points from the south pole to the north pole. The magnitude is:
-            </p>
-            \[
-            M = m \cdot 2l \quad \text{(SI unit: A·m}^2\text{)}
-            \]
-            <p>
-                The magnetic length \( 2l \) is slightly less than the geometric length of the magnet because the poles
-                are located slightly inward from the ends.
-            </p>
-        </section>
-
-        <section>
-            <h2>Torque and Potential Energy in a Uniform Field</h2>
-            <p>
-                When a bar magnet (dipole moment \( \vec{M} \)) is placed in a uniform external magnetic field \(
-                \vec{B} \), it experiences a torque:
-            </p>
-            \[
-            \vec{\tau} = \vec{M} \times \vec{B}, \quad \tau = MB\sin\theta
-            \]
-            <p>
-                where \( \theta \) is the angle between \( \vec{M} \) and \( \vec{B} \). The torque tends to align the
-                magnet along the field direction.
-            </p>
-            <p>
-                The potential energy of the dipole in the field is:
-            </p>
-            \[
-            U = -\vec{M} \cdot \vec{B} = -MB\cos\theta
-            \]
-            <ul>
-                <li>\( \theta = 0° \): \( U = -MB \) — stable equilibrium (magnet aligned with field).</li>
-                <li>\( \theta = 180° \): \( U = +MB \) — unstable equilibrium.</li>
-            </ul>
-            <p>
-                Work done in rotating from \( \theta_1 \) to \( \theta_2 \):
-            </p>
-            \[
-            W = MB(\cos\theta_1 - \cos\theta_2)
-            \]
-        </section>
-
-        <section>
-            <h2>Core Sub-Topics</h2>
-            <div class="chapter-list">
-                <a href="./01a-dipole-fields.html">1a. Magnetic Field of a Dipole — Axial and Equatorial</a>
-                <a href="./01b-gauss-magnetism.html">1b. Gauss's Law for Magnetism</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Magnetism and Matter
+</a>
+</nav>
+<h1>The Bar Magnet and Magnetic Dipole</h1>
+<p class="subtitle">
+The bar magnet as the simplest macroscopic realization of a magnetic dipole.
+</p>
+<section>
+<h2>What is a Magnetic Dipole?</h2>
+<p>
+A magnetic dipole is the simplest possible magnetic system — one that possesses two opposite magnetic poles, called the <strong>north pole</strong> and the <strong>south pole</strong>. In this sense it is the magnetic analogue of an electric dipole, where two equal and opposite charges are separated by a small distance.
+</p>
+<p>
+There is however an important difference between electric and magnetic dipoles. In an electric dipole the two charges can exist independently, but in magnetism the two poles are inseparable. Every magnet always possesses both a north and a south pole simultaneously.
+</p>
+<p>
+This fact becomes evident through a simple experiment. If a bar magnet is cut into two pieces, each piece does not produce an isolated pole. Instead, each fragment becomes a smaller complete magnet with its own north and south poles.
+</p>
+<p>
+This experimental observation is the physical basis of <strong>Gauss's Law for Magnetism</strong>, which states that isolated magnetic charges (magnetic monopoles) do not exist. Mathematically this law is expressed as
+</p>
+\[
+\oint \vec{B} \cdot d\vec{A} = 0
+\]
+<p>
+The total magnetic flux through any closed surface is therefore always zero, because magnetic field lines never begin or end at isolated charges — they always form closed loops.
+</p>
+<div class="insightbox">
+<p>
+A current loop and a bar magnet are equivalent descriptions of the same physical object at the macroscopic level. Any bar magnet can be modelled as an equivalent current loop that produces the same magnetic dipole moment and therefore the same external magnetic field pattern.
+</p>
+<p>
+Although the microscopic origins are different, both systems behave identically as magnetic dipoles when observed from outside the system.
+</p>
+</div>
+</section>
+<section>
+<h2>Magnetic Dipole Moment of a Bar Magnet</h2>
+<p>
+The strength and orientation of a magnetic dipole are described by a vector quantity called the <strong>magnetic dipole moment</strong>. For a bar magnet this quantity depends on two parameters:
+</p>
+<ul>
+<li>The <strong>pole strength</strong> \(m\)</li>
+<li>The <strong>distance between the poles</strong></li>
+</ul>
+<p>
+If the distance between the poles is \(2l\), the magnetic dipole moment of the magnet is defined as
+</p>
+\[
+\vec{M} = m (2l)\,\hat{l}
+\]
+<p>
+where \( \hat{l} \) is a unit vector directed along the axis of the magnet from the <strong>south pole toward the north pole</strong>.
+</p>
+<p>
+The magnitude of the magnetic dipole moment therefore becomes
+</p>
+\[
+M = m (2l)
+\]
+<p>
+The SI unit of magnetic dipole moment is
+</p>
+\[
+\text{A·m}^2
+\]
+<p>
+This quantity completely characterizes how strongly the magnet interacts with external magnetic fields.
+</p>
+<p>
+The separation \(2l\) is known as the <strong>magnetic length</strong> of the magnet.
+</p>
+<p>
+In practice the magnetic length is slightly smaller than the geometric length of the magnet. This occurs because the effective magnetic poles are located slightly inside the physical ends of the magnet. Magnetic field lines do not emerge exactly from the extreme end faces but from regions slightly inward from the ends.
+</p>
+<p>
+Experimentally it is often observed that
+</p>
+\[
+\text{Magnetic Length } (2l) \approx 0.84 \times \text{Geometric Length}
+\]
+<p>
+This relation is only an approximate guideline used to visualize the location of the poles and should not be used in precise calculations.
+</p>
+<div class="insightbox">
+<p>
+At the microscopic level, magnetic dipole moment originates from moving electric charges. Whenever charge circulates in a loop — such as electrons orbiting inside atoms or the spin of electrons — a magnetic dipole moment is produced. For a current loop the dipole moment is
+</p>
+\[
+\mu = IA
+\]
+<p>
+where \(I\) is the current and \(A\) is the area of the loop.
+</p>
+<p>
+A bar magnet, however, contains an enormous number of such microscopic current loops inside its atoms. When many of these microscopic dipoles align, the magnet behaves externally as if two magnetic poles exist at its ends. To describe this macroscopic behaviour conveniently, we use the <em>pole model</em> and write the dipole moment as
+</p>
+\[
+M = m(2l)
+\]
+<p>
+which resembles the electric dipole moment \(p = qd\). Thus the expression \(M = m(2l)\) is a macroscopic mathematical model, while the true microscopic origin of magnetism lies in circulating charges that produce moments of the form \(IA\).
+</p>
+</div>
+</section>
+<section>
+<h2>Same Behaviour in an External Magnetic Field</h2>
+<p>
+Once a magnet is characterised by its dipole moment \( \vec{M} \), its interaction with an external magnetic field can be described entirely in terms of this vector quantity.
+</p>
+<p>
+When a bar magnet is placed in a uniform magnetic field \( \vec{B} \), the field exerts forces on the two poles of the magnet. These forces form a couple that produces a torque on the magnet.
+</p>
+<p>
+The torque experienced by the magnet is
+</p>
+\[
+\vec{\tau} = \vec{M} \times \vec{B}
+\]
+<p>
+and its magnitude is
+</p>
+\[
+\tau = MB\sin\theta
+\]
+<p>
+where \( \theta \) is the angle between the dipole moment \( \vec{M} \) and the external magnetic field \( \vec{B} \).
+</p>
+<p>
+The torque tends to rotate the magnet so that its dipole moment aligns with the direction of the magnetic field. The magnet therefore rotates along the path corresponding to the smaller angular displacement (less than \(180^\circ\)).
+</p>
+<p>
+The orientation of the magnet in the magnetic field is associated with a potential energy given by
+</p>
+\[
+U = -\vec{M} \cdot \vec{B}
+\]
+<p>
+or
+</p>
+\[
+U = -MB\cos\theta
+\]
+<p>
+This expression shows how the energy of the system depends on the orientation of the dipole relative to the field.
+</p>
+<ul>
+<li>\( \theta = 0^\circ \): \( U = -MB \) — stable equilibrium, magnet aligned with the field.</li>
+<li>\( \theta = 180^\circ \): \( U = +MB \) — unstable equilibrium.</li>
+</ul>
+<p>
+If the magnet is rotated from an angle \( \theta_1 \) to \( \theta_2 \), the work done is
+</p>
+\[
+W = MB(\cos\theta_1 - \cos\theta_2)
+\]
+<p>
+These results are identical to those obtained earlier for a magnetic dipole in the form of a current carrying loop. This again reinforces the idea that a bar magnet and a current loop are two different physical realizations of the same magnetic dipole system.
+</p>
+</section>
+<section>
+<h2>Core Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./01a-dipole-fields.html">1. Magnetic Field of a Dipole — Axial and Equatorial</a>
+<a href="./01b-gauss-magnetism.html">2. Gauss's Law for Magnetism</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

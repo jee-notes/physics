@@ -1,139 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnetism and Matter | Dipole Fields — Axial and Equatorial</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetism and Matter | Dipole Fields — Axial and Equatorial</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./01-bar-magnet.html" class="back-btn">
-                <span>&larr;</span> Back to Bar Magnet and Magnetic Dipole
-            </a>
-        </nav>
-
-        <h1>Magnetic Field of a Dipole</h1>
-        <p class="subtitle">
-            The axial and equatorial field lines of a bar magnet.
-        </p>
-
-        <section>
-            <h2>Setup</h2>
-            <p>
-                Consider a bar magnet of magnetic moment \( M \) and half-length \( l \). The two poles are at \( \pm l
-                \) from the centre. We find the magnetic field at two special positions:
-            </p>
-            <ul>
-                <li><strong>Axial point</strong> \( P_1 \): a point on the axis of the magnet at distance \( r \) from
-                    its centre.</li>
-                <li><strong>Equatorial point</strong> \( P_2 \): a point on the perpendicular bisector (equatorial
-                    plane) at distance \( r \) from the centre.</li>
-            </ul>
-            <p>
-                Both results are derived by treating the magnet as two isolated poles of strength \( +m \) and \( -m \)
-                and vectorially adding their fields.
-            </p>
-        </section>
-
-        <section>
-            <h2>Field at an Axial Point</h2>
-            <p>
-                At point \( P_1 \) on the axis at distance \( r \) (with \( r \gg l \)):
-            </p>
-            <p>
-                The field from the nearer \( N \) pole and the farther \( S \) pole both act along the axis, but in
-                opposite directions. The net field points from \( S \) to \( N \) — the same direction as \( \vec{M} \):
-            </p>
-            \[
-            \vec{B}_{\text{axial}} = \frac{\mu_0}{4\pi} \frac{2Mr}{(r^2 - l^2)^2}
-            \]
-            <p>
-                In the short-magnet approximation (\( r \gg l \)), \( (r^2 - l^2)^2 \approx r^4 \):
-            </p>
-            \[
-            \boxed{B_{\text{axial}} \approx \frac{\mu_0}{4\pi} \frac{2M}{r^3}}
-            \]
-            <p>
-                The axial field is in the <strong>same direction</strong> as the magnetic moment \( \vec{M} \) (from
-                S-pole to N-pole inside the magnet, or from south to north externally along the axis).
-            </p>
-            <div class="insightbox">
-                Compare with the electric dipole: \( E_{\text{axial}} = \frac{1}{4\pi\varepsilon_0}\frac{2p}{r^3} \).
-                The magnetic and electric dipole formulas are structurally identical — only the constants differ.
-            </div>
-        </section>
-
-        <section>
-            <h2>Field at an Equatorial Point</h2>
-            <p>
-                At point \( P_2 \) on the equatorial plane at distance \( r \):
-            </p>
-            <p>
-                The components of the two pole fields along the perpendicular bisector cancel by symmetry. The
-                components along the axis of the magnet add up. The net field points from \( N \) to \( S \) —
-                <strong>opposite</strong> to \( \vec{M} \):
-            </p>
-            \[
-            \vec{B}_{\text{equatorial}} = -\frac{\mu_0}{4\pi} \frac{M}{(r^2 + l^2)^{3/2}}
-            \]
-            <p>
-                In the short-magnet approximation (\( r \gg l \)):
-            </p>
-            \[
-            \boxed{B_{\text{equatorial}} \approx \frac{\mu_0}{4\pi} \frac{M}{r^3}}
-            \]
-            <p>
-                Direction: antiparallel to \( \vec{M} \), i.e., from north to south along the external equatorial line.
-            </p>
-        </section>
-
-        <section>
-            <h2>Key Comparison</h2>
-            <div class="model-box">
-                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
-                    <thead>
-                        <tr style="border-bottom: 2px solid #e0e0e0;">
-                            <th style="text-align:left; padding:8px;">Property</th>
-                            <th style="text-align:left; padding:8px;">Axial Field</th>
-                            <th style="text-align:left; padding:8px;">Equatorial Field</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding:8px;">Magnitude (short magnet)</td>
-                            <td style="padding:8px;">\( \dfrac{\mu_0}{4\pi}\dfrac{2M}{r^3} \)</td>
-                            <td style="padding:8px;">\( \dfrac{\mu_0}{4\pi}\dfrac{M}{r^3} \)</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Ratio</td>
-                            <td colspan="2" style="padding:8px;">\( B_{\text{axial}} = 2\, B_{\text{equatorial}} \) at
-                                the same \( r \)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:8px;">Direction vs \( \vec{M} \)</td>
-                            <td style="padding:8px;">Same (parallel)</td>
-                            <td style="padding:8px;">Opposite (antiparallel)</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Distance dependence</td>
-                            <td style="padding:8px;">\( 1/r^3 \)</td>
-                            <td style="padding:8px;">\( 1/r^3 \)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-bar-magnet.html" class="back-btn">
+<span>&larr;</span> Back to Bar Magnet and Magnetic Dipole
+</a>
+</nav>
+<h1>Magnetic Field of a Dipole</h1>
+<p class="subtitle">
+Magnetic field produced by a dipole along its axial and equatorial lines.
+</p>
+<section>
+<h2>Bar Magnet Setup as Electric dipole</h2>
+<p>
+Consider a bar magnet of magnetic dipole moment \( M \) and half-length \( l \). The magnet can be modelled using the pole model as two magnetic poles of equal strength \( +m \) and \( -m \), separated by a distance \(2l\).
+</p>
+<p>
+The north pole is located at \(+l\) from the centre and the south pole at \(-l\). Using this model we calculate the magnetic field at two important locations around the magnet:
+</p>
+<ul>
+<li>
+<strong>Axial point \(P_1\)</strong>: a point lying on the axis of the magnet at a distance \(r\) from the centre.
+</li>
+<li>
+<strong>Equatorial point \(P_2\)</strong>: a point on the perpendicular bisector (equatorial plane) of the magnet at a distance \(r\) from the centre.
+</li>
+</ul>
+<p>
+These two locations are particularly useful because they represent directions parallel and perpendicular to the dipole moment. The magnetic field at these points is obtained by calculating the field produced by each pole separately and then adding the contributions vectorially.
+</p>
+</section>
+<section>
+<h2>Field at an Axial Point</h2>
+<p>
+Consider a point \(P_1\) on the axis of the magnet at a distance \(r\) from its centre.
+</p>
+<p>
+The north pole produces a magnetic field directed away from itself, while the south pole produces a field directed toward itself. At the axial point these fields lie along the same straight line but act in opposite directions.
+</p>
+<p>
+The net magnetic field is obtained by subtracting the two contributions. The resulting expression for the magnetic field on the axial line is
+</p>
+\[
+\vec{B}_{\text{axial}} = \frac{\mu_0}{4\pi}\frac{2Mr}{(r^2 - l^2)^2}
+\]
+<p>
+where \(M = m(2l)\) is the magnetic dipole moment of the magnet.
+</p>
+<p>
+For points far from the magnet (\(r \gg l\)), the magnet behaves like a <em>short dipole</em>. In this limit
+</p>
+\[
+(r^2 - l^2)^2 \approx r^4
+\]
+<p>
+and the expression simplifies to
+</p>
+\[
+\boxed{B_{\text{axial}} \approx \frac{\mu_0}{4\pi}\frac{2M}{r^3}}
+\]
+<p>
+The direction of the magnetic field at the axial point is along the axis from the south pole toward the north pole. This is the same direction as the magnetic dipole moment \( \vec{M} \).
+</p>
+<div class="insightbox">
+<p>
+The structure of the magnetic dipole field is mathematically identical to that of an electric dipole field. For an electric dipole,
+</p>
+\[
+E_{\text{axial}}=\frac{1}{4\pi\varepsilon_0}\frac{2p}{r^3}
+\]
+<p>
+while for a magnetic dipole
+</p>
+\[
+B_{\text{axial}}=\frac{\mu_0}{4\pi}\frac{2M}{r^3}.
+\]
+<p>
+The spatial dependence and geometry are identical; only the physical constants differ.
+</p>
+</div>
+</section>
+<section>
+<h2>Field at an Equatorial Point</h2>
+<p>
+Now consider a point \(P_2\) on the equatorial plane of the magnet at a distance \(r\) from the centre.
+</p>
+<p>
+At this location the fields produced by the two poles are symmetrically oriented. The components perpendicular to the axis cancel by symmetry, while the components along the axis add together.
+</p>
+<p>
+The resulting magnetic field at the equatorial point is
+</p>
+\[
+\vec{B}_{\text{equatorial}} = -\frac{\mu_0}{4\pi}\frac{M}{(r^2 + l^2)^{3/2}} 
+\]
+<p>
+For points far from the magnet (\(r \gg l\)) the expression simplifies to
+</p>
+\[
+\boxed{B_{\text{equatorial}} \approx \frac{\mu_0}{4\pi}\frac{M}{r^3}}
+\]
+<p>
+The negative sign indicates that the magnetic field at the equatorial point is directed opposite to the dipole moment \( \vec{M} \). In other words, along the equatorial line the field points from the north pole toward the south pole.
+</p>
+<div class="insightbox">
+<p>
+A useful rule emerges from these results. Along the axial line the magnetic field of a dipole is in the <strong>same direction</strong> as the dipole moment, while along the equatorial line it is in the <strong>opposite direction</strong>. This rule allows the direction of the dipole field to be determined quickly without repeating the full pole calculation.
+</p>
+</div>
+</section>
+<section>
+<h2>Key Comparison</h2>
+<div class="model-box">
+<table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+<thead>
+<tr style="border-bottom: 2px solid #e0e0e0;">
+<th style="text-align:left; padding:8px;">Property</th>
+<th style="text-align:left; padding:8px;">Axial Field</th>
+<th style="text-align:left; padding:8px;">Equatorial Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:8px;">Magnitude (short magnet)</td>
+<td style="padding:8px;">\( \dfrac{\mu_0}{4\pi}\dfrac{2M}{r^3} \)</td>
+<td style="padding:8px;">\( \dfrac{\mu_0}{4\pi}\dfrac{M}{r^3} \)</td>
+</tr>
+<tr style="background:#fafafa;">
+<td style="padding:8px;">Ratio</td>
+<td colspan="2" style="padding:8px;">\( B_{\text{axial}} = 2\,B_{\text{equatorial}} \) at the same distance \(r\)</td>
+</tr>
+<tr>
+<td style="padding:8px;">Direction relative to \( \vec{M} \)</td>
+<td style="padding:8px;">Parallel</td>
+<td style="padding:8px;">Antiparallel</td>
+</tr>
+<tr style="background:#fafafa;">
+<td style="padding:8px;">Distance dependence</td>
+<td style="padding:8px;">\(1/r^3\)</td>
+<td style="padding:8px;">\(1/r^3\)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>
