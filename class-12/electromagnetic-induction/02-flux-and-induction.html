@@ -14,26 +14,32 @@
 <span>&larr;</span> Back to Electromagnetic Induction
 </a>
 </nav>
-<h1>Magnetic Flux and Induced EMF</h1>
+<h1>Magnetic Flux</h1>
 <p class="subtitle">
-What exactly is flux and its dependency on Area vector orientation.
+What exactly is flux and its dependence on the orientation of the area vector.
 </p>
 <section>
 <h2>Magnetic Flux</h2>
 <p>
-Let there be a region in space containing Magnetic Field \( \vec{B}(\vec{r}) \). The magnetic field at position \( \vec{r}=\vec{r}_1 \) is \( \vec{B}(\vec{r}_1) \). To define <b>flux</b> at position \( \vec{r}=\vec{r}_1 \), we consider a small surface element \( d\vec{A} \) located at the point \( \vec{r}=\vec{r}_1 \). The magnetic flux \( d\phi \) through this infinitesimal point area is a measure of how much of the magnetic field passes through that surface element. It is defined as
+Consider a region in space containing a magnetic field \( \vec{B}(\vec{r}) \). The magnetic field at a particular position \( \vec{r}=\vec{r}_1 \) is therefore written as \( \vec{B}(\vec{r}_1) \).
+</p>
+<p>
+To define <b>flux</b> at this location, we consider a small surface element \( d\vec{A} \) situated at the point \( \vec{r}=\vec{r}_1 \). The magnetic flux \( d\phi \) through this infinitesimal area represents the amount of magnetic field passing through that surface element.
+</p>
+<p>
+It is defined as
 </p>
 \[
 d\phi = \vec{B}(\vec{r}_1)\cdot d\vec{A}
 \]
 <p>
-The above expression gives the flux through a differential area element at a point. To determine the flux through a finite surface \( S \), we sum the contributions from all such infinitesimal elements over the surface. This leads to the surface integral
+The above expression gives the flux through a differential area element at a point. To determine the total flux through a finite surface \( S \), we sum the contributions from all such infinitesimal elements over the surface. This leads to the surface integral
 </p>
 \[
 \Phi_B = \int_S \vec{B}\cdot d\vec{A}
 \]
 <p>
-For the special case of a uniform magnetic field \( \vec{B} \) making an angle \( \theta \) with the normal \( \hat n \) to a flat surface of area \( A \), the flux becomes
+For the special case of a uniform magnetic field \( \vec{B} \) making an angle \( \theta \) with the normal \( \hat n \) to a flat surface of area \( A \), the flux simplifies to
 </p>
 \[
 \Phi_B = BA\cos\theta
@@ -44,12 +50,12 @@ The SI unit of magnetic flux is the <strong>Weber (Wb)</strong>:
 \[
 1\,\text{Wb} = 1\,\text{T·m}^2
 \]
-<ul>
+<ul class="model-box">
 <li>\( \theta = 0^\circ \): \( \Phi_B = BA \) — maximum flux, when the field is perpendicular to the surface.</li>
 <li>\( \theta = 90^\circ \): \( \Phi_B = 0 \) — the field is parallel to the surface, so no field lines pass through it.</li>
 </ul>
 <div class="insightbox">
-Flux is a scalar quantity. A positive flux means the predominant direction of \( \vec B \) is along the chosen surface normal; a negative flux means it is opposite to it. The sign therefore depends on the orientation chosen for the surface normal.
+Flux is a scalar quantity. A positive flux means the predominant direction of \( \vec B \) is along the chosen surface normal; a negative flux means it is opposite to it. The sign therefore depends on the chosen orientation of the surface normal.
 </div>
 </section>
 <section>
@@ -61,7 +67,140 @@ For a coil consisting of \( N \) turns, each turn experiences the same magnetic 
 \Lambda = N\Phi_B
 \]
 </section>
+<section>
+<h2>Field Qualifiers</h2>
+<p>
+Fields are quantities that exist distributed throughout space by definition. We often describe fields using certain adjectives that characterise how they vary in space or time. These adjectives are called <strong>qualifiers</strong> of the field.
+</p>
+<p>
+First, we describe how the field varies in <strong>space</strong>.
+</p>
+<ul class="model-box">
+<li><strong>Uniform</strong> — The field is spatially invariant. \( \vec{B}(x_1) = \vec{B}(x_2) \) at all instants of time.</li>
+<li><strong>Non-Uniform</strong> — The field varies with position. There exists some instant such that \( \vec{B}(x_1) \neq \vec{B}(x_2) \).</li>
+</ul>
+<p>
+The terms "uniform" and "non-uniform" therefore describe the distribution of the field in the <strong>space domain</strong>.
+</p>
+<p>
+We also use qualifiers to describe how the field behaves in the <strong>time domain</strong>.
+</p>
+<ul class="model-box">
+<li><strong>Static</strong> — The field does not change with time. At a given position \( x_1 \), \( \vec{B}(t_1) = \vec{B}(t_2) \). This does not specify anything about spatial distribution — the field may be uniform or non-uniform.</li>
+<li><strong>Time-Varying</strong> — The field changes with time. At a given position \( x_1 \), there exists at least one instant such that \( \vec{B}(t_1) \neq \vec{B}(t_2) \). Again, this does not specify anything about spatial distribution.</li>
+</ul>
+<p>
+The spatial and temporal qualifiers are independent. Therefore four combinations are possible:
+</p>
+<ul class="model-box">
+<li><strong>Uniform and Static</strong> — Magnetic field inside a long solenoid carrying steady current.</li>
+<li><strong>Uniform and Time-Varying</strong> — Magnetic field inside a solenoid with time-varying current.</li>
+<li><strong>Non-Uniform and Static</strong> — Field around a straight conductor carrying steady current.</li>
+<li><strong>Non-Uniform and Time-Varying</strong> — Field around a conductor carrying time-varying current.</li>
+</ul>
+</section>
+<section>
 
+<h2>Area Vector</h2>
+
+<p>
+Magnetic flux measures how much magnetic field passes through a surface. 
+Since magnetic field is a vector quantity, the amount of field passing through a surface depends not only on the size of the surface but also on its <strong>orientation</strong>.
+</p>
+
+<p>
+To account for orientation, we represent the surface by an <strong>area vector</strong>.
+</p>
+
+<p>
+The magnitude of the area vector equals the area of the surface, and its direction is perpendicular (normal) to the surface.
+</p>
+
+<p>
+Using this convention, magnetic flux through a surface is defined as
+</p>
+
+\[
+\Phi_B = \vec{B}\cdot\vec{A}
+\]
+
+<p>
+The dot product ensures that only the component of the magnetic field perpendicular to the surface contributes to the flux.
+</p>
+
+<div class="insightbox">
+If the magnetic field is parallel to the surface, no field lines pass through it and the flux is zero.  
+If the field is perpendicular to the surface, the flux is maximum.
+</div>
+</section>
+<section>
+<h2>Solved Example</h2>
+<div class="examplebox">
+<h3>Question</h3>
+<p>
+A uniform magnetic field exists in a region and is given by
+</p>
+
+\[
+\vec{B} = B_0 \hat{i}
+\]
+<p>
+A bent rectangular coil has two surfaces:
+</p>
+<ul class="model-box">
+<li>One surface of area \(A_1\) lies in the <strong>YZ plane</strong>.</li>
+<li>Another surface of area \(A_2\) lies in the <strong>XY plane</strong>.</li>
+</ul>
+<p>
+Find the total magnetic flux through the coil.
+</p>
+<hr>
+<h4>Solution</h4>
+<p>
+Flux through a surface is given by
+</p>
+\[
+\Phi = \vec{B}\cdot\vec{A}
+\]
+<p>
+First determine the area vectors.
+</p>
+<ul class="model-box">
+<li>For a surface in the <strong>YZ plane</strong>, the normal is along \( \hat{i} \).</li>
+<li>For a surface in the <strong>XY plane</strong>, the normal is along \( \hat{k} \).</li>
+</ul>
+<p>
+Thus the total area vector can be written as
+</p>
+\[
+\vec{A} = A_1 \hat{i} + A_2 \hat{k}
+\]
+<p>
+The magnetic field is
+</p>
+\[
+\vec{B} = B_0 \hat{i}
+\]
+<p>
+The flux becomes
+</p>
+\[
+\Phi = \vec{B}\cdot\vec{A}
+\]
+\[
+\Phi = (B_0 \hat{i}) \cdot (A_1\hat{i} + A_2\hat{k})
+\]
+\[
+\Phi = B_0A_1
+\]
+<p>
+Since \( \hat{i}\cdot\hat{k} = 0 \), the surface in the XY plane contributes no flux.
+</p>
+<div class="insightbox">
+Only the surface whose normal is parallel to the magnetic field contributes to the magnetic flux.
+</div>
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
