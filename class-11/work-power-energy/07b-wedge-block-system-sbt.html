@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wedge–Block–System: The Stationary Wedge Constraint</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Mechanics Notes
+</a>
+</nav>
+<h1>Wedge–Block–Rope System</h1>
+<p class="subtitle">
+Finding the mass ratio $M/m$ for a stationary wedge $m_0$.
+</p>
+<section>
+<p>
+In the system shown, all surfaces are smooth and the string and pulleys are light. The angle of the wedge is \(\theta = \sin^{-1}(3/5)\). When the system is released from rest, the wedge of mass \(m_0\) does not move. Our goal is to find the ratio \(M/m\).
+</p>
+<div class="diagram">
+<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" style="stroke:#666; stroke-width:1" />
+    </pattern>
+  </defs>
+  <rect x="50" y="400" width="520" height="15" fill="url(#hatch)" />
+  <line x1="50" y1="400" x2="570" y2="400" stroke="black" stroke-width="2" />
+  <rect x="420" y="10" width="80" height="10" fill="url(#hatch)" />
+  <line x1="420" y1="20" x2="500" y2="20" stroke="black" stroke-width="2" />
+  <path d="M 100 100 L 100 400 L 500 400 Z" fill="#f9f9f9" stroke="blue" stroke-width="2" />
+  <text x="130" y="370" font-family="serif" font-style="italic" font-size="20" fill="blue">m₀</text>
+  <circle cx="100" cy="60" r="15" fill="white" stroke="black" stroke-width="2" />
+  <circle cx="460" cy="60" r="15" fill="white" stroke="black" stroke-width="2" />
+  <line x1="460" y1="20" x2="460" y2="60" stroke="black" stroke-width="2.5" stroke-linecap="round" />
+  <line x1="100" y1="60" x2="100" y2="100" stroke="black" stroke-width="2.5" stroke-linecap="round" />
+  <circle cx="100" cy="60" r="3" fill="black" />
+  <circle cx="460" cy="60" r="3" fill="black" />
+  <line x1="100" y1="45" x2="460" y2="45" stroke="green" stroke-width="1.5" />
+  <line x1="475" y1="60" x2="475" y2="220" stroke="black" stroke-width="1.5" />
+  <g transform="rotate(36.87, 100, 60)">
+    <line x1="100" y1="75" x2="250" y2="75" stroke="black" stroke-width="1.5" />
+    <rect x="250" y="58" width="60" height="34" fill="#ddd" stroke="black" stroke-width="2" />
+    <text x="272" y="81" font-family="serif" font-style="italic" font-size="18">m</text>
+  </g>
+  <rect x="445" y="220" width="60" height="60" fill="white" stroke="black" stroke-width="2" />
+  <text x="515" y="255" font-family="serif" font-style="italic" font-size="20">M</text>
+  <path d="M 450 400 A 50 50 0 0 1 460 370" fill="none" stroke="black" stroke-width="1.5" />
+  <text x="425" y="385" font-family="serif" font-size="20">θ</text>
+</svg>
+</div>
+</section>
+<section>
+<h2>Geometric Constraints</h2>
+<p>
+Since the wedge \(m_0\) is stationary, the string constraint is simple: if block m moves down the incline with acceleration a, block M must move upward with the same acceleration magnitude a.
+</p>
+<p>For \(\theta = \sin^{-1}(3/5)\):</p>
+\[ \sin\theta = 0.6, \quad \cos\theta = 0.8 \]
+</section>
+<section>
+<h2>Method 1 — Newton's Laws (FBD Approach)</h2>
+<p>Analyze horizontal forces on the wedge \(m_0\). For \(m_0\) to remain at rest, \(\sum F_x = 0\).</p>
+\[ N \sin\theta = T + T \cos\theta \implies N \sin\theta = T(1 + \cos\theta) \quad \dots(1) \]
+<p>For block $m$, perpendicular to the incline:</p>
+\[ N = mg \cos\theta \quad \dots(2) \]
+<p>Substituting (2) into (1):</p>
+\[ T = \frac{mg \sin\theta \cos\theta}{1 + \cos\theta} \quad \dots(3) \]
+<p>Equations of motion for $m$ (down incline) and $M$ (upward):</p>
+\[ mg \sin\theta - T = ma \quad \text{and} \quad T - Mg = Ma \]
+<p>Eliminating $a$ gives $M(g+a) = T$, which leads to the ratio:</p>
+\[ \frac{M}{m} = \frac{\sin\theta \cos\theta}{1 + \sin\theta + \cos\theta} = \frac{0.48}{2.4} = 0.2 \]
+</section>
+<section>
+<h2>Method 2 — System Momentum Approach</h2>
+<p>
+Consider the system: <strong>Wedge + Block \(m\) + Rope segment left of point P</strong> (shown in green).
+</p>
+<p>
+The only external horizontal force on this system is the tension $T$ at point P pulling to the right. Since the wedge is stationary, the horizontal acceleration of the center of mass is purely due to block \(m\).
+</p>
+\[ T = m a_x = m (a \cos\theta) \quad \dots(4) \]
+<p>
+Combining this with the equation for block \(M\) (\(T = M(g+a)\)):
+</p>
+\[ M(g+a) = ma \cos\theta \implies \frac{M}{m} = \frac{a \cos\theta}{g+a} \]
+<p>
+From the equation of motion for block \(m\) ($mg \sin\theta - T = ma$), substituting \(T\) from (4):
+</p>
+\[ mg \sin\theta - ma \cos\theta = ma \implies a = \frac{g \sin\theta}{1 + \cos\theta} \]
+<p>
+Substituting $a$ back into the ratio gives the same result: $\mathbf{M/m = 0.2}$.
+</p>
+</section>
+<section>
+<h2>Method 3 — Work-Energy Approach</h2>
+<p>By Work-Energy theorem, $\Delta K + \Delta U = 0$ for the whole system over displacement $s$:</p>
+\[ \frac{1}{2}(M + m)v^2 + Mgs - mgs \sin\theta = 0 \]
+<p>Using $v^2 = 2as$:</p>
+\[ a = g \left( \frac{m \sin\theta - M}{M + m} \right) \]
+<p>Combining this potential-kinetic trade-off with the stationary wedge constraint ($T = ma \cos\theta$) yields the identical mass ratio. This confirms that the internal tension and normal forces do no net work on the system.</p>
+</section>
+</div>
+</body>
+</html>
