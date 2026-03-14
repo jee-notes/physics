@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Induction | Faraday's Experiments</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electromagnetic Induction
+</a>
+</nav>
+<h1>Faraday's Experiments</h1>
+<p class="subtitle">
+The experiments that revealed how and when an EMF is induced.
+</p>
+<section>
+<h2>Faraday's Experiments</h2>
+<p>
+Michael Faraday discovered electromagnetic induction through a series of experiments performed in 1831.  
+These experiments revealed a single fundamental fact: <strong>an EMF is induced in a circuit whenever the magnetic flux linked with the circuit changes.</strong>
+</p>
+<p>
+Although the experimental setups looked different, they can all be understood today as different ways of changing the magnetic flux through a loop.
+</p>
+<h3>Experiment 1 — Changing Magnetic Field</h3>
+<p>
+Faraday wound two coils \(P\) and \(S\) on a common iron core. Coil \(P\) was connected to a battery and a key, while coil \(S\) was connected to a galvanometer.
+</p>
+<ul class="model-box">
+<li>When the key was pressed, the galvanometer showed a momentary deflection.</li>
+<li>When the key was released, a deflection again appeared, but in the opposite direction.</li>
+<li>When the key remained pressed, no deflection occurred.</li>
+</ul>
+<p>
+Pressing the key causes the current in coil \(P\) to grow, producing a growing magnetic field in the core. This increases the magnetic flux linked with coil \(S\), inducing a current. When the key is released, the magnetic field decreases and the induced current reverses direction.
+</p>
+<p>
+When the current becomes steady, the magnetic field and flux remain constant, so no EMF is produced.
+</p>
+<p>
+This type of induction occurs because the <strong>magnetic field strength changes with time</strong>.
+</p>
+<h3>Experiment 2 — Relative Motion of Source and Coil</h3>
+<p>
+Faraday also observed that an EMF appears when the source of magnetic field moves relative to a nearby coil.
+</p>
+<ul class="model-box">
+<li>Moving an electromagnet or bar magnet toward a coil produces a galvanometer deflection.</li>
+<li>Moving it away produces a deflection in the opposite direction.</li>
+<li>If both remain stationary, no deflection occurs.</li>
+</ul>
+<p>
+As the magnet approaches the coil, the magnetic flux through the coil increases. When it moves away, the flux decreases. The induced current appears only while this change in flux occurs.
+</p>
+<h3>Experiment 3 — Motion of the Coil in a Magnetic Field</h3>
+<p>
+Faraday also placed a coil connected to a galvanometer inside a region of uniform magnetic field.
+</p>
+<ul class="model-box">
+<li>If the coil moved entirely within the magnetic field, no deflection was observed.</li>
+<li>If the coil entered or left the magnetic field region, the galvanometer showed a deflection.</li>
+</ul>
+<p>
+When the coil moves so that the portion of the loop inside the magnetic field changes, the magnetic flux linked with the loop changes. This produces an induced current.
+</p>
+<p>
+The EMF generated in this situation is called <strong>motional EMF</strong>. It can be explained either using the Lorentz force acting on electrons in the conductor or by applying Faraday's law of induction.
+</p>
+<div class="insightbox">
+Although these experiments appear different, they all share a common feature: the magnetic flux through the circuit changes.
+In fact, magnetic flux is given by
+\[
+\Phi_B = BA\cos\theta
+\]
+so the flux can change in three ways:
+<ul>
+<li>the magnetic field \(B\) may change,</li>
+<li>the area of the loop \(A\) may change,</li>
+<li>or the orientation of the loop (\(\theta\)) may change.</li>
+</ul>
+All practical methods of electromagnetic induction — transformers, motional EMF, and generators — arise from one of these three possibilities.
+</div>
+</section>
+<section>
+<h2>Field View</h2>
+<p>
+Faraday's experiments strongly supported the <strong>field view</strong> of electromagnetism.
+</p>
+<p>
+Earlier theories often explained forces through the idea of <em>action at a distance</em>, where objects influenced one another directly across empty space. Faraday's results suggested a different picture: the region of space around electric charges and currents is filled with a <strong>field</strong> that carries physical influence.
+</p>
+<p>
+In this view, the electromagnetic field is treated as a real physical entity that exists throughout space. Changes in this field propagate through space and affect nearby circuits, producing phenomena such as electromagnetic induction.
+</p>
+<p>
+Magnetic flux is therefore defined in terms of the <strong>magnetic field</strong>.
+</p>
+<p>
+To understand <b>flux</b>, we must first understand the idea of a <b>field</b>, because flux is defined for a field.
+</p>
+<p>
+A field is a physical quantity that can be indexed by location (position) in space. For example, when we speak of <em>instantaneous velocity</em>, we mean the velocity associated with a particular instant of time. We can therefore define velocity at a specific time \( t=t_1 \) as \( \vec{v}(t_1) \).
+</p>
+<p>
+In a similar way, a field assigns a value to every point in space. Thus the magnetic field at position \( \vec{r}=\vec{r}_1 \) can be written as \( \vec{B}(\vec{r}_1) \).
+</p>
+<div class="insightbox">
+A useful way to view electromagnetic phenomena is through the behaviour of electric charges.
+<ul>
+<li><strong>Charge at rest</strong> → produces only an electric field \( \vec{E} \).</li>
+<li><strong>Charge moving with constant velocity</strong> → produces both an electric field \( \vec{E} \) and a magnetic field \( \vec{B} \).</li>
+<li><strong>Accelerating charge</strong> → produces changing electric and magnetic fields that propagate through space as an <strong>electromagnetic wave</strong>.</li>
+</ul>
+Electrostatics studies charges at rest.  
+Magnetostatics studies charges in steady motion (steady currents). 
+Electromagnetic induction arises when fields change with time, and accelerating charges ultimately give rise to electromagnetic waves.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

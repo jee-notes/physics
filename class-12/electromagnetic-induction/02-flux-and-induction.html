@@ -1,148 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electromagnetic Induction | Magnetic Flux and Induced EMF</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Induction | Magnetic Flux</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Electromagnetic Induction
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electromagnetic Induction
+</a>
+</nav>
+<h1>Magnetic Flux and Induced EMF</h1>
+<p class="subtitle">
+What exactly is flux and its dependency on Area vector orientation.
+</p>
+<section>
+<h2>Magnetic Flux</h2>
+<p>
+Let there be a region in space containing Magnetic Field \( \vec{B}(\vec{r}) \). The magnetic field at position \( \vec{r}=\vec{r}_1 \) is \( \vec{B}(\vec{r}_1) \). To define <b>flux</b> at position \( \vec{r}=\vec{r}_1 \), we consider a small surface element \( d\vec{A} \) located at the point \( \vec{r}=\vec{r}_1 \). The magnetic flux \( d\phi \) through this infinitesimal point area is a measure of how much of the magnetic field passes through that surface element. It is defined as
+</p>
+\[
+d\phi = \vec{B}(\vec{r}_1)\cdot d\vec{A}
+\]
+<p>
+The above expression gives the flux through a differential area element at a point. To determine the flux through a finite surface \( S \), we sum the contributions from all such infinitesimal elements over the surface. This leads to the surface integral
+</p>
+\[
+\Phi_B = \int_S \vec{B}\cdot d\vec{A}
+\]
+<p>
+For the special case of a uniform magnetic field \( \vec{B} \) making an angle \( \theta \) with the normal \( \hat n \) to a flat surface of area \( A \), the flux becomes
+</p>
+\[
+\Phi_B = BA\cos\theta
+\]
+<p>
+The SI unit of magnetic flux is the <strong>Weber (Wb)</strong>:
+</p>
+\[
+1\,\text{Wb} = 1\,\text{T·m}^2
+\]
+<ul>
+<li>\( \theta = 0^\circ \): \( \Phi_B = BA \) — maximum flux, when the field is perpendicular to the surface.</li>
+<li>\( \theta = 90^\circ \): \( \Phi_B = 0 \) — the field is parallel to the surface, so no field lines pass through it.</li>
+</ul>
+<div class="insightbox">
+Flux is a scalar quantity. A positive flux means the predominant direction of \( \vec B \) is along the chosen surface normal; a negative flux means it is opposite to it. The sign therefore depends on the orientation chosen for the surface normal.
+</div>
+</section>
+<section>
+<h2>Flux Linkage</h2>
+<p>
+For a coil consisting of \( N \) turns, each turn experiences the same magnetic flux. The total flux linkage \( \Lambda \) is therefore the sum of the flux through all the turns:
+</p>
+\[
+\Lambda = N\Phi_B
+\]
+</section>
 
-        <h1>Magnetic Flux and Induced EMF</h1>
-        <p class="subtitle">
-            What exactly is flux — and the three ways it can change to produce an EMF.
-        </p>
-
-        <section>
-            <h2>Magnetic Flux</h2>
-            <p>
-                The magnetic flux \( \Phi_B \) through a surface \( S \) is a measure of how many magnetic field lines
-                pass through that surface. It is defined as:
-            </p>
-            \[
-            \Phi_B = \int_S \vec{B} \cdot d\vec{A}
-            \]
-            <p>
-                For a uniform field \( \vec{B} \) making angle \( \theta \) with the normal \( \hat{n} \) to a flat
-                surface of area \( A \):
-            </p>
-            \[
-            \Phi_B = BA\cos\theta
-            \]
-            <p>
-                The SI unit of magnetic flux is the <strong>Weber (Wb)</strong>: \( 1\text{ Wb} = 1\text{ T·m}^2 \).
-            </p>
-            <ul>
-                <li>\( \theta = 0° \): \( \Phi_B = BA \) — maximum, field perpendicular to surface.</li>
-                <li>\( \theta = 90° \): \( \Phi_B = 0 \) — field parallel to surface, no lines pass through.</li>
-            </ul>
-            <div class="insightbox">
-                Flux is a scalar. A positive flux means the predominant direction of \( \vec{B} \) is along the chosen
-                normal to the surface; negative flux means it is opposite. The sign depends on the chosen orientation of
-                the surface normal.
-            </div>
-        </section>
-
-        <section>
-            <h2>Flux Linkage</h2>
-            <p>
-                For a coil of \( N \) turns, the total flux linkage \( \Lambda \) is the sum of flux through all turns:
-            </p>
-            \[
-            \Lambda = N\Phi_B
-            \]
-            <p>
-                Faraday's Law in terms of flux linkage:
-            </p>
-            \[
-            \mathcal{E} = -\frac{d\Lambda}{dt} = -N\frac{d\Phi_B}{dt}
-            \]
-        </section>
-
-        <section>
-            <h2>Three Ways to Change Flux</h2>
-            <p>
-                Since \( \Phi_B = BA\cos\theta \), there are exactly three ways to change it — and each produces an EMF:
-            </p>
-
-            <h3>1. Changing \( B \) (Transformer EMF)</h3>
-            <p>
-                If the field \( B \) changes with time while the loop is stationary and its orientation is fixed:
-            </p>
-            \[
-            \mathcal{E} = -NA\cos\theta \cdot \frac{dB}{dt}
-            \]
-            <p>
-                Example: A loop inside a solenoid whose current is changing. Used in transformers.
-            </p>
-
-            <h3>2. Changing \( A \) (Motional EMF)</h3>
-            <p>
-                If a conductor moves in a steady field such that the area of the circuit changes:
-            </p>
-            \[
-            \mathcal{E} = -NB\cos\theta \cdot \frac{dA}{dt}
-            \]
-            <p>
-                Example: A sliding rod on rails in a uniform field. This is motional EMF.
-            </p>
-
-            <h3>3. Changing \( \theta \) (Generator EMF)</h3>
-            <p>
-                If the loop rotates in a steady uniform field:
-            </p>
-            \[
-            \theta = \omega t \implies \Phi_B = BA\cos(\omega t)
-            \]
-            \[
-            \mathcal{E} = -N\frac{d\Phi_B}{dt} = NBA\omega\sin(\omega t) = \mathcal{E}_0\sin(\omega t)
-            \]
-            <p>
-                This is the principle of the AC generator. The peak EMF is \( \mathcal{E}_0 = NBA\omega \).
-            </p>
-            <div class="insightbox">
-                All three cases — transformer, motional, and generator EMF — are governed by the single equation \(
-                \mathcal{E} = -N\, d\Phi_B/dt \). The physical mechanism may differ, but the mathematical law is
-                universal.
-            </div>
-        </section>
-
-        <section>
-            <h2>The Induced Electric Field</h2>
-            <p>
-                When \( B \) changes with time in a region, it creates an electric field even in free space — with no
-                conductor present. The integral form of this relationship is:
-            </p>
-            \[
-            \oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}
-            \]
-            <p>
-                This is the differential Maxwell equation \( \nabla \times \vec{E} = -\partial\vec{B}/\partial t \) in
-                integral form. For a circular loop of radius \( r \) inside a solenoid where \( B \) is changing
-                uniformly:
-            </p>
-            \[
-            E \cdot 2\pi r = -\frac{d\Phi_B}{dt} = -\pi r^2 \frac{dB}{dt}
-            \]
-            \[
-            E = -\frac{r}{2}\frac{dB}{dt}
-            \]
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
