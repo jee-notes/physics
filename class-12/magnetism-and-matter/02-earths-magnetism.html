@@ -1,163 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magnetism and Matter | Earth's Magnetism</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetism and Matter | Earth's Magnetism</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Magnetism and Matter
-            </a>
-        </nav>
-
-        <h1>Earth's Magnetism</h1>
-        <p class="subtitle">
-            The planet as a giant magnetic dipole — understanding its field and elements.
-        </p>
-
-        <section>
-            <h2>Earth as a Magnetic Dipole</h2>
-            <p>
-                The Earth behaves approximately as a magnetic dipole. Its magnetic field is believed to originate from
-                convective currents of molten iron and nickel in its liquid outer core — a natural dynamo generating a
-                slowly drifting magnetic field.
-            </p>
-            <p>
-                The Earth's magnetic poles are not at the same location as its geographic poles:
-            </p>
-            <ul>
-                <li>The <strong>geographic north pole</strong> is the end of Earth's rotation axis in the northern
-                    hemisphere.</li>
-                <li>The <strong>magnetic south pole</strong> of Earth's dipole lies near the geographic north pole (in
-                    northern Canada). This is why the north-seeking end of a compass — which we call the north pole of
-                    the compass — is actually attracted toward Earth's magnetic south pole.</li>
-            </ul>
-            <p>
-                The two axes are inclined at approximately \( 11.5° \) to each other and the positions of the magnetic
-                poles drift slowly over geological time.
-            </p>
-            <div class="insightbox">
-                Earth's magnetic field is not static. Paleomagnetic studies of rock samples show that the field has
-                reversed its polarity hundreds of times over geological history — a phenomenon called geomagnetic
-                reversal.
-            </div>
-        </section>
-
-        <section>
-            <h2>The Three Magnetic Elements</h2>
-            <p>
-                The Earth's magnetic field at any location on the surface is completely described by three quantities
-                called the <strong>magnetic elements</strong>:
-            </p>
-            <hr>
-            <h3>1. Magnetic Declination (\( \alpha \))</h3>
-            <p>
-                The horizontal angle between the geographic meridian (true north) and the magnetic meridian (direction
-                of the horizontal component of Earth's field) at a given location. It is measured in degrees east or
-                west.
-            </p>
-            <p>
-                Practical significance: A compass needle points toward magnetic north, not geographic north. Navigators
-                must add or subtract the local declination to find the true bearing.
-            </p>
-            <hr>
-            <h3>2. Magnetic Dip (Inclination) (\( \delta \))</h3>
-            <p>
-                The angle that the total magnetic field vector \( \vec{B} \) makes with the horizontal plane at a given
-                location:
-            </p>
-            \[
-            \tan\delta = \frac{B_V}{B_H}
-            \]
-            <ul>
-                <li>At the magnetic equator: \( \delta = 0° \) (field is horizontal).</li>
-                <li>At the magnetic poles: \( \delta = 90° \) (field is vertical).</li>
-                <li>In India: \( \delta \approx 30°\text{–}45° \) depending on location.</li>
-            </ul>
-            <div class="insightbox">
-                A dip needle (a magnetised needle free to rotate in the vertical plane) aligns with the total field
-                vector, pointing downward in the northern hemisphere and upward in the southern hemisphere.
-            </div>
-            <hr>
-            <h3>3. Horizontal Component (\( B_H \))</h3>
-            <p>
-                The component of the Earth's total field in the horizontal plane. It is the component that governs the
-                deflection of a compass needle:
-            </p>
-            \[
-            B_H = B\cos\delta
-            \]
-        </section>
-
-        <section>
-            <h2>Resolution of Earth's Field</h2>
-            <p>
-                Let \( B \) be the total field magnitude at a location, \( B_H \) the horizontal component, and \( B_V
-                \) the vertical component. The dip angle is \( \delta \). Then:
-            </p>
-            \[
-            B_H = B\cos\delta, \quad B_V = B\sin\delta
-            \]
-            \[
-            \tan\delta = \frac{B_V}{B_H}, \quad B = \sqrt{B_H^2 + B_V^2}
-            \]
-            <p>
-                These four relations are used to calculate any magnetic element given the others. The values for a
-                typical location in India: \( B \approx 40\text{–}60 \;\mu\text{T} \), \( \delta \approx 30° \text{–}45°
-                \).
-            </p>
-        </section>
-
-        <section>
-            <h2>Apparent Dip</h2>
-            <p>
-                If a dip needle is placed not in the magnetic meridian but in a vertical plane making angle \( \phi \)
-                with it, the apparent dip \( \delta' \) it shows is related to the true dip \( \delta \) and \( \phi \)
-                by:
-            </p>
-            \[
-            \tan\delta' = \frac{\tan\delta}{\cos\phi}
-            \]
-            <p>
-                Since \( \cos\phi \leq 1 \), we have \( \tan\delta' \geq \tan\delta \) — the apparent dip is always
-                greater than or equal to the true dip, and is maximum (\( 90° \)) in a vertical plane perpendicular to
-                the magnetic meridian.
-            </p>
-        </section>
-
-        <section>
-            <h2>Neutral Points</h2>
-            <p>
-                When a bar magnet is placed in Earth's field, the resultant field is zero at certain points called
-                <strong>neutral points</strong>. At these points, the field of the magnet exactly cancels Earth's
-                horizontal component \( B_H \).
-            </p>
-            <ul>
-                <li>Magnet pointing <strong>north–south</strong> (north pole facing geographic north): neutral points
-                    lie on the equatorial line of the magnet (one on each side, equidistant from its centre).</li>
-                <li>Magnet pointing <strong>north–south</strong> (south pole facing north): neutral points lie on the
-                    axial line of the magnet.</li>
-            </ul>
-            <p>
-                At a neutral point where the equatorial field equals \( B_H \):
-            </p>
-            \[
-            \frac{\mu_0}{4\pi}\frac{M}{(r^2+l^2)^{3/2}} = B_H
-            \]
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Magnetism and Matter
+</a>
+</nav>
+<h1>Earth's Magnetism</h1>
+<p class="subtitle">
+The planet as a giant magnetic dipole — understanding its field and magnetic elements.
+</p>
+<section>
+<h2>Earth as a Magnetic Dipole</h2>
+<p>
+The Earth behaves approximately like a giant magnetic dipole. Its magnetic field is believed to originate from convective motion of electrically conducting molten iron and nickel in the Earth's liquid outer core. These circulating currents act as a natural dynamo, continuously generating and sustaining the planet's magnetic field.
+</p>
+<p>
+Although the field resembles that of a dipole, the magnetic axis of the Earth does not coincide exactly with its rotational axis.
+</p>
+<ul class="model-box">
+<li>
+The <strong>geographic north pole</strong> is defined by the Earth's rotation axis and is the point where the axis intersects the northern hemisphere.
+</li>
+<li>
+The <strong>magnetic south pole</strong> of the Earth's dipole lies near the geographic north pole (currently located in northern Canada). This explains why the north-seeking end of a compass needle points roughly toward the geographic north direction — it is attracted to Earth's magnetic south pole.
+</li>
+</ul>
+<p>
+The magnetic axis of the Earth is tilted by approximately \(11.5^\circ\) relative to the rotation axis. In addition, the magnetic poles slowly drift over time due to changes in the flow of molten material inside the Earth's core.
+</p>
+<div class="insightbox">
+<p>
+Earth's magnetic field is not perfectly stable. Geological studies of magnetised rocks show that the Earth's magnetic field has reversed polarity many times in the past. During such events the north and south magnetic poles exchange positions — a phenomenon known as <strong>geomagnetic reversal</strong>.
+</p>
+</div>
+</section>
+<section>
+<h2>The Three Magnetic Elements</h2>
+<p>
+At any location on the Earth's surface, the magnetic field can be completely described using three measurable quantities known as the <strong>magnetic elements</strong>.
+</p>
+<hr>
+<h3>Magnetic Declination (\( \alpha \))</h3>
+<p>
+Magnetic declination is the horizontal angle between the geographic meridian (true north–south direction) and the magnetic meridian (the direction of the horizontal component of Earth's magnetic field).
+</p>
+<p>
+The angle is measured east or west depending on whether the magnetic north lies east or west of geographic north.
+</p>
+<p>
+<strong>Practical significance:</strong> A compass needle aligns with the magnetic meridian rather than the geographic meridian. Navigators and surveyors therefore correct compass readings using the local value of declination in order to determine the true geographic direction.
+</p>
+<hr>
+<h3>Magnetic Dip (Inclination) (\( \delta \))</h3>
+<p>
+Magnetic dip, or inclination, is the angle that the total magnetic field vector \( \vec{B} \) makes with the horizontal plane at a given location.
+</p>
+\[
+\tan\delta = \frac{B_V}{B_H}
+\]
+<p>
+where \(B_H\) is the horizontal component and \(B_V\) is the vertical component of the Earth's magnetic field.
+</p>
+<ul class="model-box">
+<li>At the <strong>magnetic equator</strong>: \( \delta = 0^\circ \) (the field is completely horizontal).</li>
+<li>At the <strong>magnetic poles</strong>: \( \delta = 90^\circ \) (the field is vertical).</li>
+<li>In India: \( \delta \approx 30^\circ \text{–} 45^\circ \), depending on location.</li>
+</ul>
+<div class="insightbox">
+<p>
+A dip needle is a magnetised needle mounted so that it can rotate freely in the vertical plane. It aligns with the direction of the Earth's total magnetic field vector. In the northern hemisphere the needle points downward, while in the southern hemisphere it points upward.
+</p>
+</div>
+<hr>
+<h3>Horizontal Component (\( B_H \))</h3>
+<p>
+The horizontal component \(B_H\) is the projection of the Earth's magnetic field onto the horizontal plane.
+</p>
+<p>
+This component is responsible for the orientation of a compass needle. Since the needle is free to rotate only in the horizontal plane, it aligns itself with \(B_H\).
+</p>
+\[
+B_H = B\cos\delta
+\]
+</section>
+<section>
+<h2>Resolution of Earth's Field</h2>
+<p>
+Let \(B\) represent the total magnetic field at a location on the Earth's surface. This field can be resolved into two perpendicular components:
+</p>
+<ul class="model-box">
+<li>\(B_H\) — horizontal component</li>
+<li>\(B_V\) — vertical component</li>
+</ul>
+<p>
+If the dip angle is \( \delta \), the following relations hold:
+</p>
+\[
+B_H = B\cos\delta, \qquad B_V = B\sin\delta
+\]
+\[
+\tan\delta = \frac{B_V}{B_H}
+\]
+\[
+B = \sqrt{B_H^2 + B_V^2}
+\]
+<p>
+These relations allow any one magnetic element to be calculated if the others are known.
+</p>
+<p>
+For most locations on Earth the magnitude of the magnetic field lies roughly between
+</p>
+\[
+B \approx 40\text{–}60 \ \mu\text{T}
+\]
+</section>
+<section>
+<h2>Apparent Dip</h2>
+<p>
+A dip needle measures the correct value of dip only when it is placed in the vertical plane of the magnetic meridian.
+</p>
+<p>
+If the needle is placed in a vertical plane that makes an angle \( \phi \) with the magnetic meridian, the angle it measures is called the <strong>apparent dip</strong> \( \delta' \).
+</p>
+<p>
+The relation between the true dip and the apparent dip is
+</p>
+\[
+\tan\delta' = \frac{\tan\delta}{\cos\phi}
+\]
+<p>
+Since \( \cos\phi \leq 1 \), we obtain
+</p>
+\[
+\tan\delta' \geq \tan\delta
+\]
+<p>
+Therefore the apparent dip is always greater than or equal to the true dip. The apparent dip becomes maximum (\(90^\circ\)) when the vertical plane is perpendicular to the magnetic meridian.
+</p>
+</section>
+<section>
+<h2>Neutral Points</h2>
+<p>
+When a bar magnet is placed in the Earth's magnetic field, the resultant magnetic field may vanish at certain points in space. These points are called <strong>neutral points</strong>.
+</p>
+<p>
+At a neutral point the magnetic field produced by the magnet exactly cancels the horizontal component of the Earth's magnetic field \(B_H\).
+</p>
+<ul class="model-box">
+<li>
+If the magnet is placed in the <strong>north–south direction</strong> with its north pole pointing toward geographic north, the neutral points lie on the <strong>equatorial line</strong> of the magnet.
+</li>
+<li>
+If the magnet is reversed so that its south pole faces geographic north, the neutral points lie on the <strong>axial line</strong>.
+</li>
+</ul>
+<p>
+For example, at a neutral point located on the equatorial line of the magnet,
+</p>
+\[
+\frac{\mu_0}{4\pi}\frac{M}{(r^2+l^2)^{3/2}} = B_H
+\]
+<p>
+which expresses the condition that the magnetic field of the magnet balances the Earth's horizontal magnetic field.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>
