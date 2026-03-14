@@ -68,69 +68,308 @@ For a coil consisting of \( N \) turns, each turn experiences the same magnetic 
 \]
 </section>
 <section>
-<h2>Field Qualifiers</h2>
+<h2>Magnetic Field as a Function</h2>
 <p>
-Fields are quantities that exist distributed throughout space by definition. We often describe fields using certain adjectives that characterise how they vary in space or time. These adjectives are called <strong>qualifiers</strong> of the field.
+A magnetic field exists throughout a region of space. This means that at every point in space and at every instant of time we can assign a value to the magnetic field.
 </p>
 <p>
-First, we describe how the field varies in <strong>space</strong>.
+Mathematically, this idea is expressed by writing the magnetic field as a function of position and time:
 </p>
-<ul class="model-box">
-<li><strong>Uniform</strong> — The field is spatially invariant. \( \vec{B}(x_1) = \vec{B}(x_2) \) at all instants of time.</li>
-<li><strong>Non-Uniform</strong> — The field varies with position. There exists some instant such that \( \vec{B}(x_1) \neq \vec{B}(x_2) \).</li>
-</ul>
+\[
+\vec{B} = \vec{B}(\vec{r},t)
+\]
 <p>
-The terms "uniform" and "non-uniform" therefore describe the distribution of the field in the <strong>space domain</strong>.
+Here \( \vec{r} = (x,y,z) \) represents the position in space and \(t\) represents time. This notation means that the value of the magnetic field may change when we move to a different point in space, and it may also change as time passes.
 </p>
 <p>
-We also use qualifiers to describe how the field behaves in the <strong>time domain</strong>.
-</p>
-<ul class="model-box">
-<li><strong>Static</strong> — The field does not change with time. At a given position \( x_1 \), \( \vec{B}(t_1) = \vec{B}(t_2) \). This does not specify anything about spatial distribution — the field may be uniform or non-uniform.</li>
-<li><strong>Time-Varying</strong> — The field changes with time. At a given position \( x_1 \), there exists at least one instant such that \( \vec{B}(t_1) \neq \vec{B}(t_2) \). Again, this does not specify anything about spatial distribution.</li>
-</ul>
-<p>
-The spatial and temporal qualifiers are independent. Therefore four combinations are possible:
+Because the magnetic field can depend on both position and time, we can describe its behaviour using two independent questions:
 </p>
 <ul class="model-box">
-<li><strong>Uniform and Static</strong> — Magnetic field inside a long solenoid carrying steady current.</li>
-<li><strong>Uniform and Time-Varying</strong> — Magnetic field inside a solenoid with time-varying current.</li>
-<li><strong>Non-Uniform and Static</strong> — Field around a straight conductor carrying steady current.</li>
-<li><strong>Non-Uniform and Time-Varying</strong> — Field around a conductor carrying time-varying current.</li>
+<li>Does the magnetic field change from one place to another?</li>
+<li>Does the magnetic field change with time?</li>
 </ul>
+<p>
+These two questions lead to four possible types of magnetic fields.
+</p>
 </section>
 <section>
-
-<h2>Area Vector</h2>
-
+<h2>1. Uniform and Static Field</h2>
 <p>
-Magnetic flux measures how much magnetic field passes through a surface. 
-Since magnetic field is a vector quantity, the amount of field passing through a surface depends not only on the size of the surface but also on its <strong>orientation</strong>.
+A magnetic field is called <strong>uniform</strong> if it has the same value everywhere in space.  
+It is called <strong>static</strong> if it does not change with time.
 </p>
+<p>
+An example of such a field is
+</p>
+\[
+\vec{B} = (2\hat{i} + 3\hat{j} + 4\hat{k})
+\]
+<p>
+In this expression the magnetic field does not depend on position \(x,y,z\) and it also does not depend on time \(t\).
+</p>
+<p>
+Therefore:
+</p>
+<ul class="model-box">
+<li>The field is the same at every point in space.</li>
+<li>The field remains the same as time passes.</li>
+</ul>
+<p>
+A good physical example is the magnetic field inside a long solenoid carrying steady current.
+</p>
+</section>
+<section>
+<h2>2. Uniform but Time-Varying Field</h2>
+<p>
+Sometimes the magnetic field may remain the same at every point in space but may change with time.
+</p>
+<p>
+For example:
+</p>
+\[
+\vec{B} = (2t^2)\hat{i}
+\]
+<p>
+In this case the magnetic field depends only on time \(t\).
+</p>
+<p>
+This means:
+</p>
+<ul class="model-box">
+<li>At any given instant, the field is the same everywhere in space.</li>
+<li>However, the magnitude of the field changes as time passes.</li>
+</ul>
+<p>
+Such fields are very important in electromagnetic induction, because a magnetic field that changes with time can produce an electric field.
+</p>
+</section>
+<section>
+<h2>3. Non-Uniform but Static Field</h2>
+<p>
+In some situations the magnetic field changes from one place to another but remains constant with time.
+</p>
+<p>
+For example:
+</p>
+\[
+\vec{B} = (2x^2)\hat{i}
+\]
+<p>
+Here the magnetic field depends on the position coordinate \(x\).
+</p>
+<p>
+This means:
+</p>
+<ul class="model-box">
+<li>The magnetic field has different values at different points in space.</li>
+<li>However, once the field is established, it does not change with time.</li>
+</ul>
+<p>
+A familiar example of this type is the magnetic field around a straight current-carrying wire.
+</p>
+</section>
+<section>
+<h2>4. Non-Uniform and Time-Varying Field</h2>
+<p>
+The most general case occurs when the magnetic field changes both with position and with time.
+</p>
+<p>
+For example:
+</p>
+\[
+\vec{B} = (2x^3 t^2)\hat{i}
+\]
+<p>
+In this situation:
+</p>
+<ul class="model-box">
+<li>The magnetic field has different values at different points in space.</li>
+<li>The value of the field at a given point also changes with time.</li>
+</ul>
+<p>
+Such fields arise in many electromagnetic phenomena, especially when charges are accelerating or when electromagnetic waves are produced.
+</p>
+</section>
+<section>
+<h2>Relation with Derivatives</h2>
+<p>
+Mathematically, the change of the magnetic field with position or time is described using <strong>partial derivatives</strong>.
+</p>
+<p>
+If the field changes with position, then
+</p>
+\[
+\frac{\partial \vec{B}}{\partial \vec{r}} \neq 0
+\]
+<p>
+and if the field changes with time, then
+</p>
+\[
+\frac{\partial \vec{B}}{\partial t} \neq 0
+\]
+<p>
+Electromagnetic induction occurs whenever the magnetic field changes with time, that is, when
+</p>
+\[
+\frac{\partial \vec{B}}{\partial t} \neq 0
+\]
+</section>
+<section>
+<h2>Different Variables in the Calculus</h2>
+<p>
+Electromagnetic induction often involves two different types of calculus operations: integration over space and differentiation with respect to time. If these variables are not carefully distinguished, it is easy to make mistakes.
+</p>
+<p>
+Faraday's law relates the induced EMF to the time rate of change of magnetic flux:
+</p>
+\[
+\mathcal{E} = -\frac{d\Phi}{dt}
+\]
+<p>
+However, the magnetic flux itself is defined as a surface integral of the magnetic field:
+</p>
+\[
+\Phi = \int_S \vec{B}\cdot d\vec{A}
+\]
+<p>
+The magnetic field may depend on both position and time, and is generally written as
+</p>
+\[
+\vec{B} = \vec{B}(\vec{r},t)
+\]
+<p>
+When calculating the flux, the integration is performed over spatial coordinates. Therefore time \(t\) is treated as a constant parameter during the integration. Only after computing the flux do we differentiate the result with respect to time when applying Faraday's law.
+</p>
+<p>
+The following example illustrates how this works.
+</p>
+</section>
+<section>
+<h2>Solved Example</h2>
+<div class="examplebox">
+<h3>Question</h3>
+<p>
+A magnetic field passes through a rectangular surface of sides \(a\) and \(b\) placed in the \(xy\)-plane. Find the magnetic flux through the rectangle for the magnetic field
+</p>
+\[
+\vec B = (2t^3 x)\hat{k}
+\]
+<p>
+Assume the rectangle extends from \(x=0\) to \(x=a\) and from \(y=0\) to \(y=b\).
+</p>
+<div class="diagram">
+<svg width="380" height="300" viewBox="0 0 380 300">
+  <!-- axes -->
+  <line x1="40" y1="260" x2="340" y2="260" stroke="red" stroke-width="2"/>
+  <line x1="40" y1="260" x2="40" y2="40" stroke="red" stroke-width="2"/>
+  <text x="345" y="265" fill="red">x</text>
+  <text x="30" y="35" fill="red">y</text>
 
+  <!-- rectangle -->
+  <rect x="90" y="110" width="200" height="140"
+        fill="none" stroke="#4da6ff" stroke-width="3"/>
+
+  <!-- labels -->
+  <text x="185" y="275">a</text>
+  <text x="60" y="190">b</text>
+
+  <!-- differential strip -->
+  <rect x="200" y="110" width="12" height="140"
+        fill="#ffd966" stroke="orange" stroke-width="2"/>
+
+  <text x="210" y="100">dx</text>
+  <text x="214" y="180" transform="rotate(90 214 180)">b</text>
+
+  <!-- B direction -->
+  <text x="300" y="80">B = (2t³x)k</text>
+  <circle cx="315" cy="110" r="4" fill="black"/>
+  <circle cx="330" cy="130" r="4" fill="black"/>
+  <circle cx="300" cy="140" r="4" fill="black"/>
+</svg>
+</div>
+<hr>
+<h4>Solution</h4>
+<p>
+Magnetic flux through a surface is defined as
+</p>
+\[
+\Phi = \int_S \vec B \cdot d\vec A
+\]
+<p>
+Since the surface lies in the \(xy\)-plane, the area vector is along \( \hat{k} \).
+</p>
+\[
+d\vec A = dA\,\hat{k}
+\]
+<p>
+The magnetic field is also along \( \hat{k} \):
+</p>
+\[
+\vec B = (2t^3 x)\hat{k}
+\]
+<p>
+Therefore
+</p>
+\[
+\vec B \cdot d\vec A = (2t^3 x)\, dA
+\]
+<p>
+The rectangle has length \(a\) along the \(x\)-direction and height \(b\) along the \(y\)-direction. We divide the area into vertical strips of width \(dx\).
+</p>
+\[
+dA = b\,dx
+\]
+<p>
+Substituting into the flux integral:
+</p>
+\[
+\Phi = \int_0^a (2t^3 x)(b\,dx)
+\]
+<p>
+The integration variable is \(x\), so \(t\) behaves like a constant and can be taken outside the integral.
+</p>
+\[
+\Phi = 2bt^3 \int_0^a x\,dx
+\]
+<p>
+Evaluating the integral:
+</p>
+\[
+\int_0^a x\,dx = \frac{a^2}{2}
+\]
+<p>
+Therefore the magnetic flux is
+</p>
+\[
+\Phi = a^2 b t^3
+\]
+<div class="insightbox">
+During the surface integration we integrate over spatial coordinates. The time \(t\) is treated as a constant parameter. Only after computing the flux do we differentiate with respect to time when applying Faraday's law.
+</div>
+</div>
+</section>
+<section>
+<h2>Area Vector</h2>
+<p>
+Magnetic flux measures how much magnetic field passes through a surface. Since magnetic field is a vector quantity, the amount of field passing through a surface depends not only on the size of the surface but also on its <strong>orientation</strong>.
+</p>
 <p>
 To account for orientation, we represent the surface by an <strong>area vector</strong>.
 </p>
-
 <p>
 The magnitude of the area vector equals the area of the surface, and its direction is perpendicular (normal) to the surface.
 </p>
-
 <p>
 Using this convention, magnetic flux through a surface is defined as
 </p>
-
 \[
 \Phi_B = \vec{B}\cdot\vec{A}
 \]
-
 <p>
 The dot product ensures that only the component of the magnetic field perpendicular to the surface contributes to the flux.
 </p>
-
 <div class="insightbox">
-If the magnetic field is parallel to the surface, no field lines pass through it and the flux is zero.  
-If the field is perpendicular to the surface, the flux is maximum.
+If the magnetic field is parallel to the surface, no field lines pass through it and the flux is zero. If the field is perpendicular to the surface, the flux is maximum.
 </div>
 </section>
 <section>
@@ -198,6 +437,123 @@ Since \( \hat{i}\cdot\hat{k} = 0 \), the surface in the XY plane contributes no 
 </p>
 <div class="insightbox">
 Only the surface whose normal is parallel to the magnetic field contributes to the magnetic flux.
+</div>
+</div>
+</section>
+<section>
+<h2>Solved Example — Area Vector Consistency</h2>
+<div class="examplebox">
+<h3>Question</h3>
+<p>
+A magnetic field
+</p>
+\[
+\vec{B} = (4\hat{i} + 3\hat{j} + 2\hat{k})\; \text{T}
+\]
+<p>
+passes through a rectangular surface of area \(5\,\text{m}^2\) placed in space as shown in the figure. The normal to the surface makes an angle of \(53^\circ\) with the \(x\)-axis in the \(xz\)-plane. Find the magnetic flux through the surface.
+</p>
+<div class="diagram">
+<svg width="420" height="320" viewBox="0 0 420 320">
+
+<!-- Axes -->
+<line x1="100" y1="240" x2="320" y2="240" stroke="red" stroke-width="2"/>
+<line x1="100" y1="240" x2="100" y2="60" stroke="red" stroke-width="2"/>
+<line x1="100" y1="240" x2="40" y2="290" stroke="red" stroke-width="2"/>
+
+<text x="325" y="245" fill="red">x</text>
+<text x="95" y="55" fill="red">y</text>
+<text x="25" y="300" fill="red">z</text>
+
+<!-- Surface (rectangle) -->
+<polygon points="100,120 200,170 200,290 100,240"
+         fill="none" stroke="#4da6ff" stroke-width="3"/>
+
+<!-- Area vector -->
+<line x1="150" y1="200" x2="240" y2="150" stroke="orange" stroke-width="3"/>
+<polygon points="240,150 232,150 238,160" fill="orange"/>
+<text x="245" y="150" fill="orange">A</text>
+
+<!-- Projection on x-axis -->
+<line x1="150" y1="200" x2="240" y2="200"
+      stroke="gray" stroke-dasharray="4"/>
+<text x="245" y="205" fill="gray">Aₓ</text>
+
+<!-- Projection on z-axis -->
+<line x1="150" y1="200" x2="120" y2="260"
+      stroke="gray" stroke-dasharray="4"/>
+<text x="105" y="270" fill="gray">A_z</text>
+
+<!-- Angle -->
+<path d="M150 200 A40 40 0 0 1 210 200"
+      fill="none" stroke="white" stroke-width="2"/>
+<text x="175" y="195" fill="white">53°</text>
+</svg>
+</div>
+<hr>
+<h4>Solution</h4>
+<p>
+Magnetic flux through a surface is
+</p>
+\[
+\Phi = \vec{B}\cdot\vec{A}
+\]
+<p>
+The magnitude of the area vector equals the area of the surface:
+</p>
+\[
+|\vec{A}| = 5 \text{ m}^2
+\]
+<p>
+The surface normal lies in the \(xz\)-plane and makes an angle \(53^\circ\) with the +x axis. From the diagram the normal points toward +x and <strong>−z</strong>.
+</p>
+<p>
+Therefore the area vector must be written as
+</p>
+\[
+\vec A = A(\cos53^\circ \hat i - \sin53^\circ \hat k)
+\]
+<p>
+Substituting \(A = 5\):
+</p>
+\[
+\vec A = 5(\cos53^\circ \hat i - \sin53^\circ \hat k)
+\]
+\[
+\cos53^\circ = \frac35, \qquad \sin53^\circ = \frac45
+\]
+\[
+\vec A = 5\left(\frac35 \hat i - \frac45 \hat k\right)
+\]
+\[
+\vec A = 3\hat i - 4\hat k
+\]
+<p>
+Now compute the flux:
+</p>
+\[
+\Phi = (4\hat i + 3\hat j + 2\hat k)\cdot(3\hat i - 4\hat k)
+\]
+\[
+\Phi = 12 - 8
+\]
+\[
+\Phi = 4
+\]
+\[
+\boxed{\Phi = 4 \text{Wb}}
+\]
+<div class="insightbox">
+<strong>Common Trap:</strong>  
+Students often resolve the triangle in the diagram and write
+\[
+\vec A = 3\hat i + 4\hat k
+\]
+because both sides of the triangle appear positive. However, the triangle only gives the <strong>magnitudes</strong> of the components. The <strong>signs</strong> must be determined from the actual direction of the area vector.In this figure the area vector points toward \(+x\) and \(-z\). Therefore the correct vector is
+\[
+\vec A = 3\hat i - 4\hat k
+\]
+Once the direction of the area vector is fixed, all its components must follow that same direction consistently.
 </div>
 </div>
 </section>
