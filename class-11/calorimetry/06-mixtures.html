@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorimetry | Calorimetry of Mixtures</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Calorimetry
+        </a>
+    </nav>
+
+    <h1>Calorimetry of Mixtures</h1>
+    <p class="subtitle">Solving heat exchange equations systematically.</p>
+
+    <section>
+        <h2>Calorimetry of Mixtures</h2>
+        <p>
+            When tackling practical calorimetry problems, we often mix multiple substances together. The core principle remains identical — the total heat exchanged in an isolated system is zero. Mixing hot iron into cold water, or throwing ice into steam, simply requires identifying every energetic transition mapping from the initial states to the final equilibrium state.
+        </p>
+    </section>
+
+    <section>
+        <h2>Establishing Sign Conventions</h2>
+        <p>
+            In complex mixtures involving phase changes (e.g., melting ice to \(0^\circ\text{C}\) water, warming that water to \(10^\circ\text{C}\)), tracking "Heat Lost" vs "Heat Gained" manually can become confusing and computationally messy.
+        </p>
+        <p>
+            Instead, we adopt a standard universal algebraic convention:
+        </p>
+        <div class="model-box">
+            Define all heat transfer \( Q \) strictly as:
+            <br>
+            \[
+            Q = mc(T_{\text{final}} - T_{\text{initial}})
+            \]
+            where \( T_{\text{final}} - T_{\text{initial}} \) natively produces positive values for substances gaining heat (warming up) and negative values for substances losing heat (cooling down).
+        </div>
+        <p>
+            Similarly, for phase changes, assign a specific algebraic sign:
+            <ul>
+                <li><strong>Positive Latent Heat (\(+mL\)):</strong> Heat absorbed (Melting, Vaporization)</li>
+                <li><strong>Negative Latent Heat (\(-mL\)):</strong> Heat released (Freezing, Condensation)</li>
+            </ul>
+        </p>
+    </section>
+
+    <section>
+        <h2>Balancing the Heat Equation</h2>
+        <p>
+            With these conventions strictly established, the governing equation for the entire mixture collapses into a single, elegant sum of all heat interactions:
+        </p>
+        <div class="math-block">
+            \[
+            \sum Q_i = 0
+            \]
+        </div>
+        <p>
+            Every substance \( i \)'s complete thermal journey is calculated and algebraically summed to zero.
+        </p>
+        <div class="examplebox">
+            <h3>Example: Ice into Water</h3>
+            Let's drop \(m_{\text{ice}}\) at \(0^\circ\text{C}\) into \(m_{\text{water}}\) at \(T_w\). Assuming the final equilibrium temperature \(T_f\) is strictly between \(0^\circ\text{C}\) and \(T_w\) (i.e. all ice melts):
+            <hr>
+            The ice must melt: \( +m_{\text{ice}}L_f \) <br>
+            The newly melted water must warm up: \( +m_{\text{ice}}c_w(T_f - 0) \) <br>
+            The original hot water must cool down: \( +m_{\text{water}}c_w(T_f - T_w) \)
+            <br><br>
+            Summing them all together:
+            \[
+            m_{\text{ice}}L_f + m_{\text{ice}}c_w(T_f - 0) + m_{\text{water}}c_w(T_f - T_w) = 0
+            \]
+            This single equation will natively resolve the unknown final temperature \(T_f\).
+        </div>
+        <div class="insightbox">
+            An immensely powerful trick when dealing with phase changes is to "hypothetically" assume the final mixture reaches exactly the phase transition point (e.g. \(0^\circ\text{C}\)), and then evaluate if there is leftover energy or a deficit of energy to determine the true final mixture composition.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorimetry | Heating Curve</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Calorimetry
+        </a>
+    </nav>
+
+    <h1>Heating Curve</h1>
+    <p class="subtitle">A visual representation of thermal transitions as energy is supplied uniformly.</p>
+
+    <section>
+        <h2>Understanding the Heating Curve</h2>
+        <p>
+            When a pure substance (like perfectly solid ice at \(-20^\circ\text{C}\)) is placed over an external, constant heat source, it will continuously absorb energy over time. By diligently tracking the temperature of the substance as a function of the total heat supplied (or simply against chronological time if power is perfectly constant), we produce a <strong>Heating Curve</strong>.
+        </p>
+        <div class="diagram">
+        <svg width="600" height="360" viewBox="0 0 600 360">
+            <!-- Axes -->
+            <line x1="50" y1="320" x2="560" y2="320" stroke="black" stroke-width="2"/>
+            <line x1="50" y1="20" x2="50" y2="320" stroke="black" stroke-width="2"/>
+            <text x="565" y="325" font-size="14">Heat (Q)</text>
+            <text x="15" y="15" font-size="14">T (°C)</text>
+
+            <!-- T lines -->
+            <line x1="45" y1="250" x2="55" y2="250" stroke="black" stroke-width="2"/>
+            <text x="25" y="255" font-size="14">T₀</text>
+
+            <line x1="45" y1="180" x2="55" y2="180" stroke="black" stroke-width="2"/>
+            <text x="15" y="185" font-size="14">Tₘ</text>
+            <line x1="50" y1="180" x2="550" y2="180" stroke="#ccc" stroke-dasharray="4"/>
+
+            <line x1="45" y1="80" x2="55" y2="80" stroke="black" stroke-width="2"/>
+            <text x="20" y="85" font-size="14">T_b</text>
+            <line x1="50" y1="80" x2="550" y2="80" stroke="#ccc" stroke-dasharray="4"/>
+
+            <!-- The Curve -->
+            <!-- Solid Phase -->
+            <line x1="50" y1="250" x2="150" y2="180" stroke="#e67e22" stroke-width="4"/>
+            <!-- Melting (Fusion) -->
+            <line x1="150" y1="180" x2="250" y2="180" stroke="#2c3e50" stroke-width="4"/>
+            <!-- Liquid Phase -->
+            <line x1="250" y1="180" x2="350" y2="80" stroke="#e67e22" stroke-width="4"/>
+            <!-- Boiling (Vaporization) -->
+            <line x1="350" y1="80" x2="500" y2="80" stroke="#2c3e50" stroke-width="4"/>
+
+            <!-- Phase Labels -->
+            <text x="70" y="240" font-size="13" transform="rotate(-35, 70, 240)">Solid Heating</text>
+            <text x="175" y="170" font-size="13">Melting (L_f)</text>
+            <text x="270" y="150" font-size="13" transform="rotate(-40, 270, 150)">Liquid Heating</text>
+            <text x="380" y="70" font-size="13">Boiling (L_v)</text>
+        </svg>
+        </div>
+        <p>
+            The graphical structure of a heating curve is fundamentally composed of two distinct geometric features: linearly sloping ramps and perfectly horizontal plateaus. Each tells a specific physical story.
+        </p>
+    </section>
+
+    <section>
+        <h2>Analyzing Sloping Regions (Temperature Change)</h2>
+        <p>
+            When an object absorbs heat without undergoing a phase change, its temperature rises linearly according to \( Q = mc\Delta T \).
+        </p>
+        <p>
+            If we model the \(y\)-axis as Temperature (\(T\)) and the \(x\)-axis as the total Heat added (\(Q\)), we can rewrite the formula in a standard slope-intercept arrangement \( y = mx + b \):
+        </p>
+        <div class="math-block">
+            \[
+            \Delta T = \frac{1}{mc} \cdot Q
+            \]
+        </div>
+        <p>
+            The slope (\(m\)) of the \(T\text{ vs }Q\) graph is therefore strictly inversely proportional to the mass product with the specific heat capacity (\(mc\)). 
+        </p>
+        <div class="concept-box">
+            A steeper slope implies a smaller specific heat. The substance heats up extremely quickly for a tiny addition of heat. A shallower slope implies a larger specific heat, representing higher thermal inertia.
+        </div>
+        <p>
+            For example, liquid water handles immense thermal loading gracefully — it would exhibit a significantly shallower slope compared to a heating curve mapped out for an equivalent chunk of solid ice.
+        </p>
+    </section>
+
+    <section>
+        <h2>Analyzing Flat Regions (Phase Change)</h2>
+        <p>
+            Eventually, the steeply climbing solid temperature strikes a rigid physical boundary — its melting point \(T_m\). Here, \( \Delta T = 0 \) while \(Q\) continues to stubbornly increase.
+        </p>
+        <div class="insightbox">
+            The slope flattens to absolute zero because kinetic energy is stationary. All incoming thermal energy is instantly diverted to tearing apart intermolecular potential bonds.
+        </div>
+        <p>
+            The horizontal length of this plateau is the total heat added to finish the exact phase transition, governed exclusively by the Latent Heat formulation \( Q = mL \). 
+        </p>
+        <p>
+            Therefore, a wider plateau represents a substantially larger Latent Heat constant for that specific phase change. This is directly observable in the heating curve for water — the vaporization plateau (boiling) extends along the x-axis almost seven times wider than the fusion plateau (melting) because \(L_v \gg L_f\).
+        </p>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+
+</body>
+</html>

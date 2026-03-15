@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorimetry | Change of State & Latent Heat</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Calorimetry
+        </a>
+    </nav>
+
+    <h1>Change of State & Latent Heat</h1>
+    <p class="subtitle">Analyzing the energy required to break macroscopic molecular bonds.</p>
+
+    <section>
+        <h2>Change of State</h2>
+        <p>
+            Matter universally exists in three primary phases: solid, liquid, and gas. A change of state occurs when a substance functionally shifts from one of these phases to another.
+        </p>
+        <ul>
+            <li><strong>Melting (Fusion):</strong> Solid to liquid.</li>
+            <li><strong>Freezing:</strong> Liquid to solid.</li>
+            <li><strong>Boiling/Evaporation (Vaporization):</strong> Liquid to gas.</li>
+            <li><strong>Condensation:</strong> Gas to liquid.</li>
+            <li><strong>Sublimation:</strong> Solid directly to gas.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Isothermal Transitions</h2>
+        <p>
+            When we supply heat (\(Q = mc\Delta T\)) to an ice cube originally at \(-10^\circ\text{C}\), the ice warms up until it hits \(0^\circ\text{C}\). However, an interesting physics phenomenon occurs right at the melting point.
+        </p>
+        <div class="concept-box">
+            During a phase transition, the temperature of an isolated pure substance remains completely <strong>constant</strong>, even as immense amounts of heat are continually absorbed or rejected from the system.
+        </div>
+        <p>
+            Why does the temperature freeze at \(0^\circ\text{C}\)? Temperature is a macroscopic measure of the average <em>kinetic energy</em> of the molecules. However, during a phase change, the heat energy being supplied is used exclusively to alter the <em>potential energy</em> between the molecules — breaking the rigid intermolecular bonds holding the solid ice structure together to form the looser, flowing structure of liquid water.
+        </p>
+    </section>
+
+    <section>
+        <h2>Latent Heat of Fusion</h2>
+        <p>
+            Because the formula \( Q = mc\Delta T \) inherently forces \( Q=0 \) if \( \Delta T=0 \), we need a brand new physical mechanism to quantify the tremendous heat absorbed during melting.
+        </p>
+        <div class="model-box">
+            <strong>Latent Heat of Fusion (\(L_f\)):</strong> The precise quantity of heat required to legally change a unit mass of a substance entirely from solid state to liquid state at its specific melting point.
+        </div>
+        <p>
+            The mathematical relation is independent of temperature change:
+        </p>
+        <div class="math-block">
+            \[
+            Q = m \cdot L_f
+            \]
+        </div>
+        <ul>
+            <li><strong>Variables:</strong>
+                <ul>
+                    <li>\( Q \): Heat supplied or removed during the phase change (J)</li>
+                    <li>\( m \): Mass of the substance changing phase (kg)</li>
+                    <li>\( L_f \): Latent heat of fusion of the material.</li>
+                </ul>
+            </li>
+            <li><strong>SI Unit:</strong> Joule per kilogram (\( \text{J} \cdot \text{kg}^{-1} \))</li>
+            <li><strong>Dimensional Formula:</strong> \( [L] = \text{M}^0 \text{L}^2 \text{T}^{-2} \)</li>
+        </ul>
+        <div class="examplebox">
+            <h3>Standard Physical Constant</h3>
+            For water, the latent heat of fusion of ice is exceptionally high:
+            <hr>
+            \[
+            L_f \approx 3.34 \times 10^5 \text{ J/kg} = 80 \text{ cal/g}
+            \]
+            This requires roughly 80 times more heat to melt $1 \text{ gram}$ of ice than to simply warm that water by $1^\circ\text{C}$. This massive heat requirement is why snow in the mountains does not melt instantaneously on the first warm day of spring.
+        </div>
+    </section>
+
+    <section>
+        <h2>Latent Heat of Vaporization</h2>
+        <p>
+            A perfectly analogous constant exists for the boiling transition when liquid converts entirely into a gaseous vapor at the boiling point.
+        </p>
+        <div class="model-box">
+            <strong>Latent Heat of Vaporization (\(L_v\)):</strong> The quantity of heat required to change a unit mass of a substance entirely from liquid state to gaseous state at its specific boiling point.
+        </div>
+        <p>
+            The overarching formula is functionally identical, just scaling out the fusion parameter:
+        </p>
+        <div class="math-block">
+            \[
+            Q = m \cdot L_v
+            \]
+        </div>
+        <div class="insightbox">
+            For water, \( L_v \approx 2.26 \times 10^6 \text{ J/kg} \) (roughly \( 540 \text{ cal/g} \)). Notice that \(L_v\) is almost seven times larger than \(L_f\). Breaking the intermolecular bonds entirely to create a freely expanding gas requires substantially more energy than merely loosening them into a flowing liquid structure. This massive energy threshold is the primary reason steam burns are significantly more severe than burns from boiling water.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+
+</body>
+</html>

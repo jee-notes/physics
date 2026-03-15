@@ -4,193 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calorimetry | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #e67e22; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #fdf2e9; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
 </head>
 <body>
 
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+    <nav class="top-nav">
+        <a href="../../index.html" class="back-btn">
+            <span>&larr;</span> Back to Syllabus
+        </a>
+    </nav>
 
     <h1>Calorimetry</h1>
-    <p style="text-align: center;"><em>Heat transfer analyzed through energy conservation.</em></p>
+    <p class="subtitle">Heat transfer analyzed through macroscopic energy conservation.</p>
 
-    <section id="heat">
-        <h2>1. Heat</h2>
+    <section>
+        <h2>Conceptual Overview</h2>
         <p>
-            <strong>Heat</strong> is energy transferred between bodies due to
-            a temperature difference.
+            The study of thermodynamics is fundamentally concerned with energy transfer between macroscopic systems. Within this broad domain, <strong>Calorimetry</strong> focuses specifically on the measurement and calculation of heat exchange. 
         </p>
-
-        <ul>
-            <li>Heat flows spontaneously from higher to lower temperature</li>
-            <li>Heat is not a property of a system</li>
-        </ul>
-
-        <div class="insightbox">
-            Heat is energy in transit,
-            not stored energy.
-        </div>
+        <p>
+            When two systems at different temperatures are placed in thermal contact, they interact. Energy naturally and spontaneously flows from the system at a higher temperature to the system at a lower temperature until thermal equilibrium is established. This energy in transit is what physicist refer to as <em>heat</em>.
+        </p>
+        <p>
+            Calorimetry is built upon a single, powerful pillar: the <strong>Conservation of Energy</strong>. In an isolated system where no heat leaks to the surroundings, the total heat lost by hot bodies must be exactly equal to the total heat gained by cold bodies. This macroscopic balance equation allows us to predict final equilibrium temperatures, identify unknown materials by calculating their specific heat capacities, and quantify the unseen energy involved in phase transitions.
+        </p>
     </section>
 
-    <section id="specific-heat">
-        <h2>2. Specific Heat Capacity</h2>
-        <p>
-            <strong>Specific heat capacity</strong> is the amount of heat required
-            to raise the temperature of unit mass of a substance by 1 K.
-        </p>
-
-        <div class="formula-block">
-            \[
-            Q = mc\Delta T
-            \]
+    <section>
+        <h2>Chapter Structure</h2>
+        <div class="chapter-list">
+            <a href="./01-heat.html">1. Heat</a>
+            <a href="./02-specific-heat-capacity.html">2. Specific Heat Capacity</a>
+            <a href="./03-principle-of-calorimetry.html">3. Principle of Calorimetry</a>
+            <a href="./04-latent-heat.html">4. Change of State & Latent Heat</a>
+            <a href="./05-heating-curve.html">5. Heating Curve</a>
+            <a href="./06-mixtures.html">6. Calorimetry of Mixtures</a>
+            <a href="./07-calorimeter-water-equivalent.html">7. Calorimeter & Water Equivalent</a>
         </div>
-
-        <ul>
-            <li>Depends on material</li>
-            <li>Depends on physical state</li>
-        </ul>
-
-        <div class="insightbox">
-            Large specific heat means
-            large thermal inertia.
-        </div>
-    </section>
-
-    <section id="calorimetry-principle">
-        <h2>3. Principle of Calorimetry</h2>
-        <p>
-            In an isolated system, total heat exchanged is zero.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \sum Q = 0
-            \]
-        </div>
-
-        <ul>
-            <li>Heat lost = Heat gained</li>
-            <li>Direct consequence of energy conservation</li>
-        </ul>
-
-        <div class="insightbox">
-            Calorimetry is the First Law
-            applied to temperature change.
-        </div>
-    </section>
-
-    <section id="phase-change">
-        <h2>4. Change of State & Latent Heat</h2>
-        <p>
-            During phase change, temperature remains constant
-            while heat is absorbed or released.
-        </p>
-
-        <div class="formula-block">
-            \[
-            Q = mL
-            \]
-        </div>
-
-        <ul>
-            <li>\(L_f\): latent heat of fusion</li>
-            <li>\(L_v\): latent heat of vaporization</li>
-        </ul>
-
-        <div class="insightbox">
-            Latent heat changes molecular configuration,
-            not temperature.
-        </div>
-    </section>
-
-    <section id="heating-curve">
-        <h2>5. Heating Curve</h2>
-        <p>
-            A heating curve shows temperature variation
-            as heat is supplied continuously.
-        </p>
-
-        <ul>
-            <li>Sloping regions → temperature change</li>
-            <li>Flat regions → phase change</li>
-        </ul>
-    </section>
-
-    <section id="mixtures">
-        <h2>6. Calorimetry of Mixtures</h2>
-        <p>
-            When substances at different temperatures are mixed,
-            final temperature is found using heat balance.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \sum m c (T_f - T_i) = 0
-            \]
-        </div>
-
-        <div class="insightbox">
-            Always define a consistent
-            sign convention before writing equations.
-        </div>
-    </section>
-
-    <section id="calorimeter">
-        <h2>7. Calorimeter & Water Equivalent</h2>
-        <p>
-            A calorimeter is a device used to measure heat exchange.
-        </p>
-
-        <div class="formula-block">
-            Water equivalent:
-            \[
-            W = \frac{m_c c_c}{c_w}
-            \]
-        </div>
-
-        <ul>
-            <li>Accounts for heat absorbed by container</li>
-            <li>Simplifies heat balance equations</li>
-        </ul>
-
-        <div class="insightbox">
-            Ignoring calorimeter heat capacity
-            leads to systematic errors.
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>8. Common Mistakes</h2>
-        <ul>
-            <li>Using energy conservation without thermal isolation</li>
-            <li>Mixing Celsius and Kelvin carelessly</li>
-            <li>Forgetting latent heat during phase change</li>
-        </ul>
     </section>
 
     <footer>
         <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
+        <p>By Hitendra K K</p>
     </footer>
 </div>
 

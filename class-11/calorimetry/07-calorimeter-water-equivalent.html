@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorimetry | Calorimeter & Water Equivalent</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Calorimetry
+        </a>
+    </nav>
+
+    <h1>Calorimeter & Water Equivalent</h1>
+    <p class="subtitle">Accounting for the measurement apparatus.</p>
+
+    <section>
+        <h2>The Calorimeter Device</h2>
+        <p>
+            A <strong>Calorimeter</strong> is simply the physical vessel — often made of copper or aluminum — used in a laboratory to isolate a mixture thermally. It is designed to be well-insulated, but it fundamentally possesses mass and its own specific heat capacity.
+        </p>
+        <p>
+            Therefore, as a mixture of hot and cold substances equilibriates inside the calorimeter, the calorimeter itself also warms up or cools down, actively participating in the heat exchange. It cannot be ignored in precise thermodynamic calculations.
+        </p>
+    </section>
+
+    <section>
+        <h2>Concept of Water Equivalent</h2>
+        <p>
+            When calculating the heat absorbed by a copper calorimeter of mass \( m_c \) and specific heat \( c_c \), we use:
+        </p>
+        <div class="math-block">
+            \[
+            Q_c = m_c \cdot c_c \cdot \Delta T
+            \]
+        </div>
+        <p>
+            To simplify laboratory calculations (since mixtures primarily involve water), physicists introduced a conceptual proxy called the <strong>Water Equivalent (\(W\))</strong>.
+        </p>
+        <div class="model-box">
+            <strong>Definition:</strong> The water equivalent is the mass of pure water that would absorb or release the exact same amount of heat as the given object (the calorimeter) for the exact same change in temperature.
+        </div>
+        <p>
+            Mathematically, we set the heat absorbed by the object equal to the heat absorbed by a hypothetical equivalent mass of water \(W\):
+        </p>
+        <div class="math-block">
+            \[
+            m_c \cdot c_c \cdot \Delta T = W \cdot c_w \cdot \Delta T
+            \]
+        </div>
+        <p>
+            Solving perfectly for \(W\):
+        </p>
+        <div class="math-block">
+            \[
+            W = \frac{m_c \cdot c_c}{c_w}
+            \]
+        </div>
+        <ul>
+            <li><strong>Variables:</strong>
+                <ul>
+                    <li>\( W \): Water equivalent (kg or g)</li>
+                    <li>\( m_c \): Mass of the calorimeter</li>
+                    <li>\( c_c \): Specific heat of the calorimeter material</li>
+                    <li>\( c_w \): Specific heat of water</li>
+                </ul>
+            </li>
+            <li><strong>Unit:</strong> Mass units (\( \text{kg} \) or \( \text{g} \))</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Accounting for Container Heat Capacity</h2>
+        <p>
+            Instead of tracking the copper calorimeter separately in the sum of heats, we can computationally just pretend there is an extra mass \( W \) of water fully mixed with the actual water.
+        </p>
+        <div class="concept-box">
+            If a problem states "A calorimeter containing 100g of water has a water equivalent of 10g", you simply solve the entire problem by assuming there is magically <strong>110g of water</strong> natively present.
+        </div>
+    </section>
+
+    <section>
+        <h2>Mathematical Simplification</h2>
+        <div class="insightbox">
+            Ignoring the calorimeter heat capacity leads to systematic errors. The measured final equilibrium temperature will always fall lower than predicted by simple calculation because the unseen container secretly "stole" some of the thermal energy to warm itself up. Water equivalent natively corrects this.
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+
+</body>
+</html>
