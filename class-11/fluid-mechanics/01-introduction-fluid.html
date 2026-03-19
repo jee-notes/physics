@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Fluid | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Fluid</h1>
+<p class="subtitle">
+The assumption model of fluid as an entity.
+</p>
+<section>
+<h2>What "Fluid" Means?</h2>
+<p>
+In physics, a <strong>fluid</strong> is not just a substance like water or air — it is a <strong>model</strong> used to describe matter when it can flow.
+</p>
+<p>
+At the microscopic level, matter consists of discrete molecules. However, tracking each molecule is neither practical nor necessary. Instead, we adopt the <strong>continuum approximation</strong>, where matter is assumed to be continuously distributed in space.
+</p>
+<p>
+This approximation works because, at macroscopic scales, any small region of fluid still contains an enormous number of molecules. This allows us to define physical quantities at a point by averaging over a tiny volume around it.
+</p>
+<div class="concept-box">
+A "point" in fluid mechanics is not truly infinitesimal — it is a small region large enough to contain many molecules, yet small enough to behave like a point.
+</div>
+<p>
+Under this framework, quantities such as <strong>density</strong> and <strong>pressure</strong> become smoothly varying functions of position.
+</p>
+<p>
+This leads us to think of a fluid not as a collection of particles, but as a <strong>field of properties</strong> spread across space.
+</p>
+<ul class="model-box">
+<li><strong>Density field:</strong> mass distribution in space</li>
+<li><strong>Pressure field:</strong> internal force distribution in space</li>
+</ul>
+<p>
+To understand the meaning of these fields — especially pressure — we first need to understand what a <strong>field</strong> itself is.
+</p>
+</section>
+<section>
+<h2>What is a "Field"?</h2>
+<p>
+In physics, a <strong>field</strong> is a quantity that has a value assigned to every point in space (and possibly time).
+</p>
+<p>
+Instead of describing a system by tracking individual objects, we describe how a physical quantity varies across space.
+</p>
+<p>
+Mathematically, a field is simply a function of position:
+</p>
+<div class="math-block">
+\[
+P = P(x, y, z)
+\]
+</div>
+<p>
+This means that at every location in space, the pressure can, in general, have a different value.
+</p>
+<p>
+For example, in a fluid at rest under gravity, pressure varies with depth:
+</p>
+<div class="math-block">
+\[
+P(h) = f(h)
+\]
+</div>
+<p>
+This spatial variation is not arbitrary — it arises due to the weight of the fluid itself.
+</p>
+<div class="insightbox">
+A field is not a substance — it is a way of describing how a physical quantity is distributed in space.
+</div>
+<p>
+In fluid mechanics, we primarily deal with scalar fields like pressure and density, and later vector fields like velocity.
+</p>
+</section>
+<section>
+<h2>Analogy: Stack of Solid Blocks</h2>
+<p>
+To understand the physical meaning of pressure, consider a simple mechanical system: a vertical stack of identical solid blocks placed one over another.
+</p>
+<p>
+Each block experiences the weight of all blocks above it. As a result:
+</p>
+<ul class="model-box">
+<li>The force between two blocks is a <strong>normal contact force</strong></li>
+<li>This force increases as we move downward</li>
+<li>The bottom blocks support the maximum load</li>
+</ul>
+<p>
+Now imagine shrinking the thickness of each block continuously.
+</p>
+<p>
+The discrete stack transforms into a system of infinitely thin layers — this is exactly how we model a fluid.
+</p>
+<p>
+Each layer presses on the layer below it, just like blocks do. The difference is that:
+</p>
+<ul class="model-box">
+<li>In solids → forces act at discrete interfaces</li>
+<li>In fluids → forces exist at <strong>every possible internal surface</strong></li>
+</ul>
+<div class="insightbox">
+Pressure is the continuous limit of contact force — it is how internal forces exist when matter is treated as a continuum.
+</div>
+<p>
+Because force is now distributed over area everywhere, we define:
+</p>
+<div class="math-block">
+\[
+P = \frac{F_{\perp}}{A}
+\]
+</div>
+<p>
+Thus, pressure at a point represents the <strong>internal compressive force per unit area</strong> exerted by surrounding fluid.
+</p>
+<p>
+As we go deeper into the fluid, more layers lie above, increasing this internal force — just like in the block system.
+</p>
+</section>
+<section>
+<h2>Why Only Normal Forces?</h2>
+<p>
+In a solid block system, surfaces can support both normal and tangential (frictional) forces. This is because solids resist deformation.
+</p>
+<p>
+Fluids, however, behave differently.
+</p>
+<p>
+A defining property of a fluid is that it <strong>cannot sustain shear stress at rest</strong>. Even a very small tangential force will cause continuous deformation (flow).
+</p>
+<p>
+This means that in a fluid at rest:
+</p>
+<ul class="model-box">
+<li>No tangential forces can exist between layers</li>
+<li>Only perpendicular (normal) forces are possible</li>
+</ul>
+<p>
+Therefore, the internal force in a fluid is always directed <strong>normal to any surface</strong>.
+</p>
+<div class="insightbox">
+Pressure is not just force per area — it is specifically the normal component of internal force in a fluid.
+</div>
+<p>
+If a material could resist shear without flowing, it would no longer be classified as a fluid — it would behave like a solid.
+</p>
+<p>
+This restriction is what gives fluid statics its unique simplicity, and it is the foundation for:
+</p>
+<ul class="model-box">
+<li>Isotropy of pressure (same in all directions)</li>
+<li>Pressure variation with depth</li>
+<li>Buoyant forces</li>
+</ul>
+</section>
+<section>
+<h2>Fluids: Liquids and Gases</h2>
+<p>
+Both <strong>liquids</strong> and <strong>gases</strong> are classified as fluids because they can flow and continuously deform under applied forces.
+</p>
+<p>
+However, there is an important physical distinction between them:
+</p>
+<ul class="model-box">
+<li><strong>Liquids:</strong> have a definite volume and form a free surface when placed in a container</li>
+<li><strong>Gases:</strong> do not have a definite volume and expand to fill the entire available space</li>
+</ul>
+<p>
+A <strong>free surface</strong> is a boundary where the fluid is in contact with air (or vacuum), and the pressure is equal to the external pressure.
+</p>
+<div class="insightbox">
+Liquids can sustain a free surface because they have a definite volume.<br>  
+Gases expand to fill space, so they do not form a free surface.
+</div>
+<p>
+This distinction becomes important in many situations:
+</p>
+<ul class="model-box">
+<li>In liquids, pressure variation is often measured relative to the free surface</li>
+<li>In gases, pressure varies throughout the entire volume without a well-defined boundary</li>
+</ul>
+<p>
+Despite this difference, both are treated using the same continuum framework in fluid mechanics.
+</p>
+<p>
+A <strong>free surface</strong> is a boundary of a liquid that is not constrained by a rigid solid geometry, but is in contact with another fluid (usually air) or vaccuum. At this surface, the pressure is equal to the external pressure.
+</p>
+<div class="insightbox">
+"Free" means the surface shape is not rigidly fixed — it adjusts itself according to the balance of forces.
+</div>
+</section>
+<section>
+<h2>Ideal Fluid</h2>
+<p>
+While real fluids exhibit complex behavior, we often begin with a simplified model called an <strong>ideal fluid</strong>.
+</p>
+<p>
+An ideal fluid is defined by the absence of certain real-world effects:
+</p>
+<ul class="model-box">
+<li><strong>No viscosity:</strong> no internal friction between layers</li>
+<li><strong>No energy dissipation:</strong> mechanical energy is conserved</li>
+<li><strong>No surface tension:</strong> surface effects are neglected</li>
+</ul>
+<p>
+This means that different layers of the fluid can slide past each other without any resistance.
+</p>
+<p>
+In hydrostatics, the assumption of zero viscosity is automatically satisfied, since there is no motion. However, the idea of an ideal fluid becomes crucial in fluid dynamics, especially in deriving results like Bernoulli’s equation.
+</p>
+<p>
+In an ideal fluid, surface tension is ignored, but the free surface can still be sustained and is governed only by pressure and external forces like gravity.
+</p>
+<div class="insightbox">
+An ideal fluid is not a real substance — it is a mathematical model that helps isolate the role of pressure and motion without complications.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

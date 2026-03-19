@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydrostatics | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Hydrostatics</h1>
+<p class="subtitle">
+Continuum of Scalar Fields
+</p>
+<section>
+<h2>What Hydrostatic Means?</h2>
+<p>
+Fluid mechanics is broadly divided into two regimes based on whether the fluid is in motion or not:
+</p>
+<ul class="model-box">
+<li><strong>Fluid Statics:</strong> Study of fluids at rest</li>
+<li><strong>Fluid Dynamics:</strong> Study of fluids in motion</li>
+</ul>
+<p>
+The term <strong>hydrostatic</strong> specifically refers to fluids that are at rest.
+</p>
+<p>
+"Rest" here means that there is no relative motion between different parts of the fluid. The entire fluid may be moving as a whole (like water in a moving container), but as long as there is no internal flow, it is treated as static.
+</p>
+<div class="insightbox">
+Hydrostatics is not about absolute rest — it is about absence of internal motion.
+</div>
+<p>
+In this condition, the fluid settles into a state of equilibrium where all forces balance exactly.
+</p>
+</section>
+<section>
+<h2>What Changes in Hydrostatics?</h2>
+<p>
+When a fluid is at rest, a major simplification occurs:
+</p>
+<ul class="model-box">
+<li>No relative motion between layers</li>
+<li>No velocity field</li>
+<li>No shear stresses</li>
+</ul>
+<p>
+Because there is no motion, the fluid cannot sustain tangential forces. As a result, the only internal force that exists is <strong>pressure</strong>, which always acts perpendicular to surfaces.
+</p>
+<div class="insightbox">
+In hydrostatics, all internal interactions in the fluid reduce to a single scalar field: pressure.
+</div>
+<p>
+This is what makes hydrostatics significantly simpler than fluid dynamics — we do not need to track motion or acceleration, only how pressure varies in space.
+</p>
+</section>
+<section>
+<h2>Forces in a Static Fluid</h2>
+<p>
+Even though the fluid is at rest, forces are still present.
+</p>
+<p>
+Consider a small element of fluid inside a larger body:
+</p>
+<ul class="model-box">
+<li>It experiences pressure forces from surrounding fluid</li>
+<li>It experiences body forces such as gravity</li>
+</ul>
+<p>
+For the fluid to remain at rest, these forces must balance exactly.
+</p>
+<p>
+This leads to the central idea of hydrostatics:
+</p>
+<div class="math-block">
+\[
+\text{Net force on every fluid element} = 0
+\]
+</div>
+<p>
+This condition of equilibrium determines how pressure varies inside the fluid.
+</p>
+<div class="insightbox">
+Pressure variation in a fluid is not arbitrary — it is dictated by force balance.
+</div>
+</section>
+<section>
+<h2>Why Study Hydrostatics Separately?</h2>
+<p>
+Hydrostatics is studied separately because the absence of motion removes many complexities.
+</p>
+<p>
+In fluid dynamics, we must consider:
+</p>
+<ul class="model-box">
+<li>Velocity fields</li>
+<li>Acceleration of fluid elements</li>
+<li>Energy transfer</li>
+<li>Viscous effects</li>
+</ul>
+<p>
+In hydrostatics, all of this disappears. The problem reduces to:
+</p>
+<ul class="model-box">
+<li>Understanding pressure distribution</li>
+<li>Balancing forces under gravity</li>
+</ul>
+<p>
+This simplification allows us to derive powerful results such as:
+</p>
+<ul class="model-box">
+<li>Pressure variation with depth</li>
+<li>Pascal’s law</li>
+<li>Buoyant force (Archimedes’ principle)</li>
+</ul>
+<div class="insightbox">
+Hydrostatics is the foundation — once pressure distribution is understood, many real-world phenomena follow naturally.
+</div>
+</section>
+<section>
+<h2>Role of Motion and Kinetic Energy</h2>
+<p>
+Hydrostatics does not require the fluid to be absolutely at rest in every frame. It only requires that there is <strong>no relative motion between different parts of the fluid</strong>.
+</p>
+<p>
+From mechanics, the kinetic energy of a system can be written as:
+</p>
+<div class="math-block">
+\[
+K_{\text{total}} = K_{\text{COM}} + K_{\text{internal}}
+\]
+</div>
+<p>
+Here:
+</p>
+<ul class="model-box">
+<li><strong>Bulk kinetic energy (\(K_{\text{COM}}\))</strong> → motion of the fluid as a whole</li>
+<li><strong>Internal kinetic energy (\(K_{\text{internal}}\))</strong> → relative motion between different parts of the fluid</li>
+</ul>
+<p>
+In hydrostatics:
+</p>
+<ul class="model-box">
+<li>No relative motion between fluid elements → \(K_{\text{internal}} = 0\)</li>
+<li>The fluid may still have bulk motion → \(K_{\text{COM}}\) can be non-zero</li>
+</ul>
+<p>
+For example, a liquid inside an accelerating container is in hydrostatic equilibrium in the container frame, even though it has kinetic energy in the ground frame.
+</p>
+<div class="insightbox">
+Hydrostatics is defined by absence of internal motion, not by absence of kinetic energy.
+</div>
+<p>
+In this chapter, we focus only on the <strong>internal equilibrium of the fluid</strong>. Any overall motion of the system is treated separately using rigid-body mechanics.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -21,25 +21,68 @@ The study of fluids at rest and in motion, exploring the macroscopic behavior ar
 <section>
 <h2>Conceptual Overview</h2>
 <p>
-Matter essentially exists in three states: solid, liquid, and gas. Solids maintain a definite shape and volume. Liquids and gases, however, behave quite differently. They flow under the action of applied forces and take the shape of their container. Because of their ability to flow, liquids and gases are jointly called <strong>fluids</strong>. Fluid Mechanics serves as a vital bridge between classical mechanics and thermodynamics, dealing with the macroscopic properties of these continuous media.
+Matter manifests itself in three primary states: solids, liquids, and gases. While solids resist deformation and retain both shape and volume, liquids and gases exhibit a fundamentally different behavior — they <strong>flow</strong>. This ability to continuously deform under even the smallest applied shear force defines what we call <strong>fluids</strong>.
+</p>
+<p>
+At the microscopic level, this behavior arises because intermolecular forces in fluids are not strong enough to hold molecules in fixed positions. Instead, molecules are free to rearrange, giving rise to motion even under minimal external influence. Fluid mechanics, therefore, studies how these microscopic freedoms translate into <strong>macroscopic laws of motion, pressure, and energy</strong>.
 </p>
 <div class="insightbox">
-While solid mechanics focuses on rigid bodies and point masses, fluid mechanics studies a continuum—a continuous distribution of matter where properties vary continuously from point to point in space.
+Fluid Mechanics is a new chapter in terms of Newtonian mechanics meeting continuum approximation. Instead of tracking individual particles, we describe the system using smoothly varying fields of velocity, pressure and density.
 </div>
 <p>
-This chapter is primarily divided into two large themes:
+A key idea in fluid mechanics is the <strong>continuum hypothesis</strong>. Rather than treating matter as discrete molecules, we assume it is continuously distributed. This allows us to define physical quantities (density, pressure, velocity) at every point in space, making calculus the natural language of this subject.
 </p>
+<p>
+The subject unfolds naturally into two complementary frameworks:
+</p>
+<ul class="model-box">
+<li>
+<strong>Fluid Statics:</strong>  
+Concerned with fluids in equilibrium. Despite the absence of motion, forces are very much present. The defining feature here is that fluids cannot sustain shear stress — all forces act <strong>normal to surfaces</strong>.  
+This leads to profound results like:
 <ul>
-    <li><strong>Fluid Statics:</strong> The study of fluids at rest. Key concepts like pressure variation with depth, Pascal's Principle, and Archimedes' Principles fall here. Forces exist in static fluids, but they operate primarily perpendicularly to surfaces as there are no tangential forces (shear stresses) without motion.</li>
-    <li><strong>Fluid Dynamics:</strong> The study of fluids in motion. By treating the fluid as passing through space, sweeping out volumes over time, we harness conservation laws: Conservation of Mass (Equation of Continuity) and Conservation of Energy (Bernoulli's Principle).</li>
+<li>Pressure increases with depth due to weight of fluid</li>
+<li>Pascal’s law enabling force transmission</li>
+<li>Buoyant forces emerging from pressure differences</li>
+</ul>
+</li>
+<li>
+<strong>Fluid Dynamics:</strong>  
+Focuses on fluids in motion. Instead of analyzing forces directly, we use conservation laws:
+<ul>
+<li><strong>Mass Conservation → Continuity Equation</strong></li>
+<li><strong>Energy Conservation → Bernoulli’s Equation</strong></li>
+</ul>
+Here, motion is understood not by tracking particles individually, but by studying how fluid flows through space — like a moving field.
+</li>
 </ul>
 <p>
-We then move to real fluid properties—Viscosity and Surface Tension. Viscosity introduces internal friction between fluid layers, turning Bernoulli's idealizations into more realistic Poiseuille flows. Surface tension reveals the unique forces acting at the liquid's free surface, dominating phenomena such as droplet formation and capillarity at small scales. 
+While ideal fluids simplify analysis by neglecting internal resistance, real fluids introduce additional layers of complexity:
 </p>
+<ul class="model-box">
+<li>
+<strong>Viscosity:</strong>  
+Represents internal friction between fluid layers. It explains why real fluids resist motion and why energy is dissipated. This leads to realistic flow descriptions such as laminar flow and Poiseuille’s law.
+</li>
+<li>
+<strong>Surface Tension:</strong>  
+Arises due to unbalanced intermolecular forces at the surface of a liquid. It governs phenomena that seem counterintuitive at first — droplets forming spheres, insects walking on water, and liquids rising in narrow tubes.
+</li>
+</ul>
+<p>
+Together, these concepts allow us to understand a vast range of physical phenomena — from the flow of blood in arteries to the lift on airplane wings, from hydraulic systems to raindrop formation.
+</p>
+<div class="insightbox">
+For Exam point of view, Fluid Mechanics is part of Newtonian Mechanics.<br>
+Fluids that do not follow Newtonian Mechanics are called Non-Newtonian Fluids and are out of syllabus.<br>
+Same Mechanical Energy Laws are represented in different form.
+</div>
 </section>
 <section>
 <h2>Chapter Structure</h2>
 <div class="chapter-list">
+<a href="./01-introduction-fluid.html">1. What is Fluid?</a>
+<a href="./02-hydrostatics.html">2. Hydrostatics</a>
 <a href="./01-introduction-and-density.html">1. Fluid Statics vs Fluid Dynamics, Density and Specific Gravity</a>
 <a href="./02-fluid-pressure.html">2. Fluid Pressure, Variation with Depth, and Pascal's Principle</a>
 <a href="./03-buoyancy-and-archimedes.html">3. Buoyancy, Archimedes' Principle, and Laws of Floatation</a>
