@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction & Density | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Introduction and Density</h1>
+<p class="subtitle">
+The foundational definitions distinguishing fluid statics, dynamics, and the intrinsic property of density.
+</p>
+<section>
+<h2>Fluid Statics vs Fluid Dynamics</h2>
+<p>
+The study of fluids is broadly categorized into two branches based on the state of motion of the fluid:
+</p>
+<div class="concept-box">
+<strong>Fluid Statics (Hydrostatics)</strong><br>
+Deals with fluids at rest in equilibrium. In this state, a fluid cannot sustain a shear (tangential) stress. The only force exerted by a static fluid on any surface is perpendicular (normal) to that surface. If there were a tangential component, the fluid layers would easily slide past one another, violating the condition of being strictly "at rest".
+</div>
+<div class="concept-box">
+<strong>Fluid Dynamics (Hydrodynamics)</strong><br>
+Deals with fluids in motion. Here, layers of fluid slide past each other and boundaries. Consequently, both normal and tangential (viscous) stresses can exist. Fluid dynamics analyzes the velocities and flow fields resulting from pressure differences and gravity.
+</div>
+<p>
+Before delving into statics and dynamics, we must establish the most fundamental macroscopic property describing a fluid distributed through space: density.
+</p>
+</section>
+<section>
+<h2>Density and Specific Gravity</h2>
+<p>
+Because a fluid is treated as a continuous medium, it is often more useful to describe its mass purely in terms of its distribution over space rather than the total mass of the object.
+</p>
+<div class="model-box">
+<strong>Density \( (\rho) \)</strong><br>
+Density is defined as the mass of the fluid per unit volume.
+<br><br>
+\[
+\rho = \frac{m}{V}
+\]
+<br>
+Where:
+<ul>
+    <li>\( m \) is the total mass of the fluid.</li>
+    <li>\( V \) is the volume occupied by the fluid.</li>
+</ul>
+<strong>SI Unit:</strong> \( \text{kg m}^{-3} \) <br>
+<strong>Dimensional Formula:</strong> \( [\text{M}^1 \text{L}^{-3} \text{T}^0] \)
+</div>
+<div class="insightbox">
+For an incompressible fluid (most liquids), density \( \rho \) remains constant under pressure variations. For a compressible fluid (gases), density is highly dependent on both pressure and temperature.
+</div>
+<p>
+Often, scientists and engineers compare the density of a substance to the density of a standard reference substance (usually pure water at \( 4^{\circ}\text{C} \)) to get a dimensionless, easy-to-use metric.
+</p>
+<div class="model-box">
+<strong>Specific Gravity (Relative Density)</strong><br>
+Specific gravity is the ratio of the density of a substance to the density of water at \( 4^{\circ}\text{C} \) (which is exactly \( 10^3 \, \text{kg m}^{-3} \)).
+<br><br>
+\[
+\text{Specific Gravity} = \frac{\rho_{\text{substance}}}{\rho_{\text{water}}}
+\]
+<strong>SI Unit:</strong> None (it is a dimensionless ratio). <br>
+<strong>Dimensional Formula:</strong> \( [\text{M}^0 \text{L}^0 \text{T}^0] \)
+</div>
+<div class="examplebox">
+<h3>Example: Calculating Mass from Density</h3>
+<hr>
+<p>
+If a tank has a volume of \( 2.0 \, \text{m}^3 \) and is completely filled with an oil of specific gravity \( 0.85 \), what is the mass of the oil?
+</p>
+<p>
+<strong>Solution:</strong><br>
+First, find the density of the oil. <br>
+\( \rho_{\text{oil}} = (\text{Specific Gravity}) \times \rho_{\text{water}} = 0.85 \times 10^3 \, \text{kg m}^{-3} = 850 \, \text{kg m}^{-3} \)
+</p>
+<p>
+Next, use the density formula to find mass:<br>
+\( m = \rho \times V = 850 \, \text{kg m}^{-3} \times 2.0 \, \text{m}^3 = 1700 \, \text{kg} \)
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

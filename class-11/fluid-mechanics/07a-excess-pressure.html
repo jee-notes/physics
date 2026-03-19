@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Excess Pressure | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./07-surface-tension.html" class="back-btn">
+<span>&larr;</span> Back to Surface Tension
+</a>
+</nav>
+<h1>Excess Pressure</h1>
+<p class="subtitle">
+Why the pressure inside curved liquid surfaces is always higher than outside.
+</p>
+
+<section>
+<h2>Curvature and Pressure Differential</h2>
+<p>
+Surface tension acts aggressively to shrink a liquid surface. For a highly curved surface like a sphere, the surface tension forces along the perimeter yield a net inward resultant force directed specifically toward the center of curvature. 
+</p>
+<p>
+To prevent the drop from spontaneously crushing itself to a point under this inward pull, the thermodynamic pressure strictly <em>inside</em> the drop must be fundamentally greater than the pressure outside. This difference is called the <strong>excess pressure</strong>.
+</p>
+</section>
+
+<section>
+<h2>Excess Pressure Inside a Liquid Drop</h2>
+<p>
+Consider a spherical liquid drop of radius \( R \) and surface tension \( S \). Let the excess pressure inside be \( \Delta P = P_{\text{in}} - P_{\text{out}} \).
+</p>
+<p>
+If we imagine the drop meticulously cut in half, the net outward force due to excess pressure acting on the equatorial area \( \pi R^2 \) is fiercely balanced by the surface tension acting along the boundary circumference \( 2\pi R \):
+</p>
+\[
+(\Delta P) (\pi R^2) = S (2\pi R) \implies \Delta P = \frac{2S}{R}
+\]
+<div class="model-box">
+<strong>Excess Pressure for One Free Surface</strong>
+<br><br>
+A liquid drop has exactly one free surface (liquid-air interface).
+<br><br>
+\[
+P_{\text{in}} - P_{\text{out}} = \frac{2S}{R}
+\]
+</div>
+</section>
+
+<section>
+<h2>Excess Pressure Inside a Soap Bubble</h2>
+<p>
+A soap bubble floating gently in the air is hollow. Therefore, it has <em>two</em> free surfaces—an inner spherical boundary and an outer spherical boundary—both in contact with the air. Because the film is microscopically thin, we assume both radii are essentially \( R \).
+</p>
+<p>
+The total surface tension force pulling the bubble together is effectively doubled.
+</p>
+<div class="model-box">
+<strong>Excess Pressure for Two Free Surfaces (Soap Bubble)</strong>
+<br><br>
+\[
+P_{\text{in}} - P_{\text{out}} = 2 \times \left(\frac{2S}{R}\right) = \frac{4S}{R}
+\]
+</div>
+<div class="insightbox">
+Notice the inverse relationship with radius \( R \). The smaller the bubble, the astronomically higher the internal pressure! If a tiny soap bubble is connected by a tiny tube to a large soap bubble, the air will spontaneously flow from the small bubble into the large bubble, shrinking the small one until it vanishes.
+</div>
+</section>
+
+<section>
+<h2>Excess Pressure Inside an Air Bubble in Liquid</h2>
+<p>
+An air bubble violently trapped <em>inside</em> a pool of liquid is physically identical to a liquid drop in air—it simply consists of exactly one liquid-gas interface. 
+</p>
+<div class="model-box">
+<strong>Excess Pressure for Submerged Air Bubble</strong>
+<br><br>
+\[
+P_{\text{in}} - P_{\text{liquid}} = \frac{2S}{R}
+\]
+</div>
+<p>
+Keep in mind, to definitively find the true absolute pressure \( P_{\text{in}} \) inside the bubble, you must also meticulously add the hydrostatic fluid pressure \( (\rho g h) \) if the bubble is situated deep underwater.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

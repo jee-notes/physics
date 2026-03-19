@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torricelli's Law | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./05-bernoullis-principle.html" class="back-btn">
+<span>&larr;</span> Back to Bernoulli's Principle
+</a>
+</nav>
+<h1>Torricelli's Law</h1>
+<p class="subtitle">
+The physics of leaky tanks and the speed of escaping fluid.
+</p>
+
+<section>
+<h2>Speed of Efflux</h2>
+<p>
+The word "efflux" means fluid outflow. Evangelista Torricelli discovered that the speed at which a liquid pours out of a small hole at the bottom of an open tank is deeply related to free-fall kinematics. We can prove this using Bernoulli's equation.
+</p>
+<p>
+Consider a large open tank filled with water to a height \( H \). There is a tiny hole of area \( a \) located a depth \( h \) below the surface. Let the area of the top surface be \( A \). 
+</p>
+<p>
+Applying Bernoulli's equation between the top free surface (point 1) and just outside the hole (point 2):
+</p>
+<ul>
+    <li>At the top: Pressure is atmospheric (\( P_a \)). Velocity \( v_1 \) is very small. Height is \( H \).</li>
+    <li>At the hole: The jet is open to the air, so pressure is also atmospheric (\( P_a \)). Velocity is the efflux velocity \( v \). Height is \( H - h \).</li>
+</ul>
+\[
+P_a + \frac{1}{2}\rho v_1^2 + \rho g H = P_a + \frac{1}{2}\rho v^2 + \rho g (H - h)
+\]
+<p>
+Because \( A \gg a \), the continuity equation \( A v_1 = a v \) ensures that the surface drops so slowly that we can approximate its kinetic energy term \( \frac{1}{2}\rho v_1^2 \approx 0 \). The atmospheric pressures on both sides cancel out:
+</p>
+\[
+\rho g H = \frac{1}{2}\rho v^2 + \rho g (H - h) \implies \frac{1}{2} v^2 = g h
+\]
+<div class="model-box">
+<strong>Torricelli's Law of Efflux</strong>
+<br><br>
+The velocity of efflux \( v \) of a fluid from an orifice is equal to the velocity it would acquire by falling freely from rest through a vertical distance \( h \), where \( h \) is the fluid depth above the hole.
+<br><br>
+\[
+v = \sqrt{2gh}
+\]
+</div>
+<div class="insightbox">
+This remarkable result proves that fluid escaping pressure acts exactly like mass escaping gravity. The density of the fluid \( \rho \) naturally vanishes from the equation—mercury and water will squirt out of the identical hole at the identical speed!
+</div>
+</section>
+
+<section>
+<h2>Time Taken to Empty a Tank</h2>
+<p>
+As the fluid empties out of the hole, the depth \( h \) shrinks. According to Torricelli's Law, as \( h \) shrinks, the efflux velocity \( v \) also steadily slows down. Therefore, the tank empties non-linearly. To find the exact time it takes to drain, we must use calculus.
+</p>
+<p>
+The volume leaving the tank per infantisimal time \( dt \) is \( a \cdot v \cdot dt \). This corresponds to a drop in the water level \( -A \cdot dh \):
+</p>
+\[
+-A \, dh = a \sqrt{2gh} \, dt \implies dt = \frac{-A}{a\sqrt{2g}} \cdot h^{-1/2} \, dh
+\]
+<div class="examplebox">
+<h3>Formula: Time to Drain</h3>
+<hr>
+<p>
+Integrating from the initial height \( H \) down to \( 0 \), the total time \( T \) required to fully empty the tank is:
+</p>
+\[
+T = \int_{0}^{T} dt = \frac{-A}{a\sqrt{2g}} \int_{H}^{0} h^{-1/2} \, dh = \frac{A}{a} \sqrt{\frac{2H}{g}}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

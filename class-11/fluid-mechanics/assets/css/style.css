@@ -1,14 +1,18 @@
 :root{
-    --primary:#2c3e50;
-    --secondary:#3498db;
-    --accent:#2980b9;
-    --bg:#ebf5fb;
+    --primary:#1f3a5f;
+    --secondary:#3b82f6;
+    --accent:#60a5fa;
+
+    --bg:#f6f9ff;
     --card:#ffffff;
-    --bg-soft:#fdfdfd;
-    --bg-box:#f8f9fa;
-    --text:#1f2933;
+
+    --bg-soft:#e8f0ff;
+    --bg-box:#f8fbff;
+
+    --text:#1e293b;
     --muted:#6b7280;
-    --border:#d1f0ea;
+
+    --border:#e2e8f0;
 }
 /* ------------------ Global ------------------ */
 *{

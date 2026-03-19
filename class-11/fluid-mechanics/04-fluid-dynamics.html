@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid Dynamics | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Fluid Dynamics</h1>
+<p class="subtitle">
+The study of fluids in motion, analyzing flow patterns and the conservation of mass.
+</p>
+
+<section>
+<h2>Types of Fluid Flow</h2>
+<p>
+Fluid dynamics analyzes fluid motion by tracking variables like pressure and velocity at every point in space as time progresses. The complexity of actual fluid flow is immense, but we typically classify flow into distinct regimes.
+</p>
+<ol>
+    <li><strong>Steady Flow:</strong> The velocity of the fluid particles at any given point does not change with time.</li>
+    <li><strong>Unsteady Flow:</strong> The velocity at any given point changes with time.</li>
+    <li><strong>Incompressible Flow:</strong> The density of the fluid remains constant everywhere. This is an excellent approximation for most liquids and even for gases at low speeds (subsonic).</li>
+    <li><strong>Irrotational Flow:</strong> The fluid does not possess net angular momentum about any point. A small paddle wheel placed in the fluid would translate without spinning.</li>
+</ol>
+</section>
+
+<section>
+<h2>Streamline and Turbulent Flow</h2>
+<p>
+A <strong>streamline</strong> is a continuous curve drawn in a fluid such that the tangent to it at any point provides the instantaneous direction of fluid velocity at that point. By definition, no two streamlines can ever cross; if they did, a particle at the intersection would have two different velocities simultaneously, which is physically impossible.
+</p>
+<div class="concept-box">
+<strong>Streamline (Laminar) Flow</strong><br>
+When the flow is steady, the paths of the fluid particles exactly follow the streamlines. The fluid flows in smooth, distinct layers (laminas) that never mix. This occurs at relatively low velocities.
+</div>
+<div class="concept-box">
+<strong>Turbulent Flow</strong><br>
+When the velocity exceeds a certain critical threshold, the flow loses its orderly structure. Eddies and chaotic vortices appear. The motion becomes highly unpredictable and dissipative. The streamlines are constantly breaking, crossing, and reforming.
+</div>
+</section>
+
+<section>
+<h2>Equation of Continuity</h2>
+<p>
+The Equation of Continuity is the mathematical expression of the <strong>Conservation of Mass</strong> for fluid flow. 
+</p>
+<p>
+Consider a steady, incompressible fluid flowing through a pipe of varying cross-sectional area. Let \( A_1 \) and \( A_2 \) be the cross-sectional areas at two different points, and let \( v_1 \) and \( v_2 \) be the fluid velocities at those respective points.
+</p>
+<p>
+Because mass cannot be created or destroyed, the mass of fluid entering section 1 per unit time must precisely equal the mass of fluid exiting section 2 per unit time. 
+</p>
+\[
+\frac{\Delta m_1}{\Delta t} = \frac{\Delta m_2}{\Delta t} \implies \rho A_1 v_1 = \rho A_2 v_2
+\]
+<p>
+For an incompressible fluid, density \( \rho \) is constant and cancels out.
+</p>
+<div class="model-box">
+<strong>Equation of Continuity</strong>
+<br><br>
+\[
+A_1 v_1 = A_2 v_2 \implies A \cdot v = \text{Constant}
+\]
+<br>
+Where:
+<ul>
+    <li>\( A \) is the cross-sectional area of the flow.</li>
+    <li>\( v \) is the instantaneous velocity of the fluid.</li>
+</ul>
+</div>
+<div class="insightbox">
+The product \( A \cdot v \) is the <strong>Volume Flow Rate</strong> (or discharge), historically denoted by \( Q \). Its SI unit is \( \text{m}^3\text{s}^{-1} \). The Continuity Equation physically implies that where the pipe narrows, the fluid must speed up to prevent a back-up of mass.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

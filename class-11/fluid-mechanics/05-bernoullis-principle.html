@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bernoulli's Principle | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Bernoulli's Principle</h1>
+<p class="subtitle">
+The principle of conservation of energy applied to an ideal flowing fluid.
+</p>
+
+<section>
+<h2>Energy of a Flowing Fluid</h2>
+<p>
+A fluid in motion possesses three distinct forms of mechanical energy per unit volume:
+</p>
+<ol>
+    <li>
+        <strong>Kinetic Energy (per unit volume):</strong> Energy due to the macroscopic velocity \( v \) of the fluid. <br>
+        \[ K.E. = \frac{1}{2} \rho v^2 \]
+    </li>
+    <li>
+        <strong>Potential Energy (per unit volume):</strong> Gravitational potential energy due to the fluid's elevation \( h \) above a reference level. <br>
+        \[ P.E. = \rho g h \]
+    </li>
+    <li>
+        <strong>Pressure Energy (per unit volume):</strong> The work done by fluid pressure \( P \) to move the fluid volume against its surroundings. <br>
+        \[ W = P \]
+    </li>
+</ol>
+</section>
+
+<section>
+<h2>Bernoulli's Equation</h2>
+<p>
+In 1738, Daniel Bernoulli derived a profound relationship describing fluids. By applying the Work-Energy Theorem to a steady, incompressible, and non-viscous (ideal) fluid flowing smoothly through a pipe, he found that the total mechanical energy is conserved along any given streamline.
+</p>
+<div class="model-box">
+<strong>Bernoulli's Equation</strong>
+<br><br>
+The sum of pressure energy, kinetic energy per unit volume, and potential energy per unit volume remains constant at all points along a streamline.
+<br><br>
+\[
+P + \frac{1}{2}\rho v^2 + \rho g h = \text{Constant}
+\]
+<br>
+Where:
+<ul>
+    <li>\( P \) is the absolute pressure at that point.</li>
+    <li>\( \rho \) is the continuous fluid density.</li>
+    <li>\( v \) is the fluid velocity.</li>
+    <li>\( h \) is the height above an arbitrary reference datum.</li>
+    <li>\( g \) is the acceleration due to gravity.</li>
+</ul>
+</div>
+<div class="insightbox">
+A crucial takeaway from Bernoulli's Equation for horizontal flow (\( h_1 = h_2 \)) is the inverse relationship between speed and pressure: \( P + \frac{1}{2}\rho v^2 = \text{Constant} \). <strong>Where the fluid velocity is high, the pressure must be low; and where the fluid velocity is low, the pressure must be high.</strong> This is highly counter-intuitive to many, who assume fast streams "push harder."
+</div>
+
+<p>
+This theoretical foundation has an immense number of phenomenological applications in the real world.
+</p>
+
+<div class="chapter-list">
+<a href="./05a-applications-of-bernoulli.html">Explore Applications: Venturi Meter, Pitot Tube, and Dynamic Lift</a>
+<a href="./05b-torricellis-law.html">Explore Applications: Torricelli's Law of Efflux</a>
+</div>
+
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

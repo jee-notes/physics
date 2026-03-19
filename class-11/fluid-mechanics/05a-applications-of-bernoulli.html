@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Applications of Bernoulli | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./05-bernoullis-principle.html" class="back-btn">
+<span>&larr;</span> Back to Bernoulli's Principle
+</a>
+</nav>
+<h1>Applications of Bernoulli's Principle</h1>
+<p class="subtitle">
+Putting the inverse relationship of pressure and velocity to practical use.
+</p>
+
+<section>
+<h2>Venturi Meter</h2>
+<p>
+A <strong>Venturi meter</strong> is a simple yet genius device used to measure the flow speed of an incompressible fluid inside a pipe. It consists of a horizontal tube with a wide section that rapidly narrows down into a constricted "throat," and then expands again. Connected to both sections is a U-tube manometer.
+</p>
+<p>
+Let the area, velocity, and pressure at the wide part be \( A_1, v_1, P_1 \) and at the narrow throat be \( A_2, v_2, P_2 \). Because the pipe is horizontal, \( h_1 = h_2 \), and Bernoulli's equation simplifies to:
+</p>
+\[
+P_1 + \frac{1}{2}\rho v_1^2 = P_2 + \frac{1}{2}\rho v_2^2 \implies P_1 - P_2 = \frac{1}{2}\rho (v_2^2 - v_1^2)
+\]
+<p>
+By the Equation of Continuity (\( A_1 v_1 = A_2 v_2 \)), the fluid must speed up in the throat (\( v_2 > v_1 \)). Therefore, the pressure \( P_2 \) in the throat must be <em>lower</em> than \( P_1 \). This pressure difference \( (P_1 - P_2) \) pushes the manometer fluid (density \( \rho_m \)) higher on the throat side by a height difference \( h_m \).
+</p>
+<div class="model-box">
+<strong>Velocity of Fluid in Venturi Meter</strong>
+<br><br>
+Using \( P_1 - P_2 = \rho_m g h_m \), we can solve for the fluid velocity in the main pipe:
+<br><br>
+\[
+v_1 = \sqrt{\frac{2 \rho_m g h_m}{\rho \left[ \left(\frac{A_1}{A_2}\right)^2 - 1 \right]}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Pitot Tube</h2>
+<p>
+Invented by Henri Pitot, a <strong>Pitot tube</strong> determines the local velocity of a fluid stream (most famously, determining the airspeed of aircraft).
+</p>
+<p>
+It is an L-shaped tube pointing directly into the flow. The fluid rushes into the open tip and is brought completely to rest inside the tube. This creates a "stagnation point" where the kinetic energy of the fluid is perfectly converted into maximum pressure. Comparing this elevated stagnation pressure to the surrounding static pressure (measured by parallel holes on the side) yields the velocity.
+</p>
+\[
+P_{\text{stagnation}} = P_{\text{static}} + \frac{1}{2}\rho v^2 \implies v = \sqrt{\frac{2(P_{\text{stagnation}} - P_{\text{static}})}{\rho}}
+\]
+<div class="insightbox">
+If you look closely at commercial jetliners, you will see small metallic probes sticking out of the nose. These are Pitot tubes, critical for the pilots to know their airspeed. If they freeze over and provide false pressure readings, the consequences can be catastrophic.
+</div>
+</section>
+
+<section>
+<h2>Dynamic Lift (Magnus Effect)</h2>
+<p>
+When a solid object moves through a fluid, it experiences a force perpendicular to its motion. This is called dynamic lift, and it is largely responsible for airplane flight and the curving "swing" of a spinning cricket or baseball.
+</p>
+<div class="concept-box">
+<strong>Magnus Effect</strong><br>
+When a ball translates and spins simultaneously, the spin drags layers of air physically around the ball due to viscosity. On one side, this dragged air moves <em>with</em> the oncoming translational airflow, dramatically increasing velocity. On the opposite side, it moves <em>against</em> the oncoming airflow, drastically decreasing velocity.
+<br><br>
+According to Bernoulli's principle, the high-speed side develops a low pressure, while the low-speed side develops a high pressure. This pressure difference creates a net force that violently "lifts" or curves the ball away from its standard parabolic trajectory.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

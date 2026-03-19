@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viscosity | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Viscosity</h1>
+<p class="subtitle">
+The study of internal fluid friction, turning ideal models into real-world phenomena.
+</p>
+
+<section>
+<h2>Velocity Gradient</h2>
+<p>
+Real fluids flowing over a stationary surface do not maintain a uniform velocity. The actual fluid layer in direct atomic contact with the solid surface "sticks" to it, locking its velocity to zero (the <em>no-slip condition</em>). The layer just above it flows slowly, dragging the next layer, which flows faster, and so on. 
+</p>
+<p>
+This continuous spatial variation of velocity perpendicular to the flow creates what is formally known as a <strong>velocity gradient</strong>.
+</p>
+<div class="model-box">
+<strong>Velocity Gradient</strong>
+<br><br>
+If the velocity of the fluid changes by \( dv \) over a perpendicular distance \( dy \), the velocity gradient is defined as:
+<br><br>
+\[
+\text{Velocity Gradient} = \frac{dv}{dy}
+\]
+<strong>SI Unit:</strong> \( \text{s}^{-1} \) <br>
+<strong>Dimensional Formula:</strong> \( [\text{M}^0 \text{L}^0 \text{T}^{-1}] \)
+</div>
+</section>
+
+<section>
+<h2>Viscous Force and Coefficient of Viscosity</h2>
+<p>
+Because adjacent layers are moving at slightly different speeds relative to each other, they rub together. The faster upper layer tries to accelerate the lower layer, and the slower lower layer tries to violently retard the upper one. 
+</p>
+<p>
+This internal, macroscopic "friction" between fluid layers is called <strong>viscous force</strong>. Newton discovered that for many common fluids (Newtonian fluids), this viscous drag force \( F \) between two layers of contact area \( A \) is directly proportional to the area and the velocity gradient.
+</p>
+<div class="model-box">
+<strong>Newton's Law of Viscosity</strong>
+<br><br>
+\[
+F = -\eta A \frac{dv}{dy}
+\]
+<br>
+Where:
+<ul>
+    <li>\( F \) is the tangential viscous force opposing relative motion.</li>
+    <li>\( A \) is the contact area of the fluid layers.</li>
+    <li>\( \frac{dv}{dy} \) is the velocity gradient.</li>
+    <li>\( \eta \) (eta) is the <strong>Coefficient of Viscosity</strong>.</li>
+</ul>
+<strong>SI Unit of \( \eta \):</strong> \( \text{Pa}\cdot\text{s} \) (Pascal-second) or Poiseuille (Pl).<br>
+<strong>Dimensional Formula:</strong> \( [\text{M}^1 \text{L}^{-1} \text{T}^{-1}] \)
+</div>
+<div class="insightbox">
+A high \( \eta \) means the fluid is very "thick" and resists flow (like cold honey or tar). A low \( \eta \) means the fluid flows extremely easily (like water or air). Viscosity is highly temperature-dependent; warming a liquid usually drastically drops its viscosity.
+</div>
+</section>
+
+<section>
+<h2>Stokes' Law and Terminal Velocity</h2>
+<p>
+When a solid object moves through a viscous medium—like a raindrop falling through air—it drags the adjacent fluid layers with it, setting up a velocity gradient and experiencing a viscous drag force.
+</p>
+<div class="concept-box">
+<strong>Stokes' Law</strong><br>
+Sir George Stokes proved that the viscous drag force \( F_v \) on a small spherical body of radius \( r \) moving with velocity \( v \) through a vast extent of fluid of viscosity \( \eta \) is given precisely by:
+<br><br>
+\[
+F_v = 6 \pi \eta r v
+\]
+</div>
+<p>
+Notice that the viscous drag force violently increases as the object's velocity \( v \) increases. If you drop a sphere into a fluid, gravity initially accelerates it downward. But as its speed rises, the upward viscous drag (from Stokes' Law) actively rises as well.
+</p>
+<p>
+Eventually, the upward drag force completely balances out the downward gravitational force (minus any buoyant force). At this exact moment, the net force drops to zero. The object ceases to accelerate and falls at a constant, maximum speed known as <strong>Terminal Velocity (\( v_t \))</strong>.
+</p>
+<div class="model-box">
+<strong>Expression for Terminal Velocity</strong>
+<br><br>
+By equating apparent weight \( \frac{4}{3}\pi r^3 (\rho - \sigma) g \) to the drag \( 6 \pi \eta r v_t \):
+<br><br>
+\[
+v_t = \frac{2 r^2 (\rho - \sigma) g}{9 \eta}
+\]
+<br>
+Where:
+<ul>
+    <li>\( r \) is the radius of the sphere.</li>
+    <li>\( \rho \) is the density of the sphere.</li>
+    <li>\( \sigma \) is the fluid density.</li>
+    <li>\( \eta \) is the viscosity coefficient.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Reynolds Number</h2>
+<p>
+How do we know mathematically whether a flowing fluid will remain in a smooth streamline state or burst into chaotic turbulence? The answer is a dimensionless ratio.
+</p>
+<div class="model-box">
+<strong>Reynolds Number (\( R_e \))</strong>
+<br><br>
+\[
+R_e = \frac{\rho v d}{\eta}
+\]
+<br>
+Where \( \rho \) is density, \( v \) is average velocity, \( d \) is the pipe diameter, and \( \eta \) is viscosity.
+</div>
+<p>
+Physically, Reynolds Number represents the ratio of inertial forces (mass and speed) to viscous forces (internal friction).
+</p>
+<ul>
+    <li><strong>\( R_e < 1000 \):</strong> Viscous forces violently dominate. The flow is strictly streamline (laminar).</li>
+    <li><strong>\( 1000 < R_e < 2000 \):</strong> Transition state; the flow is highly unstable.</li>
+    <li><strong>\( R_e > 2000 \):</strong> Inertial forces dominate. The flow becomes fully turbulent.</li>
+</ul>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

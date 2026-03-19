@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid Pressure | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Fluid Pressure</h1>
+<p class="subtitle">
+Understanding how fluids exert force macroscopic surfaces and how pressure varies with altitude and depth.
+</p>
+<section>
+<h2>Pressure in a Fluid</h2>
+<p>
+When a fluid is at rest in a container, it exerts a force that is everywhere strictly perpendicular to the walls of the container. If there were a component parallel to the surface, the fluid would start flowing. The normal force exerted by a fluid per unit area is called <strong>pressure</strong>.
+</p>
+<div class="model-box">
+<strong>Pressure \( (P) \)</strong><br>
+Pressure is defined as the magnitude of the normal force \( F_{\perp} \) exerted per unit area \( A \).
+<br><br>
+\[
+P = \frac{F_{\perp}}{A}
+\]
+<br>
+Where:
+<ul>
+    <li>\( F_{\perp} \) is the normal force exerted by the fluid.</li>
+    <li>\( A \) is the area over which the force acts.</li>
+</ul>
+<strong>SI Unit:</strong> \text{Pascal} (Pa) or \text{N m}^{-2} <br>
+<strong>Dimensional Formula:</strong> \( [\text{M}^1 \text{L}^{-1} \text{T}^{-2}] \)
+</div>
+<div class="insightbox">
+Despite being defined by the ratio of force (a vector) to area (also treated as a vector in some contexts), pressure itself is a highly isotropic scalar quantity. At any specific point within a static fluid, the pressure is identical in all directions.
+</div>
+</section>
+
+<section>
+<h2>Variation of Pressure with Depth</h2>
+<p>
+Pressure within a fluid under gravity changes depending on depth. Consider a cylindrical element of fluid of cross-sectional area \( A \) and height \( h \), situated within a larger volume of fluid of density \( \rho \). Let the top surface be at pressure \( P_1 \) and the bottom be at pressure \( P_2 \).
+</p>
+<p>
+Since the fluid element is in equilibrium, the net force in the vertical direction must be zero:
+</p>
+\[
+P_2 A - P_1 A - m g = 0
+\]
+<p>
+The mass of the element is \( m = \rho (\text{volume}) = \rho A h \). Substituting this:
+</p>
+\[
+(P_2 - P_1) A = \rho A h g \implies P_2 - P_1 = \rho g h
+\]
+<div class="model-box">
+<strong>Hydrostatic Pressure Equation</strong><br>
+The absolute pressure \( P \) at a depth \( h \) below the surface of a fluid is:
+<br><br>
+\[
+P = P_0 + \rho g h
+\]
+<br>
+Where:
+<ul>
+    <li>\( P_0 \) is the pressure at the reference surface (often atmospheric pressure \( P_a \)).</li>
+    <li>\( \rho \) is the fluid density.</li>
+    <li>\( g \) is the acceleration due to gravity.</li>
+    <li>\( h \) is the depth below the surface.</li>
+</ul>
+</div>
+<p>
+This explains why hydrostatic pressure depends only on depth and completely ignores the container's shape—a phenomenon famously known as the <em>hydrostatic paradox</em>.
+</p>
+</section>
+
+<section>
+<h2>Pascal's Principle and Hydraulic Lift</h2>
+<p>
+Because fluids apply pressure uniformly in all directions at a given depth, applying an external pressure forces the entire fluid to adjust its internal pressure profile simultaneously.
+</p>
+<div class="concept-box">
+<strong>Pascal's Principle</strong><br>
+A change in pressure applied to an enclosed incompressible fluid is transmitted undiminished to every point of the fluid and to the walls of the container.
+</div>
+<p>
+One of the most consequential applications of Pascal's Principle is the <strong>Hydraulic Lift</strong>. Two pistons of varying cross-sectional areas \( A_1 \) and \( A_2 \) are connected by a fluid-filled tube. A small force \( F_1 \) is applied to the small area \( A_1 \).
+</p>
+\[
+P_1 = \frac{F_1}{A_1}
+\]
+<p>
+According to Pascal's Principle, this pressure change is transmitted to piston 2 exactly:
+</p>
+\[
+P_2 = P_1 \implies \frac{F_2}{A_2} = \frac{F_1}{A_1} \implies F_2 = F_1 \frac{A_2}{A_1}
+\]
+<div class="insightbox">
+Because the area \( A_2 \) is much larger than \( A_1 \), the output force \( F_2 \) is magnificently amplified. The hydraulic lift allows us to effortlessly elevate a massive car by applying only a tiny force downward, mimicking the principle of a mechanical lever for continuous media.
+</div>
+</section>
+
+<section>
+<h2>Atmospheric and Gauge Pressure</h2>
+<p>
+Living on Earth, we are constantly buried at the bottom of a fluid ocean—our atmosphere. The column of air above us exerts a significant <strong>Atmospheric Pressure (\( P_a \))</strong>. At sea level, its standard value is:
+</p>
+\[
+1 \, \text{atm} = 1.013 \times 10^5 \, \text{Pa}
+\]
+<div class="model-box">
+<strong>Gauge Pressure (\( P_g \))</strong><br>
+Gauge pressure is the difference between the absolute pressure \( P \) and the atmospheric pressure \( P_a \). It effectively zeroes out the background atmospheric pressure because atmospheric pressure pushes on all sides equivalently.
+<br><br>
+\[
+P_g = P - P_a = \rho g h
+\]
+</div>
+<p>
+Most mechanical pressure gauges (like tire pressure gauges) read gauge pressure. A tire pressure of "30 psi" means the pressure inside is 30 psi <em>higher</em> than the atmospheric ambient pressure outside.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

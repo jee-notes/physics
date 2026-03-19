@@ -1,265 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluid Mechanics | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #3498db; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #ebf5fb; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid Mechanics | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
-
-    <h1>Fluid Mechanics</h1>
-    <p style="text-align: center;"><em>How liquids and gases respond to forces and flow.</em></p>
-
-    <section id="fluids">
-        <h2>1. What Is a Fluid?</h2>
-        <p>
-            A <strong>fluid</strong> is a substance that cannot sustain shear stress
-            in static equilibrium and flows under applied force.
-        </p>
-
-        <div class="insightbox">
-            Fluids resist compression,  
-            but not shape change.
-        </div>
-    </section>
-
-    <section id="density-pressure">
-        <h2>2. Density & Pressure</h2>
-
-        <div class="formula-block">
-            Density:
-            \[
-            \rho = \frac{m}{V}
-            \]
-        </div>
-
-        <div class="formula-block">
-            Pressure:
-            \[
-            P = \frac{F}{A}
-            \]
-        </div>
-
-        <ul>
-            <li>Pressure is scalar</li>
-            <li>Acts equally in all directions</li>
-        </ul>
-    </section>
-
-    <section id="pressure-depth">
-        <h2>3. Pressure Variation with Depth</h2>
-        <p>
-            In a static fluid, pressure increases with depth.
-        </p>
-
-        <div class="formula-block">
-            \[
-            P = P_0 + \rho g h
-            \]
-        </div>
-
-        <div class="insightbox">
-            Pressure depends on depth,
-            not container shape.
-        </div>
-    </section>
-
-    <section id="pascal">
-        <h2>4. Pascal’s Law</h2>
-        <p>
-            Pressure applied to an enclosed fluid is transmitted
-            undiminished in all directions.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \frac{F_1}{A_1} = \frac{F_2}{A_2}
-            \]
-        </div>
-
-        <p>
-            Basis of hydraulic press and brakes.
-        </p>
-    </section>
-
-    <section id="buoyancy">
-        <h2>5. Buoyancy & Archimedes’ Principle</h2>
-        <p>
-            A body immersed in a fluid experiences an upward force
-            equal to the weight of fluid displaced.
-        </p>
-
-        <div class="formula-block">
-            \[
-            F_B = \rho_{\text{fluid}} V g
-            \]
-        </div>
-
-        <ul>
-            <li>Apparent weight decreases in fluid</li>
-            <li>Floating depends on average density</li>
-        </ul>
-
-        <div class="insightbox">
-            Buoyant force depends on fluid,
-            not on the object’s material.
-        </div>
-    </section>
-
-    <section id="continuity">
-        <h2>6. Fluid Flow & Continuity Equation</h2>
-        <p>
-            For steady, incompressible flow:
-        </p>
-
-        <div class="formula-block">
-            \[
-            A_1 v_1 = A_2 v_2
-            \]
-        </div>
-
-        <ul>
-            <li>Smaller area → higher speed</li>
-            <li>Mass flow rate conserved</li>
-        </ul>
-    </section>
-
-    <section id="bernoulli">
-        <h2>7. Bernoulli’s Theorem</h2>
-        <p>
-            Energy conservation applied to fluid flow.
-        </p>
-
-        <div class="formula-block">
-            \[
-            P + \frac{1}{2}\rho v^2 + \rho g h = \text{constant}
-            \]
-        </div>
-
-        <ul>
-            <li>Valid for steady, non-viscous flow</li>
-            <li>Explains lift, venturimeter, atomizer</li>
-        </ul>
-
-        <div class="insightbox">
-            Bernoulli is not magic —  
-            it is energy conservation.
-        </div>
-    </section>
-
-    <section id="viscosity">
-        <h2>8. Viscosity</h2>
-        <p>
-            <strong>Viscosity</strong> is the internal resistance
-            to fluid flow.
-        </p>
-
-        <div class="formula-block">
-            \[
-            F = \eta A \frac{dv}{dy}
-            \]
-        </div>
-
-        <ul>
-            <li>Higher viscosity → slower flow</li>
-            <li>Liquids: viscosity decreases with temperature</li>
-        </ul>
-    </section>
-
-    <section id="stokes">
-        <h2>9. Stokes’ Law & Terminal Velocity</h2>
-
-        <div class="formula-block">
-            \[
-            F = 6\pi\eta r v
-            \]
-        </div>
-
-        <div class="formula-block">
-            Terminal velocity:
-            \[
-            v_t = \frac{2r^2(\rho_s - \rho_f)g}{9\eta}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Terminal velocity arises when
-            net force becomes zero.
-        </div>
-    </section>
-
-    <section id="surface-tension">
-        <h2>10. Surface Tension</h2>
-        <p>
-            Surface tension is the tendency of a liquid surface
-            to minimize area.
-        </p>
-
-        <div class="formula-block">
-            \[
-            T = \frac{F}{L}
-            \]
-        </div>
-
-        <ul>
-            <li>Due to molecular cohesion</li>
-            <li>Responsible for capillarity</li>
-        </ul>
-    </section>
-
-    <section id="capillary">
-        <h2>11. Capillary Rise</h2>
-
-        <div class="formula-block">
-            \[
-            h = \frac{2T\cos\theta}{\rho g r}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Capillarity is a balance of
-            surface tension and gravity.
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>12. Common Mistakes</h2>
-        <ul>
-            <li>Using Bernoulli where viscosity is important</li>
-            <li>Confusing pressure with force</li>
-            <li>Assuming buoyant force depends on depth</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Fluid Mechanics</h1>
+<p class="subtitle">
+The study of fluids at rest and in motion, exploring the macroscopic behavior arising from microscopic interactions.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Matter essentially exists in three states: solid, liquid, and gas. Solids maintain a definite shape and volume. Liquids and gases, however, behave quite differently. They flow under the action of applied forces and take the shape of their container. Because of their ability to flow, liquids and gases are jointly called <strong>fluids</strong>. Fluid Mechanics serves as a vital bridge between classical mechanics and thermodynamics, dealing with the macroscopic properties of these continuous media.
+</p>
+<div class="insightbox">
+While solid mechanics focuses on rigid bodies and point masses, fluid mechanics studies a continuum—a continuous distribution of matter where properties vary continuously from point to point in space.
 </div>
-
+<p>
+This chapter is primarily divided into two large themes:
+</p>
+<ul>
+    <li><strong>Fluid Statics:</strong> The study of fluids at rest. Key concepts like pressure variation with depth, Pascal's Principle, and Archimedes' Principles fall here. Forces exist in static fluids, but they operate primarily perpendicularly to surfaces as there are no tangential forces (shear stresses) without motion.</li>
+    <li><strong>Fluid Dynamics:</strong> The study of fluids in motion. By treating the fluid as passing through space, sweeping out volumes over time, we harness conservation laws: Conservation of Mass (Equation of Continuity) and Conservation of Energy (Bernoulli's Principle).</li>
+</ul>
+<p>
+We then move to real fluid properties—Viscosity and Surface Tension. Viscosity introduces internal friction between fluid layers, turning Bernoulli's idealizations into more realistic Poiseuille flows. Surface tension reveals the unique forces acting at the liquid's free surface, dominating phenomena such as droplet formation and capillarity at small scales. 
+</p>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-introduction-and-density.html">1. Fluid Statics vs Fluid Dynamics, Density and Specific Gravity</a>
+<a href="./02-fluid-pressure.html">2. Fluid Pressure, Variation with Depth, and Pascal's Principle</a>
+<a href="./03-buoyancy-and-archimedes.html">3. Buoyancy, Archimedes' Principle, and Laws of Floatation</a>
+<a href="./04-fluid-dynamics.html">4. Fluid Dynamics, Types of Flow, and Continuity</a>
+<a href="./05-bernoullis-principle.html">5. Bernoulli's Principle</a>
+<a href="./06-viscosity.html">6. Viscosity and Stokes' Law</a>
+<a href="./07-surface-tension.html">7. Surface Tension and Capillarity</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
