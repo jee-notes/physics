@@ -3,218 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electromagnetic Induction | Lenz's Law</title>
+<title>Electromagnetic Induction | Motional EMF</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
+
 <nav class="top-nav">
 <a href="./index.html" class="back-btn">
 <span>&larr;</span> Back to Electromagnetic Induction
 </a>
 </nav>
+
 <section>
-<h1>Lenz's Law</h1>
+<h1>Motional EMF</h1>
+
 <p class="subtitle">
-Direction of induced current determined by conservation of energy.
+Conductor cuts magnetic field lines like a sword cutting grass.
 </p>
-<h2>Lenz's Law</h2>
+<h2>Underlying Mechanism</h2>
 <p>
-When the magnetic flux linked with a closed loop changes with time, an induced EMF appears in the loop. According to <strong>Lenz's Law</strong>, the direction of this induced EMF (and hence the induced current) is such that it always <strong>opposes the change in magnetic flux</strong> that produced it.
+Faraday's Law unifies two different mechanisms for induced EMF:
+</p>
+<ul class="model-box">
+<li>Motional EMF (due to motion of charges in magnetic field)</li>
+<li>Induced Electric Field (due to changing magnetic field)</li>
+</ul>
+<div class="insightbox">
+In motional EMF, the magnetic field can be constant — it is the <strong>motion of the conductor</strong> that causes flux change.
+</div>
+</section>
+<section>
+<h2>Physical Origin (Lorentz Force)</h2>
+<p>
+When a conductor moves through a magnetic field, free charges inside it experience the Lorentz force:
+</p>
+\[
+\vec{F} = q(\vec{v} \times \vec{B})
+\]
+<p>
+This force pushes positive and negative charges in opposite directions, creating a potential difference across the conductor.
 </p>
 <div class="insightbox">
-<strong>Energy Perspective</strong><br>
-The induced current always acts in a way that resists the change causing it. Because of this opposition, an <strong>external agent must do positive work</strong> to change the magnetic flux. This external work is converted into electrical energy stored in the magnetic field produced around the current carrying conductor.
+There is <strong>no electric field initially</strong>. The EMF arises purely due to magnetic force on moving charges.
 </div>
-</section>
-<section>
-<h2>Opposition to Motion of Magnet</h2>
+<h3>Expression for Motional EMF</h3>
 <p>
-When a magnet is moved toward or away from a conducting loop, the magnetic flux through the loop changes. The induced current produces a magnetic field that opposes this change.
+For a straight conductor of length \( \ell \) moving with velocity \( v \) perpendicular to a magnetic field \( B \):
 </p>
-<div class="diagram">
-<div class="diagram">
-
-<svg width="520" height="260" viewBox="0 0 520 260">
-
-<!-- ===== CASE 1 ===== -->
-<text x="70" y="30" font-size="14">N pole approaching → coil face becomes N</text>
-
-<!-- magnet -->
-<rect x="20" y="80" width="80" height="40" fill="#ddd" stroke="black"/>
-<text x="35" y="105">N</text>
-<text x="75" y="105">S</text>
-
-<!-- arrow motion -->
-<line x1="100" y1="100" x2="140" y2="100" stroke="black" stroke-width="2"/>
-<polygon points="140,100 130,95 130,105" fill="black"/>
-
-<!-- coil -->
-<ellipse cx="200" cy="100" rx="45" ry="35" fill="none" stroke="blue" stroke-width="3"/>
-
-<!-- coil polarity -->
-<text x="188" y="60">N</text>
-
-<!-- repulsion arrows -->
-<line x1="120" y1="100" x2="160" y2="80" stroke="red"/>
-<line x1="120" y1="100" x2="160" y2="120" stroke="red"/>
-
-
-<!-- ===== CASE 2 ===== -->
-<text x="330" y="30" font-size="14">N pole moving away → coil face becomes S</text>
-
-<!-- magnet -->
-<rect x="300" y="80" width="80" height="40" fill="#ddd" stroke="black"/>
-<text x="315" y="105">N</text>
-<text x="355" y="105">S</text>
-
-<!-- arrow motion -->
-<line x1="300" y1="100" x2="260" y2="100" stroke="black" stroke-width="2"/>
-<polygon points="260,100 270,95 270,105" fill="black"/>
-
-<!-- coil -->
-<ellipse cx="430" cy="100" rx="45" ry="35" fill="none" stroke="blue" stroke-width="3"/>
-
-<!-- coil polarity -->
-<text x="418" y="60">S</text>
-
-<!-- attraction arrows -->
-<line x1="380" y1="100" x2="410" y2="80" stroke="red"/>
-<line x1="380" y1="100" x2="410" y2="120" stroke="red"/>
-</svg>
-</div>
-</div>
+\[
+\mathcal{E} = B \ell v
+\]
+<p>
+This is obtained by summing the magnetic force acting on charges along the length of the rod.
+</p>
+<h3>Direction of EMF</h3>
+<p>
+Direction is given by:
+</p>
 <ul class="model-box">
-<li>The induced current produces a magnetic field that <strong>opposes the motion of the magnet</strong>.</li>
-<li>An external force must be applied to keep the magnet moving.</li>
-<li>The work done by the external agent is converted into electrical energy.</li>
+<li>Right-hand rule for \( \vec{v} \times \vec{B} \)</li>
+<li>Or Fleming’s right-hand rule</li>
 </ul>
 </section>
 <section>
-<h2>Flux Interpretation</h2>
-<p>
-Lenz's Law can also be understood purely in terms of magnetic flux.
-</p>
-<ul class="model-box">
-<li>If the external magnetic flux through the coil <strong>increases</strong>, the coil produces a magnetic field that opposes it.</li>
-<li>If the external magnetic flux through the coil <strong>decreases</strong>, the coil produces a magnetic field that tries to maintain it.</li>
-</ul>
-</section>
-<section>
-<h2>Case 1: External Flux Decreasing</h2>
-<p>
-If the external magnetic flux through the coil is decreasing, the induced current produces a magnetic field in the <strong>same direction</strong> as the original field.
-</p>
-<p>
-This attempts to maintain the original magnetic flux.
-</p>
-</section>
-<section>
-<h2>Case 2: External Flux Increasing</h2>
-<p>
-If the external magnetic flux through the coil is increasing, the induced current produces a magnetic field in the <strong>opposite direction</strong> to the original field.
-</p>
-<p>
-This attempts to reduce the increase in flux.
-</p>
-</section>
-<section>
-<h2>Example 1: Falling Magnet Through a Coil</h2>
-<p>
-A magnet falling through a conducting loop experiences a magnetic force due to the induced current.
-</p>
-<ul class="model-box">
-<li>Before crossing the coil: induced current produces an upward magnetic force.</li>
-<li>After crossing the coil: induced current again produces an upward magnetic force.</li>
-</ul>
-<p>
-Therefore the acceleration of the magnet becomes less than \(g\).
-</p>
-</section>
-<section>
-<h2>Example 2: Straight Wire Near a Coil</h2>
-<p>
-A current carrying wire produces a magnetic field through a nearby coil.
-</p>
-<p>
-If the current in the wire increases, the magnetic flux through the coil increases. The induced current in the coil flows such that it opposes this increase.
-</p>
-</section>
-<section>
-<h2>Example 3: Two Coils Moving Apart</h2>
-<p>
-Two current carrying coils are placed near each other.
-</p>
-<p>
-When the coils are moved away from each other, the magnetic flux linked with each coil decreases.
-</p>
-<ul class="model-box">
-<li>Induced currents appear in both coils.</li>
-<li>The induced currents act in the <strong>same direction</strong> as the original currents.</li>
-<li>This attempts to maintain the original magnetic flux.</li>
-</ul>
-</section>
-<section>
-<h3>Irodov 3.304: Induced Current in Closed Loops</h3>
+<h2>Sliding Rod on Rails</h2>
 <div class="examplebox">
 <h3>Question</h3>
 <p>
-The figure below illustrates plane figures made of thin conductors which are located in a uniform magnetic field directed away from the reader (into the plane of the drawing). The magnetic induction starts diminishing. Find how the currents induced in these loops are directed.
+A conducting rod of length \( \ell \) slides on two parallel conducting rails with constant velocity \( v \). The entire arrangement is placed in a uniform magnetic field \( B \) directed into the page.
+</p>
+<p>
+The rails are connected by a resistor \( R \). Find the current in the circuit.
 </p>
 <div class="diagram">
-<svg width="720" height="200" viewBox="0 0 720 200">
-<style>
-.b-field { fill: #999; font-size: 12px; }
-</style>
-<text x="400" y="30" class="b-field">B (into page) ⊗ diminishing</text>
-<circle cx="90" cy="90" r="50" stroke="black" stroke-width="3" fill="none"/>
-<line x1="40" y1="90" x2="140" y2="90" stroke="black" stroke-width="3"/>
-<text x="80" y="170">(a)</text>
-<path d="M 300 87 A 50 50 1 1 0 300 93" stroke="black" stroke-width="3" fill="none"/>
-<path d="M 275 87 A 25 25 1 1 0 275 93" stroke="black" stroke-width="3" fill="none"/>
-<line x1="275" y1="87" x2="300" y2="87" stroke="black" stroke-width="3"/>
-<line x1="275" y1="93" x2="300" y2="93" stroke="black" stroke-width="3"/>
-<text x="240" y="170">(b)</text>
-<circle cx="410" cy="90" r="50" stroke="black" stroke-width="3" fill="none"/>
-<circle cx="410" cy="90" r="25" stroke="black" stroke-width="3" fill="none"/>
-<line x1="435" y1="90" x2="460" y2="90" stroke="black" stroke-width="3"/>
-<text x="400" y="170">(c)</text>
-<path d="M 630 87 A 50 50 1 1 0 630 93" stroke="black" stroke-width="3" fill="none"/>
-<path d="M 640 87 A 25 25 1 1 1 640 93" stroke="black" stroke-width="3" fill="none"/>
-<line x1="630" y1="87" x2="640" y2="93" stroke="black" stroke-width="3"/>
-<line x1="630" y1="93" x2="640" y2="87" stroke="black" stroke-width="3"/>
-<text x="610" y="170">(d)</text>
+<svg width="420" height="260" viewBox="0 0 420 260">
+
+<!-- rails -->
+<line x1="60" y1="80" x2="300" y2="80" stroke="black" stroke-width="3"/>
+<line x1="60" y1="180" x2="300" y2="180" stroke="black" stroke-width="3"/>
+
+<!-- rod -->
+<line x1="200" y1="80" x2="200" y2="180" stroke="#4da6ff" stroke-width="5"/>
+
+<!-- velocity arrow -->
+<line x1="200" y1="50" x2="260" y2="50" stroke="red" stroke-width="3"/>
+<polygon points="260,50 250,45 250,55" fill="red"/>
+<text x="265" y="55">v</text>
+
+<!-- resistor -->
+<rect x="60" y="120" width="30" height="20" fill="none" stroke="black" stroke-width="2"/>
+<text x="55" y="115">R</text>
+
+<!-- B field -->
+<text x="320" y="90">× × ×</text>
+<text x="320" y="130">× × ×</text>
+<text x="320" y="170">× × ×</text>
 </svg>
 </div>
 <hr>
 <h4>Solution</h4>
 <p>
-Since the magnetic field \(\vec{B}\) (into the page) is <strong>diminishing</strong>, the induced current must create a magnetic field that is also <strong>into the page</strong> to oppose the change (Lenz's Law). This requires a net <strong>Clockwise (CW)</strong> circulation of current.
+Charges in the rod experience magnetic force:
 </p>
-<p><strong>Analysis of individual cases:</strong></p>
+\[
+F = qvB
+\]
 <p>
-<strong>Case (a):</strong> The system consists of two closed semicircular loops. In both, current is induced CW. Along the shared diameter, these currents oppose and cancel each other. <br>
-<strong>Result:</strong> Current flows <strong>Clockwise</strong> along the outer boundary.
+This creates a potential difference across the rod:
 </p>
+\[
+\mathcal{E} = B \ell v
+\]
 <p>
-<strong>Case (b):</strong> This is a <strong>single continuous loop</strong>. Following the wire path, if current flows CW in the outer arc, it must flow <strong>CCW</strong> in the inner arc. The net EMF is \(\mathcal{E}_{net} = \frac{dB}{dt}(A_{outer} - A_{inner})\). Since the outer area dominates, the net direction is dictated by the outer boundary.<br>
-<strong>Result:</strong> Current flows <strong>Clockwise</strong> in the outer section and <strong>Counter-Clockwise</strong> in the inner section.
+This EMF drives current in the circuit:
 </p>
-<p>
-<strong>Case (c):</strong> We have two independent concentric loops joined by a single radial bridge. While CW currents are induced in both loops, the bridge is a <strong>"dangling branch."</strong> Since it does not form a closed path between the two loops, no charge can flow through it (KCL).<br>
-<strong>Result:</strong> Current flows <strong>Clockwise</strong> in both rings; current in the bridge is <strong>Zero</strong>.
-</p>
-<p>
-<strong>Case (d):</strong> This figure-eight is a single loop where the two sections are wound in opposite senses. The larger area \(A_1\) produces a larger EMF than the smaller area \(A_2\).<br>
-<strong>Result:</strong> The larger EMF dominates the circuit. The current flows <strong>Clockwise in the larger loop</strong> and <strong>Counter-Clockwise in the smaller loop</strong>.
-</p>
+\[
+I = \frac{\mathcal{E}}{R} = \frac{B \ell v}{R}
+\]
 <div class="insightbox">
-<strong>The "Single Loop" Trick</strong><br>
-In Case (b), common mistake is to treat the inner and outer arcs as separate circuits. Because they are part of the <strong>same wire</strong>, we must trace the path: a CW flow on the outside naturally becomes a CCW flow on the inside. The loop "encloses" the area between the two arcs, and Lenz's law acts on that net area.<br>
-<strong>KCL and "Dangling Branches"</strong><br>
-In Case (c), the radial wire is a single point-to-point connection. For a steady current to exist, there must be a return path. Without one, any flow would lead to charge accumulation, violating the steady-state condition. This subtle application of Kirchhoff's Current Law is often asked in exam to check if students can distinguish between a "connected" system and a "complete" circuit.
+<strong>Energy Perspective</strong><br><br>
+The magnetic field does no work on charges.
+<br><br>
+External agent pulling the rod does work → converted into electrical energy → dissipated as heat in resistor.
 </div>
+</div>
+</section>
+<section>
+<h2>Key Differences</h2>
+<div class="insightbox">
+<strong>Motional EMF vs Induced Electric Field</strong>
+<br><br>
+• Motional EMF → due to Lorentz force \( q\vec{v} \times \vec{B} \)  
+• Induced field → due to \( \frac{dB}{dt} \)
+<br><br>
+• Motional EMF → requires motion of conductor  
+• Induced field → exists even in empty space  
+<br><br>
+• Motional EMF → local force on charges  
+• Induced field → global circulating field  
 </div>
 </section>
 <footer>

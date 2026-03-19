@@ -1,122 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electromagnetic Induction | Self Inductance</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Induction | Self Inductance</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Electromagnetic Induction
-            </a>
-        </nav>
-
-        <h1>Self Inductance</h1>
-        <p class="subtitle">
-            A circuit's opposition to its own changing current — the inertia of electromagnetism.
-        </p>
-
-        <section>
-            <h2>What is Self Inductance?</h2>
-            <p>
-                When current flows through a coil, it creates a magnetic field and hence magnetic flux through the coil
-                itself. If the current changes, the flux changes, inducing an EMF in the coil itself — opposing the
-                change. This property is called <strong>self inductance</strong>.
-            </p>
-            <p>
-                The self-induced EMF is proportional to the rate of change of current:
-            </p>
-            \[
-            \mathcal{E}_L = -L\frac{dI}{dt}
-            \]
-            <p>
-                where \( L \) is the <strong>self inductance</strong> (or simply inductance) of the coil. The negative
-                sign reflects Lenz's Law — it opposes the change.
-            </p>
-            <div class="insightbox">
-                An inductor is the electromagnetic analogue of inertia. Just as mass resists changes in velocity,
-                inductance resists changes in current. A large inductor maintains its current even after the driving EMF
-                is removed.
-            </div>
-        </section>
-
-        <section>
-            <h2>Definition via Flux Linkage</h2>
-            <p>
-                The flux linkage \( \Lambda \) through a coil is proportional to the current producing it:
-            </p>
-            \[
-            \Lambda = N\Phi_B = LI
-            \]
-            \[
-            L = \frac{N\Phi_B}{I} = \frac{\Lambda}{I}
-            \]
-            <p>
-                The SI unit of inductance is the <strong>Henry (H)</strong>: \( 1\text{ H} = 1\text{ Wb/A} = 1\text{
-                V·s/A} \).
-            </p>
-        </section>
-
-        <section>
-            <h2>Self Inductance of a Solenoid</h2>
-            <p>
-                For a solenoid of \( N \) turns, length \( l \), and cross-sectional area \( A \), with \( n = N/l \)
-                turns per unit length, carrying current \( I \):
-            </p>
-            <p>
-                The field inside is \( B = \mu_0 nI \). The flux through one turn is \( \Phi_B = BA = \mu_0 nIA \).
-                Total flux linkage:
-            </p>
-            \[
-            \Lambda = N\Phi_B = (nl)(\mu_0 nIA) = \mu_0 n^2 l A \cdot I
-            \]
-            \[
-            \boxed{L = \mu_0 n^2 lA = \mu_0 \frac{N^2}{l} A = \frac{\mu_0 N^2 A}{l}}
-            \]
-            <p>
-                Key observations:
-            </p>
-            <ul>
-                <li>\( L \propto N^2 \) — doubling turns quadruples inductance.</li>
-                <li>\( L \propto A \) — larger cross-section means more flux per turn.</li>
-                <li>\( L \propto 1/l \) — shorter solenoid has more turns per unit length for same \( N \).</li>
-                <li>With a core of relative permeability \( \mu_r \): \( L = \mu_r \mu_0 N^2 A / l \).</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Back EMF and Its Role in Circuits</h2>
-            <p>
-                When the current through an inductor increases, the self-induced EMF \( \mathcal{E}_L = -L\, dI/dt \)
-                opposes the increase — it acts like a "back EMF" that resists the rise of current. When current
-                decreases, \( \mathcal{E}_L \) opposes the decrease — it tries to maintain the current.
-            </p>
-            <p>
-                This is why:
-            </p>
-            <ul>
-                <li>Inductors cause current to lag behind voltage in AC circuits.</li>
-                <li>When an inductive circuit is suddenly broken, the large \( dI/dt \) produces a very large back EMF —
-                    this causes the spark seen when switching off a high-current inductor.</li>
-            </ul>
-            <div class="insightbox">
-                A 1 H inductor carrying 1 A stores 0.5 J of energy. When the circuit is broken, this energy must go
-                somewhere — if the switch creates an air gap, it can ionize the air and produce a visible arc. This is
-                why inductors can be dangerous to switch abruptly.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electromagnetic Induction
+</a>
+</nav>
+<h1>Self Inductance</h1>
+<p class="subtitle">
+A circuit element's opposition to its own changing current — the inertia of electromagnetism.
+</p>
+<section>
+<h2>What is Self Inductance?</h2>
+<p>
+When a current is established in a closed conducting loop, it produces a magnetic field around it.
+</p>
+<p>
+This magnetic field passes through the area enclosed by the loop. Therefore, there is a magnetic flux associated with the loop.
+</p>
+<p>
+If the current in the loop changes with time, the magnetic field also changes, and hence the magnetic flux linked with the loop changes.
+</p>
+<p>
+According to Faraday’s Law, a change in magnetic flux induces an emf in the loop.
+</p>
+<p>
+This induced emf is produced in the <strong>same loop</strong> in which the current is changing. This phenomenon is called <strong>self induction</strong>.
+</p>
+<h3>Why is Flux Proportional to Current?</h3>
+<p>
+The magnetic field produced by a current-carrying conductor is proportional to the current in the loop:
+</p>
+\[
+B \propto i(t)
+\]
+<p>
+Magnetic flux is given by:
+</p>
+\[
+\Phi_B = \int \vec{B} \cdot d\vec{A}
+\]
+<p>
+Since \( B \propto i(t) \), the flux through the loop is also proportional to current:
+</p>
+\[
+\Phi_B \propto i(t)
+\]
+<p>
+To convert this proportionality into an equation, we introduce a constant:
+</p>
+\[
+\Phi_B = L i(t)
+\]
+<p>
+This constant \( L \) depends only on the geometry of the loop (shape, size, number of turns, etc.).
+</p>
+<p>
+This constant is called the <strong>self inductance</strong> of the loop.
+</p>
+<h3>Induced EMF</h3>
+<p>
+From Faraday’s Law:
+</p>
+\[
+\mathcal{E} = -\frac{d\Phi_B}{dt}
+\]
+<p>
+Substituting \( \Phi_B = LI \):
+</p>
+\[
+\mathcal{E} = -\frac{d}{dt}(Li)
+\]
+<p>
+If \( L \) is constant:
+</p>
+\[
+\mathcal{E} = -L\frac{di}{dt}
+\]
+<p>
+This is the expression for self-induced EMF.
+</p>
+<div class="concept-box">
+<strong>Chain of Cause → Effect</strong><br>
+Current → Magnetic Field → Magnetic Flux<br>
+Changing Flux → Induced EMF
+<br>
+Each step is proportional to the previous one, which is why:
+\[
+\Phi \propto i \quad \text{and} \quad \mathcal{E} \propto \frac{di}{dt}
+\]
+</div>
+<div class="insightbox">
+An inductor is the electromagnetic analogue of inertia.
+<br>
+• Mass resists change in velocity<br>  
+• Inductance resists change in current  
+<br>
+The larger the inductance, the harder it is to change the current.
+</div>
+</section>
+<section>
+<h2>Definition via Flux Linkage</h2>
+<p>
+Coil — A current-carrying loop that encloses an area is a coil. Just like we have systems of particles, systems of charges and systems of conductors (capacitor), we can extend this idea to systems of coils and systems of inductors.
+</p>
+<p>
+A key feature of a system-level description is that it remains valid even for a single element. The same definition applies whether we consider one loop or many turns. This is why the system approach is useful and natural in electromagnetism.
+</p>
+<p>
+Even a single current-carrying conductor (for example, a finite length \( \Delta l \)) can have non-zero inductance. Multiple turns simply represent an extension of the same idea.
+</p>
+<p>
+We use a system approach because the physically relevant quantity is the <strong>total magnetic flux linked with the entire configuration</strong>. This quantity is called <strong>flux linkage</strong>.
+</p>
+<p>
+The simplest case is a coil of \( N \) turns such that all turns are connected in series and each turn encloses the same area. In this case, each turn experiences the same magnetic flux \( \Phi_B \).
+</p>
+<p>
+Therefore, the total flux linkage of the system is:
+</p>
+\[
+\Lambda = N\Phi_B
+\]
+<p>
+From earlier, flux through a loop is proportional to the current producing it. Hence, the total flux linkage is also proportional to current:
+</p>
+\[
+\Lambda \propto I
+\]
+<p>
+Introducing the constant of proportionality:
+</p>
+\[
+\Lambda = LI
+\]
+\[
+L = \frac{\Lambda}{I} = \frac{N\Phi_B}{I}
+\]
+<p>
+Thus, inductance measures how effectively a current produces magnetic flux linkage.
+</p>
+<p>
+SI unit: <strong>Henry (H)</strong>
+</p>
+\[
+1 \text{ H} = 1 \text{ Wb/A} = 1 \text{ V·s/A}
+\]
+<div class="insightbox">
+<strong>System Thinking</strong><br><br>
+For multi-turn coils, flux linkage naturally becomes a system-level quantity.
+<br>
+• Capacitor → inherently a system of conductors<br>  
+• Inductor → can exist for a single loop, but becomes richer for multiple turns  
+<br>
+Flux linkage plays a role analogous to charge in capacitors.
+</div>
+</section>
+<section>
+<h2>Self Inductance of a Solenoid</h2>
+<p>
+For a solenoid of \( N \) turns, length \( l \), and cross-sectional area \( A \):
+</p>
+<p>
+Magnetic field inside:
+</p>
+\[
+B = \mu_0 n I \quad \text{where } n = \frac{N}{l}
+\]
+<p>
+Flux through one turn:
+</p>
+\[
+\Phi_B = BA = \mu_0 n I A
+\]
+<p>
+Total flux linkage:
+</p>
+\[
+\Lambda = N\Phi_B = \mu_0 n^2 l A \cdot I
+\]
+\[
+\boxed{L = \mu_0 \frac{N^2 A}{l}}
+\]
+<p>
+With a core of relative permeability \( \mu_r \):
+</p>
+\[
+L = \mu_r \mu_0 \frac{N^2 A}{l}
+\]
+<ul>
+<li>\( L \propto N^2 \) — turns are extremely powerful</li>
+<li>\( L \propto A \) — larger area → more flux</li>
+<li>\( L \propto \frac{1}{l} \) — compact coils are stronger</li>
+</ul>
+</section>
+<section>
+<h2>Back EMF and Circuit Behavior</h2>
+<p>
+The induced EMF always opposes the change in current:
+</p>
+<ul>
+<li>If current increases → EMF opposes rise</li>
+<li>If current decreases → EMF tries to maintain it</li>
+</ul>
+<p>
+This leads to important effects:
+</p>
+<ul>
+<li>Current cannot change instantaneously</li>
+<li>Inductors oppose sudden switching</li>
+<li>In AC circuits, current lags voltage</li>
+</ul>
+<div class="insightbox">
+An inductor resists change, not current itself. Once steady current is established, it behaves like a wire.
+</div>
+</section>
+<section>
+<h2>Energy Stored in an Inductor</h2>
+<p>
+Work must be done against the back EMF to build current in an inductor. This work is stored as energy in the magnetic field.
+</p>
+\[
+U = \frac{1}{2} L I^2
+\]
+<p>
+This energy is stored in the magnetic field surrounding the coil.
+</p>
+<div class="insightbox">
+<strong>Where is the energy stored?</strong><br><br>
+Not in the wire — but in the magnetic field in space around it.
+<br><br>
+Energy density of magnetic field:
+\[
+u = \frac{B^2}{2\mu_0}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

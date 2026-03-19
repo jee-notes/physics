@@ -1,136 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electromagnetic Induction | Mutual Inductance</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Induction | Mutual Inductance</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Electromagnetic Induction
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electromagnetic Induction
+</a>
+</nav>
+<section>
+<h1>Mutual Inductance</h1>
+<p class="subtitle">
+Energy exchange between coupled systems — the foundation of the transformer.
+</p>
+<h3>What is Mutual Induction?</h3>
+<p>
+In <strong>Self Inductance</strong>, a circuit interacts with its own magnetic field. In <strong>Mutual Induction</strong>, we consider a system of <strong>two</strong> coils.
+</p>
+<p>
+When a current \( I_1 \) flows through Coil 1 (the primary), it creates a magnetic field that spreads through space. If Coil 2 (the secondary) is placed nearby, some of those magnetic field lines will pass through it.
+</p>
+<p>
+If \( I_1 \) changes with time, the magnetic flux linked with Coil 2 (\( \Phi_2 \)) also changes. According to Faraday’s Law, this induces an EMF in Coil 2.
+</p>
+<div class="concept-box">
+<strong>The Coupling Chain</strong><br>
+Current in Coil 1 \(\to\) Field in Space \(\to\) Flux through Coil 2<br>
+Change in \( I_1 \) \(\to\) Change in \( \Phi_2 \) \(\to\) Induced EMF in Coil 2.
+</div>
+<h3>The Coefficient of Mutual Inductance (\( M \))</h3>
+<p>
+The magnetic flux linked with Coil 2 is directly proportional to the current in Coil 1 that produced it:
+</p>
+\[ \Phi_2 \propto I_1 \]
+<p>
+Introducing the constant of proportionality, \( M \):
+</p>
+\[ \Phi_2 = M I_1 \]
+<p>
+The induced EMF in the second coil is:
+</p>
+\[ \mathcal{E}_2 = -\frac{d\Phi_2}{dt} = -M \frac{dI_1}{dt} \]
+<p>
+The constant \( M \) is the <strong>Mutual Inductance</strong> of the pair of coils. Like self-inductance, it is measured in <strong>Henrys (H)</strong>.
+</p>
+</section>
+<section>
+<h3>The Reciprocity Theorem: Nature's Symmetry</h3>
+<p>
+One of the most profound results in electromagnetism is that the "coupling" between two coils is perfectly symmetrical.
+</p>
+<p>
+If you pass current through Coil 1, the flux in Coil 2 is \( \Phi_2 = M_{21} I_1 \). <br>
+If you pass the same current through Coil 2, the flux in Coil 1 is \( \Phi_1 = M_{12} I_2 \).
+</p>
+<p>
+Mathematically and physically:
+</p>
+\[ M_{12} = M_{21} = M \]
+<div class="insightbox">
+<strong>Symmetry of Interaction</strong><br>
+The Mutual Inductance \( M \) is a property of the <strong>system as a whole</strong>. It doesn't belong to Coil 1 or Coil 2; it describes the geometric "handshake" between them. 
+</div>
+</section>
+<section>
+<h3>Factors Affecting \( M \)</h3>
+<p>
+While self-inductance depends only on the geometry of one coil, mutual inductance depends on:
+</p>
+<ul class="model-box">
+<li><strong>Individual Geometries:</strong> \( N \), \( A \), and \( l \) of both coils.</li>
+<li><strong>Relative Distance:</strong> Closer coils share more field lines.</li>
+<li><strong>Relative Orientation:</strong> Coils must be aligned to maximize flux linkage (perpendicular coils have \( M \approx 0 \)).</li>
+<li><strong>Medium:</strong> A high-permeability core (\( \mu_r \)) "channels" the flux from one coil to the other.</li>
+</ul>
+</section>
+<section>
+<h3>5. Example: Two Coaxial Solenoids</h3>
+<p>
+Consider a long solenoid of radius \( r_1 \) and turns per unit length \( n_1 \). A second solenoid of radius \( r_2 \) and turns \( n_2 \) is wound over it.
+</p>
+<p>
+If we pass current \( I_1 \) through the inner solenoid, the field is \( B_1 = \mu_0 n_1 I_1 \). The flux through <strong>each</strong> turn of the outer solenoid is \( \Phi = B_1 A_{inner} \).
+</p>
+<p>
+Total flux linkage in the outer solenoid:
+</p>
+\[ \Lambda_2 = N_2 ( \mu_0 n_1 I_1 \pi r_1^2 ) \]
+<p>
+Since \( \Lambda_2 = M I_1 \):
+</p>
+\[ \boxed{M = \mu_0 n_1 n_2 l \pi r_1^2} \]
+<div class="insightbox">
+Note that \( M \) depends on the area of the <strong>inner</strong> solenoid, as that is where the magnetic field is confined.
+</div>
+</section>
 
-        <h1>Mutual Inductance</h1>
-        <p class="subtitle">
-            How a changing current in one circuit induces EMF in another — the transformer principle.
-        </p>
+<section>
+<h3>Coupling Coefficient (\( k \))</h3>
+<p>
+In an ideal world, all flux from Coil 1 would pass through Coil 2. In reality, there is "leakage." We define the coupling coefficient \( k \):
+</p>
+\[ M = k \sqrt{L_1 L_2} \]
+<ul class="model-box">
+<li>\( k = 1 \): Perfect coupling (all flux shared).</li>
+<li>\( k = 0 \): No coupling (coils are far apart or perpendicular).</li>
+</ul>
+</section>
 
-        <section>
-            <h2>Definition</h2>
-            <p>
-                When two coils are placed near each other, a changing current in coil 1 produces a changing magnetic
-                field which links (partly or fully) with coil 2, inducing an EMF in it. This interaction is
-                characterised by the <strong>mutual inductance</strong> \( M \).
-            </p>
-            <p>
-                The flux linkage in coil 2 due to current \( I_1 \) in coil 1 is proportional to \( I_1 \):
-            </p>
-            \[
-            N_2 \Phi_{21} = M I_1
-            \]
-            <p>
-                The induced EMF in coil 2:
-            </p>
-            \[
-            \mathcal{E}_2 = -M\frac{dI_1}{dt}
-            \]
-            <p>
-                Similarly, current \( I_2 \) in coil 2 induces EMF in coil 1:
-            </p>
-            \[
-            \mathcal{E}_1 = -M\frac{dI_2}{dt}
-            \]
-            <p>
-                The mutual inductance \( M \) is the same in both directions — this is the <strong>reciprocity
-                    theorem</strong>: \( M_{12} = M_{21} = M \). The SI unit is the Henry (H).
-            </p>
-            <div class="insightbox">
-                The reciprocity of mutual inductance (\( M_{12} = M_{21} \)) is a non-trivial result from energy
-                considerations. It means that the same \( M \) describes the coupling regardless of which coil drives
-                and which receives.
-            </div>
-        </section>
-
-        <section>
-            <h2>Mutual Inductance of Two Coaxial Solenoids</h2>
-            <p>
-                Consider two coaxial solenoids — solenoid 1 of \( N_1 \) turns, length \( l \), area \( A \), and
-                solenoid 2 of \( N_2 \) turns wound over it. Current \( I_1 \) in solenoid 1 creates:
-            </p>
-            \[
-            B_1 = \mu_0 n_1 I_1 = \mu_0 \frac{N_1}{l} I_1
-            \]
-            <p>
-                Total flux linkage through solenoid 2 (all \( N_2 \) turns link the same flux \( B_1 A \)):
-            </p>
-            \[
-            N_2 \Phi_{21} = N_2 B_1 A = N_2 \mu_0 \frac{N_1}{l} A \cdot I_1
-            \]
-            \[
-            \boxed{M = \frac{\mu_0 N_1 N_2 A}{l}}
-            \]
-            <p>
-                Note: \( M = \sqrt{L_1 L_2} \) only when flux linkage is perfect (coupling coefficient \( k = 1 \)). In
-                general:
-            </p>
-            \[
-            M = k\sqrt{L_1 L_2}, \quad 0 \leq k \leq 1
-            \]
-        </section>
-
-        <section>
-            <h2>The Transformer</h2>
-            <p>
-                A transformer uses mutual inductance to transfer AC power between two circuits at different voltage
-                levels. An ideal transformer (100% coupling, no losses) satisfies:
-            </p>
-            \[
-            \frac{V_s}{V_p} = \frac{N_s}{N_p}
-            \]
-            <p>
-                By energy conservation (power input = power output for an ideal transformer):
-            </p>
-            \[
-            V_p I_p = V_s I_s \implies \frac{I_s}{I_p} = \frac{N_p}{N_s}
-            \]
-            <ul>
-                <li><strong>Step-up transformer:</strong> \( N_s > N_p \) — voltage increases, current decreases.</li>
-                <li><strong>Step-down transformer:</strong> \( N_s < N_p \) — voltage decreases, current increases.</li>
-            </ul>
-            <div class="insightbox">
-                Real transformers have losses due to eddy currents in the core (minimised by lamination), hysteresis in
-                the core, and resistance of windings. Efficiencies of 95–99% are typical for power transformers.
-            </div>
-        </section>
-
-        <section>
-            <h2>Neumann Formula</h2>
-            <p>
-                The most general expression for mutual inductance between two arbitrary loops \( C_1 \) and \( C_2 \) is
-                given by the Neumann formula:
-            </p>
-            \[
-            M = \frac{\mu_0}{4\pi} \oint_{C_1} \oint_{C_2} \frac{d\vec{l}_1 \cdot d\vec{l}_2}{|\vec{r}_{12}|}
-            \]
-            <p>
-                where \( \vec{r}_{12} \) is the vector from element \( d\vec{l}_1 \) to element \( d\vec{l}_2 \). This
-                double line integral makes manifest the geometric nature of \( M \) and the symmetry \( M_{12} = M_{21}
-                \).
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<section>
+<h3>Connection to Bond Graph Theory</h3>
+<p>
+In our Effort–Flow framework, Mutual Inductance represents a <strong>multi-port storage element</strong>. 
+</p>
+<p>
+Energy is stored in the <em>combined</em> magnetic field of both coils. The power transfer between the coils occurs because the <strong>Flow</strong> in one system creates an <strong>Effort</strong> in the other.
+</p>
+\[ \text{Energy Stored} = \frac{1}{2} L_1 I_1^2 + \frac{1}{2} L_2 I_2^2 \pm M I_1 I_2 \]
+<div class="insightbox">
+The \(\pm M I_1 I_2\) term is the <strong>interaction energy</strong>. It tells us that the total energy of the system depends on whether the currents are "helping" or "opposing" each other's fields.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>
