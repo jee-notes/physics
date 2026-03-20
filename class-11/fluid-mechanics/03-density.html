@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Density | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Density</h1>
+<p class="subtitle">
+Foundational quantity used to describe matter in continuum mechanics.
+</p>
+<section>
+<h2>Density</h2>
+<p>
+An important property of any material is its <strong>density</strong>, defined as <b>mass per unit volume</b>.
+</p>
+<p>
+For a <strong>homogeneous</strong> material (such as ice or iron), density remains the same throughout the material.
+</p>
+<div class="math-block">
+\[
+\rho = \frac{M}{V}
+\]
+</div>
+<ul class="model-box">
+<li><strong>SI Unit:</strong> \( \text{kg m}^{-3} \)</li>
+<li><strong>Dimensions:</strong>  \( [\text{M}^1 \text{L}^{-3} \text{T}^0] \)</li>
+</ul>
+<h3>Unit Conversions</h3>
+<ul class="model-box">
+<li><strong>CGS Unit:</strong> \( \text{g cm}^{-3} \) (also written as g/cc)</li>
+<li>1 \( \text{g cm}^{-3} \) = 1000 \( \text{kg m}^{-3} \)</li>
+<li>1 \( \text{cm}^{3} \) = 1 \( \text{cc} \) = 1 \( \text{mL} \)</li>
+<li>1 \( \text{L} \) = 1000 \( \text{mL} \) = 1000 \( \text{cc} \)</li>
+<li>1 \( \text{L} \) = 1 \( \text{dm}^{3} \)</li>
+</ul>
+<p>
+Density can be defined for solids as well as liquids as well as gases, as long as their volume can be specified.
+</p>
+</section>
+<section>
+<h2>Why Density is Defined</h2>
+<p>
+Density connects two fundamental physical quantities: <strong>mass</strong> and <strong>volume (space)</strong>.
+</p>
+<p>
+Two objects made of the same material (substance) may have different masses and volumes, but they will have the same density because the ratio \( \frac{M}{V} \) remains constant.
+</p>
+<p>
+Thus, if the material (and hence density) is known, knowing either mass or volume is sufficient to determine the other.
+</p>
+<div class="insightbox">
+Density is a material property — it characterizes the substance, not the size of the object.<br>
+Because a fluid is treated as a continuous medium, it is often more useful to describe its mass purely in terms of its distribution over space rather than the total mass of the object.
+</div>
+<h3>Measurement and Applications</h3>
+<p>
+Measuring density is an important analytical technique in physics and chemistry.
+</p>
+<p>
+For example, the state of charge of a lead battery can be determined by measuring the density of its electrolyte (sulfuric acid solution).
+</p>
+<p>
+As the battery discharges, sulfuric acid reacts with lead plates to form lead sulfate, reducing the concentration of the solution. As a result, the density decreases:
+</p>
+<ul class="model-box">
+<li>Fully charged: ~1.30 × 10<sup>3</sup> kg/m<sup>3</sup></li>
+<li>Discharged: ~1.15 × 10<sup>3</sup> kg/m<sup>3</sup></li>
+</ul>
+<h3>Dependence on Conditions</h3>
+<p>
+Density depends not only on the material but also on external conditions such as <strong>temperature</strong> and <strong>pressure</strong>.
+</p>
+<p>
+However, for most solids and liquids, this variation is small and is often neglected unless high precision is required.
+</p>
+<div class="insightbox">
+Density is approximately constant for a given material under ordinary conditions.
+</div>
+<h3>Density as a Field</h3>
+<p>
+In fluid mechanics, density is treated as a quantity defined at every point in space:
+</p>
+<div class="math-block">
+\[
+\rho = \rho(x, y, z)
+\]
+</div>
+<p>
+This allows us to describe how mass is distributed continuously throughout the fluid.
+</p>
+<div class="insightbox">
+In continuum mechanics, density is not just a property of an object, but a field defined over space.
+</div>
+</section>
+<section>
+<h2>Relative Density (Specific Gravity)</h2>
+<p>
+<strong>Relative density</strong> of a substance is defined as the ratio of its density to the density of a reference substance.
+</p>
+<div class="math-block">
+\[
+\text{Relative Density} = \frac{\rho_{\text{substance}}}{\rho_{\text{reference}}}
+\]
+</div>
+<p>
+<strong>Specific gravity</strong> of a substance is defined as the relative density of the substance with reference to the density of water at \( 4^{\circ}\text{C} \) (which is exactly \( 10^3 \, \text{kg m}^{-3} \)).
+</p>
+<div class="model-box">
+<strong>Specific Gravity (Relative Density)</strong><br>
+Specific gravity is the ratio of the density of a substance to the density of water at \( 4^{\circ}\text{C} \) (which is exactly \( 10^3 \, \text{kg m}^{-3} \)).
+<br><br>
+\[
+\text{Specific Gravity} = \frac{\rho_{\text{substance}}}{\rho_{\text{water}}}
+\]
+<strong>SI Unit:</strong> None (it is a dimensionless ratio). <br>
+<strong>Dimensional Formula:</strong> \( [\text{M}^0 \text{L}^0 \text{T}^0] \)
+</div>
+</section>
+<section>
+<h2>Average Density of an Object</h2>
+<p>
+For a real object, especially one that may have cavities or non-uniform structure, we define its <strong>average density</strong> as:
+</p>
+
+<div class="math-block">
+\[
+\rho_{\text{avg}} = \frac{\text{Total mass of object}}{\text{Total (external) volume of object}}
+\]
+</div>
+<p>
+This definition considers the object as a whole, without worrying about how mass is distributed inside it.
+</p>
+<h3>Example: Hollow Object</h3>
+<p>
+Consider a hollow spherical object of outer radius \( R_2 \) and inner radius \( R_1 \), with total mass \( M \).
+</p>
+<p>
+Density of the material (substance):
+</p>
+<div class="math-block">
+\[
+\rho_{\text{substance}} = \frac{M}{\frac{4}{3}\pi (R_2^3 - R_1^3)}
+\]
+</div>
+<p>
+Average density of the object:
+</p>
+<div class="math-block">
+\[
+\rho_{\text{avg}} = \frac{M}{\frac{4}{3}\pi R_2^3}
+\]
+</div>
+<p>
+Since the outer volume is larger than the actual material volume:
+</p>
+<div class="math-block">
+\[
+\rho_{\text{avg}} \le \rho_{\text{substance}}
+\]
+</div>
+<div class="insightbox">
+Average density depends on the overall size and shape of the object, while density of substance depends only on the material.
+</div>
+<h3>Key Idea</h3>
+<ul class="model-box">
+<li><strong>Density of substance:</strong> property of material</li>
+<li><strong>Average density:</strong> property of the object (may include empty space)</li>
+</ul>
+<div class="insightbox">
+An object can be made of a dense material but still have low average density if it contains empty space (e.g., hollow objects, porous materials).
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

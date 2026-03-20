@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressure | Fluid Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Fluid Mechanics
+</a>
+</nav>
+<h1>Pressure</h1>
+<p class="subtitle">
+Foundation of force interaction in a continuum.
+</p>
+<section>
+<h2>Pressure in a Fluid</h2>
+<p>
+When a fluid (liquid or gas) is at rest, it exerts a force <strong>perpendicular</strong> to any surface in contact with it, such as container walls or a body immersed in the fluid. This is the force you feel when you press your hand into water.
+</p>
+<p>
+To understand this, imagine an imaginary surface inside the fluid itself. This surface is surrounded by fluid on both sides. The surrounding fluid exerts equal and opposite forces on this surface; otherwise, the fluid would accelerate and would not remain at rest.
+</p>
+<p>
+Consider a small surface element of area \( dA \) around a point in the fluid. The normal force exerted by the surrounding fluid on this surface is \( dF \). We define pressure at that point as:
+</p>
+<div class="math-block">
+\[
+P = \frac{dF_{\perp}}{dA}
+\]
+</div>
+<p>
+If pressure is uniform over a flat surface:
+</p>
+<div class="math-block">
+\[
+P = \frac{F_{\perp}}{A}
+\]
+</div>
+<p>
+If pressure is uniform over a curved surface:
+</p>
+<div class="math-block">
+\[
+P = \frac{F_{\perp}}{A_{\text{enclosed}}}
+\]
+</div>
+<p>
+where \( A_{\text{enclosed}} \) is the area enclosed by the boundary.
+</p>
+<div class="insightbox">
+Pressure and force are different physical quantities.<br>
+Fluid pressure acts perpendicular to any surface in the fluid, no matter how that surface is oriented. Hence pressure has no intrinsic direction of its own; it is a scalar.<br>
+A larger area experiences proportionally larger force, but the pressure remains the same.
+</div>
+<p>
+In solids, forces are described as direct contact interactions. However, in fluids, interaction is described through pressure. This is because the actual contact area between solids is much smaller than the apparent area due to surface roughness. In fluids, the contact area is effectively the same as the measured area, leading to a well-defined pressure.
+</p>
+</section>
+<section>
+<h2>Pressure and Depth</h2>
+<p>
+If the weight of the fluid is neglected, pressure would be the same throughout the fluid. This approximation is sometimes used in discussions of bulk properties.
+</p>
+<p>
+However, when the fluid's weight is considered, pressure varies with depth. For example:
+</p>
+<ul class="model-box">
+<li>Atmospheric pressure decreases with altitude</li>
+<li>Pressure increases as we go deeper in water</li>
+</ul>
+<p>
+To derive this variation, consider a small fluid element of thickness \( dy \) and cross-sectional area \( A \).
+</p>
+
+<p>
+Its volume is \( dV = A\,dy \), mass is \( dm = \rho A\,dy \), and weight is:
+</p>
+
+<div class="math-block">
+\[
+dW = \rho A\,dy\,g
+\]
+</div>
+<p>
+Let pressure at the top surface be \( P \), and at the bottom be \( P + dP \).
+</p>
+<ul class="model-box">
+<li>Downward force on top: \( P A \)</li>
+<li>Upward force on bottom: \( (P + dP) A \)</li>
+</ul>
+<p>
+Since the fluid is in equilibrium:
+</p>
+<div class="math-block">
+\[
+(P + dP)A - PA - \rho A dy g = 0
+\]
+</div>
+<p>
+Simplifying:
+</p>
+<div class="math-block">
+\[
+\frac{dP}{dy} = \rho g
+\]
+</div>
+<p>
+Thus, pressure increases with depth.
+</p>
+<p>
+For two points:
+</p>
+<div class="math-block">
+\[
+P_2 - P_1 = \rho g (y_2 - y_1)
+\]
+</div>
+<div class="model-box">
+<strong>Hydrostatic Pressure Equation</strong><br>
+\[
+P = P_0 + \rho g h
+\]
+</div>
+<div class="insightbox">
+Pressure increases with depth because each layer of fluid supports the weight of the fluid above it.<br>
+For an ideal incompressible fluid, density is independent of pressure.<br>
+Even though pressure varies with depth, the density remains constant throughout the fluid.
+</div>
+</section>
+<section>
+<h2>Atmospheric and Gauge Pressure</h2>
+<p>
+We live at the bottom of a vast ocean of air. The column of air above us exerts a pressure called <strong>atmospheric pressure</strong>.
+</p>
+<div class="math-block">
+\[
+1 \, \text{atm} = 1.013 \times 10^5 \, \text{Pa}
+\]
+</div>
+<div class="model-box">
+<strong>Gauge Pressure</strong><br>
+\[
+P_g = P - P_a
+\]
+</div>
+<p>
+Gauge pressure measures pressure relative to atmospheric pressure. Most instruments (like tire gauges) measure gauge pressure.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
