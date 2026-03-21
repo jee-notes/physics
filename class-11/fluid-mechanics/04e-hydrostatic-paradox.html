@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isotropy | Pressure</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-pressure.html" class="back-btn">
+<span>&larr;</span> Back to Pressure
+</a>
+</nav>
+<h1>Isotropy of Pressure</h1>
+<p class="subtitle">
+Isotropy comes from static equilibrium in continuum.
+</p>
+<section>
+<h2>Pressure is Isotropic</h2>
+<p>
+At a given point in a fluid at rest, pressure is the same for all orientations of surfaces passing through that point.
+</p>
+<h3>Operational Meaning</h3>
+<p>
+Consider a point \( X \) inside a fluid where the pressure is \( P \).
+</p>
+<p>
+Take a small surface element \( dA_1 \) at that point, oriented along some direction (say \( \hat{i} \)). The force exerted by the fluid on this surface is:
+</p>
+<div class="math-block">
+\[
+d\vec{F}_1 = -P \, d\vec{A}_1
+\]
+</div>
+<p>
+Now take another surface element \( dA_2 \) at the same point, but oriented in a different direction (say \( \hat{j} \)):
+</p>
+<div class="math-block">
+\[
+d\vec{F}_2 = -P \, d\vec{A}_2
+\]
+</div>
+<p>
+Even though the orientation of the surface changes, the same pressure \( P \) relates force and area.
+</p>
+<div class="insightbox">
+Isotropy means that pressure at a point does not depend on the orientation of the surface. The same value of pressure applies in all directions.
+</div>
+<h3>What Changes and What Does Not</h3>
+<ul class="model-box">
+<li>The <strong>direction of force</strong> changes (it is always normal to the surface)</li>
+<li>The <strong>area vector</strong> changes with orientation</li>
+<li>The <strong>pressure \( P \)</strong> remains the same</li>
+</ul>
+<div class="insightbox">
+Changing the orientation of the surface changes the direction of force, but not the value of pressure at that point.
+</div>
+<h3>Why This Must Be True</h3>
+<p>
+If pressure were different in different directions at a point, then different surface orientations would experience different magnitudes of force. This would create an unbalanced force on a small fluid element, causing motion.
+</p>
+<p>
+Since the fluid is at rest, such imbalance cannot exist. Hence, pressure must be the same in all directions.
+</p>
+<div class="insightbox">
+This is where application of "hydrostatics" condition is understood. It means, all fluid particles are at rest with respect to each other. This condition is like a constraint (like rigid body constraint etc.). Pressure is about internal forces, and they have to be such that all particles are at rest wrt each other.<br>
+Pressure has no intrinsic direction. The direction of force depends on the orientation of the surface.
+</div>
+</section>
+<section>
+<h2>Pressure is Isotropic (Wedge Argument)</h2>
+<p>
+To test whether pressure depends on direction, consider a very small wedge-shaped fluid element at a point.
+</p>
+<div class="diagram">
+<!-- SVG Diagram -->
+<svg width="260" height="200" viewBox="0 0 260 200">
+  <!-- Triangle -->
+  <polygon points="40,150 200,150 40,40" fill="none" stroke="black" stroke-width="2"/>
+
+  <!-- Labels -->
+  <text x="90" y="170" font-size="14">Base (x-face)</text>
+  <text x="10" y="100" font-size="14">Side (y-face)</text>
+  <text x="110" y="80" font-size="14">Inclined face</text>
+
+  <!-- Force arrows -->
+  <line x1="120" y1="150" x2="120" y2="170" stroke="blue" stroke-width="2"/>
+  <text x="125" y="185" font-size="12">Pₓ</text>
+
+  <line x1="40" y1="100" x2="20" y2="100" stroke="blue" stroke-width="2"/>
+  <text x="5" y="105" font-size="12">Pᵧ</text>
+
+  <line x1="100" y1="100" x2="120" y2="80" stroke="blue" stroke-width="2"/>
+  <text x="125" y="75" font-size="12">Pₙ</text>
+</svg>
+</div>
+<h3>Forces on the Element</h3>
+<ul class="model-box">
+<li>Pressure \( P_x \) acts on vertical face (area \( A_x \))</li>
+<li>Pressure \( P_y \) acts on horizontal face (area \( A_y \))</li>
+<li>Pressure \( P_n \) acts on inclined face (area \( A_n \))</li>
+</ul>
+<p>
+For equilibrium, net force on the element must be zero.
+</p>
+<h3>Neglecting Weight (Key Step)</h3>
+<p>
+Pressure forces scale with area:
+</p>
+<div class="math-block">
+\[
+F_P \sim P \cdot l^2
+\]
+</div>
+<p>
+Weight scales with volume:
+</p>
+<div class="math-block">
+\[
+F_g = \rho g \cdot l^3
+\]
+</div>
+<p>
+Comparing:
+</p>
+<div class="math-block">
+\[
+\frac{F_g}{F_P} \sim l \rightarrow 0
+\]
+</div>
+<div class="insightbox">
+As the element becomes infinitesimally small, weight becomes negligible compared to pressure forces. Hence, body forces can be ignored while establishing isotropy.
+</div>
+<h3>Force Balance</h3>
+<p>
+Resolving forces along x and y directions:
+</p>
+<div class="math-block">
+\[
+P_x A_x = P_n A_n \cos\theta
+\]
+</div>
+<div class="math-block">
+\[
+P_y A_y = P_n A_n \sin\theta
+\]
+</div>
+<p>
+From geometry:
+</p>
+<div class="math-block">
+\[
+A_x = A_n \cos\theta, \quad A_y = A_n \sin\theta
+\]
+</div>
+<p>
+Substituting:
+</p>
+<div class="math-block">
+\[
+P_x = P_n, \quad P_y = P_n
+\]
+</div>
+<h3>Final Result</h3>
+<div class="math-block">
+\[
+P_x = P_y = P_n = P
+\]
+</div>
+<div class="insightbox">
+Pressure at a point is independent of direction. The same scalar pressure relates force and area for all surface orientations.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

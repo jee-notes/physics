@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressure Walk | Pressure</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-pressure.html" class="back-btn">
+<span>&larr;</span> Back to Pressure
+</a>
+</nav>
+<h1>Pressure Walk</h1>
+<p class="subtitle">
+Technique to add or subtract height component.
+</p>
+<section>
+<h2>Pressure Walk Technique</h2>
+<p>
+Consider two points in a liquid:
+</p>
+<ul>
+<li>\( A(x_1, y_1, z_1) \)</li>
+<li>\( B(x_2, y_2, z_2) \)</li>
+</ul>
+<p>
+Even if the points are in 3D, pressure difference depends only on displacement along \( g_{eff} \) (vertical). x and z do not matter.
+</p>
+<h3>Diagram</h3>
+<div class="diagram">
+<svg width="320" height="420" viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg">
+
+  <rect x="60" y="40" width="200" height="320" fill="none" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- top layer -->
+  <rect x="60" y="40" width="200" height="140" fill="#67e8f9" opacity="0.35"/>
+  <text x="70" y="110" font-size="12">ρ₁</text>
+
+  <!-- bottom layer -->
+  <rect x="60" y="180" width="200" height="180" fill="#38bdf8" opacity="0.35"/>
+  <text x="70" y="280" font-size="12">ρ₂</text>
+
+  <!-- interface -->
+  <line x1="60" y1="180" x2="260" y2="180" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- surface -->
+  <line x1="60" y1="40" x2="260" y2="40" stroke="#1f2937" stroke-width="2"/>
+  <text x="265" y="45" font-size="12">P₀</text>
+
+  <!-- bottom point -->
+  <circle cx="160" cy="320" r="4" fill="#1f2937"/>
+  <text x="170" y="320" font-size="12">B</text>
+
+  <!-- h1 -->
+  <line x1="110" y1="40" x2="110" y2="180" stroke="#1f2937" stroke-width="2"/>
+  <line x1="105" y1="40" x2="115" y2="40" stroke="#1f2937"/>
+  <line x1="105" y1="180" x2="115" y2="180" stroke="#1f2937"/>
+  <text x="75" y="120" font-size="12">h₁</text>
+
+  <!-- h2 -->
+  <line x1="110" y1="180" x2="110" y2="320" stroke="#1f2937" stroke-width="2"/>
+  <line x1="105" y1="180" x2="115" y2="180" stroke="#1f2937"/>
+  <line x1="105" y1="320" x2="115" y2="320" stroke="#1f2937"/>
+  <text x="75" y="260" font-size="12">h₂</text>
+
+</svg>
+</div>
+<p>
+Take \( y \) positive downward. If \( B \) is deeper than \( A \), then \( y_2 > y_1 \).
+</p>
+<h3>Relation</h3>
+<p>\[
+P_B - P_A = \rho g (y_2 - y_1)
+\]</p>
+<p>
+Let \( h = y_2 - y_1 \)
+</p>
+<p>\[
+P_B = P_A + \rho g h
+\]</p>
+<p>
+This works because pressure gradient exists only along \( g_{eff} \). No gradient exists perpendicular to it.
+</p>
+</section>
+<section>
+<h2>Pressure Walking Trick</h2>
+<p>
+Move between points and update pressure based on vertical displacement.
+The sign comes purely from direction of movement relative to \( g_{eff} \).
+</p>
+<ul>
+<li>Move along \( g_{eff} \) (down) → add \( \rho g h \)</li>
+<li>Move opposite to \( g_{eff} \) (up) → subtract \( \rho g h \)</li>
+<li>Move perpendicular to \( g_{eff} \) → no change</li>
+</ul>
+<p>
+The path does not matter. Only net vertical displacement matters.
+</p>
+<h3>Reverse</h3>
+<p>\[
+P_A = P_B - \rho g h
+\]</p>
+</section>
+<section>
+<h2>Same Level</h2>
+<p>\[
+y_1 = y_2 \Rightarrow P_A = P_B
+\]</p>
+<p>
+Points at same vertical coordinate have same pressure because no component of displacement exists along \( g_{eff} \).
+</p>
+</section>
+<section>
+<h2>Multiple Liquids</h2>
+<p>
+The relation \( P_B - P_A = \rho g h \) is valid only when \( \rho \) is constant.
+</p>
+<p>
+If density changes, the same idea still applies — but must be used piecewise.
+</p>
+<ul>
+<li>Split the path into segments where \( \rho \) is constant</li>
+<li>Apply add/subtract in each segment</li>
+<li>Change \( \rho \) at each interface</li>
+</ul>
+<p>
+\[
+P = P_0 + \rho_1 g h_1 + \rho_2 g h_2
+\]
+</p>
+<p>
+Each term comes from displacement along \( g_{eff} \) within that layer.
+</p>
+<h3>Reverse</h3>
+<p>\[
+P_A = P_B - \rho_2 g h_2 - \rho_1 g h_1
+\]</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
