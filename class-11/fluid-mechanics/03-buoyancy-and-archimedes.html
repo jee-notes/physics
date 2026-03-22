@@ -16,84 +16,99 @@
 </nav>
 <h1>Buoyancy and Archimedes' Principle</h1>
 <p class="subtitle">
-Understanding exactly why massive ships float and dense coins sink.
+Understanding exactly why massive ships float but dense coins sink.
 </p>
-
 <section>
 <h2>Buoyant Force</h2>
 <p>
-When an object is submerged in a fluid, fluid pressure pushes deeply against all of its surfaces. Because fluid pressure monotonically increases with depth, the upward force violently pushing on the bottom of the object is always strictly greater than the downward force softly pushing on its top. 
+When a body is partially or fully immersed in a fluid, the surrounding fluid exerts pressure forces on its surface.
 </p>
 <p>
-This continuous imbalance of vertical pressure produces a net upward force called the <strong>Buoyant Force (\( F_B \))</strong>.
+At every point on the surface, the force due to the fluid is perpendicular to the surface and equal to the local pressure multiplied by the area.
 </p>
+<p>
+Since pressure increases with depth, the force acting on the bottom surface of the object is greater than the force acting on the top surface.
+</p><p>
+The horizontal components of pressure forces cancel out due to symmetry. However, the vertical components do not cancel.
+</p>
+<p>
+This imbalance of pressure forces results in a net upward force on the object.
+</p>
+<p>
+The resultant of all these pressure forces is called the <strong>buoyant force (\( F_B \))</strong>.
+</p>
+<div class="insightbox">
+Buoyancy is not a separate force — it is the resultant of pressure forces acting over the surface of the object.
+</div>
+<ul class="model-box">
+<li>A body immersed in water appears lighter</li>
+<li>Objects less dense than the fluid float</li>
+<li>A helium-filled balloon rises in air</li>
+</ul>
 </section>
-
 <section>
 <h2>Archimedes' Principle</h2>
 <p>
-The exact magnitude of this buoyant force was elegantly deduced by the ancient Greek mathematician Archimedes.
+The magnitude of the buoyant force can be obtained by summing (integrating) the pressure forces over the surface of the object.
 </p>
 <div class="concept-box">
 <strong>Archimedes' Principle</strong><br>
-When a body is partially or completely immersed in a fluid at rest, it constantly experiences an upward buoyant force that is exactly equal to the weight of the fluid it actively displaces.
+When a body is partially or completely immersed in a fluid at rest, it experiences an upward buoyant force equal to the weight of the fluid displaced.
 </div>
-<div class="model-box">
-<strong>Magnitude of Buoyant Force</strong>
-<br><br>
-\[
-F_B = m_{\text{fluid-displaced}} \cdot g = \rho_{\text{fluid}} V_{\text{submerged}} g
-\]
 <br>
-Where:
-<ul>
-    <li>\( \rho_{\text{fluid}} \) is the density of the fluid.</li>
-    <li>\( V_{\text{submerged}} \) is the volume of the fluid displaced (equal to the volume of the immersed part of the object).</li>
-    <li>\( g \) is the acceleration due to gravity.</li>
+\[
+\vec{F}_B = \rho_{\text{fluid}} V_{\text{submerged}} g
+\]
+<ul class="model-box">
+<li>\( \rho_{\text{fluid}} \): density of the fluid</li>
+<li>\( V_{\text{submerged}} \): volume of fluid displaced</li>
+<li>\( g \): acceleration due to gravity</li>
 </ul>
+<div class="insightbox">
+The buoyant force depends only on the fluid and the volume of fluid displaced. It is independent of the material, shape, or mass of the object.
 </div>
 <div class="insightbox">
-Notice how the nature, shape, or mass of the submerged object itself completely disappears from the formula. The buoyant force depends <em>only</em> on the properties of the fluid and the volume of the hole cut into it by the object.
+Archimedes’ principle is a direct consequence of pressure variation with depth. The net pressure force over the surface equals the weight of the displaced fluid.
 </div>
 </section>
-
 <section>
 <h2>Laws of Floatation</h2>
 <p>
-Whether an object ultimately floats, suspends, or sinks is determined by the tug-of-war between its true gravity weight (\( W \)) and the maximum possible fluid buoyancy (\( F_B \)).
+The motion of an object in a fluid is determined by the balance between its weight and the buoyant force.
 </p>
-<ul>
-    <li><strong>Sinking (\( W > F_B \)):</strong> If the object is denser than the fluid (\( \rho_{\text{obj}} > \rho_{\text{fluid}} \)), its maximum buoyant force is eclipsed by its weight. It accelerates downward to the bottom.</li>
-    <li><strong>Neutral Suspension (\( W = F_B \)):</strong> If the object's density exactly matches the fluid density (\( \rho_{\text{obj}} = \rho_{\text{fluid}} \)), it will remain suspended natively in equilibrium wherever it is completely immersed.</li>
-    <li><strong>Floating (\( W = F_B \) but partially submerged):</strong> If the object is less dense than the fluid (\( \rho_{\text{obj}} < \rho_{\text{fluid}} \)), it cannot fully submerge because the buoyant force would exceed its weight. It rises until enough volume exits the fluid that the displaced fluid weight exactly counters its own weight.</li>
+<ul class="model-box">
+<li><strong>Sinking (\( W > F_B \)):</strong> Object is denser than fluid</li>
+<li><strong>Neutral Suspension (\( W = F_B \)):</strong> Densities are equal</li>
+<li><strong>Floating (\( W = F_B \), partial immersion):</strong> Object is less dense than fluid</li>
 </ul>
-<div class="model-box">
-<strong>Fraction of Volume Submerged</strong><br>
-For a floating object, equating weight to buoyant force \( (\rho_{\text{obj}} V_{\text{total}} g = \rho_{\text{fluid}} V_{\text{submerged}} g) \) yields:
-<br><br>
+<p>
+For a floating object:
+</p>
+\[
+\rho_{\text{obj}} V_{\text{total}} g = \rho_{\text{fluid}} V_{\text{submerged}} g
+\]
 \[
 \frac{V_{\text{submerged}}}{V_{\text{total}}} = \frac{\rho_{\text{obj}}}{\rho_{\text{fluid}}}
 \]
-</div>
 </section>
-
 <section>
 <h2>Apparent Weight</h2>
 <p>
-When an object is immersed, the upward buoyant force natively counteracts a portion of its true downward weight. This makes the object feel lighter. We define this effective weight as the <strong>Apparent Weight.</strong>
+When an object is immersed in a fluid, the buoyant force reduces the net force experienced by the object.
 </p>
-<div class="model-box">
-<strong>Apparent Weight (\( W_{\text{app}} \))</strong>
-<br><br>
 \[
-W_{\text{app}} = W_{\text{true}} - F_B = ( \rho_{\text{obj}} - \rho_{\text{fluid}} ) V g
+W_{\text{app}} = W_{\text{true}} - F_B
 \]
+\[
+W_{\text{app}} = (\rho_{\text{obj}} - \rho_{\text{fluid}})\, V g
+\]
+<div class="insightbox">
+Apparent weight is the result of partial cancellation of gravity by buoyancy.
 </div>
 <p>
-If the object floats, its true weight is absolutely balanced by buoyancy, rendering its apparent weight strictly zero within the fluid frame!
+For a floating object, the buoyant force exactly balances the weight, and the apparent weight becomes zero.
 </p>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>
