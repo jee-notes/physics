@@ -18,28 +18,42 @@
 <p class="subtitle">
 The principle of conservation of energy applied to an ideal flowing fluid.
 </p>
-
 <section>
 <h2>Energy of a Flowing Fluid</h2>
 <p>
 A fluid in motion possesses three distinct forms of mechanical energy per unit volume:
 </p>
 <ol>
-    <li>
-        <strong>Kinetic Energy (per unit volume):</strong> Energy due to the macroscopic velocity \( v \) of the fluid. <br>
-        \[ K.E. = \frac{1}{2} \rho v^2 \]
-    </li>
-    <li>
-        <strong>Potential Energy (per unit volume):</strong> Gravitational potential energy due to the fluid's elevation \( h \) above a reference level. <br>
-        \[ P.E. = \rho g h \]
-    </li>
-    <li>
-        <strong>Pressure Energy (per unit volume):</strong> The work done by fluid pressure \( P \) to move the fluid volume against its surroundings. <br>
-        \[ W = P \]
-    </li>
+<li>
+<strong>Kinetic Energy (per unit volume):</strong> Energy due to the macroscopic velocity \( v \) of the fluid. <br>
+\[ K.E. = \frac{1}{2} \rho v^2 \]
+</li>
+<li>
+<strong>Potential Energy (per unit volume):</strong> Gravitational potential energy due to the fluid's elevation \( h \) above a reference level. <br>
+\[ P.E. = \rho g h \]
+</li>
+<li>
+<strong>Pressure Energy (per unit volume):</strong>
+Energy associated with the work done by pressure forces in moving a fluid element.
+<br>
+When a fluid element of volume \( dV \) is pushed by pressure \( P \), the work done is:
+\[
+dW = P \, dV
+\]
+Hence, the work done per unit volume is:
+\[
+\frac{dW}{dV} = P
+\]
+</li>
 </ol>
+<div class="insightbox">
+Pressure energy represents the work required for a fluid element to occupy space within a pressure field.<br>
+When a fluid element moves forward, the region ahead is already filled with fluid. To move into that region, it must push the existing fluid out. The surrounding fluid resists this motion by exerting pressure.<br>
+Thus, pressure does work not by accelerating the fluid, but by enabling it to displace the fluid already present. This work per unit volume is equal to \( P \).<br>
+Reverse happens when a fluid element moves out of a pressure field. It is pushed out or ejected like gas blown out of a hole in balloon.<br>
+Thus, upstream ejection pressure does work to push fluid downstream against injection pressure.<br>
+</div>
 </section>
-
 <section>
 <h2>Bernoulli's Equation</h2>
 <p>
@@ -56,28 +70,24 @@ P + \frac{1}{2}\rho v^2 + \rho g h = \text{Constant}
 <br>
 Where:
 <ul>
-    <li>\( P \) is the absolute pressure at that point.</li>
-    <li>\( \rho \) is the continuous fluid density.</li>
-    <li>\( v \) is the fluid velocity.</li>
-    <li>\( h \) is the height above an arbitrary reference datum.</li>
-    <li>\( g \) is the acceleration due to gravity.</li>
+<li>\( P \) is the absolute pressure at that point.</li>
+<li>\( \rho \) is the continuous fluid density.</li>
+<li>\( v \) is the fluid velocity.</li>
+<li>\( h \) is the height above an arbitrary reference datum.</li>
+<li>\( g \) is the acceleration due to gravity.</li>
 </ul>
 </div>
 <div class="insightbox">
 A crucial takeaway from Bernoulli's Equation for horizontal flow (\( h_1 = h_2 \)) is the inverse relationship between speed and pressure: \( P + \frac{1}{2}\rho v^2 = \text{Constant} \). <strong>Where the fluid velocity is high, the pressure must be low; and where the fluid velocity is low, the pressure must be high.</strong> This is highly counter-intuitive to many, who assume fast streams "push harder."
 </div>
-
 <p>
 This theoretical foundation has an immense number of phenomenological applications in the real world.
 </p>
-
 <div class="chapter-list">
-<a href="./05a-applications-of-bernoulli.html">Explore Applications: Venturi Meter, Pitot Tube, and Dynamic Lift</a>
-<a href="./05b-torricellis-law.html">Explore Applications: Torricelli's Law of Efflux</a>
+<a href="./05a-applications-of-bernoulli.html">1. Venturi Meter</a>
+<a href="./05b-torricellis-law.html">2. Torricelli's Law of Efflux</a>
 </div>
-
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

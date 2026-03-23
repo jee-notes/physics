@@ -21,56 +21,76 @@ Mechanics of fluids, studying macroscopic behavior arising from microscopic inte
 <section>
 <h2>Conceptual Overview</h2>
 <p>
-Matter manifests itself in three primary states: solids, liquids, and gases. While solids resist deformation and retain both shape and volume, liquids and gases exhibit a fundamentally different behavior — they <strong>flow</strong>. This ability to continuously deform under even the smallest applied shear force defines what we call <strong>fluids</strong>.
+In physics, we must distinguish between the behavior of individual particles and the behavior of <strong>bulk matter</strong>. It is a fundamental conceptual shift to recognize that a single \(H_2O\) molecule is neither ice, nor water, nor steam. These states are <strong>emergent properties</strong>—collective characteristics that only manifest when a massive number of molecules (\(N \approx 10^{23}\)) interact. Fluid Mechanics, therefore, is not just the study of particles, but the study of this collective bulk behavior.
 </p>
 <p>
-At the microscopic level, this behavior arises because intermolecular forces in fluids are not strong enough to hold molecules in fixed positions. Instead, molecules are free to rearrange, giving rise to motion even under minimal external influence. Fluid mechanics, therefore, studies how these microscopic freedoms translate into <strong>macroscopic laws of motion, pressure, and energy</strong>.
+While bulk solids possess a structural lattice that resists deformation and maintains a fixed shape, <strong>fluids</strong> (liquids and gases) exhibit a fundamentally different behavior: they <strong>flow</strong>. A fluid is defined as bulk matter that lacks the internal rigidity to maintain its shape; it continuously deforms under even the smallest applied shear (tangential) force. While a solid reaches a static deformation under stress, a fluid will continue to move as long as the stress is applied.
+</p>
+<p>
+At the microscopic level, this behavior arises because the intermolecular forces in fluids are not strong enough to lock molecules into fixed positions. Instead, molecules are free to rearrange and slide past one another. Fluid mechanics acts as the bridge that translates these microscopic freedoms into the <strong>macroscopic laws of motion, pressure, and energy</strong> that govern everything from blood flow to aerodynamics.
 </p>
 <div class="insightbox">
-Fluid Mechanics is a new chapter in terms of Newtonian mechanics meeting continuum approximation. Instead of tracking individual particles, we describe the system using smoothly varying fields of velocity, pressure and density.
+Fluid Mechanics is not new physics — it is Newtonian Mechanics applied to a different model of matter.<br>
+We no longer track individual particles.<br>
+We describe motion using fields: velocity, pressure and density distributed over space.
 </div>
 <p>
-A key idea in fluid mechanics is the <strong>continuum hypothesis</strong>. Rather than treating matter as discrete molecules, we assume it is continuously distributed. This allows us to define physical quantities (density, pressure, velocity) at every point in space, making calculus the natural language of this subject.
+A key idea in fluid mechanics is the <strong>continuum hypothesis</strong>. If we were to look at a fluid through a microscopic lens, we would see vast amounts of empty space between discrete molecules. This "discreteness" indicates an inherent separation of "chunks" in the bulk body. To simplify the analysis of billions of discrete interactions, we assume matter is continuously distributed through space. This allows us to treat physical quantities like density, pressure, and velocity as <strong>continuous, differentiable functions</strong>—enabling the use of the smooth calculus required to solve complex flow problems.
 </p>
+<div class="insightbox">
+<strong>Continuum hypothesis</strong> enables application of differentials and infinitesimals.<br>
+Space and Time continuum model enables us to define concepts like instantaneous velocity.<br>
+Similarly, continuum of mass distribution model in fluids enables us to define concepts like density, pressure, velocity etc at a point.
+</div>
+</section>
+<section>
+<h2>Statics and Dynamics</h2>
 <p>
-The subject unfolds naturally into two complementary frameworks:
+The study of bulk fluids unfolds into two complementary frameworks based on the state of equilibrium:
 </p>
 <ul class="model-box">
 <li>
-<strong>Fluid Statics:</strong>  
-Concerned with fluids in equilibrium. Despite the absence of motion, forces are very much present. The defining feature here is that fluids cannot sustain shear stress — all forces act <strong>normal to surfaces</strong>.  
-This leads to profound results like:
+<strong>Fluid Statics (Hydrostatics):</strong>  
+Concerned with fluids in equilibrium. Despite the absence of macroscopic motion, forces are very much present. The defining feature here is that fluids cannot sustain shear stress—all forces must act <strong>normal to surfaces</strong>.  
+This leads to:
 <ul>
-<li>Pressure increases with depth due to weight of fluid</li>
-<li>Pascal’s law enabling force transmission</li>
-<li>Buoyant forces emerging from pressure differences</li>
+<li>Pressure increases with depth due to the weight of the fluid.</li>
+<li>Pascal’s law enabling uniform force transmission.</li>
+<li>Buoyant forces emerging from pressure differences (Archimedes' Principle).</li>
 </ul>
 </li>
 <li>
-<strong>Fluid Dynamics:</strong>  
-Focuses on fluids in motion. Instead of analyzing forces directly, we use conservation laws:
+<strong>Fluid Dynamics (Hydrodynamics):</strong>  
+Focuses on fluids in motion. Instead of analyzing forces directly on every particle, we use conservation laws applied to the flow:
 <ul>
 <li><strong>Mass Conservation → Continuity Equation</strong></li>
 <li><strong>Energy Conservation → Bernoulli’s Equation</strong></li>
 </ul>
-Here, motion is understood not by tracking particles individually, but by studying how fluid flows through space — like a moving field.
+Here, motion is understood not by tracking particles individually, but by studying how fluid flows through space—like a moving field.
 </li>
 </ul>
+</section>
+<section>
+<h2>Ideal vs. Real Fluids</h2>
 <p>
-While ideal fluids simplify analysis by neglecting internal resistance, real fluids introduce additional layers of complexity:
+To simplify the complex behavior of bulk matter, we often start with the concept of an <strong>Ideal Fluid</strong> before introducing real-world complexities:
 </p>
 <ul class="model-box">
+<li>
+<strong>Incompressible:</strong>  
+An ideal fluid is incompressible, meaning its density ( \( \rho \) ) remains constant regardless of the applied pressure.
+</li>
 <li>
 <strong>Viscosity:</strong>  
 Represents internal friction between fluid layers. It explains why real fluids resist motion and why energy is dissipated. This leads to realistic flow descriptions such as laminar flow and Poiseuille’s law.
 </li>
 <li>
 <strong>Surface Tension:</strong>  
-Arises due to unbalanced intermolecular forces at the surface of a liquid. It governs phenomena that seem counterintuitive at first — droplets forming spheres, insects walking on water, and liquids rising in narrow tubes.
+Arises due to unbalanced intermolecular forces at the surface of a liquid. It governs phenomena like droplets forming spheres, insects walking on water, and liquids rising in narrow capillary tubes.
 </li>
 </ul>
 <p>
-Together, these concepts allow us to understand a vast range of physical phenomena — from the flow of blood in arteries to the lift on airplane wings, from hydraulic systems to raindrop formation.
+Together, these concepts allow us to understand a vast range of physical phenomena—from hydraulic systems to the lift on airplane wings.
 </p>
 <div class="insightbox">
 For Exam point of view, Fluid Mechanics is part of Newtonian Mechanics.<br>
@@ -85,7 +105,7 @@ Same Mechanical Energy Laws are represented in different form.
 <a href="./02-hydrostatics.html">2. Hydrostatics</a>
 <a href="./03-density.html">3. Density</a>
 <a href="./04-pressure.html">4. Pressure</a>
-<a href="./02-fluid-pressure.html">5. Pascal</a>
+<a href="./02-fluid-pressure.html">5. Pascal’s Law</a>
 <a href="./03-buoyancy-and-archimedes.html">6. Buoyancy and Archimedes</a>
 <a href="./04-fluid-dynamics.html">7. Hydrodynamics</a>
 <a href="./05-bernoullis-principle.html">8. Bernoulli Principle</a>
