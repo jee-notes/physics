@@ -1,348 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Physics | Structural Understanding</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        :root {
-            --primary: #1e293b;
-            --secondary: #e67e22;
-            --accent: #3498db;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #334155;
-            --text-light: #64748b;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEE Physics | Structural Understanding</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+:root {
+--primary: #1e293b;
+--secondary: #e67e22;
+--accent: #3498db;
+--bg: #f8fafc;
+--card-bg: #ffffff;
+--text-main: #334155;
+--text-light: #64748b;
+}
 
-        * { box-sizing: border-box; }
+* { box-sizing: border-box; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg);
-            margin: 0;
-            padding: 0;
-        }
+body {
+font-family: 'Inter', sans-serif;
+line-height: 1.6;
+color: var(--text-main);
+background-color: var(--bg);
+margin: 0;
+padding: 0;
+}
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 20px;
+}
 
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-            border-radius: 0 0 40px 40px;
-            margin-bottom: 60px;
-        }
+/* --- Hero Section --- */
+.hero {
+background: linear-gradient(135deg, #0f172a, #1e293b);
+color: white;
+padding: 100px 20px;
+text-align: center;
+border-radius: 0 0 40px 40px;
+margin-bottom: 60px;
+}
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
-            font-weight: 700;
-            margin: 0 0 15px 0;
-            letter-spacing: -1px;
-        }
+.hero h1 {
+font-size: clamp(2.5rem, 5vw, 3.8rem);
+font-weight: 700;
+margin: 0 0 15px 0;
+letter-spacing: -1px;
+}
 
-        .hero p {
-            font-size: 1.25rem;
-            color: #cbd5e1;
-            max-width: 700px;
-            margin: 0 auto 35px;
-        }
+.hero p {
+font-size: 1.25rem;
+color: #cbd5e1;
+max-width: 700px;
+margin: 0 auto 35px;
+}
 
-        .hero-btn {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s, background 0.2s;
-            box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
-        }
+.hero-btn {
+display: inline-block;
+background: var(--secondary);
+color: white;
+padding: 16px 32px;
+border-radius: 12px;
+font-weight: 600;
+text-decoration: none;
+transition: transform 0.2s, background 0.2s;
+box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
+}
 
-        .hero-btn:hover {
-            transform: translateY(-2px);
-            background: #d35400;
-        }
+.hero-btn:hover {
+transform: translateY(-2px);
+background: #d35400;
+}
 
-        /* --- Quick Value Props --- */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: -100px; /* Overlap with hero */
-            margin-bottom: 80px;
-        }
+/* --- Quick Value Props --- */
+.features {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+margin-top: -100px; /* Overlap with hero */
+margin-bottom: 80px;
+}
 
-        .feature-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            text-align: center;
-            border: 1px solid #f1f5f9;
-        }
+.feature-card {
+background: var(--card-bg);
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+text-align: center;
+border: 1px solid #f1f5f9;
+}
 
-        .feature-card .icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            display: block;
-        }
+.feature-card .icon {
+font-size: 2rem;
+margin-bottom: 15px;
+display: block;
+}
 
-        .feature-card h3 {
-            margin: 0 0 10px 0;
-            color: var(--primary);
-        }
+.feature-card h3 {
+margin: 0 0 10px 0;
+color: var(--primary);
+}
 
-        /* --- Philosophy Section --- */
-        .philosophy {
-            background: white;
-            padding: 60px;
-            border-radius: 24px;
-            margin-bottom: 80px;
-            border: 1px solid #e2e8f0;
-        }
+/* --- Philosophy Section --- */
+.philosophy {
+background: white;
+padding: 60px;
+border-radius: 24px;
+margin-bottom: 80px;
+border: 1px solid #e2e8f0;
+}
 
-        .philosophy h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--primary);
-        }
+.philosophy h2 {
+font-size: 2.2rem;
+text-align: center;
+margin-bottom: 40px;
+color: var(--primary);
+}
 
-        .philosophy p {
-            font-size: 1.1rem;
-            color: var(--text-main);
-            margin-bottom: 25px;
-        }
+.philosophy p {
+font-size: 1.1rem;
+color: var(--text-main);
+margin-bottom: 25px;
+}
 
-        /* --- Diagram Grid --- */
-        .diagram-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            margin: 50px 0;
-            background: #f8fafc;
-            padding: 30px;
-            border-radius: 16px;
-        }
+/* --- Diagram Grid --- */
+.diagram-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 20px;
+margin: 50px 0;
+background: #f8fafc;
+padding: 30px;
+border-radius: 16px;
+}
 
-        .diagram-item { text-align: center; }
-        .diagram-item svg { width: 100%; max-width: 150px; height: auto; }
-        .diagram-item p { font-size: 0.9rem; margin-top: 10px; font-weight: 600; }
+.diagram-item { text-align: center; }
+.diagram-item svg { width: 100%; max-width: 150px; height: auto; }
+.diagram-item p { font-size: 0.9rem; margin-top: 10px; font-weight: 600; }
 
-        .top { fill: #cbd5e1; }
-        .leg { fill: #94a3b8; }
-        .book { fill: var(--accent); }
-        .highlight { fill: var(--secondary); }
-        .state { fill: #475569; }
+.top { fill: #cbd5e1; }
+.leg { fill: #94a3b8; }
+.book { fill: var(--accent); }
+.highlight { fill: var(--secondary); }
+.state { fill: #475569; }
 
-        /* --- Syllabus Grid --- */
-        .syllabus-section h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
+/* --- Syllabus Grid --- */
+.syllabus-section h2 {
+font-size: 2rem;
+margin-bottom: 40px;
+text-align: center;
+}
 
-        .syllabus-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 100px;
-        }
+.syllabus-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+margin-bottom: 100px;
+}
 
-        .class-box h3 {
-            background: var(--primary);
-            color: white;
-            padding: 15px 20px;
-            border-radius: 12px;
-            margin-top: 0;
-            font-size: 1.2rem;
-        }
+.class-box h3 {
+background: var(--primary);
+color: white;
+padding: 15px 20px;
+border-radius: 12px;
+margin-top: 0;
+font-size: 1.2rem;
+}
 
-        .chapter-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            padding: 0;
-            list-style: none;
-        }
+.chapter-list {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+padding: 0;
+list-style: none;
+}
 
-        .chapter-list a {
-            display: block;
-            padding: 12px;
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 0.95rem;
-            transition: all 0.2s;
-        }
+.chapter-list a {
+display: block;
+padding: 12px;
+background: white;
+border: 1px solid #e2e8f0;
+border-radius: 8px;
+text-decoration: none;
+color: var(--text-main);
+font-size: 0.95rem;
+transition: all 0.2s;
+}
 
-        .chapter-list a:hover {
-            border-color: var(--secondary);
-            color: var(--secondary);
-            background: #fffaf5;
-            transform: translateX(5px);
-        }
+.chapter-list a:hover {
+border-color: var(--secondary);
+color: var(--secondary);
+background: #fffaf5;
+transform: translateX(5px);
+}
 
-        .footer {
-            text-align: center;
-            padding: 60px 0;
-            color: var(--text-light);
-            border-top: 1px solid #e2e8f0;
-        }
+.footer {
+text-align: center;
+padding: 60px 0;
+color: var(--text-light);
+border-top: 1px solid #e2e8f0;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .syllabus-grid { grid-template-columns: 1fr; }
-            .chapter-list { grid-template-columns: 1fr; }
-            .philosophy { padding: 30px 20px; }
-            .hero h1 { font-size: 2.2rem; }
-        }
-    </style>
+/* Responsive */
+@media (max-width: 768px) {
+.syllabus-grid { grid-template-columns: 1fr; }
+.chapter-list { grid-template-columns: 1fr; }
+.philosophy { padding: 30px 20px; }
+.hero h1 { font-size: 2.2rem; }
+}
+</style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <h1>JEE Physics</h1>
-            <p>Notes on Structure, Meaning, and Mathematical Rigor. Move beyond memorization into internal construction.</p>
-            <a href="#syllabus" class="hero-btn">Browse Chapter Notes</a>
-        </div>
-    </header>
+<header class="hero">
+<div class="container">
+<h1>JEE Physics</h1>
+<p>Notes on Structure, Meaning, and Mathematical Rigor. Move beyond memorization into internal construction.</p>
+<a href="#syllabus" class="hero-btn">Browse Chapter Notes</a>
+</div>
+</header>
 
-    <div class="container">
-        <section class="features">
-            <div class="feature-card">
-                <span class="icon">🔍</span>
-                <h3>Start with Meaning</h3>
-                <p>Before the math, we ask: What is this law actually describing in the real world?</p>
-            </div>
-            <div class="feature-card">
-                <span class="icon">🏗️</span>
-                <h3>Structural Logic</h3>
-                <p>Visualizing physics as a system of properties, states, and events.</p>
-            </div>
-            <div class="feature-card">
-                <span class="icon">✍️</span>
-                <h3>Internal Construction</h3>
-                <p>Notes designed to help you build understanding, not just "input" data.</p>
-            </div>
-        </section>
-
-        <article class="philosophy">
-    <h2>Understanding UNDERSTANDING</h2>
-    
-    <p>
-        Students often ask if a book is "sufficient" for JEE Advanced. This question is built on a misconception: that knowledge is a <strong>physical product</strong> to be procured. But Physics cannot be "downloaded." Reading a textbook is merely an <em>input process</em>. 
-    </p>
-
-    <blockquote>
-        <strong>Understanding</strong> is not found on the page; it is a mental architecture you must <strong>construct internally</strong>. 
-    </blockquote>
-
-    <h3>From Information to Structure</h3>
-    <p>
-        Why do students forget formulas or fail at "unseen" problems? Because they possess isolated facts without a <strong>structural framework</strong>. To understand a system—whether a simple table or a complex electromagnetic field—the mind must organize four fundamental pillars:
-    </p>
-
-    <div class="diagram-grid">
-        <div class="diagram-item">
-            <svg viewBox="0 0 200 140"><rect x="40" y="50" width="120" height="15" class="top"/><rect x="50" y="65" width="10" height="50" class="leg"/><rect x="140" y="65" width="10" height="50" class="leg"/></svg>
-            <p><strong>1. THE SYSTEM</strong><br>
-            <span style="color:var(--text-light); font-weight:400">Defining the boundaries of what we are studying.</span></p>
-        </div>
-        <div class="diagram-item">
-            <svg viewBox="0 0 200 140"><rect x="40" y="50" width="120" height="15" class="top highlight"/><rect x="50" y="65" width="10" height="50" class="leg"/><rect x="140" y="65" width="10" height="50" class="leg"/></svg>
-            <p><strong>2. PROPERTIES</strong><br>
-            <span style="color:var(--text-light); font-weight:400">Intrinsic values like mass, charge, or temperature.</span></p>
-        </div>
-        <div class="diagram-item">
-            <svg viewBox="0 0 200 140"><rect x="40" y="50" width="120" height="15" class="top"/><rect x="50" y="65" width="10" height="50" class="leg"/><rect x="140" y="65" width="10" height="50" class="leg"/><rect x="85" y="35" width="30" height="15" class="book"/></svg>
-            <p><strong>3. RELATIONS</strong><br>
-            <span style="color:var(--text-light); font-weight:400">Interactions (Forces, Fields) with other systems.</span></p>
-        </div>
-        <div class="diagram-item">
-            <svg viewBox="0 0 200 140"><rect x="40" y="50" width="120" height="15" class="state"/><rect x="50" y="65" width="10" height="50" class="leg"/><rect x="140" y="65" width="10" height="50" class="leg"/></svg>
-            <p><strong>4. DYNAMICS</strong><br>
-            <span style="color:var(--text-light); font-weight:400">How the "State" evolves through events and time.</span></p>
-        </div>
-    </div>
-
-    <h3>Why This Matters for JEE</h3>
-    <p>
-        In these notes, we don't just "list" formulas. We look at <strong>Mathematics as the grammar</strong> of this structure. 
-    </p>
-    <ul>
-        <li><strong>Physical Quantities</strong> are not just variables; they are the <em>Properties</em> of your system.</li>
-        <li><strong>Equations</strong> are not just recipes; they describe the <em>Relations</em> between systems.</li>
-        <li><strong>Conservation Laws</strong> are the constraints on how <em>States</em> can change during an <em>Event</em>.</li>
-    </ul>
-
-    <p>
-        When you study structurally, you stop "memorizing" and start "building." If you understand the internal structure of a concept, you can derive what you forget and solve what you haven't seen before. These notes are my attempt to provide the blueprints for that construction.
-    </p>
+<div class="container">
+<section class="features">
+<div class="feature-card">
+<span class="icon">🔍</span>
+<h3>Start with Meaning</h3>
+<p>Before the math, we ask: What is this law actually describing in the real world?</p>
+</div>
+<div class="feature-card">
+<span class="icon">🏗️</span>
+<h3>Structural Logic</h3>
+<p>Visualizing physics as a system of properties, states, and events.</p>
+</div>
+<div class="feature-card">
+<span class="icon">✍️</span>
+<h3>Internal Construction</h3>
+<p>Notes designed to help you build understanding, not just "input" data.</p>
+</div>
+</section>
+<article class="philosophy">
+<h2>Understanding UNDERSTANDING</h2>
+<p>
+Students often ask if a book is "sufficient" for JEE Advanced. This question itself carries an assumption: that <strong>understanding</strong> is something <strong>"outside"</strong>, which you can acquire and possess like an object.
+</p>
+<p>
+But <strong>JEE Advanced is just an advanced level of understanding</strong>. Understanding is not like knowledge to be procured from outside through senses (watching a lecture or reading a book etc). It is to be cultivated from within, like how Virat Kohli cultivated his batting skill.
+</p>
+<blockquote>
+Understanding is not something that enters through reading or listening. Those are only ways of receiving <strong>information</strong>. Understanding is what <strong>structure</strong> you are able to <em>build from that information</em>. It is a personal internal thing.
+</blockquote>
+<p>
+You can read a formula, remember it - and still not know when or why it applies. That means the information is present, but the structure is missing. The keyword is <strong>STRUCTURE</strong>, and we need to know what is structural thinking?
+</p>
+<h3>From Information to Structure</h3>
+<p>
+To see what "structure" means, consider a simple object: a table.
+</p>
+<p>
+You may know facts about a table: it has a flat top, it has legs, it is used to place objects. These are pieces of information. They describe the table, but they do not yet organize it.
+</p>
+<p>
+Structure begins when these pieces are arranged in a way where each part has a definite role, and the whole can be treated as a system.
+</p>
+<!-- 1. SYSTEM -->
+<div class="diagram-item">
+<svg viewBox="0 0 200 140">
+<rect x="40" y="50" width="120" height="15" class="top"/>
+<rect x="50" y="65" width="10" height="50" class="leg"/>
+<rect x="140" y="65" width="10" height="50" class="leg"/>
+</svg>
+<p>
+<strong>1. THE SYSTEM</strong>
+</p>
+</div>
+<p>
+The first step is to identify what exactly is being considered.
+</p>
+<p>
+Here, the table is taken as the system. This includes the top and the legs. Everything else—the floor, the air, other objects—is outside the system.
+</p>
+<p>
+This separation is necessary. Without it, there is no fixed object of study. All descriptions depend on what has been included and what has been excluded.
+</p>
+<p>
+The system is not chosen arbitrarily. It is chosen so that the object can be described in a definite and consistent way.
+</p>
+<!-- 2. PROPERTIES -->
+<div class="diagram-item">
+<svg viewBox="0 0 200 140">
+<rect x="40" y="50" width="120" height="15" class="top highlight"/>
+<rect x="50" y="65" width="10" height="50" class="leg"/>
+<rect x="140" y="65" width="10" height="50" class="leg"/>
+</svg>
+<p>
+<strong>2. PROPERTIES</strong>
+</p>
+</div>
+<p>
+Once the system is fixed, it is described using properties.
+</p>
+<p>
+Properties are quantities or attributes that belong to the system: height, area of the top, thickness, mass, color, material.
+</p>
+<p>
+These are not just labels. They are the variables through which the system can be specified.
+</p>
+<p>
+At any moment, each property has a definite value. These values are what allow the system to be described precisely, compared with other systems, and analyzed.
+</p>
+<p>
+Without properties, the system exists only as an idea, not as something that can be worked with.
+</p>
+<!-- 3. RELATIONS -->
+<div class="diagram-item">
+<svg viewBox="0 0 200 140">
+<rect x="40" y="50" width="120" height="15" class="top"/>
+<rect x="50" y="65" width="10" height="50" class="leg"/>
+<rect x="140" y="65" width="10" height="50" class="leg"/>
+<rect x="85" y="35" width="30" height="15" class="book"/>
+</svg>
+<p>
+<strong>3. RELATIONS</strong>
+</p>
+</div>
+<p>
+The properties of a system are not independent. They are connected through relations.
+</p>
+<p>
+For the table, the height depends on the length of the legs. The ability to support an object depends on the arrangement and strength of the legs. The area of the top determines how objects can be placed on it.
+</p>
+<p>
+Relations specify how one property is linked to another. They determine what combinations of values are possible and how a change in one quantity affects others.
+</p>
+<p>
+Without relations, properties remain isolated. With relations, they form a connected system.
+</p>
+<!-- 4. DYNAMICS -->
+<div class="diagram-item">
+<svg viewBox="0 0 200 140">
+<rect x="40" y="50" width="120" height="15" class="state"/>
+<rect x="50" y="65" width="10" height="50" class="leg"/>
+<rect x="140" y="65" width="10" height="50" class="leg"/>
+</svg>
+<p>
+<strong>4. DYNAMICS</strong>
+</p>
+</div>
+<p>
+The properties of a system may remain constant or may change with time.
+</p>
+<p>
+If the properties do not change, the system is static. If one or more properties vary with time, the system is dynamic.
+</p>
+<p>
+For example, imagine the color of the table changing continuously with time, shifting between shades of black and white.
+</p>
+<p>
+At any given instant, the table has definite values of all its properties: height, mass, color, etc. This complete set of values defines the <strong>state</strong> of the system at that instant.
+</p>
+<p>
+As time progresses, these values may change. The manner in which the state changes with time defines the <strong>dynamics</strong> of the system.
+</p>
+<p>
+Understanding a system therefore requires both:
+</p>
+<ul>
+<li>the properties that define its state</li>
+<li>and the way that state evolves with time</li>
+</ul>
+<p>
+When all four are clearly identified, the table is no longer just described—it is organized as a system.
+</p>
+<p>
+If any one of these is missing, the understanding remains incomplete:
+</p>
+<ul>
+<li>without a system, nothing is clearly defined</li>
+<li>without properties, nothing can be specified</li>
+<li>without relations, nothing is connected</li>
+<li>without dynamics, nothing can change</li>
+</ul>
+<p>
+Physics follows the same structure. A concept is understood only when it is organized in this form.
+</p>
+</section>
+<h3>Why This Matters for JEE</h3>
+<p>
+In these notes, mathematics is not treated as a set of tools to apply, but as a language that expresses this structure.
+</p>
+<ul>
+<li><strong>Physical quantities</strong> describe the <em>properties</em> of a system.</li>
+<li><strong>Equations</strong> express <em>relations</em> between those properties.</li>
+<li><strong>Conservation laws</strong> restrict how the <em>state</em> can change.</li>
+</ul>
+<p>
+When the structure is clear, formulas are no longer things to remember. They become things you can reconstruct.
+</p>
+<p>
+These notes are not meant to replace books. They are meant to change how you read them.
+</p>
 </article>
+<section id="syllabus" class="syllabus-section">
+<h2>Course Library</h2>
+<div class="syllabus-grid">
+<div class="class-box">
+<h3>Class 11</h3>
+<ul id="list-11" class="chapter-list"></ul>
+</div>
+<div class="class-box">
+<h3>Class 12</h3>
+<ul id="list-12" class="chapter-list"></ul>
+</div>
+</div>
+</section>
+<footer class="footer">
+<p><strong>JEE Physics Notes</strong> | A project by Hitendra K K</p>
+<p style="font-size: 0.8rem;">Focusing on clarity over authority.</p>
+</footer>
+</div>
+<script>
+const class11 = [
+"physical-world", "mathematical-tools", "units-and-dimensions", "measurments-and-errors",
+"motion-in-1-d", "motion-in-2-d", "laws-of-motion", "friction", "circular-motion",
+"work-power-energy", "system-of-particles", "rotational-mechanics", "oscillations",
+"elasticity", "fluid-mechanics", "thermal-properties", "calorimetry", "heat-transfer",
+"gaseous-state", "thermodynamics", "ktg", "string-waves", "sound-waves", "gravitation"
+];
+const class12 = [
+"electrostatics", "current-electricity", "capacitance", 
+"magnetic-effects-of-current", "magnetism-and-matter", "electromagnetic-induction",
+"alternating-current", "electromagnetic-waves", "geometrical-optics",
+"optical-instruments", "wave-optics", "dual-nature-of-matter", "atoms", "nuclei", "semiconductors"
+];
 
-        <section id="syllabus" class="syllabus-section">
-            <h2>Course Library</h2>
-            <div class="syllabus-grid">
-                <div class="class-box">
-                    <h3>Class 11</h3>
-                    <ul id="list-11" class="chapter-list"></ul>
-                </div>
-                <div class="class-box">
-                    <h3>Class 12</h3>
-                    <ul id="list-12" class="chapter-list"></ul>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p><strong>JEE Physics Notes</strong> | A project by Hitendra K K</p>
-            <p style="font-size: 0.8rem;">Focusing on clarity over authority.</p>
-        </footer>
-    </div>
-
-    <script>
-        const class11 = [
-            "physical-world", "mathematical-tools", "units-and-dimensions", "measurments-and-errors",
-            "motion-in-1-d", "motion-in-2-d", "laws-of-motion", "friction", "circular-motion",
-            "work-power-energy", "system-of-particles", "rotational-mechanics", "oscillations",
-            "elasticity", "fluid-mechanics", "thermal-properties", "calorimetry", "heat-transfer",
-            "gaseous-state", "thermodynamics", "ktg", "string-waves", "sound-waves", "gravitation"
-        ];
-        const class12 = [
-            "electrostatics", "current-electricity", "capacitance", 
-            "magnetic-effects-of-current", "magnetism-and-matter", "electromagnetic-induction",
-            "alternating-current", "electromagnetic-waves", "geometrical-optics",
-            "optical-instruments", "wave-optics", "dual-nature-of-matter", "atoms", "nuclei", "semiconductors"
-        ];
-
-        function populateList(id, chapters, pathPrefix) {
-            const ul = document.getElementById(id);
-            chapters.forEach(ch => {
-                const li = document.createElement('li');
-                const cleanName = ch.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-                li.innerHTML = `<a href="${pathPrefix}/${ch}/index.html">${cleanName}</a>`;
-                ul.appendChild(li);
-            });
-        }
-
-        populateList('list-11', class11, 'class-11');
-        populateList('list-12', class12, 'class-12');
-    </script>
+function populateList(id, chapters, pathPrefix) {
+const ul = document.getElementById(id);
+chapters.forEach(ch => {
+const li = document.createElement('li');
+const cleanName = ch.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+li.innerHTML = `<a href="${pathPrefix}/${ch}/index.html">${cleanName}</a>`;
+ul.appendChild(li);
+});
+}
+populateList('list-11', class11, 'class-11');
+populateList('list-12', class12, 'class-12');
+</script>
 </body>
 </html>
