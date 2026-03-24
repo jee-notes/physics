@@ -18,39 +18,141 @@
 <p class="subtitle">
 Why the pressure inside curved liquid surfaces is always higher than outside.
 </p>
-
 <section>
 <h2>Curvature and Pressure Differential</h2>
 <p>
-Surface tension acts aggressively to shrink a liquid surface. For a highly curved surface like a sphere, the surface tension forces along the perimeter yield a net inward resultant force directed specifically toward the center of curvature. 
+Surface tension acts along the liquid surface and tends to reduce its area.
 </p>
 <p>
-To prevent the drop from spontaneously crushing itself to a point under this inward pull, the thermodynamic pressure strictly <em>inside</em> the drop must be fundamentally greater than the pressure outside. This difference is called the <strong>excess pressure</strong>.
+For a flat surface, these forces cancel each other due to isotropy and collinearity, producing no net effect. However, for a curved surface (such as a spherical drop), the surface tension forces are no longer collinear. Their components combine to produce a net inward resultant directed toward the center of curvature.
 </p>
+<div class="insightbox">
+Curvature breaks collinearity. As a result, surface tension generates a net inward force on the interface.
+</div>
+<p>
+If unopposed, this inward pull would cause the surface to contract continuously. To maintain equilibrium, the pressure inside the drop must be greater than the pressure outside, providing an outward force that balances the effect of surface tension.
+</p>
+<p>
+This pressure difference is called the <strong>excess pressure</strong>:
+</p>
+<div class="concept-box">
+\[
+\Delta P = P_{\text{in}} - P_{\text{out}}
+\]
+</div>
+<div class="insightbox">
+Excess pressure is the mechanical response required to balance the inward pull of surface tension on a curved surface.
+</div>
 </section>
-
 <section>
-<h2>Excess Pressure Inside a Liquid Drop</h2>
+<h2>Excess Pressure Inside a Fluid Drop</h2>
 <p>
-Consider a spherical liquid drop of radius \( R \) and surface tension \( S \). Let the excess pressure inside be \( \Delta P = P_{\text{in}} - P_{\text{out}} \).
+Consider a spherical liquid drop of radius \( R \) and surface tension \( S \). Let the pressure difference across the surface be:
+</p>
+<div class="concept-box">
+\[
+\Delta P = P_{\text{in}} - P_{\text{out}}
+\]
+</div>
+<p>
+To determine this excess pressure, imagine the drop divided into two hemispheres.
 </p>
 <p>
-If we imagine the drop meticulously cut in half, the net outward force due to excess pressure acting on the equatorial area \( \pi R^2 \) is fiercely balanced by the surface tension acting along the boundary circumference \( 2\pi R \):
+The pressure inside the drop acts over the flat circular cross-section of area \( \pi R^2 \), producing an outward force:
+</p>
+<div class="model-box">
+\[
+F_{\text{pressure}} = (\Delta P)(\pi R^2)
+\]
+</div>
+<p>
+Surface tension acts along the circular boundary of this cross-section. Since surface tension is force per unit length, the total inward force along the circumference \( 2\pi R \) is:
+</p>
+<div class="model-box">
+\[
+F_{\text{surface}} = S (2\pi R)
+\]
+</div>
+<p>
+In equilibrium, these forces balance:
 </p>
 \[
-(\Delta P) (\pi R^2) = S (2\pi R) \implies \Delta P = \frac{2S}{R}
+(\Delta P)(\pi R^2) = S (2\pi R)
+\]
+<p>
+Solving,
+</p>
+\[
+\Delta P = \frac{2S}{R}
 \]
 <div class="model-box">
-<strong>Excess Pressure for One Free Surface</strong>
-<br><br>
-A liquid drop has exactly one free surface (liquid-air interface).
+<strong>Excess Pressure for a Liquid Drop (One Surface)</strong>
 <br><br>
 \[
 P_{\text{in}} - P_{\text{out}} = \frac{2S}{R}
 \]
 </div>
 </section>
-
+<section>
+<h2>Liquid Drop vs Gas Bubble</h2>
+<p>
+A liquid drop (e.g., a water droplet in air) and a gas bubble (e.g., an air bubble in water) are governed by the same surface tension relation, but their physical behavior differs due to compressibility.
+</p>
+<p>
+In both cases, surface tension imposes a mechanical constraint:
+</p>
+<div class="model-box">
+\[
+P_{\text{in}} = P_{\text{out}} + \frac{2S}{R}
+\]
+</div>
+<p>
+Here, \( S \) is the surface tension (a material property), and \( P_{\text{out}} \) is the external pressure set by the surroundings.
+</p>
+<h3>Liquid Drop (Incompressible)</h3>
+<p>
+For a liquid drop, the amount of liquid is fixed and the liquid is effectively incompressible. Therefore, the volume—and hence the radius \( R \)—is fixed.
+</p>
+<p>
+As a result, the excess pressure relation determines the internal pressure:
+</p>
+<div class="model-box">
+\[
+P_{\text{in}} = P_{\text{out}} + \frac{2S}{R}
+\]
+</div>
+<div class="insightbox">
+In a liquid drop, the radius is fixed.<br>  
+The internal pressure adjusts to satisfy the surface tension constraint.
+</div>
+<h3>Gas Bubble (Compressible)</h3>
+<p>
+For a gas bubble, the situation is different because the gas is compressible.
+</p>
+<p>
+Surface tension still imposes the mechanical condition:
+</p>
+<div class="model-box">
+\[
+P_{\text{in}} = P_{\text{liquid}} + \frac{2S}{R}
+\]
+</div>
+<p>
+However, the gas inside must also satisfy the thermodynamic relation:
+</p>
+<div class="model-box">
+\[
+P_{\text{in}} V = nRT
+\]
+</div>
+<p>
+Since the volume \( V \propto R^3 \), the internal pressure and radius are not independent. They adjust together to satisfy both the mechanical constraint (surface tension) and the thermodynamic constraint (gas law).
+</p>
+<div class="insightbox">
+In a gas bubble, neither \( P_{\text{in}} \) nor \( R \) is fixed independently. They are coupled through the gas equation of state.<br>
+Also, even for gas bubble, surface tension \( S \) is to be taken of the surrounding liquid only. The gas only provides pressure; it does not contribute to surface tension.
+</div>
+</section>
 <section>
 <h2>Excess Pressure Inside a Soap Bubble</h2>
 <p>
@@ -70,7 +172,6 @@ P_{\text{in}} - P_{\text{out}} = 2 \times \left(\frac{2S}{R}\right) = \frac{4S}{
 Notice the inverse relationship with radius \( R \). The smaller the bubble, the astronomically higher the internal pressure! If a tiny soap bubble is connected by a tiny tube to a large soap bubble, the air will spontaneously flow from the small bubble into the large bubble, shrinking the small one until it vanishes.
 </div>
 </section>
-
 <section>
 <h2>Excess Pressure Inside an Air Bubble in Liquid</h2>
 <p>
@@ -87,7 +188,97 @@ P_{\text{in}} - P_{\text{liquid}} = \frac{2S}{R}
 Keep in mind, to definitively find the true absolute pressure \( P_{\text{in}} \) inside the bubble, you must also meticulously add the hydrostatic fluid pressure \( (\rho g h) \) if the bubble is situated deep underwater.
 </p>
 </section>
+<section>
+<h2>The "Split-Pressure" Bubble</h2>
+<div class="examplebox">
+<p>
+Two separate bubbles of radius \( R_1 \) and \( R_2 \) of same material \( S \) merge to form a combined bubble. Determine  radius of curvature of common interface.
+</p>
+<div class="diagram">
+<svg viewBox="0 0 500 250" width="100%">
 
+  <!-- Large bubble -->
+  <circle cx="280" cy="125" r="80"
+  fill="none" stroke="black" stroke-width="2"/>
+
+  <!-- Small bubble (on top) -->
+  <circle cx="200" cy="125" r="50"
+  fill="white" stroke="black" stroke-width="2"/>
+
+  <!-- Intersection-based interface -->
+  <path d="
+M 240 75
+A 90 90 0 0 1 240 175
+  "
+  fill="none" stroke="black" stroke-width="3"/>
+</svg>
+</div>
+<h4>Solution:</h4>
+<p>
+For each bubble, the excess pressure due to surface tension is given by:
+</p>
+\[
+\Delta P = \frac{4S}{R}
+\]
+<p>
+Thus, before merging:
+</p>
+<div class="model-box">
+\[
+P_1 = P_0 + \frac{4S}{R_1}, \quad
+P_2 = P_0 + \frac{4S}{R_2}
+\]
+</div>
+<p>
+Since \( R_1 \lt R_2 \), we have \( P_1 > P_2 \). Therefore, after merging, the common interface forms such that it balances this pressure difference.
+</p>
+<div class="insightbox">
+<strong>Assumptions used in this solution:</strong><br>
+1. The radii of the two bubbles remain unchanged after merging:
+\[
+R_1' = R_1, \quad R_2' = R_2
+\]
+2. Gas compressibility and thermodynamic effects (e.g., \( PV = nRT \)) are ignored.<br>
+3. Each outer surface remains spherical and obeys:
+\[
+P = P_0 + \frac{4S}{R}
+\]
+4. The result is obtained from mechanical equilibrium of interfaces only, not from the actual merging process.<br>
+</div>
+<p>
+Let the radius of curvature of the common interface be \( R \). The excess pressure across this interface is:
+</p>
+<div class="model-box">
+\[
+P_1 - P_2 = \frac{4S}{R}
+\]
+</div>
+<p>
+Substituting:
+</p>
+\[
+\left(P_0 + \frac{4S}{R_1}\right) - \left(P_0 + \frac{4S}{R_2}\right)
+= \frac{4S}{R}
+\]
+\[
+\frac{4S}{R_1} - \frac{4S}{R_2} = \frac{4S}{R}
+\]
+<p>
+Cancelling \( 4S \):
+</p>
+\[
+\frac{1}{R_1} - \frac{1}{R_2} = \frac{1}{R}
+\]
+<div class="concept-box">
+\[
+R = \frac{R_1 R_2}{R_2 - R_1}
+\]
+</div>
+<div class="insightbox">
+The curvature of the common interface is determined by the difference in excess pressures of the two bubbles.<br>
+The interface bends toward the larger bubble (lower pressure side).
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
