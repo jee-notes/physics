@@ -16,42 +16,46 @@
 </nav>
 <h1>Pressure</h1>
 <p class="subtitle">
-Foundation of force interaction in a continuum.
+Internal Force in a continuum.
 </p>
 <section>
 <h2>Pressure in a Fluid</h2>
 <p>
-When a fluid (liquid or gas) is at rest, it exerts a force <strong>perpendicular</strong> to any surface in contact with it, such as container walls or a body immersed in the fluid. This is the force you feel when you press your hand into water.
+In an <strong>Ideal Fluid</strong> (inviscid), the bulk matter can only exert a force <strong>perpendicular</strong> to any surface in contact with it, such as container walls or a body immersed in the fluid. 
+</p>
+<div class="insightbox">
+<strong>The "Grip" Test:</strong> If you can't "grip" it, you can't "pull" it. Since an ideal fluid has zero internal friction (viscosity), it has zero "grip." It can only "thump" into a surface, producing <strong>Normal Force</strong>.
+</div>
+<p>
+Notice the emphasis on <strong>perpendicular</strong>. Because fluids (at rest or ideal) cannot sustain tangential forces, we define a specific physical quantity to describe this normal "push": <strong>Pressure</strong>.
 </p>
 <p>
-To understand this, imagine an imaginary surface inside the fluid itself. This surface is surrounded by fluid on both sides. The surrounding fluid exerts equal and opposite forces on this surface; otherwise, the fluid would accelerate and would not remain at rest.
+To visualize this as a field property, imagine an arbitrary imaginary surface inside fluid bulk at rest. This surface is surrounded by fluid on both sides. For the bulk to remain in equilibrium, the surrounding fluid must exert equal and opposite normal forces on this surface.
 </p>
+<div class="model-box">
+<h3>Definition at a Point</h3>
 <p>
-Consider a small surface element of area \( dA \) around a point in the fluid. The normal force exerted by the surrounding fluid on this surface is \( dF \). We define pressure at that point as:
+Consider a small surface element of area \( dA \) around a point in ideal fluid. As we shrink this area (\( dA \to 0 \)), the normal force exerted by the surrounding fluid is \( F \). As \( dA \) is infinitesimal, the force is uniform (or at a point):
 </p>
-<div class="math-block">
-\[
-P = \frac{dF_{\perp}}{dA}
-\]
+\[ P = \frac{F}{dA} \]
+<p>
+However, for a <strong>generic definition</strong> (applicable to all cases - specially for real fluids in motion where tangential forces like drag may exist), we isolate only the component of force \( F \) that is normal to the surface:
+</p>
+\[ P = \lim_{dA \to 0} \frac{F_{\perp}}{dA} \]
+</div>
+<div class="insightbox">
+<strong>Mechanical Logic:</strong> By defining pressure using \( F_{\perp} \), we ensure that Pressure remains a <strong>scalar quantity</strong>. While the force vector depends on the orientation of the surface, the pressure value at a specific point in the bulk is <strong>isotropic</strong>—it is the same in all directions.
 </div>
 <p>
 If pressure is uniform over a flat surface:
 </p>
 <div class="math-block">
 \[
-P = \frac{F_{\perp}}{A}
+\int dF = P \int dA
 \]
 </div>
 <p>
-If pressure is uniform over a curved surface:
-</p>
-<div class="math-block">
-\[
-P = \frac{F_{\perp}}{A_{\text{enclosed}}}
-\]
-</div>
-<p>
-where \( A_{\text{enclosed}} \) is the area enclosed by the boundary.
+Thus, knowing pressure only the component of normal force can be determined. It is similar to knowing \( \omega \), only the component of velocity perpendicular to \( \vec{r} \) can be determined.  
 </p>
 <div class="insightbox">
 Pressure and force are different physical quantities.<br>
@@ -65,7 +69,7 @@ In solids, forces are described as direct contact interactions. However, in flui
 <section>
 <h2>Pressure and Depth</h2>
 <p>
-If the weight of the fluid is neglected, pressure would be the same throughout the fluid. This approximation is sometimes used in discussions of bulk properties.
+If the weight of the fluid is neglected (or there is gravity free environment), pressure would be the same throughout the fluid. Thus gravity creates a pressure gradient inside bulk fluid.
 </p>
 <p>
 However, when the fluid's weight is considered, pressure varies with depth. For example:
@@ -75,31 +79,29 @@ However, when the fluid's weight is considered, pressure varies with depth. For 
 <li>Pressure increases as we go deeper in water</li>
 </ul>
 <p>
-To derive this variation, consider a small fluid element of thickness \( dy \) and cross-sectional area \( A \).
+To derive this variation, we consider a fluid element of geometry that will simplify calculation. Consider a cylinder of height \( h \) and cross-sectional area \( A = \pi r^2 \).
 </p>
-
 <p>
-Its volume is \( dV = A\,dy \), mass is \( dm = \rho A\,dy \), and weight is:
+Its volume is \( V = A\,h \), mass is \( m = \rho A\,h \), and weight is:
 </p>
-
 <div class="math-block">
 \[
-dW = \rho A\,dy\,g
+W = \rho A\,h\,g
 \]
 </div>
 <p>
-Let pressure at the top surface be \( P \), and at the bottom be \( P + dP \).
+Let pressure at the top surface be \( P_0 \), and at the bottom be \( P_0 + \Delta P \).
 </p>
 <ul class="model-box">
-<li>Downward force on top: \( P A \)</li>
-<li>Upward force on bottom: \( (P + dP) A \)</li>
+<li>Downward force on top: \( P_0 A \)</li>
+<li>Upward force on bottom: \( (P_0 + \Delta P) A \)</li>
 </ul>
 <p>
 Since the fluid is in equilibrium:
 </p>
 <div class="math-block">
 \[
-(P + dP)A - PA - \rho A dy g = 0
+(P_0 + \Delta P)A - P_0 A - \rho A h g = 0
 \]
 </div>
 <p>
@@ -107,7 +109,10 @@ Simplifying:
 </p>
 <div class="math-block">
 \[
-\frac{dP}{dy} = \rho g
+\frac{\Delta P}{h} = \rho g
+\]
+\[
+\frac{dP}{dh} = \rho g
 \]
 </div>
 <p>

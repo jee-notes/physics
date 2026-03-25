@@ -18,50 +18,125 @@
 <p class="subtitle">
 The physics explaining how plants draw water and towels soak up spills.
 </p>
-
 <section>
-<h2>Capillary Rise (Ascent Formula)</h2>
+<h2>Angle of Contact</h2>
 <p>
-When a long tube of very fine bore (a capillary tube) is vertically dipped into a liquid, the liquid spontaneously rises or falls inside the tube relative to the surrounding level. This phenomenon is known as <strong>capillarity</strong>.
+The same intermolecular imbalance responsible for surface tension also determines how a liquid meets a solid surface.
 </p>
 <p>
-Why does it happen? If a liquid wets the glass (like water, generating a concave meniscus), the pressure just beneath the curved surface is strictly less than atmospheric pressure by precisely \( \frac{2S}{R} \) (where \( R \) is the radius of curvature of the meniscus). Consequently, the fluid natively accelerates up the tube until the hydrostatic weight of the rising liquid column aggressively balances this pressure discrepancy.
+At the line of contact, two types of forces compete:
 </p>
-<p>
-By relating the meniscus radius \( R \) to the actual tube radius \( r \) via the angle of contact \( \theta \) (\( r = R \cos \theta \)), we uniquely derive the Ascent Formula.
-</p>
-<div class="model-box">
-<strong>The Ascent Formula</strong>
-<br><br>
-The vertical height \( h \) to which a liquid of density \( \rho \) and surface tension \( S \) natively rises in a capillary tube of internal radius \( r \) is given by:
-<br><br>
-\[
-h = \frac{2 S \cos \theta}{r \rho g}
-\]
-<br>
-Where:
-<ul>
-    <li>\( S \) is the surface tension of the liquid.</li>
-    <li>\( \theta \) is the angle of contact.</li>
-    <li>\( r \) is the radius of the capillary tube.</li>
-    <li>\( \rho \) is the fluid density.</li>
-    <li>\( g \) is the native acceleration due to gravity.</li>
+<ul class="model-box">
+<li><strong>Cohesive force (\(F_l\)):</strong> Attraction between molecules of the liquid.</li>
+<li><strong>Adhesive force (\(F_s\)):</strong> Attraction between molecules of the liquid and the solid.</li>
 </ul>
+<p>
+The resultant of these forces determines the orientation of the liquid surface near the solid. The free surface of the liquid rests in such a way that the surface is perpendicular to this resultant.
+</p>
+<p>
+Depending on the relative magnitudes of these forces:
+</p>
+<ul class="model-box">
+<li><strong>\(F_l > F_s\):</strong> Cohesion dominates → liquid pulls inward → surface becomes <strong>convex</strong> → liquid is depressed near the solid.</li>
+<li><strong>\(F_l \lt F_s\):</strong> Adhesion dominates → liquid spreads along solid → surface becomes <strong>concave</strong> → liquid rises near the solid.</li>
+<li><strong>\(F_l = F_s\):</strong> No preference → surface remains <strong>flat</strong>.</li>
+</ul>
+<p>
+The <strong>angle of contact</strong> (\(\theta\)) is defined as the angle between:
+</p>
+<ul>
+<li>the tangent to the liquid surface at the point of contact, and</li>
+<li>the solid surface,</li>
+</ul>
+<p>
+measured <strong>inside the liquid</strong>. The tangent to the solid surface is to be drawn towards the liquid and the tangent to the liquid is to be drawn away from the solid.
+</p>
+<p>
+It is a property of the liquid–solid pair and quantifies the tendency of a liquid to wet a surface.
+</p>
+<div class="insightbox">
+A smaller contact angle means stronger adhesion (better wetting), while a larger contact angle indicates dominant cohesion (poor wetting).
+</div>
+<p>
+For example, water on clean glass has \(\theta \approx 0^\circ\), meaning it wets the surface completely.
+</p>
+</section>
+<section>
+<h2>Derivation of the Ascent Formula</h2>
+<p>
+To understand the height \( h \) to which a liquid rises in a capillary tube, we can analyze the system through two complementary lenses: <strong>Pressure Fields</strong> (how the bulk responds to curvature) and <strong>Mechanical Equilibrium</strong> (how forces balance at the boundary).
+</p>
+<div class="concept-box">
+<h3>Method 1: The Pressure-Curvature Approach (Field Perspective)</h3>
+<p>
+In this framework, the rise of the liquid is a bulk response to a pressure deficit created by the curved meniscus.
+</p>
+<p>
+<strong>1. Geometry of the Meniscus:</strong><br>
+As established by the <em>Perpendicular Resultant Rule</em>, the liquid surface meets the wall at an angle \(\theta\). For a tube of radius \(r\), the meniscus forms a spherical cap with a radius of curvature \(R\):
+\[ R = \frac{r}{\cos \theta} \]
+</p>
+<p>
+<strong>2. The Laplace Pressure Jump:</strong><br>
+The curvature creates a pressure discontinuity. For a concave meniscus, the pressure just below the surface (\(P_L\)) is lower than the atmospheric pressure (\(P_{atm}\)) above it:
+\[ P_{atm} - P_L = \frac{2S}{R} \implies P_L = P_{atm} - \frac{2S \cos \theta}{r} \]
+</p>
+<p>
+<strong>3. Hydrostatic Balance:</strong><br>
+Consider two points at the same horizontal level of the flat liquid surface outside the tube. The pressure at the flat surface is \(P_{atm}\). Inside the tube, at the same level, the pressure must also be \(P_{atm}\). This pressure is provided by the low-pressure bulk under the meniscus plus the weight of the raised column:
+\[ P_{atm} = P_L + \rho gh \]
+\[ P_{atm} = \left( P_{atm} - \frac{2S \cos \theta}{r} \right) + \rho gh \]
+</p>
+<p>
+<strong>4. Final Result:</strong>
+\[ \rho gh = \frac{2S \cos \theta}{r} \implies h = \frac{2S \cos \theta}{r \rho g} \]
+</p>
+</div>
+<div class="concept-box">
+<h3>Method 2: The Force Balancing Approach (Mechanical Perspective)</h3>
+<p>
+This method treats surface tension as a distributed force acting along the contact line between the liquid and the solid.
+</p>
+<p>
+<strong>1. Total Surface Tension Force:</strong><br>
+Surface tension \(S\) acts tangentially to the liquid surface along the entire circumference of the tube (\(2\pi r\)).
+\[ F_{total} = S \times (2\pi r) \]
+</p>
+<p>
+<strong>2. Vertical Component:</strong><br>
+The horizontal components of this force cancel out due to axial symmetry. Only the vertical component contributes to supporting the weight of the liquid:
+\[ F_{up} = F_{total} \cos \theta = (2\pi r S) \cos \theta \]
+</p>
+<p>
+<strong>3. Balancing the Weight:</strong><br>
+This upward force supports the weight of the liquid column of height \(h\). Ignoring the tiny volume of the meniscus itself:
+\[ W = m \cdot g = (\rho \cdot \text{Volume}) \cdot g = \rho (\pi r^2 h) g \]
+</p>
+<p>
+<strong>4. Equilibrium:</strong><br>
+Setting \(F_{up} = W\):
+\[ 2\pi r S \cos \theta = \rho \pi r^2 h g \]
+\[ h = \frac{2S \cos \theta}{r \rho g} \]
+</p>
 </div>
 <div class="insightbox">
-If the angle of contact is strictly obtuse (\( \theta > 90^{\circ} \)), \( \cos \theta \) becomes aggressively negative, making \( h \) negative. This conclusively proves why non-wetting liquids like massive mercury suffer capillary <em>depression</em> (falling below the surrounding surface level).
+<strong>Jurin's Law:</strong> Both methods yield the same result, proving that the height \(h\) is inversely proportional to the tube radius \(r\).<br>
+<h4>Summary of Ascent/Descent</h4>
+<ul>
+<li>If \(\theta \lt 90^\circ\) (Concave): \(\cos \theta\) is positive, \(h\) is positive \(\to\) <strong>Capillary Rise</strong>.</li>
+<li>If \(\theta > 90^\circ\) (Convex): \(\cos \theta\) is negative, \(h\) is negative \(\to\) <strong>Capillary Depression</strong>.</li>
+</ul>
 </div>
 </section>
-
 <section>
 <h2>Factors Affecting Capillarity</h2>
 <p>
 Based exactly on the Ascent Formula, we can deduce several physical dependencies:
 </p>
 <ul>
-    <li><strong>Tube Radius (\( r \)):</strong> The rise is strictly inversely proportional to the tube radius (\( h \propto \frac{1}{r} \)). The impossibly thinner the tube, the colossally higher the liquid climbs.</li>
-    <li><strong>Temperature:</strong> As ambient temperature climbs naturally, surface tension \( S \) definitively falls. Hence, capillary rise drops organically.</li>
-    <li><strong>Impure Solutes:</strong> Highly soluble impurities (like rigid salt) explicitly increase surface tension and capillary rise, whereas insoluble impurities (like gentle detergent) drastically lower them.</li>
+<li><strong>Tube Radius (\( r \)):</strong> The rise is strictly inversely proportional to the tube radius (\( h \propto \frac{1}{r} \)). The impossibly thinner the tube, the colossally higher the liquid climbs.</li>
+<li><strong>Temperature:</strong> As ambient temperature climbs naturally, surface tension \( S \) definitively falls. Hence, capillary rise drops organically.</li>
+<li><strong>Impure Solutes:</strong> Highly soluble impurities (like rigid salt) explicitly increase surface tension and capillary rise, whereas insoluble impurities (like gentle detergent) drastically lower them.</li>
 </ul>
 </section>
 
