@@ -133,54 +133,51 @@ For large volumes of fluid, this ratio is small, and surface tension becomes neg
 </p>
 </section>
 <section>
-<h2>Angle of Contact</h2>
+<h2>Angle of Contact: The Boundary Force Balance</h2>
 <p>
-When a liquid comes in contact with a solid surface, the shape of the interface is determined by the competition between two intermolecular interactions:
-</p>
-<ol>
-<li><strong>Cohesive Forces:</strong> Attraction between molecules of the liquid.</li>
-<li><strong>Adhesive Forces:</strong> Attraction between liquid molecules and the solid surface.</li>
-</ol>
-<div class="concept-box">
-<strong>Angle of Contact (\( \theta \))</strong><br>
-The angle inside the liquid between the solid surface and the tangent to the liquid surface at the point of contact.
-</div>
-<p>
-If adhesive forces dominate, the liquid tends to spread over the solid surface. The meniscus becomes concave, and the angle of contact is acute (\( \theta < 90^\circ \)).
-</p>
-<p>
-If cohesive forces dominate, the liquid tends to contract away from the surface. The meniscus becomes convex, and the angle of contact is obtuse (\( \theta > 90^\circ \)).
-</p>
-<div class="insightbox">
-The angle of contact is not just a geometric quantity—it encodes the balance of intermolecular forces at the interface.
-</div>
-</section>
-<section>
-<h2>Connection to Capillary Rise</h2>
-<p>
-Surface tension acts tangentially along the liquid surface. Near the wall of a container or tube, this force acts along the tangent to the meniscus.
-</p>
-<p>
-Since the surface is inclined at an angle \( \theta \), the surface tension force has a vertical component.
+The origin of the <strong>Angle of Contact</strong> is identical to the origin of surface tension: it is the macroscopic result of <strong>unbalanced intermolecular forces</strong>. To understand why it exists, we compare the environment of a surface molecule at the center of a tank versus one at the wall.
 </p>
 <div class="model-box">
-Vertical component of surface tension per unit length:
-\[
-S \cos\theta
-\]
-</div>
+<h3>Case 1: Molecule at the Center (Standard Surface Tension)</h3>
 <p>
-This vertical component is responsible for pulling the liquid upward (or downward) along the surface.
+Consider a water molecule at the center of the top free surface. It is surrounded by liquid molecules only from below and the sides. It experiences a net attractive pull toward the <strong>liquid bulk</strong>. 
 </p>
+<p>
+Because the pull is symmetric horizontally but unbalanced vertically, the net force is directed vertically downward. For the fluid to be at rest, the surface must stay <strong>horizontal</strong> (perpendicular to the net downward force).
+</p>
+</div>
+<div class="model-box">
+<h3>Case 2: Molecule Near the Solid Wall (Contact Angle)</h3>
+<p>
+Now consider a molecule of the same surface, but situated right next to the solid wall of the tank. This molecule is now caught between two different bulks:
+</p>
+<ul>
+<li><strong>Liquid Bulk:</strong> Pulls the molecule toward the interior of the liquid.</li>
+<li><strong>Solid Bulk:</strong> Pulls the molecule toward the wall.</li>
+</ul>
+<p>
+Because the molecule is pulled by both the liquid and the solid, the <strong>net unbalanced force</strong> is no longer vertically downward. It is tilted at an angle that depends on the relative strength of these two bulk attractions.
+</p>
+</div>
 <div class="insightbox">
-Surface tension provides the force, while the angle of contact determines how much of that force acts vertically.
+<strong>The Perpendicular Rule:</strong> Since a static fluid cannot sustain shear stress, the free surface must always align itself <strong>perpendicular to the net resultant force</strong> acting on its molecules.
 </div>
 <p>
-If \( \theta \lt 90^\circ \), then \( \cos\theta > 0 \), and the vertical component is upward → liquid rises (capillary rise).
+The <strong>Angle of Contact (\( \theta \))</strong> is simply the geometric orientation the liquid must adopt so that its surface is perpendicular to this lopsided resultant force at the boundary.
 </p>
+<ul class="model-box">
+<li>
+<strong>Acute Angle (\( \theta \lt 90^\circ \)):</strong> If the pull from the solid is very strong, the net force vector tilts toward the wall. To stay perpendicular, the liquid climbs the wall, forming a <strong>concave meniscus</strong>.
+</li>
+<li>
+<strong>Obtuse Angle (\( \theta > 90^\circ \)):</strong> If the pull from the liquid bulk is dominant, the net force vector tilts into the liquid. To stay perpendicular, the liquid depresses away from the wall, forming a <strong>convex meniscus</strong>.
+</li>
+</ul>
+<div class="concept-box">
+<strong>Definition:</strong> The angle of contact is measured <strong>inside the liquid</strong> between the solid surface and the tangent to the liquid surface at the point of contact.
+</div>
 <p>
-If \( \theta > 90^\circ \), then \( \cos\theta \lt 0 \), and the vertical component is downward → liquid falls (capillary depression).
-</p>
+We have below applications of surface tension:</p>
 <div class="chapter-list">
 <a href="./07a-excess-pressure.html">1. Excess Pressure in Drops and Bubbles</a>
 <a href="./07b-capillarity.html">2. Capillary Rise and the Ascent Formula</a>
