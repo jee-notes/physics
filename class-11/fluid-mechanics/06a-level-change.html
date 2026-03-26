@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level Change | Buoyancy</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-buoyancy-and-archimedes.html" class="back-btn">
+<span>&larr;</span> Back to Buoyancy
+</a>
+</nav>
+<h1>Change of Level</h1>
+<p class="subtitle">Problems linking Displaced Liquid and Buoyancy.</p>
+<section>
+<h2>The Core Principle</h2>
+<p>
+There are certain type of problems which ask to comment about change of water level in a tank when some buoyancy scenario changes. The key concept in such problems is to link it with liquid displaced.
+</p>
+<p>
+This is because if \(M\) is floating in water, then:
+</p>
+\[
+V_{\text{displaced}} \cdot \rho_{l} \cdot g = M \cdot g
+\]
+\[
+V_{\text{displaced}} = \frac{M}{\rho_{l}} 
+\]
+<div class="insightbox">
+<p>
+This will be true irrespective of whether \(M\) is in direct contact or not.
+</p>
+</div>
+</section>
+<section>
+<h2>Simplest example</h2>
+<div class="examplebox">
+<h3>Question</h3>
+<p>
+A tank of water contains a block of ice of mass \(M\) floating on it. The ice melts. Comment on the change in level of water.
+</p>
+<div class="diagram">
+<svg width="400" height="400">
+
+    <rect x="100" y="50" width="200" height="300" fill="#ffffff"/>
+	<rect x="100" y="100" width="200" height="250" fill="#00ffff" />
+    <line x1="100" y1="50" x2="100" y2="350" stroke="#000000" stroke-width="2"/>
+	<line x1="100" y1="350" x2="300" y2="350" stroke="#000000" stroke-width="2"/>
+	<line x1="300" y1="50" x2="300" y2="350" stroke="#000000" stroke-width="2"/>
+	<rect x="150" y="75" width="100" height="50" fill="#f0f0ff"/>
+	<line x1="100" y1="100" x2="300" y2="100" stroke="#0000ff" stroke-width="2" stroke-dasharray="5,5"/>
+	<rect x="150" y="100" width="100" height="25" fill="#f0ffff"/>
+    
+    <text x="175" y="95" font-family="Arial" font-size="14" fill="#0d47a1">Ice (M)</text>
+    <text x="60" y="75" font-family="Arial" font-size="12" fill="#2196f3">Water Level</text>
+</svg>
+</div>
+<h3>Solution</h3>
+<p>
+The trick is to find change in displaced liquid. Imagine ice block taken out of the water and Volume of empty space in water = Volume of displaced liquid. After melting, if displaced liquid decreased, level has decreased. If displaced liquid increased, level has increased. If displaced liquid same, level is same.
+</p>
+<p><strong>Step 1: Initial Volume Displaced</strong></p>
+<p>While the ice is floating, it displaces a volume of water \(V_1\) such that its weight is supported by buoyancy:</p>
+\[
+V_1 = \frac{M}{\rho_{w}}
+\]
+<p>The Volume of the ice block is: \(V_{ice} = \frac{M}{\rho_{ice}}\) </p>
+<p><strong>Step 2: Volume after Melting</strong></p>
+<p>When the ice of mass \(M\) melts, it turns into liquid water. The mass remains \(M\), but its state changes. The volume of water formed, \(V_2\), is given by:</p>
+\[
+V_2 = \frac{M}{\rho_{w}}
+\]
+<p>The Volume of the ice contracted: \(V_{water} = V_{ice} \cdot \frac{\rho_{ice}}{\rho_{water}}\) to exactly fit into the empty void.</p>
+<p><strong>Conclusion:</strong></p>
+<p>Since \(V_1 = V_2\), the space previously occupied by the submerged part of the ice is exactly filled by the water formed from the melted ice.</p>
+<div class="insightbox">
+<p><strong>Result:</strong> The water level remains <strong>unchanged</strong>.</p>
+</div>
+</div>
+</section>
+<section>
+<h2>Level Change in Different Liquids</h2>
+<div class="examplebox">
+<h3>Question</h3>
+<p>
+A piece of ice of mass \(M\) is floating in a liquid of density \(\rho_L\). What happens to the level of the liquid when the ice melts?
+</p>
+<h3>Solution</h3>
+<p><strong>Step 1: Volume of liquid displaced (while floating)</strong></p>
+\[
+Mg = \rho_L V_D g
+\quad \Rightarrow \quad
+V_D = \frac{M}{\rho_L}
+\]
+<p><strong>Step 2: Volume of water formed after melting</strong></p>
+\[
+V_F = \frac{M}{\rho_w}
+\]
+<p>
+The change in liquid level depends on comparison between displaced volume \(V_D\) and final volume \(V_F\).
+</p>
+<div class="model-box">
+\[
+V_D = \frac{M}{\rho_L}, \quad
+V_F = \frac{M}{\rho_w}
+\]
+</div>
+<p><strong>Case 1: Liquid is water (\(\rho_L = \rho_w\))</strong></p>
+\[
+V_D = V_F
+\]
+<div class="insightbox">
+No change in level.
+</div>
+<p><strong>Case 2: Liquid denser than water (\(\rho_L > \rho_w\))</strong></p>
+\[
+\frac{M}{\rho_L} \lt \frac{M}{\rho_w}
+\quad \Rightarrow \quad
+V_D \lt V_F
+\]
+<div class="insightbox">
+Final volume is greater than displaced volume → level rises (in case of mercury).
+</div>
+<p><strong>Case 3: Liquid lighter than water (\(\rho_L \lt \rho_w\))</strong></p>
+\[
+\frac{M}{\rho_L} > \frac{M}{\rho_w}
+\quad \Rightarrow \quad
+V_D > V_F
+\]
+<div class="insightbox">
+Final volume is less than displaced volume → level falls.
+</div>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
