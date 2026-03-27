@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prisms | Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Geometrical Optics
+</a>
+</nav>
+
+<h1>Prisms</h1>
+<p class="subtitle">
+Refraction, deviation, and dispersion of light by angular transparent media.
+</p>
+
+<section>
+<h2>Refraction and Deviation through a Prism</h2>
+<p>
+A prism is a wedged-shaped portion of a transparent refracting medium bounded by two plane faces inclined at an angle. The angle between the two refracting faces is called the <strong>Angle of Prism (\(A\))</strong>.
+</p>
+<p>
+When a monochromatic ray of light passes through a prism, it suffers refraction at the two inclined faces. Unlike a rectangular glass slab where the emergent ray is parallel to the incident ray, a prism bends the emergent ray at a considerable angle relative to the incident direction. This total angle of bending is called the <strong>Angle of Deviation (\(\delta\))</strong>.
+</p>
+
+<div class="model-box">
+<h3>Prism Formula</h3>
+<p>
+If a ray is incident at an angle \(i_1\), undergoes refraction at the first face at an angle \(r_1\), then strikes the second face at an angle \(r_2\), and emerges at an angle \(i_2\) (sometimes denoted as \(e\)):
+</p>
+<ol>
+<li>The sum of internal angles of refraction equals the angle of the prism:
+\[ A = r_1 + r_2 \]
+</li>
+<li>The net angle of deviation (\(\delta\)) is given by:
+\[ \delta = (i_1 + i_2) - A \]
+</li>
+</ol>
+</div>
+<div class="insightbox">
+A prism <strong>always</strong> bends the ray of light towards its thicker base.
+</div>
+</section>
+
+<section>
+<h2>Condition for Minimum Deviation</h2>
+<p>
+As the angle of incidence (\(i_1\)) increases, the angle of deviation (\(\delta\)) first decreases, reaches a minimum value called the <strong>Angle of Minimum Deviation (\(\delta_m\))</strong>, and then begins to increase.
+</p>
+<div class="concept-box">
+<h3>Conditions at Minimum Deviation</h3>
+<p>
+The prism is in the position of minimum deviation <em>if and only if</em> the ray of light passes symmetrically through it. This implies:
+</p>
+<ul>
+<li>The angle of incidence equals the angle of emergence: \(i_1 = i_2 = i\).</li>
+<li>The internal angles of refraction are equal: \(r_1 = r_2 = r\).</li>
+<li>The refracted ray inside the prism travels <strong>parallel to the base</strong> of the prism (assuming the prism is an isosceles triangle).</li>
+</ul>
+</div>
+
+<div class="model-box">
+<h3>Refractive Index from Minimum Deviation</h3>
+<p>
+Using the symmetry conditions \(2r = A \Rightarrow r = \frac{A}{2}\) and \(2i = A + \delta_m \Rightarrow i = \frac{A+\delta_m}{2}\), substituting into Snell's Law (\(n = \frac{\sin i}{\sin r}\)) yields the crucial prism formula:
+</p>
+\[ n = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)} \]
+<p>
+Where \(n\) is the refractive index of the prism material relative to the surrounding medium.
+</p>
+<hr>
+<h3>Thin Prism Approximation</h3>
+<p>
+For a thin prism (where angle \(A\) is very small, typically \(< 10^\circ\)), the angles \(i, r\) and \(\delta\) are also small. The sine of small angles can be approximated by the angle itself (\(\sin \theta \approx \theta\)). The deviation formula simplifies to a linear relationship independent of the angle of incidence:
+</p>
+\[ \delta = A \cdot (n - 1) \]
+</div>
+</section>
+
+<section>
+<h2>Dispersion of Light and Dispersive Power</h2>
+<p>
+While a monochromatic ray only deviates, white light consists of multiple wavelengths. The refractive index of any transparent material depends on the wavelength (\(\lambda\)) of light according to <strong>Cauchy's Formula</strong> (\(n = A + \frac{B}{\lambda^2} + \dots\)). Therefore, violet light (shortest visible \(\lambda\)) experiences a higher refractive index than red light (longest visible \(\lambda\)).
+</p>
+<p>
+Because deviation \(\delta\) depends on \(n\) (\(\delta = A(n-1)\)), different colors deviate by different angles. The splitting of white light into its constituent colors is called <strong>Dispersion</strong>.
+</p>
+
+<div class="model-box">
+<h3>Angular Dispersion (\(\theta\))</h3>
+<p>
+The difference in the angles of deviation of the extreme colors (violet and red) is the angular dispersion.
+</p>
+\[ \theta = \delta_v - \delta_r \]
+<p>For a thin prism: \( \delta_v = A(n_v - 1) \) and \( \delta_r = A(n_r - 1) \). Therefore:</p>
+\[ \theta = A(n_v - n_r) \]
+
+<hr>
+<h3>Dispersive Power (\(\omega\))</h3>
+<p>
+The dispersive power of a prism material is the ratio of the angular dispersion to the mean deviation (usually taken for yellow light, \(\delta_y\)). It is a dimensionless, intrinsic property of the material alone, independent of the prism angle \(A\).
+</p>
+\[ \omega = \frac{\theta}{\delta_y} = \frac{\delta_v - \delta_r}{\delta_y} \]
+\[ \omega = \frac{n_v - n_r}{n_y - 1} \]
+</div>
+</section>
+
+<section>
+<h2>Combination of Prisms</h2>
+<p>
+By combining two thin prisms of different materials (e.g., Crown glass and Flint glass) and oppositely oriented angles (\(A\) and \(A'\)), we can achieve specific optical effects: canceling deviation while keeping dispersion, or canceling dispersion while keeping deviation.
+</p>
+<div class="concept-box">
+<ol>
+<li>
+<strong>Dispersion without Deviation (Direct Vision Spectroscope):</strong>
+We want the net deviation of the mean (yellow) ray to be zero: \(\delta_{y} + \delta'_{y} = 0\).
+\[ A(n_y - 1) + A'(n'_y - 1) = 0 \quad \Rightarrow \quad A' = -A \left[ \frac{n_y - 1}{n'_y - 1} \right] \]
+Under this condition, net angular dispersion remains non-zero:
+\[ \theta_{\text{net}} = (\delta_v - \delta_r) + (\delta'_v - \delta'_r) = \delta_y \cdot \omega + \delta'_y \cdot \omega' = \delta_y (\omega - \omega') \]
+</li>
+<li>
+<strong>Deviation without Dispersion (Achromatic Prism):</strong>
+We want the net angular dispersion to be zero: \(\theta + \theta' = 0\).
+\[ A(n_v - n_r) + A'(n'_v - n'_r) = 0 \]
+Under this condition, the net mean deviation remains non-zero:
+\[ \delta_{\text{net}} = \delta_y \left[ 1 - \frac{\omega}{\omega'} \right] \]
+This combination is used in achromatic lenses in telescopes and cameras to eliminate chromatic aberration.
+</li>
+</ol>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
+</div>
+</body>
+</html>

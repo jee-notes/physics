@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflection at Plane Surfaces | Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Geometrical Optics
+</a>
+</nav>
+
+<h1>Reflection at Plane Surfaces</h1>
+<p class="subtitle">
+The foundation of image formation by smooth, flat boundaries.
+</p>
+
+<section>
+<h2>Laws of Reflection</h2>
+<p>
+When a light ray strikes a smooth boundary separating two different media, a part of the light is turned back into the same medium. This phenomenon is called reflection.
+</p>
+<div class="model-box">
+<h3>The Laws of Reflection</h3>
+<p>
+Reflection of light is governed by two fundamental laws:
+</p>
+<ol>
+<li>
+<strong>First Law:</strong> The incident ray, the reflected ray, and the normal to the reflecting surface at the point of incidence all lie in the same plane.
+</li>
+<li>
+<strong>Second Law:</strong> The angle of incidence (\(i\)) is always equal to the angle of reflection (\(r\)).
+\[ \angle i = \angle r \]
+</li>
+</ol>
+</div>
+<p>
+Here:
+</p>
+<ul>
+<li><strong>Angle of Incidence (\(i\)):</strong> The angle between the incident ray and the normal.</li>
+<li><strong>Angle of Reflection (\(r\)):</strong> The angle between the reflected ray and the normal.</li>
+<li><strong>Normal:</strong> A line drawn perpendicular to the reflecting surface at the point of incidence.</li>
+</ul>
+<div class="insightbox">
+These laws are completely independent of the wavelength of the light wave and apply to both plane and curved reflecting surfaces.
+</div>
+</section>
+
+<section>
+<h2>Image Formation by Plane Mirrors</h2>
+<p>
+An image is formed when light rays originating from a point object meet (or appear to meet) at another point after reflection or refraction. Images can be categorized into two types:
+</p>
+<ul>
+<li><strong>Real Image:</strong> Formed by the actual intersection of reflected or refracted rays. It can be projected onto a screen.</li>
+<li><strong>Virtual Image:</strong> Formed when rays appear to diverge from a point without actually meeting there. It cannot be captured on a screen.</li>
+</ul>
+
+<div class="concept-box">
+<p>
+<strong>Characteristics of an Image formed by a Plane Mirror:</strong>
+</p>
+<ol>
+<li>The image is always <strong>virtual</strong> and <strong>erect</strong>.</li>
+<li>The image is of the same size as the object (magnification \( m = +1 \)).</li>
+<li>The image distance from the mirror is exactly equal to the object distance from the mirror.</li>
+<li>The image is <strong>laterally inverted</strong> (left appears right and vice versa).</li>
+</ol>
+</div>
+<p>
+Mathematically, if an object point is at coordinate \((x, y, z)\) and the mirror is lying in the \(y-z\) plane (at \(x=0\)), the image point will be formed at \((-x, y, z)\).
+</p>
+</section>
+
+<section>
+<h2>Field of View and Multiple Reflections</h2>
+<p>
+The region from which an observer can see the image of an object in a mirror is known as the <strong>field of view</strong>. It is determined by tracing the extreme reflected rays from the edges of the mirror to the observer's eyes.
+</p>
+<div class="insightbox">
+To see the full image of oneself in a plane mirror, the minimum length of the mirror required is exactly half the height of the person. This is independent of the distance of the person from the mirror.
+</div>
+
+<h3>Multiple Reflections from Two Inclined Mirrors</h3>
+<p>
+When two plane mirrors are placed at an angle \(\theta\) to each other, an object placed between them forms multiple images due to repeated reflections. The number of images, \(n\), formed depends on the angle \(\theta\).
+</p>
+<div class="model-box">
+<p>Let \( N = \frac{360^\circ}{\theta} \).</p>
+<ol>
+<li>If \( N \) is an <strong>even integer</strong>, the number of images formed is \( n = N - 1 \), symmetrically or asymmetrically placed object.</li>
+<li>If \( N \) is an <strong>odd integer</strong>:
+<ul>
+<li>For an object placed symmetrically on the angle bisector: \( n = N - 1 \)</li>
+<li>For an object placed asymmetrically: \( n = N \)</li>
+</ul>
+</li>
+<li>If \( N \) is a <strong>fraction</strong>, the number of images is equal to the integral part of \( N \).</li>
+</ol>
+<p>All images formed by two inclined mirrors lie on a circle passing through the object, with its center at the intersection point of the two mirrors.</p>
+</div>
+</section>
+
+<section>
+<h2>Velocity of Image in Plane Mirrors</h2>
+<p>
+When an object or the mirror itself moves, the image formed by the plane mirror also moves. We can analyze this by taking the position vector of the object and image relative to the mirror.
+</p>
+<p>
+Let the mirror lie in the \(y-z\) plane. The direction perpendicular to the mirror is the \(x\)-axis, and vectors parallel to the mirror lie in the \(y-z\) plane.
+</p>
+<div class="concept-box">
+<ol>
+<li>
+<strong>Velocity components parallel to the mirror:</strong> The image moves with the same velocity as the object.
+\[ \vec{v}_{i,\parallel} = \vec{v}_{o,\parallel} \]
+</li>
+<li>
+<strong>Velocity components perpendicular to the mirror:</strong> The velocity of the image relative to the mirror is equal and opposite to the velocity of the object relative to the mirror.
+\[ \vec{v}_{i,\perp} - \vec{v}_{m,\perp} = - (\vec{v}_{o,\perp} - \vec{v}_{m,\perp}) \]
+\[ \Rightarrow \vec{v}_{i,\perp} = 2\vec{v}_{m,\perp} - \vec{v}_{o,\perp} \]
+</li>
+</ol>
+</div>
+<div class="examplebox">
+<h3>Example: Moving Mirror and Object</h3>
+<p>
+Suppose an object is moving towards a stationary plane mirror with a speed of \( 5 \text{ m/s} \) perpendicular to it (\( \vec{v}_{o,\perp} = 5\hat{i} \)). The image velocity perpendicular to the mirror will be:
+\[ \vec{v}_{i,\perp} = 2(0) - (5\hat{i}) = -5\hat{i} \text{ m/s} \]
+The relative velocity of separation or approach is thus \( 10 \text{ m/s} \).
+</p>
+<p>
+Now, if the object is stationary (\(\vec{v}_{o,\perp} = 0\)) and the mirror moves towards the object with speed \( 2 \text{ m/s} \) (\(\vec{v}_{m,\perp} = -2\hat{i}\)), the image velocity is:
+\[ \vec{v}_{i,\perp} = 2(-2\hat{i}) - 0 = -4\hat{i} \text{ m/s} \]
+Thus, if a mirror moves with speed \(v\) towards a stationary object, the image moves with speed \(2v\).
+</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
+</div>
+</body>
+</html>

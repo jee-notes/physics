@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combination of Lenses | Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Geometrical Optics
+</a>
+</nav>
+
+<h1>Combination of Lenses</h1>
+<p class="subtitle">
+Analyzing the effectively unified behavior of multiple lenses.
+</p>
+
+<section>
+<h2>Power of a Lens</h2>
+<p>
+The power of a lens is a measure of its ability to converge or diverge an incident beam of light. A lens of shorter focal length bends the incident rays more, thereby having greater power.
+</p>
+<div class="model-box">
+<h3>Definition and Formula</h3>
+<p>
+The power (\(P\)) of a lens is defined as the tangent of the angle by which it converges or diverges a beam of light falling at unit distance from the optical center. Functionally, it is the reciprocal of its focal length (\(f\)).
+</p>
+\[ P = \frac{1}{f} \]
+<p>
+Where \(f\) must be measured in meters. The SI Unit of power is the <strong>diopter</strong> (D).
+</p>
+<ul>
+<li><strong>Convex Lens:</strong> Focuses rays to a real point (\(f > 0\)), so its power is positive (\(P > 0\)).</li>
+<li><strong>Concave Lens:</strong> Diverges rays forming a virtual focus (\(f < 0\)), so its power is negative (\(P < 0\)).</li>
+</ul>
+</div>
+<div class="insightbox">
+1 Diopter is the power of a lens whose focal length is 1 meter.
+</div>
+</section>
+
+<section>
+<h2>Combination of Thin Lenses in Contact</h2>
+<p>
+Consider two thin lenses \(L_1\) and \(L_2\) of focal lengths \(f_1\) and \(f_2\) respectively, placed coaxially in contact with each other. A point object \(O\) is placed on their common principal axis.
+</p>
+<p>
+The first lens \(L_1\) produces an image \(I_1\). This image \(I_1\) then acts as a virtual object for the second lens \(L_2\), which forms the final image \(I\).
+By applying the thin lens formula successively to both lenses and adding the resulting equations, we can find the equivalent focal length of the combination.
+</p>
+
+<div class="model-box">
+<h3>Equivalent Focal Length and Power</h3>
+<p>
+The effective focal length \(F\) of a combination of lenses in contact is given by:
+</p>
+\[ \frac{1}{F} = \frac{1}{f_1} + \frac{1}{f_2} + \frac{1}{f_3} + \dots \]
+<p>
+In terms of power, the net power \(P\) of a combination of lenses in contact is the algebraic sum of their individual powers:
+</p>
+\[ P = P_1 + P_2 + P_3 + \dots \]
+<p><em>Always substitute \(f_i\) or \(P_i\) with proper signs (positive for convex, negative for concave).</em></p>
+</div>
+
+<div class="concept-box">
+<h3>Total Magnification of the Combination</h3>
+<p>
+If \(m_1, m_2, m_3 \dots\) are the linear magnifications produced by the individual lenses in contact, the total linear magnification \(M\) produced by the combination is the product of the individual magnifications:
+</p>
+\[ M = m_1 \times m_2 \times m_3 \times \dots \]
+<p>
+This principle allows optical instruments, like the compound microscope, to achieve tremendous magnification by cascading lenses.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Equivalent Lens for Lenses Separated by a Distance</h2>
+<p>
+When two thin lenses of focal lengths \(f_1\) and \(f_2\) are separated by a finite distance \(d\) coaxially, finding the equivalent focal length \(F\) is geometrically more complex. The combined effect involves tracing rays that emerge from the first lens, traverse the distance \(d\), and then strike the second lens at a different height.
+</p>
+<div class="model-box">
+<h3>Equivalent Focal Length with Separation</h3>
+<p>
+The equivalent focal length \(F\) of a combination of two thin lenses separated by a distance \(d\) is:
+</p>
+\[ \frac{1}{F} = \frac{1}{f_1} + \frac{1}{f_2} - \frac{d}{f_1 f_2} \]
+<p>
+Or in terms of optical power:
+</p>
+\[ P = P_1 + P_2 - d P_1 P_2 \]
+</div>
+
+<div class="examplebox">
+<h3>Case Study: Convex Lenses with Large Separation</h3>
+<p>
+Suppose two identical convex lenses of power \(P = 5\text{ D}\) (\(f = 20\text{ cm}\)) are separated by a distance \(d\).
+</p>
+<p>
+If \(d < f_1 + f_2\) (\(d < 40\text{ cm}\)), the combined power is positive, and the system acts as a converging lens.
+</p>
+<p>
+However, if \(d > f_1 + f_2\) (\(d > 40\text{ cm}\)), the term \(-d(5)(5) = -25d\) dominates the positive sum \(P_1 + P_2 = 10\). The net power becomes negative. Thus, a combination of two converging lenses placed far apart behaves equivalent to a diverging concave lens!
+</p>
+<p>
+If \(d = f_1 + f_2\), \(P = 10 - (0.4)(25) = 10 - 10 = 0\). The combination has zero power, acting like a simple parallel glass slab.
+</p>
+</div>
+
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
+</div>
+</body>
+</html>

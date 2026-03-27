@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optical Instruments | Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Geometrical Optics
+</a>
+</nav>
+
+<h1>Optical Instruments</h1>
+<p class="subtitle">
+Devices engineered to assist the human eye in resolving tiny or immensely distant objects.
+</p>
+
+<section>
+<h2>The Human Eye and its Defects</h2>
+<p>
+The human eye is an incredibly complex natural optical instrument. Using a crystalline convex lens, it forms a real, inverted image on a light-sensitive screen called the retina. The brain processes this into our vivid perception of the world.
+</p>
+<div class="concept-box">
+<h3>Key Features of the Eye</h3>
+<ul>
+<li><strong>Accommodation:</strong> The ability of the eye to alter the focal length of its lens (via ciliary muscles) to focus both near and distant objects perfectly onto the retina.</li>
+<li><strong>Near Point (\(D\)):</strong> The minimum distance at which an object can be seen most distinctly without strain. For a normal adult eye, \(D \approx 25\text{ cm}\). Also known as the Least Distance of Distinct Vision (LDDV).</li>
+<li><strong>Far Point:</strong> The farthest point up to which the eye can see clearly. For a normal eye, the far point is at infinity.</li>
+</ul>
+</div>
+
+<div class="insightbox">
+<h3>Common Defects of Vision</h3>
+<ul>
+<li><strong>Myopia (Nearsightedness):</strong> Distant objects appear blurred because the image is formed <em>in front</em> of the retina. This occurs when the eye lens converges too strongly or the eyeball is too long. It is corrected using a diverging (concave) lens.</li>
+<li><strong>Hypermetropia (Farsightedness):</strong> Nearby objects appear blurred because the image is formed <em>behind</em> the retina. This occurs when the eye lens is too weakly converging or the eyeball is too short. It is corrected using a converging (convex) lens.</li>
+<li><strong>Presbyopia:</strong> With age, the eye loses its power of accommodation as the crystalline lens loses elasticity. Nearby objects become difficult to focus on. Corrected using reading glasses (convex lens) or bifocals.</li>
+<li><strong>Astigmatism:</strong> The cornea lacks perfect spherical symmetry, causing different focal lengths in different planes. Corrected using cylindrical lenses.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Simple and Compound Microscope</h2>
+<p>
+Microscopes are devices used to view highly magnified virtual images of tiny objects situated very close to the eye.
+</p>
+
+<div class="model-box">
+<h3>Magnifying Power (Angular Magnification, \(m\))</h3>
+<p>
+The magnifying power of an optical instrument is defined as the ratio of the angle subtended by the final image at the eye (\(\beta\)) to the angle subtended by the object at the un-aided eye (\(\alpha\)) when placed at the least distance of distinct vision (\(D\)).
+</p>
+\[ m = \frac{\tan \beta}{\tan \alpha} \approx \frac{\beta}{\alpha} \]
+<hr>
+
+<h3>Simple Microscope</h3>
+<p>
+A simple microscope consists of a single converging (convex) lens of short focal length. The object must be placed between the optical center and the principal focus to form an erect, magnified, virtual image.
+</p>
+<ul>
+<li><strong>When the final image is formed at the Near Point (\(D\)):</strong> This provides maximum angular magnification, but viewing causes eye strain.
+\[ m = 1 + \frac{D}{f} \]
+</li>
+<li><strong>When the final image is formed at Infinity (Normal Adjustment):</strong> The eye views the image in a relaxed state (minimum strain).
+\[ m = \frac{D}{f} \]
+</li>
+</ul>
+
+<hr>
+
+<h3>Compound Microscope</h3>
+<p>
+To achieve much higher magnification than possible with a single thick lens, a compound microscope uses two separated convex lenses: an <strong>Objective</strong> lens (small aperture, small focal length) near the object, and an <strong>Eyepiece</strong> (larger aperture, larger focal length) near the eye.
+</p>
+<p>
+The objective forms a real, magnified, inverted image of the object. This intermediate image falls exactly between the optical center and focus of the eyepiece. The eyepiece then acts as a simple microscope, forming a massive, virtual final image.
+</p>
+<ul>
+<li><strong>Total Magnification (\(m\)):</strong> Let \(m_o\) be linear magnification of objective, and \(m_e\) be the magnifying power of the eyepiece.
+\[ m = m_o \times m_e \approx -\left(\frac{L}{f_o}\right) \left(1 + \frac{D}{f_e}\right) \]
+(for image at near point, where \(L\) is the tube length).
+</li>
+<li><strong>For Normal Adjustment (Image at Infinity):</strong>
+\[ m \approx -\left(\frac{L}{f_o}\right) \left(\frac{D}{f_e}\right) \]
+</li>
+</ul>
+<p><em>The negative sign indicates the final image is inverted relative to the original microscopic object.</em></p>
+</div>
+</section>
+
+<section>
+<h2>Astronomical and Terrestrial Telescope</h2>
+<p>
+Telescopes are instruments specifically designed to greatly increase the visual angle subtended by vastly distant celestial bodies.
+</p>
+<p>
+A refracting telescope primarily consists of an <strong>Objective</strong> lens (massive aperture, massive focal length to collect maximum light) and an <strong>Eyepiece</strong> (small focal length).
+</p>
+
+<div class="model-box">
+<h3>Astronomical Refracting Telescope</h3>
+<p>
+Since celestial objects are infinitely far away, parallel rays fall on the objective lens. It forms a real, inverted, diminished image exactly at its principal focus \(F_o\).
+</p>
+<p>
+To view this image with relaxed eyes (Normal Adjustment), the eyepiece is positioned such that its focus \(F_e\) perfectly coincides with \(F_o\). The final image is formed at infinity. The image is inverted.
+</p>
+<ul>
+<li><strong>Magnifying Power (Normal Adjustment):</strong>
+\[ m = -\frac{f_o}{f_e} \]
+</li>
+<li><strong>Length of Telescope Tube (\(L\)):</strong>
+\[ L = f_o + f_e \]
+</li>
+</ul>
+<hr>
+
+<h3>Terrestrial Telescope</h3>
+<p>
+For observing objects on Earth, an inverted final image is unacceptable. A Terrestrial telescope introduces a third intermediate convex lens—an <strong>Erecting Lens</strong>.
+</p>
+<p>
+The erecting lens (focal length \(f\)) is placed at a distance \(2f\) from the first image formed by the objective. It creates a real but <strong>erect</strong> intermediate image of identical size, also at a distance \(2f\) on its other side. This second image is then viewed by the eyepiece.
+</p>
+<ul>
+<li><strong>Magnifying Power (Normal Adjustment):</strong> remains unchanged.
+\[ m = \frac{f_o}{f_e} \] (positive since image is erect).
+</li>
+<li><strong>Length of Telescope Tube (\(L\)):</strong>
+\[ L = f_o + 4f + f_e \]
+</li>
+</ul>
+</div>
+
+<div class="insightbox">
+Because refracting telescopes suffer from severe <em>chromatic</em> and <em>spherical aberration</em>, modern professional astronomy universally uses large Reflecting Telescopes (e.g., Cassegrain telescopes) utilizing parabolic mirrors as their objective element.
+</div>
+</section>
+
+<section>
+<h2>Resolving Power of Optical Instruments</h2>
+<p>
+Magnification alone does not guarantee a crisp image. Even if an image is large, if two close point sources blur together, no details are visible. This blurring is due to the wave nature of light (diffraction) passing through the circular aperture of the instrument's objective lens.
+</p>
+<div class="model-box">
+<h3>Resolving Power</h3>
+<p>
+The resolving power of an instrument is its ability to produce distinctly separated optical images of two closely spaced objects. It is the reciprocal of its limit of resolution.
+</p>
+
+<ol>
+<li>
+<strong>Resolving Power of a Telescope:</strong> Telescopes resolve two distant stars separated by a tiny angle \(d\theta\).
+\[ \text{Resolving Power} = \frac{1}{\Delta \theta} = \frac{D}{1.22 \cdot \lambda} \]
+Where \(D\) is the diameter (aperture) of the objective lens, and \(\lambda\) is the wavelength of light. Larger telescopes have higher resolving power.
+</li>
+<li>
+<strong>Resolving Power of a Microscope:</strong> Microscopes resolve two tiny object points separated by a small physical distance \(d_{\text{min}}\).
+\[ \text{Resolving Power} = \frac{1}{d_{\text{min}}} = \frac{2 \cdot n \cdot \sin \beta}{1.22 \cdot \lambda} \]
+Where \(n \sin \beta\) is called the <strong>Numerical Aperture</strong> of the objective lens.
+</li>
+</ol>
+<p>To maximize resolving power in an optical microscope, one should use a tiny wavelength (e.g., ultraviolet light or electrons in electron microscopes) and immerse the objective in oil (increasing \(n\)).</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
+</div>
+</body>
+</html>

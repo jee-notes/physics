@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silvering of Lenses | Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Geometrical Optics
+</a>
+</nav>
+
+<h1>Silvering of Lenses</h1>
+<p class="subtitle">
+When a lens is combined with a mirror to reflect light back.
+</p>
+
+<section>
+<h2>Silvering of One Surface of a Lens</h2>
+<p>
+When one surface of a lens is silvered (coated with a reflecting material), the lens no longer simply transmits light. Instead, light enters the lens through the first surface (undergoing refraction), travels through the lens material, strikes the silvered second surface (undergoing reflection), and finally emerges back out through the first surface (undergoing a second refraction).
+</p>
+<div class="insightbox">
+Because the light is ultimately reflected back into the medium from which it came, a silvered lens <strong>behaves as a mirror</strong>. Its overall optical behavior is characterized by an equivalent focal length of a spherical mirror.
+</div>
+</section>
+
+<section>
+<h2>Effective Focal Length of Silvered Lenses</h2>
+<p>
+To find the effective focal length \(F\) of a silvered lens, we sum the powers of the individual optical components the light encounters. The total power \(P\) is the sum of the power of the lens (\(P_L\)) during the first pass, the power of the mirror (\(P_M\)) at the silvered surface, and the power of the lens (\(P_L\)) during the return pass.
+</p>
+<p>
+Therefore, the effective power \(P\) is:
+</p>
+\[ P = P_L + P_M + P_L = 2P_L + P_M \]
+
+<p>
+Since an equivalent mirror has power \(P = -\frac{1}{F}\), power of a lens is \(P_L = \frac{1}{f_l}\), and power of a curved mirror is \(P_M = -\frac{1}{f_m}\), we get:
+</p>
+<div class="model-box">
+<h3>Formula for Equivalent Focal Length</h3>
+\[ -\frac{1}{F} = \frac{2}{f_l} - \frac{1}{f_m} \]
+\[ F = - \frac{f_l \cdot f_m}{2f_m - f_l} \]
+<p>Where:</p>
+<ul>
+<li>\(F\) = Equivalent focal length of the combined mirror system.</li>
+<li>\(f_l\) = Focal length of the unsilvered lens (calculated using Lens Maker's Formula).</li>
+<li>\(f_m\) = Focal length of the mirror formed by the silvered surface (\(f_m = -R/2\) per Cartesian sign convention).</li>
+</ul>
+<p><em>Always apply proper sign conventions for individual focal lengths.</em></p>
+</div>
+
+<div class="examplebox">
+<h3>Case: Plano-Convex Lens Silvered at the Plane Surface</h3>
+<p>
+Consider a plano-convex lens with a curved surface of radius \(R\), silvered on its plane surface.
+</p>
+<p>
+1. <strong>Focal length of the lens (\(f_l\)):</strong> Using the Lens Maker's Formula (\(R_1 = R, R_2 = \infty\)):
+\[ \frac{1}{f_l} = (n - 1)\left(\frac{1}{R} - 0\right) = \frac{n-1}{R} \]
+</p>
+<p>
+2. <strong>Focal length of the plane mirror (\(f_m\)):</strong> Infinite.
+\[ f_m = \infty \quad \Rightarrow \quad \frac{1}{f_m} = 0 \]
+</p>
+<p>
+3. <strong>Effective focal length (\(F\)):</strong>
+\[ -\frac{1}{F} = 2\left(\frac{n-1}{R}\right) - 0 \]
+\[ F = -\frac{R}{2(n-1)} \]
+</p>
+<p>
+Since \(F\) is negative, the entire system behaves as a <strong>concave mirror</strong> of focal length \(\frac{R}{2(n-1)}\).
+</p>
+</div>
+</section>
+
+<section>
+<h2>Displacement Method for Convex Lens</h2>
+<p>
+The displacement method is an elegant experimental technique used to accurately determine the focal length of a convex lens. It exploits the reversibility of light paths.
+</p>
+<p>
+If an object and a screen are placed at a fixed distance \(D\) apart, and a convex lens of focal length \(f\) is placed between them, there are often <strong>two</strong> distinct positions of the lens where a sharp real image of the object is formed on the screen.
+</p>
+
+<div class="model-box">
+<h3>Displacement Formula</h3>
+<p>
+Let the fixed distance between the object and screen be \(D\). Let the distance between the two distinct lens positions that form a sharply focused image on the screen be \(x\). The focal length \(f\) of the convex lens is given by:
+</p>
+\[ f = \frac{D^2 - x^2}{4D} \]
+</div>
+
+<div class="concept-box">
+<h3>Crucial Insights for the Displacement Method</h3>
+<ul>
+<li><strong>Condition for Formation of Two Images:</strong> Real images can only be formed at two distinct positions if the fixed distance between the object and screen satisfies the condition \(D \ge 4f\).</li>
+<li>If \(D = 4f\), the two lens positions coincide exactly midway between the object and screen (\(x = 0\)).</li>
+<li>If \(D < 4f\), no real image is formed on the screen for any position of the lens.</li>
+<li><strong>Magnifications:</strong> If \(m_1\) is the magnification at the first lens position and \(m_2\) is the magnification at the second lens position, their product is exactly unity:
+\[ m_1 \times m_2 = 1 \]
+Meaning, one image is magnified and the other is diminished by the same reciprocal factor.
+</li>
+<li><strong>Object Size:</strong> If the sizes (heights) of the two images formed are \(O_1\) and \(O_2\), the true size of the object \(O\) is the geometric mean of the image sizes:
+\[ O = \sqrt{O_1 \cdot O_2} \]
+</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
+</div>
+</body>
+</html>

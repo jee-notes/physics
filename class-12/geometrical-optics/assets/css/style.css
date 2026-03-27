@@ -3,11 +3,12 @@
     --secondary: #c0392b;
     --accent: #e74c3c;
     --bg: #fdfafa;
-	--bgdark:#fdedec;	
-	--bgbox:#fef9f9;
-    --text:#1f2d2b;
-    --muted:#64748b;
-    --border:#d7f3e3;
+    --card:#ffffff;
+    --bg-soft:#fdedec;
+    --bg-box:#fef9f9;
+    --text:#333;
+    --muted:#6b7280;
+    --border:#f5e4e4;
 }
 /* ------------------ Global ------------------ */
 *{
