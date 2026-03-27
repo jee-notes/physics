@@ -1,228 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Measurements and Errors | JEE Physics Notes</title>
-    <script src="./assets/js/math.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #c0392b;
-            --accent: #e74c3c;
-            --bg: #fdfafa;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            background: var(--bg);
-            color: #333;
-            margin: 0;
-            padding: 30px;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: auto;
-            background: #fff;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        h1,
-        h2,
-        h3 {
-            color: var(--primary);
-        }
-
-        h1 {
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 12px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-            opacity: 0.7;
-            margin-bottom: 35px;
-            font-size: 0.95rem;
-        }
-
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 15px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        section:not(:last-of-type)::after {
-            content: "";
-            display: block;
-            height: 1px;
-            margin-top: 40px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
-        }
-
-        .top-nav {
-            margin-bottom: 35px;
-        }
-
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            background: #fdedec;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--primary);
-            transition: all 0.25s ease;
-        }
-
-        .back-btn:hover {
-            background: #fadbd8;
-            transform: translateX(-3px);
-        }
-
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .chapter-list {
-            margin-top: 25px;
-        }
-
-        .chapter-list a {
-            display: block;
-            padding: 18px 20px;
-            margin-bottom: 15px;
-            background: #fef9f9;
-            border-left: 5px solid var(--secondary);
-            border-radius: 10px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: all 0.25s ease;
-            position: relative;
-        }
-
-        .chapter-list a::after {
-            content: "→";
-            position: absolute;
-            right: 20px;
-            opacity: 0.4;
-            transition: all 0.25s ease;
-        }
-
-        .chapter-list a:hover {
-            background: #fdedec;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-        }
-
-        .chapter-list a:hover::after {
-            opacity: 1;
-            right: 15px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-
-        hr {
-            margin: 40px 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #ccc, transparent);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measurements and Errors | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
-        <h1>Measurements and Errors</h1>
-        <p class="subtitle">
-            Managing the inevitable uncertainties of the physical world.
-        </p>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Measurements and Errors</h1>
+<p class="subtitle">
+Managing the inevitable uncertainties of the physical world.
+</p>
 
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                Physics relies on measurements to validate theories. However, no measurement is ever "perfect". Every
-                instrument has a limit, and every process has flaws. Understanding these limits is just as important as
-                the measurement itself.
-            </p>
-            <p>
-                This chapter deals with how we quantify these uncertainties and how they propagate through our
-                calculations.
-            </p>
-        </section>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Physics relies on measurements to validate theories. However, no measurement is ever "perfect". Every
+instrument has a limit, and every process has flaws. Understanding these limits is just as important as
+the measurement itself.
+</p>
+<p>
+This chapter deals with how we quantify these uncertainties and how they propagate through our
+calculations.
+</p>
+</section>
 
-        <section>
-            <h2>Precision vs. Truth</h2>
-            <p>
-                A measurement can be very consistent (Precise) without being correct (Accurate). Scientific rigor
-                requires us to distinguish between being reliably wrong and being close to the truth.
-            </p>
-        </section>
+<section>
+<h2>Precision vs. Truth</h2>
+<p>
+A measurement can be very consistent (Precise) without being correct (Accurate). Scientific rigor
+requires us to distinguish between being reliably wrong and being close to the truth.
+</p>
+</section>
 
-        <section>
-            <h2>The Philosophy of Uncertainty</h2>
-            <p>
-                In physics, "Error" doesn't mean a mistake. It refers to the uncertainty that is inherent in every
-                experimental outcome. A result reported without an error margin is scientifically incomplete.
-            </p>
-            <div class="insightbox">
-                Precision is about the instrument's resolution; Accuracy is about the method's reliability.
-            </div>
-        </section>
+<section>
+<h2>The Philosophy of Uncertainty</h2>
+<p>
+In physics, "Error" doesn't mean a mistake. It refers to the uncertainty that is inherent in every
+experimental outcome. A result reported without an error margin is scientifically incomplete.
+</p>
+<div class="insightbox">
+Precision is about the instrument's resolution; Accuracy is about the method's reliability.
+</div>
+</section>
 
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>Accuracy & Precision</strong> — Concepts of closeness and repeatability.</li>
-                <li><strong>Types of Errors</strong> — Categorizing random and systematic flaws.</li>
-                <li><strong>Error Calculation</strong> — Absolute, relative, and percentage metrics.</li>
-                <li><strong>Propagation</strong> — How errors combine in mathematical operations.</li>
-                <li><strong>Significant Figures</strong> — Reflecting the reliability of data.</li>
-                <li><strong>Practical Tools</strong> — Mastering the Vernier Calipers and Screw Gauge.</li>
-            </ul>
-        </section>
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+<li><strong>Accuracy & Precision</strong> — Concepts of closeness and repeatability.</li>
+<li><strong>Types of Errors</strong> — Categorizing random and systematic flaws.</li>
+<li><strong>Error Calculation</strong> — Absolute, relative, and percentage metrics.</li>
+<li><strong>Propagation</strong> — How errors combine in mathematical operations.</li>
+<li><strong>Significant Figures</strong> — Reflecting the reliability of data.</li>
+<li><strong>Practical Tools</strong> — Mastering the Vernier Calipers and Screw Gauge.</li>
+</ul>
+</section>
 
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-accuracy-and-precision.html">1. Accuracy and Precision</a>
-                <a href="./02-types-of-errors.html">2. Systematic and Random Errors</a>
-                <a href="./03-error-calculation.html">3. Calculating Error Metrics</a>
-                <a href="./04-propagation-of-errors.html">4. Propagation of Errors</a>
-                <a href="./05-significant-figures.html">5. Significant Figures & Rounding</a>
-                <a href="./06-vernier-calipers.html">6. Practical: Vernier Calipers</a>
-                <a href="./07-screw-gauge.html">7. Practical: Micrometer Screw Gauge</a>
-            </div>
-        </section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-accuracy-and-precision.html">1. Accuracy and Precision</a>
+<a href="./02-types-of-errors.html">2. Systematic and Random Errors</a>
+<a href="./03-error-calculation.html">3. Calculating Error Metrics</a>
+<a href="./04-propagation-of-errors.html">4. Propagation of Errors</a>
+<a href="./05-significant-figures.html">5. Significant Figures & Rounding</a>
+<a href="./06-vernier-calipers.html">6. Practical: Vernier Calipers</a>
+<a href="./07-screw-gauge.html">7. Practical: Micrometer Screw Gauge</a>
+</div>
+</section>
 
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>

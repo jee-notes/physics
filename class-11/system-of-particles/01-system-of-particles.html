@@ -1,109 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System of Particles | System of Particles</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>System of Particles | System of Particles</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to System of Particles
-            </a>
-        </nav>
-
-        <h1>System of Particles</h1>
-        <p class="subtitle">
-            What defines a system, and why the distinction between internal and external forces matters.
-        </p>
-
-        <section>
-            <h2>What is a System of Particles?</h2>
-            <p>
-                A <strong>system of particles</strong> is any collection of two or more particles that we choose to
-                analyse together. The "system" is defined by the physicist — we draw an imaginary boundary and classify
-                everything inside as the system and everything outside as the surroundings.
-            </p>
-            <p>
-                Once the boundary is drawn, every force acting on every particle in the system falls into one of two
-                categories:
-            </p>
-            <ul>
-                <li><strong>Internal forces:</strong> Forces between particles within the system (e.g., tension in a
-                    rope connecting two blocks, gravitational pull between two masses in the system).</li>
-                <li><strong>External forces:</strong> Forces exerted on the system by objects outside it (e.g., gravity
-                    from the Earth, applied push, friction from the ground).</li>
-            </ul>
-            <div class="insightbox">
-                The classification of a force as internal or external depends entirely on how you define your system. A
-                force that is external for one choice of system may become internal if you expand the system boundary to
-                include its source.
-            </div>
-        </section>
-
-        <section>
-            <h2>Why This Distinction Matters</h2>
-            <p>
-                By Newton's third law, internal forces always come in equal and opposite pairs. When you sum all forces
-                on all particles, the internal forces cancel exactly:
-            </p>
-            \[\sum \vec{F}_{\text{internal}} = 0\]
-            <p>
-                Therefore, the net force on the system is due entirely to external forces:
-            </p>
-            \[\vec{F}_{\text{net on system}} = \sum \vec{F}_{\text{external}}\]
-            <p>
-                This is an extraordinarily powerful result. It means we can predict the overall motion of the system
-                (through its centre of mass) without knowing anything about the internal forces — no matter how complex.
-            </p>
-        </section>
-
-        <section>
-            <h2>Examples of Systems</h2>
-            <ul>
-                <li><strong>Two blocks connected by a spring:</strong> The spring force is internal; gravity and normal
-                    force from the surface are external.</li>
-                <li><strong>A bullet and a gun:</strong> The explosion forces are internal; gravity is external. Total
-                    momentum is conserved if we neglect gravity during the short firing time.</li>
-                <li><strong>Fragments of an exploding bomb:</strong> Explosion forces are internal. If the bomb was in
-                    free fall (no support), the centre of mass continues its parabolic trajectory undisturbed.</li>
-                <li><strong>Two colliding balls:</strong> Contact forces during collision are internal. If the collision
-                    is brief, external forces have negligible impulse → momentum conserved.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Rigid Bodies as Systems</h2>
-            <p>
-                A <strong>rigid body</strong> is a special system in which the distance between any two particles
-                remains constant. No matter what forces act, the body does not deform. This idealisation allows us to
-                describe the motion of a rigid body purely in terms of:
-            </p>
-            <ul>
-                <li>Translation of the centre of mass, and</li>
-                <li>Rotation about the centre of mass.</li>
-            </ul>
-            <p>
-                The system-of-particles framework is the foundation for both translational dynamics (this chapter) and
-                rotational dynamics (rotational motion chapter).
-            </p>
-            <div class="insightbox">
-                Every extended object is, at its core, a system of particles. The methods developed here — centre of
-                mass, momentum conservation, impulse — do not require the object to be rigid and work just as well for
-                deformable systems such as colliding bodies, explosions, and fluid flows.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to System of Particles
+</a>
+</nav>
+<h1>System of Particles</h1>
+<p class="subtitle">
+What defines a system and why the distinction between internal and external forces matters.
+</p>
+<section>
+<h2>What is a System of Particles?</h2>
+<p>
+A <strong>system of particles</strong> is any collection of two or more particles that we choose to analyse together. The "system" is defined by the physicist — we draw an imaginary boundary and classify everything inside as the system and everything outside as the surroundings.
+</p>
+<p>
+Once the boundary is drawn, every force acting on every particle in the system falls into one of two categories:
+</p>
+<ul>
+<li><strong>Internal forces:</strong> Forces between particles within the system (e.g., tension in a rope connecting two blocks, gravitational pull between two masses in the system).</li>
+<li><strong>External forces:</strong> Forces exerted on the system by objects outside it (e.g., gravity from the Earth, applied push, friction from the ground).</li>
+</ul>
+<p>
+This approach of classifying interactions as internal and external is called <strong>system approach</strong>. 
+</p>
+<div class="insightbox">
+The classification of a force as internal or external depends entirely on how you define your system. A force that is external for one choice of system may become internal if you expand the system boundary to include its source.
+</div>
+</section>
+<section>
+<h2>Why This Distinction Matters</h2>
+<p>
+By Newton's third law, internal forces always come in equal and opposite pairs. When you sum all forces on all particles, the internal forces cancel exactly:
+</p>
+\[\sum \vec{F}_{\text{internal}} = 0\]
+<p>
+Therefore, the net force on the system is due entirely to external forces:
+</p>
+\[\vec{F}_{\text{net on system}} = \sum \vec{F}_{\text{external}}\]
+<p>
+This is an extraordinarily powerful result. It means we can predict the overall motion of the system (through its centre of mass) without knowing anything about the internal forces — no matter how complex.
+</p>
+</section>
+<section>
+<h2>Examples of Systems</h2>
+<ul>
+<li><strong>Two blocks connected by a spring:</strong> The spring force is internal; gravity and normal force from the surface are external.</li>
+<li><strong>A bullet and a gun:</strong> The explosion forces are internal; gravity is external. Total momentum is conserved if we neglect gravity during the short firing time.</li>
+<li><strong>Fragments of an exploding bomb:</strong> Explosion forces are internal. If the bomb was in free fall (no support), the centre of mass continues its parabolic trajectory undisturbed.</li>
+<li><strong>Two colliding balls:</strong> Contact forces during collision are internal. If the collision is brief, external forces have negligible impulse → momentum conserved.</li>
+</ul>
+</section>
+<section>
+<h2>Rigid Bodies as Systems</h2>
+<p>
+A <strong>rigid body</strong> is a special system in which the distance between any two particles remains constant. This is a kinematic constraint — it restricts how the system can move, independent of the forces acting on it.
+</p>
+<p>
+This constraint gives rigid body motion a definite structure. The motion can always be described as a combination of two modes:
+</p>
+<ul>
+<li>
+<strong>Translation:</strong> All points of the body have the same velocity and acceleration.
+</li>
+<li>
+<strong>Rotation:</strong> For any chosen point on the body, once its motion is accounted for (as translation), the remaining motion of the body is a rotation characterized by a single angular velocity about that point.
+</li>
+</ul>
+<p>
+This decomposition is purely kinematic and holds irrespective of the dynamics involved. The choice of point is arbitrary — no point on the body is fundamentally special — and the same angular velocity describes the rotational aspect of motion for the entire body.
+</p>
+<p>
+The system-of-particles framework is the foundation for both translational dynamics (this chapter) and rotational dynamics (rotational motion chapter).
+</p>
+<div class="insightbox">
+The rigid body constraint is not a statement about forces, but about allowed motion. It ensures that the motion of the system can always be decomposed into translation and rotation, and this decomposition can be constructed using any point on the body without privileging a specific one.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
