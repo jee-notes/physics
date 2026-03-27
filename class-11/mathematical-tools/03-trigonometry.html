@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematical Tools | Trigonometry </title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Mathematical Tools
+</a>
+</nav>
+<h1>Trigonometry</h1>
+<p class="subtitle">
+Relation between length and angles.
+</p>
+<section>
+<h2>Angle</h2>
+<p>
+In physics, an angle is more than just a shape; it represents <strong>rotation</strong> or a <strong>phase</strong>. 
+</p>
+<div class="concept-box">
+<p>
+We define the angle \(\theta\) as the ratio of arc length \(s\) to the radius \(r\):
+</p>
+\[ \theta = \frac{s}{r} \]
+<p>
+Since it is a ratio of lengths, the <strong>Radian</strong> is a "dimensionless" unit. In Physics, always assume \(\theta\) is in radians unless specified in degrees.
+</p>
+</div>
+<p>
+<strong>Conversion:</strong> \(180^\circ = \pi \text{ radians}\). For small angles (common in Paraxial Optics), \(\sin \theta \approx \theta\) and \(\tan \theta \approx \theta\).
+</p>
+</section>
+<section>
+<h2>Unit Circle is a Wrapped Number Line</h2>
+<p>
+Think of the unit circle (radius \(= 1\)) as a number line that has been wrapped around a cylinder. 
+</p>
+<p>
+Every point on this circle is defined by coordinates \((x, y)\). Because the radius is \(1\), these coordinates directly give us the fundamental ratios:
+</p>
+<ul>
+<li>The \(x\)-coordinate is \(\cos \theta\).</li>
+<li>The \(y\)-coordinate is \(\sin \theta\).</li>
+</ul>
+<p>
+This "wrapping" explains <strong>periodicity</strong>. As you keep moving along the number line, you keep passing the same points on the circle every \(2\pi\) interval. This is why waves repeat themselves.
+</p>
+</section>
+<section>
+<h2>Trigonometric Ratios</h2>
+<p>
+While <em>Right Triangle Trigonometry</em> is the starting point, <em>Circular Trigonometry</em> is what we use in Physics for vectors.
+</p>
+<div class="model-box">
+<p>For a vector \(\vec{A}\) making an angle \(\theta\) with the x-axis:</p>
+<ul>
+<li>Horizontal Component: \(A_x = A \cos \theta\)</li>
+<li>Vertical Component: \(A_y = A \sin \theta\)</li>
+<li>The Identity: \(\sin^2 \theta + \cos^2 \theta = 1\) (This is just the Pythagorean theorem \(x^2 + y^2 = r^2\) in disguise).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Common Angles</h2>
+<p>
+In JEE problems, you must know the standard values. However, there is a "Physics Secret" triangle you must memorize: the <strong>3-4-5 Triangle</strong>.
+</p>
+
+<table>
+<tr>
+<th>Angle (\(\theta\))</th>
+<th>\(0^\circ\)</th>
+<th>\(30^\circ\)</th>
+<th>\(37^\circ\) (Approx)</th>
+<th>\(45^\circ\)</th>
+<th>\(53^\circ\) (Approx)</th>
+<th>\(60^\circ\)</th>
+<th>\(90^\circ\)</th>
+</tr>
+<tr>
+<td>\(\sin \theta\)</td>
+<td>\(0\)</td>
+<td>\(1/2\)</td>
+<td>\(3/5\)</td>
+<td>\(1/\sqrt{2}\)</td>
+<td>\(4/5\)</td>
+<td>\(\sqrt{3}/2\)</td>
+<td>\(1\)</td>
+</tr>
+<tr>
+<td>\(\cos \theta\)</td>
+<td>\(1\)</td>
+<td>\(\sqrt{3}/2\)</td>
+<td>\(4/5\)</td>
+<td>\(1/\sqrt{2}\)</td>
+<td>\(3/5\)</td>
+<td>\(1/2\)</td>
+<td>\(0\)</td>
+</tr>
+</table>
+</section>
+
+<section>
+<h2>Compound Angle</h2>
+<p>
+Physics often involves the "Superposition" of two different waves or forces. To find the result, we use compound angle formulas:
+</p>
+<div class="formula-box">
+\[ \sin(A \pm B) = \sin A \cos B \pm \cos A \sin B \]
+\[ \cos(A \pm B) = \cos A \cos B \mp \sin A \sin B \]
+</div>
+<p>
+<strong>Double Angle Formulas</strong> (Crucial for Projectile Motion range calculations):
+</p>
+<ul>
+<li>\(\sin 2\theta = 2 \sin \theta \cos \theta\)</li>
+<li>\(\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2\cos^2 \theta - 1 = 1 - 2\sin^2 \theta\)</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

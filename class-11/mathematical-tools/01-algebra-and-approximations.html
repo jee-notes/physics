@@ -1,75 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathematical Tools | Algebra & Approximations</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematical Tools | Algebra </title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Mathematical Tools
-            </a>
-        </nav>
-
-        <h1>Algebra & Binomial Approximations</h1>
-        <p class="subtitle">
-            Simplifying complex expressions for physical analysis.
-        </p>
-
-        <section>
-            <h2>1. Quadratic Equations</h2>
-            <p>
-                Quadratic equations frequently appear in Kinematics, especially when solving the displacement-time
-                relationship \(s = ut + \frac{1}{2}at^2\).
-            </p>
-            <div class="formula-block">
-                \[ ax^2 + bx + c = 0 \implies x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \]
-            </div>
-            <div class="insightbox">
-                In physics, we often must choose only one of the two roots based on physical constraints (e.g., time
-                \(t\) cannot be negative).
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Binomial Approximation</h2>
-            <p>
-                This is one of the most powerful tools for JEE physics. It allows us to simplify expressions involving
-                powers when one term is much smaller than the other.
-            </p>
-            <div class="formula-block">
-                \[ (1 + x)^n \approx 1 + nx \quad \text{for } |x| \ll 1 \]
-            </div>
-            <h3>Applications:</h3>
-            <ul>
-                <li><strong>Gravitation:</strong> Finding variation of \(g\) at height \(h\) where \(h \ll R_e\).</li>
-                <li><strong>Thermal Expansion:</strong> Calculating changes in area and volume from linear expansion.
-                </li>
-                <li><strong>Error Analysis:</strong> Propagating small fractional errors in compound quantities.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>3. Logarithms and Exponents</h2>
-            <p>
-                Wait useful for Radioactive Decay (\(N = N_0 e^{-\lambda t}\)) and Thermodynamics.
-            </p>
-            <div class="formula-block">
-                \[ \ln(x) = \log_e(x) \approx 2.303 \log_{10}(x) \]
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Mathematical Tools
+</a>
+</nav>
+<h1>Algebra</h1>
+<p class="subtitle">
+Arithmetic with variables.
+</p>
+<section>
+<h2>Algebra vs Arithmetic</h2>
+<p>
+Before discussing math tools, we must clearly understand the difference between arithmetic and algebra — because this distinction is not just technical, it is philosophical.
+</p>
+<p>
+Arithmetic deals with <strong>specific numbers</strong> and their operations — addition, subtraction, multiplication, division. Every arithmetic statement produces a definite numerical result.
+</p>
+<p>
+Algebra, on the other hand, introduces <strong>symbols</strong> (variables) into arithmetic. These symbols do not represent one fixed number — they represent <strong>a whole class of possible values</strong>.
+</p>
+<p>
+So algebra is not just "arithmetic with letters" — it is arithmetic that has been <strong>lifted from the specific to the general</strong>.
+</p>
+<p>
+Arithmetic answers the question: <strong>"What is the value?"</strong>
+</p>
+<p>
+Algebra answers a deeper question: <strong>"What is the structure of the relationship?"</strong>
+</p>
+</section>
+<section>
+<h2>The Power of Generalization</h2>
+<p>
+In arithmetic, you might calculate:
+\(5 + 5 + 5 = 15\).
+</p>
+<p>
+In algebra, we generalize this as: \(x + x + x = 3x\).
+</p>
+<p>
+This looks simple, but something profound has happened: we have moved from a <strong>single computation</strong> to a <strong>rule that works for infinitely many cases</strong>.
+</p>
+<p>
+For a physics student, this is the difference between calculating the speed of <strong>one</strong> specific car and deriving a <strong>formula</strong> that works for every moving object in the universe.
+</p>
+<p>
+This is why algebra is the language of physics — because nature does not operate on specific numbers, it operates on <strong>relationships</strong>.
+</p>
+<h3>Constants vs. Variables</h3>
+<ul class="model-box">
+<li>
+<strong>Constants:</strong> Fixed values that do not change within a given context. They often represent universal properties (like \(\pi\)) or fixed conditions (like \(g \approx 9.8 \, m/s^2\) near Earth).
+</li>
+<li>
+<strong>Variables:</strong> Symbols (usually \(x, y, t\)) representing quantities that can change. They encode <strong>freedom</strong> — allowing the same equation to describe many different physical situations.
+</li>
+</ul>
+<p>
+A key mental shift: a variable is not "unknown" — it is <strong>allowed to vary</strong>. Only in equations do variables sometimes become unknowns to be solved.
+</p>
+</section>
+<section>
+<h2>Algebraic Expressions &amp; Equations</h2>
+<div class="concept-box">
+<p>
+An <strong>expression</strong> is a mathematical "phrase" without an equals sign (e.g., \(2x + 5\)). It represents a <strong>quantity</strong>, but does not assert anything.
+</p>
+<p>
+An <strong>equation</strong> is a mathematical "sentence" stating that two expressions are equal (e.g., \(2x + 5 = 15\)). It represents a <strong>condition</strong> or <strong>constraint</strong>.
+</p>
+</div>
+<p>
+This distinction is crucial in physics:
+</p>
+<ul>
+<li>Expressions describe <strong>quantities</strong> (energy, force, velocity).</li>
+<li>Equations describe <strong>laws</strong> (Newton’s laws, conservation principles).</li>
+</ul>
+<p>
+In Physics, equations are our primary tools for modeling reality — they are not just calculations, they are <strong>statements about how the universe behaves</strong>.
+</p>
+</section>
+<section>
+<h2>Theory of Equations</h2>
+<p>
+In arithmetic, we compute answers.
+</p>
+<p>
+In algebra, we determine the <strong>value(s) of variables</strong> that make a statement true. These values are called <strong>roots</strong> or <strong>solutions</strong>.
+</p>
+<p>
+So solving an equation is not calculation — it is <strong>finding conditions under which a relationship holds</strong>.
+</p>
+<div class="concept-box">
+<h3>Degree of an Equation</h3>
+<p>
+The highest power of the variable determines the <strong>degree</strong>.
+</p>
+<p>
+In physics, the degree is not just mathematical — it reflects the <strong>nature of change</strong> in the system.
+</p>
+<ul>
+<li>
+<strong>Linear (\(ax + b = 0\)):</strong> Degree 1. Represents <strong>constant rate of change</strong>. Example: uniform motion \(v = u + at\).
+</li>
+<li>
+<strong>Quadratic (\(ax^2 + bx + c = 0\)):</strong> Degree 2. Represents <strong>changing rate of change</strong> (acceleration). Example: \(s = ut + \frac{1}{2}at^2\).
+</li>
+</ul>
+</div>
+<p>
+The <strong>Fundamental Theorem of Algebra</strong> tells us that a polynomial of degree \(n\) has exactly \(n\) roots (counting multiplicity and complex roots).
+</p>
+<p>
+In physics, this often translates into <strong>multiple possible events</strong>.
+</p>
+<p>
+For example, a quadratic equation in time may give two values:
+</p>
+<ul>
+<li>One corresponding to when an object reaches a certain point on the way up</li>
+<li>Another when it reaches the same point on the way down</li>
+</ul>
+<p>
+So multiple roots are not "extra solutions" — they represent <strong>different physical possibilities consistent with the same law</strong>.
+</p>
+</section>
+<section>
+<h2>System of Equations</h2>
+<p>
+Often, a single generalization is not enough, because multiple variables interact simultaneously. This leads to a <strong>system of equations</strong> (simultaneous equations).
+</p>
+<div class="model-box">
+<p>
+<strong>The Constraint Rule:</strong>  To solve for \(n\) unknown variables, you need at least \(n\) <strong>independent</strong> equations.
+</p>
+</div>
+<p>
+The word <strong>independent</strong> is critical — repeating the same information in different forms does not help. Each equation must add a new constraint.
+</p>
+<h3>Why this matters for Exams:</h3>
+<p>
+Consider two blocks connected by a string (pulley system). You have two unknowns:
+</p>
+<ul>
+<li>Tension (\(T\))</li>
+<li>Acceleration (\(a\))</li>
+</ul>
+<p>
+Arithmetic fails here because there is no single number to compute — there are <strong>interdependent quantities</strong>.
+</p>
+<p>
+So we build a system:
+</p>
+<ol>
+<li>For Block 1: \(m_1g - T = m_1a\)</li>
+<li>For Block 2: \(T - m_2g = m_2a\)</li>
+</ol>
+<p>
+Now something powerful happens: we use algebra to <strong>eliminate variables</strong>.
+</p>
+<p>
+Elimination is not just a trick — it is a way of isolating one relationship from a network of constraints.
+</p>
+<p>
+This is the real role of algebra in physics:
+</p>
+<p>
+<strong>It translates physical laws into solvable structures and extracts numerical predictions from them.</strong>
+</p>
+<p>
+Algebra is therefore the bridge between:
+</p>
+<ul>
+<li><strong>Physical Laws</strong> (conceptual understanding)</li>
+<li><strong>Numerical Results</strong> (measurable outcomes)</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
