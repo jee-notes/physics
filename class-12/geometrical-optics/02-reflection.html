@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflection | Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Geometrical Optics
+</a>
+</nav>
+
+<h1>Reflection of Light</h1>
+<p class="subtitle">
+The geometry of light interaction with reflective boundaries and variational principles.
+</p>
+<section>
+<h2>Laws of Reflection</h2>
+<p>
+When a light ray strikes a boundary, a portion of the energy returns to the original medium. This is modeled by two fundamental laws.
+</p>
+<div class="model-box">
+<h3>Geometric Statement</h3>
+<ol>
+<li><strong>First Law:</strong> The incident ray, the reflected ray, and the normal at the point of incidence are coplanar. This plane is known as the <em>plane of incidence</em>.</li>
+<li><strong>Second Law:</strong> The angle of incidence \(i\) is always equal to the angle of reflection \(r\).
+\[ \angle i = \angle r \]
+</li>
+</ol>
+</div>
+<h3>Vector Form</h3>
+<p>
+For 3D coordinate problems, we define the rays using unit vectors. Let \(\hat{i}\) be the unit vector along the incident ray and \(\hat{n}\) be the unit vector normal to the surface (directed into the incident medium). The reflected unit vector \(\hat{r}\) is given by:
+</p>
+<div class="concept-box" style="font-family: monospace;">
+\[ \hat{r} = \hat{i} - 2(\hat{i} \cdot \hat{n})\hat{n} \]
+</div>
+<p>
+This vector approach is essential for solving problems involving rotating mirrors or mirrors placed in arbitrary planes in 3D space.
+</p>
+</section>
+<section>
+<h2>Specular vs. Diffuse Reflection</h2>
+<p>
+Reflection behavior is determined by the surface "roughness" relative to the wavelength of light (\(\lambda \approx 400-700 \text{ nm}\)).
+</p>
+<ul>
+<li>
+<strong>Specular Reflection:</strong> Occurs on highly polished surfaces. Parallel incident rays remain parallel after reflection, preserving the wavefront and allowing image formation.
+</li>
+<li>
+<strong>Diffuse Reflection:</strong> Occurs on rough surfaces (like paper or walls). While the law \(\angle i = \angle r\) holds at every <strong>local point</strong>, the random orientation of local normals scatters rays in all directions.
+</li>
+</ul>
+<div class="insightbox">
+Specular reflection creates <em>images</em> (like in a mirror), while diffuse reflection allows us to <em>see</em> non-luminous objects from various angles.
+</div>
+</section>
+<section>
+<h2>Fermat’s Principle: The Variational Basis</h2>
+<p>
+The laws of reflection are a direct consequence of <strong>Fermat’s Principle of Least Time</strong>.
+</p>
+<div class="concept-box">
+"Light travels between two points along the path that requires the <strong>stationary</strong> (usually minimum) time."
+</div>
+<h3>Mathematical Derivation</h3>
+<p>
+To travel from point \(A\) to point \(B\) via reflection at point \(P\) on a mirror, the total path length \(L\) is:
+\[ L = \sqrt{x^2 + h_1^2} + \sqrt{(d-x)^2 + h_2^2} \]
+Since the speed of light is constant in the medium, minimizing time is equivalent to minimizing the path length \(L\). Taking the derivative with respect to the point of incidence \(x\) and setting it to zero:
+\[ \frac{dL}{dx} = \frac{x}{\sqrt{x^2 + h_1^2}} - \frac{d-x}{\sqrt{(d-x)^2 + h_2^2}} = 0 \]
+This simplifies to:
+\[ \sin i = \sin r \implies i = r \]
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
