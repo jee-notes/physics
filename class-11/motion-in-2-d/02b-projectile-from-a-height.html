@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile from a Height | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-projectile-motion.html" class="back-btn">
+<span>&larr;</span> Back to Projectile Motion
+</a>
+</nav>
+
+<h1>Projectile from a Height</h1>
+<p class="subtitle">
+Examining trajectories initiated above the landing plane.
+</p>
+
+<section>
+<h2>Horizontal Projection from a Tower</h2>
+<p>
+Consider a particle projected exactly horizontally with an initial speed \(u\) from the top of a tower of height \(h\).
+</p>
+<p>
+Because the launch is purely horizontal, the initial velocity components are:
+<ul>
+<li>\(u_x = u\)</li>
+<li>\(u_y = 0\)</li>
+</ul>
+</p>
+<div class="model-box">
+<strong>Time of Descent (\(T\)):</strong>
+<p>
+The time taken to hit the ground strictly depends on the vertical free fall. Using \(S_y = h\), \(u_y = 0\), and \(a_y = g\) (taking downward as positive for convenience):
+\[ h = (0)T + \frac{1}{2}g T^2 \implies T = \sqrt{\frac{2h}{g}} \]
+</p>
+</div>
+<div class="insightbox">
+This elegantly reveals that a bullet fired perfectly horizontally from a high cliff and an identical bullet simply dropped from rest from the same cliff will mathematically and physically strike the level ground at the absolute exact same moment. They share the same initial vertical velocity (zero) and undergo the same vertical acceleration (\(g\)).
+</div>
+<div class="model-box">
+<strong>Horizontal Range (\(R\)):</strong>
+<p>
+The horizontal distance traveled from the base of the tower is simply:
+\[ R = u_x \times T = u \sqrt{\frac{2h}{g}} \]
+</p>
+</div>
+</section>
+
+<section>
+<h2>Oblique Projection from a Tower</h2>
+<p>
+Now suppose the particle is projected from the tower of height \(h\) with an initial speed \(u\), but at an angle \(\theta\) <em>above</em> the horizontal.
+</p>
+<p>
+We set the launch point as the origin \((0,0)\). The ground is now physically located at a vertical displacement of \(y = -h\).
+</p>
+<ul>
+<li>\(u_x = u\cos\theta\)</li>
+<li>\(u_y = u\sin\theta\)</li>
+<li>\(a_y = -g\)</li>
+</ul>
+<div class="model-box">
+<strong>Time of Flight Calculation:</strong>
+<p>
+We substitute the final displacement into the vertical kinematic equation:
+\[ y = u_y t + \frac{1}{2} a_y t^2 \]
+\[ -h = (u\sin\theta)t - \frac{1}{2}gt^2 \]
+\[ \frac{1}{2}gt^2 - (u\sin\theta)t - h = 0 \]
+This yields a quadratic equation in \(t\). Solving this quadratic provides the total time of flight \(T\). Only the mathematically positive root is physically meaningful.
+</p>
+</div>
+<p>
+Once the time of flight \(T\) is secured, the horizontal range from the base of the tower is cleanly calculated as:
+\[ R = (u\cos\theta)T \]
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

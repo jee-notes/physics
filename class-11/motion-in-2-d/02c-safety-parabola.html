@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safety Parabola | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-projectile-motion.html" class="back-btn">
+<span>&larr;</span> Back to Projectile Motion
+</a>
+</nav>
+
+<h1>Safety Parabola</h1>
+<p class="subtitle">
+Defining the absolute bounding envelope for all possible projectiles launched with a fixed speed.
+</p>
+
+<section>
+<h2>Envelope of Projectile Trajectories</h2>
+<p>
+Imagine an artillery gun located at the origin \((0,0)\) capable of firing shells in absolutely any direction (\(\theta\) from \(0^\circ\) to \(180^\circ\)), but always with the exact same constant muzzle velocity \(u\).
+</p>
+<p>
+If we were to plot the trajectories of thousands of these shells fired at incrementally varying angles, they would create an expansive spray of overlapping parabolas. Interestingly, this spray is rigidly mathematically bounded. There is a specific distinct boundary curve in the 2D plane beyond which no shell—fired at any angle with speed \(u\)—can ever physically reach.
+</p>
+<div class="insightbox">
+This bounding geometrical curve is called the <strong>Envelope of Trajectories</strong> or the <strong>Safety Parabola</strong>. If you stand physically <em>outside</em> this specific region, you are fundamentally perfectly safe from projectile impact, regardless of where the gun is aimed, because the shells simply lack the energetic capacity (initial speed \(u\)) to mathematically reach your exact spatial coordinates.
+</div>
+</section>
+
+<section>
+<h2>Equation of the Safety Parabola</h2>
+<p>
+To analytically formally completely derive the algebraic equation for this protective geometrical boundary, we begin with the standard equation of trajectory:
+\[ y = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta} \]
+</p>
+<p>
+We convert this into a quadratic equation expressed simply in terms of \(\tan\theta\) by utilizing the trig identity \(\frac{1}{\cos^2\theta} = 1 + \tan^2\theta\):
+</p>
+\[ y = x\tan\theta - \frac{gx^2}{2u^2}(1 + \tan^2\theta) \]
+\[ \frac{gx^2}{2u^2}\tan^2\theta - x\tan\theta + \left(y + \frac{gx^2}{2u^2}\right) = 0 \]
+<p>
+For a specific target point \((x,y)\) to be physically reachable by the particle, there must exist at least one real value for the launch angle \(\theta\). Therefore, the Discriminant (\(D\)) of this quadratic equation must be strictly greater than or equal to zero.
+</p>
+<div class="model-box">
+<strong>Applying the Discriminant Condition (\(D \geq 0\)):</strong>
+\[ (-x)^2 - 4\left(\frac{gx^2}{2u^2}\right)\left(y + \frac{gx^2}{2u^2}\right) \geq 0 \]
+\[ x^2 - \frac{2gx^2}{u^2}\left(y + \frac{gx^2}{2u^2}\right) \geq 0 \]
+Divide completely by \(x^2\) (assuming \(x \neq 0\)):
+\[ 1 - \frac{2g}{u^2}y - \frac{g^2x^2}{u^4} \geq 0 \]
+Rearranging for \(y\):
+\[ y \leq \frac{u^2}{2g} - \frac{gx^2}{2u^2} \]
+</div>
+<div class="insightbox">
+The bounding equality explicitly forms the beautifully symmetric mathematical equation of the <strong>Safety Parabola</strong>:
+\[ y = \frac{u^2}{2g} - \frac{gx^2}{2u^2} \]
+Any point located physically structurally <em>above</em> this parabolic surface is definitively completely unreachable and completely safe.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

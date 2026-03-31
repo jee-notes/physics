@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartesian Vectors | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-kinematics-of-2d-motion.html" class="back-btn">
+<span>&larr;</span> Back to Kinematics of 2D Motion
+</a>
+</nav>
+
+<h1>Cartesian Vectors</h1>
+<p class="subtitle">
+Understanding the absolute spatial rigidity of the mathematical \(\hat{i}, \hat{j}\) framework.
+</p>
+
+<section>
+<h2>Free Vector vs. Bound Vector</h2>
+<p>
+Before analyzing specific coordinate systems, it is vital to mathematically distinguish between two fundamental classes of vectors utilized in classical mechanics:
+</p>
+<div class="model-box">
+<strong>Free Vectors:</strong>
+A vector whose physical action or mathematical definition is <em>not</em> rigidly tied to a specific point in space. It is characterized strictly by its magnitude and direction. If you parallel-translate a free vector anywhere across the coordinate plane, it remains the exact identical vector functionally. (e.g., a uniform velocity field, or a generic displacement vector \(\Delta\vec{r}\)).
+<br><br>
+<strong>Bound Vectors (or Localized Vectors):</strong>
+A vector whose geometric meaning or physical effect strictly depends on its exact point of application (its "tail"). If you physically translate it to a different location, it fundamentally changes the physical scenario. (e.g., the position vector \(\vec{r}\) originating specifically from the origin, or a force vector applied to a specific hinge on a door).
+</div>
+</section>
+
+<section>
+<h2>Constant Direction of the Unit Vector</h2>
+<p>
+The standard two-dimensional Cartesian coordinate system explicitly relies on orthogonal unit vectors \(\hat{i}\) (pointing along the positive x-axis) and \(\hat{j}\) (pointing along the positive y-axis).
+</p>
+<div class="insightbox">
+A profound and mathematically convenient property of Cartesian unit vectors \(\hat{i}\) and \(\hat{j}\) is that they are entirely <strong>free vectors</strong> with respect to their directional definition. Their orientation is absolutely logically invariant everywhere in the universe.
+</div>
+<p>
+Regardless of whether a particle is located at \((1,1)\) or at \((1000, -500)\), the \(\hat{i}\) vector at that localized position invariably points "horizontally to the right", and the \(\hat{j}\) vector invariably points "vertically upward". 
+</p>
+<p>
+Because their geometric orientation securely never structurally physically changes as a particle dynamically moves through space, the mathematical algebraic derivatives of these specific unit vectors with respect to time are identically zero:
+</p>
+\[ \frac{d\hat{i}}{dt} = 0 \quad \text{and} \quad \frac{d\hat{j}}{dt} = 0 \]
+<p>
+This absolute spatial invariant rigidity is precisely why deriving velocity in Cartesian coordinates is mechanically straightforward:
+\[ \frac{d}{dt}(x\hat{i} + y\hat{j}) = \left(\frac{dx}{dt}\right)\hat{i} + x\left(\frac{d\hat{i}}{dt}\right) + \left(\frac{dy}{dt}\right)\hat{j} + y\left(\frac{d\hat{j}}{dt}\right) = \dot{x}\hat{i} + \dot{y}\hat{j} \]
+The unit vectors transparently pass safely consistently directly through the time-derivative unbroken.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

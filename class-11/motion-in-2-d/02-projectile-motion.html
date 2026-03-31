@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Motion | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 2D
+</a>
+</nav>
+
+<h1>Projectile Motion</h1>
+<p class="subtitle">
+The most celebrated classical example of independent two-dimensional kinematics under constant acceleration.
+</p>
+
+<section>
+<h2>Principle of Physical Independence of Motions</h2>
+<p>
+When an object is thrown into the air, its subsequent unpowered flight under the sole influence of gravity (ignoring air resistance) is called <strong>Projectile Motion</strong>. The object mathematically traces a distinct, beautifully symmetric curve traversing both the horizontal and vertical spatial dimensions.
+</p>
+<p>
+Galileo was the first to mathematically codify the secret to solving projectile motion: <strong>Physical Independence</strong>. The horizontal progression of the projectile is absolutely completely mechanically blind to its vertical vertical rise and fall.
+</p>
+<div class="insightbox">
+A projectile is merely two independent 1D motions happening simultaneously on the exact same stopwatch:
+<br>1. A simple, perfectly uniform horizontal motion (constant velocity).
+<br>2. A standard, 1D vertical free-fall motion (constant acceleration \(g\)).
+</div>
+<p>
+Because gravity (\(\vec{g}\)) points strictly vertically downward, it definitively possesses absolutely zero horizontal geometric component (\(g\cos 90^\circ = 0\)). Therefore, throughout the entirety of the flight, the horizontal mathematical acceleration \(a_x\) is rigidly exactly zero.
+</p>
+</section>
+
+<section>
+<h2>Equation of Trajectory</h2>
+<p>
+To visualize the exact physical path the projectile traces in the actual \((x,y)\) sky, we must derive its Equation of Trajectory—a direct mathematical relationship seamlessly connecting the \(y\) coordinate to the \(x\) coordinate, effectively eliminating the temporal parameter \(t\).
+</p>
+<p>
+Suppose a particle is launched strictly from the origin \((0,0)\) with an initial specific velocity \(u\) dynamically oriented at an angle \(\theta\) above the purely horizontal plane.
+</p>
+<div class="model-box">
+<strong>Resolution of Launch Velocity:</strong>
+<ul>
+<li>Horizontal: \(u_x = u\cos\theta\)  (constant since \(a_x = 0\))</li>
+<li>Vertical: \(u_y = u\sin\theta\)  (subject to \(a_y = -g\))</li>
+</ul>
+</div>
+<p>
+Using basic 1D kinematic equations, the position explicitly at any given time \(t\) is:
+</p>
+<ol>
+<li><strong>Horizontal constraint:</strong> \( x(t) = (u\cos\theta)t \)</li>
+<li><strong>Vertical constraint:</strong> \( y(t) = (u\sin\theta)t - \frac{1}{2}gt^2 \)</li>
+</ol>
+<p>
+To ruthlessly eliminate \(t\), we mathematically cleanly securely isolate it precisely rigidly from Equation 1: \(t = \frac{x}{u\cos\theta}\) and vigorously precisely directly effectively neatly efficiently safely neatly accurately explicitly precisely smoothly neatly substitute it fundamentally strictly directly mathematically cleanly into Equation 2.
+</p>
+\[ y = (u\sin\theta)\left(\frac{x}{u\cos\theta}\right) - \frac{1}{2}g\left(\frac{x}{u\cos\theta}\right)^2 \]
+<div class="concept-box">
+<strong>The Classical Equation of Trajectory:</strong>
+\[ y = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta} \]
+<p>
+Because this rigorous equation clearly natively algebraically elegantly systematically cleanly mathematically identically perfectly securely inherently firmly accurately purely firmly firmly visibly smoothly neatly precisely takes the strict form \(y = ax - bx^2\), which is the standard canonical mathematical representation of a parabola, we brilliantly rigorously explicitly rigorously mathematically elegantly conclusively physically formally unequivocally definitively rigorously logically scientifically conclude that unresisted projectiles rigorously rigidly identically naturally natively physically universally systematically safely elegantly strictly natively elegantly strictly travel along <strong>parabolic paths</strong>.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Projectile Variations</h2>
+<div class="chapter-list">
+<a href="./02a-ground-to-ground-projectile.html">1. Ground-to-Ground Projectile</a>
+<a href="./02b-projectile-from-a-height.html">2. Projectile from a Height (Tower)</a>
+<a href="./02c-safety-parabola.html">3. Envelope and Safety Parabola</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

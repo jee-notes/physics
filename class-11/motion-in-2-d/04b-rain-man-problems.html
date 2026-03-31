@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rain-Man Problems | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-relative-motion-in-2d.html" class="back-btn">
+<span>&larr;</span> Back to Relative Motion in 2D
+</a>
+</nav>
+
+<h1>Rain-Man Problems</h1>
+<p class="subtitle">
+Determining the exact geometric angle required for moving observers to stay dry.
+</p>
+
+<section>
+<h2>Velocity of Rain relative to a Moving Observer</h2>
+<p>
+When it rains, the droplets typically fall vertically downward relative to the stationary ground, denoted \(\vec{v}_r\). If a man (the observer) is standing perfectly still on the ground, he experiences the rain falling straight down from the sky.
+</p>
+<p>
+However, if the man begins to run horizontally with a velocity \(\vec{v}_m\), his frame of reference shifts dynamically. He will perceive the rain to be falling at an oblique slant, striking him in the face. To mathematically determine exactly how the rain appears to him, we must calculate the relative velocity of the rain with respect to the man, \(\vec{v}_{rm}\).
+</p>
+<div class="model-box">
+<strong>Vector Calculation:</strong>
+<p>
+Using the universal relative velocity formulation:
+\[ \vec{v}_{rm} = \vec{v}_r - \vec{v}_m \]
+</p>
+<p>
+Geometrically, this asserts that you take the downward pointing rain vector \(\vec{v}_r\) and add the reversed vector of the man's velocity \(-\vec{v}_m\). Because \(\vec{v}_r\) points vertically down and \(\vec{v}_m\) points horizontally, they constitute the two perpendicular legs of a right-angled triangle.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Adjusting Umbrella Angle</h2>
+<p>
+To protect himself from the apparent slanted rain, the man must tilt his umbrella to directly oppose the relative velocity vector \(\vec{v}_{rm}\).
+</p>
+<div class="model-box">
+<strong>Calculating the Tilt Angle (\(\theta\)):</strong>
+<p>
+Let the angle the umbrella needs to make with the vertical axis be \(\theta\).
+</p>
+<p>
+From the right-angled vector subtraction triangle:
+<ul>
+<li>Opposite side magnitude = \( |\vec{v}_m| \) (speed of the man)</li>
+<li>Adjacent side magnitude = \( |\vec{v}_r| \) (speed of the rain)</li>
+</ul>
+</p>
+\[ \tan\theta = \frac{|\vec{v}_m|}{|\vec{v}_r|} \implies \theta = \tan^{-1}\left(\frac{v_m}{v_r}\right) \]
+</div>
+<p>
+This relation proves that the faster the man runs (increasing \(v_m\)), the larger the angle \(\theta\) becomes, forcing him to tilt the umbrella further forward.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

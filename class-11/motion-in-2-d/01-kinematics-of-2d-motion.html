@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematics of 2D Motion | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 2D
+</a>
+</nav>
+
+<h1>Kinematics of 2D Motion</h1>
+<p class="subtitle">
+Establishing the fundamental vector formulations for spatial position, velocity, and acceleration.
+</p>
+
+<section>
+<h2>Position, Displacement, and Velocity Vectors</h2>
+<p>
+Unlike 1D motion where position is given merely by an \(x\)-coordinate, the exact location of a particle in a 2D plane perfectly requires two coordinates \((x, y)\). 
+</p>
+<div class="model-box">
+<strong>The Position Vector (\(\vec{r}\)):</strong>
+<p>
+A vector drawn directly from the mathematically chosen origin \((0,0)\) to the particle's present location \(P(x,y)\). It rigorously structurally pinpoints where the particle is inside the plane.
+</p>
+\[ \vec{r} = x\hat{i} + y\hat{j} \]
+The absolute distance from the origin is the magnitude: \(|\vec{r}| = \sqrt{x^2 + y^2}\).
+</div>
+<p>
+When the particle dynamically physically moves from point \(P_1(x_1, y_1)\) to \(P_2(x_2, y_2)\), its geometric shift is described precisely by the <strong>Displacement Vector</strong> (\(\Delta\vec{r}\)):
+</p>
+\[ \Delta\vec{r} = \vec{r}_2 - \vec{r}_1 = (x_2 - x_1)\hat{i} + (y_2 - y_1)\hat{j} \]
+\[ \Delta\vec{r} = \Delta x\hat{i} + \Delta y\hat{j} \]
+<p>
+By structurally evaluating the rate at which this displacement vector fundamentally changes over time, we define the <strong>Instantaneous Velocity Vector</strong> (\(\vec{v}\)):
+</p>
+\[ \vec{v} = \frac{d\vec{r}}{dt} = \frac{d}{dt}(x\hat{i} + y\hat{j}) = \frac{dx}{dt}\hat{i} + \frac{dy}{dt}\hat{j} \]
+\[ \vec{v} = v_x\hat{i} + v_y\hat{j} \]
+<div class="insightbox">
+Crucially, the instantaneous velocity vector is <em>always</em> perfectly geometrically tangent to the particle's actual curved path (trajectory) at any given exact specific instant.
+</div>
+</section>
+
+<section>
+<h2>Average and Instantaneous Acceleration in a Plane</h2>
+<p>
+If the velocity specifically visibly physically continuously alters either its raw scalar magnitude (speed) AND/OR its geometric vectorial spatial direction, the particle structurally unmistakably undergoes <strong>Acceleration</strong>.
+</p>
+<p>
+The <strong>Average Acceleration</strong> \(\vec{a}_{avg}\) over a time interval \(\Delta t\) is essentially simply:
+</p>
+\[ \vec{a}_{avg} = \frac{\Delta\vec{v}}{\Delta t} = \frac{\vec{v}_2 - \vec{v}_1}{t_2 - t_1} \]
+<p>
+By rigorously analytically aggressively shrinking the time interval \(\Delta t \rightarrow 0\), we logically meticulously precisely elegantly fundamentally isolate the exact <strong>Instantaneous Acceleration</strong> (\(\vec{a}\)):
+</p>
+<div class="model-box">
+\[ \vec{a} = \frac{d\vec{v}}{dt} = \frac{dv_x}{dt}\hat{i} + \frac{dv_y}{dt}\hat{j} \]
+\[ \vec{a} = a_x\hat{i} + a_y\hat{j} \]
+<p>
+Where \(a_x = \frac{d^2x}{dt^2}\) and \(a_y = \frac{d^2y}{dt^2}\).
+</p>
+</div>
+<p>
+Unlike velocity, the acceleration vector is famously <em>not</em> strictly tangent to the curved trajectory. It fundamentally dynamically explicitly typically usually distinctly points stubbornly generally rigidly decidedly inwardly directly toward the concave side of the curve, representing the physical force violently visibly structurally yanking the particle off its straight-line inertia path.
+</p>
+</section>
+
+<section>
+<h2>Coordinate Systems Foundations</h2>
+<div class="chapter-list">
+<a href="./01a-cartesian.html">1. Cartesian Vectors (Free/Bound)</a>
+<a href="./01b-polar.html">2. Polar unit vectors</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

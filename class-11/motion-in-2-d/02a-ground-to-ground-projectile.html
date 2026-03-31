@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ground-to-Ground Projectile | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-projectile-motion.html" class="back-btn">
+<span>&larr;</span> Back to Projectile Motion
+</a>
+</nav>
+
+<h1>Ground-to-Ground Projectile</h1>
+<p class="subtitle">
+Analyzing the standard symmetric trajectory over a level plane.
+</p>
+
+<section>
+<h2>Time of Flight and Maximum Height</h2>
+<p>
+Consider a projectile launched from the level ground \((y=0)\) with an initial velocity \(u\) at an angle \(\theta\) above the horizontal. It traces a parabolic path and eventually impacts the ground again.
+</p>
+<div class="model-box">
+<strong>Time of Flight (\(T\)):</strong>
+<p>
+The total time the projectile remains airborne can be found by setting the final vertical displacement \(y = 0\) in the fundamental kinematic equation:
+\[ y = u_y t + \frac{1}{2}a_y t^2 \]
+\[ 0 = (u\sin\theta)T - \frac{1}{2}g T^2 \]
+Assuming \(T \neq 0\) (which represents the launch moment), we solve for the impact time:
+\[ T = \frac{2u\sin\theta}{g} \]
+</p>
+</div>
+<div class="model-box">
+<strong>Maximum Height (\(H\)):</strong>
+<p>
+At the absolute peak of its trajectory, the vertical component of the projectile's velocity momentarily becomes zero (\(v_y = 0\)). Using the velocity-displacement kinematic equation:
+\[ v_y^2 = u_y^2 + 2a_y H \]
+\[ 0 = (u\sin\theta)^2 - 2g H \]
+\[ H = \frac{u^2\sin^2\theta}{2g} \]
+</p>
+</div>
+</section>
+
+<section>
+<h2>Horizontal Range and Maximum Range Conditions</h2>
+<p>
+The <strong>Horizontal Range (\(R\))</strong> is the total horizontal distance covered by the projectile during its complete time of flight \(T\).
+</p>
+<div class="model-box">
+<strong>Range Formula (\(R\)):</strong>
+<p>
+Since there is zero acceleration horizontally (\(a_x = 0\)), the horizontal distance is simply velocity multiplied by time:
+\[ R = u_x \times T = (u\cos\theta) \times \left(\frac{2u\sin\theta}{g}\right) \]
+Using the trigonometric identity \(2\sin\theta\cos\theta = \sin(2\theta)\), we elegantly obtain:
+\[ R = \frac{u^2\sin(2\theta)}{g} \]
+</p>
+</div>
+<div class="concept-box">
+<strong>Maximum Range Condition:</strong>
+For a fixed launch speed \(u\), the range \(R\) strictly depends on the angle \(\theta\). The range is mathematically maximized when \(\sin(2\theta)\) attains its maximum value of \(1\).
+<br><br>
+This explicitly occurs when \(2\theta = 90^\circ\), or unequivocally when exactly:
+\[ \theta = 45^\circ \]
+At this optimal launch angle, the absolute maximum horizontal range evaluates to:
+\[ R_{max} = \frac{u^2}{g} \]
+</div>
+<div class="insightbox">
+<strong>Complementary Launch Angles:</strong> Note that \(\sin(2\theta) = \sin(180^\circ - 2\theta) = \sin(2(90^\circ - \theta))\). This mathematical symmetry proves that two distinct complementary launch angles, \(\theta\) and \((90^\circ - \theta)\), will fundamentally produce the identically exact same horizontal range \(R\), despite tracing dramatically different height trajectories.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

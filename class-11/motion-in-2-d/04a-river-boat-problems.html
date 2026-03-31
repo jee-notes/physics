@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>River-Boat Problems | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-relative-motion-in-2d.html" class="back-btn">
+<span>&larr;</span> Back to Relative Motion in 2D
+</a>
+</nav>
+
+<h1>River-Boat Problems</h1>
+<p class="subtitle">
+Navigating cross-currents using vector velocity addition.
+</p>
+
+<section>
+<h2>Vector Setup</h2>
+<p>
+Consider a river of uniform width \(d\) flowing horizontally with a constant velocity \(\vec{v}_r\). A motorboat capable of a maximum speed \(v_b\) <em>in still water</em> attempts to cross it.
+</p>
+<div class="model-box">
+<strong>Velocity Definitions:</strong>
+<ul>
+<li>\(\vec{v}_r\): Velocity of the river current relative to the ground.</li>
+<li>\(\vec{v}_{br}\): Velocity of the boat explicitly <em>relative to the river water</em>. Its magnitude is strictly the still-water speed \(v_b\).</li>
+<li>\(\vec{v}_b\): Actual net velocity of the boat relative to the stationary ground observer.</li>
+</ul>
+<p>
+Following our fundamental relative velocity equation \(\vec{v}_{br} = \vec{v}_b - \vec{v}_r\), resolving for the actual ground velocity yields a vector addition:
+\[ \vec{v}_b = \vec{v}_{br} + \vec{v}_r \]
+</p>
+</div>
+<div class="insightbox">
+The boat structurally possesses entirely autonomous physical control over its orientation relative to the water (\(\vec{v}_{br}\)), but it has absolutely zero control over the unyielding downstream flow of the river (\(\vec{v}_r\)). The resultant path is their geometric sum.
+</div>
+</section>
+
+<section>
+<h2>Crossing the River in Shortest Time</h2>
+<p>
+The boat mathematically needs to traverse a vertical displacement distance \(d\). As established, horizontal flow cannot physically influence the vertical state.
+</p>
+<p>
+Therefore, to cross in the absolute shortest time \(T_{min}\), the boat must maximize its vertical velocity component. This strictly means pointing the nose of the boat exactly structurally perpendicular straight across the river flow.
+</p>
+<div class="model-box">
+<strong>Shortest Time Condition:</strong>
+<ul>
+<li>Set the heading angle perpendicular: \(\theta = 90^\circ\) relative to current.</li>
+<li>The vertical velocity is fully effectively \(v_b\).</li>
+<li>\[ T_{min} = \frac{d}{v_b} \]</li>
+</ul>
+<p>
+However, because it did not actively counteract the river, upon reaching the opposite bank, the boat will have systematically drifted horizontally permanently downstream by a distance \(X\):
+\[ X = v_r \times T_{min} = \frac{v_r d}{v_b} \]
+</p>
+</div>
+</section>
+
+<section>
+<h2>Crossing the River along Shortest Path (Zero Drift)</h2>
+<p>
+If the boat intends to firmly land exactly linearly directly opposite its specific starting point (zero macroscopic drift, \(X=0\)), its resultant ground velocity vector \(\vec{v}_b\) must physically point structurally exclusively perpendicularly straight across without any horizontal component.
+</p>
+<p>
+To ruthlessly cancel the river's \(v_r\) pushing it right, the boat must intelligently point its nose upstream at some optimal deflection structural angle \(\theta\).
+</p>
+<div class="model-box">
+<strong>Zero Drift Derivation:</strong>
+<p>
+The horizontal component of the boat's relative velocity must exactly equal and stubbornly structurally dynamically cancel the river velocity:
+\[ v_b\sin\theta = v_r \implies \sin\theta = \frac{v_r}{v_b} \]
+From this, we construct the angle \(\theta\).
+</p>
+<p>
+The remaining active vertical velocity efficiently driving the boat relentlessly smoothly smoothly effectively cleanly strongly directly across the exact width \(d\) is exclusively mechanically logically structurally \(v_b\cos\theta = \sqrt{v_b^2 - v_r^2}\).
+</p>
+<p>
+The total crossing time becomes:
+\[ T = \frac{d}{\sqrt{v_b^2 - v_r^2}} \]
+</p>
+<p>Note: This is strictly physically geometrically physically possible only if the boat is strictly faster mathematically powerfully decisively structurally vigorously firmly faster cleanly dependably expertly robustly structurally specifically explicitly reliably efficiently than the river (\(v_b > v_r\)).</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

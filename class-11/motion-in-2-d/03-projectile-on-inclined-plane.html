@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile on Inclined Plane | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 2D
+</a>
+</nav>
+
+<h1>Projectile on an Inclined Plane</h1>
+<p class="subtitle">
+Adjusting the coordinate system to simplify complex unlevel trajectories.
+</p>
+
+<section>
+<h2>Projection Up the Incline</h2>
+<p>
+Consider an inclined plane making an angle \(\alpha\) with the horizontal. A projectile is launched from the bottom of this incline with an initial velocity \(u\) at an angle \(\theta\) <em>with respect to the horizontal</em>.
+</p>
+<p>
+The most efficient way to solve this is to rotate our axis system. Let the x-axis lie parallel <em>up</em> the incline, and the y-axis lie perpendicular to the incline.
+The angle of projection relative to the incline itself becomes \((\theta - \alpha)\).
+</p>
+<div class="model-box">
+<strong>Adjusted Kinematics:</strong>
+<ul>
+<li>\(u_x = u\cos(\theta - \alpha)\)</li>
+<li>\(u_y = u\sin(\theta - \alpha)\)</li>
+<li>\(a_x = -g\sin\alpha\) (Gravity now critically has a component opposing the horizontal motion)</li>
+<li>\(a_y = -g\cos\alpha\)</li>
+</ul>
+</div>
+<p>
+<strong>Time of Flight (\(T\)):</strong> The projectile hits the incline when its perpendicular displacement \(y = 0\).
+\[ y = u_y T + \frac{1}{2}a_y T^2 \implies 0 = u\sin(\theta - \alpha)T - \frac{1}{2}(g\cos\alpha)T^2 \]
+\[ T = \frac{2u\sin(\theta - \alpha)}{g\cos\alpha} \]
+</p>
+<div class="insightbox">
+<strong>Range Up the Incline (\(R\)):</strong>
+Unlike ground-to-ground, we must account for \(a_x\):
+\[ R = u_x T + \frac{1}{2}a_x T^2 = u\cos(\theta - \alpha)T - \frac{1}{2}g\sin\alpha T^2 \]
+Through trigonometric simplification, the range simplifies nicely to:
+\[ R = \frac{u^2}{g\cos^2\alpha} \left[ \sin(2\theta - \alpha) - \sin\alpha \right] \]
+Maximum range up the incline occurs when \(\sin(2\theta - \alpha) = 1\), or \(2\theta - \alpha = \pi/2\).
+</div>
+</section>
+
+<section>
+<h2>Projection Down the Incline</h2>
+<p>
+If the projectile is launched from the top of the incline, pointing downwards, we adjust our rotated axis so the positive x-axis points <em>down</em> the incline. The projection angle relative to the incline surface is now \((\theta + \alpha)\).
+</p>
+<div class="model-box">
+<strong>Adjusted Downward Kinematics:</strong>
+<ul>
+<li>\(u_x = u\cos(\theta + \alpha)\)</li>
+<li>\(u_y = u\sin(\theta + \alpha)\)</li>
+<li>\(a_x = +g\sin\alpha\) (Gravity now assists the horizontal motion down the plane)</li>
+<li>\(a_y = -g\cos\alpha\)</li>
+</ul>
+</div>
+<p>
+<strong>Time of Flight (\(T\)):</strong>
+\[ T = \frac{2u\sin(\theta + \alpha)}{g\cos\alpha} \]
+</p>
+<p>
+<strong>Range Down the Incline (\(R\)):</strong>
+Since gravity assists, the formula adds the sine terms rather than subtracting:
+\[ R = \frac{u^2}{g\cos^2\alpha} \left[ \sin(2\theta + \alpha) + \sin\alpha \right] \]
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
