@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expansion of Liquids | Thermal Properties of Matter</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermal Properties of Matter
+</a>
+</nav>
+
+<h1>Expansion of Liquids</h1>
+<p class="subtitle">
+Analyzing volumetric thermal response and the nuances of apparent expansion in fluid systems.
+</p>
+
+<section>
+<h2>Apparent and Real Expansion of Liquids</h2>
+<p>
+Unlike solids, liquids do not have a defined linear shape; they take the shape of their container. Therefore, liquids only undergo volume (cubical) expansion. However, observing the true expansion of a liquid is experimentally complicated because the solid vessel holding the liquid <em>also</em> expands when heated.
+</p>
+<p>
+If a liquid fills a glass flask, and we heat the system, both the glass and the liquid expand. Because the coefficient of volume expansion of a liquid (\(\gamma_L\)) is generally greater than that of a solid (\(\gamma_S\)), the liquid level will eventually rise relative to the vessel walls. The rise we directly observe is merely the <strong>apparent expansion</strong>.
+</p>
+<div class="model-box">
+<strong>Real vs. Apparent Expansion:</strong>
+The true scale of the liquid's volume change is the sum of the apparent change we observe plus the volume by which the container itself expanded.
+\[ \Delta V_{real} = \Delta V_{apparent} + \Delta V_{vessel} \]
+
+We define two coefficients of volume expansion:
+<ul>
+<li><strong>Apparent coefficient (\(\gamma_a\)):</strong> The fractional change in observed volume per unit temperature change.</li>
+<li><strong>Real absolute coefficient (\(\gamma_r\)):</strong> The actual fractional change in the liquid's true volume.</li>
+</ul>
+\[ \gamma_r = \gamma_a + \gamma_g \]
+Where \(\gamma_g\) is the cubical expansion coefficient of the solid container material (\( \gamma_g = 3\alpha_g \)).
+</div>
+<div class="examplebox">
+<strong>Curious Phenomenon:</strong> When a flask full of liquid is suddenly plunged into a hot bath, the liquid level inside the capillary neck initially <em>drops</em> slightly before rising. This occurs because the outer glass flask absorbs heat and expands first, increasing the total internal volume, before the thermal energy properly propagates into and expands the inner liquid.
+</div>
+</section>
+
+<section>
+<h2>Variation of Density with Temperature</h2>
+<p>
+As a liquid expands, its total mass (\(m\)) remains strictly conserved. However, because its volume \(V\) physically increases with temperature, the density (\(\rho = \frac{m}{V}\)) of the liquid must decrease.
+</p>
+<p>
+Let \(\rho_0\) be the density of the liquid at an initial temperature \(T_0\), and \(\rho_T\) be its density at a higher temperature \(T_0 + \Delta T\). 
+</p>
+<p>
+The volume expands linearly according to:
+\[ V_T = V_0(1 + \gamma_r \Delta T) \]
+</p>
+<p>
+Substitute \(V = \frac{m}{\rho}\) into the volume relation:
+\[ \frac{m}{\rho_T} = \frac{m}{\rho_0} (1 + \gamma_r \Delta T) \]
+</p>
+<div class="model-box">
+<strong>Density Formula:</strong>
+\[ \rho_T = \frac{\rho_0}{1 + \gamma_r \Delta T} \]
+<p>
+Using standard binomial approximation since \(\gamma_r \Delta T \ll 1\), this simplifies neatly to:
+</p>
+\[ \rho_T \approx \rho_0 (1 - \gamma_r \Delta T) \]
+</div>
+<div class="concept-box">
+Except for water in a very specific narrow temperature band, warming a liquid makes it lighter and less dense. This density differential is precisely what drives thermal convection currents in fluids and air.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

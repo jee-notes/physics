@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expansion of Solids | Thermal Properties of Matter</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermal Properties of Matter
+</a>
+</nav>
+
+<h1>Expansion of Solids</h1>
+<p class="subtitle">
+Mathematical formulations of solid body dimensional changes due to thermal energy.
+</p>
+
+<section>
+<h2>Linear Expansion</h2>
+<p>
+When a solid object is subjected to a temperature change \(\Delta T\), any specific linear dimension (such as length, radius, or a diagonal) undergoes a fractional change. If the original length of the rod is \(L\), the change in length \(\Delta L\) is experimentally found to be proportional to both \(L\) and \(\Delta T\).
+</p>
+<div class="model-box">
+<strong>Coefficient of Linear Expansion (\(\alpha\)):</strong>
+\[ \Delta L = \alpha L \Delta T \]
+<p>
+Where:
+<ul>
+<li>\(\Delta L = L_{final} - L_{initial}\)</li>
+<li>\(\alpha\) is a material constant known as the coefficient of linear expansion.</li>
+<li>\(\Delta T\) is the change in temperature.</li>
+</ul>
+</p>
+<li><strong>SI Unit:</strong> \(K^{-1}\) or \(^\circ\text{C}^{-1}\)</li>
+</div>
+<p>
+The new length \(L'\) after expansion is given by:
+\[ L' = L(1 + \alpha \Delta T) \]
+</p>
+</section>
+
+<section>
+<h2>Areal (Surface) Expansion</h2>
+<p>
+If we consider a two-dimensional surface area \(A\), an increase in temperature will cause both linear dimensions (length and width) to increase, leading to a proportional increase in the total area. 
+</p>
+<div class="model-box">
+<strong>Coefficient of Areal Expansion (\(\beta\)):</strong>
+\[ \Delta A = \beta A \Delta T \]
+<p>
+Where \(\beta\) is the material's coefficient of areal (or superficial) expansion. The new area \(A'\) is:
+</p>
+\[ A' = A(1 + \beta \Delta T) \]
+</div>
+</section>
+
+<section>
+<h2>Volume (Cubical) Expansion</h2>
+<p>
+For a three-dimensional object, thermal expansion occurs across all three axes simultaneously, resulting in a change in the total volume \(V\).
+</p>
+<div class="model-box">
+<strong>Coefficient of Volume Expansion (\(\gamma\)):</strong>
+\[ \Delta V = \gamma V \Delta T \]
+<p>
+Where \(\gamma\) is the coefficient of volume expansion. The expanded volume \(V'\) is:
+</p>
+\[ V' = V(1 + \gamma \Delta T) \]
+</div>
+<div class="insightbox">
+Remember, thermal expansion acts exactly like a photographic enlargement. If a solid material contains a hole, the hole <em>expands</em> in diameter exactly as a solid plug of the same material would expand. The cavity gets larger, not smaller.
+</div>
+</section>
+
+<section>
+<h2>Relation Between Alpha, Beta, and Gamma</h2>
+<p>
+Because an isotropic material (a material whose properties are identical in all directions) expands equally along all its axes, the three coefficients (\(\alpha\), \(\beta\), \(\gamma\)) are mathematically related.
+</p>
+<p>
+Consider a square plate of side \(L\). Its area \(A = L^2\).
+Following linear expansion, the new length is \(L(1+\alpha\Delta T)\).
+The new area is \(A' = [L(1+\alpha\Delta T)]^2 = L^2(1 + 2\alpha\Delta T + \alpha^2\Delta T^2)\).
+</p>
+<p>
+Since \(\alpha\) is typically very small (\(\approx 10^{-5} \text{ K}^{-1}\)), the quadratic term \(\alpha^2\) is negligible. Thus:
+\[ A' \approx A(1 + 2\alpha\Delta T) \]
+Comparing this with \(A' = A(1 + \beta \Delta T)\), we define:
+\[ \beta = 2\alpha \]
+</p>
+<p>
+Similarly, for a cube of volume \(V = L^3\), applying binomial expansion and dropping higher-order \(\alpha\) terms yields:
+\[ \gamma = 3\alpha \]
+</p>
+<div class="concept-box">
+<strong>Fundamental Isotropic Relation:</strong>
+\[ \alpha : \beta : \gamma = 1 : 2 : 3 \]
+\[ \frac{\alpha}{1} = \frac{\beta}{2} = \frac{\gamma}{3} \]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Types of Thermometers | Thermal Properties of Matter</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermal Properties of Matter
+</a>
+</nav>
+
+<h1>Types of Thermometers</h1>
+<p class="subtitle">
+Investigating the physical instruments used to manifest temperature scales.
+</p>
+
+<section>
+<h2>Liquid-in-Glass Thermometers</h2>
+<p>
+The most common and historically significant thermometers rely on the thermal expansion of a liquid—usually mercury or colored alcohol—contained within a glass bulb and a fine capillary tube.
+</p>
+<p>
+The thermometric property is the <strong>length of the liquid column (\(L\))</strong> in the capillary. Assuming the expansion of the liquid is relatively uniform, the temperature \(T\) at a given length \(L_T\) is calculated as:
+</p>
+\[ T = \left( \frac{L_T - L_0}{L_{100} - L_0} \right) \times 100^\circ\text{C} \]
+<p>
+Where:
+<ul>
+<li>\(L_0\) is the length of the column at the ice point (\(0^\circ\text{C}\)).</li>
+<li>\(L_{100}\) is the length at the steam point (\(100^\circ\text{C}\)).</li>
+</ul>
+</p>
+<div class="insightbox">
+Mercury was favored for decades because it stays liquid over a wide temperature range (\(-39^\circ\text{C}\) to \(357^\circ\text{C}\)), expands uniformly, does not wet glass, and is easily visible. However, due to its high toxicity, alcohol (often dyed red) is increasingly preferred for everyday use.
+</div>
+</section>
+
+<section>
+<h2>Constant-Volume Gas Thermometer</h2>
+<p>
+Unlike liquid thermometers that are limited by freezing and boiling points, a gas thermometer operates on the principle that the pressure of a fixed mass of dilute gas at constant volume is directly proportional to its absolute temperature (Gay-Lussac's Law).
+</p>
+<p>
+The thermometric property here is the <strong>pressure of the gas (\(P\))</strong>. The temperature \(T\) is given by:
+</p>
+\[ T = \left( \frac{P_T}{P_{\text{tr}}} \right) \times 273.16\text{ K} \]
+<p>
+Where \(P_{\text{tr}}\) is the pressure of the gas at the triple point of water (\(273.16\text{ K}\)).
+</p>
+<div class="concept-box">
+<strong>Ideal Gas Standard:</strong> All real gases behave remarkably similarly at very low pressures. As pressure approaches zero, all gases perfectly align with this scale, earning the constant-volume gas thermometer the status of the <em>standard</em> against which all other thermometers are calibrated.
+</div>
+</section>
+
+<section>
+<h2>Platinum Resistance Thermometer</h2>
+<p>
+For high-precision industrial and scientific measurements across a very broad range, electrical resistance thermometers are used. The electrical resistance of a clean metal wire increases with temperature.
+</p>
+<p>
+The thermometric property is the <strong>electrical resistance (\(R\))</strong>. Platinum is typically chosen because it is highly stable, resists oxidation, and provides reproducible results from roughly \(-200^\circ\text{C}\) to \(1200^\circ\text{C}\).
+</p>
+<p>
+For a narrow temperature range, the relation is approximately linear:
+</p>
+\[ R_T = R_0(1 + \alpha T) \]
+<p>
+Where:
+<ul>
+<li>\(R_0\) is the resistance at \(0^\circ\text{C}\).</li>
+<li>\(\alpha\) is the temperature coefficient of resistance for platinum.</li>
+</ul>
+</p>
+<p>
+Therefore, the temperature can be evaluated as:
+</p>
+\[ T = \left( \frac{R_T - R_0}{R_{100} - R_0} \right) \times 100^\circ\text{C} \]
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

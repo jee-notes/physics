@@ -1,220 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thermal Properties | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #f39c12; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #fef5e7; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Properties of Matter | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
 
-    <h1>Thermal Properties of Matter</h1>
-    <p style="text-align: center;"><em>Temperature, measurement, and expansion due to heat.</em></p>
+<h1>Thermal Properties of Matter</h1>
+<p class="subtitle">
+The macroscopic study of temperature, heat, and the fundamental properties that govern atomic thermal behavior.
+</p>
 
-    <section id="temperature">
-        <h2>1. Temperature</h2>
-        <p>
-            <strong>Temperature</strong> is a physical quantity that determines the
-            direction of heat flow between bodies.
-        </p>
-
-        <ul>
-            <li>Heat flows from higher to lower temperature</li>
-            <li>Temperature is a measure of thermal state, not heat content</li>
-        </ul>
-
-        <div class="insightbox">
-            Two bodies at the same temperature
-            need not contain the same amount of heat.
-        </div>
-    </section>
-
-    <section id="thermal-equilibrium">
-        <h2>2. Thermal Equilibrium & Zeroth Law</h2>
-        <p>
-            If two systems are separately in thermal equilibrium with a third,
-            they are in thermal equilibrium with each other.
-        </p>
-
-        <div class="insightbox">
-            The Zeroth Law gives temperature
-            a measurable meaning.
-        </div>
-    </section>
-
-    <section id="temperature-scales">
-        <h2>3. Temperature Scales</h2>
-
-        <div class="grid">
-            <div>
-                <strong>Celsius Scale</strong>
-                <ul>
-                    <li>Ice point: 0 °C</li>
-                    <li>Steam point: 100 °C</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Kelvin Scale</strong>
-                <ul>
-                    <li>Absolute zero: 0 K</li>
-                    <li>No negative temperatures</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="formula-block">
-            \[
-            T(\text{K}) = t(^{\circ}\text{C}) + 273.15
-            \]
-        </div>
-
-        <div class="insightbox">
-            Kelvin is the fundamental SI scale of temperature.
-        </div>
-    </section>
-
-    <section id="thermometer">
-        <h2>4. Measurement of Temperature</h2>
-        <p>
-            Temperature is measured using thermometric properties
-            that change uniformly with temperature.
-        </p>
-
-        <ul>
-            <li>Volume of liquid (mercury, alcohol)</li>
-            <li>Electrical resistance</li>
-            <li>Thermoelectric emf</li>
-        </ul>
-
-        <div class="insightbox">
-            A thermometer does not measure heat —
-            it measures a property correlated with temperature.
-        </div>
-    </section>
-
-    <section id="expansion">
-        <h2>5. Thermal Expansion</h2>
-        <p>
-            <strong>Thermal expansion</strong> is the increase in dimensions of a body
-            due to rise in temperature.
-        </p>
-
-        <div class="insightbox">
-            Expansion occurs because average intermolecular spacing increases.
-        </div>
-    </section>
-
-    <section id="linear-expansion">
-        <h2>6. Linear Expansion</h2>
-
-        <div class="formula-block">
-            \[
-            \Delta L = \alpha L \Delta T
-            \]
-        </div>
-
-        <ul>
-            <li>\(\alpha\): coefficient of linear expansion</li>
-            <li>Valid for small temperature changes</li>
-        </ul>
-    </section>
-
-    <section id="area-volume">
-        <h2>7. Area & Volume Expansion</h2>
-
-        <div class="formula-block">
-            Area expansion:
-            \[
-            \Delta A = 2\alpha A \Delta T
-            \]
-        </div>
-
-        <div class="formula-block">
-            Volume expansion:
-            \[
-            \Delta V = 3\alpha V \Delta T
-            \]
-        </div>
-
-        <div class="insightbox">
-            Expansion coefficients are related,
-            not independent.
-        </div>
-    </section>
-
-    <section id="anomalous">
-        <h2>8. Anomalous Expansion of Water</h2>
-        <p>
-            Water contracts when heated from 0 °C to 4 °C,
-            and expands above 4 °C.
-        </p>
-
-        <ul>
-            <li>Maximum density at 4 °C</li>
-            <li>Responsible for survival of aquatic life</li>
-        </ul>
-
-        <div class="insightbox">
-            Anomalous expansion is a molecular effect,
-            not a violation of thermal laws.
-        </div>
-    </section>
-
-    <section id="stress">
-        <h2>9. Thermal Stress</h2>
-        <p>
-            If expansion is prevented, thermal stress develops.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \text{Stress} = Y \alpha \Delta T
-            \]
-        </div>
-
-        <div class="insightbox">
-            Thermal stress links elasticity
-            with thermal physics.
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>10. Common Mistakes</h2>
-        <ul>
-            <li>Confusing heat with temperature</li>
-            <li>Using Celsius in thermodynamic formulas</li>
-            <li>Forgetting constraint conditions in expansion</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Our everyday experience with objects involves concepts such as "hot" and "cold", yet these intuitive sensations give an incomplete picture of physical reality. The classical study of mechanics focuses on the bulk motion of objects, effectively ignoring the chaotic, microscopic movement of the atoms and molecules that constitute them.
+</p>
+<p>
+The chapter on <strong>Thermal Properties of Matter</strong> bridges the gap between atomic behavior and macroscopic observations. Everything we observe as temperature or thermal expansion is essentially a macroscopic manifestation of the microscopic kinetic and potential energies locked away inside a material. When an object is "heated", we are fundamentally transferring energy into its microscopic degrees of freedom.
+</p>
+<p>
+In this chapter, we formalize the concepts of temperature and heat transfer. We analyze how materials physically change dimension in response to thermal variations (thermal expansion) and explore the precise mechanisms of thermometry used to quantify these states. This lays the critical foundation for the deeper statistical and mathematical study of thermodynamics that follows.
+</p>
+<div class="insightbox">
+Remember, heat is not a substance contained within a body. Rather, it is a <em>process</em>—the transfer of thermal energy across a system boundary due solely to a difference in temperature.
 </div>
+</section>
 
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-temperature-and-heat.html">1. Temperature, Heat, and The Zeroth Law</a>
+<a href="./02-thermometry.html">2. Thermometry and Temperature Scales</a>
+<a href="./03-thermal-expansion.html">3. Thermal Expansion</a>
+<a href="./04-thermal-stress-and-applications.html">4. Thermal Stress and Technical Applications</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
