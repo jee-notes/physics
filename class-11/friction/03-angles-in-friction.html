@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angles in Friction | Friction</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Friction
+</a>
+</nav>
+
+<h1>Angle of Friction and Repose</h1>
+<p class="subtitle">
+Geometrical representations of the limiting frictional parameters.
+</p>
+
+<section>
+<h2>Angle of Friction (\(\lambda\))</h2>
+<p>
+Consider a block of mass \(m\) resting on a rough horizontal surface under the action of a horizontal force \(P\). As \(P\) gradually increases, the static frictional force \(f_s\) also increases until it reaches its limiting maximum value \(f_{lim} = \mu_s N\).
+</p>
+<p>
+At this exact limiting macroscopic state, the block experiences two independent reaction forces from the surface:
+</p>
+<ol>
+<li>The vertical Normal Reaction: \(N\).</li>
+<li>The horizontal Limiting Frictional Force: \(f_{lim}\).</li>
+</ol>
+<p>
+These two forces conceptually sum via vector addition into a single <strong>Net Contact Force (Resultant Reaction)</strong>, denoted \(R\). 
+</p>
+<div class="model-box">
+<strong>Definition of Angle of Friction:</strong>
+<p>
+The mathematical angle \(\lambda\) which the resultant reaction \(R\) strictly makes with the perpendicular normal reaction \(N\) when limiting friction is precisely acting is categorically called the <strong>Angle of Friction</strong>.
+</p>
+<p>
+From the geometric vector triangle, the tangent of this angle cleanly resolves as:
+</p>
+\[ \tan\lambda = \frac{f_{lim}}{N} = \frac{\mu_s N}{N} \]
+\[ \tan\lambda = \mu_s \]
+\[ \lambda = \tan^{-1}(\mu_s) \]
+</div>
+<div class="insightbox">
+The angle of friction forms a beautiful conceptual cone (the "Friction Cone") around the vertical normal axis. As long as any externally applied macroscopic force dictates a needed resultant reaction that rigidly falls <em>inside</em> this cone, the block will mechanically remain perfectly stationary. The moment the vector touches the cone surface, slipping is imminent.
+</div>
+</section>
+
+<section>
+<h2>Angle of Repose (\(\alpha\))</h2>
+<p>
+Now physically consider a block simply placed upon an initially horizontal plank. If we slowly lift one structural end of the plank, effectively turning it into an inclined plane, the block will eventually begin to freely slide downhill solely under the macroscopic influence of gravity.
+</p>
+<div class="model-box">
+<strong>Definition of Angle of Repose:</strong>
+<p>
+The absolute minimal angle \(\alpha\) structurally made by an inclined plane with the horizontal axis, at which a resting body symmetrically placed on it precisely begins to spontaneously slide down, is technically called the <strong>Angle of Repose</strong> (or Angle of Sliding).
+</p>
+</div>
+<p>
+When the plank rests exactly at this critical angle \(\alpha\), the block is miraculously teetering precisely on the edge of slipping. Therefore, limiting static friction intensely operates upward along the plane surface.
+</p>
+<p>
+The gravitational force neatly resolves into two orthogonal components:
+<ul>
+<li>Perpendicular to the plane: \(mg\cos\alpha\) (Balanced by \(N\)).</li>
+<li>Parallel down the plane: \(mg\sin\alpha\) (Balanced by \(f_{lim}\)).</li>
+</ul>
+</p>
+<p>
+Setting up the limiting equilibrium equations yields:
+\[ N = mg\cos\alpha \]
+\[ f_{lim} = mg\sin\alpha \]
+</p>
+<p>
+Dividing both strictly equations analytically produces:
+</p>
+\[ \frac{f_{lim}}{N} = \frac{mg\sin\alpha}{mg\cos\alpha} \]
+\[ \mu_s = \tan\alpha \]
+</section>
+
+<section>
+<h2>Relationship Between Angles</h2>
+<p>
+By synthetically comparing the two derivations mathematically formulated above, a powerful and extraordinarily elegant fundamental relationship vividly emerges.
+</p>
+<div class="concept-box">
+<strong>Fundamental Equivalence:</strong>
+Since both \(\tan\lambda = \mu_s\) and \(\tan\alpha = \mu_s\), we logically and rigidly conclude that for any given pair of structurally contacting surfaces:
+\[ \lambda = \alpha \]
+<p>
+The empirical Angle of Friction computationally identically equals the empirical Angle of Repose. This provides a remarkably simple and beautiful experimental method to practically measure \(\mu_s\): simply slowly tilt a plank until a block forcefully slides, elegantly measure the tilt angle \(\alpha\), and analytically compute \(\tan\alpha\).
+</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

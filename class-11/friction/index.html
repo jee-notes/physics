@@ -1,239 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friction | JEE Physics Notes</title>
-    <script src="./assets/js/math.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #7f8c8d;
-            --accent: #2980b9;
-            --bg: #f4f7fa;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            background: var(--bg);
-            color: #333;
-            margin: 0;
-            padding: 30px;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: auto;
-            background: #fff;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        h1,
-        h2,
-        h3 {
-            color: var(--primary);
-        }
-
-        h1 {
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 12px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-            opacity: 0.7;
-            margin-bottom: 35px;
-            font-size: 0.95rem;
-        }
-
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 15px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        section:not(:last-of-type)::after {
-            content: "";
-            display: block;
-            height: 1px;
-            margin-top: 40px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
-        }
-
-        .top-nav {
-            margin-bottom: 35px;
-        }
-
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            background: #eef5fb;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--primary);
-            transition: all 0.25s ease;
-        }
-
-        .back-btn:hover {
-            background: #dcecf9;
-            transform: translateX(-3px);
-        }
-
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .chapter-list {
-            margin-top: 25px;
-        }
-
-        .chapter-list a {
-            display: block;
-            padding: 18px 20px;
-            margin-bottom: 15px;
-            background: #f9fbfd;
-            border-left: 5px solid var(--secondary);
-            border-radius: 10px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: all 0.25s ease;
-            position: relative;
-        }
-
-        .chapter-list a::after {
-            content: "→";
-            position: absolute;
-            right: 20px;
-            opacity: 0.4;
-            transition: all 0.25s ease;
-        }
-
-        .chapter-list a:hover {
-            background: #eef5fb;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-        }
-
-        .chapter-list a:hover::after {
-            opacity: 1;
-            right: 15px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-
-        hr {
-            margin: 40px 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #ccc, transparent);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Friction | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
-        <h1>Friction</h1>
-        <p class="subtitle">
-            The contact force responsible for both motion and its prevention.
-        </p>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
 
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                Friction is a paradoxical force. It acts as a resistance to relative motion, yet without it, walking,
-                driving, or even holding a pen would be impossible. In physics, friction is treated as a <strong>contact
-                    force</strong> that arises when two surfaces are pressed together.
-            </p>
-            <p>
-                The force of friction is not a simple constant; it is an <em>adaptive force</em>. It remains zero when
-                no external work is attempted, grows to match an applied force to prevent motion, and finally settles
-                into a steady resistance once motion begins.
-            </p>
-        </section>
+<h1>Friction</h1>
+<p class="subtitle">
+The contact force universally opposing relative macroscopic motion.
+</p>
 
-        <section>
-            <h2>Molecular Basis of Friction</h2>
-            <p>
-                At a microscopic level, no surface is perfectly smooth. Friction arises from the interlocking of
-                microscopic "asperities" (irregularities) and the formation of cold welds between atoms of the two
-                surfaces.
-            </p>
-            <p>
-                When we try to slide one object over another, we must either break these welds or lift the asperities
-                over each other. This molecular struggle is what we perceive as the macroscopic force of friction.
-            </p>
-        </section>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Up until this point in the study of mechanics, many problems involved imaginary "smooth" or "frictionless" surfaces. In reality, absolutely frictionless surfaces do not exist. Whenever two bodies are in physical contact and there is relative motion (or a tendency for relative motion) between them, a resistive force arises tangentially at the interface. This resistive force is <strong>Friction</strong>.
+</p>
+<p>
+Friction is arguably the most profoundly important macroscopic force for our daily existence. Without friction, we could not walk, cars could not brake, and knots would instantly unravel. From a fundamental perspective, friction is not a new fundamental force of nature; it is a macroscopic, statistical manifestation of complex electromagnetic interactions between the microscopic irregularities and molecular bonds of two touching surfaces.
+</p>
+<p>
+In this chapter, we mathematically categorize this resistive force into distinct regimes (static, limiting, kinetic, and rolling). We study the empirical laws governing its magnitude and direction, and finally, we seamlessly integrate frictional forces into Newton's Equations of Motion to solve realistic dynamical systems—ranging from simple sliding blocks to complex multi-block assemblies.
+</p>
+<div class="insightbox">
+Remember: Friction does not universally "oppose motion". Friction strictly opposes <em>relative motion</em> between two surfaces in contact. In many cases, such as the tires of a smoothly accelerating car or a block sitting on a moving truck, friction is precisely the force <em>causing</em> the forward motion of the object relative to the ground.
+</div>
+</section>
 
-        <section>
-            <h2>Friction as a Force</h2>
-            <p>
-                Friction always acts parallel to the surfaces in contact and opposite to the direction of relative
-                motion (or the tendency of such motion). It is governed by the <strong>Normal Force</strong> (\(N\)),
-                which measures how hard the surfaces are being pressed together.
-            </p>
-            <div class="insightbox">
-                A common mistake is assuming friction equals \(\mu N\) in all cases. In reality, static friction is only
-                as large as it needs to be to prevent motion, up to its limiting value.
-            </div>
-        </section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-introduction-and-laws.html">1. Introduction and Laws of Friction</a>
+<a href="./02-types-of-friction.html">2. Types of Friction</a>
+<a href="./03-angles-in-friction.html">3. Angles in Friction (Repose & Friction Angle)</a>
+<a href="./04-dynamics-with-friction.html">4. Dynamics of Rough Surfaces</a>
+<a href="./05-two-block-systems.html">5. Two-Block Systems</a>
+</div>
+</section>
 
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>Nature of Friction</strong> — Understanding the origin and basic characteristics of
-                    resistive forces.</li>
-                <li><strong>Static Friction</strong> — The self-adjusting phase and limiting friction calculation.</li>
-                <li><strong>Kinetic Friction</strong> — The resistance during active sliding and its speed-independence.
-                </li>
-                <li><strong>Direction of Friction</strong> — The most critical skill: identifying the tendency of
-                    relative motion.</li>
-                <li><strong>Angle of Friction</strong> — The geometric relationship between normal force and friction.
-                </li>
-                <li><strong>Rolling Friction</strong> — Why wheels are more efficient than sliders.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-nature-of-friction.html">1. Nature and Origin of Friction</a>
-                <a href="./02-static-friction.html">2. Static Friction: The Self-Adjusting Force</a>
-                <a href="./03-kinetic-friction.html">3. Kinetic Friction: Active Resistance</a>
-                <a href="./04-direction-of-friction.html">4. Determining the Direction of Friction</a>
-                <a href="./05-angle-of-friction.html">5. Angle of Friction and Angle of Repose</a>
-                <a href="./06-rolling-friction.html">6. Rolling Friction and Applications</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
