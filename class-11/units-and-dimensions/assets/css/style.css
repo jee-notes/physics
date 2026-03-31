@@ -225,3 +225,35 @@ border-radius: 10px;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 padding: 20px;
 }
+/* ------------------ Tables ------------------ */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:25px 0;
+    font-size:0.98rem;
+    background:var(--bg-box);
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--border);
+}
+thead{
+    background:var(--bg-soft);
+}
+th{
+    text-align:left;
+    padding:14px 16px;
+    font-weight:600;
+    color:var(--primary);
+    border-bottom:2px solid var(--border);
+}
+td{
+    padding:14px 16px;
+    border-bottom:1px solid var(--border);
+}
+tbody tr:last-child td{
+    border-bottom:none;
+}
+tbody tr:hover{
+    background:#fff5f5;
+    transition:background 0.2s ease;
+}

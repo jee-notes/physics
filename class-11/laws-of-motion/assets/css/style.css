@@ -1,18 +1,18 @@
 :root{
     --primary:#1f2937;
-    --secondary:#8b5cf6;
-    --accent:#c4b5fd;
+    --secondary:#2563eb;
+    --accent:#60a5fa;
 
-    --bg:#f7f5ff;
+    --bg:#f9fafb;
     --card:#ffffff;
 
-    --bg-soft:#ede9fe;
-    --bg-box:#faf8ff;
+    --bg-soft:#e0e7ff;
+    --bg-box:#f3f4f6;
 
-    --text:#2d2a3a;
-    --muted:#6b6a80;
+    --text:#111827;
+    --muted:#6b7280;
 
-    --border:#e7e4fb;
+    --border:#e5e7eb;
 }
 /* ------------------ Global ------------------ */
 *{
@@ -85,7 +85,7 @@ ul{
 li{
     margin-bottom:6px;
 }
-/* ------------------Blocks and Boxes ------------------ */
+/* ------------------ Blocks and Boxes ------------------ */
 .math-block{
 background:#fafbfd;
 padding:18px;
@@ -203,6 +203,7 @@ footer{
     color:#7f8c8d;
     font-size:0.9rem;
 }
+
 /* ------------------ Responsive ------------------ */
 @media (max-width:700px){
     body{
@@ -217,4 +218,46 @@ footer{
     h2{
         font-size:1.35rem;
     }
+}
+/* ------------------ Diagrams ------------------ */
+.diagram {
+text-align: center;
+}
+svg {
+background: white;
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+padding: 20px;
+}
+/* ------------------ Tables ------------------ */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:25px 0;
+    font-size:0.98rem;
+    background:var(--bg-box);
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--border);
+}
+thead{
+    background:var(--bg-soft);
+}
+th{
+    text-align:left;
+    padding:14px 16px;
+    font-weight:600;
+    color:var(--primary);
+    border-bottom:2px solid var(--border);
+}
+td{
+    padding:14px 16px;
+    border-bottom:1px solid var(--border);
+}
+tbody tr:last-child td{
+    border-bottom:none;
+}
+tbody tr:hover{
+    background:#fff5f5;
+    transition:background 0.2s ease;
 }

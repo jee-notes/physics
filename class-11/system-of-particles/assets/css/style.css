@@ -1,14 +1,14 @@
 :root{
-    --primary: #2c3e50;
-    --secondary: #16a085;
-    --accent: #1abc9c;
-    --bg: #f4f7fa;
+    --primary:#134e4a;
+    --secondary:#f97316;
+    --accent:#fb923c;
+    --bg:#f0fdfa;
     --card:#ffffff;
-    --bg-soft:#dcfce7;
-    --bg-box:#f7fff9;
-    --text:#1f2d2b;
-    --muted:#64748b;
-    --border:#d7f3e3;
+    --bg-soft:#ffedd5;
+    --bg-box:#f6fffd;
+    --text:#1f2933;
+    --muted:#6b7280;
+    --border:#d1f0ea;
 }
 /* ------------------ Global ------------------ */
 *{
@@ -224,4 +224,36 @@ background: white;
 border-radius: 10px;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 padding: 20px;
+}
+/* ------------------ Tables ------------------ */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin:25px 0;
+    font-size:0.98rem;
+    background:var(--bg-box);
+    border-radius:10px;
+    overflow:hidden;
+    border:1px solid var(--border);
+}
+thead{
+    background:var(--bg-soft);
+}
+th{
+    text-align:left;
+    padding:14px 16px;
+    font-weight:600;
+    color:var(--primary);
+    border-bottom:2px solid var(--border);
+}
+td{
+    padding:14px 16px;
+    border-bottom:1px solid var(--border);
+}
+tbody tr:last-child td{
+    border-bottom:none;
+}
+tbody tr:hover{
+    background:#fff5f5;
+    transition:background 0.2s ease;
 }
