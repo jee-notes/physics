@@ -14,22 +14,98 @@
 <span>&larr;</span> Back to Geometrical Optics
 </a>
 </nav>
-
 <h1>Reflection at Spherical Surfaces</h1>
 <p class="subtitle">
 Understanding image formation and magnification by curved mirrors.
 </p>
-
 <section>
-<h2>Introduction to Concave and Convex Mirrors</h2>
+<h2>Introduction to Spherical Mirrors</h2>
 <p>
-A spherical mirror is a reflecting surface that forms a part of a hollow sphere. Depending on which side of the spherical surface is polished, spherical mirrors are classified into two types:
+A spherical mirror is a reflecting surface that is part of a hollow glass shell.
 </p>
-<ul>
-<li><strong>Concave Mirror:</strong> The inner (depressed) surface of the spherical part is the reflecting surface. It generally converges parallel incident rays.</li>
-<li><strong>Convex Mirror:</strong> The outer (bulging) surface of the spherical part is the reflecting surface. It generally diverges parallel incident rays.</li>
-</ul>
+<div class="diagram">
+<svg viewBox="0 0 700 400" width="100%" height="auto">
 
+<!-- Principal Axis -->
+<line x1="50" y1="200" x2="650" y2="200" stroke="black" stroke-width="1"/>
+
+<!-- Sphere (reference) -->
+<circle cx="400" cy="200" r="150" stroke="black" stroke-width="2" fill="none"/>
+<circle cx="400" cy="200" r="155" stroke="black" stroke-width="2" fill="none"/>
+
+<!-- Cutting plane -->
+<line x1="280" y1="50" x2="280" y2="350" stroke="blue" stroke-width="2"/>
+<line x1="520" y1="50" x2="520" y2="350" stroke="blue" stroke-width="2"/>
+<text x="250" y="370">Cutting Plane</text>
+
+<!-- Radius line convex-->
+<line x1="400" y1="200" x2="280" y2="109" stroke="green" stroke-width="2"/>
+<text x="340" y="150">R</text>
+
+<!-- Radius line concave-->
+<line x1="400" y1="200" x2="520" y2="109" stroke="green" stroke-width="2"/>
+<text x="460" y="150">R</text>
+
+<!-- Pole (left convex) -->
+<circle cx="248" cy="200" r="4" fill="red"/>
+<text x="235" y="220">P</text>
+
+<!-- Pole (right concave) -->
+<circle cx="552" cy="200" r="4" fill="red"/>
+<text x="540" y="220">P</text>
+
+<!-- Hatch for concave (outer surface) -->
+<g stroke="black" stroke-width="1">
+<!-- upper -->
+<line x1="525" y1="110"  x2="540" y2="98"/>
+<line x1="540" y1="130" x2="555" y2="122"/>
+<line x1="550" y1="165" x2="565" y2="160"/>
+<line x1="555" y1="190" x2="570" y2="190"/>
+<!-- lower -->
+<line x1="555" y1="210" x2="570" y2="210"/>
+<line x1="550" y1="235" x2="565" y2="240"/>
+<line x1="540" y1="270" x2="555" y2="278"/>
+<line x1="525" y1="290" x2="540" y2="302"/>
+</g>
+
+<!-- Hatch for convex (inner surface) -->
+<g stroke="black" stroke-width="1">
+<!-- upper -->
+<line x1="295" y1="110" x2="280" y2="98"/>
+<line x1="280" y1="130" x2="265" y2="122"/>
+<line x1="270" y1="165" x2="255" y2="160"/>
+<line x1="265" y1="190" x2="250" y2="190"/>
+<!-- lower (mirror about y=200) -->
+<line x1="265" y1="210" x2="250" y2="210"/>
+<line x1="270" y1="235" x2="255" y2="240"/>
+<line x1="280" y1="270" x2="265" y2="278"/>
+<line x1="295" y1="290" x2="280" y2="302"/>
+</g>
+<!-- Aperture (concave) -->
+<line x1="520" y1="110" x2="520" y2="290" stroke="purple" stroke-width="3"/>
+<text x="445" y="220">Aperture</text>
+<circle cx="520" cy="110" r="4" fill="purple"/>
+<circle cx="520" cy="290" r="4" fill="purple"/>
+<!-- Center of curvature -->
+<circle cx="400" cy="200" r="4" fill="black"/>
+<text x="390" y="220">C</text>
+
+<!-- Labels -->
+<text x="120" y="60">Convex Mirror</text>
+<text x="530" y="60">Concave Mirror</text>
+
+<!-- Principal Axis label -->
+<text x="80" y="190">Principal Axis</text>
+
+</svg>
+</div>
+<p>
+Depending on which side of the spherical surface is polished, spherical mirrors are classified into two types:
+</p>
+<ul class="model-box">
+<li><strong>Concave Mirror:</strong> The reflecting surface is the inner side of the spherical surface (facing the center of curvature). It converges parallel incident rays.</li>
+<li><strong>Convex Mirror:</strong> The reflecting surface is the outer side of the spherical surface (facing away from the center of curvature). It diverges parallel incident rays.</li>
+</ul>
 <div class="concept-box">
 <p><strong>Key Terminologies:</strong></p>
 <ul>
@@ -37,129 +113,38 @@ A spherical mirror is a reflecting surface that forms a part of a hollow sphere.
 <li><strong>Center of Curvature (\(C\)):</strong> The center of the sphere of which the mirror forms a part.</li>
 <li><strong>Radius of Curvature (\(R\)):</strong> The radius of the sphere of which the mirror forms a part. The distance between \(P\) and \(C\) is \(R\).</li>
 <li><strong>Principal Axis:</strong> The straight line passing through the pole (\(P\)) and the center of curvature (\(C\)).</li>
-<li><strong>Aperture:</strong> The effective diameter of the light-reflecting area of the mirror.</li>
+<li><strong>Aperture:</strong> The diameter of the reflecting portion of the mirror, measured perpendicular to the principal axis.</li>
 </ul>
 </div>
+</section>
+<section>
+<h2>Converging and Diverging Nature</h2>
+<p>
+The effect of a spherical mirror can be understood in terms of how it transforms a beam of parallel rays.
+</p>
+<ul>
+<li><strong>Concave Mirror:</strong> Converts a parallel beam into a <strong>converging beam</strong> that meets at a point (focus).</li>
+<li><strong>Convex Mirror:</strong> Converts a parallel beam into a <strong>diverging beam</strong> that appears to originate from a point behind the mirror.</li>
+</ul>
 <div class="insightbox">
-In geometric optics, we almost exclusively deal with <strong>paraxial rays</strong>. These are rays that are close to the principal axis and make very small angles with it. This approximation ensures a sharp image is formed at a single point (focal point). Rays far from the axis suffer from <em>spherical aberration</em>.
+A plane mirror preserves the angular spread of a beam.<br>
+A spherical mirror modifies it through its converging or diverging nature.<br>
+This change in angular spread leads to changes in size, shape and orientation of the image.<br>
+Study of this geometric transformation enables the design of optical instruments such as microscopes and telescopes which revolutionized science.
 </div>
 </section>
-
 <section>
-<h2>Sign Convention and Principal Focus</h2>
-<p>
-To mathematically determine the exact position and nature of an image, we use a Cartesian sign convention system.
-</p>
-<div class="model-box">
-<h3>Cartesian Sign Convention</h3>
-<ol>
-<li>The <strong>pole (\(P\))</strong> of the mirror is taken as the origin (\(0,0\)).</li>
-<li>The <strong>principal axis</strong> is taken as the \(x\)-axis.</li>
-<li>All distances are measured from the pole of the mirror.</li>
-<li>Distances measured in the <strong>direction of incident light</strong> are taken as positive (\(+\)).</li>
-<li>Distances measured in the <strong>direction opposite to incident light</strong> are taken as negative (\(-\)).</li>
-<li>Heights measured upwards and perpendicular to the principal axis are taken as positive (\(+\)).</li>
-<li>Heights measured downwards and perpendicular to the principal axis are taken as negative (\(-\)).</li>
-</ol>
-</div>
-
-<h3>Principal Focus and Focal Length</h3>
-<p>
-When a narrow beam of rays, parallel to the principal axis, falls on a spherical mirror, the reflected rays either actually converge to an point on the principal axis (in a concave mirror) or appear to diverge from a point on the principal axis (in a convex mirror). This point is called the <strong>Principal Focus (\(F\))</strong>.
-</p>
-<p>
-The distance from the pole (\(P\)) to the principal focus (\(F\)) is the <strong>focal length (\(f\))</strong>.
-For paraxial rays, the focal length is exactly half the radius of curvature:
-</p>
-\[ f = \frac{R}{2} \]
-<p>
-Following the sign convention, the focal length of a concave mirror is negative (\(f < 0\)), and the focal length of a convex mirror is positive (\(f > 0\)).
-</p>
-</section>
-
-<section>
-<h2>Mirror Formula and Magnification</h2>
-<p>
-The relationship between the object distance (\(u\)), image distance (\(v\)), and focal length (\(f\)) for a spherical mirror is encapsulated in the mirror formula. This equation is paramount for solving optical image formation problems.
-</p>
-<div class="model-box">
-<h3>The Mirror Formula</h3>
-\[ \frac{1}{v} + \frac{1}{u} = \frac{1}{f} \]
-<p>Where:</p>
-<ul>
-<li>\(u\) = object distance from pole.</li>
-<li>\(v\) = image distance from pole.</li>
-<li>\(f\) = focal length of the mirror.</li>
-</ul>
-<p><em>Always substitute values of \(u, v, f\) with their proper signs based on the sign convention.</em></p>
-</div>
-
-<h3>Lateral (Transverse) Magnification (\(m\))</h3>
-<p>
-Magnification describes how large or small the image is compared to the object. It is defined as the ratio of the height of the image (\(h_i\)) to the height of the object (\(h_o\)).
-</p>
-\[ m = \frac{h_i}{h_o} \]
-<p>
-Using similar triangles in the geometric proof of the mirror formula, we derive the relation:
-</p>
-\[ m = -\frac{v}{u} = \frac{f}{f - u} = \frac{f - v}{f} \]
-
-<div class="concept-box">
-<p><strong>Interpreting Magnification (\(m\)):</strong></p>
-<ul>
-<li>If <strong>\(m\) is negative (\(-\))</strong>, the image is inverted. Inverted images formed by single mirrors are always <strong>real</strong>.</li>
-<li>If <strong>\(m\) is positive (\(+\))</strong>, the image is erect. Erect images formed by single mirrors are always <strong>virtual</strong>.</li>
-<li>If <strong>\(|m| > 1\)</strong>, the image is magnified (enlarged).</li>
-<li>If <strong>\(|m| < 1\)</strong>, the image is diminished.</li>
-</ul>
+<h2>Main Topics</h2>
+<div class="chapter-list">
+<a href="./02a-spherical-mirror-formula.html">1. Mirror Formula and Sign Convention</a>
+<a href="./02b-spherical-mirror-magnification.html">2. Magnification</a>
+<a href="./02c-spherical-mirror-velocity.html">3. Object Image  Velocity</a>
 </div>
 </section>
-
-<section>
-<h2>Velocity of Image in Spherical Mirrors</h2>
-<p>
-If an object moves along the principal axis of a spherical mirror with velocity \(v_o = \frac{du}{dt}\), the image will also move with velocity \(v_i = \frac{dv}{dt}\). We can find the relationship by differentiating the mirror formula with respect to time.
-</p>
-<p>
-Starting with the mirror formula:
-\[ \frac{1}{v} + \frac{1}{u} = \frac{1}{f} \]
-</p>
-<p>
-Assuming the mirror is stationary (\(f\) is constant, and pole is fixed), differentiating with respect to time \(t\):
-\[ -\frac{1}{v^2}\frac{dv}{dt} - \frac{1}{u^2}\frac{du}{dt} = 0 \]
-\[ \frac{dv}{dt} = -\left(\frac{v}{u}\right)^2 \frac{du}{dt} \]
-</p>
-<div class="model-box">
-<h3>Velocity Relation (Along Principal Axis)</h3>
-\[ \vec{v}_i = -m^2 \vec{v}_o \]
-<p>Where:</p>
-<ul>
-<li>\(\vec{v}_i\) = Velocity of image relative to mirror.</li>
-<li>\(\vec{v}_o\) = Velocity of object relative to mirror.</li>
-<li>\(m = -\frac{v}{u}\) = Transverse magnification.</li>
-</ul>
-</div>
-<div class="insightbox">
-Because the square of any real number (\(m^2\)) is always positive, the negative sign strictly means that the velocity of the image is <em>always opposite</em> to the velocity of the object relative to the mirror when moving along the principal axis. They always move in opposing directions.
-</div>
-
-<div class="examplebox">
-<h3>Velocity Perpendicular to the Principal Axis</h3>
-<p>
-If the object is moving perpendicular to the principal axis, its \(u\) coordinate remains constant, which means \(v\) and \(m\) remain constant.
-Since \( h_i = m \cdot h_o \), differentiating with respect to time gives:
-\[ \frac{dh_i}{dt} = m \frac{dh_o}{dt} \]
-\[ \Rightarrow v_{i,\perp} = m \cdot v_{o,\perp} \]
-Here, the magnification acts as a simple scale factor for vertical velocity components.
-</p>
-</div>
-</section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
-
 </div>
 </body>
 </html>

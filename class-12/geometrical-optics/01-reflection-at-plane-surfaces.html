@@ -14,71 +14,47 @@
 <span>&larr;</span> Back to Geometrical Optics
 </a>
 </nav>
-
 <h1>Reflection at Plane Surfaces</h1>
 <p class="subtitle">
 The foundation of image formation by smooth, flat boundaries.
 </p>
-
-<section>
-<h2>Laws of Reflection</h2>
-<p>
-When a light ray strikes a smooth boundary separating two different media, a part of the light is turned back into the same medium. This phenomenon is called reflection.
-</p>
-<div class="model-box">
-<h3>The Laws of Reflection</h3>
-<p>
-Reflection of light is governed by two fundamental laws:
-</p>
-<ol>
-<li>
-<strong>First Law:</strong> The incident ray, the reflected ray, and the normal to the reflecting surface at the point of incidence all lie in the same plane.
-</li>
-<li>
-<strong>Second Law:</strong> The angle of incidence (\(i\)) is always equal to the angle of reflection (\(r\)).
-\[ \angle i = \angle r \]
-</li>
-</ol>
-</div>
-<p>
-Here:
-</p>
-<ul>
-<li><strong>Angle of Incidence (\(i\)):</strong> The angle between the incident ray and the normal.</li>
-<li><strong>Angle of Reflection (\(r\)):</strong> The angle between the reflected ray and the normal.</li>
-<li><strong>Normal:</strong> A line drawn perpendicular to the reflecting surface at the point of incidence.</li>
-</ul>
-<div class="insightbox">
-These laws are completely independent of the wavelength of the light wave and apply to both plane and curved reflecting surfaces.
-</div>
-</section>
-
 <section>
 <h2>Image Formation by Plane Mirrors</h2>
 <p>
-An image is formed when light rays originating from a point object meet (or appear to meet) at another point after reflection or refraction. Images can be categorized into two types:
+An image is formed when light rays originating from a point object, after reflection, meet or appear to meet at another point. In a plane mirror, reflection transforms the incident system of rays into a reflected system, and the image is determined by the behavior of these reflected rays.
+</p>
+<p>
+For a plane mirror, the nature of the image depends on the nature of the object:
 </p>
 <ul>
-<li><strong>Real Image:</strong> Formed by the actual intersection of reflected or refracted rays. It can be projected onto a screen.</li>
-<li><strong>Virtual Image:</strong> Formed when rays appear to diverge from a point without actually meeting there. It cannot be captured on a screen.</li>
+<li><strong>Real Object:</strong> Reflected rays diverge → the image is <strong>virtual</strong>.</li>
+<li><strong>Virtual Object:</strong> Reflected rays converge → the image is <strong>real</strong>.</li>
 </ul>
-
+<p>
+For extended objects, the image is formed by considering each point of the object. The overall image is characterized by:
+</p>
+<ul>
+<li><strong>Orientation:</strong> Erect or inverted</li>
+<li><strong>Scale:</strong> Magnified, diminished, or same size</li>
+</ul>
 <div class="concept-box">
 <p>
-<strong>Characteristics of an Image formed by a Plane Mirror:</strong>
+<strong>Characteristics of the image of a real extended object in a plane mirror:</strong>
 </p>
 <ol>
 <li>The image is always <strong>virtual</strong> and <strong>erect</strong>.</li>
 <li>The image is of the same size as the object (magnification \( m = +1 \)).</li>
-<li>The image distance from the mirror is exactly equal to the object distance from the mirror.</li>
-<li>The image is <strong>laterally inverted</strong> (left appears right and vice versa).</li>
+<li>The image distance from the mirror is equal to the object distance from the mirror.</li>
+<li>The image is <strong>laterally inverted</strong>.</li>
 </ol>
 </div>
 <p>
-Mathematically, if an object point is at coordinate \((x, y, z)\) and the mirror is lying in the \(y-z\) plane (at \(x=0\)), the image point will be formed at \((-x, y, z)\).
+This behavior can be expressed mathematically. If the mirror lies in the \(YZ\) plane (at \(x = 0\)) and an object point is at \((x, y, z)\), then the image point is formed at:
+\[
+(x, y, z) \;\longrightarrow\; (-x, y, z)
+\]
 </p>
 </section>
-
 <section>
 <h2>Field of View and Multiple Reflections</h2>
 <p>
@@ -87,8 +63,9 @@ The region from which an observer can see the image of an object in a mirror is 
 <div class="insightbox">
 To see the full image of oneself in a plane mirror, the minimum length of the mirror required is exactly half the height of the person. This is independent of the distance of the person from the mirror.
 </div>
-
-<h3>Multiple Reflections from Two Inclined Mirrors</h3>
+</section>
+<section>
+<h2>Multiple Reflections from Two Inclined Mirrors</h2>
 <p>
 When two plane mirrors are placed at an angle \(\theta\) to each other, an object placed between them forms multiple images due to repeated reflections. The number of images, \(n\), formed depends on the angle \(\theta\).
 </p>
@@ -107,14 +84,13 @@ When two plane mirrors are placed at an angle \(\theta\) to each other, an objec
 <p>All images formed by two inclined mirrors lie on a circle passing through the object, with its center at the intersection point of the two mirrors.</p>
 </div>
 </section>
-
 <section>
 <h2>Velocity of Image in Plane Mirrors</h2>
 <p>
 When an object or the mirror itself moves, the image formed by the plane mirror also moves. We can analyze this by taking the position vector of the object and image relative to the mirror.
 </p>
 <p>
-Let the mirror lie in the \(y-z\) plane. The direction perpendicular to the mirror is the \(x\)-axis, and vectors parallel to the mirror lie in the \(y-z\) plane.
+Let the mirror lie in the \(YZ\) plane. The direction perpendicular to the mirror is the \(x\)-axis, and vectors parallel to the mirror lie in the \(YZ\) plane.
 </p>
 <div class="concept-box">
 <ol>
@@ -143,12 +119,10 @@ Thus, if a mirror moves with speed \(v\) towards a stationary object, the image 
 </p>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
-
 </div>
 </body>
 </html>

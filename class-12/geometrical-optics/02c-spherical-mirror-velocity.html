@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirror Velocity | Spherical Mirror</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-reflection-at-spherical-surfaces.html" class="back-btn">
+<span>&larr;</span> Back to Spherical Mirror
+</a>
+</nav>
+<h1>Mirror Velocity</h1>
+<p class="subtitle">
+Object Image Velocity Relation for Spherical Mirrors.
+</p>
+<section>
+<h2>Velocity of Image in Spherical Mirrors</h2>
+<p>
+If an object moves along the principal axis of a spherical mirror with velocity \(v_o = \frac{du}{dt}\), the image will also move with velocity \(v_i = \frac{dv}{dt}\). We can find the relationship by differentiating the mirror formula with respect to time.
+</p>
+<p>
+Starting with the mirror formula:
+\[ \frac{1}{v} + \frac{1}{u} = \frac{1}{f} \]
+</p>
+<p>
+Assuming the mirror is stationary (\(f\) is constant, and pole is fixed), differentiating with respect to time \(t\):
+\[ -\frac{1}{v^2}\frac{dv}{dt} - \frac{1}{u^2}\frac{du}{dt} = 0 \]
+\[ \frac{dv}{dt} = -\left(\frac{v}{u}\right)^2 \frac{du}{dt} \]
+</p>
+<div class="model-box">
+<h3>Velocity Relation (Along Principal Axis)</h3>
+\[ \vec{v}_i = -m^2 \vec{v}_o \]
+<p>Where:</p>
+<ul>
+<li>\(\vec{v}_i\) = Velocity of image relative to mirror.</li>
+<li>\(\vec{v}_o\) = Velocity of object relative to mirror.</li>
+<li>\(m = -\frac{v}{u}\) = Transverse magnification.</li>
+</ul>
+</div>
+<div class="insightbox">
+Because the square of any real number (\(m^2\)) is always positive, the negative sign strictly means that the velocity of the image is <em>always opposite</em> to the velocity of the object relative to the mirror when moving along the principal axis. They always move in opposing directions.
+</div>
+<div class="examplebox">
+<h3>Velocity Perpendicular to the Principal Axis</h3>
+<p>
+If the object is moving perpendicular to the principal axis, its \(u\) coordinate remains constant, which means \(v\) and \(m\) remain constant.
+Since \( h_i = m \cdot h_o \), differentiating with respect to time gives:
+\[ \frac{dh_i}{dt} = m \frac{dh_o}{dt} \]
+\[ \Rightarrow v_{i,\perp} = m \cdot v_{o,\perp} \]
+Here, the magnification acts as a simple scale factor for vertical velocity components.
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
