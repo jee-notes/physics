@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Regions | Spherical Mirror</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-reflection-at-spherical-surfaces.html" class="back-btn">
+<span>&larr;</span> Back to Spherical Mirror
+</a>
+</nav>
+<h1>Image Regions & Graphical Analysis</h1>
+<p class="subtitle">
+A systematic study of object-image movement and graphical \( u \) vs \( v \) relation .
+</p>
+<section>
+<h2>Object–Image Regions</h2>
+<p>
+For a concave mirror (\(f \lt 0\)), the principal axis is divided into critical zones by the Focus (\(F\)) and the Center of Curvature (\(C\)). Understanding these regions allows for an immediate qualitative assessment of the image.
+</p>
+<p>
+It is considered useful to perform zonal analysis. Each zone/region corresponds to a qualitatively different ray behavior.
+</p>
+<div class="model-box">
+<ol>
+<li><strong>At infinity:</strong> Incident rays are parallel.</li>
+<li><strong>Between infinity and center of curvature (C):</strong> Rays are converging toward the mirror.</li>
+<li><strong>At center of curvature (C):</strong> Rays are symmetrically incident; normal passes through C.</li>
+<li><strong>Between C and focus (F):</strong> Rays are strongly converging.</li>
+<li><strong>At focus (F):</strong> Reflected rays become parallel.</li>
+<li><strong>Between F and pole (P):</strong> Rays are diverging after reflection.</li>
+<li><strong>At pole (P):</strong> Object is extremely close; paraxial approximation breaks down.</li>
+</ol>
+</div>
+<p>
+Each of these regions leads to a distinct image formation scenario, which can be systematically analyzed using either ray diagrams or the mirror formula.
+</p>
+<div class="concept-box">
+<strong>The "Speed" Observation:</strong> Note that as the object moves from \( -\infty \) to \( -F \), the image moves from \( -F \) to \( -\infty \). The image "meets" the object at \( -C \). Between \( -C \) and \( -F \), the image moves faster than the object.
+</div>
+</section>
+<section>
+<h2>Summary Tables</h2>
+<h3>Concave Mirror</h3>
+<table >
+<thead>
+<tr>
+<th>Object Position</th>
+<th>Image Position</th>
+<th>Nature</th>
+<th>Orientation</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>At \( -\infty \)</td>
+<td>At \( -f \)</td>
+<td>Real</td>
+<td>Inverted</td>
+<td>Highly diminished (point)</td>
+</tr>
+<tr>
+<td>\( -\infty \) \( \to \) \( -c \)</td>
+<td>\( -f \) \( \to \) \( -c \)</td>
+<td>Real</td>
+<td>Inverted</td>
+<td>Diminished</td>
+</tr>
+<tr>
+<td>At \( -c \)</td>
+<td>At \( -c \)</td>
+<td>Real</td>
+<td>Inverted</td>
+<td>Same size</td>
+</tr>
+<tr>
+<td>\( -c \) \( \to \) \( -f \)</td>
+<td>\( -c \) \( \to \) \( -\infty \)</td>
+<td>Real</td>
+<td>Inverted</td>
+<td>Enlarged</td>
+</tr>
+<tr>
+<td>At \( -f \)</td>
+<td>At \( -\infty \)</td>
+<td>Real</td>
+<td>Inverted</td>
+<td>Highly enlarged</td>
+</tr>
+<tr>
+<td>\( -f \) \( \to \) \( -p \)</td>
+<td>\( +\infty \) \( \to \) \( +p \)</td>
+<td>Virtual</td>
+<td>Erect</td>
+<td>Enlarged</td>
+</tr>
+<tr>
+<td>At \( -p \)</td>
+<td>At \( +p \)</td>
+<td>Virtual</td>
+<td>Erect</td>
+<td>Same size</td>
+</tr>
+</tbody>
+</table>
+<div class="concept-box">
+The focus (F) is the critical boundary:  
+<ul>
+<li>For object beyond F → reflected rays converge → <strong>real image</strong></li>
+<li>For object between F and P → reflected rays diverge → <strong>virtual image</strong></li>
+</ul>
+</div>
+<h3>Convex Mirror</h3>
+<table>
+<thead>
+<tr>
+<th>Object Position</th>
+<th>Image Position</th>
+<th>Nature</th>
+<th>Orientation</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>At \( -\infty \)</td>
+<td>At \( +f \)</td>
+<td>Virtual</td>
+<td>Erect</td>
+<td>Highly diminished (point)</td>
+</tr>
+<tr>
+<td>\( -\infty \to -p \)</td>
+<td>\( +f \to +p \)</td>
+<td>Virtual</td>
+<td>Erect</td>
+<td>Diminished</td>
+</tr>
+<tr>
+<td>At \( -p \)</td>
+<td>At \( +p \)</td>
+<td>Virtual</td>
+<td>Erect</td>
+<td>Same size</td>
+</tr>
+</tbody>
+</table>
+<div class="concept-box">
+In a convex mirror, reflected rays always diverge. Hence, all images are <strong>virtual and erect</strong>, regardless of object position.
+</div>
+</section>
+<section>
+<h2>Graphical Representation: \( \frac{1}{v} \) vs \( \frac{1}{u} \)</h2>
+<p>
+The mirror formula is given by:
+\[ \frac{1}{v} + \frac{1}{u} = \frac{1}{f} \]
+By rearranging this into the slope-intercept form \( y = mx + c \), where \( y = \frac{1}{v} \) and \( x = \frac{1}{u} \):
+\[ \frac{1}{v} = -1\left(\frac{1}{u}\right) + \frac{1}{f} \]
+</p>
+<ul>
+<li><strong>Slope:</strong> Always \( -1 \) (at a \( 135^\circ \) angle to the x-axis).</li>
+<li><strong>Intercepts:</strong> Both intercepts are equal.</li>
+</ul>
+<div class="concept-box">
+For convex mirror, both intercepts are equal to \(+\frac{1}{f}\).<br>
+For concave mirror, both intercepts are equal to \(-\frac{1}{f}\).
+</div>
+<div class="diagram">
+<svg viewBox="0 0 700 700" width="100%" height="auto">
+
+<!-- axes -->
+<line x1="350" y1="0" x2="350" y2="700" stroke="black" stroke-width="2"/>
+<line x1="0" y1="350" x2="700" y2="350" stroke="black" stroke-width="2"/>
+
+<!-- labels -->
+<text x="650" y="365">1/u</text>
+<text x="360" y="20">1/v</text>
+
+<!-- intercepts concave -->
+<circle cx="200" cy="350" r="4" fill="blue"/>
+<text x="200" y="345">-1/f</text>
+<circle cx="350" cy="500" r="4" fill="blue"/>
+<text x="360" y="510">-1/f</text>
+
+<!-- concave line (left) -->
+<line x1="50" y1="200" x2="500" y2="650" stroke="blue" stroke-width="2"/>
+<text x="80" y="150" fill="blue">Concave</text>
+
+<!-- intercepts convex -->
+<circle cx="350" cy="200" r="4" fill="green"/>
+<text x="305" y="220">+1/f</text>
+<circle cx="500" cy="350" r="4" fill="green"/>
+<text x="520" y="340">+1/f</text>
+
+<!-- convex line (right) -->
+<line x1="200" y1="50" x2="650" y2="500" stroke="green" stroke-width="2"/>
+<text x="220" y="50" fill="green">Convex</text>
+</svg>
+</div>
+<h3>Physical Interpretation of the Graph</h3>
+<p>
+The graph maps input ray behavior (\(1/u\)) to output ray behavior (\(1/v\)). The quadrant determines whether the object and image are real or virtual.
+</p>
+<div class="concept-box">
+<strong>Important Limitation:</strong><br>
+The transformation \( u \to \frac{1}{u} \) compresses infinity into a single point:
+<ul>
+<li>\( u \to -\infty \Rightarrow \frac{1}{u} \to 0^- \)</li>
+<li>\( u \to +\infty \Rightarrow \frac{1}{u} \to 0^+ \)</li>
+</ul>
+Thus, physically distinct cases (real object at \(-\infty\) and virtual object at \(+\infty\)) appear at the same location on the graph.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -254,7 +254,7 @@ tbody tr:last-child td{
     border-bottom:none;
 }
 tbody tr:hover{
-    background:#fff5f5;
+    background:var(--bg-soft);
     transition:background 0.2s ease;
 }
 /* Hide the Paper.js scratchpad while it does the polar math */
