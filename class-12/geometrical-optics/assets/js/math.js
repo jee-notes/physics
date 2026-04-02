@@ -9,6 +9,48 @@ paperScript.src = "https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper
 document.head.appendChild(paperScript);
 
 paperScript.onload = function() {
+window.addAngleArc = function(vertex_raw, p1_raw, p2_raw, radius, label, isClockwise = true) {
+    const vertex = new paper.Point(vertex_raw);
+    const p1 = new paper.Point(p1_raw);
+    const p2 = new paper.Point(p2_raw);
+
+    // 1. Get the angles of the lines relative to the vertex
+    let a1 = p1.subtract(vertex).angle;
+    let a2 = p2.subtract(vertex).angle;
+
+    // 2. Calculate the sweep
+    let sweep = a2 - a1;
+    
+    // Adjust sweep based on the desired direction
+    if (isClockwise && sweep < 0) sweep += 360;
+    if (!isClockwise && sweep > 0) sweep -= 360;
+
+    // 3. Define the three points of the Arc
+    const arcP1 = vertex.add(new paper.Point({ angle: a1, length: radius }));
+    const arcP2 = vertex.add(new paper.Point({ angle: a2, length: radius }));
+    
+    // The 'through' point is exactly in the middle of the sweep
+    const midAngle = a1 + (sweep / 2);
+    const through = vertex.add(new paper.Point({ angle: midAngle, length: radius }));
+
+    // 4. Draw the Arc
+    const arc = new paper.Path.Arc(arcP1, through, arcP2);
+    arc.set({
+        strokeColor: 'black',
+        strokeWidth: 1
+    });
+
+    // 5. Place the Label
+    const labelPos = vertex.add(new paper.Point({ angle: midAngle, length: radius + 15 }));
+    new paper.PointText({
+        point: labelPos.add([-5, 5]),
+        content: label,
+        fontSize: 14,
+        fontWeight: 'bold'
+    });
+
+    return arc;
+};
 window.drawPlaneMirror = function(p1_raw, p2_raw, isClockwise) {
     const p1 = new paper.Point(p1_raw);
     const p2 = new paper.Point(p2_raw);

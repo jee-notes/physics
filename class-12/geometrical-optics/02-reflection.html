@@ -24,13 +24,13 @@ The geometry of light interaction with reflective boundaries and variational pri
 When a light ray strikes a smooth boundary separating two different media, a part of the light is turned back into the same medium. This phenomenon is called reflection.
 </p>
 <div class="model-box">
-<h3>The Laws of Reflection</h3>
+<h3>Laws of Reflection</h3>
 <p>
 Reflection of light is governed by two fundamental laws:
 </p>
 <ol>
 <li>
-<strong>First Law:</strong> The incident ray, the reflected ray, and the normal to the reflecting surface at the point of incidence all lie in the same plane.
+<strong>First Law:</strong> The incident ray, the reflected ray and the normal to the reflecting surface at the point of incidence all lie in the same plane.
 </li>
 <li>
 <strong>Second Law:</strong> The angle of incidence (\(i\)) is always equal to the angle of reflection (\(r\)).
@@ -42,22 +42,58 @@ Reflection of light is governed by two fundamental laws:
 Here:
 </p>
 <ul>
+<li><strong>Rays:</strong> The ray is incident or reflected - depending upon its direction with respect to <b>reflecting surface</b>.</li>
+<li><strong>Incident Ray (i):</strong> Incident ray is moving towards the <b>reflecting surface</b> before reflection.</li>
+<li><strong>Reflected Ray (r):</strong> Reflected ray is moving away from the <b>reflecting surface</b> after reflection.</li>
+<li><strong>Point of incidence:</strong> Point of incedence is a point on the reflecting surface where the incident ray strikes the surface.</li>
+<li><strong>Normal:</strong> A line drawn perpendicular to the reflecting surface at the point of incidence and pointing outwards. Note that direction of normal is localized at the point of incidence. For a flat reflecting surface (planar) it has uniform direction.</li>
 <li><strong>Angle of Incidence (\(i\)):</strong> The angle between the incident ray and the normal.</li>
 <li><strong>Angle of Reflection (\(r\)):</strong> The angle between the reflected ray and the normal.</li>
-<li><strong>Normal:</strong> A line drawn perpendicular to the reflecting surface at the point of incidence.</li>
 </ul>
 <div class="insightbox">
-These laws are completely independent of the wavelength of the light wave and apply to both plane and curved reflecting surfaces.
+The laws of reflection are completely independent of the wavelength of the light wave and apply to both plane and curved reflecting surfaces.<br>
+These laws are independent remain valid beyond approximations such as paraxial optics.
 </div>
-<h3>Vector Form</h3>
+</section>
+<section>
+<h2>Vector Form</h2>
 <p>
-For 3D coordinate problems, we define the rays using unit vectors. Let \(\hat{i}\) be the unit vector along the incident ray and \(\hat{n}\) be the unit vector normal to the surface (directed into the incident medium). The reflected unit vector \(\hat{r}\) is given by:
+The laws of reflection are described in vector form as well - useful for 3D mathematical operations. In vector form, rays are simply straight directions and so we can define the rays using unit vectors.
 </p>
-<div class="concept-box" style="font-family: monospace;">
-\[ \hat{r} = \hat{i} - 2(\hat{i} \cdot \hat{n})\hat{n} \]
+<p>
+Let \(\hat{i}\) be the unit vector along the incident ray and \(\hat{n}\) be the unit vector normal to the surface (directed outwards the incident medium) and \(\hat{r}\) be the unit vector along the reflected ray. The first law of reflection is given by:
+</p>
+<div class="math-block">
+\[ [\hat{i} \, \hat{r} \,\hat{n}] =  0 \]
 </div>
 <p>
-This vector approach is essential for solving problems involving rotating mirrors or mirrors placed in arbitrary planes in 3D space.
+\( [\hat{a} \, \hat{b} \,\hat{c}] \) is the scalar triple product and is used as a mathematical tool to express coplanarity relation.
+</p>
+<p>
+The second law can be expressed as:
+</p>
+<div class="math-block">
+\[ - \hat{i} \cdot \hat{n} =  \hat{r} \cdot \hat{n} \]
+</div>
+</section>
+<section>
+<h2>Angle of deviation</h2>
+<div class="diagram" id="svg-output"></div>
+<canvas id="paper-workspace" width="500" height="300"></canvas>
+<p>
+Angle of deviation is defined as the angle by which the incident ray deviates after reflection.
+</p>
+<p>
+To determine its value, we need to construct imaginary extended incident ray if it would not have been reflected and find its angular deviation to align with reflected ray.
+</p>
+<p>
+For reflection phenomenon - there is a common formula for magnitude. However, direction needs to be determined case by case basis.
+</p>
+<div class="math-block">
+\[ \delta =  180^\circ - 2 \angle i \]
+</div>
+<p>
+For the diagram case, the direction is anticlockwise.
 </p>
 </section>
 <section>
@@ -112,5 +148,48 @@ This simplifies to:
 <p>By Hitendra K K</p>
 </footer>
 </div>
+<script>
+function startDrawing() {
+document.getElementById('svg-output').innerHTML = ''; // Clear old drawings
+const canvas = document.getElementById('paper-workspace');
+if (!canvas) return;
+paper.setup(canvas);
+
+    // 1. Draw a Plane Mirror
+    const m = drawPlaneMirror([100, 200], [400, 200], true);
+
+    // 2. Define the Normal Line
+    const normalTop = [m.pole.x, m.pole.y - 100];
+    addRay(m.pole, normalTop, 'black', true);
+
+    // 3. Define Incident, Extended and Reflected points
+    const incidentPoint = [m.pole.x - 80, m.pole.y - 80];
+	const extendPoint = [m.pole.x + 80, m.pole.y + 80];
+    const reflectedPoint = [m.pole.x + 80, m.pole.y - 80];
+
+    // 4. Draw Rays
+    addRay(incidentPoint, m.pole, 'red');
+    addRay(m.pole, reflectedPoint, 'blue');
+	
+	// 5. Draw Extended Incident Ray
+	addRay(m.pole, extendPoint, 'red', true);
+
+    // 5. ADD THE ANGLE ARCS
+    // Angle of Incidence (between Normal and Incident Ray)
+    addAngleArc(m.pole, incidentPoint, normalTop, 20, 'i');
+    
+    // Angle of Reflection (between Normal and Reflected Ray)
+    addAngleArc(m.pole, normalTop, reflectedPoint, 30, 'r');
+
+    // Angle of Deviation (between Extended Incident Ray and Reflected Ray)
+    addAngleArc(m.pole, reflectedPoint, extendPoint, 25, 'δ');
+	
+    const svg = paper.project.exportSVG({ asString: false });
+    document.getElementById('svg-output').appendChild(svg);
+}
+
+if (window.paperIsReady) { startDrawing(); } 
+else { window.addEventListener('PaperReady', startDrawing); }
+</script>
 </body>
 </html>
