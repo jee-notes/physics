@@ -58,10 +58,10 @@ These laws are independent remain valid beyond approximations such as paraxial o
 <section>
 <h2>Vector Form</h2>
 <p>
-The laws of reflection are described in vector form as well - useful for 3D mathematical operations. In vector form, rays are simply straight directions and so we can define the rays using unit vectors.
+The laws of reflection are described in vector form as well - useful for 3D mathematical operations. In vector form, rays are modeled as straight-line directions and are represented using unit vectors, as only the direction of propagation is relevant, not the magnitude. (In a more complete model, an EM wave has amplitude, energy, phase etc. but ray model only deals with direction of energy propogation.)
 </p>
 <p>
-Let \(\hat{i}\) be the unit vector along the incident ray and \(\hat{n}\) be the unit vector normal to the surface (directed outwards the incident medium) and \(\hat{r}\) be the unit vector along the reflected ray. The first law of reflection is given by:
+Let \(\hat{i}\) be the unit vector along the incident ray and \(\hat{n}\) be the unit vector normal to the surface (directed outwards from the incident medium) and \(\hat{r}\) be the unit vector along the reflected ray. The first law of reflection is given by:
 </p>
 <div class="math-block">
 \[ [\hat{i} \, \hat{r} \,\hat{n}] =  0 \]
@@ -74,6 +74,20 @@ The second law can be expressed as:
 </p>
 <div class="math-block">
 \[ - \hat{i} \cdot \hat{n} =  \hat{r} \cdot \hat{n} \]
+</div>
+<p>
+Combining these relations, the reflected direction can be written as:
+</p>
+<div class="math-block">
+\[
+\hat{r} = \hat{i} - 2(\hat{i} \cdot \hat{n})\hat{n}
+\]
+</div>
+<div class="insightbox">
+<p>
+This shows that reflection reverses the component of the incident direction along the normal while leaving the parallel component unchanged.<br>
+This insight is used to solve problems by just using geometric tools.
+</p>
 </div>
 </section>
 <section>
