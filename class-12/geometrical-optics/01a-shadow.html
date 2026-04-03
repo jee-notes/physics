@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadow Formation | Ray Model</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-physical-to-model.html" class="back-btn">
+<span>&larr;</span> Back to Ray Model
+</a>
+</nav>
+<h1>Shadow Formation</h1>
+<p class="subtitle">
+Shadow formation explained by ray model.
+</p>
+<section>
+<h2>Shadow Region</h2>
+<p>
+A shadow is a <strong>three-dimensional volume</strong> in space where rays from a source are obstructed. When this volume is intercepted by a 2D surface (a screen), it forms a <strong>Shadow Patch</strong> on the surface.
+</p>
+<p>
+In the ray model, this corresponds to regions where no rays from the source are able to propagate as the line-of-sight is blocked.
+</p>
+<div class="concept-box">
+In the ray model, shadow formation is the "inverse" of image formation. While images are formed by the <em>presence</em> and intersection of rays, shadows are defined by their <em>absence</em>.
+</div>
+</section>
+<section>
+<h2>Shadow Formation</h2>
+<p>
+Shadow formation, like image formation, is analyzed using ray tracing. However, the objective is different:
+</p>
+<ul>
+<li><strong>Image formation:</strong> Determine where rays meet or appear to meet.</li>
+<li><strong>Shadow formation:</strong> Determine where the rays are <strong>blocked</strong>.</li>
+</ul>
+<p>
+To analyze shadows, we use the concept of <strong>boundary rays</strong>.
+</p>
+<div class="model-box">
+<p>
+<strong>Boundary Rays:</strong> These are the extreme rays that just graze the edges of the obstructing object. They separate illuminated and shadow regions.
+</p>
+</div>
+<p>
+The use of boundary rays follows from a key property of a beam: rays belonging to the same beam propagate independently and form a continuous family. The geometry of the beam is completely determined by its boundary rays, making it sufficient to analyze only these extreme rays.
+</p>
+<p>
+This is analogous to streamlines in steady flow, where the flow region is bounded by extreme streamlines, and no flow crosses these boundaries.
+</p>
+<div class="concept-box">
+Boundary rays define the envelope of a beam. All other rays lie within this envelope and do not affect its boundary.
+</div>
+</section>
+<section>
+<h2>Types of Shadow</h2>
+<p>
+For extended sources, shadow formation leads to two distinct regions:
+</p>
+<ul class="model-box">
+<li>
+<strong>Umbra:</strong> Region where light from the source is completely blocked. No rays from the source reach this region.
+</li>
+<li>
+<strong>Penumbra:</strong> Region where light from only a part of the source reaches. Some rays are blocked, while others are not.
+</li>
+</ul>
+<p>
+For a point source, only a sharp shadow (umbra) is formed, since all rays originate from a single point.
+</p>
+<div class="insightbox">
+The existence of penumbra is a direct consequence of the source being extended (a system of point sources).<br>
+We only have point source shadows for exam.
+</div>
+</section>
+<section>
+<h2>Geometric Interpretation</h2>
+<p>
+Shadow formation can be understood as a mapping of rays from the source through the edges of the object.
+</p>
+<p>
+The edges of the object act as boundaries that block certain rays while allowing others to pass.
+</p>
+<p>
+Thus, shadow formation is governed by:
+</p>
+<ul>
+<li>Geometry of the source</li>
+<li>Geometry of the obstructing object</li>
+<li>Relative positions of source, object, and screen</li>
+</ul>
+<div class="concept-box">
+Shadow formation is a consequence of rectilinear propagation of light combined with obstruction.
+</div>
+</section>
+<section>
+<h2>Illustrations</h2>
+<p>
+Ray diagrams for shadow formation are constructed by drawing boundary rays from the edges of the source to the edges of the object.
+</p>
+<p>
+These rays are called as:
+</p>
+<ul>
+<li>Boundary rays</li>
+<li>Extreme rays</li>
+<li>Grazing rays</li>
+</ul>
+<p>
+Shadow region or light region are 3D regions and their 2D projections are also called as <strong>Patch</strong> on the 2D surface.
+</p>
+<h3>The Similar Triangle Logic</h3>
+<p>
+For a point source, the shadow is always a sharp-edged <strong>Umbra</strong>. The geometry is governed by the divergence of rays from a single vertex.
+</p>
+<p>
+Consider a point source \(S\), an object of height \(h_o\) at distance \(d\), and a screen at distance \(D\) from the source. The height of the shadow \(h_s\) is determined by:
+\[ \frac{h_s}{D} = \frac{h_o}{d} \implies h_s = h_o \left( \frac{D}{d} \right) \]
+</p>
+<div class="insightbox">
+<strong>Velocity of Shadow:</strong> If the object moves with velocity \(v_o\) perpendicular to the axis, the shadow patch moves with velocity \(v_s\):
+\[ v_s = v_o \left( \frac{D}{d} \right) \]
+The shadow always moves "faster" than the object if the screen is further than the object from the source.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

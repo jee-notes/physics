@@ -278,6 +278,71 @@ window.addRay = function(start_point, end_point, color = 'black', isDashed = fal
     return { ray: ray, head: head };
 };
 	
+	window.drawConvexLens = function(p1_raw, p2_raw, r1, r2, isBiConvex = true) {
+    const p1 = new paper.Point(p1_raw);
+    const p2 = new paper.Point(p2_raw);
+    const midpoint = p1.add(p2).divide(2);
+    const chordVec = p2.subtract(p1);
+    const dist = p1.getDistance(p2);
+
+    // Radii Validation
+    if (r1 < 0 || r2 < 0) return null;
+	if (!isBiConvex) { 
+	if (r1 === r2) isBiConvex = true;
+	if (r1 === 0 || r2 === 0) isBiConvex = true; //Safety Hack: This is actually plano-convex
+	}
+    
+    // Safety check: radius must be at least half the chord distance
+    // Adding 0.1 ensures h is never exactly 0, preventing division by zero in normalize()
+    if (r1 !== 0 && r1 <= dist / 2) { r1 = dist / 2 + 0.1; isBiConvex = true; }
+    if (r2 !== 0 && r2 <= dist / 2) { r2 = dist / 2 + 0.1; isBiConvex = true; }
+
+    function getArcData(radius, side) {
+        if (radius === 0) return null; 
+        const h = Math.sqrt(Math.pow(radius, 2) - Math.pow(dist / 2, 2));
+        
+        // Base direction for the perpendicular "offset"
+        const sideDir = chordVec.rotate(90).normalize();
+        const perp = sideDir.multiply(h * side);
+        const center = midpoint.add(perp);
+        
+        // Use sideDir directly for the apex to avoid normalizing a potentially 0-length perp
+        const apex = center.subtract(sideDir.multiply(radius * side));
+        return { center, apex };
+    }
+
+    const lensGroup = new paper.Group();
+    const s1 = 1;
+    const s2 = isBiConvex ? -1 : 1;
+
+    const side1 = getArcData(r1, s1);
+    const side2 = getArcData(r2, s2);
+
+    if (!side1) {
+        new paper.Path.Line(p1, p2).addTo(lensGroup);
+    } else {
+        new paper.Path.Arc(p1, side1.apex, p2).addTo(lensGroup);
+    }
+
+    if (!side2) {
+        new paper.Path.Line(p1, p2).addTo(lensGroup);
+    } else {
+        new paper.Path.Arc(p1, side2.apex, p2).addTo(lensGroup);
+    }
+
+    lensGroup.set({ strokeColor: 'black', strokeWidth: 2.5 });
+    
+    const optCenter = (side1 && side2) ? side1.apex.add(side2.apex).divide(2) : midpoint;
+
+    return { 
+        opticalCenter: optCenter, 
+        c1: side1 ? side1.center : null, 
+        c2: side2 ? side2.center : null,
+        apex1: side1 ? side1.apex : midpoint,
+        apex2: side2 ? side2.apex : midpoint
+    };
+};
+
     // Global Helper: Add a Label Point
     window.addPoint = function(pos, label, offset) {
         new paper.Path.Circle(pos, 4).fillColor = 'red';

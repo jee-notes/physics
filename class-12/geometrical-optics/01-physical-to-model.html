@@ -16,7 +16,7 @@
 </nav>
 <h1>Model of Light</h1>
 <p class="subtitle">
-Modeling light as rays to analyze reflection, refraction, and image formation.
+Modeling light as rays to analyze reflection, refraction and image, shadow formation.
 </p>
 <section>
 <h2>Sources of Light</h2>
@@ -25,10 +25,10 @@ In geometrical optics, light is treated as originating from a <strong>source</st
 </p>
 <ul class="model-box">
 <li>
-<strong>Self-Luminous:</strong> Objects that generate their own light (e.g., Sun, stars, electric bulbs, red-hot iron). Their color depends on the physical mechanism of emission, such as temperature or atomic transitions.
+<strong>Self-Luminous:</strong> Objects that generate their own light (e.g. Sun, stars, electric bulbs, red-hot iron). Their color depends on the physical mechanism of emission, such as temperature or atomic transitions.
 </li>
 <li>
-<strong>Non-Luminous:</strong> Objects that do not emit light but become visible by reflecting light from a self-luminous source (e.g., Moon, planets, this page).
+<strong>Non-Luminous:</strong> Objects that do not emit light but become visible by reflecting light from a self-luminous source (e.g. Moon, planets, this page).
 </li>
 </ul>
 <h3>The Mechanism of Color</h3>
@@ -43,8 +43,7 @@ For self-luminous objects, color depends on the <strong>emission mechanism</stro
 <em>Example:</em> A red-hot iron emits due to temperature (thermal radiation), while a sodium vapor lamp emits characteristic yellow light due to atomic transitions.
 </p>
 <div class="concept-box">
-In modeling, sources are idealized as <strong>point sources</strong> (dimensionless) or <strong>extended sources</strong> (a system of point sources).  
-<br>
+In modeling, sources are idealized as <strong>point sources</strong> (dimensionless) or <strong>extended sources</strong> (a system of point sources).<br>
 Ray diagrams typically begin by considering light originating from a point on the source.
 </div>
 </section>
@@ -55,6 +54,12 @@ A <strong>Ray</strong> is a straight line representing the direction of propagat
 </p>
 <p>
 A <strong>Beam</strong> is a system of rays.
+</p>
+<p>
+As a more fuller physical model, light is an EM wave having amplitude, wavelength, velocity etc. But the ray model only deals with direction of energy propagation.
+</p>
+<p>
+As a result, rays are modeled as straight-line directions and are represented using unit vectors (in vector form), as only the direction of propagation is relevant, and not the magnitude.
 </p>
 <ul class="model-box">
 <li>
@@ -68,11 +73,34 @@ A <strong>Beam</strong> is a system of rays.
 </li>
 </ul>
 <p>
-This classification is geometric and depends on the angular spread of the rays in the beam.
+This classification is geometric and depends on the angular spread of the rays in the beam. But, its operational use as a tool is similar to field lines or streamline in fluid flow. Diverging beam can be modelled as "originating" from a point source and converging beam can be modelled as "terminating" at a point.
 </p>
-</section>
+<p>
+However, the rays might continue beyond the "originating" or "terminating" point ( depending on given physical conditions ) but we can say that the <strong>beam</strong> itself originated or terminated.
+</p>
+<div class="concept-box">
+The ray model can be summarized as <strong>rectilinear propagation of light</strong>.<br>
+This is why the subject is called Ray Optics or Geometrical Optics—light is analyzed by tracing straight-line paths of rays - by using geometry.
+</div>
 <section>
-<h2>Objects and Images</h2>
+<h2>Ray diagram</h2>
+<p>
+A ray diagram is a system diagram comprising of beams ( rays ), optical elements and objects and images. It is a visual representation of an optics system similar to how a circuit diagram is a visual representation of an electric system. Just like a potentiometer is an electric system, a microscope is an optics system.
+</p>
+<h3>Objects and Images</h3>
+<p>
+Objects and images are elements of a ray diagram. They are points where diverging beam originate or converging beam terminate. 
+</p>
+<p>
+These originating or terminating points can be either an object or an image. It depends on the interacting optical element.
+</p>
+<h3>Relation between Object and Optical Element</h3>
+<p>
+An optical element like a lens, mirror, prism etc. interacts with incident rays that originate from an object and transforms them and the transformed emerging rays terminate at the image. 
+</p>
+<p>
+This mechanism is known as ray tracing. All transformations done by the optical element occur at point of incidence.   
+</p>
 <p>
 In geometrical optics, whether an object or image is <strong>real</strong> or <strong>virtual</strong> depends entirely on the behavior of the incident and emergent rays.
 </p>
@@ -107,7 +135,7 @@ In geometrical optics, whether an object or image is <strong>real</strong> or <s
 </li>
 </ul>
 <div class="concept-box">
-Rays will <em>actually meet<em> at a point if incident rays diverge and emergent rays converge.<br>
+Rays will <em>actually meet</em> at a point if incident rays diverge and emergent rays converge.<br>
 If incident rays converge or emerging rays diverge, then we need to backtrace the rays to make them meet.<br>
 The backtracing needs to be done with reference to the optical element.
 </div>
@@ -118,6 +146,12 @@ The backtracing needs to be done with reference to the optical element.
 An extended object can be viewed as a system of point objects, each emitting its own set of rays.
 </p>
 <p>
+A point source, in isolation, emits light in all directions (a solid angle of \(4\pi\)). However, when a point is part of an extended object, the rays reaching an observer are restricted by the geometry of the object and possible obstructions.
+</p>
+<p>
+This is why we cannot see the back of our head in a mirror placed in front of us—the rays from those points do not reach the mirror and hence do not contribute to image formation.
+</p>
+<p>
 Image formation for an extended object is determined by analyzing the image formed by each point and preserving the geometric relationships between them.
 </p>
 <div class="concept-box">
@@ -125,69 +159,19 @@ Thus, the image of an extended object is a geometrically transformed system of i
 </div>
 </section>
 <section>
-<h2>Ray diagram</h2>
+<h2>Ray diagram Example</h2>
 <p>
-A ray diagram is an optical element or a system of optical elements. Rays are incident or emergent with respect to an optical element. For a system of optical elements, emerging rays from one optical element can be incident rays for other. In this case image of one optical element becomes object for next optical element.  
+A ray diagram may comprise of a system of optical elements. Rays are incident or emergent with respect to an optical element. For a system of optical elements, emerging rays from one optical element can be incident rays for other. In such cases image of one optical element becomes object for next optical element.  
 </p>
 <div class="concept-box">
-Often students incorrectly memorize that "object is to the left" or "images form to the right". Its the behavior of rays that determines everything. For any optical element (in ray diagram), the object is defined by the intersection of <strong>incident</strong> rays, and the image is defined by the intersection of <strong>emergent</strong> rays.
+Often students incorrectly memorize that "object is for diverging" or "image is for converging". Its the behavior of rays that determines everything. For any optical element (in ray diagram), the object is defined by the intersection of <strong>incident</strong> rays, and the image is defined by the intersection of <strong>emergent</strong> rays.
 </div>
 <div class="examplebox">
 <p>
 Convex Lens L followed by plane mirror M. Light rays from source O fall on convex lens, converge and fall on mirror M.
 </p>
-<div class="diagram">
-<svg viewBox="0 0 600 600" width="100%" height="auto">
-
-<!-- axis -->
-<line x1="0" y1="300" x2="600" y2="300" stroke="black" stroke-width="2"/>
-
-<!-- source -->
-<circle cx="100" cy="300" r="3" fill="black"/>
-<text x="95" y="320">O</text>
-
-<!-- convex lens -->
-<ellipse cx="200" cy="300" rx="10" ry="80" stroke="black" stroke-width="3" fill="none"/>
-<text x="215" y="320">L</text>
-
-<!-- mirror -->
-<line x1="400" y1="200" x2="400" y2="400" stroke="black" stroke-width="3"/>
-<!-- hatch -->
-<g stroke="black" stroke-width="1">
-<line x1="400" y1="200" x2="410" y2="190"/>
-<line x1="400" y1="240" x2="410" y2="230"/>
-<line x1="400" y1="280" x2="410" y2="270"/>
-<line x1="400" y1="320" x2="410" y2="310"/>
-<line x1="400" y1="360" x2="410" y2="350"/>
-<line x1="400" y1="400" x2="410" y2="390"/>
-</g>
-<text x="410" y="320">M</text>
-
-<!-- rays from O to lens -->
-<line x1="100" y1="300" x2="200" y2="240" stroke="red" stroke-width="2"/>
-<line x1="100" y1="300" x2="200" y2="360" stroke="red" stroke-width="2"/>
-
-<!-- converging rays after lens to mirror-->
-<line x1="200" y1="240" x2="400" y2="280" stroke="red" stroke-width="2"/>
-<line x1="200" y1="360" x2="400" y2="320" stroke="red" stroke-width="2"/>
-
-<!-- mirror backtrace virtual object -->
-<line x1="400" y1="280" x2="500" y2="300" stroke="red" stroke-width="2" stroke-dasharray="2 2"/>
-<line x1="400" y1="320" x2="500" y2="300" stroke="red" stroke-width="2" stroke-dasharray="2 2"/>
-
-<!-- image by lens -->
-<circle cx="500" cy="300" r="3" fill="black"/>
-<text x="510" y="320">I₁</text>
-
-<!-- reflected rays from mirror-->
-<line x1="400" y1="280" x2="300" y2="300" stroke="blue" stroke-width="2"/>
-<line x1="400" y1="320" x2="300" y2="300" stroke="blue" stroke-width="2"/>
-
-<!-- final image -->
-<circle cx="300" cy="300" r="3" fill="black"/>
-<text x="280" y="320">I₂</text>
-</svg>
-</div>
+<div class="diagram" id="svg-output"></div>
+<canvas id="paper-workspace" width="600" height="400"></canvas>
 <h3>Solution</h3>
 <p><strong>For Lens (L):</strong></p>
 <ul>
@@ -213,10 +197,71 @@ Our eyes are designed as an optical instrument to see real objects for the human
 Hence, even if a plane mirror makes virtual image of real objects, we can see the image as it is real object for human eye. 
 </div>
 </section>
+<section>
+<h2>Main Topics</h2>
+<div class="chapter-list">
+<a href="./01a-shadow.html">1. Shadow formation</a>
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
 </div>
+<script>
+function startDrawing() {
+    // 1. Setup the workspace
+    document.getElementById('svg-output').innerHTML = ''; 
+    const canvas = document.getElementById('paper-workspace');
+    if (!canvas) return;
+    paper.setup(canvas);
+
+    // 2. Draw the Lens
+    // p1, p2, r1, r2, isBiConvex
+    // Passing 'false' creates a Concavo-Convex (Meniscus) lens
+    const lens = drawConvexLens([200, 100], [200, 300], 500, 500, false);
+	const mirror = drawPlaneMirror([400, 100], [400, 300], false);
+	const source = new paper.Point([100,200]);
+	const i2 = new paper.Point([mirror.pole.x - 100, mirror.pole.y]);
+	const i1 = new paper.Point([mirror.pole.x + 100, mirror.pole.y]);
+
+    // 3. Draw the Principal Axis
+    // We use the opticalCenter returned by your function to ensure it's centered
+    const axis = new paper.Path.Line(
+        [lens.opticalCenter.x - 200, lens.opticalCenter.y], 
+        [lens.opticalCenter.x + 500, lens.opticalCenter.y]
+    );
+    axis.strokeColor = '#3498db';
+    axis.dashArray = [4, 4];
+
+    // 4. Label
+    addPoint(source, "O", [0, 20]);
+	addPoint(i2, "I₂", [0, 20]);
+	addPoint(i1, "I₁", [0, 20]);
+	
+	addRay(source, [lens.opticalCenter.x, lens.opticalCenter.y - 50 ], 'blue', false);
+	addRay(source, [lens.opticalCenter.x, lens.opticalCenter.y + 50 ], 'blue', false);
+	
+	addRay([lens.opticalCenter.x, lens.opticalCenter.y - 50 ], [mirror.pole.x, mirror.pole.y - 25 ], 'blue', false);
+	addRay([lens.opticalCenter.x, lens.opticalCenter.y + 50 ], [mirror.pole.x, mirror.pole.y + 25 ], 'blue', false);
+	
+	addRay([mirror.pole.x, mirror.pole.y - 25 ], i2, 'orange', false);
+	addRay([mirror.pole.x, mirror.pole.y + 25 ], i2, 'orange', false);
+	
+	addRay([mirror.pole.x, mirror.pole.y - 25 ], i1, 'blue', true);
+	addRay([mirror.pole.x, mirror.pole.y + 25 ], i1, 'blue', true);
+
+    
+    const svg = paper.project.exportSVG({ asString: false });
+    document.getElementById('svg-output').appendChild(svg);
+}
+
+// Ensure math.js is loaded before running
+if (window.paperIsReady) { 
+    startDrawing(); 
+} else { 
+    window.addEventListener('PaperReady', startDrawing); 
+}
+</script>
 </body>
 </html>
