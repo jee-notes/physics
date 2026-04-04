@@ -19,45 +19,56 @@
 Modeling light as rays to predict image formation through reflection, refraction and shadow formation.
 </p>
 <section>
-<h2>Conceptual Overview of Ray Optics</h2>
+<h2>Conceptual Overview</h2>
 <p>
-Light is fundamentally an electromagnetic wave. However, when the wavelength of light is much smaller than the dimensions of the objects it interacts with (such as mirrors, lenses, and everyday objects), its wave nature becomes less prominent.
+In classical physics, light is fundamentally an electromagnetic wave. A natural starting point is therefore to model it as a wave, for example:
+\[
+y = A \sin(\omega t + kx)
+\]
 </p>
 <p>
-In this limit, light can be modeled as traveling in straight lines called <strong>rays</strong>.
+At the scale of human observation (and experience), the wavelength of light is much smaller than the dimensions of typical objects (mirrors, lenses, apertures). Consequently, wave effects such as interference and diffraction are negligible.
+</p>
+<p>
+In this limit, light can be modeled as energy propagating along straight lines called <strong>rays</strong>.
 </p>
 <div class="insightbox">
-Geometrical Optics (or Ray Optics) is the approximation in which light is treated as traveling in straight lines. It ignores interference, diffraction, and polarization, and focuses purely on geometric rules to determine the path of light.
+Ray optics is a geometric approximation in which light is treated as energy traveling in straight lines. It ignores interference, diffraction, polarization and focuses on geometric rules governing the path of light.<br>
+At this scale, the underlying nature of light (wave or particle) does not affect the predictions of the model.<br>
+Phenomena such as interference and polarization, however, necessarily require a wave description.
 </div>
 <p>
-This approximation is valid when variations in the medium or obstacles occur over length scales much larger than the wavelength of light.
+This approximation remains valid as long as variations in the medium or obstacles occur over length scales much larger than the wavelength of light.
 </p>
 </section>
 <section>
-<h2>Light in Classical Physics</h2>
+<h2>History of nature of Light</h2>
 <p>
-In classical physics, there was a long-standing debate regarding whether light behaves as a particle or a wave. Initially, light was assumed to consist of particles (called corpuscles), and Newton explained phenomena such as reflection and refraction using this corpuscular model.
+In classical physics, the nature of light was debated between two models: the corpuscular (particle) model and the wave model. The corpuscular model, successfully explained phenomena such as reflection and refraction (by Newton).
 </p>
 <p>
-On the other hand, sound was understood as a wave phenomenon, with well-established concepts such as interference and wave propagation. The discovery of interference and diffraction in light later provided strong evidence for its wave nature, and phenomena like polarization could only be explained using wave theory.
+Huygens had proposed wave nature of light, but it did not gain acceptance initially—not due to decisive physical refutation, but because Newton’s dominance led to the particle model being favored.
+</p>
+<p>
+Even though, sound was already understood as a wave phenomenon, with well-established concepts such as interference and wave propagation. The discovery of interference and diffraction in light later provided strong evidence for its wave nature, and phenomena like polarization could only be explained using wave theory.
 </p>
 <p>
 This led to the acceptance of light as a wave, culminating in Maxwell’s formulation of light as an electromagnetic wave.
 </p>
 <p>
-Geometrical optics does not contradict this wave description. Instead, it emerges as an approximation of wave optics in the limit of small wavelengths. At this macroscopic level, it is not necessary to consider whether light is fundamentally a particle or a wave.
+Geometrical optics does not contradict this wave description. Instead, it emerges as a limiting model of wave optics when wavelength effects are negligible. At this scale, it is not necessary to consider whether light is fundamentally a particle or a wave.
 </p>
 <div class="concept-box">
 <p>
-The core assumption of geometrical optics is the <strong>rectilinear propagation of light</strong>.<br> 
-A light ray represents the direction of energy propagation (equivalently, the normal to the wavefront), and a collection of such rays forms a beam of light.
+The core assumption of geometrical optics is the <strong>rectilinear propagation of light</strong>.<br>
+A ray represents the direction of energy propagation (equivalently, the normal to the wavefront), and a collection of rays forms a beam of light.
 </p>
 </div>
 <p>
-Using this framework, all phenomena in this chapter—reflection from mirrors, refraction through lenses, and dispersion by prisms—can be understood through simple geometric laws governing these rays.
+Within this framework, optical elements act as geometric transformers of rays. Image formation reduces to determining how incident rays are transformed into emergent rays by these elements.
 </p>
 <p>
-Despite its simplicity, this approach is extremely powerful. With just the laws of reflection and refraction and basic geometry, we can analyze and design optical instruments such as telescopes, microscopes, and cameras, and also understand the working of the human eye.
+Despite its simplicity, this model is extremely powerful. Using only geometric laws of reflection and refraction, we can analyze optical systems such as mirrors, lenses, and instruments like telescopes and microscopes.
 </p>
 </section>
 <section>
@@ -69,17 +80,20 @@ This chapter is primarily solved using <strong>ray diagrams</strong>.
 A ray diagram is similar in spirit to a Free Body Diagram or a Circuit Diagram—it is a visual model that translates a physical situation into a form that can be analyzed mathematically.
 </p>
 <p>
-Just as circuit diagrams use idealized elements (resistors, capacitors, sources), ray diagrams use optical elements such as mirrors, lenses, and refracting surfaces.
+Just as circuit diagrams use idealized elements (resistors, capacitors, sources), ray diagrams use optical elements such as mirrors, lenses, and refracting surfaces. These are also called as optical device.
 </p>
 <p>
-In a ray diagram, light is represented by rays, and the behavior of these rays is governed by the laws of reflection and refraction.
+In a ray diagram, light is represented by rays, and these optical elements interact with rays incident on their surface. This interaction is basically a geometrical transformation like deviation, dispersion etc. For example, sunlight falling on the surface of a convex lens converges and can be used to light fires. White light falls on prism surface gets dispersed into 7 colors of rainbow.
 </p>
 <p>
-Thus, a ray diagram reduces the problem of image formation to a problem in geometry—once the correct rays are constructed, the image follows directly from their intersections.
+After the interaction with optical element, these rays are called "emerging" rays. Thus, ray diagrams are a visual representation of geometric transformation of "incident" rays to "emerging" rays by the optical element at the point of incidence at its surface. 
+</p>
+<p>
+Thus, a ray diagram is basically a ray tracing geometric problem. We need to follow the trail of the ray \(\to\) which is a straight line, till it encounters an optical element. Then we need to again follow the straight trail of the transformed ray \(\to\) untill we get our answer.
 </p>
 <div class="insightbox">
 Unlike many topics in electrostatics and electromagnetism, geometrical optics involves minimal use of vector calculus.<br>
-The emphasis here is on geometric reasoning—constructing ray diagrams and applying the laws of reflection and refraction — rather than analyzing vector fields.<br>
+The emphasis here is on geometric reasoning \(\to\) constructing ray diagrams and applying the laws of reflection and refraction — rather than analyzing vector fields.<br>
 Geometry, Trigonometry are more important tools in this chapter.
 </div>
 </section>
