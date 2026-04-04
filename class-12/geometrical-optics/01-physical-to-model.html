@@ -50,56 +50,69 @@ Ray diagrams typically begin by considering light originating from a point on th
 <section>
 <h2>Rays and Beams</h2>
 <p>
-A <strong>Ray</strong> is a straight line representing the direction of propagation of light energy.
+A <strong>ray</strong> is a straight line representing the direction of propagation of light energy.
 </p>
 <p>
-A <strong>Beam</strong> is a system of rays.
+A <strong>beam</strong> is a system of rays that are geometrically related to each other.
 </p>
 <p>
-As a more fuller physical model, light is an EM wave having amplitude, wavelength, velocity etc. But the ray model only deals with direction of energy propagation.
+A beam is not an arbitrary collection of rays. The rays in a beam must form a structured distribution—such as originating from a point (diverging), remaining parallel, or converging toward a point.
 </p>
 <p>
-As a result, rays are modeled as straight-line directions and are represented using unit vectors (in vector form), as only the direction of propagation is relevant, and not the magnitude.
+In a more complete physical description, light is an electromagnetic wave with amplitude, wavelength, phase etc. However, in geometrical optics, only the direction of propagation is relevant, and rays are modeled as straight-line directions (often represented using unit vectors).
 </p>
+<div class="insightbox"> 
+In a deeper treatment of optics, rays are not fundamental objects but arise as limiting paths of wave propagation.<br>  
+This connection is described mathematically by the Eikonal equation, which links wave optics to geometrical optics.<br>  
+However, for exam, rays can be treated as independent geometric entities.
+</div>
 <ul class="model-box">
 <li>
-<strong>Parallel Beam:</strong> Rays are parallel to each other. Corresponds to light arriving from a very distant source.
+<strong>Parallel Beam:</strong> Rays are parallel to each other. This corresponds to light arriving from a very distant source.
 </li>
 <li>
-<strong>Converging Beam:</strong> Rays meet at a specific point.
+<strong>Converging Beam:</strong> Rays are directed toward a common point.
 </li>
 <li>
-<strong>Diverging Beam:</strong> Rays spread out from a point.
+<strong>Diverging Beam:</strong> Rays spread out from a common point.
 </li>
 </ul>
 <p>
-This classification is geometric and depends on the angular spread of the rays in the beam. But, its operational use as a tool is similar to field lines or streamline in fluid flow. Diverging beam can be modelled as "originating" from a point source and converging beam can be modelled as "terminating" at a point.
+This classification is purely geometric and depends on the angular spread of rays constituting the beam. In this sense, the rays of a beam are similar to field lines or streamlines — representing how light propagates through space.
 </p>
 <p>
-However, the rays might continue beyond the "originating" or "terminating" point ( depending on given physical conditions ) but we can say that the <strong>beam</strong> itself originated or terminated.
+A beam may be modeled as originating from or terminating at a point, even if the rays physically continue beyond that point depending on the optical system.
 </p>
 <div class="concept-box">
-The ray model can be summarized as <strong>rectilinear propagation of light</strong>.<br>
-This is why the subject is called Ray Optics or Geometrical Optics—light is analyzed by tracing straight-line paths of rays - by using geometry.
+A beam represents a structured system of rays governed by geometry.<br>
+Image formation in geometrical optics is determined by how this system is transformed by optical elements.
 </div>
+</section>
 <section>
-<h2>Ray diagram</h2>
+
+<h2>Ray Diagram</h2>
 <p>
-A ray diagram is a system diagram comprising of beams ( rays ), optical elements and objects and images. It is a visual representation of an optics system similar to how a circuit diagram is a visual representation of an electric system. Just like a potentiometer is an electric system, a microscope is an optics system.
+A ray diagram is a system diagram comprising beams (systems of rays), optical elements, and objects and images.
+</p>
+<p>
+It is a visual representation of an optical system (e.g. microscope), similar to how a circuit diagram represents an electrical system (e.g. potentiometer).
 </p>
 <h3>Objects and Images</h3>
 <p>
-Objects and images are elements of a ray diagram. They are points where diverging beam originate or converging beam terminate. 
+Objects and images are elements of a ray diagram. They are points associated with beams—either as points from which rays diverge or toward which rays converge.
 </p>
 <p>
-These originating or terminating points can be either an object or an image. It depends on the interacting optical element.
+These points may represent either an object or an image depending on the optical element under consideration.
 </p>
 <h3>Relation between Object and Optical Element</h3>
 <p>
-An optical element like a lens, mirror, prism etc. interacts with incident rays that originate from an object and transforms them and the transformed emerging rays terminate at the image. 
+An optical element such as a lens, mirror, or prism interacts with incident rays associated with an object and transforms them into emergent rays associated with an image.
 </p>
 <p>
-This mechanism is known as ray tracing. All transformations done by the optical element occur at point of incidence.   
+An <strong>object</strong> is defined as the point from which incident rays originate (or appear to originate) with respect to a given optical element.
+</p>
+<p>
+An <strong>image</strong> is defined as the point toward which emergent rays converge (or appear to converge) with respect to that optical element. Note that rays may not physically terminate; rather, the beam is considered to terminate at that point.
 </p>
 <p>
 In geometrical optics, whether an object or image is <strong>real</strong> or <strong>virtual</strong> depends entirely on the behavior of the incident and emergent rays.
@@ -135,18 +148,18 @@ In geometrical optics, whether an object or image is <strong>real</strong> or <s
 </li>
 </ul>
 <div class="concept-box">
-Rays will <em>actually meet</em> at a point if incident rays diverge and emergent rays converge.<br>
-If incident rays converge or emerging rays diverge, then we need to backtrace the rays to make them meet.<br>
-The backtracing needs to be done with reference to the optical element.
+If rays <em>actually meet</em>, the point is real.<br>
+If rays meet only when <em>extended</em>, the point is virtual.<br>
+All constructions must be interpreted with respect to the optical element.
 </div>
 </section>
 <section>
 <h2>Point Object vs. Extended Object</h2>
 <p>
-An extended object can be viewed as a system of point objects, each emitting its own set of rays.
+An extended object can be viewed as a system of point objects, each emitting its own set of rays (beam).
 </p>
 <p>
-A point source, in isolation, emits light in all directions (a solid angle of \(4\pi\)). However, when a point is part of an extended object, the rays reaching an observer are restricted by the geometry of the object and possible obstructions.
+A point (source) object, in isolation, emits light in all directions (a solid angle of \(4\pi\)). However, when the point object is part of an extended object, only a subset of these rays contribute to image formation, determined by geometry and possible obstructions.
 </p>
 <p>
 This is why we cannot see the back of our head in a mirror placed in front of us—the rays from those points do not reach the mirror and hence do not contribute to image formation.
