@@ -114,18 +114,37 @@ These rays are called as:
 <p>
 Shadow region or light region are 3D regions and their 2D projections are also called as <strong>Patch</strong> on the 2D surface.
 </p>
-<h3>The Similar Triangle Logic</h3>
-<p>
-For a point source, the shadow is always a sharp-edged <strong>Umbra</strong>. The geometry is governed by the divergence of rays from a single vertex.
-</p>
-<p>
-Consider a point source \(S\), an object of height \(h_o\) at distance \(d\), and a screen at distance \(D\) from the source. The height of the shadow \(h_s\) is determined by:
-\[ \frac{h_s}{D} = \frac{h_o}{d} \implies h_s = h_o \left( \frac{D}{d} \right) \]
-</p>
 <div class="insightbox">
-<strong>Velocity of Shadow:</strong> If the object moves with velocity \(v_o\) perpendicular to the axis, the shadow patch moves with velocity \(v_s\):
-\[ v_s = v_o \left( \frac{D}{d} \right) \]
-The shadow always moves "faster" than the object if the screen is further than the object from the source.
+Most of shadow problems are solved by application of geometric concepts from similar triangle, parallel lines etc.<br>
+Basically, create geometric constructions to get 2 similar triangles due to parallel lines and use proportional sides logic.
+</div>
+<h3>Solved Example: Shadow on a Wall</h2>
+<div class="examplebox">
+<p><strong>Problem:</strong> A man of height \( 1.8 \text{ m} \) is standing in front of a wall. The sun is exactly behind him. His shadow has a length of \( 1.5 \text{ m} \) on the ground and \( 0.75 \text{ m} \) on the wall. Find the total length of his shadow on the ground if the wall were removed.</p>
+<div class="diagram" id="svg-output"></div>
+<canvas id="paper-workspace" width="600" height="400"></canvas>
+<h3>Mathematical Solution</h3>
+<p>
+The angle of elevation of the sun rays remains constant. We can use property of similar triangles to find the "missing" shadow length \( x \) that would extend beyond the wall's base.
+</p>
+<div class="model-box">
+<p>Let:</p>
+<ul>
+<li>\( H = 1.8 \text{ m} \) (Height of the man)</li>
+<li>\( s_1 = 1.5 \text{ m} \) (Shadow length on the ground)</li>
+<li>\( h_w = 0.75 \text{ m} \) (Shadow height on the wall)</li>
+<li>\( x = \) Potential shadow extension if the wall is removed</li>
+</ul>
+<p>From the geometry of the grazing ray:</p>
+\[ \tan \theta = \frac{H}{s_1 + x} = \frac{h_w}{x} \text{ or } \frac{s_1 + x}{x} = \frac{H}{h_w}\] 
+\[ \frac{1.5 + x}{x} = \frac{1.8}{0.75} =  \frac{12}{5} = 2.4 \]
+\[ x = \frac{1.5}{1.4} \implies x = 1.07 \text{ m} \]
+<p><strong>Total Shadow Length:</strong></p>
+\[ S_{total} = s_1 + x = 1.5 + 1.07 = 2.57 \text{ m} \]
+</div>
+<div class="insightbox">
+<strong>Geometrical Interpretation:</strong> The wall "intercepts" the ray early. By calculating the slope of the ray (\( \tan \theta \)), we can project where that ray would have eventually intersected the ground plane.
+</div>
 </div>
 </section>
 <footer>
@@ -133,5 +152,67 @@ The shadow always moves "faster" than the object if the screen is further than t
 <p>By Hitendra K K</p>
 </footer>
 </div>
+<script>
+function startDrawing() {
+// 1. Setup the workspace
+document.getElementById('svg-output').innerHTML = ''; 
+const canvas = document.getElementById('paper-workspace');
+if (!canvas) return;
+paper.setup(canvas);
+
+const groundY = 300;
+const startX = 100;
+const manHeight = 150; 
+const wallDist = 200; 
+const wallShadowHeight = 50; 
+const totalShadowX = 214;
+
+// 1. Ground
+const ground = new paper.Path.Line([50, groundY], [550, groundY]);
+ground.strokeColor = 'black';
+ground.strokeWidth = 3;
+
+// 2. Man
+const man = addExtendedObject([startX,groundY], manHeight, 'green');
+
+// 3. Wall
+const wallX = startX + wallDist;
+const wall = new paper.Path.Line([wallX, groundY], [wallX, groundY - 200]);
+wall.strokeColor = '#2c3e50';
+wall.strokeWidth = 3;
+
+// 4. The Ray (Grazing Ray)
+const grazing_ray = addRay([startX - 50,groundY - manHeight - 25], [startX + wallDist,groundY - wallShadowHeight], 'red', false);
+const extended_ray = addRay([startX + wallDist,groundY - wallShadowHeight], [startX + wallDist + 100,groundY], 'red', true);
+
+// 5. Annotations
+// Man Height 1.8m
+const hLabel = new paper.PointText(new paper.Point(startX - 40, groundY - 75));
+hLabel.content = "1.8m";
+
+// Shadow on wall 0.75m
+const swLabel = new paper.PointText(new paper.Point(wallX - 50, groundY - 30));
+swLabel.content = "0.75m";
+
+// Ground shadow 1.5m
+const sgLabel = new paper.PointText(new paper.Point(startX + 60, groundY + 20));
+sgLabel.content = "1.5m";
+
+// x segment
+const xLabel = new paper.PointText(new paper.Point(wallX + 40, groundY + 20));
+xLabel.content = "x";
+
+addAngleArc([startX + wallDist + 100,groundY], [startX,groundY], [startX + wallDist,groundY - wallShadowHeight], 30, 'θ', true);
+
+const svg = paper.project.exportSVG({ asString: false });
+document.getElementById('svg-output').appendChild(svg);
+}
+// Ensure math.js is loaded before running
+if (window.paperIsReady) { 
+startDrawing(); 
+} else { 
+window.addEventListener('PaperReady', startDrawing); 
+}
+</script>
 </body>
 </html>
