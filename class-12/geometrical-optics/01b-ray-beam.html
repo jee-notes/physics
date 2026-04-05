@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ray vs Beam | Ray Model</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-physical-to-model.html" class="back-btn">
+<span>&larr;</span> Back to Ray Model
+</a>
+</nav>
+<h1>Ray vs Beam</h1>
+<p class="subtitle">
+Beam is system of Rays satisfying geometric constraint.
+</p>
+<section>
+<h2>Beam as a System of Rays</h2>
+<div class="concept-box">
+A beam is a system of rays that satisfy a <strong>common geometrical constraint</strong>.
+</div>
+<p>
+Thus, not every collection of rays forms a beam. The rays must be related by a consistent geometric relation such as parallelism or intersection at a point.
+</p>
+<p>
+For a system of exactly two rays:
+</p>
+<ul class="model-box">
+<li>
+Two <strong>non-parallel coplanar rays</strong> may not always form a beam, even if they will always intersect (possibly upon extension) as concurrency as well as direction - both are critical for constraint.
+</li>
+<li>
+Two <strong>parallel rays</strong> form a beam only if they propagate in the same direction.
+</li>
+<li>
+Two <strong>non-coplanar rays</strong> (skew lines in three dimensions) do not form a beam, as no single geometric constraint can be imposed on them.
+</li>
+</ul>
+<p>
+For systems of more than two rays, all rays must satisfy the same geometric constraint for the collection to qualify as a beam.
+</p>
+</section>
+<section>
+<h2>Geometric Constraint</h2>
+<p>
+The geometric constraint is that a beam can only be one of the following three types:
+</p>
+<ul class="model-box">
+<li>
+<strong>Parallel Beam:</strong> Rays are parallel to each other and propagate in the same direction.
+</li>
+<li>
+<strong>Converging Beam:</strong> Rays are directed toward a single point (concurrent), possibly upon extension.
+</li>
+<li>
+<strong>Diverging Beam:</strong> Rays are directed away from a single point (concurrent), possibly upon extension.
+</li>
+</ul>
+<p>
+This classification is based on the angular relationship between the rays. For a beam, this angular structure must remain consistent across the entire system.
+</p>
+<div class="insightbox"> 
+Rays are described as converging or diverging based on their geometric behavior.<br>  
+A beam, being a system of rays, can be associated with a point of origin or termination as a geometric construct.<br>
+A converging beam is associated with a point of termination, while a diverging beam is associated with a point of origin.
+</div>
+<section>
+<h2>Examples of Ray–Beam Terminology</h2>
+<div class="examplebox">
+<h3>Example 1:</h3>
+<p>
+Two non-parallel coplanar rays form a beam only when their directions are consistent with convergence or divergence.
+</p>
+<style>
+#paper-workspace1 {
+    display: none;
+}
+#svg-output1 svg {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+</style>
+<div class="diagram" id="svg-output1"></div>
+<canvas id="paper-workspace1" width="600" height="500"></canvas>
+<h3>Solution</h3>
+<p>
+Ray AA′ and Ray BB′ form a <strong>converging beam</strong>. Even though they do not physically meet, they can be extended to intersect at point O.
+</p>
+<p>
+At point O, the converging beam terminates. Beyond O, Ray OA″ and Ray OB″ form a new <strong>diverging beam</strong> originating from O.
+</p>
+<p>
+Thus, the point of convergence of one beam becomes the point of origin of the next beam.
+</p>
+<p>
+<strong>Question:</strong> Can Ray AA′ and Ray OB″ together form a beam?
+</p>
+<p>
+<strong>Answer:</strong> No. These two rays do not constitute a beam even if they meet at O. Its because the direction sense with respect to point of intersection is different.
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+<script>
+function startDrawing() {
+// 1. Setup the workspace
+document.getElementById('svg-output1').innerHTML = ''; 
+const canvas = document.getElementById('paper-workspace1');
+if (!canvas) return;
+paper.setup(canvas);
+
+const startA = [100,400];
+const startB = [500,400];
+const endA = [300,100];
+const endB = [300,100];
+const midA = [200,250];
+const midB = [400,250];
+const extA = [350,25];
+const extB = [250,25];
+
+// The Rays
+addRay(startA, midA, 'red', false);
+addRay(startB, midB, 'red', false);
+addRay(midA, endA, 'red', true);
+addRay(midB, endB, 'red', true);
+addRay(endA, extA, 'blue', true);
+addRay(endB, extB, 'blue', true);
+
+// Annotations
+addPoint(new paper.Point(startA), "A", [10, 10]);
+addPoint(new paper.Point(midA), "A'", [10, 10]);
+addPoint(new paper.Point(startB), "B", [-20, 10]);
+addPoint(new paper.Point(midB), "B'", [-20, 10]);
+addPoint(new paper.Point(endA), "O", [-20, 10]);
+addPoint(new paper.Point(extA), "A''", [10, 10]);
+addPoint(new paper.Point(extB), "B''", [-30, 10]);
+
+
+const svg = paper.project.exportSVG({ asString: false });
+document.getElementById('svg-output1').appendChild(svg);
+}
+// Ensure math.js is loaded before running
+if (window.paperIsReady) { 
+startDrawing(); 
+} else { 
+window.addEventListener('PaperReady', startDrawing); 
+}
+</script>
+</body>
+</html>
