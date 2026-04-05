@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fermat Principle | Reflection</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-reflection.html" class="back-btn">
+<span>&larr;</span> Back to Reflection
+</a>
+</nav>
+<h1>Fermat Principle</h1>
+<p class="subtitle">
+Fundamental Principle behind Laws of reflection and refraction.
+</p>
+<section>
+<h2>Fermat’s Principle</h2>
+<p>
+This entire chapter is based on two fundamental phenomena: <strong>reflection</strong> and <strong>refraction</strong>.
+</p>
+<p>  
+The Laws of both phenomena can be derived from a fundamentally deeper principle known as <strong>Fermat’s Principle of Least Time</strong>.
+</p>
+<div class="concept-box">
+Light travels between two points along the path that requires <strong>stationary</strong> (usually minimum) time.
+</div>
+<p>
+Although not required for exams directly, this principle provides a deeper understanding of why the laws of reflection and refraction hold.
+</p>
+<p>
+Its interpretation as optimal path selection, leads to a powerful geometric method in reflection problems known as the <strong>Unfolding Technique</strong>.
+</p>
+<div class="insightbox">
+Instead of treating reflection as a rule, Fermat’s principle allows us to view it as a consequence of optimal path selection.<br>  
+This connects geometrical optics to a deeper variational principle.
+</div>
+</section>
+<section>
+<h2>Unfolding Technique</h2>
+<p>
+The unfolding technique is used when the source and destination points are known, and the path involves reflection from a surface.
+</p>
+<p>  
+The idea is to replace reflection by an equivalent straight-line motion by "unfolding" the path across the reflecting surface.
+</p>
+<div class="concept-box">
+Reflection at a surface can be replaced by extending the path into a mirror image of the space across that surface.
+</div>
+<div class="examplebox">
+<h3>Problem 1:</h3>
+<p>
+A bird is on a vertical perch at \((0, h_1)\). Its nest is at \((d, h_2)\). Seeds are scattered on the ground between \((0,0)\) and \((d,0)\). 
+</p>
+<p> 
+The bird flies from the perch, touches the ground once to collect seeds, and then reaches the nest.
+</p>
+<p>  
+What is the minimum distance path it should follow?
+</p>
+<div class="diagram" id="svg-output"></div>
+<canvas id="paper-workspace" width="600" height="400"></canvas>
+<h3>Solution</h3>
+<p>
+This problem is equivalent to finding the path of a light ray traveling from \((0, h_1)\) to \((d, h_2)\) after reflecting from the ground \(y = 0\).
+</p>
+<p>
+This is because, as per Fermat's principle, light will take minimum time path.
+</p>
+<p>
+As light travels in the same medium, its speed is constant. Hence, the path of minimum time is also the path of minimum distance.
+</p>
+<p>
+Instead of dealing with reflection, we <strong>unfold</strong> the problem by reflecting the destination point across the ground. Thus, the image of the nest is at \((d, -h_2)\).
+</p>
+<p>
+Now the reflected path becomes a straight line from \((0, h_1)\) to \((d, -h_2)\).
+</p>
+<p>
+By the triangle inequality, the shortest path between two points is a straight line. Hence, this straight-line path gives the minimum distance.
+</p>
+<p>
+The actual path of the bird is obtained by folding this straight line back at the ground, giving the point of reflection.
+</p>
+<div class="insightbox">
+Unfolding converts a reflection problem into a straight-line geometry problem.<br>  
+This is a direct application of Fermat’s principle.
+</div>
+</div>
+<p>
+<strong>TODO:</strong> Extend this section with additional applications of unfolding technique - ant crawling in a box. carromboard striker hit from middle of side1, hits side2, side3 and falls in right bottom pocket. Find theta.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
