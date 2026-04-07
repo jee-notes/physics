@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refraction at Plane Surfaces | Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Geometrical Optics
+</a>
+</nav>
+
+<h1>Refraction at Plane Surfaces</h1>
+<p class="subtitle">
+The bending of light when it crosses the boundary between two transparent media.
+</p>
+
+<section>
+<h2>Laws of Refraction and Snell's Law</h2>
+<p>
+When a light ray obliquely strikes the boundary separating two transparent optical media with different optical densities, it changes its direction of propagation. This phenomenon is called <strong>refraction</strong>. The light either bends towards the normal or away from the normal, depending on whether it enters a denser or rarer medium.
+</p>
+
+<div class="concept-box">
+<h3>Optical Density and Refractive Index</h3>
+<p>
+The "optical density" of a medium is a measure of how much it slows down the speed of light. It is characterized by the <strong>absolute refractive index (\(n\) or \(\mu\))</strong> of the medium.
+</p>
+\[ n = \frac{\text{Speed of light in vacuum }(c)}{\text{Speed of light in the medium }(v)} \]
+<p>
+Since \(v \le c\), the absolute refractive index is always \( n \ge 1 \). For vacuum (and approximately for air), \(n = 1\).
+</p>
+<p>
+When comparing two media, the medium with a higher refractive index is optically <strong>denser</strong>, and the medium with a lower refractive index is optically <strong>rarer</strong>.
+</p>
+</div>
+
+<div class="model-box">
+<h3>The Laws of Refraction</h3>
+<ol>
+<li>
+<strong>First Law:</strong> The incident ray, the refracted ray, and the normal to the interface at the point of incidence all lie in the same plane.
+</li>
+<li>
+<strong>Second Law (Snell's Law):</strong> For a given pair of media and a given color (wavelength) of light, the ratio of the sine of the angle of incidence (\(i\)) to the sine of the angle of refraction (\(r\)) is a constant.
+\[ \frac{\sin i}{\sin r} = \text{constant} = ^{1}n_{2} = \frac{n_2}{n_1} \]
+</li>
+</ol>
+<p>
+Where \(n_1\) is the absolute refractive index of the medium containing the incident ray, and \(n_2\) is the absolute refractive index of the medium containing the refracted ray.
+</p>
+<p>
+This is more symmetrically written as:
+\[ n_1 \sin i = n_2 \sin r \]
+</p>
+</div>
+
+<div class="insightbox">
+<ul>
+<li>When light travels from a rarer to a denser medium (\(n_1 < n_2\)), \( \sin r < \sin i \), so \( r < i \). The refracted ray <strong>bends towards</strong> the normal.</li>
+<li>When light travels from a denser to a rarer medium (\(n_1 > n_2\)), \( \sin r > \sin i \), so \( r > i \). The refracted ray <strong>bends away from</strong> the normal.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Real and Apparent Depth</h2>
+<p>
+When an object placed in a denser medium (like water) is viewed from a rarer medium (like air) almost normally, it appears to be raised from its actual depth. This is a direct consequence of refraction bending rays away from the normal as they exit the denser medium into the observer's eye.
+</p>
+<div class="model-box">
+<h3>Apparent Depth Relation</h3>
+<p>
+Let an object \(O\) be at a real depth \(d\) in a medium of refractive index \(n_2\). An observer is looking from a rarer medium of refractive index \(n_1\) (\(n_1 < n_2\)). The apparent depth \(d'\) at which the virtual image \(I\) is formed is given by:
+</p>
+\[ d' = d \left(\frac{n_1}{n_2}\right) \]
+<p>
+If the observer is in air (\(n_1 \approx 1\)), the formula simplifies to:
+\[ d' = \frac{d}{n} \]
+Where \(n\) is the refractive index of the denser medium.
+</p>
+<hr>
+<h3>Apparent Shift (\(x\))</h3>
+<p>
+The apparent shift or apparent displacement is the distance by which the object appears to be raised.
+</p>
+\[ x = \text{Real Depth} - \text{Apparent Depth} = d - d' \]
+\[ x = d \left(1 - \frac{n_1}{n_2}\right) \]
+<p>Or for an observer in air: \( x = d \left(1 - \frac{1}{n}\right) \) .</p>
+</div>
+<div class="insightbox">
+The converse is also true: if an object in a rarer medium (like a bird in air) is viewed by an observer in a denser medium (like a fish in water), the object appears farther away than its real height. The apparent height becomes \(h' = n \cdot h\), meaning the object appears shifted upward.
+</div>
+</section>
+
+<section>
+<h2>Refraction through a Rectangular Glass Slab</h2>
+<p>
+When a ray of light passes through a rectangular glass slab bounded by parallel faces, it undergoes refraction twice: once when entering the slab and again when exiting it.
+</p>
+<p>
+Assuming the medium on both sides of the slab is the same (e.g., air), the emergent ray is parallel to the incident ray. Because the two refractions occur at parallel interfaces with opposite relative refractive indices, the total deviation is zero (\(\delta = 0\)). However, the emergent ray is laterally shifted relative to the incident path.
+</p>
+
+<div class="model-box">
+<h3>Lateral Shift (\(x\))</h3>
+<p>
+The perpendicular distance between the original path of the incident ray and the path of the emergent ray is called the lateral shift.
+Let \(t\) be the thickness of the glass slab, \(i\) the angle of incidence, and \(r\) the angle of refraction at the first interface. The lateral shift is derived from geometry:
+</p>
+\[ x = \frac{t \cdot \sin(i - r)}{\cos r} \]
+<p>
+For small angles of incidence (where \(\sin \theta \approx \theta\) and \(\cos \theta \approx 1\)), and using \( i \approx n \cdot r \):
+</p>
+\[ x \approx t \cdot i \left(1 - \frac{1}{n}\right) \]
+<p>
+Where \(n\) is the refractive index of the slab relative to the surrounding medium.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Total Internal Reflection (TIR) and its Applications</h2>
+<p>
+When light travels from an optically <strong>denser</strong> medium to an optically <strong>rarer</strong> medium, it bends away from the normal. As the angle of incidence (\(i\)) in the denser medium increases, the angle of refraction (\(r\)) in the rarer medium also increases rapidly.
+</p>
+<p>
+For a certain angle of incidence, called the <strong>Critical Angle (\(i_c\) or \(\theta_c\))</strong>, the angle of refraction becomes exactly \(90^\circ\). The refracted ray grazes the interface.
+</p>
+<div class="model-box">
+<h3>Critical Angle</h3>
+<p>
+Applying Snell's Law at the interface between denser medium (\(n_1\)) and rarer medium (\(n_2\)), where \(n_1 > n_2\):
+\[ n_1 \sin i_c = n_2 \sin 90^\circ \]
+\[ \sin i_c = \frac{n_2}{n_1} \]
+</p>
+<p>
+If the rarer medium is air (\(n_2 = 1\)) and the denser medium has refractive index \(n\):
+\[ \sin i_c = \frac{1}{n} \quad \Rightarrow \quad i_c = \arcsin\left(\frac{1}{n}\right) \]
+</p>
+</div>
+
+<p>
+If the angle of incidence is increased further such that \(i > i_c\), refraction is no longer possible. <em>All</em> the incident light is reflected back into the denser medium. This phenomenon is called <strong>Total Internal Reflection (TIR)</strong>.
+</p>
+
+<div class="concept-box">
+<h3>Conditions for Total Internal Reflection</h3>
+<p>TIR occurs only when both of these conditions are met:</p>
+<ol>
+<li>The light ray must travel from an optically <strong>denser</strong> medium to an optically <strong>rarer</strong> medium.</li>
+<li>The angle of incidence (\(i\)) must be <strong>greater than the critical angle (\(i_c\))</strong> for that pair of media (\(i > i_c\)).</li>
+</ol>
+</div>
+
+<div class="examplebox">
+<h3>Applications and Natural Phenomena involving TIR</h3>
+<ul>
+<li><strong>Mirage:</strong> An optical illusion observed in deserts or hot asphalt during summer. Hot air layers near the ground become rarer (lower \(n\)) than cooler layers above. Light from the sky travels down through layers of decreasing refractive index, bending continuously until it undergoes TIR, creating the illusion of a reflecting pool of water on the ground.</li>
+<li><strong>Sparkling of Diamond:</strong> The refractive index of diamond is very high (\(n \approx 2.42\)), giving it a very small critical angle of about \(24.4^\circ\). Diamonds are cut with multiple faces such that light entering from any face strikes inside faces at angles greater than \(24.4^\circ\), undergoing multiple TIR before exiting, causing the brilliant sparkle.</li>
+<li><strong>Optical Fibers:</strong> Extensively used in modern telecommunications and medicine (endoscopy). They consist of a core with a high refractive index and cladding with a lower refractive index. Light introduced into the core undergoes repeated TIR without significant energy loss, allowing it to travel over long, curved distances.</li>
+<li><strong>Totally Reflecting Prisms:</strong> Used in periscopes and binoculars. Right-angled isosceles prisms made of glass (critical angle \(\approx 42^\circ\)) can turn rays exactly by \(90^\circ\) or \(180^\circ\) effectively using TIR, which is perfectly efficient compared to silvered mirrors that absorb some light.</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+
+</div>
+</body>
+</html>
