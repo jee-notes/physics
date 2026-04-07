@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reflection | Geometrical Optics</title>
+<title>Refraction | Geometrical Optics</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,218 +14,205 @@
 <span>&larr;</span> Back to Geometrical Optics
 </a>
 </nav>
-<h1>Reflection of Light</h1>
+<h1>Refraction of Light</h1>
 <p class="subtitle">
-The geometry of light interaction with reflective boundaries and variational principles.
+The bending of light when it crosses the boundary between two transparent media.
 </p>
 <section>
-<h2>Laws of Reflection</h2>
+<h2>Refraction Phenomenon</h2>
 <p>
-When a ray of light strikes a boundary surface separating two different mediaa, a part of the light is turned back into the same medium. This phenomenon is called reflection.
+When a beam of light travelling in a medium encounters the boundary of another transparent medium, a part of it is reflected back into the first medium while the rest enters the second medium.
 </p>
-<div class="model-box">
-<h3>Laws of Reflection</h3>
 <p>
-Reflection of light is governed by two fundamental laws:
+The portion of the incident light that enters the second medium is said to be <strong>transmitted</strong>. This process is called transmission.
 </p>
-<ol>
-<li>
-<strong>First Law:</strong> The incident ray, the reflected ray and the normal to the reflecting surface at the point of incidence all lie in the same plane.
-</li>
-<li>
-<strong>Second Law:</strong> The angle of incidence (\(i\)) is always equal to the angle of reflection (\(r\)).
-\[ \angle i = \angle r \]
-</li>
-</ol>
+<p>
+For an obliquely incident ray (\(0^\circ \lt i \lt 90^\circ\)), the direction of propagation changes at the interface. This change in direction is called <strong>refraction of light</strong>.
+</p>
+<p>
+Thus, refraction is specifically the change in direction associated with transmission across a boundary.
+</p>
+<div class="insightbox">
+<p>
+In addition to reflection and transmission, some energy may be absorbed by the medium. However, in most optical situations, absorption is negligible and is therefore ignored. (It is covered extensively in Thermal Radiation).
+</p>
 </div>
 <p>
-Here:
+Physically, it is energy that is reflected, transmitted or absorbed, but in the ray model we represent this transfer using rays.
+</p>
+<p>
+Natural phenomena such as the apparent bending of objects in water, rainbow formation and atmospheric effects are all consequences of refraction.
+</p>
+</section>
+<section>
+<h2>Laws of Refraction</h2>
+<p>
+Refraction was experimentally studied by Snell, who established the following laws governing the change in direction of light at the boundary between two media.
+</p>
+<p>
+When a ray enters a different medium, its direction changes. The ray bends either towards the normal or away from the normal depending on the optical properties of the two media.
+</p>
+<div class="concept-box">
+<h3>Optical Density and Refractive Index</h3>
+<p>
+The optical density of a medium is a measure of how much it reduces the speed of light. It is characterized by the <strong>absolute refractive index \(\mu\)</strong> of the medium:
+</p>
+\[
+\mu = \frac{c}{v}
+\]
+<p>
+Since the speed of light in a medium is always less than or equal to that in vacuum (\(v \le c\)), we have \(\mu \ge 1\). For vacuum (and approximately air), \(\mu = 1\).
+</p>
+<p>
+A medium with higher refractive index is optically <strong>denser</strong>, while one with lower refractive index is optically <strong>rarer</strong>.
+</p>
+<p>
+When light is transmitted in a different medium, its frequency \(\nu\) does not change as it depends on source.
+</p>
+<p>
+Since \(v = \lambda \nu\) and frequency \(\nu\) remains unchanged during transmission, the change in speed is reflected in the change in wavelength:
+</p>
+\[
+\mu = \frac{\lambda_0}{\lambda_m}
+\]
+<p>
+where \(\lambda_0\) is the wavelength in vacuum and \(\lambda_m\) is the wavelength in the medium.
+</p>
+</div>
+<div class="model-box">
+<h3>The Laws of Refraction</h3>
+<ol>
+<li>
+<strong>First Law:</strong> The incident ray, the refracted ray, and the normal at the point of incidence all lie in the same plane.
+</li>
+<li>
+<strong>Second Law (Snell's Law):</strong>
+For a given pair of media and a given wavelength of light,
+\[
+\frac{\sin i}{\sin r} = \text{constant} = \mu_{21}
+\]
+</li>
+</ol>
+<p>
+Here, \(\mu_1\) is the refractive index of the medium containing the incident ray, and \(\mu_2\) is that of the medium containing the refracted ray.
+</p>
+<p>
+The constant \(\mu_{21}\) is called the <strong>refractive index of medium 2 with respect to medium 1</strong>. Experimentally, it is found to be equal to the ratio of the speeds of light in the two media:
+</p>
+\[
+\mu_{21} = \frac{v_1}{v_2} = \frac{\lambda_1}{\lambda_2}
+\]
+<p>
+Using the definition \(\mu = \frac{c}{v}\), we obtain:
+</p>
+\[
+\mu_{21} = \frac{\mu_2}{\mu_1}
+\]
+<p>
+Thus, Snell’s law can be written in a symmetric form:
+</p>
+\[
+\mu_1 \sin i = \mu_2 \sin r
+\]
+</div>
+<div class="insightbox">
+<p>
+Snell’s law determines the magnitude of how the direction of a ray changes when it enters a different medium. The bending occurs because the speed of light changes across the interface.
 </p>
 <ul>
-<li><strong>Rays:</strong> The ray is incident or reflected - depending upon its direction with respect to <b>reflecting surface</b>.</li>
-<li><strong>Incident Ray (i):</strong> Incident ray is moving towards the <b>reflecting surface</b> before reflection.</li>
-<li><strong>Reflected Ray (r):</strong> Reflected ray is moving away from the <b>reflecting surface</b> after reflection.</li>
-<li><strong>Point of incidence:</strong> Point of incedence is a point on the reflecting surface where the incident ray strikes the surface.</li>
-<li><strong>Normal:</strong> A line drawn perpendicular to the reflecting surface at the point of incidence and pointing outwards. Note that direction of normal is localized at the point of incidence. For a flat reflecting surface (planar) it has uniform direction.</li>
-<li><strong>Angle of Incidence (\(i\)):</strong> The angle between the incident ray and the normal.</li>
-<li><strong>Angle of Reflection (\(r\)):</strong> The angle between the reflected ray and the normal.</li>
+<li>
+When light travels from a <strong>rarer to a denser medium</strong> (\(\mu_1 \lt \mu_2\)), its speed decreases, and the ray bends <strong>towards the normal</strong>.
+</li>
+<li>
+When light travels from a <strong>denser to a rarer medium</strong> (\(\mu_1 > \mu_2\)), its speed increases, and the ray bends <strong>away from the normal</strong>.
+</li>
 </ul>
-<div class="insightbox">
-The laws of reflection are completely independent of the wavelength of the light wave and apply to both plane and curved reflecting surfaces.<br>
-These laws are independent remain valid beyond approximations such as paraxial optics.
+<p>
+Thus, refraction can be understood as a change in direction of propagation caused by a change in the speed of light. This change in direction will be better explained in wave optics using Huygens' Wavefront.
+</p>
 </div>
 </section>
 <section>
-<h2>Vector Form</h2>
+<h2>Total Internal Reflection (TIR)</h2>
 <p>
-The laws of reflection can be expressed in vector form, which is especially useful for three-dimensional problems.  
-In this formulation, rays are modeled as straight-line directions and represented using unit vectors, since only the direction of propagation is relevant in the ray model.
+When light travels from an optically <strong>denser</strong> medium to an optically <strong>rarer</strong> medium, it bends away from the normal. As the angle of incidence (\(i\)) in the denser medium increases, the angle of refraction (\(r\)) in the rarer medium also increases rapidly.
 </p>
 <p>
-Let \(\hat{i}\) be the unit vector along the incident ray, \(\hat{n}\) be the unit normal to the surface (directed outward from the incident medium), and \(\hat{r}\) be the unit vector along the reflected ray.
+For a certain angle of incidence, called the <strong>Critical Angle (\(c\))</strong>, the angle of refraction becomes exactly \(90^\circ\). The refracted ray grazes the interface.
+</p>
+<div class="model-box">
+<h3>Critical Angle</h3>
+<p>
+Applying Snell's Law at the interface between denser medium (\(\mu_1\)) and rarer medium (\(\mu_2\)), where \(\mu_1 > \mu_2\):
+\[ \mu_1 \sin c = \mu_2 \sin 90^\circ \]
+\[ \sin c = \frac{\mu_2}{\mu_1} \]
 </p>
 <p>
-The first law of reflection (coplanarity) is expressed as:
+If the rarer medium is air (\(\mu_2 = 1\)) and the denser medium has refractive index \(\mu\):
+\[ \sin c = \frac{1}{\mu} \quad \Rightarrow \quad c = \sin^{-1}\left(\frac{1}{\mu}\right) \]
 </p>
-<div class="math-block">
-\[
-[\hat{i}\ \hat{r}\ \hat{n}] = 0
-\]
 </div>
 <p>
-Here, \([\hat{a}\ \hat{b}\ \hat{c}]\) denotes the scalar triple product (standard math tool to express coplanarity), which vanishes when the three vectors are coplanar.
+If the angle of incidence is increased further such that \(i > c\), refraction is no longer possible. <em>All</em> the incident light is reflected back into the denser medium. This phenomenon is called <strong>Total Internal Reflection (TIR)</strong>.
 </p>
 <p>
-The second law of reflection is expressed as:
-</p>
-<div class="math-block">
-\[
--\hat{i}\cdot\hat{n} = \hat{r}\cdot\hat{n}
-\]
-</div>
-<h3>Collision Approach</h3>
-<p>
-A powerful problem solving technique to interpret reflection is by collision approach:
+Students get confused and ask if \(\sin c = \frac{\mu_1}{\mu_2}\) or \(\sin c = \frac{\mu_2}{\mu_1}\). just use small / big.
 </p>
 <div class="concept-box">
-Reflection <strong>reverses</strong> the component of the incident direction along the normal, while leaving the component parallel to the surface unchanged.
+<h3>Conditions for Total Internal Reflection</h3>
+<p>TIR occurs only when both of these conditions are met:</p>
+<ol>
+<li>The light ray must travel from an optically <strong>denser</strong> medium to an optically <strong>rarer</strong> medium.</li>
+<li>The angle of incidence (\(i\)) must be <strong>greater than the critical angle (\(c\))</strong> for that pair of media (\(i > c\)).</li>
+</ol>
 </div>
-<p>
-This viewpoint is extremely useful for solving problems involving reflection in arbitrary orientations.
-</p>
-<h3>Relation between \(\hat{r}\) and \(\hat{i}\)</h3>
-<p>
-Since the component of the ray parallel to the surface remains unchanged, the change in direction between \(\hat{i}\) and \(\hat{r}\) must occur entirely along the normal.
-</p>
-<div class="math-block">
-\[
-\hat{r} - \hat{i} = k\,\hat{n}
-\]
+<div class="examplebox">
+<h3>Applications and Natural Phenomena involving TIR</h3>
+<ul>
+<li><strong>Mirage:</strong> An optical illusion observed in deserts or hot asphalt during summer. Hot air layers near the ground become rarer (lower \(n\)) than cooler layers above. Light from the sky travels down through layers of decreasing refractive index, bending continuously until it undergoes TIR, creating the illusion of a reflecting pool of water on the ground.</li>
+<li><strong>Looming:</strong> An optical illusion observed in cold areas during winter. Looming is opposite of mirage in terms of bending.</li>
+<li><strong>Sparkling of Diamond:</strong> The refractive index of diamond is very high (\(n \approx 2.42\)), giving it a very small critical angle of about \(24.4^\circ\). Diamonds are cut with multiple faces such that light entering from any face strikes inside faces at angles greater than \(24.4^\circ\), undergoing multiple TIR before exiting, causing the brilliant sparkle. (These numbers for diamond are there in NCERT to be by-hearted)</li>
+<li><strong>Optical Fibers:</strong> Extensively used in modern telecommunications and medicine (endoscopy). They consist of a core with a high refractive index and cladding with a lower refractive index. Light introduced into the core undergoes repeated TIR without significant energy loss, allowing it to travel over long, curved distances.</li>
+<li><strong>Totally Reflecting Prisms:</strong> Used in periscopes and binoculars. Right-angled isosceles prisms made of glass (critical angle \(\approx 42^\circ\)) can turn rays exactly by \(90^\circ\) or \(180^\circ\) effectively using TIR, which is perfectly efficient compared to silvered mirrors that absorb some light.</li>
+</ul>
 </div>
+<h3>Why "Total" Internal Reflection?</h3>
 <p>
-To determine \(k\), we take dot product of both sides  \(\hat{r} - \hat{i}\) and \(k\,\hat{n}\) with \(\hat{n}\):
+In general, when light strikes a boundary, part of it is reflected and part is transmitted.
 </p>
-<div class="math-block">
-\[
-(\hat{r} - \hat{i})\cdot\hat{n} = k
-\]
-\[
-k = \hat{r}\cdot\hat{n} - \hat{i}\cdot\hat{n} = -\hat{i}\cdot\hat{n} - \hat{i}\cdot\hat{n} = -2(\hat{i}\cdot\hat{n})
-\]
-</div>
 <p>
-Using \(\hat{r}\cdot\hat{n} = -\,\hat{i}\cdot\hat{n}\), and  \(\hat{n}\cdot\hat{n} = 1\). Substituting back, we get:
+However, for \(i > c\), transmission becomes impossible (since Snell’s law would require \(\sin r > 1\)). As a result, <strong>all</strong> the incident energy is reflected back into the original medium.
 </p>
-<div class="math-block">
-\[
-\hat{r} = \hat{i} - 2(\hat{i}\cdot\hat{n})\hat{n}
-\]
-</div>
+<p>
+This complete reflection of energy is why the phenomenon is called <strong>Total Internal Reflection</strong>.
+</p>
+<p>
+The ratio of transmitted power to reflected power is maximum at normal incidence (\(i = 0\)). As the angle of incidence increases, the ray becomes more oblique, and a larger fraction of the incident energy is reflected.
+</p>
+<p>
+As \(i\) approaches the critical angle, the transmitted component decreases and tends to zero. For \(i > c\), transmission becomes impossible and the transmitted power is zero.
+</p>
 </section>
 <section>
 <h2>Angle of Deviation</h2>
-<div class="diagram" id="svg-output"></div>
-<canvas id="paper-workspace" width="500" height="300"></canvas>
 <p>
-The angle of deviation (\(\delta\)) is defined as the angle between the direction of the incident ray (extended forward) and the reflected ray.
+for rarer to denser - angle of deviation delta = i - r.
 </p>
 <p>
-To determine this angle, we extend the incident ray beyond the point of incidence as if reflection had not occurred, and then measure the angle between this direction and the reflected ray.
+for denser to rarer - angle of deviation delta = r - i.
 </p>
 <p>
-For reflection, the magnitude of deviation is given by:
-</p>
-<div class="math-block">
-\[
-\delta = 180^\circ - 2i
-\]
-</div>
-<p>
-The direction of deviation (clockwise or anticlockwise) depends on the geometry of the situation and must be determined case by case.
-</p>
-<div class="insightbox">
-Angle of deviation measures how much the direction of a ray changes due to reflection.<br>  
-It depends only on the angle of incidence and is independent of the shape of the reflecting surface.
-</div>
-<h3>Graph</h3>
-<p>
-Graph of angle of deviation is a frequently asked question in different competitive exams. Specially for refraction, but we study for reflection as well first. 
+for denser to rare - this is true till c. 
 </p>
 <p>
-We plot \(\delta\) vs \(i\) from equation \(\delta = 180^\circ - 2i\). Straight line, with slope = -2 and, As \(i\) varies from \( 0^\circ \text{ to } 90^\circ \), \( \delta \) from \(180^\circ \text{ to } 0^\circ \)    
+then, due to TIR, delta = 180 - 2i. 
 </p>
-<style>
-#paper-workspace1 {
-    display: none;
-}
-#svg-output1 svg {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
-}
-</style>
-<div class="diagram" id="svg-output1"></div>
-<canvas id="paper-workspace1" width="500" height="500"></canvas>
-</section>
-<section>
-<h2>Normal and Grazing Incidence</h2>
-<p>
-Two special angles of incidence are important as they are used as limiting cases of reflection (and refraction):
-</p>
-<ul class="model-box">
-<li>
-<strong>Normal Incidence:</strong> \(i = 0^\circ\)  
-<br>
-The ray strikes the surface along the normal and retraces its path after reflection.  
-The angle of deviation is:
-\[
-\delta = 180^\circ
-\]
-</li>
-<li>
-<strong>Grazing Incidence:</strong> \(i \to 90^{\circ -}\)  
-<br>
-The ray strikes the surface nearly parallel to it. The reflected ray also remains nearly parallel to the surface.  
-The angle of deviation is:
-\[
-\delta \to 0^\circ
-\]
-</li>
-</ul>
-<div class="insightbox">
-Normal incidence corresponds to maximum deviation and is called as <strong>RETRACE</strong>.<br>
-Grazing incidence corresponds to minimum deviation.<br>  
-These cases represent the limiting behavior of reflection.
-</div>
-</section>
-<section>
-<h2>Specular vs. Diffuse Reflection</h2>
-<p>
-If reflection occurs at every surface, why do we not see clear images everywhere? The answer lies in the <strong>microscopic structure</strong> of the surface.
-</p>
-<p>
-Reflection behavior is determined by the surface roughness relative to the wavelength of light (\(\lambda \approx 400 - 700 \text{ nm}\)).
-</p>
-<ul>
-<li>
-<strong>Specular Reflection:</strong> Occurs on highly polished surfaces. The surface is smooth at the scale of wavelength, so all local normals are nearly the same (parallel).  
-As a result, parallel incident rays remain parallel after reflection, preserving the geometric structure of the beam and allowing image formation.
-</li>
-<li>
-<strong>Diffuse Reflection:</strong> Occurs on rough surfaces (like paper or walls). Although the law \(\angle i = \angle r\) holds at every <strong>local point</strong>, the local normals vary randomly. This causes reflected rays to scatter in different directions, destroying the geometric structure of the beam.
-</li>
-</ul>
-<div class="insightbox">
-Reflection occurs at every surface.<br>
-A <strong>mirror preserves the structure of a beam</strong>, while a rough surface destroys it.<br>
-Image formation requires preservation of geometric structure, not just reflection.
-</div>
 </section>
 <section>
 <h2>Main Topics</h2>
 <div class="chapter-list">
-<a href="./02a-reflection-fermat.html">1. Fermat's Principle - Unfolding</a>
-<a href="./02b-reflection-vector.html">2. Vector - Collision Approach</a>
+<a href="./05a-refraction-fermat.html">1. Fermat's Principle - Unfolding</a>
+<a href="./05b-refraction-vector.html">2. Vector - Collision Approach</a>
 </div>
 </section>
 <footer>
@@ -233,122 +220,5 @@ Image formation requires preservation of geometric structure, not just reflectio
 <p>By Hitendra K K</p>
 </footer>
 </div>
-<script>
-function startDrawing() {
-document.getElementById('svg-output').innerHTML = ''; // Clear old drawings
-const canvas = document.getElementById('paper-workspace');
-if (!canvas) return;
-paper.setup(canvas);
-
-    // 1. Draw a Plane Mirror
-    const m = drawPlaneMirror([100, 200], [400, 200], true);
-
-    // 2. Define the Normal Line
-    const normalTop = [m.pole.x, m.pole.y - 100];
-    addRay(m.pole, normalTop, 'black', true);
-
-    // 3. Define Incident, Extended and Reflected points
-    const incidentPoint = [m.pole.x - 80, m.pole.y - 80];
-	const extendPoint = [m.pole.x + 80, m.pole.y + 80];
-    const reflectedPoint = [m.pole.x + 80, m.pole.y - 80];
-
-    // 4. Draw Rays
-    addRay(incidentPoint, m.pole, 'red');
-    addRay(m.pole, reflectedPoint, 'blue');
-	
-	// 5. Draw Extended Incident Ray
-	addRay(m.pole, extendPoint, 'red', true);
-
-    // 5. ADD THE ANGLE ARCS
-    // Angle of Incidence (between Normal and Incident Ray)
-    addAngleArc(m.pole, incidentPoint, normalTop, 20, 'i');
-    
-    // Angle of Reflection (between Normal and Reflected Ray)
-    addAngleArc(m.pole, normalTop, reflectedPoint, 30, 'r');
-
-    // Angle of Deviation (between Extended Incident Ray and Reflected Ray)
-    addAngleArc(m.pole, reflectedPoint, extendPoint, 25, 'δ');
-	
-    const svg = paper.project.exportSVG({ asString: false });
-    document.getElementById('svg-output').appendChild(svg);
-}
-if (window.paperIsReady) { startDrawing(); } 
-else { window.addEventListener('PaperReady', startDrawing); }
-</script>
-<script>
-function startDrawing1() {
-    const outputDiv = document.getElementById('svg-output1');
-    outputDiv.innerHTML = ''; 
-    const canvas = document.getElementById('paper-workspace1');
-    if (!canvas) return;
-    paper.setup(canvas);
-    const margin = 50;
-    const width = 400;
-    const height = 400;
-    const origin = new paper.Point(margin, height + margin);
-    // 1. Draw Axes
-    const xAxis = new paper.Path.Line(origin, origin.add([width + 20, 0]));
-    const yAxis = new paper.Path.Line(origin, origin.add([0, -(height + 20)]));
-    [xAxis, yAxis].forEach(line => {
-        line.strokeColor = 'black';
-        line.strokeWidth = 2;
-        // Adding arrows
-        const end = line.lastSegment.point;
-        const vector = line.lastSegment.point.subtract(line.firstSegment.point).normalize(10);
-        new paper.Path([end.add(vector.rotate(135)), end, end.add(vector.rotate(-135))]).strokeColor = 'black';
-    });
-    // 2. The Plot Line: delta = 180 - 2i
-    // Scaling: 90 degrees = 'width' pixels, 180 degrees = 'height' pixels
-    const p1 = new paper.Point(margin, margin); // (i=0, delta=180)
-    const p2 = new paper.Point(margin + width, origin.y); // (i=90, delta=0)
-    const graphLine = new paper.Path.Line(p1, p2);
-    graphLine.strokeColor = '#2ecc71'; // Physics green
-    graphLine.strokeWidth = 3;
-    // 3. Adding Key Points (Normal & Grazing)
-    const dotNormal = new paper.Path.Circle(p1, 4);
-    dotNormal.fillColor = 'red';
-        const dotGrazing = new paper.Path.Circle(p2, 4);
-    dotGrazing.fillColor = 'red';
-    // 4. Labels and Grid Lines (Dashed)
-    const dashLine = new paper.Path.Line(new paper.Point(margin + width, margin), p2);
-    dashLine.strokeColor = 'gray';
-    dashLine.dashArray = [4, 4];
-    // Text Annotations
-    new paper.PointText({
-        point: [margin + width, origin.y + 20],
-        content: 'i = 90°',
-        fontSize: 14,
-        justification: 'center'
-    });
-    new paper.PointText({
-        point: [margin - 35, margin + 5],
-        content: '180°',
-        fontSize: 14
-    });
-    new paper.PointText({
-        point: [margin + width + 10, origin.y + 5],
-        content: 'i',
-        fontSize: 16,
-        fontWeight: 'bold'
-    });
-    new paper.PointText({
-        point: [margin - 10, margin - 20],
-        content: 'δ',
-        fontSize: 18,
-        fontWeight: 'bold'
-    });
-    // Label for the slope
-    new paper.PointText({
-        point: [margin + width/2, margin + height/2 - 20],
-        content: 'δ = 180° - 2i',
-        fontSize: 14,
-        fillColor: '#27ae60'
-    });
-    const svg = paper.project.exportSVG({ asString: false });
-    outputDiv.appendChild(svg);
-}
-if (window.paperIsReady) { startDrawing1(); } 
-else { window.addEventListener('PaperReady', startDrawing1); }
-</script>
 </body>
 </html>
