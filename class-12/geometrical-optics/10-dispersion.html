@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dispersion | Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Geometrical Optics
+</a>
+</nav>
+<h1>Dispersion</h1>
+<p class="subtitle">
+Wavelength-dependent refraction and separation of light into its constituent colors.
+</p>
+<section>
+<h2>Nature of Color</h2>
+<p>
+Color corresponds to the wavelength of visible light. Different wavelengths within the visible spectrum are perceived as different colors.
+</p>
+<p>
+Within the visible range, red light has the largest wavelength and violet light has the shortest:
+</p>
+\[
+\lambda_r > \lambda_v
+\]
+<p>
+This range of wavelengths (or frequencies) is called the <strong>visible spectrum</strong>.
+</p>
+<p>
+White light is a mixture of all visible wavelengths, while black corresponds to the absence of visible light.
+</p>
+<div class="insightbox">
+A prism is commonly used as a device to separate wavelengths already present in white light.<br>  
+This principle is used in spectrometry and in the study of atomic spectra.
+</div>
+</section>
+<section>
+<h2>Dispersion using a Prism</h2>
+<p>
+White light consists of different wavelengths traveling in the same direction. When it passes through a prism, each wavelength experiences a different refractive index.
+</p>
+<p>
+The refractive index of any transparent material depends on the wavelength (\(\lambda\)) of light according to <strong>Cauchy's Formula</strong> 
+</p>
+\[
+\mu (\lambda) = \mu_0 + \frac{A}{\lambda^2} 
+\]
+<p>
+Where \(A\) is small positive constant called Cauchy's constant. Thus \(\mu \propto 1/\lambda\). As \(\lambda_r > \lambda_v\), \(\mu_r \lt \mu_v\).
+</p>
+<p>
+Now, as angle of deviation depends on refractive index (assuming thin prism), different wavelengths will deviate by different amounts and emerge in different directions.
+</p>
+\[
+\delta = A \cdot (\mu - 1)
+\]
+<div class="insightbox">
+Dispersion is the phenomenon in which different wavelengths of light are deviated by different amounts due to the wavelength dependence of refractive index.
+</div>
+\[
+\delta_v = A \cdot (\mu_v - 1)
+\]
+\[
+\delta_r = A \cdot (\mu_r - 1)
+\]
+<p>
+In general, shorter wavelengths (violet) have higher refractive index and hence deviate more than longer wavelengths (red).
+</p>
+\[
+\mu_v > \mu_r \implies \delta_v > \delta_r
+\]
+<p>
+From rarer to denser, deviation is towards normal. So, violet will be closer to normal than red.
+</p>
+<p>
+From denser to rarer, deviation is away from normal. So, red will be closer to normal than violet.
+</p>
+<p>
+For critical angle, \(c_r\) and \(c_v\). As \(\mu_v > \mu_r\) and \(c \propto 1/\mu\) 
+</p>
+\[
+c_v \lt c_r
+\]
+<p>
+As a result, in case of refraction from denser to rarer medium, if incident angle is being increased, violet will undergo TIR before red. 
+</p>
+</section>
+<section>
+<h2>No Dispersion by Glass Slab</h2>
+<p>
+A glass slab also produces wavelength-dependent refraction at each surface. However, since the two faces are parallel, the angular separation produced at the first surface is exactly cancelled at the second surface.
+</p>
+<p>
+Thus, all wavelengths emerge parallel to each other, similar to the original incident ray, resulting only in a small lateral shift and no observable dispersion.
+</p>
+<div class="insightbox">
+In a prism, the two refracting surfaces are inclined.<br>  
+The angular separation produced at the first surface is not cancelled at the second surface—instead, the second refraction increases the separation.<br>  
+Thus, dispersion is reinforced rather than cancelled.<br>
+</div>
+</section>
+<section>
+<h2>Angular Dispersion</h2>
+<p>
+The difference in deviation between extreme colors (violet and red) is called angular dispersion.
+</p>
+\[
+\theta = \delta_v - \delta_r
+\]
+<p>
+For a thin prism:
+</p>
+\[
+\delta_v = A(\mu_v - 1), \quad \delta_r = A(\mu_r - 1)
+\]
+\[
+\boxed{\theta = A(\mu_v - \mu_r)}
+\]
+<div class="insightbox">
+Dispersion arises because deviation depends on refractive index, and refractive index depends on wavelength.
+</div>
+</section>
+<section>
+<h2>Dispersive Power</h2>
+<p>
+Dispersive power is the ratio of angular dispersion to the mean deviation (usually taken for yellow light, which represents the average wavelength).
+</p>
+\[
+\omega = \frac{\theta}{\delta_y} = \frac{\delta_v - \delta_r}{\delta_y}
+\]
+\[
+\boxed{\omega = \frac{\mu_v - \mu_r}{\mu_y - 1}}
+\]
+<p>
+It is a dimensionless property of the material and depends only on how refractive index varies with wavelength, not on the prism angle.
+</p>
+<div class="insightbox">
+<p>
+If \(\mu_y\) is not given, it is often approximated as:
+</p>
+\[
+\mu_y \approx \frac{\mu_v + \mu_r}{2}
+\]
+<p>
+This is an approximation valid when dispersion is small. In general, refractive index varies nonlinearly with wavelength.
+</p>
+</div>
+</section>
+<section>
+<h2>Combination of Prisms</h2>
+<p>
+By combining two thin prisms of different materials and opposite orientations, we can control deviation and dispersion independently.
+</p>
+<div class="concept-box">
+<ol>
+<li>
+<strong>Dispersion without Deviation (Direct Vision Spectroscope):</strong>
+<p>
+Condition: net deviation of mean ray is zero
+</p>
+\[
+A(\mu_y - 1) + A'(\mu'_y - 1) = 0
+\]
+<p>
+Different wavelengths still emerge at different angles, producing dispersion without overall deviation.
+</p>
+</li>
+<li>
+<strong>Deviation without Dispersion (Achromatic Prism):</strong>
+<p>
+Condition: net angular dispersion is zero
+</p>
+\[
+A(\mu_v - \mu_r) + A'(\mu'_v - \mu'_r) = 0
+\]
+<p>
+All wavelengths deviate equally, eliminating color separation.
+</p>
+</li>
+</ol>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

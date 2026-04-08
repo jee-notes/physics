@@ -14,44 +14,105 @@
 <span>&larr;</span> Back to Geometrical Optics
 </a>
 </nav>
-
 <h1>Prisms</h1>
 <p class="subtitle">
-Refraction, deviation, and dispersion of light by angular transparent media.
+Refraction, deviation and dispersion of light by angular transparent media.
 </p>
-
 <section>
 <h2>Refraction and Deviation through a Prism</h2>
 <p>
 A prism is a wedged-shaped portion of a transparent refracting medium bounded by two plane faces inclined at an angle. The angle between the two refracting faces is called the <strong>Angle of Prism (\(A\))</strong>.
 </p>
 <p>
+In general, prism is a classic example of sequential refraction about two different plane surfaces, such that the planes are at an angle called "prism angle" or "apex angle".
+</p>
+<div class="insightbox">
+Prism theory assumes that the incident ray is oriented such that both refractions occur in the same plane (plane of incidence).<br>  
+This coplanarity is essential for treating the prism as a 2D sequential refraction system.
+</div>
+<p>
 When a monochromatic ray of light passes through a prism, it suffers refraction at the two inclined faces. Unlike a rectangular glass slab where the emergent ray is parallel to the incident ray, a prism bends the emergent ray at a considerable angle relative to the incident direction. This total angle of bending is called the <strong>Angle of Deviation (\(\delta\))</strong>.
 </p>
-
-<div class="model-box">
-<h3>Prism Formula</h3>
+</section>
+<section>
+<h2>Prism Parameters</h2>
 <p>
-If a ray is incident at an angle \(i_1\), undergoes refraction at the first face at an angle \(r_1\), then strikes the second face at an angle \(r_2\), and emerges at an angle \(i_2\) (sometimes denoted as \(e\)):
+Prism parameters are basically 3 points and 6 angles in total. We need to accept this to understand prism. The 6 angles are:
 </p>
-<ol>
-<li>The sum of internal angles of refraction equals the angle of the prism:
-\[ A = r_1 + r_2 \]
+<ol class = "model-box">
+<li><strong>Angle of incidence :</strong> This is angle \(i\) made by the incident ray with the normal of the first surface. \(0^\circ \lt i \lt 90^\circ\). </li>
+<li><strong>Angle of emergence :</strong> This is angle \(e\) made by the emerging ray with the normal of the second surface. \(0^\circ \lt e \lt 90^\circ\). </li>
+<li><strong>Prism Angle :</strong> This is angle \(A\) between the two surfaces. \(0^\circ \lt A \lt 180^\circ\). </li>
+<li><strong>Angle of deviation :</strong> This is the angle \(\delta\) between the undeviated incident ray and emerging ray.</li>
+<li><strong>First inside angle :</strong> This is angle \(r_1\) made by the inside ray after refraction of incident ray with the normal of the first surface.</li>
+<li><strong>Second inside angle :</strong> This is angle \(r_2\) made by the inside ray before refraction of emerging ray with the normal of the second surface.</li>
+</ol>
+<p>
+The 3 points are:
+</p>
+<ol class = "model-box">
+<li>
+<strong>Apex :</strong>  
+The apex is the line of intersection of the two refracting surfaces. In prism problems, the incident ray is chosen such that the incident ray, emergent ray, and the normals at both surfaces all lie in the same plane (plane of incidence). This ensures that both refractions occur in a single plane, allowing the problem to be treated as a 2D sequential refraction system. In this cross-sectional plane, the apex is treated as a point.
+</li>
+<li><strong>Point of incidence :</strong> The point on the first surface at which the incident ray strikes it. We are going to draw normal to the surface at that point and we are only considering a single plane containing that normal and incident ray. All formulae and derivations are only valid in that plane.</li>
+<li><strong>Point of emergence :</strong> The point on the second surface from which the emerging ray comes out. We are going to draw normal to the surface at that point and we are only considering a single plane containing that normal and emerging ray. This should  necessarily be the same plane of incident ray. All formulae and derivations are only valid in that plane.</li>
+</ol>
+</section>
+<section>
+<h2>Relations between Prism Parameters</h2>
+<p>
+Refractive index of prism is \(\mu_{PS}\) and both surfaces are in same surrounding medium. If a ray is incident at an angle \(i\), undergoes refraction at the first face at an angle \(r_1\), then strikes the second face at an angle \(r_2\), and emerges at an angle \(e\):
+</p>
+<ol class = "model-box">
+<li>By geometry: The sum of internal angles of refraction equals the angle of the prism:
+\[ \boxed{A = r_1 + r_2} \]
+</li>
+<li>By Snell's Law at surface 1:
+\[ \boxed{\sin i = \mu_{PS} \sin r_1} \]
+</li>
+<li>By Snell's Law at surface 2:
+\[ \boxed{\mu_{PS} \sin r_2 = \sin e} \]
 </li>
 <li>The net angle of deviation (\(\delta\)) is given by:
-\[ \delta = (i_1 + i_2) - A \]
+\[ \delta = \delta_1 + \delta_2 \]
+where \(\delta_1\) and \(\delta_2\) are individual deviation angles at both surfaces.
+</li>
+<li>Angle of deviation (\(\delta_1\)) at surface 1 is given by:
+\[ \delta_1 = i - r_1 \text{ clockwise}\]
+</li>
+<li>Angle of deviation (\(\delta_2\)) at surface 2 is given by:
+\[ \delta_2 = e - r_2 \text{ clockwise}\]
+</li>
+<li>The net angle of deviation (\(\delta\)) is given by:
+\[ \boxed{\delta = (i + e) - (r_1 + r_2) = (i + e) - A} \]
 </li>
 </ol>
-</div>
+<p>
+We have <strong>7 independent variables</strong>:  
+\(\mu_{PS}, i, e, \delta, A, r_1, r_2\)
+</p>
+<p>
+and <strong>4 independent relations</strong>.  
+Hence, <strong>3 additional independent conditions</strong> are required to completely solve a prism system.
+</p>
 <div class="insightbox">
-A prism <strong>always</strong> bends the ray of light towards its thicker base.
+A prism <strong>always</strong> bends the ray of light away from the apex.
 </div>
 </section>
-
 <section>
-<h2>Condition for Minimum Deviation</h2>
+<h2>Minimum Deviation</h2>
 <p>
-As the angle of incidence (\(i_1\)) increases, the angle of deviation (\(\delta\)) first decreases, reaches a minimum value called the <strong>Angle of Minimum Deviation (\(\delta_m\))</strong>, and then begins to increase.
+As the angle of incidence (\(i\)) increases from \(i_{min}\) to \(90^\circ\), the angle of deviation (\(\delta\)) first decreases, reaches a minimum value called the <strong>Angle of Minimum Deviation (\(\delta_m\))</strong>, and then begins to increase.
+</p>
+<p>
+At \(i_{min}\), \(e = 90^\circ\) and \(r_2 = c\). For \(i\) from \(0^\circ\) to \(i_{min}\), TIR occurs at surface 2 and so it is considered out of domain.
+</p>
+<p>
+If \(i\) is further increased, then \(r_1\) increases, causing decrease in \(r_2\) (as \(r_1 + r_2 = A\)). As a result, \(e\) always decreases. 
+</p>
+<p>
+In general, we can say that, when \(i\) increases, \(r_1\) increases, \(r_2\) decreases, \(e\) decreases.
 </p>
 <div class="concept-box">
 <h3>Conditions at Minimum Deviation</h3>
@@ -59,89 +120,89 @@ As the angle of incidence (\(i_1\)) increases, the angle of deviation (\(\delta\
 The prism is in the position of minimum deviation <em>if and only if</em> the ray of light passes symmetrically through it. This implies:
 </p>
 <ul>
-<li>The angle of incidence equals the angle of emergence: \(i_1 = i_2 = i\).</li>
-<li>The internal angles of refraction are equal: \(r_1 = r_2 = r\).</li>
-<li>The refracted ray inside the prism travels <strong>parallel to the base</strong> of the prism (assuming the prism is an isosceles triangle).</li>
+<li>The angle of incidence equals the angle of emergence: \(i = e\).</li>
+<li>The internal angles of refraction are equal: \(r_1 = r_2 = A/2\).</li>
+<li>The refracted ray inside the prism travels <strong>parallel to the base</strong> of the prism (assuming the prism is an isosceles triangle). Point of incidence and Point of emergence are equidistant from the apex.</li>
 </ul>
 </div>
-
 <div class="model-box">
 <h3>Refractive Index from Minimum Deviation</h3>
 <p>
-Using the symmetry conditions \(2r = A \Rightarrow r = \frac{A}{2}\) and \(2i = A + \delta_m \Rightarrow i = \frac{A+\delta_m}{2}\), substituting into Snell's Law (\(n = \frac{\sin i}{\sin r}\)) yields the crucial prism formula:
+Using the symmetry conditions \(2r = A \Rightarrow r = \frac{A}{2}\) and \(2i = A + \delta_m \Rightarrow i = \frac{A+\delta_m}{2}\), substituting into Snell's Law (\(\mu = \frac{\sin i}{\sin r}\)) yields the crucial prism formula:
 </p>
-\[ n = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)} \]
+\[ \mu = \frac{\sin\left(\frac{A + \delta_m}{2}\right)}{\sin\left(\frac{A}{2}\right)} \]
 <p>
-Where \(n\) is the refractive index of the prism material relative to the surrounding medium.
+Where \(\mu\) is the refractive index of the prism material relative to the surrounding medium.
 </p>
-<hr>
-<h3>Thin Prism Approximation</h3>
-<p>
-For a thin prism (where angle \(A\) is very small, typically \(< 10^\circ\)), the angles \(i, r\) and \(\delta\) are also small. The sine of small angles can be approximated by the angle itself (\(\sin \theta \approx \theta\)). The deviation formula simplifies to a linear relationship independent of the angle of incidence:
-</p>
-\[ \delta = A \cdot (n - 1) \]
 </div>
+<p>
+The condition for minimum angle deviation only adds 1 more independent relation. We still would need 2 more independent information to fully define the prism system.
+</p>
 </section>
-
 <section>
-<h2>Dispersion of Light and Dispersive Power</h2>
+<h2>Thin Prism Approximation</h2>
 <p>
-While a monochromatic ray only deviates, white light consists of multiple wavelengths. The refractive index of any transparent material depends on the wavelength (\(\lambda\)) of light according to <strong>Cauchy's Formula</strong> (\(n = A + \frac{B}{\lambda^2} + \dots\)). Therefore, violet light (shortest visible \(\lambda\)) experiences a higher refractive index than red light (longest visible \(\lambda\)).
+For a thin prism (where angle \(A\) is very small, typically \(\lt 10^\circ\)), all angles involved (\(i, r_1, r_2, e, \delta\)) are also small. This allows us to apply the small-angle approximation and simplify the prism relations.
 </p>
 <p>
-Because deviation \(\delta\) depends on \(n\) (\(\delta = A(n-1)\)), different colors deviate by different angles. The splitting of white light into its constituent colors is called <strong>Dispersion</strong>.
+The purpose of this approximation is to obtain a simple expression for deviation that is <strong>independent of the angle of incidence</strong>, depending only on the prism angle \(A\) and refractive index \(\mu\).
 </p>
-
-<div class="model-box">
-<h3>Angular Dispersion (\(\theta\))</h3>
 <p>
-The difference in the angles of deviation of the extreme colors (violet and red) is the angular dispersion.
+For small angles, we use:
+\[
+\sin \theta \approx \theta
+\]
 </p>
-\[ \theta = \delta_v - \delta_r \]
-<p>For a thin prism: \( \delta_v = A(n_v - 1) \) and \( \delta_r = A(n_r - 1) \). Therefore:</p>
-\[ \theta = A(n_v - n_r) \]
-
-<hr>
-<h3>Dispersive Power (\(\omega\))</h3>
 <p>
-The dispersive power of a prism material is the ratio of the angular dispersion to the mean deviation (usually taken for yellow light, \(\delta_y\)). It is a dimensionless, intrinsic property of the material alone, independent of the prism angle \(A\).
+Applying this to Snell’s law:
 </p>
-\[ \omega = \frac{\theta}{\delta_y} = \frac{\delta_v - \delta_r}{\delta_y} \]
-\[ \omega = \frac{n_v - n_r}{n_y - 1} \]
+\[
+\sin i = \mu \sin r_1 \;\Rightarrow\; i = \mu r_1
+\]
+\[
+\sin e = \mu \sin r_2 \;\Rightarrow\; e = \mu r_2
+\]
+\[
+i + e = \mu (r_1 + r_2) = \mu A
+\]
+<p>
+Using the deviation relation:
+</p>
+\[
+\delta = (i + e) - A = \mu A - A
+\]
+\[
+\boxed{\delta = A(\mu - 1)}
+\]
+<div class="insightbox">
+For a thin prism, deviation is independent of the angle of incidence and depends only on the prism angle and refractive index.
 </div>
-</section>
-
-<section>
-<h2>Combination of Prisms</h2>
-<p>
-By combining two thin prisms of different materials (e.g., Crown glass and Flint glass) and oppositely oriented angles (\(A\) and \(A'\)), we can achieve specific optical effects: canceling deviation while keeping dispersion, or canceling dispersion while keeping deviation.
-</p>
 <div class="concept-box">
-<ol>
-<li>
-<strong>Dispersion without Deviation (Direct Vision Spectroscope):</strong>
-We want the net deviation of the mean (yellow) ray to be zero: \(\delta_{y} + \delta'_{y} = 0\).
-\[ A(n_y - 1) + A'(n'_y - 1) = 0 \quad \Rightarrow \quad A' = -A \left[ \frac{n_y - 1}{n'_y - 1} \right] \]
-Under this condition, net angular dispersion remains non-zero:
-\[ \theta_{\text{net}} = (\delta_v - \delta_r) + (\delta'_v - \delta'_r) = \delta_y \cdot \omega + \delta'_y \cdot \omega' = \delta_y (\omega - \omega') \]
+<h3>Conditions for Thin Prism Approximation</h3>
+<ul>
+<li>The prism angle \(A\) is small (typically \(A \lt 10^\circ\)).</li>
+<li>Another approximation is that \(\to\) The ray passes close to the condition of minimum deviation (i.e., near symmetric path).</li>
+<li>Under these conditions, internal angles \(r_1, r_2\) are small, as \(r_1 = r_2 = A/2\) in case of minimum deviation. </li>
+<li>Under these conditions, external ray angles \(i, e\) are also small, as \(r_1, r_2\) are small. </li>
+<li>Thus, all angles \((i, r_1, r_2, e, \delta)\) are small, allowing the approximation:
+\[
+\sin \theta \approx \theta
+\]
 </li>
-<li>
-<strong>Deviation without Dispersion (Achromatic Prism):</strong>
-We want the net angular dispersion to be zero: \(\theta + \theta' = 0\).
-\[ A(n_v - n_r) + A'(n'_v - n'_r) = 0 \]
-Under this condition, the net mean deviation remains non-zero:
-\[ \delta_{\text{net}} = \delta_y \left[ 1 - \frac{\omega}{\omega'} \right] \]
-This combination is used in achromatic lenses in telescopes and cameras to eliminate chromatic aberration.
-</li>
-</ol>
+</ul>
 </div>
 </section>
-
+<section>
+<h2>Main Topics</h2>
+<div class="chapter-list">
+<a href="./09a-prism-sequential-refraction.html">1. Sequential Refraction</a>
+<a href="./09b-prism-deviation.html">2. Deviation Angle</a>
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
-
 </div>
 </body>
 </html>
