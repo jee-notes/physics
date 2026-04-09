@@ -21,91 +21,109 @@ Modeling light as rays to predict image formation through reflection, refraction
 <section>
 <h2>Conceptual Overview</h2>
 <p>
-In classical physics, light is fundamentally an electromagnetic wave. A natural starting point is therefore to model it as a wave, for example:
+In the domain of classical physics, light is fundamentally an electromagnetic wave. If we want to study light, a natural starting point should be to model it as a wave, for example:
 \[
 y = A \sin(\omega t + kx)
 \]
 </p>
 <p>
-At the scale of human observation (and experience), the wavelength of light is much smaller than the dimensions of typical objects (mirrors, lenses, apertures). Consequently, wave effects such as interference and diffraction are negligible.
+But, at the scale of human observation (and experience), the wavelength of light is much smaller than the dimensions of typical objects it interacts with (mirrors, lenses, apertures etc.). Consequently, wave effects such as interference and diffraction are negligible.
 </p>
 <p>
-In this limit, light can be modeled as energy propagating along straight lines called <strong>rays</strong>.
+Within this limit, light can be modeled as energy propagating along straight lines called <strong>rays</strong>.
 </p>
 <div class="insightbox">
-Ray optics is a geometric approximation in which light is treated as energy traveling in straight lines. It ignores interference, diffraction, polarization and focuses on geometric rules governing the path of light.<br>
+Ray optics is a geometric approximation in which light is treated as energy traveling in straight lines.<br>
+The core assumption of geometrical optics is the <strong>rectilinear propagation of light</strong>.<br>
+It ignores interference, diffraction, polarization and focuses on geometric rules governing the path of light.<br>
 At this scale, the underlying nature of light (wave or particle) does not affect the predictions of the model.<br>
-Phenomena such as interference and polarization, however, necessarily require a wave description.
 </div>
 <p>
 This approximation remains valid as long as variations in the medium or obstacles occur over length scales much larger than the wavelength of light.
 </p>
 </section>
 <section>
-<h2>History of nature of Light</h2>
+<h2>History of Nature of Light</h2>
 <p>
-In classical physics, the nature of light was debated between two models: the corpuscular (particle) model and the wave model. The corpuscular model, successfully explained phenomena such as reflection and refraction (by Newton).
+In classical physics, the nature of light was debated between two models: the <strong>corpuscular (particle) model</strong> and the <strong>wave model</strong>.
 </p>
 <p>
-Huygens had proposed wave nature of light, but it did not gain acceptance initially—not due to decisive physical refutation, but because Newton’s dominance led to the particle model being favored.
+The corpuscular model, proposed by Newton, successfully explained phenomena such as reflection and refraction, and gained widespread acceptance.
 </p>
 <p>
-Even though, sound was already understood as a wave phenomenon, with well-established concepts such as interference and wave propagation. The discovery of interference and diffraction in light later provided strong evidence for its wave nature, and phenomena like polarization could only be explained using wave theory.
+Huygens proposed a wave theory of light, but it did not gain immediate acceptance due to the influence of Newton’s authority in the scientific community.
 </p>
+<p>
+The situation changed with the discovery of interference and diffraction, which provided clear evidence of the wave nature of light. Polarization further confirmed that light must be a transverse wave.
+</p>
+<div class="insightbox">
+Phenomena such as interference and superposition are characteristic of waves and these were already observed (and studied) in sound.<br>
+Classical particles do not exhibit superposition in this manner, which is why these phenomena strongly support the wave model of light. They occupy exclusive volumes and need to be displaced by the new occupant.<br>
+Common student doubt is that gases can superposition because a mixture of gases can occupy same volume e.g. air. But gas molecules cannot superposition at microscopic level.<br>
+It is similar to liquid solution in which there is no superposition at molecular level.   
+</div>
 <p>
 This led to the acceptance of light as a wave, culminating in Maxwell’s formulation of light as an electromagnetic wave.
 </p>
 <p>
-Geometrical optics does not contradict this wave description. Instead, it emerges as a limiting model of wave optics when wavelength effects are negligible. At this scale, it is not necessary to consider whether light is fundamentally a particle or a wave.
+Geometrical optics does not contradict this wave description. Instead, it arises as a limiting approximation of wave optics when wavelength effects are negligible.
 </p>
-<div class="concept-box">
 <p>
-The core assumption of geometrical optics is the <strong>rectilinear propagation of light</strong>.<br>
-A ray represents the direction of energy propagation (equivalently, the normal to the wavefront), and a collection of rays forms a beam of light.
+Within this framework, optical elements (lenses, mirrors, refracting surface boundaries) act as <strong>geometric transformers</strong> of rays. Geometric transformation means bending (changing direction). No geometric transformation implies rectilinear propagation and line-of-sight travel.
 </p>
+<p>
+Despite its simplicity, this model is extremely powerful. Using only geometric laws of reflection and refraction, we can analyze optical systems such as mirrors, lenses and instruments like telescopes and microscopes.
+</p>
+<div class="insightbox">
+Optical equipment like telescopes and microscopes can be modeled as a system of optical elements like lenses and mirrors.<br>
+This equipment has been part of path-breaking scientific history.<br>
+Galileo invented the telescope and could observe the moons of Jupiter.<br>
+The microscope was invented and micro-organisms and cells were observed.<br>
+Humans strongly believe that "seeing is believing" and such equipment shattered many existing belief systems.
 </div>
-<p>
-Within this framework, optical elements act as geometric transformers of rays. Image formation reduces to determining how incident rays are transformed into emergent rays by these elements.
-</p>
-<p>
-Despite its simplicity, this model is extremely powerful. Using only geometric laws of reflection and refraction, we can analyze optical systems such as mirrors, lenses, and instruments like telescopes and microscopes.
-</p>
 </section>
 <section>
 <h2>Ray Diagrams</h2>
 <p>
-This chapter is primarily studied using <strong>ray diagrams</strong>.
+This chapter is primarily studied using <strong>Ray Diagrams</strong>.
 </p>
 <p>
-A ray diagram is similar in spirit to a Free Body Diagram or a Circuit Diagram—it is a visual model that translates a physical situation into a form that can be studied mathematically.
+A Ray Diagram is conceptually similar to a Free Body Diagram or a Circuit Diagram — it is a visual model that translates a physical situation into a form that can be studied mathematically.
 </p>
 <p>
-Just as circuit diagrams use idealized elements (resistors, capacitors, sources), ray diagrams use optical elements (also called as optical device) such as mirrors, lenses, and refracting surfaces.
+Just as circuit diagrams have idealized elements (resistors, capacitors, sources), ray diagrams have optical elements (also called optical devices) such as mirrors, lenses, glass slabs, prisms and refracting surface boundaries.
 </p>
 <p>
-In a ray diagram, light is represented by rays. Optical elements interact with rays incident on their surface, and this interaction is described as a geometric transformation (such as deviation or dispersion).
+In a ray diagram, light is represented by rays. Optical elements interact with rays incident on their surface geometrically. This interaction is basically bending the initial straight path with some angle called "deviation".
 </p>
 <p>
-For example, parallel rays from sunlight falling on a convex lens converge to a point, while white light incident on a prism is dispersed into its constituent colors.
+Just like we study V-I characteristics of a circuit element, we study angles of deviation for optical elements.
 </p>
 <p>
-After interaction, the rays are called <strong>emergent rays</strong>. Thus, a ray diagram represents how an optical element transforms a system of incident rays into a system of emergent rays.
+The incident ray on the optical element is its input ray. The element transforms the input ray geometrically, and the transformed output ray is called the reflected ray, refracted ray, or emerging ray, depending on the characteristics of the optical element.
 </p>
 <p>
-Solving a ray diagram is therefore a geometric tracing problem: follow the trail of a ray which is a straight line until it encounters an optical element, apply the appropriate transformation, and then continue tracing the resulting ray.
+Solving a ray diagram is therefore a geometric tracing problem: follow the path of the incident ray (input), which is a straight line until it encounters an optical element, apply the appropriate transformation, and then continue tracing the resulting ray (output).
 </p>
 <div class="insightbox">
 Unlike many topics in electrostatics and electromagnetism, geometrical optics involves minimal use of vector calculus.<br>
-The emphasis is on geometric reasoning—constructing ray diagrams and applying the laws of reflection and refraction.<br>
+The emphasis is on geometric reasoning — constructing ray diagrams and applying the laws of reflection and refraction.<br>
 Geometry and trigonometry are the primary tools in this chapter.<br>
 Ray tracing essentially means following the straight-line path of a ray and applying the appropriate transformation whenever it encounters an optical element.
 </div>
 </section>
 <section>
-<h2>Chapter Structure</h2>
-<p>
-This is one of the largest chapters and often taught in different sequence by different teachers. We are going to follow standard textbooks so that these notes can be used as a guide. 
-</p>
+<h2>Scope of Chapter</h2>
+<ul>
+<li>How light travels (rays)</li>
+<li>How mirrors and lenses form images</li>
+<li>How refraction changes direction</li>
+<li>How prisms split light</li>
+</ul>
+<div class="insightbox">
+Geometrical optics basically answers one central question using Ray Diagram:<br>
+Given a source of light, where will the image form?
+</div>
 <div class="chapter-list">
 <a href="./01-physical-to-model.html">1. Physical to Model</a>
 <a href="./02-reflection.html">2. Reflection</a>
