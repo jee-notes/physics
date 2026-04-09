@@ -45,17 +45,9 @@ Natural phenomena such as the apparent bending of objects in water, rainbow form
 </p>
 </section>
 <section>
-<h2>Laws of Refraction</h2>
+<h2>Optical Density and Refractive Index</h2>
 <p>
-Refraction was experimentally studied by Snell, who established the following laws governing the change in direction of light at the boundary between two media.
-</p>
-<p>
-When a ray enters a different medium, its direction changes. The ray bends either towards the normal or away from the normal depending on the optical properties of the two media.
-</p>
-<div class="concept-box">
-<h3>Optical Density and Refractive Index</h3>
-<p>
-The optical density of a medium is a measure of how much it reduces the speed of light. It is characterized by the <strong>absolute refractive index \(\mu\)</strong> of the medium:
+The optical density of a medium is a measure of how much it reduces the speed of light travelling in it. It is characterized by the <strong>absolute refractive index \(\mu\)</strong> of the medium:
 </p>
 \[
 \mu = \frac{c}{v}
@@ -67,21 +59,36 @@ Since the speed of light in a medium is always less than or equal to that in vac
 A medium with higher refractive index is optically <strong>denser</strong>, while one with lower refractive index is optically <strong>rarer</strong>.
 </p>
 <p>
-When light is transmitted in a different medium, its frequency \(\nu\) does not change as it depends on source.
+When light from one medium is transmitted in a different medium, its frequency \(\nu\) does not change as it depends on source.
 </p>
 <p>
-Since \(v = \lambda \nu\) and frequency \(\nu\) remains unchanged during transmission, the change in speed is reflected in the change in wavelength:
+Since \(v = \lambda \nu\) and frequency \(\nu\) remains unchanged during transmission, the change in speed is reflected in the change in wavelength. So we can relate wavelength with refractive index as:
 </p>
 \[
 \mu = \frac{\lambda_0}{\lambda_m}
 \]
 <p>
-where \(\lambda_0\) is the wavelength in vacuum and \(\lambda_m\) is the wavelength in the medium.
+where \(\lambda_0\) is the wavelength in vacuum and \(\lambda_m\) is the wavelength in the medium. This relation can also be written for sequential mediums as:
 </p>
-</div>
-<div class="model-box">
-<h3>The Laws of Refraction</h3>
-<ol>
+\[
+\mu_1 v_1 = \mu_2 v_2  = \mu_3 v_3
+\]
+<p>
+or
+</p>
+\[
+\mu_1 \lambda_1 = \mu_2 \lambda_2 = \mu_3 \lambda_3
+\]
+</section>
+<section>
+<h2>Laws of Refraction</h2>
+<p>
+Refraction was experimentally studied by Snell, who established the following laws governing the change in direction of light at the boundary between two media.
+</p>
+<p>
+When a ray enters a different medium, its direction changes. The ray bends either towards the normal or away from the normal depending on the optical properties of the two media.
+</p>
+<ol class="model-box">
 <li>
 <strong>First Law:</strong> The incident ray, the refracted ray, and the normal at the point of incidence all lie in the same plane.
 </li>
@@ -114,7 +121,6 @@ Thus, Snell’s law can be written in a symmetric form:
 \[
 \mu_1 \sin i = \mu_2 \sin r
 \]
-</div>
 <div class="insightbox">
 <p>
 Snell’s law determines the magnitude of how the direction of a ray changes when it enters a different medium. The bending occurs because the speed of light changes across the interface.
@@ -130,6 +136,9 @@ When light travels from a <strong>denser to a rarer medium</strong> (\(\mu_1 > \
 <p>
 Thus, refraction can be understood as a change in direction of propagation caused by a change in the speed of light. This change in direction will be better explained in wave optics using Huygens' Wavefront.
 </p>
+<p>
+In case of normal incidence (\(i = 0^\circ\)), even if there is no bending, there is still reduction in speed.
+</p>
 </div>
 </section>
 <section>
@@ -143,7 +152,7 @@ For a certain angle of incidence, called the <strong>Critical Angle (\(c\))</str
 <div class="model-box">
 <h3>Critical Angle</h3>
 <p>
-Applying Snell's Law at the interface between denser medium (\(\mu_1\)) and rarer medium (\(\mu_2\)), where \(\mu_1 > \mu_2\):
+Apply Snell's Law at the interface between denser medium containing incident ray (\(\mu_1\)) and rarer medium containing refracted ray (\(\mu_2\)), where \(\mu_1 > \mu_2\):
 \[ \mu_1 \sin c = \mu_2 \sin 90^\circ \]
 \[ \sin c = \frac{\mu_2}{\mu_1} \]
 </p>
@@ -157,27 +166,31 @@ If the angle of incidence is increased further such that \(i > c\), refraction i
 </p>
 <div class="insightbox">
 <p>
-Students get confused and ask if \(\sin c = \frac{\mu_1}{\mu_2}\) or \(\sin c = \frac{\mu_2}{\mu_1}\) and why doesnt teacher clarify this? Its because of reversibility of light. So, a better way to remember this for faster  application is:
+Students get confused and ask if \(\sin c = \frac{\mu_1}{\mu_2}\) or \(\sin c = \frac{\mu_2}{\mu_1}\) and why doesnt teacher clarify this? Its because of reversibility of light.</p>
+<p>
+If we send incident ray at grazing incidence (\(i = 90^\circ\)) from rarer medium (\(\mu_1\)) into denser medium (\(\mu_2\)), then \(\sin c = \frac{\mu_1}{\mu_2}\).  
 </p>
 <p>
-Since \(\mu_1 > \mu_2\), we always have:
-\[
-\sin c = \frac{\mu_2}{\mu_1}
-\]
-i.e., the ratio is always (smaller)/(larger).
+If we send incident ray at critical angle (\(i = c\)) from denser medium (\(\mu_1\)) into rarer medium (\(\mu_2\)), then \(\sin c = \frac{\mu_2}{\mu_1}\).  
+</p>
+<p>
+So, a better way to remember this for faster application is - <strong>the ratio is always (rarer)/(denser)</strong>.
 </p>
 </div>
 <h3>Conditions for Total Internal Reflection</h3>
 <p>TIR occurs only when both of these conditions are met:</p>
 <ol>
 <li>The light ray must travel from an optically <strong>denser</strong> medium to an optically <strong>rarer</strong> medium.</li>
-<li>The angle of incidence (\(i\)) must be <strong>greater than the critical angle (\(c\))</strong> for that pair of media (\(i > c\)).</li>
+<li>The <strong>angle of incidence ( \(i\) ) must be greater than the critical angle ( \(c\) )</strong> for that pair of media (\(i > c\)).</li>
 </ol>
 <div class="examplebox">
 <h3>Applications and Natural Phenomena involving TIR</h3>
 <ul>
-<li><strong>Mirage:</strong> An optical illusion observed in deserts or hot asphalt during summer. Hot air layers near the ground become rarer (lower \(n\)) than cooler layers above. Light from the sky travels down through layers of decreasing refractive index, bending continuously until it undergoes TIR, creating the illusion of a reflecting pool of water on the ground.</li>
-<li><strong>Looming:</strong> An optical illusion observed in cold areas during winter. Looming is opposite of mirage in terms of bending.</li>
+<li><strong>Mirage and Looming:</strong> 
+Mirage and looming are optical illusions caused by temperature differences between the Earth's surface and the air above it, which create a continuous gradient of refractive index in the atmosphere (since refractive index decreases with temperature).<br>
+In a <strong>mirage</strong>, the surface is hot and the air above is cooler. Thus, refractive index is lowest near the surface and increases with height. Light from the sky travels downward through layers of decreasing refractive index, bending away from the normal continuously until it undergoes total internal reflection, creating the illusion of water on the ground.<br>
+In <strong>looming</strong>, the surface is cold and the air above is warmer. Thus, refractive index is highest near the surface and decreases with height. Light from ground and distant objects travels upward through layers of decreasing refractive index, bending away from the normal continuously until it undergoes total internal reflection, allowing objects below the horizon to appear raised or visible.
+</li>
 <li><strong>Sparkling of Diamond:</strong> The refractive index of diamond is very high (\(n \approx 2.42\)), giving it a very small critical angle of about \(24.4^\circ\). Diamonds are cut with multiple faces such that light entering from any face strikes inside faces at angles greater than \(24.4^\circ\), undergoing multiple TIR before exiting, causing the brilliant sparkle. (These numbers for diamond are there in NCERT to be by-hearted)</li>
 <li><strong>Optical Fibers:</strong> Extensively used in modern telecommunications and medicine (endoscopy). They consist of a core with a high refractive index and cladding with a lower refractive index. Light introduced into the core undergoes repeated TIR without significant energy loss, allowing it to travel over long, curved distances.</li>
 <li><strong>Totally Reflecting Prisms:</strong> Used in periscopes and binoculars. Right-angled isosceles prisms made of glass (critical angle \(\approx 42^\circ\)) can turn rays exactly by \(90^\circ\) or \(180^\circ\) effectively using TIR, which is perfectly efficient compared to silvered mirrors that absorb some light.</li>
