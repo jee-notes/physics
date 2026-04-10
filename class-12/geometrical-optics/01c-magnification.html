@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnification | Ray Model</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-physical-to-model.html" class="back-btn">
+<span>&larr;</span> Back to Ray Model
+</a>
+</nav>
+<h1>Magnification</h1>
+<p class="subtitle">
+Scaling factor between objects and images
+</p>
+<section>
+<h2>Regions of Space</h2>
+<p>
+To understand magnification, we first need to understand the regions of space associated with any optical element.
+</p>
+<p>
+If we model an optical element in space, it can be treated as a surface with a defined normal for all points of incidence.
+</p>
+<p>
+This is because both reflection and refraction are phenomena defined at a point of incidence with respect to a normal. (Dispersion is also refraction with wavelength-dependent refractive index.)
+</p>
+<p>
+Hence, any optical element exhibits different behavior in two fundamentally different directions:
+</p>
+<ul class="model-box">
+<li>
+<strong>Longitudinal direction:</strong> This is the direction along the normal. For plane surfaces, every point of incidence has its own normal; however, all these normals are parallel, so they define the same longitudinal direction. For curved surfaces, there is no single common normal everywhere, so a distinguished normal is chosen — the normal passing through the center of aperture — called the <strong>principal axis</strong>.
+</li>
+<li>
+<strong>Transverse:</strong> This is the entire plane perpendicular to the longitudinal direction.
+</li>
+</ul>
+</section>
+<section>
+<h2>Magnification</h2>
+<p>
+Magnification describes how the size of an image compares to the size of the object. It is defined for extended objects.
+</p>
+<div class="model-box">
+<p>
+\[
+m = \frac{h_i}{h_o}
+\]
+</p>
+<p>
+where \(h_o\) is the height of the object and \(h_i\) is the height of the image, both measured perpendicular to the principal axis (i.e., in the transverse direction).
+</p>
+</div>
+</section>
+<section>
+<h2>Transverse and Longitudinal Directions</h2>
+<p>
+In ray optics, all spatial variations are classified relative to the principal axis:
+</p>
+<ul class="model-box">
+<li>
+<strong>Transverse direction:</strong> perpendicular to the principal axis
+</li>
+<li>
+<strong>Longitudinal direction:</strong> along the principal axis
+</li>
+</ul>
+<p>
+Magnification is defined only in the transverse direction because optical elements preserve the geometric relationship of rays in this direction. In other words, the separation between rays corresponding to different points of the object is scaled in the transverse direction.
+</p>
+<p>
+In the longitudinal direction, distances are not scaled uniformly, and hence no single magnification factor can describe the transformation.
+</p>
+<div class="insightbox">
+Magnification fundamentally represents how the transverse separation between rays changes after interaction with an optical element. This is why height (a transverse quantity) is used in its definition.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
