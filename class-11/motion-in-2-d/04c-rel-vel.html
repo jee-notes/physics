@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rain-Man Problems | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-relative-motion-in-2d.html" class="back-btn">
+<span>&larr;</span> Back to Relative Motion in 2D
+</a>
+</nav>
+<h1>Radial and Transverse</h1>
+<p class="subtitle">
+Relative velocity polar components.
+</p>
+<section>
+<h2>Relative position and Relative velocity</h2>
+<p>
+If position of particle A wrt ground is \(\vec{r}_A\) and position of particle B wrt ground is \(\vec{r}_B\), then relative position of B wrt A is:
+</p>
+\[
+\vec{r}_{B/A} = \vec{r}_B - \vec{r}_A
+\]
+<p>
+This vector \(\vec{r}_{B/A}\) represents the position of particle B as seen from particle A. It directly connects A to B and therefore fully describes their geometric separation at any instant.
+</p>
+<p>
+If velocity of particle A wrt ground is \(\vec{v}_A\) and velocity of particle B wrt ground is \(\vec{v}_B\), then relative velocity of B wrt A is:
+</p>
+\[
+\vec{v}_{B/A} = \vec{v}_B - \vec{v}_A
+\]
+<p>
+This gives the rate of change of the relative position vector \(\vec{r}_{B/A}\). In other words, \(\vec{v}_{B/A}\) tells us how the separation between the two particles is evolving with time.
+</p>
+<p>
+Mathematically, \(\vec{v}_{B/A}\) appears as a combination of \(\vec{v}_B\) and \(-\vec{v}_A\), both defined with respect to the ground frame. This decomposition is algebraically correct and often useful for calculation.
+</p>
+<p>
+However, this form does not directly reveal the <strong>nature of the relative motion</strong> between the particles.
+</p>
+<p>
+In most physical situations, the important questions are:
+</p>
+<ul>
+<li>Is the distance between the particles increasing or decreasing?</li>
+<li>Is the line joining the particles rotating?</li>
+</ul>
+<p>
+These questions are not naturally answered by resolving \(\vec{v}_{B/A}\) into horizontal and vertical components or into \(\vec{v}_B\) and \(-\vec{v}_A\).
+</p>
+<p>
+Instead, we must analyze \(\vec{v}_{B/A}\) with respect to \(\vec{r}_{B/A}\) itself, since \(\vec{r}_{B/A}\) defines the instantaneous configuration of the system.
+</p>
+<div class="model-box">
+<p>
+<strong>Key Idea:</strong> To understand relative motion, resolve relative velocity along and perpendicular to the relative position vector.
+</p>
+</div>
+<p>
+This leads to a more physically meaningful decomposition of motion.
+</p>
+</section>
+<section>
+<h2>Radial and Transverse Components of Relative Velocity</h2>
+<p>
+At any instant, the relative position vector \(\vec{r}\) connects the two particles. This vector carries two independent pieces of information:
+</p>
+<ul>
+<li><strong>Magnitude</strong> → the distance between the particles</li>
+<li><strong>Direction</strong> → the orientation of the line joining them</li>
+</ul>
+<p>
+As the particles move, both of these quantities may change with time.
+</p>
+<p>
+The relative velocity \(\vec{v}_{rel}\), being the time derivative of \(\vec{r}\), must therefore account for both types of change:
+</p>
+<ul>
+<li>Change in magnitude of \(\vec{r}\)</li>
+<li>Change in direction of \(\vec{r}\)</li>
+</ul>
+<p>
+This naturally leads to the decomposition of \(\vec{v}_{rel}\) into two independent components.
+</p>
+<div class="model-box">
+<strong>Fundamental Decomposition:</strong>
+<p>
+\[
+\vec{v}_{rel} = \underbrace{\frac{dr}{dt}\hat{r}}_{\text{radial component}} + \underbrace{r\omega \hat{\theta}}_{\text{transverse component}}
+\]
+</p>
+</div>
+<h3>Radial Component (Distance Changing)</h3>
+<p>
+The radial component lies along the direction of \(\vec{r}\) (i.e., along \(\hat{r}\)). It represents the rate at which the magnitude of \(\vec{r}\) changes.
+</p>
+<p>
+Physically, this component tells us whether the particles are moving closer together or farther apart.
+</p>
+<ul>
+<li>Magnitude: \( \frac{dr}{dt} \)</li>
+<li>Direction: along \(\hat{r}\)</li>
+<li>Effect: changes distance between particles</li>
+</ul>
+<div class="model-box">
+<p>
+\[
+v_r = \vec{v}_{rel} \cdot \hat{r}
+\]
+</p>
+</div>
+<ul>
+<li>\(v_r \lt 0\) → distance decreases (approach)</li>
+<li>\(v_r > 0\) → distance increases (separation)</li>
+</ul>
+<p>
+Thus, the radial component completely governs how the separation between the particles evolves.
+</p>
+<h3>Transverse Component (Orientation Changing)</h3>
+<p>
+The transverse component lies perpendicular to \(\vec{r}\) (along \(\hat{\theta}\)). It represents the rate at which the direction of \(\vec{r}\) changes.
+</p>
+<p>
+This component does not contribute to any change in distance, but instead causes the line joining the particles to rotate.
+</p>
+<ul>
+<li>Magnitude: \( r\omega \)</li>
+<li>Direction: perpendicular to \(\hat{r}\)</li>
+<li>Effect: changes orientation of the line joining particles</li>
+</ul>
+<div class="model-box">
+<p>
+\[
+v_t = r\omega \quad \Rightarrow \quad \omega = \frac{v_t}{r}
+\]
+</p>
+</div>
+<ul>
+<li>Does not change distance</li>
+<li>Represents angular motion of one particle relative to the other</li>
+</ul>
+<p>
+Thus, the transverse component completely governs how the direction of the relative position vector evolves.
+</p>
+<h3>Combined Interpretation</h3>
+<p>
+Any relative motion in two dimensions can always be understood as a combination of two independent effects:
+</p>
+<ul>
+<li>Change in distance (radial motion)</li>
+<li>Change in direction (transverse motion)</li>
+</ul>
+<div class="model-box">
+<p>
+<strong>Relative motion in 2D = distance change + orientation change</strong>
+</p>
+</div>
+<p>
+This decomposition provides a complete and physically meaningful description of relative motion and serves as a primary tool in solving problems involving closest approach, collision, and angular motion.
+</p>
+</section>
+<section>
+<p>
+The cat and mouse chase problem and particles on regular polygon chase problem are associated with this theory.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
