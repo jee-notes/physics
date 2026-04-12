@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lens Maker Formula| Geometrical Optics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./08-lenses.html" class="back-btn">
+<span>&larr;</span> Back to Lenses
+</a>
+</nav>
+<h1>Lens Maker Formula</h1>
+<p class="subtitle">
+Bi-directional Formula.
+</p>
+<section>
+<h2>Derivation</h2>
+<p>
+The derivation of the lens-maker formula is not essential for JEE. However, it can be understood as a direct application of the refraction at a spherical surface:
+</p>
+\[
+\frac{\mu_2}{v} - \frac{\mu_1}{u} = \frac{\mu_2 - \mu_1}{R}
+\]
+<div class="insightbox">
+Once this formula is understood, the lens-maker formula follows by applying it sequentially to the two refracting surfaces of the lens.
+</div>
+<p>
+The additional assumption for a lens is that it is thin, so the poles of both refracting surfaces can be taken as coinciding.
+</p>
+<p>
+Applying refraction at the first surface (\(R_1\)), the image formed by the first surface is at \(v_1\):
+</p>
+\[
+\frac{\mu_2}{v_1} - \frac{\mu_1}{u} = \frac{\mu_2 - \mu_1}{R_1}
+\]
+<p>
+This image acts as the object for the second surface (\(R_2\)):
+</p>
+\[
+\frac{\mu_1}{v} - \frac{\mu_2}{v_1} = \frac{\mu_1 - \mu_2}{R_2}
+\]
+<p>
+Adding the two equations to eliminate \(\frac{\mu_2}{v_1}\):
+</p>
+\[
+\mu_1 \left(\frac{1}{v} - \frac{1}{u}\right) = \left(\mu_2 - \mu_1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)
+\]
+<p>
+Thus:
+</p>
+\[
+\frac{1}{v} - \frac{1}{u} = \frac{1}{f}
+\]
+<p>
+where:
+</p>
+\[
+\frac{1}{f} = \left(\frac{\mu_2}{\mu_1} - 1\right)\left(\frac{1}{R_1} - \frac{1}{R_2}\right)
+\]
+</section>
+<section>
+<h2>Conventions</h2>
+<p>
+The refraction formula is riddled with conventions — this is perhaps the single biggest source of confusion in geometrical optics.
+</p>
+<p>
+Most mistakes in lens problems do not come from physics, but from incorrect handling of these conventions.
+</p>
+<p>
+For \(u\), \(v\): the direction of the incident ray is taken as positive. This is called <strong>sign convention</strong> and needs to be followed.
+</p>
+<p>
+For \(\mu_1\), \(\mu_2\): these represent the refractive indices of the media containing the incident and refracted rays respectively. This is a separate convention tied to the medium, not geometry. This may be called the <strong>medium convention</strong> and needs to be followed.
+</p>
+<p>
+For \(R_1\), \(R_2\): both sign convention and surface sequence must be handled. The sequence refers to the order in which the refracting surfaces are encountered by the incident ray, and it directly affects the signs. This may be called the <strong>sequence convention</strong>, which must be followed along with the sign convention.
+</p>
+<div class="insightbox">
+If these conventions are not handled correctly, even a perfectly correct physical understanding will lead to the wrong answer. This makes conventions the critical bottleneck in applying refraction formulas.
+</div>
+</section>
+<section>
+<h2>One Simpler Formula</h2>
+<p>
+The focal length of a lens is independent of the direction in which light is incident. Whether the ray encounters \(R_1\) first or \(R_2\), the physical result remains the same.
+</p>
+<p>
+However, the standard formula makes this appear complicated due to the combined use of sign and sequence conventions.
+</p>
+<p>
+Instead of handling sequential refraction explicitly, we can use a simpler form that removes dependence on surface order:
+</p>
+\[
+\frac{1}{f} = \left(\frac{\mu_2}{\mu_1} - 1\right)\left(\frac{1}{R_1} + \frac{1}{R_2}\right)
+\]
+<p>
+Here, the sign of \(R\) is determined purely by surface geometry:
+</p>
+<ul class="model-box">
+<li>Positive: surface bulging outward</li>
+<li>Negative: surface bulging inward</li>
+</ul>
+<p>
+With this convention, the effects of both sign convention and sequence are already encoded in the geometry of \(R_1\) and \(R_2\), so no separate tracking of surface order is required.
+</p>
+<div class="insightbox">
+In the standard formulation, sign depends on both the direction of light and the order of surfaces.  
+By redefining the sign of \(R\) using only surface geometry, these dependencies are absorbed into \(R_1\) and \(R_2\) themselves.  
+Thus, geometry encodes both directional and sequence conventions.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
