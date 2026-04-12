@@ -113,6 +113,42 @@ Ray tracing essentially means following the straight-line path of a ray and appl
 </div>
 </section>
 <section>
+<h2>Two Regimes in Ray Optics</h2>
+<p>
+Ray optics can be broadly divided into two regimes:
+</p>
+<ul class="model-box">
+<li><strong>Single-Ray Optics</strong></li>
+<li><strong>Object–Image Optics</strong></li>
+</ul>
+<p>
+In <strong>single-ray optics</strong>, we track the path of an individual ray. At each point of incidence, the ray is processed using the laws of reflection and refraction with respect to the local normal.
+</p>
+<p>
+In <strong>object–image optics</strong>, we do not track a single ray in isolation. Instead, we consider at least two rays originating from a point of the object and incident on the optical element. This can be called as beam optics.
+</p>
+<p>
+The optical element processes the geometry of these rays — effectively transforming the angular spread (or separation) of the rays associated with the object into a new set of rays corresponding to the image. This is represented through object distance \(u\) and image distance \(v\).
+</p>
+<p>
+In this approach, we no longer work with local normals at every point. Instead, we work with a global geometric structure defined by the <strong>principal axis</strong> and restrict ourselves to <strong>paraxial rays</strong>, where small-angle approximations hold.
+</p>
+<p>
+This approximation allows us to replace detailed local refraction with simple object–image relations such as:
+</p>
+\[
+\frac{1}{v} - \frac{1}{u} = \frac{1}{f}
+\]
+<p>
+The plane mirror is a special case where no approximation is required, and the object–image relation holds exactly without invoking the paraxial approximation.
+</p>
+<div class="insightbox">
+Single-ray optics is local and normal-based.<br>  
+Object–image optics is global and axis-based, built on the transformation of ray geometry under the paraxial approximation.<br>
+Even dispersion is beam based optics.
+</div>
+</section>
+<section>
 <h2>Scope of Chapter</h2>
 <ul>
 <li>How light travels (rays)</li>
