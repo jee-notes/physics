@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deviation Angle | Reflection</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-reflection.html" class="back-btn">
+<span>&larr;</span> Back to Reflection
+</a>
+</nav>
+<h1>Deviation Angle</h1>
+<p class="subtitle">
+System of mirrors
+</p>
+<section>
+<h2>Vector Reflection</h2>
+<p>
+Reflection can be understood as a transformation of a vector across a surface.
+</p>
+<p>
+Any vector can be decomposed into two components:
+</p>
+<ul>
+<li><strong>Parallel (tangential) component:</strong> Along the surface</li>
+<li><strong>Perpendicular (normal) component:</strong> Along the normal to the surface</li>
+</ul>
+<p>
+During reflection:
+</p>
+<ul>
+<li>The <strong>parallel component remains unchanged</strong></li>
+<li>The <strong>normal component reverses direction</strong></li>
+</ul>
+<div class="concept-box">
+Reflection reverses the normal component of a vector while preserving the tangential component.
+</div>
+<p>
+If \(\vec{i}\) is the incident vector and \(\hat{n}\) is the unit normal, then:
+</p>
+<div class="math-block">
+\[
+\vec{r} = \vec{i} - 2(\vec{i} \cdot \hat{n})\hat{n}
+\]
+</div>
+</section>
+<section>
+<h2>2D Example</h2>
+<p>
+Let the incident vector be:
+\[
+\vec{i} = a\hat{i} + b\hat{j}
+\]
+and mirror along the X-axis
+</p>
+<p>  
+As it is given that mirror is along X axis - normal vector is either \(\hat{j}\) or \(-\hat{j}\). But as the incident ray is moving upwards (assuming 'b' > 0), normal has to be along \(-\hat{j}\). Therefore, \( \vec{n} = -\hat{j}\).
+</p>
+<p>
+We learn how to solve this geometrically. Component of \(\vec{i}\) along tangent plane = \(a\hat{i}\). Component of \(\vec{i}\) along normal = \(b\hat{j}\)
+</p>
+<p>
+We use geometric transormation logic. Component of \(\vec{r}\) along tangent plane =  Component of \(\vec{i}\) along tangent plane = \(a\hat{i}\).
+</p>
+<p>
+Component of \(\vec{r}\) along normal = - Component of \(\vec{i}\) along normal = \(-b\hat{j}\).
+</p>
+<div class="math-block">
+\[
+\vec{r} = a\hat{i} - b\hat{j}
+\]
+</div>
+<p>
+Thus, the x-component remains unchanged while the y-component reverses.
+</p>
+</section>
+<section>
+<h2>3D Example</h2>
+<p>
+Let the incident vector be:
+\[
+\vec{i} = a\hat{i} + b\hat{j} + c\hat{k}
+\]
+and mirror along the XY-plane.
+</p>
+<p>  
+As it is given that mirror is along XY plane - normal vector is either \(\hat{k}\) or \(-\hat{k}\). But as the incident ray is moving outwards (assuming 'c' > 0), normal has to be along \(-\hat{k}\). Therefore, \( \vec{n} = -\hat{k}\).
+</p>
+<p>
+We learn how to solve this geometrically. Component of \(\vec{i}\) along tangent plane = \(a\hat{i} + b\hat{j}\). Component of \(\vec{i}\) along normal = \(c\hat{k}\)
+</p>
+<p>
+We use geometric transormation logic. Component of \(\vec{r}\) along tangent plane =  Component of \(\vec{i}\) along tangent plane = \(a\hat{i} + b\hat{j}\).
+</p>
+<p>
+Component of \(\vec{r}\) along normal = - Component of \(\vec{i}\) along normal = \(-c\hat{k}\).
+</p>
+<div class="math-block">
+\[
+\vec{r} = a\hat{i} + b\hat{j} - c\hat{k}
+\]
+</div>
+<p>
+Thus, the z-component reverses while x and y components remain unchanged.
+</p>
+<div class="insightbox">
+In 2D - consecutive reflection from 2 mutually perpendicular mirrors would reverse the direction of incident ray vector.<br>
+In 3D - consecutive reflection from 3 mutually perpendicular mirrors would reverse the direction of incident ray vector.<br>
+In 3D - the mirror arrangement is similar to corner of a cube and is called as corner reflector.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
