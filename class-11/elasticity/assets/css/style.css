@@ -257,3 +257,13 @@ tbody tr:hover{
     background:#fff5f5;
     transition:background 0.2s ease;
 }
+/* Hide the Paper.js scratchpad while it does the polar math */
+#paper-workspace {
+    display: none;
+}
+/* Ensure the SVG injected by JS respects your existing .diagram styles */
+#svg-output svg {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
