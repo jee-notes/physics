@@ -89,7 +89,6 @@ window.drawPlaneMirror = function(p1_raw, p2_raw, isClockwise) {
     // 4. Return the midpoint as the "Pole" for easy ray targeting
     return { pole: p1.add(p2).divide(2), normal: normal };
 };
-
 window.addRay = function(start_point, end_point, isDashed = false, color = 'black', sw = 2 ) {
     const start = new paper.Point(start_point);
     const end = new paper.Point(end_point);
