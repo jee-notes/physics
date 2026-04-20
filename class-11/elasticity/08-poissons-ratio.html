@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/math.js"></script>
 </head>
-
 <body>
     <div class="container">
         <nav class="top-nav">
@@ -17,34 +15,59 @@
             </a>
         </nav>
 
-        <h1>5. Poisson's Ratio</h1>
+        <h1>Poisson's Ratio</h1>
         <p class="subtitle">
-            The relationship between lateral contraction and longitudinal extension.
+            Relating axial elongation to lateral contraction.
         </p>
 
         <section>
-            <h2>Poisson’s Ratio</h2>
+            <h2>Longitudinal vs Lateral Strain</h2>
             <p>
-                When a body is stretched, it contracts laterally.
+                When a wire or rod is pulled, it doesn't just get longer; it also gets thinner. This is because materials generally attempt to maintain their volume to some extent.
             </p>
-
-            <div class="formula-block">
-                \[
-                \nu = -\frac{\text{lateral strain}}{\text{longitudinal strain}}
-                \]
-            </div>
-
-            <ul>
-                <li>Dimensionless quantity</li>
-                <li>Typical values: 0 to 0.5</li>
+            <ul class="model-box">
+                <li><strong>Longitudinal Strain (\(\varepsilon_L\)):</strong> The fractional change in length. \(\varepsilon_L = \Delta L / L\).</li>
+                <li><strong>Lateral Strain (\(\varepsilon_d\)):</strong> The fractional change in diameter or width. \(\varepsilon_d = \Delta d / d\).</li>
             </ul>
+            <div class="insightbox">
+                Notice that if length increases (\(\Delta L > 0\)), diameter decreases (\(\Delta d < 0\)). Thus, longitudinal and lateral strains typically have opposite signs in natural materials.
+            </div>
         </section>
 
-        <footer>
-            <hr>
-            <p>By Hitendra K K | Managed via GitHub Pages</p>
-        </footer>
+        <section>
+            <h2>Poisson's Ratio Definition (\(\sigma\))</h2>
+            <p>
+                <strong>Poisson's Ratio</strong> is defined as the ratio of lateral strain to longitudinal strain within the elastic limit.
+            </p>
+            <div class="model-box">
+                \[ \sigma = -\frac{\text{Lateral Strain}}{\text{Longitudinal Strain}} = -\frac{\Delta d / d}{\Delta L / L} \]
+            </div>
+            <p>
+                Since it is the ratio of two strains (both dimensionless), Poisson's Ratio is also a **dimensionless and unitless quantity**. It effectively describes how "squishy" or "rubbery" a material is in response to being pulled.
+            </p>
+        </section>
+
+        <section>
+            <h2>Theoretical and Practical Limits</h2>
+            <div class="concept-box">
+                The theoretical value of Poisson's Ratio (\(\sigma\)) for an isotropic solid lies between:
+                \[ -1 \leq \sigma \leq 0.5 \]
+            </div>
+            <h3>Physical Significance of the Limits:</h3>
+            <ul>
+                <li><strong>\(\sigma = 0.5\):</strong> This represents a perfectly incompressible material (volume remains exactly constant during deformation). Rubber is very close to this value (\(\sigma \approx 0.49\)).</li>
+                <li><strong>\(\sigma = 0\):</strong> This represents a material that does not contract laterally when pulled longitudinally. <strong>Cork</strong> is a classic example of this behavior.</li>
+                <li><strong>Negative \(\sigma\):</strong> These are called <em>auxetic</em> materials. When you pull them, they actually get thicker. Such materials are usually specially engineered foams or honeycombs; they are rarely found in simple natural solids.</li>
+            </ul>
+            <div class="insightbox">
+                For most common engineering materials (steels, aluminum, etc.), the practical value of \(\sigma\) is around **0.25 to 0.35**.
+            </div>
+        </section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
     </div>
 </body>
-
 </html>

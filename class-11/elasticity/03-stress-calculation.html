@@ -1,270 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elasticity | Stress (Calculation)</title>
-<link rel="stylesheet" href="./assets/css/style.css">
-<script src="./assets/js/math.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elasticity | Stress (Calculation)</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
 </head>
+
 <body>
-<div class="container">
-<nav class="top-nav">
-<a href="./index.html" class="back-btn">
-<span>&larr;</span> Back to Elasticity
-</a>
-</nav>
-<h1>Stress (Calculation)</h1>
-<p class="subtitle">
-How to calculate stress based on definition.
-</p>
-<section>
-<h2>Stress Tensor</h2>
-<p>
-In general, stress is a second-order tensor. However, for our level, we calculate stress using its definition as force per unit area.
-</p>
-<p>
-Stress depends on the orientation of the surface on which internal forces act. Based on this, we classify stress into:
-</p>
-<ul class="model-box">
-<li><strong>Longitudinal stress : </strong> If the deforming force is applied along some linear dimension of a body, the corresponding stress is called Longitudinal Stress or Tensile Stress. So, when an object is one dimensional then we use the concept of longitudinal stress.</li>
-<li><strong>Shear stress : </strong> If the force is applied tangentially to one face of a rectangular body, keeping the other face fixed, the stress is called Tangential or Shearing stress. So, tangential stress is defined as the restoring force per unit area tangential to the surface of the body.</li>
-</ul>
-<div class="diagram" id="svg-output"></div>
-<canvas id="paper-workspace" width="500" height="400"></canvas>
-<p>
-Here force F is exerteded on area A at angle \(\theta\) with the surface. For stress, this force should be internal force. 
-</p>
-<div class="insightbox">
-<strong>Resolve Force with respect to orientation of the area.</strong>
-</div>
-<p>
-Force along normal \(F_n = F \sin \theta\) and force along tangent \(F_t = F \cos \theta\). 
-</p>
-<p>
-Longitudinal Stress:
-\[
-\frac{F_n}{A} = \frac{F \sin \theta}{A}
-\]
-</p>
-<p>
-Shear Stress:
-\[
-\frac{F_t}{A} = \frac{F \cos \theta}{A}
-\]
-</p>
-</section>
-<section>
-<h2>Illustration</h2>
-<p>
-A bar is subjected to equal and opposite forces \(F\) as shown in the figure. PQRS is a plane making angle \(\theta\) with the cross-section of the bar. If the area of cross-section of the bar be \(A\), find the tensile stress on PQRS, shearing stress on PQRS. Also find the condition when tensile stress is maximum and when shearing stress is maximum.
-</p>
-<style>
-#paper-workspace1 {
-    display: none;
-}
-/* Ensure the SVG injected by JS respects your existing .diagram styles */
-#svg-output1 svg {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
-}
-</style>
-<div class="diagram" id="svg-output1"></div>
-<canvas id="paper-workspace1" width="800" height="400"></canvas>
-<div class="examplebox">
-<p>
-Stress depends on the orientation of the surface on which internal forces act. Based on this, we classify stress into:
-</p>
-<ul class="model-box">
-<li><strong>Longitudinal stress : </strong> If the deforming force is applied along some linear dimension of a body, the corresponding stress is called Longitudinal Stress or Tensile Stress. So, when an object is one dimensional then we use the concept of longitudinal stress.</li>
-<li><strong>Shear stress : </strong> If the force is applied tangentially to one face of a rectangular body, keeping the other face fixed, the stress is called Tangential or Shearing stress. So, tangential stress is defined as the restoring force per unit area tangential to the surface of the body.</li>
-</ul>
-<p>
-Here force F is exerteded on area A at angle \(\theta\) with the surface. For stress, this force should be internal force. 
-</p>
-<div class="insightbox">
-<strong>Resolve Force with respect to orientation of the area.</strong>
-</div>
-<p>
-Force along normal \(F_n = F \sin \theta\) and force along tangent \(F_t = F \cos \theta\). 
-</p>
-<p>
-Longitudinal Stress:
-\[
-\frac{F_n}{A} = \frac{F \sin \theta}{A}
-\]
-</p>
-<p>
-Shear Stress:
-\[
-\frac{F_t}{A} = \frac{F \cos \theta}{A}
-\]
-</p>
-</div>
-</section>
-<footer>
-<hr>
-<p>
-By Hitendra K K
-</p>
-</footer>
-<script>
-function startDrawing() {
-    // 1. Setup the workspace
-    document.getElementById('svg-output').innerHTML = ''; 
-    const canvas = document.getElementById('paper-workspace');
-    if (!canvas) return;
-    paper.setup(canvas);
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Elasticity
+            </a>
+        </nav>
+        <h1>Stress (Calculation)</h1>
+        <p class="subtitle">
+            How to calculate stress based on definition.
+        </p>
+        <section>
+            <h2>Stress Tensor</h2>
+            <p>
+                In general, stress is a second-order tensor. However, for our level, we calculate stress using its
+                definition as force per unit area.
+            </p>
+            <p>
+                Stress depends on the orientation of the surface on which internal forces act. Based on this, we
+                classify stress into:
+            </p>
+            <ul class="model-box">
+                <li><strong>Longitudinal stress : </strong> If the deforming force is applied along some linear
+                    dimension of a body, the corresponding stress is called Longitudinal Stress or Tensile Stress. So,
+                    when an object is one dimensional then we use the concept of longitudinal stress.</li>
+                <li><strong>Shear stress : </strong> If the force is applied tangentially to one face of a rectangular
+                    body, keeping the other face fixed, the stress is called Tangential or Shearing stress. So,
+                    tangential stress is defined as the restoring force per unit area tangential to the surface of the
+                    body.</li>
+            </ul>
+            <div class="diagram" id="svg-output"></div>
+            <canvas id="paper-workspace" width="500" height="400"></canvas>
+            <p>
+                Here force F is exerteded on area A at angle \(\theta\) with the surface. For stress, this force should
+                be internal force.
+            </p>
+            <div class="insightbox">
+                <strong>Resolve Force with respect to orientation of the area.</strong>
+            </div>
+            <p>
+                Force along normal \(F_n = F \sin \theta\) and force along tangent \(F_t = F \cos \theta\).
+            </p>
+            <p>
+                Longitudinal Stress:
+                \[
+                \frac{F_n}{A} = \frac{F \sin \theta}{A}
+                \]
+            </p>
+            <p>
+                Shear Stress:
+                \[
+                \frac{F_t}{A} = \frac{F \cos \theta}{A}
+                \]
+            </p>
+        </section>
+        <section>
+            <h2>Illustration</h2>
+            <p>
+                A bar is subjected to equal and opposite forces \(F\) as shown in the figure. PQRS is a plane making
+                angle \(\theta\) with the cross-section of the bar. If the area of cross-section of the bar be \(A\),
+                find the tensile stress on PQRS, shearing stress on PQRS. Also find the condition when tensile stress is
+                maximum and when shearing stress is maximum.
+            </p>
+            <style>
+                #paper-workspace1 {
+                    display: none;
+                }
 
-const start = new paper.Point([100, 200]);
-const tfc = new paper.Point([225, 175]);
-const top = new paper.Point([225, 125]);
-const right = new paper.Point([275, 175]);
-const arw = new paper.Point([275, 125]);
+                /* Ensure the SVG injected by JS respects your existing .diagram styles */
+                #svg-output1 svg {
+                    max-width: 100%;
+                    height: auto;
+                    display: inline-block;
+                }
+            </style>
+            <div class="diagram" id="svg-output1"></div>
+            <canvas id="paper-workspace1" width="800" height="400"></canvas>
+            <div class="examplebox">
+                <p>
+                    Stress depends on the orientation of the surface on which internal forces act. Based on this, we
+                    classify stress into:
+                </p>
+                <ul class="model-box">
+                    <li><strong>Longitudinal stress : </strong> If the deforming force is applied along some linear
+                        dimension of a body, the corresponding stress is called Longitudinal Stress or Tensile Stress.
+                        So, when an object is one dimensional then we use the concept of longitudinal stress.</li>
+                    <li><strong>Shear stress : </strong> If the force is applied tangentially to one face of a
+                        rectangular body, keeping the other face fixed, the stress is called Tangential or Shearing
+                        stress. So, tangential stress is defined as the restoring force per unit area tangential to the
+                        surface of the body.</li>
+                </ul>
+                <p>
+                    Here force F is exerteded on area A at angle \(\theta\) with the surface. For stress, this force
+                    should be internal force.
+                </p>
+                <div class="insightbox">
+                    <strong>Resolve Force with respect to orientation of the area.</strong>
+                </div>
+                <p>
+                    Force along normal \(F_n = F \sin \theta\) and force along tangent \(F_t = F \cos \theta\).
+                </p>
+                <p>
+                    Longitudinal Stress:
+                    \[
+                    \frac{F_n}{A} = \frac{F \sin \theta}{A}
+                    \]
+                </p>
+                <p>
+                    Shear Stress:
+                    \[
+                    \frac{F_t}{A} = \frac{F \cos \theta}{A}
+                    \]
+                </p>
+            </div>
+        </section>
+        <footer>
+            <hr>
+            <p>
+                By Hitendra K K
+            </p>
+        </footer>
+        <script>
+            function startDrawing() {
+                // 1. Setup the workspace
+                document.getElementById('svg-output').innerHTML = '';
+                const canvas = document.getElementById('paper-workspace');
+                if (!canvas) return;
+                paper.setup(canvas);
 
-	
-	// 1. The Front Face (Your original code)
-const frontFace = new paper.Path.Rectangle({
-    point: [100, 200],
-    size: [200, 100],
-    fillColor: '#ddd',
-    strokeColor: 'black'
-});
+                const start = new paper.Point([100, 200]);
+                const tfc = new paper.Point([225, 175]);
+                const top = new paper.Point([225, 125]);
+                const right = new paper.Point([275, 175]);
+                const arw = new paper.Point([275, 125]);
 
-// 2. The Top Face (Parallelogram)
-const topFace = new paper.Path({
-    segments: [
-        frontFace.bounds.topLeft,               // Shared with Front
-        [frontFace.bounds.left + 50, frontFace.bounds.top - 50], // Back-Left
-        [frontFace.bounds.right + 50, frontFace.bounds.top - 50], // Back-Right
-        frontFace.bounds.topRight              // Shared with Front
-    ],
-    fillColor: '#eee',
-    strokeColor: 'black',
-    closed: true
-});
 
-// 3. The Side Face
-const sideFace = new paper.Path({
-    segments: [
-        frontFace.bounds.topRight,              // Shared with Front
-        [frontFace.bounds.right + 50, frontFace.bounds.top - 50], // Back-Top
-        [frontFace.bounds.right + 50, frontFace.bounds.bottom - 50], // Back-Bottom
-        frontFace.bounds.bottomRight            // Shared with Front
-    ],
-    fillColor: '#bbb',
-    strokeColor: 'black',
-    closed: true
-});
-addPoint(tfc, "O", [0,0]);
+                // 1. The Front Face (Your original code)
+                const frontFace = new paper.Path.Rectangle({
+                    point: [100, 200],
+                    size: [200, 100],
+                    fillColor: '#ddd',
+                    strokeColor: 'black'
+                });
 
-const xaxis = new paper.Path.Line(new paper.Point([tfc.x-150, tfc.y]),new paper.Point([tfc.x+150, tfc.y]));
-	xaxis.strokeColor = 'black';
-	const yaxis = new paper.Path.Line(new paper.Point([tfc.x, tfc.y-100]),new paper.Point([tfc.x, tfc.y+100]));
-	yaxis.strokeColor = 'black';
-    addRay(tfc, arw, false,'blue', 3);
-	addRay(tfc, top, false,'red', 2);
-	addRay(tfc, right, false,'red', 2);
-	
-    const svg = paper.project.exportSVG({ asString: false });
-    document.getElementById('svg-output').appendChild(svg);
-}
+                // 2. The Top Face (Parallelogram)
+                const topFace = new paper.Path({
+                    segments: [
+                        frontFace.bounds.topLeft,               // Shared with Front
+                        [frontFace.bounds.left + 50, frontFace.bounds.top - 50], // Back-Left
+                        [frontFace.bounds.right + 50, frontFace.bounds.top - 50], // Back-Right
+                        frontFace.bounds.topRight              // Shared with Front
+                    ],
+                    fillColor: '#eee',
+                    strokeColor: 'black',
+                    closed: true
+                });
 
-// Ensure math.js is loaded before running
-if (window.paperIsReady) { 
-    startDrawing(); 
-} else { 
-    window.addEventListener('PaperReady', startDrawing); 
-}
+                // 3. The Side Face
+                const sideFace = new paper.Path({
+                    segments: [
+                        frontFace.bounds.topRight,              // Shared with Front
+                        [frontFace.bounds.right + 50, frontFace.bounds.top - 50], // Back-Top
+                        [frontFace.bounds.right + 50, frontFace.bounds.bottom - 50], // Back-Bottom
+                        frontFace.bounds.bottomRight            // Shared with Front
+                    ],
+                    fillColor: '#bbb',
+                    strokeColor: 'black',
+                    closed: true
+                });
+                addPoint(tfc, "O", [0, 0]);
 
-function startDrawing1() {
-    // 1. Setup the workspace
-    document.getElementById('svg-output1').innerHTML = ''; 
-    const canvas = document.getElementById('paper-workspace1');
-    if (!canvas) return;
-    paper.setup(canvas);
+                const xaxis = new paper.Path.Line(new paper.Point([tfc.x - 150, tfc.y]), new paper.Point([tfc.x + 150, tfc.y]));
+                xaxis.strokeColor = 'black';
+                const yaxis = new paper.Path.Line(new paper.Point([tfc.x, tfc.y - 100]), new paper.Point([tfc.x, tfc.y + 100]));
+                yaxis.strokeColor = 'black';
+                addRay(tfc, arw, false, 'blue', 3);
+                addRay(tfc, top, false, 'red', 2);
+                addRay(tfc, right, false, 'red', 2);
 
-const tfc1 = new paper.Point([100, 250]);
-const tfc2 = new paper.Point([625, 225]);
-const tfc3 = new paper.Point([300, 200]);
-const tfc4 = new paper.Point([350, 150]);
+                const svg = paper.project.exportSVG({ asString: false });
+                document.getElementById('svg-output').appendChild(svg);
+            }
 
-const tfc5 = new paper.Point([300, 300]);
-const tfc6 = new paper.Point([350, 250]);
+            // Ensure math.js is loaded before running
+            if (window.paperIsReady) {
+                startDrawing();
+            } else {
+                window.addEventListener('PaperReady', startDrawing);
+            }
 
-const tfc7 = new paper.Point([400, 300]);
-const tfc8 = new paper.Point([450, 250]);
-	
-	// 1. The Front Face (Your original code)
-const frontFace = new paper.Path.Rectangle({
-    point: [100, 200],
-    size: [500, 100],
-    fillColor: '#ddd',
-    strokeColor: 'black'
-});
+            function startDrawing1() {
+                // 1. Setup the workspace
+                document.getElementById('svg-output1').innerHTML = '';
+                const canvas = document.getElementById('paper-workspace1');
+                if (!canvas) return;
+                paper.setup(canvas);
 
-// 2. The Top Face (Parallelogram)
-const topFace = new paper.Path({
-    segments: [
-        frontFace.bounds.topLeft,               // Shared with Front
-        [frontFace.bounds.left + 50, frontFace.bounds.top - 50], // Back-Left
-        [frontFace.bounds.right + 50, frontFace.bounds.top - 50], // Back-Right
-        frontFace.bounds.topRight              // Shared with Front
-    ],
-    fillColor: '#eee',
-    strokeColor: 'black',
-    closed: true
-});
+                const tfc1 = new paper.Point([100, 250]);
+                const tfc2 = new paper.Point([625, 225]);
+                const tfc3 = new paper.Point([300, 200]);
+                const tfc4 = new paper.Point([350, 150]);
 
-// 3. The Side Face
-const sideFace = new paper.Path({
-    segments: [
-        frontFace.bounds.topRight,              // Shared with Front
-        [frontFace.bounds.right + 50, frontFace.bounds.top - 50], // Back-Top
-        [frontFace.bounds.right + 50, frontFace.bounds.bottom - 50], // Back-Bottom
-        frontFace.bounds.bottomRight            // Shared with Front
-    ],
-    fillColor: '#bbb',
-    strokeColor: 'black',
-    closed: true
-});
+                const tfc5 = new paper.Point([300, 300]);
+                const tfc6 = new paper.Point([350, 250]);
 
-addPoint(tfc3, "P", [0,0]);
-addPoint(tfc4, "Q", [0,0]);
-addPoint(tfc5, "A", [0,0]);
-addPoint(tfc6, "B", [0,0]);
-addPoint(tfc7, "R", [0,0]);
-addPoint(tfc8, "S", [0,0]);
+                const tfc7 = new paper.Point([400, 300]);
+                const tfc8 = new paper.Point([450, 250]);
 
-    const l1 = new paper.Path.Line(tfc3,tfc4);
-	l1.strokeColor = 'black';
-	const l2 = new paper.Path.Line(tfc3,tfc5);
-	l2.strokeColor = 'black';
-	const l3 = new paper.Path.Line(tfc4,tfc6);
-	l3.strokeColor = 'black';
-	const l4 = new paper.Path.Line(tfc6,tfc5);
-	l4.strokeColor = 'black';
-	const l5 = new paper.Path.Line(tfc3,tfc7);
-	l5.strokeColor = 'black';
-	const l6 = new paper.Path.Line(tfc4,tfc8);
-	l6.strokeColor = 'black';
-	const l7 = new paper.Path.Line(tfc7,tfc8);
-	l7.strokeColor = 'black';
-    addRay(tfc1, new paper.Point([tfc1.x - 50, tfc1.y]), false,'blue', 3);
-	addRay(tfc2, new paper.Point([tfc2.x + 50, tfc2.y]), false,'blue', 3);
-	addAngleArc(tfc3, tfc5, tfc7, 30, 'θ', false)
-    const svg = paper.project.exportSVG({ asString: false });
-    document.getElementById('svg-output1').appendChild(svg);
-}
+                // 1. The Front Face (Your original code)
+                const frontFace = new paper.Path.Rectangle({
+                    point: [100, 200],
+                    size: [500, 100],
+                    fillColor: '#ddd',
+                    strokeColor: 'black'
+                });
 
-// Ensure math.js is loaded before running
-if (window.paperIsReady) { 
-    startDrawing1(); 
-} else { 
-    window.addEventListener('PaperReady', startDrawing1); 
-}
-</script>
-</div>
+                // 2. The Top Face (Parallelogram)
+                const topFace = new paper.Path({
+                    segments: [
+                        frontFace.bounds.topLeft,               // Shared with Front
+                        [frontFace.bounds.left + 50, frontFace.bounds.top - 50], // Back-Left
+                        [frontFace.bounds.right + 50, frontFace.bounds.top - 50], // Back-Right
+                        frontFace.bounds.topRight              // Shared with Front
+                    ],
+                    fillColor: '#eee',
+                    strokeColor: 'black',
+                    closed: true
+                });
+
+                // 3. The Side Face
+                const sideFace = new paper.Path({
+                    segments: [
+                        frontFace.bounds.topRight,              // Shared with Front
+                        [frontFace.bounds.right + 50, frontFace.bounds.top - 50], // Back-Top
+                        [frontFace.bounds.right + 50, frontFace.bounds.bottom - 50], // Back-Bottom
+                        frontFace.bounds.bottomRight            // Shared with Front
+                    ],
+                    fillColor: '#bbb',
+                    strokeColor: 'black',
+                    closed: true
+                });
+
+                addPoint(tfc3, "P", [0, 0]);
+                addPoint(tfc4, "Q", [0, 0]);
+                addPoint(tfc5, "A", [0, 0]);
+                addPoint(tfc6, "B", [0, 0]);
+                addPoint(tfc7, "R", [0, 0]);
+                addPoint(tfc8, "S", [0, 0]);
+
+                const l1 = new paper.Path.Line(tfc3, tfc4);
+                l1.strokeColor = 'black';
+                const l2 = new paper.Path.Line(tfc3, tfc5);
+                l2.strokeColor = 'black';
+                const l3 = new paper.Path.Line(tfc4, tfc6);
+                l3.strokeColor = 'black';
+                const l4 = new paper.Path.Line(tfc6, tfc5);
+                l4.strokeColor = 'black';
+                const l5 = new paper.Path.Line(tfc3, tfc7);
+                l5.strokeColor = 'black';
+                const l6 = new paper.Path.Line(tfc4, tfc8);
+                l6.strokeColor = 'black';
+                const l7 = new paper.Path.Line(tfc7, tfc8);
+                l7.strokeColor = 'black';
+                addRay(tfc1, new paper.Point([tfc1.x - 50, tfc1.y]), false, 'blue', 3);
+                addRay(tfc2, new paper.Point([tfc2.x + 50, tfc2.y]), false, 'blue', 3);
+                addAngleArc(tfc3, tfc5, tfc7, 30, 'θ', false)
+                const svg = paper.project.exportSVG({ asString: false });
+                document.getElementById('svg-output1').appendChild(svg);
+            }
+
+            // Ensure math.js is loaded before running
+            if (window.paperIsReady) {
+                startDrawing1();
+            } else {
+                window.addEventListener('PaperReady', startDrawing1);
+            }
+        </script>
+    </div>
 </body>
+
 </html>

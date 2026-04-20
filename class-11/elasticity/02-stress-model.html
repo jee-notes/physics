@@ -1,220 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elasticity | Stress (Model)</title>
-<link rel="stylesheet" href="./assets/css/style.css">
-<script src="./assets/js/math.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elasticity | Stress (Model)</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
 </head>
+
 <body>
-<div class="container">
-<nav class="top-nav">
-<a href="./index.html" class="back-btn">
-<span>&larr;</span> Back to Elasticity
-</a>
-</nav>
-<h1>Stress (Model)</h1>
-<p class="subtitle">
-Stress as a second order tensor physical quantity.
-</p>
-<section>
-<h2>What is Stress?</h2>
-<p>
-Stress arises from internal forces within a material body. When external forces act on a body, internal forces develop throughout the material to maintain equilibrium.
-</p>
-<p>
-These internal forces cannot be measured directly. Instead, they are inferred using methods such as the cut-body (section) method, where imaginary cuts are made to analyze internal force distribution.
-</p>
-<p>
-Stress is a way to describe how these internal forces are distributed over surfaces inside the material.
-</p>
-</section>
-<section>
-<h2>Internal Forces</h2>
-<p>
-Internal forces in an extended body are similar in nature to normal reaction and tension forces studied in Newton’s laws using the system approach.
-</p>
-<div class="diagram" id="svg-output"></div>
-<canvas id="paper-workspace" width="600" height="200"></canvas>
-<p>
-Within a system, these forces appear as action–reaction pairs and cancel out when considering the motion of the whole body. Hence, they do not affect the net external force.
-</p>
-<p>
-However, these internal forces are still present inside the material and are distributed throughout it.
-</p>
-<p>
-For example, if a rod is pulled with equal forces of 10 N at both ends, the rod remains in equilibrium (net force is zero), but internal forces develop within the rod.
-</p>
-<p>
-Thus, even when the net external force is zero, internal force distribution can exist, leading to stress inside the body.
-</p>
-<div class="insightbox">
-Equilibrium does not imply absence of internal forces.<br>
-Stress measures how these internal forces are distributed within the material.
-</div>
-</section>
-<section>
-<h2>Directional Nature of Stress</h2>
-<p>
-Stress depends on direction. The internal force acting at a point depends not only on the location but also on the orientation of the surface on which it acts.
-</p>
-<p>
-Thus, at a given point inside a body, different surfaces passing through that point can experience different internal forces.
-</p>
-<p>
-Because of this, stress cannot be described by a single number or even a simple vector. It requires multiple components corresponding to different directions and surface orientations.
-</p>
-<p>
-Unlike vectors, stress does not follow the usual rules of vector addition. Instead, it transforms in a more complex way under change of direction.
-</p>
-<p>
-Such quantities are described using tensors. Stress is a second-order tensor.
-</p>
-<div class="model-box">
-For exam syllabus, we deal with simple cases (like uniaxial loading or isotropic conditions), where only one component of stress is relevant. In such cases, stress can be treated as a scalar quantity for calculation.
-</div>
-</section>
-<section>
-<h2>Stress vs Pressure</h2>
-<p>
-Stress represents how internal forces are distributed over surfaces inside a material. These forces can act in different directions depending on the orientation of the surface.
-</p>
-<p>
-In general, stress can have both:
-</p>
-<ul class="model-box">
-<li><strong>Normal components</strong> — acting perpendicular to a surface (tensile or compressive).</li>
-<li><strong>Shear components</strong> — acting tangentially along a surface.</li>
-</ul>
-<p>
-Thus, in solids, stress is directional and can vary with orientation. Different surfaces passing through the same point can experience different stress components.
-</p>
-<p>
-Pressure, on the other hand, is a much more restricted case. It is defined as a normal compressive force per unit area and acts equally in all directions.
-</p>
-<div class="insightbox">
-Pressure is a special case of stress.<br>
-Stress can be tensile, compressive, or shear.<br>
-Pressure is only compressive and always normal to a surface.
-</div>
-<p>
-In a fluid at rest, shear stress cannot exist because fluid particles can move relative to each other. Any shear would cause continuous deformation (flow), not equilibrium.
-</p>
-<p>
-As a result, the internal force distribution in a static fluid becomes purely normal and identical in all directions. This isotropic stress state is what we call pressure.
-</p>
-<p>
-In contrast, solids can sustain both normal and shear stresses, leading to anisotropic stress states where different components act along different directions (We only have scalar stress in syllabus).
-</p>
-<div class="insightbox">
-Pressure = isotropic normal stress (same in all directions).<br>
-General stress = directional distribution of both normal and shear components.
-</div>
-</section>
-<section>
-<h2>Why divide by Area?</h2>
-<p>
-From the spring–ball model, the stiffness of a single interaction (between two neighboring particles) depends only on the material — it reflects the intermolecular forces.
-</p>
-<p>
-In a real body, many such interactions exist across any cross-section. A larger cross-sectional area contains more parallel chains of these interactions.
-</p>
-<p>
-These chains behave like springs in parallel. The more parallel paths available, the greater the total resistance to deformation. Hence, the overall force required depends on the area.
-</p>
-<p>
-Therefore, force alone does not characterize the internal state of the material. To isolate the material response, we divide the force by the cross-sectional area.
-</p>
-<p>
-This gives a quantity that depends only on the material and not on how much of it is present in cross-section.
-</p>
-<div class="insightbox">
-Force depends on both material and geometry.<br>
-Dividing by area removes the geometric factor (number of parallel interactions), leaving a material-dependent quantity — stress.
-</div>
-<div class="insightbox">
-Imagine two rods made of the same steel — one thin like a needle and the other thick like a tree trunk.<br>
-If both are pulled with the same force, the thin rod experiences a much greater concentration of force and fails, while the thick rod easily withstands it.<br>
-Stress captures this concentration: smaller area → higher stress.
-</div>
-</section>
-<footer>
-<hr>
-<p>
-By Hitendra K K
-</p>
-</footer>
-<script>
-function startDrawing() {
-    // 1. Setup the workspace
-    document.getElementById('svg-output').innerHTML = ''; 
-    const canvas = document.getElementById('paper-workspace');
-    if (!canvas) return;
-    paper.setup(canvas);
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn">
+                <span>&larr;</span> Back to Elasticity
+            </a>
+        </nav>
+        <h1>Stress (Model)</h1>
+        <p class="subtitle">
+            Stress as a second order tensor physical quantity.
+        </p>
+        <section>
+            <h2>What is Stress?</h2>
+            <p>
+                Stress arises from internal forces within a material body. When external forces act on a body, internal
+                forces develop throughout the material to maintain equilibrium.
+            </p>
+            <p>
+                These internal forces cannot be measured directly. Instead, they are inferred using methods such as the
+                cut-body (section) method, where imaginary cuts are made to analyze internal force distribution.
+            </p>
+            <p>
+                Stress is a way to describe how these internal forces are distributed over surfaces inside the material.
+            </p>
+        </section>
+        <section>
+            <h2>Internal Forces</h2>
+            <p>
+                Internal forces in an extended body are similar in nature to normal reaction and tension forces studied
+                in Newton’s laws using the system approach.
+            </p>
+            <div class="diagram" id="svg-output"></div>
+            <canvas id="paper-workspace" width="600" height="200"></canvas>
+            <p>
+                Within a system, these forces appear as action–reaction pairs and cancel out when considering the motion
+                of the whole body. Hence, they do not affect the net external force.
+            </p>
+            <p>
+                However, these internal forces are still present inside the material and are distributed throughout it.
+            </p>
+            <p>
+                For example, if a rod is pulled with equal forces of 10 N at both ends, the rod remains in equilibrium
+                (net force is zero), but internal forces develop within the rod.
+            </p>
+            <p>
+                Thus, even when the net external force is zero, internal force distribution can exist, leading to stress
+                inside the body.
+            </p>
+            <div class="insightbox">
+                Equilibrium does not imply absence of internal forces.<br>
+                Stress measures how these internal forces are distributed within the material.
+            </div>
+        </section>
+        <section>
+            <h2>Directional Nature of Stress</h2>
+            <p>
+                Stress depends on direction. The internal force acting at a point depends not only on the location but
+                also on the orientation of the surface on which it acts.
+            </p>
+            <p>
+                Thus, at a given point inside a body, different surfaces passing through that point can experience
+                different internal forces.
+            </p>
+            <p>
+                Because of this, stress cannot be described by a single number or even a simple vector. It requires
+                multiple components corresponding to different directions and surface orientations.
+            </p>
+            <p>
+                Unlike vectors, stress does not follow the usual rules of vector addition. Instead, it transforms in a
+                more complex way under change of direction.
+            </p>
+            <p>
+                Such quantities are described using tensors. Stress is a second-order tensor.
+            </p>
+            <div class="model-box">
+                For exam syllabus, we deal with simple cases (like uniaxial loading or isotropic conditions), where only
+                one component of stress is relevant. In such cases, stress can be treated as a scalar quantity for
+                calculation.
+            </div>
+        </section>
+        <section>
+            <h2>Stress vs Pressure</h2>
+            <p>
+                Stress represents how internal forces are distributed over surfaces inside a material. These forces can
+                act in different directions depending on the orientation of the surface.
+            </p>
+            <p>
+                In general, stress can have both:
+            </p>
+            <ul class="model-box">
+                <li><strong>Normal components</strong> — acting perpendicular to a surface (tensile or compressive).
+                </li>
+                <li><strong>Shear components</strong> — acting tangentially along a surface.</li>
+            </ul>
+            <p>
+                Thus, in solids, stress is directional and can vary with orientation. Different surfaces passing through
+                the same point can experience different stress components.
+            </p>
+            <p>
+                Pressure, on the other hand, is a much more restricted case. It is defined as a normal compressive force
+                per unit area and acts equally in all directions.
+            </p>
+            <div class="insightbox">
+                Pressure is a special case of stress.<br>
+                Stress can be tensile, compressive, or shear.<br>
+                Pressure is only compressive and always normal to a surface.
+            </div>
+            <p>
+                In a fluid at rest, shear stress cannot exist because fluid particles can move relative to each other.
+                Any shear would cause continuous deformation (flow), not equilibrium.
+            </p>
+            <p>
+                As a result, the internal force distribution in a static fluid becomes purely normal and identical in
+                all directions. This isotropic stress state is what we call pressure.
+            </p>
+            <p>
+                In contrast, solids can sustain both normal and shear stresses, leading to anisotropic stress states
+                where different components act along different directions (We only have scalar stress in syllabus).
+            </p>
+            <div class="insightbox">
+                Pressure = isotropic normal stress (same in all directions).<br>
+                General stress = directional distribution of both normal and shear components.
+            </div>
+        </section>
+        <section>
+            <h2>Why divide by Area?</h2>
+            <p>
+                From the spring–ball model, the stiffness of a single interaction (between two neighboring particles)
+                depends only on the material — it reflects the intermolecular forces.
+            </p>
+            <p>
+                In a real body, many such interactions exist across any cross-section. A larger cross-sectional area
+                contains more parallel chains of these interactions.
+            </p>
+            <p>
+                These chains behave like springs in parallel. The more parallel paths available, the greater the total
+                resistance to deformation. Hence, the overall force required depends on the area.
+            </p>
+            <p>
+                Therefore, force alone does not characterize the internal state of the material. To isolate the material
+                response, we divide the force by the cross-sectional area.
+            </p>
+            <p>
+                This gives a quantity that depends only on the material and not on how much of it is present in
+                cross-section.
+            </p>
+            <div class="insightbox">
+                Force depends on both material and geometry.<br>
+                Dividing by area removes the geometric factor (number of parallel interactions), leaving a
+                material-dependent quantity — stress.
+            </div>
+            <div class="insightbox">
+                Imagine two rods made of the same steel — one thin like a needle and the other thick like a tree
+                trunk.<br>
+                If both are pulled with the same force, the thin rod experiences a much greater concentration of force
+                and fails, while the thick rod easily withstands it.<br>
+                Stress captures this concentration: smaller area → higher stress.
+            </div>
+        </section>
+        <footer>
+            <hr>
+            <p>
+                By Hitendra K K
+            </p>
+        </footer>
+        <script>
+            function startDrawing() {
+                // 1. Setup the workspace
+                document.getElementById('svg-output').innerHTML = '';
+                const canvas = document.getElementById('paper-workspace');
+                if (!canvas) return;
+                paper.setup(canvas);
 
-const start = new paper.Point([100, 100]);
-const block1 = new paper.Path.Rectangle({
-        point: start,
-        size: [50, 50],
-        fillColor: '#ddd',
-        strokeColor: 'black'
-    });
-	const block2 = new paper.Path.Rectangle({
-        point: [start.x + 50,start.y],
-        size: [50, 50],
-        fillColor: '#ddd',
-        strokeColor: 'black'
-    });
-	
-	const block3 = new paper.Path.Rectangle({
-        point: [start.x + 300,start.y],
-        size: [50, 50],
-        fillColor: '#ddd',
-        strokeColor: 'black'
-    });
-	
-	const block4 = new paper.Path.Rectangle({
-        point: [start.x + 400,start.y],
-        size: [50, 50],
-        fillColor: '#ddd',
-        strokeColor: 'black'
-    });
-	const rope_start = new paper.Point([start.x + 350, start.y+25]);
-	const rope_end = new paper.Point([start.x + 400, start.y+25]);
-	const center_block = new paper.Point([start.x + 50, start.y+25]);
-	const center_block1 = new paper.Point([start.x, start.y+25]);
-	const center_block2 = new paper.Point([start.x + 100, start.y+25]);
-	const center_block3 = new paper.Point([start.x + 300, start.y+25]);
-	const center_block4 = new paper.Point([start.x + 450, start.y+25]);
-	
-	
-    const ground = drawPlaneMirror([start.x - 50,start.y+50], [start.x + 500,start.y+50], true);
-	
-    // 3. Draw the Principal Axis
-    // We use the opticalCenter returned by your function to ensure it's centered
-    const rope = new paper.Path.Line(rope_start,rope_end);
-	rope.strokeColor = 'black';
-    addRay(center_block, new paper.Point([center_block1.x + 20, center_block1.y]), false,'blue', 3);
-	addRay(center_block, new paper.Point([center_block2.x - 20, center_block1.y]), false,'blue', 3);
-	addRay(new paper.Point([center_block3.x + 20, center_block1.y]), rope_start, false,'blue', 3);
-	addRay(new paper.Point([center_block4.x - 20, center_block1.y]), rope_end, false,'blue', 3);
-	
-	addRay(new paper.Point([start.x - 40, start.y+25]), new paper.Point([start.x, start.y+25]), false,'red', 4);
-	addRay(new paper.Point([center_block4.x, start.y+25]), new paper.Point([center_block4.x + 40, start.y+25]), false,'red', 4);
-	
-	
-    const svg = paper.project.exportSVG({ asString: false });
-    document.getElementById('svg-output').appendChild(svg);
-}
+                const start = new paper.Point([100, 100]);
+                const block1 = new paper.Path.Rectangle({
+                    point: start,
+                    size: [50, 50],
+                    fillColor: '#ddd',
+                    strokeColor: 'black'
+                });
+                const block2 = new paper.Path.Rectangle({
+                    point: [start.x + 50, start.y],
+                    size: [50, 50],
+                    fillColor: '#ddd',
+                    strokeColor: 'black'
+                });
 
-// Ensure math.js is loaded before running
-if (window.paperIsReady) { 
-    startDrawing(); 
-} else { 
-    window.addEventListener('PaperReady', startDrawing); 
-}
-</script>
-</div>
+                const block3 = new paper.Path.Rectangle({
+                    point: [start.x + 300, start.y],
+                    size: [50, 50],
+                    fillColor: '#ddd',
+                    strokeColor: 'black'
+                });
+
+                const block4 = new paper.Path.Rectangle({
+                    point: [start.x + 400, start.y],
+                    size: [50, 50],
+                    fillColor: '#ddd',
+                    strokeColor: 'black'
+                });
+                const rope_start = new paper.Point([start.x + 350, start.y + 25]);
+                const rope_end = new paper.Point([start.x + 400, start.y + 25]);
+                const center_block = new paper.Point([start.x + 50, start.y + 25]);
+                const center_block1 = new paper.Point([start.x, start.y + 25]);
+                const center_block2 = new paper.Point([start.x + 100, start.y + 25]);
+                const center_block3 = new paper.Point([start.x + 300, start.y + 25]);
+                const center_block4 = new paper.Point([start.x + 450, start.y + 25]);
+
+
+                const ground = drawPlaneMirror([start.x - 50, start.y + 50], [start.x + 500, start.y + 50], true);
+
+                // 3. Draw the Principal Axis
+                // We use the opticalCenter returned by your function to ensure it's centered
+                const rope = new paper.Path.Line(rope_start, rope_end);
+                rope.strokeColor = 'black';
+                addRay(center_block, new paper.Point([center_block1.x + 20, center_block1.y]), false, 'blue', 3);
+                addRay(center_block, new paper.Point([center_block2.x - 20, center_block1.y]), false, 'blue', 3);
+                addRay(new paper.Point([center_block3.x + 20, center_block1.y]), rope_start, false, 'blue', 3);
+                addRay(new paper.Point([center_block4.x - 20, center_block1.y]), rope_end, false, 'blue', 3);
+
+                addRay(new paper.Point([start.x - 40, start.y + 25]), new paper.Point([start.x, start.y + 25]), false, 'red', 4);
+                addRay(new paper.Point([center_block4.x, start.y + 25]), new paper.Point([center_block4.x + 40, start.y + 25]), false, 'red', 4);
+
+
+                const svg = paper.project.exportSVG({ asString: false });
+                document.getElementById('svg-output').appendChild(svg);
+            }
+
+            // Ensure math.js is loaded before running
+            if (window.paperIsReady) {
+                startDrawing();
+            } else {
+                window.addEventListener('PaperReady', startDrawing);
+            }
+        </script>
+    </div>
 </body>
+
 </html>

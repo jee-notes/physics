@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/math.js"></script>
 </head>
-
 <body>
     <div class="container">
         <nav class="top-nav">
@@ -17,34 +15,65 @@
             </a>
         </nav>
 
-        <h1>6. Elastic Potential Energy</h1>
+        <h1>Elastic Potential Energy</h1>
         <p class="subtitle">
-            The internal energy stored in a deformed material.
+            The energy stored within the internal molecular structure of a deformed material.
         </p>
 
         <section>
-            <h2>Elastic Potential Energy</h2>
+            <h2>Work Done in Stretching a Wire</h2>
             <p>
-                Energy stored in a body due to elastic deformation.
+                When a wire is stretched by an external force, work is done against the internal restoring forces. This work is not lost; it is stored in the material as <strong>Elastic Potential Energy</strong>.
             </p>
+            <p>
+                Assume a wire of length \(L\) and area \(A\) is stretched by a force \(F\), producing an extension \(x\). According to Hooke's Law:
+                \[ F = \frac{YA}{L} x \]
+                The work done to increase the extension by a small amount \(dx\) is \(dW = F \cdot dx\).
+            </p>
+            <p>
+                Total work done to achieve an extension \(\Delta L\):
+                \[ W = \int_0^{\Delta L} \frac{YA}{L} x \, dx = \frac{1}{2} \cdot \frac{YA}{L} (\Delta L)^2 \]
+            </p>
+        </section>
 
-            <div class="formula-block">
-                For a spring:
-                \[
-                U = \frac{1}{2}kx^2
-                \]
+        <section>
+            <h2>Elastic Potential Energy Formula (\(U\))</h2>
+            <p>
+                Substituting \(F = \frac{YA}{L} \Delta L\) into the work formula, we get many useful forms:
+            </p>
+            <div class="model-box">
+                \[ U = \frac{1}{2} \cdot F \cdot \Delta L \]
+                \[ U = \frac{1}{2} \cdot \text{Load} \cdot \text{Extension} \]
             </div>
-
             <div class="insightbox">
-                Elastic energy is recoverable energy.
+                The factor of "1/2" arises because the restoring force is zero initially and increases linearly with extension. Thus, we are effectively using the <em>average</em> force \((0 + F) / 2\).
             </div>
         </section>
 
-        <footer>
-            <hr>
-            <p>By Hitendra K K | Managed via GitHub Pages</p>
-        </footer>
+        <section>
+            <h2>Energy per Unit Volume (Energy Density)</h2>
+            <p>
+                To isolate the material's energy storage capacity from its geometry, we calculate the energy stored per unit volume of the material.
+            </p>
+            <div class="concept-box">
+                \[ \text{Energy Density } (u) = \frac{U}{\text{Volume}} = \frac{\frac{1}{2} F \Delta L}{A L} \]
+                \[ u = \frac{1}{2} \left( \frac{F}{A} \right) \left( \frac{\Delta L}{L} \right) \]
+                \[ u = \frac{1}{2} \cdot \text{Stress} \cdot \text{Strain} = \frac{1}{2} \sigma \varepsilon \]
+            </div>
+            <p>Using Hooke's Law (\(\sigma = Y\varepsilon\)), we can express this as:</p>
+            <ul class="model-box">
+                <li>\( u = \frac{1}{2} Y (\text{Strain})^2 \)</li>
+                <li>\( u = \frac{1}{2} \frac{(\text{Stress})^2}{Y} \)</li>
+            </ul>
+            <div class="insightbox">
+                Energy density is a powerful concept in material science. It represents how much energy a material can absorb before it reaches its elastic limit or breaks.
+            </div>
+        </section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
     </div>
 </body>
-
 </html>

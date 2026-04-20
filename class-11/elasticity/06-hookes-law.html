@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/math.js"></script>
 </head>
-
 <body>
     <div class="container">
         <nav class="top-nav">
@@ -17,41 +15,58 @@
             </a>
         </nav>
 
-        <h1>3. Hooke's Law</h1>
+        <h1>Hooke's Law</h1>
         <p class="subtitle">
-            Proportionality between stress and strain within the elastic limit.
+            The fundamental linear relationship between stress and strain.
         </p>
 
         <section>
-            <h2>Hooke’s Law</h2>
-            <p>
-                Within the elastic limit, stress is directly proportional to strain.
-            </p>
-
-            <div class="formula-block">
-                \[
-                \text{Stress} \propto \text{Strain}
-                \]
-                <br>
-                \[
-                \text{Stress} = E \times \text{Strain}
-                \]
+            <h2>Hooke's Law Statement</h2>
+            <div class="model-box">
+                <strong>Hooke's Law:</strong> Within the elastic limit, the stress developed in a body is directly proportional to the strain produced in it.
+                \[ \text{Stress} \propto \text{Strain} \]
+                \[ \sigma = E \cdot \varepsilon \]
             </div>
             <p>
-                Where \(E\) is the modulus of elasticity.
+                This law was discovered by Robert Hooke in 1676. It forms the basis of the linear theory of elasticity. Essentially, it states that materials respond predictably and linearly to deforming forces as long as those forces aren't "too strong."
             </p>
+        </section>
 
+        <section>
+            <h2>Modulus of Elasticity</h2>
+            <p>
+                The constant of proportionality \(E\) is called the <strong>Modulus of Elasticity</strong> or Coefficient of Elasticity. It is a characteristic property of the material and describes its stiffness.
+            </p>
+            <div class="concept-box">
+                <strong>Properties of Modulus of Elasticity:</strong>
+                <ul>
+                    <li>It depends only on the material (nature of the substance and temperature).</li>
+                    <li>It is independent of the dimensions (length, area) of the body.</li>
+                    <li>Its SI units and dimensional formula are the same as Stress (since Strain has none).</li>
+                    <li><strong>SI Unit:</strong> \(N/m^2\). <strong>Dimensions:</strong> \([ML^{-1}T^{-2}]\).</li>
+                </ul>
+            </div>
             <div class="insightbox">
-                Hooke’s law is an empirical linear approximation,
-                not a universal truth for all materials.
+                A higher Modulus of Elasticity signifies a more "stiff" or "rigid" material. For the same applied stress, a material with a high \(E\) will exhibit much less strain.
             </div>
         </section>
 
-        <footer>
-            <hr>
-            <p>By Hitendra K K | Managed via GitHub Pages</p>
-        </footer>
+        <section>
+            <h2>Limitations of Hooke's Law</h2>
+            <p>
+                Hooke's Law is an empirical law and is only valid under specific conditions:
+            </p>
+            <ul class="model-box">
+                <li><strong>Within Elastic Limit:</strong> The law only holds true up to the proportional limit on the stress-strain curve. Beyond this, stress is no longer proportional to strain.</li>
+                <li><strong>Small Deformations:</strong> It is essentially a first-order approximation. For very large deformations, even if the material remains elastic, the relationship usually becomes non-linear.</li>
+                <li><strong>Temperature Sensitivity:</strong> Moduli of elasticity typically decrease with increasing temperature as intermolecular bonds weaken.</li>
+            </ul>
+        </section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
     </div>
 </body>
-
 </html>

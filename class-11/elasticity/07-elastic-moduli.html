@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/math.js"></script>
 </head>
-
 <body>
     <div class="container">
         <nav class="top-nav">
@@ -17,46 +15,68 @@
             </a>
         </nav>
 
-        <h1>4. Elastic Moduli</h1>
+        <h1>Elastic Moduli</h1>
         <p class="subtitle">
-            Quantifying the stiffness of materials under different types of stress.
+            Categorizing material stiffness based on the mode of deformation.
         </p>
 
         <section>
-            <h2>Elastic Moduli</h2>
-
-            <h3>Young’s Modulus</h3>
-            <div class="formula-block">
-                \[
-                Y = \frac{\text{longitudinal stress}}{\text{longitudinal strain}}
-                \]
+            <h2>Young's Modulus of Elasticity (\(Y\))</h2>
+            <p>
+                <strong>Young's Modulus</strong> measures the material's resistance to longitudinal (lengthwise) deformation. It is defined as the ratio of longitudinal stress to longitudinal strain within the elastic limit.
+            </p>
+            <div class="model-box">
+                \[ Y = \frac{\text{Longitudinal Stress}}{\text{Longitudinal Strain}} = \frac{F/A}{\Delta L/L} = \frac{FL}{A\Delta L} \]
             </div>
-
-            <h3>Bulk Modulus</h3>
-            <div class="formula-block">
-                \[
-                K = \frac{\text{volume stress}}{\text{volume strain}}
-                \]
-            </div>
-
-            <h3>Shear Modulus</h3>
-            <div class="formula-block">
-                \[
-                G = \frac{\text{shear stress}}{\text{shear strain}}
-                \]
-            </div>
-
             <div class="insightbox">
-                Higher modulus &rarr; greater stiffness,<br>
-                not greater strength.
+                Young's modulus is relevant only for **solids**. Fluids (liquids and gases) do not have a fixed length and cannot be stretched like a wire.
+            </div>
+            <p>
+                For a wire of radius \(r\) and length \(L\), if a mass \(M\) is suspended to produce an extension \(\Delta L\):
+                \[ Y = \frac{MgL}{\pi r^2 \Delta L} \]
+            </p>
+        </section>
+
+        <section>
+            <h2>Bulk Modulus (\(B\)) and Compressibility (\(K\))</h2>
+            <p>
+                <strong>Bulk Modulus</strong> measures a material's resistance to change in volume without change in shape. It is the ratio of volumetric stress (pressure change) to volumetric strain.
+            </p>
+            <div class="model-box">
+                \[ B = -\frac{\Delta P}{\Delta V / V} = -\frac{V \Delta P}{\Delta V} \]
+            </div>
+            <p>
+                The negative sign indicates that as pressure increases (\(\Delta P > 0\)), volume decreases (\(\Delta V < 0\)), making \(B\) a positive quantity.
+            </p>
+            <div class="concept-box">
+                <strong>Compressibility (\(K\)):</strong> The reciprocal of Bulk Modulus is called Compressibility.
+                \[ K = \frac{1}{B} = -\frac{1}{V} \frac{\Delta V}{\Delta P} \]
+            </div>
+            <div class="insightbox">
+                Unlike Young's Modulus, Bulk Modulus is defined for all states of matter: solids, liquids, and gases. Gases are much more compressible (low \(B\)) compared to solids and liquids.
             </div>
         </section>
 
-        <footer>
-            <hr>
-            <p>By Hitendra K K | Managed via GitHub Pages</p>
-        </footer>
+        <section>
+            <h2>Shear Modulus or Modulus of Rigidity (\(G\) or \(\eta\))</h2>
+            <p>
+                <strong>Shear Modulus</strong> measures a material's resistance to change in shape. It is defined as the ratio of shearing stress to shearing strain.
+            </p>
+            <div class="model-box">
+                \[ G (\text{or } \eta) = \frac{\text{Shearing Stress}}{\text{Shearing Strain}} = \frac{F/A}{\theta} = \frac{F}{A\theta} \]
+            </div>
+            <div class="insightbox">
+                Shear modulus is primarily defined for **solids**. Fixed fluids cannot sustain shear stress; they flow instead.
+            </div>
+            <p>
+                In most materials, Young's Modulus is generally larger than the Shear Modulus (\(Y \approx 3G\)). This means it is usually easier to twist or bend a material than to stretch it.
+            </p>
+        </section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
     </div>
 </body>
-
 </html>
