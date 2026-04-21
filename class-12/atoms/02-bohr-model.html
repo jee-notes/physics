@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bohr's Quantized Model | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Atoms
+</a>
+</nav>
+<h1>Bohr's Quantized Model of Atom</h1>
+<p class="subtitle">
+Bridging the gap between classical electromagnetism and quantum mechanics.
+</p>
+
+<section>
+<h2>Postulates of Bohr's Model</h2>
+<p>
+To overcome the limitations of Rutherford's model, Niels Bohr formulated his model of the hydrogen atom in 1913. He retained the nuclear model but added quantum ideas proposed by Planck. The model is based on three fundamental postulates:
+</p>
+<hr>
+<h3>1. Postulate of Stationary Orbits</h3>
+<p>
+An electron in an atom revolves in certain stable circular orbits around the nucleus without emitting radiant energy. These specific, non-radiating orbits are called <strong>stationary states</strong>. The centripetal force is provided by the electrostatic force:
+</p>
+\[ \frac{mv^2}{r} = \frac{1}{4\pi\epsilon_0} \frac{Ze^2}{r^2} \]
+<hr>
+<h3>2. Postulate of Angular Momentum Quantization</h3>
+<p>
+Of all the possible circular orbits permitted by classical theory, the electron is only allowed to circulate in those orbits for which its orbital angular momentum \( L \) is an integral multiple of \( h/2\pi \) (where \( h \) is Planck's constant):
+</p>
+<div class="model-box">
+\[ L = mvr = n\frac{h}{2\pi} \]
+</div>
+<p>Here, \( n \) is an integer (\( n=1,2,3,\dots \)) called the <strong>principal quantum number</strong>.</p>
+<hr>
+<h3>3. Postulate of Frequency (Energy Transition)</h3>
+<p>
+Energy is radiated (or absorbed) only when an electron jumps from one specified non-radiating orbit to another. If an electron jumps from a higher energy state \( E_i \) to a lower energy state \( E_f \), a photon of frequency \( \nu \) is emitted:
+</p>
+\[ h\nu = \frac{hc}{\lambda} = E_i - E_f \]
+</section>
+
+<section>
+<h2>Radius of Bohr Orbits</h2>
+<p>
+By combining the classical centripetal force equation and the quantum condition for angular momentum, we can find the radius of the \( n \)-th allowed orbit for a Hydrogen-like atom (Atomic number \( Z \), 1 electron).
+</p>
+<p>From angular momentum quantization: \( v = \frac{nh}{2\pi mr} \). Substituting this into the force equation yields:</p>
+<div class="model-box">
+<p><strong>Radius of \(n\)-th orbit (\(r_n\)):</strong></p>
+\[ r_n = \frac{\epsilon_0 h^2 n^2}{\pi m Z e^2} \]
+\[ r_n = 0.529 \frac{n^2}{Z} \text{ \AA} \]
+</div>
+<p>For a Hydrogen atom (\( Z=1 \)) in the ground state (\( n=1 \)), the radius is known as the <strong>Bohr radius</strong>, denoted by \( a_0 \), and \( a_0 = 0.529 \text{ \AA} \).</p>
+<p><em>Insight</em>: \( r_n \propto n^2 \). As the principal quantum number increases, the orbits get significantly farther apart.</p>
+</section>
+
+<section>
+<h2>Velocity and Frequency of Electron</h2>
+<p>
+Substituting \( r_n \) back into the velocity expression gives the speed of the electron in the \( n \)-th orbit.
+</p>
+<div class="model-box">
+<p><strong>Velocity of electron (\(v_n\)):</strong></p>
+\[ v_n = \frac{e^2}{2\epsilon_0 h} \cdot \frac{Z}{n} \]
+\[ v_n = \frac{c}{137} \cdot \frac{Z}{n} \approx 2.18 \times 10^6 \frac{Z}{n} \text{ m/s} \]
+</div>
+<p>Here, \( \alpha = \frac{e^2}{2\epsilon_0 h c} \approx \frac{1}{137} \) is the fine-structure constant. Note that \( v_n \propto \frac{Z}{n} \).</p>
+<p>The time period \( T_n = \frac{2\pi r_n}{v_n} \propto \frac{(n^2/Z)}{(Z/n)} = \frac{n^3}{Z^2} \). The frequency of revolution \( f_n = \frac{1}{T_n} \propto \frac{Z^2}{n^3} \).</p>
+</section>
+
+<section>
+<h2>Energy Levels in Hydrogen Atom</h2>
+<p>
+The total energy of the electron in the \( n \)-th orbit is the sum of its kinetic energy (due to its motion) and its electrostatic potential energy (due to the nucleus).
+</p>
+<ul>
+    <li><strong>Kinetic Energy (\(K_n\)):</strong> \( K_n = \frac{1}{2}mv_n^2 = \frac{1}{8\pi\epsilon_0}\frac{Ze^2}{r_n} \)</li>
+    <li><strong>Potential Energy (\(U_n\)):</strong> \( U_n = \frac{1}{4\pi\epsilon_0}\frac{(Ze)(-e)}{r_n} = -\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{r_n} \)</li>
+</ul>
+<p>Total Energy \( E_n = K_n + U_n = -\frac{1}{8\pi\epsilon_0}\frac{Ze^2}{r_n} \). Notice that \( E_n = -K_n \) and \( U_n = 2E_n \).</p>
+<p>Substituting the expression for \( r_n \), we get the energy quantization formula:</p>
+<div class="model-box">
+<p><strong>Total Energy in \(n\)-th orbit (\(E_n\)):</strong></p>
+\[ E_n = -\frac{m e^4}{8\epsilon_0^2 h^2} \cdot \frac{Z^2}{n^2} \]
+\[ E_n = -13.6 \frac{Z^2}{n^2} \text{ eV} \]
+</div>
+<div class="insightbox">
+<p>The negative sign in the total energy indicates that the electron is <strong>bound</strong> to the nucleus. If energy is supplied such that the total energy becomes positive or zero, the electron will escape the atom (ionization).</p>
+</div>
+</section>
+
+<section>
+<h2>Correction for Nuclear Motion (Reduced Mass)</h2>
+<p>
+In deriving the above formulas, we assumed the nucleus is infinitely heavy and remains stationary while the electron revolves around it. In reality, both the nucleus (mass \( M \)) and the electron (mass \( m \)) revolve around their common center of mass.
+</p>
+<p>To account for this, we replace the mass of the electron \( m \) with the <strong>reduced mass</strong> \( \mu \) of the system:</p>
+\[ \mu = \frac{m \cdot M}{m + M} \]
+<p>Since the nucleus is much heavier than the electron (\( M \gg m \)), \( \mu \approx m \), which is why the previous formulas hold well. However, for precision spectroscopy or for positronium (an electron and a positron revolving around each other, where \( M = m \)), the reduced mass must be used.</p>
+<div class="model-box">
+<p><strong>Corrected Rydberg Energy:</strong> Using reduced mass \( \mu \), the modified energy levels are:</p>
+\[ E_n' = \left(\frac{\mu}{m}\right) E_n \]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

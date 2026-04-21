@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atomic Spectra | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Atoms
+</a>
+</nav>
+<h1>Line Spectra of Hydrogen Atom</h1>
+<p class="subtitle">
+Decoding the unique electromagnetic fingerprints of elements.
+</p>
+
+<section>
+<h2>Emission and Absorption Spectra</h2>
+<p>
+When an atomic gas is excited (e.g., by passing an electric discharge through it), its electrons jump to higher energy states. Since these higher states are unstable, the electrons quickly return to lower energy states. During these downward transitions, the atoms emit electromagnetic radiation consisting of discrete, well-defined wavelengths. This is known as an <strong>emission line spectrum</strong>. It appears as separated bright lines on a dark background.
+</p>
+<p>
+Conversely, if white light (containing all wavelengths) is passed through a cool atomic gas, the atoms absorb photons with energies exactly matching the differences between their allowed energy levels. The transmitted light, when analyzed, shows dark lines exactly at the wavelengths that were absorbed. This is called an <strong>absorption spectrum</strong>.
+</p>
+<div class="insightbox">
+<p><em>The Fingerprint of Matter:</em> Because every element has a unique set of quantized energy levels, its line spectrum is unique. Spectroscopy allows scientists to identify the elemental composition of distant stars simply by analyzing the light they emit.</p>
+</div>
+</section>
+
+<section>
+<h2>Rydberg Formula</h2>
+<p>
+According to Bohr's third postulate, the frequency of the emitted photon when an electron jumps from an initial state \( n_i \) (higher energy) to a final state \( n_f \) (lower energy) is given by \( h\nu = E_{n_i} - E_{n_f} \).
+</p>
+<p>Using the energy formula \( E_n = -\frac{m e^4}{8\epsilon_0^2 h^2} \frac{Z^2}{n^2} \), we can find the wavenumber \( \bar{\nu} \) (which is \( \frac{1}{\lambda} \)):</p>
+<div class="model-box">
+<p><strong>The Rydberg Formula:</strong></p>
+\[ \bar{\nu} = \frac{1}{\lambda} = R Z^2 \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right) \]
+<p>Where:</p>
+<ul style="text-align: left; margin: 0; display: inline-block;">
+    <li>\( R \): Rydberg's constant for Hydrogen (\( R = \frac{m e^4}{8\epsilon_0^2 h^3 c} \approx 1.097 \times 10^7 \text{ m}^{-1} \)).</li>
+    <li>\( Z \): Atomic number.</li>
+    <li>\( n_i, n_f \): Principal quantum numbers, with \( n_i > n_f \).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Spectral Series of Hydrogen Atom</h2>
+<p>
+For the Hydrogen atom (\(Z=1\)), the spectral lines are empirically classified into different series based on the final orbit \( n_f \) to which the electron transitions.
+</p>
+<ul>
+    <li><strong>Lyman Series (Ultraviolet Region):</strong> Transitions to the ground state.
+        <br>\( n_f = 1 \) and \( n_i = 2, 3, 4, \dots \)
+    </li>
+    <li><strong>Balmer Series (Visible Region):</strong> Transitions to the first excited state. This was the first series observed.
+        <br>\( n_f = 2 \) and \( n_i = 3, 4, 5, \dots \)
+    </li>
+    <li><strong>Paschen Series (Infrared Region):</strong>
+        <br>\( n_f = 3 \) and \( n_i = 4, 5, 6, \dots \)
+    </li>
+    <li><strong>Brackett Series (Infrared Region):</strong>
+        <br>\( n_f = 4 \) and \( n_i = 5, 6, 7, \dots \)
+    </li>
+    <li><strong>Pfund Series (Far Infrared Region):</strong>
+        <br>\( n_f = 5 \) and \( n_i = 6, 7, 8, \dots \)
+    </li>
+</ul>
+
+<div class="examplebox">
+<h3>Determining Longest and Shortest Wavelengths</h3>
+<hr>
+<p>In any given series characterized by \( n_f \):</p>
+<ul>
+    <li>The <strong>longest wavelength</strong> (minimum energy, minimum frequency) corresponds to the transition from the immediately adjacent level: \( n_i = n_f + 1 \). This is often called the first line of the series.</li>
+    <li>The <strong>shortest wavelength</strong> (series limit, maximum energy) corresponds to the transition from infinity: \( n_i = \infty \).</li>
+</ul>
+<p>For example, in the Balmer series (\( n_f = 2 \)), the longest wavelength (H-\(\alpha\) line) is from \(n=3 \to 2\), and the series limit is from \(n=\infty \to 2\).</p>
+</div>
+</section>
+
+<section>
+<h2>Energy Level Diagram</h2>
+<p>
+An energy level diagram represents the allowed energy states of an atom as horizontal lines drawn against an energy scale. For Hydrogen (\(Z=1\)):
+</p>
+<ul>
+    <li>Ground State (\( n=1 \)): \( E_1 = -13.6 \text{ eV} \)</li>
+    <li>First Excited State (\( n=2 \)): \( E_2 = -3.4 \text{ eV} \)</li>
+    <li>Second Excited State (\( n=3 \)): \( E_3 = -1.51 \text{ eV} \)</li>
+    <li>Third Excited State (\( n=4 \)): \( E_4 = -0.85 \text{ eV} \)</li>
+    <li>...</li>
+    <li>Ionized State (\( n=\infty \)): \( E_\infty = 0 \text{ eV} \)</li>
+</ul>
+<div class="concept-box">
+<p><strong>Important Note on Maximum Spectral Lines:</strong> If a sample of hydrogen gas is excited to the \(n\)-th state, the maximum possible number of distinct emission spectral lines observed when the electrons fall back to the ground state is given by the combination formula:</p>
+\[ \text{Number of lines} = \frac{n(n-1)}{2} \]
+<p>However, if only a <em>single</em> isolated atom is excited to state \(n\), the maximum number of photons it can emit as it cascades down to the ground state is \( (n-1) \).</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
