@@ -18,51 +18,53 @@
 <p class="subtitle">
 The birth of the photon concept and the algebraic description of light-matter interaction.
 </p>
-
 <section>
 <h2>The Quantum Hypothesis</h2>
 <p>
 In 1905, Albert Einstein proposed a radical theory to explain the photoelectric effect, fundamentally breaking from classical wave theory. He built upon Max Planck's earlier idea that electromagnetic energy is emitted or absorbed in discrete amounts.
 </p>
 <p>
-Einstein postulated that light itself is not a continuous wave spreading out through space. Instead, a beam of light consists of discrete, localized bundles or packets of energy. These packets were later named "photons." The energy \( E \) of a single photon is strictly determined by its frequency \( \nu \), given by the equation:
+Einstein postulated that light itself is not a continuous wave spreading out through space. Instead, a beam of light consists of discrete, localized bundles or packets of energy. These packets were later named "photons". The energy \( E \) of a single photon is strictly determined by its frequency \( \nu \), given by the equation:
 </p>
 <p>
 \[ E = h\nu \]
 </p>
 <p>
-where \( h \) is Planck's constant (\( 6.626 \times 10^{-34}\text{ J}\cdot\text{s} \)).
+where \( h \) is Planck's constant (\( 6.6 \times 10^{-34}\text{ J}\cdot\text{s} \)).
 </p>
 </section>
-
 <section>
 <h2>Einstein's Photoelectric Equation</h2>
 <p>
 Einstein viewed the photoelectric effect as an elastic collision between a single incoming photon and a single electron in the metal. The photon is completely absorbed, transferring its entire energy \( h\nu \) to the electron instantaneously.
 </p>
+<div class="insightbox">
+This is the main postulate on which the theory is based.<br>
+An electron can only absorb integer multiples of photon and hence energy, and not a fraction of it.<br>
+Absorbing photon means absorbing its entire energy.<br>
+</div>
 <p>
 This energy is used by the electron in two parts:
 <ol>
-<li>To overcome the surface barrier of the metal, which requires an amount of energy equal to the work function \( \Phi_0 \).</li>
+<li>To overcome the surface barrier of the metal, which requires an amount of energy equal to the work function \( \Phi \).</li>
 <li>Any remaining energy becomes the maximum kinetic energy \( K_{\text{max}} \) of the escaping electron.</li>
 </ol>
 </p>
 <div class="model-box">
 <h3>Einstein's Photoelectric Equation</h3>
 <p>According to the law of conservation of energy:</p>
-<p>\[ h\nu = \Phi_0 + K_{\text{max}} \]</p>
-<p>Alternatively, since \( K_{\text{max}} = eV_0 \) and the work function \( \Phi_0 = h\nu_0 \), this can be written as:</p>
-<p>\[ K_{\text{max}} = h\nu - h\nu_0 = h(\nu - \nu_0) \]</p>
-<p>\[ eV_0 = h\nu - \Phi_0 \]</p>
+<p>\[ h\nu = \Phi + K_{\text{max}} \]</p>
+<p>Alternatively, since \( K_{\text{max}} = eV_0 \) (in electron Volt) and the work function \( \Phi = hc/\lambda_0 \), this can be written as:</p>
+<p>\[ K_{\text{max}} = hc/\lambda - hc/\lambda_0 = h(\nu - \nu_0) \]</p>
+<p>\[ eV_0 = h\nu - \Phi \]</p>
 </div>
 </section>
-
 <section>
 <h2>Explaining Experimental Observations</h2>
 <div class="insightbox">
 Einstein's brilliantly simple equation resolves every classical failure:
 <br><br>
-<strong>1. The Threshold Frequency:</strong> The equation shows \( K_{\text{max}} = h(\nu - \nu_0) \). Since kinetic energy cannot be negative, no emission can occur if \( \nu < \nu_0 \), perfectly explaining the threshold.
+<strong>1. The Threshold Frequency:</strong> The equation shows \( K_{\text{max}} = h(\nu - \nu_0) \). Since kinetic energy cannot be negative, no emission can occur if \( \nu \lt \nu_0 \), perfectly explaining the threshold.
 <br><br>
 <strong>2. Maximum Kinetic Energy depends on Frequency:</strong> The equation explicitly shows \( K_{\text{max}} \) is a linear function of frequency \( \nu \), independent of intensity.
 <br><br>
@@ -71,17 +73,63 @@ Einstein's brilliantly simple equation resolves every classical failure:
 <strong>4. Instantaneous Emission:</strong> A photon is a localized particle. The collision and energy transfer in the metal occur on a particle-to-particle basis, taking almost zero time.
 </div>
 </section>
-
 <section>
 <h2>Millikan's Verification and h/e Measurement</h2>
 <p>
 Robert Millikan, an American experimentalist, spent over a decade trying to *disprove* Einstein's equation, as the particle theory of light seemed too radical. He carried out painstaking experiments with high-precision measurements of stopping potentials.
 </p>
 <p>
-From Einstein's equation \( V_0 = \left(\frac{h}{e}\right)\nu - \left(\frac{\Phi_0}{e}\right) \), Millikan plotted \( V_0 \) against \( \nu \). He found exactly the straight line predicted. By calculating the slope of the experimental graph, which theoretically must equal \( \frac{h}{e} \), and knowing the elementary charge \( e \), he calculated a value for Planck's constant \( h \). His experimental value matched Planck's theoretical value precisely, inadvertently providing the most conclusive proof for Einstein's theory. Both Einstein and Millikan received Nobel Prizes for this work.
+From Einstein's equation \( V_0 = \left(\frac{h}{e}\right)\nu - \left(\frac{\Phi}{e}\right) \), Millikan plotted \( V_0 \) against \( \nu \). He found exactly the straight line predicted. By calculating the slope of the experimental graph, which theoretically must equal \( \frac{h}{e} \), and knowing the elementary charge \( e \), he calculated a value for Planck's constant \( h \). His experimental value matched Planck's theoretical value precisely, inadvertently providing the most conclusive proof for Einstein's theory. Both Einstein and Millikan received Nobel Prizes for this work.
+</p>
+<div class="insightbox">
+Last question that still remains to be answered is why \( KE_{\text{max}} \) is such that the electron absorbs only 1 photon?<br>
+If an electron absorbs 2 photons before coming out of the surface, then  \( KE_{\text{max}} = 2h\nu - \Phi \)<br>
+Multi-Photon photo-electric emission is observed experimentally under extreme intensity laser conditions and beyond scope of exam.<br>
+For exam, it is overall assumed that intensity is normal and not extreme.<br>
+</div>
+</section>
+<section>
+<h2>Intensity</h2>
+<p>
+For a point source of power P, intensity at a point at a distance r is given by:
+</p>
+\[
+I = \frac{P}{4 \pi r^2}
+\]
+<p>
+For a line source of power P and  length l, intensity at a point at a distance r is given by:
+</p>
+\[
+I = \frac{P}{2 \pi r l}
+\]
+<p>
+For a parallel beam, intensity does not depend on distance.
 </p>
 </section>
-
+<section>
+<h2>Photon</h2>
+<p>
+For a point source of power P, no. of photon emitted per second:
+</p>
+\[
+P = Nhc/\lambda \Rightarrow N = P \lambda / hc
+\]
+<p>
+Photon flux \(\Phi_p\) is defined as no. of photons crossing unit area perpendicularly per second:
+</p>
+\[
+\Phi_p = dN/dA = N / 4 \pi r^2 = \frac{I \lambda}{hc}
+\]
+<p>
+For a point source, \(\Phi_p \propto 1/r^2\) , For a line source, \(\Phi_p \propto 1/r\)
+</p>
+<p>
+Photon density \(\rho_p\) is defined as no. of photons crossing unit volume per second:
+</p>
+\[
+\rho_p = dN/dV = dN/c \cdot dA = \frac{\Phi_p}{c}
+\]
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
