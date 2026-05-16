@@ -1,102 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Physics | Nuclei</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #e67e22;
-            --bg: #fdfdfd;
-        }
-
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: var(--bg);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: var(--primary);
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 10px;
-        }
-
-        h2 {
-            color: var(--primary);
-            margin-top: 30px;
-            border-left: 5px solid var(--secondary);
-            padding-left: 15px;
-        }
-
-        .formula-box {
-            background: #f0f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            text-align: center;
-            margin: 20px 0;
-            border: 1px solid #d1d9e1;
-        }
-
-        .points-list {
-            padding-left: 20px;
-        }
-
-        nav {
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclei - JEE Physics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav><a href="../../index.html">← Back to Main Syllabus</a></nav>
-        <h1>Nuclei</h1>
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>Studies the composition and stability of the atomic nucleus, including nuclear forces, binding energy,
-                and the phenomenon of radioactivity.</p>
-        </section>
-        <section>
-            <h2>Core Formulas</h2>
-            <div class="formula-box">
-                \[ R = R_0 A^{1/3}, \quad N = N_0 e^{-\lambda t}, \quad \Delta E = \Delta m c^2 \]
-            </div>
-        </section>
-        <section>
-            <h2>Key Discussion Points</h2>
-            <ul class="points-list">
-                <li>Nuclear size, density, and isotopic notation.</li>
-                <li>Strong nuclear force: Short-range and charge-independent.</li>
-                <li>Binding energy per nucleon and nuclear stability curve.</li>
-                <li>Radioactive decay types: Alpha, Beta, and Gamma.</li>
-                <li>Nuclear reactions: Fission (splitting) and Fusion (joining).</li>
-            </ul>
-        </section>
-    </div>
+<div class="container">
+<header>
+<h1>Nuclei</h1>
+<p class="subtitle">Exploring the heart of the atom</p>
+</header>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+The nucleus is the central core of an atom containing protons and neutrons, and nearly all of the atom’s mass is concentrated inside it. 
+</p>
+<p>
+Unlike many topics in classical physics, nuclear physics is not directly connected to everyday-scale phenomena. The nucleus is extremely tiny and dense, and its behaviour becomes significant only at subatomic scales where the strong and weak fundamental interactions dictate system dynamics.
+</p>
+<p>
+The study of the nucleus is a part of modern physics, since the nucleus itself was discovered only in 1911 by <strong>Ernest Rutherford</strong> and his team.
+</p>
+<p>
+This chapter explores the composition and size of the nucleus, nuclear forces, mass defect, binding energy, radioactivity, and nuclear reactions such as fission and fusion that release enormous amounts of energy.
+</p>
+</section>
+<section>
+<h2>Nuclear Size and Composition</h2>
+<p>
+The nucleus is made up of protons and neutrons, collectively called nucleons.
+</p>
+<p>
+The size of a nucleus is of the order of femtometres (\(10^{-15}\,\text{m}\)). Experimental scattering data indicates that nuclear volume is directly proportional to the mass number \(A\). Therefore, the empirical radius \(R\) of a nucleus is defined as:
+</p>
+<p class="equation">
+\[R = R_0 A^{1/3}\]
+</p>
+<p>
+where \(R_0 \approx 1.2\,\text{fm}\). This geometric relationship means nuclear density is constant across almost all nuclei, yielding a macroscopic density of approximately \(2.3 \times 10^{17}\,\text{kg/m}^3\).
+</p>
+<p>
+At such extremely small distances, a different fundamental interaction called the <strong>nuclear force</strong> becomes dominant.
+</p>
+</section>
+<section>
+<h2>The Nuclear Force</h2>
+<p>
+Nuclear force is a strong attractive force acting between proton-proton, proton-neutron, and neutron-neutron pairs. Unlike Coulomb force, it is nearly independent of electric charge.
+</p>
+<p>
+It is the residual effect of the strong interaction. To prevent total nucleonic collapse, the nuclear force features a strongly repulsive core at distances less than \(0.7\,\text{fm}\), while being powerfully attractive at distances around \(1\,\text{fm}\). Furthermore, it exhibits saturation, meaning a nucleon only interacts with its nearest neighbours.
+</p>
+</section>
+<section>
+<h2>Mass Defect and Binding Energy</h2>
+<p>
+Energy conservation remains valid at the nuclear scale, but nuclear processes involve conversion between mass and energy according to Einstein’s theory of relativity.
+</p>
+<p>
+The mass of a nucleus is found to be slightly smaller than the sum of the individual masses of its constituent nucleons. This difference is called <strong>mass defect</strong> (\(\Delta m\)).
+</p>
+<p>
+The missing mass appears as binding energy, which is responsible for holding the nucleus together and determining its stability. More formally, a bound nuclear system exists at a lower total energy state than its separated constituents. The binding energy (\(BE = \Delta m c^2\)) represents the physical work required to completely disassemble the nucleus against the attractive nuclear force.
+</p>
+</section>
+<section>
+<h2>Radioactivity</h2>
+<p>
+Radioactivity is one of the most important and fascinating aspects of nuclear physics.
+</p>
+<p>
+It involves the spontaneous transformation of unstable nuclei into more stable nuclei through emission of radiations.
+</p>
+<p>
+The stability of nuclei is closely related to their binding energy per nucleon. The rate of this transition is governed by the radioactive decay law, which dictates that the probability of decay per unit time is constant for a given nuclide.
+</p>
+</section>
+<section>
+<h2>Nuclear Reactions</h2>
+<p>
+Nuclear reactions involve transformations of nuclei and are represented in a form similar to chemical reactions.
+</p>
+<p>
+In nuclear reactions, electric charge, momentum, and total mass-energy are conserved. Structural analysis of any nuclear reaction requires the strict application of these foundational conservation laws, along with the conservation of total baryon number.
+</p>
+<p>
+These reactions may involve particles such as protons, neutrons, electrons, photons, neutrinos, and even anti-particles.
+</p>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-nucleus-composition-and-size.html">1. Composition and Size of Nucleus</a>
+<a href="./02-mass-defect-and-binding-energy.html">2. Mass Defect and Binding Energy</a>
+<a href="./03-nuclear-force.html">3. Nuclear Force</a>
+<a href="./04-radioactivity.html">4. Radioactivity</a>
+<a href="./05-radioactive-decay-law.html">5. Radioactive Decay Law</a>
+<a href="./06-nuclear-reactions.html">6. Nuclear Reactions</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

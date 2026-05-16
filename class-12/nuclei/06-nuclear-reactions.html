@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Reactions - JEE Physics</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn"><span>&larr;</span> Back to Nuclei</a>
+        </nav>
+        <header>
+            <h1>Nuclear Reactions</h1>
+            <p class="subtitle">Fission, Fusion, and Energy generation</p>
+        </header>
+
+        <section>
+            <h2>Q-value of Nuclear Reactions</h2>
+            <p>A nuclear reaction generally involves bombarding a target nucleus with a projectile (like a neutron, proton, or alpha particle), resulting in a new product nucleus and an emitted particle.</p>
+            <p>Reaction equation: \(A + a \longrightarrow B + b\)</p>
+            <p>Where \(A\) is the target, \(a\) is the projectile, \(B\) is the product, and \(b\) is the emitted particle.</p>
+            <p>The <strong>Q-value</strong> represents the energy released or absorbed in the reaction, calculated from the mass difference between reactants and products.</p>
+            <div class="model-box">
+                \[ Q = [ (m_A + m_a) - (m_B + m_b) ] c^2 \]
+            </div>
+            <ul>
+                <li>If \(Q > 0\), the reaction is <strong>Exothermic</strong> (releases energy). The total kinetic energy of the products is greater than that of the reactants.</li>
+                <li>If \(Q < 0\), the reaction is <strong>Endothermic</strong> (absorbs energy). The reaction requires a minimum threshold kinetic energy from the projectile to occur.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Nuclear Fission Mechanism</h2>
+            <p>Nuclear fission is the splitting of a heavy nucleus (like Uranium-235) into two lighter, more stable intermediate-mass nuclei, accompanied by the release of a massive amount of energy and typically a few fast neutrons.</p>
+            <p>When a slow (thermal) neutron strikes a \(^{235}\text{U}\) nucleus, it is absorbed to form a highly unstable intermediate \(^{236}\text{U}^*\), which rapidly undergoes fission.</p>
+            <div class="model-box">
+                \[ _{92}^{235}\text{U} + _{0}^{1}\text{n} \longrightarrow _{92}^{236}\text{U}^* \longrightarrow _{56}^{141}\text{Ba} + _{36}^{92}\text{Kr} + 3 _{0}^{1}\text{n} + Q \]
+            </div>
+            <p>The \(Q\)-value for uranium fission is extraordinarily high, approximately \(200 \text{ MeV}\) per fission event. This energy comes from the fact that the \(BE/A\) for intermediate nuclei is higher (\(\approx 8.5 \text{ MeV}\)) than that of Uranium (\(\approx 7.6 \text{ MeV}\)).</p>
+            <div class="insightbox">
+                <p>Because fission produces 2-3 new neutrons for every one neutron consumed, it can trigger a <strong>chain reaction</strong>. If unchecked, this leads to a massive, explosive energy release (atomic bomb). If controlled, it can generate steady power (nuclear reactor).</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Nuclear Reactor Fundamentals</h2>
+            <p>A nuclear reactor is a device used to initiate and control a self-sustained nuclear chain reaction. The critical parameter is the <strong>multiplication factor (\(k\))</strong>, which is the ratio of the number of neutrons in a given generation to the number in the previous generation.</p>
+            <ul>
+                <li>\(k < 1\): Subcritical (reaction dies out)</li>
+                <li>\(k = 1\): Critical (steady power operation, goal of a reactor)</li>
+                <li>\(k > 1\): Supercritical (power increases exponentially)</li>
+            </ul>
+            <div class="concept-box">
+                <h3>Key Components of a Reactor:</h3>
+                <ul>
+                    <li><strong>Fuel:</strong> Usually enriched Uranium (contains a higher percentage of \(^{235}\text{U}\)).</li>
+                    <li><strong>Moderator:</strong> Slows down fast neutrons produced in fission to thermal speeds, making them more likely to cause further \(^{235}\text{U}\) fission. Common moderators: Water, Heavy Water (\(D_2O\)), Graphite.</li>
+                    <li><strong>Control Rods:</strong> Made of materials that readily absorb neutrons (e.g., Cadmium, Boron). They are inserted or withdrawn to keep \(k = 1\).</li>
+                    <li><strong>Coolant:</strong> Liquid or gas circulated through the reactor core to absorb heat and transfer it to a turbine to generate electricity.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Nuclear Fusion and Stellar Energy</h2>
+            <p>Nuclear fusion is the process in which two very light nuclei combine to form a single, heavier, and more stable nucleus. This process also releases a tremendous amount of energy, as the \(BE/A\) of the product is significantly higher than that of the light reactants.</p>
+            <p>For fusion to occur, the nuclei must overcome a massive electrostatic repulsion (Coulomb barrier) to get close enough for the strong nuclear force to take over. This requires extraordinarily high temperatures (on the order of \(10^7 \text{ K}\)) and high pressure, which is why it is called a <strong>thermonuclear reaction</strong>.</p>
+            <div class="model-box">
+                <p>Example: Fusion of Deuterium and Tritium (D-T reaction)</p>
+                \[ _{1}^{2}\text{H} + _{1}^{3}\text{H} \longrightarrow _{2}^{4}\text{He} + _{0}^{1}\text{n} + 17.6 \text{ MeV} \]
+            </div>
+            
+            <h3>Stellar Energy (Energy of the Sun)</h3>
+            <p>Fusion is the source of energy in stars, including our Sun. In the core of the Sun, the dominant process is the <strong>Proton-Proton (\(p-p\)) cycle</strong>, where four hydrogen nuclei (protons) eventually fuse to form a helium nucleus.</p>
+            <p>The net reaction for the \(p-p\) cycle is:</p>
+            <p>\[ 4 _{1}^{1}\text{H} \longrightarrow _{2}^{4}\text{He} + 2 _{+1}^{0}\text{e} + 2 \nu + 26.7 \text{ MeV} \]</p>
+            <div class="insightbox">
+                <p>While fission releases about \(200 \text{ MeV}\) per nucleus and fusion only \(\sim 26 \text{ MeV}\), fusion actually produces far more energy <strong>per unit mass</strong>. One kilogram of hydrogen undergoing fusion yields significantly more energy than one kilogram of uranium undergoing fission.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; JEE Physics Notes</p>
+        </footer>
+    </div>
+</body>
+</html>

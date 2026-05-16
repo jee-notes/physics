@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Decay - JEE Physics</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./04-radioactivity.html" class="back-btn"><span>&larr;</span> Back to Radioactivity</a>
+        </nav>
+        <header>
+            <h1>Beta Decay</h1>
+            <p class="subtitle">Interconversion of nucleons</p>
+        </header>
+
+        <section>
+            <h2>Beta Minus and Beta Plus Decay</h2>
+            <p>Beta decay occurs in nuclei that have an improper ratio of neutrons to protons, lying outside the band of stability. It involves the conversion of a neutron to a proton or vice versa, with the emission of a beta particle (an electron or a positron).</p>
+            
+            <h3>Beta Minus (\(\beta^-\)) Decay</h3>
+            <p>Occurs in neutron-rich nuclei. A neutron is transformed into a proton, an electron (\(\beta^-\)), and an antineutrino (\(\bar{\nu}\)).</p>
+            <div class="model-box">
+                \[ _{0}^{1}\text{n} \longrightarrow _{1}^{1}\text{p} + _{-1}^{0}\text{e} + \bar{\nu} \]
+                <p>The general nuclear reaction is:</p>
+                \[ _{Z}^{A}\text{X} \longrightarrow _{Z+1}^{A}\text{Y} + _{-1}^{0}\text{e} + \bar{\nu} \]
+            </div>
+            <p>In \(\beta^-\) decay, the atomic number \(Z\) increases by 1, while the mass number \(A\) remains unchanged.</p>
+
+            <h3>Beta Plus (\(\beta^+\)) Decay</h3>
+            <p>Occurs in proton-rich nuclei. A proton is transformed into a neutron, a positron (\(\beta^+\), the antimatter counterpart of an electron), and a neutrino (\(\nu\)).</p>
+            <div class="model-box">
+                \[ _{1}^{1}\text{p} \longrightarrow _{0}^{1}\text{n} + _{+1}^{0}\text{e} + \nu \]
+                <p>The general nuclear reaction is:</p>
+                \[ _{Z}^{A}\text{X} \longrightarrow _{Z-1}^{A}\text{Y} + _{+1}^{0}\text{e} + \nu \]
+            </div>
+            <p>In \(\beta^+\) decay, the atomic number \(Z\) decreases by 1, while the mass number \(A\) remains unchanged.</p>
+        </section>
+
+        <section>
+            <h2>Electron Capture</h2>
+            <p>Electron capture is a process that competes with \(\beta^+\) decay in proton-rich nuclei. Instead of emitting a positron, the nucleus captures an orbital electron (usually from the innermost K-shell). This electron combines with a proton in the nucleus to form a neutron and a neutrino.</p>
+            <div class="model-box">
+                \[ _{1}^{1}\text{p} + _{-1}^{0}\text{e} \longrightarrow _{0}^{1}\text{n} + \nu \]
+                <p>The general nuclear reaction is:</p>
+                \[ _{Z}^{A}\text{X} + _{-1}^{0}\text{e} \longrightarrow _{Z-1}^{A}\text{Y} + \nu \]
+            </div>
+            <p>Like \(\beta^+\) decay, electron capture reduces the atomic number by 1 while keeping the mass number constant. It is often accompanied by the emission of characteristic X-rays as outer shell electrons cascade down to fill the vacancy left in the K-shell.</p>
+        </section>
+
+        <section>
+            <h2>Neutrino Hypothesis</h2>
+            <p>Early studies of beta decay showed a puzzling problem: the emitted beta particles had a continuous spectrum of kinetic energies, rather than a single discrete value. This seemed to violate the principles of conservation of energy and momentum, since a two-body decay (\(\text{Parent} \rightarrow \text{Daughter} + \text{Electron}\)) should yield fixed energies for the products.</p>
+            <p>To rescue the conservation laws, Wolfgang Pauli proposed the <strong>Neutrino Hypothesis</strong> in 1930. He suggested that a third particle is emitted during beta decay, which shares the available kinetic energy (\(Q\)-value) with the beta particle.</p>
+            <div class="insightbox">
+                <p>The neutrino (\(\nu\)) and antineutrino (\(\bar{\nu}\)) possess specific properties:</p>
+                <ul>
+                    <li>They are electrically neutral, hence unaffected by electric and magnetic fields.</li>
+                    <li>Their rest mass is almost zero.</li>
+                    <li>They interact extremely weakly with matter, making them extraordinarily difficult to detect.</li>
+                    <li>They carry away the "missing" energy and momentum in beta decay. \(K_{\text{max}} = K_\beta + K_\nu \approx Q\).</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; JEE Physics Notes</p>
+        </footer>
+    </div>
+</body>
+</html>

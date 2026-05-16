@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radioactive Decay Law - JEE Physics</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <a href="./index.html" class="back-btn"><span>&larr;</span> Back to Nuclei</a>
+        </nav>
+        <header>
+            <h1>Radioactive Decay Law</h1>
+            <p class="subtitle">The mathematics of nuclear disintegration</p>
+        </header>
+
+        <section>
+            <h2>Rutherford-Soddy Law of Radioactive Decay</h2>
+            <p>Radioactive decay is a statistical process. It is impossible to predict when a specific individual nucleus will decay. However, for a large sample containing many identical nuclei, the overall rate of decay follows a precise macroscopic law established by Rutherford and Soddy.</p>
+            <p><strong>The Law of Radioactive Decay states:</strong> The rate of disintegration (decay) of a radioactive sample at any instant is directly proportional to the number of undecayed nuclei present in the sample at that instant.</p>
+            <p>Mathematically, if \(N\) is the number of active nuclei at time \(t\), the decay rate is \(-dN/dt\):</p>
+            <p>\[ -\frac{dN}{dt} \propto N \]</p>
+            <div class="model-box">
+                \[ \frac{dN}{dt} = -\lambda N \]
+                <p>Integrating this gives the exponential decay law:</p>
+                \[ N(t) = N_0 e^{-\lambda t} \]
+                <p>Where:</p>
+                <ul>
+                    <li>\(N(t)\) = Number of undecayed nuclei at time \(t\)</li>
+                    <li>\(N_0\) = Initial number of nuclei at \(t = 0\)</li>
+                    <li>\(\lambda\) = Decay constant (or disintegration constant), specific to the isotope. Unit is \(\text{s}^{-1}\).</li>
+                </ul>
+            </div>
+            <div class="insightbox">
+                <p>The decay constant \(\lambda\) represents the probability of decay per unit time for a single nucleus. A larger \(\lambda\) means the substance decays more rapidly.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Half-life and Mean Life</h2>
+            <p>To characterize how fast a radioactive sample decays, we use two practical time parameters: half-life and mean life.</p>
+            
+            <h3>Half-life (\(T_{1/2}\))</h3>
+            <p>The half-life is the time required for exactly half of the active nuclei in a sample to decay. At \(t = T_{1/2}\), \(N = N_0 / 2\).</p>
+            <p>Using the decay equation: \(\frac{N_0}{2} = N_0 e^{-\lambda T_{1/2}} \implies \ln(2) = \lambda T_{1/2}\)</p>
+            <div class="model-box">
+                \[ T_{1/2} = \frac{\ln(2)}{\lambda} \approx \frac{0.693}{\lambda} \]
+            </div>
+            <p>After \(n\) half-lives (\(t = n \cdot T_{1/2}\)), the number of remaining nuclei is \(N = N_0 \left(\frac{1}{2}\right)^n\).</p>
+
+            <h3>Mean Life (\(\tau\))</h3>
+            <p>Since nuclei decay randomly, some decay almost instantly while others may last thousands of years. The mean life is the average lifespan of all the nuclei in a given sample.</p>
+            <div class="model-box">
+                \[ \tau = \frac{1}{\lambda} \]
+            </div>
+            <p>Relation between Half-life and Mean Life:</p>
+            <p>\[ T_{1/2} = \tau \ln(2) \approx 0.693 \tau \]</p>
+        </section>
+
+        <section>
+            <h2>Activity of a Radioactive Substance</h2>
+            <p>The activity (\(A\) or \(R\)) of a radioactive sample is its rate of decay. It tells us how many disintegrations occur per second.</p>
+            <p>\[ A = \left| \frac{dN}{dt} \right| = \lambda N \]</p>
+            <p>Substituting the exponential decay law, we find that activity also decays exponentially:</p>
+            <div class="model-box">
+                \[ A(t) = A_0 e^{-\lambda t} \]
+                <p>Where \(A_0 = \lambda N_0\) is the initial activity at \(t=0\).</p>
+            </div>
+            <p><strong>Units of Activity:</strong></p>
+            <ul>
+                <li><strong>Becquerel (Bq):</strong> The SI unit. \(1 \text{ Bq} = 1 \text{ disintegration per second (dps)}\).</li>
+                <li><strong>Curie (Ci):</strong> A historical unit. \(1 \text{ Ci} = 3.7 \times 10^{10} \text{ dps}\) (activity of 1 gram of Radium-226).</li>
+                <li><strong>Rutherford (Rd):</strong> \(1 \text{ Rd} = 10^6 \text{ dps}\).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Successive Disintegration and Radioactive Equilibrium</h2>
+            <p>Often, a radioactive nucleus (Parent, \(A\)) decays into a daughter nucleus (\(B\)), which is itself radioactive and decays into another nucleus (\(C\)). This is successive disintegration.</p>
+            <p>\[ A \xrightarrow{\lambda_1} B \xrightarrow{\lambda_2} C \]</p>
+            <p>If the half-life of the parent \(A\) is much greater than the half-life of the daughter \(B\) (\(\lambda_1 \ll \lambda_2\)), a state of <strong>Secular Equilibrium</strong> can be reached. In this state, the rate of formation of \(B\) (from \(A\)) equals its rate of decay into \(C\).</p>
+            <div class="model-box">
+                <p>At equilibrium, the number of nuclei \(N_B\) remains constant (\(dN_B/dt = 0\)):</p>
+                \[ \lambda_1 N_A = \lambda_2 N_B \]
+                <p>Which means their activities are equal: \(A_A = A_B\).</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; JEE Physics Notes</p>
+        </footer>
+    </div>
+</body>
+</html>
