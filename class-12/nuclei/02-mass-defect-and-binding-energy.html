@@ -1,79 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mass Defect and Binding Energy - JEE Physics</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mass Defect and Binding Energy | JEE Physics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn"><span>&larr;</span> Back to Nuclei</a>
-        </nav>
-        <header>
-            <h1>Mass Defect and Binding Energy</h1>
-            <p class="subtitle">Understanding nuclear stability</p>
-        </header>
-
-        <section>
-            <h2>Mass Defect and Packing Fraction</h2>
-            <p>When nucleons (protons and neutrons) come together to form a nucleus, the total mass of the resulting nucleus is always slightly <em>less</em> than the sum of the masses of its constituent nucleons. This difference in mass is known as the <strong>mass defect</strong>.</p>
-            <div class="model-box">
-                \[ \Delta m = [Z \cdot m_p + (A - Z)m_n] - M_N \]
-                <p>Where:</p>
-                <ul>
-                    <li>\(\Delta m\) = Mass defect</li>
-                    <li>\(Z\) = Atomic number (number of protons)</li>
-                    <li>\(A\) = Mass number (total nucleons)</li>
-                    <li>\(m_p\) = Mass of a free proton</li>
-                    <li>\(m_n\) = Mass of a free neutron</li>
-                    <li>\(M_N\) = Actual mass of the nucleus \(_{Z}^{A}\text{X}\)</li>
-                </ul>
-            </div>
-            <p>Sometimes, we use the mass of the atom \(M(A,Z)\) instead of the nucleus. In this case, we use the mass of a hydrogen atom \(m_H\) (which is essentially a proton plus an electron) instead of \(m_p\):</p>
-            <p>\[ \Delta m = [Z \cdot m_H + (A - Z)m_n] - M(A,Z) \]</p>
-            
-            <h3>Packing Fraction</h3>
-            <p>Packing fraction (\(f\)) is defined as the mass defect per nucleon, relative to the mass number.</p>
-            <p>\[ f = \frac{M - A}{A} \]</p>
-            <p>Where \(M\) is the actual isotopic mass. If \(f\) is negative, it indicates high stability. If \(f\) is positive, it implies instability (often seen in very light or very heavy nuclei).</p>
-        </section>
-
-        <section>
-            <h2>Nuclear Binding Energy</h2>
-            <p>The "missing mass" or mass defect is not lost; it is converted into energy according to Einstein's mass-energy equivalence equation. This released energy is what binds the nucleons together into a stable nucleus, hence the name <strong>Binding Energy (BE)</strong>.</p>
-            <p>Conversely, binding energy can be defined as the minimum energy required to break a nucleus into its constituent protons and neutrons and separate them to large distances.</p>
-            <div class="model-box">
-                \[ BE = \Delta m \cdot c^2 = [Z \cdot m_p + (A - Z)m_n - M_N] \cdot c^2 \]
-            </div>
-            <p>In terms of Atomic Mass Units (u), since \(1\text{ u} \equiv 931.5 \text{ MeV}\), the binding energy in MeV is:</p>
-            <p>\[ BE (\text{in MeV}) = \Delta m (\text{in u}) \times 931.5 \]</p>
-        </section>
-
-        <section>
-            <h2>Binding Energy per Nucleon Curve</h2>
-            <p>A better measure of nuclear stability is not the total binding energy, but the <strong>binding energy per nucleon (\(BE/A\))</strong>. It is the average energy required to remove a single nucleon from the nucleus.</p>
-            <p>\[ BE/A = \frac{\Delta m \cdot c^2}{A} \]</p>
-            <p>When we plot \(BE/A\) against the mass number \(A\), we obtain a very characteristic curve that reveals the nature of the nuclear force and explains nuclear fission and fusion.</p>
-            
-            <div class="concept-box">
-                <h3>Key Features of the \(BE/A\) Curve:</h3>
-                <ul>
-                    <li><strong>Broad maximum:</strong> For nuclei with \(30 < A < 170\), \(BE/A\) is nearly constant at about \(8.0 \text{ MeV/nucleon}\). The maximum value is approximately \(8.8 \text{ MeV/nucleon}\) for \(^{56}\text{Fe}\) (Iron-56), making it the most stable nuclide.</li>
-                    <li><strong>Decrease for heavy nuclei:</strong> For \(A > 170\), \(BE/A\) gradually decreases, dropping to about \(7.6 \text{ MeV}\) for Uranium. This makes heavy nuclei less stable and prone to <strong>nuclear fission</strong>.</li>
-                    <li><strong>Sharp decrease for light nuclei:</strong> For \(A < 30\), \(BE/A\) is lower and shows sharp peaks for \(^4\text{He}\), \(^{12}\text{C}\), and \(^{16}\text{O}\), indicating they are more stable than their immediate neighbors. Light nuclei tend to undergo <strong>nuclear fusion</strong> to form a heavier, more stable nucleus.</li>
-                </ul>
-            </div>
-            <div class="insightbox">
-                <p>The fact that \(BE/A\) is roughly constant for a wide range of nuclei indicates that the strong nuclear force is a short-range force and exhibits <em>saturation</em>. A given nucleon only interacts strongly with its nearest neighbors, not with all the nucleons in the nucleus.</p>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; JEE Physics Notes</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn"><span>&larr;</span> Back to Nuclei</a>
+</nav>
+<header>
+<h1>Mass Defect and Binding Energy</h1>
+<p class="subtitle">Understanding nuclear stability</p>
+</header>
+<section>
+<h2>Mass Defect and Packing Fraction</h2>
+<p>When nucleons (protons and neutrons) come together to form a nucleus, the total mass of the resulting nucleus is always slightly <em>less</em> than the sum of the masses of its constituent nucleons. This difference in mass is known as the <strong>mass defect</strong>.</p>
+<div class="model-box">
+\[ \Delta m = [Z \cdot m_p + (A - Z)m_n] - M_N \]
+<p>Where:</p>
+<ul>
+<li>\(\Delta m\) = Mass defect</li>
+<li>\(Z\) = Atomic number (number of protons)</li>
+<li>\(A\) = Mass number (total nucleons)</li>
+<li>\(m_p\) = Mass of a free proton</li>
+<li>\(m_n\) = Mass of a free neutron</li>
+<li>\(M_N\) = Actual mass of the nucleus \(_{Z}^{A}\text{X}\)</li>
+</ul>
+</div>
+<p>Sometimes, we use the mass of the atom \(M(A,Z)\) instead of the nucleus. In this case, we use the mass of a hydrogen atom \(m_H\) (which is essentially a proton plus an electron) instead of \(m_p\):</p>
+<p>\[ \Delta m = [Z \cdot m_H + (A - Z)m_n] - M(A,Z) \]</p>
+<h3>Packing Fraction</h3>
+<p>Packing fraction (\(f\)) is defined as the mass defect per nucleon, relative to the mass number.</p>
+<p>\[ f = \frac{M - A}{A} \]</p>
+<p>Where \(M\) is the actual isotopic mass. If \(f\) is negative, it indicates high stability. If \(f\) is positive, it implies instability (often seen in very light or very heavy nuclei).</p>
+</section>
+<section>
+<h2>Nuclear Binding Energy</h2>
+<p>The "missing mass" or mass defect is not lost; it is converted into energy according to Einstein's mass-energy equivalence equation. This released energy is what binds the nucleons together into a stable nucleus, hence the name <strong>Binding Energy (BE)</strong>.</p>
+<p>Conversely, binding energy can be defined as the minimum energy required to break a nucleus into its constituent protons and neutrons and separate them to large distances.</p>
+<div class="model-box">
+\[ BE = \Delta m \cdot c^2 = [Z \cdot m_p + (A - Z)m_n - M_N] \cdot c^2 \]
+</div>
+<p>In terms of Atomic Mass Units (u), since \(1\text{ u} \equiv 931.5 \text{ MeV}\), the binding energy in MeV is:</p>
+<p>\[ BE (\text{in MeV}) = \Delta m (\text{in u}) \times 931.5 \]</p>
+</section>
+<section>
+<h2>Binding Energy per Nucleon Curve</h2>
+<p>A better measure of nuclear stability is not the total binding energy, but the <strong>binding energy per nucleon (\(BE/A\))</strong>. It is the average energy required to remove a single nucleon from the nucleus.</p>
+<p>\[ BE/A = \frac{\Delta m \cdot c^2}{A} \]</p>
+<p>When we plot \(BE/A\) against the mass number \(A\), we obtain a very characteristic curve that reveals the nature of the nuclear force and explains nuclear fission and fusion.</p>
+<div class="concept-box">
+<h3>Key Features of the \(BE/A\) Curve:</h3>
+<ul>
+<li><strong>Broad maximum:</strong> For nuclei with \(30 < A < 170\), \(BE/A\) is nearly constant at about \(8.0 \text{ MeV/nucleon}\). The maximum value is approximately \(8.8 \text{ MeV/nucleon}\) for \(^{56}\text{Fe}\) (Iron-56), making it the most stable nuclide.</li>
+<li><strong>Decrease for heavy nuclei:</strong> For \(A > 170\), \(BE/A\) gradually decreases, dropping to about \(7.6 \text{ MeV}\) for Uranium. This makes heavy nuclei less stable and prone to <strong>nuclear fission</strong>.</li>
+<li><strong>Sharp decrease for light nuclei:</strong> For \(A < 30\), \(BE/A\) is lower and shows sharp peaks for \(^4\text{He}\), \(^{12}\text{C}\), and \(^{16}\text{O}\), indicating they are more stable than their immediate neighbors. Light nuclei tend to undergo <strong>nuclear fusion</strong> to form a heavier, more stable nucleus.</li>
+</ul>
+</div>
+<div class="insightbox">
+<p>The fact that \(BE/A\) is roughly constant for a wide range of nuclei indicates that the strong nuclear force is a short-range force and exhibits <em>saturation</em>. A given nucleon only interacts strongly with its nearest neighbors, not with all the nucleons in the nucleus.</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
