@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Distance and Displacement | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Distance and Displacement</h1>
+<p class="subtitle">
+The physical change that manifest as motion.
+</p>
+<section>
+<h2>Dual Description of Change in Position</h2>
+<p>
+In the previous section, we established that motion is fundamentally a change in position with respect to time.
+</p>
+<p>
+Suppose a particle moves from an initial position to a final position. The physical change in position can now be described mathematically in two distinct ways.
+</p>
+<ol class="model-box">
+<li>
+By measuring the actual length of the trajectory followed by the particle during motion.
+</li>
+<li>
+By measuring the geometric straight-line separation between the initial and final positions, completely independent of the actual trajectory taken.
+</li>
+</ol>
+<p>
+These two different methods of describing positional change give rise to two different physical quantities:
+<strong>Distance</strong> and <strong>Displacement</strong>.
+</p>
+<p>
+Although these quantities are often introduced together, they represent fundamentally different mathematical ideas.
+</p>
+<p>
+Distance measures the total amount of motion that has occurred physically along the path.
+</p>
+<p>
+Displacement measures only the net positional change between the starting and ending points.
+</p>
+<p>
+Even though this chapter focuses strictly on one-dimensional motion, these definitions are universal and remain valid in two-dimensional and three-dimensional mechanics as well.
+</p>
+<div class="insightbox">
+Distance is a <strong>path function</strong>.<br>
+It depends entirely on the history of the motion and the exact trajectory followed.<br><br>
+Displacement is a <strong>state function</strong>.<br>
+It depends only on the initial and final coordinates, completely ignoring the intermediate path taken.
+</div>
+</section>
+
+<section>
+<h2>Distance (Path Length)</h2>
+<p>
+<strong>Distance</strong> is defined as the total length of the actual path traversed by a moving particle during a given interval of time.
+</p>
+<p>
+It measures how much ground the particle has physically covered during motion.
+</p>
+<p>
+Since distance only concerns the total path length, it is completely independent of direction.
+</p>
+<p>
+For example, if a particle moves 5 m to the right and then 5 m back to the left, the total distance covered is still:
+</p>
+<div class="math-block">
+\[
+5 + 5 = 10\text{ m}
+\]
+</div>
+<p>
+This is because distance simply accumulates the total path length traversed during motion.
+</p>
+<ul class="model-box">
+<li>
+<strong>Nature:</strong>
+Distance is a scalar quantity because it has only magnitude and no directional information.
+</li>
+<br>
+<li>
+<strong>Sign:</strong>
+For a moving particle, distance is always positive. It can never become negative.<br>
+If the particle has actually moved during the interval, distance also cannot be zero.
+</li>
+<br>
+<li>
+<strong>Time Dependence:</strong>
+Distance never decreases with time for a moving particle.<br>
+It may increase continuously during motion or remain constant when the particle is at rest, but it can never decrease because already traversed path length cannot be "undone".
+</li>
+</ul>
+</section>
+<section>
+<h2>Displacement (Change in Position)</h2>
+<p>
+<strong>Displacement</strong> is defined as the shortest straight-line distance between the initial and final positions, directed from the initial point toward the final point.
+</p>
+<p>
+Unlike distance, displacement does not care about the actual path followed during motion.
+</p>
+<p>
+It only compares the initial and final states of the particle.
+</p>
+<p>
+Mathematically, displacement is the change in the position vector.
+</p>
+<p>
+In strictly one-dimensional motion along the \( x \)-axis, displacement reduces to the algebraic difference between the final and initial coordinates:
+</p>
+<div class="math-block">
+\[
+\Delta x = x_f - x_i
+\]
+</div>
+<p>
+Since displacement depends on orientation, sign becomes extremely important in one-dimensional motion.
+</p>
+<ul class="model-box">
+<li>
+<strong>Nature:</strong>
+Displacement is a vector quantity.<br>
+In one dimension, the entire directional nature of the vector is represented using only a positive (+) or negative (-) sign.
+</li>
+<br>
+<li>
+<strong>Sign:</strong>
+Displacement can be positive, negative or zero depending on the relative positions of the initial and final points.<br>
+A zero displacement does not imply absence of motion (state  of rest). It could be due to the particle eventually returning to its initial position:
+\[
+x_f = x_i
+\]
+</li>
+<br>
+<li>
+<strong>Time Dependence:</strong>
+Unlike distance, displacement can increase, decrease or even become zero with time depending on the direction of motion relative to the chosen origin and positive direction.
+</li>
+</ul>
+</section>
+<section>
+<h2>Relation Between Distance and Displacement</h2>
+<p>
+A fundamental mathematical relation exists between distance and displacement. This relation can be deduced from the geometric definitions of the two quantities.
+</p>
+<div class="math-block">
+\[
+\text{Distance} \ge |\text{Displacement}|
+\]
+</div>
+<p>
+This inequality is universally true in one-dimensional, two-dimensional and three-dimensional motion.
+</p>
+<p>
+The reason is simple:
+</p>
+<p>
+The actual path length between two points can never be smaller than the shortest straight-line separation between them.
+</p>
+<p>
+Only in the special case of <strong>unidirectional motion</strong> does:
+</p>
+<div class="math-block">
+\[
+\text{Distance} = |\text{Displacement}|
+\]
+</div>
+<p>
+Unidirectional motion means that the particle moves continuously in a single line without reversing its direction of motion at any instant.
+</p>
+</section>
+<section>
+<h2>The 1D Constraint and Turning Point</h2>
+<p>
+A frequent source of conceptual confusion in one-dimensional kinematics is the relationship between total distance covered and the magnitude of displacement.
+</p>
+<p>
+In one-dimensional motion, a particle cannot reverse its direction of motion without its velocity becoming zero at an intermediate instant.
+</p>
+<p>
+This is a special geometrical constraint of one-dimensional motion.
+</p>
+<p>
+In higher dimensions, however, a particle can continuously change direction without necessarily stopping.
+</p>
+<p>
+For example, a car moving on a two-dimensional road can take a smooth U-turn while still remaining in motion throughout the turn.
+</p>
+<p>
+In contrast, a train moving on a straight railway track cannot instantly reverse its direction without first coming to rest momentarily.
+</p>
+<p>
+Thus, in one-dimensional motion, reversal of direction necessarily introduces a turning point where:
+</p>
+<div class="math-block">
+\[
+v = 0
+\]
+</div>
+<p>
+This idea becomes extremely important while solving kinematics problems involving distance travelled.
+</p>
+<div class="insightbox">
+<strong>The Turnaround Trap:</strong><br>
+In kinematics equations,
+\[
+\Delta x = ut + \frac{1}{2}at^2
+\]
+gives the <strong>displacement</strong>, never the total distance travelled.<br>
+Whenever acceleration and initial velocity are anti-parallel (opposite signs in 1D motion), the particle may eventually stop and reverse direction.<br>
+To correctly calculate total distance in such cases, we must:
+<ul>
+<li>first find the instant where \( v = 0 \),</li>
+<li>split the motion into separate intervals before and after reversal,</li>
+<li>and then add the absolute magnitudes of displacement in each interval.</li>
+</ul>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
