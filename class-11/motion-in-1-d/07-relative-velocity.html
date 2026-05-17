@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relative Velocity | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Relative Velocity in 1D</h1>
+<p class="subtitle">
+Observing motion from a moving frame of reference.
+</p>
+
+<section>
+<h2>Concept of Relative Velocity in 1D</h2>
+<p>
+As stated in the introduction, all motion is relative. The velocity of an object depends on the frame of reference of the observer. Usually, we measure velocities with respect to the ground (which we treat as a stationary frame). However, what if the observer is also moving?
+</p>
+<div class="model-box">
+<strong>Definition: Relative Velocity</strong>
+<br>
+Let body A and body B be moving along the same straight line with velocities \( v_A \) and \( v_B \) with respect to the ground.
+The relative velocity of A with respect to B, denoted as \( v_{AB} \), is the velocity of A as observed by B.
+\[ \vec{v}_{AB} = \vec{v}_A - \vec{v}_B \]
+Similarly, the velocity of B with respect to A is:
+\[ \vec{v}_{BA} = \vec{v}_B - \vec{v}_A \]
+From this, it is clear that \( \vec{v}_{BA} = - \vec{v}_{AB} \).
+</div>
+<div class="concept-box">
+<strong>Sign Convention rules supreme here!</strong>
+In 1D, vectors are handled by assigning signs (+ or -). If A moves right (+5 m/s) and B moves left (-3 m/s), the velocity of A relative to B is:
+\[ v_{AB} = v_A - v_B = 5 - (-3) = 8 \, \text{m/s} \]
+To B, A appears to be approaching rapidly at 8 m/s.
+</div>
+</section>
+
+<section>
+<h2>Velocity of Approach and Separation</h2>
+<p>
+In many kinematics problems involving two bodies, it is useful to track the distance between them.
+</p>
+<ul>
+<li><strong>Velocity of Approach:</strong> If two bodies are moving towards each other, the rate at which the distance between them decreases is the velocity of approach. It is the magnitude of their relative velocity.</li>
+<li><strong>Velocity of Separation:</strong> If two bodies are moving away from each other, the rate at which the distance between them increases is the velocity of separation. It is also the magnitude of their relative velocity.</li>
+</ul>
+<div class="insightbox">
+<strong>The "Stop One Body" Trick:</strong>
+When solving 1D relative motion problems, the most powerful technique is to mentally "stop" one body (the observer). If you make B the observer, you subtract B's velocity from both A and B. B's velocity becomes zero (B is at rest in its own frame), and A's velocity becomes \( \vec{v}_{AB} = \vec{v}_A - \vec{v}_B \). The entire problem is reduced to single-body kinematics!
+</div>
+</section>
+
+<section>
+<h2>Overtaking and Crossing Problems</h2>
+<p>
+Relative velocity is exceptionally useful for solving problems where one train overtakes another, or two objects thrown simultaneously cross paths.
+</p>
+<div class="examplebox">
+<h3>Trains Overtaking / Crossing</h3>
+<p>
+Let Train A of length \( L_A \) be moving with velocity \( v_A \), and Train B of length \( L_B \) be moving with velocity \( v_B \).
+</p>
+<p>
+<strong>Case 1: Crossing (Moving in opposite directions)</strong>
+If they approach each other, the magnitude of relative velocity is \( v_{rel} = v_A + v_B \).
+To completely cross each other, the total relative distance covered is the sum of their lengths.
+\[ \text{Time to cross} = \frac{\text{Total Length}}{\text{Relative Velocity}} = \frac{L_A + L_B}{v_A + v_B} \]
+</p>
+<p>
+<strong>Case 2: Overtaking (Moving in the same direction)</strong>
+If A overtakes B, then \( v_A > v_B \). The magnitude of relative velocity is \( v_{rel} = v_A - v_B \).
+To completely overtake, the faster train must cover a relative distance equal to the sum of their lengths.
+\[ \text{Time to overtake} = \frac{L_A + L_B}{v_A - v_B} \]
+</p>
+</div>
+<p>
+<strong>Relative Acceleration:</strong> Just like relative velocity, if both bodies are accelerating, we define relative acceleration:
+\[ \vec{a}_{AB} = \vec{a}_A - \vec{a}_B \]
+The kinematic equations apply exactly the same in the relative frame:
+\[ v_{rel} = u_{rel} + a_{rel}t \]
+\[ s_{rel} = u_{rel}t + \frac{1}{2}a_{rel}t^2 \]
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

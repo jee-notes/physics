@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematic Equations | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Kinematic Equations</h1>
+<p class="subtitle">
+The equations of motion for constant acceleration.
+</p>
+
+<section>
+<h2>Equations for Uniformly Accelerated Motion</h2>
+<p>
+When an object moves with a <strong>constant (uniform) acceleration</strong>, its velocity changes at a constant rate. In such cases, the complex calculus of motion simplifies into three widely used algebraic equations.
+</p>
+<div class="model-box">
+<strong>The Three Equations of Motion</strong>
+<br>
+Let an object have an initial velocity \( u \) at time \( t = 0 \) and move with a constant acceleration \( a \). Let \( v \) be its final velocity at time \( t \), and let \( s \) be its displacement during this time interval.
+<ol>
+<li><strong>Velocity-Time Relation:</strong> \[ v = u + at \]</li>
+<li><strong>Position-Time Relation:</strong> \[ s = ut + \frac{1}{2}at^2 \]</li>
+<li><strong>Position-Velocity Relation:</strong> \[ v^2 = u^2 + 2as \]</li>
+</ol>
+</div>
+<div class="insightbox">
+<strong>Crucial Warning:</strong> These equations are strictly valid <em>only</em> if the acceleration \( a \) is constant throughout the time interval \( t \). If acceleration is varying with time or position, you must use calculus to solve the problem.
+</div>
+<p>
+A fourth, often useful equation for displacement in uniformly accelerated motion is the average velocity formula:
+\[ s = \left( \frac{u + v}{2} \right) t \]
+</p>
+<p>
+Also, the displacement in the \( n^{\text{th}} \) second of motion is given by:
+\[ S_n = u + \frac{a}{2}(2n - 1) \]
+</p>
+</section>
+
+<section>
+<h2>Derivation using Calculus</h2>
+<p>
+Let's derive these fundamental equations using calculus. Assume acceleration \( a = \text{constant} \).
+</p>
+<h3>1. Deriving \( v = u + at \)</h3>
+<p>
+We know that acceleration is the rate of change of velocity: \( a = \frac{dv}{dt} \).
+\[ dv = a \, dt \]
+Integrating both sides, with limits from \( t = 0 \) (where velocity is \( u \)) to \( t \) (where velocity is \( v \)):
+\[ \int_u^v dv = \int_0^t a \, dt \]
+Since \( a \) is constant, it comes out of the integral:
+\[ [v]_u^v = a [t]_0^t \implies v - u = at \implies v = u + at \]
+</p>
+
+<h3>2. Deriving \( s = ut + \frac{1}{2}at^2 \)</h3>
+<p>
+We know velocity is the rate of change of position: \( v = \frac{ds}{dt} \).
+Substituting the first equation \( v = u + at \):
+\[ \frac{ds}{dt} = u + at \implies ds = (u + at) \, dt \]
+Integrating from \( t = 0 \) (where displacement is 0) to \( t \) (where displacement is \( s \)):
+\[ \int_0^s ds = \int_0^t (u + at) \, dt \]
+\[ [s]_0^s = [ut + \frac{1}{2}at^2]_0^t \implies s = ut + \frac{1}{2}at^2 \]
+</p>
+
+<h3>3. Deriving \( v^2 = u^2 + 2as \)</h3>
+<p>
+We use the chain rule form of acceleration: \( a = v \frac{dv}{ds} \).
+\[ a \, ds = v \, dv \]
+Integrating from initial state (\( s = 0, \text{velocity} = u \)) to final state (\( s, \text{velocity} = v \)):
+\[ \int_0^s a \, ds = \int_u^v v \, dv \]
+\[ a [s]_0^s = \left[ \frac{v^2}{2} \right]_u^v \implies as = \frac{v^2 - u^2}{2} \implies v^2 = u^2 + 2as \]
+</p>
+</section>
+
+<section>
+<h2>Galileo's Law of Odd Numbers</h2>
+<p>
+Galileo made a profound observation about objects moving with constant acceleration starting from rest.
+</p>
+<div class="concept-box">
+<strong>Galileo's Law of Odd Numbers:</strong>
+<br>
+The distances traversed, during equal intervals of time, by a body falling from rest, stand to one another in the same ratio as the odd numbers beginning with unity:
+\[ 1 : 3 : 5 : 7 : 9 \dots \]
+</div>
+<p>
+<strong>Proof:</strong>
+Since initial velocity \( u = 0 \), the displacement in any time \( t \) is \( s = \frac{1}{2}at^2 \). Let the equal time interval be \( t_0 \).
+<ul>
+<li>Distance covered in \( 0 \) to \( t_0 \): \( s_1 = \frac{1}{2}a(t_0)^2 \)</li>
+<li>Distance covered in \( 0 \) to \( 2t_0 \): \( S_2 = \frac{1}{2}a(2t_0)^2 = 4 \times \frac{1}{2}at_0^2 = 4s_1 \). Therefore, distance in the 2nd interval is \( S_2 - s_1 = 3s_1 \).</li>
+<li>Distance covered in \( 0 \) to \( 3t_0 \): \( S_3 = \frac{1}{2}a(3t_0)^2 = 9 \times \frac{1}{2}at_0^2 = 9s_1 \). Distance in the 3rd interval is \( S_3 - S_2 = 5s_1 \).</li>
+</ul>
+Hence, the ratio of distances covered in successive equal time intervals is \( s_1 : 3s_1 : 5s_1 = 1 : 3 : 5 \dots \)
+</p>
+</section>
+
+<section>
+<h2>Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./04a-motion-under-gravity.html">4a. Motion under Gravity (Free Fall)</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

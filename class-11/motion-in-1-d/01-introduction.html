@@ -1,164 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motion in One Dimension | Introduction</title>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rest, Motion, Distance, and Displacement | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-
 <div class="container">
 <nav class="top-nav">
-    <a href="./index.html" class="back-btn">
-        <span>&larr;</span> Back to Motion in 1D
-    </a>
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
 </nav>
-
-<h1>Organization of Mechanics</h1>
+<h1>Introduction: Rest, Motion, and Displacement</h1>
 <p class="subtitle">
-How the study of motion is structurally built.
+The foundational concepts of kinematics and describing the exact location of a particle.
 </p>
 
 <section>
-    <h2>Why Mechanics is "Day One" for Physics</h2>
-
-    <p>
-        Motion is easily the most pervasive thing we see in nature. Historically, humans actually associated movement with life itself—if something moved (like the Sun or the Moon), it was considered alive; if it was perfectly still, it was dead. 
-    </p>
-    
-    <p>
-        In modern physics, we start with mechanics because every single observable change in the physical world involves motion in some form. Even measuring your weight on a digital scale is technically "observing" a needle move to a specific position. Since the physical world is modeled using the four structural components of <b>Space, Time, Matter, and Energy</b>, we must first understand how matter occupies space over a sequence of time.
-    </p>
-
-    <div class="insightbox">
-        Physics begins with mechanics not because of tradition, but because you cannot describe a "natural phenomenon" (change) without first understanding the framework of space and time in which it occurs.
-    </div>
-
-    <p>
-        Through mechanics, we learn the "universal language" of physics: how to take a qualitative experience (like "the car is fast") and turn it into a quantitative description (a numerical value and a unit).
-    </p>
+<h2>Rest and Motion</h2>
+<p>
+In physics, we describe the state of an object as being either at rest or in motion.
+</p>
+<div class="concept-box">
+<ul>
+<li><strong>Rest:</strong> An object is said to be at rest if it does not change its position with respect to its surroundings with the passage of time.</li>
+<li><strong>Motion:</strong> An object is said to be in motion if it changes its position with respect to its surroundings with the passage of time.</li>
+</ul>
+</div>
+<p>
+It is crucial to understand that rest and motion are relative terms. There is no such thing as absolute rest or absolute motion. For example, a passenger sitting in a moving train is at rest with respect to his fellow passengers, but in motion with respect to a person standing on the platform.
+</p>
+<div class="insightbox">
+Because the Earth itself is constantly moving (rotating on its axis and revolving around the Sun), nothing on Earth is at absolute rest. We must always define the "surroundings" or the "observer" to meaningfully talk about motion.
+</div>
 </section>
 
 <section>
-    <h2>The Three Pillars of Mechanics</h2>
-
-    <p>
-        We don't try to solve the whole universe at once. To keep our study organized and structurally sound, we divide mechanics into three distinct branches:
-    </p>
-
-    <div class="model-box">
-        <ul>
-            <li><b>Kinematics:</b> The <i>description</i> of motion. We focus on <b>what</b> is happening (position, velocity, acceleration) without worrying about the causes.</li>
-            <li><b>Dynamics:</b> The study of the <i>causes</i> of motion. We ask <b>why</b> things move—introducing forces and energy.</li>
-            <li><b>Statics:</b> The study of <i>equilibrium</i>. We investigate systems where there is no net motion.</li>
-        </ul>
-    </div>
-
-    <p>
-        This chapter is strictly about <b>Kinematics</b>. We are learning how to describe the "dance" before we try to figure out what is pushing the dancers.
-    </p>
-</section>
-<section>
-    <h2>What is this "Description" exactly?</h2>
-
-    <p>
-        In everyday life, we describe things with adjectives ("fast", "slow", "straight", "curvy"). In physics, description means defining <b>mathematical relations</b> between measurable quantities. 
-    </p>
-
-    <p>
-        For example, if we say a particle is moving in a circle, that is a purely <b>geometric (mathematical) description</b>. We don't care <i>why</i> it's moving that way—it could be a planet held by gravity or a stone on a string. The kinematics remains the same. We focus on the relation \( x = f(t) \), remembering that this expresses how position varies with time, not necessarily that "time" is the physical cause of the displacement.
-    </p>
-
-    <p>
-        Consider cricket. Saying someone is a "better batsman" is qualitative. To describe that claim properly, we introduce measurable parameters: batting average, strike rate, total runs scored. These numbers replace opinion with quantifiable evidence.
-    </p>
-
-    <p>
-        Physics works the same way. Instead of saying "the car is fast", we assign a measurable quantity speed:
-    </p>
-
-    \[
-    v = 28 \text{ m/s}
-    \]
-
-    <p>
-        Description in physics means defining measurable quantities that capture observable behavior. It does not explain why something happens. It is just encoding natural phenomenon in mathematical form.
-    </p>
-
-    <p>
-        In mechanics, the central act of description is defining
-        how position depends on time:
-    </p>
-
-    \[
-    x = f(t), \quad 
-    v = \frac{dx}{dt}, \quad 
-    a = \frac{d^2x}{dt^2}
-    \]
-
-    <p>
-        These relations transform motion from a qualitative experience into a structured mathematical object.
-    </p>
+<h2>Frame of Reference</h2>
+<p>
+To describe motion unambiguously, we use a <strong>Frame of Reference</strong>.
+</p>
+<div class="model-box">
+<strong>Definition: Frame of Reference</strong>
+<br>
+A frame of reference is a coordinate system rigidly attached to an observer, along with a clock to measure time. It provides a standard against which the position and motion of objects can be measured.
+</div>
+<p>
+In 1D motion, our frame of reference is simply a straight line (the x-axis) with a chosen origin (\( x = 0 \)), a defined positive direction, and a clock starting at \( t = 0 \).
+</p>
 </section>
 
 <section>
-    <h2>Kinematics vs. Dynamics: What Is Invisible?</h2>
+<h2>Position, Distance, and Displacement</h2>
+<p>
+To describe exactly where an object is and how far it has traveled, we define three crucial terms.
+</p>
+<h3>Position</h3>
+<p>
+The <strong>position</strong> of a particle is its location with respect to the origin of the chosen frame of reference. In 1D, it is simply the coordinate \( x \). Position can be positive, negative, or zero.
+</p>
 
-    <p>
-        Suppose we observe that a particle has an acceleration toward the right:
-    </p>
+<h3>Distance (Path Length)</h3>
+<div class="model-box">
+<strong>Definition: Distance</strong>
+<br>
+Distance is the total length of the actual path traversed by a moving object in a given time interval.
+<ul>
+<li><strong>Nature:</strong> Scalar quantity (magnitude only).</li>
+<li><strong>SI Unit:</strong> Meter (m).</li>
+<li><strong>Dimensional Formula:</strong> \( [M^0 L^1 T^0] \)</li>
+</ul>
+</div>
+<p>
+Distance is always positive and never decreases with time for a moving particle.
+</p>
 
-    \[
-    a = +2 \text{ m/s}^2
-    \]
+<h3>Displacement</h3>
+<div class="model-box">
+<strong>Definition: Displacement</strong>
+<br>
+Displacement is the shortest distance from the initial position to the final position of the object. It is a vector pointing from the initial to the final position.
+<br><br>
+Mathematically, for 1D motion:
+\[ \Delta x = x_f - x_i \]
+Where:
+<ul>
+<li>\( \Delta x \) = Displacement</li>
+<li>\( x_f \) = Final position</li>
+<li>\( x_i \) = Initial position</li>
+</ul>
+<ul>
+<li><strong>Nature:</strong> Vector quantity (magnitude and direction).</li>
+<li><strong>SI Unit:</strong> Meter (m).</li>
+<li><strong>Dimensional Formula:</strong> \( [M^0 L^1 T^0] \)</li>
+</ul>
+</div>
+<div class="insightbox">
+In 1D motion, the direction of displacement is indicated by its sign (+ or -). A positive displacement means the object shifted in the positive x-direction, while a negative displacement means it shifted in the negative x-direction.
+</div>
 
-    <p>
-        In <b>kinematics</b>, this is sufficient. We describe the motion: the acceleration is directed to the right. Nothing more is required.
-    </p>
+<div class="examplebox">
+<h3>Comparison: Distance vs. Displacement</h3>
+<ul>
+<li>The magnitude of displacement is always less than or equal to distance: \( |\Delta x| \le \text{Distance} \).</li>
+<li>They are equal only when the particle moves in a straight line without reversing its direction.</li>
+<li>If a particle returns to its starting point, its displacement is zero, but the distance traveled is not zero.</li>
+</ul>
+</div>
 
-    <p>
-        We do not ask whether the particle is being pushed from behind, pulled from the front, attracted by gravity, or driven by an engine. All such mechanisms are <b>invisible</b> at the level of kinematics.
-    </p>
-
-    <p>
-        <b>Dynamics</b>, however, makes the invisible visible. It asks: What interaction is producing this acceleration? What force is responsible? Why is the acceleration having that magnitude and direction.
-    </p>
-
-    <p>
-        The same acceleration could arise from many different causes: a push, a pull, tension in a rope, gravitational attraction, or electrical interaction. Kinematics treats them identically. Dynamics distinguishes between them.
-    </p>
-
-    <p>
-        Thus, kinematics describes <i>how</i> motion occurs, while dynamics explains <i>why</i> it occurs.
-    </p>
-</section>
-<section>
-    <h2>Levels of Increasing Complexity</h2>
-
-    <p>
-        Motion appears in countless forms—rectilinear (straight line), curvilinear (curves), translational, rotational, periodic, oscillatory etc. Each type requires a different level of mathematical sophistication. As a result, we follow a logical ladder:
-    </p>
-
-    <p style="text-align:center; font-weight:bold;">
-        1D Motion (Straight Line) &rarr; 2D Motion (Planes) &rarr; 3D Motion (Space)
-    </p>
-
-    <p>
-        We begin with <b>One-Dimensional Motion</b> because it isolates the core concepts: position, velocity and acceleration and makes them prominent for study. It allows us to practice calculus without the heavy geometric and trigonometric load of 2D or 3D vectors. In 1D, a simple plus (+) or minus (-) sign carries all the directional information you need.
-    </p>
-    
 </section>
 
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
-
 </div>
-
 </body>
 </html>

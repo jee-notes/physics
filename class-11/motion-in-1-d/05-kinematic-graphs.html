@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematic Graphs | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Kinematic Graphs</h1>
+<p class="subtitle">
+Visualizing motion through position, velocity, and acceleration graphs.
+</p>
+
+<section>
+<h2>Interpreting Slopes and Areas</h2>
+<p>
+Before diving into specific graphs, it is essential to understand the calculus connections that allow us to extract information from kinematic plots.
+</p>
+<div class="model-box">
+<strong>The Rules of Graphical Kinematics:</strong>
+<ul>
+<li><strong>Slope of a curve:</strong> The slope of a tangent line on a graph representing \( y \) vs \( x \) gives the derivative \( \frac{dy}{dx} \).</li>
+<li><strong>Area under a curve:</strong> The area under the curve of a \( y \) vs \( x \) graph gives the integral \( \int y \, dx \).</li>
+</ul>
+</div>
+<div class="concept-box">
+Applying these rules to kinematics:
+<ul>
+<li><strong>Slope of Position-Time (x-t) Graph</strong> = Velocity (\( v = \frac{dx}{dt} \))</li>
+<li><strong>Slope of Velocity-Time (v-t) Graph</strong> = Acceleration (\( a = \frac{dv}{dt} \))</li>
+<li><strong>Area under Velocity-Time (v-t) Graph</strong> = Displacement (\( \Delta x = \int v \, dt \))</li>
+<li><strong>Area under Acceleration-Time (a-t) Graph</strong> = Change in Velocity (\( \Delta v = \int a \, dt \))</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Position-Time (x-t) Graph</h2>
+<p>
+The position-time graph shows how a particle's position varies as time progresses. Time is plotted on the horizontal axis and position on the vertical axis.
+</p>
+<ul>
+<li><strong>Object at Rest:</strong> The position does not change with time. The graph is a straight line parallel to the time axis. The slope is zero (velocity is zero).</li>
+<li><strong>Uniform Motion (Constant Velocity):</strong> The position changes linearly with time. The graph is an inclined straight line. A positive slope indicates positive velocity; a negative slope indicates negative velocity.</li>
+<li><strong>Accelerated Motion:</strong> The position changes quadratically (or otherwise non-linearly) with time. The graph is a curve (e.g., a parabola). If the curve opens upwards (concave up), acceleration is positive. If it opens downwards (concave down), acceleration is negative.</li>
+</ul>
+</section>
+
+<section>
+<h2>Velocity-Time (v-t) Graph</h2>
+<p>
+The velocity-time graph is arguably the most useful kinematic graph because it yields both acceleration (from its slope) and displacement (from its area).
+</p>
+<ul>
+<li><strong>Object at Rest:</strong> The graph is a straight line lying exactly on the time axis (\( v=0 \)).</li>
+<li><strong>Uniform Motion (Constant Velocity):</strong> The graph is a straight line parallel to the time axis, but shifted up or down depending on the speed. Slope is zero (\( a=0 \)).</li>
+<li><strong>Uniformly Accelerated Motion:</strong> The graph is an inclined straight line. The constant slope equals the constant acceleration.
+<ul>
+<li>Positive slope = Positive acceleration.</li>
+<li>Negative slope = Negative acceleration.</li>
+</ul>
+</li>
+<li><strong>Non-Uniform Acceleration:</strong> The graph is a curve. The instantaneous acceleration at any time is the slope of the tangent to the curve at that point.</li>
+</ul>
+<div class="insightbox">
+<strong>Distance vs Displacement from v-t Graph:</strong>
+To find displacement, calculate the signed area under the v-t curve (areas above the t-axis are positive, areas below are negative). To find distance, calculate the total absolute area (treat all areas as positive).
+</div>
+</section>
+
+<section>
+<h2>Acceleration-Time (a-t) Graph</h2>
+<p>
+The acceleration-time graph shows how a particle's acceleration varies with time.
+</p>
+<ul>
+<li><strong>Uniform Acceleration:</strong> The graph is a straight line parallel to the time axis.</li>
+<li><strong>Non-Uniform Acceleration:</strong> The graph is an inclined line or a curve.</li>
+</ul>
+<p>
+The area under the a-t graph gives the change in velocity: \( \Delta v = v_f - v_i = \int a \, dt \).
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

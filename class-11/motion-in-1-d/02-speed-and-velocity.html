@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed and Velocity | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Speed and Velocity</h1>
+<p class="subtitle">
+Understanding how fast an object is moving and in what direction.
+</p>
+
+<section>
+<h2>Average Speed and Average Velocity</h2>
+<p>
+When an object moves, it takes time to cover distance and undergo displacement. The rates at which these happen over a time interval are average speed and average velocity.
+</p>
+
+<h3>Average Speed</h3>
+<div class="model-box">
+<strong>Definition: Average Speed</strong>
+<br>
+Average speed is defined as the total distance traveled divided by the total time taken.
+\[ v_{\text{avg}} = \frac{\text{Total Distance}}{\text{Total Time Interval}} = \frac{\Delta s}{\Delta t} \]
+<ul>
+<li><strong>Nature:</strong> Scalar quantity.</li>
+<li><strong>SI Unit:</strong> \( \text{m/s} \) (meters per second).</li>
+<li><strong>Dimensional Formula:</strong> \( [M^0 L^1 T^{-1}] \)</li>
+</ul>
+</div>
+<p>
+Average speed gives us an overall idea of how fast the object moved during the entire journey, but it tells us nothing about how the speed varied or what direction the object moved in.
+</p>
+
+<h3>Average Velocity</h3>
+<div class="model-box">
+<strong>Definition: Average Velocity</strong>
+<br>
+Average velocity is defined as the total displacement divided by the total time taken.
+\[ \vec{v}_{\text{avg}} = \frac{\text{Total Displacement}}{\text{Total Time Interval}} = \frac{\Delta \vec{x}}{\Delta t} = \frac{\vec{x}_f - \vec{x}_i}{t_f - t_i} \]
+Where:
+<ul>
+<li>\( \Delta \vec{x} \) = Displacement vector</li>
+<li>\( \Delta t \) = Time interval</li>
+</ul>
+<ul>
+<li><strong>Nature:</strong> Vector quantity.</li>
+<li><strong>SI Unit:</strong> \( \text{m/s} \) (meters per second).</li>
+<li><strong>Dimensional Formula:</strong> \( [M^0 L^1 T^{-1}] \)</li>
+</ul>
+</div>
+<div class="insightbox">
+Because displacement can be positive, negative, or zero, average velocity can also be positive, negative, or zero. In contrast, average speed is always positive or zero.
+</div>
+
+<div class="examplebox">
+<h3>Key Property</h3>
+The magnitude of average velocity is generally <em>less than or equal to</em> the average speed.
+\[ |\vec{v}_{\text{avg}}| \le v_{\text{avg}} \]
+Equality holds only if the object moves in a straight line without reversing direction.
+</div>
+</section>
+
+<section>
+<h2>Instantaneous Speed and Velocity</h2>
+<p>
+In many physical situations, we need to know the velocity of a particle at a specific instant of time, not just over a large interval.
+</p>
+
+<h3>Instantaneous Velocity</h3>
+<p>
+Instantaneous velocity is the limit of average velocity as the time interval \( \Delta t \) approaches zero.
+</p>
+<div class="model-box">
+<strong>Definition: Instantaneous Velocity</strong>
+<br>
+\[ \vec{v} = \lim_{\Delta t \to 0} \frac{\Delta \vec{x}}{\Delta t} = \frac{d\vec{x}}{dt} \]
+Where \( \frac{d\vec{x}}{dt} \) represents the derivative of position with respect to time.
+</div>
+<p>
+In one-dimensional motion, instantaneous velocity is simply \( v = \frac{dx}{dt} \). A positive \( v \) indicates motion in the positive x-direction, while a negative \( v \) indicates motion in the negative x-direction.
+</p>
+
+<h3>Instantaneous Speed</h3>
+<div class="concept-box">
+<strong>Important Fact:</strong> The instantaneous speed is always equal to the magnitude of the instantaneous velocity.
+\[ \text{Speed} = |\vec{v}| = \left| \frac{dx}{dt} \right| \]
+</div>
+<p>
+Unlike average speed and average velocity (where magnitude of average velocity can be strictly less than average speed), at any given exact instant, the speed is simply how fast you are going, which is the magnitude of your velocity vector.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

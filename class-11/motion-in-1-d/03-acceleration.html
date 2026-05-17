@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceleration | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Acceleration</h1>
+<p class="subtitle">
+The rate at which an object's velocity changes over time.
+</p>
+
+<section>
+<h2>Average Acceleration</h2>
+<p>
+Just as velocity measures the rate of change of position, acceleration measures the rate of change of velocity. If a particle's velocity changes, it is said to be accelerating.
+</p>
+<div class="model-box">
+<strong>Definition: Average Acceleration</strong>
+<br>
+Average acceleration over a time interval \( \Delta t \) is defined as the change in velocity \( \Delta \vec{v} \) divided by the time interval.
+\[ \vec{a}_{\text{avg}} = \frac{\Delta \vec{v}}{\Delta t} = \frac{\vec{v}_f - \vec{v}_i}{t_f - t_i} \]
+Where:
+<ul>
+<li>\( \vec{v}_f \) = Final velocity</li>
+<li>\( \vec{v}_i \) = Initial velocity</li>
+<li>\( \Delta t \) = Time interval</li>
+</ul>
+<ul>
+<li><strong>Nature:</strong> Vector quantity.</li>
+<li><strong>SI Unit:</strong> \( \text{m/s}^2 \) (meters per second squared).</li>
+<li><strong>Dimensional Formula:</strong> \( [M^0 L^1 T^{-2}] \)</li>
+</ul>
+</div>
+<p>
+In one-dimensional motion, average acceleration is simply \( a_{\text{avg}} = \frac{v_f - v_i}{\Delta t} \).
+</p>
+</section>
+
+<section>
+<h2>Instantaneous Acceleration</h2>
+<p>
+Average acceleration gives the overall rate of change over an interval, but to find the acceleration at a precise moment, we use instantaneous acceleration.
+</p>
+<div class="model-box">
+<strong>Definition: Instantaneous Acceleration</strong>
+<br>
+Instantaneous acceleration is the limit of the average acceleration as the time interval \( \Delta t \) approaches zero.
+\[ \vec{a} = \lim_{\Delta t \to 0} \frac{\Delta \vec{v}}{\Delta t} = \frac{d\vec{v}}{dt} \]
+</div>
+<p>
+Since velocity is the derivative of position (\( v = \frac{dx}{dt} \)), acceleration is the second derivative of position with respect to time:
+\[ a = \frac{d}{dt} \left( \frac{dx}{dt} \right) = \frac{d^2 x}{dt^2} \]
+</p>
+<div class="insightbox">
+Another extremely useful form for acceleration in 1D, derived using the chain rule, is:
+\[ a = \frac{dv}{dt} = \frac{dv}{dx} \cdot \frac{dx}{dt} = v \frac{dv}{dx} \]
+This formula is invaluable when velocity is given as a function of position, \( v(x) \), rather than a function of time.
+</div>
+
+<div class="examplebox">
+<h3>Acceleration vs. Retardation (Deceleration)</h3>
+<ul>
+<li><strong>Speeding up:</strong> If the velocity and acceleration vectors point in the <em>same direction</em> (i.e., they have the same sign), the speed of the particle increases.</li>
+<li><strong>Slowing down (Retardation):</strong> If the velocity and acceleration vectors point in <em>opposite directions</em> (i.e., they have opposite signs), the speed of the particle decreases. This is often called deceleration or retardation.</li>
+</ul>
+<p><strong>Note:</strong> A negative acceleration does NOT always mean the object is slowing down. If an object is moving in the negative direction (\( v < 0 \)) and has negative acceleration (\( a < 0 \)), it is actually speeding up in the negative direction!</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
