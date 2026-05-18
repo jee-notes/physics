@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frame of Reference | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Frame of Reference</h1>
+<p class="subtitle">
+The mathematical framework required to describe motion.
+</p>
+<section>
+<h2>The Relativity of Motion</h2>
+<p>
+One of the most fundamental principles in classical mechanics is that <strong>motion is relative</strong>.
+</p>
+<p>
+There is no such thing as absolute rest or absolute motion in the universe.
+</p>
+<p>
+The mechanical state of an object—whether it is moving or stationary — cannot be defined in isolation. It can only be mathematically defined with respect to a specific observer or a chosen <strong>Frame of Reference</strong>.
+</p>
+<p>
+This relativity manifests in two distinct mathematical ways: through the relativity of Position (static) and the relativity of Displacement (dynamic).
+</p>
+</section>
+<section>
+<h2>Relativity of Position (Static)</h2>
+<p>
+The fact that position is relative is intuitive and purely geometric. The coordinate of a point depends entirely on where we place our origin.
+</p>
+<p>
+Consider a simple geographical example:
+</p>
+<div class="insightbox">
+Iran is positioned to the West of India, but to the East of America.
+</div>
+<p>
+The actual physical location of the landmass of Iran does not change.
+</p>
+<p>
+However, its mathematical position vector flips direction entirely depending on whether the origin of our coordinate system is placed in New Delhi or Washington D.C.
+</p>
+</section>
+<section>
+<h2>Relativity of Displacement (Dynamic)</h2>
+<p>
+While the relativity of position is obvious, the relativity of displacement is dynamic and leads to a profound conclusion: the state of motion itself depends on the observer.
+</p>
+<p>
+Consider the following scenario involving three people: Person A, Person B and Person C, situated at a building with an elevator (lift).
+</p>
+<ul class="model-box">
+<li>Person A and Person B enter the lift to go up.</li>
+<li>Person C remains standing on the ground floor.</li>
+</ul>
+<p>
+While the lift is moving upwards, let us mathematically define the mechanical state of Person A:
+</p>
+<h3>With respect to Person C (Ground Frame):</h3>
+<p>
+The position of Person A is continuously changing relative to Person C. Therefore, Person A has a non-zero displacement over time and is in a <strong>state of motion</strong>.
+</p>
+<h3>With respect to Person B (Lift Frame):</h3>
+<p>
+The position of Person A relative to Person B remains constant, as they are standing next to each other inside the cabin. Therefore, Person A has zero displacement over time and is in a <strong>state of rest</strong>.
+</p>
+<div class="insightbox">
+<strong>The Core Deduction:</strong><br>
+The exact same physical body (Person A) can have a non-zero displacement in one frame of reference and a zero displacement in another at the exact same instant.<br>
+Therefore, motion is not a property of the object alone. Motion is a combined mathematical property of the object and the observer.
+</div>
+</section>
+<section>
+<h2>Defining the Observer</h2>
+<p>
+Once we understand that motion is relative (i.e., <strong>observer-dependent</strong>), the immediate challenge becomes: how do we mathematically standardize our description of motion?
+</p>
+<p>
+The first conceptual hurdle is the word "observer" itself. Is an observer a living being with eyes?
+</p>
+<p>
+In physics, an <strong>observer</strong> is not a biological entity. It is purely a mathematical construct.
+</p>
+<p>
+An observer is simply a physical body or location to which we attach a coordinate system (spatial reference) and a clock (temporal reference).
+</p>
+<p>
+If multiple people, sensors, or cameras use the exact same origin, axes, and clock to measure physical quantities, they are all said to be operating within the same <strong>Frame of Reference</strong>.
+</p>
+<p>
+Therefore, physics equations are not written for individual people; they are written for specific frames of reference.
+</p>
+</section>
+<section>
+<h2>The Necessity of a Shared Frame: An Example</h2>
+<p>
+To understand why a formal Frame of Reference is strictly required over casual human observation, consider the following geometric scenario.
+</p>
+<p>
+Imagine a rectangular room mapped to a coordinate plane, extending from \( (0,0) \) to \( (10,10) \).
+</p>
+<ul class="model-box">
+<li><strong>Person A</strong> is standing at the center \( (5,5) \), facing the wall at \( x = 10 \).</li>
+<li><strong>Person B</strong> is located at \( (5,8) \), facing downwards towards Person A.</li>
+<li><strong>Person C</strong> is located at \( (5,2) \), facing upwards towards Person A.</li>
+</ul>
+<p>
+Now, Person A moves from their initial position \( (5,5) \) to a new position at \( (7,5) \). How do B and C describe this motion?
+</p>
+<p>
+Because Person B is facing downwards (towards negative \( y \)), they will report: <strong>"Person A moved 2 units to my left."</strong><br>
+Because Person C is facing upwards (towards positive \( y \)), they will report: <strong>"Person A moved 2 units to my right."</strong>
+</p>
+<p>
+Both descriptions ("left" and "right") describe the exact same physical event, yet they mathematically contradict each other. This happens because B and C are using <strong>local, body-centric references</strong>.
+</p>
+<p>
+To study physics objectively, B and C must discard their local orientations and arrive at a consensus.
+</p>
+<p>
+They do this by adopting a shared global geometry. Instead of using "left" or "right", they assign the wall at \( x = 10 \) as the <strong>positive \( x \)-direction</strong> (e.g., East).
+</p>
+<div class="insightbox">
+Once this shared geometric axis is established, the contradiction vanishes.<br>
+Both Person B and Person C will now agree: <strong>"Person A underwent a displacement of \( +2 \) units along the \( x \)-axis."</strong><br>
+By agreeing on this shared coordinate system, Person B and Person C are now operating in the same <strong>Frame of Reference</strong>.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
