@@ -224,6 +224,69 @@ To correctly calculate total distance in such cases, we must:
 </ul>
 </div>
 </section>
+<section>
+<h2>Displacement vs Position: The Time-Index Trap</h2>
+<p>
+To understand the fundamental mathematical difference between position and displacement, consider the following classic problem:
+</p>
+<ul class="model-box">
+<li>
+<strong>Particle A:</strong> Its position is given by the equation:
+<div class="math-block">\[ x = t^2 - 5t + 4 \]</div>
+</li>
+<li>
+<strong>Particle B:</strong> Its displacement is given by the equation:
+<div class="math-block">\[ s = t^2 - 5t \]</div>
+</li>
+</ul>
+<p>
+<strong>Question:</strong> Find the displacement of both particles in the 4th second.
+</p>
+<h3>The "nth Second" Concept</h3>
+<p>
+First, we must mathematically define what "in the 4th second" means. This often causes an off-by-one error for students. 
+</p>
+<p>
+Think of it like historical centuries: the 1st century covers the years 0 to 99, the 2nd century covers 100 to 199, and so on. Similarly, the 1st second of motion occurs between \( t = 0 \) and \( t = 1 \). 
+</p>
+<div class="insightbox">
+Therefore, the <strong>4th second</strong> is the time interval strictly between \( t = 3 \) and \( t = 4 \).
+</div>
+<h3>The Mathematical Calculation</h3>
+<p>
+For both particles, the mathematical operation to find the answer is identical: we evaluate the function at \( t = 4 \) and \( t = 3 \), and find the difference. Both calculations will yield the exact same numerical answer.
+</p>
+<p>
+However, there is a fundamental physical difference in <em>how</em> we speak about these two equations. This linguistic precision is what makes this a true conceptual class problem.
+</p>
+<h3>State Variables vs. Interval Variables</h3>
+<p>
+<strong>Position is time-indexed.</strong> It defines a specific state at a specific instant.<br>
+It is perfectly correct to say "the position <em>at</em> \( t = 4 \)".<br>
+Thus, to find the displacement of Particle A in the 4th second, we write:
+</p>
+<div class="math-block">
+\[ \text{Displacement (4th sec)} = x(t=4) - x(t=3) \]
+</div>
+<p>
+This statement is physically and mathematically sound.
+</p>
+<p>
+<strong>Displacement is not time-indexed.</strong> It defines a change over an interval, not a state at an instant.<br>
+It is conceptually wrong to say "the displacement <em>at</em> \( t = 4 \)". A particle cannot have a displacement in a frozen instant of time (where \( \Delta t = 0 \)). 
+</p>
+<p>
+When a problem gives an equation like \( s = t^2 - 5t \), it implicitly means "displacement <em>from \( t = 0 \)</em> up to time \( t \)". 
+</p>
+<div class="insightbox">
+<strong>The Correct Formulation for Particle B:</strong><br><br>
+Incorrect language: Displacement in 4th sec = Displacement (at \( t = 4 \)) - Displacement (at \( t = 3 \)).<br><br>
+Correct language: Displacement in 4th sec = Displacement (till \( t = 4 \)) - Displacement (till \( t = 3 \)).
+</div>
+<p>
+By subtracting the displacement accumulated up to \( t = 3 \) from the total displacement accumulated up to \( t = 4 \), we successfully isolate the displacement that occurred <em>only</em> during that 4th second interval.
+</p>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
