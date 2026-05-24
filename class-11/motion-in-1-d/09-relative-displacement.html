@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relative Displacement | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Relative Displacement</h1>
+<p class="subtitle">
+Analyzing motion when geometric boundaries are defined across shifting reference systems.
+</p>
+<section>
+<h2>What is Relative Displacement?</h2>
+<p>
+<strong>Relative displacement</strong> is the vector difference between the position vectors of two particles observed from a common reference system. While students intuitively accept that observers in different states of motion record different velocities, there is often cognitive resistance to the fact that <em>displacement itself depends entirely on the chosen frame of reference.</em>
+</p>
+<p>
+Let \(\vec{x}_{A}\) and \(\vec{x}_{B}\) be the instantaneous position vectors of particles \(A\) and \(B\) with respect to a fixed ground observer \(G\). The position of particle \(B\) as observed from the reference frame of particle \(A\) is defined as:
+</p>
+\[\vec{x}_{BA} = \vec{x}_{B} - \vec{x}_{A}\]
+<p>
+If both particles change their positions over a finite time interval \(\Delta t = t_f - t_i\), the change in position of \(B\) with respect to \(A\) constitutes the relative displacement:
+</p>
+\[\Delta \vec{x}_{BA} = \vec{x}_{BA}(t_f) - \vec{x}_{BA}(t_i)\]
+<p>
+Expanding this using ground frame coordinates reveals the core identity:
+</p>
+\[\Delta \vec{x}_{BA} = \left[\vec{x}_{B}(t_f) - \vec{x}_{A}(t_f)\right] - \left[\vec{x}_{B}(t_i) - \vec{x}_{A}(t_i)\right]\]
+\[\Delta \vec{x}_{BA} = \left[\vec{x}_{B}(t_f) - \vec{x}_{B}(t_i)\right] - \left[\vec{x}_{A}(t_f) - \vec{x}_{A}(t_i)\right]\]
+\[\vec{s}_{BA} = \vec{s}_{B,G} - \vec{s}_{A,G}\]
+</section>
+<section>
+<h2>How Relative Displacement Behaves</h2>
+<p>
+The critical pedagogical shift is recognizing that <strong>relative displacement is not merely an abstract vector subtraction tool—it matches the real physical distance traversed within a moving room.</strong>
+</p>
+<p>
+When an object moves inside a bounded, moving platform (like an elevator or a train), tracking the absolute path from the ground requires tracking both the object's independent acceleration and the platform's independent engine drive. However, in the platform's frame, the platform's walls and floor are stationary by definition. Consequently, the relative displacement \(\vec{s}_{rel}\) simplifies cleanly to the physical dimensions of the container.
+</p>
+</section>
+<section>
+<h2>Case Studies & Solutions</h2>
+<div class="examplebox">
+<h3>Problem 1: The Upward Moving Balloon</h3>
+<p>
+<strong>Problem 10:</strong> A stone is dropped from a balloon going up with a uniform velocity of \(5.0\text{ m/s}\). If the balloon was \(50\text{ m}\) high when the stone was dropped, find its height when the stone hits the ground. Take \(g = 10\text{ m/s}^2\).
+</p>
+<h4>How to Solve (Ground Frame Analysis)</h4>
+<p>
+Since the displacement of the stone relative to the ground is explicitly given by the fixed boundary condition (it falls from a known coordinate \(y = 50\text{ m}\) to a fixed target \(y = 0\text{ m}\)), analyzing the entire trajectory from the ground frame provides the most direct mathematical solution.
+</p>
+<p>
+<strong>Step 1: Analyze the motion of the stone (Ground Frame)</strong>
+</p>
+<ul>
+<li>Taking the upward direction as positive (\(+\)).</li>
+<li>Initial velocity of the stone: \(u_s = +5.0\text{ m/s}\) <span class="highlight">(Inertial inheritance from balloon)</span></li>
+<li>Acceleration of the stone: \(a_s = -g = -10\text{ m/s}^2\)</li>
+<li>Net displacement of the stone when it hits the ground: \(s_s = -50\text{ m}\)</li>
+</ul>
+<p>Using the second equation of motion for the stone:</p>
+\[s_s = u_s t + \frac{1}{2}a_s t^2\]
+\[-50 = 5t - \frac{1}{2}(10)t^2\]
+\[5t^2 - 5t - 50 = 0 \implies t^2 - t - 10 = 0\]
+<p>Solving via the quadratic formula:</p>
+\[t = \frac{1 \pm \sqrt{1 - 4(1)(-10)}}{2} = \frac{1 + \sqrt{41}}{2} \approx \frac{1 + 6.403}{2} \approx 3.7\text{ s}\]
+<p><strong>Step 2: Analyze the motion of the balloon during this time interval</strong></p>
+<ul>
+<li>Initial position of the balloon: \(y_{0} = 50\text{ m}\)</li>
+<li>Velocity of the balloon: \(v_b = +5.0\text{ m/s}\) (constant velocity, \(a_b = 0\))</li>
+<li>Displacement of the balloon in \(t \approx 3.7\text{ s}\):</li>
+</ul>
+\[s_b = v_b \cdot t = 5 \times 3.7 = 18.5\text{ m}\]
+<p>Total height of the balloon from the ground when the stone hits:</p>
+\[H = y_{0} + s_b = 50 + 18.5 = 68.5\text{ m}\]
+</div>
+<div class="examplebox">
+<h3>Problem 2: The Descending Elevator</h3>
+<p>
+<strong>Problem 31:</strong> An elevator is descending with uniform acceleration. To measure the acceleration, a person in the elevator drops a coin at the moment the elevator starts. The coin is \(6\text{ ft}\) above the floor of the elevator at the time it is dropped. The person observes that the coin strikes the floor in \(1\text{ second}\). Calculate from these data the acceleration of the elevator.
+</p>
+<h4>How to Solve (Relative Frame Analysis)</h4>
+<p>
+Here, the landing target is the moving floor of the elevator. The absolute displacement of the coin from the ground frame is completely unknown. However, the displacement of the coin <em>relative to the elevator</em> is an immutable geometric invariant equal to the structural clearance inside the cab (\(6\text{ ft}\)). Transforming immediately into the elevator frame eliminates tracking the shifting collision coordinate.
+</p>
+<p>
+<strong>Step 1: Set up the kinematics in the Elevator Frame</strong>
+</p>
+<ul>
+<li>Taking the downward direction as positive (\(+\)).</li>
+<li>Initial relative velocity of the coin: \(u_{\text{rel}} = u_{\text{coin}} - u_{\text{elevator}} = 0\text{ ft/s}\) <span class="highlight">(Both start from rest together)</span></li>
+<li>Relative displacement required to strike the floor: \(s_{\text{rel}} = +6\text{ ft}\)</li>
+<li>Time of flight: \(t = 1\text{ s}\)</li>
+</ul>
+<p><strong>Step 2: Determine relative acceleration</strong></p>
+<p>
+Let the downward acceleration of the elevator relative to the ground be \(a_e\). The absolute downward acceleration of the unconstrained coin is \(g = 32\text{ ft/s}^2\).
+</p>
+\[a_{\text{rel}} = a_{\text{coin}} - a_{\text{elevator}} = g - a_e\]
+<p>Applying the second equation of motion in the relative frame:</p>
+\[s_{\text{rel}} = u_{\text{rel}}t + \frac{1}{2}a_{\text{rel}}t^2\]
+\[6 = 0(1) + \frac{1}{2}(g - a_e)(1)^2\]
+\[12 = 32 - a_e \implies a_e = 32 - 12 = 20\text{ ft/s}^2\]
+</div>
+</section>
+<section>
+<h2>Strategic Breakdown: When to Invoke Relative Motion</h2>
+<p>
+The choice between working in a fixed ground frame or a moving relative frame is governed entirely by which boundary condition is cleanly defined by the problem statement.
+</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>The Balloon Problem (Ground Frame Preferred)</th>
+<th>The Elevator Problem (Relative Frame Preferred)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary Constraint Given</strong></td>
+<td>The final position of the stone is a fixed target on the ground (\(y = 0\)).</td>
+<td>The final position of the coin is determined by its collision with a moving target (the elevator floor).</td>
+</tr>
+<tr>
+<td><strong>Known Metric</strong></td>
+<td><strong>Absolute displacement</strong> (\(s_{\text{ground}} = -50\text{ m}\)) is known explicitly.</td>
+<td><strong>Relative displacement</strong> (\(s_{\text{elevator}} = -6\text{ ft}\)) is known explicitly.</td>
+</tr>
+<tr>
+<td><strong>Ground Frame Penalty</strong></td>
+<td>None. Resolves directly.</td>
+<td>High. Requires solving simultaneous equations for the intersection point of two distinct trajectories: \(s_{\text{coin}}(t) = s_{\text{floor}}(t)\).</td>
+</tr>
+<tr>
+<td><strong>Relative Frame Penalty</strong></td>
+<td>Unnecessary. Transforming the target (the ground) into the balloon frame adds complexity because the ground would "move" downwards.</td>
+<td>None. Eliminates the tracking of the absolute collision coordinate completely.</td>
+</tr>
+</tbody>
+</table>
+<div class="concept-box">
+<strong>Core Heuristic for JEE Compendium:</strong> 
+Always anchor your coordinate system to the reference frame that views the spatial boundary condition (the landing target) as a stationary or constant coordinate. If the landing platform is moving, shift to that platform's frame. If the landing platform is the earth, stay in the ground frame.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
