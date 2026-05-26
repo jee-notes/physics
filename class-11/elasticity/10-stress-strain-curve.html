@@ -1,86 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elasticity | Stress-Strain Curve</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elasticity | Stress-Strain Curve</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Elasticity
-            </a>
-        </nav>
-
-        <h1>Stress-Strain Curve</h1>
-        <p class="subtitle">
-            Mapping the full range of material response from elasticity to fracture.
-        </p>
-
-        <section>
-            <h2>Stress-Strain Curve Analysis</h2>
-            <p>
-                To understand how a material behaves beyond the initial proportionality range, we plot experimental data of stress versus strain (usually for a metal wire). This curve is unique for every material but follows a general pattern for ductile metals.
-            </p>
-            <div class="insightbox">
-                The area under the stress-strain curve represents the work done per unit volume (energy density) on the material.
-            </div>
-        </section>
-
-        <section>
-            <h2>Proportional Limit and Yield Point</h2>
-            <div class="model-box">
-                <h3>1. Proportional Limit (Point P)</h3>
-                <p>Up to this point, stress is directly proportional to strain, and **Hooke's Law** is precisely obeyed. The curve is a straight line starting from the origin.</p>
-            </div>
-            <div class="model-box">
-                <h3>2. Elastic Limit / Yield Point (Point E / Y)</h3>
-                <p>This is the maximum stress a material can withstand and still return to its original dimensions upon removal of the load. Beyond this point, Hooke's Law fails, even if the material is still somewhat elastic.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Plastic Deformation and Permanent Set</h2>
-            <p>
-                If the stress is increased beyond the yield point, the material enters the <strong>Plastic Region</strong>.
-            </p>
-            <div class="concept-box">
-                If the deforming force is removed while the material is in the plastic region, it does <em>not</em> return to its original dimensions. It retains some amount of deformation known as a <strong>Permanent Set</strong> or Residual Strain.
-            </div>
-            <p>
-                In this region, the material flows like a highly viscous liquid, and a small increase in stress results in a very large increase in strain.
-            </p>
-        </section>
-
-        <section>
-            <h2>Breaking Point and Ultimate Strength</h2>
-            <div class="model-box">
-                <h3>1. Ultimate Tensile Strength (Point U)</h3>
-                <p>The maximum stress the material can take before it begins to fail. Beyond this, even if you decrease the load, the wire continues to stretch due to local thinning ("necking").</p>
-            </div>
-            <div class="model-box">
-                <h3>2. Fracture / Breaking Point (Point B)</h3>
-                <p>The point at which the material finally snaps or fractures. The stress at this point is called the Breaking Stress.</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Ductile, Brittle and Elastomers</h2>
-            <p>Materials are classified based on the nature of their stress-strain curve:</p>
-            <ul>
-                <li><strong>Ductile Materials:</strong> Have a large plastic region between the yield point and the breaking point (e.g., Copper, Gold, Iron). They can be drawn into thin wires.</li>
-                <li><strong>Brittle Materials:</strong> Have a very small plastic region; they fracture almost immediately after the elastic limit is reached (e.g., Glass, Cast Iron).</li>
-                <li><strong>Elastomers:</strong> Materials which can be stretched to cause large strains but do not obey Hooke's Law. They return to their original shape but have no well-defined plastic region (e.g., Rubber, Aorta tissue).</li>
-            </ul>
-        </section>
-
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Elasticity
+</a>
+</nav>
+<h1>Stress-Strain Curve</h1>
+<p class="subtitle">
+Mapping the full range of material response from elasticity to fracture.
+</p>
+<section>
+<h2>Stress-Strain Curve Analysis</h2>
+<p>
+To understand how a material behaves beyond the initial proportionality range, we plot experimental data of stress versus strain (usually for a metal wire). This curve is unique for every material but follows a general pattern for ductile metals.
+</p>
+<div class="insightbox">
+The area under the stress-strain curve represents the work done per unit volume (energy density) on the material.
+</div>
+</section>
+<section>
+<h2>Proportional Limit and Yield Point</h2>
+<div class="model-box">
+<h3>1. Proportional Limit (Point P)</h3>
+<p>Up to this point, stress is directly proportional to strain, and **Hooke's Law** is precisely obeyed. The curve is a straight line starting from the origin.</p>
+</div>
+<div class="model-box">
+<h3>2. Elastic Limit / Yield Point (Point E / Y)</h3>
+<p>This is the maximum stress a material can withstand and still return to its original dimensions upon removal of the load. Beyond this point, Hooke's Law fails, even if the material is still somewhat elastic.</p>
+</div>
+</section>
+<section>
+<h2>Plastic Deformation and Permanent Set</h2>
+<p>
+If the stress is increased beyond the yield point, the material enters the <strong>Plastic Region</strong>.
+</p>
+<div class="concept-box">
+If the deforming force is removed while the material is in the plastic region, it does <em>not</em> return to its original dimensions. It retains some amount of deformation known as a <strong>Permanent Set</strong> or Residual Strain.
+</div>
+<p>
+In this region, the material flows like a highly viscous liquid, and a small increase in stress results in a very large increase in strain.
+</p>
+</section>
+<section>
+<h2>Breaking Point and Ultimate Strength</h2>
+<div class="model-box">
+<h3>1. Ultimate Tensile Strength (Point U)</h3>
+<p>The maximum stress the material can take before it begins to fail. Beyond this, even if you decrease the load, the wire continues to stretch due to local thinning ("necking").</p>
+</div>
+<div class="model-box">
+<h3>2. Fracture / Breaking Point (Point B)</h3>
+<p>The point at which the material finally snaps or fractures. The stress at this point is called the Breaking Stress.</p>
+</div>
+</section>
+<section>
+<h2>Ductile, Brittle and Elastomers</h2>
+<p>
+Materials are classified based on the nature of their stress-strain curve:
+</p>
+<ul>
+<li><strong>Ductile Materials:</strong> Have a large plastic region between the yield point and the breaking point (e.g., Copper, Gold, Iron). They can be drawn into thin wires.</li>
+<li><strong>Brittle Materials:</strong> Have a very small plastic region; they fracture almost immediately after the elastic limit is reached (e.g., Glass, Cast Iron). Brittle material is used in crash helmet.</li>
+<li><strong>Elastomers:</strong> Materials which can be stretched to cause large strains but do not obey Hooke's Law. They return to their original shape but have no well-defined plastic region (e.g., Rubber, Aorta tissue).</li>
+</ul>
+<p>
+Elastomers have a different mechanism responsible for their elastic behavior driven by entropic changes. If an elastomer is stretched and returned back, it will become hot. this is because, it takes more energy by external agent and less energy to return back. The deformation is not only energy change. This energy is dissipated as heat. Elastomers  like rubber are used in shock absorbing equipment to dissipate heat. 
+</p>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
-    </div>
+</div>
 </body>
 </html>
