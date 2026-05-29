@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projectile Motion Equations | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 2D
+</a>
+</nav>
+<h1>Projectile Motion Constant Acceleration</h1>
+<p class="subtitle">
+2 D constant acceleration motion.
+</p>
+<section>
+<h2>Constant Acceleration Motion</h2>
+<p>
+In Motion in 1D, we studied the five equations of motion involving displacement (\(s\)), initial velocity (\(u\)), final velocity (\(v\)), acceleration (\(a\)) and time (\(t\)).
+</p>
+<p>
+These equations were developed for a very specific mathematical situation: <strong>motion under constant acceleration.</strong>
+</p>
+<p>
+Projectile motion is nothing but motion under free fall. Since the gravitational acceleration remains constant and directed vertically downward, projectile motion is also a special case of constant acceleration motion.
+</p>
+<p>
+Therefore, the equations of motion remain valid for projectile motion as well.
+</p>
+<p>
+However, there is an important mathematical difference. In one-dimensional motion, quantities such as displacement, velocity and acceleration can be represented using signed scalars. In projectile motion, the motion occurs simultaneously in horizontal and vertical directions.
+</p>
+<p>
+As a result, displacement, velocity and acceleration must now be treated as vectors.
+</p>
+<div class="insightbox">
+Projectile motion is not a new mathematical theory.<br>
+It is the same constant acceleration model studied in Motion in 1D, represented in a higher-dimensional vector framework.
+</div>
+<p>
+Thus, the objective of this section is not to learn a new set of equations, but to learn how the familiar one-dimensional equations transform into vector form while describing the same physical situation.
+</p>
+</section>
+<section>
+<h2>Vector Form of Equations of Motion</h2>
+<p>
+The equations of motion are fundamentally vector equations.
+</p>
+<p>
+In Motion in 1D, the vector nature remains hidden because all motion occurs along a single straight line. Since every vector is constrained to the same direction, the vector notation can be replaced by algebraic signs.
+</p>
+<p>
+Projectile motion removes this geometric restriction. The motion now occurs simultaneously in horizontal and vertical directions, making the vector nature of the equations explicit.
+</p>
+<p>
+The five equations of motion therefore become:
+</p>
+\[
+\vec{s} = \vec{u}t + \frac{1}{2}\vec{a}t^2
+\]
+\[
+\vec{s} = \vec{v}t - \frac{1}{2}\vec{a}t^2
+\]
+\[
+\vec{v} = \vec{u} + \vec{a}t
+\]
+\[
+\vec{s} = \left(\frac{\vec{u}+\vec{v}}{2}\right)t
+\]
+\[
+\vec{v}\cdot\vec{v} = \vec{u}\cdot\vec{u} + 2\vec{a}\cdot\vec{s}
+\]
+<p>
+Notice that the equations themselves remain unchanged.
+</p>
+<p>
+Only the mathematical representation changes from scalar quantities to vectors.
+</p>
+<div class="insightbox">
+Motion in 1D and projectile motion are governed by the same constant-acceleration mathematics.<br>
+The difference is not in the physics.<br>
+The difference is only in the geometric representation.
+</div>
+<p>
+This idea appears repeatedly throughout physics. The mathematical structure remains the same while the representation becomes more general.
+</p>
+</section>
+<section>
+<h2>Example Use of the Vector Framework</h2>
+<p>
+At first glance, the vector form of the equations may appear unnecessarily complicated.
+</p>
+<p>
+In practice, however, vector equations often reveal symmetries and relationships that are difficult to see through component-based calculations alone.
+</p>
+<p>
+The following example illustrates both approaches.
+</p>
+<div class="examplebox">
+<h3>Illustration 1</h3>
+<p>
+A projectile is thrown from the ground with a speed of \(50\text{ m/s}\) at an angle of \(57^\circ\) with the horizontal.
+</p>
+<p>
+Find the time instants at which its velocity makes an angle of \(45^\circ\) with the horizontal.
+</p>
+<p>
+Take \(g = 10\text{ m/s}^2\).
+</p>
+<h3>Structural Observation</h3>
+<p>
+We are not asked about the trajectory of the projectile.
+</p>
+<p>
+We are asked about the orientation of the velocity vector.
+</p>
+<p>
+Since projectile motion is symmetric about its highest point, a particular velocity orientation may occur more than once during the flight.
+</p>
+<div class="insightbox">
+A common examination trap is to find only one time coordinate.<br>
+Whenever a projectile is launched and lands at the same level, always check whether symmetry produces multiple physical solutions.
+</div>
+<p>
+We first resolve the initial velocity into rectangular components:
+</p>
+\[
+u_x = 50\cos57^\circ = 30\text{ m/s}
+\]
+\[
+u_y = 50\sin57^\circ = 40\text{ m/s}
+\]
+<p>
+Since horizontal acceleration is zero:
+</p>
+\[
+v_x = 30\text{ m/s}
+\]
+<p>
+The vertical velocity evolves according to:
+</p>
+\[
+v_y = 40 - 10t
+\]
+<p>
+The inclination of the velocity vector is determined by:
+</p>
+\[
+\tan\alpha = \frac{v_y}{v_x}
+\]
+<h3>Ascending Phase</h3>
+<p>
+During ascent, the velocity vector points above the horizontal, so:
+</p>
+\[
+\alpha = 45^\circ
+\]
+\[
+1 = \frac{40-10t}{30}
+\]
+\[
+t=1\text{ s}
+\]
+<h3>Descending Phase</h3>
+<p>
+During descent, the velocity vector points below the horizontal, so:
+</p>
+\[
+\alpha=-45^\circ
+\]
+\[
+-1 = \frac{40-10t}{30}
+\]
+\[
+t=7\text{ s}
+\]
+<p>
+Therefore:
+</p>
+\[
+\boxed{t=1\text{ s},\;7\text{ s}}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
