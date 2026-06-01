@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calorimetry | Heat</title>
+<title>Temperature vs Heat | Calorimetry</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,66 +14,271 @@
 <span>&larr;</span> Back to Calorimetry
 </a>
 </nav>
-<h1>Heat</h1>
-<p class="subtitle">The macroscopic manifestation of microscopic energy transfer.</p>
+<h1>Temperature vs Heat</h1>
+<p class="subtitle">Distinguishing between the state of a system and the process of energy transfer.</p>
+<section>
+<h2>Introduction</h2>
+<p>
+In everyday language, the words <strong>temperature</strong> and <strong>heat</strong> are often used interchangeably.
+</p>
+<p>
+We casually say that a room "contains a lot of heat" or that a hot object "has more heat" than a cold one.
+</p>
+<p>
+In Physics, however, temperature and heat represent fundamentally different concepts. Confusing the two leads to serious conceptual errors throughout Thermodynamics and Calorimetry.
+</p>
+<p>
+To build a rigorous understanding of thermal physics, we must distinguish between a property that describes the state of a system and a quantity that describes energy transfer between systems.
+</p>
+<p>
+<strong>Temperature describes the thermal state of a system, whereas heat describes the transfer of energy between systems.</strong>
+</p>
+<div class="insightbox">
+If you say "Feeling good today. Will study more."<br>
+"Feeling good" describes the current state of your mind - similar to how temperature describes the thermal state of a system.<br>
+"Will study more" describes behaviour arising from that state - similar to how heat transfer arises because of the thermal state of interacting systems.
+</div>
+<p>
+Although temperature and heat are closely related, they are not the same physical quantity.
+</p>
+<p>
+To understand their relationship, we must first understand them individually.
+</p>
+<div class="concept-box">
+Temperature is a <strong>state variable</strong>.<br>
+Heat is a <strong>transfer quantity</strong>.<br>
+The distinction between these two ideas forms the foundation of Thermodynamics and Calorimetry.
+</div>
+</section>
+<section>
+<h2>What is Temperature?</h2>
+<p>
+In Mechanics, we study the <strong>mechanical state</strong> of a body. A body may be at rest or in motion. Quantities such as position and velocity help describe its state at a given instant.
+</p>
+<p>
+Similarly, in Thermodynamics, we study the <strong>thermodynamic state</strong> of a system. When a system is brought into thermal contact with another system, its behaviour depends on its thermal state.
+</p>
+<p>
+The quantity that describes this thermal state is called <strong>temperature</strong>.
+</p>
+<p>
+Temperature is a state variable that describes the thermal condition of a system.
+</p>
+<p>
+Just as velocity helps us characterize the mechanical state of a moving body, temperature helps us characterize the thermal state of a system.
+</p>
+<p>
+Temperature determines the direction of thermal interaction. When two systems at different temperatures are brought into thermal contact, heat flows from the system at a higher temperature to the system at a lower temperature.
+</p>
+<p>
+We say that the system with higher temperature is hotter and the system with lower temperature is cooler. 
+</p>
+<p>
+When two systems have the same temperature, no net heat is exchanged between them upon thermal contact. Such systems are said to be in <strong>thermal equilibrium</strong>.
+</p>
+<div class="insightbox">
+Temperature does not measure how much heat a system contains.<br>
+Instead, temperature determines the tendency of heat transfer between systems.
+</div>
+<p>
+Temperature is an <strong>intensive property</strong>, meaning its value does not depend on the amount of matter present.
+</p>
+<p>
+For example, if a uniform copper block at \(100^\circ\text{C}\) is cut into two equal pieces, each piece still remains at \(100^\circ\text{C}\).
+</p>
+<ul class="model-box">
+<li><strong>SI Unit:</strong> Kelvin (K)</li>
+<li><strong>Common Units:</strong> Celsius (\(^\circ\text{C}\)), Fahrenheit (\(^\circ\text{F}\))</li>
+<li><strong>Dimension:</strong> [K]</li>
+</ul>
+</section>
+<section>
+<h2>Temperature as an Emergent Statistical Quantity</h2>
+<p>
+Temperature is a property of matter, similar to mass and electric charge. However, unlike mass (\(m\)) and electric charge (\(q\)), temperature is not an intrinsic property of an individual particle.
+</p>
+<p>
+A single isolated molecule possesses mass and electric charge, but it does not meaningfully possess a temperature. The concept of temperature only emerges when we consider a very large collection of particles interacting with one another.
+</p>
+<div class="insightbox">
+Mass and charge belong to individual particles.<br>
+Temperature belongs to a statistical ensemble of particles.
+</div>
+<p>
+Because temperature emerges from the collective behaviour of an enormous number of molecules, it can be understood at two different levels of description.
+</p>
+<ul class="model-box">
+<li><strong>Macroscopic Level:</strong> Temperature is treated as a measurable state variable that describes the thermal condition of an entire system.</li>
+<li><strong>Microscopic Level:</strong> Temperature is interpreted in terms of the random motion and energy distribution of the molecules constituting the system.</li>
+</ul>
+<p>
+The macroscopic viewpoint forms the basis of Thermodynamics and Calorimetry. At this level, we are not concerned with the motion of individual molecules. Instead, temperature is measured through observable thermometric properties such as thermal expansion, electrical resistance, pressure variation and similar bulk effects.
+</p>
+<div class="insightbox">
+The temperature of a body can be measured without observing a single molecule inside it.
+</div>
+<p>
+However, matter is ultimately composed of atoms and molecules. This naturally raises an important question:
+</p>
+<p>
+<strong>What microscopic behaviour of molecules gives rise to the macroscopic quantity called temperature?</strong>
+</p>
+<p>
+The answer is provided by the Kinetic Theory of Gases. From a microscopic perspective, temperature is related to the random motion of molecules. For an ideal gas, the average translational kinetic energy of each molecule is directly proportional to temperature.
+</p>
+\[
+E_{avg}=\frac{3}{2}k_B T
+\]
+<p>
+Thus, Thermodynamics and Kinetic Theory describe the same physical quantity from two different perspectives.
+</p>
+<div class="concept-box">
+Temperature is unique because it is an emergent statistical property. This allows it to be described both macroscopically through observable bulk behaviour and microscopically through molecular motion.
+</div>
+</section>
 <section>
 <h2>What is Heat?</h2>
 <p>
-The  most important question of this chapter to understand anything further. What is heat? So far we have learned that heat is a form of energy. Just like light, sound, kinetic energy etc. And we know that energy is capacity to do work. This just means that Heat is some kind of capacity to do work - in the sense that - we can extract work from heat. Work is very specifically defined as \( \vec{F} \cdot d\vec{s} \).
-</p>
-<ul>
-<li><strong>SI Unit:</strong> Joule (\( \text{J} \))</li>
-<li><strong>Common Unit:</strong> Calorie (\( \text{cal} \)), where \( 1 \text{ cal} = 4.184 \text{ J} \)</li>
-<li><strong>Dimensional Formula:</strong> \( [Q] = \text{M}^1 \text{L}^2 \text{T}^{-2} \)</li>
-</ul>
-</section>
-
-<section>
-<h2>Heat as Energy in Transit</h2>
-<div class="model-box">
-<strong>Definition:</strong> <em>Heat (\(Q\))</em> is the form of energy that is transferred between two systems (or a system and its surroundings) by virtue of a temperature difference between them.
-</div>
-<p>
-In the language of physics, the word "heat" is used very precisely. It is not an intrinsic property of a body. When you touch a hot coffee cup, the kinetic energy of the rapidly vibrating molecules in the cup is transferred to the slower-moving molecules in your hand via collisions. The energy that is flowing during this exact moment of interaction is heat.
-</p>
-<ul>
-<li><strong>SI Unit:</strong> Joule (\( \text{J} \))</li>
-<li><strong>Common Unit:</strong> Calorie (\( \text{cal} \)), where \( 1 \text{ cal} = 4.184 \text{ J} \)</li>
-<li><strong>Dimensional Formula:</strong> \( [Q] = \text{M}^1 \text{L}^2 \text{T}^{-2} \)</li>
-</ul>
-</section>
-
-<section>
-<h2>Spontaneous Flow</h2>
-<p>
-Without the intervention of external work (like a refrigerator or a heat pump), heat will only flow in one specified direction.
-</p>
-<div class="concept-box">
-Heat naturally and spontaneously flows from a body at a higher temperature to a body at a lower temperature.
-</div>
-<p>
-This unidirectional flow continues until both bodies reach the same temperature. Once thermal equilibrium is achieved, the net transfer of heat between them drops strictly to zero.
-</p>
-</section>
-
-<section>
-<h2>Why Heat is Not a Property</h2>
-<p>
-A pervasive misconception in thermodynamics is treating heat like a fluid stored inside an object, a leftover idea from the obsolete "caloric theory." 
+Heat is not a property stored inside a body. Heat is not a substance, nor is it a fluid stored inside the coordinates of an object. The absolute rejection of the obsolete "caloric theory" — which viewed heat as a weightless fluid trapped inside matter — is a vital prerequisite for mastering calorimetry.
 </p>
 <p>
-An object contains <strong>internal energy</strong> (the total microscopic kinetic and potential energy of its molecules), but it does <em>not</em> contain "heat." Heat only exists as a transaction. Just as "work" is energy transferred by macroscopic forces and is not "possessed" by an object, "heat" is energy transferred by microscopic temperature gradients.
+Heat refers exclusively to energy being transferred from one system to another because of a temperature difference. Heat is what gets exchanged between systems involved in a thermodynamic process.
+</p>
+<p>
+<strong>Heat is the energy transferred across a system boundary solely due to a temperature difference between the system and its surroundings.</strong>
+</p>
+<p>
+Unlike temperature, heat is not a state variable. It is a <strong>path-dependent quantity</strong> whose value depends on the specific process through which a system changes state.
+</p>
+<p>
+An object cannot "contain heat". Once energy enters a system, it becomes part of the system's <strong>internal energy</strong>. Therefore, phrases such as "heat stored inside a body" or "the heat of a body" are physically inaccurate.
+</p>
+<p>
+An important consequence of this definition is that heat cannot be measured directly.
+</p>
+<p>
+Temperature can be measured directly using a thermometer. Heat, however, is not a property that can be observed or measured independently.
+</p>
+<p>
+Whenever we speak of heat transfer, its value is inferred from observable effects such as temperature changes, changes of state, or work done by a system.
 </p>
 <div class="insightbox">
-You cannot say an object "has a lot of heat." You can only say that an object "transferred a lot of heat" or that it "possesses a high internal energy." Heat is the process, not the possession.
+A thermometer measures temperature.<br>
+A calorimeter does not directly measure heat.<br>
+Instead, heat transfer is calculated from the observed thermal changes of a system.
+</div>
+<p>
+This is similar to Newton's Second Law (\(F = ma\)). Acceleration \(a\) can be determined through observation, while force \(F\) is inferred using a physical model.
+</p>
+<p>
+Similarly, temperature is measured directly, while heat transfer is inferred through thermodynamic models.
+</p>
+<ul class="model-box">
+<li><strong>SI Unit:</strong> Joule (J)</li>
+<li><strong>Common Unit:</strong> Calorie (cal)</li>
+<li><strong>Conversion:</strong> \(1 \text{ cal} = 4.18 \text{ J}\)</li>
+<li><strong>Dimension:</strong> \(\text{[ML}^2 \text{T}^{-2}\text{]}\)</li>
+</ul>
+</section>
+<section>
+<h2>Thermal Equilibrium, Heat Flow and the Zeroth Law</h2>
+<p>
+Temperature and heat are connected through the phenomenon of thermal equilibrium.
+</p>
+<p>
+When two systems at different temperatures are brought into thermal contact, energy is transferred between them.
+</p>
+<p>
+<strong>Heat spontaneously flows from a region of higher temperature to a region of lower temperature.</strong>
+</p>
+<p>
+As heat is exchanged, the temperatures of the interacting systems gradually approach one another. The hotter system gets cooler and the cooler system gets hotter.
+</p>
+<p>
+This process continues until both systems attain the same temperature. At this stage, no net heat transfer occurs between the systems. They are said to be in <strong>thermal equilibrium</strong>.
+</p>
+<p>
+Thus, we can say that, Temperature determines the direction of heat flow. Heat flows from higher temperature to lower temperature until thermal equilibrium is established.
+</p>
+<div class="insightbox">
+The idea of thermal equilibrium originates from a simple everyday observation.<br>
+When a hotter body is placed in thermal contact with a cooler body, the hotter body becomes cooler while the cooler body becomes hotter.<br>
+The temperature difference between them gradually decreases until no further thermal change is observed.<br>
+This observed tendency of systems to approach a common thermal state motivates the concept of thermal equilibrium.<br>
+If heat flowed from the cooler body to the hotter body, the temperature difference would increase rather than decrease.<br>
+The systems would move away from thermal equilibrium instead of approaching it.
+</div>
+<p>
+The concept of thermal equilibrium is so fundamental that it also forms the basis of the Zeroth Law of Thermodynamics.
+</p>
+<p>
+<strong>Zeroth Law of Thermodynamics:</strong> If system A is in thermal equilibrium with system C, and system B is also in thermal equilibrium with system C, then systems A and B are in thermal equilibrium with each other.
+</p>
+<p>
+The Zeroth Law establishes temperature as a universal parameter describing thermal state. Because all systems in thermal equilibrium share the same temperature, different thermometric properties can be related to a common variable \(T\).
+</p>
+<div class="insightbox">
+Physical quantities can now be thermally indexed.<br>
+For example, electrical resistance may be written as \(R(T)\), while the length of a liquid column may be written as \(L(T)\).<br>
+Different physical properties may vary differently with temperature, but all of them refer to the same thermal state variable \(T\).
+</div>
+<p>
+This principle that "thermal equilibrium" is a transitive mathematical relation, forms the foundation of thermometry and explains why thermometers can be used to measure temperature.
+</p>
+<div class="insightbox">
+Not all relations are transitive. For example:<br><br>
+A is a friend of B.<br>
+B is a friend of C.<br>
+This does not imply that A is a friend of C.<br><br>
+In contrast, thermal equilibrium is transitive:<br>
+If A is in thermal equilibrium with B, and B is in thermal equilibrium with C, then A and C must also be in thermal equilibrium.
 </div>
 </section>
-
+<section>
+<h2>Physical to Model</h2>
+<p>
+In Mechanics, we studied particles, rigid bodies and other physical entities that could move and interact through forces.
+</p>
+<p>
+In Thermodynamics, we are interested in entities that can exchange heat and energy with their surroundings.
+</p>
+<p>
+To study such interactions, Thermodynamics introduces a new modelling concept called a <strong>system</strong>.
+</p>
+<p>
+A <strong>thermodynamic system</strong> is simply an aggregate of matter (and energy) enclosed within a chosen boundary, whose interactions with the surroundings are studied through the principles of Thermodynamics.
+</p>
+<p>
+The boundary may be real (physically) or imaginary. It is introduced to distinguish the part of the universe under study from everything else.
+</p>
+<p>
+Everything outside the boundary is called the <strong>surroundings</strong>.
+</p>
+<p>
+Consider a cup of hot tea placed in a room.
+</p>
+<p>
+If we choose the tea as our system, then the cup, air and the rest of the room become its surroundings.
+</p>
+<p>
+The tea may exchange heat with its surroundings through the boundary separating them.
+</p>
+<div class="insightbox">
+The concept of a system is a modelling choice.<br>
+Different boundaries lead to different systems.<br>
+For example, we may choose only the tea as the system, or the tea and cup together as the system.
+</div>
+<div class="insightbox">
+Higher temperature does not imply greater internal energy.<br>
+For example, a cup of hot water poured into the ocean loses heat to the ocean.<br>
+However, the ocean already possesses far more internal energy than the cup of water.<br>
+Temperature describes thermal state, whereas internal energy depends on both temperature and the amount of matter present.
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
 </div>
-
 </body>
 </html>

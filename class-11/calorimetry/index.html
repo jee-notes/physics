@@ -1,55 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorimetry | JEE Physics Notes</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorimetry | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav class="top-nav">
-        <a href="../../index.html" class="back-btn">
-            <span>&larr;</span> Back to Syllabus
-        </a>
-    </nav>
-
-    <h1>Calorimetry</h1>
-    <p class="subtitle">Heat transfer analyzed through macroscopic energy conservation.</p>
-
-    <section>
-        <h2>Conceptual Overview</h2>
-        <p>
-            The study of thermodynamics is fundamentally concerned with energy transfer between macroscopic systems. Within this broad domain, <strong>Calorimetry</strong> focuses specifically on the measurement and calculation of heat exchange. 
-        </p>
-        <p>
-            When two systems at different temperatures are placed in thermal contact, they interact. Energy naturally and spontaneously flows from the system at a higher temperature to the system at a lower temperature until thermal equilibrium is established. This energy in transit is what physicist refer to as <em>heat</em>.
-        </p>
-        <p>
-            Calorimetry is built upon a single, powerful pillar: the <strong>Conservation of Energy</strong>. In an isolated system where no heat leaks to the surroundings, the total heat lost by hot bodies must be exactly equal to the total heat gained by cold bodies. This macroscopic balance equation allows us to predict final equilibrium temperatures, identify unknown materials by calculating their specific heat capacities, and quantify the unseen energy involved in phase transitions.
-        </p>
-    </section>
-
-    <section>
-        <h2>Chapter Structure</h2>
-        <div class="chapter-list">
-            <a href="./01-heat.html">1. Heat</a>
-            <a href="./02-specific-heat-capacity.html">2. Specific Heat Capacity</a>
-            <a href="./03-principle-of-calorimetry.html">3. Principle of Calorimetry</a>
-            <a href="./04-latent-heat.html">4. Change of State & Latent Heat</a>
-            <a href="./05-heating-curve.html">5. Heating Curve</a>
-            <a href="./06-mixtures.html">6. Calorimetry of Mixtures</a>
-            <a href="./07-calorimeter-water-equivalent.html">7. Calorimeter & Water Equivalent</a>
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Calorimetry</h1>
+<p class="subtitle">
+Quantifying thermal energy exchange through conservation of energy.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+<strong>Thermal Physics</strong> or <strong>Heat</strong> is a new section in physics and it introduces a new framework for studying physical systems that is different from Classical Mechanics studied so far.
+</p>
+<p>
+Although the physical quantities used here are different from those used in mechanics, many fundamental ideas remain unchanged.
+</p>
+<p>
+One such idea is the <strong>Conservation of Energy</strong>. In mechanics, we first encountered energy as an alternative approach to studying motion. After learning forces and Newton's Laws, we developed the Work-Energy Theorem and learned that energy often provides a simpler description of physical phenomena than force analysis.
+</p>
+<p>
+In Thermal Physics, however, this energy based approach is the primary and absolute paradigm.
+</p>
+<p>
+Just as mechanics studies how systems interact through forces and exchange momentum and energy, thermal physics studies how systems interact through temperature differences and exchange thermal energy.
+</p>
+<p>
+The broader branch of physics that studies thermal systems and energy exchange is called <strong>Thermodynamics</strong>.
+</p>
+<div class="concept-box">
+As established by Noether's Theorem, the universal principle of energy conservation arises directly from time-translation symmetry.<br>
+Because thermal systems exist within the time domain, they are strictly bound by this conservation law.<br>
+Just as Classical Mechanics investigates how macroscopic bodies interact via forces to exchange mechanical energy and momentum, <strong>Thermodynamics</strong> investigates how macroscopic systems exchange energy through thermal processes.<br>
+Because absolute internal energy cannot be directly measured, we focus entirely on tracking and quantifying the changes in energy across system boundaries.
 </div>
+<p>
+Thermodynamics is a vast subject involving solids, liquids and gases. It studies temperature, heat, internal energy, work and the conditions under which energy can be transferred between systems.
+</p>
+<p>
+Within this broad framework, <strong>Calorimetry</strong> focuses on a much narrower question:
+</p>
+<div class="concept-box">
+How much thermal energy is exchanged when two systems interact?
+</div>
+<p>
+The entire chapter is devoted to answering this question using the principle of conservation of energy.
+</p>
+<p>
+For simplicity, calorimetry primarily deals with solids and liquids. Gases are usually excluded because thermal interactions in gases are often accompanied by expansion or compression, making mechanical work an equally important part of the energy exchange.
+</p>
+<div class="insightbox">
+To answer questions about thermal energy exchange, we must first distinguish between three quantities that are often confused in everyday language:
+<strong>Temperature, Heat and Internal Energy.</strong>
+</div>
+</section>
+<section>
+<h2>Understanding the Chapter Ordering</h2>
+<p>
+The Heat section is often a source of confusion because thermal physics is distributed across multiple chapters in NCERT rather than being presented as a single continuous subject.
+</p>
+<p>
+Concepts related to Heat, Temperature, Thermodynamics and Kinetic Theory are introduced separately even though they are fundamentally connected. NCERT Structure is as follows:
+</p>
+<ul class="model-box">
+<li><strong>Thermal Properties of Matter: </strong>Just a dump of many sub-topics like Heat vs Temperature, Thermometry, Calorimetry, Thermal Expansion, Heat Transfer Mechanisms etc.</li>
+<li><strong>Thermodynamics: </strong>Mainly Thermodynamics of gases and contains the three laws of thermodynamics (Zeroth, First and Second)</li>
+<li><strong>Kinetic Theory of Gases: </strong>Links Macroscopic Thermal Properties of gases to microscopic Kinetic Energy of composite particles.</li>
+</ul>
+<p>
+This separation can make it appear as though calorimetry and thermodynamics are unrelated topics. In reality, calorimetry itself is a thermodynamic application based on the conservation of energy.
+</p>
+<p>
+Similarly, the Zeroth Law of Thermodynamics is fundamentally concerned with the concepts of temperature, thermal equilibrium and heat flow. These ideas are so basic that they naturally belong at the beginning of the Heat section rather than later in the Thermodynamics chapter.
+</p>
+<p>
+For conceptual clarity, we follow the following progression:
+</p>
+<ol class="model-box">
+<li><strong>Calorimetry:</strong> The thermodynamics of solids and liquids. We begin here to firmly establish the distinction between Temperature (a state variable) and Heat (a path function), anchored by the Zeroth Law of Thermodynamics.</li>
+<li><strong>Thermal Expansion:</strong> A detailed study of how temperature changes alter the macroscopic dimensions of matter. This provides the physical foundation for understanding thermometric properties and calibration.</li>
+<li><strong>Heat Transfer Mechanisms:</strong> The kinetic processes (Conduction, Convection, and Radiation) through which thermal energy is transported down a temperature gradient across space.</li>
+<li><strong>Gaseous State:</strong> The macroscopic description of compressible fluids, defining state variables (\(P\), \(V\), \(T\)) and verifying the Ideal Gas Equation (\(PV = nRT\)) as a prelude to gas thermodynamics.</li>
+<li><strong>Thermodynamics:</strong> Thermal Energy exchange involving gases. Evaluating Thermodynamic processes, work done, the First and Second Laws, heat engines, and Carnot cycles..</li>
+<li><strong>Kinetic Theory of Gases:</strong> Connecting macroscopic parameters to microscopic molecular dynamics, defining degrees of freedom, and deriving process-dependent molar heat capacities.</li>
+</ol>
+<div class="concept-box">
+Calorimetry may appear before Thermodynamics in the syllabus, but conceptually it is simply the thermodynamics of solids and liquids or the First Law applied to incompressible states (\( \Delta V \approx 0 \)).<br><br>
+Similarly, Zeroth Law of Thermodynamics is fundamentally about how Heat and Temperature are different. It is the logical prerequisite for defining temperature and validating thermometry, making it impossible to separate from the very beginning of the topic.
+</div>
+</section>
+<section>
+<h2>The Calorimetry Model</h2>
+<p>
+Before studying thermal energy exchange, we make an important modelling assumption.
+</p>
+<div class="insightbox">
+<strong>Calorimetry Assumption:</strong><br>
+Every system is assumed to remain in internal thermal equilibrium.<br>
+Internal thermal equilibrium is just another way of saying - at any instant, the entire body involved in heat exchange is at a single temperature value.
+</div>
+<p>
+For example, when a container of water is heated, we assume that the temperature of the water remains uniform throughout the entire volume of water in the container.
+</p>
+<p>
+In reality, different regions may temporarily have different temperatures. Describing such situations requires the study of heat transfer mechanisms such as conduction, convection and radiation.
+</p>
+<p>
+Calorimetry ignores these internal temperature variations and treats each body as a single thermal system characterized by one temperature.
+</p>
+</section>
+<section>
+<h2>The Central Idea of Calorimetry</h2>
+<p>
+When two macroscopic bodies possessing different initial temperatures are placed in thermal contact, energy spontaneously transfers from the higher-temperature system to the lower-temperature system.
+</p>
+<p>
+This specific microscopic kinetic energy exchange, occurring across the boundary solely due to a temperature gradient (\(\Delta T \neq 0\)), is defined as <strong>heat (\(Q\))</strong>.
+</p>
+<p>
+This flux continues until the driving force drops to zero, establishing a state of thermal equilibrium. Because the calorimetry apparatus is modeled as an adiabatically isolated system, it exchanges no energy or mass with the external environment.
+</p>
+<div class="concept-box">
+<strong>Conservation of Total Energy (\( \Delta U_{\text{isolated}} = 0\)):</strong><br>
+In an isolated system, the total internal energy remains constant. Therefore, the heat lost by hotter subsystems must precisely equal the heat gained by colder subsystems:
+\[
+Q_{\text{gained}} = Q_{\text{lost}}
+\]
+</div>
+<p>
+Every calculation in this chapter—whether determining an equilibrium temperature, evaluating specific heat capacity, or analyzing a multi-phase mixture—is simply a specific application of this fundamental conservation law.
+</p>
+<p>
+This principle also illustrates an important aspect of scientific modelling: the distinction between quantities that are directly measured and quantities that are inferred.
+</p>
+<p>
+For example, in Mechanics, acceleration can be determined from observations of position and time. Using Newton's Second Law (\(F = ma\)), we then infer the force acting on the system.
+</p>
+<p>
+Similarly, in Calorimetry, temperature can be measured directly using a thermometer. Heat, however, cannot be measured directly. Instead, heat transfer is inferred from observable quantities such as temperature change, mass and specific heat capacity through relations developed in this chapter.
+</p>
+<div class="insightbox">
+Physics often proceeds by measuring a few observable quantities and then using models to infer quantities that cannot be directly observed. Calorimetry is one such example.
+</div>
+<p>
+TODO: Add discussion in Physical World → Mathematical Modelling.
 
+Example:
+A cricket team's management must select the playing XI for the next match.
+
+The quantity of interest is "selectability", but this cannot be measured directly.
+
+Instead, observable quantities such as runs scored, strike rate, batting average, fitness and recent performance are measured.
+
+A mathematical model combines these observables to infer a selectability score.
+
+Similarly, in Physics, many important quantities such as Force, Heat, Electric Field and Internal Energy are not directly measured. They are inferred using mathematical models built from observable quantities.
+</p>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-heat.html">1. Heat vs Temperature</a>
+<a href="./02-specific-heat-capacity.html">2. Specific Heat Capacity</a>
+<a href="./03-principle-of-calorimetry.html">3. Principle of Calorimetry</a>
+<a href="./04-latent-heat.html">4. Change of State & Latent Heat</a>
+<a href="./05-heating-curve.html">5. Heating Curve</a>
+<a href="./06-mixtures.html">6. Calorimetry of Mixtures</a>
+<a href="./07-calorimeter-water-equivalent.html">7. Calorimeter & Water Equivalent</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
