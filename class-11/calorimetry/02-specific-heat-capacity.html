@@ -1,91 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorimetry | Specific Heat Capacity</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specific Heat Capacity | Calorimetry</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav class="top-nav">
-        <a href="./index.html" class="back-btn">
-            <span>&larr;</span> Back to Calorimetry
-        </a>
-    </nav>
-
-    <h1>Specific Heat Capacity</h1>
-    <p class="subtitle">Quantifying a material's thermal inertia.</p>
-
-    <section>
-        <h2>Definition of Specific Heat Capacity</h2>
-        <p>
-            Different materials respond differently when heat is supplied to them. Pumping identical amounts of heat into \(1\text{ kg}\) of water and \(1\text{ kg}\) of copper will result in vastly different temperature changes. The copper will become dangerously hot, while the water will barely warm up.
-        </p>
-        <div class="model-box">
-            <strong>Specific Heat Capacity (\(c\))</strong>: The quantity of heat required to raise the temperature of a unit mass of a substance by \(1 \text{ K}\) (or \(1^\circ\text{C}\)).
-        </div>
-    </section>
-
-    <section>
-        <h2>Formula and Variables</h2>
-        <p>
-            The fundamental relation connecting heat transfer, mass, temperature change, and specific heat capacity is:
-        </p>
-        <div class="math-block">
-            \[
-            Q = m \cdot c \cdot \Delta T
-            \]
-        </div>
-        <ul>
-            <li><strong>Variables:</strong>
-                <ul>
-                    <li>\( Q \): Amount of heat transferred (Joules, \( \text{J} \)). Positive if heat is absorbed, negative if released.</li>
-                    <li>\( m \): Mass of the substance (Kilograms, \( \text{kg} \)).</li>
-                    <li>\( c \): Specific heat capacity of the material.</li>
-                    <li>\( \Delta T \): Change in temperature (\( T_{\text{final}} - T_{\text{initial}} \)). Can be evaluated in Kelvin (\( \text{K} \)) or degrees Celsius (\( ^\circ\text{C} \)) since \(\Delta T\) is identical in both scales.</li>
-                </ul>
-            </li>
-            <li><strong>SI Unit of \(c\):</strong> \( \text{J} \cdot \text{kg}^{-1} \cdot \text{K}^{-1} \)</li>
-            <li><strong>Dimensional Formula of \(c\):</strong> \( [c] = \text{M}^0 \text{L}^2 \text{T}^{-2} \text{K}^{-1} \)</li>
-        </ul>
-        <div class="insightbox">
-            You may also encounter <strong>Molar Heat Capacity (\(C\))</strong>. This is the heat required to raise the temperature of one <em>mole</em> of the substance by \(1 \text{ K}\). The formula modifies to \(Q = n \cdot C \cdot \Delta T\), where \(n\) is the number of moles.
-        </div>
-    </section>
-
-    <section>
-        <h2>Depending Factors (Material and State)</h2>
-        <p>
-            Specific heat capacity is fundamentally an intensive property — it characterizes the substance itself, not how much of it you have. However, it is not an absolute constant. 
-        </p>
-        <ul>
-            <li><strong>Nature of the Material:</strong> It heavily depends on the molecular structure and degrees of freedom. Liquid water has \( c \approx 4184 \text{ J/(kg}\cdot\text{K)} \), while iron is around \( 450 \text{ J/(kg}\cdot\text{K)} \).</li>
-            <li><strong>Physical State (Phase):</strong> The same chemical compound will have entirely different specific heats in solid, liquid, or gas phases. For example, the specific heat of ice (\( \approx 2100 \text{ J/(kg}\cdot\text{K)} \)) is roughly half that of liquid water.</li>
-            <li><strong>Temperature:</strong> Over large temperature ranges, \(c\) actually varies with temperature. However, for most introductory JEE computations, it is treated as a constant over narrow temperature bands.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Thermal Inertia</h2>
-        <p>
-            Specific heat capacity represents a material's "thermal inertia" — its reluctance or resistance to changing temperature when energy is added or removed.
-        </p>
-        <div class="concept-box">
-            A large specific heat capacity indicates significant thermal inertia. A substance like water can absorb massive amounts of heat energy with only a minor rise in temperature.
-        </div>
-        <p>
-            This high specific heat is why coastal climates are so moderate. The oceans act as massive thermal reservoirs, absorbing heat during the day without getting overwhelmingly hot, and releasing it at night without dropping to freezing temperatures.
-        </p>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Calorimetry
+</a>
+</nav>
+<h1>Specific Heat Capacity</h1>
+<p class="subtitle">Quantifying a material's thermal inertia.</p>
+<section>
+<h2>Heat Capacity</h2>
+<p>
+Temperature tells us the thermal state of a system. The next natural question is: How much heat is required to change the temperature of a system?
+</p>
+<p>
+Experiments involving heating and cooling of substances were common during the development of steam engines and the Industrial Revolution.
+</p>
+<p>
+NCERT talks about a very basic experiment:   
+</p>
+<div class="insightbox">
+Take some water in a vessel and start heating it on a burner.<br>
+Soon you will notice that bubbles begin to move upward.<br>
+As the temperature is raised the motion of water particles increases till it becomes turbulent as water starts boiling.<br>
+What are the factors on which the quantity of heat required to raise the temperature of a substance depend?<br>
+In order to answer this question in the first step, heat a given quantity of water to raise its temperature by, say \(20^\circ\text{C}\) and note the time taken.<br>
+Again take the same amount of water and raise its temperature by \(40^\circ\text{C}\) using the same source of heat. Note the time taken by using a stopwatch.<br>
+You will find it takes about twice the time and therefore, double the quantity of heat required raising twice the temperature of same amount of water.<br>
+In the second step, now suppose you take double the amount of water and heat it, using the same heating arrangement, to raise the temperature by \(20^\circ\text{C}\), you will find the time taken is again twice that required in the first step.<br>
+In the third step, in place of water, now heat the same quantity (in kg) of some oil, say mustard oil, and raise the temperature again by \(20^\circ\text{C}\). Now note the time by the same stopwatch.<br>
+You will find the time taken will be shorter and therefore, the quantity of heat required would be less than that required by the same amount of water for the same rise in temperature.
 </div>
-
+<p>
+These observations suggest that the quantity of heat required depends upon:
+</p>
+<ul class="model-box">
+<li>Mass of the substance (\(m\))</li>
+<li>Temperature change (\(\Delta T\))</li>
+<li>Nature of the substance</li>
+</ul>
+<p>
+To quantify the relation between heat supplied and the resulting temperature change, we define a new physical quantity called <strong>Heat Capacity</strong>.
+</p>
+<p>
+If a small quantity of heat \(dQ\) changes the temperature of a body by \(dT\), then:
+</p>
+\[
+S=\frac{dQ}{dT}
+\]
+<p>
+Heat Capacity represents the amount of heat required to produce a unit change in temperature of the entire body.
+</p>
+</section>
+<section>
+<h2>Specific Heat Capacity</h2>
+<p>
+Heat Capacity characterizes the entire body under consideration.
+</p>
+<p>
+Therefore, two samples of the same material may have different heat capacities simply because their masses are different.
+</p>
+<p>
+A bucket of water naturally requires more heat than a spoonful of water to produce the same temperature rise.
+</p>
+<p>
+To obtain a property that depends only on the material itself, we define the <strong>Specific Heat Capacity</strong>.
+</p>
+<p>
+Specific Heat Capacity (\(s\)) is the quantity of heat required to raise the temperature of unit mass of a substance by \(1\text{ K}\) (or \(1^\circ\text{C}\)).
+</p>
+<p>
+Different materials possess different specific heat capacities.
+</p>
+<p>
+For example, copper becomes hot very quickly when heated, whereas water shows only a small rise in temperature for the same amount of heat supplied.
+</p>
+<p>
+This difference arises because water has a much larger specific heat capacity than copper.
+</p>
+</section>
+<section>
+<h2>Formula and Variables</h2>
+<p>
+The fundamental relation connecting heat transfer, mass, temperature change, and specific heat capacity is:
+</p>
+<div class="math-block">
+\[
+Q = m \cdot s \cdot \Delta T
+\]
+</div>
+<ul class="model-box">
+<li><strong>Variables:</strong>
+<ul>
+<li>\( Q \) : Amount of heat transferred (Joules, \( \text{J} \)). Positive if heat is absorbed, negative if released.</li>
+<li>\( m \) : Mass of the substance (Kilograms, \( \text{kg} \)).</li>
+<li>\( s \) : Specific heat capacity of the material.</li>
+<li>\( \Delta T \) : Change in temperature (\( T_{\text{final}} - T_{\text{initial}} \)). Can be evaluated in Kelvin (\( \text{K} \)) or degrees Celsius (\( ^\circ\text{C} \)) since \(\Delta T\) is identical in both scales.</li>
+</ul>
+</li>
+<li><strong>SI Unit of \(s\) :</strong> \( \text{J} \cdot \text{kg}^{-1} \cdot \text{K}^{-1} \) (or \( \text{J} \cdot \text{kg}^{-1} \cdot ^\circ \text{C}^{-1}\))</li>
+<li><strong>Dimensional Formula of \(s\) :</strong> \( [s] = \text{[M}^0 \text{L}^2 \text{T}^{-2} \text{K}^{-1}\text{]} \)</li>
+</ul>
+<p>
+A closely related quantity is the <strong>Molar Specific Heat Capacity (\(C\))</strong>.
+</p>
+<p>
+Instead of considering one kilogram of a substance, molar heat capacity measures the heat required to raise the temperature of one mole of the substance by \(1\text{ K}\).
+</p>
+\[
+Q = n \cdot C \cdot\Delta T
+\]
+<ul class="model-box">
+<li><strong>Variables:</strong>
+<ul>
+<li>\( n \) : Amount of substance in moles (\( \text{mol} \)).</li>
+<li>\( C \) : Molar specific heat capacity of the material.</li>
+</ul>
+</li>
+<li><strong>SI Unit of \(C\) :</strong> \( \text{J} \cdot \text{mol}^{-1} \cdot \text{K}^{-1} \) (or \( \text{J} \cdot \text{mol}^{-1} \cdot ^\circ \text{C}^{-1}\))</li>
+<li><strong>Dimensional Formula of \(C\) :</strong> \( [C] = \text{[M}^1 \text{L}^2 \text{T}^{-2} \text{K}^{-1} \text{mol}^{-1} \text{]} \)</li>
+</ul>
+<p>
+For solids and liquids, molar heat capacity primarily depends on the material itself.
+</p>
+<p>
+For gases, however, the situation is more subtle. In later chapters we will learn that the molar heat capacity of a gas also depends on the thermodynamic process through which heat is exchanged.
+</p>
+<div class="insightbox">
+Specific Heat Capacity normalizes Heat Capacity by mass.<br>
+Molar Specific Heat Capacity normalizes Heat Capacity by number of moles.<br>
+Both quantities describe the thermal response of a material, but use different measures of the amount of substance.<br>
+This normalization is often the main source of confusion in units, dimensions and numerical values of heat capacities.<br><br>
+<strong>Bridging the Units (The Molar Pitfall):</strong><br>
+The conversion between specific heat capacity (\(s\)) and molar specific heat capacity (\(C\)) is anchored by the molar mass (\(M\)) of the substance:
+\[ C = M \cdot s \]
+When calculating numerical values during question solving, ensure that the unit of mass is uniform.<br>
+For instance, while solving for \(\text{CO}_2\), its Molecular Wt. is (\(M = 44\text{ g/mol}\)).<br>
+Molecular Wt. \(M\) must be scaled to SI units as \(44 \times 10^{-3}\text{ kg/mol}\) before evaluating other parameters.
+</div>
+</section>
+<section>
+<h2>Depending Factors (Material and State)</h2>
+<p>
+Specific heat capacity is fundamentally an intensive property — it characterizes the substance itself, not how much of it you have. However, it is not an absolute constant. 
+</p>
+<ul>
+<li><strong>Nature of the Material:</strong> It heavily depends on the molecular structure and degrees of freedom. Liquid water has \( s_{water} = 4.18 \text{ kJ/(kg}\cdot\text{K)} \), while iron is around \( 450 \text{ J/(kg}\cdot\text{K)} \).</li>
+<li><strong>Physical State (Phase):</strong> The same chemical compound will have entirely different specific heats in solid, liquid, or gas phases. For example, the specific heat of ice (\( s_{ice} = 2.1 \text{ kJ/(kg}\cdot\text{K)} \)) is roughly half that of liquid water.</li>
+<div class="insightbox">
+The same chemical substance may have different specific heat capacities in different phases.<br>
+For example, ice and water are both \(H_2O\), yet their specific heat capacities differ by nearly a factor of two.<br>
+Therefore, specific heat capacity depends not only on the material but also on its thermodynamic state.
+</div>
+<li><strong>Temperature:</strong> Over large temperature ranges, \(s\) actually varies with temperature. However, in JEE syllabus, it is treated as a constant over narrow temperature bands.</li>
+</ul>
+<div class="insightbox">
+For JEE, the specific heat capacities of water and ice should be memorized from NCERT:
+\[
+s_{water} = 4.18 \text{ kJ/(kg}\cdot\text{K)}
+\]
+\[
+s_{ice} = 2.1 \text{ kJ/(kg}\cdot\text{K)}
+\]
+Equivalent values in calorie units are:<br>
+\[
+s_{water} = 1 \text{ cal/(g}\cdot\text{K)}
+\]
+\[
+s_{ice} = 0.5 \text{ cal/(g}\cdot\text{K)}
+\]
+</div>
+</section>
+<section>
+<h2>Thermal Inertia</h2>
+<p>
+Specific Heat Capacity can be interpreted as a material's <strong>thermal inertia</strong> — its resistance to changing temperature when heat is supplied or removed.
+</p>
+<p>
+To understand this interpretation, we must first identify what acts as the cause and what acts as the effect in a physical law.
+</p>
+<p>
+In \(F = ma\), Force \(F\) is cause and acceleration \(a\) is the effect. Therefore, \(m\) is the capacity or inertia. This is because, general form of the equation is:
+</p>
+\[
+\text{Cause} =  \text{Capacity} \times \text{Effect              Effect} = \text{Sensitivity} \times \text{Cause} 
+\]
+<p>
+A large capacity indicates that system can absorb a lot of cause and show less effect. A large sensitivity indicates that system can show a lot of effect for less cause.
+</p>
+<p>
+In \(Q = ms\Delta T\), Heat \(Q\) is cause and temperature change \(\Delta T\) is the effect.
+</p>
+<p>
+Therefore, the product \(ms\) acts as the thermal capacity or thermal inertia of the system.
+</p>
+<p>
+For a fixed mass, the Specific Heat Capacity (\(s\)) determines how strongly the material resists changes in temperature.
+</p>
+<div class="concept-box">
+A large Specific Heat Capacity means that a large amount of heat is required to produce a small temperature change.
+</div>
+<p>
+Water has an exceptionally large specific heat capacity. As a result, it can absorb or release large quantities of heat while undergoing only small temperature changes.
+</p>
+<p>
+This is one of the primary reasons coastal climates remain comparatively moderate. Oceans act as massive thermal reservoirs, absorbing heat during the day and releasing it at night without experiencing extreme temperature fluctuations.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
