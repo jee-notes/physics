@@ -1,115 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorimetry | Change of State & Latent Heat</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latent Heat | Calorimetry</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav class="top-nav">
-        <a href="./index.html" class="back-btn">
-            <span>&larr;</span> Back to Calorimetry
-        </a>
-    </nav>
-
-    <h1>Change of State & Latent Heat</h1>
-    <p class="subtitle">Analyzing the energy required to break macroscopic molecular bonds.</p>
-
-    <section>
-        <h2>Change of State</h2>
-        <p>
-            Matter universally exists in three primary phases: solid, liquid, and gas. A change of state occurs when a substance functionally shifts from one of these phases to another.
-        </p>
-        <ul>
-            <li><strong>Melting (Fusion):</strong> Solid to liquid.</li>
-            <li><strong>Freezing:</strong> Liquid to solid.</li>
-            <li><strong>Boiling/Evaporation (Vaporization):</strong> Liquid to gas.</li>
-            <li><strong>Condensation:</strong> Gas to liquid.</li>
-            <li><strong>Sublimation:</strong> Solid directly to gas.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Isothermal Transitions</h2>
-        <p>
-            When we supply heat (\(Q = mc\Delta T\)) to an ice cube originally at \(-10^\circ\text{C}\), the ice warms up until it hits \(0^\circ\text{C}\). However, an interesting physics phenomenon occurs right at the melting point.
-        </p>
-        <div class="concept-box">
-            During a phase transition, the temperature of an isolated pure substance remains completely <strong>constant</strong>, even as immense amounts of heat are continually absorbed or rejected from the system.
-        </div>
-        <p>
-            Why does the temperature freeze at \(0^\circ\text{C}\)? Temperature is a macroscopic measure of the average <em>kinetic energy</em> of the molecules. However, during a phase change, the heat energy being supplied is used exclusively to alter the <em>potential energy</em> between the molecules — breaking the rigid intermolecular bonds holding the solid ice structure together to form the looser, flowing structure of liquid water.
-        </p>
-    </section>
-
-    <section>
-        <h2>Latent Heat of Fusion</h2>
-        <p>
-            Because the formula \( Q = mc\Delta T \) inherently forces \( Q=0 \) if \( \Delta T=0 \), we need a brand new physical mechanism to quantify the tremendous heat absorbed during melting.
-        </p>
-        <div class="model-box">
-            <strong>Latent Heat of Fusion (\(L_f\)):</strong> The precise quantity of heat required to legally change a unit mass of a substance entirely from solid state to liquid state at its specific melting point.
-        </div>
-        <p>
-            The mathematical relation is independent of temperature change:
-        </p>
-        <div class="math-block">
-            \[
-            Q = m \cdot L_f
-            \]
-        </div>
-        <ul>
-            <li><strong>Variables:</strong>
-                <ul>
-                    <li>\( Q \): Heat supplied or removed during the phase change (J)</li>
-                    <li>\( m \): Mass of the substance changing phase (kg)</li>
-                    <li>\( L_f \): Latent heat of fusion of the material.</li>
-                </ul>
-            </li>
-            <li><strong>SI Unit:</strong> Joule per kilogram (\( \text{J} \cdot \text{kg}^{-1} \))</li>
-            <li><strong>Dimensional Formula:</strong> \( [L] = \text{M}^0 \text{L}^2 \text{T}^{-2} \)</li>
-        </ul>
-        <div class="examplebox">
-            <h3>Standard Physical Constant</h3>
-            For water, the latent heat of fusion of ice is exceptionally high:
-            <hr>
-            \[
-            L_f \approx 3.34 \times 10^5 \text{ J/kg} = 80 \text{ cal/g}
-            \]
-            This requires roughly 80 times more heat to melt $1 \text{ gram}$ of ice than to simply warm that water by $1^\circ\text{C}$. This massive heat requirement is why snow in the mountains does not melt instantaneously on the first warm day of spring.
-        </div>
-    </section>
-
-    <section>
-        <h2>Latent Heat of Vaporization</h2>
-        <p>
-            A perfectly analogous constant exists for the boiling transition when liquid converts entirely into a gaseous vapor at the boiling point.
-        </p>
-        <div class="model-box">
-            <strong>Latent Heat of Vaporization (\(L_v\)):</strong> The quantity of heat required to change a unit mass of a substance entirely from liquid state to gaseous state at its specific boiling point.
-        </div>
-        <p>
-            The overarching formula is functionally identical, just scaling out the fusion parameter:
-        </p>
-        <div class="math-block">
-            \[
-            Q = m \cdot L_v
-            \]
-        </div>
-        <div class="insightbox">
-            For water, \( L_v \approx 2.26 \times 10^6 \text{ J/kg} \) (roughly \( 540 \text{ cal/g} \)). Notice that \(L_v\) is almost seven times larger than \(L_f\). Breaking the intermolecular bonds entirely to create a freely expanding gas requires substantially more energy than merely loosening them into a flowing liquid structure. This massive energy threshold is the primary reason steam burns are significantly more severe than burns from boiling water.
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Calorimetry
+</a>
+</nav>
+<h1>Change of State & Latent Heat</h1>
+<p class="subtitle">Analyzing the energy required to break macroscopic molecular bonds.</p>
+<section>
+<h2>Change of State</h2>
+<p>
+For the present discussion, matter is considered to exist in three primary states:
+</p>
+<ul class="model-box">
+<li>Solid</li>
+<li>Liquid</li>
+<li>Gas</li>
+</ul>
+<div class="insightbox">
+<strong>Other States</strong><br>
+In chemistry we learn that other states exist like Bose-Einstein Condensate and Plasma.<br>
+These states are not part of JEE syllabus.<br>
 </div>
-
+<p>
+A <strong>change of state</strong> occurs when a substance undergoes a thermodynamic transition from one state to another. Six fundamental state changes are physically possible:
+</p>
+<ul>
+<li><strong>Melting (Fusion):</strong> Solid to liquid.</li>
+<li><strong>Freezing (Solidification):</strong> Liquid to solid.</li>
+<li><strong>Vaporization (Boiling/Evaporation):</strong> Liquid to gas.</li>
+<li><strong>Condensation:</strong> Gas to liquid.</li>
+<li><strong>Sublimation:</strong> Solid directly to gas.</li>
+<li><strong>Deposition:</strong> Gas directly to solid.</li>
+</ul>
+<h3>State vs. Phase (Thermodynamic Distinction)</h3>
+<p>
+While often used interchangeably, "State" and "Phase" have distinct thermodynamic definitions.
+</p>
+<p>
+A <strong>State of matter</strong> refers to its broad macroscopic form (Solid, Liquid, Gas). A <strong>Phase</strong> is a highly specific, homogeneous region of matter that possesses identical physical and chemical properties throughout its entire bulk.
+</p>
+<p>
+For example, solid carbon exists in one solid state, but it can exist in multiple distinct phases (e.g., diamond and graphite) depending on its internal crystal lattice structure.
+</p>
+<div class="insightbox">
+In JEE syllabus, unless specifically mentioned otherwise, change of state is also called as phase transition.
+</div>
+</section>
+<section>
+<h2>Isothermal Phase Transitions</h2>
+<p>
+So far, we have modeled macroscopic heat exchange using the relation:
+</p>
+<div class="math-block">
+\[ Q = ms\Delta T \]
+</div>
+<p>
+This equation inherently implies that any continuous transfer of thermal energy into a substance must manifest as a continuous increase in its temperature. However, a striking physical contradiction is observed when a substance undergoes a change of state.
+</p>
+<p>
+Consider a block of ice initially at \(-10^\circ\text{C}\). As heat is supplied, the temperature of the ice rises steadily until it reaches exactly \(0^\circ\text{C}\). One might logically expect the temperature to continue rising as the burner continues to supply heat. Surprisingly, it does not.
+</p>
+<p>
+<strong>During a change of state, a pure substance can absorb or release large amounts of heat while its temperature remains constant.</strong>
+</p>
+<p>
+At \(0^\circ\text{C}\), the ice continues to absorb heat and melt into liquid water, yet its temperature remains fixed at \(0^\circ\text{C}\) until the very last crystal of ice has melted. A perfectly analogous phenomenon occurs during boiling: once water reaches \(100^\circ\text{C}\), further heat input does not raise the temperature, but instead gradually converts the liquid bulk into steam at \(100^\circ\text{C}\).
+</p>
+<div class="insightbox">
+<strong>The Mathematical Contradiction:</strong><br>
+The relation \(Q = ms\Delta T\) dictates that if \(\Delta T = 0\), then the transacted heat \(Q\) must also be zero. However, during a phase transition, a massive amount of heat is actively absorbed even though \(\Delta T = 0\). Therefore, the thermal mechanics of a state change cannot be described using Specific Heat Capacity alone.
+</div>
+<h3>The Microscopic Explanation</h3>
+<p>
+Why does the thermometer stop rising even though thermal energy is still actively entering the system?
+</p>
+<p>
+Temperature is a macroscopic gauge of the average <em>translational kinetic energy</em> of the molecules. During an ordinary heating phase, the supplied thermal energy accelerates molecular motion, causing the temperature to rise.
+</p>
+<p>
+During a phase transition, however, the system reroutes all incoming thermal energy away from kinetic excitation. Instead, the energy is consumed entirely as <strong>work done against intermolecular forces</strong>—altering the structural potential energy to dismantle a rigid solid lattice into a fluid, or to separate liquid molecules into a freely expanding gas.
+</p>
+<div class="concept-box">
+During a phase transition, transacted heat modifies the <strong>intermolecular potential energy</strong> rather than the molecular kinetic energy. Because kinetic energy remains static, the temperature remains rigorously constant.
+</div>
+<h3>Coexistence and Equilibrium</h3>
+<p>
+The specific constant temperature at which a solid and liquid can indefinitely coexist in thermal equilibrium is defined as the <strong>melting point</strong> (or freezing point). Similarly, the temperature at which a liquid and gas coexist is the <strong>boiling point</strong>. 
+</p>
+<p>
+For pure water at standard atmospheric pressure (\(1\text{ atm}\)):
+</p>
+<ul class="model-box">
+<li><strong>Melting Point:</strong> \(0^\circ\text{C}\)</li>
+<li><strong>Boiling Point:</strong> \(100^\circ\text{C}\)</li>
+</ul>
+<div class="insightbox">
+At \(0^\circ\text{C}\), solid ice and liquid water can coexist indefinitely in thermal equilibrium. Similarly, at \(100^\circ\text{C}\), boiling water and steam exist in thermal equilibrium. <br><br>
+This proves that <em>thermal equilibrium does not require interacting subsystems to exist in the identical state of matter</em>. It strictly requires a zero temperature gradient (\(\Delta T = 0\)).
+</div>
+<p>
+The total inability of the \(Q = ms\Delta T\) framework to account for isothermal energy absorption directly necessitates the introduction of a new physical parameter: <strong>Latent Heat</strong>.
+</p>
+</section>
+<section>
+<h2>Latent Heat of Fusion</h2>
+<p>
+Because the formula \( Q = mc\Delta T \) inherently forces \( Q=0 \) if \( \Delta T=0 \), we need a brand new physical mechanism to quantify the tremendous heat absorbed during melting.
+</p>
+<div class="model-box">
+<strong>Latent Heat of Fusion (\(L_f\)):</strong> The precise quantity of heat required to legally change a unit mass of a substance entirely from solid state to liquid state at its specific melting point.
+</div>
+<p>
+The mathematical relation is independent of temperature change:
+</p>
+<div class="math-block">
+\[
+Q = m \cdot L_f
+\]
+</div>
+<ul>
+<li><strong>Variables:</strong>
+<ul>
+<li>\( Q \): Heat supplied or removed during the phase change (J)</li>
+<li>\( m \): Mass of the substance changing phase (kg)</li>
+<li>\( L_f \): Latent heat of fusion of the material.</li>
+</ul>
+</li>
+<li><strong>SI Unit:</strong> Joule per kilogram (\( \text{J} \cdot \text{kg}^{-1} \))</li>
+<li><strong>Dimensional Formula:</strong> \( [L] = \text{M}^0 \text{L}^2 \text{T}^{-2} \)</li>
+</ul>
+<div class="examplebox">
+<h3>Standard Physical Constant</h3>
+For water, the latent heat of fusion of ice is exceptionally high:
+<hr>
+\[
+L_f \approx 3.34 \times 10^5 \text{ J/kg} = 80 \text{ cal/g}
+\]
+This requires roughly 80 times more heat to melt $1 \text{ gram}$ of ice than to simply warm that water by $1^\circ\text{C}$. This massive heat requirement is why snow in the mountains does not melt instantaneously on the first warm day of spring.
+</div>
+</section>
+<section>
+<h2>Latent Heat of Vaporization</h2>
+<p>
+A perfectly analogous constant exists for the boiling transition when liquid converts entirely into a gaseous vapor at the boiling point.
+</p>
+<div class="model-box">
+<strong>Latent Heat of Vaporization (\(L_v\)):</strong> The quantity of heat required to change a unit mass of a substance entirely from liquid state to gaseous state at its specific boiling point.
+</div>
+<p>
+The overarching formula is functionally identical, just scaling out the fusion parameter:
+</p>
+<div class="math-block">
+\[
+Q = m \cdot L_v
+\]
+</div>
+<div class="insightbox">
+For water, \( L_v \approx 2.26 \times 10^6 \text{ J/kg} \) (roughly \( 540 \text{ cal/g} \)). Notice that \(L_v\) is almost seven times larger than \(L_f\). Breaking the intermolecular bonds entirely to create a freely expanding gas requires substantially more energy than merely loosening them into a flowing liquid structure. This massive energy threshold is the primary reason steam burns are significantly more severe than burns from boiling water.
+</div>
+</section>
+<section>
+<h2>Related Topics</h2>
+<div class="chapter-list">
+<a href="./04a-melting-point.html">1. Melting Point is Intensive</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
