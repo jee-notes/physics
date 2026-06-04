@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Principle of Calorimetry | Calorimetry</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Calorimetry
+</a>
+</nav>
+<h1>Principle of Calorimetry</h1>
+<p class="subtitle">Applying the law of conservation of energy to thermal interactions.</p>
+<section>
+<h2>The Central Question</h2>
+<p>
+Suppose a hot iron block is placed inside a container of cold water.
+</p>
+<p>
+The iron gradually cools while the water gradually warms.
+</p>
+<p>
+After sufficient time, both attain the same temperature and thermal equilibrium is established.
+</p>
+<p>
+A natural question arises: <strong>Can we predict the final equilibrium temperature of interacting bodies?</strong>
+</p>
+<p>
+The answer lies in the law of Conservation of Energy.
+</p>
+<p>
+Calorimetry is essentially the application of energy conservation to thermal interactions between systems.
+</p>
+</section>
+<section>
+<h2>Conservation of Energy in Thermal Systems</h2>
+<p>
+When two or more systems at different temperatures are placed in thermal contact, heat is exchanged between them.
+</p>
+<p>
+The hotter bodies lose thermal energy while the colder bodies gain thermal energy.
+</p>
+<p>
+If the interacting systems are perfectly isolated from the surroundings, no energy enters or leaves the combined system.
+</p>
+<p>
+<strong>If the system is perfectly isolated — meaning no heat flows into the system from the surrounding environment, and no heat escapes the system — the total internal energy of the system remains constant.</strong>
+</p>
+<p>
+Therefore, any heat lost by one part of the system must be gained by another part of the system.
+</p>
+<p>
+This simple consequence of Conservation of Energy forms the foundation of Calorimetry.
+</p>
+</section>
+<section>
+<h2>Heat Lost vs Heat Gained</h2>
+<div class="model-box">
+<strong>The Principle of Calorimetry:</strong> 
+In an isolated thermal system, the heat lost by the hotter bodies is exactly equal to the heat gained by the colder bodies.
+</div>
+<p>
+Mathematically, this balancing act can be expressed as:
+</p>
+<div class="math-block">
+\[
+\sum Q_{\text{lost}} = \sum Q_{\text{gained}} \text{|       same as         |} \sum Q_{\text{lost}} - \sum Q_{\text{gained}} = 0
+\]
+or
+\[
+\sum Q_{changes} = 0
+\]
+</div>
+<p>
+The formula depends on what does \( Q_{\text{lost}} \) or \( Q_{\text{gained}} \) or \( Q_{\text{changes}} \) represent mathematically.
+</p>
+<p>
+Such different forms are possible in any conservation equation - including momentum conservation or charge conservation in KCL.
+</p>
+<p>
+Standard representation is: \( Q_{\text{lost}} \) represents the energy relinquished by the hot components as they cool down, and \( Q_{\text{gained}} \) represents the energy absorbed by the cold components as they warm up. But this is good to use if you know the initial temperatures of all interacting bodies.
+</p>
+<p>
+In problems, when we don't know the initial temperature of interacting bodies, other forms of the formula are used.
+</p>
+</section>
+<section>
+<h2>Calculations in Isolated Systems</h2>
+<p>
+Because we use the specific heat formula \(Q = ms\Delta T\) to compute the heat, we can set up an algebraic equation to solve for unknown variables like the final mixing temperature \(T_f\).
+</p>
+<p>
+If a hot mass \(m_1\) with specific heat \(s_1\) at initial temperature \(T_1\) is mixed with a cold mass \(m_2\) with specific heat \(s_2\) at initial temperature \(T_2\), they will reach an equilibrium temperature \(T_f\).
+</p>
+<p>
+Irrespective of the values of \(m_1\) , \(s_1\) , \(m_2\) , \(s_2\) , as long as \(T_1 \gt T_2\) , heat will flow from \(\text{body}_1\) to \(\text{body}_2\) .
+</p>
+<p>
+The equilibrium temperature \(T_f\) will always be \(T_1 \gt T_f \gt T_2\) .
+</p>
+<p>
+The fundamental equality states:
+</p>
+<div class="math-block">
+\[
+m_1 s_1 (T_1 - T_f) = m_2 s_2 (T_f - T_2)
+\]
+</div>
+<ul>
+<li>Notice the structure of the temperature differences. In the "heat lost" expression on the left, we use \((T_1 - T_f)\) to assure the value is intrinsically positive.</li>
+<li>In the "heat gained" expression on the right, we use \((T_f - T_2)\) to similarly guarantee a positive value.</li>
+</ul>
+<p>
+Solving this linear equation for \( T_f \) gives the weighted average of the temperatures based on their individual thermal capacities:
+</p>
+<div class="math-block">
+\[
+T_f = \frac{m_1 s_1 T_1 + m_2 s_2 T_2}{m_1 s_1 + m_2 s_2}
+\]
+</div>
+</section>
+<section>
+<h2>Calorimeter</h2>
+<p>
+In real experiments, heat exchange with the surroundings introduces errors.
+</p>
+<p>
+To minimize these losses, thermal interactions are performed inside a device called a <strong>calorimeter</strong>.
+</p>
+<p>
+Thus, a <strong>calorimeter</strong> is a device in which heat measurement can be done.
+</p>
+<p>
+A calorimeter typically consists of:
+</p>
+<ul class="model-box">
+<li>A metallic vessel and stirrer made of the same material.</li>
+<li>An insulating outer jacket.</li>
+<li>A thermometer for temperature measurement.</li>
+</ul>
+<p>
+The insulation reduces unwanted heat exchange with the surroundings, allowing the Principle of Calorimetry to be applied more accurately.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
