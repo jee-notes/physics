@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuous Mass System | Calorimetry</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Calorimetry
+</a>
+</nav>
+<h1>Continuous Mass Systems</h1>
+<p class="subtitle">Analyzing thermal power and mass flow rates.</p>
+<h2>Fixed Mass Systems</h2>
+<p>
+To properly analyze continuous mass systems, we must first establish the calculus governing fixed mass systems.
+</p>
+<p>
+So far, all calorimetry problems we have solved involved a localized, fixed amount of substance.
+</p>
+<p>
+The mass of the interacting system remained absolutely constant throughout the thermodynamic process. Examples include:
+</p>
+<ul class="model-box">
+<li>Heating a solid block of metal.</li>
+<li>Cooling a cup of water.</li>
+<li>Mixing two distinct liquids in an isolated calorimeter.</li>
+</ul>
+<p>
+For such localized situations, the mass derivative with respect to time is zero:
+</p>
+<div class="equation-box">
+\[ \frac{dm}{dt} = 0 \]
+</div>
+<p>
+This allows us to apply the familiar integrated calorimetry relation:
+</p>
+<div class="math-block">
+\[ Q = m \cdot s \cdot \Delta T \]
+</div>
+<p>
+If we differentiate this equation with respect to time to evaluate the <strong>Thermal Power (\(P\))</strong>—the rate at which heat is supplied or extracted—we get:
+</p>
+<div class="equation-box">
+\[ P = \frac{dQ}{dt} = m \cdot s \cdot \frac{dT}{dt} \]
+</div>
+<div class="insightbox">
+This fixed-mass power relation (\( P \propto \frac{dT}{dt} \)) is the fundamental structural equation used in later chapters to derive Newton's Law of Cooling, where we analyze the instantaneous rate of temperature drop of a fixed body.
+</div>
+</section>
+<section>
+<h2>Continuous Mass Systems</h2>
+<p>
+While fixed mass systems are excellent for isolated lab experiments, many real-world engineering systems involve a continuous flow of mass across the thermodynamic boundary.
+</p>
+<p>
+Examples include electric water geysers, flowing liquid coolants in nuclear reactors, steam generators, and continuous-flow calorimeters. In these open systems, the mass of the fluid interacting with the heat source is constantly changing with time:
+</p>
+<div class="equation-box">
+\[ \frac{dm}{dt} \neq 0 \]
+</div>
+<p>
+Analyzing the transient thermodynamics of flowing fluids natively requires highly complex partial differential equations (the unsteady heat equation and fluid kinematics), which are vastly beyond the scope of the JEE syllabus. 
+</p>
+<p>
+To bypass this complexity and solve these setups algebraically, we invoke a strict structural constraint: <strong>The Steady-State Assumption Model</strong>.
+</p>
+</section>
+<section>
+<h2>The Steady-State Assumption Model</h2>
+<p>
+In thermodynamics, unless explicitly stated otherwise, energy exchange in flowing systems is assumed to operate under a quasi-static, steady-state framework.
+</p>
+<div class="model-box">
+<strong>1. The Quasi-Static Constraint:</strong><br>
+The fluid flows slowly enough that macroscopic kinetic energy (\(\frac{1}{2}mv^2\)) and macroscopic potential energy (\(mgh\)) changes are completely negligible compared to the transacted thermal energy (\(Q\)). All supplied power is routed exclusively into changing the thermal state of the fluid.
+</div>
+<div class="model-box">
+<strong>2. The Steady-State Constraint:</strong><br>
+The system has been running long enough to stabilize. This means the temperatures at the input and output boundaries are fixed and no longer change with time. Additionally, the mass flow rate through the heating chamber is strictly constant.
+</div>
+<p>
+Let the constant mass flow rate be denoted by \(\mu = \frac{dm}{dt}\) (measured in \(\text{kg/s}\)). 
+</p>
+<p>
+If a continuous power source (\(P\)) is heating this flowing fluid, we evaluate the system by shifting the time derivative from the temperature variable directly onto the mass variable. The governing equation elegantly transforms into:
+</p>
+<div class="math-block">
+\[ P = \frac{dQ}{dt} = \left(\frac{dm}{dt}\right) \cdot s \cdot \Delta T \]
+</div>
+<p>
+Where:
+</p>
+<ul>
+<li>\( P \): Constant thermal power supplied to the flow (\(\text{Watts}\) or \(\text{J/s}\)).</li>
+<li>\( \frac{dm}{dt} \): Constant mass flow rate of the fluid (\(\text{kg/s}\)).</li>
+<li>\( s \): Specific heat capacity of the fluid.</li>
+<li>\( \Delta T \): The stable temperature difference between the fluid leaving the system (\(T_{\text{out}}\)) and entering the system (\(T_{\text{in}}\)).</li>
+</ul>
+<div class="insightbox">
+<strong>The Core Distinction:</strong><br>
+In a <strong>Fixed Mass System</strong>, the mass is constant, and the temperature changes continuously with time (\(\frac{dT}{dt} \neq 0\)).<br>
+In a <strong>Continuous Mass System</strong> (under steady-state), the temperature at any spatial point is constant, but fresh mass crosses the boundary continuously with time (\(\frac{dm}{dt} \neq 0\)).
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
