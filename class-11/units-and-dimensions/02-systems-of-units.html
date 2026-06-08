@@ -1,109 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Units and Dimensions | Systems of Units</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Systems of Units | Units and Dimensions</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Units and Dimensions
-            </a>
-        </nav>
-
-        <h1>Units and the SI System</h1>
-        <p class="subtitle">
-            The universal standards for scientific measurement.
-        </p>
-
-        <section>
-            <h2>1. Requirements of a Good Unit</h2>
-            <p>
-                For a unit to be scientifically valid, it must be:
-            </p>
-            <ul>
-                <li><strong>Invariable:</strong> It should not change with time or environmental conditions.</li>
-                <li><strong>Universal:</strong> It should be easily reproducible and accessible everywhere.</li>
-                <li><strong>Convenient Size:</strong> It should be appropriate for the quantity being measured.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>2. The SI System (Système International)</h2>
-            <p>
-                Adopted in 1960, the SI system is the modern form of the metric system. it is based on seven fundamental
-                base units from which all other units are derived.
-            </p>
-            <div class="formula-block">
-                <table style="width:100%; text-align:left;">
-                    <tr>
-                        <th>Quantity</th>
-                        <th>Unit</th>
-                        <th>Symbol</th>
-                    </tr>
-                    <tr>
-                        <td>Length</td>
-                        <td>meter</td>
-                        <td>m</td>
-                    </tr>
-                    <tr>
-                        <td>Mass</td>
-                        <td>kilogram</td>
-                        <td>kg</td>
-                    </tr>
-                    <tr>
-                        <td>Time</td>
-                        <td>second</td>
-                        <td>s</td>
-                    </tr>
-                    <tr>
-                        <td>Electric Current</td>
-                        <td>ampere</td>
-                        <td>A</td>
-                    </tr>
-                    <tr>
-                        <td>Thermodynamic Temperature</td>
-                        <td>kelvin</td>
-                        <td>K</td>
-                    </tr>
-                    <tr>
-                        <td>Amount of Substance</td>
-                        <td>mole</td>
-                        <td>mol</td>
-                    </tr>
-                    <tr>
-                        <td>Luminous Intensity</td>
-                        <td>candela</td>
-                        <td>cd</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
-        <section>
-            <h2>3. Supplementary Units</h2>
-            <p>
-                The SI system also includes two dimensionless units for geometric measurements:
-            </p>
-            <ul>
-                <li><strong>Plane Angle (\(\theta\)):</strong> Measured in <strong>Radian (rad)</strong>. Defined as arc
-                    length divided by radius.</li>
-                <li><strong>Solid Angle (\(\Omega\)):</strong> Measured in <strong>Steradian (sr)</strong>. Defined as
-                    intercepted area divided by radius squared.</li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Units and Dimensions
+</a>
+</nav>
+<h1>Units and the SI System</h1>
+<p class="subtitle">
+The universal standards for scientific measurement.
+</p>
+<section>
+<h2>Requirement of a Good Unit</h2>
+<p>
+In the previous section, we saw that a unit gives physical meaning to a number.
+</p>
+<p>
+Without a unit, a measurement is merely a mathematical statement. With a unit, the measurement becomes a statement about the physical world.
+</p>
+<p>
+However, not every unit is equally useful. A unit may be sufficient for personal use, yet completely unsuitable for science.
+</p>
+<p>
+Science is a collective activity. Measurements made by one person must be understandable, verifiable and reproducible by others.
+</p>
+<p>
+Therefore, scientific measurement requires not merely a unit, but a <strong>good unit</strong>.
+</p>
+<div class="math-block">
+Unit \(\rightarrow\) Physical Meaning<br>
+Good Unit \(\rightarrow\) Scientific (Shared) Physical Meaning
+</div>
+<p>
+A scientifically useful unit should possess the following properties:
+</p>
+<ul class="model-box">
+<li><strong>Communicable:</strong> Different people should be able to understand and use the unit in the same way.</li>
+<li><strong>Reproducible:</strong> Different experimenters should be able to recreate the unit independently and obtain the same measurement.</li>
+<li><strong>Invariable:</strong> The unit should not change with time, location or environmental conditions.</li>
+<li><strong>Universal:</strong> The unit should be accessible and usable everywhere.</li>
+<li><strong>Convenient:</strong> The unit should have a practical size for the quantity being measured.</li>
+</ul>
+<div class="insightbox">
+The existence of a unit solves one problem: \(\rightarrow\) How do numbers acquire physical meaning?<br>
+A good unit solves another problem: \(\rightarrow\) How do different people assign the same physical meaning to the same number?<br>
+Science requires both.
+</div>
+<div class="examplebox">
+<p>
+Historically, many societies used body parts as units of length because body parts are easily accessible.<br>
+Examples included the foot, handspan and cubit (distance from elbow to fingertip).<br>
+Imagine a king maintains official records stating that a landowner possesses a plot measuring 70 feet by 70 feet.<br>
+If the next king has smaller feet, the numerical value remains unchanged but the physical size represented by the unit changes.
+</p>
+<p>
+Such a unit fails the requirement of invariability and creates ambiguity in measurement.
+</p>
+</div>
+</section>
+<section>
+<h2>System of Units</h2>
+<p>
+A good unit must be communicable, reproducible, invariable and universal.
+</p>
+<p>
+However, science deals with many different physical quantities. If every quantity required its own independently defined unit, measurement would quickly become difficult to organise and standardise.
+</p>
+<div class="insightbox">
+A unit must be good.<br>
+But there are many physical quantities.<br>
+Creating and maintaining a separate standard for every quantity would be impractical.<br>
+Thus humanity first <strong>identified the physical quantities that were most important in everyday life.</strong>
+</div>
+<p>
+Historically, different societies found that the quantities most frequently measured were <strong>Length, Mass and Time</strong>.
+</p>
+<p>
+This was not because these quantities were known to be fundamental. Rather, they were the quantities most commonly encountered in trade, construction, agriculture, transportation and daily life.
+</p>
+<p>
+Once standard units were established for Length, Mass and Time, many other measurements could be built upon them.
+</p>
+<p>
+The collection of standard units chosen for such important physical quantities is called a <strong>System of Units</strong>.
+</p>
+<p>
+Different countries developed different systems of units, making measurements difficult to compare and communicate internationally.
+</p>
+<p>
+The growing need for trade, engineering and scientific collaboration eventually created a demand for a common system of measurement. This led to the development of the metric system during the late eighteenth century and later to the modern SI system.
+</p>
+<div class="insightbox">
+A good unit solves the problem of assigning the same physical meaning to a measurement.<br>
+A system of units solves a larger problem:<br>
+How can an entire society perform measurements using a common language?
+</div>
+</section>
+<section>
+<h2>MKS, CGS and FPS Systems</h2>
+<p>
+As different countries and scientific communities developed their own systems of units, several systems became widely used throughout the world.
+</p>
+<p>
+The prevalence of these systems was largely due to historical, political and colonial influences rather than scientific necessity.
+</p>
+<ul class="model-box">
+<li><strong>MKS System:</strong> metre (m), kilogram (kg), second (s)</li>
+<li><strong>CGS System:</strong> centimetre (cm), gram (g), second (s)</li>
+<li><strong>FPS System:</strong> foot (ft), pound (lb), second (s)</li>
+</ul>
+<p>
+The CGS system was widely used in early scientific work, particularly in chemistry and electromagnetism. The FPS system was common in countries influenced by the British system of measurement, while the MKS system formed the foundation of the modern metric system.
+</p>
+<p>
+The coexistence of multiple systems created difficulties in trade, engineering and scientific communication because the same physical quantity could have different numerical values in different systems.
+</p>
+<div class="insightbox">
+Different systems of units were not created because nature demanded them.<br>
+They existed because different societies adopted different standards.<br>
+The need for a single internationally accepted standard eventually led to the development of the SI system.
+</div>
+</section>
+<section>
+<h2>The SI System (Système International)</h2>
+<p>
+The existence of multiple systems of units created difficulties in trade, engineering and scientific communication.
+</p>
+<p>
+A measurement expressed in one system often had to be converted into another before it could be understood elsewhere.
+</p>
+<p>
+To solve this problem, the international scientific community adopted a single globally accepted system of measurement known as the <strong>SI System</strong> (Système International d'Unités) in 1960.
+</p>
+<div class="insightbox">
+A good unit provides shared physical meaning.<br>
+A system of units provides a common language for a society.<br>
+The SI system extends this idea to the entire world.
+</div>
+<p>
+The SI system is the modern form of the metric system and serves as the international standard for scientific measurement.
+</p>
+<p>
+It is built upon seven base units. These units are treated as the foundational standards from which many other units can be derived.
+</p>
+<table>
+<tr>
+<th>Quantity</th>
+<th>Unit</th>
+<th>Symbol</th>
+</tr>
+<tr>
+<td>Length</td>
+<td>metre</td>
+<td>m</td>
+</tr>
+<tr>
+<td>Mass</td>
+<td>kilogram</td>
+<td>kg</td>
+</tr>
+<tr>
+<td>Time</td>
+<td>second</td>
+<td>s</td>
+</tr>
+<tr>
+<td>Electric Current</td>
+<td>ampere</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Thermodynamic Temperature</td>
+<td>kelvin</td>
+<td>K</td>
+</tr>
+<tr>
+<td>Amount of Substance</td>
+<td>mole</td>
+<td>mol</td>
+</tr>
+<tr>
+<td>Luminous Intensity</td>
+<td>candela</td>
+<td>cd</td>
+</tr>
+</table><div class="insightbox">
+The choice of seven base quantities is a matter of convention and convenience.<br>
+Many other physical quantities can be expressed in terms of these base quantities.<br>
+We shall study this idea in detail when discussing dimensions and derived quantities.
+</div>
+</section>
+<section>
+<h2>Supplementary Units</h2>
+<p>
+Certain quantities arise naturally in geometry and are measured as ratios of similar quantities. As a result, they are dimensionless.
+</p>
+<ul>
+<li><strong>Plane Angle (\(\theta\)):</strong>  Measured in <strong>radian (rad)</strong>. Defined as the ratio of arc length to radius.</li>
+<li><strong>Solid Angle (\(\Omega\)):</strong>Measured in <strong>steradian (sr)</strong>.Defined as the ratio of intercepted area to radius squared.</li>
+</ul>
+<div class="insightbox">
+Radians and steradians are called units even though they are dimensionless.<br>
+They help distinguish geometric quantities from ordinary pure numbers and provide clarity in scientific calculations.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
