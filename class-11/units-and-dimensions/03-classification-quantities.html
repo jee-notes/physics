@@ -94,11 +94,40 @@ In the SI system, the seven fundamental quantities are:
 <li>Length</li>
 <li>Mass</li>
 <li>Time</li>
-<li>Electric Current</li>
-<li>Thermodynamic Temperature</li>
-<li>Amount of Substance</li>
+<li>Current</li>
+<li>Temperature</li>
+<li>Amount of Substance (mol)</li>
 <li>Luminous Intensity</li>
 </ul>
+<p>
+A common question is: <strong>If mass already tells us how much substance is present, why do we need another quantity called "Amount of Substance"?</strong>
+</p>
+<p>
+The reason is that mass and amount of substance measure different things.
+</p>
+<p>
+Mass tells us how much matter is present by mass, whereas amount of substance tells us how many elementary entities (atoms, molecules, ions, etc.) are present.
+</p>
+<p>
+For example:
+</p>
+<div class="math-block">
+36 g of \(^{12}\text{C}\) = 3 mol
+</div>
+<div class="math-block">
+36 g of \(\text{H}_2\text{O}\) = 2 mol
+</div>
+<p>
+Both samples have the same mass, but they contain different numbers of entities.
+</p>
+<p>
+Thus equal mass does not imply equal amount of substance.
+</p>
+<div class="insightbox">
+Mass measures "how heavy".<br>
+Amount of substance measures "how many microscopic entities".<br>
+They are related, but they are not the same physical quantity.
+</div>
 <h3>Derived Quantities</h3>
 <p>
 Once a small set of fundamental quantities has been chosen, many other quantities can be constructed from them.
@@ -129,10 +158,10 @@ Examples include:
 <section>
 <h2>The Process of Derivation</h2>
 <p>
-When a quantity is derived from fundamental quantities, its unit can also be derived from the units of those quantities.
+When a quantity is derived from fundamental quantities, it means that its unit is derived from the units of those quantities.
 </p>
 <p>
-The derivation follows directly from the mathematical definition of the quantity.
+The process of derivation follows directly from the mathematical definition of the quantity.
 </p>
 <div class="examplebox">
 <p>
@@ -142,16 +171,11 @@ Pressure is defined as:
 \[
 P=\frac{F}{A}
 \]
-</div>
 <p>
 Substituting the SI units:
 </p>
-<div class="math-block">
 \[
-\text{Unit of Pressure}
-=
-\frac{\text{kg m s}^{-2}}
-{\text{m}^{2}}
+\text{Unit of Pressure} = \frac{\text{kg m s}^{-2}} {\text{m}^{2}}
 =
 \text{kg m}^{-1}\text{s}^{-2}
 \]
@@ -161,9 +185,24 @@ This derived unit is called the <strong>Pascal (Pa)</strong>.
 </p>
 </div>
 <div class="insightbox">
-Derivation is not merely a mathematical trick.<br>
-It reflects a deeper idea:<br>
-A derived quantity obtains its physical meaning from the fundamental quantities used to define it.
+The process of derivation may appear to be purely mathematical.<br>
+However, there is a deeper idea behind it.<br><br>
+A derived quantity derives its unit from the units of the fundamental quantities used to define it.<br>
+Since units provide physical meaning to quantities, a derived quantity also derives its physical meaning from the fundamental quantities used in its definition.<br><br>
+For example, Pressure is defined as Force per Unit Area.<br>
+Its unit and physical meaning are therefore inherited from the concepts of Force and Area.<br><br>
+To visualize a pressure of approximately 1 Pa, imagine that the top of your head has dimensions \(10\text{ cm} \times 10\text{ cm}\), giving an area of about \(0.01\text{ m}^2\).<br>
+Now place a sheet of paper of mass roughly \(1\text{ g}\) uniformly over that area.<br>
+The sheet exerts a weight of about \(0.01\text{ N}\).<br>
+Since
+\[
+P=\frac{F}{A}
+\]
+the resulting pressure is approximately
+\[
+\frac{0.01}{0.01} = 1\text{ Pa}
+\]
+Thus, 1 Pa is a very small pressure.
 </div>
 </section>
 <section>
@@ -178,6 +217,52 @@ Without this classification, every physical quantity would require its own indep
 Fundamental quantities provide the building blocks.<br>
 Derived quantities provide the structure built from those blocks.<br>
 This is how physics manages an enormous number of physical quantities using only a small number of basic standards.
+</div>
+</section>
+<section>
+<h2>The Physical Meaning of Derived Quantities</h2>
+<p>
+At first glance, a derived quantity may appear to be nothing more than a mathematical combination of other quantities.
+</p>
+<p>
+For example:
+</p>
+<div class="math-block">
+\[
+\text{Speed}=\frac{\text{Distance}}{\text{Time}}
+\]
+\[
+\text{Pressure}=\frac{\text{Force}}{\text{Area}}
+\]
+\[
+\text{Density}=\frac{\text{Mass}}{\text{Volume}}
+\]
+</div>
+<p>
+However, derived quantities are much more than mathematical formulas.
+</p>
+<p>
+A derived quantity describes a physical relationship among the physical quantities it comprises of.
+</p>
+<div class="insightbox">
+Fundamental quantities provide the basic building blocks of measurement.<br>
+Derived quantities describe how those building blocks interact in the physical world.
+</div>
+<p>
+For example, Speed describes how Distance is distributed over Time.
+</p>
+<p>
+Density describes how Mass is distributed over Volume.
+</p>
+<p>
+Pressure describes how Force is distributed over Area.
+</p>
+<p>
+Thus a derived quantity is not merely a new quantity with a new unit. It represents a new physical idea emerging from the relationship between existing quantities.
+</p>
+<div class="insightbox">
+A derived quantity derives not only its unit, but also its physical meaning.<br>
+Its meaning comes from the physical relationship between the quantities used in its definition.
 </div>
 </section>
 <footer>
