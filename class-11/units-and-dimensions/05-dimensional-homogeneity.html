@@ -1,67 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Units and Dimensions | Dimensional Homogeneity</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dimensional Homogeneity | Units and Dimensions</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Units and Dimensions
-            </a>
-        </nav>
-
-        <h1>Principle of Dimensional Homogeneity</h1>
-        <p class="subtitle">
-            The rule of consistency in physical equations.
-        </p>
-
-        <section>
-            <h2>1. The Fundamental Rule</h2>
-            <p>
-                The <strong>Principle of Dimensional Homogeneity</strong> states that only physical quantities of the
-                same dimensions can be added, subtracted, or equated.
-            </p>
-            <div class="insightbox">
-                You can add 5 meters to 10 meters, but you cannot add 5 meters to 10 kilograms.
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Mathematical Expression</h2>
-            <p>
-                In any physical equation of the form \(A + B = C\):
-            </p>
-            <div class="formula-block">
-                \[ [A] = [B] = [C] \]
-            </div>
-            <p>This principle is used to check the correctness of physical equations.</p>
-        </section>
-
-        <section>
-            <h2>3. Transcendental Functions</h2>
-            <p>
-                The arguments of mathematical functions like \(\sin(\theta)\), \(\cos(\theta)\), \(e^x\), and
-                \(\log(x)\) must always be <strong>dimensionless</strong>.
-            </p>
-            <div class="formula-block">
-                In \(y = A \sin(kt - \omega x)\):
-                <br>\([kt] = [M^0L^0T^0]\)
-                <br>\([\omega x] = [M^0L^0T^0]\)
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Units and Dimensions
+</a>
+</nav>
+<h1>Principle of Dimensional Homogeneity</h1>
+<p class="subtitle">
+The rule of consistency in physical equations.
+</p>
+<section>
+<h2>The Fundamental Rule</h2>
+<p>
+The <strong>Principle of Dimensional Homogeneity</strong> states that only physical quantities of the same dimensions can be added, subtracted, or equated.
+</p>
+<div class="insightbox">
+You can add 5 meters to 10 meters, but you cannot add 5 meters to 10 kilograms.
+</div>
+<h3>Why Homogeneity?</h3>
+<p>
+Dimensions classify physical quantities according to their nature.
+</p>
+<p>
+Since addition and subtraction are meaningful only between quantities of the same kind, every valid physical equation must preserve dimensional consistency.
+</p>
+<div class="insightbox">
+Dimensions are the grammar of physics.
+A physically meaningful equation cannot violate dimensional consistency.
+</div>
+<p>
+Dimensional homogeneity is not a separate law of nature. It is a direct consequence of the meaning of dimensions.
+</p>
+</section>
+<section>
+<h2>Mathematical Expression</h2>
+<p>
+The Principle of Dimensional Homogeneity can be expressed mathematically.
+</p>
+<p>
+Whenever physical quantities are connected through addition, subtraction or equality, they must all possess the same dimensions.
+</p>
+<div class="examplebox">
+<p>
+For an equation of the form:
+</p>
+\[
+A+B=C
+\]
+<p>
+the dimensions of all terms must be identical:
+</p>
+\[
+[A]=[B]=[C]
+\]
+</div>
+<p>
+It is important to note that dimensional homogeneity does not require every quantity appearing in an equation to have the same dimensions.
+</p>
+<p>
+The requirement applies only to quantities that are being added, subtracted or directly compared.
+</p>
+<div class="examplebox">
+<p>
+Consider the equation:
+</p>
+\[
+s=ut+\frac{1}{2}at^2
+\]
+<p>
+The dimensions of each term are:
+</p>
+\[
+[s]=[L]
+\]
+\[
+[ut]=[LT^{-1}][T]=[L]
+\]
+\[
+[at^2]=[LT^{-2}][T^2]=[L]
+\]
+<p>
+Since every term has the same dimensions, the equation is dimensionally homogeneous.
+</p>
+</div>
+<div class="insightbox">
+Dimensional homogeneity does not guarantee that an equation is correct.<br>
+However, if an equation violates dimensional homogeneity, it must be incorrect.
+</div>
+</section>
+<section>
+<h2>Transcendental Functions</h2>
+<p>
+Dimensional homogeneity places an additional restriction on certain mathematical functions.
+</p>
+<p>
+The arguments of transcendental functions such as
+\(\sin x\),
+\(\cos x\),
+\(\tan x\),
+\(e^x\),
+and
+\(\log x\)
+must always be <strong>dimensionless</strong>.
+</p>
+<p>
+This is because these functions are defined through infinite series expansions. Terms of different dimensions cannot be added together, so the argument itself must be dimensionless.
+</p>
+<div class="examplebox">
+<p>
+For example,
+</p>
+\[
+\sin x = x-\frac{x^3}{3!} +\frac{x^5}{5!} -\cdots
+\]
+<p>
+All terms in the series are added together. Therefore,
+</p>
+\[
+[x]=[x^3]=[x^5]=\cdots
+\]
+<p>
+This is possible only when:
+</p>
+\[
+[x]=[M^0L^0T^0]
+\]
+</div>
+<p>
+The same requirement applies to all transcendental functions.
+</p>
+<div class="examplebox">
+<p>
+Consider the travelling wave equation:
+</p>
+\[
+y=A\sin(kx-\omega t)
+\]
+<p>
+The argument of the sine function must be dimensionless. Therefore,
+</p>
+\[
+[kx]=[M^0L^0T^0]
+\]
+\[
+[\omega t]=[M^0L^0T^0]
+\]
+<p>
+Since both terms are dimensionless, the quantity \((kx-\omega t)\) is also dimensionless, making the equation physically meaningful.
+</p>
+</div>
+<div class="insightbox">
+Whenever a quantity appears inside a trigonometric, exponential or logarithmic function, its dimensions must be zero.<br>
+Transcendental functions can only accept dimensionless arguments.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>

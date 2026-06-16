@@ -1,124 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work, Power & Energy | Potential Energy</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potential Energy | Work, Power & Energy</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Work, Power &amp; Energy
-            </a>
-        </nav>
-
-        <h1>Potential Energy</h1>
-        <p class="subtitle">
-            Energy stored in a system by virtue of its configuration — ready to be converted into kinetic energy.
-        </p>
-
-        <section>
-            <h2>What is Potential Energy?</h2>
-            <p>
-                Potential energy is the energy stored in a system due to the relative positions of its parts or its
-                configuration. It is not the energy of motion, but the energy of arrangement. When the configuration
-                changes, this stored energy can be released as kinetic energy.
-            </p>
-            <p>
-                Potential energy can only be defined for conservative forces. For non-conservative forces like friction,
-                the concept of potential energy does not apply — the energy "stored" cannot be recovered as mechanical
-                energy.
-            </p>
-            <div class="insightbox">
-                Potential energy is a property of the <em>system</em>, not of a single object. Gravitational potential
-                energy belongs to the earth–object system, not to the object alone. The zero of potential energy is
-                chosen for mathematical convenience, since only changes in potential energy are physically meaningful.
-            </div>
-        </section>
-
-        <section>
-            <h2>Defining Potential Energy from Work</h2>
-            <p>
-                For a conservative force, the work done by the force when the system moves from configuration A to
-                configuration B is defined as the negative of the change in potential energy:
-            </p>
-            \[W_{\text{conservative}} = -\Delta U = -(U_B - U_A) = U_A - U_B\]
-            <p>
-                Rearranging: the potential energy at B relative to A is:
-            </p>
-            \[U_B - U_A = -W_{\text{conservative (A \to B)}}\]
-            <p>
-                By choosing a reference point where \(U = 0\), we can assign a definite value of \(U\) to every
-                configuration. The key relation connecting force and potential energy in one dimension is:
-            </p>
-            \[F = -\frac{dU}{dx}\]
-        </section>
-
-        <section>
-            <h2>Gravitational Potential Energy (Near Earth's Surface)</h2>
-            <p>
-                Near the surface of the earth, gravity is approximately constant: \(\vec{g} \approx -g\hat{j}\)
-                (downward). The work done by gravity when an object moves from height \(h_i\) to \(h_f\) is:
-            </p>
-            \[W_{\text{gravity}} = -mg(h_f - h_i) = mgh_i - mgh_f\]
-            <p>
-                Defining gravitational potential energy as \(U = mgh\) (with \(U = 0\) at \(h = 0\), typically the
-                ground), we have:
-            </p>
-            \[W_{\text{gravity}} = U_i - U_f = -\Delta U\]
-            <ul>
-                <li>As the object rises: \(h_f > h_i\), gravity does negative work, and \(U\) increases.</li>
-                <li>As the object falls: \(h_f < h_i\), gravity does positive work, and \(U\) decreases (converted to
-                        kinetic energy).</li>
-            </ul>
-            <div class="insightbox">
-                Only the <em>change</em> in gravitational potential energy matters, not the absolute value. Choosing the
-                ground, sea level, or any other reference as \(U = 0\) is equally valid — the physics does not change.
-            </div>
-        </section>
-
-        <section>
-            <h2>Elastic (Spring) Potential Energy</h2>
-            <p>
-                A spring compressed or stretched by distance \(x\) from its natural length stores elastic potential
-                energy. Since the spring force is \(F = -kx\) (conservative), the potential energy stored is:
-            </p>
-            \[U_{\text{spring}} = \frac{1}{2}kx^2\]
-            <p>
-                This is always non-negative. The spring stores maximum potential energy at maximum compression or
-                extension, and zero potential energy at its natural length.
-            </p>
-            <p>
-                Verification: \(F = -\frac{dU}{dx} = -\frac{d}{dx}\left(\frac{1}{2}kx^2\right) = -kx\) ✓
-            </p>
-        </section>
-
-        <section>
-            <h2>Equilibrium and Potential Energy</h2>
-            <p>
-                The condition \(F = -\frac{dU}{dx} = 0\) identifies equilibrium points — positions where the net force
-                vanishes. The nature of equilibrium is determined by the second derivative of \(U\):
-            </p>
-            <ul>
-                <li><strong>Stable equilibrium:</strong> \(\frac{d^2U}{dx^2} > 0\) — potential energy is at a local
-                    minimum; displaced objects return.</li>
-                <li><strong>Unstable equilibrium:</strong> \(\frac{d^2U}{dx^2} < 0\) — potential energy is at a local
-                        maximum; displaced objects move further away.</li>
-                <li><strong>Neutral equilibrium:</strong> \(\frac{d^2U}{dx^2} = 0\) — potential energy is constant; the
-                    object remains at the new position.</li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Work, Power &amp; Energy
+</a>
+</nav>
+<h1>Potential Energy</h1>
+<p class="subtitle">
+Energy stored in a system by virtue of its configuration.
+</p>
+<section>
+<h2>What is Potential Energy?</h2>
+<p>
+Potential energy is the energy stored in a system due to the relative positions of its parts or its configuration. It is not the energy of motion, but the energy of arrangement. When the configuration changes, this stored energy can be released as kinetic energy.
+</p>
+<p>
+Potential energy can only be defined for conservative forces. For non-conservative forces like friction, the concept of potential energy does not apply — the energy "stored" cannot be recovered as mechanical energy.
+</p>
+<div class="insightbox">
+Potential energy is a property of the <em>system</em>, not of a single object. Gravitational potential energy belongs to the earth–object system, not to the object alone. The zero of potential energy is chosen for mathematical convenience, since only changes in potential energy are physically meaningful.
+</div>
+</section>
+<section>
+<h2>Defining Potential Energy from Work</h2>
+<p>
+For a conservative force, the work done by the force when the system moves from configuration A to configuration B is defined as the negative of the change in potential energy:
+</p>
+\[W_{\text{conservative}} = -\Delta U = -(U_B - U_A) = U_A - U_B\]
+<p>
+Rearranging: the potential energy at B relative to A is:
+</p>
+\[U_B - U_A = -W_{\text{conservative (A \to B)}}\]
+<p>
+By choosing a reference point where \(U = 0\), we can assign a definite value of \(U\) to every configuration. The key relation connecting force and potential energy in one dimension is:
+</p>
+\[F = -\frac{dU}{dx}\]
+</section>
+<section>
+<h2>Gravitational Potential Energy (Near Earth's Surface)</h2>
+<p>
+Near the surface of the earth, gravity is approximately constant: \(\vec{g} \approx -g\hat{j}\) (downward). The work done by gravity when an object moves from height \(h_i\) to \(h_f\) is:
+</p>
+\[W_{\text{gravity}} = -mg(h_f - h_i) = mgh_i - mgh_f\]
+<p>
+Defining gravitational potential energy as \(U = mgh\) (with \(U = 0\) at \(h = 0\), typically the ground), we have:
+</p>
+\[W_{\text{gravity}} = U_i - U_f = -\Delta U\]
+<ul>
+<li>As the object rises: \(h_f > h_i\), gravity does negative work, and \(U\) increases.</li>
+<li>As the object falls: \(h_f \lt h_i\), gravity does positive work, and \(U\) decreases (converted to kinetic energy).</li>
+</ul>
+<div class="insightbox">
+Only the <em>change</em> in gravitational potential energy matters, not the absolute value. Choosing the ground, sea level, or any other reference as \(U = 0\) is equally valid — the physics does not change.
+</div>
+</section>
+<section>
+<h2>Elastic (Spring) Potential Energy</h2>
+<p>
+A spring compressed or stretched by distance \(x\) from its natural length stores elastic potential energy. Since the spring force is \(F = -kx\) (conservative), the potential energy stored is:
+</p>
+\[U_{\text{spring}} = \frac{1}{2}kx^2\]
+<p>
+This is always non-negative. The spring stores maximum potential energy at maximum compression or
+extension, and zero potential energy at its natural length.
+</p>
+<p>
+Verification: \(F = -\frac{dU}{dx} = -\frac{d}{dx}\left(\frac{1}{2}kx^2\right) = -kx\)
+</p>
+</section>
+<section>
+<h2>Equilibrium and Potential Energy</h2>
+<p>
+The condition \(F = -\frac{dU}{dx} = 0\) identifies equilibrium points — positions where the net force vanishes. The nature of equilibrium is determined by the second derivative of \(U\):
+</p>
+<ul>
+<li><strong>Stable equilibrium:</strong> \(\frac{d^2U}{dx^2} > 0\) — potential energy is at a local minimum; displaced objects return.</li>
+<li><strong>Unstable equilibrium:</strong> \(\frac{d^2U}{dx^2} \lt 0\) — potential energy is at a local maximum; displaced objects move further away.</li>
+<li><strong>Neutral equilibrium:</strong> \(\frac{d^2U}{dx^2} = 0\) — potential energy is constant; the object remains at the new position.</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

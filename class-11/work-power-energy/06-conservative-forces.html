@@ -1,131 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work, Power & Energy | Conservative Forces</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservative Forces | Work, Power & Energy</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Work, Power &amp; Energy
-            </a>
-        </nav>
-
-        <h1>Conservative and Non-Conservative Forces</h1>
-        <p class="subtitle">
-            The fundamental classification of forces based on whether their work depends on path or only on endpoints.
-        </p>
-
-        <section>
-            <h2>The Central Question</h2>
-            <p>
-                When a force acts on an object moving from point A to point B, the work done can depend in general on
-                the path taken. In some special cases, however, the work is the same regardless of the path. This
-                distinction has profound physical consequences.
-            </p>
-            <p>
-                Forces for which the work done between two points is independent of the path are called
-                <strong>conservative forces</strong>. All other forces are <strong>non-conservative</strong>.
-            </p>
-        </section>
-
-        <section>
-            <h2>Conservative Forces</h2>
-            <p>
-                A force is conservative if and only if:
-            </p>
-            <ul>
-                <li>The work done by it between any two points is independent of the path taken.</li>
-                <li>Equivalently, the work done by it along any closed path is zero: \(\oint \vec{F} \cdot d\vec{r} =
-                    0\)</li>
-                <li>Equivalently, the force can be expressed as the negative gradient of a scalar potential energy
-                    function: \(\vec{F} = -\nabla U\).</li>
-            </ul>
-            <p>
-                In one dimension, this reduces to \(F = -\dfrac{dU}{dx}\).
-            </p>
-            <div class="insightbox">
-                All three definitions are mathematically equivalent. The fundamental reason for conservative behaviour
-                is that the force field is derivable from a scalar — there is an underlying potential energy landscape.
-            </div>
-            <h3>Examples of Conservative Forces</h3>
-            <ul>
-                <li>Gravitational force (near earth and universal)</li>
-                <li>Spring (elastic) force — Hooke's law</li>
-                <li>Electrostatic force (Coulomb's law)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Non-Conservative Forces</h2>
-            <p>
-                A force is non-conservative if the work done by it depends on the path taken, not just the endpoints.
-                Equivalently, the work done around a closed path is non-zero:
-            </p>
-            \[\oint \vec{F} \cdot d\vec{r} \neq 0\]
-            <p>
-                The "lost" mechanical energy is irreversibly converted into other forms (heat, sound, deformation),
-                which cannot be recovered as mechanical energy. No potential energy function can be defined for such
-                forces.
-            </p>
-            <h3>Examples of Non-Conservative Forces</h3>
-            <ul>
-                <li>Kinetic friction — always opposes relative motion, so more work is done for longer paths.</li>
-                <li>Air resistance (drag) — same reason as friction.</li>
-                <li>Normal force on a rough inclined plane (when friction is also present).</li>
-            </ul>
-            <div class="insightbox">
-                Friction always does negative work (or zero, if the surface is stationary and the object doesn't move).
-                The magnitude of this negative work increases with path length — which is the hallmark that
-                distinguishes it from conservative forces.
-            </div>
-        </section>
-
-        <section>
-            <h2>The F = −dU/dx Relation</h2>
-            <p>
-                For a conservative force in one dimension, the force at any point equals the negative rate of change of
-                potential energy with position:
-            </p>
-            \[F = -\frac{dU}{dx}\]
-            <p>
-                This is the key link between force (a vector concept) and potential energy (a scalar function). It
-                means:
-            </p>
-            <ul>
-                <li>Where \(U\) is steep (large \(|dU/dx|\)), the force is large.</li>
-                <li>Where \(U\) is flat (\(dU/dx = 0\)), the force is zero — this is an equilibrium point.</li>
-                <li>The force always points in the direction of decreasing \(U\).</li>
-            </ul>
-            <p>
-                In three dimensions: \(\vec{F} = -\nabla U = -\left(\dfrac{\partial U}{\partial x}\hat{i} +
-                \dfrac{\partial U}{\partial y}\hat{j} + \dfrac{\partial U}{\partial z}\hat{k}\right)\).
-            </p>
-        </section>
-
-        <section>
-            <h2>Practical Summary</h2>
-            <ul>
-                <li>Conservative forces: work depends only on endpoints → potential energy definable → mechanical energy
-                    conserved.</li>
-                <li>Non-conservative forces: work depends on path → no potential energy → mechanical energy not
-                    conserved.</li>
-                <li>The work–energy theorem applies to both; only the energy conservation principle is restricted to
-                    conservative forces.</li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Work, Power &amp; Energy
+</a>
+</nav>
+<h1>Conservative and Non-Conservative Forces</h1>
+<p class="subtitle">
+Classification of forces based on dependency of work on path or on only endpoints.
+</p>
+<section>
+<h2>The Central Question</h2>
+<p>
+In the previous chapters, we learned that displacement is a special physical quantity.
+</p>
+<p>
+No matter how complicated the path of motion may be, <strong>the displacement of an object depends only on its initial and final positions.</strong>
+</p>
+<p>
+For example, a person may walk from point A to point B along a straight line, a curved road, or a zig-zag path. The distance travelled will be different in each case, but the displacement remains the same because it depends only on the endpoints.
+</p>
+<p>
+Work done by a force over a displacement is given by:
+</p>
+\[
+W=\int \vec{F}\cdot d\vec{r}
+\]
+<p>
+Since work is obtained by summing the contribution of force over the entire path, it is not immediately obvious whether it should depend only on the endpoints or on the path itself.
+</p>
+<p>
+In fact, both situations are possible.
+</p>
+<p>
+For some forces, the work done in moving an object from point A to point B depends only on the initial and final positions. The actual path followed is irrelevant.
+</p>
+<p>
+For other forces, the work done depends on the entire path taken between the two points. Different paths connecting the same endpoints can produce different amounts of work.
+</p>
+<p>
+This distinction leads to one of the most important classifications of forces in mechanics.
+</p>
+<p>
+Forces for which the <strong>work done between two points is independent of the path taken are called conservative forces</strong>. Forces for which the work depends on the path are called <strong>non-conservative forces</strong>.
+</p>
+<div class="insightbox">
+Displacement is always path independent.<br>
+If an object moves from A to B, its displacement depends only on the initial and final positions, irrespective of the path followed.<br>
+Work behaves differently. Since
+\[
+W=\int \vec{F}\cdot d\vec{r},
+\]
+the work done may or may not depend only on the endpoints.<br>
+The central question of this chapter is:<br>
+<strong>Under what conditions does work become path independent?</strong>
+</div>
+<p>
+The answer to this question leads directly to the concepts of potential energy, conservative forces and conservation of mechanical energy.
+</p>
+</section>
+<section>
+<h2>End-Point Evaluation of Work</h2>
+<p>
+There is a mathematical trick to determine whether a force is conservative or not - which is more practical than the definition.
+</p>
+<p>
+Consider a force, \(\vec{F} = F_x\hat{i} + F_y\hat{j} + F_z\hat{k}\) being exerted over a body located initially at \(\vec{r}_i = x_i\hat{i} + y_i\hat{j} + z_i\hat{k}\) . The body got displaced to final position \(\vec{r}_f = x_f\hat{i} + y_f\hat{j} + z_f\hat{k}\) following some path.
+</p>
+<p>
+Work done by a force over the entire displacement is given by:
+</p>
+\[
+W=\int_{\vec{r}_i}^{\vec{r}_f} \vec{F}\cdot d\vec{r} \text{ where } d\vec{r} = dx\hat{i} + dy\hat{j} + dz\hat{k} 
+\]
+\[
+W= \int_{x_i}^{x_f} F_x dx + \int_{y_i}^{y_f} F_y dy + \int_{z_i}^{z_f} F_z dz
+\]
+<p>
+We know \(F_x,F_y,F_z\) are generally functions of \(x,y,z\). 
+</p>
+<p>
+If these integrals can be evaluated directly using <strong>only the initial and final coordinates</strong>, the force is conservative. This happens if \(F_x\) depends only on \(x\), \(F_y\) only on \(y\), etc., or if the terms combine to form an exact differential (like \(ydx + xdy = d(xy)\)).
+</p>
+<p>
+However, if the work expression contains mixed variables (like for example, integrating \(yx^2\,dx\)) and it cannot be reduced to the differential of a function of position, then the integral cannot be evaluated using the endpoint coordinates alone.
+</p>
+<p>
+To calculate the work, we must now know how the particle actually moved between the two points. In other words, we must know the path.
+</p>
+<p>
+The work therefore becomes path-dependent, which is the defining characteristic of a non-conservative force.
+</p>
+<div class="insightbox">
+Students often confuse the symbol \(F_x\).<br>
+The subscript \(x\) refers to the direction of the force component, not the variable on which it depends.<br>
+For example,
+\[
+\vec F = (xy)\hat i + (x^2+y)\hat j
+\]
+has
+\[
+F_x = xy
+\]
+and
+\[
+F_y = x^2+y.
+\]
+Notice that \(F_x\) depends on both \(x\) and \(y\), even though it represents the component along the \(x\) - direction.<br>
+The notation arises from
+\[
+d\vec r = dx\,\hat i + dy\,\hat j + dz\,\hat k,
+\]
+where \(F_x\) multiplies \(dx\), \(F_y\) multiplies \(dy\), and \(F_z\) multiplies \(dz\).
+</div>
+</section>
+<section>
+<h2>Conservative Forces</h2>
+<p>
+We now return to the formal definition of a conservative force.
+</p>
+<p>
+A force is said to be <strong>conservative</strong> if the work done by it between two points depends only on the initial and final positions, and not on the path followed between them.
+</p>
+<p>
+This property can be expressed in several equivalent ways:
+</p>
+<ul class="model-box">
+<li>The work done between any two points is independent of the path taken.</li>
+<li>The work done by the force around any closed path is zero:
+\[
+\oint \vec{F}\cdot d\vec{r}=0
+\]
+</li>
+<li>The force can be expressed as the negative gradient of a scalar potential energy function:
+\[
+\vec{F}= -\nabla U
+\]
+</li>
+</ul>
+<p>
+The concept of potential energy will be developed in detail in the next section. For now, it is sufficient to know that conservative forces allow us to define a potential energy associated with the configuration of a system.
+</p>
+<div class="insightbox">
+All three statements are mathematically equivalent.<br>
+Path independence is the defining physical property of a conservative force.<br>
+The existence of a potential energy function is a mathematical consequence of this property and allows work to be calculated using only the initial and final positions.
+</div>
+<h3>Examples of Conservative Forces</h3>
+<ul class="model-box">
+<li>Gravitational force (near the Earth's surface and universal gravitation)</li>
+<li>Spring (elastic) force described by Hooke's law</li>
+<li>Electrostatic force described by Coulomb's law</li>
+</ul>
+</section>
+<section>
+<h2>What Exactly is Conserved?</h2>
+<p>
+The term <strong>conservative force</strong> often raises an important question: <strong>What exactly is being conserved?</strong>
+</p>
+<p>
+Consider two objects projected with the same initial kinetic energy.
+</p>
+<p>
+The first object is thrown vertically upwards. The second object is projected along a rough horizontal surface.
+</p>
+<p>
+As the first object rises, its kinetic energy gradually decreases while its gravitational potential energy increases. At the highest point, the kinetic energy becomes zero and all the mechanical energy exists as potential energy.
+</p>
+<p>
+The object then starts falling back down. The stored potential energy is converted back into kinetic energy, and the object regains the mechanical energy it previously had.
+</p>
+<p>
+Now consider the second object moving on the rough surface.
+</p>
+<p>
+Its kinetic energy also gradually decreases and eventually becomes zero. However, unlike the first case, the object does not start moving again.
+</p>
+<p>
+The mechanical energy has been converted into thermal energy due to friction and is no longer available as mechanical energy.
+</p>
+<div class="insightbox">
+Conservative forces do not destroy mechanical energy and do not convert it into other forms.<br>
+They merely transfer mechanical energy between kinetic and potential forms.<br>
+Non-conservative forces dissipate mechanical energy by converting it into other forms such as heat, sound or permanent deformation.
+</div>
+<p>
+For this reason, conservative forces are often called <strong>non-dissipative forces</strong>.
+</p>
+<p>
+When only conservative forces act on a system, the total mechanical energy
+</p>
+\[
+E_{\text{mech}} = K + U
+\]
+<p>
+remains constant.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

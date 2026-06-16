@@ -1,103 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Units and Dimensions | Dimensions</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dimensions | Units and Dimensions</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Units and Dimensions
-            </a>
-        </nav>
-
-        <h1>Dimensions and Dimensional Formulae</h1>
-        <p class="subtitle">
-            The qualitative nature of physical quantities.
-        </p>
-
-        <section>
-            <h2>1. What are Dimensions?</h2>
-            <p>
-                The <strong>Dimensions</strong> of a physical quantity are the powers to which the fundamental
-                quantities are raised to represent that quantity.
-            </p>
-            <p>We use square brackets to denote dimensions:</p>
-            <div class="formula-block">
-                \[ [Q] = [M^a L^b T^c A^d K^e \text{mol}^f \text{cd}^g] \]
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Common Dimensional Formulae</h2>
-            <div class="formula-block">
-                <table style="width:100%; text-align:left;">
-                    <tr>
-                        <th>Quantity</th>
-                        <th>Dimensional Formula</th>
-                    </tr>
-                    <tr>
-                        <td>Area</td>
-                        <td>\([L^2]\)</td>
-                    </tr>
-                    <tr>
-                        <td>Volume</td>
-                        <td>\([L^3]\)</td>
-                    </tr>
-                    <tr>
-                        <td>Velocity</td>
-                        <td>\([LT^{-1}]\)</td>
-                    </tr>
-                    <tr>
-                        <td>Acceleration</td>
-                        <td>\([LT^{-2}]\)</td>
-                    </tr>
-                    <tr>
-                        <td>Force</td>
-                        <td>\([MLT^{-2}]\)</td>
-                    </tr>
-                    <tr>
-                        <td>Work / Energy</td>
-                        <td>\([ML^2T^{-2}]\)</td>
-                    </tr>
-                    <tr>
-                        <td>Power</td>
-                        <td>\([ML^2T^{-3}]\)</td>
-                    </tr>
-                    <tr>
-                        <td>Pressure</td>
-                        <td>\([ML^{-1}T^{-2}]\)</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
-        <section>
-            <h2>3. Dimensionless Quantities</h2>
-            <p>
-                Quantities that are the ratio of two similar physical quantities are dimensionless.
-            </p>
-            <ul>
-                <li>Angle, Strain, Relative Density, refractive index, etc.</li>
-                <li>Their dimensions are \([M^0L^0T^0]\).</li>
-            </ul>
-            <div class="insightbox">
-                Remember: A dimensionless quantity can still have a unit (e.g., Radian for Angle), but a unitless
-                quantity is always dimensionless.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Units and Dimensions
+</a>
+</nav>
+<h1>Dimensions and Dimensional Formulae</h1>
+<p class="subtitle">
+The qualitative nature of physical quantities.
+</p>
+<section>
+<h2>What are Dimensions?</h2>
+<p>
+All the physical quantities of interest can be derived from the base quantities.
+</p>
+<div class="model-box">
+<p>
+When a quantity is expressed in terms of the base quantities, it is written as a <strong>product of different powers of the base quantities.</strong>
+</p>
+<p>
+The exponent of a base quantity that enters into the expression, is called the dimension of the quantity in that base.
+</p>
+</div>
+<div class="examplebox">
+<p>
+Consider a few examples to make it clearer.
+</p>
+<p>
+As learned before, force is equal to mass times acceleration. Acceleration is change in velocity divided by time interval. Velocity is length divided by time interval.
+</p>
+\[
+\text{Force} = \text{ mass } \times \text{ acceleration} 
+\]
+\[
+ = \text{ mass } \times \, \frac{\text{velocity}}{\text{time}} 
+\]
+\[
+ = \text{ mass } \times \, \frac{\text{length/time}}{\text{time}} 
+\]
+\[
+ = \text{ mass } \times  \text{ length } \times \text{ time }^{-2} 
+\]
+<p>
+Thus, the dimensions of force are 1 in mass, 1 in length and –2 in time.
+</p>
+<p>
+The dimensions in all other base quantities are zero.
+</p>
+</div>
+<p>
+Thus, the <strong>Dimensions of a physical quantity are the powers to which the fundamental quantities are raised to represent that quantity.</strong>
+</p>
+<p>
+We use square brackets to denote dimensions:
+</p>
+<div class="math-block">
+\[ [Q] = [M^a L^b T^c A^d K^e \text{mol}^f \text{cd}^g] \]
+</div>
+</section>
+<section>
+<h2>Units vs Dimensions</h2>
+<p>
+Units and dimensions are related but different concepts.
+</p>
+<p>
+Units also help to specify the magnitude of a quantity, but dimensions are more fundamental to specify the nature of the quantity.
+</p>
+<div class="examplebox">
+<p>
+Consider length:
+</p>
+\[
+1\,A^\circ
+\]
+\[
+1\,lightyear
+\]
+<p>
+The units are different because different reference standards are being used.
+</p>
+<p>
+But both represent the same kind of physical quantity.
+</p>
+<p>
+Their common dimensional formula is:
+</p>
+\[
+[L]
+\]
+</div>
+<div class="insightbox">
+Units tell us how much.<br>
+Dimensions tell us what kind.
+</div>
+</section>
+<section>
+<h2>Why Dimensions?</h2>
+<p>
+Why do we study dimensions at all?
+</p>
+<p>
+Dimensions help maintain consistency between physical quantities.
+</p>
+<p>
+Dimensions tell us the nature of a quantity. They allow us to distinguish between fundamentally different kinds of measurements such as length, time, mass, force and energy.
+</p>
+<p>
+Because of this, dimensions prevent us from combining physically incompatible quantities.
+</p>
+<p>
+For example, it makes no sense to add 2 apples and 3 oranges. Before performing the addition, we must first decide what common quantity is being counted. If we choose "fruits" as the common category, then the addition becomes meaningful and we can say there are 5 fruits.
+</p>
+<p>
+A similar idea applies in physics. Adding 5 metres to 3 seconds has no physical meaning because length and time represent different kinds of quantities.
+</p>
+<p>
+Only quantities of the same dimensions can be directly added, subtracted or equated.
+</p>
+<div class="insightbox">
+Dimensions tell us what kind of quantity we are dealing with.<br>
+Addition, subtraction and equality are meaningful only between quantities of the same dimensions.<br>
+This principle is called <strong>dimensional consistency</strong>.
+</div>
+</section>
+<section>
+<h2>Common Dimensional Formulae</h2>
+<table>
+<tr>
+<th>Quantity</th>
+<th>Dimensional Formula</th>
+</tr>
+<tr>
+<td>Area</td>
+<td>\([L^2]\)</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>\([L^3]\)</td>
+</tr>
+<tr>
+<td>Velocity</td>
+<td>\([LT^{-1}]\)</td>
+</tr>
+<tr>
+<td>Acceleration</td>
+<td>\([LT^{-2}]\)</td>
+</tr>
+<tr>
+<td>Force</td>
+<td>\([MLT^{-2}]\)</td>
+</tr>
+<tr>
+<td>Work / Energy</td>
+<td>\([ML^2T^{-2}]\)</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>\([ML^2T^{-3}]\)</td>
+</tr>
+<tr>
+<td>Pressure</td>
+<td>\([ML^{-1}T^{-2}]\)</td>
+</tr>
+</table>
+</section>
+<section>
+<h2>Dimensionless Quantities</h2>
+<p>
+Quantities that are the ratio of two similar physical quantities are dimensionless.
+</p>
+<ul>
+<li>Angle, Strain, Relative Density, refractive index, etc.</li>
+<li>Their dimensions are \([M^0L^0T^0]\).</li>
+</ul>
+<div class="insightbox">
+A dimensionless quantity can still have a unit (e.g., Radian for Angle), but a unitless quantity is always dimensionless.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
