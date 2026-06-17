@@ -19,48 +19,240 @@
 Energy stored in a system by virtue of its configuration.
 </p>
 <section>
-<h2>What is Potential Energy?</h2>
+<h2>Conservative Forces and Energy Storage</h2>
 <p>
-Potential energy is the energy stored in a system due to the relative positions of its parts or its configuration. It is not the energy of motion, but the energy of arrangement. When the configuration changes, this stored energy can be released as kinetic energy.
+In the previous section, we learned that conservative forces do not dissipate mechanical energy. Instead, they continuously transfer energy between kinetic and potential forms.
 </p>
 <p>
-Potential energy can only be defined for conservative forces. For non-conservative forces like friction, the concept of potential energy does not apply — the energy "stored" cannot be recovered as mechanical energy.
+Consider a body projected vertically upwards. As it rises, gravity acts opposite to the direction of motion and therefore does negative work on the body.
+</p>
+<p>
+As a result, the kinetic energy of the body gradually decreases. At the highest point, the kinetic energy becomes zero and the body momentarily comes to rest.
+</p>
+<p>
+However, the energy has not disappeared. The body begins to fall back and gravity now does positive work on it. The same energy that was removed from the kinetic energy during the upward journey reappears as kinetic energy during the downward journey.
+</p>
+<p>
+It is as though the energy removed by the negative work of a conservative force is temporarily stored in an energy reservoir and later returned when the motion reverses.
+</p>
+<p>
+The same behaviour is observed for other conservative forces such as spring forces and electrostatic forces. Energy can be stored and later recovered without any loss of mechanical energy.
+</p>
+<p>
+This stored form of mechanical energy is called <strong>potential energy</strong>.
 </p>
 <div class="insightbox">
-Potential energy is a property of the <em>system</em>, not of a single object. Gravitational potential energy belongs to the earth–object system, not to the object alone. The zero of potential energy is chosen for mathematical convenience, since only changes in potential energy are physically meaningful.
+A conservative force does not destroy mechanical energy.<br>
+When it performs negative work, mechanical energy is stored as potential energy.<br>
+When it performs positive work, the stored potential energy is converted back into kinetic energy.
+</div>
+</section>
+<section>
+<h2>What is Potential Energy?</h2>
+<p>
+Earlier, we introduced kinetic energy as the energy associated with motion. However, kinetic energy is only one form of mechanical energy. Mechanical energy exists primarily in two forms:
+</p>
+<ul class="model-box">
+<li>Kinetic Energy</li>
+<li>Potential Energy</li>
+</ul>
+<p>
+Potential energy is the energy stored in a system due to its <strong>configuration</strong>. A configuration simply refers to the relative positions of the parts of the system.
+</p>
+<p>
+Unlike kinetic energy, which is associated with motion, potential energy is associated with arrangement. As the relative positions of the parts of a system change, potential energy can be converted into kinetic energy and vice versa.
+</p>
+<div class="insightbox">
+Potential energy is a form of <strong>mechanical energy</strong> stored in the configuration of a system.<br>
+When the configuration changes, this stored energy can be converted into kinetic energy and vice versa.<br>
+Not all stored energy is potential energy.<br>
+For example, a hot metal sheet possesses internal (thermal) energy. When it is placed in contact with an ice cube, this energy flows into the ice and melts it.<br>
+The stored thermal energy is not converted into kinetic energy of the system and therefore is not considered mechanical potential energy.<br>
+Potential energy is the recoverable form of mechanical energy associated with conservative forces.<br>
+It necessarily originates from the negative work done by a conservative force and can later be returned as kinetic energy when the system is allowed to evolve freely.
+</div>
+<p>
+Potential energy can only be defined for conservative forces. The reason is that the work done by a conservative force depends only on the initial and final positions of the system.
+</p>
+<p>
+This allows us to assign a unique potential energy value to every position (or configuration) of the system.
+</p>
+<p>
+As the system moves from one position to another, the change in potential energy exactly accounts for the work done by the conservative force.
+</p>
+<p>
+For non-conservative forces such as friction, the work done depends on the path taken. Since there is no unique energy value associated with a given configuration, a potential energy function cannot be defined.
+</p>
+<div class="insightbox">
+Potential energy is a property of the <strong>system</strong>, not of an individual object.<br>
+Gravitational potential energy belongs to the Earth–object system and depends on their relative positions (height).<br>
+Elastic potential energy belongs to the spring–object system and depends on the extension or compression of the spring.<br>
+Electrostatic potential energy belongs to a system of interacting charges and depends on their relative positions (separation).<br>
+Different conservative forces store energy in different configurations, but the underlying idea remains the same: energy is stored in the arrangement of the system.
 </div>
 </section>
 <section>
 <h2>Defining Potential Energy from Work</h2>
 <p>
-For a conservative force, the work done by the force when the system moves from configuration A to configuration B is defined as the negative of the change in potential energy:
+We have learned that the work done by a conservative force depends only on the initial and final positions (or configurations) of the system.
 </p>
-\[W_{\text{conservative}} = -\Delta U = -(U_B - U_A) = U_A - U_B\]
 <p>
-Rearranging: the potential energy at B relative to A is:
+This means that the work done by a conservative force can always be expressed as the difference of some scalar function evaluated at the endpoints.
 </p>
-\[U_B - U_A = -W_{\text{conservative (A \to B)}}\]
 <p>
-By choosing a reference point where \(U = 0\), we can assign a definite value of \(U\) to every configuration. The key relation connecting force and potential energy in one dimension is:
+We call this scalar function the <strong>Potential Energy</strong> of the system.
 </p>
-\[F = -\frac{dU}{dx}\]
+<p>
+Consider a system initially in configuration \(A\) and finally in configuration \(B\).
+</p>
+<p>
+For simplicity, we may imagine one particle fixed while the other particles change their positions relative to it. This corresponds to a change in the configuration of the system.
+</p>
+<p>
+The change in potential energy is defined such that the work done by a conservative force is equal to the negative of the change in potential energy:
+</p>
+\[
+W_{\text{cons}} = -\Delta U
+\]
+<p>
+or equivalently,
+</p>
+\[
+W_{\text{cons}} = - ( U_B - U_A) = U_A - U_B
+\]
+<p>
+Rearranging,
+</p>
+\[
+U_B - U_A = -W_{\text{cons}(A\rightarrow B)}.
+\]
+<p>
+The negative sign indicates that when a conservative force performs positive work, the potential energy of the system decreases, and when a conservative force performs negative work, the potential energy of the system increases.
+</p>
+<p>
+Earlier, we observed that the work integral
+</p>
+\[
+W = \int \vec F\cdot d\vec r
+\]
+<p>
+For a conservative force can be evaluated using only the endpoint positions, without knowing the equation of the path.
+</p>
+<p>
+Mathematically, this means that the work done by a conservative force can always be written as the difference of a scalar function evaluated at the endpoints:
+</p>
+\[
+W_{\text{cons}} = -(\Phi(B)-\Phi(A)).
+\]
+<p>
+We simply give this scalar function a physical name:
+</p>
+\[
+U \equiv \Phi.
+\]
+<p>
+Thus, potential energy is nothing more than the scalar endpoint function whose difference reproduces the work done by a conservative force.
+</p>
 </section>
 <section>
-<h2>Gravitational Potential Energy (Near Earth's Surface)</h2>
+<h2>Reference Potential Energy</h2>
 <p>
-Near the surface of the earth, gravity is approximately constant: \(\vec{g} \approx -g\hat{j}\) (downward). The work done by gravity when an object moves from height \(h_i\) to \(h_f\) is:
+For a conservative force, the work done when a system changes its configuration from \(A\) to \(B\) is given by:
 </p>
-\[W_{\text{gravity}} = -mg(h_f - h_i) = mgh_i - mgh_f\]
+\[
+W_{\text{cons}} = -\Delta U = -(U_B - U_A) = U_A - U_B
+\]
 <p>
-Defining gravitational potential energy as \(U = mgh\) (with \(U = 0\) at \(h = 0\), typically the ground), we have:
+Notice that this relation only tells us the <strong>difference</strong> in potential energy between two configurations.
 </p>
-\[W_{\text{gravity}} = U_i - U_f = -\Delta U\]
-<ul>
-<li>As the object rises: \(h_f > h_i\), gravity does negative work, and \(U\) increases.</li>
-<li>As the object falls: \(h_f \lt h_i\), gravity does positive work, and \(U\) decreases (converted to kinetic energy).</li>
+<p>
+Experimentally, we can measure the work done by a conservative force and hence determine only changes in potential energy. An absolute value of potential energy cannot be measured directly.
+</p>
+<p>
+This situation is not unique to potential energy. In kinematics, position itself is measured relative to a chosen origin. Since potential energy is ultimately a function of position (or configuration), it is natural that a similar reference must be introduced.
+</p>
+<p>
+We therefore choose an arbitrary reference configuration \(x_0\) and define its potential energy to be zero:
+</p>
+\[
+U(x_0) = 0
+\]
+<p>
+This choice is purely a matter of convenience and does not affect the physics, because only differences in potential energy have physical significance.
+</p>
+<p>
+Once a reference configuration has been chosen, the potential energy at any other configuration \(x\) can be determined from the work done by the conservative force in moving the system from \(x_0\) to \(x\):
+</p>
+\[
+U(x) - U(x_0) = - W_{\text{cons}(x_0\rightarrow x)}
+\]
+<p>
+Since we have defined
+</p>
+\[
+U(x_0)=0,
+\]
+<p>
+the potential energy at configuration \(x\) becomes
+</p>
+\[
+U(x) = -W_{\text{cons}(x_0\rightarrow x)}.
+\]
+<div class="insightbox">
+Potential energy is analogous to position in kinematics.<br>
+Just as there is no experimentally measurable absolute position and an origin must be chosen, there is no experimentally measurable absolute potential energy and a reference configuration must be chosen.<br>
+Only differences in position and differences in potential energy have direct physical significance.
+</div>
+</section>
+<section>
+<h2>Gravitational and Electrostatic Potential Energy</h2>
+<p>
+We have seen that potential energy is associated with the <strong>configuration</strong> of a system. The meaning of configuration, however, depends on the type of conservative force involved.
+</p>
+<p>
+Gravitational and electrostatic forces are often studied together because they are <strong>field forces</strong>. In contrast, the spring force is a <strong>contact force</strong> and will be discussed separately.
+</p>
+<p>
+For field forces, the configuration of the system is determined by the relative positions of the interacting bodies. Equivalently, we may think of it as the position of a particle within a static field produced by another body.
+</p>
+<p>
+For example, the gravitational potential energy of the Earth revolving around the Sun belongs to the Earth–Sun system. As the Earth moves, its position relative to the Sun changes, and therefore the configuration of the system changes.
+</p>
+<p>
+In practice, we often describe the interaction in terms of the static gravitational field produced by the Sun and study the motion of the Earth within that field. Both descriptions represent the same physics.
+</p>
+<p>
+In this chapter, we restrict ourselves to the gravitational field of the Earth near its surface, where the gravitational acceleration may be approximated as constant:
+</p>
+\[
+\vec g = -g\hat{j}.
+\]
+<p>
+We mathematically express the work done by gravity when an object moves from height \(h_i\) to height \(h_f\). Height indicates the length measured upwards from a reference level. (Correspondingly, Depth indicates the length measured downwards from a reference level).
+</p>
+\[
+W_{\text{gravity}} = - mg(h_f - h_i) = mgh_i - mgh_f
+\]
+<p>
+Choose the reference level \(h_i\) to have zero potential energy (U_i = 0) and let \(h_f - h_i = h\). We define
+</p>
+\[
+W_{\text{gravity}} = -\Delta U = U_i - U_f = -mgh
+\]
+<p>
+We can define gravitational potential energy at height h from reference as:
+</p>
+\[
+U(h) = -W_{\text{gravity }h_i \to h + h_i} = mgh
+\]
+<ul class="model-box">
+<li>As the object rises, h increases, gravity performs negative work and the gravitational potential energy increases.</li>
+<li>As the object falls, h decreases, gravity performs positive work and the gravitational potential energy decreases, being converted back into kinetic energy.</li>
 </ul>
 <div class="insightbox">
-Only the <em>change</em> in gravitational potential energy matters, not the absolute value. Choosing the ground, sea level, or any other reference as \(U = 0\) is equally valid — the physics does not change.
+For field forces, configuration is determined by the relative positions of the interacting bodies.<br>
+For gravity near the Earth's surface, this configuration can be described by a single coordinate: the height (h).<br>
+Only changes in gravitational potential energy have physical significance; the choice of (U=0) is arbitrary.
 </div>
 </section>
 <section>
