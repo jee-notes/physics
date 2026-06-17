@@ -19,44 +19,94 @@
 
         <h1>Banking of Roads and Level Turns</h1>
         <p class="subtitle">
-            How geometry helps vehicles navigate curves safely.
+            How physical geometry and friction help vehicles navigate curves safely.
         </p>
 
         <section>
             <h2>1. Negotiating a Curve on a Level Road</h2>
             <p>
-                On a flat, level road, the only force providing the necessary centripetal force is <strong>static
-                    friction</strong> between the tires and the road.
+                When a car travels along a flat, level curve of radius \( R \) at speed \( v \), it requires a centripetal force of magnitude \( mv^2/R \) directed toward the center of the turn. Since the road is perfectly horizontal, the Normal Reaction \( N \) is entirely vertical and merely balances gravity (\( N = mg \)). 
             </p>
-            <div class="formula-block">
-                \[ f_s = \frac{mv^2}{R} \leq \mu_s N \]
-                \[ \implies v_{max} = \sqrt{\mu_s Rg} \]
+            <p>
+                The only available horizontal force is the <strong>static friction</strong> \( f_s \) between the tires and the road surface.
+            </p>
+            
+            <div class="model-box">
+                \[ f_s = \frac{mv^2}{R} \]
             </div>
+
+            <p>
+                However, static friction has a strict upper limit defined by the coefficient of static friction \( \mu_s \) and the normal force:
+            </p>
+
+            <div class="model-box">
+                \[ f_s \leq \mu_s N \implies f_s \leq \mu_s mg \]
+            </div>
+
+            <p>
+                To avoid skidding radially outward, the required centripetal force cannot exceed this maximum available static friction. Setting them equal gives the <strong>maximum safe speed</strong> on a level unbanked road:
+            </p>
+
+            <div class="model-box">
+                \[ \frac{mv_{max}^2}{R} = \mu_s mg \implies v_{max} = \sqrt{\mu_s Rg} \]
+            </div>
+
             <div class="insightbox">
-                If the speed exceeds this value, the required centripetal force will be greater than the maximum
-                available friction, and the car will skid outwards.
+                If the driver exceeds \( v_{max} \), the tires lose their static grip, kinetic friction takes over (which is weaker), and the car skids off the road in a direction tangent to the curve. Notice that the maximum safe speed is independent of the car's mass \( m \) — heavy trucks and light cars slide at the same speed under identical tire-asphalt conditions!
             </div>
         </section>
 
         <section>
             <h2>2. Why Bank Roads?</h2>
             <p>
-                Banking means raising the outer edge of the road relative to the inner edge. This allows a component of
-                the <strong>Normal Reaction force</strong> to contribute to the centripetal force, reducing reliance on
-                friction.
+                Relying purely on friction is extremely dangerous, especially when the road is wet, icy, or oily, which drastically lowers \( \mu_s \). Additionally, forcing the tires to supply massive lateral friction forces at high speeds causes severe wear and tear.
             </p>
+            <p>
+                <strong>Banking</strong> is the engineering solution to this problem. It involves raising the outer edge of the curved road relative to the inner edge by an angle \( \theta \). By doing this, the road surface is tilted inward. Consequently, the Normal Reaction \( N \), which is always perpendicular to the surface, is tilted inward as well.
+            </p>
+            <div class="concept-box">
+                The primary purpose of banking is to utilize a horizontal component of the Normal Force (\( N \sin \theta \)) to provide the necessary centripetal force, reducing or entirely eliminating the reliance on friction.
+            </div>
         </section>
 
         <section>
             <h2>3. The Ideal Banking Angle</h2>
             <p>
-                In the absence of friction (or to minimize tire wear), we can find an "optimum speed" (\(v_o\)) where
-                the horizontal component of the normal force provides <em>exactly</em> the required centripetal force.
+                There exists an "optimum speed" (\( v_o \)) at which a vehicle can negotiate the banked curve without requiring <em>any</em> frictional assistance at all. At this speed, the horizontal component of the normal force provides <em>exactly</em> the required centripetal force.
             </p>
-            <div class="formula-block">
-                \[ N \cos \theta = mg \]
-                \[ N \sin \theta = \frac{mv^2}{R} \]
-                \[ \implies \tan \theta = \frac{v^2}{Rg} \]
+            
+            <p>
+                Let's resolve the forces on the vehicle along vertical and horizontal axes (assuming no friction is acting):
+            </p>
+            <ul>
+                <li><strong>Vertical Axis (Equilibrium):</strong> The upward component of the normal force balances the vehicle's weight.
+                    <div class="model-box">\[ N \cos \theta = mg \]</div>
+                </li>
+                <li><strong>Horizontal Axis (Centripetal Acceleration):</strong> The inward component of the normal force supplies the centripetal acceleration.
+                    <div class="model-box">\[ N \sin \theta = \frac{mv_o^2}{R} \]</div>
+                </li>
+            </ul>
+
+            <p>
+                By dividing the horizontal equation by the vertical equation, we eliminate the Normal force \( N \) and the mass \( m \):
+            </p>
+
+            <div class="model-box">
+                \[ \tan \theta = \frac{v_o^2}{Rg} \]
+            </div>
+
+            <p>
+                From this relation, the optimum (or ideal) speed is:
+            </p>
+
+            <div class="model-box">
+                \[ v_o = \sqrt{Rg \tan \theta} \]
+            </div>
+
+            <div class="insightbox">
+                <strong>What happens if the driver travels at a different speed?</strong><br>
+                If \( v > v_o \), the normal component isn't enough; the car tends to drift outward (up the bank), so static friction must act <em>down</em> the bank to help pull the car inward.<br>
+                If \( v < v_o \), the normal component is too strong; the car tends to slide inward (down the bank), so static friction must act <em>up</em> the bank to prevent slipping.
             </div>
         </section>
 

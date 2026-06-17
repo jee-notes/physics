@@ -19,43 +19,95 @@
 
         <h1>Dynamics and Centripetal Force</h1>
         <p class="subtitle">
-            The real forces that maintain curved trajectories.
+            The real, physical forces that maintain curved trajectories.
         </p>
 
         <section>
             <h2>1. What is Centripetal Force?</h2>
             <p>
-                Centripetal force is not a basic force of nature (like gravity or electromagnetism). Instead, it is a
-                <strong>role</strong> played by any physical force that acts toward the center of a circular path.
+                From kinematics, we know that any object moving in a circle of radius \( R \) with speed \( v \) must experience a centripetal acceleration \( a_c = v^2/R \) directed toward the center. According to Newton's Second Law (\( F_{net} = ma \)), this acceleration must be caused by a net force directed toward the center. This net radial force is called the <strong>Centripetal Force</strong>.
             </p>
-            <div class="formula-block">
-                \[ F_{net} = m \frac{v^2}{R} \]
+            
+            <div class="model-box">
+                \[ F_c = m a_c = \frac{mv^2}{R} = mR\omega^2 \]
+            </div>
+
+            <ul>
+                <li><strong>\( F_c \)</strong>: Centripetal force.</li>
+                <li><strong>\( m \)</strong>: Mass of the particle.</li>
+                <li><strong>\( v \)</strong>: Linear speed of the particle.</li>
+                <li><strong>\( R \)</strong>: Radius of the circular path.</li>
+            </ul>
+
+            <div class="concept-box">
+                <strong>SI Unit:</strong> Newton (N) or \(\text{kg}\cdot\text{m/s}^2\)<br>
+                <strong>Dimensional Formula:</strong> \([M L T^{-2}]\)
+            </div>
+
+            <div class="insightbox">
+                <strong>Crucial Note:</strong> Centripetal force is <em>not</em> a new, distinct fundamental force of nature (like gravity or electromagnetism). Instead, it is a <strong>role</strong> played by one or more physical forces. When solving physics problems, you should never draw a separate "centripetal force" vector on a free-body diagram. You simply identify the real forces (tension, normal, friction, gravity) and find their net component pointing toward the center.
             </div>
         </section>
 
         <section>
             <h2>2. Real-World Agents</h2>
+            <p>
+                To maintain circular motion, different physical situations utilize different "agents" to provide the necessary centripetal force:
+            </p>
             <ul class="points-list">
-                <li><strong>Tension:</strong> A string pulling a stone in a circle.</li>
-                <li><strong>Friction:</strong> Tires of a car turning on a level road.</li>
-                <li><strong>Gravity:</strong> The sun's pull keeping planets in orbit.</li>
-                <li><strong>Normal Force:</strong> The walls of a 'Death Well' pushing on a motorcycle.</li>
+                <li><strong>Tension (\(T\)):</strong> A stone tied to a string and whirled in a horizontal circle on a frictionless table. The string's tension provides the inward pull.</li>
+                <li><strong>Static Friction (\(f_s\)):</strong> A car taking a turn on a flat, unbanked road. The friction between the tires and the asphalt pushes the car toward the center of the curve.</li>
+                <li><strong>Gravity (\(F_g\)):</strong> The moon orbiting the Earth, or satellites in geostationary orbit. The gravitational attraction acts as the centripetal force.</li>
+                <li><strong>Normal Force (\(N\)):</strong> A motorcycle rider performing stunts on the walls of a 'Death Well' (Rotor ride). The wall pushes inward on the rider.</li>
+                <li><strong>Magnetic Force (\(F_B\)):</strong> A charged particle entering a uniform magnetic field perpendicularly experiences a Lorentz force that forces it into a circular path.</li>
             </ul>
         </section>
 
         <section>
             <h2>3. Horizontal Circular Motion</h2>
             <p>
-                For a particle moving in a horizontal circle constrained by a string (Conical Pendulum):
+                Often, circular motion occurs in a horizontal plane while being influenced by vertical forces like gravity. A classic example is the <strong>Conical Pendulum</strong>.
             </p>
-            <div class="formula-block">
-                \[ T \cos \theta = mg \]
-                \[ T \sin \theta = \frac{mv^2}{R} \]
-                \[ \implies \tan \theta = \frac{v^2}{Rg} \]
+            
+            <div class="examplebox">
+                <h3>The Conical Pendulum</h3>
+                <hr>
+                <p>
+                    Consider a bob of mass \( m \) tied to a string of length \( L \), whirling in a horizontal circle of radius \( R \). The string sweeps out a cone, making an angle \( \theta \) with the vertical. Let \( T \) be the tension in the string.
+                </p>
+                <p>
+                    We resolve the tension \( T \) into two orthogonal components:
+                </p>
+                <ol>
+                    <li>A vertical component \( T \cos \theta \) which balances the gravitational force (weight).</li>
+                    <li>A horizontal component \( T \sin \theta \) which points toward the center of the circle and provides the required centripetal force.</li>
+                </ol>
+                <div class="model-box">
+                    \[ T \cos \theta = mg \]
+                    \[ T \sin \theta = \frac{mv^2}{R} \]
+                </div>
+                <p>
+                    Dividing the second equation by the first equation eliminates the tension \( T \):
+                </p>
+                <div class="model-box">
+                    \[ \tan \theta = \frac{v^2}{Rg} \]
+                </div>
+                <p>
+                    From this, we can determine the necessary speed \( v \) for a given angle \( \theta \):
+                </p>
+                <div class="model-box">
+                    \[ v = \sqrt{Rg \tan \theta} \]
+                </div>
+                <p>
+                    Since the radius \( R \) is related to the string length \( L \) by geometry (\( R = L \sin \theta \)), we can also find the time period \( P \) of one complete revolution (\( P = 2\pi R / v \)):
+                </p>
+                <div class="model-box">
+                    \[ P = 2\pi \sqrt{\frac{L \cos \theta}{g}} \]
+                </div>
             </div>
+
             <div class="insightbox">
-                In horizontal circular motion, gravity is balanced by a component of another force (like tension), while
-                a different component provides the required inward pull.
+                In horizontal circular motion setups, gravity is completely balanced by the vertical component of a force (like tension or normal reaction), while a different, un-cancelled horizontal component acts as the sole provider of the inward centripetal pull.
             </div>
         </section>
 

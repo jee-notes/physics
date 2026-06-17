@@ -19,46 +19,78 @@
 
         <h1>Vertical Circular Motion and Energy</h1>
         <p class="subtitle">
-            Non-uniform circular motion influenced by gravity.
+            Non-uniform circular motion heavily influenced by Earth's gravity.
         </p>
 
         <section>
             <h2>1. Non-Uniform Nature</h2>
             <p>
-                When an object tethered to a string moves in a vertical circle, gravity acts as a tangential force,
-                changing the object's speed at every point. This is a classic application of the Work-Energy Theorem.
+                When an object of mass \( m \) tied to a string of length \( R \) is whirled in a vertical plane, the motion is fundamentally <strong>non-uniform</strong>. Gravity acts as a continuous downward force. Unlike a horizontal circle where gravity is perpendicular to the motion and does no work, in a vertical circle, gravity has a tangential component at almost all points.
+            </p>
+            <p>
+                As the object moves upward, gravity does negative work, causing the object's kinetic energy and speed to decrease. As it moves downward, gravity does positive work, increasing the speed. This continuous exchange between Kinetic Energy (KE) and Gravitational Potential Energy (PE) is a classic application of the <strong>Conservation of Mechanical Energy</strong>.
             </p>
         </section>
 
         <section>
             <h2>2. Tension Analysis</h2>
             <p>
-                At any point (angle \(\theta\) from the bottom), the tension \(T\) in the string is:
+                Consider the particle at an angle \( \theta \) measured from the lowest point of the circle (the bottom). The forces acting on the particle along the radial direction (the string) are the tension \( T \) pulling inward and the radial component of gravity \( mg \cos \theta \) pulling outward. 
             </p>
-            <div class="formula-block">
+            <p>
+                According to Newton's Second Law, the net radial force must provide the necessary centripetal acceleration:
+            </p>
+            
+            <div class="model-box">
                 \[ T - mg \cos \theta = \frac{mv^2}{R} \]
+                \[ \implies T = mg \cos \theta + \frac{mv^2}{R} \]
             </div>
-            <ul>
-                <li><strong>At Bottom (\(\theta = 0\)):</strong> \( T_L = mg + \frac{mv_L^2}{R} \) (Maximum Tension)
-                </li>
-                <li><strong>At Top (\(\theta = \pi\)):</strong> \( T_H = \frac{mv_H^2}{R} - mg \) (Minimum Tension)</li>
-            </ul>
+
+            <p>
+                The velocity \( v \) at any angle \( \theta \) can be found using energy conservation. If \( v_L \) is the speed at the bottom, the height gained is \( h = R(1 - \cos \theta) \), giving \( \frac{1}{2}mv^2 = \frac{1}{2}mv_L^2 - mgh \).
+            </p>
+            
+            <div class="concept-box">
+                <strong>Extreme Points:</strong>
+                <ul>
+                    <li><strong>At Bottom (\(\theta = 0^\circ, \cos \theta = 1\)):</strong> The tension is absolutely maximized because it must fight the full weight of the particle while simultaneously providing maximum centripetal force (since speed is highest).
+                        <br> \( T_{Bottom} = mg + \frac{mv_L^2}{R} \)
+                    </li>
+                    <li><strong>At Top (\(\theta = 180^\circ, \cos \theta = -1\)):</strong> The tension is minimized because gravity directly assists in providing the centripetal pull, and the speed is at its lowest.
+                        <br> \( T_{Top} = \frac{mv_H^2}{R} - mg \)
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section>
             <h2>3. Critical Values for a String</h2>
             <p>
-                For the object to complete the circle without the string slacking, the tension at the top must satisfy
-                \(T_H \geq 0\).
+                For the particle to successfully complete the full vertical circle, the string must never go slack. The most dangerous point where slacking is likely to occur is at the very top. Therefore, the minimum boundary condition for completing the circle is that tension at the top just drops to zero (\( T_{Top} \geq 0 \)).
             </p>
-            <div class="formula-block">
-                \[ v_{Top} \geq \sqrt{gR} \]
-                \[ v_{Bottom} \geq \sqrt{5gR} \]
+            
+            <p>Setting \( T_{Top} = 0 \):</p>
+            <div class="model-box">
+                \[ \frac{mv_{Top}^2}{R} - mg = 0 \implies v_{Top} = \sqrt{gR} \]
             </div>
+
+            <p>
+                This is the <strong>critical minimum speed</strong> required at the highest point. To find the corresponding minimum launch speed required at the bottom (\( v_{Bottom} \)), we apply the conservation of energy between the bottom and the top (a height difference of \( 2R \)):
+            </p>
+
+            <div class="model-box">
+                \[ \frac{1}{2}mv_{Bottom}^2 = \frac{1}{2}mv_{Top}^2 + mg(2R) \]
+                \[ \frac{1}{2}mv_{Bottom}^2 = \frac{1}{2}m(gR) + 2mgR = \frac{5}{2}mgR \]
+                \[ v_{Bottom} = \sqrt{5gR} \]
+            </div>
+
             <div class="insightbox">
-                If the velocity at the bottom is between \(\sqrt{2gR}\) and \(\sqrt{5gR}\), the string will slack
-                somewhere in the upper half, and the particle will follow a parabolic path until the string becomes taut
-                again.
+                <strong>Trajectory Conditions Based on Launch Speed (\(v_0\)):</strong>
+                <ul>
+                    <li>If \( v_0 < \sqrt{2gR} \): The particle acts like a simple pendulum, oscillating in the lower half of the circle. Velocity becomes zero before tension.</li>
+                    <li>If \( v_0 = \sqrt{5gR} \): The particle just barely completes the full circle, with tension momentarily dropping to zero at the top.</li>
+                    <li>If \( \sqrt{2gR} < v_0 < \sqrt{5gR} \): The tension drops to zero while the particle is somewhere in the upper half of the circle. The string slacks, and the particle leaves the circular path, following a free-fall <strong>parabolic trajectory</strong> under gravity until the string snaps taut again.</li>
+                </ul>
             </div>
         </section>
 

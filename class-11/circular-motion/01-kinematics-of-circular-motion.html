@@ -25,39 +25,110 @@
         <section>
             <h2>1. Angular Displacement (\(\theta\))</h2>
             <p>
-                Angular displacement is the angle (in radians) through which a particle moves along a circular path. It
-                is a vector quantity (for small values) directed along the axis of rotation (Right-Hand Thumb Rule).
+                <strong>Angular displacement</strong> is the angle (measured in radians) through which a position vector of a particle moves around a specific center or axis of rotation. In uniform or non-uniform circular motion, as an object moves along the circumference, its radius vector sweeps out an angle.
             </p>
-            <div class="formula-block">
-                \[ \Delta \theta = \frac{\text{Arc Length (s)}}{\text{Radius (R)}} \]
+            <p>
+                It is defined as the ratio of the arc length \( s \) traversed by the particle to the radius \( R \) of the circular path. 
+            </p>
+            
+            <div class="model-box">
+                \[ \Delta \theta = \frac{s}{R} \]
+            </div>
+
+            <ul>
+                <li><strong>\( \Delta \theta \)</strong>: Angular displacement.</li>
+                <li><strong>\( s \)</strong>: Arc length (distance traveled along the curve).</li>
+                <li><strong>\( R \)</strong>: Radius of the circular path.</li>
+            </ul>
+
+            <div class="concept-box">
+                <strong>SI Unit:</strong> radian (rad)<br>
+                <strong>Dimensional Formula:</strong> \([M^0 L^0 T^0]\) (It is a dimensionless quantity because it is a ratio of two lengths).
+            </div>
+
+            <div class="insightbox">
+                For infinitesimally small values (\( d\theta \)), angular displacement behaves as a vector quantity. Its direction is given by the <strong>Right-Hand Thumb Rule</strong>: curl the fingers of your right hand in the direction of the particle's motion, and the extended thumb points in the direction of the angular displacement vector (along the axis of rotation). However, finite angular displacements (\( \Delta \theta \)) are not vectors because they do not obey the commutative law of vector addition.
             </div>
         </section>
 
         <section>
             <h2>2. Angular Velocity (\(\omega\))</h2>
             <p>
-                The rate of change of angular displacement.
+                <strong>Angular velocity</strong> is defined as the rate of change of angular displacement with respect to time. It describes how fast the particle is rotating or revolving around the center.
             </p>
-            <div class="formula-block">
-                \[ \omega = \frac{d\theta}{dt} \]
+
+            <div class="model-box">
+                \[ \omega = \lim_{\Delta t \to 0} \frac{\Delta \theta}{\Delta t} = \frac{d\theta}{dt} \]
             </div>
-            <p>Relation to linear velocity (\(v\)):</p>
-            <div class="formula-block">
-                \[ v = R\omega \quad \text{or} \quad \vec{v} = \vec{\omega} \times \vec{r} \]
+
+            <ul>
+                <li><strong>\( \omega \)</strong>: Instantaneous angular velocity.</li>
+                <li><strong>\( d\theta \)</strong>: Infinitesimal angular displacement.</li>
+                <li><strong>\( dt \)</strong>: Infinitesimal time interval.</li>
+            </ul>
+
+            <div class="concept-box">
+                <strong>SI Unit:</strong> radian per second (rad/s)<br>
+                <strong>Dimensional Formula:</strong> \([M^0 L^0 T^{-1}]\)
+            </div>
+
+            <p>
+                Angular velocity is a true axial vector. Its direction is also determined by the Right-Hand Thumb Rule, pointing along the axis of rotation. 
+            </p>
+            <h3>Relation to Linear Velocity</h3>
+            <p>
+                The magnitude of the instantaneous linear velocity (\( v \)) of a particle moving in a circle is directly proportional to its angular velocity (\( \omega \)) and the radius of the circle (\( R \)).
+            </p>
+
+            <div class="model-box">
+                \[ v = R\omega \]
+            </div>
+            <p>
+                In vector form, the linear velocity is the cross product of the angular velocity vector and the position vector:
+            </p>
+            <div class="model-box">
+                \[ \vec{v} = \vec{\omega} \times \vec{r} \]
             </div>
         </section>
 
         <section>
             <h2>3. Angular Acceleration (\(\alpha\))</h2>
             <p>
-                The rate of change of angular velocity.
+                <strong>Angular acceleration</strong> is the rate of change of angular velocity with respect to time. It occurs when the rotation of the object speeds up or slows down.
             </p>
-            <div class="formula-block">
-                \[ \alpha = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2} \]
+
+            <div class="model-box">
+                \[ \alpha = \lim_{\Delta t \to 0} \frac{\Delta \omega}{\Delta t} = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2} \]
             </div>
-            <p>Relation to tangential acceleration (\(a_t\)):</p>
-            <div class="formula-block">
-                \[ a_t = R\alpha \]
+
+            <ul>
+                <li><strong>\( \alpha \)</strong>: Instantaneous angular acceleration.</li>
+                <li><strong>\( d\omega \)</strong>: Change in angular velocity.</li>
+            </ul>
+
+            <div class="concept-box">
+                <strong>SI Unit:</strong> radian per second squared (rad/s²)<br>
+                <strong>Dimensional Formula:</strong> \([M^0 L^0 T^{-2}]\)
+            </div>
+
+            <div class="insightbox">
+                Angular acceleration is an axial vector. If the angular speed is increasing, \( \vec{\alpha} \) is in the same direction as \( \vec{\omega} \). If the angular speed is decreasing (deceleration), \( \vec{\alpha} \) is opposite to \( \vec{\omega} \).
+            </div>
+
+            <h3>Relation to Tangential Acceleration</h3>
+            <p>
+                The linear acceleration along the tangent to the circular path, which is responsible for changing the particle's speed, is called tangential acceleration (\( a_t \)).
+            </p>
+
+            <div class="model-box">
+                \[ a_t = \frac{dv}{dt} = \frac{d(R\omega)}{dt} = R\frac{d\omega}{dt} = R\alpha \]
+            </div>
+            
+            <p>
+                In vector notation, the tangential acceleration is given by:
+            </p>
+            <div class="model-box">
+                \[ \vec{a}_t = \vec{\alpha} \times \vec{r} \]
             </div>
         </section>
 
