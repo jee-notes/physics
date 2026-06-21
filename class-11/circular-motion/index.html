@@ -1,94 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Motion | JEE Physics Notes</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circular Motion | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
-        <h1>Circular Motion</h1>
-        <p class="subtitle">
-            Studying objects traveling along curved paths and the forces that bind them.
-        </p>
-
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                Circular motion is a fundamental type of two-dimensional motion. Unlike linear motion, even when an
-                object moves at a constant speed in a circle, its velocity is constantly changing because its direction
-                is always shifting. This inherent change requires a continuous inward acceleration.
-            </p>
-            <p>
-                From the orbit of satellites to the turning of a car on a road, understanding the interplay between
-                inertia and central forces is key to mastering dynamics. Circular motion bridges the gap between simple straight-line kinematics and complex rotational mechanics.
-            </p>
-        </section>
-
-        <section>
-            <h2>Kinematics vs Dynamics</h2>
-            <p>
-                The study is divided into two parts:
-            </p>
-            <ul>
-                <li><strong>Kinematics</strong>, which describes the geometric aspects of motion using
-                    angular displacement (\(\theta\)), angular velocity (\(\omega\)), and angular acceleration (\(\alpha\)), without regarding the forces that cause the motion.</li>
-                <li><strong>Dynamics</strong>, which investigates the physical forces (like tension, friction, or
-                    gravity) that provide the necessary centripetal force required to sustain the curved path.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>The Geometry of Rotation</h2>
-            <p>
-                Circular motion is defined by its radius (\(r\)). The relationship between linear variables (\(v, a\))
-                and angular variables (\(\omega, \alpha\)) is bridged by this radius. The most critical realization for
-                a student is that "centripetal force" is not a new type of force, but a label for any net force that
-                points toward the center.
-            </p>
-            <div class="insightbox">
-                If you see an object moving in a circle, there <strong>must</strong> be a real, physical force pulling
-                it toward the center. Identifying that force is the first step in solving any problem.
-            </div>
-        </section>
-
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>Circular Kinematics</strong> — Angular variables and their relationship to linear motion.</li>
-                <li><strong>Centripetal Acceleration</strong> — Why speed doesn't have to change for acceleration to exist.</li>
-                <li><strong>Dynamics of Circular Motion</strong> — Identifying the physical agents of centripetal force.</li>
-                <li><strong>Banking of Roads</strong> — Engineering solutions for safe high-speed turns.</li>
-                <li><strong>Vertical Circular Motion</strong> — The role of gravity and energy conservation in non-uniform paths.</li>
-                <li><strong>Centrifugal Force</strong> — Understanding the apparent force in rotating frames.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-kinematics-of-circular-motion.html">1. Kinematics: Angular Variables</a>
-                <a href="./02-centripetal-acceleration.html">2. Acceleration in Curved Paths</a>
-                <a href="./03-dynamics-of-circular-motion.html">3. Dynamics and Centripetal Force</a>
-                <a href="./04-banking-of-roads.html">4. Banking of Roads and Level Turns</a>
-                <a href="./05-vertical-circular-motion.html">5. Vertical Circular Motion & Energy</a>
-                <a href="./06-centrifugal-force.html">6. Centrifugal Force & Artificial Gravity</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Circular Motion</h1>
+<p class="subtitle">
+Studying objects traveling along curved paths and the forces that bind them.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Circular motion is one of the simplest examples of <strong>curvilinear motion</strong>, i.e., motion along a curved path.
+</p>
+<p>
+It occupies an important place in mechanics because the circular path possesses a high degree of symmetry (which is fancy way of saying - simple maths), allowing the motion to be conveniently described using angular quantities. Some important classes of motion studied in the syllabus are:
+</p>
+<ul class="model-box">
+<li>
+<strong>Straight Line Motion</strong> — Motion along a straight path. Also called one-dimensional (1D) or rectilinear motion.
+</li>
+<li>
+<strong>Projectile Motion</strong> — A special case of two-dimensional curvilinear motion in which the acceleration (due to gravity) remains constant in both magnitude and direction.
+</li>
+<li>
+<strong>Circular Motion</strong> — A special case of two-dimensional curvilinear motion in which the direction of acceleration continuously changes. The magnitude may or may not change.
+</li>
+<li>
+<strong>Simple Harmonic Motion</strong> — An important example of periodic motion in which the particle executes to-and-fro oscillations about an equilibrium position.
+</li>
+</ul>
+<p>
+In rectilinear motion, a particle moving with constant speed has zero acceleration because its velocity remains unchanged. In circular motion, however, even if the speed remains constant, the velocity vector continuously changes its direction as the particle moves around the circle. This continuous change in velocity requires the presence of an inward acceleration directed towards the centre of the circular path.
+</p>
+<p>
+Circular motion provides an excellent setting for understanding the interplay between inertia and the forces responsible for continuously changing the direction of motion. Examples range from satellites orbiting planets to vehicles negotiating curved roads.
+</p>
+<p>
+The concepts developed here serve as a bridge between translational kinematics and the broader study of rotational dynamics.
+</p>
+</section>
+<section>
+<h2>Kinematics vs Dynamics</h2>
+<p>
+Before studying the forces responsible for circular motion, it is useful to understand why a separate kinematics is introduced.
+</p>
+<p>
+Linear kinematics is well suited for describing translational motion along straight paths, but it does not provide a compact description for systems whose orientation changes continuously with time.
+</p>
+<p>
+Consider a ceiling fan in operation. The centre of mass of the fan remains at rest, yet every point on its blades moves along a circular path.
+</p>
+<p>
+Describing the motion of each particle separately using Cartesian coordinates quickly becomes cumbersome.
+</p>
+<p>
+Since all particles rotate about a common axis, it is more convenient to characterize the motion using angular quantities.
+</p>
+<div class="insightbox">
+The primary motivation for introducing angular quantities is the ability to describe the motion of an entire body in a compact manner.<br>
+For a rotating ceiling fan, different particles on the blades travel through different linear displacements and possess different linear velocities. However, all particles complete the same angular displacement in the same interval of time.<br>
+Thus, a single angular coordinate is sufficient to describe the rotational state of the entire body.<br><br>
+<strong>Motions of collections of particles are broadly classified as translational and rotational motions.</strong><br>
+In this chapter, we employ these angular quantities to study the circular motion of a single particle.<br>
+Their full significance in describing rigid bodies will be developed later in the chapter on rotational mechanics.
+</div>
+<p>
+A circle, being the simplest curve with perfect symmetry and a fixed radius, naturally lends itself to such a description.
+</p>
+<p>
+The study of circular motion is therefore divided into two parts:
+</p>
+<ul class="model-box">
+<li>
+<strong>Kinematics</strong> — The geometric description of motion using angular displacement \((\theta)\), angular velocity \((\omega)\), and angular acceleration \((\alpha)\), without considering the forces responsible for the motion.
+</li>
+<li>
+<strong>Dynamics</strong> — The investigation of the physical forces, such as tension, friction, gravity, or normal reaction, that continuously change the direction of velocity and provide the required centripetal force to sustain the circular path.
+</li>
+</ul>
+</section>
+<section>
+<h2>The Geometry of Rotation</h2>
+<p>
+The defining feature of circular motion is its geometry. In fact, the entire framework of circular kinematics is built upon the geometry of a circle, and the relationships between linear and angular quantities emerge naturally from it.
+</p>
+<p>
+The centre of rotation, the radius vector, and the plane containing the circle together provide the geometric infrastructure on which the description of circular motion is constructed. Since every point on the trajectory remains at a fixed distance from the centre, the position of the particle can be conveniently specified by a single angular coordinate instead of two Cartesian coordinates.
+</p>
+<p>
+This geometric simplicity allows us to establish direct connections between linear quantities such as displacement, velocity, and acceleration, and their angular counterparts. The radius \(r\) acts as the bridge linking the two descriptions, leading to relations such as \(s = r\theta\), \(v = r\omega\), and \(a_t = r\alpha\).
+</p>
+<p>
+The vector nature of the radius is also important. Since circular motion is always defined with respect to a centre, the radius vector serves as the natural position vector of the particle measured from that centre.
+</p>
+<p>
+More generally, if a particle \(A\) performs circular motion about a point \(C\) which is not chosen as the origin, then the position vector of the particle from the origin can be expressed as
+</p>
+\[
+\vec{r}_A = \vec{r}_C + \vec{r}_{A/C}
+\]
+<p>
+where \(\vec{r}_{A/C}\) is the radius vector measured from the centre of the circular path.
+</p>
+<div class="insightbox">
+The representation
+\[
+\vec r = r\hat r
+\]
+has the same mathematical structure as
+\[
+\vec v = v\hat v.
+\]
+In general, the quantities \(r\) and \(v\) are scalar components of vectors and may possess positive or negative signs, thereby encoding direction information.<br>
+However, in circular motion, the radial unit vector \(\hat r\) is conventionally chosen to point outward from the centre, and (r) denotes the fixed radius (distance from the centre). Consequently,
+\[
+r > 0
+\]
+throughout the motion.<br>
+The positivity of (r) is therefore a consequence of the geometric role played by the radius in circular motion, rather than a change in the general representation of vectors using scalar components and unit vectors.
+</div>
+</section>
+<section>
+<h2>Resolving Acceleration</h2>
+<p>
+The most important idea in circular motion is the decomposition of acceleration into two mutually perpendicular components: <strong>centripetal acceleration</strong> and <strong>tangential acceleration</strong>.
+</p>
+<p>
+In circular motion, the velocity vector is continuously changing because its direction is always changing. Consequently, the particle must always possess some non-zero acceleration.
+</p>
+<p>
+However, a change in velocity does not necessarily imply a change in speed. For example, when a ceiling fan is switched on, its speed initially increases. After some time, the fan attains a constant speed, even though its direction of motion continues to change.
+</p>
+<p>
+It is therefore useful to resolve the acceleration according to the distinct roles played by its components in changing the velocity vector.
+</p>
+<ul class="model-box">
+<li>
+<strong>Centripetal Acceleration</strong> — Responsible solely for changing the <strong>direction</strong> of the velocity vector. It is always directed towards the centre of the circular path.
+</li>
+<li>
+<strong>Tangential Acceleration</strong> — Responsible solely for changing the <strong>magnitude</strong> of the velocity vector, i.e., the speed of the particle. It acts along the tangent to the path.
+</li>
+</ul>
+<p>
+This decomposition provides a clear physical interpretation of acceleration in circular motion and serves as the foundation for understanding both the kinematics and dynamics of rotational motion.
+</p>
+<div class="insightbox">
+"Centripetal force" is not a new type of force.<br>
+It is merely a name given to the net inward force required to continuously change the direction of motion.<br>
+Whenever you encounter circular motion, the first step in solving a problem is to identify the actual physical interaction—such as tension, gravity, friction, or normal reaction—that provides this inward force.
+</div>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="model-box">
+<li><strong>Circular Kinematics</strong> — Angular variables and their relationship to linear motion.</li>
+<li><strong>Centripetal Acceleration</strong> — Why speed doesn't have to change for acceleration to exist.</li>
+<li><strong>Dynamics of Circular Motion</strong> — Identifying the physical agents of centripetal force.</li>
+<li><strong>Banking of Roads</strong> — Engineering solutions for safe high-speed turns.</li>
+<li><strong>Vertical Circular Motion</strong> — The role of gravity and energy conservation in non-uniform paths.</li>
+<li><strong>Centrifugal Force</strong> — Understanding the apparent force in rotating frames.</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-kinematics-of-circular-motion.html">1. Kinematics: Angular Variables</a>
+<a href="./02-centripetal-acceleration.html">2. Acceleration in Curved Paths</a>
+<a href="./03-dynamics-of-circular-motion.html">3. Dynamics and Centripetal Force</a>
+<a href="./04-banking-of-roads.html">4. Banking of Roads and Level Turns</a>
+<a href="./05-vertical-circular-motion.html">5. Vertical Circular Motion & Energy</a>
+<a href="./06-centrifugal-force.html">6. Centrifugal Force & Artificial Gravity</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

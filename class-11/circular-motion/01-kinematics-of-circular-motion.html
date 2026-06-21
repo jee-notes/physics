@@ -1,142 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Motion | Kinematics</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematics | Circular Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Circular Motion
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Circular Motion
+</a>
+</nav>
+<h1>Circular Kinematics: Angular Variables</h1>
+<p class="subtitle">
+Defining the geometry and motion parameters of rotational paths.
+</p>
+<section>
+<h2>Circular Kinematics</h2>
+<p>
+Kinematics is concerned with mathematically describing the state of motion of a point object. This involves defining quantities such as position, displacement, velocity and acceleration and studying how they evolve with time.
+</p>
+<p>
+Dynamics, on the other hand, seeks to explain why the particle possesses a particular acceleration by investigating the physical interactions responsible for producing it. Thus, <strong>acceleration usually marks the end point of kinematics and the starting point of dynamics.</strong>
+</p>
+<p>
+For one-dimensional motion, the position of a particle is conveniently specified by a single Cartesian coordinate.
+</p>
+<p>
+In two-dimensional motion, we employ two Cartesian coordinates, such as \((x,y)\), to describe the position of the particle. We studied how to apply it in 2D projectile motion with constant acceleration.
+</p>
+<p>
+However, <strong>angles are fundamentally geometric quantities defined in a plane.</strong>
+</p>
+<p>
+Consequently, planar motion may also be described using an alternative framework based on a radial coordinate and an angular coordinate.
+</p>
+<p>
+This leads to the development of <strong>angular kinematics</strong>, involving angular position, angular displacement, angular velocity and angular acceleration.
+</p>
+<p>
+Circular motion represents the simplest and most important special case of such motions.
+</p>
+<p>
+Since the particle remains at a fixed distance from a centre, the radial coordinate remains constant and the entire motion can be described using a single angular coordinate. Thus, circular motion provides the natural setting for introducing angular kinematics.
+</p>
+<p>
+The ideas developed here later form the basis for polar coordinates, rigid body rotation and other rotational motions.
+</p>
+</section>
+<section>
+<h2>Angular Position (\(\theta\))</h2>
+<p>
+In one-dimensional motion, the position of a particle is conveniently specified by a single Cartesian coordinate \(x\). In higher dimensions, the position is usually represented by a position vector or an equivalent set of coordinates.
+</p>
+<p>
+For planar (2D) motions, an alternative description is possible using a radial coordinate and an angular coordinate. The angular coordinate, called the <strong>angular position</strong>, specifies the orientation of the radius vector with respect to a chosen reference direction in the plane.
+</p>
+<div class="concept-box">
+Unless specifically mentioned, angular kinematics in this chapter refers only to planar (2D) motion.
+</div>
+<p>
+Angular position has no meaningful role in one-dimensional motion because the radius vector can only be aligned or anti-aligned with the chosen axis, corresponding to angular positions of \(0^\circ\) or \(180^\circ\). This directional information is already encoded in the sign convention adopted for the scalar coordinate.
+</p>
+<div class="insightbox">
+Just as the definition of position requires a reference origin, the definition of angular position requires a reference origin and a reference ray.<br>
+The angular position is measured from the chosen reference ray according to a specified sense of rotation (usually anticlockwise taken as positive).<br>
+To facilitate comparison between Cartesian and angular descriptions, the positive \(x\)-axis is commonly chosen as the reference ray, although any fixed ray in the plane may be used.<br>
+It is important to distinguish between the <strong>geometric orientation</strong> of a radius vector and its <strong>angular position as a kinematic variable</strong>.<br>
+While the geometric orientation of a ray is defined only modulo \(2\pi\), the angular position of a particle performing circular motion also keeps track of the number of revolutions completed.<br>
+Thus, a particle completing two full revolutions has an angular position differing by \(4\pi\) from its initial position, even though the radius vector has returned to its original orientation.
+</div>
+</section>
+<section>
+<h2>Angular Displacement (\(\Delta\theta\))</h2>
+<p>
+Just as displacement is defined as the change in position, angular displacement is defined as the change in angular position.
+</p>
+<p>
+<strong>Angular displacement</strong> is the angle swept out by the radius vector of a particle about a specified centre or axis of rotation.
+</p>
+<p>
+As discussed earlier, angular kinematics in this chapter deals exclusively with planar (2D) motion. As a particle moves along a circular path, its radius vector continuously changes its orientation and sweeps out an angle.
+</p>
+<p>
+The term <strong>angle swept</strong> is important because angular displacement behaves as an accumulated measure of rotation. Consequently, it is not reset after \(2\pi\). For example, a particle completing two full revolutions undergoes an angular displacement of \(4\pi\), even though its radius vector has returned to its initial geometric orientation.
+</p>
+<p>
+For circular motion, the angular displacement is related to the arc length traversed by the particle through
+</p>
+<div class="math-block">
+\[
+\Delta\theta=\frac{s}{R}
+\]
+</div>
+<ul class="model-box">
+<li><strong>\(\Delta\theta\)</strong> : Angular displacement</li>
+<li><strong>\(s\)</strong> : Arc length traversed by the particle</li>
+<li><strong>\(R\)</strong> : Radius of the circular path</li>
+</ul>
+<h3>Units and Dimensions</h3>
+<p>
+Angular displacement is a dimensionless quantity because it is defined as the ratio of two lengths.
+</p>
+<p>
+As per exam syllabus, angular displacement is treated as a vector quantity. Consequently, angular displacement may be regarded as a <strong>dimensionless vector quantity</strong>.
+</p>
+<p>
+<strong>SI Unit:</strong> radian (rad)<br>
+<strong>Dimensional Formula:</strong> \([M^0L^0T^0]\)
+</p>
+<h3>Direction of Angular Displacement</h3>
+<p>
+Since angular displacement is treated as a vector quantity, it must also possess a direction.
+</p>
+<p>
+For planar motion, angular displacement is conventionally associated with an axis perpendicular to the plane containing the motion.
+</p>
+<p>
+Its direction is assigned using the <strong>Right-Hand Thumb Rule</strong>. Curl the fingers of your right hand in the sense of rotation of the radius vector. The extended thumb then points in the positive direction of the angular displacement vector.
+</p>
+<p>
+For example, if a particle rotates anticlockwise in the \(xy\)-plane, the angular displacement is directed along the positive \(z\)-axis. Conversely, clockwise rotation corresponds to an angular displacement directed along the negative \(z\)-axis.
+</p>
+<div class="insightbox">
+The primary purpose of assigning a direction to angular displacement is to distinguish between the two possible senses of rotation in a plane.<br>
+For infinitesimally small rotations (\(d\theta\)), angular displacement may be represented by an axial vector perpendicular to the plane of motion.<br>
+Finite angular displacements, however, do not obey the usual laws of vector addition and are therefore not true vectors in the strict mathematical sense.<br>
+Such subtleties lie beyond the scope of this chapter and may safely be ignored for exam.
+</div>
+</section>
+<section>
+<h2>Angular Velocity (\(\omega\))</h2>
+<p>
+Just as linear velocity describes how displacement is distributed over the time domain, angular velocity describes how angular displacement is distributed over the time domain.
+</p>
+<p>
+<strong>Angular velocity</strong> is defined as the rate of change of angular displacement with respect to time. It specifies how rapidly a particle rotates or revolves about a given centre or axis of rotation.
+</p>
+<div class="math-block">
+\[
+\omega = \lim_{\Delta t\rightarrow 0} \frac{\Delta\theta}{\Delta t} = \frac{d\theta}{dt}
+\]
+</div>
+<ul class="model-box">
+<li><strong>\(\omega\)</strong> : Instantaneous angular velocity</li>
+<li><strong>\(d\theta\)</strong> : Infinitesimal angular displacement</li>
+<li><strong>\(dt\)</strong> : Infinitesimal time interval</li>
+</ul>
+<h3>Units and Dimensions</h3>
+<p>
+Angular velocity has dimensions of inverse time and is a vector quantity.
+</p>
+<p>
+<strong>SI Unit:</strong> radian per second (rad/s)<br>
+<strong>Dimensional Formula:</strong> \([M^0L^0T^{-1}]\)
+</p>
+<h3>Direction of Angular Velocity</h3>
+<p>
+Unlike finite angular displacement, angular velocity is a true axial vector. Its direction is perpendicular to the plane of rotation and is determined using the <strong>Right-Hand Thumb Rule</strong>.
+</p>
+<p>
+Curl the fingers of your right hand in the sense of rotation. The extended thumb then points in the direction of the angular velocity vector.
+</p>
+<p>
+Thus, for anticlockwise motion in the \(xy\)-plane, the angular velocity vector points along the positive \(z\)-axis, whereas clockwise motion corresponds to a vector directed along the negative \(z\)-axis.
+</p>
+<h3>Relation to Linear Velocity</h3>
+<p>
+For a particle performing circular motion, the magnitude of the linear velocity is directly proportional to the angular velocity and the radius of the circular path.
+</p>
+<div class="math-block">
+\[
+v = R\omega
+\]
+</div>
+<p>
+In vector form, the linear velocity is related to angular velocity through
+</p>
+<div class="math-block">
+\[
+\vec v = \vec\omega \times \vec r
+\]
+</div>
+<p>
+Thus, the tangential velocity vector is always perpendicular to both the angular velocity vector and the radius vector.
+</p>
+</section>
 
-        <h1>Circular Kinematics: Angular Variables</h1>
-        <p class="subtitle">
-            Defining the geometry and motion parameters of rotational paths.
-        </p>
-
-        <section>
-            <h2>1. Angular Displacement (\(\theta\))</h2>
-            <p>
-                <strong>Angular displacement</strong> is the angle (measured in radians) through which a position vector of a particle moves around a specific center or axis of rotation. In uniform or non-uniform circular motion, as an object moves along the circumference, its radius vector sweeps out an angle.
-            </p>
-            <p>
-                It is defined as the ratio of the arc length \( s \) traversed by the particle to the radius \( R \) of the circular path. 
-            </p>
-            
-            <div class="model-box">
-                \[ \Delta \theta = \frac{s}{R} \]
-            </div>
-
-            <ul>
-                <li><strong>\( \Delta \theta \)</strong>: Angular displacement.</li>
-                <li><strong>\( s \)</strong>: Arc length (distance traveled along the curve).</li>
-                <li><strong>\( R \)</strong>: Radius of the circular path.</li>
-            </ul>
-
-            <div class="concept-box">
-                <strong>SI Unit:</strong> radian (rad)<br>
-                <strong>Dimensional Formula:</strong> \([M^0 L^0 T^0]\) (It is a dimensionless quantity because it is a ratio of two lengths).
-            </div>
-
-            <div class="insightbox">
-                For infinitesimally small values (\( d\theta \)), angular displacement behaves as a vector quantity. Its direction is given by the <strong>Right-Hand Thumb Rule</strong>: curl the fingers of your right hand in the direction of the particle's motion, and the extended thumb points in the direction of the angular displacement vector (along the axis of rotation). However, finite angular displacements (\( \Delta \theta \)) are not vectors because they do not obey the commutative law of vector addition.
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Angular Velocity (\(\omega\))</h2>
-            <p>
-                <strong>Angular velocity</strong> is defined as the rate of change of angular displacement with respect to time. It describes how fast the particle is rotating or revolving around the center.
-            </p>
-
-            <div class="model-box">
-                \[ \omega = \lim_{\Delta t \to 0} \frac{\Delta \theta}{\Delta t} = \frac{d\theta}{dt} \]
-            </div>
-
-            <ul>
-                <li><strong>\( \omega \)</strong>: Instantaneous angular velocity.</li>
-                <li><strong>\( d\theta \)</strong>: Infinitesimal angular displacement.</li>
-                <li><strong>\( dt \)</strong>: Infinitesimal time interval.</li>
-            </ul>
-
-            <div class="concept-box">
-                <strong>SI Unit:</strong> radian per second (rad/s)<br>
-                <strong>Dimensional Formula:</strong> \([M^0 L^0 T^{-1}]\)
-            </div>
-
-            <p>
-                Angular velocity is a true axial vector. Its direction is also determined by the Right-Hand Thumb Rule, pointing along the axis of rotation. 
-            </p>
-            <h3>Relation to Linear Velocity</h3>
-            <p>
-                The magnitude of the instantaneous linear velocity (\( v \)) of a particle moving in a circle is directly proportional to its angular velocity (\( \omega \)) and the radius of the circle (\( R \)).
-            </p>
-
-            <div class="model-box">
-                \[ v = R\omega \]
-            </div>
-            <p>
-                In vector form, the linear velocity is the cross product of the angular velocity vector and the position vector:
-            </p>
-            <div class="model-box">
-                \[ \vec{v} = \vec{\omega} \times \vec{r} \]
-            </div>
-        </section>
-
-        <section>
-            <h2>3. Angular Acceleration (\(\alpha\))</h2>
-            <p>
-                <strong>Angular acceleration</strong> is the rate of change of angular velocity with respect to time. It occurs when the rotation of the object speeds up or slows down.
-            </p>
-
-            <div class="model-box">
-                \[ \alpha = \lim_{\Delta t \to 0} \frac{\Delta \omega}{\Delta t} = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2} \]
-            </div>
-
-            <ul>
-                <li><strong>\( \alpha \)</strong>: Instantaneous angular acceleration.</li>
-                <li><strong>\( d\omega \)</strong>: Change in angular velocity.</li>
-            </ul>
-
-            <div class="concept-box">
-                <strong>SI Unit:</strong> radian per second squared (rad/s²)<br>
-                <strong>Dimensional Formula:</strong> \([M^0 L^0 T^{-2}]\)
-            </div>
-
-            <div class="insightbox">
-                Angular acceleration is an axial vector. If the angular speed is increasing, \( \vec{\alpha} \) is in the same direction as \( \vec{\omega} \). If the angular speed is decreasing (deceleration), \( \vec{\alpha} \) is opposite to \( \vec{\omega} \).
-            </div>
-
-            <h3>Relation to Tangential Acceleration</h3>
-            <p>
-                The linear acceleration along the tangent to the circular path, which is responsible for changing the particle's speed, is called tangential acceleration (\( a_t \)).
-            </p>
-
-            <div class="model-box">
-                \[ a_t = \frac{dv}{dt} = \frac{d(R\omega)}{dt} = R\frac{d\omega}{dt} = R\alpha \]
-            </div>
-            
-            <p>
-                In vector notation, the tangential acceleration is given by:
-            </p>
-            <div class="model-box">
-                \[ \vec{a}_t = \vec{\alpha} \times \vec{r} \]
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<section>
+<h2>Angular Acceleration (\(\alpha\))</h2>
+<p>
+<strong>Angular acceleration</strong> is the rate of change of angular velocity with respect to time. It occurs when the rotation of the object speeds up or slows down.
+</p>
+<div class = "math-block">
+\[
+\alpha = \lim_{\Delta t \to 0} \frac{\Delta \omega}{\Delta t} = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2}
+\]
+</div>
+<ul class="model-box">
+<li><strong>\( \alpha \)</strong>: Instantaneous angular acceleration.</li>
+<li><strong>\( d\omega \)</strong>: Change in angular velocity.</li>
+</ul>
+<div class="concept-box">
+<strong>SI Unit:</strong> radian per second squared (rad/s²)<br>
+<strong>Dimensional Formula:</strong> \([M^0 L^0 T^{-2}]\)
+</div>
+<div class="insightbox">
+Angular acceleration is an axial vector. If the angular speed is increasing, \( \vec{\alpha} \) is in the same direction as \( \vec{\omega} \). If the angular speed is decreasing (deceleration), \( \vec{\alpha} \) is opposite to \( \vec{\omega} \).
+</div>
+<h3>Relation to Tangential Acceleration</h3>
+<p>
+The linear acceleration along the tangent to the circular path, which is responsible for changing the particle's speed, is called tangential acceleration (\( a_t \)).
+</p>
+<div class = "math-block">
+\[
+a_t = \frac{dv}{dt} = \frac{d(R\omega)}{dt} = R\frac{d\omega}{dt} = R\alpha
+\]
+</div>
+<p>
+In vector notation, the tangential acceleration is given by:
+</p>
+<div class = "math-block">
+\[
+\vec{a}_t = \vec{\alpha} \times \vec{r}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
