@@ -1,121 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Motion | Dynamics</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamics | Circular Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Circular Motion
-            </a>
-        </nav>
-
-        <h1>Dynamics and Centripetal Force</h1>
-        <p class="subtitle">
-            The real, physical forces that maintain curved trajectories.
-        </p>
-
-        <section>
-            <h2>1. What is Centripetal Force?</h2>
-            <p>
-                From kinematics, we know that any object moving in a circle of radius \( R \) with speed \( v \) must experience a centripetal acceleration \( a_c = v^2/R \) directed toward the center. According to Newton's Second Law (\( F_{net} = ma \)), this acceleration must be caused by a net force directed toward the center. This net radial force is called the <strong>Centripetal Force</strong>.
-            </p>
-            
-            <div class="model-box">
-                \[ F_c = m a_c = \frac{mv^2}{R} = mR\omega^2 \]
-            </div>
-
-            <ul>
-                <li><strong>\( F_c \)</strong>: Centripetal force.</li>
-                <li><strong>\( m \)</strong>: Mass of the particle.</li>
-                <li><strong>\( v \)</strong>: Linear speed of the particle.</li>
-                <li><strong>\( R \)</strong>: Radius of the circular path.</li>
-            </ul>
-
-            <div class="concept-box">
-                <strong>SI Unit:</strong> Newton (N) or \(\text{kg}\cdot\text{m/s}^2\)<br>
-                <strong>Dimensional Formula:</strong> \([M L T^{-2}]\)
-            </div>
-
-            <div class="insightbox">
-                <strong>Crucial Note:</strong> Centripetal force is <em>not</em> a new, distinct fundamental force of nature (like gravity or electromagnetism). Instead, it is a <strong>role</strong> played by one or more physical forces. When solving physics problems, you should never draw a separate "centripetal force" vector on a free-body diagram. You simply identify the real forces (tension, normal, friction, gravity) and find their net component pointing toward the center.
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Real-World Agents</h2>
-            <p>
-                To maintain circular motion, different physical situations utilize different "agents" to provide the necessary centripetal force:
-            </p>
-            <ul class="points-list">
-                <li><strong>Tension (\(T\)):</strong> A stone tied to a string and whirled in a horizontal circle on a frictionless table. The string's tension provides the inward pull.</li>
-                <li><strong>Static Friction (\(f_s\)):</strong> A car taking a turn on a flat, unbanked road. The friction between the tires and the asphalt pushes the car toward the center of the curve.</li>
-                <li><strong>Gravity (\(F_g\)):</strong> The moon orbiting the Earth, or satellites in geostationary orbit. The gravitational attraction acts as the centripetal force.</li>
-                <li><strong>Normal Force (\(N\)):</strong> A motorcycle rider performing stunts on the walls of a 'Death Well' (Rotor ride). The wall pushes inward on the rider.</li>
-                <li><strong>Magnetic Force (\(F_B\)):</strong> A charged particle entering a uniform magnetic field perpendicularly experiences a Lorentz force that forces it into a circular path.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>3. Horizontal Circular Motion</h2>
-            <p>
-                Often, circular motion occurs in a horizontal plane while being influenced by vertical forces like gravity. A classic example is the <strong>Conical Pendulum</strong>.
-            </p>
-            
-            <div class="examplebox">
-                <h3>The Conical Pendulum</h3>
-                <hr>
-                <p>
-                    Consider a bob of mass \( m \) tied to a string of length \( L \), whirling in a horizontal circle of radius \( R \). The string sweeps out a cone, making an angle \( \theta \) with the vertical. Let \( T \) be the tension in the string.
-                </p>
-                <p>
-                    We resolve the tension \( T \) into two orthogonal components:
-                </p>
-                <ol>
-                    <li>A vertical component \( T \cos \theta \) which balances the gravitational force (weight).</li>
-                    <li>A horizontal component \( T \sin \theta \) which points toward the center of the circle and provides the required centripetal force.</li>
-                </ol>
-                <div class="model-box">
-                    \[ T \cos \theta = mg \]
-                    \[ T \sin \theta = \frac{mv^2}{R} \]
-                </div>
-                <p>
-                    Dividing the second equation by the first equation eliminates the tension \( T \):
-                </p>
-                <div class="model-box">
-                    \[ \tan \theta = \frac{v^2}{Rg} \]
-                </div>
-                <p>
-                    From this, we can determine the necessary speed \( v \) for a given angle \( \theta \):
-                </p>
-                <div class="model-box">
-                    \[ v = \sqrt{Rg \tan \theta} \]
-                </div>
-                <p>
-                    Since the radius \( R \) is related to the string length \( L \) by geometry (\( R = L \sin \theta \)), we can also find the time period \( P \) of one complete revolution (\( P = 2\pi R / v \)):
-                </p>
-                <div class="model-box">
-                    \[ P = 2\pi \sqrt{\frac{L \cos \theta}{g}} \]
-                </div>
-            </div>
-
-            <div class="insightbox">
-                In horizontal circular motion setups, gravity is completely balanced by the vertical component of a force (like tension or normal reaction), while a different, un-cancelled horizontal component acts as the sole provider of the inward centripetal pull.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Circular Motion
+</a>
+</nav>
+<h1>Dynamics of Circular Motion</h1>
+<p class="subtitle">
+The real, physical forces that maintain curved trajectories in a plane.
+</p>
+<section>
+<h2>Circular Motion is Given</h2>
+<p>
+The most important clue in a circular motion dynamics problem is that the particle is explicitly stated to perform circular motion.
+</p>
+<p>
+Unlike kinematics, where the trajectory is determined from the equations of motion, dynamics problems of circular motion generally begin with the trajectory already being specified. Our task is then to determine the forces necessary to sustain this prescribed motion.
+</p>
+<p>
+If a particle is constrained to move in a fixed circular path, its acceleration perpendicular to the plane of the circle must be zero. According to Newton's Second Law, this immediately implies that the net external force acting perpendicular to the plane of motion must also vanish.
+</p>
+<p>
+Having satisfied this condition, we only need to analyze the forces acting within the plane of the circular motion.
+</p>
+<p>
+As discussed in the previous section, the natural directions for resolving acceleration in circular motion are the radial direction and the tangential direction. Consequently, the forces lying in the plane of motion are conveniently resolved along these two mutually perpendicular directions.
+</p>
+<ul class="model-box">
+<li><strong>Radial Direction:</strong> Responsible for changing the direction of the velocity vector.
+\[
+\sum F_r = ma_c = \frac{mv^2}{R}
+\]
+</li>
+<li><strong>Tangential Direction:</strong> Responsible for changing the magnitude of the velocity vector.
+\[
+\sum F_t = ma_t = m\frac{dv}{dt}
+\]
+</li>
+</ul>
+<p>
+Thus, once it is known that a particle performs circular motion, the dynamics problem is often greatly simplified. The geometry of the circle itself suggests the most convenient directions for resolving forces and applying Newton's Laws.
+</p>
+<div class="insightbox">
+A common misconception among students is that circular motion necessarily implies that a particle completes a full revolution of \(2\pi\) radians.<br>
+This is not true.<br>
+The concepts of centripetal acceleration, tangential acceleration and circular motion dynamics are equally applicable when the particle traverses only a portion of a circle.<br>
+Even motion along a circular arc possesses a well-defined radius of curvature, radial direction and tangential direction at every instant.<br>
+Thus, the methods developed in this chapter remain valid irrespective of whether the particle completes one revolution, many revolutions or merely a small arc segment.
+</div>
+</section>
+<section>
+<h2>What is Centripetal Force?</h2>
+<p>
+From kinematics, we know that any object moving in a circle of radius \( R \) with speed \( v \) is experiencing a centripetal acceleration \( a_c = v^2/R \) directed toward the center.
+</p>
+<p>
+According to Newton's Second Law (\( F_{net} = ma \)), this acceleration must be caused by a net force directed toward the center. This net radial force is called the <strong>Centripetal Force</strong>.
+</p>
+<div class="math-block">
+\[
+F_c = m a_c = \frac{mv^2}{R} = mR\omega^2
+\]
+</div>
+<ul>
+<li><strong>\( F_c \)</strong>: Centripetal force.</li>
+<li><strong>\( m \)</strong>: Mass of the particle.</li>
+<li><strong>\( v \)</strong>: Linear speed of the particle.</li>
+<li><strong>\( R \)</strong>: Radius of the circular path.</li>
+</ul>
+<p>
+Centripetal force is <strong>not</strong> a new, distinct fundamental force of nature (like gravity or electromagnetism).
+</p>
+<p>
+Instead, it is a <strong>role</strong> played by one or more physical forces.
+</p>
+<p>
+When solving physics problems, we should never draw a separate "centripetal force" vector on a free-body diagram.
+</p>
+<p>
+We simply identify the real forces (tension, normal, friction, gravity) and find their net component pointing toward the center.
+</p>
+<div class="insightbox">
+Kinematics tells us <strong>what acceleration is required</strong>.<br>
+Dynamics explains <strong>which physical interaction provides it</strong>.<br>
+Thus, centripetal force should be viewed as a force requirement imposed by the geometry of the trajectory rather than as a separate fundamental interaction.
+</div>
+</section>
+<section>
+<h2>Real-World Agents</h2>
+<p>
+Different physical situations in circular motion dynamics employ different interactions to provide the "driving" force.
+</p>
+<p>
+These different interactions act as "agents" to provide the necessary centripetal force.
+</p>
+<p>
+Many important examples correspond to systems in which a single dominant interaction is responsible for maintaining the circular motion, much like free fall represents the simplest motion under gravity.
+</p>
+<ul class="model-box">
+<li><strong>Gravity (\(F_G\)):</strong> The Moon orbiting the Earth, or Earth orbiting the Sun. Only gravitational attraction exists and it provides the necessary centripetal force.</li>
+<div class="math-block">
+\[
+F_G = G\frac{M_E M_S}{R_{ES}^2} = \frac{M_E V^2}{R_{ES}}
+\]
+</div>
+<li><strong>Electrostatic Force (\(F_E\)):</strong> The electron orbits around the the nucleus inside an atom. Only electrostatic force of attraction exists and it provides the necessary centripetal force.</li>
+<div class="math-block">
+\[
+F_E = k\frac{Z e^2}{r^2} = \frac{m_e v^2}{r}
+\]
+</div>
+</ul>
+</section>
+<section>
+<h2>Horizontal Circular Motion</h2>
+<p>
+Often, circular motion occurs in a horizontal plane while being influenced by vertical forces like gravity. A classic example is the <strong>Conical Pendulum</strong>.
+</p>
+<div class="examplebox">
+<h3>The Conical Pendulum</h3>
+<hr>
+<p>
+Consider a bob of mass \( m \) tied to a string of length \( L \), whirling in a horizontal circle of radius \( R \). The string sweeps out a cone, making an angle \( \theta \) with the vertical. Let \( T \) be the tension in the string.
+</p>
+<p>
+We resolve the tension \( T \) into two orthogonal components:
+</p>
+<ol>
+<li>A vertical component \( T \cos \theta \) which balances the gravitational force (weight).</li>
+<li>A horizontal component \( T \sin \theta \) which points toward the center of the circle and provides the required centripetal force.</li>
+</ol>
+<div class="math-block">
+\[
+T \cos \theta = mg
+\]
+\[
+T \sin \theta = \frac{mv^2}{R}
+\]
+</div>
+<p>
+Dividing the second equation by the first equation eliminates the tension \( T \):
+</p>
+<div class="math-block">
+\[
+\tan \theta = \frac{v^2}{Rg}
+\]
+</div>
+<p>
+From this, we can determine the necessary speed \( v \) for a given angle \( \theta \):
+</p>
+<div class="math-block">
+\[
+v = \sqrt{Rg \tan \theta}
+\]
+</div>
+<p>
+Since the radius \( R \) is related to the string length \( L \) by geometry (\( R = L \sin \theta \)), we can also find the time period \( P \) of one complete revolution (\( P = 2\pi R / v \)):
+</p>
+<div class="math-block">
+\[
+P = 2\pi \sqrt{\frac{L \cos \theta}{g}}
+\]
+</div>
+</div>
+<div class="insightbox">
+In horizontal circular motion setups, gravity is completely balanced by the vertical component of a force (like tension or normal reaction), while a different, un-cancelled horizontal component acts as the sole provider of the inward centripetal pull.
+</div>
+</section>
+<section>
+<h2>The Interplay of Normal Force and Friction</h2>
+<p>
+Because the radial and tangential directions are mutually orthogonal (perpendicular), the <strong>Normal Force</strong> (\(N\)) and <strong>Friction</strong> (\(f\)) are natural contenders to provide \(F_c\) and \(F_t\). 
+</p>
+<p>
+By definition, a Normal force is always perpendicular to a surface, while friction is always parallel to it. Depending on the orientation of the physical boundary, these two forces elegantly decouple to handle the radial and tangential dynamics.
+</p>
+<div class="examplebox">
+<h3>Example 1: A Bead Sliding on a Rough Circular Ring</h3>
+<hr>
+<p>
+Consider a bead of mass \( m \) given an initial speed \( v_0 \) and forced to slide along a rough circular wire of radius \( R \) and in gravity-free environment. Let the coefficient of kinetic friction between the bead and the wire be \( \mu_k \).
+</p>
+<p>
+As the bead moves, the circular wire must exert an inward Normal force (\( N \)) to continuously change the bead's direction.
+</p>
+<p>
+Simultaneously, kinetic friction (\( f_k \)) acts along the wire, opposing the relative motion to slow the bead down.
+</p>
+<p>
+The roles of Normal Force (\( N \)) and kinetic friction (\( f_k \)) are fixed as their directions of application are fixed. Normal force will always be in a plane normal to the wire. There are only 2 forces on the bead - Normal and Friction and it is known that bead is performing circular motion. Normal has to be the force providing centripetal acceleration and as friction is kinetic it is being applied in a direction opposite to relative velocity. So, Friction is necessarily providing tangential deceleration.
+</p>
+<ol>
+<li><strong>Radial Direction:</strong> The Normal force acts purely inward, providing the necessary centripetal force.
+<div class="math-block">
+\[
+N = m a_c = \frac{mv^2}{R}
+\]
+</div>
+</li>
+<li><strong>Tangential Direction:</strong> Friction acts purely tangentially, causing a tangential deceleration.
+<div class="math-block">
+\[
+f_k = m a_t = -m \frac{dv}{dt}
+\]
+</div>
+</li>
+</ol>
+<p>
+Because kinetic friction is directly proportional to the normal force (\( f_k = \mu_k N \)), the tangential and radial dynamics become beautifully coupled:
+</p>
+<div class="math-block">
+\[
+-m \frac{dv}{dt} = \mu_k \left( \frac{mv^2}{R} \right) \implies a_t = -\mu_k \frac{v^2}{R}
+\]
+</div>
+<p>
+Notice that as the bead slows down, the required centripetal force (\( N \)) decreases. This, in turn, reduces the kinetic friction, meaning the rate of deceleration itself continuously drops as the bead loses speed!
+</p>
+</div>
+<div class="examplebox">
+<h3>Example 2: An Accelerating Car on a Flat Circular Track</h3>
+<hr>
+<p>
+Now, consider a car speeding up while turning on a flat, unbanked circular road. Here, the Normal force is entirely vertical (balancing gravity, \( N = mg \)), meaning it cannot contribute to either the radial or tangential motion.
+</p>
+<p>
+In this scenario, <strong>static friction</strong> (\( f_s \)) between the tires and the asphalt must do double-duty, splitting into two orthogonal components in the horizontal plane:
+</p>
+<ol>
+<li>A <strong>radial component</strong> (\( f_r \)) that points towards the center to provide the centripetal force.
+<div class="math-block">
+\[
+f_r = \frac{mv^2}{R}
+\]
+</div>
+</li>
+<li>A <strong>tangential component</strong> (\( f_t \)) that points forward along the curve to provide the tangential acceleration.
+<div class="math-block">
+\[
+f_t = m a_t
+\]
+</div>
+</li>
+</ol>
+<p>
+The total static friction demanded from the tires is the vector sum of these two perpendicular components:
+</p>
+<div class="math-block">
+\[
+f_s = \sqrt{f_r^2 + f_t^2} = m \sqrt{\left(\frac{v^2}{R}\right)^2 + a_t^2}
+\]
+</div>
+<p>
+For the car to successfully negotiate the turn without skidding, this total required friction must not exceed the maximum limiting friction (\( f_s \le \mu_s N \)).
+</p>
+</div>
+<div class="insightbox">
+These two examples perfectly highlight how constraints dictate the roles of forces.<br>
+When a physical boundary (like a wire or a cylindrical wall) defines the circular path, the Normal force handles the radial steering (\( F_c \)) while friction handles the tangential speed changes (\( F_t \)).<br>
+However, when moving freely on a 2D surface (like a car on a flat road), a single interaction like friction must angle itself to satisfy <em>both</em> the radial and tangential requirements simultaneously.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
