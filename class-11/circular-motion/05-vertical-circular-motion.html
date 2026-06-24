@@ -21,22 +21,35 @@ Vertical circular motion is a race between gravity and tension.
 <section>
 <h2>Physical Set-up</h2>
 <p>
-Consider a point mass (like a bob) of mass \( m \) tied to a massless, inextensible string of length \( R \). The other end of the string is fixed, and at the bottom-most point, the bob is given an initial horizontal velocity \( v_L \).
+Consider a point mass (such as a pendulum bob) of mass \( m \) tied to a massless, inextensible string of length \( R \). The other end of the string is fixed, and at the lowest point, the bob is given an initial horizontal velocity \( v_L \), referred to as the launch speed.
 </p>
 <p>
-By assigning different values to the initial launch speed \( v_L \), we can study the entirely different trajectories the bob can take. The complete study of \(0 \lt v_L \lt \infty \) can be elegantly summarized by finding a few critical boundary values of \( v_L \).
+Our objective is to analyze the motion for different values of this launch speed (\(0 \lt v_L \lt \infty \)) and determine the minimum speed required to successfully complete a full circular path.
+</p>
+<p>
+If the launch speed is too low, the bob simply performs to-and-fro oscillatory motion, confined entirely within the lower semicircular arc.
+</p>
+<p>
+If the speed exceeds a certain threshold, the bob crosses the horizontal plane and enters the upper semi-circle. However, entering the upper half does not guarantee success, as a different mode of failure exists in this region.
+</p>
+<p>
+Ultimately, our intention is to achieve a full revolution. To do so, the initial velocity \( v_L \) must be large enough to counter two distinct failure mechanisms working against the bob: running out of speed (\(v = 0\)) or running out of tension (\(T = 0\)) before reaching the top.
+</p>
+<p>
+The entire spectrum of possible trajectories can be elegantly summarized by identifying the critical boundary values of \( v_L \) that trigger these failures.
 </p>
 <p>
 However, before jumping into the mathematics, it is vital to understand the unique physical struggle occurring in this setup.
 </p>
 <div class="insightbox">
-<strong>The Race Between Gravity and Tension</strong><br>
+<strong>The Race Between Gravity and Tension</strong><br><br>
 To understand the complexity of vertical circular motion, consider two extreme, isolated environments:<br>
-<strong>1. A Gravity-Free Environment:</strong> Here, tension does no work. It only provides centripetal acceleration, continuously changing the direction of the velocity vector while the speed remains perfectly constant.<br>
-<strong>2. A Tension-Free Environment:</strong> Here, gravity cannot alter the horizontal component of velocity. The bob simply acts as a projectile, following a parabolic path as gravity accelerates it downwards.<br>
-In vertical circular motion, <strong>both</strong> happen at once.<br>
-As the bob moves up, tension is desperately trying to steer the velocity vector along the circular curve. Simultaneously, gravity is doing negative work, relentlessly eating away at the bob's kinetic energy and converting it into potential energy.<br>
-If tension can successfully steer the velocity vector over the top <strong>before</strong> gravity depletes the kinetic energy, the circular path survives. But if gravity "wins the race" and eats up too much speed before tension completes the turn, the required centripetal force drops below the inward pull of gravity, the string goes slack, and the circular motion is destroyed!
+<strong>1. A Gravity-Free Environment:</strong> Tension cannot increase or decrease speed as it does no work. It only provides centripetal acceleration, continuously changing the direction of the velocity vector while the speed remains perfectly constant.<br>
+<strong>2. A Tension-Free Environment:</strong> Here, gravity cannot alter the horizontal component of velocity. The bob simply acts as a projectile, following a parabolic path as gravity accelerates it downwards.<br><br>
+In vertical circular motion, <strong>Gravity and Tension are active at the same time.</strong><br>
+As the bob moves upward, tension continuously changes the direction of the velocity vector along the curve—consuming the horizontal component to produce a vertical component. Simultaneously, gravity is actively consuming that vertical velocity, eating away at the bob's kinetic energy and converting it into potential energy.<br><br>
+If tension can successfully steer the velocity vector over the top <strong>before</strong> gravity depletes the kinetic energy, the circular path survives.<br>
+But if gravity "wins the race" and eats up too much speed before tension completes the turn, the required centripetal force drops below the inward pull of gravity, the string goes slack, and the circular motion is destroyed!
 </div>
 </section>
 <section>
@@ -56,7 +69,10 @@ T - mg \cos \theta = \frac{mv^2}{R} \implies T = mg \cos \theta + \frac{mv^2}{R}
 \]
 </div>
 <p>
-The velocity \( v \) at any angle \( \theta \) can be found using the principle of conservation of mechanical energy.
+Note that the centripetal force is  \( T - mg \cos \theta \) and not \( mg \cos \theta - T \) as it needs to point towards the center.
+</p>
+<p>
+The speed \( v \) at any angle \( \theta \) can be found using the principle of conservation of mechanical energy.
 </p>
 <p>
 If \( v_L \) is the speed at the bottom, the vertical height gained by the bob is \( h = R(1 - \cos \theta) \). Equating the loss in kinetic energy to the gain in potential energy gives:
@@ -93,7 +109,7 @@ T_{Top} = \frac{mv_{Top}^2}{R} - mg
 <section>
 <h2>The Four Dynamical Regions</h2>
 <p>
-Rather than merely memorizing the critical speeds \( \sqrt{2gR} \) and \( \sqrt{5gR} \), it is pedagogically much stronger to classify the motion by its <strong>qualitatively distinct dynamical behaviours</strong>. Depending on the initial launch speed \( u \), the particle will reach a maximum angle \( \theta \). 
+Rather than merely memorizing the critical speeds \( \sqrt{2gR} \) and \( \sqrt{5gR} \), it is pedagogically much stronger to classify the motion by its <strong>qualitatively distinct dynamical behaviours</strong>. Depending on the initial launch speed \( v_L \), the particle will reach a maximum angle \( \theta \). 
 </p>
 <p>
 The entire motion can be divided into four distinct regions, each characterized by a unique struggle between tension and gravity.
@@ -109,7 +125,7 @@ The horizontal position (\(\theta = 90^\circ\)) acts as the exact boundary separ
 </div>
 <h3>Region 1: The Lower Quadrant (\( 0^\circ \le \theta \lt 90^\circ \))</h3>
 <p>
-<strong>Condition:</strong> \( 0 \lt u \lt \sqrt{2gR} \)
+<strong>Condition:</strong> \( 0 \lt v_L \lt \sqrt{2gR} \)
 </p>
 <p>
 If the launch speed is low, the particle oscillates like a simple pendulum in the lower half of the circle. Here, the particle always runs out of speed (\( v = 0 \)) before the string goes slack (\( T \gt 0 \)).
@@ -121,14 +137,14 @@ If the launch speed is low, the particle oscillates like a simple pendulum in th
 By doing this, tension is essentially "supplying food" for gravity because gravity cannot impact horizontal velocity.
 </p>
 <p>
-Gravity gladly eats this vertical velocity, converting kinetic energy into potential energy (a toll of \( mgR(1 - \cos \theta) \)).
+Gravity eats up this vertical velocity, converting kinetic energy into potential energy (a toll of \( mgR(1 - \cos \theta) \)).
 </p>
 <p>
 The particle fails by running out of kinetic energy.
 </p>
 <h3>Region 2: The Horizontal Boundary (\( \theta = 90^\circ \))</h3>
 <p>
-<strong>Condition:</strong> \( u = \sqrt{2gR} \)
+<strong>Condition:</strong> \( v_L = \sqrt{2gR} \)
 </p>
 <p>
 This is the exact boundary separating the two failure mechanisms. The particle reaches exactly the horizontal position.
@@ -141,7 +157,7 @@ It then falls back down cleanly along the same path.
 </p>
 <h3>Region 3: The Upper Quadrant (\( 90^\circ \lt \theta \lt 180^\circ \))</h3>
 <p>
-<strong>Condition:</strong> \( \sqrt{2gR} \lt u \lt \sqrt{5gR} \)
+<strong>Condition:</strong> \( \sqrt{2gR} \lt v_L \lt \sqrt{5gR} \)
 </p>
 <p>
 Once the particle crosses the horizontal plane, it possesses some non-zero horizontal velocity.
@@ -163,7 +179,7 @@ The string goes slack, and the particle leaves the circular path, continuing as 
 </p>
 <h3>Region 4: The Full Loop (\( \theta \ge 180^\circ \))</h3>
 <p>
-<strong>Condition:</strong> \( u \ge \sqrt{5gR} \)
+<strong>Condition:</strong> \( v_L \ge \sqrt{5gR} \)
 </p>
 <p>
 For the particle to successfully complete the full vertical circle, the string must never go slack. The most dangerous point is the absolute top (\( \theta = 180^\circ \)).
@@ -173,11 +189,38 @@ Setting \( T_{Top} \ge 0 \) gives the critical minimum speed at the top: \( v_{T
 </p>
 <div class="math-block">
 \[
-\frac{1}{2}mu^2 = \frac{1}{2}m(\sqrt{gR})^2 + mg(2R) \implies u = \sqrt{5gR}
+\frac{1}{2}mv_L^2 = \frac{1}{2}m(\sqrt{gR})^2 + mg(2R) \implies v_L = \sqrt{5gR}
 \]
 </div>
 <p>
-If \( u \ge \sqrt{5gR} \), tension successfully steers the velocity vector fully horizontal at the top. Once the particle crosses \( 180^\circ \), gravity begins to assist the motion, and the particle completes the full circle!
+If \( v_L \ge \sqrt{5gR} \), tension successfully steers the velocity vector fully horizontal at the top. Once the particle crosses \( 180^\circ \), gravity begins to assist the motion, and the particle completes the full circle!
+</p>
+</section>
+<section>
+<h2>The Unique Constraint of a String</h2>
+<p>
+Vertical Circular Motion (VCM) is taught as a separate topic specifically to highlight the constraints introduced by dynamic forces.
+</p>
+<p>
+From the Work, Energy, and Power (WEP) chapter, students often correctly deduce that kinetic energy must be preserved to reach the top, leading them to assume that the only condition for completing the circle is that the speed must be strictly greater than zero (\(v \gt 0\)) at the highest point. 
+</p>
+<p>
+This assumption is actually perfectly correct if the mass is attached to a <strong>light, rigid rod</strong> instead of a string, because a rod can support compressive forces (it will not go slack).
+</p>
+<p>
+However, a <strong>string</strong> introduces an additional, stricter constraint: it can only pull, never push. Therefore, we must account for the tension dropping to zero.
+</p>
+<p>
+As the angle \( \theta \) increases from \( 0^\circ \) to \( 180^\circ \), both tension and speed continuously decrease. 
+</p>
+<p>
+As established in our regional analysis: in the lower half, speed becomes zero faster (before tension does); but in the upper half, tension becomes zero faster (before speed does). To successfully complete the loop, <strong>both</strong> parameters need to survive until the topmost point.
+</p>
+<p>
+Since both tension and speed reach their absolute minimum at the very top, we must evaluate which one is the limiting factor. 
+</p>
+<p>
+Because tension runs out faster in the upper half, the required condition to sustain circular motion on a string is <strong>not</strong> that the speed at the top should be just zero, but rather that the <strong>tension</strong> at the top should be just zero.
 </p>
 </section>
 <footer>
