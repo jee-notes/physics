@@ -1,70 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Measurements and Errors | Accuracy and Precision</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accuracy and Precision | Measurements and Errors</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Measurements and Errors
-            </a>
-        </nav>
-
-        <h1>Accuracy and Precision</h1>
-        <p class="subtitle">
-            Distinguishing between closeness to truth and repeatability.
-        </p>
-
-        <section>
-            <h2>1. Accuracy</h2>
-            <p>
-                <strong>Accuracy</strong> refers to how close a measured value is to the "True Value" of a quantity. It
-                is a measure of correctness.
-            </p>
-            <div class="insightbox">
-                High accuracy means the systematic errors are minimized.
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Precision</h2>
-            <p>
-                <strong>Precision</strong> refers to the closeness of two or more measurements to each other. It
-                describes the repeatability or resolution of the measurement, regardless of whether it is correct.
-            </p>
-            <div class="insightbox">
-                High precision means the random errors are small and the instrument has a high resolution (small least
-                count).
-            </div>
-        </section>
-
-        <section>
-            <h2>3. The Bullseye Analogy</h2>
-            <p>
-                Imagine throwing darts at a target:
-            </p>
-            <ul>
-                <li><strong>Accurate & Precise:</strong> All darts hit the center (the true value) and are close to each
-                    other.</li>
-                <li><strong>Precise but Inaccurate:</strong> All darts are clustered together, but far from the center
-                    (e.g., due to a shifted sight).</li>
-                <li><strong>Accurate but Imprecise:</strong> Darts are scattered around the center on average, but not
-                    close to each other.</li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Measurements and Errors
+</a>
+</nav>
+<h1>Accuracy and Precision</h1>
+<p class="subtitle">
+Distinguishing between closeness to truth and repeatability.
+</p>
+<section>
+<h2>Why Accuracy and Precision?</h2>
+<p>
+As discussed earlier, every measurement is inherently uncertain. The objective of this chapter is to study and quantify these uncertainties, commonly referred to as <strong>errors</strong>.
+</p>
+<p>
+However, errors cannot be investigated from a single measurement. To study the reliability of a measurement process, it is necessary to repeat the measurement several times under similar conditions and analyze the resulting set of observations.
+</p>
+<p>
+Once multiple measurements are available, two natural questions arise:
+</p>
+<ul class="model-box">
+<li>How closely do the observations agree with one another?</li>
+<li>How close is the measured value to the true value of the quantity?</li>
+</ul>
+<p>
+These two aspects of measurement quality are described by the concepts of <strong>precision</strong> and <strong>accuracy</strong>.
+</p>
+</section>
+<section>
+<h2>Accuracy</h2>
+<p>
+<strong>Accuracy</strong> refers to the closeness of a measured value to the true value of the quantity being measured. It is therefore a measure of the correctness of the measurement.
+</p>
+<p>
+In practice, when several observations are available, the arithmetic mean of the observations is often taken as the best estimate of the measured quantity. The closer this estimate is to the true value, the greater the accuracy of the measurement.
+</p>
+<div class="insightbox">
+High accuracy indicates that systematic errors have been minimized.
+</div>
+</section>
+<section>
+<h2>Precision</h2>
+<p>
+<strong>Precision</strong> refers to the degree of agreement among repeated measurements performed under similar conditions.
+</p>
+<p>
+A highly precise measurement process produces observations that are closely clustered together, indicating good repeatability. Precision does not necessarily imply correctness, since measurements may agree very well with one another and still differ significantly from the true value.
+</p>
+<p>
+Instruments possessing a small least count and good resolving capability generally contribute to improved precision.
+</p>
+<div class="insightbox">
+High precision indicates that random errors are small and repeated measurements exhibit good reproducibility.
+</div>
+</section>
+<section>
+<h2>Illustrative Example</h2>
+<p>
+Suppose the true length of a rod is 20.0 cm. Three experiments yield the following observations:
+</p>
+<table>
+<tr>
+<th>Experiment</th>
+<th>Observations (cm)</th>
+<th>Interpretation</th>
+</tr>
+<tr>
+<td>A</td>
+<td>19.99, 20.00, 20.01, 20.00</td>
+<td>Accurate and Precise</td>
+</tr>
+<tr>
+<td>B</td>
+<td>19.50, 19.49, 19.51, 19.50</td>
+<td>Precise but Inaccurate</td>
+</tr>
+<tr>
+<td>C</td>
+<td>19.0, 20.8, 21.0, 19.2</td>
+<td>Accurate on average, but Imprecise</td>
+</tr>
+</table>
+<p>
+Experiment A yields measurements that are both close to the true value and close to one another. Experiment B produces highly reproducible measurements that are consistently displaced from the true value. Experiment C exhibits large fluctuations among observations, despite the mean being reasonably close to the true value.
+</p>
+</section>
+<section>
+<h2>Reporting a Reading</h2>
+<p>
+Scientific measurements are reported in a standardized format, since experiments are expected to be repeatable and their associated uncertainties must be communicated along with the measured value.
+</p>
+<p>
+Consider an experiment in which the length of an object is measured five times, yielding the following observations:
+</p>
+<div class="math-block">
+\[
+19.8\,;19.9\,;20.0\,;20.1\,;20.2
+\]
+</div>
+<p>
+The true value of a physical quantity is generally unknown. In practice, when random errors dominate, the arithmetic mean of repeated observations is taken as the <strong>best estimate</strong> of the true value.
+</p>
+<div class="math-block">
+\[
+\bar{x} = \frac{19.8+19.9+20.0+20.1+20.2}{5} = 20.0
+\]
+</div>
+<p>
+Next, we determine the deviation of each observation from the mean value.
+</p>
+<div class="math-block">
+\[
+\begin{array}{c|c}
+\text{Observation} & \text{Deviation} \\
+\hline
+19.8 - 20.0 & -0.2\\
+19.9 - 20.0 & -0.1\\
+20.0 - 20.0 & 0.0\\
+20.1 - 20.0 & +0.1\\
+20.2 - 20.0 & +0.2
+\end{array}
+\]
+</div>
+<p>
+Since positive and negative deviations contribute equally to the uncertainty associated with the measurement, their absolute values are considered and averaged to obtain the <strong>Mean Absolute Error (MAE)</strong>.
+</p>
+<div class="math-block">
+\[
+\Delta x = \frac{|{-0.2}|+|{-0.1}|+|0.0|+|0.1|+|0.2|}{5} = \frac{0.2+0.1+0.0+0.1+0.2}{5} = 0.12
+\]
+</div>
+<div class="insightbox">
+The Mean Absolute Error represents the average uncertainty associated with the measurement process.
+</div>
+<p>
+Finally, the measurement is reported in the form
+</p>
+<div class="math-block">
+\[
+x = (20.0 \pm 0.12)
+\]
+</div>
+<p>
+This notation indicates that the best estimate of the measured length is 20.0 units, with an uncertainty of approximately 0.12 units.
+</p>
+<p>
+Thus, instead of reporting all five observations individually, we summarize the entire dataset by reporting the best estimate of the measured quantity together with its associated uncertainty. The expression
+</p>
+<div class="math-block">
+\[
+x = \bar{x} \pm \Delta x
+\]
+</div>
+<p>
+may therefore be viewed as a compact representation that retains the essential information contained in the complete set of observations.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

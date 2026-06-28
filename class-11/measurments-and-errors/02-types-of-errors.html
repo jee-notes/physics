@@ -1,87 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Measurements and Errors | Types of Errors</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Measurement Instruments & Errors | Measurements and Errors</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Measurements and Errors
-            </a>
-        </nav>
-
-        <h1>Systematic and Random Errors</h1>
-        <p class="subtitle">
-            Categorizing the source and nature of measurement uncertainty.
-        </p>
-
-        <section>
-            <h2>1. Systematic Errors</h2>
-            <p>
-                These are errors that tend to be in one direction (either positive or negative). They follow a specific
-                pattern and can often be eliminated if the cause is identified.
-            </p>
-            <ul>
-                <li><strong>Instrumental Errors:</strong> Due to faulty design or calibration (e.g., zero error).</li>
-                <li><strong>Imperfection in Method:</strong> Due to external conditions or flawed experimental setup.
-                </li>
-                <li><strong>Personal Errors:</strong> Due to individual habits or parallax.</li>
-            </ul>
-            <div class="insightbox">
-                Systematic errors affect the <strong>Accuracy</strong> of the result.
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Random Errors</h2>
-            <p>
-                These are errors that occur irregularly and are random in magnitude and sign. They are caused by
-                unpredictable fluctuations in experimental conditions (e.g., vibration, temperature changes).
-            </p>
-            <div class="insightbox">
-                Random errors affect the <strong>Precision</strong> of the result. They can be reduced by taking a large
-                number of readings and calculating their arithmetic mean.
-            </div>
-        </section>
-
-        <section>
-            <h2>3. Comparison Table</h2>
-            <div class="formula-block">
-                <table style="width:100%; text-align:left;">
-                    <tr>
-                        <th>Feature</th>
-                        <th>Systematic Error</th>
-                        <th>Random Error</th>
-                    </tr>
-                    <tr>
-                        <td>Cause</td>
-                        <td>Known (can be identified)</td>
-                        <td>Unpredictable / Unknown</td>
-                    </tr>
-                    <li>Direction</td>
-                        <td>Unidirectional (Fixed sign)</td>
-                        <td>Bi-directional (+ or -)</td>
-                        </tr>
-                    <li>Minimization</td>
-                        <td>Improve instrument / method</td>
-                        <td>Take average of many readings</td>
-                        </tr>
-                </table>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Measurements and Errors
+</a>
+</nav>
+<h1>Measurement Instruments and Errors</h1>
+<p class="subtitle">
+Error is the mathematical quantification of uncertainty in the measurement process.
+</p>
+<section>
+<h2>What is Error?</h2>
+<p>
+Measurement is the process of comparing a physical quantity with a predetermined reference quantity called a <strong>unit</strong>. The outcome of this comparison is expressed as a numerical value accompanied by the corresponding unit.
+</p>
+<p>
+Unlike counting, which deals with discrete objects and is exact, measurement is concerned with physical quantities that can assume a continuum of values.
+</p>
+<div class="insightbox">
+Counting \(\rightarrow\) Discrete<br>
+Measuring \(\rightarrow\) Continuous
+</div>
+<p>
+The numerical value assigned to a physical property is derived through the careful application of a measuring instrument and a defined experimental procedure; it is an empirical determination, not arbitrary guesswork.
+</p>
+<p>
+However, neither the measuring instrument nor the measurement process is perfect. Measuring instruments possess finite resolution, and experimental procedures are subject to practical limitations and fluctuations.
+</p>
+<p>
+As a result, the numerical value obtained from a measurement is inherently uncertain. These uncertainties arising from the limitations of the instrument and the measurement process are collectively mathematically described as <strong>errors</strong>.
+</p>
+</section>
+<section>
+<h2>Systematic Errors</h2>
+<p>
+Systematic errors are errors that tend to shift the measured value consistently in one direction, either positive or negative.
+</p>
+<p>
+Consequently, repeated measurements affected by systematic errors may be highly precise and reproducible, yet remain inaccurate.
+</p>
+<p>
+Such errors arise from identifiable causes and often follow a definite pattern.
+</p>
+<p>
+Therefore, they can frequently be reduced or eliminated once their source is recognized.
+</p>
+<p>
+For example, consider a weighing balance having a pan to hold the object being weighed. If the balance is not adjusted to read zero with the empty pan in place, the instrument will register the combined weight of the object and the pan. As a result, every measurement will be systematically larger than the actual value by a nearly constant amount.
+</p>
+<ul class="model-box">
+<li><strong>Instrumental Errors:</strong> Errors arising from limitations, faulty calibration or improper adjustment of the measuring instrument (e.g., zero error).</li>
+<li><strong>Methodological Errors:</strong> Errors introduced by imperfections in the experimental procedure, assumptions, or external conditions.</li>
+<li><strong>Personal Errors:</strong> Errors caused by the observer, such as parallax, reaction time, or habitual biases in taking readings.</li>
+</ul>
+<div class="insightbox">
+Systematic errors primarily affect the <strong>accuracy</strong> of a measurement by introducing a consistent bias in the measured values.
+</div>
+</section>
+<section>
+<h2>Random Errors</h2>
+<p>
+Random errors are errors that cause repeated measurements of the same quantity to fluctuate unpredictably in both magnitude and sign.
+</p>
+<p>
+As a result, successive observations may be slightly larger or smaller than one another, even when the measurement is performed under apparently identical conditions.
+</p>
+<p>
+Such errors arise from numerous small and uncontrollable variations in the measurement process, including mechanical vibrations, temperature fluctuations, electrical noise and limitations of the observer.
+</p>
+<p>
+Unlike systematic errors, random errors do not introduce a consistent bias in one direction.
+</p>
+<p>
+Instead, they produce a spread in the observed values about some mean value.
+</p>
+<div class="insightbox">
+Random errors primarily affect the <strong>precision</strong> of a measurement.<br>
+Their influence can be reduced by performing a large number of measurements and using the arithmetic mean as the best estimate of the measured quantity.
+</div>
+</section>
+<section>
+<h2>Comparison Table</h2>
+<table>
+<tr>
+<th>Feature</th>
+<th>Systematic Error</th>
+<th>Random Error</th>
+</tr>
+<tr>
+<td>Nature</td>
+<td>Introduces a consistent bias in measurements</td>
+<td>Produces random fluctuations in measurements</td>
+</tr>
+<tr>
+<td>Cause</td>
+<td>Usually arises from identifiable sources such as instrument defects, flawed methodology, or observer bias</td>
+<td>Arises from numerous small and uncontrollable variations in the measurement process</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Tends to have a fixed sign (positive or negative)</td>
+<td>Varies unpredictably in both magnitude and sign</td>
+</tr>
+<tr>
+<td>Effect on Measurement</td>
+<td>Primarily affects <strong>Accuracy</strong></td>
+<td>Primarily affects <strong>Precision</strong></td>
+</tr>
+<tr>
+<td>Reduction</td>
+<td>Improve calibration, instrument quality, or experimental method</td>
+<td>Take a large number of observations and compute their arithmetic mean</td>
+</tr>
+</table>
+</section>
+<section>
+<h2>Instrument and Calibration</h2>
+<p>
+Measurement involves extracting a numerical value from a calibrated measuring instrument.
+</p>
+<p>
+While length is intuitively measured using a scale (or a basic ruler) , almost all physical quantities are measured by reading a calibrated instrument.
+</p>
+<p>
+For example, time is measured by observing the calibrated dial of a clock, mass by using a spring balance, volume by using a measuring cylinder, and electrical quantities such as voltage and current by means of voltmeters and ammeters.
+</p>
+<p>
+Calibration is the process of assigning known values to the markings, divisions, or digital outputs of a measuring instrument. In an analog instrument, this usually appears as a uniformly or non-uniformly graduated scale, where each division corresponds to a definite value of the measured quantity.
+</p>
+<p>
+The smallest change in the measured quantity that can be directly resolved by an instrument is called its <strong>least count</strong>.
+</p>
+<p>
+The concept of least count is not restricted to analog instruments. Digital instruments also possess a least count, which is determined by the smallest increment in the numerical value that can be displayed. Thus, least count is a universal characteristic of any instrument that provides a numerical measurement.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

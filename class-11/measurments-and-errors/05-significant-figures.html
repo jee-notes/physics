@@ -1,72 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Measurements and Errors | Significant Figures</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Significant Figures | Measurements and Errors</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Measurements and Errors
-            </a>
-        </nav>
-
-        <h1>Significant Figures and Rounding</h1>
-        <p class="subtitle">
-            Reflecting the reliability and resolution of your measurement data.
-        </p>
-
-        <section>
-            <h2>1. Rules for Significant Figures</h2>
-            <ol>
-                <li>All non-zero digits are significant.</li>
-                <li>Zeros between two non-zero digits are significant.</li>
-                <li>Leading zeros (to the left of the first non-zero digit) are <strong>never</strong> significant.</li>
-                <li>Trailing zeros in a number without a decimal point are NOT significant.</li>
-                <li>Trailing zeros in a number with a decimal point <strong>are</strong> significant.</li>
-            </ol>
-            <div class="insightbox">
-                Example: 0.0050 has 2 significant figures. 500 has 1. 500.0 has 4.
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Rules for Arithmetic Operations</h2>
-            <ul>
-                <li><strong>Addition/Subtraction:</strong> The result should have the same number of <strong>decimal
-                        places</strong> as the measurement with the fewest decimal places.</li>
-                <li><strong>Multiplication/Division:</strong> The result should have the same number of
-                    <strong>significant figures</strong> as the measurement with the fewest significant figures.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>3. Rounding Off</h2>
-            <p>
-                If the digit to be dropped is 5:
-            </p>
-            <ul>
-                <li>If 5 is followed by non-zero digits, round up.</li>
-                <li>If 5 is the last digit or followed by zeros:
-                    <ul>
-                        <li>Round down if the preceding digit is even (e.g., 6.25 \(\to\) 6.2).</li>
-                        <li>Round up if the preceding digit is odd (e.g., 6.35 \(\to\) 6.4).</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Measurements and Errors
+</a>
+</nav>
+<h1>Significant Figures and Rounding</h1>
+<p class="subtitle">
+Reflecting the reliability and resolution of your measurement data.
+</p>
+<section>
+<h2>Scientific Notation</h2>
+<p>
+Scientific notation is a standardized method of reporting measured quantities.
+</p>
+<p>
+It serves not merely as a compact way of writing very large or very small numbers, but also as a means of communicating information about the measurement itself.
+</p>
+<p>
+A numerical value reported in scientific notation conveys more than just its magnitude.
+</p>
+<p>
+It also explicitly indicates the number of significant figures present in the measurement and provides information about the order of magnitude of the physical quantity.
+</p>
+<p>
+In general, a quantity is written in the form
+</p>
+<div class="math-block">
+\[
+x = a \times 10^{n}
+\]
+</div>
+<p>
+where \(a\) is called the significand.
+</p>
+<div class="math-block">
+\[
+1 \leq a \lt 10
+\]
+</div>
+<p>
+and \(n\) is an integer representing the order of magnitude of the quantity.
+</p>
+<p>
+For example, consider the following representations:
+</p>
+<div class="math-block">
+\[
+5\times10^{2}\text{ m}
+\]
+\[
+5.00\times10^{2}\text{ m}
+\]
+</div>
+<p>
+Both expressions represent the same numerical magnitude, namely \(500\ \text{m}\). However, they do not convey the same amount of information.
+</p>
+<p>
+The first representation contains only one significant figure, whereas the second representation contains three significant figures, thereby indicating a measurement of greater precision.
+</p>
+<p>
+The situation is analogous to weighing gold by a jeweller and vegetables by a vendor. The quantity being measured may be similar, but the precision expected from the measurement is markedly different.
+</p>
+<div class="insightbox">
+Scientific notation is therefore not merely a shorthand for writing numbers.<br>
+It is also a standardized format for communicating the magnitude, precision and reliability associated with a measured quantity.
+</div>
+</section>
+<section>
+<h2>Significant Figures</h2>
+<p>
+Every measuring instrument possesses a finite least count and therefore a finite resolving capability. Consequently, no measurement can determine the exact value of a physical quantity with infinite precision.
+</p>
+<p>
+Because of this limitation, the reported value of a measurement always carries some uncertainty. The uncertainty first appears in the last reported digit, while the preceding digits are regarded as reliable.
+</p>
+<p>
+To communicate the precision of a measurement, the result must be reported in a manner that reflects the reliability of its digits. This is achieved through the concept of <strong>significant figures</strong>.
+</p>
+<p>
+A measured value is therefore reported by including all the reliable digits together with the first uncertain digit. Collectively, these digits are called the <strong>significant figures</strong> (or significant digits) of the measurement.
+</p>
+<p>
+For example, if the time period of a simple pendulum is reported as <strong>1.62 s</strong>, the digits 1 and 6 are regarded as reliable, while the last reported digit 2 is uncertain. Hence, the measurement contains three significant figures.
+</p>
+<p>
+Similarly, if the length of an object is reported as <strong>287.5 cm</strong>, the digits 2, 8 and 7 are reliable, whereas the last reported digit 5 is uncertain. Thus, the measurement has four significant figures.
+</p>
+<div class="insightbox">
+<strong>What is an uncertain digit?</strong><br>
+Consider a ruler having a least count of <strong>1 mm (0.1 cm)</strong>.<br>
+Suppose the measured length of an object is reported as <strong>4.7 cm</strong>.<br>
+The digit 7 is called the <strong>uncertain digit</strong> because the finite least count of the ruler does not allow us to determine the exact value beyond this level of precision.<br>
+The actual length may differ slightly from 4.7 cm while still producing the same reported reading. Thus, the uncertainty associated with the measurement first appears in the last reported digit.<br>
+Later we will define Least Count Error based on this principle.
+</div>
+<p>
+Reporting additional digits beyond the first uncertain digit is unnecessary and misleading, since it suggests a precision that the measuring instrument cannot justify.
+</p>
+<p>
+The number of significant figures in a reported measurement therefore reflects the precision of the measurement and is ultimately limited by the least count of the measuring instrument.
+</p>
+<div class="insightbox">
+Significant figures are not merely a rule for counting digits.<br>
+They communicate the precision of a measurement by identifying the reliable digits and the first digit affected by measurement uncertainty.
+</div>
+</section>
+<section>
+<h2>Rules for Significant Figures</h2>
+<p>
+The number of significant figures in a measured quantity is determined by the following rules:
+</p>
+<ol>
+<li>All non-zero digits are significant.</li>
+<li>Zeros occurring between two non-zero digits are significant.</li>
+<li>Leading zeros (zeros to the left of the first non-zero digit) are not significant because they merely indicate the position of the decimal point.</li>
+<li>Trailing zeros in a number containing a decimal point are significant because they convey the precision of the measurement.</li>
+<li>Trailing zeros in a whole number without an explicitly indicated decimal point are generally not considered significant, since they do not by themselves reveal whether they represent measured precision or merely arise from the choice of units.</li>
+</ol>
+<div class="insightbox">
+Examples:<br>
+0.002308 &rarr; 4 significant figures<br>
+3.500 &rarr; 4 significant figures<br>
+0.06900 &rarr; 4 significant figures<br>
+500 &rarr; generally 1 significant figure (unless additional information is provided)<br>
+500.0 &rarr; 4 significant figures
+</div>
+<p>
+The last rule deserves special attention. Suppose the length of an object is reported as <strong>4.700 m</strong>. The two trailing zeros are significant because they communicate the precision of the measurement.
+</p>
+<p>
+Now express the same measurement in different units:
+</p>
+<div class="math-block">
+\[
+4.700~\text{m} = 470.0~\text{cm} = 4700~\text{mm} = 0.004700~\text{km}
+\]
+</div>
+<p>
+The physical quantity being measured has not changed; only its unit has changed. Therefore, the precision of the measurement cannot change, and neither can the number of significant figures. All four representations above describe the <strong>same measurement</strong> and therefore each has <strong>four significant figures</strong>.
+</p>
+<p>
+Thus, it is <strong>incorrect</strong> to conclude that <strong>4700 mm</strong> has only two significant figures merely because it is written without a decimal point. Such an interpretation would imply that changing the unit of measurement changes the precision of the measurement, which is impossible.
+</p>
+<div class="insightbox">
+Significant figures are a property of the <strong>measurement</strong>, not of the particular unit in which the measurement is expressed.<br>
+Changing units changes the numerical value, but it does not change the precision of the measurement.<br>
+So, we use scientific notation to represent the quantity as \(4.700 \times 10^3~\text{mm}\)
+</div>
+</section>
+<section>
+<h2>Rounding Off</h2>
+<p>
+Measured quantities are frequently combined through arithmetic operations such as addition, subtraction, multiplication and division.
+</p>
+<p>
+The numerical result of these operations often contains more significant figures than are justified by the precision of the original measurements. Such extra digits do not represent additional information and should not be reported.
+</p>
+<p>
+Therefore, the result must be expressed with an appropriate number of significant figures. This is achieved through the process of <strong>rounding off</strong>.
+</p>
+<p>
+Rounding off is the process of reducing the number of significant figures in a numerical value while preserving its value as closely as possible.
+</p>
+<p>
+Suppose a number is to be rounded to <strong>\(n\)</strong> significant figures. The first \(n\) significant digits are retained, while all subsequent digits are discarded. The retained digits determine the reported value, whereas the discarded digits determine whether the last retained digit should be modified.
+</p>
+<p>
+The rounding rule depends on the value of the discarded part of the number.
+</p>
+<h3>Case 1: Discarded part is less than 5</h3>
+<p>
+If the first discarded digit is less than 5, simply discard all remaining digits.
+</p>
+<div class="math-block">
+\[
+6.2543 \,\longrightarrow\, 6.25
+\]
+</div>
+<p>
+(Rounded from five significant figures to three significant figures.)
+</p>
+<h3>Case 2: Discarded part is greater than 5</h3>
+<p>
+If the first discarded digit is greater than 5, increase the last retained digit by one and discard the remaining digits.
+</p>
+<div class="math-block">
+\[
+6.2543 \,\longrightarrow\, 6.3
+\]
+</div>
+<div class="math-block">
+\[
+6.96 \,\longrightarrow\, 7.0
+\]
+</div>
+<p>
+(The second example retains two significant figures.)
+</p>
+<h3>Case 3: Discarded part is exactly 5</h3>
+<p>
+If the first discarded digit is exactly 5 and is not followed by any non-zero digit, use the following rule:
+</p>
+<ul class="model-box">
+<li>If the last retained digit is <strong>even</strong>, leave it unchanged.</li>
+<li>If the last retained digit is <strong>odd</strong>, increase it by one.</li>
+</ul>
+<div class="math-block">
+\[
+6.25 \,\longrightarrow\, 6.2
+\]
+</div>
+<div class="math-block">
+\[
+6.35 \,\longrightarrow\, 6.4
+\]
+</div>
+<div class="insightbox">
+The special treatment of the digit 5 prevents a systematic upward bias when a large number of measurements are rounded.<br>
+Over many calculations, numbers ending in 5 are rounded upward and downward with equal probability, reducing cumulative rounding errors.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
