@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>System of Particles | System of Particles</title>
+<title>System Approach | System of Particles</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,77 +14,143 @@
 <span>&larr;</span> Back to System of Particles
 </a>
 </nav>
-<h1>System of Particles</h1>
+<h1>System Approach</h1>
 <p class="subtitle">
 What defines a system and why the distinction between internal and external forces matters.
 </p>
 <section>
 <h2>What is a System of Particles?</h2>
 <p>
-A <strong>system of particles</strong> is any collection of two or more particles that we choose to analyse together. The "system" is defined by the physicist — we draw an imaginary boundary and classify everything inside as the system and everything outside as the surroundings.
-</p>
-<p>
-Once the boundary is drawn, every force acting on every particle in the system falls into one of two categories:
-</p>
-<ul>
-<li><strong>Internal forces:</strong> Forces between particles within the system (e.g., tension in a rope connecting two blocks, gravitational pull between two masses in the system).</li>
-<li><strong>External forces:</strong> Forces exerted on the system by objects outside it (e.g., gravity from the Earth, applied push, friction from the ground).</li>
-</ul>
-<p>
-This approach of classifying interactions as internal and external is called <strong>system approach</strong>. 
+A <strong>system of particles</strong> is any collection of two or more particles that we choose to analyse together. A single particle may itself be regarded as a trivial system containing only one particle.
 </p>
 <div class="insightbox">
-The classification of a force as internal or external depends entirely on how you define your system. A force that is external for one choice of system may become internal if you expand the system boundary to include its source.
+The natural question here is: <strong>What exactly is a particle?</strong><br>
+It is the same idealized object that we have been studying throughout Newtonian mechanics so far.<br>
+For this reason, the Newton's Laws of Motion chapter may also be viewed as <strong>particle dynamics</strong>.<br>
+The present chapter extends the discussion from the dynamics of a single particle to the dynamics of a <strong>system of particles</strong>.<br>
+The next major step is <strong>rigid body dynamics</strong>, where the particles are constrained to maintain fixed distances from one another.
+</div>
+<p>
+The system is defined by the physicist — that is, by the agent studying the physical situation.
+</p>
+<p>
+To define a system, the physicist draws an imaginary boundary around the chosen collection of particles. Everything enclosed by this boundary constitutes the <strong>system</strong>, while everything outside it constitutes the <strong>surroundings</strong>.
+</p>
+<p>
+Since every force is an interaction between two bodies, every force acting on a particle within the system falls into one of two categories:
+</p>
+<ul class="model-box">
+<li><strong>Internal forces:</strong> Forces between particles that both lie within the system (e.g., tension in a rope connecting two blocks, gravitational attraction between two masses belonging to the system).</li>
+<li><strong>External forces:</strong> Forces exerted on particles of the system by objects lying outside the system boundary (e.g., gravity due to the Earth, an applied push, or friction from the ground).</li>
+</ul>
+<p>
+This method of analysing physical situations by first defining a system and then classifying interactions as internal and external is called the <strong>system approach</strong>.
+</p>
+<div class="insightbox">
+The classification of a force as internal or external depends entirely on how the system is defined.<br>
+A force that is external for one choice of system may become internal if the system boundary is expanded to include its source.
 </div>
 </section>
 <section>
 <h2>Why This Distinction Matters</h2>
 <p>
-By Newton's third law, internal forces always come in equal and opposite pairs. When you sum all forces on all particles, the internal forces cancel exactly:
+The distinction between internal and external forces is fundamental because internal forces do not influence the overall motion of the system.
 </p>
-\[\sum \vec{F}_{\text{internal}} = 0\]
 <p>
-Therefore, the net force on the system is due entirely to external forces:
+By Newton's third law, every internal force occurs as part of an equal and opposite pair acting on two different particles of the system. Consequently, when all internal forces are summed vectorially over the entire system, they cancel exactly:
 </p>
-\[\vec{F}_{\text{net on system}} = \sum \vec{F}_{\text{external}}\]
+\[
+\sum \vec{F}_{\text{internal}} = 0
+\]
 <p>
-This is an extraordinarily powerful result. It means we can predict the overall motion of the system (through its centre of mass) without knowing anything about the internal forces — no matter how complex.
+Therefore, the net force acting on the system is simply the vector sum of all external forces:
+</p>
+\[
+\vec{F}_{\text{net on system}} = \sum \vec{F}_{\text{external}}
+\]
+<p>
+This is one of the most powerful ideas in dynamics. It tells us that the overall motion of a system is determined solely by the external forces acting on it.
+</p>
+<div class="insightbox">
+The <strong>system approach</strong> is primarily a method for solving dynamics problems.<br>
+By choosing an appropriate system, many complicated interaction forces become internal and need not be calculated.<br>
+The <strong>system approach</strong> is about <strong>virtually grouping</strong> bodies, whereas a <strong>free-body diagram</strong> is about <strong>virtually isolating</strong> a body.
+</div>
+<p>
+The internal forces may be extremely large and complicated, but they do not affect the motion of the system as a whole.
+</p>
+<p>
+Consequently, the motion of the centre of mass can be analysed without any knowledge of the internal forces.
 </p>
 </section>
 <section>
 <h2>Examples of Systems</h2>
-<ul>
-<li><strong>Two blocks connected by a spring:</strong> The spring force is internal; gravity and normal force from the surface are external.</li>
-<li><strong>A bullet and a gun:</strong> The explosion forces are internal; gravity is external. Total momentum is conserved if we neglect gravity during the short firing time.</li>
-<li><strong>Fragments of an exploding bomb:</strong> Explosion forces are internal. If the bomb was in free fall (no support), the centre of mass continues its parabolic trajectory undisturbed.</li>
-<li><strong>Two colliding balls:</strong> Contact forces during collision are internal. If the collision is brief, external forces have negligible impulse → momentum conserved.</li>
+<p>
+The usefulness of the system approach becomes evident in many standard dynamics problems. By choosing an appropriate system, complicated interaction forces become internal and need not be considered explicitly.
+</p>
+<ul class="model-box">
+<li><strong>Two blocks in contact:</strong> If both blocks are chosen as the system, the normal force at the point of contact is internal, while gravity, the normal reaction and friction from the ground are external.</li>
+<li><strong>Two blocks connected by a spring or string:</strong> If both blocks together with the spring (or string) are chosen as the system, the spring force (or the tension in the string) is internal, while gravity, the normal reaction and friction from the ground are external.</li>
+<li><strong>A gun and a bullet:</strong> If the gun and bullet together constitute the system, the explosion forces are internal, while gravity is external. Since the firing process lasts for a very short time, the external impulse due to gravity is negligible, and the total momentum of the system remains conserved.</li>
+<li><strong>Projectile fired from a moving cannon:</strong> If the cannon and projectile together constitute the system, the explosion forces are internal. During the short firing interval, the external impulse is negligible, so the total momentum of the system remains conserved.</li>
+<li><strong>Fragments of an exploding bomb:</strong> If all fragments are included in the system, the explosion forces are internal. Consequently, the centre of mass continues to follow the same trajectory that it would have followed had the explosion not occurred.</li>
+<li><strong>Two colliding balls:</strong> If both balls are treated as a single system, the contact forces during the collision are internal. Since the collision time is very short, the external impulse is usually negligible, and the total momentum of the system remains conserved.</li>
 </ul>
 </section>
 <section>
 <h2>Rigid Bodies as Systems</h2>
 <p>
-A <strong>rigid body</strong> is a special system in which the distance between any two particles remains constant. This is a kinematic constraint — it restricts how the system can move, independent of the forces acting on it.
+A <strong>rigid body</strong> is a special type of system in which the distance between every pair of particles remains constant.
 </p>
 <p>
-This constraint gives rigid body motion a definite structure. The motion can always be described as a combination of two modes:
+This condition is called the <strong>rigid body constraint</strong>. It is a <strong>kinematic constraint</strong> because it restricts the possible motions of the system without referring to the forces producing the motion.
 </p>
-<ul>
-<li>
-<strong>Translation:</strong> All points of the body have the same velocity and acceleration.
-</li>
-<li>
-<strong>Rotation:</strong> For any chosen point on the body, once its motion is accounted for (as translation), the remaining motion of the body is a rotation characterized by a single angular velocity about that point.
-</li>
+<p>
+The rigid body constraint gives the motion of a rigid body a definite structure. The motion of every rigid body can always be described as a combination of two fundamental modes:
+</p>
+<ul class="model-box">
+<li><strong>Translation:</strong> All points of the body have the same velocity and the same acceleration at any instant.</li>
+<li><strong>Rotation:</strong> Once the translational motion of any chosen point on the body is accounted for, the remaining motion of the body is a rotation about that point, characterized by a single angular velocity.</li>
 </ul>
 <p>
-This decomposition is purely kinematic and holds irrespective of the dynamics involved. The choice of point is arbitrary — no point on the body is fundamentally special — and the same angular velocity describes the rotational aspect of motion for the entire body.
+This decomposition is purely kinematic and holds irrespective of the forces acting on the body.
 </p>
 <p>
-The system-of-particles framework is the foundation for both translational dynamics (this chapter) and rotational dynamics (rotational motion chapter).
+The choice of reference point is entirely arbitrary—no point on a rigid body is fundamentally special. Regardless of the chosen point, the same angular velocity describes the rotational aspect of the body's motion.
+</p>
+<p>
+Thus, the system-of-particles framework naturally extends to rigid bodies and forms the foundation of both translational dynamics (this chapter) and rotational dynamics (the rotational motion chapter).
 </p>
 <div class="insightbox">
-The rigid body constraint is not a statement about forces, but about allowed motion. It ensures that the motion of the system can always be decomposed into translation and rotation, and this decomposition can be constructed using any point on the body without privileging a specific one.
+The rigid body constraint is a statement about the <strong>allowed motion</strong> of the system, not about the forces acting on it.<br>
+It guarantees that the motion of every rigid body can always be decomposed into translation and rotation, and this decomposition may be constructed using any point on the body as the reference point.
 </div>
+</section>
+<section>
+<h2>Relation Between Kinematics and Dynamics</h2>
+<p>
+The relationship between kinematics and dynamics can be understood by comparing the physical quantities studied in each.
+</p>
+<p>
+<strong>Kinematics</strong> describes motion using quantities such as position, velocity and acceleration.
+</p>
+<p>
+<strong>Dynamics</strong> introduces mass and studies the corresponding quantities associated with motion, namely mass moment, momentum and force.
+</p>
+<div class="math-block">
+Mass Moment = Mass \(\times\) Position<br>
+Momentum = Mass \(\times\) Velocity<br>
+Force = Mass \(\times\) Acceleration
+</div>
+<p>
+Thus, the fundamental quantities of dynamics are obtained by combining mass with the corresponding kinematic quantities.
+</p>
+<div class="math-block">
+Dynamics = Mass \(\times\) Kinematics
+</div>
+<p>
+This relationship is particularly relevant in this chapter because, although Newton's Laws of Motion primarily focused on force, the study of systems of particles also relies heavily on mass moment and momentum.
+</p>
 </section>
 <footer>
 <hr>

@@ -230,6 +230,86 @@ The special treatment of the digit 5 prevents a systematic upward bias when a la
 Over many calculations, numbers ending in 5 are rounded upward and downward with equal probability, reducing cumulative rounding errors.
 </div>
 </section>
+<section>
+<h2>Common Doubts in Rounding Off</h2>
+<p>
+Since rounding off is introduced for the first time in Class XI, students often develop a few common misconceptions. Some of the most frequent ones are discussed below.
+</p>
+<h3>1. The dropped part may contain more than one digit</h3>
+<p>
+When deciding whether the discarded part is less than, greater than, or equal to 5, we consider the <strong>entire discarded part</strong>, not merely the first discarded digit.
+</p>
+<p>
+For example, suppose <strong>6.253</strong> is to be rounded to <strong>2 significant figures</strong>. The discarded part is <strong>53</strong>, which is greater than <strong>50</strong>. Therefore, the result is
+</p>
+<div class="math-block">
+\[
+6.253 \,\longrightarrow\, 6.3
+\]
+</div>
+<p>
+On the other hand, if <strong>6.250</strong> is rounded to <strong>2 significant figures</strong>, the discarded part is exactly <strong>50</strong>. Hence, the "5-rule" is applied. Since the last retained digit (2) is even, the result is
+</p>
+<div class="math-block">
+\[
+6.250 \,\longrightarrow\, 6.2
+\]
+</div>
+<h3>2. Carry may propagate to other digits</h3>
+<p>
+Only the last retained digit is directly modified during rounding. However, increasing this digit by one may generate a carry that propagates to the digits on its left.
+</p>
+<p>
+For example,
+</p>
+<div class="math-block">
+\[
+6.96 \,\longrightarrow\, 7.0
+\]
+</div>
+<p>
+The retained digit is 9. Increasing it by one gives 10, which generates a carry to the preceding digit. Therefore, the correct result is <strong>7.0</strong>, not <strong>6.10</strong>.
+</p>
+<h3>3. Dropping digits does not change the place value</h3>
+<p>
+Dropping digits does not mean removing their place values. The place values remain unchanged; only the insignificant digits are discarded.
+</p>
+<p>
+For example, when <strong>475</strong> is rounded to <strong>2 significant figures</strong>, the result is
+</p>
+<div class="math-block">
+\[
+475 \,\longrightarrow\, 480
+\]
+</div>
+<p>
+It is incorrect to write the answer as <strong>48</strong>, because doing so changes the magnitude of the number.
+</p>
+<p>
+This is easily understood using scientific notation:
+</p>
+<div class="math-block">
+\[
+475 = 4.75\times10^2
+\]
+</div>
+<div class="math-block">
+\[
+4.75\times10^2 \,\longrightarrow\, 4.8\times10^2
+\]
+</div>
+<p>
+Converting back to ordinary notation gives
+</p>
+<div class="math-block">
+\[
+4.8\times10^2 = 480
+\]
+</div>
+<div class="insightbox">
+Rounding off changes the precision of a reported value, not its order of magnitude.
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>

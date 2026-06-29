@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Error Metrics | Measurements and Errors</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Measurements and Errors
+</a>
+</nav>
+<h1>Error Metrics</h1>
+<p class="subtitle">
+Quantifying the magnitude and significance of uncertainty.
+</p>
+<section>
+<h2>Error Metrics</h2>
+<p>
+In the previous sections, we established that every measurement is associated with some uncertainty. Merely stating that a measurement contains an error, however, provides only a qualitative description.
+</p>
+<p>
+To compare the quality of measurements, evaluate the performance of measuring instruments, and communicate the reliability of experimental results, the uncertainty must be expressed quantitatively.
+</p>
+<p>
+This is achieved by defining numerical quantities known as <strong>error metrics</strong>. Each error metric describes a different aspect of the uncertainty associated with a measurement.
+</p>
+<p>
+In this chapter, we shall study the following error metrics:
+</p>
+<ul class="model-box">
+<li><strong>Arithmetic Mean</strong> — the best estimate of the true value obtained from repeated observations.</li>
+<li><strong>Absolute Error</strong> — the magnitude of deviation of a measurement from the best estimate.</li>
+<li><strong>Relative Error</strong> — the error expressed relative to the magnitude of the measured quantity.</li>
+<li><strong>Percentage Error</strong> — the relative error expressed as a percentage.</li>
+<li><strong>Least Count Error</strong> — the uncertainty arising from the finite resolution of the measuring instrument.</li>
+</ul>
+<div class="insightbox">
+Error metrics do not eliminate uncertainty.<br>
+They provide a standardized way of <strong>quantifying</strong> and <strong>communicating</strong> the uncertainty associated with a measurement.
+</div>
+</section>
+<section>
+<h2>True Value (Arithmetic Mean)</h2>
+<p>
+The true value of a physical quantity is generally unknown and cannot be determined exactly from a finite number of measurements.
+</p>
+<p>
+When the same quantity is measured repeatedly under similar conditions, the arithmetic mean of the observations is taken as the <strong>best estimate</strong> of the true value. Random errors tend to cancel one another, making the mean a more reliable estimate than any individual observation.
+</p>
+<p>
+If the measured values are \(a_1, a_2, \ldots, a_n\), then the arithmetic mean is given by
+</p>
+<div class="math-block">
+\[
+a_{\text{mean}} = \frac{a_1+a_2+\cdots+a_n}{n}
+\]
+</div>
+<p>
+The arithmetic mean serves as the reference value for calculating various error metrics such as absolute error, relative error and percentage error.
+</p>
+<div class="insightbox">
+The arithmetic mean is <strong>not</strong> the true value.<br>
+It is the best estimate of the true value that can be obtained from the available measurements.
+</div>
+</section>
+<section>
+<h2>Absolute Error (\(\Delta a\))</h2>
+<p>
+Once the best estimate of the true value has been determined, the next step is to quantify how much each individual observation differs from this estimate.
+</p>
+<p>
+The <strong>absolute error</strong> of a measurement is defined as the magnitude of the difference between the measured value and the arithmetic mean. Since only the magnitude of the deviation is important, the difference is expressed as an absolute value.
+</p>
+<div class="math-block">
+\[
+\Delta a_i = \left|a_i-a_{\text{mean}}\right|
+\]
+</div>
+<p>
+Each observation therefore has its own absolute error. To characterize the overall uncertainty associated with the complete set of measurements, we calculate the arithmetic mean of these absolute errors.
+</p>
+<p>
+This quantity is called the <strong>Mean Absolute Error (MAE)</strong>.
+</p>
+<div class="math-block">
+\[
+\Delta a_{\text{mean}} = \frac{\Delta a_1+\Delta a_2+\cdots+\Delta a_n}{n}
+\]
+</div>
+<p>
+The Mean Absolute Error represents the average deviation of the observations from the best estimate of the true value and is commonly used as a measure of the uncertainty associated with the measurement process.
+</p>
+<div class="insightbox">
+Absolute error measures the deviation of an <strong>individual observation</strong>, whereas the Mean Absolute Error summarizes the average uncertainty of the <strong>entire set of observations</strong>.
+</div>
+</section>
+<section>
+<h2>Relative and Percentage Error</h2>
+<p>
+Absolute error alone does not always provide a meaningful indication of the quality of a measurement. The same absolute error may be significant for a small quantity but negligible for a much larger one.
+</p>
+<p>
+To assess the significance of an error, it is compared with the magnitude of the quantity being measured. This ratio is called the <strong>relative error</strong>.
+</p>
+<div class="math-block">
+\[
+\text{Relative Error} = \frac{\Delta a_{\text{mean}}}{a_{\text{mean}}}
+\]
+</div>
+<p>
+Relative error is a dimensionless quantity because both the numerator and the denominator have the same unit.
+</p>
+<p>
+For convenience, the relative error is often expressed as a percentage. This quantity is called the <strong>percentage error</strong>.
+</p>
+<div class="math-block">
+\[
+\text{Percentage Error} = \frac{\Delta a_{\text{mean}}}{a_{\text{mean}}}\times100\%
+\]
+</div>
+<div class="insightbox">
+A measurement having an absolute error of <strong>1 cm</strong> is very different depending on what is being measured.<br>
+An error of 1 cm in measuring a 10 cm object corresponds to a percentage error of 10%, whereas the same error in measuring a 1 km distance corresponds to a percentage error of only 0.001%.<br>
+Thus, <strong>relative and percentage errors indicate the significance of an error rather than its absolute magnitude.</strong>
+</div>
+</section>
+<section>
+<h2>Least Count Error</h2>
+<p>
+Every measuring instrument possesses a finite least count and therefore cannot resolve changes in the measured quantity smaller than this value.
+</p>
+<p>
+Consequently, every measurement carries an uncertainty arising solely from the finite resolution of the measuring instrument. This uncertainty is called the <strong>least count error</strong>.
+</p>
+<p>
+Least count error is a random error but of limited size.
+</p>
+<p>
+Least count error represents the minimum uncertainty introduced by the measuring instrument itself. Even if all other sources of error were eliminated, this uncertainty would still remain because of the finite resolution of the instrument.
+</p>
+<p>
+Depending on the method of taking reading, there can be different magnitudes of least count error. In our syllabus, there is only 1 way to represent least count error. 
+</p>
+<div class="math-block">
+Least Count Error = \(\pm\) Least Count
+</div>
+<p>
+E.g. if we take a reading to measure length of an object as 4.7 cm using a common ruler with 1 mm least count,, then even if we say that assuming there is no other source of error we need to report the length as \(4.7 \pm 0.1 \, \text{cm}\).
+</p>
+<h3>Why Least Count Error is \(\pm\) Least Count?</h3>
+<p>
+We take 2 examples to explain this. One  is for a digital instrument first and then for analog instrument.
+</p>
+<p>
+For a digital instrument, the measurement changes in discrete steps and the uncertainty is one least count. A reading has scope of error between 2 separate displays and so the net scope of error is 2 \(\times\) Least Count.
+</p>
+<p>
+Lets say the current time visible in a digital clock is 1:20 PM and we are asked to measure 7 minutes till 1:27 PM.
+</p>
+<p>
+Now, the digital clock will display 1:20 PM as soon as 1:20 PM ocurred till 1:20:59:999 PM. There is a scope of 1 minute error in reporting 1:20 PM. Similarly, there is a scope of 1 minute error in reporting 1:27 PM as the clock will display 1:27 PM as soon as 1:27 PM ocurred till 1:27:59:999 PM.
+</p>
+<p>
+So, we need to report the reading as 7 \(\pm\) 1 minute as the least count of instrument is 1 minute. 
+</p>
+<p>
+For an analog instrument, the measurement is reading taken from a caliberated scale. A reading has scope of error between 2 different markings and so the net scope of error is 2 \(\times\) Least Count.
+</p>
+<p>
+Lets say we are asked to measure the length of an object using a common ruler. We keep the 0 marking at one end and at the other end, we see that it is falling at 4.7 cm.
+</p>
+<p>
+Now, there is scope of 1 mm error at the 0 mark as it could be 0.0 to 0.09999. Similarly, there is scope of 1 mm error at the 4.7 mark as it could be 4.70 to 4.79999.
+</p>
+<p>
+So, we need to report the reading as 4.7 \(\pm\) 0.1 cm as the least count of instrument is 0.1 cm. 
+</p>
+<div class="insightbox">
+Least count determines the smallest change an instrument can resolve<br>
+But least count error quantifies the uncertainty associated with that finite resolution for 2 markings.
+</div>
+</section>
+<section>
+
+<h2>Least Count Error</h2>
+<p>
+Every measuring instrument possesses a finite least count and therefore cannot resolve changes in the measured quantity smaller than this value.
+</p>
+<p>
+Consequently, every measurement carries an uncertainty arising solely from the finite resolution of the measuring instrument. This uncertainty is called the <strong>least count error</strong>.
+</p>
+<p>
+Least count error is a random error, but its magnitude is limited by the least count of the instrument.
+</p>
+<p>
+It therefore represents the minimum uncertainty introduced by the measuring instrument itself. Even if all other sources of error were completely eliminated, this uncertainty would still remain because of the instrument's finite resolution.
+</p>
+<p>
+Depending on the method used to obtain the reading, different conventions may be adopted for representing the least count error. In the present syllabus, it is represented as
+</p>
+<div class="math-block">
+Least Count Error = \(\pm\) Least Count
+</div>
+<p>
+For example, suppose the length of an object is measured using a common ruler having a least count of <strong>1 mm (0.1 cm)</strong>. If the observed length is <strong>4.7 cm</strong>, then, assuming no other source of error, the measurement is reported as
+</p>
+<div class="math-block">
+\[
+4.7 \pm 0.1~\text{cm}
+\]
+</div>
+<h3>Why is Least Count Error \(\pm\) Least Count?</h3>
+<p>
+We explain this idea using two examples. The first uses a digital instrument, while the second uses an analog instrument.
+</p>
+<h4>Digital Instrument</h4>
+<p>
+A digital instrument displays measurements in discrete steps. Consequently, every displayed reading has a <strong>scope for a possible error of one least count</strong>.
+</p>
+<p>
+Consider a digital clock having a least count of <strong>1 minute</strong>. Suppose the displayed time is <strong>1:20 PM</strong>, and we wish to measure a time interval until the display shows <strong>1:27 PM</strong>.
+</p>
+<p>
+The display shows <strong>1:20 PM</strong> from the instant 1:20 begins until just before 1:21 PM. Hence, there is a <strong>scope for a possible error of one minute</strong> in the starting reading. Similarly, the display shows <strong>1:27 PM</strong> from the instant 1:27 begins until just before 1:28 PM, giving a <strong>scope for a possible error of one minute</strong> in the final reading.
+</p>
+<p>
+Thus, the measurement involves <strong>two displayed readings</strong>, each having a scope for an error of one least count. Therefore, the total scope for error is
+</p>
+<div class="math-block">
+\[
+2\times\text{Least Count}
+\]
+</div>
+<p>
+This total possible error extends equally on either side of the measured value. Hence, the measured interval is reported as
+</p>
+<div class="math-block">
+\[
+7\pm1~\text{minute}
+\]
+</div>
+<h4>Analog Instrument</h4>
+<p>
+An analog measurement is obtained by observing two markings on a calibrated scale. Each marking has a <strong>scope for a possible error of one least count</strong>.
+</p>
+<p>
+Suppose the length of an object is measured using a ruler having a least count of <strong>0.1 cm</strong>. One end of the object is placed at the zero mark, while the other end is observed at the <strong>4.7 cm</strong> marking.
+</p>
+<p>
+The zero end has a scope for an error of one least count because the exact position may lie anywhere within the first least-count interval. Similarly, the 4.7 cm marking also has a scope for an error of one least count.
+</p>
+<p>
+Since the measurement is obtained from <strong>two markings</strong>, each contributing one least count, the total scope for error is
+</p>
+<div class="math-block">
+\[
+2 \times \text{Least Count}
+\]
+</div>
+<p>
+This corresponds to an uncertainty of one least count on either side of the measured value. Therefore, the measurement is reported as
+</p>
+<div class="math-block">
+\[
+4.7 \pm 0.1~\text{cm}
+\]
+</div>
+<div class="insightbox">
+Least count determines the smallest change that an instrument can resolve.<br>
+Least count error quantifies the uncertainty associated with that finite resolution for the complete measurement.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

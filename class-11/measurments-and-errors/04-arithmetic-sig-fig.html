@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arithmetic of Significant Figures | Measurements and Errors</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Measurements and Errors
+</a>
+</nav>
+<h1>Arithmetic of Significant Figures</h1>
+<p class="subtitle">
+Rules for mathematical operations of significant figures.
+</p>
+<section>
+<h2>Mathematical Operations</h2>
+<p>
+Measurements are frequently combined through mathematical operations such as addition, subtraction, multiplication and division to determine new physical quantities.
+</p>
+<p>
+Since every measured quantity possesses a finite precision, the result of any mathematical operation must also reflect an appropriate level of precision. The precision of the final result cannot exceed the precision of the least accurate measurement used in the calculation.
+</p>
+<p>
+The rules governing arithmetic with measured quantities are therefore not purely mathematical. They are reporting rules designed to ensure that the calculated result does not imply a level of precision that is unsupported by the original measurements.
+</p>
+<div class="insightbox">
+Mathematics may produce many digits in the answer, but physics permits us to report only those digits justified by the precision of the measurements.
+</div>
+</section>
+<section>
+<h2>Addition (and Subtraction)</h2>
+<p>
+When quantities are added or subtracted, their absolute uncertainties combine. Therefore, the precision of the result depends on the position of the last reliable decimal place rather than on the total number of significant figures.
+</p>
+<p>
+Consequently, the result of an addition or subtraction should be reported with the same number of decimal places as the measurement having the fewest decimal places.
+</p>
+<div class="math-block">
+\[
+12.35 + 4.2 + 0.678 = 17.228
+\]
+</div>
+<p>
+The second measurement is known only up to one decimal place. Therefore, the final result must also be reported to one decimal place:
+</p>
+<div class="math-block">
+\[
+17.228 \approx 17.2
+\]
+</div>
+<div class="insightbox">
+For addition and subtraction, the limiting factor is the <strong>decimal place</strong>, not the number of significant figures.
+</div>
+</section>
+<section>
+<h2>Multiplication (and Division)</h2>
+<p>
+In multiplication and division, the relative precision of the measurements becomes important rather than their decimal places.
+</p>
+<p>
+Consequently, the result should contain the same number of significant figures as the measurement having the fewest significant figures.
+</p>
+<div class="math-block">
+\[
+2.31 \times 4.2 = 9.702
+\]
+</div>
+<p>
+Since 4.2 contains only two significant figures, the result must also be reported with two significant figures.
+</p>
+<div class="math-block">
+\[
+9.702 \approx 9.7
+\]
+</div>
+<div class="insightbox">
+For multiplication and division, the limiting factor is the <strong>number of significant figures</strong>, not the number of decimal places.
+</div>
+</section>
+<section>
+<h2>Source of a number</h2>
+<p>
+Not every number appearing in a calculation originates from a measurement. The source of a number determines whether the rules of significant figures apply to it.
+</p>
+<p>
+A number obtained from <strong>measurement</strong> possesses finite significant figures because every measurement is associated with uncertainty.
+</p>
+<p>
+On the other hand, a number arising from a <strong>definition</strong>, <strong>counting</strong>, or a <strong>mathematical relationship</strong> is exact. Such numbers are regarded as having an infinite number of significant figures and therefore do not limit the precision of a calculation.
+</p>
+<p>
+Consider the relation
+</p>
+<div class="math-block">
+Diameter = 2 \(\times\) Radius
+\[
+d = 2r
+\]
+</div>
+<p>
+Suppose the measured radius is
+</p>
+<div class="math-block">
+\[
+r = 2.1234\ \text{cm}
+\]
+</div>
+<p>
+Then,
+</p>
+<div class="math-block">
+\[
+d = 2 \times 2.1234 = 4.2468\,\text{cm}
+\]
+</div>
+<p>
+A common misconception is to treat the number 2 as having only one significant figure and conclude that the diameter should be reported as <strong>4 cm</strong>. This is incorrect.
+</p>
+<p>
+The number <strong>2</strong> is not a measured quantity. It is an exact number arising from the geometric definition that the diameter is twice the radius. Therefore, it is regarded as having an infinite number of significant figures and does not affect the precision of the result.
+</p>
+<div class="insightbox">
+Only numbers obtained from <strong>measurement</strong> limit the significant figures in a calculation. Exact numbers obtained from counting, definitions or mathematical relationships are treated as having infinite significant figures.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

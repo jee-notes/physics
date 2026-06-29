@@ -1,129 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System of Particles | Centre of Mass</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centre of Mass | System of Particles</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to System of Particles
-            </a>
-        </nav>
-
-        <h1>Centre of Mass</h1>
-        <p class="subtitle">
-            The mass-weighted average position of a system — the single point that represents the entire distribution.
-        </p>
-
-        <section>
-            <h2>Definition: Discrete Particles</h2>
-            <p>
-                For a system of \(n\) particles with masses \(m_1, m_2, \ldots, m_n\) at position vectors \(\vec{r}_1,
-                \vec{r}_2, \ldots, \vec{r}_n\), the position of the centre of mass is:
-            </p>
-            \[\vec{R}_{\text{CM}} = \frac{\sum_{i=1}^{n} m_i \vec{r}_i}{\sum_{i=1}^{n} m_i} = \frac{1}{M} \sum_{i=1}^{n}
-            m_i \vec{r}_i\]
-            <p>
-                In component form:
-            </p>
-            \[x_{\text{CM}} = \frac{\sum m_i x_i}{M}, \qquad y_{\text{CM}} = \frac{\sum m_i y_i}{M}, \qquad
-            z_{\text{CM}} = \frac{\sum m_i z_i}{M}\]
-            <div class="insightbox">
-                The centre of mass is a weighted average — heavier particles pull the COM closer to themselves. For two
-                particles, the COM lies on the line joining them, dividing it in the inverse ratio of their masses.
-            </div>
-        </section>
-
-        <section>
-            <h2>Two-Particle System</h2>
-            <p>
-                For two particles \(m_1\) and \(m_2\) separated by distance \(d\), taking the origin at \(m_1\):
-            </p>
-            \[x_{\text{CM}} = \frac{m_2 \cdot d}{m_1 + m_2}\]
-            <p>
-                The COM divides the line segment from \(m_1\) to \(m_2\) such that:
-            </p>
-            \[\frac{r_1}{r_2} = \frac{m_2}{m_1}\]
-            <p>
-                where \(r_1\) and \(r_2\) are the distances of the COM from \(m_1\) and \(m_2\) respectively. Equal
-                masses → COM at the midpoint. Unequal masses → COM closer to the heavier particle.
-            </p>
-        </section>
-
-        <section>
-            <h2>Definition: Continuous Bodies</h2>
-            <p>
-                For a continuous mass distribution, the sum becomes an integral. Replacing \(m_i\) with an infinitesimal
-                mass element \(dm\):
-            </p>
-            \[\vec{R}_{\text{CM}} = \frac{1}{M} \int \vec{r}\,dm\]
-            <p>
-                The mass element \(dm\) depends on the type of distribution:
-            </p>
-            <ul>
-                <li>Linear (rod, wire): \(dm = \lambda\,dl\), where \(\lambda\) is the linear mass density.</li>
-                <li>Surface (disc, plate): \(dm = \sigma\,dA\), where \(\sigma\) is the surface mass density.</li>
-                <li>Volume (sphere, cube): \(dm = \rho\,dV\), where \(\rho\) is the volume mass density.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Standard Results</h2>
-            <h3>Uniform Bodies with Symmetry</h3>
-            <p>
-                For any uniform body with a geometrical centre of symmetry, the COM lies at the geometric centre. This
-                includes:
-            </p>
-            <ul>
-                <li>Uniform rod → midpoint</li>
-                <li>Uniform rectangular plate → intersection of diagonals</li>
-                <li>Uniform disc / ring → centre</li>
-                <li>Uniform sphere / spherical shell → centre</li>
-                <li>Uniform cube → body centre</li>
-            </ul>
-
-            <h3>Bodies Without Full Symmetry</h3>
-            <ul>
-                <li>Semicircular ring of radius \(R\): \(y_{\text{CM}} = \dfrac{2R}{\pi}\) from centre</li>
-                <li>Semicircular disc of radius \(R\): \(y_{\text{CM}} = \dfrac{4R}{3\pi}\) from centre</li>
-                <li>Hemisphere (solid) of radius \(R\): \(y_{\text{CM}} = \dfrac{3R}{8}\) from centre</li>
-                <li>Hemispherical shell of radius \(R\): \(y_{\text{CM}} = \dfrac{R}{2}\) from centre</li>
-                <li>Triangular lamina: at the centroid (intersection of medians), \(\frac{1}{3}\) of the way from each
-                    side</li>
-                <li>Solid cone of height \(h\): \(y_{\text{CM}} = \dfrac{h}{4}\) from base</li>
-                <li>Hollow cone of height \(h\): \(y_{\text{CM}} = \dfrac{h}{3}\) from base</li>
-            </ul>
-            <div class="insightbox">
-                These results are derived by integration and should be memorised for rapid use in JEE problems. The
-                pattern is clear: hollow bodies have their COM further from the base than solid bodies.
-            </div>
-        </section>
-
-        <section>
-            <h2>COM of Bodies with Cavities</h2>
-            <p>
-                To find the COM of a body with a cavity, treat it as the original complete body minus the removed
-                portion. If the complete body has mass \(M\) and COM at \(\vec{R}_1\), and the removed portion has mass
-                \(m\) and COM at \(\vec{R}_2\):
-            </p>
-            \[\vec{R}_{\text{CM}} = \frac{M\vec{R}_1 - m\vec{R}_2}{M - m}\]
-            <p>
-                This "negative mass" trick avoids complex integration with irregular boundaries.
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to System of Particles
+</a>
+</nav>
+<h1>Centre of Mass</h1>
+<p class="subtitle">
+The mass-weighted average position of a system at a single point.
+</p>
+<section>
+<h2>Definition</h2>
+<p>
+The <strong>centre of mass (COM)</strong> of a system of particles is the point about which the vector sum of the mass moments of all particles is zero.
+</p>
+<p>
+Consider a system of \(n\) particles having masses \(m_1, m_2, \ldots, m_n\) located at position vectors \(\vec{r}_1, \vec{r}_2, \ldots, \vec{r}_n\) with respect to a chosen origin.
+</p>
+<p>
+Let the position vector of the centre of mass be \(\vec{r}_c\). If \(\vec{r}_{ic}\) denotes the position vector of the \(i^{\text{th}}\) particle with respect to the centre of mass, then by definition,
+</p>
+\[
+\sum_{i=1}^{n} m_i \vec{r}_{ic}=0.
+\]
+<p>
+Since
+</p>
+\[
+\vec{r}_{ic}=\vec{r}_i-\vec{r}_c
+\]
+<p>
+substituting into the above equation gives
+</p>
+\[
+\sum_{i=1}^{n}m_i(\vec{r}_i-\vec{r}_c) = 0
+\]
+<p>
+Expanding the summation,
+</p>
+\[
+\sum_{i=1}^{n}m_i\vec{r}_i  - \vec{r}_c\sum_{i=1}^{n}m_i = 0
+\]
+<p>
+Hence, the position vector of the centre of mass is
+</p>
+\[
+\boxed{\vec{r}_c = \vec{r}_{\text{CM}} = \frac{\sum_{i=1}^{n}m_i\vec{r}_i}{\sum_{i=1}^{n}m_i} = \frac{1}{M}\sum_{i=1}^{n}m_i\vec{r}_i}
+\]
+<div class="insightbox">
+The quantity \(\displaystyle \sum m_i\vec{r}_i\) is the <strong>total mass moment</strong> of the system about the chosen origin.<br>
+Thus, the centre of mass is obtained by dividing the total mass moment by the total mass of the system.
+</div>
+</section>
+<section>
+<h2>Characteristics of the Centre of Mass</h2>
+<p>
+The centre of mass possesses several important properties that can be understood most easily by considering simple two-particle and three-particle systems.
+</p>
+<ul class="model-box">
+<li>
+<strong>Towards the heavier particle:</strong> The centre of mass always lies closer to the heavier particle or, more generally, towards the heavier region of the mass distribution.
+</li>
+<li>
+<strong>Between the particles:</strong> For a two-particle system, the centre of mass always lies on the line joining the two particles. More generally, it lies within the overall region occupied by the mass distribution.
+</li>
+<li>
+<strong>Independent of the choice of origin:</strong> The relative position of the centre of mass within a system depends only on the mass distribution and is completely independent of the origin chosen to describe the position vectors.
+</li>
+<li>
+<strong>Collection is replaceable by point mass at centre of mass:</strong> While determining the centre of mass of a larger system, an entire subsystem may be replaced by a single point mass equal to its total mass placed at the centre of mass of that subsystem. This greatly simplifies the analysis of composite bodies.
+</li>
+</ul>
+<div class="insightbox">
+Changing the origin changes the numerical values of the position vectors of every particle as well as that of the centre of mass by exactly the same amount.<br>
+Consequently, the relative location of the centre of mass within the system remains unchanged.
+</div>
+</section>
+<section>
+<h2>Two-Particle System</h2>
+<p>
+A two-particle system is the simplest non-trivial system of particles. Consider two point masses \(m_1\) and \(m_2\) separated by a finite distance \(d\).
+</p>
+<p>
+Although the particles may be located anywhere in three-dimensional space, only the straight line joining them is relevant for determining the centre of mass.
+</p>
+<p>
+Let \(\vec{r}_1\) and \(\vec{r}_2\) be the position vectors of \(m_1\) and \(m_2\) measured from the centre of mass. Then, by definition,
+</p>
+\[
+m_1 \vec{r}_1 + m_2 \vec{r}_2 = 0
+\]
+<p>
+Since \(m_1\) and \(m_2\) are positive scalars, the above equation implies that the vector sum of two non-zero vectors is zero.
+</p>
+<p>
+The sum of two non-zero vectors can be zero only if they are collinear and directed oppositely. Therefore, the two mass-moment vectors \(m_1\vec{r}_1\) and \(m_2\vec{r}_2\) are anti-parallel.
+</p>
+<p>
+Since multiplication by a positive scalar does not change the direction of a vector, \(\vec{r}_1\) and \(\vec{r}_2\) must also be anti-parallel. Consequently, the centre of mass, \(m_1\) and \(m_2\) all lie on the same straight line.
+</p>
+<p>
+Furthermore, because \(\vec{r}_1\) and \(\vec{r}_2\) point in opposite directions from the centre of mass, the centre of mass must lie between the two particles.
+</p>
+<p>
+Let us consider the center of mass is at origin. Particle \(m_1\) is towards its right at \(x_1\) and \(m_2\) is towards its left at \(- x_2\) and \(x_1 + x_2 = d\) . We have:   
+</p>
+\[
+m_1 x_1 + m_2 (-x_2) = 0 \implies m_1 x_1 = m_2 x_2 \implies \frac{m_1}{m_2} = \frac{x_2}{x_1}  
+\]
+<p>
+Thus, the distance from the center of mass is inversely proportional to the mass.
+</p>
+<p>
+To find relative distance from \(m_1\) , just do componendo: 
+</p>
+\[
+\frac{m_1}{m_2} = \frac{x_2}{x_1} \implies \frac{m_1 + m_2}{m_2} = \frac{x_2 + x_1}{x_1} = \frac{d}{x_1} \implies x_1 = \frac{m_2 d}{m_1 + m_2}  
+\]
+<p>
+If we consider origin at \(m_1\):
+</p>
+\[
+x_{\text{CM}} = \frac{m_1 (0) + m_2 d}{m_1 + m_2} = \frac{m_2 d}{m_1 + m_2} 
+\]
+<p>
+The relative distance of COM from \(m_1\) is same irrespective of the choice of origin.
+</p>
+</section>
+<section>
+<h2>Definition: Continuous Bodies</h2>
+<p>
+For a continuous mass distribution, the sum becomes an integral. Replacing \(m_i\) with an infinitesimal mass element \(dm\):
+</p>
+\[
+\vec{R}_{\text{CM}} = \frac{1}{M} \int \vec{r}\,dm
+\]
+<p>
+The mass element \(dm\) depends on the type of distribution:
+</p>
+<ul>
+<li>Linear (rod, wire): \(dm = \lambda\,dl\), where \(\lambda\) is the linear mass density.</li>
+<li>Surface (disc, plate): \(dm = \sigma\,dA\), where \(\sigma\) is the surface mass density.</li>
+<li>Volume (sphere, cube): \(dm = \rho\,dV\), where \(\rho\) is the volume mass density.</li>
+</ul>
+</section>
+<section>
+<h2>Standard Results</h2>
+<h3>Uniform Bodies with Symmetry</h3>
+<p>
+For any uniform body with a geometrical centre of symmetry, the COM lies at the geometric centre. This includes:
+</p>
+<ul>
+<li>Uniform rod → midpoint</li>
+<li>Uniform rectangular plate → intersection of diagonals</li>
+<li>Uniform disc / ring → centre</li>
+<li>Uniform sphere / spherical shell → centre</li>
+<li>Uniform cube → body centre</li>
+</ul>
+<h3>Bodies Without Full Symmetry</h3>
+<ul>
+<li>Semicircular ring of radius \(R\): \(y_{\text{CM}} = \dfrac{2R}{\pi}\) from centre</li>
+<li>Semicircular disc of radius \(R\): \(y_{\text{CM}} = \dfrac{4R}{3\pi}\) from centre</li>
+<li>Hemisphere (solid) of radius \(R\): \(y_{\text{CM}} = \dfrac{3R}{8}\) from centre</li>
+<li>Hemispherical shell of radius \(R\): \(y_{\text{CM}} = \dfrac{R}{2}\) from centre</li>
+<li>Triangular lamina: at the centroid (intersection of medians), \(\frac{1}{3}\) of the way from each side</li>
+<li>Solid cone of height \(h\): \(y_{\text{CM}} = \dfrac{h}{4}\) from base</li>
+<li>Hollow cone of height \(h\): \(y_{\text{CM}} = \dfrac{h}{3}\) from base</li>
+</ul>
+<div class="insightbox">
+These results are derived by integration and should be memorised for rapid use in exam problems.<br>
+The pattern is clear: hollow bodies have their COM further from the base than solid bodies.
+</div>
+</section>
+<section>
+<h2>COM of Bodies with Cavities</h2>
+<p>
+To find the COM of a body with a cavity, treat it as the original complete body minus the removed portion. If the complete body has mass \(M\) and COM at \(\vec{R}_1\), and the removed portion has mass \(m\) and COM at \(\vec{R}_2\):
+</p>
+\[
+\vec{R}_{\text{CM}} = \frac{M\vec{R}_1 - m\vec{R}_2}{M - m}
+\]
+<p>
+This "negative mass" trick avoids complex integration with irregular boundaries.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
