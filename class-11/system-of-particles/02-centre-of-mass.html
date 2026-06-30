@@ -137,6 +137,105 @@ The relative distance of COM from \(m_1\) is same irrespective of the choice of 
 </p>
 </section>
 <section>
+<h2>Three-Particle System</h2>
+<p>
+A three-particle system is the simplest non-trivial system of particles forming a two-dimensional planar configuration.
+</p>
+<p>
+Consider three point masses \(m_1\), \(m_2\) and \(m_3\) located at \((x_1,y_1)\), \((x_2,y_2)\) and \((x_3,y_3)\) respectively.
+</p>
+<p>
+Using \( \vec{r}_{\text{CM}} = \frac{1}{M}\sum_{i=1}^{n}m_i\vec{r}_i \) , we have:
+</p>
+\[
+x_{\text{CM}} = x_{123} = \frac{m_1 x_1 + m_2 x_2 + m_3 x_3}{m_1 + m_2 + m_3}
+\]
+\[
+y_{\text{CM}} = y_{123} = \frac{m_1 y_1 + m_2 y_2 + m_3 y_3}{m_1 + m_2 + m_3}
+\]
+<p>
+Now let us determine the same centre of mass in another way. First, consider only particles \(m_1\) and \(m_2\). Let their centre of mass be \((x_{12},y_{12})\). Replace these two particles by a single particle of mass
+\[
+m_{12}=m_1+m_2
+\]
+placed at \((x_{12},y_{12})\).
+</p>
+<p>
+The centre of mass of the new two-particle system is
+</p>
+\[
+x'_{\text{CM}} = \frac{m_{12} x_{12} + m_3 x_3}{m_{12} + m_3}
+\]
+<p>
+Since
+</p>
+\[
+x_{12} = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2}
+\]
+<p>
+we have
+</p>
+\[
+m_{12} x_{12} = (m_1 + m_2)\left(\frac{m_1 x_1 + m_2 x_2}{m_1 + m_2} \right) = m_1 x_1 + m_2 x_2
+\]
+<p>
+Therefore,
+</p>
+\[
+x'_{\text{CM}} = \frac{m_1 x_1 + m_2 x_2 + m_3 x_3}{m_1 + m_2 + m_3} = x_{123}
+\]
+<p>
+Similarly,
+</p>
+\[
+y'_{\text{CM}}=y_{123}
+\]
+<p>
+Hence, replacing a subsystem by a single particle of equal mass placed at the centre of mass of that subsystem does not change the centre of mass of the entire system.
+</p>
+<div class="insightbox">
+This result is extremely useful in mechanics.<br>
+A complicated collection of particles may be simplified step by step by repeatedly replacing subsystems with equivalent point masses located at their respective centres of mass.
+</div>
+<h3>Incremental COM Update</h3>
+<p>
+If there is a sub-system of particles of mass \({M'}_{\text{S}}\) at \(({x'}_{s},{y'}_{s})\) .
+</p>
+<p>
+To this sub-system I want to add another particle of mass \(m_{\text{p}}\) at \(({x}_{p},{y}_{p})\) .
+</p>
+<p>
+Note that adding to the system here does not mean that I am moving the system or the particle. It implies that I am re-defining the boundaries of the system to include the particle.
+</p>
+<p>
+Then the new system has mass \({M'}_{\text{S}} + m_p = M_{\text{S}}\) and its center of mass is at: 
+</p>
+\[
+x_s = \frac{{M'}_{\text{S}} {x'}_{s} + m_{\text{p}} {x}_{p} }{{M'}_{\text{S}} + m_{\text{p}}}
+\]
+\[
+y_s = \frac{{M'}_{\text{S}} {y'}_{s} + m_{\text{p}} {y}_{p} }{{M'}_{\text{S}} + m_{\text{p}}}
+\]
+<p>
+Similarly, If there is a sub-system of particles of mass \({M'}_{\text{S}}\) at \(({x'}_{s},{y'}_{s})\) .
+</p>
+<p>
+From this sub-system I want to remove an existing particle of mass \(m_{\text{p}}\) at \(({x}_{p},{y}_{p})\) .
+</p>
+<p>
+Note that removing from the system here does not mean that I am moving the system or the particle. It implies that I am re-defining the boundaries of the system to exclude the particle.
+</p>
+<p>
+Then the new system has mass \({M'}_{\text{S}} - m_p = M_{\text{S}}\) and its center of mass is at: 
+</p>
+\[
+x_s = \frac{{M'}_{\text{S}} {x'}_{s} - m_{\text{p}} {x}_{p} }{{M'}_{\text{S}} - m_{\text{p}}}
+\]
+\[
+y_s = \frac{{M'}_{\text{S}} {y'}_{s} - m_{\text{p}} {y}_{p} }{{M'}_{\text{S}} - m_{\text{p}}}
+\]
+</section>
+<section>
 <h2>Definition: Continuous Bodies</h2>
 <p>
 For a continuous mass distribution, the sum becomes an integral. Replacing \(m_i\) with an infinitesimal mass element \(dm\):

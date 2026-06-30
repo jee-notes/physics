@@ -1,108 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System of Particles | Motion of the Centre of Mass</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion of the Centre of Mass | System of Particles</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to System of Particles
-            </a>
-        </nav>
-
-        <h1>Motion of the Centre of Mass</h1>
-        <p class="subtitle">
-            The centre of mass obeys Newton's second law — regardless of internal complexity.
-        </p>
-
-        <section>
-            <h2>Velocity of the Centre of Mass</h2>
-            <p>
-                Differentiating the position of the COM with respect to time gives the velocity of the centre of mass:
-            </p>
-            \[\vec{v}_{\text{CM}} = \frac{d\vec{R}_{\text{CM}}}{dt} = \frac{1}{M}\sum m_i \vec{v}_i\]
-            <p>
-                This is the mass-weighted average of the velocities of all particles in the system.
-            </p>
-        </section>
-
-        <section>
-            <h2>Acceleration of the Centre of Mass</h2>
-            <p>
-                Differentiating once more:
-            </p>
-            \[\vec{a}_{\text{CM}} = \frac{d\vec{v}_{\text{CM}}}{dt} = \frac{1}{M}\sum m_i \vec{a}_i\]
-            <p>
-                Using Newton's second law for each particle (\(m_i \vec{a}_i = \vec{F}_i\)), and noting that internal
-                forces cancel by Newton's third law:
-            </p>
-            \[M\,\vec{a}_{\text{CM}} = \sum \vec{F}_{\text{external}}\]
-            <div class="insightbox">
-                This is Newton's second law for the system as a whole. The centre of mass moves as if all external
-                forces were applied directly to a single particle of mass \(M\) located at the COM. Internal forces — no
-                matter how violent — cannot change this motion.
-            </div>
-        </section>
-
-        <section>
-            <h2>Consequences</h2>
-            <h3>1. No External Force → COM Stays Put (or Moves Uniformly)</h3>
-            <p>
-                If \(\vec{F}_{\text{ext}} = 0\), then \(\vec{a}_{\text{CM}} = 0\), so \(\vec{v}_{\text{CM}} =
-                \text{const}\). If the system was initially at rest, the COM remains stationary even if individual
-                particles move wildly.
-            </p>
-            <p>
-                <strong>Example:</strong> A man walks on a frictionless frozen lake. As he walks one way, the ice sheet
-                slides the other way such that their common COM does not move.
-            </p>
-
-            <h3>2. Projectile Explosion</h3>
-            <p>
-                A projectile in flight explodes into fragments. The internal explosion forces do not affect the COM.
-                Therefore, the COM continues along the original parabolic trajectory — even as fragments fly in all
-                directions.
-            </p>
-
-            <h3>3. Binary Star System</h3>
-            <p>
-                Two stars orbiting each other in space experience no external forces. Both orbit their common COM, which
-                either remains stationary or moves at constant velocity through space.
-            </p>
-        </section>
-
-        <section>
-            <h2>COM Frame of Reference</h2>
-            <p>
-                The <strong>centre of mass frame</strong> is a reference frame in which the centre of mass is at rest
-                (\(\vec{v}_{\text{CM}} = 0\)). In this frame:
-            </p>
-            <ul>
-                <li>Total momentum is zero: \(\vec{P}_{\text{total}} = M\vec{v}_{\text{CM}} = 0\).</li>
-                <li>Collision problems simplify enormously, because the two objects approach each other with equal and
-                    opposite momenta.</li>
-                <li>The minimum kinetic energy of the system is zero (in the COM frame), and the kinetic energy in any
-                    other frame exceeds this by \(\frac{1}{2}Mv_{\text{CM}}^2\).</li>
-            </ul>
-            <div class="insightbox">
-                The COM frame is the "natural" frame for analysing interactions. The kinetic energy in the COM frame is
-                the energy available for creating deformations, heat, or new particles — the rest is just the energy of
-                bulk translation, which momentum conservation prevents from being used.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to System of Particles
+</a>
+</nav>
+<h1>Motion of the Centre of Mass</h1>
+<p class="subtitle">
+The centre of mass obeys Newton's second law — regardless of internal complexity.
+</p>
+<h2>Why Study the Centre of Mass?</h2>
+<p>
+So far, we have studied how to locate the centre of mass of a stationary system of particles having either a discrete or a continuous mass distribution.
+</p>
+<p>
+But why go through all this effort? The answer lies in dynamics. The true importance of the centre of mass is that it provides a remarkably simple way of describing the motion of an entire system of particles, regardless of its internal complexity.
+</p>
+<p>
+Recall the expression for the position of the centre of mass:
+</p>
+\[
+\vec{r}_{\text{CM}} = \frac{1}{M} \sum m_i\vec{r}_i
+\]
+<h3>Velocity of the Centre of Mass</h3>
+<p>
+Differentiating the above equation with respect to time gives the velocity of the centre of mass:
+</p>
+\[
+\vec{v}_{\text{CM}} = \frac{d\vec{r}_{\text{CM}}}{dt} = \frac{1}{M} \sum m_i\vec{v}_i
+\]
+<p>
+Now consider the momentum of a system of particles. If the \(i^{\text{th}}\) particle has momentum \(\vec{p}_i=m_i\vec{v}_i\), then the total momentum of the system is
+</p>
+\[
+\vec{P} = \sum \vec{p}_i = \sum m_i\vec{v}_i
+\]
+<p>
+Comparing the above two equations, we obtain
+</p>
+\[
+\boxed{\vec{P} = M\vec{v}_{\text{CM}}}
+\]
+<div class="insightbox">
+The total momentum of a system equals the total mass multiplied by the velocity of its centre of mass.<br>
+Thus, the velocity of the centre of mass completely represents the translational motion of the entire system.
+</div>
+<h3>Acceleration of the Centre of Mass</h3>
+<p>
+Differentiating the centre-of-mass velocity once more gives the acceleration of the centre of mass:
+</p>
+\[
+\vec{a}_{\text{CM}} = \frac{d\vec{v}_{\text{CM}}}{dt} = \frac{1}{M}\sum m_i\vec{a}_i
+\]
+<p>
+Applying Newton's second law to every particle,
+\[
+m_i\vec{a}_i=\vec{F}_i
+\]
+gives
+</p>
+\[
+M\vec{a}_{\text{CM}} = \sum \vec{F}_i
+\]
+<p>
+Since the internal forces cancel pairwise by Newton's third law, only the external forces remain. Hence,
+</p>
+\[
+\boxed{ M\vec{a}_{\text{CM}} = \sum \vec{F}_{\text{external}}}
+\]
+<div class="insightbox">
+This is Newton's second law for the system as a whole.<br>
+The centre of mass moves exactly as if the entire mass of the system were concentrated at the centre of mass and all external forces acted on that single particle.<br>
+No matter how large or complicated the internal forces are, they cannot alter the motion of the centre of mass.
+</div>
+</section>
+<section>
+<h2>Consequences</h2>
+<h3>1. No External Force → COM Stays Put (or Moves Uniformly)</h3>
+<p>
+If \(\vec{F}_{\text{ext}} = 0\), then \(\vec{a}_{\text{CM}} = 0\), so \(\vec{v}_{\text{CM}} = \text{const}\).
+</p>
+<p>
+If the system was initially at rest, the COM remains stationary even if individual particles move wildly.
+</p>
+<p>
+<strong>Example:</strong> A man in a boat walks in the boat that is floating on a frictionless lake. As he walks one way, the boat drifts the other way such that their common COM does not move.
+</p>
+<h3>2. Projectile Explosion</h3>
+<p>
+A projectile in flight explodes into fragments. The internal explosion forces do not affect the COM.
+</p>
+<p>
+Therefore, the COM continues along the original parabolic trajectory — even as fragments fly in all directions.
+</p>
+<h3>3. Binary Star System</h3>
+<p>
+Two stars orbiting each other in space experience no external forces. Both orbit their common COM, which either remains stationary or moves at constant velocity through space.
+</p>
+</section>
+<section>
+<h2>COM Frame of Reference</h2>
+<p>
+The <strong>centre of mass frame</strong> is a reference frame in which the centre of mass is at rest (\(\vec{v}_{\text{CM}} = 0\)). In this frame:
+</p>
+<ul class="model-box">
+<li>Total momentum is zero: \(\vec{P}_{\text{total}} = M\vec{v}_{\text{CM}} = 0\).</li>
+<li>Collision problems simplify enormously, because the two objects approach each other with equal and opposite momenta.</li>
+<li>The minimum kinetic energy of the system is zero (in the COM frame), and the kinetic energy in any other frame exceeds this by \(\frac{1}{2}Mv_{\text{CM}}^2\).</li>
+</ul>
+<div class="insightbox">
+The COM frame is the "natural" frame for analysing interactions. The kinetic energy in the COM frame is the energy available for creating deformations, heat, or new particles — the rest is just the energy of bulk translation, which momentum conservation prevents from being used.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

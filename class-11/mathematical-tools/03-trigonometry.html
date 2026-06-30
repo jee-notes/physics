@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mathematical Tools | Trigonometry </title>
+<title>Trigonometry | Mathematical Tools</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -18,6 +18,117 @@
 <p class="subtitle">
 Relation between length and angles.
 </p>
+<section>
+<h2>Trigonometry</h2>
+<p>
+Trigonometry is the study of triangles and the mathematical relationships between their lengths and angles. A triangle is one of the most fundamental figures in geometry because any three distinct non-collinear points always lie in a single plane and uniquely determine a triangle with three sides and three angles.
+</p>
+<p>
+Since the triangle is the simplest geometric figure that naturally relates lengths and angles, trigonometry begins with triangles. The ideas developed there are then generalized to more complex geometric situations through the Unit Circle.
+</p>
+<p>
+In Physics, angles are primarily used to measure the <strong>rotation between directions</strong>. For example, when we say that the wind is blowing <strong>30&deg; north of east</strong>, we first point in the east direction and then rotate it by \(30^\circ\) towards the north. Thus, an angle provides a quantitative measure of the change from one direction to another.
+</p>
+<p>
+Angles are also used to represent <strong>phase</strong>. Whenever a physical phenomenon varies periodically in space or time, an angle specifies its stage within one complete cycle. For example, the waxing and waning of the Moon is a periodic phenomenon in time. Hence, we may assign a phase to describe its state, with the New Moon and the Full Moon representing two distinct phases of the lunar cycle.
+</p>
+<p>
+In this chapter, we first study trigonometric ratios using a right-angled triangle and then extend these ideas to the more general definition based on the <strong>Unit Circle</strong>, allowing trigonometric functions to be defined for angles of any magnitude.
+</p>
+<div class="insightbox">
+Lengths and angles are fundamentally different mathematical quantities.<br>
+Lengths are ordinary numerical quantities on which arithmetic operations directly represent physical processes, whereas angles possess their own mathematical properties and operations.<br>
+Trigonometric functions establish mathematical relationships between lengths and angles, allowing information to be translated from one form to the other whenever the geometry permits.<br>
+This is particularly important in Physics because a vector combines both quantities — a <strong>magnitude</strong> (length) and a <strong>direction</strong> (angle).<br>
+Trigonometry provides the bridge between these two descriptions, allowing vectors to be resolved into components or reconstructed from their components.<br>
+In this sense, trigonometric functions play a role similar to logarithms and anti-logarithms, which relate ordinary numbers to their exponents and allow us to work in the most convenient mathematical domain.
+</div>
+</section>
+<section>
+<h2>Trigonometric Ratios and Identities</h2>
+<p>
+Trigonometric ratios are defined using a right-angled triangle. This is a special triangle because one of its angles is \(90^\circ\), making the side opposite to it the longest side, called the <strong>hypotenuse</strong>.
+</p>
+<p>
+The remaining two sides are identified with respect to one of the acute angles, say \(\theta\). The side opposite to \(\theta\) is called the <strong>perpendicular</strong>, while the side adjacent to \(\theta\) (other than the hypotenuse) is called the <strong>base</strong>.
+</p>
+<p>
+Using these three sides, we define the six trigonometric ratios. The three primary ratios are
+</p>
+<div class="math-block">
+\[
+\sin\theta=\frac{P}{H} \qquad \cos\theta=\frac{B}{H} \qquad \tan\theta=\frac{P}{B}
+\]
+</div>
+<p>
+The remaining three ratios are simply the reciprocals of these:
+</p>
+<div class="math-block">
+\[
+\csc\theta=\frac{H}{P} \qquad \sec\theta=\frac{H}{B} \qquad \cot\theta=\frac{B}{P}
+\]
+</div>
+<p>
+These definitions form the foundation of trigonometry. In the next section, we shall generalize them using the <strong>Unit Circle</strong>, allowing trigonometric functions to be defined for angles of any magnitude.
+</p>
+<h3>Trigonometric Identities</h3>
+<p>
+The trigonometric ratios are not independent of one another. They satisfy several mathematical relationships, known as <strong>trigonometric identities</strong>, which remain true for every right-angled triangle having the same acute angle.
+</p>
+<p>
+The most fundamental identities are obtained directly from the <strong>Pythagorean Theorem</strong>. Since every right-angled triangle satisfies
+</p>
+<div class="math-block">
+\[
+P^2+B^2=H^2,
+\]
+</div>
+<p>
+we can divide the equation by different sides of the triangle to obtain different identities involving the trigonometric ratios.
+</p>
+<p>
+Dividing throughout by \(H^2\),
+</p>
+<div class="math-block">
+\[
+\frac{P^2}{H^2}+\frac{B^2}{H^2}=1
+\]
+\[
+\boxed{\sin^2\theta+\cos^2\theta=1}
+\]
+</div>
+<p>
+Dividing throughout by \(B^2\),
+</p>
+<div class="math-block">
+\[
+\frac{P^2}{B^2}+1=\frac{H^2}{B^2}
+\]
+\[
+\boxed{\tan^2\theta+1=\sec^2\theta}
+\]
+</div>
+<p>
+Dividing throughout by \(P^2\),
+</p>
+<div class="math-block">
+\[
+1+\frac{B^2}{P^2}=\frac{H^2}{P^2}
+\]
+\[
+\boxed{1+\cot^2\theta=\csc^2\theta}
+\]
+</div>
+<p>
+These three identities are called the <strong>fundamental trigonometric identities</strong>.
+</p>
+<p>
+Since they are all derived from the same Pythagorean theorem, knowing any one of them is sufficient to derive the other two.
+</p>
+<p>
+All non rt angled triangles can be evaluated as a combination of rt angled triangles. this is used in sine rule - important for lamis theorem.
+</p>
+</section>
 <section>
 <h2>Angle</h2>
 <p>
@@ -55,7 +166,7 @@ This "wrapping" explains <strong>periodicity</strong>. As you keep moving along 
 <section>
 <h2>Trigonometric Ratios</h2>
 <p>
-While <em>Right Triangle Trigonometry</em> is the starting point, <em>Circular Trigonometry</em> is what we use in Physics for vectors.
+While <strong>Right Triangle Trigonometry</strong> is the starting point, <strong>Circular Trigonometry</strong> is what we use in Physics for vectors.
 </p>
 <div class="model-box">
 <p>For a vector \(\vec{A}\) making an angle \(\theta\) with the x-axis:</p>
@@ -66,13 +177,11 @@ While <em>Right Triangle Trigonometry</em> is the starting point, <em>Circular T
 </ul>
 </div>
 </section>
-
 <section>
 <h2>Common Angles</h2>
 <p>
 In JEE problems, you must know the standard values. However, there is a "Physics Secret" triangle you must memorize: the <strong>3-4-5 Triangle</strong>.
 </p>
-
 <table>
 <tr>
 <th>Angle (\(\theta\))</th>
@@ -106,23 +215,34 @@ In JEE problems, you must know the standard values. However, there is a "Physics
 </tr>
 </table>
 </section>
-
 <section>
 <h2>Compound Angle</h2>
 <p>
 Physics often involves the "Superposition" of two different waves or forces. To find the result, we use compound angle formulas:
 </p>
-<div class="formula-box">
-\[ \sin(A \pm B) = \sin A \cos B \pm \cos A \sin B \]
-\[ \cos(A \pm B) = \cos A \cos B \mp \sin A \sin B \]
+<div class="math-block">
+\[
+\sin(A \pm B) = \sin A \cos B \pm \cos A \sin B
+\]
+\[
+\cos(A \pm B) = \cos A \cos B \mp \sin A \sin B
+\]
 </div>
 <p>
 <strong>Double Angle Formulas</strong> (Crucial for Projectile Motion range calculations):
 </p>
-<ul>
+<ul class="model-box">
 <li>\(\sin 2\theta = 2 \sin \theta \cos \theta\)</li>
 <li>\(\cos 2\theta = \cos^2 \theta - \sin^2 \theta = 2\cos^2 \theta - 1 = 1 - 2\sin^2 \theta\)</li>
 </ul>
+</section>
+<section>
+<h2>Sub-topics</h2>
+<div class="chapter-list">
+<a href="./03a-trigo-pythagorean-triplet.html">1. Pythagorean Triplets</a>
+<a href="./03b-trigo-astc.html">2. ASTC</a>
+<a href="./03b-trigo-astc.html">3. Sine Rule</a>
+</div>
 </section>
 <footer>
 <hr>

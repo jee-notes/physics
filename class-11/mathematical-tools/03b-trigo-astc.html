@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASTC | Trigonometry</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-trigonometry.html" class="back-btn">
+<span>&larr;</span> Back to Trigonometry
+</a>
+</nav>
+<h1>ASTC</h1>
+<p class="subtitle">
+Determining the sign of trigonometric functions using quadrants.
+</p>
+<section>
+<h2>Angle and Quadrants</h2>
+<p>
+The independent variable of a trigonometric function is the angle \(\theta\), which may take any real value from \((-\infty,\,+\infty)\).
+</p>
+<p>
+Every finite angle has a unique terminal side and therefore lies in exactly one of the four quadrants of the Cartesian plane (except when it lies on an axis).
+</p>
+<p>
+The sign of a trigonometric function depends only on the quadrant in which the terminal side of the angle lies. Hence, sign determination is a geometric problem rather than an algebraic one.
+</p>
+<p>
+To remember the signs in different quadrants, we use a simple mnemonic called <strong>ASTC</strong>.
+</p>
+</section>
+<section>
+<h2>ASTC Rule</h2>
+<p>
+The letters <strong>A–S–T–C</strong> correspond to the four quadrants in order.
+</p>
+<ul class="points-list">
+<li><strong>Quadrant I (A)</strong> — <strong>All</strong> trigonometric functions are positive.</li>
+<li><strong>Quadrant II (S)</strong> — Only <strong>Sine</strong> and its reciprocal (<strong>Cosecant</strong>) are positive.</li>
+<li><strong>Quadrant III (T)</strong> — Only <strong>Tangent</strong> and its reciprocal (<strong>Cotangent</strong>) are positive.</li>
+<li><strong>Quadrant IV (C)</strong> — Only <strong>Cosine</strong> and its reciprocal (<strong>Secant</strong>) are positive.</li>
+</ul>
+<p>
+Common mnemonics include <strong>Add Sugar To Coffee</strong> and <strong>After School To College</strong>.
+</p>
+<p>
+Since \(\csc\theta\), \(\sec\theta\), and \(\cot\theta\) are reciprocals of \(\sin\theta\), \(\cos\theta\), and \(\tan\theta\), they always have the same sign as their corresponding primary trigonometric functions. Therefore, only the signs of <strong>sin</strong>, <strong>cos</strong>, and <strong>tan</strong> need to be remembered.
+</p>
+</section>
+<section>
+<h2>Application of ASTC</h2>
+<p>
+The evaluation of a trigonometric function consists of two independent steps:
+</p>
+<ol>
+<li>Determine its <strong>magnitude</strong>.</li>
+<li>Determine its <strong>sign</strong>.</li>
+</ol>
+<p>
+To determine the <strong>magnitude</strong>, reduce the given angle to its corresponding reference angle using trigonometric identities.
+</p>
+<ul class="model-box">
+<li>If the angle differs by an <strong>even multiple of \(90^\circ\)</strong>, the trigonometric function remains the same.</li>
+<li>If the angle differs by an <strong>odd multiple of \(90^\circ\)</strong>, the trigonometric function changes according to
+\[
+\sin \leftrightarrow \cos,\qquad
+\tan \leftrightarrow \cot,\qquad
+\sec \leftrightarrow \csc.
+\]
+</li>
+</ul>
+<p>
+While determining the magnitude, the sign is ignored. Therefore,
+</p>
+<div class="math-block">
+\[
+|\sin150^\circ|
+=
+|\sin(180^\circ-30^\circ)|
+=
+|\sin30^\circ|
+=
+\frac12
+\]
+\[
+|\sin210^\circ|
+=
+|\sin(180^\circ+30^\circ)|
+=
+|\sin30^\circ|
+=
+\frac12
+\]
+</div>
+<div class="math-block">
+\[
+|\sin60^\circ|
+=
+|\sin(90^\circ-30^\circ)|
+=
+|\cos30^\circ|
+=
+\frac{\sqrt{3}}{2}
+\]
+\[
+|\sin120^\circ|
+=
+|\sin(90^\circ+30^\circ)|
+=
+|\cos30^\circ|
+=
+\frac{\sqrt{3}}{2}
+\]
+</div>
+<p>
+After the magnitude has been obtained, determine the sign independently using the ASTC rule. Since \(150^\circ\) lies in the second quadrant, where sine is positive,
+</p>
+<div class="math-block">
+\[
+\boxed{\sin150^\circ=\frac12.}
+\]
+</div>
+<p>
+Similarly, \(210^\circ\) lies in the third quadrant, where sine is negative. Hence,
+</p>
+<div class="math-block">
+\[
+|\sin210^\circ|
+=
+\frac12
+\qquad\Longrightarrow\qquad
+\boxed{\sin210^\circ=-\frac12.}
+\]
+</div>
+<div class="insightbox">
+Reference-angle identities determine only the <strong>magnitude</strong> of a trigonometric function. The <strong>sign</strong> is determined independently by the quadrant using the ASTC rule. Treat these as two separate calculations.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
