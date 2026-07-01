@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Small Angle Approximation | Trigonometry</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-trigonometry.html" class="back-btn">
+<span>&larr;</span> Back to Trigonometry
+</a>
+</nav>
+<h1>Small Angle Approximation</h1>
+<p class="subtitle">
+Values of Trigonometric functions of small angles 
+</p>
+<section>
+<h2>Small Angle Approximation</h2>
+<p>
+Many physical systems involve very small angular displacements. In such situations, several trigonometric functions can be replaced by much simpler expressions, known as the <strong>small-angle approximations</strong>.
+</p>
+<p>
+The geometric idea behind these approximations is that, for a sufficiently small angle \(d\theta\), the corresponding arc and chord of a circle become nearly equal in length.
+</p>
+<p>
+Consider a circle of radius \(R\) subtending a very small angle \(d\theta\) at its centre.
+</p>
+<p>
+The length of the arc is
+</p>
+<div class="math-block">
+\[
+ds = R\,d\theta.
+\]
+</div>
+<p>
+Now join the two end points of the arc by a chord. Together with the two radii, this forms an isosceles triangle. For a very small angle, the chord is almost indistinguishable from the arc.
+</p>
+<p>
+If the chord is resolved into a right-angled triangle, its perpendicular side is
+</p>
+<div class="math-block">
+\[
+R\sin(d\theta).
+\]
+</div>
+<p>
+Since the chord and the arc are nearly equal for small angles,
+</p>
+<div class="math-block">
+\[
+R\sin(d\theta)\approx Rd\theta.
+\]
+</div>
+<p>
+Cancelling the common factor \(R\),
+</p>
+<div class="math-block">
+\[
+\boxed{\sin(d\theta)\approx d\theta.}
+\]
+</div>
+<p>
+Using this result together with the fundamental trigonometric identities, we obtain the commonly used small-angle approximations:
+</p>
+<div class="math-block">
+\[
+\boxed{\sin\theta\approx\theta,\qquad
+\tan\theta\approx\theta,\qquad
+\cos\theta\approx1}
+\]
+</div>
+<div class="insightbox">
+Major confusion here is that students replace everything with 0 (zero).<br>
+They think if \(\theta \to 0\) , then \(\sin \theta \approx \theta\) . But as \(\theta \to 0\) , \(\sin \theta \approx 0\) .<br>
+This argument is correct,  but it is not to be used directly.<br>
+Like if \(\sin 3^\circ\) is asked, then its \( = 3\pi / 180\) and not 0.   
+</div>
+</section>
+<section>
+<h2>Proof using the Sandwich Theorem</h2>
+<p>
+The small-angle approximation can be proved rigorously using the <strong>Sandwich Theorem</strong> and the geometry of the Unit Circle.
+</p>
+<p>
+Consider a unit circle with centre \(O\). Let \(A\) and \(C\) be two points on the circle subtending an angle \(\theta\) at the centre. Draw the radius \(OC\), drop a perpendicular from \(A\) to \(OC\) meeting it at \(D\), and draw the tangent at \(C\). Extend \(OA\) to meet this tangent at \(B\).
+</p>
+<p>
+The three enclosed regions satisfy the inequality
+</p>
+<div class="math-block">
+\[
+\text{Area}(\triangle AOD)
+ \lt 
+\text{Area}(\text{Sector }AOC)
+ \lt 
+\text{Area}(\triangle BOC).
+\]
+</div>
+<p>
+Substituting the expressions for the three areas gives
+</p>
+<div class="math-block">
+\[
+\frac12\sin\theta
+ \lt 
+\frac12\theta
+ \lt 
+\frac12\tan\theta,
+\]
+</div>
+<p>
+or equivalently,
+</p>
+<div class="math-block">
+\[
+\boxed{\sin\theta \lt \theta \lt \tan\theta.}
+\]
+</div>
+<p>
+Dividing throughout by \(\sin\theta\) and applying the Sandwich Theorem as \(\theta\to0\) gives
+</p>
+<div class="math-block">
+\[
+\boxed{\lim_{\theta\to0}\frac{\sin\theta}{\theta}=1}
+\]
+</div>
+<p>
+This result forms the mathematical basis of the small-angle approximations used throughout Physics.
+</p>
+</section>
+<div class="insightbox">
+From the derivation we can see that, these approximations are valid only when the angle is measured in <strong>radians</strong>.<br>
+They arise from the geometric fact that, for very small angles, the arc, the chord, and the tangent segment become nearly identical.
+</div>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
