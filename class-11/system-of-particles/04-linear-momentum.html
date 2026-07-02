@@ -1,107 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System of Particles | Linear Momentum</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Momentum and Energy of System| System of Particles</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to System of Particles
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to System of Particles
+</a>
+</nav>
+<h1>Momentum and Energy of Systems</h1>
+<p class="subtitle">
+Momentum and energy are the two main tools for dynamics of systems of particles.
+</p>
+<section>
+<h2>Motivation</h2>
+<p>
+So far, we have studied the momentum and energy of individual particles as tools for analysing <strong>particle dynamics</strong>.
+</p>
+<p>
+Before studying particle dynamics through Newton's laws, we first learnt <strong>particle kinematics</strong>, where motion was described using the kinematic definitions
+\[
+\vec{v}=\frac{d\vec{r}}{dt} \qquad \vec{a}=\frac{d\vec{v}}{dt}
+\]
+Even simple cases such as motion under gravity were first analysed kinematically, while their dynamical origin was studied later through Newton's laws.
+</p>
+<p>
+The same pedagogical progression is followed for a <strong>system of particles</strong>.
+</p>
+<p>
+In the previous topic, we studied the <strong>motion of the centre of mass</strong> by starting from the definition of the centre of mass and differentiating it to obtain the velocity and acceleration of the centre of mass. Thus, the emphasis there was primarily on the <strong>kinematics of a system of particles</strong>.
+</p>
+<p>
+We now move to the <strong>dynamics of a system of particles</strong>. Although Newton's second law \(\vec{F}_{net} = m\vec{a}\) may still be applied directly to every individual particle, doing so is often impractical because of the large number of internal interaction forces.
+</p>
+<p>
+Instead, momentum and energy become the principal tools for analysing system dynamics.
+</p>
+<p>
+By choosing an appropriate system, we can often apply their conservation principles without calculating the internal forces explicitly.
+</p>
+<p>
+Thus, many system-dynamics problems are solved more conveniently using conservation principles than by directly applying
+</p>
+\[
+\sum{\vec{F}_{\text{ext}}} = M\,\vec{a}_{\text{CM}}
+\]
+<div class="insightbox">
+The most important skill in system dynamics is choosing an appropriate system so that the conservation principles of momentum and energy become applicable.<br>
+Once the system has been identified, the governing physical laws are combined with the relevant constraints to determine the motion.</div>
+</section>
+<section>
+<h2>Momentum Conservation</h2>
+<p>
+We begin with Newton's second law in its momentum form:
+</p>
+\[
+\vec{F}_{\text{net}} = \frac{d\vec{p}}{dt}.
+\]
+<p>
+Applying this equation to an entire system of particles, and noting that the internal forces cancel pairwise, we obtain
+</p>
+\[
+\sum \vec{F}_{\text{ext}} = \frac{d\vec{P}_{\text{sys}}}{dt}
+\]
+<p>
+Using the result established in the previous section,
+</p>
+\[
+\vec{P}_{\text{sys}} = M\vec{v}_{\text{CM}}
+\]
+<p>
+we obtain
+</p>
+\[
+\sum \vec{F}_{\text{ext}} = M\vec{a}_{\text{CM}}
+\]
+<p>
+This is the same equation obtained earlier, but its origin is now different. Previously, it was derived by differentiating the definition of the centre of mass. Here, it is obtained from Newton's second law and is used to determine the conditions under which the momentum of a system remains constant.
+</p>
+<p>
+If
+</p>
+\[
+\sum \vec{F}_{\text{ext}}=0,
+\]
+<p>
+then
+</p>
+\[
+\frac{d\vec{P}_{\text{sys}}}{dt}=0,
+\]
+<p>
+which implies that the total momentum of the system remains conserved.
+</p>
+<p>
+If, on the system,
+\[
+\sum \vec{F}_{\text{ext}} = 0,
+\]
+and yet the system changes its state of motion, then momentum conservation can be applied directly.
+</p>
+<p>
+At first, this may appear contradictory. We know that a point particle can change its state of motion only when a net force acts on it.
+</p>
+<p>
+However, a <strong>system</strong> is different. Even when the resultant <strong>external</strong> force on the system is zero, the constituent particles may still exert internal forces on one another and change their individual states of motion.
+</p>
+<p>
+Since the state of motion of a system is determined by the states of motion of its constituent particles, a change in the motion of any constituent particle implies that the system has undergone a change in its state of motion.
+</p>
+<p>
+Thus, a system may undergo a change in its state of motion while its total momentum remains unchanged. This is precisely the situation in which momentum conservation becomes applicable.
+</p>
+<p>
+However, if
+\[
+\sum \vec{F}_{\text{ext}} \neq 0,
+\]
+the total vector momentum is generally not conserved. Nevertheless, momentum conservation may still be applied along directions perpendicular to the resultant external force, provided the direction of the external force remains unchanged throughout the change in the system's state of motion.
+</p>
+<p>
+This is because momentum and force are vectors and so they have directional relevance.
+</p>
+<h3>Momentum as a Vector</h3>
+<p>
+Newton's second law for a system,
+</p>
+\[
+\sum\vec F_{\text{ext}} = \frac{d\vec P_{\text{sys}}}{dt}
+\]
+<p>
+is itself a vector equation. Therefore, it may be resolved independently along mutually perpendicular directions.
+</p>
+\[
+\sum F_{\text{ext},x} = \frac{dP_x}{dt}
+\]
+\[
+\sum F_{\text{ext},y} = \frac{dP_y}{dt}
+\]
+\[
+\sum F_{\text{ext},z} = \frac{dP_z}{dt}
+\]
+<p>
+Hence, if the external force has no component along a particular direction, the corresponding component of momentum remains conserved.
+</p>
+<p>
+For example, during the explosion of a projectile, gravity acts only in the vertical direction. Therefore, the horizontal component of momentum remains conserved, whereas the vertical component does not.
+</p>
+</section>
+<section>
+<h2>Kinetic Energy and Momentum</h2>
+<p>
+For a single particle, kinetic energy and momentum are related by
+</p>
+\[
+K=\frac{p^2}{2m}
+\]
+<p>
+For a system of particles, however, the relation is not so direct because different particles generally move with different velocities. Instead, the total kinetic energy of the system can be decomposed into two parts:
+</p>
+\[
+K_{\text{total}}
+= \underbrace{\frac12Mv_{\text{CM}}^2}_{\text{Kinetic energy of COM motion}}
++
+\underbrace{K_{\text{rel}}}_{\text{Relative kinetic energy}}
+\]
+<p>
+The first term represents the kinetic energy associated with the translational motion of the centre of mass. The second term represents the kinetic energy due to the motion of the particles relative to the centre of mass.
+</p>
+<p>
+To understand the physical meaning of these two terms, we analyse the motion from the <strong>centre-of-mass frame</strong>.
+</p>
+<p>
+<strong>In the centre-of-mass frame, the translational motion of the entire system disappears.</strong>
+</p>
+<p>
+The only remaining motion is the motion of the constituent particles relative to one another. Consequently, the kinetic energy measured in this frame is precisely the <strong>relative kinetic energy</strong> of the system.
+</p>
+<p>
+We derive this result for a two-particle system so that the individual terms are understood clearly. The same decomposition remains valid for any system of \(n\) particles.
+</p>
+<p>
+Consider two particles of masses \(m_1\) and \(m_2\) moving with velocities \(\vec{v}_1\) and \(\vec{v}_2\).
+</p>
+<p>
+The velocity of the centre of mass is
+</p>
+\[
+\vec{v}_{\text{CM}}
+= \frac{m_1\vec{v}_1+m_2\vec{v}_2}{m_1+m_2}
+\]
+<p>
+The velocities of the particles in the centre-of-mass frame are
+</p>
+\[
+\vec{v}_{1/\text{CM}}
+= \vec{v}_1-\vec{v}_{\text{CM}}
+= \vec{v}_1-
+\frac{m_1\vec{v}_1+m_2\vec{v}_2}{m_1+m_2}
+= \frac{m_2(\vec{v}_1-\vec{v}_2)}{m_1+m_2},
+\]
+and similarly,
+\[
+\vec{v}_{2/\text{CM}}
+= \vec{v}_2-\vec{v}_{\text{CM}}
+= \vec{v}_2-
+\frac{m_1\vec{v}_1+m_2\vec{v}_2}{m_1+m_2}
+= \frac{m_1(\vec{v}_2-\vec{v}_1)}{m_1+m_2}.
+\]
+<p>
+Hence, the kinetic energy of the system measured in the centre-of-mass frame is
+</p>
+\[
+K_{\text{rel}}
+= \frac12m_1v_{1/\text{CM}}^2
++
+\frac12m_2v_{2/\text{CM}}^2.
+\]
+<p>
+Substituting the above expressions for the relative velocities and simplifying gives
+</p>
+\[
+K_{\text{rel}}
+= \frac12
+\left(
+\frac{m_1m_2}{m_1+m_2}
+\right)
+(\vec{v}_1-\vec{v}_2)^2.
+\]
+<p>
+Thus, the total kinetic energy of a two-particle system can be written as
+</p>
+\[
+\boxed{
+K_{\text{total}} = \frac12Mv_{\text{CM}}^2
++
+K_{\text{rel}}
+}
+\]
+<p>
+where the first term represents the kinetic energy of the translational motion of the system, while the second term represents the kinetic energy associated with the relative motion of its constituent particles.
+</p>
+<div class="insightbox">
+This decomposition explains why a perfectly inelastic collision may not lose all of its kinetic energy.<br>
+The kinetic energy associated with the motion of the centre of mass is preserved by momentum conservation.<br>
+Only the <strong>relative kinetic energy</strong> is available for conversion into heat, deformation and other forms of energy during the interaction.
+</div>
+</section>
 
-        <h1>Linear Momentum of a System</h1>
-        <p class="subtitle">
-            The total momentum of a system equals the total mass times the velocity of the centre of mass.
-        </p>
-
-        <section>
-            <h2>Definition</h2>
-            <p>
-                The linear momentum of a single particle of mass \(m\) and velocity \(\vec{v}\) is:
-            </p>
-            \[\vec{p} = m\vec{v}\]
-            <p>
-                For a system of \(n\) particles, the total linear momentum is the vector sum of the individual momenta:
-            </p>
-            \[\vec{P} = \sum_{i=1}^n m_i \vec{v}_i\]
-            <p>
-                Since \(\vec{v}_{\text{CM}} = \frac{1}{M}\sum m_i \vec{v}_i\), this gives the fundamental relation:
-            </p>
-            \[\vec{P} = M\,\vec{v}_{\text{CM}}\]
-            <div class="insightbox">
-                The total momentum of any system — no matter how many particles, no matter how complex their motions —
-                is simply the total mass times the velocity of the centre of mass. This remarkable result makes the COM
-                the natural representative point for the system.
-            </div>
-        </section>
-
-        <section>
-            <h2>Newton's Second Law in Momentum Form</h2>
-            <p>
-                Newton's second law, in its most general form, relates force to the rate of change of momentum:
-            </p>
-            \[\vec{F}_{\text{net}} = \frac{d\vec{p}}{dt}\]
-            <p>
-                For a system of particles (where internal forces cancel):
-            </p>
-            \[\vec{F}_{\text{ext}} = \frac{d\vec{P}}{dt} = M\,\vec{a}_{\text{CM}}\]
-            <p>
-                This is the same equation we derived from COM kinematics, but now written in terms of momentum. It is
-                the more fundamental form because it also holds for variable-mass systems (like rockets), where \(M\)
-                itself changes with time.
-            </p>
-        </section>
-
-        <section>
-            <h2>Momentum as a Vector</h2>
-            <p>
-                Momentum is a vector quantity. In two or three dimensions, momentum conservation must be applied
-                component-wise:
-            </p>
-            \[P_x = \sum m_i v_{ix} = \text{const (if } F_{\text{ext},x} = 0)\]
-            \[P_y = \sum m_i v_{iy} = \text{const (if } F_{\text{ext},y} = 0)\]
-            <p>
-                One component can be conserved even if the other is not. For example, during a projectile explosion,
-                horizontal momentum is conserved (no horizontal external force) while vertical momentum is not (gravity
-                acts).
-            </p>
-        </section>
-
-        <section>
-            <h2>Kinetic Energy and Momentum</h2>
-            <p>
-                Kinetic energy and momentum are related by:
-            </p>
-            \[K = \frac{p^2}{2m} \qquad \text{(single particle)}\]
-            <p>
-                For a system, the total kinetic energy splits into two parts:
-            </p>
-            \[K_{\text{total}} = \underbrace{\frac{1}{2}Mv_{\text{CM}}^2}_{\text{KE of COM}} +
-            \underbrace{K_{\text{rel}}}_{\text{KE relative to COM}}\]
-            <p>
-                The first term is the kinetic energy of the centre-of-mass motion. The second term is the kinetic energy
-                of particles <em>relative</em> to the COM. Only the second term is available for conversion during
-                interactions; the first is locked by momentum conservation.
-            </p>
-            <div class="insightbox">
-                This decomposition explains why a perfectly inelastic collision does not lose all kinetic energy — the
-                COM kinetic energy is preserved by momentum conservation. Only the relative kinetic energy is lost.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

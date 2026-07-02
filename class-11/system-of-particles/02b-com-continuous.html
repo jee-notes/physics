@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuous COM | COM</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-centre-of-mass.html" class="back-btn">
+<span>&larr;</span> Back to COM
+</a>
+</nav>
+<h1>Continuous COM</h1>
+<p class="subtitle">
+COM of continuous mass distributions.
+</p>
+<section>
+<h2>Dimensions of Bodies</h2>
+<p>
+A continuous body possesses an <strong>intrinsic dimension</strong>, which is independent of the space in which it is placed.
+</p>
+<p>
+For example, a straight rod is a one-dimensional body embedded in one-dimensional space.
+</p>
+<p>
+A semicircular arc of a ring is also a one-dimensional body, but it is embedded in two-dimensional space.
+</p>
+<p>
+Similarly, a piece of thread is intrinsically one-dimensional. When stretched straight, it lies in one-dimensional space. If it is coiled into a ball, it occupies a three-dimensional region of space, yet the body itself remains one-dimensional.
+</p>
+<p>
+This distinction is important because the type of mass density depends on the intrinsic dimension of the body, not on the dimension of the space it occupies. Therefore, every one-dimensional body is described using a <strong>linear mass density</strong>, irrespective of its shape.
+</p>
+<p>
+Consequently, an important skill in centre-of-mass problems is identifying the appropriate geometric parameter and expressing the infinitesimal length element \(dl\) in terms of it. This is analogous to identifying geometric constraints while solving mechanics problems.
+</p>
+<div class="insightbox">
+Students memorize COM formulas like solid cone h/4, hollow cone h/3.<br>
+Then they expect derivation to be mostly similar but just about changing some numbers.<br>
+But, the model is entirely different because hollow cone is intrinsically 2D and solid cone is intrinsically 3D 
+</div>
+</section>
+<section>
+<h2>Choosing the Infinitesimal Element</h2>
+<p>
+Once the intrinsic dimension of the body has been identified, the next step is to choose the appropriate infinitesimal element for integration.
+</p>
+<p>
+The guiding principle is simple:
+</p>
+<div class="insightbox">
+The integration variable must move only along the region where the mass is distributed.
+</div>
+<p>
+If the mass is distributed along a curve, we use an infinitesimal length element \(dl\). If the mass is distributed over a surface, we use an infinitesimal area element \(dA\). If the mass is distributed throughout a volume, we use an infinitesimal volume element \(dV\).
+</p>
+<p>
+The external shape of the body is not the deciding factor. What matters is where the mass actually exists.
+</p>
+<ul class="model-box">
+<li>A straight rod, a circular ring, a semicircular arc, a spring and a coiled wire are all one-dimensional bodies. In every case, the integration variable moves <strong>along the wire</strong>, so \(dm=\lambda\,dl\).</li>
+<li>A thin disc, a hollow sphere and a thin conical shell are two-dimensional bodies. Their mass is distributed over a surface, so \(dm=\sigma\,dA\).</li>
+<li>A solid sphere, a solid cylinder and a solid cone are three-dimensional bodies. Their mass occupies a volume, so \(dm=\rho\,dV\).</li>
+</ul>
+<p>
+To understand this better, consider a wire. If the wire is straight, the infinitesimal length element \(dl\) moves along a straight line. If the same wire is bent into a circular ring, a semicircular arc or any other curved shape, the integration variable is still \(dl\). The only difference is that \(dl\) now moves along the curved length of the wire rather than along a straight line.
+</p>
+<p>
+This is why the centre of mass of a ring is <strong>not</strong> obtained using the disc method. Although the ring encloses a circular region, its mass is distributed only along the circumference. Therefore, the infinitesimal element must move along the circumference, where the mass actually exists.
+</p>
+<div class="insightbox">
+Many integration methods become obvious once the mass distribution is identified.<br>
+For example, the centre of mass of a ring is obtained by moving the infinitesimal element along its circumference—not by treating it as a disc.<br>
+Likewise, a hollow cone is analysed using surface elements, whereas a solid cone is analysed using volume elements.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

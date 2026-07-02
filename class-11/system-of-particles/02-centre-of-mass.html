@@ -16,13 +16,17 @@
 </nav>
 <h1>Centre of Mass</h1>
 <p class="subtitle">
-The mass-weighted average position of a system at a single point.
+Centre of Mass Location and Characteristics.
 </p>
 <section>
 <h2>Definition</h2>
 <p>
 The <strong>centre of mass (COM)</strong> of a system of particles is the point about which the vector sum of the mass moments of all particles is zero.
 </p>
+<div class="insightbox">
+It is spelled "center" as per American English and "centre" as per British English.<br>
+Pronunciation is same in both versions.
+</div>
 <p>
 Consider a system of \(n\) particles having masses \(m_1, m_2, \ldots, m_n\) located at position vectors \(\vec{r}_1, \vec{r}_2, \ldots, \vec{r}_n\) with respect to a chosen origin.
 </p>
@@ -88,7 +92,10 @@ Consequently, the relative location of the centre of mass within the system rema
 <section>
 <h2>Two-Particle System</h2>
 <p>
-A two-particle system is the simplest non-trivial system of particles. Consider two point masses \(m_1\) and \(m_2\) separated by a finite distance \(d\).
+A two-particle system is the simplest system of particles and so it is generally used to explain the characteristics of COM.
+</p>
+<p>
+Consider two point masses \(m_1\) and \(m_2\) separated by a finite distance \(d\).
 </p>
 <p>
 Although the particles may be located anywhere in three-dimensional space, only the straight line joining them is relevant for determining the centre of mass.
@@ -112,13 +119,16 @@ Since multiplication by a positive scalar does not change the direction of a vec
 Furthermore, because \(\vec{r}_1\) and \(\vec{r}_2\) point in opposite directions from the centre of mass, the centre of mass must lie between the two particles.
 </p>
 <p>
-Let us consider the center of mass is at origin. Particle \(m_1\) is towards its right at \(x_1\) and \(m_2\) is towards its left at \(- x_2\) and \(x_1 + x_2 = d\) . We have:   
+Thus, COM of 2 particles always lies between the 2 particles.
+</p>
+<p>
+Let us consider the center of mass is at origin. Particle \(m_1\) is towards its right at \(x_1\) and \(m_2\) is towards its left at \(- x_2\) and \(x_1 + x_2 = d\) as \(x_1\) and \(x_2\) are distances. We have:   
 </p>
 \[
 m_1 x_1 + m_2 (-x_2) = 0 \implies m_1 x_1 = m_2 x_2 \implies \frac{m_1}{m_2} = \frac{x_2}{x_1}  
 \]
 <p>
-Thus, the distance from the center of mass is inversely proportional to the mass.
+Thus, the distance from the center of mass is inversely proportional to the mass and so the COM lies towards the heavier distribution.
 </p>
 <p>
 To find relative distance from \(m_1\) , just do componendo: 
@@ -127,7 +137,7 @@ To find relative distance from \(m_1\) , just do componendo:
 \frac{m_1}{m_2} = \frac{x_2}{x_1} \implies \frac{m_1 + m_2}{m_2} = \frac{x_2 + x_1}{x_1} = \frac{d}{x_1} \implies x_1 = \frac{m_2 d}{m_1 + m_2}  
 \]
 <p>
-If we consider origin at \(m_1\):
+To demonstrate the second characteristic, we now consider origin at \(m_1\) and so co-ordinate of \(m_2\) is \(d\):
 </p>
 \[
 x_{\text{CM}} = \frac{m_1 (0) + m_2 d}{m_1 + m_2} = \frac{m_2 d}{m_1 + m_2} 
@@ -139,7 +149,7 @@ The relative distance of COM from \(m_1\) is same irrespective of the choice of 
 <section>
 <h2>Three-Particle System</h2>
 <p>
-A three-particle system is the simplest non-trivial system of particles forming a two-dimensional planar configuration.
+A three-particle system is the simplest system of particles forming a two-dimensional planar configuration.
 </p>
 <p>
 Consider three point masses \(m_1\), \(m_2\) and \(m_3\) located at \((x_1,y_1)\), \((x_2,y_2)\) and \((x_3,y_3)\) respectively.
@@ -154,14 +164,14 @@ x_{\text{CM}} = x_{123} = \frac{m_1 x_1 + m_2 x_2 + m_3 x_3}{m_1 + m_2 + m_3}
 y_{\text{CM}} = y_{123} = \frac{m_1 y_1 + m_2 y_2 + m_3 y_3}{m_1 + m_2 + m_3}
 \]
 <p>
-Now let us determine the same centre of mass in another way. First, consider only particles \(m_1\) and \(m_2\). Let their centre of mass be \((x_{12},y_{12})\). Replace these two particles by a single particle of mass
+Now let us determine the same centre of mass in another way. First, consider only particles \(m_1\) and \(m_2\). Let their centre of mass be at \((x_{12},y_{12})\). Replace these two particles by a single particle of mass
 \[
 m_{12}=m_1+m_2
 \]
 placed at \((x_{12},y_{12})\).
 </p>
 <p>
-The centre of mass of the new two-particle system is
+Now, find the centre of mass of the new two-particle system comprising of \(m_3\) particle at \((x_3,y_3)\) and the new combined \(m_{12}\) particle at \((x_{12},y_{12})\) 
 </p>
 \[
 x'_{\text{CM}} = \frac{m_{12} x_{12} + m_3 x_3}{m_{12} + m_3}
@@ -191,12 +201,15 @@ Similarly,
 y'_{\text{CM}}=y_{123}
 \]
 <p>
-Hence, replacing a subsystem by a single particle of equal mass placed at the centre of mass of that subsystem does not change the centre of mass of the entire system.
+Hence, replacing a subsystem by a single particle of subsystem mass placed at the centre of mass of that subsystem does not change the centre of mass of the entire system.
 </p>
 <div class="insightbox">
 This result is extremely useful in mechanics.<br>
 A complicated collection of particles may be simplified step by step by repeatedly replacing subsystems with equivalent point masses located at their respective centres of mass.
 </div>
+<p>
+Also, using replacability and 2 particle system we can show that for n-particle system, COM will always lie within the extent of the spatial distribution of the particles. It means if \(x_l\) is the co-ordinate of leftmost particle and \(x_r\) is the co-ordinate of righttmost particle, then \(x_l \le x_{\text{CM}} \le x_r\) .
+</p>
 <h3>Incremental COM Update</h3>
 <p>
 If there is a sub-system of particles of mass \({M'}_{\text{S}}\) at \(({x'}_{s},{y'}_{s})\) .
@@ -236,21 +249,47 @@ y_s = \frac{{M'}_{\text{S}} {y'}_{s} - m_{\text{p}} {y}_{p} }{{M'}_{\text{S}} - 
 \]
 </section>
 <section>
-<h2>Definition: Continuous Bodies</h2>
+<h2>Continuous Bodies</h2>
 <p>
-For a continuous mass distribution, the sum becomes an integral. Replacing \(m_i\) with an infinitesimal mass element \(dm\):
+So far, we have considered systems consisting of a finite number of discrete particles. We now extend the idea of the centre of mass to <strong>continuous bodies</strong>, whose mass is continuously distributed in space.
+</p>
+<p>
+The definition of the centre of mass involves the product of two different physical quantities, namely mass and position vector. For discrete particles, the masses are already known. For a continuous body, however, mass itself must first be constructed from the geometry of the body.
+</p>
+<p>
+This construction requires a <strong>bridge</strong> between geometry and mass. The bridge is provided by the appropriate mass density:
 </p>
 \[
-\vec{R}_{\text{CM}} = \frac{1}{M} \int \vec{r}\,dm
+dm=\lambda\,dl\qquad dm=\sigma\,dA\qquad dm=\rho\,dV
 \]
 <p>
-The mass element \(dm\) depends on the type of distribution:
+This idea is exactly analogous to the role of instantaneous velocity in kinematics. There, time is the continuous quantity, and velocity acts as the bridge that constructs displacement through
 </p>
-<ul>
-<li>Linear (rod, wire): \(dm = \lambda\,dl\), where \(\lambda\) is the linear mass density.</li>
-<li>Surface (disc, plate): \(dm = \sigma\,dA\), where \(\sigma\) is the surface mass density.</li>
-<li>Volume (sphere, cube): \(dm = \rho\,dV\), where \(\rho\) is the volume mass density.</li>
+\[
+d\vec{s}=\vec{v}\,dt
+\]
+<p>
+Here, space is the continuous quantity, and density acts as the bridge that constructs mass through infinitesimal geometric elements. In this way, the continuity of space is transferred to mass, allowing mass to be treated as a continuous distribution.
+</p>
+<p>
+Once the body has been represented as a continuous distribution of infinitesimal mass elements, the discrete summation naturally becomes an integration. Thus, the definition of the centre of mass becomes
+</p>
+\[
+\vec{R}_{\text{CM}} = \frac{1}{M}\int \vec{r}\,dm
+\]
+<p>
+Depending on the nature of the distribution, the infinitesimal mass element is written as
+</p>
+<ul class="model-box">
+<li><strong>Linear distribution</strong> (rod, wire): \(dm=\lambda\,dl\), where \(\lambda\) is the linear mass density.</li>
+<li><strong>Surface distribution</strong> (disc, plate): \(dm=\sigma\,dA\), where \(\sigma\) is the surface mass density.</li>
+<li><strong>Volume distribution</strong> (sphere, cube): \(dm=\rho\,dV\), where \(\rho\) is the volume mass density.</li>
 </ul>
+<div class="insightbox">
+Bridge quantities transfer continuity from one physical quantity to another.<br>
+Velocity transfers the continuity of time to displacement, while density transfers the continuity of geometry to mass.<br>
+Once the new quantity becomes continuously distributed, its infinitesimal contributions can be accumulated by integration.
+</div>
 </section>
 <section>
 <h2>Standard Results</h2>
@@ -291,6 +330,14 @@ To find the COM of a body with a cavity, treat it as the original complete body 
 <p>
 This "negative mass" trick avoids complex integration with irregular boundaries.
 </p>
+</section>
+<section>
+<h2>Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./01-system-of-particles.html">1. Discrete COM</a>
+<a href="./02b-com-continuous.html">2. Continuous COM</a>
+<a href="./02c-com-cavity.html">3. Cavity COM</a>
+</div>
 </section>
 <footer>
 <hr>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cavity COM | COM</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-centre-of-mass.html" class="back-btn">
+<span>&larr;</span> Back to COM
+</a>
+</nav>
+<h1>Cavity COM</h1>
+<p class="subtitle">
+COM of cavity bodies.
+</p>
+<section>
+<h2>What is Muzzle Velocity?</h2>
+<p>
+<strong>Muzzle velocity</strong> is the speed of a bullet relative to the muzzle (or gun) as it leaves the barrel.
+</p>
+<p>
+It is a specification of the gun and represents its firing capability. In other words, it is a convenient way of communicating the performance or capacity of the gun, independent of how the gun itself is moving.
+</p>
+<p>
+For example, if a gun has a muzzle velocity of \(100\,\text{m/s}\), it means that every bullet leaves the barrel with a speed of \(100\,\text{m/s}\) relative to the gun. If the gun is mounted on an aeroplane moving at \(300\,\text{m/s}\) in the same direction, the bullet speed in the ground frame becomes
+</p>
+\[
+\vec{v}_{b} = \vec{v}_{b/g} + \vec{v}_{g}\]
+<p>
+where \(\vec{v}_{b/g}\) is the velocity of the bullet with respect to the gun. Hence, in this case, the bullet moves at \(400\,\text{m/s}\) with respect to the ground.
+</p>
+</section>
+<section>
+<h2>Why is Muzzle Velocity Important?</h2>
+<p>
+Problems involving dynamics are solved using system of equations having <strong>independent origins</strong>.
+</p>
+<p>
+Independent origins means that the equations arise from different physical principles, so each contributes independent information needed to determine the unknowns
+</p>
+<p>
+One origin is a physical law, while the other origin is a kinematic constraint.
+</p>
+<p>
+The first is the relative-velocity equation,
+</p>
+\[
+\boxed{\vec{v}_b = \vec{v}_{b/g} + \vec{v}_g }
+\]
+<p>
+This equation (which relates velocities measured in different reference frames) is purely kinematic. It specifies that the bullet leaves the gun with the given muzzle velocity relative to the gun. It is not obtained from momentum conservation.
+</p>
+<p>
+The second equation is the law of conservation of momentum:
+</p>
+\[
+\boxed{\vec{p}_{i,g} = \vec{p}_{f,g} }
+\]
+<p>
+Momentum conservation is applied in an inertial frame, usually the ground frame, so that no pseudo-force corrections are required.
+</p>
+<div class="insightbox">
+The key skill in dynamics problems is to use these two equations together while maintaining a consistent sign convention.<br>
+This is exactly analogous to Newton's Laws of Motion problems, where the equations of motion (\(\sum \vec{F}=m\vec{a}\)) are solved simultaneously with the appropriate constraint equations.<br>
+As a matter of fact, Dynamics is the study of how physical laws manifest under constraints.<br>
+The laws of physics are universal and immutable. The immense variety of dynamical behaviour observed in nature and engineered systems arises from the constraints under which these laws operate.<br>
+Physics gives us the laws. Engineering (or problem design) gives us the constraints.<br>
+As the laws are fixed and universal, the diversity of motion comes from changing the constraints.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
