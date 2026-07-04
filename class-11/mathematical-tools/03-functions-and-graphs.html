@@ -1,74 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathematical Tools | Functions & Graphs</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Functions & Graphs | Mathematical Tools</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Mathematical Tools
-            </a>
-        </nav>
-
-        <h1>Functions and Graphical Analysis</h1>
-        <p class="subtitle">
-            Visualizing relationships between physical variables.
-        </p>
-
-        <section>
-            <h2>1. What is a Function?</h2>
-            <p>
-                In physics, a function represents a causal relationship. For example, the position of a car is a
-                function of time: \(s = f(t)\).
-            </p>
-            <ul>
-                <li><strong>Independent Variable:</strong> The "Cause" (usually plotted on the x-axis, like time).</li>
-                <li><strong>Dependent Variable:</strong> The "Effect" (usually plotted on the y-axis, like velocity).
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>2. Slopes and Intercepts</h2>
-            <p>
-                The <strong>slope</strong> (\(m\)) of a graph represents the rate of change.
-            </p>
-            <div class="formula-block">
-                \[ m = \frac{\Delta y}{\Delta x} = \tan \theta \]
-            </div>
-            <div class="insightbox">
-                In a Position-Time graph, the slope is <strong>Velocity</strong>. In a Velocity-Time graph, the slope is
-                <strong>Acceleration</strong>.
-            </div>
-            <p>The <strong>y-intercept</strong> (\(c\)) represents the initial value of the dependent variable when the
-                independent variable is zero (e.g., initial velocity \(u\) at \(t = 0\)).</p>
-        </section>
-
-        <section>
-            <h2>3. Sign Conventions in Graphs</h2>
-            <p>
-                Graphical analysis helps in "Visual Sign Management":
-            </p>
-            <ul>
-                <li><strong>Positive Slope:</strong> The dependent variable is increasing.</li>
-                <li><strong>Negative Slope:</strong> The dependent variable is decreasing.</li>
-                <li><strong>Area under the Curve:</strong> Represents the product of the two variables (e.g., Area under
-                    a V-T graph is <strong>Displacement</strong>).</li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Mathematical Tools
+</a>
+</nav>
+<h1>Functions and Graphical Analysis</h1>
+<p class="subtitle">
+Visualizing relationships between physical variables.
+</p>
+<section>
+<h2>What is a Function?</h2>
+<p>
+A function is a mathematical rule that assigns exactly one output to every permissible input. If the input variable is \(x\) and the output variable is \(y\), we write
+</p>
+<div class="math-block">
+\[
+y=f(x)
+\]
+</div>
+<p>
+Here, \(x\) is called the <strong>independent variable</strong> because its value is assigned independently, while \(y\) is called the <strong>dependent variable</strong> because its value is determined by the chosen value of \(x\).
+</p>
+<p>
+A mathematical rule simply specifies how two variables are mathematically related. For example, the relation
+\[
+y=3x
+\]
+states that the value of \(y\) is always three times the value of \(x\). The rule itself carries no physical meaning; it merely establishes a mathematical relationship between two variables. To evaluate the function, we first assign a value to the independent variable \(x\). The corresponding value of \(y\) is then obtained using the given relation.
+</p>
+<p>
+In Physics, functions are extensively used to describe relationships between physical quantities. For example,
+</p>
+<div class="math-block">
+\[
+\text{Density}=\frac{\text{Mass}}{\text{Volume}}
+\]
+\[
+\text{Electric Current}=\frac{\text{Electric Charge}}{\text{Time}}
+\]
+\[
+\text{Pressure}=\frac{\text{Force}}{\text{Area}}
+\]
+</div>
+<p>
+Each expression describes how one physical quantity is mathematically related to another. However, Physics goes a step further by assigning a physical interpretation to these variables and the relationship between them.
+</p>
+<p>
+Consider the relation
+\[
+\text{Speed}=\frac{\text{Distance}}{\text{Time}}.
+\]
+Suppose the distance between your home and school is fixed. If you travel at a higher speed, you take less time to reach school. Conversely, if you travel more slowly, the journey takes longer. Here, the mathematical relation acquires a physical meaning by describing how the travel time depends on your speed for a given distance.
+</p>
+<p>
+Similarly,
+\[
+\text{Density}=\frac{\text{Mass}}{\text{Volume}}
+\]
+states that, for a fixed mass, reducing the volume increases the density, while increasing the volume decreases the density. The mathematical relation thus describes how one physical quantity varies with another.
+</p>
+<div class="insightbox">
+A function is a mathematical concept that relates one variable to another.<br>
+Physics adopts this mathematical concept to describe relationships between physical quantities.<br>
+When these relationships represent a physical law, the independent variable often represents the cause (or controlling quantity), while the dependent variable represents the corresponding effect.<br>
+However, Physics also uses functions to express definitions, geometrical relations, empirical relations and many other mathematical relationships.
+</div>
+<h3>Mathematical Invertibility vs Physical Causality</h3>
+<p>
+One of the useful features of a mathematical function is that it can often be <strong>inverted</strong>. This allows either variable to be expressed in terms of the other. For example,
+</p>
+<div class="math-block">
+\[
+F=ma \qquad \Longleftrightarrow \qquad a=\frac{F}{m}
+\]
+</div>
+<p>
+Mathematically, both equations are completely equivalent. Each can be obtained from the other by simple algebraic rearrangement.
+</p>
+<p>
+Physics makes extensive use of this mathematical invertibility. Depending on the problem, we may calculate the acceleration produced by a known force, or determine the force required to produce a desired acceleration. Thus, both mathematical forms are physically useful.
+</p>
+<p>
+However, mathematical invertibility should not be confused with <strong>physical causality</strong>. Rearranging the equation does not reverse the underlying physical process. When a force is applied to a body, the body responds by accelerating. Thus, the force is the physical cause, while the acceleration is the corresponding effect. The mass of the body is a property that relates the two.
+</p>
+<div class="insightbox">
+Mathematical invertibility tells us <strong>what can be computed</strong>, whereas physical causality tells us <strong>what causes what</strong>. Physics uses the invertibility of mathematical functions for computation, but the physical cause-and-effect relationship is determined by the underlying phenomenon, not by the algebraic form of the equation.
+</div>
+</section>
+<section>
+<h2>Graphs</h2>
+<p>
+A graph is the visual representation of a function. While a function describes the relationship between two variables mathematically, a graph enables us to visualize that relationship.
+</p>
+<p>
+Consider the function
+\[
+y = f(x) = 3x
+\]
+For different values of the independent variable \(x\), the corresponding values of the dependent variable \(y\) are obtained using the function.
+</p>
+<div class="math-block">
+\[
+\begin{array}{c|ccccc}
+x & -2 & -1 & 0 & 1 & 2\\
+\hline
+y & -6 & -3 & 0 & 3 & 6
+\end{array}
+\]
+</div>
+<p>
+Each pair of values \((x,y)\) represents a point in the Cartesian plane. Plotting all such points and joining them smoothly produces the graph of the function.
+</p>
+<p>
+In Physics, graphs provide a visual description of how one physical quantity varies with another. They often reveal trends, rates of change and important physical behaviour that may not be immediately apparent from the equation alone.
+</p>
+</section>
+<section>
+<h2>Slopes and Intercepts</h2>
+<p>
+The <strong>slope</strong> (\(m\)) of a graph represents the rate of change.
+</p>
+<div class="math-block">
+\[
+m = \frac{\Delta y}{\Delta x} = \tan \theta
+\]
+</div>
+<div class="insightbox">
+In a Position-Time graph, the slope is <strong>Velocity</strong>. In a Velocity-Time graph, the slope is <strong>Acceleration</strong>.
+</div>
+<p>The <strong>y-intercept</strong> (\(c\)) represents the initial value of the dependent variable when the independent variable is zero (e.g., initial velocity \(u\) at \(t = 0\)).</p>
+</section>
+<section>
+<h2>Sign Conventions in Graphs</h2>
+<p>
+One of the greatest advantages of graphical analysis is that it provides a visual interpretation of algebraic signs. Instead of relying solely on equations, many physical quantities can be interpreted directly from the geometry of the graph.
+</p>
+<ul class="model-box">
+<li><strong>Positive Slope:</strong> The dependent variable increases as the independent variable increases.</li>
+<li><strong>Negative Slope:</strong> The dependent variable decreases as the independent variable increases.</li>
+<li><strong>Positive Area:</strong> Represents a positive accumulated quantity.</li>
+<li><strong>Negative Area:</strong> Represents a negative accumulated quantity.</li>
+</ul>
+<div class="insightbox">
+Graphs provide a form of <strong>visual sign management</strong>.<br>
+The geometry of the graph often reveals the sign of a physical quantity immediately, reducing the need for algebraic sign tracking.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

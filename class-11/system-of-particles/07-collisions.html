@@ -1,151 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System of Particles | Collisions</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collisions | System of Particles</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to System of Particles
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to System of Particles
+</a>
+</nav>
+<h1>Collisions</h1>
+<p class="subtitle">
+Short-duration momentum and energy interactions.
+</p>
+<section>
+<h2>What is a Collision?</h2>
+<p>
+A collision is a brief, intense interaction during which two or more bodies exert large impulsive forces on one another.
+</p>
+<p>
+The defining characteristic of a collision is that the interaction lasts for a very short duration. Consequently, external forces impart negligible impulse during this interval, allowing the momentum of the colliding system to be treated as conserved.
+</p>
+<p>
+To understand collisions more deeply, we must ask an important question: <strong>How is impulse transmitted from one body to another?</strong> The physical mechanism responsible is <strong>deformation</strong>.
+</p>
+<p>
+When two bodies collide, they do not behave as perfectly rigid objects. Instead, they deform during contact and subsequently reform either partially or completely. It is during this process of deformation and reformation that the impulsive forces act, transferring momentum from one body to the other.
+</p>
+<p>
+A convenient physical model for understanding collisions is two blocks interacting through a spring. Suppose block A is initially at rest on a smooth horizontal surface, with a light spring attached to its left face. Block B approaches from the left with speed \(v\) and collides with the free end of the spring. As the spring compresses, both blocks move while the spring stores elastic potential energy. The compression of the spring models the deformation of the colliding bodies, whereas the subsequent expansion models their reformation after the collision.
+</p>
+<p>
+During deformation, part of the kinetic energy of the system is temporarily converted into potential energy associated with the deformation. During reformation, this stored potential energy is converted back into kinetic energy. The extent to which this stored energy is recovered determines the nature of the collision.
+</p>
+</section>
+<section>
+<h2>Types of Collisions</h2>
+<p>
+During deformation, a part of the kinetic energy is temporarily stored as potential energy associated with the deformation of the colliding bodies. During reformation, this stored energy is recovered and converted back into kinetic energy.
+</p>
+<p>
+The extent to which the stored energy is recovered depends on the elasticity of the colliding bodies and other material properties. Accordingly, collisions are classified on the basis of the amount of energy recovered during reformation. If no reformation occurs, the deformation becomes permanent.
+</p>
+<h3>Elastic Collision</h3>
+<p>
+In an elastic collision, the bodies recover completely from the deformation produced during the collision. Consequently, all the stored deformation energy is converted back into kinetic energy.
+</p>
+<p>
+Both momentum and kinetic energy are conserved:
+</p>
+\[
+\vec{P}_i = \vec{P}_f \qquad K_i = K_f
+\]
+<p>
+The bodies separate without any permanent deformation, and the relative speed of separation equals the relative speed of approach.
+</p>
+<h3>Inelastic Collision</h3>
+<p>
+In an inelastic collision, the bodies recover only partially from the deformation. As a result, only part of the stored deformation energy is converted back into kinetic energy, while the remainder is dissipated as heat, sound or permanent deformation.
+</p>
+\[
+\vec{P}_i = \vec{P}_f \qquad K_i > K_f
+\]
+<h3>Perfectly Inelastic Collision</h3>
+<p>
+A perfectly inelastic collision is the limiting case in which no deformation energy is recovered. The bodies remain permanently deformed (or stick together) and move with a common velocity after the collision.
+</p>
+\[
+v_f = \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}
+\]
+<div class="insightbox">
+"Perfectly inelastic" does not mean that all kinetic energy is lost.<br>
+The kinetic energy associated with the motion of the centre of mass,
+\[
+\frac12(m_1 + m_2) v_f^2
+\]
+is always preserved by momentum conservation.<br>
+Only the kinetic energy relative to the centre of mass is completely lost.
+</div>
+</section>
+<section>
+<h2>Coefficient of Restitution</h2>
+<p>
+The coefficient of restitution \(e\) is defined as the ratio of the velocity of separation to the velocity of approach along the line of impact:
+</p>
+\[
+e=\frac{v_{\text{sep}}}{v_{\text{app}}}
+\]
+<h3>Velocity of Approach and Separation</h3>
+<p>
+The quantities <strong>velocity of approach</strong> and <strong>velocity of separation</strong> are exactly the same quantities defined in the Kinematics chapter. Their definitions do not change while studying collisions.
+</p>
+<p>
+The velocity of approach is simply the rate at which the distance between the two bodies decreases. Consequently, velocities directed <strong>towards each other</strong> are added, whereas velocities directed <strong>away from each other</strong> are subtracted.
+</p>
+<ul class="model-box">
+<li>
+If body A is to the left of body B and they move towards each other,
+\[
+v_{\text{app}}=v_A+v_B
+\]
+</li>
+<li>
+If both bodies move towards the right,
+\[
+v_{\text{app}}=v_A-v_B
+\]
+A collision is possible only if \(v_A>v_B\)
+</li>
+</ul>
+<p>
+The velocity of separation is determined using exactly the same principle after the collision.
+</p>
+<div class="insightbox">
+Do not memorise separate formulas for velocity of approach and velocity of separation.<br>
+Compute them exactly as in kinematics by determining the rate at which the distance between the bodies decreases or increases.
+</div>
+<p>
+For the usual one-dimensional collision in which body 1 approaches body 2 from behind,
+\[
+e = \frac{v_2-v_1}{u_1-u_2}
+\]
+This is simply the above definition written in terms of the particle velocities.
+</p>
+<ul class="model-box">
+<li>\(e = 1\) → elastic</li>
+<li>\(0 \lt e \lt 1\) → partially inelastic</li>
+<li>\(e = 0\) → perfectly inelastic</li>
+</ul>
+<p>
+In general, the quantities \(v_{\text{app}}\) and \(v_{\text{sep}}\) may be positive, negative or zero. For a collision,
+\[
+v_{\text{app}}>0
+\]
+whereas after the collision has been completed,
+\[
+v_{\text{sep}}\ge0
+\]
+A value of \(v_{\text{sep}}=0\) corresponds to a perfectly inelastic collision.
+</p>
+<p>
+Together with momentum conservation, the coefficient of restitution provides a second equation relating the unknown final velocities. Thus, collision problems are solved by simultaneously applying momentum conservation and the restitution relation.
+</p>
+<div class="insightbox">
+The coefficient of restitution is an empirical (experimentally determined) property of the pair of colliding materials.<br>
+It represents the fraction of the deformation energy recovered during reformation and encapsulates the microscopic physics of deformation and recovery in a single dimensionless quantity.
+</div>
+</section>
+<section>
+<h2>Direction of Impulse</h2>
+<p>
+Since impulse is imparted by a force, its direction is the same as the direction of the impulsive force.
+</p>
+<p>
+In collisions, the impulsive force is usually the normal contact force between the colliding bodies. Therefore, the impulse acts along the <strong>common normal</strong>, also called the <strong>line of impact</strong>. This direction is determined by the geometry of contact and is independent of the direction in which the bodies are moving.
+</p>
+<div class="insightbox">
+Even Tension force can be impulsive and act as a collision force.<br>
+</div>
+<p>
+This independence is easily understood by considering a ball striking a vertical wall. If the ball is projected normally towards the wall, it rebounds along the same line because the line of motion and the line of impact coincide.
+</p>
+<p>
+Now project the same ball obliquely towards the wall. Although the direction of motion has changed, the wall remains the same. Hence, the common normal to the wall—and therefore the direction of the impulsive force and the impulse—also remains unchanged.
+</p>
+<p>
+Thus, every collision involves two independent directions:
+</p>
+<ul class="model-box">
+<li><strong>Line of motion</strong> — the direction of the velocity of the body.</li>
+<li><strong>Line of impact</strong> — the direction of the impulsive force (common normal).</li>
+</ul>
+<p>
+The type of collision is determined by the relative orientation of these two directions.
+</p>
+<ul class="model-box">
+<li><strong>Head-on collision:</strong> The line of motion coincides with the line of impact.</li>
+<li><strong>Oblique collision:</strong> The line of motion is inclined to the line of impact.</li>
+</ul>
+<p>
+In a head-on collision, the entire velocity lies along the line of impact and is therefore affected by the impulse. In an oblique collision, only the component of velocity along the line of impact is changed by the impulse. The component perpendicular to the line of impact remains unchanged for smooth surfaces because no impulsive force acts in that direction.
+</p>
+<div class="insightbox">
+A collision is governed by two independent directions: the <strong>line of motion</strong> and the <strong>line of impact</strong>.<br>
+The line of motion depends on how the body is moving, whereas the line of impact depends on how the bodies come into contact.<br>
+Head-on and oblique collisions differ only in the relative orientation of these two directions.
+</div>
+</section>
 
-        <h1>Collisions</h1>
-        <p class="subtitle">
-            Short-duration interactions analysed through momentum conservation, energy bookkeeping, and the coefficient
-            of restitution.
-        </p>
-
-        <section>
-            <h2>What is a Collision?</h2>
-            <p>
-                A collision is a brief, intense interaction during which two or more objects exert large impulsive
-                forces on each other. The defining characteristic is that the collision duration \(\Delta t\) is so
-                small that external forces have negligible impulse during that interval.
-            </p>
-            <p>
-                Consequently, the total momentum of the colliding system is conserved across the collision. Whether
-                kinetic energy is also conserved determines the type of collision.
-            </p>
-        </section>
-
-        <section>
-            <h2>Types of Collisions</h2>
-            <h3>1. Elastic Collision</h3>
-            <p>
-                Both momentum and kinetic energy are conserved:
-            </p>
-            \[\vec{P}_i = \vec{P}_f \qquad K_i = K_f\]
-            <p>
-                Objects bounce off each other without any permanent deformation. The relative speed of separation equals
-                the relative speed of approach.
-            </p>
-
-            <h3>2. Inelastic Collision</h3>
-            <p>
-                Momentum is conserved; kinetic energy is not. Some kinetic energy is converted to internal energy (heat,
-                deformation, sound):
-            </p>
-            \[\vec{P}_i = \vec{P}_f \qquad K_i > K_f\]
-
-            <h3>3. Perfectly Inelastic Collision</h3>
-            <p>
-                The extreme case: objects stick together and move with a common velocity. This produces the maximum
-                kinetic energy loss consistent with momentum conservation:
-            </p>
-            \[v_f = \frac{m_1 v_1 + m_2 v_2}{m_1 + m_2}\]
-            <div class="insightbox">
-                "Perfectly inelastic" does not mean "all kinetic energy is lost." The COM kinetic energy
-                \(\frac{1}{2}(m_1+m_2)v_f^2\) is always preserved. Only the kinetic energy relative to the COM is fully
-                lost.
-            </div>
-        </section>
-
-        <section>
-            <h2>Head-On Elastic Collision: Formulae</h2>
-            <p>
-                For a 1D elastic collision between \(m_1\) (speed \(u_1\)) and \(m_2\) (speed \(u_2\)), solving momentum
-                and energy conservation simultaneously:
-            </p>
-            \[v_1 = \frac{(m_1 - m_2)\,u_1 + 2m_2\,u_2}{m_1 + m_2}\]
-            \[v_2 = \frac{(m_2 - m_1)\,u_2 + 2m_1\,u_1}{m_1 + m_2}\]
-            <h3>Special Cases</h3>
-            <ul>
-                <li><strong>Equal masses (\(m_1 = m_2\)):</strong> Velocities exchange. \(v_1 = u_2,\; v_2 = u_1\).</li>
-                <li><strong>Heavy projectile (\(m_1 \gg m_2\)):</strong> \(v_1 \approx u_1\); \(v_2 \approx 2u_1 -
-                    u_2\). Target shoots off at nearly twice the projectile speed.</li>
-                <li><strong>Light projectile (\(m_1 \ll m_2\)):</strong> \(v_1 \approx -u_1 + 2u_2\); \(v_2 \approx
-                    u_2\). Projectile bounces back, target barely moves.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Coefficient of Restitution</h2>
-            <p>
-                The coefficient of restitution \(e\) is the ratio of the relative speed of separation to the relative
-                speed of approach along the line of impact:
-            </p>
-            \[e = \frac{v_2 - v_1}{u_1 - u_2}\]
-            <ul>
-                <li>\(e = 1\) → elastic</li>
-                <li>\(0 < e < 1\) → partially inelastic</li>
-                <li>\(e = 0\) → perfectly inelastic</li>
-            </ul>
-            <p>
-                Using \(e\) together with momentum conservation gives two equations for two unknowns (\(v_1, v_2\)),
-                making it a complete and efficient method for solving collision problems even when energy conservation
-                cannot be applied directly.
-            </p>
-            <div class="insightbox">
-                The coefficient of restitution is an empirical property of the material and surface pair. It
-                encapsulates all the microscopic physics of deformation and recovery in a single dimensionless number.
-            </div>
-        </section>
-
-        <section>
-            <h2>Energy Lost in a Perfectly Inelastic Collision</h2>
-            <p>
-                For \(m_2\) initially at rest:
-            </p>
-            \[\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1 + m_2} \cdot u_1^2\]
-            <p>
-                This is the kinetic energy relative to the COM — exactly the fraction that can be converted to
-                non-mechanical forms.
-            </p>
-            <p>
-                In general (with coefficient of restitution \(e\)):
-            </p>
-            \[\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1 + m_2} \cdot (1 - e^2)(u_1 - u_2)^2\]
-        </section>
-
-        <section>
-            <h2>Oblique (2D) Collisions</h2>
-            <p>
-                When two objects collide at an angle, the analysis is performed along two axes:
-            </p>
-            <ul>
-                <li><strong>Along the line of impact (normal):</strong> Apply momentum conservation and the
-                    \(e\)-relation.</li>
-                <li><strong>Perpendicular to the line of impact (tangent):</strong> If surfaces are smooth, velocity
-                    components along this direction remain unchanged.</li>
-            </ul>
-            <p>
-                This reduces the 2D problem to a 1D collision along the normal, plus unchanged tangential velocities.
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<section>
+<h2>Head-On Elastic Collision: Formulae</h2>
+<p>
+For a 1D elastic collision between \(m_1\) (speed \(u_1\)) and \(m_2\) (speed \(u_2\)), solving momentum and energy conservation simultaneously:
+</p>
+\[
+v_1 = \frac{(m_1 - m_2)\,u_1 + 2m_2\,u_2}{m_1 + m_2}
+\]
+\[
+v_2 = \frac{(m_2 - m_1)\,u_2 + 2m_1\,u_1}{m_1 + m_2}
+\]
+<h3>Special Cases</h3>
+<ul>
+<li><strong>Equal masses (\(m_1 = m_2\)):</strong> Velocities exchange. \(v_1 = u_2,\; v_2 = u_1\).</li>
+<li><strong>Heavy projectile (\(m_1 \gg m_2\)):</strong> \(v_1 \approx u_1\); \(v_2 \approx 2u_1 - u_2\). Target shoots off at nearly twice the projectile speed.</li>
+<li><strong>Light projectile (\(m_1 \ll m_2\)):</strong> \(v_1 \approx -u_1 + 2u_2\); \(v_2 \approx u_2\). Projectile bounces back, target barely moves.</li>
+</ul>
+</section>
+<section>
+<h2>Energy Lost in a Perfectly Inelastic Collision</h2>
+<p>
+For \(m_2\) initially at rest:
+</p>
+\[
+\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1 + m_2} \cdot u_1^2
+\]
+<p>
+This is the kinetic energy relative to the COM — exactly the fraction that can be converted to non-mechanical forms.
+</p>
+<p>
+In general (with coefficient of restitution \(e\)):
+</p>
+\[
+\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1 + m_2} \cdot (1 - e^2)(u_1 - u_2)^2
+\]
+</section>
+<section>
+<h2>Oblique (2D) Collisions</h2>
+<p>
+When two objects collide at an angle, the analysis is performed along two axes:
+</p>
+<ul>
+<li><strong>Along the line of impact (normal):</strong> Apply momentum conservation and the \(e\)-relation.</li>
+<li><strong>Perpendicular to the line of impact (tangent):</strong> If surfaces are smooth, velocity components along this direction remain unchanged.</li>
+</ul>
+<p>
+This reduces the 2D problem to a 1D collision along the normal, plus unchanged tangential velocities.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>

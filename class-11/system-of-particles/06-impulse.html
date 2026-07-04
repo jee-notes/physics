@@ -1,125 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System of Particles | Impulse</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impulse | System of Particles</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to System of Particles
-            </a>
-        </nav>
-
-        <h1>Impulse</h1>
-        <p class="subtitle">
-            Force integrated over time — the quantity that connects a collision's force profile to the resulting
-            momentum change.
-        </p>
-
-        <section>
-            <h2>Definition</h2>
-            <p>
-                Impulse is defined as the integral of force over the time interval during which it acts:
-            </p>
-            \[\vec{J} = \int_{t_1}^{t_2} \vec{F}\,dt\]
-            <p>
-                By Newton's second law (\(\vec{F} = \frac{d\vec{p}}{dt}\)), this integral evaluates to:
-            </p>
-            \[\vec{J} = \Delta \vec{p} = \vec{p}_f - \vec{p}_i\]
-            <p>
-                This is the <strong>impulse–momentum theorem</strong>: the impulse delivered to an object equals the
-                change in its momentum.
-            </p>
-            <div class="insightbox">
-                Impulse is the "bridge" between force (which is instantaneous) and momentum change (which is a
-                before-vs-after comparison). It tells us the total effect of a force over time, regardless of how
-                complex the force's time profile may be.
-            </div>
-        </section>
-
-        <section>
-            <h2>Average Force and Impulse</h2>
-            <p>
-                The average force during a time interval \(\Delta t = t_2 - t_1\) is defined such that:
-            </p>
-            \[\vec{J} = \vec{F}_{\text{avg}} \cdot \Delta t\]
-            <p>
-                so:
-            </p>
-            \[\vec{F}_{\text{avg}} = \frac{\Delta \vec{p}}{\Delta t}\]
-            <p>
-                For the same momentum change, a shorter collision time implies a larger average force. This is why:
-            </p>
-            <ul>
-                <li>A cricketer pulls their hands back while catching a ball — increases \(\Delta t\), reduces
-                    \(F_{\text{avg}}\).</li>
-                <li>Car crumple zones extend the collision time, reducing the force on passengers.</li>
-                <li>A karate chop with a stiff hand maximises force by minimising contact time.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Impulsive Forces</h2>
-            <p>
-                During a collision, the contact forces are typically very large and act for a very short time (\(\sim
-                10^{-3}\) to \(10^{-2}\) s). These are called <strong>impulsive forces</strong>. Their impulse — the
-                product \(F \cdot \Delta t\) — is finite and significant, even though the time is tiny.
-            </p>
-            <p>
-                During this short interval, non-impulsive forces (gravity, friction) deliver negligible impulse because
-                their magnitude is small compared to the impulsive force:
-            </p>
-            \[J_{\text{gravity}} = mg\Delta t \approx 0 \qquad (\Delta t \to 0)\]
-            <p>
-                This is why momentum is approximately conserved during a collision.
-            </p>
-            <div class="insightbox">
-                Be careful: there are situations where "non-impulsive" forces can be large enough to not neglect during
-                a collision — for example, a normal force from a rigid wall that suddenly appears at impact. Always
-                check the physical setup.
-            </div>
-        </section>
-
-        <section>
-            <h2>Graphical Interpretation</h2>
-            <p>
-                On a force–time (\(F\text{–}t\)) graph, the impulse is the area under the curve between \(t_1\) and
-                \(t_2\). This is analogous to the work–displacement relationship, where area under the \(F\text{–}x\)
-                curve gives work.
-            </p>
-            <ul>
-                <li>Area above the time axis → positive impulse (momentum increases in the chosen direction).</li>
-                <li>Area below the time axis → negative impulse (momentum decreases).</li>
-                <li>Total impulse = net area = \(\Delta p\).</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Impulse in a Bouncing Ball</h2>
-            <p>
-                A ball of mass \(m\) hits a wall with speed \(v\) and bounces back with speed \(ev\) (where \(e\) is the
-                coefficient of restitution). Taking the direction toward the wall as positive:
-            </p>
-            \[p_i = +mv, \qquad p_f = -mev\]
-            \[J = \Delta p = -mev - mv = -m(1+e)v\]
-            <p>
-                The magnitude of the impulse is \(m(1+e)v\). For a perfectly elastic bounce (\(e = 1\)), the impulse is
-                \(2mv\) — exactly twice the incoming momentum.
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to System of Particles
+</a>
+</nav>
+<h1>Impulse</h1>
+<p class="subtitle">
+Force integrated over time.
+</p>
+<section>
+<h2>Definition</h2>
+<p>
+Impulse is defined as the time integral of force over the interval during which the force acts:
+</p>
+\[
+\vec{J} = \int_{t_1}^{t_2} \vec{F}\,dt
+\]
+<p>
+Using Newton's second law in momentum form,
+</p>
+\[
+\vec{F}=\frac{d\vec{p}}{dt},
+\]
+<p>
+we obtain
+</p>
+\[
+\vec{J} = \int_{t_1}^{t_2} \vec{F}\,dt = \Delta \vec{p} = \vec{p}_f - \vec{p}_i
+\]
+<p>
+This result is known as the <strong>impulse–momentum theorem</strong>: the impulse delivered to an object is equal to the change in its momentum.
+</p>
+<h3>Why do we study Impulse?</h3>
+<p>
+Force is an <strong>instantaneous</strong> quantity that describes the interaction at a particular instant of time. In many dynamical situations, however, we are interested in the <strong>overall effect</strong> of the interaction during an entire time interval rather than at each instant.
+</p>
+<p>
+Impulse provides this accumulated description. It measures the total effect of a force acting over a finite duration, irrespective of how the force varies during that interval.
+</p>
+<p>
+Thus, in dynamics, an interaction may be viewed in two equivalent ways: either as an instantaneous force acting at every instant, or as the impulse imparted over the complete duration of the interaction.
+</p>
+<div class="insightbox">
+Force describes an interaction instantaneously, whereas impulse describes the same interaction accumulated over time.<br>
+This is analogous to work, which describes the accumulated effect of a force over displacement.
+</div>
+</section>
+<section>
+<h2>Average Force and Impulse</h2>
+<p>
+Since impulse represents the total effect of a force over a time interval, it is often convenient to replace a varying force by an equivalent <strong>average force</strong> that produces the same impulse.
+</p>
+<p>
+The average force during the interval \(\Delta t = t_2 - t_1\) is therefore defined by
+</p>
+\[
+\vec{J} = \vec{F}_{\text{avg}} \cdot \Delta t
+\]
+<p>
+Using the impulse–momentum theorem,
+</p>
+\[
+\vec{J}=\Delta\vec{p},
+\]
+<p>
+we obtain
+</p>
+\[
+\vec{F}_{\text{avg}} = \frac{\Delta \vec{p}}{\Delta t}
+\]
+<p>
+Thus, for a given change in momentum, the average force is inversely proportional to the duration of interaction. Increasing the interaction time reduces the average force, while decreasing the interaction time increases it.
+</p>
+<ul class="model-box">
+<li>A cricketer pulls their hands backward while catching a ball, increasing the contact time and thereby reducing the average force.</li>
+<li>Car crumple zones increase the collision time, reducing the average force experienced by the passengers.</li>
+<li>A karate chop is delivered with a stiff hand to minimise the contact time, thereby producing a larger average force.</li>
+</ul>
+<p>
+Notice that in all these examples, the required <strong>impulse</strong> is fixed by the desired change in momentum, while the interaction time is varied. For example, when catching a ball of mass \(m\) moving with speed \(v\), the ball must be brought to rest. Therefore, the required impulse is \(mv\) opposite to the initial momentum. By pulling the hands backward, the cricketer increases the interaction time, thereby reducing the average force required to produce the same impulse.
+</p>
+<div class="insightbox">
+Average force is <strong>not</strong> the actual force at every instant.<br>
+It is the constant force that would produce the same impulse over the same time interval.
+</div>
+</section>
+<section>
+<h2>Impulsive Forces</h2>
+<p>
+During a collision, the contact forces are typically very large and act for a very short duration (\(\sim10^{-3}\) to \(10^{-2}\,\text{s}\)). Such forces are called <strong>impulsive forces</strong>. Although the duration of action is extremely small, they impart a finite and significant impulse.
+</p>
+<p>
+In the idealized model of a collision, an impulsive force is represented by
+</p>
+\[
+| \vec{F}_{\text{imp}} | \rightarrow \infty \qquad \Delta t \rightarrow 0
+\]
+<p>
+such that
+</p>
+\[
+|\vec{F}_{\text{imp}}|\,\Delta t
+\]
+<p>
+remains finite, thereby producing a finite change in momentum.
+</p>
+<p>
+During the same collision interval, many other external forces may also act on the system. However, these forces remain finite throughout the collision. Consequently, the impulses they impart are comparatively negligible because
+<div class="math-block">
+\[
+J_{\text{gravity}} = mg\Delta t \approx 0
+\]
+\[
+J_{\text{spring}} = F_{\text{spring}}\Delta t \approx 0
+\]
+</div>
+<p>
+Unlike impulsive forces, gravity and ordinary spring forces can never satisfy
+</p>
+\[
+|\vec{F}| \rightarrow \infty
+\]
+<p>
+for a finite mass and a finite spring deformation. Hence, they remain <strong>non-impulsive</strong>.
+</p>
+<p>
+Therefore, during a collision, momentum may be treated as conserved even when gravity, spring forces or other non-impulsive external forces are present.
+</p>
+<div class="insightbox">
+Whether a force is impulsive depends on the <strong>interaction</strong>, not on the type of force.<br>
+For example, when a larger ball collides with a smaller ball resting on the ground, the normal force exerted by the ground on the smaller ball becomes impulsive because it participates in the collision.<br>
+In contrast, the normal force on the larger ball remains non-impulsive because it never happened that - \(|\vec{F}_{\text{imp}}| \to \infty\) during collision.
+</div>
+</section>
+<section>
+<h2>Graphical Interpretation</h2>
+<p>
+On a force–time (\(F\text{–}t\)) graph, the impulse is the area under the curve between \(t_1\) and \(t_2\). This is analogous to the work–displacement relationship, where area under the \(F\text{–}x\) curve gives work.
+</p>
+<ul>
+<li>Area above the time axis → positive impulse (momentum increases in the chosen direction).</li>
+<li>Area below the time axis → negative impulse (momentum decreases).</li>
+<li>Total impulse = net area = \(\Delta p\).</li>
+</ul>
+</section>
+<section>
+<h2>Impulse in a Bouncing Ball</h2>
+<p>
+A ball of mass \(m\) hits a wall with speed \(v\) and bounces back with speed \(ev\) (where \(e\) is the coefficient of restitution). Taking the direction toward the wall as positive:
+</p>
+\[
+p_i = +mv, \qquad p_f = -mev
+\]
+\[
+J = \Delta p = -mev - mv = -m(1+e)v
+\]
+<p>
+The magnitude of the impulse is \(m(1+e)v\). For a perfectly elastic bounce (\(e = 1\)), the impulse is \(2mv\) — exactly twice the incoming momentum.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>
