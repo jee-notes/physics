@@ -1,68 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathematical Tools | Differentiation</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Differentiation | Mathematical Tools</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Mathematical Tools
-            </a>
-        </nav>
-
-        <h1>Differentiation: Instantaneous Change</h1>
-        <p class="subtitle">
-            Finding the slope of a curve at a single point.
-        </p>
-
-        <section>
-            <h2>1. The Concept of Derivative</h2>
-            <p>
-                Differentiation allows us to find the "rate of change" of a function at any given instant. In physics,
-                this is how we transition from "average" quantities to "instantaneous" ones.
-            </p>
-            <div class="formula-block">
-                \[ \text{Rate of change} = \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} \]
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Frequently Used Rules</h2>
-            <div class="formula-block">
-                \[ \frac{d}{dx}(x^n) = nx^{n-1} \]
-                \[ \frac{d}{dx}(\sin x) = \cos x \]
-                \[ \frac{d}{dx}(\cos x) = -\sin x \]
-                \[ \frac{d}{dx}(C) = 0 \quad (\text{where C is a constant}) \]
-            </div>
-        </section>
-
-        <section>
-            <h2>3. Physical Meanings</h2>
-            <p>
-                The derivative is the mathematical tool for kinematics:
-            </p>
-            <div class="formula-block">
-                \[ v = \frac{ds}{dt} \quad \text{(Velocity is the derivative of Position)} \]
-                \[ a = \frac{dv}{dt} \quad \text{(Acceleration is the derivative of Velocity)} \]
-            </div>
-            <div class="insightbox">
-                If you know the equation for position, differentiation tells you the velocity at <strong>any</strong>
-                moment in time.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Mathematical Tools
+</a>
+</nav>
+<h1>Differentiation: Instantaneous Change</h1>
+<p class="subtitle">
+Finding the slope of a curve at a single point.
+</p>
+<section>
+<h2>Rate of Change</h2>
+<p>
+In a function such as <strong>y = f(x)</strong>, the dependent variable <strong>y</strong> is mathematically determined by the independent variable <strong>x</strong>.
+</p>
+<p>
+Since both are variables, their values can change, but not independently. Once the value of <strong>x</strong> is fixed as \(x_1\), the corresponding value of <strong>y</strong> is also fixed by the function as \(y_1=f(x_1)\).
+</p>
+<p>
+The purpose of studying a mathematical function is to understand <strong>how changes in one variable propagate to the other</strong>. In other words, when the independent variable <strong>x</strong> changes, how does the dependent variable <strong>y</strong> respond?
+</p>
+<p>
+This is a fundamental question because functions relate variables, and variables are placeholders for quantities that can change. Once a relationship between the variables is established, the next natural step is to study how a change in one variable influences the other. The quantity that describes this behaviour is called the <strong>rate of change</strong>.
+</p>
+<p>
+For example, suppose the marks you score in a test are a function of the number of hours you study:
+</p>
+<div class="math-block">
+\[
+\text{Marks} = f(\text{Hours Studied})
+\]
+</div>
+<p>
+We want to understand the behaviour of this relation. If you study one hour less today, how much do your marks decrease? If you study one extra hour, how much improvement should you expect? In other words, <strong>how are changes in study time propagated to changes in marks?</strong>
+</p>
+<p>
+This is precisely what the <strong>rate of change</strong> measures. For a function \(y=f(x)\), it is expressed as
+</p>
+<div class="math-block">
+\[
+\text{Rate of Change}=\frac{\Delta y}{\Delta x}
+\]
+</div>
+<div class="insightbox">
+The thirsty crow putting pebbles in water jar to raise the water level is also doing physics.<br>
+Doing physics is fundamentally about understanding the behaviour of mathematical relationships between physical quantities.<br>
+Physics seeks to answer how changes in one physical quantity propagate to changes in others.
+</div>
+</section>
+<section>
+<h2>The Concept of Derivative</h2>
+<p>
+The rate of change introduced in the previous section measures how changes in one variable are propagated to another over a finite interval.
+</p>
+<p>
+However, in many situations, the behaviour of a relationship is not uniform. The rate of change itself may vary from one interval to another.
+</p>
+<p>
+Consider the previous example of marks versus hours studied. Suppose you study more effectively during the morning than at night. Then, not studying for one minute in the morning may reduce your marks much more than not studying for one minute at night.
+</p>
+<p>
+Clearly, the rate of change depends on <strong>when</strong> we measure it.
+</p>
+<p>
+To determine the rate of change at a particular instant, we continuously reduce the interval of observation until it becomes infinitesimally small.
+</p>
+<p>
+This limiting value is called the <strong>derivative</strong>, or the <strong>instantaneous rate of change</strong>.
+</p>
+<div class="math-block">
+\[
+\frac{dy}{dx} = \lim_{\Delta x\to0} \frac{\Delta y}{\Delta x}
+\]
+</div>
+</section>
+<section>
+<h2>Frequently Used Rules</h2>
+<p>
+The derivative of a function is evaluated using the mathematical theory of limits.
+</p>
+<p>
+In Mathematics, functions are studied rigorously through the concepts of limits, continuity and differentiability.
+</p>
+<p>
+These concepts lead to the derivation of derivative formulas for different classes of functions. These derivatives are also called as differential co-efficients.
+</p>
+<p>
+In Physics, we usually use these derivative formulas directly rather than deriving them each time.
+</p>
+<div class="math-block">
+\[
+\frac{d}{dx}(x^n)=nx^{\,n-1}
+\]
+\[
+\frac{d}{dx}(a^x)=a^x \ln a
+\]
+\[
+\frac{d}{dx}(e^x)=e^x
+\]
+\[
+\frac{d}{dx}(\ln x)=\frac1x
+\]
+\[
+\frac{d}{dx}(\sin x)=\cos x
+\]
+\[
+\frac{d}{dx}(\cos x)=-\sin x
+\]
+\[
+\frac{d}{dx}(C)=0 \qquad (\text{where }C\text{ is a constant})
+\]
+</div>
+</section>
+<section>
+<h2>Applications</h2>
+<p>
+Instantaneous Rate of change.
+</p>
+<p>
+Maxima Minima.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

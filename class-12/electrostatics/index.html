@@ -16,7 +16,7 @@
 </nav>
 <h1>Electrostatics</h1>
 <p class="subtitle">
-The first complete mathematical formulation of the concept of field.
+A mathematical description of the concept of field.
 </p>
 <section>
 <h2>Conceptual Overview</h2>
@@ -30,15 +30,10 @@ It marks a decisive shift in physics: from describing interactions as direct act
 Instead of saying that one charge directly pulls another, electrostatics asserts that a charge produces an electric field in the surrounding region of space. This field is a real physical entity. Other charges respond locally to this field.
 </p>
 <div class="insightbox">
-<p>
-At everyday scales outside the atomic nucleus, the fundamental forces governing matter–matter interactions are gravitational and electromagnetic. Both are field-mediated.
-</p>
-<p>
-In classical physics, space and time form the passive geometric arena. They do not carry energy or momentum. Matter and fields do.
-</p>
-<p>
-Thus, what appears as matter–matter interaction is structurally matter → field → matter. There is no direct transfer of energy or momentum between separated bodies without a mediating field.
-</p>
+At everyday scales outside the atomic nucleus, the fundamental forces governing matter–matter interactions are gravitational and electromagnetic. Both are field-mediated.<br>
+In classical physics, space and time form the passive geometric arena. They do not carry energy or momentum. Matter and fields do.<br>
+Thus, what appears as matter–matter interaction is structurally matter → field → matter. There is no direct transfer of energy or momentum between separated bodies without a mediating field.<br>
+When two things touch each other, their constituent molecules never touch each other and its just field repulsion.
 </div>
 </section>
 <section>
@@ -46,8 +41,11 @@ Thus, what appears as matter–matter interaction is structurally matter → fie
 <p>
 The core concept of electrostatics is the electric field. A field assigns a physical quantity to every point in space. Unlike matter, which is localized, a field is distributed continuously throughout space.
 </p>
+\[
+\vec{E} = \vec{E}(\vec{r})
+\]
 <p>
-Matter carries intrinsic properties such as mass or charge. A field carries measurable parameters such as electric field strength and potential. Both matter and field can store energy, and both influence the evolution of physical systems.
+Matter carries intrinsic properties such as mass and charge. A field carries measurable parameters such as electric field strength and potential. Both matter and field can store energy, and both influence the evolution of physical systems.
 </p>
 <p>
 Electrostatics is therefore not merely the study of charges, but the first systematic mathematical theory of a physical field. In 11th chapter of gravitation, we study gravitation as a particle-particle interaction. But after electrostatics, we again study gravitation as field.
@@ -68,7 +66,7 @@ Electrostatics exhibits a similar dual description. The electric field \( \vec{E
 dV = - \vec{E} \cdot d\vec{l}
 \]
 <p>
-Thus, potential is not about a separate physical entity; it is another mathematical representation (physical quantity) of the same field interaction.
+Thus, potential is not about a separate physical entity; it can be considered as a scalar representation (physical quantity) of the same field interaction.
 </p>
 <p>
 Visually, \( \vec{E} \) is represented by field lines, while \( V \) is represented by equipotential surfaces. Together, they provide complementary descriptions of the electric field.
@@ -85,15 +83,13 @@ Coulomb’s law and Gauss’ law are two complementary formulations of electrost
 Coulomb’s law gives the electric field produced by a point charge:
 </p>
 \[
-\vec{E} = \frac{1}{4\pi\varepsilon_0}
-\frac{q}{r^2}\,\hat{r}
+\vec{E} = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\,\hat{r}
 \]
 <p>
 For extended charge distributions, the total field is obtained using superposition:
 </p>
 \[
-\vec{E} = \frac{1}{4\pi\varepsilon_0}
-\int \frac{dq}{r^2}\,\hat{r}
+\vec{E} = \frac{1}{4\pi\varepsilon_0}\int \frac{dq}{r^2}\,\hat{r}
 \]
 <p>
 Thus, Coulomb’s law builds the field by summing contributions from individual charge elements.
@@ -104,9 +100,7 @@ Thus, Coulomb’s law builds the field by summing contributions from individual 
 Gauss’ law relates the electric flux through a closed surface to the total charge enclosed:
 </p>
 \[
-\Phi = \oint \vec{E} \cdot d\vec{S}
-=
-\frac{Q_{\text{enc}}}{\varepsilon_0}
+\Phi = \oint \vec{E} \cdot d\vec{S} = \frac{Q_{\text{enc}}}{\varepsilon_0}
 \]
 <p>
 It does not directly give the field at a point. Instead, it provides a global constraint on how the field flows through space. When strong symmetry is present, this constraint allows direct determination of \( \vec{E} \).
@@ -178,12 +172,12 @@ Gauss’ law does not replace Coulomb’s law. It accelerates computation when s
 </section>
 <section>
 <h2>Core Topics</h2>
-<ul class="points-list">
-    <li><strong>Coulomb’s Law</strong> — Inverse-square interaction between point charges; foundation of electrostatic force.</li>
-    <li><strong>Electric Field</strong> — Definition, superposition principle, and visualization through field lines.</li>
-    <li><strong>Electric Potential</strong> — Scalar description of the field and its relation to energy.</li>
-    <li><strong>Equipotential Surfaces</strong> — Geometric representation of constant potential and their relation to \( \vec{E} \).</li>
-    <li><strong>Gauss’ Law</strong> — Symmetry-based method for determining electric fields.</li>
+<ul class="model-box">
+<li><strong>Coulomb’s Law</strong> — Inverse-square interaction between point charges; foundation of electrostatic force.</li>
+<li><strong>Electric Field</strong> — Definition, superposition principle, and visualization through field lines.</li>
+<li><strong>Electric Potential</strong> — Scalar description of the field and its relation to energy.</li>
+<li><strong>Equipotential Surfaces</strong> — Geometric representation of constant potential and their relation to \( \vec{E} \).</li>
+<li><strong>Gauss’ Law</strong> — Symmetry-based method for determining electric fields.</li>
 </ul>
 </section>
 <section>

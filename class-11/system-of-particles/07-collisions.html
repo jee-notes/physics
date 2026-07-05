@@ -192,19 +192,79 @@ The line of motion depends on how the body is moving, whereas the line of impact
 Head-on and oblique collisions differ only in the relative orientation of these two directions.
 </div>
 </section>
-
 <section>
-<h2>Head-On Elastic Collision: Formulae</h2>
+<h2>Head-On Collision</h2>
 <p>
-For a 1D elastic collision between \(m_1\) (speed \(u_1\)) and \(m_2\) (speed \(u_2\)), solving momentum and energy conservation simultaneously:
+Consider a one-dimensional collision in which particle \(m_1\) lies to the left of particle \(m_2\). Initially, both particles move towards the right with speeds \(u_1\) and \(u_2\), respectively, such that
+\[
+u_1>u_2
+\]
+Thus, \(m_1\) approaches \(m_2\), while \(m_2\) moves away from \(m_1\).
+</p>
+<p>
+After the collision, we assume that both particles continue to move towards the right with velocities \(v_1\) and \(v_2\), respectively, such that
+\[
+v_2>v_1
+\]
+Thus, \(m_2\) separates from \(m_1\).
+</p>
+<p>
+The final velocities \(v_1\) and \(v_2\) are unknown in both magnitude and direction. Since the collision is one-dimensional, however, each velocity has only one independent component and is therefore represented by a signed scalar. Thus, there are only two unknowns: \(v_1\) and \(v_2\).
+</p>
+<p>
+Before solving, we assign convenient directions to these unknown velocities. These assumed directions establish a <strong>single, consistent sign convention</strong> for all velocities.
+</p>
+<p>
+This is essential because the conservation of momentum equation and the coefficient of restitution equation are solved <strong>simultaneously as a system of equations</strong>. Both equations must therefore use exactly the same sign convention. If either \(v_1\) or \(v_2\) is obtained as negative, the actual direction of motion is opposite to the assumed direction.
+</p>
+<p>
+The two unknowns are therefore determined using the following two independent equations:
+</p>
+<ul class="model-box">
+<li>Conservation of linear momentum.</li>
+<li>Coefficient of restitution.</li>
+</ul>
+<p>
+Applying conservation of linear momentum,
 </p>
 \[
-v_1 = \frac{(m_1 - m_2)\,u_1 + 2m_2\,u_2}{m_1 + m_2}
+m_1u_1+m_2u_2=m_1v_1+m_2v_2
+\]
+<p>
+Applying the coefficient of restitution,
+</p>
+\[
+e=\frac{v_2-v_1}{u_1-u_2}
+\]
+or,
+\[
+eu_1-eu_2=v_2-v_1
+\]
+<p>
+Solving:
+</p>
+\[
+e m_2 u_1 - e m_2 u_2 = m_2 v_2 - m_2 v_1
 \]
 \[
-v_2 = \frac{(m_2 - m_1)\,u_2 + 2m_1\,u_1}{m_1 + m_2}
+m_1v_1 + m_2 v_1 + e m_2 u_1 - e m_2 u_2 = m_1 u_1 + m_2 u_2
 \]
+\[
+(m_1 + m_2)v_1 + e m_2 u_1 - e m_2 u_2 = m_1 u_1 + m_2 u_2
+\]
+\[
+v_1 = \frac{(m_1 - e m_2) u_1 + (1+e)m_2u_2}{m_1 + m_2}
+\]
+\[
+v_2 = \frac{(m_2 - e m_1)u_2 + (1+e)m_1u_1}{m_1 + m_2}
+\]
+<p>
+The formula is such that the sign convention needs to be remembered because values need to be plugged in accordingly. e.g. if both are approaching each other then \(u_1 = u_1\) and \(u_2 = -u_2\) . 
+</p>
 <h3>Special Cases</h3>
+<p>
+We discuss special cases of elasctic collision \(e = 1\) .
+</p>
 <ul>
 <li><strong>Equal masses (\(m_1 = m_2\)):</strong> Velocities exchange. \(v_1 = u_2,\; v_2 = u_1\).</li>
 <li><strong>Heavy projectile (\(m_1 \gg m_2\)):</strong> \(v_1 \approx u_1\); \(v_2 \approx 2u_1 - u_2\). Target shoots off at nearly twice the projectile speed.</li>
@@ -212,22 +272,68 @@ v_2 = \frac{(m_2 - m_1)\,u_2 + 2m_1\,u_1}{m_1 + m_2}
 </ul>
 </section>
 <section>
-<h2>Energy Lost in a Perfectly Inelastic Collision</h2>
+<h2>Energy Lost in Head-On Collision</h2>
 <p>
-For \(m_2\) initially at rest:
+The expression for the kinetic energy of a two-particle system derived earlier is
 </p>
 \[
-\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1 + m_2} \cdot u_1^2
+\text{KE} = \frac12MV_{\text{CM}}^2 + \frac12\mu v_{\text{rel}}^2
 \]
 <p>
-This is the kinetic energy relative to the COM — exactly the fraction that can be converted to non-mechanical forms.
+where
+\[
+M=m_1+m_2 \qquad \mu=\frac{m_1m_2}{m_1+m_2}
+\]
 </p>
 <p>
-In general (with coefficient of restitution \(e\)):
+During a collision, the velocity of the centre of mass remains unchanged because the total momentum of the system is conserved. Therefore, the centre-of-mass kinetic energy also remains unchanged.
+</p>
+<p>
+Consequently, the change in the total kinetic energy of the system arises entirely due to the change in the <strong>relative velocity</strong>.
+</p>
+<p>
+For a one-dimensional collision, the relative velocity is directly related to the coefficient of restitution:
+</p>
+<ul class="model-box">
+<li>Before collision,
+\[
+v_{\text{rel}}=v_{\text{app}}
+\]
+</li>
+<li>After collision,
+\[
+v_{\text{rel}}=v_{\text{sep}} = ev_{\text{app}}
+\]
+</li>
+</ul>
+<p>
+Substituting these into the kinetic energy expression, we obtain
 </p>
 \[
-\Delta K = \frac{1}{2} \cdot \frac{m_1 m_2}{m_1 + m_2} \cdot (1 - e^2)(u_1 - u_2)^2
+\Delta K = \frac12\mu(1-e^2)v_{\text{app}}^2
 \]
+<div class="insightbox">
+A one-dimensional collision is completely characterised by six independent quantities:
+\[
+\frac{m_1}{m_2},\;
+u_1,\;
+u_2,\;
+e,\;
+v_1,\;
+v_2.
+\]
+The governing model consists of two independent equations:
+<ul>
+<li>Conservation of linear momentum.</li>
+<li>Coefficient of restitution.</li>
+</ul>
+Hence, specifying any four independent quantities uniquely determines the remaining two.<br>
+The energy-loss relation
+\[
+\Delta K=\frac12\mu(1-e^2)v_{\text{app}}^2
+\]
+is <strong>not an additional governing equation</strong>. It simply provides an alternative way of determining the coefficient of restitution. Thus, a problem may specify \(\Delta K\) instead of \(e\), after which the collision is solved using momentum conservation and the restitution relation.
+</div>
 </section>
 <section>
 <h2>Oblique (2D) Collisions</h2>
