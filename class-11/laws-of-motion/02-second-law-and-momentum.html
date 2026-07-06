@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Momentum & Second Law | Laws of Motion</title>
+<title>Second Law | Laws of Motion</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,100 +14,256 @@
 <span>&larr;</span> Back to Laws of Motion
 </a>
 </nav>
-<h1>Momentum and Newton's Second Law</h1>
+<h1>Newton's Second Law of Motion</h1>
 <p class="subtitle">
 Quantitative relationship between force and motion.
 </p>
 <section>
-<h2>Linear Momentum</h2>
+<h2>Why Do We Need More Laws?</h2>
 <p>
-The linear momentum (\(\vec{p}\)) of a point mass is defined as the product of its mass (\(m\)) and its velocity (\(\vec{v}\)).
+Newton's First Law introduces the concepts of <strong>force</strong>, <strong>inertia</strong>, and <strong>inertial frames of reference</strong>.
 </p>
-<div class="formula-block">
+<p>
+If we already know that force changes the state of motion of a body, a natural question arises: <strong>Why do we need a Second Law and a Third Law?</strong>
+</p>
+<p>
+The reason is that each law addresses a different aspect of motion. Together, the three laws provide a complete description of mechanics.
+</p>
+<p>
+The <strong>First Law</strong> provides a qualitative description.
+</p>
+<p>
+It tells us <em>when</em> motion changes and introduces the concepts needed to study dynamics, but it does not tell us <em>how much</em> the motion changes for a given force.
+</p>
+<p>
+The <strong>Second Law</strong> answers this quantitative question.
+</p>
+<p>
+It establishes the mathematical relationship between the <strong>net external force</strong> acting on a body and a new physical quantity called <strong>momentum</strong>.
+</p>
+</section>
+<section>
+<h2>Momentum</h2>
+<p>
+The <strong>momentum</strong> (\(\vec{p}\)) of a point mass is defined as the product of its mass (\(m\)) and its velocity (\(\vec{v}\)).
+</p>
+<div class="math-block">
 \[
-\vec{p} = m\vec{v}
+\vec{p}=m\vec{v}
 \]
 </div>
 <p>
-Momentum is a vector quantity and its direction is the same as the direction of velocity. The SI unit of momentum is \(kg \cdot m/s\).
+Momentum is a vector quantity. Its direction is the same as that of the velocity vector. The SI unit of momentum is \(kg\cdot m/s\).
 </p>
 <p>
-Momentum is what separates kinematics from dynamics. Kinematics merely describes motion; it can describe the motion of any identifiable pattern in space. For example, the motion of a shadow across a wall can be described in terms of position, velocity, and acceleration.
+Momentum is the quantity that separates <strong>kinematics</strong> from <strong>dynamics</strong>.
 </p>
 <p>
-However, a shadow does not possess momentum. It is not a physical carrier of momentum; it is only the absence of light produced by an obstruction. Thus the motion of a shadow, though describable kinematically, is not subject to the principles of dynamics.
+Kinematics merely describes motion. It can describe the motion of any identifiable pattern in space, whether or not that pattern corresponds to a physical object.
 </p>
 <p>
-Dynamics applies only to entities that possess momentum. Momentum is therefore the quantity through which motion becomes subject to the laws of dynamics. Matter and physical fields possess momentum, and their motion can be governed by dynamical laws.
+For example, the motion of a shadow across a wall can be described in terms of position, velocity and acceleration.
+</p>
+<p>
+However, <strong>a shadow does not possess momentum.</strong> It is not a physical carrier of momentum; it is simply the absence of light caused by an obstruction. Although its motion can be described kinematically, it is not governed by the laws of dynamics.
+</p>
+<p>
+<strong>Dynamics applies only to entities that possess momentum.</strong> In this sense, momentum is the physical quantity through which motion becomes subject to the laws of dynamics.
+</p>
+<p>
+Matter possesses momentum, and so do physical fields. Consequently, the motion and evolution of such physical entities can be described using dynamical laws.
+</p>
+<h3>Momentum Interpretation</h3>
+<p>
+In dynamics, momentum is interpreted as the <strong>amount of motion</strong> possessed by a body.
+</p>
+<p>
+Thus, momentum is a physical quantity possessed by a body that represents how much motion it carries. Both the mass and the velocity of the body contribute to its momentum.
+</p>
+<p>
+For example, consider a bicycle of mass \(5\,kg\) and a truck of mass \(1000\,kg\), both moving with the same velocity of \(50\,m/s\). Although their speeds are identical, the truck possesses much greater momentum because of its much larger mass.
+</p>
+<p>
+This difference is evident in everyday experience. A collision with the truck is far more severe than a collision with the bicycle, reflecting the truck's much greater momentum.
 </p>
 </section>
 <section>
 <h2>Newton's Second Law</h2>
 <p>
-Newton's second law states that the net force acting on a body is equal to the rate of change of its momentum.
+Newton's Second Law states that the <strong>net external force</strong> acting on a body is equal to the time rate of change of its momentum.
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
-\vec{F} = \frac{d\vec{p}}{dt}
+\vec{F}=\frac{d\vec{p}}{dt}
 \]
 </div>
 <p>
-The direction of the force is the same as the direction of the change in momentum.
+At present, momentum has been defined only for a <strong>point particle</strong>. Therefore, we shall apply Newton's Second Law only to point particles. Later, we shall extend the same idea to systems consisting of many particles.
 </p>
+<p>
+Since force is a vector quantity, \(\vec{F}\) represents the <strong>net external force</strong> acting on the particle:
+</p>
+<div class="math-block">
+\[
+\vec{F}=\vec{F}_{\text{net}}
+\]
+</div>
+<p>
+Thus, the direction of the net force is the same as the direction of the rate of change of momentum.
+</p>
+<p>
+We have already studied the motion of bodies under gravity in kinematics. Let us now examine the same motion from the viewpoint of Newton's Second Law.
+</p>
+<div class="examplebox">
+<h3>Illustration</h3>
+<p>
+A ball of mass \(m\) is projected vertically upward with speed \(u\). It returns to the point of projection with the same speed. Determine the change in momentum of the ball during the complete journey and hence calculate the force exerted by gravity.
+</p>
+<h3>Solution</h3>
+<p>
+Taking the upward direction as positive,
+</p>
+<p>
+Initial momentum:
+</p>
+\[
+\vec{p}_i=mu
+\]
+<p>
+Final momentum:
+</p>
+\[
+\vec{p}_f=-mu
+\]
+<p>
+The time of flight is
+</p>
+\[
+T=\frac{2u}{g}
+\]
+<p>
+Therefore, the change in momentum is
+</p>
+\[
+\Delta\vec{p}
+=
+\vec{p}_f-\vec{p}_i
+=
+(-mu)-(+mu)
+=
+-2mu
+\]
+<p>
+During the flight, the only force acting on the ball (neglecting air resistance) is gravity. Hence,
+</p>
+\[
+\vec{F}_g
+=
+\frac{\Delta\vec{p}}{\Delta t}
+=
+\frac{-2mu}{2u/g}
+=
+-mg
+\]
+<p>
+The negative sign indicates that both the change in momentum and the gravitational force are directed downward.
+</p>
+<p>
+Since gravity is constant throughout the motion, the average force over the entire time of flight is equal to the instantaneous gravitational force.
+</p>
+</div>
 </section>
 <section>
 <h2>Force and Acceleration</h2>
 <p>
-For a body of constant mass:
+For a point particle, the mass remains constant with time. Substituting the expression for momentum into Newton's Second Law,
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
-\vec{F} = \frac{d(m\vec{v})}{dt}
+\vec{F}
+=
+\frac{d\vec{p}}{dt}
+=
+\frac{d(m\vec{v})}{dt}.
 \]
 </div>
 <p>
-Since mass is constant,
+Since the mass is constant,
 </p>
-<div class="formula-block">
+<div class="math-block">
 \[
-\vec{F} = m\frac{d\vec{v}}{dt} = m\vec{a}
+\vec{F}
+=
+m\frac{d\vec{v}}{dt}
+=
+m\vec{a}
 \]
 </div>
 <div class="insightbox">
-The equation \( \vec{F} = m\vec{a} \) is a special case of Newton's second law that applies when the mass of the system remains constant. If the mass of the system changes (for example, in a rocket), the full momentum equation must be used.
+The familiar equation \(\vec{F}=m\vec{a}\) is a <strong>special case</strong> of Newton's Second Law. It is valid whenever the mass of the system remains constant.<br>
+If the mass of the system changes with time (for example, in a rocket), the general momentum equation \(\vec{F}=d\vec{p}/dt\) must be used.<br>
+Since the mass of a point particle does not change with time, \(\vec{F}=m\vec{a}\) always applies to point particles.
 </div>
-</section>
-<section>
-<h2>Impulse</h2>
-<p>
-Impulse measures the effect of a force acting over a short time interval. It is equal to the change in momentum produced by the force.
-</p>
-<div class="formula-block">
-\[
-\vec{J} = \int \vec{F} \, dt = \Delta \vec{p}
-\]
-</div>
-<p>
-Thus, a large force acting for a short time can produce the same change in momentum as a smaller force acting for a longer time.
-</p>
 </section>
 <section>
 <h2>Significance of Newton's Second Law</h2>
 <p>
-Newton's second law establishes a precise relation between force and the change of momentum of a body. Force is therefore the physical cause responsible for changing the state of motion.
+Newton's Second Law establishes a quantitative relationship between the <strong>net external force</strong> acting on a body and the <strong>rate of change of its momentum</strong>.
 </p>
 <p>
-An important consequence is that force does not produce velocity itself; it produces a change in momentum. If the net external force on a body is zero, its momentum remains constant and its motion does not change.
+Thus, force is the physical cause responsible for changing the state of motion of a body.
 </p>
 <p>
-Force and acceleration are simultaneous. There is no time delay between cause and effect: as long as a net force acts on a body, its momentum changes and the body accelerates. When the force vanishes, the acceleration immediately vanishes.
+Physically, a body may be regarded as carrying (or possessing) momentum, while force is an external influence exerted (or acted) on the body that changes this momentum. In other words, force does not create motion; it modifies the body's existing momentum.
 </p>
 <p>
-This has a direct implication in situations where an object is said to be <strong>dropped</strong>. When an object X is dropped from another body Y, it is merely released; no force is applied to X at that instant. Therefore X retains the velocity that it had while moving with Y, but it does not retain Y's acceleration.
+Consequently, if the net external force acting on a body is zero, its momentum remains constant and its state of motion does not change.
 </p>
 <p>
-After the release, the motion of X is determined only by the forces acting on it (such as gravity), not by the previous acceleration of Y.
+Force and the resulting acceleration are simultaneous. There is no time delay between cause and effect. As long as a net external force acts, the body's momentum changes continuously. The moment the force vanishes, the rate of change of momentum also vanishes.
 </p>
+<p>
+This has an important implication in situations where an object is said to be <strong>dropped</strong> or <strong>detached</strong> from another body. At the instant of release, no additional force is applied to the object. Therefore, it retains the momentum (and hence the velocity) it possessed just before the release, but it does not retain the acceleration of the body from which it was released.
+</p>
+<p>
+After the release, the subsequent motion of the object is determined solely by the forces acting on it, such as gravity, and not by the previous acceleration of the body from which it separated.
+</p>
+</section>
+<section>
+<h2>Impulse</h2>
+<p>
+Force is an <strong>instantaneous</strong> physical quantity. At every instant of time, it specifies the instantaneous rate at which the momentum of a body changes.
+</p>
+<p>
+In many situations, however, we are interested in the <strong>total change in momentum</strong> produced over a finite time interval rather than the instantaneous rate of change. This motivates the definition of another physical quantity called <strong>impulse</strong>.
+</p>
+<p>
+Impulse measures the cumulative effect of a force acting over a time interval. It is equal to the change in momentum produced by the force.
+</p>
+<div class="math-block">
+\[
+\vec{J}
+=
+\int \vec{F}\,dt
+=
+\Delta\vec{p}
+\]
+</div>
+<p>
+In many practical situations, the variation of force with time is not known, but the total change in momentum is known or can be measured. In such cases, we use the concept of <strong>average force</strong>, defined by
+</p>
+<div class="math-block">
+\[
+\vec{F}_{\text{avg}}
+=
+\frac{\Delta\vec{p}}{\Delta t}
+\]
+</div>
+<div class="insightbox">
+As Force is instantaneous, we can write \(\vec{F}\) as \(\vec{F}(t)\).<br>
+But impulse is accumulated and so we cannot define anything like instantaneous impulse or write \(\vec{J}\) as \(\vec{J}(t)\).<br>
+The difference is analogous to how velocity is instantaneous but displacement is accumulated.
+</div>
 </section>
 <footer>
 <hr>

@@ -21,59 +21,69 @@ Reference frames in which Newton's laws of motion hold true.
 <section>
 <h2>Need for a Reference Frame</h2>
 <p>
-In order to describe the motion of a body, we must measure its position and velocity relative to something else. This "something else" is called a <strong>reference frame</strong>.
+The position and motion of a body can only be described relative to something else. Therefore, before describing motion, we must first choose a <strong>reference frame</strong>.
 </p>
 <p>
-A reference frame may consist of a coordinate system together with a clock used to measure position and time. Observers situated in different frames of reference may describe the same motion differently because the measurements are made relative to different backgrounds.
+A reference frame provides a stationary background against which the position and velocity of a body are measured. In practice, it consists of a coordinate system together with a clock used to measure position and time.
 </p>
 <p>
-For example, consider a passenger sitting inside a train moving with constant velocity. To the passenger, the seat appears stationary. However, to an observer standing on the ground outside the train, the seat is moving along with the train.
+Since all measurements are made relative to the chosen reference frame, different observers may describe the same motion differently if they use different reference frames.
 </p>
 <p>
-Thus the description of motion always depends on the chosen reference frame.
+For example, consider a passenger sitting inside a train moving with constant velocity. To the passenger, the train and everything attached to it, such as the seats and the floor, appear to be at rest. However, to an observer standing on the ground, the entire train is moving with constant velocity.
+</p>
+<p>
+Thus, the description of motion is not absolute; it always depends on the chosen reference frame.
+</p>
+<p>
+This means that the state of motion itself is frame-dependent. Since dynamics seeks to explain motion by identifying its causes, we must understand how the choice of reference frame influences the observed motion. Only then can we correctly relate the observed effect (acceleration) to its physical cause (net external force).
 </p>
 </section>
 <section>
 <h2>Definition of an Inertial Frame</h2>
 <p>
-Newton's first law provides a natural way to identify a special class of reference frames known as <strong>inertial frames of reference</strong>.
+Since acceleration depends on the chosen reference frame, Newton's laws cannot be applied indiscriminately in every frame.
+</p>
+<p>
+We require a special class of reference frames in which the causal relationship between <strong>net external force</strong> and <strong>acceleration</strong> remains valid. Such frames are called <strong>inertial frames of reference</strong>.
 </p>
 <p>
 An <strong>inertial frame</strong> is a reference frame in which a body on which no net external force acts either remains at rest or continues to move with constant velocity in a straight line.
 </p>
-<p>
-In such frames the principle expressed by Newton's first law is valid.
-</p>
 <div class="math-block">
 \[
-\Sigma \vec{F} = 0
-\Rightarrow
-\vec{a} = 0
+\sum \vec{F}=0
+\quad\Rightarrow\quad
+\vec{a}=0
 \]
 </div>
 <p>
-Therefore, in an inertial frame, a body free from external forces does not accelerate.
+Thus, in an inertial frame, the absence of a net external force always implies the absence of acceleration. This is precisely the causal implication expressed by Newton's First Law.
 </p>
 <div class="insightbox">
-Newton's laws of motion are valid only in inertial frames of reference.
+Newton's laws of motion are formulated for inertial frames of reference.<br>
+If a non-inertial frame is chosen, additional pseudo forces must be introduced before the laws can be applied.
 </div>
 </section>
 <section>
 <h2>Can an Absolutely Inertial Frame be Identified?</h2>
 <p>
-An inertial frame is defined as a frame in which a body free from external forces moves with constant velocity.
+An inertial frame is defined as a reference frame in which a body free from net external forces remains at rest or moves with constant velocity.
 </p>
 <p>
-However, an absolutely inertial frame cannot be determined. Acceleration cannot be defined in an absolute sense because it is always measured relative to a chosen reference frame.
+However, the inertiality of a reference frame cannot be determined in an absolute sense. Unlike properties such as mass or charge, inertiality is <strong>not an inherent property</strong> of a reference frame. It is a <strong>relational property</strong>.
 </p>
 <p>
-If a frame is changed to another frame that accelerates relative to it, the acceleration of every body changes accordingly. Thus acceleration is not an invariant quantity; its value depends on the reference frame used to measure it.
+This is because acceleration itself is measured only relative to a chosen reference frame. If we change to another frame that accelerates with respect to the original one, the measured acceleration of every body changes accordingly.
 </p>
 <p>
-Since inertiality is defined through the condition of zero acceleration for a force-free body, and acceleration itself depends on the chosen frame, no frame can be identified as absolutely inertial.
+Since inertiality is defined through the absence of acceleration for a force-free body, and acceleration itself is frame-dependent, no reference frame can be declared inertial in isolation.
 </p>
 <p>
-Therefore, a frame is to be chosen and assumed to be inertial for operational purposes. For problems studied on Earth, the frame of reference attached to the ground is taken as inertial frame of reference.
+A frame is regarded as inertial or non-inertial only with respect to another inertial frame.
+</p>
+<p>
+Therefore, in practice, we choose a convenient reference frame and assume it to be inertial for the phenomena under study. For most problems in elementary mechanics, the frame attached to the Earth's surface is taken to be an inertial frame to a very good approximation.
 </p>
 </section>
 <section>
@@ -103,7 +113,7 @@ A reference frame that is rotating with respect to an inertial frame is also a <
 In such frames Newton's first law does not hold in its usual form.
 </p>
 <p>
-For example, consider a passenger standing inside a bus that suddenly accelerates forward. The passenger feels a backward jerk. From the perspective of the bus, it appears as if a force is pushing the passenger backward.
+For example, consider a passenger standing inside a bus that suddenly accelerates forward. The passenger feels a backward jerk. From the perspective of the bus, it appears as if a non-existing ghost force is pushing the passenger backward.
 </p>
 <p>
 However, an observer standing on the ground sees the situation differently. The passenger tends to remain in his original state of motion due to inertia while the bus accelerates forward.
@@ -115,16 +125,20 @@ Thus the apparent backward force arises because the bus is an accelerating (non-
 <section>
 <h2>Importance in Mechanics</h2>
 <p>
-The concept of inertial frames is fundamental in classical mechanics because Newton's laws are formulated specifically for such frames.
+The primary objective of dynamics is to relate the <strong>cause</strong> (net external force) to the <strong>effect</strong> (acceleration). However, acceleration depends on the chosen reference frame. Therefore, Newton's laws cannot be applied indiscriminately in every frame.
 </p>
 <p>
-When analysing mechanical problems, we generally choose a frame that can be treated as inertial. This allows us to apply Newton's laws directly to determine forces and motion.
+The concept of an <strong>inertial frame</strong> provides the necessary <strong>guardrails</strong> within which this cause-and-effect relationship remains valid.
 </p>
 <p>
-If the chosen frame is non-inertial, additional correction terms called <strong>pseudo forces</strong> must be used to correctly describe the motion.
+Once an inertial frame has been chosen, Newton's laws can be applied directly to determine forces and predict motion.
+</p>
+<p>
+If a non-inertial frame is chosen instead, the observed acceleration is influenced by the motion of the frame itself. To preserve the validity of Newton's laws, additional correction terms called <strong>pseudo forces</strong> must be introduced.
 </p>
 <div class="insightbox">
-Choosing an inertial frame greatly simplifies the analysis of mechanical systems because Newton's laws can be applied directly.
+Inertial frames are the guardrails of Newtonian mechanics.<br>
+They ensure that the observed effect (acceleration) can be correctly attributed to its physical cause (net external force).
 </div>
 </section>
 <footer>
