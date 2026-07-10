@@ -1,302 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotational Mechanics | JEE Physics Notes</title>
-    <script src="./assets/js/math.js"></script>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #2980b9;
-            --accent: #3498db;
-            --bg: #f4f7fa;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            background: var(--bg);
-            color: #333;
-            margin: 0;
-            padding: 30px;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: auto;
-            background: #fff;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        h1,
-        h2 {
-            color: var(--primary);
-        }
-
-        h1 {
-            border-bottom: 3px solid var(--secondary);
-            padding-bottom: 12px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-            opacity: 0.7;
-            margin-bottom: 35px;
-            font-size: 0.95rem;
-        }
-
-        h2 {
-            margin-top: 40px;
-            margin-bottom: 15px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        section:not(:last-of-type)::after {
-            content: "";
-            display: block;
-            height: 1px;
-            margin-top: 40px;
-            background: linear-gradient(to right, transparent, #ddd, transparent);
-        }
-
-        .top-nav {
-            margin-bottom: 35px;
-        }
-
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            background: #eef5fb;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--primary);
-            transition: all 0.25s ease;
-        }
-
-        .back-btn:hover {
-            background: #dcecf9;
-            transform: translateX(-3px);
-        }
-
-        ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-
-        .chapter-list {
-            margin-top: 25px;
-        }
-
-        .chapter-list a {
-            display: block;
-            padding: 18px 20px;
-            margin-bottom: 15px;
-            background: #f5fafd;
-            border-left: 5px solid var(--secondary);
-            border-radius: 10px;
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: 500;
-            transition: all 0.25s ease;
-            position: relative;
-        }
-
-        .chapter-list a::after {
-            content: "→";
-            position: absolute;
-            right: 20px;
-            opacity: 0.4;
-            transition: all 0.25s ease;
-        }
-
-        .chapter-list a:hover {
-            background: #eef5fb;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-        }
-
-        .chapter-list a:hover::after {
-            opacity: 1;
-            right: 15px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 60px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-
-        hr {
-            margin: 40px 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #ccc, transparent);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotational Mechanics | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
-        <h1>Rotational Mechanics</h1>
-        <p class="subtitle">
-            The complete dynamics of rigid bodies — torque, moment of inertia, angular momentum, and rolling.
-        </p>
-
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                Rotational mechanics extends Newton's laws from point particles to rigid bodies — objects with a
-                definite shape that can both translate and rotate. While translational motion is described by force,
-                mass, and linear velocity, rotational motion introduces their angular counterparts: torque, moment of
-                inertia, and angular velocity.
-            </p>
-            <p>
-                The chapter builds a complete parallel structure: just as \(\vec{F} = m\vec{a}\) governs translation,
-                \(\vec{\tau} = I\vec{\alpha}\) governs rotation. Just as linear momentum \(\vec{p} = m\vec{v}\) is
-                conserved when no external force acts, angular momentum \(\vec{L} = I\vec{\omega}\) is conserved when no
-                external torque acts.
-            </p>
-        </section>
-
-        <section>
-            <h2>The Translation–Rotation Analogy</h2>
-            <p>
-                Every concept in translational mechanics has a rotational analogue. This structural parallel is the key
-                organising principle of the chapter:
-            </p>
-            <ul>
-                <li>Displacement \(s\) ↔ Angular displacement \(\theta\)</li>
-                <li>Velocity \(v\) ↔ Angular velocity \(\omega\)</li>
-                <li>Acceleration \(a\) ↔ Angular acceleration \(\alpha\)</li>
-                <li>Mass \(m\) ↔ Moment of inertia \(I\)</li>
-                <li>Force \(\vec{F}\) ↔ Torque \(\vec{\tau}\)</li>
-                <li>Momentum \(\vec{p} = m\vec{v}\) ↔ Angular momentum \(\vec{L} = I\vec{\omega}\)</li>
-                <li>Kinetic energy \(\frac{1}{2}mv^2\) ↔ Rotational KE \(\frac{1}{2}I\omega^2\)</li>
-                <li>Work \(W = Fs\) ↔ Rotational work \(W = \tau\theta\)</li>
-            </ul>
-            <p>
-                The analogy is not superficial — it arises because the underlying mathematics (Newton's second law
-                applied to each particle) generates both sets of equations.
-            </p>
-        </section>
-
-        <section>
-            <h2>Moment of Inertia: The Rotational Mass</h2>
-            <p>
-                Moment of inertia \(I\) plays the role of mass in rotational dynamics. It measures how resistant a body
-                is to angular acceleration, and depends not only on the total mass but on how that mass is distributed
-                relative to the axis of rotation:
-            </p>
-            \[
-            I = \sum m_i r_i^2 \qquad \text{(discrete)} \qquad I = \int r^2\,dm \qquad \text{(continuous)}
-            \]
-            <p>
-                Two key theorems — the parallel axis theorem and the perpendicular axis theorem — allow the moment of
-                inertia about any axis to be calculated from a known result about a simpler axis.
-            </p>
-        </section>
-
-        <section>
-            <h2>Torque and the Law of Rotation</h2>
-            <p>
-                Torque is the rotational analogue of force. It measures the tendency of a force to cause rotation about
-                an axis:
-            </p>
-            \[
-            \vec{\tau} = \vec{r} \times \vec{F}
-            \]
-            <p>
-                Newton's second law for rotation about a fixed axis states:
-            </p>
-            \[
-            \tau_{\text{net}} = I\alpha
-            \]
-            <p>
-                This single equation governs all fixed-axis rotation problems — from simple pulleys to rolling bodies
-                and compound pendulums.
-            </p>
-        </section>
-
-        <section>
-            <h2>Angular Momentum and Its Conservation</h2>
-            <p>
-                Angular momentum is the rotational analogue of linear momentum:
-            </p>
-            \[
-            \vec{L} = \vec{r} \times \vec{p} \qquad \text{(particle)} \qquad L = I\omega \qquad \text{(rigid body, fixed
-            axis)}
-            \]
-            <p>
-                When no net external torque acts on a system, angular momentum is conserved. This principle explains the
-                spinning skater who speeds up by pulling in her arms, the stability of gyroscopes, and the orbital
-                mechanics of planets.
-            </p>
-        </section>
-
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>Rigid Body and Types of Motion</strong> — Definition; translation, rotation, combined
-                    motion.</li>
-                <li><strong>Angular Kinematics</strong> — \(\theta, \omega, \alpha\); equations of rotational
-                    kinematics.</li>
-                <li><strong>Moment of Inertia</strong> — Definition; standard results; parallel and perpendicular axis
-                    theorems; radius of gyration.</li>
-                <li><strong>Torque</strong> — Cross product definition; direction; couple; conditions for equilibrium.
-                </li>
-                <li><strong>Newton's Second Law for Rotation</strong> — \(\tau = I\alpha\); fixed-axis dynamics.</li>
-                <li><strong>Angular Momentum</strong> — Particle and rigid body; \(\vec{L} = \vec{r} \times \vec{p}\)
-                    and \(L = I\omega\).</li>
-                <li><strong>Conservation of Angular Momentum</strong> — When \(\tau_{\text{ext}} = 0\); classic
-                    applications.</li>
-                <li><strong>Rotational Energy and Work</strong> — \(\frac{1}{2}I\omega^2\); work–energy theorem for
-                    rotation.</li>
-                <li><strong>Rolling Motion</strong> — Pure rolling constraint \(v = \omega R\); combined translational
-                    and rotational KE.</li>
-                <li><strong>Rolling on Inclines and Friction</strong> — Acceleration, friction requirements, energy
-                    methods for rolling bodies.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-rigid-body.html">1. Rigid Body and Types of Motion</a>
-                <a href="./02-angular-kinematics.html">2. Angular Kinematics</a>
-                <a href="./03-moment-of-inertia.html">3. Moment of Inertia</a>
-                <a href="./04-torque.html">4. Torque</a>
-                <a href="./05-rotational-dynamics.html">5. Newton's Second Law for Rotation</a>
-                <a href="./06-angular-momentum.html">6. Angular Momentum</a>
-                <a href="./07-conservation-angular-momentum.html">7. Conservation of Angular Momentum</a>
-                <a href="./08-rotational-energy.html">8. Rotational Energy and Work</a>
-                <a href="./09-rolling-motion.html">9. Rolling Motion</a>
-                <a href="./10-rolling-incline.html">10. Rolling on Inclines and Friction</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Rotational Mechanics</h1>
+<p class="subtitle">
+Rigid body dynamics — torque, moment of inertia, angular momentum.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Rotational mechanics extends Newton's laws from point particles to <strong>rigid bodies.</strong>
+</p>
+<p>
+Rigid bodies are a special case of system of particles that are idealized such that their shape and size is fixed and finite and so, they can undergo both translation and rotation.
+</p>
+<p>
+NLM is dynamics of particle body and Rotation is dynamics of rigid body.
+</p>
+<p>
+Unlike a particle, which is completely described by its position \(\vec{r}\), a rigid body possesses both a position \(\vec{r}\) and an orientation \(\theta\). Together, these define the body's <strong>spatial state</strong>—the complete description of how the body occupies space, or equivalently, its spatial configuration at a given instant.
+</p>
+<p>
+Because a rigid body possesses an additional degree of freedom—its orientation—describing its motion requires new physical quantities.
+</p>
+<p>
+Along with the familiar translational quantities such as force, mass and linear velocity, we therefore introduce their rotational counterparts: angular displacement, angular velocity, angular acceleration, torque and moment of inertia.
+</p>
+</section>
+<section>
+<h2>Building the Rotational Framework</h2>
+<p>
+The physical quantities of rotational mechanics are defined so that the mathematical framework of translational mechanics can be reused to describe rotational motion. Consequently, many fundamental quantities in translation have natural rotational counterparts:
+</p>
+<ul>
+<li>Displacement \(s\) ↔ Angular displacement \(\theta\)</li>
+<li>Velocity \(v\) ↔ Angular velocity \(\omega\)</li>
+<li>Acceleration \(a\) ↔ Angular acceleration \(\alpha\)</li>
+<li>Mass \(m\) ↔ Moment of inertia \(I\)</li>
+<li>Force \(\vec{F}\) ↔ Torque \(\vec{\tau}\)</li>
+<li>Momentum \(\vec{p}=m\vec{v}\) ↔ Angular momentum \(\vec{L}=I\vec{\omega}\)</li>
+<li>Kinetic Energy \(\frac12mv^2\) ↔ Rotational Kinetic Energy \(\frac12I\omega^2\)</li>
+<li>Work \(W=Fs\) ↔ Rotational Work \(W=\tau\theta\)</li>
+</ul>
+<p>
+This parallel is not merely an analogy. A rigid body is ultimately a collection of particles obeying Newton's laws. The rotational quantities are therefore defined so that the equations governing rotational motion retain the same mathematical structure as those governing translational motion. For example,
+</p>
+\[
+\vec{F}=m\vec{a} \qquad \Longleftrightarrow \qquad \vec{\tau}=I\vec{\alpha}
+\]
+<p>
+This parallel structure allows many concepts, derivations and problem-solving techniques developed for particle dynamics to be carried over naturally to rigid-body dynamics.
+</p>
+</section>
+<section>
+<h2>Moment of Inertia: The Rotational Mass</h2>
+<p>
+Moment of inertia \(I\) plays the role of mass in rotational dynamics. It measures how resistant a body is to angular acceleration, and depends not only on the total mass but on how that mass is distributed relative to the axis of rotation:
+</p>
+\[
+I = \sum m_i r_i^2 \qquad \text{(discrete)} \qquad I = \int r^2\,dm \qquad \text{(continuous)}
+\]
+<p>
+Two key theorems — the parallel axis theorem and the perpendicular axis theorem — allow the moment of inertia about any axis to be calculated from a known result about a simpler axis.
+</p>
+</section>
+<section>
+<h2>Torque and the Law of Rotation</h2>
+<p>
+Torque is the rotational analogue of force. It measures the tendency of a force to cause rotation about an axis:
+</p>
+\[
+\vec{\tau} = \vec{r} \times \vec{F}
+\]
+<p>
+Newton's second law for rotation about a fixed axis states:
+</p>
+\[
+\tau_{\text{net}} = I\alpha
+\]
+<p>
+This single equation governs all fixed-axis rotation problems — from simple pulleys to rolling bodies and compound pendulums.
+</p>
+</section>
+<section>
+<h2>Angular Momentum and Its Conservation</h2>
+<p>
+Angular momentum is the rotational analogue of linear momentum:
+</p>
+\[
+\vec{L} = \vec{r} \times \vec{p} \qquad \text{(particle)} \qquad L = I\omega \qquad \text{(rigid body, fixed axis)}
+\]
+<p>
+When no net external torque acts on a system, angular momentum is conserved. This principle explains the spinning skater who speeds up by pulling in her arms, the stability of gyroscopes, and the orbital mechanics of planets.
+</p>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="model-box">
+<li><strong>Rigid Body and Types of Motion</strong> — Definition; translation, rotation, combined motion.</li>
+<li><strong>Angular Kinematics</strong> — \(\theta, \omega, \alpha\); equations of rotational kinematics.</li>
+<li><strong>Moment of Inertia</strong> — Definition; standard results; parallel and perpendicular axis theorems; radius of gyration.</li>
+<li><strong>Torque</strong> — Cross product definition; direction; couple; conditions for equilibrium.</li>
+<li><strong>Newton's Second Law for Rotation</strong> — \(\tau = I\alpha\); fixed-axis dynamics.</li>
+<li><strong>Angular Momentum</strong> — Particle and rigid body; \(\vec{L} = \vec{r} \times \vec{p}\) and \(L = I\omega\).</li>
+<li><strong>Conservation of Angular Momentum</strong> — When \(\tau_{\text{ext}} = 0\); classic applications.</li>
+<li><strong>Rotational Energy and Work</strong> — \(\frac{1}{2}I\omega^2\); work–energy theorem for rotation.</li>
+<li><strong>Rolling Motion</strong> — Pure rolling constraint \(v = \omega R\); combined translational and rotational KE.</li>
+<li><strong>Rolling on Inclines and Friction</strong> — Acceleration, friction requirements, energy methods for rolling bodies.</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-rigid-body.html">1. Rigid Body and Types of Motion</a>
+<a href="./02-angular-kinematics.html">2. Angular Kinematics</a>
+<a href="./03-moment-of-inertia.html">3. Moment of Inertia</a>
+<a href="./04-torque.html">4. Torque</a>
+<a href="./05-rotational-dynamics.html">5. Newton's Second Law for Rotation</a>
+<a href="./06-angular-momentum.html">6. Angular Momentum</a>
+<a href="./07-conservation-angular-momentum.html">7. Conservation of Angular Momentum</a>
+<a href="./08-rotational-energy.html">8. Rotational Energy and Work</a>
+<a href="./09-rolling-motion.html">9. Rolling Motion</a>
+<a href="./10-rolling-incline.html">10. Rolling on Inclines and Friction</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

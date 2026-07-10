@@ -112,6 +112,86 @@ W_{\text{net}} = \frac12 mv_f^2-\frac12 mv_i^2 = \Delta K
 <p>
 This is the <strong>Work–Energy Theorem</strong>.
 </p>
+<h3>Direct Three-Dimensional Derivation</h3>
+<p>
+The one-dimensional derivation is sufficient for understanding the Work–Energy Theorem. However, the direct three-dimensional derivation reveals the mathematical idea that allows a vector equation of motion to be converted into a scalar energy equation, without resolving the motion into separate coordinate axes.
+</p>
+<p>
+We begin with Newton's Second Law:
+</p>
+\[
+\vec{F} = m\vec{a}
+\]
+<p>
+Taking the dot product of both sides with the velocity vector \(\vec v\),
+</p>
+\[
+\vec{F} \cdot \vec{v} = m \vec{a} \cdot \vec{v}
+\]
+<p>
+Using:
+</p>
+\[
+\vec{v} = \frac{d\vec{r}}{dt} \qquad \text{and} \qquad \vec{a} = \frac{d\vec{v}}{dt}
+\]
+<p>
+we get:
+</p>
+\[
+\vec{F} \cdot d\vec{r} = m \vec{v} \cdot d\vec{v}
+\]
+<p>
+Using:
+</p>
+\[
+\int_{\vec{v}_i}^{\vec{v}_f} \vec{v} \cdot d\vec{v} = \frac12 (v_f^2 - v_i^2)
+\]
+<p>
+we directly obtain the Work–Energy Theorem.
+</p>
+<div class="insightbox">
+The key idea behind the direct three-dimensional derivation is that the <strong>dot product converts a vector equation into a scalar equation.</strong><br>
+The quantity
+\[
+\vec v\cdot d\vec v
+\]
+is not merely a dot product. It is the differential of the scalar
+\[
+v^2=\vec v\cdot\vec v
+\]
+Using the product rule,
+\[
+d(v^2) = d(\vec v\cdot\vec v) = \vec v\cdot d\vec v + d\vec v\cdot\vec v = 2\,\vec v\cdot d\vec v
+\]
+Thus,
+\[
+\vec v\cdot d\vec v = \frac12\,d(v^2)
+\]
+which allows the Work–Energy Theorem to be derived directly in three dimensions without resolving the motion into separate coordinate axes.
+</div>
+<div class="insightbox">
+Be careful when interpreting graphs involving products such as \(av\).<br>
+In one-dimensional motion,
+\[
+av=a_xv_x
+\]
+However, if the question simply refers to the acceleration and velocity of a particle without restricting the motion to one dimension, then
+\[
+av
+\]
+may represent
+\[
+\vec a\cdot\vec v
+\]
+since
+\[
+\frac{dK}{dt}=m\vec a\cdot\vec v
+\]
+Always read the wording of the question carefully before interpreting the graph.<br>
+This is because, Graphs of vectors against time labelled like \(x\)–\(t\), \(y\)–\(t\), \(v\)–\(t\), \(a\)–\(t\), etc. always represent <strong>individual scalar components</strong>.<br>
+If a graph is simply labelled \(v\)–\(t\), it is usually understood to represent the one-dimensional velocity (a signed scalar) unless the question explicitly states that \(v\) denotes the magnitude of velocity.<br>
+But multiplication could be dot product and so it becomes scalar.
+</div>
 </section>
 <section>
 <h2>Key Points of Application</h2>
