@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rotational Mechanics | Moment of Inertia</title>
+<title>Moment of Inertia | Rotational Mechanics</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -23,10 +23,14 @@ The rotational analogue of mass — measuring a body's resistance to angular acc
 <p>
 The moment of inertia of a system about a given axis is the sum of the products of each particle's mass and the square of its perpendicular distance from the axis:
 </p>
-\[I = \sum m_i r_i^2 \qquad \text{(discrete)}\]
-\[I = \int r^2\,dm \qquad \text{(continuous)}\]
+\[
+I = \sum m_i r_i^2 \qquad \text{(discrete)}
+\]
+\[
+I = \int r^2\,dm \qquad \text{(continuous)}
+\]
 <p>
-SI unit: kg·m². Moment of inertia depends on:
+SI unit: \(kg \cdot m^2\). Moment of inertia depends on:
 </p>
 <ul>
 <li>Total mass of the body</li>
@@ -34,7 +38,8 @@ SI unit: kg·m². Moment of inertia depends on:
 <li>Choice of axis</li>
 </ul>
 <div class="insightbox">
-Mass resists changes in linear velocity; moment of inertia resists changes in angular velocity. A body with the same mass can have very different moments of inertia depending on how its mass is distributed.
+Mass resists changes in linear velocity; moment of inertia resists changes in angular velocity.<br>
+A body with the same mass can have very different moments of inertia depending on how its mass is distributed.
 </div>
 </section>
 <section>
@@ -65,32 +70,138 @@ These results must be memorised. Every rolling and rotation problem starts by id
 </div>
 </section>
 <section>
-<h2>Parallel Axis Theorem</h2>
+<h2>Point Mass about Coordinate Axes</h2>
 <p>
-If the moment of inertia about an axis through the centre of mass is \(I_{\text{CM}}\), then the moment of inertia about any parallel axis a distance \(d\) away is:
+Consider a point mass \(m\) located at the point \((x,y,z)\). Determine its moment of inertia about the coordinate axes.
 </p>
-\[I = I_{\text{CM}} + Md^2\]
 <p>
-The parallel axis theorem always <em>increases</em> the moment of inertia — the CM axis gives the minimum value among all parallel axes.
+The moment of inertia of a point mass about an axis is given by
+\[
+I=mr_\perp^2,
+\]
+where \(r_\perp\) is the perpendicular distance of the point from the axis.
+</p>
+<p>
+The Cartesian coordinates themselves provide these perpendicular distances. For example, let \(P(x,y,z)\) be projected perpendicularly onto the \(x\)-axis. By the definition of Cartesian coordinates, the foot of the perpendicular is \(A(x,0,0)\). Therefore,
+\[
+PA=\sqrt{y^2+z^2},
+\]
+giving
+\[
+I_x=m(y^2+z^2).
+\]
+Similarly,
+\[
+I_y=m(x^2+z^2),
+\]
+and
+\[
+I_z=m(x^2+y^2).
+\]
+</p>
+<p>
+This result serves as a mathematical tool for proving both the Parallel Axis Theorem and the Perpendicular Axis Theorem. Although a general formula exists for the perpendicular distance of a point from a line in three-dimensional geometry, it is considerably more complicated and lies outside the JEE syllabus. By choosing the axes of rotation as coordinate axes, the required perpendicular distances follow directly from the Cartesian coordinates of each mass element.
 </p>
 </section>
 <section>
 <h2>Perpendicular Axis Theorem</h2>
 <p>
-For a <strong>planar (2D) body</strong> lying in the \(xy\)-plane, the moment of inertia about the \(z\)-axis (perpendicular to the plane) equals the sum of the moments about the \(x\)- and \(y\)-axes:
+For a <strong>planar (2D) body</strong> lying in the \(xy\)-plane, the moment of inertia about the \(z\)-axis (perpendicular to the plane) equals the sum of the moments of inertia about the mutually perpendicular \(x\)- and \(y\)-axes:
 </p>
-\[I_z = I_x + I_y\]
+\[
+I_z=I_x+I_y
+\]
 <p>
-This theorem applies <strong>only</strong> to flat laminae — not to three-dimensional bodies like spheres or cylinders. x-axis, y-axis and z-axis are mutually perpendicular.
-</p>
-<p>
-The x-axis and y-axis should lie in the plane of the 2D body and z-axis should be perpendicular to the plane of the body. This is because \(dI_x = dm y^2\) and \(dI_y = dm x^2\) and \(dI_z = dm (x^2 + y^2)\).
-</p>
-<p>
-The z-axis is taken from the point of intersection of x-axis and y-axis. It is not necessary for this point to be within the boundary of the body.
+The theorem applies <strong>only</strong> to planar bodies (laminae). The \(x\)- and \(y\)-axes must lie in the plane of the body, while the \(z\)-axis must be perpendicular to the plane. These three axes intersect at a common point, which need not lie inside the body or coincide with its centre of mass.
 </p>
 <p>
-Example: For a uniform ring, \(I_x = I_y\) by symmetry, and \(I_z = MR^2\). Therefore \(I_x = I_y = \frac{1}{2}MR^2\) — the moment about any diameter.
+Using the results obtained for a point mass about the coordinate axes, every mass element \(dm\) of the lamina has \(z=0\). Hence,
+\[
+dI_x=dmy^2,
+\]
+\[
+dI_y=dmx^2,
+\]
+and
+\[
+dI_z=dm(x^2+y^2).
+\]
+Therefore,
+\[
+dI_z=dI_x+dI_y.
+\]
+Integrating over the entire body gives
+\[
+I_z=I_x+I_y.
+\]
+</p>
+<p>
+Example: For a uniform ring,
+\[
+I_x=I_y
+\]
+by symmetry, and
+\[
+I_z=MR^2.
+\]
+Hence,
+\[
+I_x=I_y=\frac12MR^2,
+\]
+which is the moment of inertia about any diameter of the ring.
+</p>
+</section>
+<section>
+<h2>Parallel Axis Theorem</h2>
+<p>
+If the moment of inertia of a rigid body about an axis passing through its centre of mass is \(I_{\rm CM}\), then the moment of inertia about any parallel axis at a perpendicular distance \(d\) is
+</p>
+\[
+I=I_{\rm CM}+Md^2
+\]
+<p>
+The theorem always increases the moment of inertia. Consequently, among all mutually parallel axes, the axis passing through the centre of mass has the minimum moment of inertia.
+</p>
+<p>
+The theorem can be proved elegantly by choosing the coordinate axes appropriately. Consider an arbitrary rigid body. Let its centre of mass be at the origin \((0,0,0)\). Choose the \(y\)-axis to coincide with the axis passing through the centre of mass so that
+\[
+I_{\rm CM}=I_y.
+\]
+Let the required parallel axis \(I_g\) also be parallel to the \(y\)-axis and pass through the point \((d,0,0)\). Thus, the \(x\)-axis lies along the common perpendicular between the two axes.
+</p>
+<p>
+Now consider an arbitrary mass element \(dm\) located at \((x,y,z)\). Using the result for a point mass about a coordinate axis,
+\[
+dI_{\rm CM}=dm(x^2+z^2)
+\]
+whereas its moment of inertia about the parallel axis is
+\[
+dI_g=dm\left[(x-d)^2+z^2\right]
+\]
+Expanding,
+\[
+dI_g=dI_{\rm CM}-2d\,x\,dm+d^2\,dm
+\]
+Integrating over the entire body,
+\[
+I_g
+=
+I_{\rm CM}
+-2d\int x\,dm
++d^2\int dm
+\]
+Since the origin is the centre of mass,
+\[
+\int x\,dm=0
+\]
+and
+\[
+\int dm=M
+\]
+Hence,
+\[
+I_g=I_{\rm CM}+Md^2
+\]
 </p>
 </section>
 <section>
@@ -103,6 +214,149 @@ For a body made of multiple parts, the total moment of inertia is the sum of the
 For a body with a cavity, subtract the moment of the removed part:
 </p>
 \[I_{\text{with cavity}} = I_{\text{full}} - I_{\text{removed}}\]
+</section>
+<section>
+<h2>Slanting Axis of a Rod</h2>
+<p>
+The rod is the simplest one-dimensional rigid body and is therefore an excellent model for understanding the geometry of moment of inertia. Many common misconceptions become apparent when studying a rod about a slanting axis.
+</p>
+<p>
+If a uniform rod of length \(L\) makes an angle \(\theta\) with an axis of rotation passing through one of its ends, then its moment of inertia about the axis is
+</p>
+\[
+I=\frac13ML^2\sin^2\theta.
+\]
+<p>
+A common misconception is that the rod's length is being resolved into components \(L\sin\theta\) and \(L\cos\theta\), similar to vector resolution. This is incorrect. The factor \(\sin\theta\) appears because the <strong>perpendicular distance of each mass element from the axis</strong> changes with the inclination of the rod. The length of the rod itself is never resolved.
+</p>
+<p>
+Another common doubt arises during the derivation. Should the differential mass element \(dm\) be taken along the length of the rod or along the perpendicular distance from the axis? Since mass is distributed <strong>along the rod</strong>,
+</p>
+\[
+dm=\lambda\,dl,
+\]
+<p>
+where \(dl\) is an element of the rod's length. The perpendicular distance is used only while evaluating
+</p>
+\[
+dI=r_\perp^2\,dm.
+\]
+<p>
+Notice that \(dm\) is always associated with an element of the rod's length through
+\[
+dm=\lambda\,dl.
+\]
+If we instead choose a coordinate along the perpendicular radius, then the mass element is no longer distributed along that coordinate. The element \(dm\) lies at an angle to the chosen coordinate, so \(dm=\lambda\,dx\) is no longer valid.
+</p>
+<p>
+A third misconception occurs when the rod lies in the plane of the paper while the axis of rotation is perpendicular to the plane. Tilting the rod within the plane changes its orientation but does <strong>not</strong> change the angle between the rod and the axis, which remains \(90^\circ\). Consequently, the moment of inertia remains unchanged.
+</p>
+<p>
+A fourth misconception concerns the Parallel Axis Theorem. The perpendicular distance \(d\) between two parallel axes is always the shortest distance between them. For a slanting rod,
+</p>
+\[
+d=\frac{L}{2}\sin\theta,
+\]
+<p>
+not \(\frac{L}{2}\). Therefore,
+</p>
+\[
+I_{\rm CM}
+=
+I_{\rm end}
+-
+M\left(\frac{L\sin\theta}{2}\right)^2
+=
+\frac13ML^2\sin^2\theta
+-
+\frac14ML^2\sin^2\theta
+=
+\frac1{12}ML^2\sin^2\theta.
+\]
+</section>
+<section>
+<h2>Radius of Gyration for Discrete Systems</h2>
+<p>
+Since most standard moment of inertia formulae are for uniform continuous bodies, students often use the shortcut:
+</p>
+<ul>
+<li>Replace the total mass \(M\) by 1.</li>
+<li>Take the square root of the remaining expression.</li>
+</ul>
+<p>
+For example, for a uniform rod,
+\[
+I=\frac{ML^2}{12}
+\]
+Putting \(M=1\) gives
+\[
+k=\sqrt{\frac{L^2}{12}}=\frac{L}{\sqrt{12}}
+\]
+This shortcut works because the formula is already expressed in the form
+\[
+I=Mk^2
+\]
+</p>
+<p>
+However, this shortcut becomes a trap for discrete systems (and even for continuous bodies with non-uniform mass distributions). In such cases, the coefficient of the expression for \(I\) is not necessarily the <strong>total mass</strong>.
+</p>
+<p>
+Consider three point masses:
+</p>
+<ul>
+<li>\(m_1\) at \((0,0)\)</li>
+<li>\(m_2\) at \((2,0)\)</li>
+<li>\(m_3\) at \((-2,0)\)</li>
+</ul>
+<p>
+The moment of inertia about the \(z\)-axis is
+</p>
+\[
+I_z
+=
+m_1(0)^2
++
+m_2(2)^2
++
+m_3(2)^2
+=
+4(m_2+m_3)
+\]
+<p>
+If we incorrectly set
+\[
+m_2+m_3=1
+\]
+we obtain
+\[
+k=2
+\]
+which is generally incorrect because the radius of gyration is defined using the <strong>total mass</strong> of the system.
+</p>
+<p>
+The correct relation is
+</p>
+\[
+(m_1+m_2+m_3)k^2
+=
+4(m_2+m_3)
+\]
+<p>
+which gives
+</p>
+\[
+k
+=
+\sqrt{\frac{4(m_2+m_3)}
+{m_1+m_2+m_3}}
+\]
+<div class="insightbox">
+The shortcut "put \(M=1\) and take the square root" works only when the moment of inertia formula is already written in the form
+\[
+I=Mk^2
+\]
+Always identify the <strong>total mass of the system</strong> before calculating the radius of gyration.
+</div>
 </section>
 <footer>
 <hr>

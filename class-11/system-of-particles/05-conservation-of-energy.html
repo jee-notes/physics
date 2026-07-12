@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation of Momentum | System of Particles</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to System of Particles
+</a>
+</nav>
+<h1>Conservation of Energy</h1>
+<p class="subtitle">
+Energy Dynamics for system of particles.
+</p>
+<section>
+<h2>Energy Dynamics</h2>
+<p>
+Conservation of linear momentum and conservation of mechanical energy are the two principal tools for solving dynamics problems involving systems of particles.
+</p>
+<p>
+Although both are derived from Newton's laws and are therefore applicable only in inertial frames, they differ fundamentally in how forces are treated.
+</p>
+<ul class="model-box">
+<li><strong>Momentum conservation:</strong> Internal forces cancel because they occur in equal and opposite pairs. Consequently, only the net external impulse changes the total momentum of the system.</li>
+<li><strong>Energy conservation:</strong> No such cancellation occurs. Every force capable of doing work must be included because both internal and external forces can transfer energy between different forms.</li>
+</ul>
+</section>
+<section>
+<h2>Solved Example</h2>
+<p>
+The following example clearly illustrates the difference between the two approaches. While applying conservation of momentum, we deliberately exclude internal forces. In contrast, while applying the work-energy principle, we begin by identifying <strong>every force</strong> acting on the system. These forces are then classified as conservative or non-conservative to determine whether total mechanical energy is conserved.
+</p>
+<p>
+By definition, gravitational, electrostatic and spring forces are conservative. Unless explicitly stated otherwise, all other forces should be treated as non-conservative.
+</p>
+<p>
+Consider a block attached to a vertical spring fixed to the ceiling. The block is released from the unstretched position. Using conservation of mechanical energy, it can be shown that the block descends through a distance
+\[
+\frac{2mg}{k}
+\]
+Notice that this analysis never uses the concepts of internal and external forces. Instead, every force acting on the system is considered.
+</p>
+<p>
+Choose the system as <strong>spring + block</strong>. The forces acting are:
+</p>
+<ul class="model-box">
+<li>On the block: gravitational force and spring force.</li>
+<li>On the spring: spring force and the force exerted by the ceiling clamp.</li>
+</ul>
+<p>
+Since the spring is assumed massless, its weight is neglected and its kinetic energy remains zero. Applying the work-energy principle to the complete system gives
+</p>
+<p>
+Work (on block by gravity)
++ Work (on block by spring force)
++ Work (on spring by spring force)
++ Work (on spring by ceiling clamp)
+=
+\(\Delta\)KE (block)
++ \(\Delta\)KE (spring)
+</p>
+<p>
+Now simplify each term.
+</p>
+<ul class="model-box">
+<li>\(\Delta\)KE of the spring is zero because the spring is massless.</li>
+<li>Work done by the ceiling clamp is zero because its point of application undergoes no displacement.</li>
+<li>The work done by the two spring forces combines to give the change in elastic potential energy of the spring.</li>
+<li>The work done by gravity gives the change in the gravitational potential energy of the block.</li>
+</ul>
+<p>
+Hence,
+</p>
+\[
+\Delta U_{\text{gravity}} + \Delta U_{\text{spring}} = \Delta K_{\text{block}}
+\]
+<p>
+Thus, the total mechanical energy of the system is conserved because no non-conservative force performs work.
+</p>
+<div class="insightbox">
+Do not classify forces as internal or external while applying conservation of energy.<br>
+That classification belongs to momentum conservation.<br>
+For energy methods, begin by identifying <strong>every force</strong> acting on the system. Then classify each force as conservative or non-conservative, because every force capable of doing work contributes to the energy balance.
+</div>
+</section>
+<section>
+<h2>Work Done by Internal Forces</h2>
+<p>
+Unlike momentum conservation, internal forces generally <strong>cannot</strong> be ignored while applying the work-energy principle because they are capable of transferring energy between different forms within the system.
+</p>
+<p>
+However, three important internal forces require special attention:
+</p>
+<ul class="model-box">
+<li>Internal normal force.</li>
+<li>Internal tension.</li>
+<li>Internal static friction.</li>
+</ul>
+<p>
+For ideal constraints, the net work done by these internal forces on the system is zero. Consequently, they do not appear in the final energy equation.
+</p>
+<div class="insightbox">
+Do not memorise that "internal forces do no work." That statement is incorrect.<br>
+Only the <strong>net work</strong> done by internal normal forces, internal tensions and internal static friction is zero for ideal constraints.<br>
+Internal conservative forces such as spring, electrostatic and gravitational forces generally perform non-zero work and therefore contribute through potential energy.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
