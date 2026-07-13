@@ -1,101 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrostatics | Electric Field</title>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Field | Electrostatics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-    <nav class="top-nav">
-        <a href="./index.html" class="back-btn">
-            <span>&larr;</span> Back to Electrostatics
-        </a>
-    </nav>
-    
-    <h1>Electric Field</h1>
-    <p class="subtitle">
-        The modification of space that mediates electrostatic interactions.
-    </p>
-
-    <section>
-        <h2>What is an Electric Field?</h2>
-        <p>
-            Coulomb's Law describes a force acting across empty space between two charges. However, this "action-at-a-distance" concept is philosophically and physically incomplete. The modern perspective introduces the <strong>Electric Field</strong>.
-        </p>
-        <p>
-            An electric field is a fundamental property of space itself, created by the presence of a source charge. The source charge modifies the space around it, and when a second charge (a test charge) is placed in this space, it interacts directly with the local field, not instantaneously with the distant source charge.
-        </p>
-        <div class="insightbox">
-            The electric field is not merely a mathematical abstraction; it is a real, physical entity that can store energy and transmit momentum.
-        </div>
-    </section>
-
-    <section>
-        <h2>How do we define and calculate the field?</h2>
-        <p>
-            Mathematically, the electric field \(\vec{E}\) at a specific point in space is defined as the electrostatic force \(\vec{F}\) experienced by a vanishingly small positive test charge \(q_0\) placed at that point, divided by the magnitude of the test charge.
-        </p>
-        \[\vec{E} = \lim_{q_0 \to 0} \frac{\vec{F}}{q_0}\]
-        <p>
-            The SI unit for electric field is Newtons per Coulomb (\(\text{N/C}\)) or Volts per meter (\(\text{V/m}\)).
-        </p>
-        
-        
-
-        <h3>Field due to a Point Charge</h3>
-        <p>
-            Using Coulomb's Law, the force on a test charge \(q_0\) at position \(\vec{r}\) due to a source charge \(q\) at the origin is \(\vec{F} = \frac{1}{4\pi\varepsilon_0} \frac{q q_0}{r^2} \hat{r}\). Dividing by \(q_0\), we get the electric field of a point charge:
-        </p>
-        \[\vec{E} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^2} \hat{r} = \frac{1}{4\pi\varepsilon_0} \frac{q}{r^3} \vec{r}\]
-        <p>
-            Notice that the electric field depends <em>only</em> on the source charge \(q\) and the position coordinates. It is completely independent of the test charge \(q_0\).
-        </p>
-    </section>
-
-    <section>
-        <h2>Superposition and Continuous Charge Distributions</h2>
-        <p>
-            Because force obeys the superposition principle, the electric field also obeys it. The net electric field at a point due to a system of discrete point charges is the vector sum of the individual fields:
-        </p>
-        \[\vec{E}_{\text{net}} = \sum_{i=1}^{n} \vec{E}_i = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{n} \frac{q_i}{|\vec{r} - \vec{r}_i|^3} (\vec{r} - \vec{r}_i)\]
-
-        <p>
-            For extended macroscopic bodies (the "Coulomb World" integration approach), we cannot use discrete summation. We must treat the charge distribution as continuous, breaking the body into infinitesimal charge elements \(dq\). The total field is found by integrating:
-        </p>
-        \[\vec{E} = \frac{1}{4\pi\varepsilon_0} \int \frac{dq}{r^2} \hat{r}\]
-
-        
-
-        <p>
-            Depending on the geometry of the body, \(dq\) is expressed using charge densities:
-        </p>
-        <ul>
-            <li><strong>Linear Charge Density (\(\lambda\)):</strong> For a wire or ring, \(dq = \lambda \, dl\)</li>
-            <li><strong>Surface Charge Density (\(\sigma\)):</strong> For a sheet or disc, \(dq = \sigma \, dA\)</li>
-            <li><strong>Volume Charge Density (\(\rho\)):</strong> For a solid sphere or cylinder, \(dq = \rho \, dV\)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Exceptions and Theoretical Nuances</h2>
-        <p>
-            When applying the electric field concept, especially in advanced JEE problems, certain boundary conditions and nuances must be strictly observed:
-        </p>
-        <ul>
-            <li><strong>The Test Charge Limit:</strong> Why do we require \(q_0 \to 0\)? If the test charge has a substantial magnitude, its own electric field will exert forces on the source charges, potentially moving them and altering the very field we are trying to measure. <em>Exception:</em> If the source charges are mechanically fixed in place, the size of the test charge does not matter.</li>
-            <li><strong>Field Inside Conductors:</strong> In electrostatics (charges at rest), the electric field strictly inside the material of a solid macroscopic conductor is always exactly zero (\(\vec{E} = 0\)). If a field existed, free electrons would move, violating the condition of electrostatics.</li>
-            <li><strong>Singularities:</strong> The formula \(\vec{E} \propto 1/r^2\) implies the field becomes infinitely large exactly at \(r = 0\) (the location of a point charge). In classical physics, this is a singularity. In reality, perfectly dimension-less point charges do not exist; fundamental particles have quantum mechanical constraints that prevent infinite energies.</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electrostatics
+</a>
+</nav>
+<h1>Electric Field</h1>
+<p class="subtitle">
+The modification of space that mediates electrostatic interactions.
+</p>
+<section>
+<h2>What is an Electric Field?</h2>
+<p>
+Coulomb's law successfully predicts the magnitude and direction of the electrostatic force between two charges separated in space. However, it does not explain <strong>how</strong> one charge influences another across empty space.
+</p>
+<p>
+The modern description introduces the concept of the <strong>electric field</strong>. Instead of interacting directly with distant charges, a source charge first modifies the surrounding space. This modified space is called the <strong>electric field</strong>.
+</p>
+<div class="insightbox">
+The electric field is not merely a philosophical idea—it is physically necessary.<br>
+Imagine two charged bodies separated by approximately the Earth–Sun distance. If the position or charge of one body changes, the other fixed body does not respond instantaneously. The information about this change propagates through space at the speed of light, reaching the other body after about 8 minutes.<br>
+Thus, the distant body is not interacting directly with the source charge. Instead, it interacts locally with the electric field present at its own location.
+</div>
+<p>
+Electric field exists whether or not another charge is present to experience it. The role of the source charge is to establish this modified state of the surrounding space. If another charge, called the <strong>test charge</strong>, is placed somewhere in this modified region it interacts only with the <strong>space occupied by itself</strong> and not directly with the distant source charge.
+</p>
+<p>
+As the region of space occupied by the test charge has already been modified by the source charge, the test charge experiences an electrostatic force.
+</p>
+<p>
+This is precisely what is meant by saying that a charge responds to the electric field <strong>at its own location</strong>. The interaction is local because the test charge interacts only with the space that it occupies locally, and never directly with the distant source charge.
+</p>
+<p>
+If the occupied space were ordinary, unmodified space, no electrostatic interaction would occur. Electrostatic force exists only because the source charge has modified the surrounding space before the test charge arrives.
+</p>
+<div class="insightbox">
+Matter modifies space, while space mediates the interaction between charges.<br>
+Electrostatic interaction is therefore best viewed as <strong>source charge &rarr; modified space (electric field) &rarr; test charge</strong>, rather than as a direct interaction between source charge and test charge.<br>
+Imagine an infinitely stretched membrane representing space. When the membrane is pinched at one point, the membrane itself becomes modified, and this modification propagates through it.<br>
+Now stitch an embroidery onto the membrane. The embroidery does not interact with the distant pinch. Instead, it experiences deformation because the portion of the membrane occupied by the embroidery has itself become deformed.<br>
+Similarly, a source charge modifies the surrounding space.<br>
+A test charge does not interact directly with the distant source charge; it experiences electrostatic force because the <strong>space occupied by the test charge</strong> has already been modified. This modified space is what we call the <strong>electric field</strong>.
+</div>
+</section>
+<section>
+<h2>Why is an Electric Field Necessary?</h2>
+<p>
+One of the fundamental principles of physics is <strong>locality</strong>. A physical body interacts only with its immediate surroundings and only at the current instant. It does not interact directly with distant bodies.
+</p>
+<p>
+Consider two separated charges. Since their interaction cannot be direct, there must exist a physical entity present locally at the position of the test charge through which the interaction occurs.
+</p>
+<p>
+This local physical entity is called the <strong>electric field</strong>. A source charge establishes the electric field by modifying the surrounding space. The test charge then interacts only with the modified space that it occupies.
+</p>
+<p>
+It is important to distinguish the electric field from physical quantities such as temperature, pressure, density and fluid velocity. These are properties of <strong>matter</strong>. If the matter is removed, these quantities no longer exist at that location.
+</p>
+<div class="insightbox">
+The word <strong>field</strong> is used in many branches of mathematics and physics.<br>
+Mathematically, a field is simply an entity whose value is specified at every point of space (Field = function(\(\vec{r}\))) - i.e. its value can be indexed to a location in space.<br>
+Examples include scalar fields such as temperature and pressure, and vector fields such as fluid velocity and electric field intensity.<br>
+The electric field is also called a field because its properties can be described by assigning suitable physical quantities to every point in space.<br>
+However, in electrostatics, the electric field is first and foremost a <strong>physical entity</strong>—the electrically modified surrounding space produced by a source charge.<br>
+The mathematical description follows from this physical picture.
+</div>
+<p>
+The electric field is fundamentally different. It exists even in vacuum, where no matter is present. This indicates that the electric field is not a property of matter occupying space, but of the surrounding <strong>space itself</strong>.
+</p>
+<p>
+This interpretation naturally follows from locality. Since the test charge interacts only with the space it occupies, the space at that location must itself have been electrically modified by the source charge. This electrically modified surrounding space is what we call the <strong>electric field</strong>.
+</p>
+<div class="insightbox">
+The electric field is not introduced merely for mathematical convenience.<br>
+It is demanded by the principle of locality.<br>
+Without a local mediating entity, electrostatic interaction would reduce to action-at-a-distance.<br>
+Unlike temperature, pressure or density, the electric field persists even in vacuum. This is why, in these notes, the electric field is interpreted as the electrically modified surrounding space itself.
+</div>
+</section>
+<section>
+<h2>How do we Define and Calculate the Field?</h2>
+<p>
+Physically, the electric field is the electrically modified surrounding space produced by a source charge. However, this electrical modification can be represented in several different ways, each highlighting a different aspect of the same physical entity.
+</p>
+<ul class="model-box">
+<li><strong>Electric Field Intensity (\(\vec{E}\))</strong> &mdash; A vector representation describing the electrical modification at every point in space.</li>
+<li><strong>Electric Field Lines</strong> &mdash; A graphical representation showing the direction and relative strength of the field.</li>
+<li><strong>Equipotential Surfaces</strong> &mdash; A scalar representation describing regions having the same electric potential.</li>
+</ul>
+<p>
+These are not different physical entities. They are simply different mathematical and graphical representations of the same electrically modified space.
+</p>
+<h3>Electric Field Intensity</h3>
+<p>
+We begin with the vector representation of the electric field, called the <strong>electric field intensity</strong>. It quantifies the electrical modification of space at every point.
+</p>
+<p>
+Operationally, the electric field intensity at a point is defined as the electrostatic force experienced by a vanishingly small <strong>positive</strong> test charge placed at that point, divided by the magnitude of the test charge:
+</p>
+\[
+\vec{E}(\vec{r})=\lim_{q_0\to0}\frac{\vec{F}(\vec{r})}{q_0}
+\]
+<div class="insightbox">
+The test charge is chosen to be <strong>vanishingly small</strong> so that it does not disturb the charge distribution of the source while measuring the field.<br>
+If the source consists of a single fixed point charge, this condition is not essential. However, the vanishingly small test charge provides a definition that is valid for all charge distributions.<br>
+The direction of the electric field is defined using a <strong>positive</strong> test charge.<br>
+Although the mathematical definition does not require the limit \(q_0\to0^+\), this convention gives the electric field a unique direction.<br>
+Once the field has been defined, the force on any charge is simply obtained from
+\[
+\vec{F}=q\vec{E}
+\]
+where its the sign of \(q\) that determines whether the force is along or opposite to the electric field.
+</div>
+<p>
+The SI unit of electric field intensity is Newton per Coulomb (\(\mathrm{N/C}\)). Since electric field intensity is also equal to the negative potential gradient, it may equivalently be expressed as Volt per metre (\(\mathrm{V/m}\)).
+</p>
+<h3>Field due to a Point Charge</h3>
+<p>
+Using Coulomb's law, the force on a positive test charge \(q_0\) placed at position \(\vec r\) due to a source charge \(q\) at the origin is
+</p>
+\[
+\vec F=\frac{1}{4\pi\varepsilon_0}\frac{qq_0}{r^2}\,\hat r
+\]
+<p>
+Dividing by the test charge gives the electric field intensity produced by a point charge:
+</p>
+\[
+\vec E = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\hat r = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^3}\vec r
+\]
+<p>
+Notice that the electric field is determined entirely by the <strong>source charge</strong> and the position in space. The test charge is merely a probe used to measure the field; it does not determine the field itself.
+</p>
+<div class="insightbox">
+The electric field intensity at a point is <strong>not</strong> the electric field itself.<br>
+It is a physical quantity that mathematically describes the electrical modification of space at that point, just as pressure describes the mechanical state of a fluid at a point.
+</div>
+</section>
+<section>
+<h2>Superposition</h2>
+<p>
+Because force obeys the superposition principle, the electric field also obeys it.
+</p>
+<p>
+The net electric field at a point due to a system of discrete point charges is the vector sum of the individual fields:
+</p>
+\[
+\vec{E}_{\text{net}} = \sum_{i=1}^{n} \vec{E}_i = \frac{1}{4\pi\varepsilon_0} \sum_{i=1}^{n} \frac{q_i}{|\vec{r} - \vec{r}_i|^3} (\vec{r} - \vec{r}_i)
+\]
+<p>
+For extended continuous bodies, we cannot use discrete summation.
+</p>
+<p>
+We must treat the charge distribution as continuous, breaking the body into infinitesimal charge elements \(dq\). The total field is found by integrating:
+</p>
+\[
+\vec{E} = \frac{1}{4\pi\varepsilon_0} \int \frac{dq}{r^2} \hat{r}
+\]
+<p>
+Depending on the geometry of the body, \(dq\) is expressed using charge densities:
+</p>
+<ul>
+<li><strong>Linear Charge Density (\(\lambda\)):</strong> For a wire or ring, \(dq = \lambda \, dl\)</li>
+<li><strong>Surface Charge Density (\(\sigma\)):</strong> For a sheet or disc, \(dq = \sigma \, dA\)</li>
+<li><strong>Volume Charge Density (\(\rho\)):</strong> For a solid sphere or cylinder, \(dq = \rho \, dV\)</li>
+</ul>
+</section>
+<section>
+<h2>Theoretical Nuances</h2>
+<p>
+While applying the concept of electric field, certain mathematical idealizations require careful physical interpretation.
+</p>
+<h3>Singularities</h3>
+<p>
+For a point charge,
+</p>
+\[
+\vec E=\frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\hat r
+\]
+<p>
+the electric field increases without bound as \(r\rightarrow0\). At the location of the source charge itself (\(r=0\)), the mathematical expression is singular (fancy word for undefined or no information can be provided). We know that as \(r\rightarrow0\) , \(E\rightarrow \infty\) . This is not undefined. But exactly at \(r=0\) - it is undefined.  
+</p>
+<p>
+We need to rely on tools other than maths to interpret what do these things mean. Is \(E = \infty\) at \(r=0\) .
+</p>
+<p>
+The answer is <strong>no</strong>. A source charge does not interact with the electric field produced by itself. Therefore, the value of the <strong>self-electric field</strong> at the location of the source charge is never required while calculating electrostatic forces. Even if this value were somehow known, it would play no role in determining the dynamics of the source charge.
+</p>
+<p>
+In fact, this self-field cannot even be measured experimentally. Measuring an electric field requires placing a separate test charge at the point of interest. However, the point is already occupied by the source charge itself, and two material point charges cannot simultaneously occupy the same point in space. Consequently, the self-electric field at the location of the source charge is not measurable by the very definition of electric field intensity.
+</p>
+<p>
+This discussion applies only to the <strong>self-field</strong>. The electric field at the same point due to <strong>other</strong> source charges remains perfectly meaningful and is used routinely while calculating electrostatic forces.
+</p>
+<p>
+In classical electromagnetism, such points are called <strong>singularities</strong>. The mathematical expression ceases to provide a finite value exactly at these locations and therefore requires physical interpretation.
+</p>
+<p>
+One such interpretation is provided by the field-line representation, where point charges are treated as <strong>poles</strong>. Positive charges act as points from which electric field lines originate, while negative charges act as points where electric field lines terminate.
+</p>
+<div class="insightbox">
+The singularity of a point charge is not used for force calculations because a charge does not interact with its own electric field.<br>
+Instead, the singular point is interpreted physically as a <strong>pole</strong> of the electric field from which field lines emerge or into which they terminate.
+</div>
+<p>
+Finally, it should be remembered that perfectly dimensionless point charges are idealizations. Real elementary particles are described by quantum theories, where the classical picture of point singularities requires a more fundamental treatment.
+</p>
+<div class="insightbox">
+The singularity of a point charge is primarily a property of the <strong>self-field</strong>.<br>
+Since a source charge does not interact with its own electric field, the infinite value at its own location has no role in ordinary electrostatic force calculations.<br>
+The physically relevant electric field acting on a charge is the field produced by <strong>all the other charges</strong>.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
 </div>
 </body>
 </html>

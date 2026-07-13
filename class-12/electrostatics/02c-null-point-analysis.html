@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Null Point Analysis | Coulomb</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-coulomb-law.html" class="back-btn">
+<span>&larr;</span> Back to Coulombs Law
+</a>
+</nav>
+<h1>Null Point Analysis</h1>
+<p class="subtitle">
+Equilibrium through geometric control of Coulomb forces.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+Coulomb's law gives the magnitude and direction of the electrostatic force between every pair of point charges.
+</p>
+<p>
+Since both depend on the relative positions of the charges, changing the geometry of the system changes the net force experienced by a test charge.
+</p>
+<p>
+Null point analysis studies those locations in space where the vector sum of all Coulomb forces (or equivalently, the net electric field) becomes zero.
+</p>
+<p>
+The central idea is therefore not merely force calculation, but the use of geometry to control the magnitude and direction of multiple electrostatic forces.
+</p>
+<div class="insightbox">
+Null point analysis is essentially the geometric engineering of Coulomb forces.<br>
+By choosing the appropriate position in space, the individual force vectors can be made to cancel each other, producing zero net force.
+</div>
+</section>
+<section>
+<h2>Typical Questions</h2>
+<ul class="model-box">
+<li>Locate the null point for two point charges.</li>
+<li>Determine whether the null point lies between or outside the charges.</li>
+<li>Study how the null point shifts when the magnitudes of the charges change.</li>
+<li>Determine whether the equilibrium is stable or unstable.</li>
+<li>Find the time period of small oscillations about a stable null point.</li>
+</ul>
+<div class="insightbox">
+In null point analysis, <strong>geometry</strong> means <strong>vector geometry</strong>.<br>
+Symmetry is used to eliminate force components, thereby reducing a multidimensional vector problem into a simpler collinear force problem.<br>
+Algebra is then used only to determine the exact location of the null point.
+</div>
+</section>
+<section>
+<h2>2 point charge system</h2>
+<p>
+Consider two positive point charges \(q_1\) and \(q_2\) placed at \((0,0,0)\) and \((d,0,0)\).
+</p>
+<p>
+Before performing any calculations, geometry itself allows us to predict the possible location of the null point.
+</p>
+<p>
+For the resultant of two non-zero vectors to be zero, the vectors must be equal in magnitude and opposite in direction (anti-parallel).
+</p>
+<p>
+Outside the two charges, the Coulomb forces produced by the charges act in the same direction and therefore cannot cancel. Between the charges, however, the two forces act in opposite directions, making cancellation possible.
+</p>
+<div class="insightbox">
+Geometry determines the <strong>possible region</strong> of the null point.<br>
+Algebra determines its <strong>exact position</strong>.
+</div>
+<div class="insightbox">
+The positions of the charges are not given merely to calculate distances.<br>
+They determine the <strong>vector geometry</strong> of the electric field.<br>
+Symmetry may eliminate components, restrict the possible location of the resultant field, or reduce a multidimensional vector problem into a one-dimensional one.<br>
+Coulomb's law then determines only the remaining magnitudes.
+</div>
+</section>
+<section>
+<h2>3 Point Charge Systems</h2>
+<p>
+As the number of source charges increases, the geometry of the force field becomes increasingly complex. Consequently, both the number and the location of null points depend on the arrangement of the charges as well as their magnitudes.
+</p>
+<p>
+For example, three equal charges placed at the vertices of an equilateral triangle possess a single null point at the centroid by symmetry.
+</p>
+<p>
+However, symmetry does not imply uniqueness. Different geometries and charge distributions can produce multiple null points.
+</p>
+<p>
+For instance, three collinear point charges with suitably chosen charge values can all be in equilibrium simultaneously. In such a configuration, the system possesses three distinct null points.
+</p>
+<p>
+As another example, if two identical positive charges \(+q\) are placed at the ends of the base of an equilateral triangle and a charge \(-q\) is placed at the apex, the system possesses two null points on the altitude through the apex. One null point is below the base (and also below the apex) and the other is above the apex (and also above the base).
+</p>
+<p>
+A useful way to analyse this configuration is to treat the two positive charges as a single geometric subsystem and the negative charge as the second subsystem.
+</p>
+<p>
+Along the common altitude, the electric field produced by the base subsystem and that produced by the apex charge point in the same direction throughout the region between the base and the apex. Consequently, cancellation is impossible in this region.
+</p>
+<p>
+Therefore, just as in the two-opposite-charge system, every null point must lie <strong>outside</strong> the region separating the two subsystems. One null point lies beyond the base, while the other lies beyond the apex.
+</p>
+<p>
+By symmetry, any null point must lie on the altitude of the equilateral triangle. Along this line, the horizontal components of the forces due to the two positive charges cancel, leaving only the components along the altitude.
+</p>
+<p>
+Consequently, the resultant force due to the two positive charges becomes collinear with the force due to the negative charge. Since both forces now act along the same line, they can cancel each other at suitable points on the altitude.
+</p>
+<p>
+However, just as in the two-opposite-charge system, cancellation is not possible everywhere on the altitude. The direction of the two collinear forces must first be examined to identify the regions where they oppose each other. This geometric analysis predicts that one null point lies beyond the base, while the other lies beyond the apex.
+</p>
+<div class="insightbox">
+The number of null points is not determined by the number of charges alone.<br>
+It depends on the combined effects of <strong>geometry</strong> and <strong>charge distribution</strong>.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
