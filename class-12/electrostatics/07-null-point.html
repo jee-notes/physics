@@ -1,108 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrostatics | Null Points and Equilibrium</title>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Null Points and Equilibrium | Electrostatics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-    <nav class="top-nav">
-        <a href="./index.html" class="back-btn">
-            <span>&larr;</span> Back to Electrostatics
-        </a>
-    </nav>
-    
-    <h1>Null Points and Equilibrium Analysis</h1>
-    <p class="subtitle">
-        Locating regions of zero field and analyzing the stability of charge systems.
-    </p>
-
-    <section>
-        <h2>What are Null Points and Equilibrium?</h2>
-        <p>
-            A <strong>Null Point</strong> (or neutral point) is a specific location in space where the net electric field created by a system of charges is exactly zero (\(\vec{E}_{\text{net}} = 0\)). Consequently, any test charge placed exactly at this point will experience zero net electrostatic force.
-        </p>
-        <p>
-            <strong>Equilibrium</strong> refers to the mechanical state of a charge when the net force acting on it is zero. While placing a charge at a null point guarantees equilibrium, the critical physics lies in analyzing the <em>nature</em> of that equilibrium: will the charge return to the null point if slightly disturbed (stable), or will it fly away (unstable)?
-        </p>
-        
-    </section>
-
-    <section>
-        <h2>How do we locate a Null Point?</h2>
-        <p>
-            For a system of two point charges \(q_1\) and \(q_2\) separated by a distance \(d\), the location of the null point depends entirely on the signs and relative magnitudes of the charges. Let \(x\) be the distance of the null point from the smaller charge \(q_1\).
-        </p>
-
-        <h3>Case 1: Like Charges (Same Sign)</h3>
-        <p>
-            If both charges are positive or both are negative, their electric fields oppose each other in the region <em>between</em> them. The null point always lies on the line joining them, exactly between the charges, and closer to the charge with the smaller magnitude.
-        </p>
-        \[\frac{1}{4\pi\varepsilon_0} \frac{q_1}{x^2} = \frac{1}{4\pi\varepsilon_0} \frac{q_2}{(d - x)^2}\]
-        \[x = \frac{d}{\sqrt{\frac{q_2}{q_1}} + 1}\]
-
-        <h3>Case 2: Unlike Charges (Opposite Signs)</h3>
-        <p>
-            If one charge is positive and the other is negative, their fields point in the same direction between them, meaning they can never cancel out there. The null point must lie on the extended line joining them, <em>outside</em> the charges, on the side of the charge with the smaller magnitude.
-        </p>
-        \[\frac{1}{4\pi\varepsilon_0} \frac{q_1}{x^2} = \frac{1}{4\pi\varepsilon_0} \frac{q_2}{(d + x)^2}\]
-        \[x = \frac{d}{\sqrt{\frac{q_2}{q_1}} - 1}\]
-        <div class="insightbox">
-            <strong>Shortcut:</strong> For unlike charges of <em>equal</em> magnitude (an electric dipole), the denominator becomes zero, meaning \(x \to \infty\). An ideal dipole has no finite null point.
-        </div>
-    </section>
-
-    <section>
-        <h2>How do we analyze the Nature of Equilibrium?</h2>
-        <p>
-            To determine if an equilibrium state is stable, unstable, or neutral, we mathematically or conceptually displace the test charge by a small distance \(dx\) and analyze the resulting net force.
-        </p>
-        
-
-        <ul>
-            <li><strong>Stable Equilibrium:</strong> If displaced, a restoring force arises that pushes the charge back toward the null point. The potential energy \(U\) is at a local minimum (\(\frac{d^2U}{dx^2} > 0\)). In JEE problems, this setup often leads to Simple Harmonic Motion (SHM) for small displacements.</li>
-            <li><strong>Unstable Equilibrium:</strong> If displaced, the net force pushes the charge further away from the null point. The potential energy \(U\) is at a local maximum (\(\frac{d^2U}{dx^2} < 0\)).</li>
-            <li><strong>Neutral Equilibrium:</strong> If displaced, the net force remains zero. The charge simply stays in its new position (\(\frac{d^2U}{dx^2} = 0\)).</li>
-        </ul>
-
-        <h3>Application: Charge Between Two Identical Source Charges</h3>
-        <p>
-            Consider two fixed positive charges \(+Q\) separated by distance \(2a\). A third charge \(q\) is placed at the exact midpoint (the null point).
-        </p>
-        <p>
-            If \(q\) is <strong>positive</strong>: 
-            Displacing it along the axis creates a restoring force (Stable). Displacing it perpendicular to the axis pushes it away (Unstable).
-        </p>
-        <p>
-            If \(q\) is <strong>negative</strong>: 
-            Displacing it along the axis pulls it toward a source charge (Unstable). Displacing it perpendicular to the axis creates a restoring force pulling it back to the axis (Stable).
-        </p>
-    </section>
-
-    <section>
-        <h2>Exceptions: Earnshaw's Theorem</h2>
-        <p>
-            When analyzing equilibrium in electrostatics, there is a profound theoretical limitation that must be specified.
-        </p>
-        <p>
-            <strong>Earnshaw's Theorem</strong> states that a collection of point charges cannot be maintained in a stable stationary equilibrium configuration solely by the electrostatic interaction of the charges. 
-        </p>
-        <p>
-            While a charge might be stable against displacements along a specific axis (as seen in the example above), it will always be unstable against displacements in at least one other orthogonal direction in 3D space. 
-        </p>
-        <div class="insightbox">
-            <strong>Exception applied:</strong> True 3D stable equilibrium requires other forces. You can never perfectly trap a charge in an electrostatic "bowl" in empty space without incorporating external mechanical forces, quantum mechanics, or dynamic (moving) magnetic fields.
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electrostatics
+</a>
+</nav>
+<h1>Null Points and Equilibrium Analysis</h1>
+<p class="subtitle">
+Locating regions of zero field and analyzing the stability of charge systems.
+</p>
+<section>
+<h2>What are Null Points and Equilibrium?</h2>
+<p>
+A <strong>null point</strong> (or <strong>neutral point</strong>) is a location in space where the net electric field due to a system of source charges is zero:
+</p>
+\[
+\vec E_{\text{net}}=\vec 0
+\]
+<div class="insightbox">
+A common doubt is that the electric field becomes zero at infinity, so shouldn't infinity also be a null point?<br>
+The answer is <strong>no</strong>. A null point is a <strong>point in space</strong> where a test charge can actually be placed and experiences zero net electric field. Infinity is not such a point.<br>
+We often hear statements like <strong>"parallel lines meet at infinity."</strong> If you take it literally then this is as much a joke as saying:
+<ul class="model-box">
+<li>"He is rich with ₹0."</li>
+<li>"He is poor with infinite money."</li>
+<li>"There is a null point at infinity."</li>
+</ul>
+None of these statements should be interpreted literally. Parallel lines do not meet at all. A person with ₹0 is not rich. A person with infinite money is not poor. Likewise, null point at infinity means no null point at all.<br>
+It is only an attempt to enforce the mathematical fidelity even when it has no meaning physically.<br>
+We can only say that:  
+\[
+\lim_{r\to\infty}\vec E=\vec0
+\]
+it doesnt mean that \(r=\infty\), because \(\infty\) is not even a real number.
+</div>
+<p>
+Consequently, any test charge placed exactly at this point experiences zero electrostatic force and is therefore in <strong>electrostatic equilibrium</strong>.
+</p>
+<p>
+However, locating a null point is only the first step. A complete equilibrium analysis requires determining the <strong>nature of the equilibrium</strong>. If the test charge is displaced slightly from the null point, will the electrostatic force restore it to its original position, drive it further away, or leave it in its new position?
+</p>
+<p>
+Accordingly, equilibrium may be classified as <strong>stable</strong>, <strong>unstable</strong>, or <strong>neutral</strong>. This classification determines whether the equilibrium configuration is physically sustainable and whether small oscillations about the null point are possible.
+</p>
+<p>
+Null point analysis consists of two independent tasks:
+</p>
+<ul class="model-box">
+<li><strong>Locate</strong> the null point by finding where the net electric field is zero.</li>
+<li><strong>Classify</strong> the equilibrium by studying the force on a slightly displaced test charge.</li>
+</ul>
+<p>
+Finding the null point alone does <strong>not</strong> complete the analysis.
+</p>
+</section>
+<section>
+<h2>How do we locate a Null Point?</h2>
+<p>
+For a system of two point charges \(q_1\) and \(q_2\) separated by a distance \(d\), the existence and location of the null point depend entirely on the <strong>signs</strong> and <strong>relative magnitudes</strong> of the charges.
+</p>
+<div class="insightbox">
+Null-point analysis always has two stages:
+<ul class="model-box">
+<li><strong>Geometry:</strong> Determine the region where field cancellation is possible.</li>
+<li><strong>Algebra:</strong> Determine the exact coordinates within that region.</li>
+</ul>
+Never begin directly with equations.
+</div>
+<p>
+If a finite null point exists for two point charges, it always lies on the line joining the charges.
+</p>
+<p>
+Let \(q_1\) denote the charge with the smaller magnitude and
+\[
+n=\frac{|q_2|}{|q_1|}\ge1
+\]
+Let \(x\) be the distance of the null point from \(q_1\).
+</p>
+<h3>Case 1: Like Charges</h3>
+<p>
+Between two like charges, the electric fields are in opposite directions. Therefore, cancellation is possible only <strong>between</strong> the charges.
+</p>
+<p>
+If the magnitudes are equal
+\[
+q_1=q_2=\pm q
+\]
+symmetry immediately gives the null point at the midpoint.
+</p>
+<p>
+Otherwise,
+</p>
+\[
+\frac{1}{4\pi\varepsilon_0}\frac{q_1}{x^2} = \frac{1}{4\pi\varepsilon_0}\frac{q_2}{(d-x)^2}
+\]
+\[
+x=\frac{d}{\sqrt{\frac{q_2}{q_1}}+1} = \frac{d}{\sqrt n+1}
+\]
+<h3>Case 2: Unlike Charges</h3>
+<p>
+Between unlike charges, the electric fields point in the same direction. Therefore, cancellation between the charges is impossible.
+</p>
+<p>
+The null point, if it exists, must lie <strong>outside</strong> the charges, on the side of the charge having the smaller magnitude.
+</p>
+\[
+\frac{1}{4\pi\varepsilon_0}\frac{q_1}{x^2} = \frac{1}{4\pi\varepsilon_0}\frac{q_2}{(d+x)^2}
+\]
+\[
+x=\frac{d}{\sqrt{\frac{q_2}{q_1}}-1} = \frac{d}{\sqrt n-1}
+\]
+<div class="insightbox">
+For unlike charges of equal magnitude (an ideal electric dipole),
+\[
+\sqrt n-1=0
+\]
+The formula therefore ceases to yield a finite distance.
+This simply means that an ideal electric dipole has <strong>no finite null point</strong>.
+</div>
+</section>
+<section>
+<h2>How do we analyze the Nature of Equilibrium?</h2>
+<p>
+Finding a null point only establishes <strong>equilibrium</strong>. To determine the <strong>nature of the equilibrium</strong>, we imagine displacing the test charge by a very small distance \(dx\) and analyze the direction of the resulting electrostatic force.
+</p>
+<div class="insightbox">
+Equilibrium analysis is a <strong>thought experiment</strong>. The charge is imagined to be displaced slightly from the equilibrium position, and the resulting force is examined.
+</div>
+<ul class="model-box">
+<li>
+<strong>Stable Equilibrium:</strong>
+The electrostatic force acts opposite to the displacement, driving the charge back toward the equilibrium position. The potential energy is minimum:
+\[
+\frac{d^2U}{dx^2}>0
+\]
+For sufficiently small displacements, the restoring force is often proportional to displacement, leading to <strong>Simple Harmonic Motion (SHM)</strong>.
+</li>
+<li>
+<strong>Unstable Equilibrium:</strong>
+The electrostatic force acts in the same direction as the displacement, driving the charge farther away from equilibrium. The potential energy is maximum:
+\[
+\frac{d^2U}{dx^2} \lt 0
+\]
+</li>
+<li>
+<strong>Neutral Equilibrium:</strong>
+The electrostatic force remains zero after displacement. The charge simply stays in its new position:
+\[
+\frac{d^2U}{dx^2}=0
+\]
+</li>
+</ul>
+<h3>Example: Charge Between Two Identical Source Charges</h3>
+<p>
+Consider two identical fixed positive charges \(+Q\) separated by a distance \(2a\). The midpoint is a null point.
+</p>
+<ul class="model-box">
+<li>
+If the test charge is <strong>positive</strong>:
+<ul>
+<li>Displacement along the line joining the charges &rarr; <strong>Stable</strong>.</li>
+<li>Displacement perpendicular to the line joining the charges &rarr; <strong>Unstable</strong>.</li>
+</ul>
+</li>
+<li>
+If the test charge is <strong>negative</strong>:
+<ul>
+<li>Displacement along the line joining the charges &rarr; <strong>Unstable</strong>.</li>
+<li>Displacement perpendicular to the line joining the charges &rarr; <strong>Stable</strong>.</li>
+</ul>
+</li>
+</ul>
+<div class="insightbox">
+Stability is <strong>direction-dependent</strong>.<br>
+A configuration may be stable along one direction and unstable along another.<br>
+Therefore, checking equilibrium along only one axis is not sufficient.<br>
+Its because, <strong>Equilibrium is a property of the point; but stability is a property of its neighbourhood.</strong>
+</div>
+</section>
+<section>
+<h2>Earnshaw's Theorem</h2>
+<p>
+Our previous examples show that symmetry can produce a <strong>null point</strong>. However, a natural question arises:
+</p>
+<div class="insightbox">
+Can we arrange several fixed charges so that a test charge placed at the null point is stable against displacement in <strong>every</strong> direction?
+</div>
+<p>
+For example:
+</p>
+<ul class="model-box">
+<li>Two equal charges are stable along one direction but unstable along another.</li>
+<li>Four equal charges placed at the corners of a square are stable for displacements in the plane of the square but unstable for displacements perpendicular to the plane.</li>
+<li>Eight equal charges placed at the corners of a cube are stable along the coordinate axes, but instability still appears along other directions.</li>
+</ul>
+<p>
+Increasing the symmetry to a uniform charge distribution along a spherical surface too does not produce true three-dimensional stable equilibrium.
+</p>
+<p>
+This observation is generalized by <strong>Earnshaw's Theorem</strong>, which states that a charge cannot be held in a stable stationary equilibrium solely by the electrostatic forces due to other stationary charges.
+</p>
+<div class="insightbox">
+A null point only guarantees that the net force is zero at one position.<br>
+It does <strong>not</strong> guarantee that the force will remain restoring after a small displacement.<br>
+Earnshaw's theorem states that no arrangement of stationary charges can create a purely electrostatic "trap" that restores a displaced charge in <strong>every</strong> direction.
+</div>
+</section>
+<section>
+<h2>Maximum Field: Rolle's Theorem</h2>
+<p>
+Consider two identical fixed charges \(+q\) separated by a distance \(2R\). Let \(P\) be a point on the perpendicular bisector. If \(x\) is the distance of \(P\) from the midpoint and \(l\) is its distance from either charge, then
+</p>
+\[
+l^2=x^2+R^2
+\]
+<p>
+At the midpoint,
+\[
+E(0)=0
+\]
+while
+\[
+\lim_{x\to\infty}E(x)=0
+\]
+</p>
+<div class="insightbox">
+A clever way to predict the existence of a maximum is to use <strong>Rolle's Theorem</strong>.<br>
+Since the electric field has the same value at the two ends, there must exist at least one intermediate point where
+\[
+\frac{dE}{dx}=0
+\]
+Thus, the electric field must attain at least one stationary value between the midpoint and infinity.<br>
+Since the field is positive throughout this region, this stationary value is the required maximum.
+</div>
+<p>
+We now determine its exact location using a trigonometric parametrization.
+</p>
+<p>
+Let \(\theta\) be the angle between the line joining the charge to point \(P\) and the perpendicular bisector.
+</p>
+\[
+\tan\theta=\frac{R}{x}
+\]
+<p>
+The electric field due to each charge has magnitude
+</p>
+\[
+E=\frac{1}{4\pi\varepsilon_0}\frac{q}{l^2}
+\]
+<p>
+The components perpendicular to the bisector are equal and opposite, so they cancel each other. The components along the perpendicular bisector are equal and act in the same direction.
+</p>
+\[
+E_{\text{net}}=2E\cos\theta
+\]
+<p>
+From the right triangle,
+</p>
+\[
+\sin\theta=\frac{R}{l}
+\]
+<p>
+or
+</p>
+\[
+l=\frac{R}{\sin\theta}
+\]
+<p>
+Substituting in the expression for \(E\),
+</p>
+\[
+E = \frac{1}{4\pi\varepsilon_0} \frac{q}{\left(\dfrac{R}{\sin\theta}\right)^2} = \frac{1}{4\pi\varepsilon_0} \frac{q}{R^2}\sin^2\theta
+\]
+Therefore,
+\[
+E_{\text{net}} = \frac{1}{4\pi\varepsilon_0} \frac{2q}{R^2} \sin^2\theta\cos\theta
+\]
+<p>
+Since all other quantities are constants, we only need to maximize
+</p>
+\[
+\boxed{f(\theta)=\sin^2\theta\cos\theta}
+\]
+<p>
+Differentiating with respect to \(\theta\),
+</p>
+\[
+\frac{df}{d\theta} = 2\sin\theta\cos^2\theta-\sin^3\theta
+\]
+\[
+= \sin\theta\left(2\cos^2\theta-\sin^2\theta\right)
+\]
+<p>
+At the maximum,
+</p>
+\[
+\frac{df}{d\theta}=0
+\]
+<p>
+Ignoring the trivial solution \(\theta=0\),
+</p>
+\[
+2\cos^2\theta=\sin^2\theta
+\]
+<p>
+Dividing throughout by \(\cos^2\theta\),
+</p>
+\[
+\tan^2\theta=2
+\]
+\[
+\tan\theta=\sqrt{2}
+\]
+<p>
+Since
+</p>
+\[
+\tan\theta=\frac{R}{x}
+\]
+<p>
+the position of maximum electric field is
+</p>
+\[
+\boxed{x=\frac{R}{\sqrt{2}}}
+\]
+<div class="insightbox">
+The above derivation is much more general than it appears.<br>
+Consider any <strong>regular polygon</strong> having \(n\) identical charges placed at its vertices. At every point on the axis passing through the centre and perpendicular to the plane of the polygon:
+<ul class="model-box">
+<li>Each charge is at the same distance \(l\) from the observation point.</li>
+<li>The components perpendicular to the axis cancel due to symmetry.</li>
+<li>Only the axial components add.</li>
+</ul>
+Hence,
+\[
+E_{\text{net}}=nE\cos\theta
+\]
+and using
+\[
+E=\frac{1}{4\pi\varepsilon_0}\frac{q}{l^2},
+\qquad
+l=\frac{R}{\sin\theta},
+\]
+we obtain
+\[
+E_{\text{net}}
+=
+\frac{1}{4\pi\varepsilon_0}
+\frac{nq}{R^2}
+\sin^2\theta\cos\theta.
+\]
+The factor \(n\) is a constant. Therefore, the maximum always occurs when
+\[
+\boxed{\tan\theta=\sqrt2}
+\]
+irrespective of the number of charges.<br>
+Consequently, the maximum electric field on the symmetry axis always occurs at
+\[
+\boxed{x=\frac{R}{\sqrt2}}
+\]
+Taking the limiting case \(n\rightarrow\infty\), the regular polygon becomes a uniformly charged ring.<br>
+Hence, the same result immediately applies to the electric field on the axis of a uniformly charged ring.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
 </div>
 </body>
 </html>

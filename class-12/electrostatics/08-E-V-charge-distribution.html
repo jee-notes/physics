@@ -1,111 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electrostatics | Charge Distributions (Coulomb World)</title>
-
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charge Distributions | Electrostatics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-    <nav class="top-nav">
-        <a href="./index.html" class="back-btn">
-            <span>&larr;</span> Back to Electrostatics
-        </a>
-    </nav>
-    
-    <h1>Field and Potential of Charge Distributions</h1>
-    <p class="subtitle">
-        Applying Coulomb's Law and direct integration to continuous macroscopic bodies.
-    </p>
-
-    <section>
-        <h2>What is the Direct Integration Method?</h2>
-        <p>
-            Coulomb's Law strictly applies only to zero-dimensional point charges. However, real-world objects—like wires, rings, and plates—have continuous dimensions. We cannot plug their total charge \(Q\) directly into Coulomb's Law because the distance \(r\) to a test point varies for different parts of the body.
-        </p>
-        <p>
-            The solution lies in calculus. We divide the macroscopic body into an infinite number of infinitesimal elements. Each element contains a tiny charge \(dq\) and is small enough to be treated as a perfect point charge. We calculate the infinitesimal electric field \(d\vec{E}\) or potential \(dV\) created by \(dq\), and then integrate these contributions over the entire geometry of the body.
-        </p>
-        <div class="insightbox">
-            Depending on the object's geometry, the charge element \(dq\) is defined using charge density: <br>
-            Line: \(dq = \lambda \, dl\) <br>
-            Surface: \(dq = \sigma \, dA\) <br>
-            Volume: \(dq = \rho \, dV\)
-        </div>
-    </section>
-
-    <section>
-        <h2>How to Calculate Field and Potential (Standard Cases)</h2>
-        <p>
-            For JEE, mastering the derivations and final results of the following highly symmetric continuous distributions is essential.
-        </p>
-
-        <h3>1. Finite Straight Uniformly Charged Rod</h3>
-        <p>
-            Consider a rod with linear charge density \(\lambda\). We want to find the electric field at a perpendicular distance \(r\) from the rod. The ends of the rod subtend angles \(\theta_1\) and \(\theta_2\) at the observation point.
-        </p>
-        
-        
-
-        <p>
-            Because the rod lacks perfect symmetry, the electric field has two separate components: one perpendicular to the rod (\(E_{\perp}\)) and one parallel to the rod (\(E_{\parallel}\)).
-        </p>
-        \[E_{\perp} = \frac{\lambda}{4\pi\varepsilon_0 r} (\sin\theta_1 + \sin\theta_2)\]
-        \[E_{\parallel} = \frac{\lambda}{4\pi\varepsilon_0 r} (\cos\theta_2 - \cos\theta_1)\]
-        <p>
-            The net electric field is the vector sum of these two components.
-        </p>
-
-        <h3>2. Uniformly Charged Circular Ring (On Axis)</h3>
-        <p>
-            Consider a ring of radius \(R\) carrying a total charge \(Q\). We evaluate the field and potential at a point \(P\) on its central axis, at a distance \(x\) from the center.
-        </p>
-        
-        
-
-        <p>
-            By symmetry, the components of \(d\vec{E}\) perpendicular to the axis completely cancel out. Only the axial components (\(dE \cos\theta\)) survive the integration.
-        </p>
-        \[E_{\text{axis}} = \frac{1}{4\pi\varepsilon_0} \frac{Q x}{(R^2 + x^2)^{3/2}}\]
-        <p>
-            The electric potential is a scalar, so we simply integrate \(dV = \frac{1}{4\pi\varepsilon_0} \frac{dq}{\sqrt{R^2 + x^2}}\) without worrying about vectors:
-        </p>
-        \[V_{\text{axis}} = \frac{1}{4\pi\varepsilon_0} \frac{Q}{\sqrt{R^2 + x^2}}\]
-
-        <h3>3. Uniformly Charged Circular Disc (On Axis)</h3>
-        <p>
-            A disc of radius \(R\) has a uniform surface charge density \(\sigma\). To find the field on its axis, we do not start from point charges; instead, we treat the disc as a collection of concentric infinitesimal rings of radius \(r\) and thickness \(dr\), where \(dq = \sigma (2\pi r \, dr)\).
-        </p>
-
-        
-
-        <p>
-            Integrating the ring formula from \(r = 0\) to \(r = R\) yields:
-        </p>
-        \[E_{\text{axis}} = \frac{\sigma}{2\varepsilon_0} \left( 1 - \frac{x}{\sqrt{R^2 + x^2}} \right)\]
-        \[V_{\text{axis}} = \frac{\sigma}{2\varepsilon_0} \left( \sqrt{R^2 + x^2} - x \right)\]
-    </section>
-
-    <section>
-        <h2>Exceptions and Limiting Cases</h2>
-        <p>
-            The true power of these generalized formulas lies in applying limits to discover the behavior of extreme geometries.
-        </p>
-        <ul>
-            <li><strong>Infinite Straight Wire:</strong> If the rod becomes infinitely long, the subtended angles approach \(\theta_1 = 90^\circ\) and \(\theta_2 = 90^\circ\). The parallel component \(E_{\parallel}\) drops to zero, and the perpendicular component simplifies to \(E = \frac{\lambda}{2\pi\varepsilon_0 r}\).</li>
-            <li><strong>Center of the Ring:</strong> At the exact center of the charged ring (\(x = 0\)), the electric field formula yields \(E = 0\). The vectors pull equally in all directions, creating a null point. However, the potential formula yields \(V = \frac{1}{4\pi\varepsilon_0} \frac{Q}{R}\). <em>Exception highlighted:</em> A zero electric field does not imply a zero electric potential.</li>
-            <li><strong>Ring at Large Distances:</strong> If we move very far away from the ring (\(x \gg R\)), we can approximate \((R^2 + x^2) \approx x^2\). The field formula reduces to \(E = \frac{1}{4\pi\varepsilon_0} \frac{Q}{x^2}\). From far away, the continuous ring is physically indistinguishable from a point charge.</li>
-            <li><strong>Infinite Charged Sheet:</strong> If the radius of the disc approaches infinity (\(R \to \infty\)), or if we observe very close to the disc (\(x \ll R\)), the fraction \(\frac{x}{\sqrt{R^2 + x^2}}\) approaches zero. The field simplifies to the constant \(E = \frac{\sigma}{2\varepsilon_0}\). The field becomes uniform and independent of distance.</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electrostatics
+</a>
+</nav>
+<h1>Field and Potential of Charge Distributions</h1>
+<p class="subtitle">
+Applying Coulomb's Law and direct integration to continuous macroscopic bodies.
+</p>
+<section>
+<h2>What is Charge Distribution?</h2>
+<p>
+Coulomb's Law is formulated for <strong>point charges</strong>, just as Newton's Law of Gravitation is formulated for point masses and \(F=m\vec a\) is applied to point particles.
+</p>
+<p>
+Real charged bodies such as wires, rings, discs, sheets, shells and spheres possess finite dimensions. Their charge is distributed continuously throughout the body. Consequently, different parts of the body lie at different distances from the observation point, so the total charge \(Q\) cannot be substituted directly into Coulomb's Law.
+</p>
+<p>
+The solution is to divide the body into an infinite number of infinitesimal charge elements \(dq\). Each element is sufficiently small to be treated as a point charge.
+</p>
+<p>
+We first calculate the infinitesimal electric field \(d\vec E\) or potential \(dV\) produced by a single charge element and then integrate these contributions over the entire body using the principle of superposition.
+</p>
+<p>
+To express the infinitesimal charge element \(dq\), we introduce <strong>charge density</strong>. This is analogous to mass density in mechanics.
+</p>
+<p>
+The need for charge density arises because electric field and electric potential are <strong>location-dependent</strong> quantities. Every point of the charged body contributes differently depending on its position relative to the observation point. Therefore, we need a physical quantity that bridges <strong>charge</strong> with <strong>space</strong>.
+</p>
+<div class="insightbox">
+The first step in every continuous charge distribution problem is to choose a suitable infinitesimal charge element.<br>
+Depending on the geometry,
+<br>
+Line:
+\[
+dq=\lambda\,dl
+\]
+Surface:
+\[
+dq=\sigma\,dA
+\]
+Volume:
+\[
+dq=\rho\,dV
+\]
+Once \(dq\) is chosen, the remaining steps are common to all derivations:
+<ul class="model-box">
+<li>Apply Coulomb's Law to obtain \(d\vec E\) or \(dV\).</li>
+<li>Resolve vector components if necessary.</li>
+<li>Integrate over the entire charge distribution.</li>
+</ul>
+</div>
+<p>
+We first derive the electric field and then the electric potential. The field derivation develops the essential symmetry arguments and vector geometry, while the potential derivation becomes comparatively straightforward because potential is a scalar quantity.
+</p>
+</section>
+<section>
+<h2>How to Calculate Field and Potential (Standard Cases)</h2>
+<p>
+For JEE, mastering the derivations and final results of the following highly symmetric continuous distributions is essential.
+</p>
+<h3>1. Uniformly Charged Circular Ring (On Axis)</h3>
+<p>
+This is immediately the first configuration taught when we move from discrete to continuous. In discrete, we studied field along perpendicular bisector then along axis of different regular polygons. A uniformly charged circular ring behaves like a regular polygon with infinite number of sides with regards to the math ops.
+</p>
+<p>
+Consider a ring of radius \(R\) carrying a total charge \(Q\). We evaluate the field and potential at a point \(P\) on its central axis, at a distance \(x\) from the center.
+</p>
+<p>
+By symmetry, the components of \(d\vec{E}\) perpendicular to the axis completely cancel out. Only the axial components (\(dE \cos\theta\)) survive the integration.
+</p>
+\[
+E_{\text{axis}} = \frac{k Q x}{(R^2 + x^2)^{3/2}}
+\]
+<p>
+The electric potential is a scalar, so we simply integrate \(dV = \frac{k dq}{\sqrt{R^2 + x^2}}\) without worrying about vectors:
+</p>
+\[
+V_{\text{axis}} = \frac{kQ}{\sqrt{R^2 + x^2}}
+\]
+<h3>2. Uniformly Charged Circular Arc (At Center)</h3>
+<p>
+Consider a Circular Arc of radius \(R\) and arc angle \(\theta\) carrying a total charge \(Q\). Its charge density is \(\lambda = Q/(R\theta)\). We evaluate the field and potential at the center \(O\). Using symmetry, we know that the net electric field is directed along the angle bisector as it is uniformly charged.
+</p>
+<p>
+By integrating the components along the bisector, we get:
+</p>
+\[
+E_{\text{center}} = \frac{2k\lambda}{R} \sin\left(\frac{\theta}{2}\right)
+\]
+<p>
+The electric potential is a scalar. Since every charge element \(dq\) is at the exact same distance \(R\) from the center, we simply integrate \(dV = \frac{kdq}{R}\):
+</p>
+\[
+V_{\text{center}} = \frac{kQ}{R}
+\]
+<h3>3. Finite Straight Uniformly Charged Rod</h3>
+<p>
+Consider a rod with linear charge density \(\lambda\). We want to find the electric field at a perpendicular distance \(r\) from the rod. The ends of the rod subtend angles \(\theta_1\) and \(\theta_2\) at the observation point.
+</p>
+<p>
+Because the rod lacks perfect symmetry, the electric field has two separate components: one perpendicular to the rod (\(E_{\perp}\)) and one parallel to the rod (\(E_{\parallel}\)).
+</p>
+\[
+E_{\perp} = \frac{k\lambda}{r} (\sin\theta_1 + \sin\theta_2)
+\]
+\[
+E_{\parallel} = \frac{k\lambda}{r} (\cos\theta_2 - \cos\theta_1)
+\]
+<p>
+The net electric field is the vector sum of these two components.
+</p>
+<h3>4. Uniformly Charged Circular Disc (On Axis)</h3>
+<p>
+A disc of radius \(R\) has a uniform surface charge density \(\sigma\). To find the field on its axis, we do not start from point charges; instead, we treat the disc as a collection of concentric infinitesimal rings of radius \(r\) and thickness \(dr\), where \(dq = \sigma (2\pi r \, dr)\).
+</p>
+<p>
+Integrating the ring formula from \(r = 0\) to \(r = R\) yields:
+</p>
+\[
+E_{\text{axis}} = \frac{\sigma}{2\varepsilon_0} \left( 1 - \frac{x}{\sqrt{R^2 + x^2}} \right) = \frac{\sigma}{2\varepsilon_0} \left( 1 - \cos\theta \right)
+\]
+\[
+V_{\text{axis}} = \frac{\sigma}{2\varepsilon_0} \left( \sqrt{R^2 + x^2} - x \right)
+\]
+</section>
+<section>
+<h2>Exceptions and Limiting Cases</h2>
+<p>
+The true power of these generalized formulas lies in applying limits to discover the behavior of extreme geometries.
+</p>
+<ul>
+<li><strong>Infinite Straight Wire:</strong> If the rod becomes infinitely long, the subtended angles approach \(\theta_1 = 90^\circ\) and \(\theta_2 = 90^\circ\). The parallel component \(E_{\parallel}\) drops to zero, and the perpendicular component simplifies to \(E = \frac{\lambda}{2\pi\varepsilon_0 r}\).</li>
+<li><strong>Center of the Ring:</strong> At the exact center of the charged ring (\(x = 0\)), the electric field formula yields \(E = 0\). The vectors pull equally in all directions, creating a null point. However, the potential formula yields \(V = \frac{1}{4\pi\varepsilon_0} \frac{Q}{R}\). <em>Exception highlighted:</em> A zero electric field does not imply a zero electric potential.</li>
+<li><strong>Ring at Large Distances:</strong> If we move very far away from the ring (\(x \gg R\)), we can approximate \((R^2 + x^2) \approx x^2\). The field formula reduces to \(E = \frac{1}{4\pi\varepsilon_0} \frac{Q}{x^2}\). From far away, the continuous ring is physically indistinguishable from a point charge.</li>
+<li><strong>Infinite Charged Sheet:</strong> If the radius of the disc approaches infinity (\(R \to \infty\)), or if we observe very close to the disc (\(x \ll R\)), the fraction \(\frac{x}{\sqrt{R^2 + x^2}}\) approaches zero. The field simplifies to the constant \(E = \frac{\sigma}{2\varepsilon_0}\). The field becomes uniform and independent of distance.</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
 </div>
 </body>
 </html>
