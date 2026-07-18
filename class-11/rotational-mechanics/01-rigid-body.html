@@ -1,111 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotational Mechanics | Rigid Body and Types of Motion</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rigid Body Motion | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Rotational Mechanics
-            </a>
-        </nav>
-
-        <h1>Rigid Body and Types of Motion</h1>
-        <p class="subtitle">
-            The idealisation that bridges particle dynamics and the real world of extended objects.
-        </p>
-
-        <section>
-            <h2>What is a Rigid Body?</h2>
-            <p>
-                A <strong>rigid body</strong> is a system of particles in which the distance between every pair of
-                particles remains constant, regardless of what forces act on it. No real object is perfectly rigid — all
-                materials deform under stress — but many objects deform so little that the rigid-body approximation is
-                excellent.
-            </p>
-            <p>
-                The rigid body constraint dramatically simplifies analysis: instead of tracking the positions and
-                velocities of \(10^{23}\) molecules, we need only a few variables to describe the entire body's motion.
-            </p>
-        </section>
-
-        <section>
-            <h2>Types of Motion</h2>
-            <h3>1. Pure Translation</h3>
-            <p>
-                Every particle of the body has the same velocity at every instant. The body moves without rotating — all
-                lines drawn in the body remain parallel to their original directions.
-            </p>
-            <p>
-                Examples: a box sliding on a frictionless floor, a car moving in a straight line (to a first
-                approximation).
-            </p>
-
-            <h3>2. Pure Rotation</h3>
-            <p>
-                The body rotates about a fixed axis. Every particle moves in a circle centred on the axis, and every
-                particle has the same angular velocity \(\omega\). A particle at distance \(r\) from the axis has linear
-                speed \(v = r\omega\).
-            </p>
-            <p>
-                Examples: a spinning top about its tip (approximately), a ceiling fan, the Earth about its axis.
-            </p>
-
-            <h3>3. Combined Translation and Rotation</h3>
-            <p>
-                The most general motion of a rigid body in a plane is a combination of translation of the centre of mass
-                and rotation about the centre of mass. Every possible planar motion can be decomposed this way.
-            </p>
-            <p>
-                Example: a ball rolling on the ground, a cylinder rolling down an incline.
-            </p>
-            <div class="insightbox">
-                Any planar rigid-body motion can also be viewed as pure rotation about an instantaneous axis. This axis
-                — called the <em>instantaneous centre of rotation</em> — may lie outside the body and changes from
-                instant to instant.
-            </div>
-        </section>
-
-        <section>
-            <h2>Degrees of Freedom</h2>
-            <p>
-                A free particle in 3D has 3 degrees of freedom (coordinates \(x, y, z\)). A rigid body in 3D has 6
-                degrees of freedom:
-            </p>
-            <ul>
-                <li><strong>3 translational</strong> — position of the centre of mass \((x, y, z)\).</li>
-                <li><strong>3 rotational</strong> — orientation of the body (Euler angles or equivalent).</li>
-            </ul>
-            <p>
-                For planar motion (motion confined to a plane), this reduces to 3: two translational (\(x, y\) of COM)
-                and one rotational (\(\theta\)). Adding constraints (like a fixed axis) reduces the count further.
-            </p>
-        </section>
-
-        <section>
-            <h2>Fixed-Axis vs Free Rotation</h2>
-            <ul>
-                <li><strong>Fixed-axis rotation:</strong> The axis of rotation is fixed in space and does not move. The
-                    body's motion is fully described by a single variable \(\theta(t)\). Examples: a door hinged at one
-                    edge, a wheel on a fixed axle.</li>
-                <li><strong>Free rotation:</strong> The axis of rotation can change direction. This is far more complex
-                    and includes phenomena like precession and nutation. For JEE purposes, most problems involve
-                    fixed-axis or constrained-axis rotation.</li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>Rigid Body Motion</h1>
+<p class="subtitle">
+The Kinematic constraint characterising Rigid Body Motion.
+</p>
+<section>
+<h2>What is a Rigid Body?</h2>
+<p>
+A <strong>rigid body</strong> is an idealized system of particles in which the distance between every pair of particles remains constant throughout the motion. This condition is known as the <strong>rigid body constraint</strong>.
+</p>
+<p>
+No real object is perfectly rigid — every material undergoes some deformation when subjected to forces. However, in many situations these deformations are negligible, making the rigid-body approximation an excellent model.
+</p>
+<p>
+The rigid body constraint dramatically simplifies the description of motion. Instead of tracking the positions of a very large number of particles individually, the motion of the entire body can be described using only a few variables representing its position and orientation.
+</p>
+<div class="insightbox">
+Instead of tracking the positions of every particle individually, we introduce a new quantity called the <strong>orientation</strong> of a rigid body. It provides a compact description of how the entire body is rotated relative to a chosen reference.<br><br>
+A change in orientation is called <strong>rotational motion</strong>. This change is measured by an angular displacement. However, an angle is always measured between two rays. Therefore, every particle of the rigid body requires its own initial and final reference rays to measure its angular displacement.<br><br>
+The reference rays are different for different particles because they originate from different points of the body. Nevertheless, all these rays are associated with the same <strong>axis of rotation</strong>. The axis therefore provides the common geometric reference for the entire rigid body. Although every particle has its own pair of reference rays, the angular displacement measured between those rays is identical for every particle. Thus, the orientation of the entire rigid body can be described using a single angular coordinate together with the axis of rotation.
+</div>
+<p>
+The rigid body constraint is a geometric property of the body and is therefore independent of the reference frame. Every observer agrees that the distances between particles remain constant. Just as your height does not change when observed from a different frame, the rigidity of a body is also frame - independent and the distances among the particles are relative to each other.
+</p>
+<p>
+In this chapter, we restrict ourselves to rotation about a single axis, which is the case encountered in exam syllabus. For a planar (2D) body, every particle moves in a circle about a common centre. For a three-dimensional body, every particle moves in a circle whose plane is perpendicular to a common axis of rotation. These planes are parallel to one another, and their centres lie on a straight line called the <strong>axis of rotation</strong>. The axis itself may translate from one position to another (as in a rolling wheel), but its orientation remains unchanged throughout the motion considered in this chapter.
+</p>
+<p>
+General rigid-body motion in three dimensions requires three independent angular coordinates to describe the body's orientation. In this chapter, however, we study only <strong>one-dimensional rotational motion</strong>, where the orientation is constrained so that a single angular coordinate \(\theta\) completely specifies the body's orientation.
+</p>
+</section>
+<section>
+<h2>Degrees of Freedom and Types of Rotation</h2>
+<p>
+A free particle in three-dimensional space has <strong>3 degrees of freedom</strong>, corresponding to its three position coordinates \((x,y,z)\).
+</p>
+<p>
+A free rigid body in three-dimensional space has <strong>6 degrees of freedom</strong>:
+</p>
+<ul class="model-box">
+<li><strong>3 translational</strong> — the position of its centre of mass \((x,y,z)\).</li>
+<li><strong>3 rotational</strong> — the orientation of the body (described, for example, by Euler angles).</li>
+</ul>
+<p>
+If the translational motion of the centre of mass is confined to a plane, the translational degrees of freedom reduce from three to two. However, this translational constraint alone does <strong>not</strong> reduce the rotational degrees of freedom. The body may still possess all three rotational degrees of freedom if the orientation of its axis of rotation is allowed to change.
+</p>
+<p>
+To reduce the rotational degrees of freedom to one, an additional rotational constraint is required. Throughout this chapter, we study only motions in which the <strong>orientation of the axis of rotation remains fixed</strong>. The axis itself may either remain fixed in space or translate, but its orientation does not change. Under this constraint, the body's orientation is completely specified by a single angular coordinate \(\theta\).
+</p>
+<p>
+Thus, in the rotational motions studied in this chapter, the body has only <strong>1 rotational degree of freedom</strong>.
+</p>
+<p>
+Examples include a rotating door, a ceiling fan, a wheel mounted on a fixed axle, a rolling cylinder moving in a straight line, and a movable pulley in an Atwood machine. The turning wheel of a vehicle taking a turn or a sphere rolling along an arbitrary curved path do <strong>not</strong> satisfy this constraint because the orientation of the rotation axis changes during the motion.
+</p>
+<p>
+Accordingly, the one-dimensional rotational motion studied in the syllabus may occur in two ways:
+</p>
+<ul class="model-box">
+<li>
+<strong>Fixed-axis rotation:</strong>
+The axis of rotation remains fixed in space. The body has <strong>1 rotational degree of freedom</strong> and <strong>0 translational degrees of freedom</strong>. Its orientation is completely described by the angular coordinate \(\theta(t)\). Examples: a door about its hinge, a ceiling fan, or a wheel mounted on a fixed axle.
+</li>
+<li>
+<strong>Translating-axis rotation:</strong>
+The axis of rotation translates while its orientation remains unchanged. The body therefore undergoes combined translation and rotation. The rotational motion still has only <strong>1 rotational degree of freedom</strong>, while the body may simultaneously possess translational degrees of freedom depending on the problem constraints. For example, a rolling cylinder moving in a straight line has 2 translational and 1 rotational degree of freedom, whereas a movable pulley may possess only 1 translational degree of freedom in a constrained system.
+</li>
+</ul>
+<div class="insightbox">
+The defining feature of all rotational motion studied in this chapter is not whether the axis is fixed in space, but whether the <strong>orientation of the axis of rotation remains fixed</strong>. Under this rotational constraint, a single angular coordinate \(\theta\) completely specifies the body's orientation. General three-dimensional rotational motion, in which the orientation of the axis itself changes and additional angular coordinates are required, lies beyond the scope of this chapter.
+</div>
+</section>
+<section>
+<h2>Types of Motion</h2>
+<p>
+For a point mass, we classified motion as rectilinear or curvilinear because the state of a particle is completely described by its position. A rigid body, however, possesses both <strong>position</strong> and <strong>orientation</strong>. Accordingly, the motion of a rigid body is classified based on changes in these two quantities.
+</p>
+<h3>1. Pure Translation</h3>
+<p>
+In pure translation, the position of the body changes while its orientation remains unchanged. Every particle of the body has the same instantaneous velocity, and every line drawn in the body remains parallel to its original direction.
+</p>
+<p>
+A common source of confusion is <strong>translatory circular motion</strong>. Students often associate a circular path with rotation, but this is not necessarily true. A rigid body can move along a circular path while maintaining the same orientation throughout its motion. In such cases, the motion is still pure translation. Every particle follows a circular path of the same radius but with different centres, and all particles have the same instantaneous velocity.
+</p>
+<p>
+Examples: a box sliding on a frictionless floor, a car moving approximately in a straight line, and a <strong>puja thali</strong> moved in a vertical circular path during <strong>aarti</strong> while being kept horizontal so that the burning oil lamp and other objects placed on it do not fall.
+</p>
+<h3>2. Pure Rotation</h3>
+<p>
+In pure rotation, the orientation of the body changes while the axis of rotation remains fixed in space. The body has no translational motion. Every particle moves in a circle about the axis and has the same angular velocity \(\omega\). A particle at perpendicular distance \(r\) from the axis has linear speed \(v=r\omega\).
+</p>
+<p>
+This is the simplest rotational motion studied in this chapter and has <strong>0 translational</strong> and <strong>1 rotational</strong> degree of freedom.
+</p>
+<p>
+Examples: a door about its hinge, a ceiling fan, a wheel mounted on a fixed axle, and a fixed pulley.
+</p>
+<h3>3. Combined Translation and Rotation</h3>
+<p>
+In combined motion, both the position and the orientation of the rigid body change simultaneously. The axis of rotation translates through space while its orientation remains unchanged. The body therefore possesses translational degrees of freedom together with a single rotational degree of freedom.
+</p>
+<p>
+Depending on the constraints imposed on the body, the translational motion may have one, two or three degrees of freedom.
+</p>
+<ul class="model-box">
+<li><strong>0T + 1R:</strong> Door, ceiling fan, fixed pulley.</li>
+<li><strong>1T + 1R:</strong> Movable pulley in an Atwood machine.</li>
+<li><strong>2T + 1R:</strong> A drone propeller while the drone maintains a constant altitude.</li>
+<li><strong>3T + 1R:</strong> A drone propeller while the drone flies freely in space.</li>
+</ul>
+<div class="insightbox">
+Throughout this chapter, every rotational motion has only <strong>one rotational degree of freedom</strong>. The difference between problems lies only in the number of translational degrees of freedom permitted by the constraints. General three-dimensional rotation, in which the orientation of the rotation axis itself changes, lies beyond the scope of this chapter.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
