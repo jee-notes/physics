@@ -1,118 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotational Mechanics | Newton's Second Law for Rotation</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotational Dynamics | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Rotational Mechanics
-            </a>
-        </nav>
-
-        <h1>Newton's Second Law for Rotation</h1>
-        <p class="subtitle">
-            \(\tau = I\alpha\) — the equation that governs all fixed-axis rotation dynamics.
-        </p>
-
-        <section>
-            <h2>The Law</h2>
-            <p>
-                For a rigid body rotating about a fixed axis, the net external torque about that axis equals the moment
-                of inertia times the angular acceleration:
-            </p>
-            \[\tau_{\text{net}} = I\alpha\]
-            <p>
-                This is the rotational analogue of \(F = ma\). It is derived by applying \(F = ma\) to every particle in
-                the body and summing the torques (internal torques cancel by Newton's third law).
-            </p>
-            <div class="insightbox">
-                Like \(F = ma\), this equation links cause (torque) to effect (angular acceleration) through an inertia
-                parameter (\(I\)). It is valid only about a fixed axis (or about the centre of mass, even if the CM
-                accelerates).
-            </div>
-        </section>
-
-        <section>
-            <h2>Applying the Law: Method</h2>
-            <p>
-                The standard approach for fixed-axis dynamics problems:
-            </p>
-            <ul>
-                <li><strong>Step 1:</strong> Identify the axis of rotation and draw a free-body diagram showing all
-                    forces on the body.</li>
-                <li><strong>Step 2:</strong> Calculate the moment of inertia \(I\) about the axis.</li>
-                <li><strong>Step 3:</strong> Calculate the net torque \(\tau_{\text{net}}\) about the axis (using \(\tau
-                    = r_\perp F\) or \(\tau = rF\sin\theta\)).</li>
-                <li><strong>Step 4:</strong> Apply \(\tau_{\text{net}} = I\alpha\) to find \(\alpha\).</li>
-                <li><strong>Step 5:</strong> If needed, use kinematics (\(\omega = \omega_0 + \alpha t\), etc.) to find
-                    velocities and displacements.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Example: Pulley with Mass</h2>
-            <p>
-                A pulley of mass \(M\), radius \(R\), treated as a uniform disc (\(I = \frac{1}{2}MR^2\)), has a block
-                of mass \(m\) hanging from a string wrapped around it. For the block:
-            </p>
-            \[mg - T = ma\]
-            <p>
-                For the pulley (torque about its axis):
-            </p>
-            \[TR = I\alpha = \tfrac{1}{2}MR^2 \cdot \frac{a}{R}\]
-            \[T = \tfrac{1}{2}Ma\]
-            <p>
-                Solving these simultaneously:
-            </p>
-            \[a = \frac{mg}{m + \frac{M}{2}}\]
-            <p>
-                The pulley's inertia reduces the acceleration compared to a massless pulley (\(a = g\)).
-            </p>
-        </section>
-
-        <section>
-            <h2>About the Centre of Mass</h2>
-            <p>
-                A powerful generalisation: \(\tau = I\alpha\) also holds about the centre of mass, even if the CM is
-                accelerating. This is used extensively in combined translation–rotation problems (like rolling):
-            </p>
-            \[\tau_{\text{CM}} = I_{\text{CM}}\alpha\]
-            <p>
-                Together with Newton's second law for the COM (\(\vec{F}_{\text{ext}} = M\vec{a}_{\text{CM}}\)), these
-                two equations fully determine the motion of a rigid body in a plane.
-            </p>
-        </section>
-
-        <section>
-            <h2>Rotational Equilibrium Revisited</h2>
-            <p>
-                If \(\alpha = 0\), then \(\tau_{\text{net}} = 0\). This is the condition for rotational equilibrium. The
-                body either does not rotate or rotates at constant angular velocity.
-            </p>
-            <p>
-                In static problems (body at rest), both \(\sum \vec{F} = 0\) and \(\sum \vec{\tau} = 0\) must hold
-                simultaneously. Classic applications include:
-            </p>
-            <ul>
-                <li>Ladders leaning against walls</li>
-                <li>Balanced beams and seesaws</li>
-                <li>Hanging signs supported by cables and hinges</li>
-            </ul>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>Rotational Dynamics</h1>
+<p class="subtitle">
+Physical Law for Rigid Body Dynamics - \(\tau = I\alpha\)
+</p>
+<section>
+<h2>Rigid Body Dynamics</h2>
+<p>
+Rigid body dynamics encountered in this chapter can be broadly divided into two categories:
+</p>
+<ul class="model-box">
+<li><strong>Fixed Axis Rotation</strong></li>
+<li><strong>Translating Axis Rotation</strong></li>
+</ul>
+<p>
+Problems involving translating axis rotation require additional equations to account for the translational motion of the body coming under the heading of constraints. They are not dependent on physical laws.
+</p>
+<p>
+Newton's Second Law of Rotational Motion remains valid for both cases.
+</p>
+<p>
+For translating axis rotation, the most convenient choice of axis is usually the one passing through the centre of mass (COM).
+</p>
+<p>
+In the non-inertial frame attached to the COM, the pseudo force acts through the COM and therefore produces zero torque about it.
+</p>
+</section>
+<section>
+<h2>Newton's Second Law</h2>
+<p>
+For a rigid body rotating about an axis, the net external torque about that axis equals the moment of inertia about the same axis multiplied by the angular acceleration:
+</p>
+\[
+\tau_{\text{axis}} = I_{\text{axis}}\alpha
+\]
+<p>
+This is the rotational analogue of Newton's second law,
+\[
+F = ma
+\]
+</p>
+<p>
+It is obtained by applying \(F = ma\) to every particle of the rigid body and summing the torques of all external forces about the chosen axis. The torques due to internal forces cancel in pairs because of Newton's third law.
+</p>
+<p>
+Since its derivation is based on Newton's laws, it is valid only in an inertial frame of reference.
+</p>
+<div class="insightbox">
+Like \(F=ma\), the equation \(\tau=I\alpha\) relates the cause (torque) to the effect (angular acceleration) through an inertia parameter, the moment of inertia \(I\).<br>
+Unlike mass, which remains constant for a rigid body, the moment of inertia depends on how the mass is distributed about the chosen axis. Consequently, \(I\) changes if either the axis of rotation or the body's mass distribution changes.<br>
+The equation is directly applicable to fixed-axis rotation and also about the centre of mass, even if the centre of mass is accelerating.
+</div>
+</section>
+<section>
+<h2>Hinge Force</h2>
+<p>
+A hinge constrains a rigid body to rotate about a fixed axis. Common examples include a door rotating about its hinges and a ceiling fan rotating about its shaft.
+</p>
+<p>
+The hinge exerts a contact force on the body. This contact force is a manifestation of the normal reaction and, if the hinge is not frictionless, may also include friction.
+</p>
+<p>
+A hinge consists of a pin enclosed by a circular sleeve. Thus, the pin is in contact with the hinge over its entire circumference.
+</p>
+<p>
+Unlike the normal reaction between two surfaces, which acts along the common normal, the direction of the hinge force cannot be determined directly from geometry.
+</p>
+<p>
+This is because the pin is surrounded by the hinge over its entire circumference (\(360^\circ\) coverage). Therefore, the contact force may act in any direction perpendicular to the axis of rotation.
+</p>
+<p>
+The hinge force adjusts itself to satisfy the translational constraints imposed by the fixed axis. Consequently, any external force that does not produce a torque about the axis is balanced by the hinge force. For example, if a downward force is applied to a door, the hinge provides an equal and opposite force so that the door does not translate downward.
+</p>
+<div class="insightbox">
+Hinge Force is generally calculated using \(F_{\text{ext}} = Ma_{\text{CM}}\) .<br>
+It has the potential to be impulsive force.<br>
+A Frictionless hinge does not do any work as the displacement of the point of contact is perpendicular to the hinge force at all points for all time.<br>
+However, hinge with friction will do negative work.<br>
+The torque due to the hinge force about the hinge is zero. Although a real hinge has a finite radius, it is idealised as a point while calculating torque and hinge force is considered to pass through the hinge point.
+</div>
+</section>
+<section>
+<h2>Applying the Law: Method</h2>
+<p>
+The standard approach for fixed-axis dynamics problems:
+</p>
+<ul class="model-box">
+<li><strong>Step 1:</strong> Identify the axis of rotation and draw a free-body diagram showing all forces on the body.</li>
+<li><strong>Step 2:</strong> Calculate the moment of inertia \(I\) about the axis.</li>
+<li><strong>Step 3:</strong> Calculate the net torque \(\tau_{\text{net}}\) about the axis (using \(\tau = r_\perp F\) or \(\tau = rF\sin\theta\)).</li>
+<li><strong>Step 4:</strong> Apply \(\tau_{\text{net}} = I\alpha\) to find \(\alpha\).</li>
+<li><strong>Step 5:</strong> If needed, use kinematics (\(\omega = \omega_0 + \alpha t\), etc.) to find velocities and displacements.</li>
+</ul>
+</section>
+<section>
+<h2>Example: Pulley with Mass</h2>
+<p>
+A pulley of mass \(M\), radius \(R\), treated as a uniform disc (\(I = \frac{1}{2}MR^2\)), has a block of mass \(m\) hanging from a string wrapped around it. For the block:
+</p>
+\[
+mg - T = ma
+\]
+<p>
+For the pulley (torque about its axis):
+</p>
+\[
+TR = I\alpha = \tfrac{1}{2}MR^2 \cdot \frac{a}{R}
+\]
+\[
+T = \tfrac{1}{2}Ma
+\]
+<p>
+Solving these simultaneously:
+</p>
+\[
+a = \frac{mg}{m + \frac{M}{2}}
+\]
+<p>
+The pulley's inertia reduces the acceleration compared to a massless pulley (\(a = g\)).
+</p>
+</section>
+<section>
+<h2>About the Centre of Mass</h2>
+<p>
+A powerful generalisation: \(\tau = I\alpha\) also holds about the centre of mass, even if the CM is accelerating. This is used extensively in combined translation–rotation problems (like rolling):
+</p>
+\[
+\tau_{\text{CM}} = I_{\text{CM}}\alpha
+\]
+<p>
+Together with Newton's second law for the COM (\(\vec{F}_{\text{ext}} = M\vec{a}_{\text{CM}}\)), these two equations fully determine the motion of a rigid body in a plane.
+</p>
+</section>
+<section>
+<h2>Rotational Equilibrium Revisited</h2>
+<p>
+If \(\alpha = 0\), then \(\tau_{\text{net}} = 0\). This is the condition for rotational equilibrium. The body either does not rotate or rotates at constant angular velocity.
+</p>
+<p>
+In static problems (body at rest), both \(\sum \vec{F} = 0\) and \(\sum \vec{\tau} = 0\) must hold simultaneously. Classic applications include:
+</p>
+<ul class="model-box">
+<li>Ladders leaning against walls</li>
+<li>Balanced beams and seesaws</li>
+<li>Hanging signs supported by cables and hinges</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

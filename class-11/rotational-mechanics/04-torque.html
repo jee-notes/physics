@@ -1,119 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotational Mechanics | Torque</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torque | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Rotational Mechanics
-            </a>
-        </nav>
-
-        <h1>Torque</h1>
-        <p class="subtitle">
-            The rotational analogue of force — the cause of angular acceleration.
-        </p>
-
-        <section>
-            <h2>Definition</h2>
-            <p>
-                The torque of a force \(\vec{F}\) about a point \(O\) is defined as the cross product of the position
-                vector \(\vec{r}\) (from \(O\) to the point of application) and the force:
-            </p>
-            \[\vec{\tau} = \vec{r} \times \vec{F}\]
-            <p>
-                The magnitude is:
-            </p>
-            \[\tau = rF\sin\theta = F \cdot d\]
-            <p>
-                where \(\theta\) is the angle between \(\vec{r}\) and \(\vec{F}\), and \(d = r\sin\theta\) is the
-                <strong>perpendicular distance</strong> from \(O\) to the line of action — also called the <strong>lever
-                    arm</strong> or <strong>moment arm</strong>.
-            </p>
-            <div class="insightbox">
-                Torque is zero when the force passes through the pivot (lever arm = 0), or when the force is parallel to
-                the position vector (\(\sin\theta = 0\)). A large force does not guarantee a large torque — the lever
-                arm matters equally.
-            </div>
-        </section>
-
-        <section>
-            <h2>Direction of Torque</h2>
-            <p>
-                By the right-hand rule for cross products, the torque vector is perpendicular to the plane containing
-                \(\vec{r}\) and \(\vec{F}\). For rotation in a plane:
-            </p>
-            <ul>
-                <li>Counterclockwise (CCW) torque → positive (out of the page)</li>
-                <li>Clockwise (CW) torque → negative (into the page)</li>
-            </ul>
-            <p>
-                The sign convention is chosen to match the axis direction using the right-hand rule.
-            </p>
-        </section>
-
-        <section>
-            <h2>Couple</h2>
-            <p>
-                A <strong>couple</strong> consists of two equal and opposite forces whose lines of action do not
-                coincide. The net force is zero, but the net torque is non-zero:
-            </p>
-            \[\tau_{\text{couple}} = F \cdot d\]
-            <p>
-                where \(d\) is the perpendicular distance between the two lines of action. The remarkable property of a
-                couple is:
-            </p>
-            <ul>
-                <li>The torque is the same about <em>every</em> point. (It does not depend on the choice of pivot.)</li>
-                <li>A couple produces pure rotation without any translation.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Torque About an Axis</h2>
-            <p>
-                In fixed-axis rotation problems, we need the component of torque along the rotation axis. If the axis is
-                along \(\hat{n}\):
-            </p>
-            \[\tau_{\text{axis}} = \hat{n} \cdot (\vec{r} \times \vec{F})\]
-            <p>
-                Only forces (or components of forces) that tend to rotate the body about the given axis contribute.
-                Forces parallel to the axis or forces whose line of action intersects the axis produce zero torque about
-                that axis.
-            </p>
-        </section>
-
-        <section>
-            <h2>Conditions for Equilibrium</h2>
-            <p>
-                A rigid body is in <strong>static equilibrium</strong> (no translation and no rotation) when:
-            </p>
-            \[\sum \vec{F} = 0 \qquad \text{(translational equilibrium)}\]
-            \[\sum \vec{\tau} = 0 \qquad \text{(rotational equilibrium)}\]
-            <p>
-                The torque equilibrium condition must hold about <em>any</em> point (if the net force is zero, the net
-                torque is the same about all points). In practice, choose a pivot that eliminates unknown forces from
-                the torque equation.
-            </p>
-            <div class="insightbox">
-                Smart choice of pivot can dramatically simplify equilibrium problems. Choose a point where the most
-                unknown forces act — their torques vanish, leaving fewer unknowns.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>Torque</h1>
+<p class="subtitle">
+The rotational analogue of force in rigid-body mechanics.
+</p>
+<section>
+<h2>Definition</h2>
+<p>
+In NLM, the physical quantity <strong>force</strong> was introduced. Before giving its mathematical definition, we first discussed it qualitatively as a push or a pull. We follow a similar approach for torque.
+</p>
+<p>
+In NLM, we discussed that stopping a truck requires more force than stopping a cycle moving with the same speed because of momentum. However, in those discussions, the truck and the cycle were treated as point objects.
+</p>
+<p>
+In the discussion of torque, the object is a <strong>rigid body</strong> having finite dimensions. Consequently, the point of application of a force becomes important.
+</p>
+<p>
+A force acting on a rigid body can produce two different effects. It may change the translational motion of the body, and it may also change its orientation (rotational motion).
+</p>
+<p>
+For a particle, all forces are effectively concurrent since they act at the same point. In contrast, forces acting on a rigid body may be applied at different points. Therefore, the rotational effect of a force depends not only on its magnitude and direction, but also on its point of application.
+</p>
+<p>
+Common examples that illustrate this idea are opening a door and using a wrench to loosen the wheel nuts of a truck. A mechanic always stands at the far end of the wrench to maximize its twisting effect. The farther the point of application of the force from the axis of rotation, the greater is its twisting effect.
+</p>
+<p>
+The physical quantity that measures the rotational effect of a force about a point is called <strong>torque</strong>.
+</p>
+<p>
+Like force, torque is also a vector quantity. The torque of a force \(\vec{F}\) about a point \(O\) is defined as the cross product of the position vector \(\vec{r}\), drawn from \(O\) to the point of application of the force, and the force:
+</p>
+\[
+\vec{\tau}=\vec{r}\times\vec{F}
+\]
+<p>
+The magnitude of torque is
+</p>
+\[
+\tau=rF\sin\theta = Fr_\perp = F_\perp r
+\]
+<p>
+where \(\theta\) is the angle between \(\vec r\) and \(\vec F\), and \(r_\perp=r\sin\theta\) is the perpendicular distance from the point \(O\) to the line of force. This perpendicular distance is called the <strong>lever arm</strong> or <strong>moment arm</strong>.
+</p>
+<div class="insightbox">
+Torque is zero when the line of action of the force passes through the pivot (lever arm = 0), or when the force is parallel to the position vector (\(\sin\theta=0\)).<br>
+Thus, a larger force does not necessarily produce a larger torque — the lever arm is equally important.
+</div>
+<h3>Units and Dimensions</h3>
+<p>
+From the definition,
+</p>
+\[
+\tau = rF
+\]
+<p>
+Since force has SI unit newton (N) and distance has SI unit metre (m), the SI unit of torque is
+</p>
+\[
+\boxed{\text{N}\cdot\text{m}}
+\]
+<p>
+The dimensions of torque are
+</p>
+\[
+[M L^2 T^{-2}]
+\]
+<p>
+These are the same as the dimensions of work and energy. However, torque is a different physical quantity. Work and energy are scalar quantities, whereas torque is a vector quantity.
+</p>
+<div class="insightbox">
+Although both torque and work have the SI unit N·m and the same dimensions, they represent entirely different physical quantities.<br>
+Torque measures the rotational effect of a force, whereas work measures the energy transferred by a force through displacement.
+</div>
+</section>
+<section>
+<h2>Direction of Torque</h2>
+<p>
+Since torque is defined as the cross product
+\[
+\vec{\tau}=\vec{r}\times\vec{F},
+\]
+its direction is given by the right-hand rule. The torque vector is perpendicular to the plane containing \(\vec r\) and \(\vec F\).
+</p>
+<p>
+In most problems, the force and the position vector lie in the plane of the page. Consequently, the torque vector is directed either into or out of the plane of the page.
+</p>
+<ul class="model-box">
+<li>Counterclockwise (CCW) tendency of rotation &rarr; Torque is positive (out of the page).</li>
+<li>Clockwise (CW) tendency of rotation &rarr; Torque is negative (into the page).</li>
+</ul>
+<p>
+This sign convention follows directly from the right-hand rule and is consistent with the positive direction of the axis perpendicular to the plane of rotation.
+</p>
+<div class="insightbox">
+Most problems in the JEE syllabus involve coplanar forces. We shall also solve a few problems involving non-coplanar forces, but with suitable techniques so that the mathematics of coplanar forces remains applicable.
+</div>
+<p>
+The right-hand rule provides a quick way to determine the direction of torque and is particularly useful in dynamics problems. With practice, the direction can often be identified by simple geometric reasoning, without explicitly evaluating the cross product every time.
+</p>
+</section>
+<section>
+<h2>Couple</h2>
+<p>
+A <strong>couple</strong> consists of two equal and opposite forces whose lines of force do not coincide. The net force is zero, but the net torque is non-zero:
+</p>
+\[
+\tau_{\text{couple}} = F \cdot d
+\]
+<p>
+where \(d\) is the perpendicular distance between the two lines of action. The remarkable property of a couple is:
+</p>
+<ul class="model-box">
+<li>The torque is the same about <strong>every</strong> point. (It does not depend on the choice of pivot.)</li>
+<li>A couple produces pure rotation without any translation.</li>
+</ul>
+</section>
+<section>
+<h2>Torque About an Axis</h2>
+<p>
+In problems involving one rotational degree of freedom, we require only the component of torque along the axis of rotation. If the axis is along \(\hat n\), then
+</p>
+\[
+\tau_{\text{axis}} = \hat n\cdot(\vec r\times\vec F)
+\]
+<p>
+Only forces (or components of forces) that tend to rotate the body about the given axis contribute to the torque.
+</p>
+<p>
+Forces parallel to the axis, or forces whose line of action passes through the axis, produce zero torque about that axis.
+</p>
+<div class="insightbox">
+This is one of the major simplifications in the JEE syllabus.<br>
+Most rotational problems involve only <strong>one rotational degree of freedom</strong>.<br>
+Consequently, the moment of inertia about a given axis reduces to a scalar quantity, while torque about the axis reduces to a one-dimensional vector.<br>
+In general three-dimensional rigid-body motion, the body's inertia is described by an inertia tensor and the rotational dynamics becomes considerably more advanced.
+</div>
+<p>
+How do we calculate torque about an axis? In
+\[
+\tau_{\text{axis}}=\hat n\cdot(\vec r\times\vec F),
+\]
+what exactly is the position vector \(\vec r\)?
+</p>
+<p>
+Recall that the torque of a force is always defined <strong>about a point</strong>. Since an axis is simply a line passing through infinitely many points, we may choose <strong>any point</strong> on the axis as the reference point \(O\). The vector \(\vec r\) is then drawn from that point on the axis to the point of application of the force.
+</p>
+<p>
+Although different choices of the reference point on the same axis give different torque vectors, their components along the axis are identical. Therefore,
+\[
+\tau_{\text{axis}} = \hat n\cdot(\vec r\times\vec F)
+\]
+is independent of which point on the axis is chosen.
+</p>
+<div class="insightbox">
+To calculate the torque about an axis:
+<ul>
+<li>Choose any convenient point on the axis.</li>
+<li>Draw the position vector from that point to the point of application of the force.</li>
+<li>Compute \(\vec r\times\vec F\).</li>
+<li>Take its component along the axis using the dot product with \(\hat n\).</li>
+</ul>
+</div>
+</section>
+<section>
+<h2>Conditions for Equilibrium</h2>
+<p>
+A rigid body is in <strong>static equilibrium</strong> (no translation and no rotation) when:
+</p>
+\[
+\sum \vec{F} = 0 \qquad \text{(translational equilibrium)}
+\]
+\[
+\sum \vec{\tau} = 0 \qquad \text{(rotational equilibrium)}
+\]
+<p>
+The torque equilibrium condition must hold about <strong>any</strong> point (if the net force is zero, the net torque is the same about all points). In practice, choose a pivot that eliminates unknown forces from the torque equation.
+</p>
+<div class="insightbox">
+Smart choice of pivot can dramatically simplify equilibrium problems. Choose a point where the most unknown forces act — their torques vanish, leaving fewer unknowns.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Speed | Speed and Velocity</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-speed-and-velocity.html" class="back-btn">
+<span>&larr;</span> Back to Speed and Velocity
+</a>
+</nav>
+<h1>Average Speed</h1>
+<p class="subtitle">
+Useful results for special cases frequently encountered in numerical problems.
+</p>
+<section>
+<h2>Average Speed</h2>
+<p>
+The average speed of a particle is always defined as
+</p>
+<div class="model-box">
+\[
+v_{\rm avg}=\frac{\text{Total Distance Travelled}}{\text{Total Time Taken}}
+\]
+</div>
+<p>
+The formulas discussed below are not independent formulas. They are direct consequences of the above definition and are applicable only under the specified conditions.
+</p>
+</section>
+<section>
+<h2>Average Speed for Equal Time Intervals</h2>
+<p>
+Suppose a particle moves with speed \(v_1\) for a time interval \(t\), and then with speed \(v_2\) for the same time interval \(t\).
+</p>
+<p>
+Total distance travelled
+\[
+=v_1t+v_2t=(v_1+v_2)t
+\]
+</p>
+<p>
+Total time taken
+\[
+=2t
+\]
+</p>
+<p>
+Therefore,
+\[
+v_{\rm avg}=\frac{(v_1+v_2)t}{2t}=\boxed{\frac{v_1+v_2}{2}}
+\]
+</p>
+<div class="insightbox">
+This is simply the arithmetic mean of the two speeds.
+</div>
+</section>
+<section>
+<h2>Average Speed for Equal Distances</h2>
+<p>
+Suppose a particle covers the same distance \(d\) with speed \(v_1\), and then covers another equal distance \(d\) with speed \(v_2\).
+</p>
+<p>
+Total distance travelled
+\[
+=2d
+\]
+</p>
+<p>
+Total time taken
+\[
+=\frac{d}{v_1}+\frac{d}{v_2}
+\]
+</p>
+<p>
+Therefore,
+\[
+v_{\rm avg}=\frac{2d}{\dfrac{d}{v_1}+\dfrac{d}{v_2}}=\boxed{\frac{2v_1v_2}{v_1+v_2}}
+\]
+</p>
+<div class="insightbox">
+This is the harmonic mean of the two speeds.
+</div>
+</section>
+<section>
+<h2>Important Note</h2>
+<div class="insightbox">
+These two formulas are valid only under their respective conditions.
+<ul>
+<li>Use \(\displaystyle \frac{v_1+v_2}{2}\) only when the particle travels with the two speeds for <strong>equal time intervals</strong>.</li>
+<li>Use \(\displaystyle \frac{2v_1v_2}{v_1+v_2}\) only when the particle covers <strong>equal distances</strong> with the two speeds.</li>
+</ul>
+In all other situations, always return to the fundamental definition
+\[
+v_{\rm avg} = \frac{\text{Total Distance}}{\text{Total Time}}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
