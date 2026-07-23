@@ -18,100 +18,250 @@
 <p class="subtitle">
 The equations of motion for constant acceleration.
 </p>
-
 <section>
 <h2>Equations for Uniformly Accelerated Motion</h2>
 <p>
-When an object moves with a <strong>constant (uniform) acceleration</strong>, its velocity changes at a constant rate. In such cases, the complex calculus of motion simplifies into three widely used algebraic equations.
+When an object moves with a <strong>constant (uniform) acceleration</strong>, its velocity changes at a constant rate. In such cases, the complex calculus of motion simplifies into widely used algebraic equations.
 </p>
-<div class="model-box">
-<strong>The Three Equations of Motion</strong>
-<br>
+<p>
 Let an object have an initial velocity \( u \) at time \( t = 0 \) and move with a constant acceleration \( a \). Let \( v \) be its final velocity at time \( t \), and let \( s \) be its displacement during this time interval.
-<ol>
-<li><strong>Velocity-Time Relation:</strong> \[ v = u + at \]</li>
-<li><strong>Position-Time Relation:</strong> \[ s = ut + \frac{1}{2}at^2 \]</li>
-<li><strong>Position-Velocity Relation:</strong> \[ v^2 = u^2 + 2as \]</li>
-</ol>
-</div>
-<div class="insightbox">
-<strong>Crucial Warning:</strong> These equations are strictly valid <em>only</em> if the acceleration \( a \) is constant throughout the time interval \( t \). If acceleration is varying with time or position, you must use calculus to solve the problem.
+<p>
+<div class="math-block">
+\[ v = u + at \]
+\[ s = ut + \frac{1}{2}at^2 \]
 </div>
 <p>
-A fourth, often useful equation for displacement in uniformly accelerated motion is the average velocity formula:
+There are 5 variables - \( u \) , \( t \) , \( s \) , \( a \) , \( v \) . So this is also called as UTSAV.
+<p>
+<p>
+The variables \( t \) and \( s \) are defined over an interval. \( t \) is the time interval from \( t = 0 \) to \( t = t\) . \( s \) is the displacement accumulated in the time interval from \( t = 0 \) to \( t = t\) . \( u \) , \( a \) and \( v \) are instantaneous variables. \( u \) is instantaneous velocity at \( t = 0 \) . \( v \) is instantaneous velocity at \( t = t \) . \( a \) is the constant instantaneous acceleration in the interval from \( t = 0 \) to \( t = t\) .
+<p>
+<p>
+Other, often useful equations are different forms of the above 2 basic equations:
+<div class="math-block">
 \[ s = \left( \frac{u + v}{2} \right) t \]
+\[ v^2 = u^2 + 2as \]
+\[ s = vt - \frac{1}{2}at^2 \]
+</div>
 </p>
 <p>
 Also, the displacement in the \( n^{\text{th}} \) second of motion is given by:
-\[ S_n = u + \frac{a}{2}(2n - 1) \]
+\[
+S_n = u + \frac{a}{2}(2n - 1)
+\]
 </p>
 </section>
-
 <section>
 <h2>Derivation using Calculus</h2>
 <p>
-Let's derive these fundamental equations using calculus. Assume acceleration \( a = \text{constant} \).
+The kinematic equations for uniformly accelerated motion follow directly from the definitions of velocity and acceleration. Throughout this derivation, assume that the acceleration \(a\) is constant.
 </p>
-<h3>1. Deriving \( v = u + at \)</h3>
+<h3>1. Deriving \(v=u+at\)</h3>
 <p>
-We know that acceleration is the rate of change of velocity: \( a = \frac{dv}{dt} \).
-\[ dv = a \, dt \]
-Integrating both sides, with limits from \( t = 0 \) (where velocity is \( u \)) to \( t \) (where velocity is \( v \)):
-\[ \int_u^v dv = \int_0^t a \, dt \]
-Since \( a \) is constant, it comes out of the integral:
-\[ [v]_u^v = a [t]_0^t \implies v - u = at \implies v = u + at \]
+Acceleration is defined as the rate of change of velocity:
 </p>
-
-<h3>2. Deriving \( s = ut + \frac{1}{2}at^2 \)</h3>
+\[
+a=\frac{dv}{dt}
+\]
+\[
+dv=a\,dt
+\]
 <p>
-We know velocity is the rate of change of position: \( v = \frac{ds}{dt} \).
-Substituting the first equation \( v = u + at \):
-\[ \frac{ds}{dt} = u + at \implies ds = (u + at) \, dt \]
-Integrating from \( t = 0 \) (where displacement is 0) to \( t \) (where displacement is \( s \)):
-\[ \int_0^s ds = \int_0^t (u + at) \, dt \]
-\[ [s]_0^s = [ut + \frac{1}{2}at^2]_0^t \implies s = ut + \frac{1}{2}at^2 \]
+Integrating both sides from \(t=0\) (where the velocity is \(u\)) to time \(t\) (where the velocity is \(v\)),
 </p>
-
-<h3>3. Deriving \( v^2 = u^2 + 2as \)</h3>
+\[
+\int_u^v dv=\int_0^t a\,dt
+\]
 <p>
-We use the chain rule form of acceleration: \( a = v \frac{dv}{ds} \).
-\[ a \, ds = v \, dv \]
-Integrating from initial state (\( s = 0, \text{velocity} = u \)) to final state (\( s, \text{velocity} = v \)):
-\[ \int_0^s a \, ds = \int_u^v v \, dv \]
-\[ a [s]_0^s = \left[ \frac{v^2}{2} \right]_u^v \implies as = \frac{v^2 - u^2}{2} \implies v^2 = u^2 + 2as \]
+Since \(a\) is constant, it can be taken outside the integral:
 </p>
+\[
+[v]_u^v=a[t]_0^t
+\]
+\[
+v-u=at
+\]
+\[
+\boxed{v=u+at}
+\]
+<h3>2. Deriving \(s=ut+\frac12at^2\)</h3>
+<p>
+Velocity is defined as the rate of change of position:
+</p>
+\[
+v=\frac{dx}{dt}
+\]
+<p>
+Substituting the first equation,
+</p>
+\[
+\frac{dx}{dt}=u+at
+\]
+\[
+dx=(u+at)\,dt
+\]
+<p>
+Integrating from \(t=0\) (where position \(x=x_0\)) to time \(t\) (where position \(x=x\)),
+</p>
+\[
+\int_{x_0}^{x} dx=\int_0^t (u+at)\,dt
+\]
+\[
+[x]_{x_0}^{x}=\left[ut+\frac12at^2\right]_0^t
+\]
+<p>
+At LHS, the quantity \(x-x_0\) represents change in position, also called as displacement \(s\),
+</p>
+\[
+\boxed{s=ut+\frac12at^2}
+\]
+<div class="insightbox">
+The derivation actually involves solving <strong>two first-order differential equations</strong> sequentially.<br>
+First,
+\[
+\frac{dv}{dt}=a
+\]
+whose integration introduces one integration constant, determined by the initial condition
+\[
+v(0)=u
+\]
+Next,
+\[
+\frac{dx}{dt}=v
+\]
+whose integration introduces a second integration constant, determined by the initial condition
+\[
+x(0)=x_0
+\]
+Thus, the complete solution is
+\[
+x=x_0+ut+\frac12at^2
+\]
+Finally, using
+\[
+s=x-x_0
+\]
+we obtain
+\[
+s=ut+\frac12at^2
+\]
+If the derivation is carried out directly in terms of displacement \(s\), the initial position \(x_0\) is absorbed into the definition of displacement, hiding the second integration constant.<br>
+A differential equation describes a <strong>family of possible solutions</strong>, not a unique solution.<br>
+Integrating the differential equation introduces an <strong>integration constant</strong>, giving the general solution.<br>
+The value of the integration constant is determined by an <strong>initial condition</strong> (or boundary condition), thereby selecting the unique solution corresponding to the physical problem.
+<br><br>
+</div>
+<h3>3. Deriving \(v^2=u^2+2as\)</h3>
+<p>
+Using the chain-rule form of acceleration,
+</p>
+\[
+a=v\frac{dv}{ds}
+\]
+\[
+a\,ds=v\,dv
+\]
+<p>
+Integrating from the initial state \((s=0,\;v=u)\) to the final state \((s,\;v=v)\),
+</p>
+\[
+\int_0^s a\,ds=\int_u^v v\,dv
+\]
+\[
+a[s]_0^s=\left[\frac{v^2}{2}\right]_u^v
+\]
+\[
+as=\frac{v^2-u^2}{2}
+\]
+\[
+\boxed{v^2=u^2+2as}
+\]
+<div class="insightbox">
+The third equation is <strong>not an independent kinematic equation.</strong><br>
+Only the two differential relations
+\[
+v=\frac{ds}{dt} \qquad\text{and}\qquad a=\frac{dv}{dt}
+\]
+are fundamental. Every other kinematic equation is obtained by algebraic manipulation or integration of these two relations.<br>
+Thus, although there are five variables (\(u,\;v,\;a,\;s,\;t\)), there are only two independent equations relating them.<br>
+Therefore, three independent quantities must be specified to determine the remaining two.
+</div>
 </section>
-
 <section>
 <h2>Galileo's Law of Odd Numbers</h2>
 <p>
-Galileo made a profound observation about objects moving with constant acceleration starting from rest.
+Galileo made a profound observation about bodies moving with constant acceleration from rest. This is a special case of <strong>uniformly accelerated motion</strong> corresponding to \(u=0\).
 </p>
-<div class="concept-box">
-<strong>Galileo's Law of Odd Numbers:</strong>
-<br>
-The distances traversed, during equal intervals of time, by a body falling from rest, stand to one another in the same ratio as the odd numbers beginning with unity:
-\[ 1 : 3 : 5 : 7 : 9 \dots \]
-</div>
+<h3>Galileo's Law of Odd Numbers (GLON)</h3>
 <p>
-<strong>Proof:</strong>
-Since initial velocity \( u = 0 \), the displacement in any time \( t \) is \( s = \frac{1}{2}at^2 \). Let the equal time interval be \( t_0 \).
-<ul>
-<li>Distance covered in \( 0 \) to \( t_0 \): \( s_1 = \frac{1}{2}a(t_0)^2 \)</li>
-<li>Distance covered in \( 0 \) to \( 2t_0 \): \( S_2 = \frac{1}{2}a(2t_0)^2 = 4 \times \frac{1}{2}at_0^2 = 4s_1 \). Therefore, distance in the 2nd interval is \( S_2 - s_1 = 3s_1 \).</li>
-<li>Distance covered in \( 0 \) to \( 3t_0 \): \( S_3 = \frac{1}{2}a(3t_0)^2 = 9 \times \frac{1}{2}at_0^2 = 9s_1 \). Distance in the 3rd interval is \( S_3 - S_2 = 5s_1 \).</li>
-</ul>
-Hence, the ratio of distances covered in successive equal time intervals is \( s_1 : 3s_1 : 5s_1 = 1 : 3 : 5 \dots \)
+The distances traversed by a body, during successive equal intervals of time, are in the ratio of the odd numbers beginning with unity:
 </p>
+\[
+1 : 3 : 5 : 7 : 9 : \cdots
+\]
+<h3>Proof</h3>
+<p>
+For motion starting from rest (\(u=0\)),
+</p>
+\[
+s=\frac{1}{2}at^2
+\]
+<p>
+Let each time interval have duration \(t_0\). Let \(S_n\) denote the displacement from the start after \(n\) intervals.
+</p>
+<ul class="model-box">
+<li>
+After the first interval,
+\[
+S_1=\frac{1}{2}at_0^2
+\]
+Hence, the distance covered in the first interval is
+\[
+S_1
+\]
+</li>
+<li>
+After the second interval,
+\[
+S_2=\frac{1}{2}a(2t_0)^2=4S_1
+\]
+Hence, the distance covered in the second interval is
+\[
+S_2-S_1=3S_1
+\]
+</li>
+<li>
+After the third interval,
+\[
+S_3=\frac{1}{2}a(3t_0)^2=9S_1
+\]
+Hence, the distance covered in the third interval is
+\[
+S_3-S_2=5S_1
+\]
+</li>
+</ul>
+<p>
+Therefore, the distances covered in successive equal intervals of time are in the ratio
+</p>
+\[
+S_1:3S_1:5S_1:\cdots=1:3:5:\cdots
+\]
+<div class="insightbox">
+The intervals need only be of <strong>equal duration</strong>; they need not be \(1\,\text{s}\).<br>
+Galileo's Law of Odd Numbers is valid only for motion starting from rest (\(u=0\)).<br>
+If the initial velocity is non-zero, the distances covered in successive equal intervals are no longer in the ratio
+\[
+1:3:5:\cdots
+\]
+</div>
 </section>
-
 <section>
 <h2>Sub-Topics</h2>
 <div class="chapter-list">
 <a href="./08a-motion-under-gravity.html">1. Motion under Gravity (Free Fall)</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

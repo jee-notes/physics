@@ -100,6 +100,171 @@ v_{\rm avg} = \frac{\text{Total Distance}}{\text{Total Time}}
 \]
 </div>
 </section>
+<section>
+<h2>Average is Average of Averages</h2>
+<div class="examplebox">
+<h3>I.E. Irodov 1.2</h3>
+<p>
+A particle traverses half of the total distance with velocity \(v_0\). The remaining half of the distance is covered with velocity \(v_1\) for half of the time and with velocity \(v_2\) for the other half of the time. Find the average velocity of the particle over the entire journey.
+</p>
+<h3>Solution</h3>
+<p>
+This problem illustrates an important mathematical idea involving averages. We shall first solve it using the standard method of definition. Later, we shall solve it again using the idea of <strong>average is average of averages</strong>, which provides a much shorter solution. It is basically successive averaging.
+</p>
+<p>
+Assume that the total distance travelled is \(2d\). Then the first half of the journey consists of travelling a distance \(d\) with constant velocity \(v_0\).
+</p>
+<p>
+Let the time taken to cover the remaining half of the journey be \(2t\). During this interval, the particle moves with velocity \(v_1\) for a time \(t\) and with velocity \(v_2\) for the remaining time \(t\).
+</p>
+<div class="insightbox">
+The statement of the problem mixes the terms <strong>distance</strong> and <strong>velocity</strong>.<br>
+Average velocity is defined using displacement rather than distance.<br>
+Therefore, either we assume that the motion is along a straight line without changing direction.<br>
+Or we assume that the question wrongly talks about velocity and it should be speed.
+</div>
+<h3>Method 1 &mdash; Direct Method</h3>
+<p>
+For the second half of the journey,
+</p>
+\[
+d=v_1t+v_2t=(v_1+v_2)t
+\]
+<p>
+Hence, the time taken for the first half of the journey is
+</p>
+\[
+t_1=\frac{d}{v_0}=\frac{(v_1+v_2)t}{v_0}
+\]
+<p>
+Notice that all the 3 unknown quantities \(d\) , \(t\) , \(t_1\) have now been expressed in terms of the single variable \(t\). This allows both the total distance and the total time to be written entirely in terms of \(t\), after which the common factor cancels automatically.
+</p>
+\[
+\text{Total Distance}=2d=2(v_1+v_2)t
+\]
+\[
+\text{Total Time}=t_1+2t=\frac{(v_1+v_2)t}{v_0}+2t
+\]
+<p>
+Using the definition of average velocity,
+</p>
+\[
+v_{\text{avg}}=\frac{\text{Total Distance}}{\text{Total Time}}=\frac{2(v_1+v_2)t}{\dfrac{(v_1+v_2)t}{v_0}+2t}
+\]
+<p>
+Cancelling \(t\),
+</p>
+\[
+\boxed{v_{\text{avg}}=\frac{2v_0(v_1+v_2)}{2v_0+v_1+v_2}}
+\]
+<h3>Method 2 &mdash; Average is Average of Averages</h3>
+<p>
+Instead of starting from the definition of average velocity again, we first calculate the average velocity of each part of the journey separately.
+</p>
+<p>
+For the first half of the journey, the particle moves with constant velocity \(v_0\). Therefore,
+</p>
+\[
+v_{\text{avg,1}}=v_0
+\]
+<p>
+For the second half of the journey, the particle moves with velocity \(v_1\) for half of the time and velocity \(v_2\) for the remaining half of the time. Since the two velocities are maintained for equal time intervals,
+</p>
+\[
+v_{\text{avg,2}}=\frac{v_1+v_2}{2}
+\]
+<p>
+Now observe that the complete journey consists of two equal-distance parts:
+</p>
+<ul>
+<li>First half of the distance with average velocity \(v_0\).</li>
+<li>Second half of the distance with average velocity \(\dfrac{v_1+v_2}{2}\).</li>
+</ul>
+<p>
+Therefore, the average velocity over the complete journey is simply the average speed for equal distances of these two average velocities.
+</p>
+\[
+v_{\text{avg}}=\frac{2v_0\left(\dfrac{v_1+v_2}{2}\right)}{v_0+\dfrac{v_1+v_2}{2}}
+\]
+<p>
+Simplifying,
+</p>
+\[
+\boxed{v_{\text{avg}}=\frac{2v_0(v_1+v_2)}{2v_0+v_1+v_2}}
+\]
+<div class="insightbox">
+The overall average was obtained by successively averaging the constituent parts.
+<ul>
+<li>The second half of the journey was first replaced by its average velocity.</li>
+<li>The entire journey was then viewed as two equal-distance segments and averaged again.</li>
+</ul>
+Thus, an average can often be obtained by taking the <strong>appropriate average of averages</strong>, provided the correct weights (equal time, equal distance, etc.) are preserved at every stage.
+</div>
+</div>
+<div class="examplebox">
+<h3>Practice Problem</h3>
+<p>
+Two cars, <strong>Car A</strong> and <strong>Car B</strong>, leave Kota for Delhi at the same instant.
+</p>
+<ul>
+<li>
+<strong>Car A</strong> travels the first half of the journey with speed \(v_1=120\ \text{km/h}\) and the remaining half with speed \(v_2=80\ \text{km/h}\).
+</li>
+<li>
+<strong>Car B</strong> travels for the first half of the total travel time with speed \(v_1=120\ \text{km/h}\) and for the remaining half of the total travel time with speed \(v_2=80\ \text{km/h}\).
+</li>
+</ul>
+<p>
+<strong>Which car reaches Delhi first?</strong>
+</p>
+<ol>
+<li>Both reach at the same time.</li>
+<li>Car A.</li>
+<li>Car B.</li>
+<li>Cannot be determined.</li>
+</ol>
+<h3>Solution</h3>
+<p>
+The solution involves determining the average speed of both cars. Since both cars travel the same distance between Kota and Delhi, the car with the greater average speed will reach first.
+</p>
+<p>
+For <strong>Car A</strong>, the two speeds are maintained over <strong>equal distances</strong>. Hence,
+</p>
+\[
+v_{\text{avg},A}=\frac{2v_1v_2}{v_1+v_2}=\frac{2(120)(80)}{120+80}=96\ \text{km/h}
+\]
+<p>
+For <strong>Car B</strong>, the two speeds are maintained for <strong>equal time intervals</strong>. Hence,
+</p>
+\[
+v_{\text{avg},B}=\frac{v_1+v_2}{2}=\frac{120+80}{2}=100\ \text{km/h}
+\]
+<p>
+Since
+</p>
+\[
+100\ \text{km/h}>96\ \text{km/h}
+\]
+<p>
+Car B has the greater average speed. As both cars travel the same total distance, <strong>Car B reaches Delhi first.</strong>
+</p>
+\[
+\boxed{\text{Answer: Car B}}
+\]
+<div class="insightbox">
+This problem beautifully illustrates the difference between the two special average-speed formulas.
+<ul>
+<li>Equal distance &rarr; Harmonic Mean</li>
+<li>Equal time &rarr; Arithmetic Mean</li>
+</ul>
+For two unequal speeds,
+\[
+\frac{v_1+v_2}{2}>\frac{2v_1v_2}{v_1+v_2}
+\]
+so travelling with equal time intervals always results in a greater average speed than travelling the same speeds over equal distances.
+</div>
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>

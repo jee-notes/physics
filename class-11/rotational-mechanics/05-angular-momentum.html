@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angular Momentum | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>Angular Momentum</h1>
+<p class="subtitle">
+The rotational analogue of linear momentum in rigid-body mechanics.
+</p>
+<section>
+<h2>Definition</h2>
+<p>
+In NLM, the physical quantity <strong>momentum</strong> was introduced. Before giving its mathematical definition, we first discussed it qualitatively as the amount of motion possessed by a body. We shall follow a similar approach for <strong>angular momentum</strong>.
+</p>
+<p>
+We discussed that stopping a truck requires more force than stopping a bicycle moving with the same speed because the truck possesses greater momentum. However, in those discussions, the truck and the bicycle were treated as point objects. Consequently, the momentum under discussion was linear momentum.
+</p>
+<p>
+When dealing with a rigid body, the situation is different. A rigid body has finite dimensions and therefore consists of many constituent particles. The linear velocities of these particles are generally different. However, due to the rigid-body constraint, every pair of particles has the same angular velocity relative to each other.
+</p>
+<p>
+Consequently, the rotational effect of the momentum of different particles is also different, even though they all possess the same angular velocity. Moreover, this rotational effect depends on the point about which it is measured.
+</p>
+<div class="insightbox">
+Angular velocity itself depends on the point (or axis) about which it is measured.<br>
+For example, while travelling in a train, distant trees appear to have a much smaller angular velocity than nearby objects.<br>
+The same principle is used in astronomy to determine the distances of nearby stars using the method of parallax.
+</div>
+<p>
+The physical quantity that measures the rotational effect of linear momentum about a point is called <strong>angular momentum</strong>.
+</p>
+<p>
+Like linear momentum, angular momentum is also a vector quantity. The angular momentum of a particle of mass \(m\), moving with velocity \(\vec v\), about a point \(O\) is defined as the cross product of the position vector \(\vec r\), drawn from \(O\) to the particle, and the linear momentum of the particle:
+</p>
+\[
+\vec L=\vec r\times\vec p=m\vec r\times\vec v
+\]
+<p>
+The magnitude of angular momentum is
+</p>
+\[
+L=mrv\sin\theta=mvr_\perp=mrv_\perp
+\]
+<p>
+where \(\theta\) is the angle between \(\vec r\) and \(\vec v\), and \(r_\perp=r\sin\theta\) is the perpendicular distance from the point \(O\) to the line of motion. This perpendicular distance is called the <strong>moment arm</strong>.
+</p>
+<div class="insightbox">
+Angular momentum is zero when the line of motion of the particle passes through the chosen point (moment arm = 0), or when the velocity is parallel to the position vector (\(\sin\theta=0\)).<br>
+Thus, a higher velocity does not necessarily imply a higher angular momentum—the moment arm is equally important.<br>
+A particle moving in a straight line possesses angular momentum about every point not lying on its line of motion.<br>
+Angular momentum is not exclusive to circular or rotational motion; it is a general property of motion measured about a reference point.
+</div>
+<h3>Units and Dimensions</h3>
+<p>
+From the definition,
+</p>
+\[
+L=mrv
+\]
+<p>
+Since linear momentum has SI unit \(\mathrm{kg\,m\,s^{-1}}\) and distance has SI unit metre (\(\mathrm{m}\)), the SI unit of angular momentum is
+</p>
+\[
+\boxed{\mathrm{kg\,m^2\,s^{-1}}}
+\]
+<p>
+The dimensions of angular momentum are
+</p>
+\[
+[ML^2T^{-1}]
+\]
+</section>
+<section>
+<h2>Angular Momentum of a Rigid Body</h2>
+<p>
+Above section was for angular momentum of a particle mass. However, in rigid body  dynamics, we are looking for physical quantities that can describe motion of the entire collective body and not single constituent particles.
+</p>
+<p>
+When we are talking about angular momentum of a rigid body, it is measured about an axis and not about a point as in for a particle body. We have axial angular momentum and torque in syllabus.
+</p>
+<p>
+Angular momentum of a rigid body is measured differently depending on whether the axis of rotation is fixed or moving. 
+</p>
+<h3>Fixed Axis Angular Momentum of a Rigid Body</h3>
+<p>
+For a rigid body rotating about a fixed axis with angular velocity \(\omega\), the angular momentum about that axis is:
+</p>
+\[
+L = I\omega
+\]
+<p>
+where \(I\) is the moment of inertia about the axis. This is the rotational analogue of \(p = mv\).
+</p>
+<p>
+The direction of \(\vec{L}\) is along the axis, given by the right-hand rule: it points in the direction of \(\vec{\omega}\).
+</p>
+</section>
+<section>
+<h2>Torque and Angular Momentum</h2>
+<p>
+Newton's second law in its most general rotational form states:
+</p>
+\[\vec{\tau}_{\text{net}} = \frac{d\vec{L}}{dt}\]
+<p>
+This is the rotational analogue of \(\vec{F} = \frac{d\vec{p}}{dt}\). For a rigid body about a fixed
+axis (where \(I\) is constant):
+</p>
+\[\tau = \frac{dL}{dt} = I\frac{d\omega}{dt} = I\alpha\]
+<p>
+which recovers the familiar \(\tau = I\alpha\). But the general form \(\vec{\tau} =
+\frac{d\vec{L}}{dt}\) is more powerful — it applies even when \(I\) changes (as in the spinning skater
+problem).
+</p>
+</section>
+<section>
+<h2>Angular Momentum of a Particle in Circular Motion</h2>
+<p>
+A particle of mass \(m\) in a circle of radius \(r\) with speed \(v\):
+</p>
+\[L = mvr = mr^2\omega\]
+<p>
+This matches \(L = I\omega\) with \(I = mr^2\) — the moment of inertia of a point mass.
+</p>
+</section>
+<section>
+<h2>Angular Momentum About the COM</h2>
+<p>
+For a system of particles (or a rigid body), the total angular momentum about a fixed point can be
+decomposed as:
+</p>
+\[\vec{L}_{\text{total}} = \vec{L}_{\text{orbital}} + \vec{L}_{\text{spin}}\]
+<ul>
+<li>\(\vec{L}_{\text{orbital}} = M\vec{R}_{\text{CM}} \times \vec{V}_{\text{CM}}\) — angular momentum of
+the COM (as if all mass were concentrated there).</li>
+<li>\(\vec{L}_{\text{spin}} = I_{\text{CM}}\vec{\omega}\) — angular momentum about the COM (intrinsic
+rotation).</li>
+</ul>
+<p>
+For a rolling object, both terms contribute. For a spinning body at rest, only the spin term survives.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
