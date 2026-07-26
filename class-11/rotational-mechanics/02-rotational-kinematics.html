@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotational Kinematics | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>Rotational Kinematics</h1>
+<p class="subtitle">
+Kinematic Constraint of Rigid Body
+</p>
+<section>
+<h2>Definition</h2>
+<p>
+This chapter is about <strong>Rigid Body Dynamics (Rotation)</strong>. So why do we begin with kinematics instead of forces and torques?
+</p>
+<p>
+The reason is that the linear and angular velocities and accelerations of different particles of a rigid body are not independent. They are related by the rigidity of the body.
+</p>
+<p>
+These relations arise purely from the geometric constraint that the distance between every pair of particles of a rigid body remains constant. They do not depend on the forces or torques acting on the body.
+</p>
+<p>
+Hence, these relations are valid in both inertial and non-inertial frames of reference and are collectively known as the <strong>kinematic constraints of a rigid body</strong>.
+</p>
+</section>
+<section>
+<h2>Set Up</h2>
+<p>
+To understand the kinematic constraints of a rigid body, consider a rigid body undergoing general motion (combined translational and rotational motion) at a particular instant.
+</p>
+<p>
+A rigid body may be regarded as a system of point particles whose relative positions remain fixed.
+</p>
+<p>
+Consider any two particles \(P\) and \(Q\) of the body. Let their velocities with respect to the ground be \(\vec{v}_P\) and \(\vec{v}_Q\), respectively.
+</p>
+<p>
+Since the body is rigid, the distance between \(P\) and \(Q\) remains constant at all times.
+</p>
+<p>
+Therefore, the component of their relative velocity along the line joining them must be zero.
+</p>
+<p>
+Equivalently, if particle \(P\) has a non-zero velocity with respect to particle \(Q\), then this relative velocity must always be perpendicular to the line joining them.
+</p>
+<p>
+This simple constraint is the foundation of rigid body kinematics and will be used to derive all the important relations in this chapter.
+</p>
+</section>
+<section>
+<h2>Rigid Body Has a Single Angular Velocity</h2>
+<p>
+In pure translational motion, all particles of a rigid body have the same velocity at a given instant.
+</p>
+<p>
+In rotational motion, however, the linear velocities of different particles are generally different.
+</p>
+<p>
+Despite this, the relative motion of every pair of particles can always be described by the same angular velocity vector \(\vec{\omega}\). Thus, a rigid body has a single angular velocity at any instant.
+</p>
+<p>
+A rigorous mathematical proof of this result is beyond the scope of this book. However, the idea can be understood intuitively.
+</p>
+<p>
+If different parts of a rigid body were to rotate with different angular velocities, the relative positions of its particles would continuously change. The body would undergo twisting or deformation, violating the defining property of a rigid body that the distance between every pair of particles remains constant.
+</p>
+<p>
+This is analogous to two particles that must remain in contact. If one particle tends to move faster than the other along the line joining them, they would either separate or penetrate each other. Similarly, different angular velocities in different parts of a rigid body would require the body to deform, which is not possible for an ideal rigid body.
+</p>
+</section>
+<section>
+<h2>Rigid Body Velocity Constraint (RBC)</h2>
+<p>
+We have seen that every rigid body possesses a single angular velocity vector \(\vec{\omega}\) at a given instant. This immediately places a constraint on the velocities of all particles of the body.
+</p>
+<p>
+The velocity of one particle cannot be chosen independently of the velocity of another. Once the velocity of any one particle and the angular velocity of the rigid body are known, the velocities of all other particles are uniquely determined.
+</p>
+<p>
+This relation between the velocities of different particles of a rigid body is called the <strong>Rigid Body Velocity Constraint (RBC)</strong>. It is one of the most important results in rigid body kinematics.
+</p>
+<h3>Derivation</h3>
+<p>
+Consider any two particles \(P\) and \(Q\) of a rigid body. Let
+</p>
+\[
+\vec r_{P/Q}=\vec r_P-\vec r_Q
+\]
+<p>
+be the position vector of particle \(P\) with respect to particle \(Q\). Since the body is rigid, the distance between the particles remains constant. Therefore,
+</p>
+\[
+|\vec r_{P/Q}|=\text{constant}
+\]
+<p>
+Differentiating with respect to time,
+</p>
+\[
+\frac{d}{dt} (\vec r_{P/Q}\cdot\vec r_{P/Q}) = 0
+\]
+\[
+2\vec r_{P/Q}\cdot \frac{d\vec r_{P/Q}}{dt} = 0
+\]
+<p>
+But,
+</p>
+\[
+\frac{d\vec r_{P/Q}}{dt} = \vec v_P-\vec v_Q = \vec v_{P/Q} 
+\]
+<p>
+Hence,
+</p>
+\[
+\boxed{(\vec r_{P/Q})\cdot\vec r_{P/Q}=0}
+\]
+<p>
+Thus, the relative velocity of the two particles is always perpendicular to the line joining them.
+</p>
+<p>
+Further, we have already seen that the entire rigid body possesses a single angular velocity vector \(\vec\omega\). Therefore, the relative velocity of particle \(P\) with respect to particle \(Q\) can be represented as the velocity produced by the rotation of the vector \(\vec r_{PQ}\) with angular velocity \(\vec\omega\).
+</p>
+\[
+\boxed{\vec v_P-\vec v_Q = \vec\omega\times\vec r_{P/Q}}
+\]
+<p>
+or equivalently,
+</p>
+\[
+\boxed{\vec v_P=\vec v_Q+\vec\omega\times\vec r_{P/Q}}
+\]
+<p>
+This equation is known as the <strong>Rigid Body Velocity Constraint (RBC)</strong>. It relates the velocities of any two particles of a rigid body undergoing general motion.
+</p>
+<div class="insightbox">
+Notice that the relative velocity depends only on the angular velocity of the rigid body and the relative position vector between the two particles.<br>
+It is independent of the translational motion of the body.<br>
+Consequently, every point of a rigid body shares the same translational velocity, while the difference in their velocities arises entirely due to rotation.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

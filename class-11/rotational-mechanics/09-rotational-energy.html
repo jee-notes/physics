@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotational Energy and Work | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>Rotational Energy and Work</h1>
+<p class="subtitle">
+Kinetic energy of rotation and the work–energy theorem for rotating bodies.
+</p>
+<section>
+<h2>Rotational Kinetic Energy</h2>
+<p>
+Every particle of a rotating rigid body is in motion and therefore possesses kinetic energy. The rotational kinetic energy of the body is simply the sum of the kinetic energies of all its constituent particles.
+</p>
+<p>
+Consider a rigid body rotating with angular velocity \(\omega\) about a fixed hinged axis. Since the hinge is stationary,
+</p>
+\[
+v_{\text{hinge}}=0
+\]
+<p>
+Hence, by rigid body kinematics, the speed of a particle \(i\) at a perpendicular distance \(r_{i/\text{hinge}}\) from the axis is
+</p>
+\[
+v_i=v_{\text{hinge}} + \omega r_{i/\text{hinge}}
+\]
+<p>
+Therefore, the total kinetic energy of the body is
+</p>
+\[
+\begin{aligned}
+K_{\text{total}}
+&=\sum \frac12 m_i v_i^2 \\
+&=\sum \frac12 m_i\left(\omega r_{i/\text{hinge}}\right)^2 \\
+&=\frac12\omega^2\sum m_i r_{i/\text{hinge}}^2 \\
+&=\frac12 I_{\text{hinge}}\omega^2
+\end{aligned}
+\]
+<p>
+This total Kinetic Energy of the entire rigid body is its rotational kinetic energy when it is rotating about a fixed axis is
+</p>
+\[
+\boxed{K_{\text{rot}}=K_{\text{total}}=\frac12 I_{\text{hinge}}\omega^2}
+\]
+<div class="insightbox">
+The analogy with translational kinetic energy is exact:
+\[
+\frac12 mv^2\quad\Longrightarrow\quad\frac12 I\omega^2
+\]
+obtained by replacing \(m\) with the moment of inertia \(I\) and the linear speed \(v\) with the angular speed \(\omega\). This correspondence appears repeatedly throughout rotational mechanics.
+</div>
+</section>
+<section>
+<h2>Kinetic Energy of Combined Motion</h2>
+<p>
+A rigid body may undergo both translational and rotational motion simultaneously. In such cases, its total kinetic energy is the sum of the kinetic energies associated with these two motions.
+</p>
+\[
+K_{\text{total}}=\underbrace{\frac{1}{2}Mv_{\text{CM}}^2}_{\text{Translational}}+\underbrace{\frac{1}{2}I_{\text{CM}}\omega^2}_{\text{Rotational}}
+\]
+<p>
+This decomposition is valid for any Combined Translational and Rotational Motion (CTRM), including both pure rolling and rolling with slipping.
+</p>
+<p>
+The translational and rotational components are evaluated with respect to the <strong>centre of mass</strong>. Thus, the translational kinetic energy is computed using the velocity of the centre of mass, \(v_{\text{CM}}\), while the rotational kinetic energy is computed using the moment of inertia about the centre of mass axis, \(I_{\text{CM}}\).
+</p>
+<p>
+Separating the kinetic energy into translational and rotational parts greatly simplifies the analysis of many dynamics problems because each part can often be studied independently.
+</p>
+<div class="insightbox">
+Consider a wheel that is spinning about its centre with angular velocity \(\omega\). It is projected up a smooth incline with translational speed \(v\).<br>
+Since the surface is smooth, no friction acts on the wheel, and gravity passes through the centre of mass. Consequently, no external torque acts about the centre of mass.<br>
+As the wheel moves upward, its translational kinetic energy is gradually converted into gravitational potential energy until the wheel momentarily comes to rest. However, its rotational kinetic energy remains unchanged because its angular velocity remains constant.<br>
+Similarly, if the spinning wheel is gently placed on a perfectly smooth horizontal surface, it continues to rotate indefinitely while its centre of mass remains at rest. The body therefore possesses rotational kinetic energy even though its translational kinetic energy is zero.
+</div>
+</section>
+<section>
+<h2>Work Done by a Torque</h2>
+<p>
+The work done by a torque \(\tau\) as the body rotates through an angle \(d\theta\) is:
+</p>
+\[
+dW = \tau\,d\theta
+\]
+<p>
+For a constant torque:
+</p>
+\[
+W = \tau \cdot \theta
+\]
+<p>
+For a variable torque:
+</p>
+\[
+W = \int \tau\,d\theta
+\]
+<p>
+This is the rotational analogue of \(W = \int F\,ds\).
+</p>
+</section>
+<section>
+<h2>Rotational Work–Energy Theorem</h2>
+<p>
+The net work done by all torques on a rigid body (about its axis of rotation) equals the change in rotational kinetic energy:
+</p>
+\[
+W_{\text{net}} = \Delta K_{\text{rot}} = \frac{1}{2}I\omega_f^2 - \frac{1}{2}I\omega_i^2
+\]
+<p>
+When combined with translational work–energy:
+</p>
+\[
+W_{\text{all forces}} = \Delta K_{\text{trans}} + \Delta K_{\text{rot}}
+\]
+</section>
+<section>
+<h2>Power</h2>
+<p>
+The instantaneous power delivered by a torque is:
+</p>
+\[
+P = \tau\omega
+\]
+<p>
+This mirrors \(P = Fv\) in translational mechanics. For a motor driving a rotating shaft, this is the key relationship connecting torque output, rotational speed, and power rating.
+</p>
+</section>
+<section>
+<h2>Energy Methods in Rotation</h2>
+<p>
+Energy conservation provides an alternative to \(\tau = I\alpha\) for finding final speeds. For a system in which only conservative forces perform non-zero work:
+</p>
+\[
+K_i + U_i = K_f + U_f
+\]
+<p>
+where \(K\) includes both translational and rotational contributions. This is particularly useful for rolling-body problems where directly computing torques and friction can be complicated.
+</p>
+<div class="insightbox">
+In rolling without slipping, friction does no work (the contact point has zero relative velocity).<br>
+Therefore, mechanical energy is conserved even though friction is present — a non-intuitive but critical result.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

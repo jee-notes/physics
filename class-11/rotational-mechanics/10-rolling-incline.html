@@ -1,144 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotational Mechanics | Rolling on Inclines and Friction</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rolling on Inclines | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Rotational Mechanics
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>Rolling on Inclines</h1>
+<p class="subtitle">
+Energy distribution and dynamics of rolling bodies on an incline.
+</p>
+<section>
+<h2>Rolling on Incline</h2>
+<p>
+When a particle slides down an incline, its gravitational potential energy is converted into translational kinetic energy.
+</p>
+<p>
+A rolling rigid body, however, possesses two forms of kinetic energy:
+</p>
+<ul class="model-box">
+<li>Translational kinetic energy due to the motion of its centre of mass.</li>
+<li>Rotational kinetic energy due to its rotation about the centre of mass.</li>
+</ul>
+<p>
+As the body rolls down the incline, its loss of gravitational potential energy is shared between these two forms of kinetic energy. The central question is:
+</p>
+<div class="insightbox">
+How is the available gravitational potential energy distributed between translational and rotational kinetic energy?
+</div>
+<p>
+The answer depends on the body's <strong>moment of inertia</strong>, or equivalently, on how its mass is distributed about the axis of rotation.
+</p>
+<p>
+For convenience, we define a dimensionless parameter \(C\) by writing
+</p>
+\[
+I_{\text{CM}} = CMR^2
+\]
+<p>
+where \(M\) is the mass and \(R\) is the radius of the body. Different shapes have different values of \(C\).
+</p>
+<ul class="model-box">
+<li><strong>Ring (or hollow cylinder):</strong> \(C_r=1\)</li>
+<li><strong>Disc (or solid cylinder):</strong> \(C_d=\frac12\)</li>
+<li><strong>Hollow sphere:</strong> \(C_h=\frac23\)</li>
+<li><strong>Solid sphere:</strong> \(C_s=\frac25\)</li>
+</ul>
+<div class="insightbox">
+The parameter C is a dimensionless measure of how far the body's mass is distributed from the axis of rotation.<br>
+Since no part of the body can lie beyond its radius R, \(0 \le C \le 1\) .<br>
+Larger values of C indicate that a greater fraction of the mass is concentrated near the rim, resulting in a larger moment of inertia.
+</div>
+<p>
+Consider a body of mass \(M\), radius \(R\), and moment of inertia
+\[
+I_{\text{CM}}=CMR^2
+\]
+rolling without slipping down a rough incline of angle \(\theta\). The friction is sufficient to maintain pure rolling.
+</p>
+<p>
+Along the incline, gravity tends to accelerate the centre of mass downward, while static friction acts up the incline. Although static friction does no work, it provides the torque required to produce angular acceleration and maintain the rolling condition.
+</p>
+<p>
+Applying Newton's second law for translation,
+</p>
+\[
+Mg\sin\theta-f=Ma
+\]
+<p>
+and Newton's second law for rotation about the centre of mass,
+</p>
+\[
+fR=I_{\text{CM}}\alpha=CMR^2\cdot\frac{a}{R}
+\]
+<p>
+where we have used the rolling condition
+\[
+a=\alpha R
+\]
+Solving these equations simultaneously gives
+</p>
+\[
+a=\frac{g\sin\theta}{1+C}
+\]
+<p>
+The corresponding static friction is
+</p>
+\[
+f=Mg\sin\theta\,\frac{C}{1+C}
+\]
+<div class="insightbox">
+A larger value of \(C\) means a larger moment of inertia, so a greater fraction of the available gravitational potential energy is converted into rotational kinetic energy.<br> Consequently, less energy is available for translational motion, and the body accelerates more slowly.<br>
+The acceleration depends only on the body's <strong>shape</strong> (through \(C\)), not on its mass or radius.<br>
+Thus, a tiny solid sphere and a giant solid sphere roll down the same incline with exactly the same acceleration.
+</div>
+</section>
+<section>
+<h2>Energy Method for Rolling on Inclines</h2>
+<p>
+For a body rolling without slipping, the translational and rotational kinetic energies are not independent. The rolling condition
+\[
+v_{\text{CM}}=R\omega
+\]
+together with
+\[
+I_{\text{CM}}=CMR^2
+\]
+establishes a fixed relationship between them.
+</p>
+\[
+K_{\text{trans}}=\frac12Mv_{\text{CM}}^2
+\]
+\[
+K_{\text{rot}}=\frac12I_{\text{CM}}\omega^2=\frac12CMR^2\left(\frac{v_{\text{CM}}}{R}\right)^2=C\,K_{\text{trans}}
+\]
+<p>
+Thus, for every unit of translational kinetic energy, the body possesses \(C\) units of rotational kinetic energy. Consequently,
+</p>
+\[
+K_{\text{trans}}=\frac{1}{1+C}\,K_{\text{total}}
+\]
+\[
+K_{\text{rot}}=\frac{C}{1+C}\,K_{\text{total}}
+\]
+<div class="insightbox">
+The parameter \(C\) completely determines how the total kinetic energy is distributed between translation and rotation.<br>
+A larger value of \(C\) means a larger fraction of the energy is stored as rotational kinetic energy.
+</div>
+<p>
+Since static friction does no work during pure rolling, mechanical energy is conserved:
+</p>
+\[
+Mgh=\frac12Mv_{\text{CM}}^2+\frac12I_{\text{CM}}\omega^2=\frac12Mv_{\text{CM}}^2(1+C)
+\]
+<p>
+Hence,
+</p>
+\[
+v_{\text{CM}}=\sqrt{\frac{2gh}{1+C}}
+\]
+<p>
+Thus, the speed at the bottom can be obtained directly from energy conservation without solving for the acceleration or frictional force.
+</p>
+<div class="examplebox">
+<p>
+We will consider 2 situations as examples to understand the physical interpretation of the maths.
+</p>
+<h3>Illustration 1</h3>
+<p>
+A ring of mass \(M\) and radius \(R\) and another ring of mass \(M\) and radius \(2R\) are sent rolling down an incline from rest till same hieght \(h\) . What all they have same and different?
+</p>
+<h3>Solution</h3>
+<p>
+For both bodies,
+</p>
+<ul>
+<li>Mass \(=M\)</li>
+<li>Shape = Ring \(\Rightarrow C=1\)</li>
+<li>Released from the same vertical height \(h\)</li>
+</ul>
+<p>
+Since both have the same value of \(C\), all quantities that depend only on \(C\) are identical.
+</p>
+<table>
+<tr>
+<th>Quantity</th>
+<th>Ring (Radius \(R\))</th>
+<th>Ring (Radius \(2R\))</th>
+<th>Comparison</th>
+</tr>
+<tr>
+<td>Linear acceleration</td>
+<td>\(\displaystyle a=\frac{g\sin\theta}{2}\)</td>
+<td>\(\displaystyle a=\frac{g\sin\theta}{2}\)</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Time of descent</td>
+<td>\(\displaystyle t=\sqrt{\frac{2L}{a}}\)</td>
+<td>\(\displaystyle t=\sqrt{\frac{2L}{a}}\)</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Final linear speed</td>
+<td>\(\displaystyle v=\sqrt{gh}\)</td>
+<td>\(\displaystyle v=\sqrt{gh}\)</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Angular acceleration</td>
+<td>\(\displaystyle \alpha=\frac{a}{R}\)</td>
+<td>\(\displaystyle \alpha=\frac{a}{2R}\)</td>
+<td>Second is half</td>
+</tr>
+<tr>
+<td>Final angular speed</td>
+<td>\(\displaystyle \omega=\frac{v}{R}\)</td>
+<td>\(\displaystyle \omega=\frac{v}{2R}\)</td>
+<td>Second is half</td>
+</tr>
+<tr>
+<td>Translational KE</td>
+<td>\(\displaystyle \frac12Mgh\)</td>
+<td>\(\displaystyle \frac12Mgh\)</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Rotational KE</td>
+<td>\(\displaystyle \frac12Mgh\)</td>
+<td>\(\displaystyle \frac12Mgh\)</td>
+<td>Same</td>
+</tr>
+</table>
+<div class="insightbox">
+Changing only the radius of a rolling body does not change how the available energy is distributed.<br>
+The larger wheel rolls with the same speed and acceleration as the smaller one, but rotates more slowly because it covers more distance in one revolution.<br>
+\(K_{\text{rot}}\) of larger and smaller rings is same because, \(\omega\) is halved and \(I\) is quadrupuled and \(I\omega^2\) remains same for both.  
+</div>
+<h3>Illustration 2</h3>
+<p>
+A ring of mass \(M\) and radius \(R\) and a disc of mass \(M\) and radius \(R\) are sent rolling down an incline from rest till same hieght \(h\) . What all they have same and different?
+</p>
+<h3>Solution</h3>
+<p>
+Here both bodies have the same mass and radius but different mass distributions.
+</p>
+<ul>
+<li>Ring : \(C=1\)</li>
+<li>Disc : \(C=\frac12\)</li>
+</ul>
+<p>
+Since the value of \(C\) is different, all quantities depending on \(C\) will also be different.
+</p>
+<table>
+<tr>
+<th>Quantity</th>
+<th>Ring</th>
+<th>Disc</th>
+<th>Comparison</th>
+</tr>
+<tr>
+<td>Linear acceleration</td>
+<td>\(\displaystyle \frac{g\sin\theta}{2}\)</td>
+<td>\(\displaystyle \frac23g\sin\theta\)</td>
+<td>Disc larger</td>
+</tr>
+<tr>
+<td>Time of descent</td>
+<td>Greater</td>
+<td>Smaller</td>
+<td>Disc reaches first</td>
+</tr>
+<tr>
+<td>Final linear speed</td>
+<td>\(\displaystyle \sqrt{gh}\)</td>
+<td>\(\displaystyle \sqrt{\frac{4gh}{3}}\)</td>
+<td>Disc larger</td>
+</tr>
+<tr>
+<td>Angular acceleration</td>
+<td>\(\displaystyle \frac{g\sin\theta}{2R}\)</td>
+<td>\(\displaystyle \frac{2g\sin\theta}{3R}\)</td>
+<td>Disc larger</td>
+</tr>
+<tr>
+<td>Final angular speed</td>
+<td>\(\displaystyle \frac{\sqrt{gh}}{R}\)</td>
+<td>\(\displaystyle \frac1R\sqrt{\frac{4gh}{3}}\)</td>
+<td>Disc larger</td>
+</tr>
+<tr>
+<td>Translational KE</td>
+<td>\(\displaystyle \frac12Mgh\)</td>
+<td>\(\displaystyle \frac23Mgh\)</td>
+<td>Disc larger</td>
+</tr>
+<tr>
+<td>Rotational KE</td>
+<td>\(\displaystyle \frac12Mgh\)</td>
+<td>\(\displaystyle \frac13Mgh\)</td>
+<td>Ring larger</td>
+</tr>
+</table>
+<div class="insightbox">
+Although both bodies lose the same gravitational potential energy \(Mgh\), they distribute it differently.<br>
+The ring stores a larger fraction as rotational kinetic energy, leaving less energy available for translational motion.<br>
+Consequently, the disc rolls faster and reaches the bottom first.<br>
+Notice that for disc and ring, \(I_d \lt I_r\) and \(\omega_d \gt \omega_r\) . But still \(K_{\text{rot/ring}} \gt K_{\text{rot/disc}}\) even though \(K_{\text{rot}} \propto I \omega^2\)  
+</div>
+</div>
+<div class="insightbox">
+When comparing different rolling bodies, do not compare the moment of inertia \(I\) and angular speed \(\omega\) separately.<br>
+Instead, compare their shape factor \(C\). Once \(C\) is known, the entire rolling behaviour of the body is determined:
+<ul>
+<li>Larger \(C\) &rarr; smaller acceleration</li>
+<li>Larger \(C\) &rarr; smaller linear speed</li>
+<li>Larger \(C\) &rarr; larger fraction of energy stored as rotational kinetic energy</li>
+</ul>
+Thus, \(C\) is the natural parameter for comparing rolling bodies.
+</div>
+</section>
+<section>
+<h2>Directions of \(A\) and \(\alpha\) during Rolling on an Incline</h2>
+<p>
+In rolling problems, the translational quantities \(V\) and \(A\), as well as the rotational quantities \(\omega\) and \(\alpha\), are often unknown. Their magnitudes as well as directions may both be unknown.
+</p>
+<p>
+From geometry, we can usually determine only the <strong>line of action</strong> of the translational acceleration. The actual direction along this line depends on the forces acting on the body.
+</p>
+<p>
+For most contact forces such as the <strong>normal reaction</strong> and <strong>tension</strong>, the direction is fixed by the geometry of the problem and only the magnitude is unknown. Static friction, however, is different. Its magnitude as well as its direction are both self-adjusting. Thus, among all contact forces, static friction is usually the most difficult one to determine.
+</p>
+<div class="insightbox">
+Unlike the normal reaction and tension, static friction has neither a fixed magnitude nor a fixed direction.<br>
+Both are determined by the requirement that the surfaces continue to satisfy the given constraint.
+</div>
+<p>
+Fortunately, if the problem states that the body undergoes <strong>pure rolling</strong>, then the translational and rotational motions are no longer independent. The rolling condition relates not only the magnitudes of \(V,\omega\) and \(A,\alpha\), but also their directions.
+</p>
+<p>
+Another important fact is that static friction always acts to <strong>maintain the rolling condition</strong>. If rolling can be maintained without friction, then the frictional force is zero even on a rough surface (\(\mu \neq 0\)).
+</p>
+<p>
+The final key idea is that the component of gravity along the incline,
+\[
+Mg\sin\theta,
+\]
+acts through the centre of mass. Therefore it produces <strong>no torque</strong> about the centre of mass. Hence, during rolling on an incline, the torque required for angular acceleration is supplied entirely by static friction.
+</p>
+<div class="insightbox">
+This conclusion is special to rolling on an incline.<br>
+If an external force is applied away from the centre of mass (for example, at the top of the wheel), that force itself produces torque.<br>
+In such cases, the direction of static friction may be different and can even reverse.
+</div>
+<p>
+Thus, the direction of static friction is determined using the following ideas:
+</p>
+<ol class="model-box">
+<li>Static friction has unknown magnitude as well as unknown direction.</li>
+<li>Pure rolling relates the translational and rotational motions.</li>
+<li>Static friction acts to maintain pure rolling.</li>
+<li>\(Mg\sin\theta\) produces no torque about the centre of mass.</li>
+</ol>
+<h3>Case 1 : Body Rolling Down the Incline</h3>
+<p>
+If friction were absent, the body would simply slide down the incline with acceleration \(g\sin\theta\) and would not rotate because gravity produces no torque. Therefore, static friction must act <strong>up the incline</strong> so as to provide the torque required for pure rolling.
+</p>
+<h3>Case 2 : Body Rolling Up the Incline</h3>
+<p>
+This situation often causes confusion. Even though the body is moving upward, if friction were absent its translational acceleration would still be \(g\sin\theta\) downward, and gravity would still produce no torque.
+</p>
+<p>
+Therefore, the torque required to maintain pure rolling must again be supplied entirely by static friction. Hence, static friction again acts <strong>up the incline</strong>.
+</p>
+<div class="insightbox">
+Do not determine the direction of static friction from the direction of motion.<br>
+Determine it from the torque required to maintain the rolling condition.
+</div>
+</section>
+<section>
+<h2>Race of Rolling Bodies</h2>
+<p>
+Since acceleration \(a = \frac{g\sin\theta}{1 + C}\), bodies with smaller \(C\) accelerate faster. The ranking from fastest to slowest down the same incline:
+</p>
+<ul>
+<li><strong>Solid sphere</strong> (\(C = 2/5\)) — fastest</li>
+<li><strong>Solid cylinder / disc</strong> (\(C = 1/2\))</li>
+<li><strong>Hollow sphere</strong> (\(C = 2/3\))</li>
+<li><strong>Thin ring / hollow cylinder</strong> (\(C = 1\)) — slowest</li>
+</ul>
+<p>
+A sliding block (no rotation, \(C = 0\) effectively) has \(a = g\sin\theta\) and always beats all rolling bodies.
+</p>
+</section>
+<section>
+<h2>Minimum Friction for Pure Rolling</h2>
+<p>
+For the body to roll without slipping, the required friction must not exceed the maximum available static friction:
+</p>
+\[
+f \leq \mu_s N = \mu_s Mg\cos\theta
+\]
+<p>
+Substituting the expression for \(f\):
+</p>
+\[
+\frac{Mg\sin\theta \cdot C}{1 + C} \leq \mu_s Mg\cos\theta
+\]
+\[
+\mu_s \geq \frac{\tan\theta \cdot C}{1 + C}
+\]
+<p>
+If \(\mu_s\) is less than this critical value, the body slips and slides down the incline (kinetic friction applies, and the problem becomes more complex).
+</p>
+</section>
 
-        <h1>Rolling on Inclines and Friction</h1>
-        <p class="subtitle">
-            Dynamics of rolling bodies on slopes — acceleration, friction requirements, and why shape matters.
-        </p>
-
-        <section>
-            <h2>Rolling Down an Incline</h2>
-            <p>
-                A body of mass \(M\), radius \(R\), and moment of inertia \(I_{\text{CM}} = Mk^2\) rolls without
-                slipping down a rough incline of angle \(\theta\). Two equations govern the motion:
-            </p>
-            <p><strong>Translation (along the incline):</strong></p>
-            \[Mg\sin\theta - f = Ma\]
-            <p><strong>Rotation (about the CM):</strong></p>
-            \[fR = I_{\text{CM}}\alpha = Mk^2 \cdot \frac{a}{R}\]
-            <p>
-                Solving these simultaneously:
-            </p>
-            \[a = \frac{g\sin\theta}{1 + k^2/R^2}\]
-            <p>
-                And the friction force:
-            </p>
-            \[f = \frac{Mg\sin\theta \cdot k^2/R^2}{1 + k^2/R^2}\]
-            <div class="insightbox">
-                The acceleration depends on the <em>shape</em> of the body (through \(k^2/R^2\)) but not on its mass or
-                radius. A solid sphere and a tiny solid marble accelerate equally — the larger mass is exactly
-                compensated by the larger inertia.
-            </div>
-        </section>
-
-        <section>
-            <h2>Race of Rolling Bodies</h2>
-            <p>
-                Since acceleration \(a = \frac{g\sin\theta}{1 + k^2/R^2}\), bodies with smaller \(k^2/R^2\) accelerate
-                faster. The ranking from fastest to slowest down the same incline:
-            </p>
-            <ul>
-                <li><strong>Solid sphere</strong> (\(k^2/R^2 = 2/5\)) — fastest</li>
-                <li><strong>Solid cylinder / disc</strong> (\(k^2/R^2 = 1/2\))</li>
-                <li><strong>Hollow sphere</strong> (\(k^2/R^2 = 2/3\))</li>
-                <li><strong>Thin ring / hollow cylinder</strong> (\(k^2/R^2 = 1\)) — slowest</li>
-            </ul>
-            <p>
-                A sliding block (no rotation, \(k^2/R^2 = 0\) effectively) has \(a = g\sin\theta\) and always beats all
-                rolling bodies.
-            </p>
-        </section>
-
-        <section>
-            <h2>Minimum Friction for Pure Rolling</h2>
-            <p>
-                For the body to roll without slipping, the required friction must not exceed the maximum available
-                static friction:
-            </p>
-            \[f \leq \mu_s N = \mu_s Mg\cos\theta\]
-            <p>
-                Substituting the expression for \(f\):
-            </p>
-            \[\frac{Mg\sin\theta \cdot k^2/R^2}{1 + k^2/R^2} \leq \mu_s Mg\cos\theta\]
-            \[\mu_s \geq \frac{\tan\theta \cdot k^2/R^2}{1 + k^2/R^2}\]
-            <p>
-                If \(\mu_s\) is less than this critical value, the body slips and slides down the incline (kinetic
-                friction applies, and the problem becomes more complex).
-            </p>
-        </section>
-
-        <section>
-            <h2>Energy Method for Rolling on Inclines</h2>
-            <p>
-                Since static friction does no work in pure rolling, energy conservation provides a clean alternative:
-            </p>
-            \[Mgh = \frac{1}{2}Mv^2 + \frac{1}{2}I_{\text{CM}}\omega^2 = \frac{1}{2}Mv^2\left(1 +
-            \frac{k^2}{R^2}\right)\]
-            \[v = \sqrt{\frac{2gh}{1 + k^2/R^2}}\]
-            <p>
-                where \(h\) is the vertical height descended. This gives the speed at the bottom without needing to find
-                friction or acceleration explicitly.
-            </p>
-        </section>
-
-        <section>
-            <h2>Rolling Up an Incline</h2>
-            <p>
-                A body projected up a rough incline decelerates. Friction now acts <em>up</em> the incline (to maintain
-                the rolling condition as gravity decelerates both translation and rotation). The deceleration is the
-                same magnitude as the acceleration going down:
-            </p>
-            \[a = \frac{g\sin\theta}{1 + k^2/R^2}\]
-            <p>
-                The body comes to a momentary stop and then rolls back down with the same acceleration. No energy is
-                lost if rolling is maintained throughout.
-            </p>
-        </section>
-
-        <section>
-            <h2>Transition from Sliding to Rolling</h2>
-            <p>
-                A sphere placed on a rough horizontal surface with initial velocity \(v_0\) (no spin) will slide and
-                spin up due to kinetic friction. The sliding decelerates (friction reduces \(v\)) while spinning
-                accelerates (friction provides torque to increase \(\omega\)). Eventually:
-            </p>
-            \[v = \omega R \qquad \text{(pure rolling achieved)}\]
-            <p>
-                After this point, friction becomes static and does no further work. The final rolling speed for a solid
-                sphere:
-            </p>
-            \[v_f = \frac{5}{7}v_0\]
-            <p>
-                The lost kinetic energy is dissipated as heat during the sliding phase.
-            </p>
-            <div class="insightbox">
-                The transition problem is solved using kinetic friction for both translation (deceleration) and rotation
-                (angular acceleration) until the rolling condition is met. After that, dynamics change fundamentally —
-                kinetic friction becomes static friction.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<section>
+<h2>Transition from Sliding to Rolling</h2>
+<p>
+A sphere placed on a rough horizontal surface with initial velocity \(v_0\) (no spin) will slide and spin up due to kinetic friction. The sliding decelerates (friction reduces \(v\)) while spinning accelerates (friction provides torque to increase \(\omega\)). Eventually:
+</p>
+\[
+v = \omega R \qquad \text{(pure rolling achieved)}
+\]
+<p>
+After this point, friction becomes static and does no further work. The final rolling speed for a solid sphere:
+</p>
+\[
+v_f = \frac{5}{7}v_0
+\]
+<p>
+The lost kinetic energy is dissipated as heat during the sliding phase.
+</p>
+<div class="insightbox">
+The transition problem is solved using kinetic friction for both translation (deceleration) and rotation (angular acceleration) until the rolling condition is met. After that, dynamics change fundamentally — kinetic friction becomes static friction.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>

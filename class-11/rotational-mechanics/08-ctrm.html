@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTRM | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>CTRM</h1>
+<p class="subtitle">
+The combination of translational and rotational motion.
+</p>
+<section>
+<h2>CTRM Definition</h2>
+<p>
+In kinematics, we often resolve the velocity and acceleration of a particle into radial and tangential components. This decomposition is particularly useful when the position and velocity vectors are changing both their magnitude and direction.
+</p>
+<p>
+The radial component describes the change in magnitude, while the tangential component is closely associated with the change in direction. Since angular quantities measure rotational change, this decomposition greatly simplifies the analysis of curvilinear motion.
+</p>
+<div class="insightbox">
+We do not use radial–tangential decomposition because Cartesian decomposition is inadequate.<br>
+Cartesian components are ideal for vector addition and multiplication.<br>
+Radial–tangential decomposition is introduced because it separates the analysis of change in magnitude from the analysis of change in direction, making curvilinear motion much easier to study.
+</div>
+<p>
+A similar idea is used for rigid bodies. Instead of resolving the motion of an individual particle, we resolve the motion of the entire rigid body into two simpler motions:
+</p>
+<ul class="model-box">
+<li><strong>Translational Motion</strong></li>
+<li><strong>Rotational Motion</strong></li>
+</ul>
+<p>
+This kinematic decomposition is called <strong>Combined Translational and Rotational Motion (CTRM)</strong>.
+</p>
+<p>
+The most common application of CTRM in mechanics is <strong>rolling motion</strong>. Throughout these notes, the term <strong>wheel</strong> will be used in a broad sense to denote any body whose rolling motion is governed by the same kinematic principles. Thus, a wheel includes bodies such as a ring, disc, solid cylinder, hollow cylinder, solid sphere and hollow sphere.
+</p>
+<p>
+Bodies that roll according to different kinematic principles, such as a cone rolling on its slant height, are not included in this category and are studied separately.
+</p>
+<p>
+Rolling motion is the motion of a wheel that utilizes its circular geometry to move along a surface. During rolling, the wheel and the surface have only one point of contact with each other at any instant. Rolling motion is motion enabled by wheel geometry.
+</p>
+<p>
+The wheel is one of the most useful inventions of humankind. In this chapter, we study the motion of a wheel using the principles of Combined Translational and Rotational Motion (CTRM). Later, in the topic on <strong>Toppling</strong>, we shall study the stability and design of wheels.
+</p>
+</section>
+<section>
+<h2>CTRM Kinematics</h2>
+<p>
+The kinematics of Combined Translational and Rotational Motion (CTRM) are defined for a wheel undergoing rolling.
+</p>
+<p>
+In CTRM, the motion of the wheel is resolved into two simpler motions:
+</p>
+<ul class="model-box">
+<li>The geometric centre of the wheel undergoes translational motion along the surface on which the wheel rolls.</li>
+<li>The wheel simultaneously undergoes fixed-axis rotation about its geometric centre.</li>
+</ul>
+<p>
+This decomposition is based entirely on the geometry of the wheel and is independent of its mass distribution. The translational motion therefore refers to the <strong>geometric centre</strong> of the wheel, not necessarily its centre of mass. Even if the mass is distributed non-uniformly, the geometric centre continues to translate as long as the point of contact always lies on the circular rim. The centre of mass becomes important later when studying the dynamics and energetics of rolling bodies.
+</p>
+<p>
+Consider a wheel of radius \(R\). Let the translational velocity and acceleration of its geometric centre be \(\vec V\) and \(\vec A\), respectively. Let the angular velocity and angular acceleration of the wheel about its geometric centre be \(\vec\omega\) and \(\vec\alpha\), respectively.
+</p>
+<p>
+Let \(P\) be any point on the wheel whose position vector relative to the geometric centre is \(\vec r\). The velocity of \(P\) with respect to the ground is
+</p>
+\[
+\vec v_P=\vec V+\vec\omega\times\vec r
+\]
+<p>
+Thus, the velocity of any particle of the wheel is the vector sum of its translational velocity and rotational velocity.
+</p>
+<p>
+Similarly, the acceleration of \(P\) with respect to the ground is
+</p>
+\[
+\vec a_P=\vec A+\vec\alpha\times\vec r+\vec\omega\times(\vec\omega\times\vec r)
+\]
+<p>
+For planar motion, the rotational acceleration resolves into tangential and centripetal components. Hence,
+</p>
+\[
+\vec a_P=\vec A+\underbrace{\vec\alpha\times\vec r}_{\text{Tangential}}+\underbrace{\omega^2r}_{\text{Towards the centre}}
+\]
+<p>
+Thus, the acceleration of any particle of the wheel is the vector sum of one translational acceleration and two rotational accelerations. The rotational accelerations are the tangential acceleration and the centripetal acceleration.
+</p>
+<p>
+Since both the velocity and the acceleration are naturally resolved into translational and rotational components, this type of motion is called <strong>Combined Translational and Rotational Motion (CTRM)</strong>.
+</p>
+</section>
+<section>
+<h2>Pure Rolling (Rolling Without Slipping)</h2>
+<p>
+Pure rolling is defined as rolling motion where there is <strong>no relative motion (no slipping) between the point of contact of the rolling body and the surface it is rolling on</strong>.
+</p>
+<p>
+Consider a wheel rolling on a surface. At any given instant, there is a single point on the periphery of the wheel (let's call it \(P_{\text{wheel}}\)) that is in direct physical contact with a specific point on the surface (\(P_{\text{surface}}\)). 
+</p>
+<p>
+The condition of "no slipping" strictly requires that during the infinitesimally small duration of contact, these two points must share the exact same velocity and acceleration <strong>along the surface.</strong>
+</p>
+<p>
+If we denote their velocities and accelerations along the surface as \(v_{\text{wheel}} , a_{\text{wheel}}\) and \(v_{\text{surface}} , a_{\text{surface}}\) respectively, then the pure rolling condition dictates:
+</p>
+\[
+\vec{v}_{\text{wheel}} = \vec{v}_{\text{surface}} \qquad \text{and} \qquad \vec{a}_{\text{wheel(tangential)}} = \vec{a}_{\text{surface(tangential)}}
+\]
+<h3>The Standard Case: Rolling on a Stationary Surface</h3>
+<p>
+The most frequent scenario encountered in mechanics involves a wheel rolling on a stationary, rigid surface (like the ground). In this frame of reference, the surface point is at rest:
+</p>
+\[
+v_{\text{surface(tangential)}} = 0 \qquad \text{and} \qquad a_{\text{surface(tangential)}} = 0
+\]
+<p>
+Consequently, for pure rolling to occur, the point of the wheel that is in contact with the surface — must also be at rest relative to the ground at the instant of contact.
+</p>
+<p>
+Let the wheel have a radius \(R\) and point \(O\) be its geometric center. According to CTRM kinematics, the translational velocity \(V_t\) and translational acceleration \(A_t\) of the entire wheel are given by the velocity and acceleration of its geometric center (\(V_t = v_O\) and \(A_t = a_O\)). Let the wheel rotate with angular velocity \(\omega\) and angular acceleration \(\alpha\).
+</p>
+\[
+v_P = v_O - \omega R
+\]
+<p>
+The minus sign arises because the translational velocity \(v_O\) is directed forward, while the tangential velocity due to rotation (\(\omega R\)) at the bottommost point \(P\) is directed backward. Setting \(v_P = 0\) and substituting \(v_O = V_t\), we get the fundamental constraint equation for pure rolling on a fixed surface:
+</p>
+\[
+V_t = \omega R
+\]
+<p>
+Differentiating this velocity constraint with respect to time yields the corresponding constraint for acceleration:
+</p>
+\[
+A_t = \alpha R
+\]
+<p>
+These equations establish a strict, unbreakable kinematic link between the translational motion of the wheel and the rotational motion about the center. This constraint effectively reduces the degrees of freedom of the system by one, simplifying the analysis significantly.
+</p>
+<h3>Velocity Profile in Pure Rolling</h3>
+<p>
+Because the contact point is instantaneously at rest, we can determine the velocity of any other point on the wheel using CTRM. 
+</p>
+<ul class="model-box">
+<li><strong>Bottom point (contact):</strong> \(v_P = v_O - \omega R = 0\). (Instantaneously at rest).</li>
+<li><strong>Centre:</strong> \(v_O = V_t\). (Only translational velocity).</li>
+<li><strong>Top point:</strong> \(v = v_O + \omega R = v_O + v_O = 2V_t\). (Moving twice as fast as the center).</li>
+</ul>
+<p>
+For a generic point on the rim located at an angle \(\phi\) measured from the lowest point (the contact point), the magnitude of its net velocity can be found using vector addition. The result is elegantly expressed as:
+</p>
+\[v_{\text{point}} = 2V_t\sin\left(\frac{\phi}{2}\right)\]
+<p>
+This formula confirms our extreme cases: at the bottom (\(\phi = 0\)), \(v = 0\); at the top (\(\phi = 180^\circ\)), \(v = 2V_t\).
+</p>
+<h3>Understanding Slipping vs. Rolling</h3>
+The equation \(V_t = \omega R\) defines the boundary of pure rolling.
+<ul class="model-box">
+<li>If <strong>\(V_t \ge \omega R\)</strong>: The translational speed dominates. The contact point has a net forward velocity. This is <strong>forward slipping</strong> or <strong>skidding</strong> (like locking the brakes on an icy road).</li>
+<li>If <strong>\(V_t \le \omega R\)</strong>: The rotational speed dominates. The contact point has a net backward velocity. This is <strong>backward slipping</strong> (like a car spinning its wheels in mud).</li>
+</ul>
+<p>
+Friction will always act in a direction to restore the \(V_t = \omega R\) condition or no slipping condition.
+<p>
+<div class="insightbox">
+The point \(P\) of wheel in contact with the ground has radial acceleration \(\omega^2 R\) towards the center.<br>
+Only, its net acceleration along the tangent is 0.<br>
+Thus, the entire wheel may have non-zero translational and angular acceleration. But, their superposition at point \(P\) is 0.<br>
+This is like an accelerated  particle coming to momentary rest similarly to 1D motion under gravity at the highest point. 
+</div>
+</section>
+<section>
+<h2>Instantaneous Axis of Rotation</h2>
+<p>
+Rolling can be viewed as pure rotation about the contact point (the <strong>instantaneous axis of
+rotation</strong>). The moment of inertia about this axis is:
+</p>
+\[I_{\text{contact}} = I_{\text{CM}} + MR^2 \qquad \text{(parallel axis theorem)}\]
+<p>
+The total kinetic energy can then be written as:
+</p>
+\[K = \frac{1}{2}I_{\text{contact}}\omega^2 = \frac{1}{2}(I_{\text{CM}} + MR^2)\omega^2\]
+<p>
+This equals \(\frac{1}{2}Mv^2 + \frac{1}{2}I_{\text{CM}}\omega^2\) — confirming that both viewpoints
+give the same result.
+</p>
+</section>
+
+<section>
+<h2>Kinetic Energy of Rolling</h2>
+<p>
+The total KE of a body rolling without slipping:
+</p>
+\[K = \frac{1}{2}Mv^2 + \frac{1}{2}I_{\text{CM}}\omega^2 = \frac{1}{2}Mv^2\left(1 + \frac{k^2}{R^2}\right)\]
+<p>
+where \(k\) is the radius of gyration (\(I_{\text{CM}} = Mk^2\)). The fraction of total KE that is
+rotational:
+</p>
+\[\frac{K_{\text{rot}}}{K_{\text{total}}} = \frac{k^2/R^2}{1 + k^2/R^2}\]
+<ul>
+<li>Solid sphere (\(k^2/R^2 = 2/5\)): 2/7 of KE is rotational</li>
+<li>Solid cylinder (\(k^2/R^2 = 1/2\)): 1/3 of KE is rotational</li>
+<li>Hollow sphere (\(k^2/R^2 = 2/3\)): 2/5 of KE is rotational</li>
+<li>Thin ring (\(k^2/R^2 = 1\)): 1/2 of KE is rotational</li>
+</ul>
+</section>
+
+<section>
+<h2>The Role of Friction in Rolling</h2>
+<p>
+Static friction is essential for rolling without slipping — it provides the torque needed to maintain
+the constraint \(v = \omega R\). However:
+</p>
+<ul>
+<li>The contact point has zero velocity, so static friction does <strong>no work</strong>.</li>
+<li>Mechanical energy is therefore conserved in pure rolling (if no other dissipative forces act).</li>
+<li>If external forces would cause the body to slip, friction acts to prevent slipping. If the required
+friction exceeds \(\mu_s N\), the body begins to slip.</li>
+</ul>
+<div class="insightbox">
+This is a crucial subtlety: friction is present and essential, yet does no work. It redirects energy
+between translational and rotational forms without dissipating any.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+
+</html>

@@ -1,111 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rotational Mechanics | Conservation of Angular Momentum</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation of Angular Momentum | Rotational Mechanics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Rotational Mechanics
-            </a>
-        </nav>
-
-        <h1>Conservation of Angular Momentum</h1>
-        <p class="subtitle">
-            When the net external torque vanishes, angular momentum is preserved — with dramatic consequences.
-        </p>
-
-        <section>
-            <h2>Statement</h2>
-            <p>
-                If the net external torque on a system about a point (or axis) is zero, the total angular momentum about
-                that point (or axis) remains constant:
-            </p>
-            \[\vec{\tau}_{\text{ext}} = 0 \implies \vec{L} = \text{constant}\]
-            <p>
-                For a rigid body about a fixed axis:
-            </p>
-            \[I_1 \omega_1 = I_2 \omega_2\]
-            <p>
-                If the moment of inertia decreases, the angular velocity must increase to keep \(L\) constant, and vice
-                versa.
-            </p>
-        </section>
-
-        <section>
-            <h2>Classic Applications</h2>
-            <h3>1. Spinning Figure Skater</h3>
-            <p>
-                A skater spins slowly with arms extended (\(I\) large, \(\omega\) small). Pulling arms in reduces \(I\);
-                angular velocity \(\omega\) increases dramatically to conserve \(L\). The skater spins faster without
-                any external torque.
-            </p>
-
-            <h3>2. Diver's Tuck</h3>
-            <p>
-                A diver leaves the board with a certain angular momentum. By tucking (reducing \(I\)), the diver spins
-                faster to complete somersaults, then extends to slow the rotation before entering the water.
-            </p>
-
-            <h3>3. Collapsing Star</h3>
-            <p>
-                A rotating star that collapses under gravity shrinks to a fraction of its original size. Its moment of
-                inertia decreases enormously (\(I \propto R^2\)), so its angular velocity increases by the same factor.
-                Neutron stars spin at hundreds of revolutions per second.
-            </p>
-
-            <h3>4. Rotating Platform</h3>
-            <p>
-                A person stands on a freely rotating turntable holding a spinning wheel. Flipping the wheel reverses its
-                angular momentum; the platform must rotate in the opposite direction to compensate, keeping total \(L\)
-                constant.
-            </p>
-        </section>
-
-        <section>
-            <h2>Angular Momentum in Two-Body Problems</h2>
-            <p>
-                When two bodies interact (e.g., a disc and a ring dropped onto it), their internal torques are equal and
-                opposite. The total angular momentum is conserved:
-            </p>
-            \[I_1\omega_1 + I_2\omega_2 = (I_1 + I_2)\omega_f\]
-            <p>
-                This is the rotational analogue of a perfectly inelastic collision. Energy is not conserved — friction
-                between surfaces converts kinetic energy to heat until both rotate at the same \(\omega_f\).
-            </p>
-            <div class="insightbox">
-                Energy loss in such problems can be found by comparing initial and final rotational KE:
-                \[\Delta K = \frac{1}{2} \cdot \frac{I_1 I_2}{I_1 + I_2} \cdot (\omega_1 - \omega_2)^2\]
-                This is entirely analogous to the kinetic energy loss in a linear perfectly inelastic collision.
-            </div>
-        </section>
-
-        <section>
-            <h2>When Torque is Zero About One Point but Not Another</h2>
-            <p>
-                Angular momentum conservation applies about the specific point or axis where the net torque is zero. A
-                common situation: gravity exerts no torque about the centre of the Earth, but it does exert torque about
-                other points.
-            </p>
-            <p>
-                In collision problems, if impulsive forces act at a hinge, angular momentum is conserved about the hinge
-                (impulsive force exerts no torque about the hinge because its lever arm is zero), but <em>not</em> about
-                other points.
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Rotational Mechanics
+</a>
+</nav>
+<h1>Conservation of Angular Momentum</h1>
+<p class="subtitle">
+When the net external torque is zero, angular momentum is conserved.
+</p>
+<section>
+<h2>Statement</h2>
+<p>
+If the net external torque on a system about an axis (or point) is zero, the total angular momentum about that point (or axis) remains constant:
+</p>
+\[
+\vec{\tau}_{\text{ext}} = 0 \implies \vec{L} = \text{constant}
+\]
+<p>
+For fixed-axis rotation, where the moment of inertia changes but no external torque acts,
+</p>
+\[
+I_1\omega_1=I_2\omega_2
+\]
+<p>
+If the moment of inertia decreases, the angular velocity must increase to keep \(L\) constant, and vice versa.
+</p>
+</section>
+<section>
+<h2>Classic Applications</h2>
+<h3>1. Spinning Figure Skater</h3>
+<p>
+A skater spins slowly with arms extended (\(I\) large, \(\omega\) small). Pulling arms in reduces \(I\); angular velocity \(\omega\) increases dramatically to conserve \(L\). The skater spins faster without any external torque.
+</p>
+<h3>2. Diver's Tuck</h3>
+<p>
+A diver leaves the board with a certain angular momentum. By tucking (reducing \(I\)), the diver spins faster to complete somersaults, then extends to slow the rotation before entering the water.
+</p>
+<h3>3. Collapsing Star</h3>
+<p>
+A rotating star that collapses under gravity shrinks to a fraction of its original size. Its moment of inertia decreases enormously (\(I \propto R^2\)), so its angular velocity increases by the same factor. Neutron stars spin at hundreds of revolutions per second.
+</p>
+<h3>4. Rotating Platform</h3>
+<p>
+A person stands on a freely rotating turntable holding a spinning wheel. Flipping the wheel reverses its angular momentum; the platform must rotate in the opposite direction to compensate, keeping total \(L\) constant.
+</p>
+</section>
+<section>
+<h2>Angular Momentum in Two-Body Problems</h2>
+<p>
+When two bodies interact (e.g., a disc and a ring dropped onto it), their internal torques are equal and opposite. The total angular momentum is conserved:
+</p>
+\[
+I_1\omega_1 + I_2\omega_2 = (I_1 + I_2)\omega_f
+\]
+<p>
+This is the rotational analogue of a perfectly inelastic collision. Energy is not conserved — friction between surfaces converts kinetic energy to heat until both rotate at the same \(\omega_f\).
+</p>
+<p>
+Energy loss in such problems can be found by comparing initial and final rotational KE:
+</p>
+\[
+\Delta K = \frac{1}{2} \cdot \frac{I_1 I_2}{I_1 + I_2} \cdot (\omega_1 - \omega_2)^2
+\]
+<p>
+This is entirely analogous to the kinetic energy loss in a linear perfectly inelastic collision.
+</p>
+</section>
+<section>
+<h2>When Torque is Zero About One Point but Not Another</h2>
+<p>
+Angular momentum conservation applies about the specific point or axis where the net torque is zero.
+</p>
+<p>
+Some common situations: gravity exerts no torque about the centre of the Earth, but it does exert torque about other points. Or often there is a vertical axis and mg exerts no torque about the axis.
+</p>
+<p>
+In collision problems, if impulsive forces act at a hinge, angular momentum is conserved about the hinge axis (impulsive force exerts no torque about the hinge because its lever arm is zero), but <strong>not</strong> about other points.
+</p>
+</section>
+<section>
+<h2>Plank-Boy to Disc-Boy</h2>
+<p>
+We previously solved the plank-boy problem using the conservation of linear momentum. In that problem, the boy jumps with a velocity \(v\) relative to the plank.
+</p>
+<p>
+Since the plank undergoes pure translational motion, every point of the plank has the same velocity. Therefore, it does not matter which point of the plank is chosen while defining the jump velocity.
+</p>
+<p>
+The situation is different for a rotating disc. Although every particle of the disc has the same angular velocity, different particles have different linear velocities.
+</p>
+<p>
+Therefore, the jump velocity of the boy must be defined with respect to the <strong>last point of contact</strong> between the boy and the disc, just before he leaves the disc.
+</p>
+<p>
+The same idea applies in other situations. Suppose a tank is rigidly fixed on a rotating disc at a distance \(r\) from the axis of rotation. If the disc rotates with angular velocity \(\omega\), then the muzzle has a linear velocity
+\[
+v_{\text{muzzle}}=\omega r
+\]
+<strong>not</strong> \(\omega R\), where \(R\) is the radius of the disc.
+</p>
+<p>
+Hence, the muzzle velocity of the shell is always specified relative to the <strong>muzzle itself</strong>, since the muzzle is the last point of contact between the tank and the shell before the shell leaves the barrel.
+</p>
+<div class="insightbox">
+Whenever a velocity is specified during an interaction (jumping, firing, ejection, throwing, etc.), it is measured relative to the material point of the body through which the interaction takes place.
+</div>
+</section>
+<section>
+<h2>Linear Momentum vs Angular Momentum</h2>
+<p>
+Consider a bead sliding on a rotating rod. At any instant, the bead has a linear velocity that can be resolved into two components:
+</p>
+<ul class="model-box">
+<li><strong>Radial velocity</strong>, along the position vector.</li>
+<li><strong>Tangential velocity</strong>, perpendicular to the position vector.</li>
+</ul>
+<p>
+The bead's linear momentum is
+</p>
+\[
+\vec p=m\vec v
+\]
+<p>
+Since linear momentum depends on the <strong>total linear velocity</strong>, both the radial and tangential components contribute to it.
+</p>
+<p>
+The corresponding kinetic energy is
+</p>
+\[
+K=\frac{p^2}{2m}
+\]
+<p>
+Therefore, the total kinetic energy depends on both the radial and tangential velocities.
+</p>
+<p>
+The angular momentum of the bead about the axis is
+</p>
+\[
+\vec L=\vec r\times m\vec v
+\]
+<p>
+Since the radial velocity is parallel to the position vector, it contributes nothing to the cross product. Consequently, only the tangential component contributes to angular momentum.
+</p>
+<p>
+The rotational kinetic energy is
+</p>
+\[
+K_{\rm rot}=\frac{L^2}{2I}
+\]
+<p>
+Since angular momentum depends only on the tangential velocity, the rotational kinetic energy is also determined only by the tangential motion.
+</p>
+<div class="insightbox">
+Both the <strong>radial</strong> and <strong>tangential</strong> components contribute to the particle's <strong>linear momentum</strong> and hence to its <strong>total kinetic energy</strong>.<br>
+However, only the <strong>tangential</strong> component contributes to the particle's <strong>angular momentum</strong> and hence to its <strong>rotational kinetic energy</strong>.<br>
+This explains why, in the rotating-bead problem, the rotational kinetic energy decreases as the bead moves outward, while the "lost" energy reappears as kinetic energy associated with the radial motion.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

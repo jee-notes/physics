@@ -21,35 +21,71 @@ The equations of motion for constant acceleration.
 <section>
 <h2>Equations for Uniformly Accelerated Motion</h2>
 <p>
-When an object moves with a <strong>constant (uniform) acceleration</strong>, its velocity changes at a constant rate. In such cases, the complex calculus of motion simplifies into widely used algebraic equations.
+When an object moves with a <strong>constant (uniform) acceleration</strong>, its velocity changes at a constant rate. Under this condition, the calculus of motion reduces to a set of simple algebraic equations known as the equations of uniformly accelerated motion.
 </p>
 <p>
-Let an object have an initial velocity \( u \) at time \( t = 0 \) and move with a constant acceleration \( a \). Let \( v \) be its final velocity at time \( t \), and let \( s \) be its displacement during this time interval.
-<p>
-<div class="math-block">
-\[ v = u + at \]
-\[ s = ut + \frac{1}{2}at^2 \]
-</div>
-<p>
-There are 5 variables - \( u \) , \( t \) , \( s \) , \( a \) , \( v \) . So this is also called as UTSAV.
-<p>
-<p>
-The variables \( t \) and \( s \) are defined over an interval. \( t \) is the time interval from \( t = 0 \) to \( t = t\) . \( s \) is the displacement accumulated in the time interval from \( t = 0 \) to \( t = t\) . \( u \) , \( a \) and \( v \) are instantaneous variables. \( u \) is instantaneous velocity at \( t = 0 \) . \( v \) is instantaneous velocity at \( t = t \) . \( a \) is the constant instantaneous acceleration in the interval from \( t = 0 \) to \( t = t\) .
-<p>
-<p>
-Other, often useful equations are different forms of the above 2 basic equations:
-<div class="math-block">
-\[ s = \left( \frac{u + v}{2} \right) t \]
-\[ v^2 = u^2 + 2as \]
-\[ s = vt - \frac{1}{2}at^2 \]
-</div>
+Consider an object with an initial velocity \(u\) at time \(t=0\), moving with a constant acceleration \(a\). Let its velocity become \(v\) after a time interval \(t\), during which it undergoes a displacement \(s\).
 </p>
-<p>
-Also, the displacement in the \( n^{\text{th}} \) second of motion is given by:
+<div class="math-block">
 \[
-S_n = u + \frac{a}{2}(2n - 1)
+v=u+at
 \]
+\[
+s=ut+\frac{1}{2}at^2
+\]
+</div>
+<p>
+These equations involve five variables: \(u\), \(t\), \(s\), \(a\) and \(v\). A popular mnemonic for remembering them is <strong>UTSAV</strong>.
 </p>
+<p>
+The variables \(t\) and \(s\) are <strong>interval variables</strong>. The time \(t\) represents the interval from \(t=0\) to \(t=t\), while the displacement \(s\) is the displacement accumulated during this interval.
+</p>
+<p>
+The variables \(u\), \(v\) and \(a\) are <strong>instantaneous variables</strong>. The velocity \(u\) is the instantaneous velocity at \(t=0\), the velocity \(v\) is the instantaneous velocity at time \(t\), and \(a\) is the constant instantaneous acceleration throughout the interval.
+</p>
+<p>
+Several other useful equations can be obtained by combining or rearranging these two basic equations:
+</p>
+<div class="math-block">
+\[
+s=\left(\frac{u+v}{2}\right)t
+\]
+\[
+v^2=u^2+2as
+\]
+\[
+s=vt-\frac{1}{2}at^2
+\]
+</div>
+<h3>Displacement in \(n^{\text{th}}\) second</h3>
+<p>
+There is a common formula to determine displacement during the \(n^{\text{th}}\) second of motion. But what is the time duration of \(n^{\text{th}}\) second?
+</p>
+<p>
+The \(n^{\text{th}}\) second is the time interval between the instants \(t=n-1\) and \(t=n\). For example, the 3rd second is the interval from \(t=2\) s to \(t=3\) s. Students often mistakenly assume that the \(n^{\text{th}}\) second is the interval from \(t=n\) to \(t=n+1\), but this is incorrect because the 1st second begins at \(t=0\) s and ends at \(t=1\) s.
+</p>
+<p>
+The formula for displacement during the \(n^{\text{th}}\) is:
+</p>
+<div class="math-block">
+\[
+S_n=u+\frac{a}{2}(2n-1)
+\]
+</div>
+<p>
+The derivation relies on the following property: <strong>Displacement is additive over time.</strong>. The displacement during the \(n^{\text{th}}\) second is obtained by subtracting the displacement covered in the first \((n-1)\) seconds from the displacement covered in the first \(n\) seconds:
+</p>
+<div class="math-block">
+\[
+S_n=S(n)-S(n-1)
+\]
+</div>
+<p>
+This follows from the additive nature of displacement over successive time intervals. Once displacement is defined as the time integral of velocity, the displacement over a longer interval equals the sum of the displacements over its constituent intervals. Mathematically, this simply means that - if \(v(t)\) is an integrable function of \(t\) over the interval [\(t_1,  t_3\)], then:
+</p>
+\[
+\int_{t_1}^{t_3}v(t)\,dt = \int_{t_1}^{t_2}v(t)\,dt + \int_{t_2}^{t_3}v(t)\,dt \qquad (t_1 \le t_2 \le t_3)
+\]
 </section>
 <section>
 <h2>Derivation using Calculus</h2>
