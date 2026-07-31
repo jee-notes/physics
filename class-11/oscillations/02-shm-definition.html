@@ -1,123 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscillations | Simple Harmonic Motion</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Harmonic Motion | Oscillations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Oscillations
-            </a>
-        </nav>
-
-        <h1>Simple Harmonic Motion</h1>
-        <p class="subtitle">
-            The most fundamental oscillation — defined by the linear restoring force \(F = -kx\).
-        </p>
-
-        <section>
-            <h2>Definition</h2>
-            <p>
-                A particle undergoes <strong>simple harmonic motion</strong> if the net force on it is:
-            </p>
-            \[F = -kx\]
-            <p>
-                where \(x\) is the displacement from the equilibrium position and \(k\) is a positive constant (the
-                "spring constant" or "force constant"). By Newton's second law:
-            </p>
-            \[ma = -kx \implies a = -\frac{k}{m}x = -\omega^2 x\]
-            <p>
-                where \(\omega = \sqrt{k/m}\) is the angular frequency.
-            </p>
-            <div class="insightbox">
-                The hallmark of SHM is that acceleration is proportional to displacement and always directed toward
-                equilibrium. This single condition — \(a = -\omega^2 x\) — is the defining equation of SHM.
-            </div>
-        </section>
-
-        <section>
-            <h2>The Differential Equation</h2>
-            <p>
-                Writing the defining equation as a differential equation:
-            </p>
-            \[\frac{d^2x}{dt^2} + \omega^2 x = 0\]
-            <p>
-                This is a second-order linear ODE with constant coefficients. Its general solution is:
-            </p>
-            \[x(t) = A\sin(\omega t + \phi)\]
-            <p>
-                or equivalently:
-            </p>
-            \[x(t) = A\cos(\omega t + \phi')\]
-            <p>
-                or in the combined form:
-            </p>
-            \[x(t) = C_1\cos\omega t + C_2\sin\omega t\]
-            <p>
-                All three forms are equivalent. The choice depends on initial conditions.
-            </p>
-        </section>
-
-        <section>
-            <h2>Parameters of SHM</h2>
-            <ul>
-                <li><strong>Amplitude \(A\)</strong> — The maximum displacement from equilibrium. Determined by initial
-                    conditions (energy), not by system properties.</li>
-                <li><strong>Angular frequency \(\omega\)</strong> — Determined by the system's physical properties
-                    (\(\omega = \sqrt{k/m}\)). Independent of amplitude.</li>
-                <li><strong>Phase constant \(\phi\)</strong> — Determined by the initial position and velocity. Fixes
-                    the starting point of the sinusoidal cycle.</li>
-                <li><strong>Time period \(T = \frac{2\pi}{\omega}\)</strong> — The time for one complete oscillation.
-                    Independent of amplitude (isochronism).</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Identifying SHM</h2>
-            <p>
-                To check whether a given motion is SHM, verify any one of these equivalent conditions:
-            </p>
-            <ul>
-                <li>\(F = -kx\) (restoring force proportional to displacement)</li>
-                <li>\(a = -\omega^2 x\) (acceleration proportional to displacement, opposite in sign)</li>
-                <li>\(\frac{d^2x}{dt^2} + \omega^2 x = 0\) (the differential equation is satisfied)</li>
-                <li>The displacement can be written as \(x = A\sin(\omega t + \phi)\)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>SHM as a Projection of Circular Motion</h2>
-            <p>
-                Consider a particle moving in a circle of radius \(A\) with constant angular speed \(\omega\). Its
-                projection onto any diameter traces SHM:
-            </p>
-            \[x = A\cos(\omega t + \phi)\]
-            <p>
-                This geometric connection between uniform circular motion and SHM is extremely useful for:
-            </p>
-            <ul>
-                <li>Visualising the phase relationship between displacement, velocity, and acceleration</li>
-                <li>Adding (superposing) two SHMs using the phasor (rotating vector) method</li>
-                <li>Understanding the phase constant \(\phi\) geometrically as the initial angle of the phasor</li>
-            </ul>
-            <div class="insightbox">
-                SHM is the "shadow" of uniform circular motion. The amplitude is the radius of the circle, the angular
-                frequency is the angular speed, and the phase is the angle measured from a reference direction.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Oscillations
+</a>
+</nav>
+<h1>Simple Harmonic Motion</h1>
+<p class="subtitle">
+The most fundamental periodic oscillation.
+</p>
+<section>
+<h2>Physical Picture</h2>
+<p>
+Simple Harmonic Motion (SHM) is the simplest model of oscillatory motion.
+</p>
+<p>
+It arises when a system possesses a stable equilibrium and a conservative restoring mechanism.
+</p>
+<p>
+When disturbed slightly from equilibrium, the restoring force is directly proportional to the displacement and always acts towards the equilibrium position.
+</p>
+<p>
+Since the stored energy is exchanged continuously between potential and kinetic forms, the system repeatedly overshoots the equilibrium position, giving rise to a periodic oscillation.
+</p>
+<p>
+SHM represents the simplest possible mathematical description of this behaviour.
+</p>
+</section>
+<section>
+<h2>Definition</h2>
+<p>
+A particle is said to undergo <strong>Simple Harmonic Motion (SHM)</strong> if the net restoring force acting on it is directly proportional to its displacement from the equilibrium position and is always directed towards the equilibrium position:
+</p>
+\[
+F=-kx
+\]
+<p>
+where \(x\) is the particle's displacement from the equilibrium position and \(k\) is a positive constant, called the <strong>SHM constant</strong> (or force constant). The simple stands for first power of \(x\). \(F=-kx^3\) is also periodic and oscillatory, but its not simple.
+</p>
+<p>
+Applying Newton's second law,
+</p>
+\[
+ma=-kx
+\]
+<p>
+or,
+</p>
+\[
+a=-\frac{k}{m}x=-\omega^2x
+\]
+<p>
+where
+</p>
+\[
+\omega=\sqrt{\frac{k}{m}}
+\]
+<p>
+is called the <strong>angular frequency</strong> of the motion.
+</p>
+<div class="insightbox">
+The phrase <strong>displacement from the equilibrium position</strong> can be misleading.<br>
+In kinematics, displacement usually means the change in position between two instants.<br>
+However, in SHM, it refers to the particle's <strong>signed position measured from the equilibrium position</strong>.<br>
+Thus, in the equation \(F=-kx\), \(x\) is the particle's position relative to equilibrium, not the change in its position.
+</div>
+<p>
+Angular frequency has same units and dimensions as angular velocity in circular kinematics. However, it is a completely different physical quantity in the sense that it is a parameter of SHM and not circular motion or rotation. It is a scalar and it is closer to frequency than velocity.
+</p>
+</section>
+<section>
+<h2>The Differential Equation</h2>
+<p>
+Writing the defining equation as a differential equation:
+</p>
+\[
+\frac{d^2x}{dt^2} + \omega^2 x = 0
+\]
+<p>
+This is a second-order linear ODE with constant coefficients. Its general solution is:
+</p>
+\[
+x(t) = A\sin(\omega t + \phi)
+\]
+<p>
+This is the most common form and entire SHM will be mostly studied based on this equation. Note that this form indicates that \(-A \le x \le +A\) for eternity. The entire universe of \(x\) is between \(-A\) and \(+A\) . Other equivalent forms are:
+</p>
+\[
+x(t) = A\cos(\omega t + \phi')
+\]
+<p>
+or the combined form:
+</p>
+\[
+x(t) = C_1\cos\omega t + C_2\sin\omega t
+\]
+<p>
+All three forms are equivalent. The choice depends on initial conditions. Other forms are mentioned because examiners try to confuse.
+</p>
+</section>
+<section>
+<h2>Phase Angle</h2>
+<p>
+The entire quantity inside the trigonometric function is an angle and is called the <strong>phase angle</strong> (or simply the <strong>phase</strong>) of SHM.
+</p>
+\[
+x(t)=A\sin(\omega t+\phi)
+\]
+<p>
+Hence,
+</p>
+\[
+\text{Phase}=\omega t+\phi
+\]
+<p>
+Phase is an instantaneous physical quantity. At every instant of time, the oscillator has a definite phase. It represents the instantaneous state of the oscillator in its cycle of motion.
+</p>
+<p>
+Mathematically, phase is an intermediate variable between time and displacement. The displacement is obtained in two steps:
+</p>
+\[
+\theta=\omega t+\phi
+\]
+<p>
+followed by
+</p>
+\[
+x=A\sin\theta
+\]
+<p>
+Thus,
+</p>
+\[
+x=f(g(t))
+\]
+<p>
+where
+</p>
+\[
+g(t)=\omega t+\phi,\qquad f(\theta)=A\sin\theta
+\]
+<p>
+The phase is therefore a linear function of time, while the displacement is a trigonometric function of the phase.
+</p>
+<h3>Initial Phase</h3>
+<p>
+The phase of SHM is defined as
+</p>
+\[
+\theta=\omega t+\phi
+\]
+<p>
+The constant \(\phi\) is called the <strong>initial phase</strong>. It is the phase of the oscillator at the chosen reference instant \(t=0\).
+</p>
+<p>
+An ideal SHM, in the absence of dissipative forces, is considered to continue indefinitely. Every cycle is identical to every other cycle. Therefore, by simply looking at the displacement of the particle, we cannot determine when the motion actually began. It could have started at any time in the past. The displacement, however, always remains bounded between the two extreme positions,
+</p>
+\[
+-A\le x\le +A
+\]
+<p>
+In kinematics, we learned that both the position reference (\(x=0\)) and the time reference (\(t=0\)) are chosen by the observer. SHM is slightly different. Here, the position reference is no longer arbitrary. The equilibrium (or mean) position is, by definition, taken as \(x=0\), while the two extreme positions are \(x=\pm A\). Thus, the physics of SHM itself fixes the reference for position.
+</p>
+<p>
+The reference for time, however, is still chosen by the observer. Since the motion is already in progress and has no preferred starting instant, the observer is free to choose any instant as \(t=0\). At that instant, the particle may be anywhere between the two extreme positions. The initial phase \(\phi\) specifies the state of the oscillator at this chosen reference instant.
+</p>
+<p>
+Thus, when the observer starts the clock,
+</p>
+\[
+x(0)=A\sin\phi
+\]
+<p>
+In other words, the observer says, "From this instant onward, I shall measure time as \(t=0\)." The initial phase then tells us where the oscillator is in its periodic cycle at that instant. It therefore establishes the relationship between the observer's chosen time origin and the state of the oscillator.
+</p>
+</section>
+<section>
+<h2>Parameters of SHM</h2>
+<ul class = "model-box">
+<li><strong>Amplitude \(A\)</strong> — The maximum displacement from equilibrium. Determined by initial conditions (energy), not by system properties.</li>
+<li><strong>Angular frequency \(\omega\)</strong> — Determined by the system's physical properties (\(\omega = \sqrt{k/m}\)). Independent of amplitude.</li>
+<li><strong>Phase constant \(\phi\)</strong> — Determined by the initial position and velocity. Fixes the starting point of the sinusoidal cycle.</li>
+<li><strong>Time period \(T = \frac{2\pi}{\omega}\)</strong> — The time for one complete oscillation. Independent of amplitude (isochronism).</li>
+</ul>
+<p>
+Notice that the angular frequency (and hence the time period) is an inherent property of the system. It depends only on the physical parameters of the oscillator, such as the mass and the spring constant, and not on the amplitude of oscillation.
+</p>
+<p>
+For example, consider a spring-block system. If the block is pulled by a distance \(A\) from the equilibrium position and released, it oscillates with angular frequency \(\omega\). If it is instead pulled by a distance \(2A\) and released, the amplitude doubles, but the angular frequency remains the same. Thus, increasing the amplitude changes only the extent of the oscillation, not the rate at which the system oscillates.
+</p>
+</section>
+<section>
+<h2>Identifying SHM</h2>
+<p>
+To check whether a given motion is SHM, verify any one of these equivalent conditions:
+</p>
+<ul>
+<li>\(F = -kx\) (restoring force proportional to displacement)</li>
+<li>\(a = -\omega^2 x\) (acceleration proportional to displacement, opposite in sign)</li>
+<li>\(\frac{d^2x}{dt^2} + \omega^2 x = 0\) (the differential equation is satisfied)</li>
+<li>The displacement can be written as \(x = A\sin(\omega t + \phi)\)</li>
+</ul>
+</section>
+<section>
+<h2>SHM as a Projection of Circular Motion</h2>
+<p>
+Consider a particle moving in a circle of radius \(A\) with constant angular speed \(\omega\). Its projection onto any diameter traces SHM:
+</p>
+\[
+x = A\cos(\omega t + \phi)
+\]
+<p>
+This geometric connection between uniform circular motion and SHM is extremely useful for:
+</p>
+<ul>
+<li>Visualising the phase relationship between displacement, velocity, and acceleration</li>
+<li>Adding (superposing) two SHMs using the phasor (rotating vector) method</li>
+<li>Understanding the phase constant \(\phi\) geometrically as the initial angle of the phasor</li>
+</ul>
+<div class="insightbox">
+SHM is the "shadow" of uniform circular motion.<br>
+The amplitude is the radius of the circle, the angular frequency is the angular speed, and the phase is the angle measured from a reference direction.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
