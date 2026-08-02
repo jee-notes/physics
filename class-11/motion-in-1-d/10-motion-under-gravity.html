@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion Under Gravity | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Motion Under Gravity</h1>
+<p class="subtitle">
+The kinematics of free fall near the Earth's surface.
+</p>
+<section>
+<h2>Concept of Free Fall</h2>
+<p>
+One of the most important examples of uniformly accelerated motion is the motion of a body under the influence of Earth's gravity.
+</p>
+<p>
+In the absence of air resistance, all bodies—regardless of their mass, size or shape—fall with the same constant acceleration. This idealized motion is called <strong>free fall</strong>.
+</p>
+<h3>Acceleration due to Gravity (\(g\))</h3>
+<p>
+Near the Earth's surface, the acceleration due to gravity is nearly constant and is denoted by \(g\).
+</p>
+<div class="math-block">
+\[
+g = 9.8\,\text{m/s}^2 \qquad (\text{often approximated as }10\,\text{m/s}^2)
+\]
+</div>
+<p>
+The acceleration due to gravity always acts vertically downward.
+</p>
+<div class="insightbox">
+Gravity is a force that acts towards the <strong>center of the Earth</strong>. A separate chapter on Gravitation discusses this force in detail.<br>
+Near the Earth's surface, the Earth's curvature is negligible over ordinary distances. Therefore, the direction towards the Earth's center is treated as the same everywhere and is simply taken to be <strong>vertically downward</strong>.<br>
+Strictly speaking, motion under gravity belongs to <strong>dynamics</strong> because the acceleration is produced by a force. However, since the acceleration is nearly constant near the Earth's surface, the motion can be analyzed completely using the kinematic equations. For this reason, it is traditionally studied as part of kinematics.<br>
+A body is said to be in <strong>free fall</strong> if gravity is the <strong>only</strong> force acting on it. A freely falling body may be moving downward, moving upward after projection, or be momentarily at rest at its highest point.
+</div>
+</section>
+<section>
+<h2>Sign Convention and Equations</h2>
+<p>
+Motion under gravity is a one-dimensional vector problem. Therefore, a consistent sign convention must be chosen before applying the kinematic equations.
+</p>
+<p>
+Any sign convention may be used, provided it is followed consistently throughout the problem. However, the most common convention is to take the upward direction as positive and the downward direction as negative.
+</p>
+<h3>Standard Sign Convention</h3>
+<p>
+Taking the upward direction as positive (\(+y\)) and the downward direction as negative (\(-y\)),
+</p>
+<div class="math-block">
+\[
+a=-g
+\]
+</div>
+<p>
+where \(g\) denotes the magnitude of the acceleration due to gravity. The negative sign simply indicates that the acceleration is directed downward.
+</p>
+<p>
+Regardless of whether the body is moving upward, moving downward, or is momentarily at rest at its highest point, the acceleration remains constant and equal to
+</p>
+<div class="math-block">
+\[
+a=-9.8\,\text{m/s}^2
+\]
+</div>
+<p>
+Substituting \(a=-g\) into the kinematic equations and using \(y\) for vertical displacement, we obtain
+</p>
+<ul class="model-box">
+<li>\(\displaystyle v=u-gt\)</li>
+<li>\(\displaystyle y=ut-\frac12gt^2\)</li>
+<li>\(\displaystyle v^2=u^2-2gy\)</li>
+</ul>
+<p>
+Note that as per standard, \(y\) is vertical upward displacement of the particle from the point of projection. But \(y\) can theoretically be any vertically upward displacement for in-between points as well.   
+</p>
+</section>
+<section>
+<h2>Important Standard Results</h2>
+<p>
+Consider a particle projected vertically upwards from the ground with an initial velocity \( u \).
+</p>
+<div class="examplebox">
+<h3>1. Maximum Height (\( H_{\text{max}} \))</h3>
+At the maximum height, the instantaneous velocity of the particle is zero (\( v = 0 \)). Using \( v^2 = u^2 - 2gH_{\text{max}} \):
+\[
+0 = u^2 - 2gH_{\text{max}} \implies H_{\text{max}} = \frac{u^2}{2g}
+\]
+<h3>2. Time of Ascent (\( t_a \)) and Time of Descent (\( t_d \))</h3>
+The time taken to reach the maximum height is the time of ascent. Using \( v = u - gt_a \) and setting \( v = 0 \):
+\[
+0 = u - gt_a \implies t_a = \frac{u}{g}
+\]
+By symmetry (ignoring air resistance), the time taken to fall back to the ground equals the time of ascent. Thus, time of descent \( t_d = \frac{u}{g} \).
+<h3>3.Time of Flight (\( T \))</h3>
+The total time the particle remains in the air is the sum of ascent and descent times:
+\[
+T = t_a + t_d = \frac{2u}{g}
+\]
+Alternatively, use \( y = ut - \frac{1}{2}gt^2 \). For the full journey, displacement \( y = 0 \):
+\[
+0 = uT - \frac{1}{2}gT^2 \implies T = \frac{2u}{g}
+\]
+<h3>4. Velocity on Returning to Ground</h3>
+When the particle returns to the launch point, its displacement is zero. Using \( v^2 = u^2 - 2gy \) with \( y=0 \):
+\[
+v^2 = u^2 \implies v = -u
+\]
+(The negative sign indicates the particle is moving downwards with the same speed it was projected upwards).
+</div>
+</section>
+<section>
+<h2>Symmetry of Upward and Downward Journey</h2>
+<p>
+Consider a particle projected vertically upwards with an initial velocity \(u\). Let the maximum height reached be
+\[
+H_{\max}=\frac{u^2}{2g}
+\]
+Let \(h_1\) be any height satisfying
+\[
+0 \lt h_1 \lt H_{\max}.
+\]
+</p>
+<p>
+Using the equation of motion,
+</p>
+\[
+h_1=ut-\frac12gt^2
+\]
+<p>
+or equivalently,
+</p>
+\[
+gt^2-2ut+2h_1=0
+\]
+<p>
+we obtain two roots \(t_1\) and \(t_2\), corresponding to the two instants at which the particle passes through the same height \(h_1\): once during ascent and once during descent.
+</p>
+<p>
+Using the properties of quadratic equations,
+</p>
+\[
+t_1+t_2=\frac{2u}{g}=T
+\]
+\[
+t_1t_2=\frac{2h_1}{g}
+\]
+<p>
+Thus, the two instants are symmetric about the time of maximum height,
+\[
+\frac{T}{2}=\frac{u}{g}
+\]
+Knowing either one of the two times immediately determines the other.
+</p>
+<p>
+The initial velocity \(u\) completely determines the motion. Quantities such as the maximum height, time of flight, time of ascent, or the times corresponding to a given height are all functions of \(u\). In problems, \(u\) is often determined indirectly from one of these quantities.
+</p>
+<div class="insightbox">
+Often in questions, \(t_1\) and \(t_2\) are given confusingly.<br>
+Consider 1D motion under gravity. It takes 4 seconds to reach a particular height and 2 more seconds to reach it again. Here, \(t_1 = 4\) and \(t_2 = 6\) .<br>
+Consider 1D motion under gravity. It takes 4 seconds to reach a particular height and from there it takes 6 seconds to return to ground. Here, \(t_1 = 4\) and \(t_2 = 6\) .<br>
+Consider 1D motion under gravity. A particular height is attained in 4 seconds and the same height is attained again in 6 seconds. Here, \(t_1 = 4\) and \(t_2 = 6\) .<br>
+In all 3 cases, \(T = t_1 + t_2 = 4 + 6 = 10s\) and using \(T = 2u/g\) , we get \(u = 50m/s\) and using \(h_1 = gt_1t_2/2\) , we get \(h_1 = 120m\) and using \(H_{max} = u^2/2g\) , we get \(H_{max} = 125m\) .<br>
+Using \(v = u - gt\) , we know the value of \(v\) at every integer second. Just subtract multiple of 10 each time.    
+</div>
+<h3>GLON and Reverse GLON</h3>
+<p>
+Galileo's Law of Odd Numbers (GLON) applies whenever the initial velocity is zero. Therefore, it can be applied to the downward journey beginning from the highest point, where the particle starts from rest.
+</p>
+<p>
+For example, taking \(g=10\,\text{m/s}^2\), the particle covers
+</p>
+\[
+5\,\text{m},\;
+15\,\text{m},\;
+25\,\text{m},\;
+35\,\text{m},\ldots
+\]
+<p>
+during successive one-second intervals after leaving the highest point.
+</p>
+<p>
+By symmetry of the upward and downward journeys, the same distances are covered during the corresponding one-second intervals immediately <strong>before</strong> reaching the highest point. Thus, counting backwards from the highest point, the particle also covers
+</p>
+\[
+5\,\text{m},\;
+15\,\text{m},\;
+25\,\text{m},\;
+35\,\text{m},\ldots
+\]
+<p>
+during successive one-second intervals. This may be regarded as a <strong>Reverse GLON</strong>.
+</p>
+<p>
+The same result can also be obtained directly using
+</p>
+\[
+s=vt-\frac12gt^2
+\]
+<p>
+where \(v=0\) at the highest point.
+</p>
+</section>
+<section>
+<h2>Sub Topics</h2>
+<div class="chapter-list">
+<a href="./10a-motion-under-gravity-tower.html">1. Free Fall from Tower</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

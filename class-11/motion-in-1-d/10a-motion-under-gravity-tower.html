@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fall from Tower | Motion Under Gravity</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./10-motion-under-gravity.html" class="back-btn">
+<span>&larr;</span> Back to Motion Under Gravity
+</a>
+</nav>
+<h1>Free Fall from Tower</h1>
+<p class="subtitle">
+Tower Height is extra parameter of displacement.
+</p>
+<section>
+<h2>Statement</h2>
+<p>
+Motion under gravity is commonly studied in two situations:
+</p>
+<ul class="model-box">
+<li>Motion from the ground (Zero Displacement).</li>
+<li>Motion from the top of a tower of height \(H_T\) (Non-Zero Displacement).</li>
+</ul>
+<p>
+In kinematics, <strong>displacement is one of the principal parameters that determines the motion</strong>.
+</p>
+<p>
+Most experimental situations are specified by giving a displacement, such as the height of a tower, the depth of a well, the maximum height attained by a particle, or the range of a projectile. The corresponding time of motion is then obtained by solving the displacement equation.
+</p>
+<p>
+For motion starting from the ground, the displacement from initial point of projection is taken to be zero. Thus, the only independent parameter governing the motion is the initial velocity \(u\).
+</p>
+<p>
+When the particle starts from the top of a tower, an additional displacement parameter is introduced, namely the tower height \(H_T\). Consequently, the complete motion is now determined by two independent parameters:
+</p>
+<div class="math-block">
+\[
+u
+\]
+\[
+H_T
+\]
+</div>
+<p>
+The tower height determines the total vertical displacement required for the particle to reach the ground, and therefore directly influences the time of flight.
+</p>
+<div class="insightbox">
+The <strong>time of flight</strong> is the total duration for which the motion under gravity (free fall motion) is defined and part of study.<br>
+It is obtained by solving the displacement equation corresponding to the required displacement.<br>
+Students often know that the required quantity is the <strong>time of flight</strong>, but are unsure which equation of motion should be used to determine it.<br>
+The missing link is that <strong>Ground-to-Ground (G2G)</strong> and <strong>Tower-to-Ground (T2G)</strong> are classifications based on <strong>displacement</strong>.<br>
+For G2G motion, the statement of the problem implies that the displacement from the point of projection is zero.<br>
+For T2G motion, the statement implies that the required displacement is the height of the tower \(H_T\).<br>
+Thus, the displacement is already given—although not explicitly. Once this hidden displacement condition is identified, the appropriate equation to determine the time of flight is the displacement equation
+\[
+s=ut+\frac12at^2
+\]
+Thus, in kinematics, displacement conditions naturally determine the relevant time(s) of motion and they are the key hidden parameters that are given in the problem.
+</div>
+<p>
+In Free Fall from Tower Topic, we shall first study the special case of a particle dropped from the tower (\(u=0\)), where the motion depends only on the displacement parameter \(H_T\). We shall then study the general case (\(u\neq0\)), where both \(u\) and \(H_T\) determine the motion.
+</p>
+</section>
+<section>
+<h2>Dropped from Tower</h2>
+<p>
+A particle is said to be <strong>dropped</strong> (or released/detached) when no additional velocity is imparted by the releasing mechanism. Consequently, the particle initially has the same velocity as the releasing body. If the releasing body is at rest with respect to the ground, then
+</p>
+<div class="math-block">
+\[
+u=0
+\]
+</div>
+<p>
+This is different from <strong>throwing</strong> a particle, where an additional initial velocity is imparted.
+</p>
+<p>
+For a particle dropped from the top of a tower, the displacement condition for the time of flight is
+</p>
+<div class="math-block">
+\[
+s=-H_T,\qquad u=0,\qquad a=-g
+\]
+</div>
+<p>
+Substituting into the displacement equation,
+</p>
+<div class="math-block">
+\[
+s=ut+\frac12at^2
+\]
+\[
+-H_T=0+\frac12(-g)t^2
+\]
+\[
+\boxed{T=\sqrt{\frac{2H_T}{g}}}
+\]
+</div>
+<p>
+The velocity just before striking the ground can be obtained directly without calculating the time of flight by using
+</p>
+<div class="math-block">
+\[
+v^2=u^2+2as
+\]
+\[
+v^2=0+2(-g)(-H_T)
+\]
+\[
+\boxed{v=\sqrt{2gH_T}}
+\]
+</div>
+<div class="insightbox">
+The time of flight is obtained from the <strong>displacement condition</strong> \(s=-H_T\), whereas the impact velocity is obtained directly from the <strong>velocity-displacement equation</strong>. Thus, the time of flight need not be calculated if only the impact velocity is required.
+</div>
+<p>
+Problems involving a particle dropped from a tower are commonly based on Galileo's Law of Odd Numbers (GLON), the proportionalities
+</p>
+<div class="math-block">
+\[
+t\propto\sqrt{H_T}, \qquad t^2\propto H_T, \qquad v\propto\sqrt{H_T}
+\]
+</div>
+<p>
+Many questions describe the particle's position by its <strong>height above the ground</strong> rather than its displacement from the top of the tower. Care must therefore be taken to convert the given height into the corresponding displacement before applying the equations of motion.
+</p>
+<p>
+Other questions are identical to ordinary uniformly accelerated motion. For example, the velocity at time \(T/2\) is smaller than the velocity at the midpoint of the tower \((H_T/2)\), because at time \(T/2\) the particle has not yet reached half the height of the tower.
+</p>
+<div class="insightbox">
+For a particle undergoing uniformly accelerated motion,
+\[
+v(T/2)=\frac{u+v}{2}
+\]
+i.e. the velocity at half the total time equals the arithmetic mean of the initial and final velocities.<br>
+For a particle dropped from rest,
+\[
+v(T/2)=\frac{\sqrt{2gH_T}}{2}=\sqrt{\frac{gH_T}{2}}=0.707\,\sqrt{gH_T}
+\]
+Similarly,
+\[
+v(H_T/2)=\sqrt{\frac{u^2+v^2}{2}}
+\]
+i.e. the velocity at half the total displacement equals the root-mean-square (RMS) of the initial and final velocities.<br>
+For a particle dropped from rest,
+\[
+v(H_T/2)=\sqrt{gH_T}
+\]
+Finally,
+\[
+v(T)=v(H_T)=\sqrt{2gH_T}=1.414\,\sqrt{gH_T}
+\]
+Thus,
+\[
+v(T/2) \lt v(H_T/2) \lt v(T)
+\]
+showing that <strong>half the time of flight and half the displacement correspond to different positions of the particle.</strong>
+</div>
+</section>
+<section>
+<h2>Throw from Tower</h2>
+<p>
+Throw from tower implies that \(u \neq 0\) . But it can be up or down. We start with upwards first.
+</p>
+<p>
+For a particle thrown upwards with velocity \(u\) from the top of a tower, the displacement condition for the time of flight is
+</p>
+<div class="math-block">
+\[
+s=-H_T,\qquad u=u,\qquad a=-g
+\]
+</div>
+<p>
+Substituting into the displacement equation,
+</p>
+<div class="math-block">
+\[
+s=ut+\frac12at^2
+\]
+\[
+-H_T=ut-\frac12(g)t^2 \qquad gt^2-2ut-2H_T=0
+\]
+\[
+t_1 + t_2 = 2u/g \qquad t_1 \times t_2 = -2H_T/g 
+\]
+</div>
+<p>
+The quadratic equation has one positive root and one negative root. Let the positive root be \(t_1\) and the negative root be \(t_2\).
+</p>
+<div class="math-block">
+\[
+t_1+t_2=\frac{2u}{g}
+\]
+\[
+t_1=\frac{2u}{g}-t_2
+\]
+</div>
+<p>
+The quantity
+\[
+\frac{2u}{g}
+\]
+is the time taken by a particle projected vertically upward from the tower to return to the same level (tower top).
+</p>
+<p>
+The negative root \(t_2\) has an elegant physical interpretation. Its magnitude equals the time required for the particle to reach the ground if it had been projected <strong>downward</strong> with the same speed \(u\). Thus,
+\[
+|t_2|
+\]
+is precisely the time of flight for the corresponding downward throw from the same tower.
+</p>
+<p>
+Therefore, the actual time of flight for the upward throw is obtained by adding the time required to return to the tower top and the time that would have been taken for the corresponding downward throw:
+</p>
+<div class="math-block">
+\[
+T_{\text{upward}}=\frac{2u}{g}+T_{\text{downward}}\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
