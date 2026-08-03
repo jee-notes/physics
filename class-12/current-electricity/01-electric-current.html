@@ -67,77 +67,6 @@ Current exists only when there is a <strong>net transport of net charge across a
 </div>
 </section>
 <section>
-<h2>Current Density</h2>
-<p>
-Electric current is a macroscopic scalar quantity associated with a specified cross-sectional area. It represents the total <strong>flow rate</strong> of charge through that cross-section.
-</p>
-<p>
-However, when we define current mathematically as
-</p>
-\[
-i=\frac{dQ}{dt}
-\]
-<p>
-there is no explicit mention of the cross-sectional area. This is because the area is usually implied by the physical situation. For example, when we ask, <strong>"What is the current through the resistor?"</strong>, the relevant cross-section is understood automatically.
-</p>
-<div class="insightbox">
-Although the definition of current requires a specific cross-sectional area, the area is usually left implicit in circuit analysis.<br>
-In fact, for a uniform conductor, the effect of the cross-sectional area is already encoded in the resistance through
-\[
-R=\rho\frac{l}{A}
-\]
-Thus, when we solve circuits using Ohm's Law, the geometry of the conductor has already been incorporated into the resistance.<br>
-In this section, however, we make the cross-sectional area explicit because our objective is to understand how current is distributed locally inside the conductor.
-</div>
-<p>
-The total current tells us only the overall flow rate of charge through the conductor. It does not tell us whether the charge transport is uniform throughout the cross-section or whether some regions carry more current than others.
-</p>
-<p>
-To describe the transport of charge locally, we introduce a vector field called <strong>current density</strong>, denoted by \(\vec J\). Current density specifies the local flow of charge at every point inside the conductor, both in magnitude and direction.
-</p>
-<p>
-Consider an infinitesimal surface element \(d\vec A\). The infinitesimal current passing through this element is
-</p>
-\[
-di=\vec J\cdot d\vec A
-\]
-<p>
-The total current through the entire cross-section is obtained by adding the contributions from all such infinitesimal surface elements:
-</p>
-\[
-I=\int\vec J\cdot d\vec A.
-\]
-<div class="insightbox">
-Current is therefore the <strong>flux of the current density vector</strong> through a surface, completely analogous to electric flux in electrostatics.<br>
-More generally, if a scalar physical quantity \(PQ\) is defined as
-\[
-PQ=\int\vec E\cdot d\vec A,
-\]
-then \(PQ\) is called the <strong>flux</strong> (or surface integral) of the vector field \(\vec E\).<br>
-Spatially, the vector field \(\vec E\) is defined locally at every point in space, whereas the corresponding scalar quantity is obtained by accumulating (integrating) the field over an entire surface.<br>
-Examples include:
-<ul>
-<li>Electric Flux</li>
-<li>Electric Current</li>
-</ul>
-Similarly, if a scalar physical quantity is defined as
-\[
-PQ=\int\vec E\cdot d\vec l,
-\]
-then it is called the <strong>line integral</strong> of the vector field.<br>
-Here again, the vector field is defined pointwise, while the resulting scalar quantity is accumulated along a path.<br>
-Examples include:
-<ul>
-<li>Work Done</li>
-<li>Potential Difference</li>
-</ul>
-<strong>Current</strong> is a macroscopic quantity describing the total flow rate of charge through a cross-section.<br>
-<strong>Current density</strong> is the local description of that charge transport.<br>
-The total current is obtained by integrating the local current density over the entire cross-sectional area.<br>
-Thus, current is actually an accumulated quantity over a spatial region.
-</div>
-</section>
-<section>
 <h2>Frame Invariance of Current</h2>
 <p>
 The value of steady current in a conductor does not depend on whether the conductor itself is at rest or moving.
@@ -228,53 +157,117 @@ When ions cross a membrane surface, charge is transported across that boundary. 
 </p>
 </section>
 <section>
-<h2>Solved Example</h2>
-<div class="examplebox">
-<h3>Question 1</h3>
+<h2>Steady Current</h2>
 <p>
-An electron beam has a circular aperture of area \(1.0 \, \text{mm}^2\). 
-A total of \(6.0 \times 10^{16}\) electrons pass through any perpendicular cross-section per second. 
-Find:
+A physical system may exist in either a <strong>static steady state</strong> or a <strong>dynamic steady state</strong>.
+</p>
+<p>
+In a <strong>static steady state</strong>, the constituents of the system are at rest and the macroscopic state does not change with time.
+</p>
+<p>
+In a <strong>dynamic steady state</strong>, the constituents of the system are continuously moving, yet the macroscopic state remains unchanged with time. Mathematically, if \(P(\mathbf r,t)\) denotes any macroscopic field variable of the system, then
+</p>
+\[
+\frac{\partial P}{\partial t}=0
+\]
+<p>
+Examples of dynamic steady states include steady flow of a fluid through a pipe, propagation of a steady travelling wave on a stretched string, and steady transport of charge through a conductor.
+</p>
+<p>
+Current electricity deals primarily with <strong>steady current</strong>. Unless stated otherwise, all currents discussed in this chapter are assumed to be steady. For direct current (DC), this means
+</p>
+\[
+\boxed{\frac{dI}{dt}=0}
+\]
+<p>
+A steady current does <strong>not</strong> imply that the charge carriers are at rest. Free electrons continue to drift through the conductor under the influence of the electric field. What remains constant is the <strong>macroscopic flow rate of charge</strong> through every cross-section of the conductor.
+</p>
+<p>
+Since the current through every cross-section is the same, no net charge accumulates anywhere inside the conductor. Consequently,
+</p>
+\[
+I_{\text{in}}=I_{\text{out}}
+\]
+<p>
+More generally, the local condition for steady current is that the current density does not vary with time:
+</p>
+\[
+\frac{\partial \vec J}{\partial t}=0
+\]
+<div class="concept-box">
+Steady current is a <strong>dynamic steady state</strong>.<br>
+The charge carriers are continuously moving through the conductor, but the macroscopic current and current density remain time-independent.<br>
+As a result, every cross-section carries the same constant flow rate of charge, and no net charge accumulates anywhere inside the conductor.
+</div>
+</section>
+<section>
+<h2>Conduction and Convection Current</h2>
+<p>
+Electric current is a general transport phenomenon. Depending on how charge is transported across a specified cross-sectional area, currents may be broadly classified into two types:
+</p>
+<ul class="model-box">
+<li><strong>Conduction Current:</strong> Charge carriers move through a material medium while the medium itself remains essentially stationary.</li>
+<li><strong>Convection Current:</strong> The charged matter itself moves from one place to another, carrying its charge along with it.</li>
+</ul>
+<h3>Conduction Current</h3>
+<p>
+Conduction current occurs in conducting materials where certain charge carriers are free to move through the medium. The bulk material remains stationary, while the mobile charge carriers drift under the influence of an electric field.
+</p>
+<p>
+Examples include:
 </p>
 <ul>
-<li>(a) The electric current in the beam</li>
-<li>(b) The current density in the beam</li>
+<li>Free electrons drifting through metallic conductors.</li>
+<li>Positive and negative ions moving through electrolytic solutions.</li>
+<li>Electrons and ions moving through ionized gases (plasmas).</li>
 </ul>
-<hr>
-<h4>Solution</h4>
-<p><strong>(a) Current</strong></p>
 <p>
-Total charge crossing per second:
+The microscopic and macroscopic forms of Ohm's Law developed in this chapter describe <strong>conduction current</strong>. In particular, the constitutive relation
 </p>
 \[
-q = ne = (6.0 \times 10^{16})(1.6 \times 10^{-19}) \, \text{C}
-\]
-\[
-q = 9.6 \times 10^{-3} \, \text{C}
-\]
-\[
-I = \frac{q}{t} = 9.6 \times 10^{-3} \, \text{A}
+\vec J=\sigma\vec E
 \]
 <p>
-Since electrons carry negative charge, the conventional current direction is opposite to the direction of motion of the electron beam.
+is applicable to conducting media where the current arises due to the drift of mobile charge carriers through the material.
 </p>
-<p><strong>(b) Current Density</strong></p>
+<h3>Convection Current</h3>
 <p>
-Convert area:
+In convection current, the charged body or charged medium itself moves from one place to another, carrying its charge along with it. Unlike conduction current, the charge carriers do not drift through a stationary material; instead, the entire charged object is transported.
 </p>
+<p>
+A simple example is a uniformly charged insulating rod having linear charge density \(\lambda\), moving with a constant velocity \(v\) along its length.
+</p>
+<p>
+In a time interval \(dt\), a length
 \[
-1.0 \, \text{mm}^2 = 1.0 \times 10^{-6} \, \text{m}^2
+dx=v\,dt
 \]
+of the rod crosses a given cross-sectional plane. The charge transported across the plane is therefore
 \[
-J = \frac{I}{A} = \frac{9.6 \times 10^{-3}}{1.0 \times 10^{-6}}
+dQ=\lambda\,dx=\lambda v\,dt
 \]
+Hence, the current is
 \[
-J = 9.6 \times 10^{3} \, \text{A m}^{-2}
+I=\frac{dQ}{dt}=\lambda v
 \]
+</p>
+<p>
+Here, the current arises simply because the <strong>charged body itself is moving</strong>. This is an example of <strong>convection current</strong>.
+</p>
+<ul>
+<li>A uniformly charged rod moving with velocity \(v\).</li>
+<li>Charged oil droplets moving through air.</li>
+<li>Charged dust particles carried by wind.</li>
+<li>An electron beam moving through vacuum.</li>
+</ul>
+<p>
+Convection current is not governed by Ohm's Law because it does not arise from charge carriers drifting through a stationary conducting medium. Instead, the entire charged body or charged fluid is in motion.
+</p>
+<div class="concept-box">
+Both <strong>conduction current</strong> and <strong>convection current</strong> represent the transport of charge across a specified surface and therefore satisfy the definition of electric current.<br>
+However, this chapter develops the theory primarily for <strong>conduction current in metallic conductors</strong>.<br>
+Convection currents will be studied in greater detail in the chapter on <strong>Magnetism</strong>, where moving charges are treated as sources of magnetic fields.
 </div>
-<p>
-This section can contain other questions like i vs t graphs or q vs t graphs or equations etc. Just functions and calculus questions from maths masked as physics questions
-</p>
 </section>
 <footer>
 <hr>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current Density | Current Electricity</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Current Electricity
+</a>
+</nav>
+<h1>Current Density</h1>
+<p class="subtitle">
+Localised Current describing quantity.
+</p>
+
+<section>
+<h2>Current Density</h2>
+<p>
+Electric current is a macroscopic scalar quantity associated with a specified cross-sectional area. It represents the total <strong>flow rate</strong> of charge through that cross-section.
+</p>
+<p>
+However, when we define current mathematically as
+</p>
+\[
+i=\frac{dQ}{dt}
+\]
+<p>
+there is no explicit mention of the cross-sectional area. This is because the area is usually implied by the physical situation. For example, when we ask, <strong>"What is the current through the resistor?"</strong>, the relevant cross-section is understood automatically.
+</p>
+<div class="insightbox">
+Although the definition of current requires a specific cross-sectional area, the area is usually left implicit in circuit analysis.<br>
+In fact, for a uniform conductor, the effect of the cross-sectional area is already encoded in the resistance through
+\[
+R=\rho\frac{l}{A}
+\]
+Thus, when we solve circuits using Ohm's Law, the geometry of the conductor has already been incorporated into the resistance.<br>
+In this section, however, we make the cross-sectional area explicit because our objective is to understand how current is distributed locally inside the conductor.
+</div>
+<p>
+The total current tells us only the overall flow rate of charge through the conductor. It does not tell us whether the charge transport is uniform throughout the cross-section or whether some regions carry more current than others.
+</p>
+<p>
+To describe the transport of charge locally, we introduce a vector field called <strong>current density</strong>, denoted by \(\vec J\). Current density specifies the local flow of charge at every point inside the conductor, both in magnitude and direction.
+</p>
+<p>
+Consider an infinitesimal surface element \(d\vec A\). The infinitesimal current passing through this element is
+</p>
+\[
+di=\vec J\cdot d\vec A
+\]
+<p>
+The total current through the entire cross-section is obtained by adding the contributions from all such infinitesimal surface elements:
+</p>
+\[
+I=\int\vec J\cdot d\vec A.
+\]
+<div class="insightbox">
+Current is therefore the <strong>flux of the current density vector</strong> through a surface, completely analogous to electric flux in electrostatics.<br>
+More generally, if a scalar physical quantity \(PQ\) is defined as
+\[
+PQ=\int\vec E\cdot d\vec A,
+\]
+then \(PQ\) is called the <strong>flux</strong> (or surface integral) of the vector field \(\vec E\).<br>
+Spatially, the vector field \(\vec E\) is defined locally at every point in space, whereas the corresponding scalar quantity is obtained by accumulating (integrating) the field over an entire surface.<br>
+Examples include:
+<ul>
+<li>Electric Flux</li>
+<li>Electric Current</li>
+</ul>
+Similarly, if a scalar physical quantity is defined as
+\[
+PQ=\int\vec E\cdot d\vec l,
+\]
+then it is called the <strong>line integral</strong> of the vector field.<br>
+Here again, the vector field is defined pointwise, while the resulting scalar quantity is accumulated along a path.<br>
+Examples include:
+<ul>
+<li>Work Done</li>
+<li>Potential Difference</li>
+</ul>
+<strong>Current</strong> is a macroscopic quantity describing the total flow rate of charge through a cross-section.<br>
+<strong>Current density</strong> is the local description of that charge transport.<br>
+The total current is obtained by integrating the local current density over the entire cross-sectional area.<br>
+Thus, current is actually an accumulated quantity over a spatial region.
+</div>
+</section>
+<section>
+<h2>Solved Example</h2>
+<div class="examplebox">
+<h3>Question 1</h3>
+<p>
+An electron beam has a circular aperture of area \(1.0 \, \text{mm}^2\). 
+A total of \(6.0 \times 10^{16}\) electrons pass through any perpendicular cross-section per second. 
+Find:
+</p>
+<ul>
+<li>(a) The electric current in the beam</li>
+<li>(b) The current density in the beam</li>
+</ul>
+<hr>
+<h4>Solution</h4>
+<p><strong>(a) Current</strong></p>
+<p>
+Total charge crossing per second:
+</p>
+\[
+q = ne = (6.0 \times 10^{16})(1.6 \times 10^{-19}) \, \text{C}
+\]
+\[
+q = 9.6 \times 10^{-3} \, \text{C}
+\]
+\[
+I = \frac{q}{t} = 9.6 \times 10^{-3} \, \text{A}
+\]
+<p>
+Since electrons carry negative charge, the conventional current direction is opposite to the direction of motion of the electron beam.
+</p>
+<p><strong>(b) Current Density</strong></p>
+<p>
+Convert area:
+</p>
+\[
+1.0 \, \text{mm}^2 = 1.0 \times 10^{-6} \, \text{m}^2
+\]
+\[
+J = \frac{I}{A} = \frac{9.6 \times 10^{-3}}{1.0 \times 10^{-6}}
+\]
+\[
+J = 9.6 \times 10^{3} \, \text{A m}^{-2}
+\]
+</div>
+<p>
+This section can contain other questions like i vs t graphs or q vs t graphs or equations etc. Just functions and calculus questions from maths masked as physics questions
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
