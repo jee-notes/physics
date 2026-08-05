@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velocity Inheritance | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Velocity Inheritance</h1>
+<p class="subtitle">
+Velocity is inherited. Acceleration is not.
+</p>
+<section>
+<h2>What is Velocity Inheritance?</h2>
+<p>
+Many problems involve an object being released from a moving body such as a balloon, rocket, lift or train. This process is called <strong>detachment</strong> (or release).
+</p>
+<p>
+During detachment, the contact force between the object and the moving body disappears. Since no impulsive force acts during the release, the object's velocity cannot change instantaneously.
+</p>
+<p>
+Therefore, at the instant of release, the object simply <strong>inherits the velocity of the body from which it is released.</strong>
+</p>
+<h3>Velocity Inheritance</h3>
+<p>
+If an object is released from a moving body, then at the instant of release,
+</p>
+<div class="math-block">
+\[
+\boxed{\vec v_{\text{object}}=\vec v_{\text{body}}}
+\]
+</div>
+<p>
+Consequently, the initial relative velocity of the object with respect to the releasing body is
+</p>
+<div class="math-block">
+\[
+\boxed{\vec v_{\text{relative}}=0}
+\]
+</div>
+<div class="insightbox">
+A body is said to be <strong>dropped</strong> when no additional velocity is imparted during release.</b>
+Thus, "dropped" means that the initial <strong>relative velocity</strong> between the object and the releasing body is zero.</b>
+It does <strong>not</strong> necessarily mean that the initial velocity with respect to the ground is zero.
+</div>
+<h3>Acceleration is not Inherited</h3>
+<p>
+While velocity is inherited, acceleration is not. After detachment, the acceleration of the object is determined only by the external forces acting on it.
+</p>
+<p>
+The releasing body can no longer exert normal reaction, tension or friction on the object. Hence, the object does <strong>not</strong> inherit the acceleration of the releasing body.
+</p>
+<p>
+For example, if the object is released under gravity,
+</p>
+<div class="math-block">
+\[
+\boxed{\vec a=\vec g}
+\]
+</div>
+<p>
+If the releasing body has acceleration \(\vec a_{\text{body}}\), then the acceleration of the object relative to the body is
+</p>
+<div class="math-block">
+\[
+\boxed{\vec a_{\text{relative}}=\vec g-\vec a_{\text{body}}}
+\]
+</div>
+<div class="insightbox">
+<b>Velocity is inherited. Acceleration is not.</b>
+This single principle explains the motion of objects released from moving balloons, rockets, lifts, trains and other moving bodies.
+</div>
+</section>
+<section>
+<h2>Misconception Pitfalls</h2>
+<ul class="model-box">
+<li><strong>The "Dropped implies \(u=0\)" Trap:</strong> Students routinely set the initial velocity of a dropped object to zero regardless of context. "Dropped" only guarantees that the initial <strong>relative</strong> velocity to the releasing entity is zero (\(\vec{v}_{\text{rel}} = 0\)). If the platform is moving relative to the ground, the ground observer sees a non-zero initial velocity.</li>
+<li><strong>The Acceleration Carryover Illusion:</strong> It is a common error to think that if an elevator is accelerating upwards at \(2\text{ m/s}^2\), a coin dropped inside it immediately accelerates downwards with \((9.8 - 2)\text{ m/s}^2\) relative to the ground. Once detached, the elevator's physical engine can no longer communicate forces to the coin; its acceleration relative to the ground is immediately and strictly \(\vec{g}\) downward.</li>
+</ul>
+</section>
+<section>
+<h2>Solved Examples</h2>
+<p>
+The principle of <strong>velocity inheritance</strong> is illustrated through the following applications:
+</p>
+<ul class="model-box">
+<li><strong>Body dropped from a moving balloon:</strong> The released body inherits the velocity of the balloon at the instant of release, but does not inherit its acceleration.</li>
+<li><strong>Multi-stage motion:</strong> A journey consisting of successive stages with different constant accelerations. The final velocity of one stage becomes the initial velocity of the next stage. This principle of <strong>velocity chaining</strong> often simplifies the solution of multi-stage motion problems.</li>
+</ul>
+<div class="examplebox">
+<h3>Example 1</h3>
+<p>
+A balloon starts rising vertically from the top of a building of height\(15\,\text{m}\) with a constant acceleration \(2\,\text{m/s}^2\) . The balloon starts from rest at \(t=0\). After \(5\,\text{s}\), a stone is dropped from the balloon. Find the height of the balloon above the ground at the instant the stone reaches the ground. Take \(g=10\,\text{m/s}^2\) and neglect air resistance.
+</p>
+<h3>Solution</h3>
+<p>
+At the instant of release, the balloon has been moving for \(5\,\text{s}\) . Let the velocity of balloon at \(t=5\) be \(v_B\) and displacement of the balloon (or height gained by balloon from ground) in \(t=5\) be \(h_B\) .  We are taking upwards direction positive. 
+</p>
+<div class="math-block">
+\[
+v_B=0+(2)(5)=10\,\text{m/s}
+\]
+\[
+h_B=15+\frac12(2)(5)^2=40\,\text{m}
+\]
+</div>
+<p>
+By the principle of <strong>velocity inheritance</strong>, as the stone is released from a moving balloon, its velocity at the instant of release is same as the velocity as the balloon.
+</p>
+<div class="math-block">
+\[
+u_{\text{stone}}=10\,\text{m/s upward}
+\]
+\[
+a_{\text{stone}}=-10\,\text{m/s}^2
+\]
+</div>
+<p>
+The stone reaches the ground after time \(T\).
+</p>
+<div class="math-block">
+\[
+s=ut+\frac12at^2
+\]
+\[
+-40=10T-5T^2
+\]
+\[
+T^2-2T-8=0
+\]
+\[
+T=4\,\text{s}
+\]
+</div>
+<p>
+During these \(4\,\text{s}\), the balloon continues to move upward with the same acceleration.
+</p>
+<div class="math-block">
+\[
+s=ut+\frac12at^2
+\]
+\[
+s=(10)(4)+\frac12(2)(4)^2
+\]
+\[
+s=56\,\text{m}
+\]
+</div>
+<p>
+Therefore, the height of the balloon above the ground is
+</p>
+<div class="math-block">
+\[
+40+56=96\,\text{m}
+\]
+\[
+\boxed{96\,\text{m}}
+\]
+</div>
+<div class="insightbox">
+Although the stone is <strong>dropped</strong>, its initial velocity is
+\[
+u_{\text{stone}}=u_{\text{balloon}}=10\,\text{m/s}.
+\]
+This is the principle of <strong>velocity inheritance</strong>.<br>
+After release, however, the stone no longer remains in contact with the balloon.<br>
+Hence, the balloon can no longer communicate contact forces to the stone.<br>
+The stone therefore accelerates only under gravity, while the balloon continues to accelerate upward at \(2\,\text{m/s}^2\).
+</div>
+</div>
+<div class="examplebox">
+<h3>Example 2</h3>
+<p>
+A rocket is fired vertically upwards with an initial velocity of \(40\,\text{m/s}\) from the ground level. It is accelerated at \(2\,\text{m/s}^2\) until it reaches an altitude of \(1000\,\text{m}\). At that point, the engines shut off and the rocket goes into free fall. If the velocity just before it collides with the ground is \(40\alpha\,\text{m/s}\), find the value of \(\alpha\).Take
+\[
+g=10\,\text{m/s}^2
+\]
+and neglect air resistance.
+</p>
+<h3>Solution</h3>
+<p>
+The motion consists of two parts:
+</p>
+<ul class="model-box">
+<li><strong>Powered motion:</strong> Ground to engine cut-off.</li>
+<li><strong>Free fall:</strong> Engine cut-off to ground.</li>
+</ul>
+<p>
+Let the velocity of the rocket at the instant the engines shut off be \(v_c\). The exact value of \(v_c\) is <strong>not required</strong>.
+</p>
+<p>
+During the powered phase,
+</p>
+\[
+v_c^2=u^2+2as
+\]
+\[
+v_c^2=40^2+2(2)(1000)
+\]
+<p>
+Immediately after engine cut-off, the rocket enters free fall. Its velocity is inherited from the powered phase. Using the velocity-displacement equation for the free-fall phase,
+</p>
+\[
+v^2=v_c^2+2(-g)(-1000)
+\]
+<p>
+Substituting the expression for \(v_c^2\),
+</p>
+\[
+v^2=40^2+2(2)(1000)+2(10)(1000)
+\]
+\[
+v^2=1600+4000+20000=25600
+\]
+\[
+v=160\,\text{m/s}
+\]
+\[
+40\alpha=160
+\]
+\[
+\boxed{\alpha=4}
+\]
+<div class="insightbox">
+Notice that the intermediate velocity at engine cut-off was never calculated.<br>
+Only its <strong>state inheritance</strong> was used. The final velocity is obtained by carrying forward the quantity \(v_c^2\), demonstrating that intermediate states need not always be evaluated explicitly.
+</div>
+</div>
+<div class="insightbox">
+Successive stages of motion can be <strong>chained together</strong> without calculating the intermediate velocity explicitly.<br>
+If the motion is divided into segments having constant accelerations \(a_1,a_2,\ldots\), then the velocity equation gives
+\[
+v=u+a_1t_1+a_2t_2+\cdots
+\]
+Similarly, using the velocity-displacement equation,
+\[
+v^2=u^2+2a_1s_1+2a_2s_2+\cdots
+\]
+Thus, each stage simply contributes an additive term \(a_it_i\) or \(2a_is_i\) to the final state.<br>
+This avoids the need to calculate intermediate velocities separately.<br>
+The final velocity can often be obtained directly by accumulating the contributions from each stage of motion.
+Example 1 is also a multi-stage journey. The stone first moves together with the balloon and then moves independently after detachment. Thus, the balloon example is also the sample illustration of velocity chaining.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

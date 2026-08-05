@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHM Dynamics | Oscillations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Oscillations
+</a>
+</nav>
+<h1>SHM Dynamics</h1>
+<p class="subtitle">
+Determining Equilibrium Position , \(\omega\) , \(A\) and \(\phi\) of physical systems.
+</p>
+<section>
+<h2>What Does SHM Dynamics Determine?</h2>
+<p>
+The kinematic equation of Simple Harmonic Motion is
+</p>
+\[
+x=x_0+A\sin(\omega t+\phi)
+\]
+<p>
+This equation completely describes the oscillatory motion of a particle. Before it can be used for a physical system, the four constants appearing in it must be determined from the physics of the system.
+</p>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Physical Meaning</th>
+<th>Determined By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(x_0\)</td>
+<td>Equilibrium position (centre of oscillation)</td>
+<td>Statics</td>
+</tr>
+<tr>
+<td>\(\omega\)</td>
+<td>Angular frequency</td>
+<td>Restoring dynamics</td>
+</tr>
+<tr>
+<td>\(A\)</td>
+<td>Amplitude</td>
+<td>Initial conditions</td>
+</tr>
+<tr>
+<td>\(\phi\)</td>
+<td>Initial phase</td>
+<td>Initial conditions</td>
+</tr>
+</tbody>
+</table>
+<p>
+Thus, the objective of SHM dynamics is to determine these four constants and thereby completely specify the oscillatory motion.
+</p>
+<p>
+To understand why these constants are determined differently, we first distinguish between the <strong>oscillator</strong> and the <strong>oscillation</strong>.
+</p>
+<p>
+An <strong>oscillator</strong> is the physical system that performs SHM, such as a spring-block system or a simple pendulum. Every oscillator possesses its own inherent physical properties. One such property is the angular frequency
+</p>
+\[
+\omega=\sqrt{\frac{k}{m}}
+\]
+<p>
+which depends only on the system parameters. For a given oscillator, the angular frequency remains unchanged. For example, the same spring-block system takes the same time to complete one oscillation whether it is displaced by \(2\,\text{cm}\), \(5\,\text{cm}\) or \(10\,\text{cm}\), provided the motion remains SHM.
+</p>
+<div class="insightbox">
+Inherent Property is something whose value does not depend on state.<br>
+Its like how mass of a body is an inherent property.<br>
+The body maybe at rest or in motion - its state of motion does not impact its mass.<br>
+Similarly, the angular speed of an oscillator is its inherent property in the sense that its oscillation state will not change it.
+</div>
+<p>
+An <strong>oscillation</strong>, on the other hand, is simply a particular state of the oscillator. The same oscillator may execute different oscillations. For example, today it may oscillate with an amplitude of \(5\,\text{cm}\), and later with an amplitude of \(10\,\text{cm}\). The oscillator remains the same, so its angular frequency does not change, but the oscillation has changed.
+</p>
+<p>
+The equilibrium position \(x_0\) also belongs to the description of the oscillation. It specifies the position about which the oscillation takes place. Unlike the amplitude and the initial phase, however, it is not determined by the initial conditions. Instead, it is obtained by locating the position where the net force on the particle is zero.
+</p>
+<p>
+The four constants are therefore obtained as follows:
+</p>
+<ol class="model-box">
+<li>Determine the equilibrium position \(x_0\) by equilibrium analysis.</li>
+<li>Determine the angular frequency \(\omega\) from the restoring dynamics of the system.</li>
+<li>Determine the amplitude \(A\) and the initial phase \(\phi\) from the initial conditions.</li>
+</ol>
+</section>
+<section>
+<h2>Direction of acceleration is known</h2>
+<p>
+In many problems, the statement itself directly suggests oscillatory motion (for example, a spring-block system or a simple pendulum). In others, the oscillatory nature must be recognized from the restoring force produced by the system. This is similar to circular motion dynamics in which it is given that particle is performing circular motion.
+</p>
+<p>
+Thus, the overall strategy is very similar to circular-motion dynamics. Just like in circular motion, we use the fact that centripetal acceleration is towards the center, we apply same tool in SHM dynamics. 
+</p>
+<ul class="model-box">
+<li>In circular motion, the net force is resolved along the radial direction to obtain the centripetal acceleration.</li>
+<li>In SHM, the net force is resolved along the direction of the restoring force (towards the equilibrium position) to obtain the restoring acceleration.</li>
+</ul>
+<p>
+Thus, the restoring force is not a new kind of force. It is simply the component of the net force that always acts towards the equilibrium position, just as the centripetal force is the component of the net force directed towards the centre of the circular path.
+</p>
+<div class="insightbox">
+Students are often impatient about amplitude information \(A\).<br>
+However, the amplitude is <strong>not</strong> required to determine the \(\omega\) of the oscillator. To determine the restoring-force constant \(k\) (or equivalently the angular frequency \(\omega\)), we simply assume an arbitrary small displacement \(x\) from the equilibrium position and obtain the restoring force.<br>
+The angular frequency \(\omega\) is a property of the oscillator itself and is independent of the amplitude. As long as the motion remains SHM, changing the amplitude changes only the extent of oscillation, not the time period. Whether the amplitude is \(1\,\text{cm}\), \(10\,\text{cm}\) or \(100\,\text{cm}\), the oscillator completes each cycle in the same time.<br>
+Only after the oscillator has been identified do we use the initial conditions to determine the amplitude \(A\) and the initial phase \(\phi\).
+</div>
+</section>
+<section>
+<h2>Solved Examples</h2>
+<div class="examplebox">
+<h3>Example 1: Acceleration Direction is Known</h3>
+<p>
+A block of mass \(m\) is placed on a horizontal platform. The platform performs vertical Simple Harmonic Motion with amplitude \(A\) and angular frequency \(\omega\).
+</p>
+<p>
+Assuming that the block remains in contact with the platform,
+</p>
+<ol>
+<li>Find the maximum and minimum normal reaction acting on the block.</li>
+<li>Determine the condition under which the block just loses contact with the platform.</li>
+</ol>
+<h3>Solution</h3>
+<p>
+The key observation is that it is given that the platform executes SHM. Therefore, <strong>the direction of acceleration is already known.</strong> At every instant, the acceleration is directed towards the equilibrium position.
+</p>
+<p>
+We have to use this information to determine the sign convention for directions, because the directions of forces are determined by geometry. 
+</p>
+<ul>
+<li>Weight \(mg\) always acts vertically downward.</li>
+<li>Normal reaction \(N\) always acts vertically upward.</li>
+<li>The acceleration always acts towards the equilibrium position.</li>
+</ul>
+<p>
+Thus, the Free Body Diagram already contains all the directional information. Newton's Second Law is then used only to determine the unknown magnitudes.
+</p>
+<p>
+Suppose the platform is at a displacement \(x\) above the equilibrium position.
+</p>
+<p>
+The equilibrium position lies below the platform. Therefore, the acceleration is directed downward.
+</p>
+<p>
+Since \(mg\) acts along the direction of acceleration while \(N\) acts opposite to it,
+</p>
+\[
+mg-N=ma
+\]
+<div class="insightbox">
+This is the key step.<br>
+We always choose the known direction of acceleration as positive and so during upward motion, we know that \(N \lt mg\) to provide the required downward acceleration.
+</div>
+<p>
+Using the SHM relation,
+</p>
+\[
+a=\omega^2x
+\]
+<p>
+we obtain
+</p>
+\[
+N=mg-m\omega^2x
+\]
+<p>
+The normal reaction is therefore minimum at the highest point of the motion, where
+</p>
+\[
+x=A
+\]
+Hence,
+\[
+N_{\min}=mg-m\omega^2A
+\]
+<p>
+Now consider the platform at a displacement \(x\) below the equilibrium position.
+</p>
+<p>
+The equilibrium position lies above the platform. Therefore, the acceleration is directed upward.
+</p>
+<p>
+Now \(N\) acts along the direction of acceleration while \(mg\) acts opposite to it. Hence,
+</p>
+\[
+N-mg=ma
+\]
+<div class="insightbox">
+This is the key step.<br>
+When the particle is above the equilibrium position, \(mg - N = ma\) .<br>
+When the particle is below the equilibrium position, \(N - mg = ma\) .
+</div>
+Using
+\[
+a=\omega^2|x|
+\]
+we obtain
+\[
+N=mg+m\omega^2|x|
+\]
+<p>
+The maximum normal reaction occurs at the lowest point,
+</p>
+\[
+x=-A
+\]
+giving
+\[
+N_{\max}=mg+m\omega^2A
+\]
+<hr>
+<p>
+The block just loses contact with the platform when the normal reaction first becomes zero.
+</p>
+\[
+N_{\min}=0
+\]
+Therefore,
+\[
+mg-m\omega^2A=0
+\]
+or,
+\[
+A\omega^2=g
+\]
+Hence,
+\[
+\boxed{A\omega^2=g}
+\]
+is the condition for the block to just lose contact.
+</div>
+<p>
+The condition makes 1 variable independent and other controlled. If we want to oscillate like that with given \(\omega\) , then \(A\) is constrained. Or, if we want to oscillate like that with given \(A\) , then \(\omega\) is constrained.  
+</p>
+<div class="insightbox">
+The important idea is not the final formula but the method.<br>
+The directions of the forces are already fixed by the geometry of the problem, while the direction of acceleration is determined by SHM (always towards the equilibrium position).<br>
+Thus, there is no need to introduce an arbitrary positive direction convention.<br>
+The Free Body Diagram also takes care of the sign convention for direction.<br>
+Newton's Second Law just determines the unknown magnitudes.
+</div>
+<div class="examplebox">
+<h3>Example: Same Oscillator, Different Equilibrium Position</h3>
+<p>
+Consider the same spring-block system in two different orientations.
+</p>
+<table>
+<thead>
+<tr>
+<th>Horizontal Spring</th>
+<th>Vertical Spring</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+The equilibrium position is the natural length of the spring.
+</td>
+<td>
+The equilibrium position shifts downward because of the weight of the block.
+</td>
+</tr>
+<tr>
+<td>
+\[
+x=x_0+A\sin(\omega t+\phi),\qquad x_0=0
+\]
+</td>
+<td>
+\[
+x=x_0+A\sin(\omega t+\phi), \qquad x_0=\frac{mg}{k}
+\]
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+The oscillator is still the same spring-block system. The spring constant \(k\) and the mass \(m\) have not changed.
+</p>
+<p>
+Only the equilibrium position has shifted because gravity introduces a constant force.
+</p>
+<p>
+The angular frequency remains
+</p>
+\[
+\omega=\sqrt{\frac{k}{m}}
+\]
+<p>
+which is identical in both cases.
+</p>
+<div class="insightbox">
+Gravity changes the <strong>equilibrium position</strong>, not the <strong>angular frequency</strong> of the oscillator.<br>
+The oscillation now occurs about a new centre, but the time period remains unchanged.
+</div>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

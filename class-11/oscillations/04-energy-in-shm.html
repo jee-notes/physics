@@ -1,100 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscillations | Energy in SHM</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy in SHM | Oscillations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Oscillations
-            </a>
-        </nav>
-
-        <h1>Energy in SHM</h1>
-        <p class="subtitle">
-            A perpetual exchange between kinetic and potential energy — with total energy locked to the amplitude
-            squared.
-        </p>
-
-        <section>
-            <h2>Kinetic Energy</h2>
-            \[K = \frac{1}{2}mv^2 = \frac{1}{2}m\omega^2(A^2 - x^2)\]
-            <ul>
-                <li>Maximum at \(x = 0\) (mean position): \(K_{\max} = \frac{1}{2}m\omega^2 A^2\)</li>
-                <li>Zero at \(x = \pm A\) (extreme positions)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Potential Energy</h2>
-            \[U = \frac{1}{2}kx^2 = \frac{1}{2}m\omega^2 x^2\]
-            <ul>
-                <li>Zero at \(x = 0\) (reference at mean position)</li>
-                <li>Maximum at \(x = \pm A\): \(U_{\max} = \frac{1}{2}m\omega^2 A^2\)</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Total Energy</h2>
-            \[E = K + U = \frac{1}{2}m\omega^2 A^2 = \frac{1}{2}kA^2 = \text{constant}\]
-            <p>
-                Total energy is proportional to the square of amplitude and independent of position. It does not change
-                with time — energy merely transfers between kinetic and potential forms.
-            </p>
-            <div class="insightbox">
-                Doubling the amplitude quadruples the total energy. The total energy depends on the system parameters
-                (\(k\)) and the initial conditions (how far you pull the spring or push the pendulum), but once set, it
-                remains constant.
-            </div>
-        </section>
-
-        <section>
-            <h2>Energy as Functions of Time</h2>
-            <p>
-                Taking \(x = A\sin\omega t\):
-            </p>
-            \[K(t) = \frac{1}{2}m\omega^2 A^2 \cos^2\omega t\]
-            \[U(t) = \frac{1}{2}m\omega^2 A^2 \sin^2\omega t\]
-            <p>
-                Both \(K\) and \(U\) oscillate with frequency \(2\omega\) (twice the displacement frequency) and period
-                \(T/2\). When plotted, they are mirror images that always sum to \(E\).
-            </p>
-        </section>
-
-        <section>
-            <h2>Average Values</h2>
-            \[\langle K \rangle = \frac{E}{2} = \frac{1}{4}m\omega^2 A^2\]
-            \[\langle U \rangle = \frac{E}{2} = \frac{1}{4}m\omega^2 A^2\]
-            <p>
-                Over a complete cycle, the time-averaged KE equals the time-averaged PE, each being half the total
-                energy.
-            </p>
-        </section>
-
-        <section>
-            <h2>The Equipartition Point</h2>
-            <p>
-                At what displacement are KE and PE equal?
-            </p>
-            \[K = U \implies \frac{1}{2}m\omega^2(A^2 - x^2) = \frac{1}{2}m\omega^2 x^2\]
-            \[x = \pm\frac{A}{\sqrt{2}}\]
-            <p>
-                At \(x = \frac{A}{\sqrt{2}} \approx 0.707A\), kinetic and potential energies are each equal to \(E/2\).
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Oscillations
+</a>
+</nav>
+<h1>Energy in SHM</h1>
+<p class="subtitle">
+A perpetual exchange between kinetic and potential energies.
+</p>
+<section>
+<h2>Kinetic Energy</h2>
+\[
+K = \frac{1}{2}mv^2 = \frac{1}{2}m\omega^2(A^2 - x^2)
+\]
+<ul>
+<li>Maximum at \(x = 0\) (mean position): \(K_{\max} = \frac{1}{2}m\omega^2 A^2\)</li>
+<li>Zero at \(x = \pm A\) (extreme positions)</li>
+</ul>
+</section>
+<section>
+<h2>Potential Energy</h2>
+\[
+U = \frac{1}{2}kx^2 = \frac{1}{2}m\omega^2 x^2
+\]
+<ul>
+<li>Zero at \(x = 0\) (reference at mean position)</li>
+<li>Maximum at \(x = \pm A\): \(U_{\max} = \frac{1}{2}m\omega^2 A^2\)</li>
+</ul>
+</section>
+<section>
+<h2>Total Energy</h2>
+\[
+E = K + U = \frac{1}{2}m\omega^2 A^2 = \frac{1}{2}kA^2 = \text{constant}
+\]
+<p>
+Total energy is proportional to the square of amplitude and it is also independent of the position (during SHM). It does not change with time — energy merely transfers between kinetic and potential forms.
+</p>
+</section>
+<section>
+<h2>Energy as Functions of Time</h2>
+<p>
+Taking \(x = A\sin\omega t\):
+</p>
+\[
+K(t) = \frac{1}{2}m\omega^2 A^2 \cos^2\omega t
+\]
+\[
+U(t) = \frac{1}{2}m\omega^2 A^2 \sin^2\omega t
+\]
+<p>
+Both \(K\) and \(U\) oscillate with frequency \(2\omega\) (twice the displacement frequency) and period \(T/2\). When plotted, they are mirror images that always sum to \(E\).
+</p>
+<h3>Total Energy in Time</h3>
+\[
+E = K + U = \frac{1}{2}m\omega^2 A^2 \cos^2\omega t + \frac{1}{2}m\omega^2 A^2 \sin^2\omega t = \frac{1}{2}kA^2 = \frac{1}{2}m\omega^2 A^2 = \text{constant}
+\]
+<p>
+Total energy is proportional to the square of amplitude and it is also independent of the initial phase \(\phi\) . It does not change with position — energy merely transfers between kinetic and potential forms.
+</p>
+<div class="insightbox">
+Doubling the amplitude quadruples the total energy.<br>
+The total energy depends on the system parameters (\(k\)) and the initial conditions (how far you pull the spring or push the pendulum), but once set, it remains constant.
+</div>
+</section>
+<section>
+<h2>Average Values</h2>
+\[
+\langle K \rangle = \frac{E}{2} = \frac{1}{4}m\omega^2 A^2
+\]
+\[
+\langle U \rangle = \frac{E}{2} = \frac{1}{4}m\omega^2 A^2
+\]
+<p>
+Over a complete cycle, the time-averaged KE equals the time-averaged PE, each being half the total energy.
+</p>
+</section>
+<section>
+<h2>The Equipartition Point</h2>
+<p>
+At what displacement are KE and PE equal?
+</p>
+\[
+K = U \implies \frac{1}{2}m\omega^2(A^2 - x^2) = \frac{1}{2}m\omega^2 x^2
+\]
+\[
+x = \pm\frac{A}{\sqrt{2}}
+\]
+<p>
+At \(x = \frac{A}{\sqrt{2}} \approx 0.707A\), kinetic and potential energies are each equal to \(E/2\).
+</p>
+<p>
+For time of equipartition point, it depends on (\(\phi\)).
+</p>
+</section>
+<section>
+<h2>Oscillating Physical Quantities</h2>
+<p>
+One of the remarkable features of SHM is that almost every instantaneous physical quantity associated with the motion oscillates with time. As the particle moves to and fro about the equilibrium position, quantities such as displacement, velocity, acceleration, momentum and the two forms of mechanical energy continuously change in magnitude and, where applicable, in direction.
+</p>
+<p>
+The only quantity that remains unchanged is the <strong>total mechanical energy</strong>. The motion therefore consists of a continuous exchange between kinetic and potential energy while the total energy remains conserved.
+</p>
+<table>
+<thead>
+<tr>
+<th>Physical Quantity</th>
+<th>Expression</th>
+<th>Behaviour in SHM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Displacement</td>
+<td>\(x=A\sin(\omega t+\phi)\)</td>
+<td>Oscillates between \(-A\) and \(+A\).</td>
+</tr>
+<tr>
+<td>Velocity</td>
+<td>\(v=A\omega\cos(\omega t+\phi)\)</td>
+<td>Magnitude and direction both oscillate.</td>
+</tr>
+<tr>
+<td>Acceleration</td>
+<td>\(a=-A\omega^2\sin(\omega t+\phi)\)</td>
+<td>Magnitude and direction both oscillate.</td>
+</tr>
+<tr>
+<td>Momentum</td>
+<td>\(p=mv\)</td>
+<td>Magnitude and direction both oscillate.</td>
+</tr>
+<tr>
+<td>Kinetic Energy</td>
+<td>\(K=\frac12m\omega^2(A^2-x^2)\)</td>
+<td>Oscillates between \(0\) and \(E\).</td>
+</tr>
+<tr>
+<td>Potential Energy</td>
+<td>\(U=\frac12kx^2\)</td>
+<td>Oscillates between \(0\) and \(E\).</td>
+</tr>
+<tr>
+<td><strong>Total Energy</strong></td>
+<td>\(E=\frac12kA^2\)</td>
+<td><strong>Remains constant throughout the motion.</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="insightbox">
+SHM is characterized by a continuous oscillation of almost every instantaneous physical quantity.<br>
+The displacement, velocity, acceleration, momentum, kinetic energy and potential energy all vary periodically with time.<br>
+The only exception is the total mechanical energy, which remains constant.<br>
+Thus, in SHM, it is not the total energy that oscillates, but the continuous exchange between its kinetic and potential forms.<br>
+Note that this behaviour contrasts with Uniform Circular Motion (UCM).<br>
+In UCM, the magnitude of velocity (and hence the magnitude of momentum) remains constant; only their directions change continuously. In SHM, however, both the magnitude and the direction of the momentum oscillate.<br>
+Also, in UCM, the KE is constant, but in SHM, KE too oscillates.
+</div>
+<div class="insightbox">
+Students often ask, "What oscillates in SHM?"<br>
+But, the correct question is, "Which physical quantity are we referring to?"<br>
+In SHM, almost every instantaneous physical quantity associated with the motion oscillates—displacement, velocity, acceleration, momentum, kinetic energy and potential energy.<br> This idea becomes even more important in later chapters such as sound waves, where several different physical quantities oscillate simultaneously.
+</div>
+<div class="insightbox">
+This section is useful in reverse as well.<br>
+If a problem states that a quantity such as kinetic energy or potential energy oscillates, then we can immediately infer that the underlying motion is oscillatory.<br>
+Since kinetic and potential energies vary as \(\sin^2\theta\) or \(\cos^2\theta\), they oscillate with twice the frequency of the displacement.<br>
+Consequently, the displacement, velocity, acceleration and momentum oscillate with half that frequency.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

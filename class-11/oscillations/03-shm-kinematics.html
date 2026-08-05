@@ -1,120 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscillations | Kinematics of SHM</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematics of SHM | Oscillations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Oscillations
-            </a>
-        </nav>
-
-        <h1>Kinematics of SHM</h1>
-        <p class="subtitle">
-            Displacement, velocity, and acceleration — three sinusoidal functions locked in a permanent phase
-            relationship.
-        </p>
-
-        <section>
-            <h2>Displacement</h2>
-            \[x(t) = A\sin(\omega t + \phi)\]
-            <p>
-                The displacement oscillates between \(-A\) and \(+A\). The argument of the sine — \((\omega t + \phi)\)
-                — is called the <strong>phase</strong> of the motion.
-            </p>
-        </section>
-
-        <section>
-            <h2>Velocity</h2>
-            <p>
-                Differentiating displacement:
-            </p>
-            \[v(t) = \frac{dx}{dt} = A\omega\cos(\omega t + \phi)\]
-            <p>
-                In terms of displacement:
-            </p>
-            \[v = \pm\omega\sqrt{A^2 - x^2}\]
-            <ul>
-                <li>Maximum at equilibrium (\(x = 0\)): \(v_{\max} = A\omega\)</li>
-                <li>Zero at extremes (\(x = \pm A\))</li>
-            </ul>
-            <p>
-                Velocity leads displacement by a phase of \(\frac{\pi}{2}\) (90°).
-            </p>
-        </section>
-
-        <section>
-            <h2>Acceleration</h2>
-            <p>
-                Differentiating velocity:
-            </p>
-            \[a(t) = \frac{dv}{dt} = -A\omega^2\sin(\omega t + \phi) = -\omega^2 x\]
-            <ul>
-                <li>Maximum at extremes (\(x = \pm A\)): \(a_{\max} = A\omega^2\)</li>
-                <li>Zero at equilibrium (\(x = 0\))</li>
-            </ul>
-            <p>
-                Acceleration leads displacement by a phase of \(\pi\) (180°) — it is always opposite in direction to
-                displacement.
-            </p>
-            <div class="insightbox">
-                The phase relationships are: velocity is 90° ahead of displacement, acceleration is 180° ahead (i.e.,
-                opposite). When displacement is maximum, velocity is zero and acceleration is maximum (pointing back
-                toward equilibrium). When displacement is zero, velocity is maximum and acceleration is zero.
-            </div>
-        </section>
-
-        <section>
-            <h2>Phase and Initial Conditions</h2>
-            <p>
-                The phase constant \(\phi\) is determined by the initial conditions \(x(0) = x_0\) and \(v(0) = v_0\):
-            </p>
-            \[x_0 = A\sin\phi, \qquad v_0 = A\omega\cos\phi\]
-            \[\tan\phi = \frac{\omega x_0}{v_0}, \qquad A = \sqrt{x_0^2 + \left(\frac{v_0}{\omega}\right)^2}\]
-            <p>
-                Common initial conditions:
-            </p>
-            <ul>
-                <li>Released from extreme (\(x_0 = A, v_0 = 0\)): \(\phi = \frac{\pi}{2}\), so \(x = A\cos\omega t\).
-                </li>
-                <li>Passing through mean position moving right (\(x_0 = 0, v_0 > 0\)): \(\phi = 0\), so \(x =
-                    A\sin\omega t\).</li>
-                <li>Passing through mean position moving left (\(x_0 = 0, v_0 < 0\)): \(\phi=\pi\).</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Graphs of SHM</h2>
-            <p>
-                The \(x\text{–}t\), \(v\text{–}t\), and \(a\text{–}t\) graphs are all sinusoidal with the same period
-                \(T\), but shifted by quarter periods:
-            </p>
-            <ul>
-                <li>\(x\text{–}t\): sine wave, amplitude \(A\)</li>
-                <li>\(v\text{–}t\): cosine wave (shifted left by \(T/4\)), amplitude \(A\omega\)</li>
-                <li>\(a\text{–}t\): negative sine wave (shifted left by \(T/2\)), amplitude \(A\omega^2\)</li>
-            </ul>
-            <p>
-                The \(v\text{–}x\) graph is an ellipse: \(\frac{v^2}{(A\omega)^2} + \frac{x^2}{A^2} = 1\).
-            </p>
-            <p>
-                The \(a\text{–}x\) graph is a straight line through the origin with slope \(-\omega^2\).
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Oscillations
+</a>
+</nav>
+<h1>Kinematics of SHM</h1>
+<p class="subtitle">
+Mathematical relation between \(x\) , \(v\) , \(a\) , \(t\).
+</p>
+<section>
+<h2>Kinematics</h2>
+<p>
+Kinematics is the study of how physical quantities such as position, velocity and acceleration vary with time. In SHM, all these quantities are represented as mathematical functions of time. Once these functions are known, every aspect of the motion can be analysed using algebra, calculus and graphs.
+</p>
+<p>
+The primary objective of SHM kinematics is to establish the mathematical relations between position, velocity, acceleration and time.
+</p>
+<h3>Position</h3>
+<p>
+The position of a particle executing SHM is given by
+</p>
+\[
+x(t)=A\sin(\omega t+\phi)
+\]
+<p>
+where
+</p>
+<ul class="model-box">
+<li>\(A\) is the <strong>amplitude</strong>.</li>
+<li>\(\omega\) is the <strong>angular frequency</strong>.</li>
+<li>\(\phi\) is the <strong>initial phase</strong>.</li>
+<li>\(\theta=\omega t+\phi\) is called the <strong>phase</strong> of the motion.</li>
+</ul>
+<p>
+The particle always oscillates about the equilibrium position and remains confined between the two extreme positions,
+</p>
+\[
+-A\le x\le +A
+\]
+<p>
+Unlike uniform motion, the position is not a linear function of time. Instead, time first determines the phase and the phase then determines the position:
+</p>
+\[
+t \longrightarrow \theta \longrightarrow x
+\]
+<p>
+Thus, SHM is mathematically a composition of two functions:
+</p>
+\[
+\theta=\omega t+\phi
+\]
+<p>
+followed by
+</p>
+\[
+x=A\sin\theta
+\]
+<p>
+The phase varies linearly with time, whereas the position varies sinusoidally with the phase.
+</p>
+<h3>Velocity</h3>
+<p>
+Velocity is obtained by differentiating the position with respect to time:
+</p>
+\[
+v(t)=\frac{dx}{dt}=A\omega\cos(\omega t+\phi)
+\]
+<p>
+Eliminating time gives the direct relation between velocity and displacement:
+</p>
+\[
+v=\pm\omega\sqrt{A^2-x^2}
+\]
+<ul class="model-box">
+<li>Maximum magnitude at equilibrium:
+\[
+v_{\max}=A\omega
+\]
+</li>
+<li>Zero at the extreme positions:
+\[
+x=\pm A
+\]
+</li>
+</ul>
+<p>
+This is true whatever may be the value of \(\phi\) . Velocity leads the displacement by a phase difference of
+</p>
+\[
+\frac{\pi}{2} \quad (90^\circ)
+\]
+<h3>Acceleration</h3>
+<p>
+Acceleration is obtained by differentiating the velocity:
+</p>
+\[
+a(t)=\frac{dv}{dt}=-A\omega^2\sin(\omega t+\phi)
+\]
+<p>
+Since
+</p>
+\[
+x=A\sin(\omega t+\phi)
+\]
+<p>
+we obtain the fundamental SHM relation
+</p>
+\[
+a=-\omega^2x
+\]
+<ul class="model-box">
+<li>Maximum magnitude at the extreme positions:
+\[
+a_{\max}=A\omega^2
+\]
+</li>
+<li>Zero at the equilibrium position.</li>
+</ul>
+<p>
+This is true whatever may be the value of \(\phi\) . Acceleration is always directed towards the equilibrium position and is therefore opposite in direction to the displacement.
+</p>
+<h3>Summary of Kinematic Relations</h3>
+\[
+\boxed{
+\begin{aligned}
+x &=A\sin(\omega t+\phi)\\[4pt]
+v &=A\omega\cos(\omega t+\phi)\\[4pt]
+a &=-A\omega^2\sin(\omega t+\phi)\\[4pt]
+a&=-\omega^2x
+\end{aligned}
+}
+\]
+<div class="insightbox">
+Notice that every kinematic quantity is obtained from the same phase \(\theta=\omega t+\phi\).
+<ul>
+<li>Position is proportional to \(\sin\theta\).</li>
+<li>Velocity is proportional to \(\cos\theta\).</li>
+<li>Acceleration is proportional to \(-\sin\theta\).</li>
+</ul>
+Thus, once the phase is known, every kinematic quantity of SHM is immediately determined.<br>
+When we express \(x\) , \(v\) , \(a\) as functions of time, then, to determine <strong>when</strong> their minimum and maximum value is attained, it depends on \(\phi\) . But, to determine <strong>where</strong> their minimum and maximum value is attained, it does not depend on \(\phi\) .   
+</div>
+</section>
+<section>
+<h2>Quarter-Cycle Analysis</h2>
+<p>
+Although SHM is represented by trigonometric functions, solving every problem by repeatedly evaluating the sine and cosine functions is neither convenient nor necessary. The symmetry of SHM allows us to analyse one complete oscillation by dividing it into four identical stages, called <strong>quarter-cycles</strong>.
+</p>
+<p>
+This method is known as <strong>Quarter-Cycle Analysis</strong>. It is one of the most useful techniques for visualising SHM and solving qualitative problems.
+</p>
+<h3>Why Quarter-Cycles?</h3>
+<p>
+One complete oscillation takes one time period \(T\). During this interval, the phase increases uniformly by one complete revolution,
+</p>
+\[
+T \Longleftrightarrow 2\pi \quad (360^\circ)
+\]
+<p>
+The phase is an angle. Since the coordinate axes naturally divide one complete revolution into four equal quadrants, the phase cycle is also naturally divided into four equal angular intervals of
+</p>
+\[
+\frac{\pi}{2}
+\]
+<p>
+Because the phase varies linearly with time,
+</p>
+\[
+\theta=\omega t+\phi
+\]
+<p>
+equal changes in phase correspond to equal changes in time. Therefore,
+</p>
+\[
+\begin{aligned}
+2\pi &\Longleftrightarrow T,\\
+\pi &\Longleftrightarrow \frac{T}{2},\\
+\frac{\pi}{2} &\Longleftrightarrow \frac{T}{4}.
+\end{aligned}
+\]
+<p>
+Thus, one complete oscillation naturally divides into four equal time intervals, each of duration
+</p>
+\[
+\frac{T}{4}
+\]
+<p>
+Each quarter-cycle corresponds to one quadrant of the phase circle.
+</p>
+<h3>Role of Trigonometry</h3>
+<p>
+The phase determines the position through the relation
+</p>
+\[
+x=A\sin\theta
+\]
+<p>
+Similarly,
+</p>
+\[
+v=A\omega\cos\theta
+\]
+<p>
+and
+</p>
+\[
+a=-A\omega^2\sin\theta
+\]
+<p>
+Therefore, once the quadrant of the phase is known, the signs of displacement, velocity and acceleration are immediately obtained from the signs of the trigonometric functions. This can be done using the <strong>ASTC</strong> (Ashtak) rule without repeatedly evaluating the sine and cosine functions.
+</p>
+<div class="insightbox">
+Quarter-cycle analysis is essentially a geometric interpretation of SHM.<br>
+Instead of continuously calculating trigonometric functions, we simply track how the phase moves through the four quadrants of the phase circle.
+</div>
+<h3>First Quarter-Cycle</h3>
+<p>
+Assume the particle starts from the equilibrium position moving towards the positive extreme. Then
+</p>
+\[
+0\le t\le\frac{T}{4}
+\]
+<p>
+corresponds to
+</p>
+\[
+0\le\theta\le\frac{\pi}{2}
+\]
+<p>
+Since the phase lies in the first quadrant,
+</p>
+<ul class="model-box">
+<li>\(\sin\theta>0\)</li>
+<li>\(\cos\theta>0\)</li>
+</ul>
+<p>
+Hence,
+</p>
+<ul class="model-box">
+<li>\(x=A\sin\theta>0\)</li>
+<li>\(v=A\omega\cos\theta>0\)</li>
+<li>\(a=-A\omega^2\sin\theta \lt 0\)</li>
+</ul>
+<p>
+Initially,
+</p>
+\[
+t=0
+\]
+\[
+x=0,\qquad v=A\omega,\qquad a=0
+\]
+<p>
+The particle crosses the equilibrium position with maximum speed. Since the restoring force is zero at equilibrium, the acceleration is also zero.
+</p>
+<p>
+As the particle moves away from equilibrium, its displacement increases. Consequently, the restoring force and acceleration also increase in magnitude towards the equilibrium position. The velocity therefore decreases continuously.
+</p>
+<p>
+Finally, at
+</p>
+\[
+t=\frac{T}{4}
+\]
+<p>
+the particle reaches the positive extreme,
+</p>
+\[
+x=A,\qquad v=0,\qquad a=-A\omega^2
+\]
+<p>
+Thus, during the first quarter-cycle,
+</p>
+<ul class="model-box">
+<li>Displacement increases from \(0\) to \(A\).</li>
+<li>Velocity decreases from \(A\omega\) to \(0\).</li>
+<li>Acceleration changes from \(0\) to \(-A\omega^2\).</li>
+</ul>
+<p>
+The particle therefore moves away from the equilibrium position while continuously slowing down.
+</p>
+<h3>Remaining Quarter-Cycles</h3>
+<p>
+The remaining three quarter-cycles are analysed in exactly the same manner. The only change is the quadrant of the phase angle. Once the correct quadrant is identified, the signs of displacement, velocity and acceleration follow immediately from the trigonometric functions.
+</p>
+<h3>Maximum and Minimum Values</h3>
+<p>
+For signed physical quantities such as displacement, velocity and acceleration, the words <strong>maximum</strong> and <strong>minimum</strong> refer to their values, not their magnitudes.
+</p>
+<p>
+The maximum value is the greatest positive value, whereas the minimum value is the greatest negative value. Since SHM is perfectly symmetric, the maximum and minimum always have the same magnitude but opposite directions.
+</p>
+<table>
+<tr>
+<th>Quantity</th>
+<th>Maximum Value</th>
+<th>Minimum Value</th>
+<th>Maximum Magnitude</th>
+<th>Minimum Magnitude</th>
+</tr>
+<tr>
+<td>Displacement \(x\)</td>
+<td>\(+A\)</td>
+<td>\(-A\)</td>
+<td>\(A\)</td>
+<td>\(0\)</td>
+</tr>
+<tr>
+<td>Velocity \(v\)</td>
+<td>\(+A\omega\)</td>
+<td>\(-A\omega\)</td>
+<td>\(A\omega\)</td>
+<td>\(0\)</td>
+</tr>
+<tr>
+<td>Acceleration \(a\)</td>
+<td>\(+A\omega^2\)</td>
+<td>\(-A\omega^2\)</td>
+<td>\(A\omega^2\)</td>
+<td>\(0\)</td>
+</tr>
+</table>
+<p>
+The locations where these extrema occur are summarized below.
+</p>
+<table>
+<tr>
+<th>Quantity</th>
+<th>Maximum Value</th>
+<th>Minimum Value</th>
+<th>Maximum Magnitude</th>
+<th>Minimum Magnitude</th>
+</tr>
+<tr>
+<td>\(x\)</td>
+<td>\(x=+A\)</td>
+<td>\(x=-A\)</td>
+<td>At both extremes</td>
+<td>At equilibrium</td>
+</tr>
+<tr>
+<td>\(v\)</td>
+<td>At \(x=0\), moving right</td>
+<td>At \(x=0\), moving left</td>
+<td>At equilibrium</td>
+<td>At both extremes</td>
+</tr>
+<tr>
+<td>\(a\)</td>
+<td>At \(x=-A\)</td>
+<td>At \(x=+A\)</td>
+<td>At both extremes</td>
+<td>At equilibrium</td>
+</tr>
+</table>
+<div class="insightbox">
+Students often confuse <strong>velocity</strong> with <strong>speed</strong>, and <strong>acceleration</strong> with the <strong>magnitude of acceleration</strong>. For example,
+<ul>
+<li>"When is the velocity minimum?" → At the equilibrium position while moving towards the left.</li>
+<li>"When is the speed minimum?" → At the two extreme positions.</li>
+<li>"When is the acceleration minimum?" → At the right extreme \((x=+A)\).</li>
+<li>"When is the magnitude of acceleration minimum?" → At the equilibrium position.</li>
+</ul>
+Always check whether the question asks for the signed quantity or its magnitude.
+</div>
+<div class="insightbox">
+The particle does <strong>not</strong> cover equal distances in equal phase intervals.
+Since
+\[
+x=A\sin\theta,
+\]
+we have
+<table class="styled-table">
+<tr>
+<th>Phase</th>
+<th>Displacement</th>
+<th>Fraction of Amplitude</th>
+</tr>
+<tr>
+<td>\(0^\circ\)</td>
+<td>\(0\)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>\(30^\circ\)</td>
+<td>\(\dfrac{A}{2}\)</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>\(45^\circ\)</td>
+<td>\(\dfrac{A}{\sqrt2}\)</td>
+<td>70.7%</td>
+</tr>
+<tr>
+<td>\(60^\circ\)</td>
+<td>\(\dfrac{\sqrt3A}{2}\)</td>
+<td>86.6%</td>
+</tr>
+<tr>
+<td>\(90^\circ\)</td>
+<td>\(A\)</td>
+<td>100%</td>
+</tr>
+</table>
+Thus, in just the first \(30^\circ\) of the phase, the particle covers half of the total displacement. The remaining half of the displacement is covered over the next \(60^\circ\).
+This is because the sine function is not linear. Equal changes in phase do not produce equal changes in displacement.
+</div>
+<div class="insightbox">
+The particle does not spend equal time in equal distances.
+Starting from the equilibrium position,
+\[
+x=A\sin\theta
+\]
+When
+\[
+\theta=30^\circ
+\]
+we obtain
+\[
+x=\frac{A}{2}
+\]
+Since \(30^\circ\) is one-third of the first quadrant,
+\[
+30^\circ \Longleftrightarrow \frac{T}{12}
+\]
+Thus, the particle covers the first half of the amplitude in only one-third of the quarter-cycle. The remaining half of the amplitude takes the remaining two-thirds of the quarter-cycle.
+This shows that the particle moves rapidly near the equilibrium position and gradually slows down as it approaches the extreme position.
+</div>
+</section>
+<section>
+<h2>Phase and Initial Conditions</h2>
+<p>
+The phase constant \(\phi\) is determined by the initial conditions \(x(0) = x_0\) and \(v(0) = v_0\):
+</p>
+\[
+x_0 = A\sin\phi, \qquad v_0 = A\omega\cos\phi
+\]
+\[
+\tan\phi = \frac{\omega x_0}{v_0}, \qquad A = \sqrt{x_0^2 + \left(\frac{v_0}{\omega}\right)^2}
+\]
+<p>
+Common initial conditions:
+</p>
+<ul>
+<li>Released from extreme (\(x_0 = A, v_0 = 0\)): \(\phi = \frac{\pi}{2}\), so \(x = A\cos\omega t\).</li>
+<li>Passing through mean position moving right (\(x_0 = 0, v_0 > 0\)): \(\phi = 0\), so \(x =A\sin\omega t\).</li>
+<li>Passing through mean position moving left (\(x_0 = 0, v_0 \lt 0\)): \(\phi=\pi\).</li>
+</ul>
+<h3>Negative Amplitude or Phase Shift?</h3>
+<p>
+The amplitude of SHM is conventionally taken to be a positive quantity,
+</p>
+\[
+A>0
+\]
+<p>
+This is because the amplitude is a property of the oscillator. It represents the maximum <strong>magnitude</strong> of displacement from the equilibrium position and is therefore independent of the direction of motion.
+</p>
+<p>
+If the displacement appears with a negative sign, we usually do not write
+</p>
+\[
+x=-A\sin\omega t
+\]
+<p>
+Instead, the negative sign is absorbed into the phase using the trigonometric identity
+</p>
+\[
+-\sin\theta=\sin(\theta+\pi)
+\]
+<p>
+Hence,
+</p>
+\[
+-A\sin\omega t=A\sin(\omega t+\pi)
+\]
+<p>
+Similarly,
+</p>
+\[
+-A\cos\omega t=A\cos(\omega t+\pi)
+\]
+<p>
+Thus, the amplitude is kept positive, while the change in direction is represented by a phase shift of \(\pi\) radians (or \(180^\circ\)).
+</p>
+<div class="insightbox">
+The quantities \(A\), \(\omega\) and \(\phi\) are physical parameters of the oscillator and are conventionally treated as constants during kinematic analysis.<br>
+These parameters are determined by the dynamics of the oscillator. Kinematics then takes them as given and studies how the kinematic quantities \(x\), \(v\) and \(a\) evolve with time.<br>
+The quantities whose signs change during the motion are the kinematic quantities \(x\), \(v\) and \(a\). Their signs are determined entirely by the phase through the trigonometric functions (using the ASTC rule), rather than by assigning negative values to the amplitude or angular frequency.
+</div>
+</section>
+<section>
+<h2>Graphs of SHM</h2>
+<p>
+The \(x\text{–}t\), \(v\text{–}t\), and \(a\text{–}t\) graphs are all sinusoidal with the same period \(T\), but shifted by quarter periods:
+</p>
+<ul>
+<li>\(x\text{–}t\): sine wave, amplitude \(A\)</li>
+<li>\(v\text{–}t\): cosine wave (shifted left by \(T/4\)), amplitude \(A\omega\)</li>
+<li>\(a\text{–}t\): negative sine wave (shifted left by \(T/2\)), amplitude \(A\omega^2\)</li>
+</ul>
+<p>
+The \(v\text{–}x\) graph is an ellipse: \(\frac{v^2}{(A\omega)^2} + \frac{x^2}{A^2} = 1\).
+</p>
+<p>
+The \(a\text{–}x\) graph is a straight line through the origin with slope \(-\omega^2\).
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
