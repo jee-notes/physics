@@ -21,77 +21,75 @@ Modeling light as rays to predict image formation through reflection, refraction
 <section>
 <h2>Why This Chapter Matters</h2>
 <p>
-Light is fundamentally an electromagnetic wave with properties like frequency, wavelength, amplitude and energy.
+One of the oldest questions in physics is: <em>What is the fundamental nature of light?</em> Historically, light has been described using both particle and wave models.
 </p>
 <p>
-But in this chapter, we deliberately ignore almost all of that.
-</p>
-<div class="model-box">
-We extract and keep only one thing: <strong>the direction in which light travels — represented as rays.</strong>
-</div>
-<p>
-This simplification allows us to model light as straight-line rays.
+From our earlier study of electromagnetic waves, we know that light is fundamentally an <strong>electromagnetic wave</strong>, characterized by properties such as frequency, wavelength, amplitude and energy.
 </p>
 <p>
-Surprisingly, this minimal model is powerful enough to predict how images form in mirrors, lenses and optical systems, as well as how shadows are formed.
+However, not every physical phenomenon requires the complete electromagnetic-wave description. In this chapter, we deliberately adopt a simpler model.
 </p>
 <p>
-Within this framework, optical elements act as <strong>geometric transformers</strong> — they change the direction of rays through reflection and refraction.
+We retain only one property of light: <strong>its direction of propagation</strong>, represented mathematically by <strong>rays</strong>.
 </p>
 <p>
-If no transformation occurs, light simply travels in straight lines, giving rise to line-of-sight vision.
+This simplified model is sufficient to explain how light propagates, how shadows are formed, and how mirrors, lenses and other optical systems produce images.
+</p>
+<p>
+Within this framework, optical elements act as geometric transformers. Since a ray represents only the direction of propagation of light, an optical element acts simply by changing this direction through reflection or refraction.
+</p>
+<p>
+If no such transformation occurs, light continues to travel in the same direction and is therefore represented geometrically by a straight line, giving rise to line-of-sight vision.
 </p>
 <div class="insightbox">
-Using only simple geometric rules, we can understand how instruments like telescopes and microscopes work — systems that transformed human observation by revealing planets, cells and previously unseen structures.<br>
-These instruments are systems of optical elements (lenses and mirrors) designed to produce controlled, engineered images.
+Using only simple geometric rules, we can understand the working of optical instruments such as telescopes and microscopes.<br>
+These instruments transformed human observation by revealing planets, galaxies, cells and microorganisms—objects far beyond the limits of the unaided eye.<br>
+Humans acquire much of their knowledge of the external world through vision. Optical instruments extend this ability, allowing us to observe objects that are too small, too distant or otherwise inaccessible.<br>
+Geometrical optics provides the principles needed to understand and design these instruments.
 </div>
 </section>
 <section>
 <h2>Conceptual Overview</h2>
 <p>
-The nature of light has been a subject of debate in classical physics.
-</p>
-<p>
-Two major models were proposed:
+The nature of light has been a subject of debate in classical physics. Two major models were proposed initially:
 </p>
 <ul>
 <li><strong>Corpuscular (particle) model</strong> — proposed by Newton</li>
 <li><strong>Wave model</strong> — proposed by Huygens</li>
 </ul>
 <p>
-The particle model successfully explained reflection and refraction, and was widely accepted for a long time.
+The particle model successfully explained reflection and refraction and was widely accepted for a long time.
 </p>
 <p>
-However, phenomena such as interference and diffraction could only be explained by the wave model. These observations established that light behaves as a wave.
+However, phenomena such as interference and diffraction could only be explained by the wave model. These observations established that light exhibits wave behaviour.
 </p>
 <div class="insightbox">
-Interference and superposition are defining properties of waves.<br>  
-These effects were already observed in sound, and their presence in light strongly supports its wave nature.
+Interference and superposition are defining properties of waves.<br>
+These effects were already observed in sound, and their presence in light strongly supports its wave nature.<br>
+In <strong>Huygens' interpretation</strong>, the wave nature of light implied that light was a mechanical disturbance propagating through a medium, analogous to a sound wave.<br>
+Superposition is a fundamental phenomenon that distinguishes wave behaviour from the behaviour of classical particles.<br>
+A common confusion is that gases or mixtures also appear to demonstrate "superposition" because different substances can occupy the same space.<br>
+However, this is not wave superposition — at the microscopic level, the particles remain distinct and do not overlap as wave disturbances do.
 </div>
+<p>
+Up till this chapter, light is understood as an <strong>electromagnetic wave</strong>, as described by Maxwell's theory. Thus, light is a wave, but not a mechanical wave. It does not require a material medium with mechanical inertia and mechanical elasticity for its propagation.
+</p>
+<p>
+However, the complete electromagnetic-wave description is not required for every optical phenomenon. In most practical situations, the wavelength of light is extremely small compared with the size of the objects and structures with which it interacts, such as mirrors, lenses and apertures. Wave effects associated with the finite wavelength, such as interference and diffraction, can therefore be neglected.
+</p>
 <div class="insightbox">
-A common confusion is that gases or mixtures "superpose" because they can occupy the same space.<br>  
-However, this is not true superposition — at the microscopic level, particles still occupy distinct positions and do not overlap like waves do.
-</div>
-<div class="model-box">
-Today, light is understood as an electromagnetic wave, as described by Maxwell’s theory.
+This is the main assumption of the <strong>ray model</strong>.<br>
+It does not say that light is fundamentally a ray or make any statement about the nature of light.<br>
+It is simply a model chosen according to the phenomenon being studied.
 </div>
 <p>
-However, in most practical situations, the wavelength of light is extremely small compared to the size of objects it interacts with (such as mirrors, lenses and apertures).
+Within this limit, light can be modeled as traveling along straight lines, called <strong>rays</strong>.
 </p>
 <p>
-As a result, wave effects like interference and diffraction become negligible.
+Geometrical optics is therefore an approximation in which we focus only on the <strong>geometric path</strong> of light i.e. its direction of propagation (or ray). The wave properties that are not required for determining this path are deliberately left out of the model.
 </p>
 <p>
-In this limit, light can be modeled as traveling along straight lines, called <strong>rays</strong>.
-</p>
-<div class="model-box">
-Geometrical optics is an approximation in which: <strong>light is treated as traveling in straight lines.</strong>
-</div>
-<p>
-This allows us to ignore the detailed wave nature of light and focus only on its geometric path.
-</p>
-<p>
-This approximation remains valid as long as variations in the medium or obstacles occur over length scales much larger than the wavelength of light.
+This approximation remains valid as long as the variations in the medium, or the dimensions of the obstacles and apertures involved, are much larger than the wavelength of light.
 </p>
 </section>
 <section>
@@ -108,6 +106,11 @@ It is conceptually similar to a free body diagram or a circuit diagram — a way
 <p>
 In this representation, light is modeled as straight-line rays, and optical elements (such as mirrors, lenses, glass slabs and prisms) act on these rays by changing their direction.
 </p>
+<div class="insightbox">
+Ray model does not concern about what is the mechanism behind the interaction between ray and optical element as this would again depend on what is light.<br>
+Ray model says that light is ray and ray means direction.<br>
+The only change or a transformation that a direction can undergo is deflection (or deviation).
+</div>
 <p>
 This change in direction is governed by the laws of reflection and refraction, and is often described in terms of angles of deviation.
 </p>
@@ -117,11 +120,9 @@ When a ray is <strong>incident</strong> on an optical element, it acts as an <st
 <p>
 Solving a ray diagram is therefore a process of <strong>geometric tracing : </strong> follow the path of a ray, apply the appropriate transformation at each interaction, and continue tracing the resulting path.
 </p>
-<div class="model-box">
-Every problem in geometrical optics reduces to one task: <strong>trace the path of light through the system.</strong>
-</div>
 <div class="insightbox">
-Geometrical optics relies primarily on geometric reasoning rather than heavy mathematics.<br>  
+Every problem in geometrical optics reduces to one task: <strong>trace the path of light through the system.</strong><br>
+Geometrical optics relies primarily on geometric reasoning rather than heavy mathematics.<br>
 The focus is on constructing correct ray diagrams and applying simple rules at each step.<br>  
 Geometry and basic trigonometry are the main tools used in this chapter.
 </div>
@@ -139,7 +140,7 @@ Ray optics can be broadly divided into two regimes:
 In <strong>single-ray optics</strong>, we track the path of an individual ray. At each point of incidence, the ray is processed locally using the laws of reflection and refraction with respect to the normal.
 </p>
 <p>
-In <strong>image-object optics</strong>, we shift perspective. Instead of following a single ray, we consider "optical element" as the primary reference. A bundle of rays are incident on the optical element and it performs <strong>ray tracing</strong> to determine object distance.
+In <strong>image-object optics</strong>, we shift perspective. Instead of following a single ray, we consider "optical element" as the primary reference. A <strong>bundle of rays</strong> are incident on the optical element and it performs <strong>ray tracing</strong> to determine object distance.
 </p>
 <p>
 The optical element does not directly know the relation between actual objects. It only receives this information from the incident rays and transforms them according to geometric laws. Like, if the incident rays are parallel, then for the optical element, the object is at infinity. 
