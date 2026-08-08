@@ -35,6 +35,27 @@ When acceleration is variable, algebraic equations fail, and we must return to t
 <li>Acceleration is the derivative of velocity w.r.t time: \( a = \frac{dv}{dt} \)</li>
 <li>Acceleration in terms of position (Chain Rule): \( a = v \frac{dv}{dx} \)</li>
 </ul>
+<h3>The Fundamental Integral Relations:</h3>
+<ul class="model-box">
+<li>Change in position (Displacement): \( \Delta x = x_f - x_i = \int_{t_i}^{t_f} v \, dt \)</li>
+<li>Change in velocity: \( \Delta v = v_f - v_i = \int_{t_i}^{t_f} a \, dt \)</li>
+<li>Velocity from position-dependent acceleration: \( \int_{v_i}^{v_f} v \, dv = \int_{x_i}^{x_f} a(x) \, dx \)</li>
+</ul>
+<p>
+Differentiation moves from
+\[
+x(t)\rightarrow v(t)\rightarrow a(t).
+\]
+Integration performs the reverse process,
+\[
+a(t)\rightarrow v(t)\rightarrow x(t).
+\]
+Thus, differentiation moves forward through the kinematic quantities, whereas integration reconstructs them using suitable boundary conditions.
+</p>
+<div class="insightbox">
+For constant acceleration, motion can be described completely by algebraic equations.<br>
+For variable acceleration, motion is described by differential equations, which must be solved using calculus.
+</div>
 </section>
 <section>
 <h2>Applications of Differentiation</h2>
@@ -42,67 +63,274 @@ When acceleration is variable, algebraic equations fail, and we must return to t
 Differentiation is used when you are given an equation for position (or displacement) \( x(t) \) and need to find velocity or acceleration.
 </p>
 <div class="examplebox">
-<h3>Example: Finding v and a from x(t)</h3>
+<h3>Example</h3>
 <p>
-Suppose the position of a particle is given by \( x(t) = t^3 - 6t^2 + 9t \) meters.
-</p>
-<p>
-<strong>1. Find velocity \( v(t) \):</strong>
+The position of a particle moving along a straight line is given by
 \[
-v(t) = \frac{dx}{dt} = \frac{d}{dt}(t^3 - 6t^2 + 9t) = 3t^2 - 12t + 9 \, \text{m/s}
+x=t^3-3t^2-10
 \]
+where \(x\) is in metres and \(t\) is in seconds. Find the <strong>total distance travelled</strong> by the particle during the first \(4\) seconds \((0\le t\le4)\).
 </p>
+<h3>Solution</h3>
 <p>
-<strong>2. Find acceleration \( a(t) \):</strong>
+Differentiate the position function to obtain the velocity.
+</p>
 \[
-a(t) = \frac{dv}{dt} = \frac{d}{dt}(3t^2 - 12t + 9) = 6t - 12 \, \text{m/s}^2
+v=\frac{dx}{dt}=3t^2-6t=3t(t-2)
 \]
-</p>
 <p>
-Notice that acceleration \( a(t) \) depends on time, so it is <strong>variable acceleration</strong>. The standard kinematic equations cannot be applied here.
-</p>
-<p>
-<strong>3. When is the particle at rest?</strong>
-Set \( v(t) = 0 \):
+The particle comes to rest whenever
 \[
-3t^2 - 12t + 9 = 0 \implies t^2 - 4t + 3 = 0 \implies (t-1)(t-3) = 0
+v=0
 \]
-The particle is at rest at \( t = 1 \, \text{s} \) and \( t = 3 \, \text{s} \).
+Hence,
 </p>
+\[
+3t(t-2)=0
+\]
+\[
+t=0,\;2\text{ s}
+\]
+<p>
+The velocity is negative for \(0 \lt t \lt 2\) and positive for \(t>2\). Therefore, the particle reverses its direction at \(t=2\) s.
+</p>
+<p>
+To determine the total distance travelled, the position must be evaluated at:
+</p>
+<ul class="model-box">
+<li>The initial instant.</li>
+<li>The final instant.</li>
+<li>Every intermediate instant at which \(v=0\), since the particle may reverse its direction there.</li>
+</ul>
+\[
+x(0)=-10\,\text{m}
+\]
+\[
+x(2)=2^3-3(2)^2-10=-14\,\text{m}
+\]
+\[
+x(4)=4^3-3(4)^2-10=6\,\text{m}
+\]
+<p>
+The total distance travelled is obtained by adding the magnitudes of the displacements over each interval of motion.
+</p>
+\[
+|-14-(-10)|+|6-(-14)|
+\]
+\[
+=4+20
+\]
+\[
+\boxed{24\ \text{m}}
+\]
+<div class="insightbox">
+To calculate the <strong>total distance travelled</strong> from a position function \(x(t)\):
+<ol>
+<li>Differentiate \(x(t)\) to obtain the velocity \(v(t)\).</li>
+<li>Find all instants within the given interval for which \(v=0\).</li>
+<li>Evaluate the position at the initial instant, the final instant, and every such intermediate instant.</li>
+<li>Add the magnitudes of the displacements over the resulting intervals.</li>
+</ol>
+</div>
 </div>
 </section>
 <section>
-<h2>Applications of Integration</h2>
+<h2>Implicit Differentiation</h2>
 <p>
-Integration is used when you are given acceleration or velocity and need to step "backward" to find velocity or position.
+In many problems, position, velocity or acceleration are not given explicitly as functions of time. Instead, they are related through an implicit equation involving two or more variables.
 </p>
-<h3>The Fundamental Integral Relations:</h3>
-<ul class="model-box">
-<li>Change in position (Displacement): \( \Delta x = x_f - x_i = \int_{t_i}^{t_f} v \, dt \)</li>
-<li>Change in velocity: \( \Delta v = v_f - v_i = \int_{t_i}^{t_f} a \, dt \)</li>
-<li>Velocity from position-dependent acceleration: \( \int_{u}^{v} v \, dv = \int_{x_i}^{x_f} a(x) \, dx \)</li>
-</ul>
-<div class="insightbox">
-Integration introduces a constant of integration.<br>
-Boundary conditions (e.g., "starts from rest at the origin") must be used to evaluate this constant, or use definite integrals with precise limits.
-</div>
+<p>
+In such cases, the required kinematic quantities are obtained by <strong>implicitly differentiating</strong> the given relation with respect to time.
+</p>
 <div class="examplebox">
-<h3>Example: Finding velocity from time-dependent acceleration</h3>
+<h3>Example (JEE Mains PYQ)</h3>
 <p>
-A particle starts from rest at \( t=0 \). Its acceleration is given by \( a(t) = 4t \, \text{m/s}^2 \). Find its velocity at \( t=2 \) seconds.
+The relation between time and position of a particle moving along a straight line is
+\[
+t=\alpha x^2+\beta x
+\]
+where \(\alpha\) and \(\beta\) are constants. If \(v\) denotes the velocity of the particle at any instant, find its acceleration.
+</p>
+<h3>Solution</h3>
+<p>
+The given relation is not of the form
+\[
+x=f(t)
+\]
+therefore we differentiate implicitly with respect to time.
+</p>
+\[
+\frac{d}{dt}\left(t\right)=\frac{d}{dt}\left(\alpha x^2+\beta x\right)
+\]
+\[
+1=2\alpha x\frac{dx}{dt}+\beta\frac{dx}{dt}
+\]
+\[
+1=v(2\alpha x+\beta)
+\]
+\[
+v=\frac{1}{2\alpha x+\beta}
+\]
+<p>
+Differentiate this equation once again with respect to time.
+</p>
+\[
+\frac{d}{dt}\left[v(2\alpha x+\beta)\right]=0
+\]
+\[
+(2\alpha x+\beta)\frac{dv}{dt}+2\alpha v\frac{dx}{dt}=0
+\]
+Since
+\[
+\frac{dx}{dt}=v \qquad \text{and} \qquad \frac{dv}{dt}=a
+\]
+\[
+(2\alpha x+\beta)a+2\alpha v^2=0
+\]
+Using
+\[
+2\alpha x+\beta=\frac{1}{v}
+\]
+we obtain
+\[
+\frac{a}{v}+2\alpha v^2=0
+\]
+\[
+\boxed{a=-2\alpha v^3}
+\]
+<div class="insightbox">
+Whenever the position is not given explicitly as \(x=f(t)\), do not try to solve for \(x\) first.<br>
+Differentiate the given relation directly with respect to time using the chain rule:
+\[
+\frac{dx}{dt}=v,\qquad \frac{dv}{dt}=a
+\]
+This is called <strong>implicit differentiation</strong> and often leads to a much shorter solution.
+</div>
+</div>
+</section>
+<section>
+
+<h2>Velocity as a Function of Position</h2>
+
+<p>
+Sometimes the velocity of a particle is given as a function of its position rather than time:
+\[
+v=f(x).
+\]
+Since acceleration is defined as
+\[
+a=\frac{dv}{dt},
+\]
+we apply the chain rule to obtain
+\[
+a=\frac{dv}{dx}\frac{dx}{dt}.
+\]
+Since
+\[
+\frac{dx}{dt}=v,
+\]
+we obtain the important relation
+\[
+\boxed{a=v\frac{dv}{dx}}
+\]
+which is used whenever velocity is expressed as a function of position.
+</p>
+<div class="examplebox">
+<h3>Example</h3>
+<p>
+The velocity of a particle is given by
+\[
+v=x^2+2x
+\]
+Find the acceleration when \(x=2\) m.
+</p>
+<h3>Solution</h3>
+<p>
+Differentiate the velocity with respect to position.
+</p>
+\[
+\frac{dv}{dx}=2x+2
+\]
+<p>
+At
+\[
+x=2
+\]
+</p>
+\[
+v=2^2+2(2)=8\,\text{m/s}
+\]
+\[
+\frac{dv}{dx}=6
+\]
+Hence,
+\[
+a=v\frac{dv}{dx}
+\]
+\[
+a=8\times6
+\]
+\[
+\boxed{a=48\ \text{m/s}^2}
+\]
+</div>
+</section>
+<section>
+<h2>Pseudo Variable Acceleration</h2>
+<p>
+Some problems appear to involve <strong>variable acceleration</strong> because the velocity is given as a complicated function of position. However, after evaluating the acceleration using
+\[
+a=v\frac{dv}{dx}
+\]
+the acceleration turns out to be constant. Such problems are called <strong>pseudo variable acceleration</strong> problems.
 </p>
 <p>
-Since \( a = \frac{dv}{dt} \), we have \( dv = a \, dt \). Integrating both sides:
+Typical examples are
+</p>
+<div class="math-block">
 \[
-\int_0^v dv = \int_0^2 4t \, dt
+v=a\sqrt{b+cx}
 \]
 \[
-[v]_0^v = 4 \left[ \frac{t^2}{2} \right]_0^2
+v=c\sqrt{x}
 \]
+</div>
+<p>
+For these,
 \[
-v - 0 = 2(2^2 - 0^2) = 8 \, \text{m/s}
+a=v\frac{dv}{dx}
+\]
+is a constant. Hence, the motion is actually <strong>uniformly accelerated motion in disguise</strong>. These are simply alternative forms of the equation
+\[
+v^2=u^2+2ax
 \]
 </p>
+<div class="insightbox">
+Do not classify a problem by the appearance of the velocity function.<br>
+Always evaluate
+\[
+a=v\frac{dv}{dx}
+\]
+or
+\[
+a=\frac{dv}{dt}
+\]
+If the resulting acceleration is constant, the motion is uniformly accelerated, regardless of how complicated the velocity function appears.
+</div>
+<p>
+In contrast, functions such as
+</p>
+\[
+v=a+b\sqrt{x}
+\]
+<p>
+lead to an acceleration that depends on position. Such problems represent <strong>genuine variable acceleration</strong>.
+</p>
+</section>
+<section>
+<h2>Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./12a-integration.html">1. Application Integration</a>
 </div>
 </section>
 <footer>

@@ -2,113 +2,291 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscillations | Mass–Spring Systems</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spring Block System | Oscillations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Oscillations
-            </a>
-        </nav>
-
-        <h1>Mass–Spring Systems</h1>
-        <p class="subtitle">
-            The prototype SHM system — horizontal and vertical springs, combinations, and effective spring constants.
-        </p>
-
-        <section>
-            <h2>Horizontal Spring</h2>
-            <p>
-                A block of mass \(m\) attached to a spring of constant \(k\) on a frictionless horizontal surface
-                executes SHM. The equilibrium is at the natural length of the spring:
-            </p>
-            \[T = 2\pi\sqrt{\frac{m}{k}}, \qquad \omega = \sqrt{\frac{k}{m}}\]
-            <p>
-                The time period depends only on \(m\) and \(k\) — not on the amplitude, the direction of displacement,
-                or gravity.
-            </p>
-        </section>
-
-        <section>
-            <h2>Vertical Spring</h2>
-            <p>
-                A mass hung from a vertical spring stretches it by \(x_0 = \frac{mg}{k}\) to a new equilibrium. If
-                displaced from this equilibrium and released, it oscillates with the same period as the horizontal case:
-            </p>
-            \[T = 2\pi\sqrt{\frac{m}{k}}\]
-            <p>
-                Gravity shifts the equilibrium position but does not affect the time period. The SHM occurs about the
-                new (stretched) equilibrium, not the natural length.
-            </p>
-            <div class="insightbox">
-                To find the time period, measure displacement from the equilibrium position (where the spring force
-                balances gravity). The resulting equation of motion is \(ma = -kx\) — identical to the horizontal case.
-                Gravity drops out.
-            </div>
-        </section>
-
-        <section>
-            <h2>Springs in Combination</h2>
-            <h3>Springs in Parallel</h3>
-            <p>
-                Two springs (constants \(k_1, k_2\)) attached side-by-side to the same mass share the displacement
-                equally. The effective spring constant is:
-            </p>
-            \[k_{\text{eff}} = k_1 + k_2\]
-            \[T = 2\pi\sqrt{\frac{m}{k_1 + k_2}}\]
-
-            <h3>Springs in Series</h3>
-            <p>
-                Two springs connected end-to-end. The total extension is the sum of individual extensions under the same
-                force:
-            </p>
-            \[\frac{1}{k_{\text{eff}}} = \frac{1}{k_1} + \frac{1}{k_2} \implies k_{\text{eff}} = \frac{k_1 k_2}{k_1 +
-            k_2}\]
-            \[T = 2\pi\sqrt{\frac{m(k_1 + k_2)}{k_1 k_2}}\]
-        </section>
-
-        <section>
-            <h2>Two-Mass Spring System</h2>
-            <p>
-                Two blocks \(m_1\) and \(m_2\) connected by a spring on a frictionless surface oscillate relative to
-                each other. The reduced mass governs the SHM:
-            </p>
-            \[\mu = \frac{m_1 m_2}{m_1 + m_2}\]
-            \[T = 2\pi\sqrt{\frac{\mu}{k}}\]
-            <p>
-                The centre of mass of the system remains stationary (or moves uniformly), and both blocks oscillate
-                about the COM.
-            </p>
-        </section>
-
-        <section>
-            <h2>Cutting a Spring</h2>
-            <p>
-                A uniform spring of constant \(k\) and natural length \(L\) is cut into two pieces of lengths \(L_1\)
-                and \(L_2\). The spring constant is inversely proportional to length:
-            </p>
-            \[kL = k_1 L_1 = k_2 L_2\]
-            <p>
-                So cutting a spring into a fraction \(n/N\) of its length gives a piece with spring constant
-                \(\frac{N}{n}k\). A shorter piece is <em>stiffer</em>.
-            </p>
-            <div class="insightbox">
-                This result follows from the fact that the spring constant of a section depends on the number of coils:
-                fewer coils mean less stretch per unit force, hence a larger spring constant.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Oscillations
+</a>
+</nav>
+<h1>Spring Block System</h1>
+<p class="subtitle">
+Spring Block - The prototype SHM system.
+</p>
+<section>
+<h2>Horizontal Spring</h2>
+<p>
+A block of mass \(m\) attached to a spring of constant \(k\) on a frictionless horizontal surface executes SHM. The equilibrium is at the natural length of the spring:
+</p>
+\[
+T = 2\pi\sqrt{\frac{m}{k}}, \qquad \omega = \sqrt{\frac{k}{m}}
+\]
+<p>
+The time period depends only on \(m\) and \(k\) — not on the amplitude, the direction of displacement, or gravity.
+</p>
+</section>
+<section>
+<h2>Vertical Spring</h2>
+<p>
+A mass hung from a vertical spring stretches it by \(x_0 = \frac{mg}{k}\) to a new equilibrium. If displaced from this equilibrium and released, it oscillates with the same period as the horizontal case:
+</p>
+\[
+T = 2\pi\sqrt{\frac{m}{k}}
+\]
+<p>
+Gravity shifts the equilibrium position but does not affect the time period. The SHM occurs about the new (stretched) equilibrium, not the natural length.
+</p>
+<div class="insightbox">
+To find the time period, measure displacement from the equilibrium position (where the spring force balances gravity).<br>
+The resulting equation of motion is \(ma = -kx\) — identical to the horizontal case.<br>
+Gravity drops out.
+</div>
+</section>
+<section>
+<h2>Solved Example</h2>
+<div class="examplebox">
+<h3>Example: When the Oscillator Itself Changes (JEE Advanced 2016)</h3>
+<p>
+A block of mass \(M\) is attached to a light spring of stiffness \(k\) on a smooth horizontal surface. The block executes SHM with amplitude \(A\) about its equilibrium position \(x_0\).
+</p>
+<p>
+Consider the following two situations:
+</p>
+<ol>
+<li>A small particle of mass \(m\;(m \lt M)\) is gently placed on the block when the block is at the equilibrium position \(x_0\).</li>
+<li>The same particle is gently placed on the block when the block is at the extreme position \(x=x_0+A\).</li>
+<li>The same particle is gently placed on the block when the block is a general position \(x_0 \lt x \lt x_0+A\).</li>
+</ol>
+<p>
+The particle sticks to the block immediately after being placed on it.
+</p>
+<p>
+Study how the following quantities change after the collision:
+</p>
+<ul>
+<li>Angular frequency \(\omega\)</li>
+<li>Time period \(T\)</li>
+<li>Amplitude \(A\)</li>
+<li>Initial phase \(\phi\)</li>
+<li>Total mechanical energy</li>
+</ul>
+<h3>Solution</h3>
+<div class="insightbox">
+As part of the approach to solve this, we need to check<strong>Has only the oscillation changed, or has the oscillator itself changed?</strong><br>
+Since the additional mass sticks to the block, the oscillator itself changes. The spring constant remains the same, but the oscillating mass changes from \(M\) to \(M+m\). Consequently,
+\[
+\omega=\sqrt{\frac{k}{M}} \qquad\longrightarrow\qquad \omega'=\sqrt{\frac{k}{M+m}}
+\]
+Thus, the angular frequency and the time period are no longer the same.<br>
+Secondly, collision also changes the state of oscillation as collision involves exchange of energy, so the amplitude, initial phase and total mechanical energy must be re-determined from the new initial conditions.
+</div>
+<p>
+This problem beautifully illustrates the distinction between an <strong>oscillator</strong> and an <strong>oscillation</strong>.
+</p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Reason for Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equilibrium Position</td>
+<td>Remains same as only one spring force on the spring block system.</td>
+</tr>
+<tr>
+<td>\(\omega,\;T\)</td>
+<td>The oscillator itself changes because the oscillating mass changes.</td>
+</tr>
+<tr>
+<td>\(A,\;\phi\)</td>
+<td>The collision creates a new state of oscillation (new initial conditions).</td>
+</tr>
+<tr>
+<td>Total Energy</td>
+<td>Part of the mechanical energy is lost during the perfectly inelastic collision.</td>
+</tr>
+</tbody>
+</table>
+<div class="insightbox">
+This problem combines two independent chapters: SHM and Collision.<br>
+The key SHM tool is
+\[
+v=\pm\omega\sqrt{A^2-x^2},
+\]
+which gives the velocity of the block at the instant of collision from its instantaneous position.<br>
+This velocity is then used in the conservation of linear momentum during the collision. Once the collision is over, the combined body is treated as a new oscillator.
+</div>
+</div>
+<div class="examplebox">
+<h3>Example: Changing the Oscillator and the Equilibrium Position</h3>
+<p>
+A vertical spring of stiffness \(k\) supports two blocks of masses \(m_1\) and \(m_2\) as shown. Initially, the system is in equilibrium.
+</p>
+<p>
+The upper block \(m_2\) is suddenly removed without disturbing the lower block \(m_1\).
+</p>
+<p>
+Determine:
+</p>
+<ol>
+<li>The new equilibrium position.</li>
+<li>The time period of oscillation.</li>
+<li>The amplitude of oscillation.</li>
+<li>The maximum speed of the block.</li>
+</ol>
+<h3>Solution</h3>
+<div class="insightbox">
+This problem beautifully illustrates how different physical quantities of SHM originate from different physics.<br>
+When the upper block is removed,
+<ul>
+<li>the oscillating mass changes from \(m_1+m_2\) to \(m_1\),</li>
+<li>the supported weight also changes.</li>
+</ul>
+Therefore,
+<ul>
+<li>the <strong>angular frequency</strong> changes because the oscillator itself has changed,</li>
+<li>the <strong>equilibrium position</strong> changes because the static force balance changes.</li>
+</ul>
+Once the new equilibrium position is located, the instantaneous position of the block at the moment of removal becomes the initial condition for the new SHM.
+</div>
+<p>
+Initially,
+</p>
+\[
+k x_{0,\mathrm{old}}=(m_1+m_2)g
+\]
+<p>
+After removing \(m_2\),
+</p>
+\[
+k x_{0,\mathrm{new}}=m_1g
+\]
+<p>
+Hence the equilibrium shifts upward by
+</p>
+\[
+\Delta x=\frac{m_2g}{k}
+\]
+<p>
+Since the block has not yet moved at the instant of removal, its instantaneous position remains unchanged. Therefore, with respect to the new equilibrium position, the block is displaced by
+</p>
+\[
+A=\frac{m_2g}{k}
+\]
+<p>
+Also, since the block is initially at rest,
+</p>
+\[
+v=0
+\]
+<p>
+it starts from an extreme position of the new SHM.
+</p>
+<div class="insightbox">
+Amplitude is distance between equilibrium position and extreme position.<br>
+Extreme position is where \(v=0\) .<br>
+In this problem, the equilibrium position has shifted. Since a particle in SHM can have zero velocity only at an extreme position, the old equilibrium position immediately becomes an extreme position of the new SHM.<br>
+Hence, the amplitude is simply the distance between the old and the new equilibrium positions:
+\[
+A=|x_{\rm old}-x_{\rm new}|.
+\]
+Students often try to determine the amplitude using conservation of mechanical energy by writing expressions involving both the spring potential energy \(\frac12kx^2\) and the gravitational potential energy \(mgh\). Although that approach is valid, it is unnecessary here.<br>
+A much simpler SHM observation is that the block is initially at rest. Since a particle in SHM has zero velocity only at an extreme position, the old equilibrium position immediately becomes an extreme of the new SHM. Therefore, the amplitude is simply the distance between the old and the new equilibrium positions.<br>
+Students often consider energy methods easier because energy is a scalar quantity, whereas force is a vector. However, this problem illustrates the opposite.<br>
+A simple equilibrium analysis immediately locates the new centre of oscillation. Since the block is initially at rest, its initial position is an extreme of the new SHM. The amplitude is therefore obtained directly from geometry, without writing any energy equation involving either spring potential energy or gravitational potential energy.<br>
+Thus, a good understanding of equilibrium and SHM often leads to a much simpler solution than energy methods.
+</div>
+</div>
+<p>
+The new angular frequency is
+</p>
+\[
+\omega=\sqrt{\frac{k}{m_1}}
+\]
+<p>
+and the new time period is
+</p>
+\[
+T=2\pi\sqrt{\frac{m_1}{k}}
+\]
+<p>
+Finally,
+</p>
+\[
+v_{\max}=\omega A=\sqrt{\frac{k}{m_1}}\left(\frac{m_2g}{k}\right)=\frac{m_2g}{\sqrt{k\,m_1}}
+\]
+<div class="insightbox">
+This example is complementary to the previous collision example.<br>
+In the previous example, the oscillator changed because the oscillating mass increased, but the equilibrium position remained unchanged.<br>
+In this example, removing one of the blocks changes both the oscillator and the equilibrium position. Consequently, both the angular frequency and the amplitude change simultaneously.
+</div>
+</div>
+</section>
+<section>
+<h2>Springs in Combination</h2>
+<h3>Springs in Parallel</h3>
+<p>
+Two springs (constants \(k_1, k_2\)) attached side-by-side to the same mass share the displacement equally. The effective spring constant is:
+</p>
+\[
+k_{\text{eff}} = k_1 + k_2
+\]
+\[
+T = 2\pi\sqrt{\frac{m}{k_1 + k_2}}
+\]
+<h3>Springs in Series</h3>
+<p>
+Two springs connected end-to-end. The total extension is the sum of individual extensions under the same force:
+</p>
+\[
+\frac{1}{k_{\text{eff}}} = \frac{1}{k_1} + \frac{1}{k_2} \implies k_{\text{eff}} = \frac{k_1 k_2}{k_1 + k_2}
+\]
+\[
+T = 2\pi\sqrt{\frac{m(k_1 + k_2)}{k_1 k_2}}
+\]
+</section>
+<section>
+<h2>Two-Mass Spring System</h2>
+<p>
+Two blocks \(m_1\) and \(m_2\) connected by a spring on a frictionless surface oscillate relative to each other. The reduced mass governs the SHM:
+</p>
+\[
+\mu = \frac{m_1 m_2}{m_1 + m_2}
+\]
+\[
+T = 2\pi\sqrt{\frac{\mu}{k}}
+\]
+<p>
+The centre of mass of the system remains stationary (or moves uniformly), and both blocks oscillate about the COM.
+</p>
+</section>
+<section>
+<h2>Cutting a Spring</h2>
+<p>
+A uniform spring of constant \(k\) and natural length \(L\) is cut into two pieces of lengths \(L_1\) and \(L_2\). The spring constant is inversely proportional to length:
+</p>
+\[
+kL = k_1 L_1 = k_2 L_2
+\]
+<p>
+So cutting a spring into a fraction \(n/N\) of its length gives a piece with spring constant \(\frac{N}{n}k\). A shorter piece is <strong>stiffer</strong>.
+</p>
+<div class="insightbox">
+This result follows from the fact that the spring constant of a section depends on the number of coils: fewer coils mean less stretch per unit force, hence a larger spring constant.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

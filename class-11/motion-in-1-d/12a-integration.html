@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Integration | Variable Acceleration</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./12-variable-acceleration.html" class="back-btn">
+<span>&larr;</span> Back to Variable Acceleration
+</a>
+</nav>
+<h1>Integration</h1>
+<p class="subtitle">
+To go from a to v to x when variable acceleration.
+</p>
+<section>
+<h2>Applications of Integration</h2>
+<p>
+Integration is used when you are given acceleration or velocity and need to step "backward" to find velocity or position.
+</p>
+<p>
+Unlike differentiation, integration introduces constant of integration. Boundary conditions (e.g., "starts from rest at the origin") must be used to evaluate this constant, or use definite integrals with precise limits. Sign convention needs to be taken care while dealing with constants. 
+</p>
+<div class="examplebox">
+<h3>Example: Finding velocity from time-dependent acceleration</h3>
+<p>
+A particle starts from rest at \( t=0 \). Its acceleration is given by \( a(t) = 4t \, \text{m/s}^2 \). Find its velocity at \( t=2 \) seconds.
+</p>
+<p>
+Since \( a = \frac{dv}{dt} \), we have \( dv = a \, dt \). Integrating both sides:
+\[
+\int_0^v dv = \int_0^2 4t \, dt
+\]
+\[
+[v]_0^v = 4 \left[ \frac{t^2}{2} \right]_0^2
+\]
+\[
+v - 0 = 2(2^2 - 0^2) = 8 \, \text{m/s}
+\]
+\[
+T_0 V_0^{\gamma - 1} = 2T_0 V_0^{\gamma - 1}/k^{\gamma - 1} 
+\]
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

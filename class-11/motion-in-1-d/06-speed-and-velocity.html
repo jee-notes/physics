@@ -16,7 +16,7 @@
 </nav>
 <h1>Speed and Velocity</h1>
 <p class="subtitle">
-Understanding how fast an object is moving and in what direction.
+Average and instantaneous descriptions of motion related to fastness.
 </p>
 <section>
 <h2>Speed and Velocity</h2>
@@ -27,51 +27,86 @@ Both speed and velocity are rates of change with respect to time. Speed is the r
 These quantities introduce the time factor into the study of motion.
 </p>
 <div class="insightbox">
-Speed and velocity connect space and time—the two fundamental elements of the physical world.<br>
+Speed and velocity bridge <strong>space</strong> and <strong>time</strong>—the two fundamental aspects of the physical world.<br>
 It is therefore remarkable that one of the fundamental constants of nature, the speed of light \(c\), is itself a speed.
 </div>
 <p>
-In general, if \(y=f(x)\), then
+In general, if
 \[
-\frac{\Delta y}{\Delta x}
+y=f(x)
+\]
+then
+\[
+\frac{\Delta y}{\Delta x}=\frac{f(x+\Delta x)-f(x)}{(x+\Delta x)-x}
 \]
 represents the rate of change of \(y\) with respect to \(x\).
 </p>
 <p>
-Whenever a physical quantity is defined as a rate, it can be mathematically described in two ways:
+Whenever a physical quantity is defined as a rate, it can be described in two ways:
 </p>
 <ul class="model-box">
 <li>Average Rate</li>
 <li>Instantaneous Rate</li>
 </ul>
 <p>
-A familiar example is the run rate in cricket. Suppose a team scores 180 runs in 30 overs. The average run rate is
-\[
-\frac{180}{30}=6
-\]
-runs per over. However, it is possible that the team scored 8 runs in the last over. Thus, the average run rate over the entire innings and the run rate at a particular instant need not be the same.
+The distinction between average and instantaneous is not unique to speed and velocity. It applies to every physical quantity defined as a rate.
 </p>
 <p>
-We shall now study the concepts of average speed, average velocity, instantaneous speed, and instantaneous velocity.
+A familiar example is the <strong>run rate</strong> in cricket. Suppose a team scores 180 runs in 30 overs. The average run rate is \(\frac{180}{30}=6\) runs per over. 
 </p>
+<p>
+This does not mean that exactly 6 runs were scored in every over. Some overs may have produced 2 runs, some 10 runs and some even no runs. In fact, it is possible that <strong>no over</strong> had exactly 6 runs, yet the average run rate over the entire innings is still 6 runs per over.
+</p>
+<p>
+Thus, <strong>6 runs per over</strong> is a single representative value assigned to the entire collection of 30 overs.
+</p>
+<div class="concept-box">
+An <strong>average</strong> is obtained by replacing a collection of unequal values by a single representative value, as if every value in the collection were identical, while <strong>preserving the total</strong>.
+</div>
+<p>
+Now reduce the scope of observation. Instead of considering all 30 overs, consider only the <strong>last over</strong>. It is possible that 8 runs were scored in that over. Thus, the average run rate for just the last over is 8 runs per over. 
+</p>
+<p>
+Reduce the scope further from one over to a single ball. Suppose 8 runs were scored in the last over. The average over those six balls is therefore \(\frac{8}{6}=1.33\) runs per ball. However, the batsman may have scored no run on the last ball. Thus, <strong>1.33 runs per ball</strong> is again only a representative value obtained by treating the six balls as if they had all contributed equally while preserving the total of 8 runs.
+</p>
+<div class="insightbox">
+Moving from an <strong>average rate</strong> to an <strong>instantaneous rate</strong> is essentially a <strong>scoping operation</strong>.<br>
+An average always represents a collection of values. As the scope of the collection is reduced—from the entire innings, to one over, to one ball—the average becomes increasingly local.<br>
+In the limiting case where the time interval becomes infinitesimally small, the average rate becomes the <strong>instantaneous rate</strong>.
+</div>
 </section>
 <section>
 <h2>Average Speed and Average Velocity</h2>
 <p>
-When an object moves, it takes time to travel a certain distance and undergo a certain displacement. The rates at which these quantities change over a finite time interval are called <strong>average speed</strong> and <strong>average velocity</strong>.
+Whenever an object moves with a finite speed (or velocity), it requires a finite amount of time to travel a certain distance and undergo a certain displacement. It is not as if the object disappears from one position and instantaneously reappears at another (teleportation).
+</p>
+<p>
+The rates at which these quantities change over such a finite time interval are called <strong>average speed</strong> and <strong>average velocity</strong>.
 </p>
 <h3>Average Speed</h3>
 <p>
 Average speed is defined as the total distance traveled divided by the total time interval.
 </p>
 \[
-v_{\text{avg}} = \frac{\text{Total Distance}}{\text{Total Time Interval}} = \frac{\Delta s}{\Delta t}
+v_{\text{avg}} = \frac{\text{Total Distance}}{\text{Total Time Interval}} = \frac{\Delta d}{\Delta t}
 \]
 <ul class="model-box">
 <li><strong>Nature:</strong> Scalar quantity.</li>
 <li><strong>SI Unit:</strong> \( \text{m/s} \) (meters per second).</li>
 <li><strong>Dimensional Formula:</strong> \( [M^0 L^1 T^{-1}] \)</li>
 </ul>
+<div class="insightbox">
+In Classes 9 and 10 we wrote
+\[
+\text{Speed}=\frac{\text{Distance}}{\text{Time}}
+\]
+Now we introduce the symbols
+\[
+\frac{\Delta d}{\Delta t}
+\]
+The symbol \(\Delta\) reminds us that the distance travelled and the time interval must correspond to the <strong>same interval of motion</strong>.<br>
+For example, the average run rate during the last 5 overs is obtained using only the runs scored and the time corresponding to those last 5 overs.
+</div>
 <p>
 Average speed gives us an overall idea of how fast the object moved during the entire interval, but it tells us nothing about how the speed varied or what direction the object moved in.
 </p>
@@ -93,9 +128,21 @@ Where:
 <li><strong>SI Unit:</strong> \( \text{m/s} \) (meters per second).</li>
 <li><strong>Dimensional Formula:</strong> \( [M^0 L^1 T^{-1}] \)</li>
 </ul>
+<p>
+Because displacement can be positive, negative, or zero, average velocity can also be positive, negative, or zero. In contrast, average speed is always positive or zero.
+</p>
 <div class="insightbox">
-Because displacement can be positive, negative, or zero, average velocity can also be positive, negative, or zero.<br>
-In contrast, average speed is always positive or zero.
+Average velocity depends only on the <strong>initial and final positions</strong>, whereas average speed depends on the <strong>entire path travelled</strong>.<br>
+Motion is something that occurs <strong>during a finite time interval</strong>, whereas displacement is measured only <strong>between the beginning and the end</strong> of that interval.<br>
+Hence, an object may remain at its initial position after a finite interval of time, even though it was continuously moving throughout that interval. In such a case,
+\[
+\text{Average Velocity}=0
+\]
+while
+\[
+\text{Average Speed}>0
+\]
+Thus, average speed and average velocity describe two different aspects of motion.
 </div>
 <h3>Key Property</h3>
 <p>
@@ -112,9 +159,9 @@ Equality holds only when the motion is along a straight line without any reversa
 Average speed and average velocity are associated with a <strong>time interval</strong>, not with a single instant of time.
 </p>
 <p>
-For example, it is perfectly valid to say that the average speed during the first 3 seconds was 50 m/s. However, it is not meaningful to say that the average speed <em>at</em> \(t=3\) s was 50 m/s.
+For example, it is perfectly valid to say that the average speed during the first 3 seconds was 50 m/s. However, it is not meaningful to say that the average speed <strong>at</strong> \(t=3\) s was 50 m/s.
 </p>
-<p>Similarly, it is perfectly valid to say that the average velocity during the interval from \(t=3\) s to \(t=5\) s was 50 m/s. However, it is not meaningful to say that the average velocity <em>at</em> \(t=3\) s was 50 m/s.
+<p>Similarly, it is perfectly valid to say that the average velocity during the interval from \(t=3\) s to \(t=5\) s was 50 m/s. However, it is not meaningful to say that the average velocity <strong>at</strong> \(t=3\) s was 50 m/s.
 </p>
 <p>
 Since average quantities are defined over an interval, the notation \(\Delta t\) is used to explicitly represent a finite time interval.
@@ -123,78 +170,75 @@ Since average quantities are defined over an interval, the notation \(\Delta t\)
 <section>
 <h2>Instantaneous Speed and Velocity</h2>
 <p>
-In many physical situations, we need to know the velocity of a particle at a specific instant of time, not just over a large interval.
+Average velocity describes the motion over a finite time interval. However, in mechanics we often require the velocity of a particle at a particular instant of time.
+</p>
+<p>
+This is because position and velocity both are needed to define the mechanical state of a system. This state is instantaneous. 
+</p>
+<p>
+To obtain this, we make the observation interval smaller and smaller. As the time interval approaches zero, the average velocity approaches a limiting value called the <strong>instantaneous velocity</strong>.
 </p>
 <h3>Instantaneous Velocity</h3>
-<p>
-Instantaneous velocity is the limit of average velocity as the time interval \( \Delta t \) approaches zero.
-</p>
-<p>
 \[
-\vec{v} = \lim_{\Delta t \to 0} \frac{\Delta \vec{x}}{\Delta t} = \frac{d\vec{x}}{dt}
+\vec v=\lim_{\Delta t\rightarrow0}\frac{\Delta\vec x}{\Delta t}=\frac{d\vec x}{dt}
 \]
-Where \( \frac{d\vec{x}}{dt} \) represents the derivative of position with respect to time.
+<p>
+Thus, instantaneous velocity is the velocity of the particle at a particular instant of time. It is the time derivative of the position vector.
 </p>
 <p>
-Thus, instantaneous velocity may be regarded as the limiting value of the average velocity as the time interval shrinks to an instant.
+For one-dimensional motion,
 </p>
-<p>
-In one-dimensional motion, instantaneous velocity is simply \( v = \frac{dx}{dt} \). A positive \( v \) indicates motion in the positive x-direction, while a negative \( v \) indicates motion in the negative x-direction.
-</p>
-<h3>Instantaneous Speed</h3>
-<p>
-The instantaneous speed is always equal to the magnitude of the instantaneous velocity.
-\[
-\text{Speed} = |\vec{v}| = \left| \frac{dx}{dt} \right|
-\]
-</p>
-<p>
-Unlike average speed and average velocity (where magnitude of average velocity can be strictly less than average speed), at any given exact instant, the speed is simply how fast you are going, which is the magnitude of your velocity vector.
-</p>
-<h3>Key Property</h3>
-<p>
-Thus, to define the instantaneous velocity
 \[
 v=\frac{dx}{dt}
 \]
-the position \(x(t)\) must be a continuous and differentiable function of time.
+<p>
+A positive value of \(v\) indicates motion along the positive x-direction, while a negative value indicates motion along the negative x-direction. The sign of \(v\) is same as the sign of \(dx\) as \(dt \gt 0\)
+</p>
+<h3>Instantaneous Speed</h3>
+<p>
+Instantaneous speed is simply the magnitude of the instantaneous velocity.
+</p>
+\[
+\text{Speed}=|\vec v|
+\]
+<p>
+Unlike average speed and average velocity, which may differ over a finite time interval, the instantaneous speed is always equal to the magnitude of the instantaneous velocity. This is true for general 3D motion.
+</p>
+<h3>Conditions for Existence</h3>
+<p>
+The position of the particle must be a continuous and differentiable function of time for the instantaneous velocity to exist.
 </p>
 <p>
-Otherwise, imagine a person teleporting instantaneously from position \(x=x_1\) to position \(x=x_2\).
+For example, imagine a person teleporting instantaneously from one position to another without passing through the intermediate positions. In such a situation, the instantaneous velocity cannot be defined.
+</p>
+<div class="insightbox">
+Instantaneous position, velocity and acceleration are all <strong>time-indexed</strong> quantities.<br>
+They describe the state of motion at a particular instant and are not associated with a finite time interval.
+</div>
+<h3>Why Instantaneous Velocity is Needed</h3>
+<p>
+Acceleration describes how the velocity changes with time. Therefore, velocity itself must first be defined at every instant of time.
 </p>
 <p>
-At one instant, the person is at \(x_1\), and at the very next instant, they are at \(x_2\) without passing through the intermediate positions.
+Average velocity represents only the overall motion during a finite time interval. It does not contain any information about how the velocity changed within that interval.
 </p>
 <p>
-In such a situation, the instantaneous velocity cannot be defined.
+The concept of instantaneous velocity overcomes this limitation and naturally leads to the definition of acceleration.
 </p>
-<h3>Key Property</h3>
-<p>
-Instantaneous speed and instantaneous velocity are associated with an <strong>single instant of time</strong>, and not with a time interval. It is time indexed like position.
-</p>
-<p>
-For example, it is perfectly valid to say that the instantaneous speed <em>at</em> \(t=3\) s  was 50 m/s. However, it is not meaningful to say that the instantaneous speed during the first 3 seconds was 50 m/s.
-</p>
-<p>
-The concept of instantaneous velocity is fundamental because, to define acceleration, velocity must first be defined as a continuous differentiable function of time, \(v = f(t)\) , just like position.
-</p>
-<p>
-Average velocity is associated with a finite time interval and provides only an overall description of the motion during that interval.
-</p>
-<p>
-It compresses the information over the entire interval into a single constant velocity that would produce the same displacement over the same time interval.
-</p>
-<p>
-Since this single value contains no information about how the velocity changed within the interval, it cannot be used to describe the change in velocity itself.
-</p>
-<p>
-To study how the velocity changes from one instant to the next, we require the concept of instantaneous velocity. This naturally leads to the definition of acceleration.
-</p>
+<div class="insightbox">
+Consider the same example discussed above - in which the team scored 180 runs in 30 overs. The average run rate is \(\frac{180}{30}=6\) runs per over.<br>
+Now suppose we wish to analyse the performance of a particular bowler within that 30 over span.<br>
+The average run rate summarizes the innings as a whole. It contains no information about how many runs were conceded by each bowler or during each over. To analyse an individual bowler, we require a more local description than the innings average.<br>
+A bowler who consistently conceded less than 6 runs per over generally bowled better than the batting average, whereas a bowler who conceded more than 6 runs per over generally bowled worse.<br>
+Thus, to study the contribution of individual bowlers, we require the run rate in each over rather than the average run rate over the entire innings.<br>
+Similarly, average velocity only provides an overall description of the motion over a finite time interval. To study how the velocity changes from one instant to the next, we require the instantaneous velocity.
+</div>
 </section>
 <section>
 <h2>Sub-Topics</h2>
 <div class="chapter-list">
 <a href="./06a-average-speed.html">1. Average Speed</a>
+<a href="./06b-uniform-motion.html">2. Uniform Motion</a>
 </div>
 </section>
 <footer>

@@ -26,38 +26,77 @@ A body is said to be in a <strong>state of motion</strong> if its position chang
 <p>
 Equivalently, a body is in a state of motion if it has a non-zero speed. In this sense, <strong>speed measures the amount (magnitude) of motion</strong>.
 </p>
+<div class="insightbox">
+Unless explicitly stated otherwise, the terms <strong>speed</strong> and <strong>velocity</strong> always refer to their <strong>instantaneous</strong> values.<br>
+Average speed and average velocity are stated explicitly whenever they are intended.
+</div>
 <p>
 A body with zero speed is therefore not said to be in a state of motion. It is said to be in a <strong>state of rest</strong>.
 </p>
 <p>
 Saying that a body is in a state of motion with zero speed is similar to saying that a person is rich with zero money. A person with zero money is not rich &mdash; they are poor. Likewise, a body with zero speed possesses no motion and is therefore in a state of rest.
 </p>
+<div class="insightbox">
+Motion is characterized by <strong>instantaneous speed</strong>.<br>
+If the instantaneous speed is zero, the body is in a <strong>state of rest</strong>.<br>
+If the instantaneous speed is non-zero, the body is in a <strong>state of motion</strong>.<br>
+This is because a <strong>state</strong> is an instantaneous description of a body.
+</div>
 </section>
 <section>
 <h2>Uniform Motion</h2>
 <p>
-A body is said to be in a <strong>state of uniform motion</strong> if its instantaneous velocity \(\vec{v}\) remains constant (in time).
+A body is said to be in a <strong>state of uniform motion</strong> if its instantaneous velocity \(\vec{v}\) remains constant (in time). Mathematically we can write it as:
+</p>
+\[
+\vec{v}(t) = \text{Constant}
+\]
+<p>
+Since velocity is a vector quantity, both its magnitude (speed) and direction should remain unchanged throughout the motion for uniform motion.
 </p>
 <p>
-Since velocity is a vector quantity, both its magnitude (speed) and direction remain unchanged throughout the motion.
+Consequently, the velocity is constant not only in time domain but also in space domain. That is, the body has the same velocity at every instant of time and at every point location along its path. Mathematically we can write it as:
 </p>
+\[
+\vec{v}(t) = \vec{v}(x) = \text{Constant}
+\]
 <p>
-Consequently, the velocity is constant not only as a function of time but also as a function of position. That is, the body has the same velocity at every instant of time and at every point along its path.
+Uniform motion is the simplest possible state of motion of a body because its velocity remains completely unchanged throughout the motion.
 </p>
-<p>
-Uniform motion is the simplest state of motion of a body.
-</p>
+<div class="insightbox">
+In uniform circular motion, only the speed is constant.<br>
+The direction of the velocity is continuously changing.<br>
+As a result, uniform circular motion is not an example of uniform motion.
+</div>
 </section>
 <section>
 <h2>Characteristics of Uniform Motion</h2>
 <p>
-Since the instantaneous velocity \(\vec{v}\) remains constant, the average velocity over any time interval is equal to the instantaneous velocity.
+Since the instantaneous velocity \(\vec{v}\) remains constant in time, we can take it out of the integral to find total displacement.
 </p>
 \[
-\langle\vec{v}\rangle=\vec{v} \qquad \text{over any time interval}
+\text{Total Displacement} = \int_{t_1}^{t_2} \vec{v} \, dt
 \]
 <p>
-Consequently, the average speed over any time interval is equal to the instantaneous speed.
+as \(\vec{v}\) is constant,
+</p>
+\[
+\text{total displacement} = \vec{v} \int_{t_1}^{t_2}  \, dt = \vec{v} \Delta t 
+\]
+<p>
+Average velocity \( \langle \vec{v} \rangle \) is given by (Total Displacement)/(Time Interval).
+</p>
+\[
+\langle\vec{v}\rangle = \frac{\vec{v} \Delta t}{\vec{v}} = \vec{v}
+\]
+<p>
+Thus, the average velocity over any time interval is equal to the instantaneous velocity of any instant in that time interval.
+</p>
+\[
+\langle\vec{v}\rangle=\vec{v}
+\]
+<p>
+Consequently, the average speed over any time interval is equal to the instantaneous speed of any instant in that time interval.
 </p>
 \[
 |\langle\vec{v}\rangle|=|\vec{v}|
@@ -78,7 +117,7 @@ Therefore,
 |\vec{s}|=\left|\int\vec{v}\,dt\right|=\int |\vec{v}|\,dt=d
 \]
 <p>
-Thus, for uniform motion,
+Thus, for uniform motion, the distance covered in any time interval is equal to the magnitude of displacement in the interval. |Displacement| = Distance 
 </p>
 \[
 \boxed{\left|\int\vec{v}\,dt\right|=\int |\vec{v}|\,dt}

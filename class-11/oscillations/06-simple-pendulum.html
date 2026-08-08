@@ -1,122 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oscillations | Simple Pendulum</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Pendulum | Oscillations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Oscillations
-            </a>
-        </nav>
-
-        <h1>Simple Pendulum</h1>
-        <p class="subtitle">
-            A point mass on a massless inextensible string — the classic oscillator, valid for small angles.
-        </p>
-
-        <section>
-            <h2>Setup and Restoring Force</h2>
-            <p>
-                A simple pendulum consists of a point mass (bob) \(m\) suspended by a light, inextensible string of
-                length \(l\) from a rigid support. For small angular displacement \(\theta\):
-            </p>
-            \[\text{Restoring force} = -mg\sin\theta \approx -mg\theta = -\frac{mg}{l}s\]
-            <p>
-                where \(s = l\theta\) is the arc displacement from equilibrium. This is a linear restoring force (\(F
-                \propto s\)), so the motion is SHM.
-            </p>
-        </section>
-
-        <section>
-            <h2>Time Period</h2>
-            \[T = 2\pi\sqrt{\frac{l}{g}}\]
-            <ul>
-                <li>Independent of mass of the bob</li>
-                <li>Independent of amplitude (for small \(\theta\))</li>
-                <li>Depends only on length and gravitational acceleration</li>
-            </ul>
-            <div class="insightbox">
-                The independence from mass was one of the earliest observed features of pendulum motion (Galileo). It
-                arises because both the inertia (\(m\)) and the restoring force (\(mg\sin\theta\)) are proportional to
-                \(m\), so mass cancels.
-            </div>
-        </section>
-
-        <section>
-            <h2>Effective Length</h2>
-            <p>
-                The effective length of a pendulum is the distance from the point of suspension to the centre of mass of
-                the bob. For a uniform sphere of radius \(r\) on a string of length \(L\):
-            </p>
-            \[l_{\text{eff}} = L + r\]
-            <p>
-                Always use the effective length in the time-period formula.
-            </p>
-        </section>
-
-        <section>
-            <h2>Effective Gravity</h2>
-            <p>
-                When a pendulum is in a non-inertial frame or additional forces act, replace \(g\) with an effective
-                gravitational acceleration \(g_{\text{eff}}\):
-            </p>
-            <h3>In a Lift</h3>
-            <ul>
-                <li>Accelerating upward: \(g_{\text{eff}} = g + a\) → \(T\) decreases (faster oscillation)</li>
-                <li>Accelerating downward: \(g_{\text{eff}} = g - a\) → \(T\) increases (slower oscillation)</li>
-                <li>Free fall (\(a = g\)): \(g_{\text{eff}} = 0\) → \(T \to \infty\) (no oscillation)</li>
-            </ul>
-
-            <h3>With a Horizontal Acceleration</h3>
-            <p>
-                If the support accelerates horizontally with acceleration \(a\):
-            </p>
-            \[g_{\text{eff}} = \sqrt{g^2 + a^2}\]
-            <p>
-                The equilibrium is no longer vertical — the string makes an angle \(\tan^{-1}(a/g)\) with the vertical.
-            </p>
-
-            <h3>In a Satellite (Weightlessness)</h3>
-            <p>
-                \(g_{\text{eff}} = 0\). A pendulum cannot oscillate in orbit.
-            </p>
-        </section>
-
-        <section>
-            <h2>Second's Pendulum</h2>
-            <p>
-                A <strong>second's pendulum</strong> has a time period of exactly 2 seconds (one second for each
-                half-swing). Its length:
-            </p>
-            \[T = 2 \text{ s} \implies l = \frac{gT^2}{4\pi^2} = \frac{g}{\pi^2} \approx 1 \text{ m}\]
-        </section>
-
-        <section>
-            <h2>Large-Angle Corrections</h2>
-            <p>
-                For large amplitudes \(\theta_0\), the small-angle approximation breaks down. The exact period is given
-                by an elliptic integral, but to first correction:
-            </p>
-            \[T = 2\pi\sqrt{\frac{l}{g}}\left(1 + \frac{\theta_0^2}{16} + \cdots\right)\]
-            <p>
-                The period increases with amplitude — the pendulum is no longer isochronous. For \(\theta_0 = 15°\), the
-                correction is less than 0.5%.
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Oscillations
+</a>
+</nav>
+<h1>Simple Pendulum</h1>
+<p class="subtitle">
+Prototype Oscillator for Angular SHM.
+</p>
+<section>
+<h2>Angular SHM</h2>
+<p>
+Unlike the spring-block system, whose motion is described by linear displacement, the motion of a simple pendulum is naturally described by its angular displacement about the point of suspension.
+</p>
+<p>
+For small angular displacements, the angular position of the bob is given by
+</p>
+\[
+\theta=\theta_0\sin(\omega t+\phi)
+\]
+<p>
+where
+</p>
+<ul class="model-box">
+<li>\(\theta_0\) is the angular amplitude.</li>
+<li>\(\omega\) is the angular frequency of the SHM.</li>
+<li>\(\phi\) is the initial phase.</li>
+</ul>
+<p>
+Differentiating with respect to time gives the angular velocity of the pendulum,
+</p>
+\[
+\omega'=\frac{d\theta}{dt}=\omega\theta_0\cos(\omega t+\phi)
+\]
+<div class="insightbox">
+Do not confuse the two symbols.
+<ul>
+<li>\(\omega\) is the <strong>angular frequency</strong> (or angular speed of the SHM). It is a constant that determines how rapidly the oscillation repeats.</li>
+<li>\(\omega'=\dfrac{d\theta}{dt}\) is the <strong>angular velocity</strong> of the pendulum. It changes continuously during the motion and becomes zero at the extreme positions.</li>
+</ul>
+Although the same Greek letter is traditionally used for both quantities, they represent completely different physical ideas.
+</div>
+</section>
+<section>
+<h2>Setup and Restoring Torque</h2>
+<p>
+A simple pendulum consists of a point mass (bob) of mass \(m\) suspended by a light, inextensible string of length \(l\) from a fixed support. Its motion is described by the angular displacement \(\theta\) from the equilibrium position.
+</p>
+<p>
+When the pendulum is displaced through an angle \(\theta\), gravity produces a restoring torque about the point of suspension:
+</p>
+\[
+\tau=-mgl\sin\theta
+\]
+<p>
+The negative sign indicates that the torque is always directed towards the equilibrium position.
+</p>
+<p>
+For small angular displacements,
+</p>
+\[
+\sin\theta\approx\theta
+\]
+<p>
+Hence,
+</p>
+\[
+\tau\approx-mgl\,\theta
+\]
+<p>
+Comparing with the standard form of angular SHM,
+</p>
+\[
+\tau=-C\theta
+\]
+<p>
+we identify
+</p>
+\[
+\boxed{C=mgl}
+\]
+<p>
+where \(C\) is the <strong>restoring torque constant</strong> (or simply the <strong>torque constant</strong>) of the oscillator.
+</p>
+<p>
+Applying Newton's Second Law for rotational motion,
+</p>
+\[
+I\alpha=\tau=-C\theta
+\]
+<p>
+gives
+</p>
+\[
+\alpha=-\frac{C}{I}\theta
+\]
+<p>
+Comparing with the standard equation of Angular SHM,
+</p>
+\[
+\alpha=-\omega^2\theta
+\]
+<p>
+we obtain the general result
+</p>
+\[
+\boxed{\omega=\sqrt{\frac{C}{I}}}
+\]
+<div class="insightbox">
+The simple pendulum is the angular analogue of the spring-block oscillator.
+<ul>
+<li>Linear SHM: \(F=-kx\), where \(k\) is the restoring force constant.</li>
+<li>Angular SHM: \(\tau=-C\theta\), where \(C\) is the restoring torque constant.</li>
+</ul>
+For a simple pendulum,
+\[
+C=mgl
+\]
+while for other angular oscillators (such as a torsion pendulum), the value of \(C\) is different. The form of the SHM equation, however, remains the same.
+</div>
+<h3>Time Period</h3>
+<p>
+The time period of any angular SHM is
+</p>
+\[
+T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{I}{C}}
+\]
+<p>
+For a simple pendulum,
+</p>
+\[
+I=ml^2, \qquad C=mgl
+\]
+<p>
+Hence,
+</p>
+\[
+T=2\pi\sqrt{\frac{ml^2}{mgl}}=2\pi\sqrt{\frac{l}{g}}
+\]
+<ul>
+<li>Independent of the mass of the bob.</li>
+<li>Independent of the amplitude (for small angular displacements).</li>
+<li>Depends only on the effective length and the gravitational acceleration.</li>
+</ul>
+<div class="insightbox">
+The expression
+\[
+T=2\pi\sqrt{\frac{I}{C}}
+\]
+is the rotational analogue of the spring-block formula
+\[
+T=2\pi\sqrt{\frac{m}{k}}
+\]
+For a simple pendulum,
+\[
+I=ml^2,\qquad C=mgl,
+\]
+so the mass cancels automatically. Thus, the time period depends only on the geometry of the pendulum (its effective length) and the strength of gravity.
+</div>
+</section>
+<section>
+<h2>Effect on Time Period</h2>
+<p>
+The time period of a simple pendulum is
+</p>
+\[
+T=2\pi\sqrt{\frac{l}{g}}
+\]
+<p>
+This is one of the most widely used results in Oscillations. It is not only important in solving problems, but has also been used historically to determine the local value of gravitational acceleration.
+</p>
+<p>
+From the expression for the time period, we immediately observe that only two quantities determine the oscillation:
+</p>
+<ol class="model-box">
+<li>The effective length of the pendulum.</li>
+<li>The effective gravitational acceleration.</li>
+</ol>
+<p>
+Therefore, any physical situation that changes either the effective length or the effective gravity will also change the time period.
+</p>
+<h3>Effective Length</h3>
+<p>
+The effective length of a pendulum is the distance from the point of suspension to the centre of mass of the bob. For a spherical bob of radius \(r\) suspended by a string of length \(L\),
+</p>
+\[
+l_{\rm eff}=L+r
+\]
+<p>
+Always use the effective length while applying the time-period formula.
+</p>
+<h3>Effective Gravity</h3>
+<p>
+If the pendulum is observed from a non-inertial frame or additional body forces act on it, the bob experiences an effective gravitational acceleration \(g_{\rm eff}\). The time period is then obtained by replacing \(g\) with \(g_{\rm eff}\):
+</p>
+\[
+T=2\pi\sqrt{\frac{l}{g_{\rm eff}}}
+\]
+<h3>In a Lift</h3>
+<ul>
+<li>Lift accelerating upward:
+\[
+g_{\rm eff}=g+a
+\]
+so the time period decreases.</li>
+<li>Lift accelerating downward:
+\[
+g_{\rm eff}=g-a
+\]
+so the time period increases.</li>
+<li>Free fall:
+\[
+g_{\rm eff}=0
+\]
+so no restoring torque acts and the pendulum cannot oscillate.</li>
+</ul>
+<h3>With Horizontal Acceleration</h3>
+<p>
+If the support accelerates horizontally with acceleration \(a\),
+</p>
+\[
+g_{\rm eff}=\sqrt{g^2+a^2}
+\]
+<p>
+The equilibrium position is no longer vertical. Instead, the string makes an angle
+</p>
+\[
+\tan^{-1}\!\left(\frac{a}{g}\right)
+\]
+<p>
+with the vertical, and the pendulum oscillates about this new equilibrium position.
+</p>
+<h3>In a Satellite</h3>
+<p>
+Inside an orbiting satellite,
+</p>
+\[
+g_{\rm eff}=0
+\]
+<p>
+Since there is no restoring torque, a simple pendulum cannot execute SHM.
+</p>
+<div class="insightbox">
+The role of gravity is fundamentally different in the two prototype SHM systems.<br>
+For the spring-block oscillator,
+\[
+\omega=\sqrt{\frac{k}{m}}
+\]
+Gravity shifts the equilibrium position but does not affect the restoring force constant \(k\). Consequently, it does not affect the time period.<br>
+For the simple pendulum,
+\[
+\omega=\sqrt{\frac{g}{l}}
+\]
+Gravity not only determines the equilibrium position but also provides the restoring torque.<br>
+Consequently, any change in the effective gravitational acceleration changes both the equilibrium position and the time period.
+</div>
+</section>
+<section>
+<h2>Second's Pendulum</h2>
+<p>
+A <strong>second's pendulum</strong> has a time period of exactly 2 seconds (one second for each half-swing). Its length:
+</p>
+\[
+T = 2 \text{ s} \implies l = \frac{gT^2}{4\pi^2} = \frac{g}{\pi^2} \approx 1 \text{ m}
+\]
+</section>
+<section>
+<h2>Large-Angle Corrections</h2>
+<p>
+For large amplitudes \(\theta_0\), the small-angle approximation breaks down. The exact period is given by an elliptic integral, but to first correction:
+</p>
+\[
+T = 2\pi\sqrt{\frac{l}{g}}\left(1 + \frac{\theta_0^2}{16} + \cdots\right)
+\]
+<p>
+The period increases with amplitude — the pendulum is no longer isochronous. For \(\theta_0 = 15°\), the correction is less than 0.5%.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Period of SHM systems | Oscillations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Oscillations
+</a>
+</nav>
+<h1>Time Period of SHM systems</h1>
+<p class="subtitle">
+Major Part of SHM Dynamics.
+</p>
+<section>
+<h2>Time Period of SHM Systems</h2>
+<p>
+The most common application of SHM dynamics is the determination of the angular frequency \(\omega\) (or equivalently, the time period \(T\)) of an oscillator.
+</p>
+<p>
+Unlike the prototype oscillators studied earlier, the systems considered here are often mechanically more complex.
+</p>
+<p>
+They involve translational and rotational motion connected through constraints, with the restoring tendency arising from springs, gravity or a combination of both.
+</p>
+<p>
+The objective of this topic is limited to determining the angular frequency (or the time period) of such systems. The complete oscillation (amplitude, initial phase, etc.) is not discussed because angular frequency is inherent property of system.
+</p>
+<p>
+To build the required problem-solving skills gradually, the systems are introduced in increasing order of complexity. We begin with single-body oscillators and then extend the same ideas to systems containing multiple interacting bodies.
+</p>
+<p>
+In general, two methods are used:
+</p>
+<ol class="model-box">
+<li><strong>Force Method</strong> &mdash; determine the restoring force (or restoring torque) and obtain the equation of motion.</li>
+<li><strong>Energy Method</strong> &mdash; determine the oscillation using conservation of mechanical energy.</li>
+</ol>
+</section>
+<section>
+<h2>Force Method</h2>
+<p>
+The force method determines the time period by applying Newton's Second Law to the oscillating body.
+</p>
+<p>
+The general algorithm is as follows:
+</p>
+<ol class="model-box">
+<li>Determine the equilibrium position.</li>
+<li>Identify the particle (or rigid body) whose dynamics will be analysed. This is the body whose inertia appears in Newton's Second Law and stores the kinetic energy of the oscillation.</li>
+<li>Displace this body slightly from its equilibrium position.</li>
+<li>Using the constraints of the system, determine the restoring force (or restoring torque) acting on this body along its displacement and directed towards the equilibrium position.</li>
+<li>Express the restoring force as
+\[
+F=-kx
+\]
+(or the restoring torque as \(\tau=-C\theta\)).</li>
+<li>Apply Newton's Second Law
+\[
+F=ma
+\]
+(or \(I\alpha=\tau\)) to determine the angular frequency and hence the time period.</li>
+</ol>
+<div class="insightbox">
+In constrained systems, several bodies may move simultaneously.<br>
+However, Newton's Second Law is written only for the body (or equivalent body) whose inertia stores the kinetic energy of the oscillation.<br>
+The motion of all other bodies is then related to it through the constraints.
+</div>
+</section>
+<section>
+<h2>Energy Method</h2>
+<p>
+In the Energy Method, we study the oscillator as a complete system by writing its total mechanical energy.
+</p>
+<p>
+The total mechanical energy consists of the kinetic energy of all inertial bodies and the potential energy associated with the restoring interactions, such as springs and gravity.
+</p>
+<p>
+The general algorithm is as follows:
+</p>
+<ol class="model-box">
+<li>Determine the equilibrium position. This serves as the reference for measuring both the displacement and the potential energy.</li>
+<li>Assume oscillation is in progress and the oscillator is at a general displacement \(x\) (or angular displacement \(\theta\)) from the equilibrium position.</li>
+<li>Using the constraints of the system, write the total mechanical energy of the oscillator in terms of the displacement and velocity.</li>
+<li>Differentiate the total energy equation with respect to the most convenient variable because TMEC:
+\[
+\frac{dE}{dt}=0,\qquad \frac{dE}{dx}=0,\qquad \text{or}\qquad \frac{dE}{d\theta}=0
+\]
+</li>
+<li>Simplify the resulting equation and compare it with the standard SHM equation to determine the angular frequency and hence the time period.</li>
+</ol>
+<div class="insightbox">
+Unlike the Force Method, the Energy Method treats the entire oscillator as a single system rather than analysing the force on a particular body.<br>
+Consequently, the total mechanical energy includes the kinetic energy of every moving body and the potential energy of every restoring interaction.<br>
+The total energy is naturally written as
+\[
+E=KE(v)+PE(x)
+\]
+since kinetic energy depends on velocity whereas potential energy depends on displacement.<br>
+Differentiating with respect to different variables produces different but equivalent forms of the equation of motion.
+<ul>
+<li>
+Using
+\[
+\frac{dE}{dt}=0
+\]
+the chain rule introduces
+\[
+\frac{dx}{dt}=v \quad\text{and}\quad \frac{dv}{dt}=a
+\]
+The common factor \(v\) then cancels, giving the equation of motion.
+</li>
+<li>
+Using
+\[
+\frac{dE}{dx}=0
+\]
+the kinetic-energy term gives
+\[
+\frac{d}{dx}\!\left(\frac12 mv^2\right)=mv\frac{dv}{dx}
+\]
+where
+\[
+v\frac{dv}{dx}=a
+\]
+The potential-energy term differentiates directly to the restoring force.
+</li>
+<li>
+Similarly, for angular oscillations,
+\[
+\frac{dE}{d\theta}=0
+\]
+directly yields the restoring torque equation.
+</li>
+</ul>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
