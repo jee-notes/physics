@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mechanics | Introduction</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-introduction.html" class="back-btn">
+<span>&larr;</span> Back to Introduction
+</a>
+</nav>
+<h1>Mechanics</h1>
+<p class="subtitle">
+Mechanics and its Constituent branches of study.
+</p>
+<section>
+<h2>What is Mechanics?</h2>
+<p>
+<strong>Mechanics</strong> is the study of natural phenomena of motion within the framework of physics.
+</p>
+<p>
+The study of mechanics can be broadly organized into two complementary parts:
+</p>
+<ul class="model-box">
+<li><strong>Kinematics</strong> &mdash; the mathematical framework for describing motion.</li>
+<li><strong>Dynamics</strong> &mdash; the physical laws governing motion.</li>
+</ul>
+<p>
+As we move from a single particle to systems containing many particles, mechanics also develops mathematical tools that allow the complicated description of a system to be reduced to simpler collective descriptions.
+</p>
+<p>
+The <strong>centre of mass</strong> and <strong>moment of inertia</strong> are important examples of such tools.
+</p>
+</section>
+<section>
+<h2>What is Kinematics?</h2>
+<p>
+<strong>Kinematics</strong> develops the mathematical framework required to represent motion in space and time.
+</p>
+<p>
+The physical phenomenon being studied is <strong>motion</strong>. Kinematics provides the mathematical language needed to describe that motion: where an object is, how its position changes with time, and how that change itself changes.
+</p>
+<p>
+The basic kinematic quantities are therefore position, velocity and acceleration:
+</p>
+<p>
+\[
+\mathbf r(t),\qquad \mathbf v(t)=\frac{d\mathbf r}{dt},\qquad \mathbf a(t)=\frac{d\mathbf v}{dt}
+\]
+</p>
+<p>
+The mathematical description is chosen according to the nature of the motion. For example, one spatial coordinate is sufficient for one-dimensional motion:
+</p>
+\[
+x=x(t)
+\]
+<p>
+A two-dimensional motion requires two spatial coordinates:
+</p>
+\[
+x=x(t),\qquad y=y(t)
+\]
+<p>
+Other forms of motion have their own particularly useful mathematical descriptions. Circular motion, for example, can be naturally described using angular quantities such as
+\(\theta\), \(\omega\) and \(\alpha\), while oscillatory motion has a mathematical description involving quantities such as displacement, amplitude, phase and frequency.
+</p>
+<div class="insight-box">
+<strong>Different motions are like different ball games.</strong><br>
+Cricket, football and tennis are all games played with a ball, but each has its own mathematical system for describing and keeping track of what happens in the game like the score.<br>
+Similarly, different forms of motion require appropriate mathematical systems for representing and analyzing them.
+</div>
+<p>
+Thus, kinematics is not merely a collection of formulas for different types of motion. It is the development and use of the <strong>mathematical systems appropriate for describing motion in space and time</strong>.
+</p>
+</section>
+<section>
+<h2>What is Dynamics?</h2>
+<p>
+Once motion has been mathematically described, we can study the physical laws that determine how that motion evolves. This is the domain of <strong>dynamics</strong>.
+</p>
+<p>
+In Newtonian mechanics, the central dynamical relation is
+</p>
+\[
+\mathbf F_{\text{net}}=m\mathbf a
+\]
+<p>
+Dynamics can be formulated through several complementary mathematical descriptions, including force, momentum and energy. For momentum,
+</p>
+\[
+\mathbf p=m\mathbf v, \qquad \mathbf F=\frac{d\mathbf p}{dt}
+\]
+<p>
+For energy, the motion can be described through quantities such as kinetic energy, work and potential energy:
+</p>
+\[
+K=\frac12mv^2, \qquad W_{\text{net}}=\Delta K
+\]
+<p>
+Dynamics also deals with <strong>constraints</strong> that restrict the possible motion of a system, such as strings, rods, surfaces, rigid-body conditions and rolling constraints.
+</p>
+<div class="concept-box">
+Kinematics provides the mathematical system for describing the game.<br>
+Dynamics describes how that game is played in the physical world by studying the physical laws that determine its evolution.<br>
+It is like studying any other physical system that changes (evolves), such as the weather/climate.<br>
+First, we develop the mathematical framework for describing the system (weather/climate). We define quantities such as temperature, pressure and humidity and specify how to represent them as functions of position and time. This mathematical framework itself does not require the physical world (or a laboratory). This is analogous to the kinematics part.<br>
+We then use this mathematical framework in the actual physical world by taking measurement of these quantities at particular locations and particular times. These measurements give values to the mathematical quantities that we defined in kinematics part. We then study how these physical quantities are affected (changed/evolved) by phenomena such as deforestation, pollution, construction and other physical processes at that location and time. This is the dynamics part.
+</div>
+</section>
+<section>
+<h2>Systems of Particles: Mathematical Reduction</h2>
+<p>
+The mathematical framework of mechanics becomes more complicated when a system contains many particles. Instead of following every particle separately, mechanics develops mathematical tools that compress information about the entire system into useful collective quantities.
+</p>
+<p>
+This is similar to mathematical operations such as an average: a large collection of values is represented by a smaller amount of information that preserves some particular feature of the collection.
+</p>
+<h3>Centre of Mass</h3>
+<p>
+The <strong>centre of mass</strong> is a mass-weighted average of the positions of the particles:
+</p>
+\[
+\mathbf R_{\text{CM}}=\frac{\sum_i m_i\mathbf r_i}{\sum_i m_i}
+\]
+<p>
+Instead of describing the location of every particle individually, the mass distribution can therefore be represented, for translational purposes, by one collective position: the centre of mass.
+</p>
+<p>
+This leads to the important system-level relation
+</p>
+\[
+\mathbf P=M\mathbf V_{\text{CM}}
+\]
+<p>
+Thus, the total momentum of a many-particle system can be represented using the mass of the entire system and the velocity of its centre of mass.
+</p>
+<h3>Moment of Inertia</h3>
+<p>
+The <strong>moment of inertia</strong> is another mathematical tool for compressing information about a mass distribution. For rotation about a specified axis,
+</p>
+\[
+I=\sum_i m_i r_i^2
+\]
+<p>
+or, for a continuous distribution,
+</p>
+\[
+I=\int r^2\,dm
+\]
+<p>
+It represents the rotational inertia of the entire mass distribution about that axis through a single quantity.
+</p>
+<p>
+Thus, different system-level mathematical tools extract different useful features from a complicated multi-particle system:
+</p>
+<ul class="model-box">
+<li><strong>Centre of mass</strong> &mdash; a representative location of the mass distribution.</li>
+<li><strong>Moment of inertia</strong> &mdash; a measure of the distribution of mass relative to an axis.</li>
+<li><strong>Total momentum</strong> &mdash; the collective translational state.</li>
+<li><strong>Total angular momentum</strong> &mdash; the collective rotational state.</li>
+<li><strong>Total energy</strong> &mdash; the collective energetic state.</li>
+</ul>
+<p>
+These tools allow aspects of a many-particle system to be reduced to a much simpler mathematical description, sometimes effectively reducing the system to a single-particle description for the purpose being considered.
+</p>
+<div class="concept-box">
+Mechanics does not only develop laws of motion; it also develops mathematical tools for simplifying the description of complicated mechanical systems.
+</div>
+</section>
+<section>
+<h2>The Bigger Picture</h2>
+<p>
+The overall structure of mechanics can therefore be viewed as a progression:
+</p>
+\[
+\boxed{\text{Natural phenomenon of motion}}
+\]
+\[
+\downarrow
+\]
+\[
+\boxed{\text{Kinematics: mathematical description of motion}}
+\]
+\[
+\downarrow
+\]
+\[
+\boxed{\text{Dynamics: physical laws governing motion}}
+\]
+\[
+\downarrow
+\]
+\[
+\boxed{\text{System-level mathematical tools for simplifying complex systems}}
+\]
+<p>
+In this way, mechanics is not merely a collection of separate chapters. It is a framework for representing motion, determining how motion evolves, and simplifying the mathematical description when the physical system becomes more complex.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
