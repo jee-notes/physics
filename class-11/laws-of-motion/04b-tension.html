@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tension Force | Dynamics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-forces-dynamics.html" class="back-btn">
+<span>&larr;</span> Back to Dynamics
+</a>
+</nav>
+<h1>Tension Force</h1>
+<p class="subtitle">
+Self Adjusting force for connecting ropes.
+</p>
+<section>
+<h2>Tension</h2>
+<p>
+Tension is the <strong>contact force</strong> exerted by a taut string, rope or cable on the bodies attached to its ends.
+</p>
+<p>
+In mechanics, strings and ropes are modelled as <strong>perfectly flexible</strong> and <strong>inextensible</strong>. They can bend freely but cannot stretch.
+</p>
+<p>
+Consequently, the distance between the two ends of an ideal taut string along its length remains constant.
+</p>
+<p>
+The tension force arises to enforce this <strong>inextensibility constraint</strong>.
+</p>
+<p>
+Unlike the normal force, which acts along the common normal of two contacting surfaces, the tension force always acts <strong>along the length of the string</strong>.
+</p>
+<p>
+The tension force always <strong>pulls the attached bodies towards the rope</strong>. It can pull, but it can never push.
+</p>
+<p>
+The magnitude of the tension is not fixed. Instead, it automatically adjusts itself according to the mechanical interaction between the connected bodies.
+</p>
+<p>
+In mechanics problems, the magnitude of tension is often determined using constraint conditions. From the viewpoint of constraints, the tension force adjusts itself so as to enforce the <strong>inextensibility constraint</strong>.
+</p>
+<p>
+Suppose the two ends of a string initially move with different velocities along the string. As the string becomes taut, the tension interaction acts impulsively to establish the string constraint. Thereafter, while the string remains taut, the tension continuously adjusts itself so that the connected points satisfy the inextensibility condition.
+</p>
+<p>
+Thus, if the two ends of the string have different displacements just before the string becomes taut, the impulsive tension interaction acts to establish the string constraint. Once the string is taut, the tension force acts so that the connected points have equal acceleration along the length of the string, thereby maintaining a constant string length.
+</p>
+<p>
+For example, if two blocks are connected by a light inextensible string, pulling one block immediately causes the string to pull the other block. The tension continuously adjusts itself so that the length of the string remains unchanged.
+</p>
+<div class="insightbox">
+The string constraint associated with tension is often sufficient to solve mechanics problems.<br>
+Many problems can be solved directly from the constraint without explicitly determining the magnitude of the tension.
+</div>
+</section>
+<section>
+<h2>Rope on a Surface</h2>
+<p>
+When a rope moves while remaining in contact with a surface, the forces acting on the rope may include <strong>tension</strong>, <strong>normal force</strong> and <strong>weight</strong>.
+</p>
+<p>
+Tension acts <strong>along the length of the rope</strong>, whereas the normal force exerted by the surface acts <strong>perpendicular to the rope</strong> at the point of contact.
+</p>
+<p>
+Therefore, the normal force has no component along the length of the rope. It cannot directly affect the <strong>along-rope dynamics</strong> of the rope. Its role is to change the direction of the rope and hence the direction of its velocity and acceleration.
+</p>
+<p>
+Tension, on the other hand, acts along the rope. It is the force that transmits the <strong>along-rope length dynamics</strong> from one part of the rope to another.
+</p>
+<p>
+This follows directly from the inextensibility constraint. For a taut constant length rope, the connected points must have the same acceleration along the length of the rope. Thus, if one end of the rope is accelerated, the tension interaction transmits the required acceleration to the other end so that the inextensibility constraint is maintained.
+</p>
+<p>
+Hence, tension can be viewed as the <strong>acceleration-transmitting agent</strong> in a rope. The normal force from a surface does not perform this role because it acts perpendicular to the length of the rope.
+</p>
+<p>
+This distinction is particularly useful when a rope passes over a smooth pulley. The normal force exerted by the pulley is responsible only for <strong>turning the rope</strong>, while tension is responsible for transmitting the <strong>rope length dynamics</strong>.
+</p>
+<p>
+Therefore, when analysing the dynamics along the rope, the normal force exerted by the pulley need not be included. We can conceptually straighten the curved portion of the rope and retain only the forces acting along the rope.
+</p>
+<p>
+This gives the <strong>tug-of-war method</strong> for an Atwood machine. Consider two masses \(m_1\) and \(m_2\) connected by a rope passing over a frictionless pulley. Instead of analysing the curved portion of the rope around the pulley, we straighten the rope and represent the system as two masses connected by a rope, with the two opposing forces \(m_1g\) and \(m_2g\) acting along the rope.
+</p>
+<p>
+The normal force exerted by the pulley on the rope is not shown in this representation. This does not mean that the pulley exerts no normal force. The normal force is what changes the direction of the rope around the pulley. We have simply removed the direction-changing part of the dynamics by straightening the rope.
+</p>
+<div class="insightbox">
+For a rope moving over a surface, the two forces have distinct dynamical roles:<br>
+<strong>Normal force</strong> acts perpendicular to the rope and changes its direction.<br>
+<strong>Tension</strong> acts along the rope and transmits the along-rope dynamics between its parts.<br>
+Thus, the normal force does not directly affect the tension-transmitted acceleration along the rope.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

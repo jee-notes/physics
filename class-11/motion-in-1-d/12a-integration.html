@@ -24,28 +24,192 @@ To go from a to v to x when variable acceleration.
 Integration is used when you are given acceleration or velocity and need to step "backward" to find velocity or position.
 </p>
 <p>
-Unlike differentiation, integration introduces constant of integration. Boundary conditions (e.g., "starts from rest at the origin") must be used to evaluate this constant, or use definite integrals with precise limits. Sign convention needs to be taken care while dealing with constants. 
+Unlike differentiation, integration introduces constant of integration. Boundary conditions (e.g., "starts from rest") must be used to evaluate this constant, or use definite integrals with precise limits. Sign convention needs to be taken care while dealing with constants. 
 </p>
 <div class="examplebox">
-<h3>Example: Finding velocity from time-dependent acceleration</h3>
+<h3>Example</h3>
 <p>
-A particle starts from rest at \( t=0 \). Its acceleration is given by \( a(t) = 4t \, \text{m/s}^2 \). Find its velocity at \( t=2 \) seconds.
+The acceleration of a particle moving along a straight line is related to its velocity by
+\[
+a=-3v
+\]
+At \(t=0\), the particle has velocity \(2\,\text{m/s}\) and is at position \(x=4\,\text{m}\). Find:
+</p>
+<ul class="model-box">
+<li>the velocity \(v\) as a function of time \(t\),</li>
+<li>the velocity \(v\) as a function of position \(x\).</li>
+</ul>
+<h3>Solution</h3>
+<p>
+The form of the required answer determines which form of the acceleration relation is most convenient.
+</p>
+<div class="insightbox">
+If the required relation is \(v(t)\), use
+\[
+\boxed{a=\frac{dv}{dt}}
+\]
+If the required relation is \(v(x)\), use
+\[
+\boxed{a=v\frac{dv}{dx}}
+\]
+The two equations describe the same acceleration; they simply use different independent variables.
+</div>
+<h3>(a) Finding \(v(t)\)</h3>
+<p>
+Since velocity is required as a function of time, write
+\[
+a=\frac{dv}{dt}
+\]
+Thus,
+</p>
+\[
+\frac{dv}{dt}=-3v
+\]
+<p>
+Separating the variables,
+</p>
+\[
+\frac{dv}{v}=-3\,dt
+\]
+<p>
+Using the initial condition \(v=2\,\text{m/s}\) at \(t=0\),
+</p>
+\[
+\int_{2}^{v}\frac{dv}{v}=-3\int_{0}^{t}dt
+\]
+\[
+\ln\left(\frac{v}{2}\right)=-3t
+\]
+\[
+\boxed{v=2e^{-3t}\,\text{m/s}}
+\]
+<h3>(b) Finding \(v(x)\)</h3>
+<p>
+Now velocity is required as a function of position. Therefore, use
+\[
+a=v\frac{dv}{dx}
+\]
+Hence,
+</p>
+\[
+v\frac{dv}{dx}=-3v
+\]
+<p>
+For \(v\neq0\), we obtain
+</p>
+\[
+\frac{dv}{dx}=-3
+\]
+<p>
+Integrating and using the initial condition \(v=2\,\text{m/s}\) at \(x=4\,\text{m}\),
+</p>
+\[
+\int_{2}^{v}dv=-3\int_{4}^{x}dx
+\]
+\[
+v-2=-3(x-4)
+\]
+\[
+\boxed{v=14-3x\,\text{m/s}}
+\]
+<div class="insightbox">
+The same acceleration law
+\[
+a=-3v
+\]
+produces two different forms of the velocity depending on the independent variable:
+\[
+\boxed{v(t)=2e^{-3t}}
+\]
+and
+\[
+\boxed{v(x)=14-3x}
+\]
+The important skill is therefore not memorising one particular form of \(a\), but choosing the form of acceleration according to the quantity being sought:
+\[
+\boxed{v(t)\Rightarrow a=\frac{dv}{dt} \qquad v(x)\Rightarrow a=v\frac{dv}{dx}}
+\]
+</div>
+</div>
+</section>
+<section>
+<h2>Real uses</h2>
+<p>
+When we solve dynamics, we will be told about physical laws. Physical laws are determined by experiment and we need to comprehend and apply it as per the given problem.
 </p>
 <p>
-Since \( a = \frac{dv}{dt} \), we have \( dv = a \, dt \). Integrating both sides:
-\[
-\int_0^v dv = \int_0^2 4t \, dt
-\]
-\[
-[v]_0^v = 4 \left[ \frac{t^2}{2} \right]_0^2
-\]
-\[
-v - 0 = 2(2^2 - 0^2) = 8 \, \text{m/s}
-\]
-\[
-T_0 V_0^{\gamma - 1} = 2T_0 V_0^{\gamma - 1}/k^{\gamma - 1} 
-\]
+One such physical law is related to air-drag. Its the frictional force that retards motion. Often we hear examples like a cat jumped from significant height but did not die. Its because they attain terminal velocity in the air.
 </p>
+<div class="examplebox">
+<h3>Example: Motion in a Viscous Medium</h3>
+<p>
+The motion of a body falling from rest in a viscous medium is described by
+\[
+\frac{dv}{dt}=A-Bv
+\]
+where \(A\) and \(B\) are positive constants. Find the velocity of the body at time \(t\).
+</p>
+<h3>Solution</h3>
+<p>
+The acceleration is given directly as a function of velocity:
+\[
+a=A-Bv
+\]
+Since the required quantity is \(v\) as a function of time, use
+\[
+a=\frac{dv}{dt}
+\]
+Therefore,
+</p>
+\[
+\frac{dv}{dt}=A-Bv
+\]
+<p>
+Rearranging,
+</p>
+\[
+\frac{dv}{A-Bv}=dt
+\]
+<p>
+The body starts from rest, so
+\[
+v=0\quad\text{at}\quad t=0
+\]
+Using this initial condition,
+</p>
+\[
+\int_0^v\frac{dv}{A-Bv}=\int_0^t dt
+\]
+\[
+-\frac{1}{B}\ln\left(\frac{A-Bv}{A}\right)=t
+\]
+<p>
+Hence,
+</p>
+\[
+\ln\left(\frac{A-Bv}{A}\right)=-Bt
+\]
+\[
+\frac{A-Bv}{A}=e^{-Bt}
+\]
+\[
+Bv=A(1-e^{-Bt})
+\]
+\[
+\boxed{v=\frac{A}{B}\left(1-e^{-Bt}\right)}
+\]
+<div class="insightbox">
+This is a genuine <strong>variable-acceleration</strong> problem because
+\[
+a=A-Bv
+\]
+changes as the velocity changes.
+Notice that the acceleration decreases as the velocity increases. The velocity therefore approaches a limiting value:
+\[
+\boxed{v_{\text{terminal}}=\frac{A}{B}}
+\]
+The physical origin of this law will be studied later in <strong>Fluid Mechanics</strong>, where the effect of viscous resistance on a falling body will be developed in detail.
+</div>
 </div>
 </section>
 <footer>
