@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Operations | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 2D
+</a>
+</nav>
+<h1>Vector Operations</h1>
+<p class="subtitle">
+Mathematical Operations of vectors.
+</p>
+<section>
+<h2>What is Vector?</h2>
+<p>
+In Physics, vector is a physical quantity that has magnitude, direction and follows vector addition.
+</p>
+<p>
+But what do we even mean by this? It is directly related to space. The existing physical space itself has two aspects that are mathematically relevant:
+</p>
+<div class="math-block">
+\[
+\text{Space}=\text{Extent}+\text{Direction}
+\]
+</div>
+<p>
+A spatial quantity can therefore change in two fundamentally different ways: its extent can change, its direction can change, or both can change.
+</p>
+<p>
+Consider position. Position is not determined by distance alone; it also depends on direction. For example, consider the position of the Earth relative to the Sun. As the Earth revolves around the Sun, its distance from the Sun remains approximately constant, but its direction from the Sun continuously changes. Therefore, its position changes even though its distance does not.
+</p>
+<p>
+This shows that a complete description of a spatial quantity requires both its extent and its direction. These two aspects can be separated mathematically. For any non-zero vector \(\vec A\), its magnitude
+</p>
+\[
+A=|\vec A|
+\]
+<p>
+represents its extent. We can represent its direction by a vector of unit magnitude pointing in the same direction as \(\vec A\). This is called the unit vector along \(\vec A\):
+</p>
+\[
+\hat A=\frac{\vec A}{|\vec A|}
+\]
+<p>
+The original vector can therefore be written as
+</p>
+\[
+\boxed{\vec A=A\hat A}
+\]
+<p>
+Thus, the magnitude \(A\) specifies the extent of the vector, while the unit vector \(\hat A\) specifies its direction.
+</p>
+<div class="insightbox">
+A vector can change either because its magnitude changes, because its direction changes, or because both change.
+</div>
+<p>
+For example, in uniform circular motion, the position vector has constant magnitude:
+</p>
+\[
+|\vec r|=R=\text{constant}
+\]
+<p>
+but its direction continuously changes as the particle moves around the circle. Therefore, the position vector itself changes even though its magnitude remains constant.
+</p>
+\[
+\vec r=R\hat r
+\]
+<p>
+Here \(R\) remains constant while \(\hat r\) changes continuously. This is a simple example of a vector changing purely because its direction changes.
+</p>
+</section>
+<section>
+<h2>Vector Operations</h2>
+<p>
+In the Measurements chapter, we studied that measurement assigns a numerical value to a physical quantity, allowing us to represent it mathematically and perform mathematical operations on it.
+</p>
+<p>
+For scalar quantities such as mass, temperature and amount of substance, the numerical values can be operated on using ordinary arithmetic. We can add, subtract, multiply and divide their numerical values according to the usual rules of arithmetic.
+</p>
+<p>
+A vector quantity contains directional information in addition to its magnitude. Direction itself is not a scalar quantity, unlike magnitude, on which ordinary arithmetic can be performed. For example, an expression such as "east + north" has no meaning as scalar arithmetic. Directions therefore need to be represented mathematically. A mathematical representation becomes useful precisely because it allows us to perform well-defined mathematical operations on the represented entity.
+</p>
+<p>
+Once magnitude and direction are represented together as a vector, mathematical operations can be defined for vectors. These operations take into account the directional structure of vectors in different ways.
+</p>
+<p>
+For example, two vectors can be added to produce another vector:
+</p>
+\[
+\vec A+\vec B
+\]
+<p>
+The magnitude of the resultant is not obtained by simply adding the magnitudes \(A+B\); it depends on the relative orientation of the two vectors. Different vector operations therefore provide different ways of mathematically manipulating vector quantities.
+</p>
+<p>
+The mathematical operations developed for vectors include:
+</p>
+<ul class="model-box">
+<li>vector addition</li>
+<li>scalar multiplication</li>
+<li>dot product</li>
+<li>cross product</li>
+</ul>
+<p>
+These operations are intrinsic to the vectors: their results do not depend on the coordinate system chosen to represent the vectors.
+</p>
+<div class="insightbox">
+Resolution of a vector is different from these intrinsic vector operations.<br>
+Resolution is a basis-dependent decomposition: the components obtained depend on the directions chosen for the resolution.<br>
+For example,
+\[
+\vec A=A_x\hat i+A_y\hat j
+\]
+and
+\[
+\vec A=A'_x\hat i'+A'_y\hat j'
+\]
+represent the same vector, but generally have different components.<br>
+In contrast, the vector sum \(\vec A+\vec B\), dot product \(\vec A\cdot\vec B\), and cross product \(\vec A\times\vec B\) are properties of the vectors themselves and do not depend on the chosen coordinate representation.
+</div>
+</section>
+<section>
+<h2>Angle Between 2 Vectors</h2>
+<p>
+Vector operations are performed with consideration of the directional information carried by the vectors. For example, the result of vector addition, dot product and cross product depends on how the vectors are oriented relative to each other.
+</p>
+<p>
+However, the numerical representation of a vector depends on the directions chosen as the coordinate axes. In a plane, we can choose any two mutually perpendicular directions as the Cartesian axes, and the components of the same vectors will change when the axes are changed.
+</p>
+<p>
+The relative direction between the vectors, however, does not change. This relative direction can be specified by the <strong>angle between the vectors</strong>.
+</p>
+<p>
+Consider Nepal and Sri Lanka relative to India. Nepal is approximately north of India, while Sri Lanka is approximately south of India. Therefore, the directions from India towards Nepal and Sri Lanka are opposite, and the angle between them is \(180^\circ\).
+</p>
+<p>
+Now suppose that instead of calling the usual north-west direction "north", we choose the north-west direction as a new reference direction and call it "borth". Similarly, let the south-east direction be called "bouth". The descriptions of the two locations relative to these new directions will change: Nepal will lie to the borth-east and Sri Lanka to the bouth-west. However, the angle between the two directions remains \(180^\circ\).
+</p>
+<div class="insightbox">
+The components of a vector depend on the chosen coordinate axes, but the relative angle between two vectors does not.<br>
+It is therefore an intrinsic geometrical relationship between the vectors.
+</div>
+<p>
+Therefore, vector addition, dot product and cross product can be expressed using the angle between the vectors without depending on the particular coordinate directions chosen to represent them.
+</p>
+\[
+|\vec A+\vec B|=\sqrt{A^2+B^2+2AB\cos\theta}
+\]
+\[
+\vec A\cdot\vec B=AB\cos\theta
+\]
+\[
+|\vec A\times\vec B|=AB\sin\theta
+\]
+<p>
+where \(\theta\) is the angle between the two vectors.
+</p>
+</section>
+<section>
+<h2>Scalar Multiplication</h2>
+<p>
+Vectors are mathematically represented by their magnitude and direction:
+</p>
+\[
+\vec A=A\hat a
+\]
+<p>
+Here, \(A\) is the magnitude of \(\vec A\), while \(\hat a\) is the unit vector along \(\vec A\), representing its direction. For example, if we say "exert a force of \(50\,\mathrm N\) towards east", then \(A=50\,\mathrm N\) represents the magnitude of the force, while \(\hat a\) represents its direction, east.
+</p>
+<p>
+The direction cannot be operated on using ordinary scalar arithmetic (addition,subtraction,multiplication,division). We cannot, for example, multiply "east" by \(2\) in the same sense in which we multiply a number by \(2\). However, we can multiply the magnitude by a scalar. We can therefore say "apply half the force" or "apply double the force":
+</p>
+\[
+\frac12\vec A=\frac{A}{2}\hat a \qquad 2\vec A=2A\hat a
+\]
+<p>
+This operation is called <strong>scalar multiplication</strong>. Multiplication by a positive scalar changes the magnitude of the vector while retaining its direction.
+</p>
+<p>
+A negative scalar also allows us to reverse the direction. For example, applying the same \(50\,\mathrm N\) force in the opposite direction can be represented as
+</p>
+\[
+-\vec A=(-A)\hat a
+\]
+<p>
+which is equivalent to
+</p>
+\[
+-\vec A=A(-\hat a)
+\]
+<div class="insightbox">
+<strong>Scalar multiplication is scaling of a vector.</strong><br>
+Multiplying a vector by a positive scalar changes its magnitude while retaining its direction.<br>
+Multiplication by a negative scalar additionally reverses its direction.<br>
+Think of zooming a digital picture.<br>
+When a picture is enlarged, its spatial structure and directional relationships are retained; only its scale changes.<br>
+Similarly, positive scalar multiplication enlarges or reduces a vector without changing its direction.
+</div>
+<p>
+Thus, scalar multiplication operates on the scalar magnitude while preserving the directional information of the vector for positive scalars.
+</p>
+</section>
+<section>
+<h2>Sub Topics</h2>
+<div class="chapter-list">
+<a href="./01a-vector-relation.html">1. Relations between Vectors</a>
+<a href="./01b-vector-angle.html">2. Angle between Vectors</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

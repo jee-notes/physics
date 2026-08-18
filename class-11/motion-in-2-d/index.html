@@ -14,30 +14,339 @@
 <span>&larr;</span> Back to Syllabus
 </a>
 </nav>
-
 <h1>Motion in 2D</h1>
 <p class="subtitle">
-Navigating the complexities of planar kinematics through vector independence.
+Planar kinematics through vector independence.
 </p>
-
 <section>
 <h2>Conceptual Overview</h2>
 <p>
-Up until now, the study of kinematics has been strictly confined to objects moving purely along a single straight line (1D Motion). We could completely describe back-and-forth movement simply by assigning positive and negative scalar values to velocity and acceleration. 
+When we study kinematics of 1D motion, we mathematically define 1D motion algebraically as well as geometrically.
 </p>
 <p>
-However, the overwhelming majority of motion in our universe—from a cricket ball soaring through the air to the elegant elliptical orbits of planets around the sun—occurs dynamically across two or three dimensions. To accurately describe a particle that curves, loops, and fundamentally changes its line of travel, we must inherently transition from simple algebraic scalars to the rigorous, multi-dimensional mathematics of Vectors.
+Algebraically, we say that 1 variable \(x\) is sufficient to fully describe and define the position of the moving particle. Geometrically, we say that the motion is along a straight line.
+</p>
+<p>
+When we need to mathematically define 2D motion, algebraically, we say that 2 variables \(x\) and \(y\) are sufficient to fully describe and define the position of the moving particle and geometrically, we say that the motion is in a flat plane.
+</p>
+<p>
+However, in 2D motion, we learn about a new mathematical tool to mathematically represent two dimensional vector physical quantities like position, velocity, acceleration etc. This new tool is called vector notation.
+</p>
+<p>
+In the vector notation, directions are represented as unit vectors and their special mathematical operations are studied.
 </p>
 <div class="insightbox">
-The profound genius of Cartesian 2D motion rests entirely upon a singular, beautiful concept: The physical independence of orthogonal motions.
-<br><br>
-This means that an object's horizontal movement is completely blind to its vertical movement, and vice-versa. You can independently solve for the horizontal state, cleanly solve for the vertical state, and then geometrically synthesize them together to reveal the glorious two-dimensional trajectory.
+The profound genius of Cartesian 2D motion rests entirely upon a singular, beautiful concept: The physical independence of orthogonal motions.<br>
+This means that an object's horizontal movement is completely blind to its vertical movement, and vice-versa.<br>
+We can independently solve for the horizontal state and separately for the vertical state, and then geometrically synthesize them together to reveal the glorious two-dimensional trajectory.
 </div>
+<p>
+The overwhelming majority of motion in our universe—from a cricket ball soaring through the air to the elegant elliptical orbits of planets around the sun — occurs dynamically across two or three dimensions.
+</p>
+<p>
+To accurately describe a particle that curves, loops, and fundamentally changes its line of travel, we must inherently transition from simple algebraic scalars to the rigorous, multi-dimensional mathematics of Vectors.
+</p>
 </section>
-
+<section>
+<h2>Vector Representation</h2>
+<p>
+The dimensionality of a physical space can be understood both geometrically and algebraically.
+</p>
+<p>
+Geometrically, dimension refers to the number of independent directions in the space. Algebraically, it refers to the number of independent coordinates required to completely specify the position of a point in that space. These are two ways of describing the same underlying structure.
+</p>
+<p>
+In one-dimensional space, there is only one <strong>independent</strong> spatial direction. Therefore, one coordinate \(x\) is sufficient to completely specify the position of a particle. Geometrically, such a space is a straight line.
+</p>
+<div class="insightbox">
+A straight line has two directions, but the two directions are not independent.<br>
+The geometry of the line relates them: choosing one direction as positive automatically determines the opposite direction as negative.<br>
+Therefore, only one independent coordinate is required to specify position on the line.
+</div>
+<p>
+In two-dimensional space, there are two independent spatial directions. Therefore, two independent coordinates \(x\) and \(y\) are required to completely specify the position of a particle. Geometrically, such a space is a flat plane.
+</p>
+<p>
+A plane contains infinitely many possible directions. The two dimensions of the plane, however, correspond to two independent directions.
+</p>
+<p>
+In Euclidean space, orthogonality is the geometric expression of this independence: two orthogonal directions are independent of one another. Therefore, we choose two mutually perpendicular directions as the coordinate directions. These directions define the \(x\)- and \(y\)-axes.
+</p>
+<p>
+The ordered pair \((x,y)\) is the Cartesian coordinate description of the position. It specifies the extent of the position along each of these two independent directions.
+</p>
+<p>
+We can now represent the same position as a vector. Let \(\hat i\) and \(\hat j\) be unit vectors along the \(x\)- and \(y\)-directions. The position vector is
+</p>
+\[
+\vec r=x\hat i+y\hat j
+\]
+<p>
+Thus, the two terms in the vector representation correspond directly to the two independent spatial directions. The scalars \(x\) and \(y\) specify the extent along those directions, while \(\hat i\) and \(\hat j\) specify the directions themselves.
+</p>
+<div class="insightbox">
+The number of independent components of a position vector is determined by the dimensionality of the space.<br>
+One-dimensional space requires one coordinate; two-dimensional space requires two; three-dimensional space requires three.
+</div>
+<p>
+In general for a 3D vector, the ordered pair \((x,y,z)\) is the Cartesian coordinate description of the position. We represent the same position in Cartesian coordinate as a vector. Let \(\hat i\) and \(\hat j\) and \(\hat k\) be unit vectors along the \(x\)- and \(y\) and \(z\)-directions. The position vector is
+</p>
+\[
+\boxed{\vec r = x\hat i + y\hat j + z\hat k}
+\]
+<p>
+The same construction applies to other vector physical quantities. In two dimensions,
+</p>
+\[
+\vec v = v_x\,\hat i + v_y\,\hat j + v_z\,\hat k
+\]
+\[
+\vec a = a_x\,\hat i + a_y\,\hat j + a_z\,\hat k
+\]
+<p>
+For 1D vector, we ignore the unit vector \hat i as all vector physical quantities are along the same line and to represent those, a signed scalar is sufficient. 
+</p>
+<h3>Applying kinematic definitions</h3>
+<p>
+When the particle moves, the coordinates become functions of time:
+</p>
+\[
+x=x(t),\qquad y=y(t)
+\]
+<p>
+and hence its position vector becomes
+</p>
+\[
+\vec r(t)=x(t)\hat i+y(t)\hat j
+\]
+<p>
+As per calculus based definitions of velocity and acceleration:
+</p>
+\[
+\vec v = \frac{d\vec r}{dt}
+\]
+\[
+\vec a = \frac{d\vec v}{dt} = \frac{d^2\vec r}{dt^2}
+\]
+<p>
+Since time is a scalar parameter, temporal differentiation acts independently on the spatial components:
+</p>
+\[
+\vec v = \frac{d\vec r}{dt} = \frac{dx}{dt}\hat i + \frac{dy}{dt}\hat j = v_x\hat i + v_y\hat j
+\]
+\[
+v_x = \frac{dx}{dt} \qquad v_y = \frac{dy}{dt}
+\]
+\[
+\vec a = \frac{d\vec v}{dt} = \frac{d^2\vec r}{dt^2} = \frac{d^2x}{dt^2}\hat i + \frac{d^2y}{dt^2}\hat j = a_x\hat i + a_y\hat j
+\]
+\[
+a_x = \frac{d v_x}{dt} = \frac{d^2x}{dt^2} \qquad a_y = \frac{d v_y}{dt} = \frac{d^2y}{dt^2}
+\]
+<p>
+Therefore, two-dimensional kinematics can be treated as the simultaneous evolution of two scalar components, \(x(t)\) and \(y(t)\), while the vector notation keeps them together as a single physical state.
+</p>
+</section>
+<section>
+<h2>Projectile Motion</h2>
+<p>
+This is the heart of this chapter. Here, we bring together the ideas developed in 1D motion, equations of motion under constant acceleration, and vector algebra.
+</p>
+<p>
+Projectile motion is two-dimensional motion. We describe it using two independent spatial components, usually along the horizontal \(x\)-axis and vertical \(y\)-axis. The vector quantities describing the motion are therefore resolved into their components:
+</p>
+\[
+\vec r=x\hat i+y\hat j, \qquad \vec v=v_x\hat i+v_y\hat j, \qquad \vec a=a_x\hat i+a_y\hat j
+\]
+<p>
+This process of expressing a vector in terms of its components along the chosen coordinate directions is called <strong>resolution of a vector</strong>. It is a fundamental technique used throughout physics for all vector physical quantities.
+</p>
+<p>
+For projectile motion near the Earth's surface, the acceleration due to gravity is vertically downward:
+</p>
+\[
+\vec a=-g\hat j
+\]
+<p>
+Therefore,
+</p>
+\[
+a_x=0,\qquad a_y=-g
+\]
+<p>
+The two component equations can consequently be treated using the one-dimensional kinematics developed earlier. The horizontal component has zero acceleration, while the vertical component undergoes uniformly accelerated motion under gravity.
+</p>
+<p>
+Thus, the familiar results of 1D motion under gravity can be applied directly to the vertical component, while the horizontal component is treated as 1D motion with constant velocity.
+</p>
+<p>
+We can then combine the two component motions to obtain the complete two-dimensional motion of the projectile. We will also develop the corresponding equations of motion for constant acceleration in two dimensions.
+</p>
+</section>
+<section>
+<h2>Polar Basis</h2>
+<p>
+Cartesian coordinates are not the only way to describe position in a two-dimensional plane. Instead of specifying the position by its extent along two fixed perpendicular directions \(x\) and \(y\), we can specify it by its distance from the origin and its angular position:
+</p>
+\[
+(r,\theta)
+\]
+<p>
+This is the polar coordinate description of position.
+</p>
+<p>
+In Cartesian coordinates, the coordinate directions are fixed in space. The unit vectors \(\hat i\) and \(\hat j\) therefore have the same directions everywhere in the plane. In polar coordinates, however, the natural coordinate directions are different.
+</p>
+<p>
+At a given point, one direction is along the radial line from the origin to the point. The other is perpendicular to this radial direction, along the direction of increasing \(\theta\). We therefore define two unit vectors:
+</p>
+\[
+\hat r
+\]
+<p>
+along the radial direction, and
+</p>
+\[
+\hat\theta
+\]
+<p>
+along the direction of increasing angular coordinate \(\theta\).
+</p>
+<p>
+These two directions are perpendicular at every point:
+</p>
+\[
+\hat r\cdot\hat\theta=0.
+\]
+<p>
+Thus, \(\hat r\) and \(\hat\theta\) form an orthogonal basis at each point of the plane. However, unlike the Cartesian basis, this basis is <strong>not fixed in space</strong>. Its orientation depends on the angular position \(\theta\) of the particle.
+</p>
+<p>
+The position vector has only a radial component in this basis:
+</p>
+\[
+\boxed{\vec r=r\hat r}
+\]
+<p>
+There is no \(\hat\theta\) component of the position vector because the position itself extends only from the origin to the particle, along the radial direction.
+</p>
+<div class="insightbox">
+The Cartesian basis \(\hat i,\hat j\) is fixed throughout the plane, whereas the polar basis \(\hat r,\hat\theta\) changes its orientation from point to point. The two bases describe the same two-dimensional space; they simply choose different directions for representing its extent.
+</div>
+<p>
+The relation between the polar and Cartesian basis vectors is
+</p>
+\[
+\hat r=\cos\theta,\hat i+\sin\theta,\hat j
+\]
+\[
+\hat\theta=-\sin\theta,\hat i+\cos\theta,\hat j
+\]
+<p>
+These relations show explicitly that the polar basis changes as \(\theta\) changes.
+</p>
+<p>
+Consequently, although the polar basis vectors are unit vectors, they are not constant vectors. Their temporal derivatives are non-zero when the particle changes its angular position:
+</p>
+\[
+\frac{d\hat r}{dt}=\frac{d\hat r}{d\theta}\frac{d\theta}{dt}\dot\theta,\hat\theta
+\]
+\[
+\frac{d\hat\theta}{dt}=\frac{d\hat\theta}{d\theta}\frac{d\theta}{dt}-\dot\theta,\hat r
+\]
+<p>
+This is the essential mathematical difference between Cartesian and polar kinematics. In Cartesian coordinates, the basis vectors are fixed and therefore their time derivatives vanish. In polar coordinates, the basis itself changes as the particle moves.
+</p>
+<h3>Velocity in Polar Coordinates</h3>
+<p>
+Starting from
+</p>
+\[
+\vec r=r\hat r
+\]
+<p>
+differentiate with respect to time:
+</p>
+\[
+\vec v=\frac{d\vec r}{dt}=\frac{dr}{dt}\hat r+r\frac{d\hat r}{dt}
+\]
+<p>
+Using
+</p>
+\[
+\frac{d\hat r}{dt}=\dot\theta,\hat\theta,
+\]
+<p>
+we obtain
+</p>
+\[
+\boxed{\vec v=\dot r,\hat r+r\dot\theta,\hat\theta}
+\]
+<p>
+Therefore, the velocity has two polar components:
+</p>
+\[
+\boxed{v_r=\dot r}
+\]
+\[
+\boxed{v_\theta=r\dot\theta}
+\]
+<p>
+The radial component describes the rate of change of the distance from the origin, while the transverse component describes the motion associated with changing angular position.
+</p>
+</section>
+<section>
+<h2>Relative Motion</h2>
+<p>
+Motion is always described relative to a reference object or observer. When two objects are moving, the motion of one as seen from the other is called <strong>relative motion</strong>.
+</p>
+<p>
+The vector description developed above gives us a direct way to describe relative motion. If the position vectors of two particles \(A\) and \(B\), measured from the same reference frame, are \(\vec r_A\) and \(\vec r_B\), then the position of \(A\) relative to \(B\) is
+</p>
+\[
+\boxed{\vec r_{A/B}=\vec r_A-\vec r_B}
+\]
+<p>
+Differentiating with respect to time gives the relative velocity:
+</p>
+\[
+\boxed{\vec v_{A/B}=\vec v_A-\vec v_B}
+\]
+<p>
+and differentiating once more gives the relative acceleration:
+</p>
+\[
+\boxed{\vec a_{A/B}=\vec a_A-\vec a_B}
+\]
+<p>
+These relations are vector relations, so they can be expressed in whichever coordinate representation is most convenient for the problem.
+</p>
+<p>
+For problems involving fixed horizontal and vertical directions, Cartesian components are usually convenient. For example,
+</p>
+\[
+\vec v_{A/B}=(v_{Ax}-v_{Bx})\hat i+(v_{Ay}-v_{By})\hat j
+\]
+<p>
+For problems involving the changing direction between two particles, a polar basis can be more natural. If the position of \(A\) relative to \(B\) is described by
+</p>
+\[
+\vec r_{A/B}=r\,\hat r
+\]
+<p>
+then the changing radial direction provides a natural basis for describing the relative velocity.
+</p>
+<p>
+This is particularly useful in <strong>chasing problems</strong>. The distance between the two particles is the magnitude of their relative position, while the direction from the pursuer to the target changes as the particles move. A polar basis attached to this instantaneous line of sight therefore provides a natural description of the motion.
+</p>
+<p>
+Thus, relative-motion problems are not a new type of kinematics. They are an application of the same vector kinematics in which the reference particle is used to describe the motion of another particle.
+</p>
+</section>
 <section>
 <h2>Chapter Structure</h2>
 <div class="chapter-list">
+<a href="./01-vector-operations.html">1. Vector Operations</a>
 <a href="./01-kinematics-of-2d-motion.html">1. Kinematics of 2D Motion (Vectors & Acceleration)</a>
 <a href="./02-projectile-motion.html">2. Projectile Motion</a>
 <a href="./02-projectile-eq-of-motion.html">2. Projectile Motion and Equations of Motion</a>
@@ -45,7 +354,6 @@ This means that an object's horizontal movement is completely blind to its verti
 <a href="./04-relative-motion-in-2d.html">4. Relative Motion in 2D (River/Rain Problems)</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angle between Vectors | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-vector-operations.html" class="back-btn">
+<span>&larr;</span> Back to Vector Operations
+</a>
+</nav>
+<h1>Angle between Vectors</h1>
+<p class="subtitle">
+Theory and problems of Angle between Vectors.
+</p>
+<section>
+<h2>Relations between Vectors</h2>
+<p>
+If we can perform mathematical operations on vectors, we can also define relations between vector quantities. But how do we compare two vectors?
+</p>
+<p>
+For scalar quantities, we can directly compare their numerical values using \(\gt\), \(\lt\) and \(=\). For vectors, however, direction does not have an ordering. It is meaningless to say that east is greater than north or that north is less than south.
+</p>
+<p>
+Therefore, when we compare vector quantities using greater-than or less-than language, the comparison is implicitly made using their <strong>magnitudes</strong>.
+</p>
+<p>
+For example, suppose the velocity of car A is \(5\,\mathrm{m/s}\) towards east and the velocity of car B is \(6\,\mathrm{m/s}\) towards west. Taking east as positive,
+</p>
+\[
+\vec v_A=5\hat i \qquad \vec v_B=-6\hat i
+\]
+<p>
+The velocities have different directions, so there is no meaningful sense in which one direction is greater than the other. But their magnitudes can be compared:
+</p>
+\[
+|\vec v_A|=5\,\mathrm{m/s} \qquad |\vec v_B|=6\,\mathrm{m/s}
+\]
+<p>
+Thus, when we say that car B has a greater velocity in the usual physical language, what is actually being compared is the <strong>magnitude of velocity</strong>:
+</p>
+\[
+|\vec v_B|>|\vec v_A|
+\]
+<p>
+The same idea appears when we say that the velocity of a car "increases" or "decreases". For example, if the velocity of car B changes from \(-6\hat i\) to \(-10\hat i\) , then its velocity is said to have increased in magnitude:
+</p>
+\[
+|\vec v_B|:6\rightarrow10\,\mathrm{m/s}
+\]
+<p>
+The vector has become more negative along the chosen positive direction, but its <strong>magnitude has increased</strong>. This is what is ordinarily meant when we say that the velocity has increased in such a context.
+</p>
+<div class="insightbox">
+For greater-than and less-than comparisons of vector quantities, the comparison is implicitly a comparison of their magnitudes, because magnitude has an ordinary numerical ordering whereas direction does not.
+</div>
+<p>
+Equality of vectors however, is different. For two vectors to be equal, their magnitudes as well as their directions must be the same:
+</p>
+\[
+\boxed{\vec A=\vec B\iff|\vec A|=|\vec B|\quad\text{and}\quad\vec A,\vec B\text{ have the same direction}}
+\]
+<p>
+Therefore, two vectors can have equal magnitudes without being equal vectors. For example,
+</p>
+\[
+|\vec A|=|\vec B|
+\]
+<p>
+does not imply
+</p>
+\[
+\vec A=\vec B
+\]
+<p>
+if the two vectors point in different directions.
+</p>
+<p>
+<strong>Magnitude comparison and vector equality are different relations.</strong> Greater/lesser language refers to magnitude, while equality of vectors requires both magnitude and direction to agree.
+</p>
+<p>
+Any comparison of physical quantities is meaningful only when the quantities are of the same physical kind. This applies equally to scalar and vector quantities: mass can be compared with mass, and velocity with velocity, but mass cannot be compared with temperature or velocity with acceleration.
+</p>
+</section>
+<section>
+<h2>Other Relations</h2>
+<p>
+Vectors can be related to each other in ways other than their magnitude or equality. Since direction is an essential part of a vector, we can relate vectors based on their directional and geometrical relationships.
+</p>
+<p>
+One such relation is <strong>parallelism</strong>. Two vectors are parallel when they have the same or opposite direction. The physical quantities represented by the vectors do not need to be the same.
+</p>
+<p>
+For example, consider a force of \(5\,\mathrm N\) towards east and a velocity of \(5\,\mathrm{m/s}\) towards east:
+</p>
+\[
+\vec F=5\hat i\qquad\vec v=5\hat i
+\]
+<p>
+Although force and velocity are different physical quantities and have different dimensions, their vectors point in the same direction. Therefore, they are parallel vectors.
+</p>
+<p>
+If two vectors point in the same direction, they are called <strong>parallel</strong>. If they point in exactly opposite directions, they are called <strong>anti-parallel</strong>.
+</p>
+\[
+\boxed{\vec A\parallel\vec B\quad\text{if their directions are the same or opposite}}
+\]
+<p>
+For two non-zero parallel vectors, their magnitudes can be separated from their common directional information. For example,
+</p>
+\[
+\vec A=A\hat a,\qquad\vec B=B\hat a
+\]
+<p>
+when they point in the same direction. Therefore,
+</p>
+\[
+\boxed{\frac{\vec A}{A}=\frac{\vec B}{B}=\hat a}
+\]
+<p>
+The common unit vector \(\hat a\) represents their common direction. Notice that the vectors \(\vec A\) and \(\vec B\) can represent completely different physical quantities; their magnitudes may even have different physical dimensions. Their common unit vector, however, represents only the common spatial direction.
+</p>
+<div class="insightbox">
+A unit vector represents direction only. It has unit magnitude and therefore carries no magnitude information of the physical quantity represented by the original vector.
+</div>
+<p>
+Since a unit vector is a ratio of a vector to its magnitude,
+</p>
+\[
+\hat a=\frac{\vec A}{|\vec A|}
+\]
+<p>
+the physical dimensions cancel. For example,
+</p>
+\[
+\frac{\mathrm{N}}{\mathrm{N}}=1,\qquad\frac{\mathrm{m/s}}{\mathrm{m/s}}=1
+\]
+<p>
+Thus, a unit vector is <strong>dimensionless</strong>. It is also <strong>unitless</strong>: it does not have a physical unit such as metre, second or newton. Its numerical magnitude is \(1\), while its role is to retain directional information.
+</p>
+<p>
+The same idea applies to anti-parallel vectors. If \(\vec A\) and \(\vec B\) point in opposite directions, then
+</p>
+\[
+\frac{\vec A}{A}=-\frac{\vec B}{B}
+\]
+<p>
+Thus, the unit vectors are equal for parallel vectors and opposite for anti-parallel vectors.
+</p>
+<h3>Other Geometrical Relations</h3>
+<p>
+Vectors can also be related by their geometrical arrangement in space.
+</p>
+<p>
+Two (or more) parallel or anti-parallel vectors are also called as collinear vectors.
+</p>
+<p>
+Three or more vectors are <strong>coplanar</strong> if they lie in the same plane.
+</p>
+<p>
+Two non-collinear vectors are always co-planar (just like 2 points are always collinear).
+</p>
+<p>
+Coplanarity is a geometrical relation and does not require the vectors to have the same physical dimensions or magnitude.
+</p>
+<p>
+Vectors can also be related by the geometrical arrangement of their lines of action.
+</p>
+<p>
+Vectors are called <strong>concurrent</strong> when their lines of action pass through a common point. This terminology is particularly useful in mechanics, where several forces acting on a particle are concurrent at the particle.
+</p>
+<p>
+Concurrency is different from parallelism. Parallel vectors have the same or opposite direction, whereas concurrent vectors are identified by the intersection of their lines of action.
+</p>
+<ul class="model-box">
+<li>Parallel Vectors — same direction</li>
+<li>Anti-Parallel Vectors — opposite directions</li>
+<li>Coplanar Vectors — vectors lying in the same plane</li>
+<li>Concurrent Vectors — lines of action passing through a common point</li>
+</ul>
+</section>
+<section>
+<h2>Summary of Relations between Vectors</h2>
+<p>
+A vector contains both magnitude and directional information. Therefore, different types of comparison can be made by comparing different parts of this information.
+</p>
+<table>
+<thead>
+<tr>
+<th>What is compared?</th>
+<th>Relation</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Magnitude</td>
+<td>Greater than / Less than</td>
+<td>\(|\vec A|>|\vec B|\) or \(|\vec A|\lt|\vec B|\)</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Parallel</td>
+<td>Same direction</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Anti-parallel</td>
+<td>Opposite directions</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Perpendicular/Orthogonal</td>
+<td>\(\theta=90^\circ\)</td>
+</tr>
+<tr>
+<td>Complete vector</td>
+<td>Equal</td>
+<td>\(|\vec A|=|\vec B|\) and same direction</td>
+</tr>
+</tbody>
+</table>
+<div class="insightbox">
+<strong>Equality is the complete comparison.</strong><br>
+Greater-than and less-than comparisons involve only magnitude, while directional relations such as parallel and perpendicular involve direction. Equality of vectors requires both magnitude and direction to be identical.
+</div>
+<p>
+Thus, the different relations between vectors can be understood by asking which part of the vector's information is being compared: its magnitude, its direction, or the complete vector.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
