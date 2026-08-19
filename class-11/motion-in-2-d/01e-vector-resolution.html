@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resolution of Vector | Vector Operations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-vector-operations.html" class="back-btn">
+<span>&larr;</span> Back to Vector Operations
+</a>
+</nav>
+<h1>Resolution of Vector</h1>
+<p class="subtitle">
+Breaking down a vector into components.
+</p>
+<section>
+<h2>What is Resolution?</h2>
+<p>
+Resolution means <strong>breaking down a quantity into components</strong> for convenience of calculation.
+</p>
+<p>
+For example, if we want to calculate
+</p>
+\[
+9+7
+\]
+<p>
+we may resolve \(9\) as \(10-1\):
+</p>
+\[
+9+7=10-1+7=10+6=16
+\]
+<p>
+The original number is not changed; it is simply represented as a combination of simpler quantities that are more convenient to work with.
+</p>
+<p>
+Similarly, a vector can be resolved into a set of component vectors whose vector sum is the original vector.
+</p>
+\[
+\boxed{\vec A=\vec A_1+\vec A_2+\vec A_3+\cdots}
+\]
+</section>
+<section>
+<h2>Orthogonal Resolution</h2>
+<p>
+Orthogonal resolution can be applied to both \(2D\) and \(3D\) vectors. For simplicity, we first discuss the \(2D\) case. Here, all the vectors are coplanar, so we can restrict ourselves to a single plane.
+</p>
+<div class="insightbox">
+Dimensionality is defined when the co-ordinate axes and unit vectors are defined.<br>
+As we have not yet defined them, we will only use geometric implication of 2D as a flat plane.
+</div>
+<p>
+Suppose there is a vector \(\vec A\) and we want to resolve it into components such that all the components are <strong>non-collinear</strong> and <strong>co-planar</strong>.
+</p>
+<p>
+There are two possibilities: the components may be <strong>rectangular</strong> or <strong>non-rectangular</strong>.
+</p>
+<p>
+In rectangular resolution, the component vectors are mutually perpendicular. In a plane, once one direction is chosen, its perpendicular direction is fixed, apart from its opposite direction. This can be visualized from the four directions
+</p>
+\[
+\hat i,\quad \hat j,\quad -\hat i,\quad -\hat j
+\]
+<p>
+which divide the full \(360^\circ\) around the point into four equal angles:
+</p>
+\[
+\frac{360^\circ}{4}=90^\circ
+\]
+<p>
+Thus, \(\hat j\) is perpendicular to both \(\hat i\) and \(-\hat i\). There is no third independent direction in the same plane that is also perpendicular to these directions.
+</p>
+<p>
+Therefore, a vector in \(2D\) can have at most <strong>two non-zero rectangular components</strong>:
+</p>
+\[
+\boxed{\vec A=A_x\hat i+A_y\hat j}
+\]
+<p>
+Once the two perpendicular directions are specified, these two components are uniquely determined.
+</p>
+<p>
+In non-rectangular resolution, the component directions need not be perpendicular. There is no corresponding \(90^\circ\) restriction, so the same vector can be resolved into <strong>infinitely many</strong> different sets of non-collinear, coplanar components.
+</p>
+<div class="insightbox">
+Rectangular resolution is unique because, in a plane, perpendicular directions are fixed once one direction is chosen. Non-rectangular resolution has no such restriction and therefore does not have a unique set of components.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

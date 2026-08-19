@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vector Addition — Triangle Law | Vector Operations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-vector-operations.html" class="back-btn">
+<span>&larr;</span> Back to Vector Operations
+</a>
+</nav>
+<h1>Vector Addition — Triangle Law</h1>
+<p class="subtitle">
+The fundamental operation for combining vectors.
+</p>
+<section>
+<h2>Vector Addition</h2>
+<p>
+A defining feature of vectors is that they can be <strong>added</strong> to one another to produce another vector.
+</p>
+<p>
+Vector addition is applicable to vectors in <strong>one, two and three dimensions</strong>. This makes it a fundamental operation for combining vectors.
+</p>
+<p>
+Multiplication of a vector by a scalar is also closely related to addition. For example,
+</p>
+\[
+3\vec A=\vec A+\vec A+\vec A
+\]
+<p>
+Thus, scalar multiplication can be viewed as repeated addition of the same vector.
+</p>
+<p>
+Other vector operations have different characteristics. The dot product of two vectors produces a scalar, while the cross product is a special operation applicable to vectors in three dimensions.
+</p>
+<div class="insightbox">
+Vector addition is the fundamental operation for combining vectors.<br>
+Scalar multiplication is built upon it.
+</div>
+</section>
+<section>
+<h2>Triangle Law of Vector Addition</h2>
+<p>
+In the previous chapter, we already learned how to add vectors in \(1D\), i.e. collinear vectors. This does not really require the triangle law; we simply add their magnitudes algebraically, with signs accounting for their opposite directions.
+</p>
+<p>
+However, when adding two non-collinear vectors, their directions cannot be represented by an algebraic sign alone. We need a geometrical rule that accounts for both their magnitudes and directions.
+</p>
+<p>
+To add two vectors, arrange them <strong>head-to-tail</strong>: place the tail of the second vector at the head of the first vector.
+</p>
+<p>
+The resultant vector is drawn from the <strong>tail of the first vector</strong> to the <strong>head of the second vector</strong>.
+</p>
+\[
+\boxed{\vec R=\vec A+\vec B}
+\]
+<p>
+Thus, the three vectors form a triangle, with the resultant as the third side joining the tail of \(\vec A\) to the head of \(\vec B\). This geometrical construction is known as the <strong>triangle law of vector addition</strong>.
+</p>
+</section>
+<section>
+<h2>Geometry</h2>
+<p>
+Suppose \(\vec A\) and \(\vec B\) are arranged head-to-tail:
+</p>
+\[
+\vec A \quad\longrightarrow\quad \vec B
+\]
+<p>
+The resultant \(\vec R\) is the third side of the triangle joining the <strong>tail of \(\vec A\)</strong> to the <strong>head of \(\vec B\)</strong>. Thus,
+</p>
+\[
+\boxed{\vec A+\vec B=\vec R}
+\]
+<p>
+In other words, the resultant is the vector whose <strong>tail coincides with the tail of the first vector</strong> and whose <strong>head coincides with the head of the second vector</strong>.
+</p>
+</section>
+<section>
+<h2>Vector Addition Formula</h2>
+<p>
+If the magnitudes of two vectors are \(A\) and \(B\), and the angle between them is \(\theta\), then the magnitude of their resultant is
+</p>
+\[
+\boxed{R=\sqrt{A^2+B^2+2AB\cos\theta}}
+\]
+<p>
+The direction of the resultant can be determined from the geometry of the triangle.
+</p>
+</section>
+<section>
+<h2>Vector Subtraction</h2>
+<p>
+Vector subtraction can be expressed in terms of vector addition:
+</p>
+\[
+\boxed{\vec A-\vec B=\vec A+(-\vec B)}
+\]
+<p>
+Thus, subtracting a vector is equivalent to adding a vector of the same magnitude but opposite direction.
+</p>
+</section>
+<section>
+<h2>Resultant Variation</h2>
+<p>
+Thus, if two vectors have constant magnitudes \(a\) and \(b\), and we vary the angle \(\theta\) between them, then the magnitude of their resultant varies from \(a+b\) to \(\lvert a-b\rvert\).
+</p>
+<p>
+When the vectors are in the same direction, \(\theta=0^\circ\), and the resultant is maximum:
+</p>
+\[
+\boxed{R_{\max}=a+b}
+\]
+<p>
+When the vectors are in opposite directions, \(\theta=180^\circ\), and the resultant is minimum:
+</p>
+\[
+\boxed{R_{\min}=\lvert a-b\rvert}
+\]
+<p>
+This variation of the resultant with the angle between the vectors is frequently used in problems.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
