@@ -14,91 +14,108 @@
 <span>&larr;</span> Back to Geometrical Optics
 </a>
 </nav>
-
 <h1>Refraction at Spherical Surfaces</h1>
 <p class="subtitle">
 How curved boundaries between media form images.
 </p>
-
 <section>
 <h2>Refraction Formula for a Spherical Surface</h2>
 <p>
-Consider a spherical interface separating two optical media of absolute refractive indices \(\mu_1\) and \(\mu_2\). Let the radius of curvature of the spherical surface be \(R\), and its pole be \(P\). If a point object \(O\) is placed on the principal axis in medium \(\mu_1\) at a distance \(u\) from the pole, refraction at the spherical surface will form an image \(I\) in medium \(\mu_2\) at a distance \(v\).
+Consider a spherical refracting surface separating two optical media with absolute refractive indices \(\mu_i\) and \(\mu_r\). Let its radius of curvature be \(R\), and let \(P\) be its pole.
 </p>
-<div class="model-box">
+<p>
+A point object \(O\) is placed on the principal axis in the incident medium \(\mu_i\), at a signed distance \(u\) from the pole. Refraction at the spherical surface produces an image \(I\) in the refracted medium \(\mu_r\), at a signed distance \(v\) from the pole.
+</p>
+<p>
+Here, \(\mu_i\) denotes the refractive index of the medium containing the <strong>incident rays</strong>, while \(\mu_r\) denotes the refractive index of the medium containing the <strong>refracted rays</strong>.
+</p>
 <h3>The General Refraction Formula</h3>
 <p>
-For paraxial rays, the relationship connecting object distance \(u\), image distance \(v\), the refractive indices \(n_1, n_2\), and the radius of curvature \(R\) is:
+For paraxial rays, the object and image distances, refractive indices, and radius of curvature are related by
 </p>
-\[ \frac{\mu_2}{v} - \frac{\mu_1}{u} = \frac{\mu_2 - \mu_1}{R} \]
-<p>Where:</p>
-<ul>
-<li>\(n_1\) = Refractive index of the medium from which light is <em>incident</em>.</li>
-<li>\(n_2\) = Refractive index of the medium into which light is <em>refracted</em>.</li>
-<li>\(u\) = Object distance from pole (\(P\)).</li>
-<li>\(v\) = Image distance from pole (\(P\)).</li>
-<li>\(R\) = Radius of curvature of the spherical surface.</li>
+<div class="math-block">
+\[
+\boxed{\frac{\mu_r}{v}-\frac{\mu_i}{u}=\frac{\mu_r-\mu_i}{R}}
+\]
+</div>
+<ul class="model-box">
+<li>\(u\) = object distance from the pole \(P\), with sign convention.</li>
+<li>\(v\) = image distance from the pole \(P\), with sign convention.</li>
+<li>\(R\) = radius of curvature of the spherical surface, with sign convention.</li>
 </ul>
-<p><em>Crucial: Always apply proper Cartesian sign convention for \(u\), \(v\), and \(R\) when using this formula.</em></p>
-</div>
-
+<p>
+The sign of \(R\) encodes the geometry of the spherical surface. Therefore, the sign convention for \(R\) must be applied correctly according to the direction of the principal axis and the location of the centre of curvature.
+</p>
 <div class="insightbox">
-This formula holds true for both convex and concave spherical refracting surfaces, irrespective of whether the object is in the rarer or denser medium, and regardless of whether the image formed is real or virtual.
+The same formula applies to both <strong>convex and concave</strong> spherical refracting surfaces, and to arbitrary configurations in which the object or image may be real or virtual and the incident medium may be either optically denser or rarer than the refracted medium.
 </div>
+<h3>Sign Convention decides nature</h3>
+<ul class="model-box">
+<li>For real object \(u \lt 0\) . For virtual object \(u \gt 0\) . This is similar to spherical mirror.</li>
+<li>For real image \(v \gt 0\) . For virtual image \(v \lt 0\) . This is opposite to spherical mirror.</li>
+</ul>
 </section>
-
 <section>
-<h2>Lateral and Longitudinal Magnification</h2>
+<h2>Magnification</h2>
 <p>
-Just like spherical mirrors, refraction at a spherical surface changes the size of the object, depending on its position and the radii.
+Refraction at a spherical surface can change the transverse size of an object, so we define its transverse magnification.
 </p>
-
-<h3>Lateral (Transverse) Magnification (\(m\))</h3>
 <p>
-Lateral magnification is the ratio of the height of the image (\(h_i\)) perpendicular to the principal axis to the corresponding height of the object (\(h_o\)).
+As already explained, magnification (\(m\)) is defined in transverse plane only and its the ratio of the height of the image (\(h_i\)) perpendicular to the principal axis to the corresponding height of the object (\(h_o\)) with sign convention.
 </p>
-\[ m = \frac{h_i}{h_o} \]
+\[
+m = \frac{h_i}{h_o}
+\]
 <p>
 Using similar triangles from the ray diagram of refraction at a curved surface, the expression for lateral magnification is derived as:
 </p>
-<div class="model-box">
-\[ m = \left(\frac{n_1}{n_2}\right) \left(\frac{v}{u}\right) \]
+<div class="math-block">
+\[
+m = \left(\frac{\mu_i}{\mu_r}\right) \left(\frac{v}{u}\right)
+\]
 </div>
-
-<div class="concept-box">
-<p><strong>Interpreting \(m\):</strong></p>
-<ul>
-<li>A positive magnification (\(m > 0\)) implies an erect image (usually virtual for single surfaces).</li>
-<li>A negative magnification (\(m < 0\)) implies an inverted image (usually real).</li>
+<h3>Interpretation of \(m\)</h3>
+<ul class="model-box">
+<li>A positive magnification (\(m \gt 0\)) implies an erect image and same nature of object. (real image of real object or virtual image of virtual object)</li>
+<li>A negative magnification (\(m \lt 0\)) implies an inverted image and opposite nature of object. (real image of virtual object or virtual image of real object)</li>
 </ul>
-</div>
-
-<hr>
-
-<h3>Longitudinal Magnification (\(m_L\))</h3>
+</section>
+<section>
+<h2>Longitudinal Length (\(m_L\))</h2>
 <p>
-If an object lies along the principal axis with a small finite length \(du\), its longitudinal image size will be \(dv\). The longitudinal magnification is defined as:
+If an object lies along the principal axis with a small finite length \(du\), its longitudinal image size will be \(dv\). The longitudinal length relation \(m_L\) is defined as:
 </p>
-\[ m_L = \frac{dv}{du} \]
+\[
+m_L = \frac{dv}{du}
+\]
 <p>
 To find \(m_L\), we differentiate the general refraction formula with respect to \(u\):
 </p>
-\[ \frac{d}{du}\left(\frac{n_2}{v} - \frac{n_1}{u}\right) = \frac{d}{du}\left(\frac{n_2 - n_1}{R}\right) \]
-\[ n_2 \left(-\frac{1}{v^2}\frac{dv}{du}\right) - n_1\left(-\frac{1}{u^2}\right) = 0 \]
-\[ \frac{n_2}{v^2} \frac{dv}{du} = \frac{n_1}{u^2} \]
+\[
+\frac{d}{du}\left(\frac{\mu_r}{v} - \frac{\mu_i}{u}\right) = \frac{d}{du}\left(\frac{\mu_r - \mu_i}{R}\right)
+\]
+\[
+\mu_r \left(-\frac{1}{v^2}\frac{dv}{du}\right) - \mu_i\left(-\frac{1}{u^2}\right) = 0
+\]
+\[
+\frac{\mu_r}{v^2} \frac{dv}{du} = \frac{\mu_i}{u^2}
+\]
 <div class="model-box">
-\[ m_L = \frac{dv}{du} = \left(\frac{n_1}{n_2}\right) \left(\frac{v}{u}\right)^2 = \left(\frac{n_2}{n_1}\right) m^2 \]
+\[
+m_L = \frac{dv}{du} = \left(\frac{\mu_i}{\mu_r}\right) \left(\frac{v}{u}\right)^2 = \left(\frac{\mu_r}{\mu_i}\right) m^2
+\]
 </div>
 <p>
-Because \( \left(\frac{v}{u}\right)^2 \) and \( \frac{n_1}{n_2} \) are always positive, the longitudinal magnification is always positive. This signifies that the front and rear portions of the object keep their relative order in the image (unlike in plane mirrors where lateral inversion causes 'front' to become 'back').
+Because \( \left(\frac{v}{u}\right)^2 \) and \( \frac{\mu_i}{\mu_r} \) are always positive, the longitudinal length relation is always positive.
+</p>
+<p>
+This signifies that the front and rear portions of the object keep their relative order in the image (unlike in mirrors where lateral inversion causes 'front' to become 'back').
 </p>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>
 </footer>
-
 </div>
 </body>
 </html>

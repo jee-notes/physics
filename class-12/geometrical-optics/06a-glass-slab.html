@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glass Slab | Plane surface Refraction</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./09-prisms.html" class="back-btn">
+<span>&larr;</span> Back to Plane surface Refraction
+</a>
+</nav>
+<h1>Glass Slab</h1>
+<p class="subtitle">
+Simplest  case of sequential plane surface refraction.
+</p>
+<section>
+<h2>Refraction through a Rectangular Glass Slab</h2>
+<p>
+When a ray of light passes through a rectangular glass slab bounded by parallel faces, it undergoes refraction twice: once when entering the slab and again when exiting it.
+</p>
+<p>
+Assuming the medium on both sides of the slab is the same (e.g., air), the emergent ray is parallel to the incident ray. Because the two refractions occur at parallel interfaces with opposite relative refractive indices, the total deviation is zero (\(\delta = 0\)). However, the emergent ray is laterally shifted relative to the incident path.
+</p>
+<div class="model-box">
+<h3>Lateral Shift (\(x\))</h3>
+<p>
+The perpendicular distance between the original path of the incident ray and the path of the emergent ray is called the lateral shift.
+Let \(t\) be the thickness of the glass slab, \(i\) the angle of incidence, and \(r\) the angle of refraction at the first interface. The lateral shift is derived from geometry:
+</p>
+\[ x = \frac{t \cdot \sin(i - r)}{\cos r} \]
+<p>
+For small angles of incidence (where \(\sin \theta \approx \theta\) and \(\cos \theta \approx 1\)), and using \( i \approx n \cdot r \):
+</p>
+\[ x \approx t \cdot i \left(1 - \frac{1}{n}\right) \]
+<p>
+Where \(n\) is the refractive index of the slab relative to the surrounding medium.
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

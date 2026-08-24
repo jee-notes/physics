@@ -16,66 +16,224 @@
 </nav>
 <h1>Refraction at Plane Surfaces</h1>
 <p class="subtitle">
-The bending of light when it crosses the boundary between two transparent media.
+Object-Image relation for plane surface refraction.
 </p>
+<section>
+<h2>Refraction at a Plane Surface</h2>
+<p>
+When a ray of light is incident on a plane boundary between two optical media, it undergoes refraction.
+</p>
+<p>
+In our syllabus, refraction at plane surfaces appears in three main situations:
+</p>
+<ul class="model-box">
+<li><strong>Single Surface</strong> — Apparent Depth</li>
+<li><strong>Glass Slab</strong> — Emergent Ray</li>
+<li><strong>Prism</strong> — Emergent Ray</li>
+</ul>
+<p>
+A glass slab and a prism involve <strong>sequential refraction</strong> at two boundary surfaces. We therefore study them separately as problems involving the <strong>emergent ray</strong>.
+</p>
+<p>
+The prism is the most complicated of these systems and is treated separately.
+</p>
+<div class="insightbox">
+Refraction at a plane surface is often difficult to teach not because the mathematics is inherently complicated, but because the physical examples can obscure the underlying model.<br>
+Students may focus too much on reproducing the exact physical situation rather than first identifying the mathematical assumptions being made.<br>
+For example, in apparent-depth problems involving a fish and a bird, the fish and the bird are treated as <strong>point objects</strong>.<br>
+The problem is therefore about a generic object-image relation for refraction at a plane surface, not about the detailed physical geometry of a real fish or bird.
+</div>
+</section>
 <section>
 <h2>Real and Apparent Depth</h2>
 <p>
-When an object placed in a denser medium (like water) is viewed from a rarer medium (like air) almost normally, it appears to be raised from its actual depth. This is a direct consequence of refraction bending rays away from the normal as they exit the denser medium into the observer's eye.
+Real and apparent depth is the simplest case of <strong>refraction at a single plane surface</strong>. The analysis uses the <strong>paraxial-ray approximation</strong>.
 </p>
-<div class="model-box">
+<p>
+A common difficulty in this topic is remembering the formula correctly. Students often try to obtain the plane-surface relation by taking the spherical-surface refraction formula and putting \(R=\infty\).
+</p>
+<p>
+Since the spherical-surface formula is more complicated, and is not understood fully, the confusion in spherical refraction topic is also carried over.
+</p>
+<p>
+The usual textbook treatment introduces the idea through a specific example: an object inside water viewed from air. This can make the result appear to be a special formula for "apparent depth". However, the underlying system is more general.
+</p>
+<p>
+The generic problem is simply <strong>object-image formation by refraction at a plane surface</strong>, described using the standard sign convention.
+</p>
+<p>
+\(u\) is the object distance measured from the pole. It is negative when measured opposite to the direction of the incident rays. Similarly, \(v\) is the image distance measured from the pole and is negative when measured opposite to the direction of the incident rays. The first confusion is that students think that the direction of the <strong>refracted ray</strong> is used to determine the sign of \(v\). This is not true. For both, \(u\) and \(v\) , the convention is to be measured from pole and for sign, direction of incident ray is to be considered.
+</p>
+<p>
+For a plane surface, the pole can be regarded as lying anywhere on the surface because all the normals to the surface are parallel. Thus, the surface itself serves as the reference for the pole. Thus, for a plane surface, the "pole" is the entire surface line and not a single point. To measure object and image distances, we are measuring the perpendicular distance from the line rather than point-to-point distance.  
+</p>
+<p>
+For the usual real-object case,
+</p>
+\[
+\text{Real depth}=|u| \qquad \text{Apparent depth}=|v|
+\]
+<p>
+But, as per convention, both \(u\) and \(v\) are negative in the case of real object, virtual image.
+</p>
+<div class="insightbox">
+In general, for reflection and refraction both, \(u\) is always negative for a real object.<br>
+In reflection, \(v\) is always negative for a real image. In refraction, \(v\) is always positive for a real image.<br>
+The fish-bird example is the case of real object, virtual image.<br>
+Plane surface reflection and refraction are similar regarding nature of object-image. Real object will form virtual image and virtual object will form real image always. 
+</div>
+<p>
+We also use a medium-based notation for refractive indices. \(\mu_i\) denotes the refractive index of the medium containing the <strong>incident rays</strong>, while \(\mu_r\) denotes the refractive index of the medium containing the <strong>refracted rays</strong>.
+</p>
 <h3>Apparent Depth Relation</h3>
 <p>
-Let an object \(O\) be at a real depth \(d\) in a medium of refractive index \(n_2\). An observer is looking from a rarer medium of refractive index \(n_1\) (\(n_1 < n_2\)). The apparent depth \(d'\) at which the virtual image \(I\) is formed is given by:
+Consider a point object \(O\) at a real depth \(d\), so that \(u=-d\) in a medium of refractive index \(\mu_i\). The refracted rays enter a medium of refractive index \(\mu_r\), where the observer is placed.
 </p>
-\[ d' = d \left(\frac{n_1}{n_2}\right) \]
-<p>
-If the observer is in air (\(n_1 \approx 1\)), the formula simplifies to:
-\[ d' = \frac{d}{n} \]
-Where \(n\) is the refractive index of the denser medium.
-</p>
-<hr>
-<h3>Apparent Shift (\(x\))</h3>
-<p>
-The apparent shift or apparent displacement is the distance by which the object appears to be raised.
-</p>
-\[ x = \text{Real Depth} - \text{Apparent Depth} = d - d' \]
-\[ x = d \left(1 - \frac{n_1}{n_2}\right) \]
-<p>Or for an observer in air: \( x = d \left(1 - \frac{1}{n}\right) \) .</p>
-</div>
 <div class="insightbox">
-The converse is also true: if an object in a rarer medium (like a bird in air) is viewed by an observer in a denser medium (like a fish in water), the object appears farther away than its real height. The apparent height becomes \(h' = n \cdot h\), meaning the object appears shifted upward.
+The relation is not fundamentally about a <strong>real object and a real observer</strong>.<br>
+It is about the two media involved in the refraction: which medium contains the incident rays and which medium contains the refracted rays.<br>
+This formulation is more general and can be applied even when the object is virtual or when the observer is not the relevant reference.
+</div>
+<p>
+For a ray reaching the interface at a transverse distance \(x\) from the principal axis,
+</p>
+\[
+\tan i=\frac{x}{u} \qquad \tan r=\frac{x}{v}
+\]
+<p>
+Different rays will have different values of \(i\) and therefore produce different values of \(v\). To obtain a single well-defined image position, we use the <strong>paraxial approximation</strong>, corresponding to <strong>normal viewing:</strong>
+</p>
+\[
+\tan i\approx\sin i \qquad \tan r\approx\sin r
+\]
+<p>
+Using Snell's law,
+</p>
+\[
+\mu_i\sin i=\mu_r\sin r
+\]
+<p>
+we obtain
+</p>
+\[
+\boxed{v=u\left(\frac{\mu_r}{\mu_i}\right)}
+\]
+<p>
+As \(\mu_r\) and \(\mu_i\) are always positive, sign of \(v\) is always same as sign of \(u\) .  
+</p>
+</section>
+<section>
+<h2>Extended Object</h2>
+<p>
+For an extended object, we need to determine how refraction transforms its dimensions.
+</p>
+<p>
+If the object is extended in the <strong>transverse plane</strong>, all points of the object have the same object distance \(u\). Since
+\[
+v=u\left(\frac{\mu_r}{\mu_i}\right)
+\]
+all points therefore have the same image distance \(v\). The entire object is consequently displaced parallel to the surface, without any change in its transverse size. Its similar to translational motion parallel to the surface.
+</p>
+<p>
+Thus, the <strong>transverse magnification</strong> is
+\[
+m=+1
+\]
+This is similar to a plane mirror, where the transverse magnification is also \(+1\). However, for a plane mirror,
+\[
+m=-\frac{v}{u}
+\]
+whereas this relation does not apply to plane-surface refraction.
+</p>
+<p>
+If the object is extended along the <strong>principal axis</strong>, the two ends of the object generally have different values of \(u\), and hence different image positions. Applying the plane-surface relation to both ends gives
+</p>
+\[
+\boxed{\Delta l_i=\Delta l_o\left(\frac{\mu_r}{\mu_i}\right)}
+\]
+<p>
+where \(\Delta l_o\) is the object length along the principal axis and \(\Delta l_i\) is the corresponding image length.
+</p>
+<p>
+The two lengths have the <strong>same sense</strong>; the image is not inverted (like in plane mirror). This follows from the fact that \(\mu_i\) and \(\mu_r\) are always positive, so the mapping
+\[
+v=u\left(\frac{\mu_r}{\mu_i}\right)
+\]
+preserves the ordering of points along the principal axis.
+</p>
+</section>
+<section>
+<h2>Relating Instantaneous Velocities</h2>
+<p>
+For velocity, we resolve it into components in the transverse plane and along the principal axis.
+</p>
+<p>
+The transverse dimensions are unchanged by plane-surface refraction. Therefore, every transverse coordinate of the image is equal to the corresponding coordinate of the object:
+</p>
+\[
+\mathbf{r}_{i,\perp}=\mathbf{r}_{o,\perp}
+\]
+<p>
+Differentiating with respect to time,
+</p>
+\[
+\boxed{\mathbf{v}_{i,\perp}=\mathbf{v}_{o,\perp}}
+\]
+<p>
+Thus, the transverse component of image velocity is the same as the transverse component of object velocity.
+</p>
+<p>
+Along the principal axis, the object-image relation is
+</p>
+\[
+v=u\left(\frac{\mu_r}{\mu_i}\right)
+\]
+<p>
+where \(u\) and \(v\) are the signed positions of the object and image. Since the refractive indices are constant for a fixed pair of media, differentiating with respect to time gives
+</p>
+\[
+\boxed{v_{i,\parallel}=v_{o,\parallel}\left(\frac{\mu_r}{\mu_i}\right)}
+\]
+<p>
+Therefore, the image velocity is obtained by applying a different scale factor to the two components:
+</p>
+\[
+\boxed{\mathbf{v}_{i,\perp}=\mathbf{v}_{o,\perp} \qquad v_{i,\parallel}=v_{o,\parallel}\left(\frac{\mu_r}{\mu_i}\right)}
+\]
+<div class="insightbox">
+Plane-surface refraction therefore transforms velocity anisotropically: the transverse component is unchanged, while the component along the principal axis is scaled by \(\mu_r/\mu_i\).
 </div>
 </section>
 <section>
-<h2>Refraction through a Rectangular Glass Slab</h2>
+<h2>Apparent Shift (\(x\))</h2>
 <p>
-When a ray of light passes through a rectangular glass slab bounded by parallel faces, it undergoes refraction twice: once when entering the slab and again when exiting it.
+The apparent shift, or apparent displacement, is the distance through which the object appears to be displaced from its real position. We consider shift as per sign convention. Shift in the direction of incident ray is positive. If shift is \(x\) then: 
 </p>
+\[
+x = v - u
+\]
+\[
+\boxed{x=u\left(\frac{\mu_r}{\mu_i} - 1\right)}
+\]
 <p>
-Assuming the medium on both sides of the slab is the same (e.g., air), the emergent ray is parallel to the incident ray. Because the two refractions occur at parallel interfaces with opposite relative refractive indices, the total deviation is zero (\(\delta = 0\)). However, the emergent ray is laterally shifted relative to the incident path.
+For the usual case in which an object submerged in water appears raised when normal viewing from air, \(u\) is negative and so the real depth \(d=-u\). So:
 </p>
-<div class="model-box">
-<h3>Lateral Shift (\(x\))</h3>
+\[
+\text{Shift} = d\left(1-\frac{\mu_r}{\mu_i}\right) \qquad \text{d is Real Depth}
+\]
 <p>
-The perpendicular distance between the original path of the incident ray and the path of the emergent ray is called the lateral shift.
-Let \(t\) be the thickness of the glass slab, \(i\) the angle of incidence, and \(r\) the angle of refraction at the first interface. The lateral shift is derived from geometry:
+This shift is shift along the principal axis and is different from the lateral shifting of rays by a glass slab as we shall learn further.
 </p>
-\[ x = \frac{t \cdot \sin(i - r)}{\cos r} \]
-<p>
-For small angles of incidence (where \(\sin \theta \approx \theta\) and \(\cos \theta \approx 1\)), and using \( i \approx n \cdot r \):
-</p>
-\[ x \approx t \cdot i \left(1 - \frac{1}{n}\right) \]
-<p>
-Where \(n\) is the refractive index of the slab relative to the surrounding medium.
-</p>
+<div class="insightbox">
+Shift is just a different approach to determine the same thing.<br>
+Shift is a specific application of real and apparent depth. Rather than finding out the real and apparent depth first and then subtracting, we can directly use shift formula depending on the question.<br>
+It is specifically useful when more than 1 medium distance is relevant. like e.g. multi-medium thickness or observer distance is important etc.
 </div>
 </section>
 <section>
-<h2>Main Topics</h2>
+<h2>Sub Topics</h2>
 <div class="chapter-list">
-<a href="./02a-reflection-fermat.html">1. Fermat's Principle - Unfolding</a>
-<a href="./02b-reflection-vector.html">2. Vector - Collision Approach</a>
+<a href="./06a-glass-slab.html">1. Glass Slab</a>
 </div>
 </section>
 <footer>

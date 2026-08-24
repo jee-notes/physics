@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prism System | Prism</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./09-prisms.html" class="back-btn">
+<span>&larr;</span> Back to Prism
+</a>
+</nav>
+<h1>Prism System</h1>
+<p class="subtitle">
+The mathematical system of equations of a prism.
+</p>
+<section>
+<h2>Prism System is Complex</h2>
+<p>
+The prism system may appear mathematically complex because the ray undergoes <strong>sequential refractions</strong> at two surfaces, with the output of one interaction becoming the input to the next.
+</p>
+<p>
+However, the mathematical dependency is straightforward. The incident angle \(i\) determines \(r_1\) through Snell's law, \(r_1\) determines \(r_2\) through the prism geometry, and \(r_2\) determines the emergent angle \(e\) through Snell's law, provided the ray can emerge.
+</p>
+<p>
+This topic is therefore about learning how to <strong>track this sequence of equations</strong>.
+</p>
+</section>
+<section>
+<h2>Simplest Case</h2>
+<p>
+The simplest case is best to understand the prism system. Let the incident and emerging media be the same, with refractive index \(\mu_S\). The refractive index of the prism is \(\mu_P\), its apex angle is \(A\), and the angle of incidence \(i\) is known. We want to determine the angle of emergence \(e\).
+</p>
+<p>
+At first, the system may appear to involve too many variables, especially because the ray may or may not emerge from the second surface depending on whether total internal reflection occurs. The solution is simple: <strong>just follow the incident ray through the system.</strong>
+</p>
+<p>
+At the first surface, the ray undergoes refraction according to Snell's law:
+</p>
+\[
+\mu_S\sin i=\mu_P\sin r_1
+\]
+<p>
+This determines \(r_1\). We can then determine \(r_2\) from the prism geometry:
+</p>
+\[
+A=r_1+r_2 \qquad\Rightarrow\qquad r_2=A-r_1
+\]
+<p>
+Up to this point, we have used only physical laws and geometric constraints. The prism angle \(A\) acts as the geometric constraint relating the two internal angles \(r_1\) and \(r_2\).
+</p>
+<p>
+Before determining the emergent angle, we must check whether the ray can emerge from the second surface. For this, we determine the critical angle:
+</p>
+\[
+\mu_P\sin\theta_c=\mu_S\sin90^\circ \qquad\Rightarrow\qquad \sin\theta_c=\frac{\mu_S}{\mu_P}
+\]
+<p>
+If
+\[
+r_2>\theta_c
+\]
+the ray undergoes total internal reflection and there is no emergent ray. Otherwise, the ray emerges and we apply Snell's law at the second surface:
+</p>
+\[
+\mu_P\sin r_2=\mu_S\sin e
+\]
+<p>
+Finally, if the deviation \(\delta\) is required,
+</p>
+\[
+\delta=i+e-A
+\]
+</section>
+<section>
+<h2>Relations</h2>
+<p>
+The mathematical system is clear - 6 unknowns and 3 independent relations. Or 7 unknowns if we include deviation and 4 independent relations. To determine all unknowns, we need other information. Else, a relation between unknowns may be asked.
+</p>
+<div class="examplebox">
+<h3>Example: Relation Between Emergent Angle and Refractive Index</h3>
+<p>
+A ray is incident from air on an equilateral prism with angle of incidence \(i=45^\circ\). The prism angle is \(A=60^\circ\), and its refractive index is \(\mu_P\). The incident and emerging medium is air, so \(\mu_S=1\). The emergent angle \(e\) is not known. Find the mathematical relation between \(e\) and \(\mu_P\).
+</p>
+<p>
+We do not need to determine every angle separately. Simply follow the ray through the prism.
+</p>
+<p>
+At the first surface, Snell's law gives:
+</p>
+\[
+\sin45^\circ=\mu_P\sin r_1
+\]
+<p>
+Therefore,
+</p>
+\[
+\sin r_1=\frac{1}{\sqrt{2}\mu_P}\qquad\cos r_1=\frac{\sqrt{2\mu_P^2-1}}{\sqrt{2}\mu_P}
+\]
+<p>
+The prism geometry gives:
+</p>
+\[
+A=r_1+r_2
+\]
+<p>
+Hence,
+</p>
+\[
+r_2=60^\circ-r_1
+\]
+<p>
+Since the ray is stated to emerge from the second surface, Snell's law can be applied there:
+</p>
+\[
+\sin e=\mu_P\sin r_2=\mu_P\sin(60^\circ-r_1)
+\]
+<p>
+Using
+\[
+\sin(60^\circ-r_1)=\sin60^\circ\cos r_1-\cos60^\circ\sin r_1
+\]
+we obtain
+</p>
+\[
+\sin e=\frac{\sqrt{3}\sqrt{2\mu_P^2-1}-1}{2\sqrt{2}}
+\]
+<p>
+Thus the prism system gives the relation
+</p>
+\[
+\boxed{\sin e=\frac{\sqrt{3}\sqrt{2\mu_P^2-1}-1}{2\sqrt{2}}}
+\]
+<p>
+The important point is that \(e\) and \(\mu_P\) need not be known individually. The prism equations establish a <strong>mathematical relation between them</strong>.
+</p>
+<h3>
+What is the maximum value of \(\mu_P\) for which the ray can emerge?
+</h3>
+<p>
+For the ray to emerge, the maximum possible value of \(e\) is \(90^\circ\). Therefore, at the limiting condition,
+</p>
+\[
+\sin e=1
+\]
+<p>
+Using the relation obtained above,
+</p>
+\[
+\frac{\sqrt{3}\sqrt{2\mu_P^2-1}-1}{2\sqrt{2}}=1
+\]
+<p>
+which gives
+</p>
+\[
+\sqrt{2\mu_P^2-1}=\frac{1+2\sqrt{2}}{\sqrt{3}}
+\]
+<p>
+Hence,
+</p>
+\[
+2\mu_P^2=\frac{12+4\sqrt{2}}{3}
+\]
+\[
+\boxed{\mu_{P,\max}=\sqrt{\frac{6+2\sqrt{2}}{3}}}
+\]
+<p>
+<strong>(3) Find the percentage change in \(e\) if \(\mu_P\) increases by \(1\%\) at\(\mu_P=\sqrt{2}\).</strong>
+</p>
+<p>
+From
+\[
+\sin e=\frac{\sqrt{3}\sqrt{2\mu_P^2-1}-1}{2\sqrt{2}}
+\]
+at \(\mu_P=\sqrt{2}\),
+</p>
+\[
+\sin e=\frac{1}{\sqrt{2}}
+\]
+<p>
+so
+</p>
+\[
+e=45^\circ=\frac{\pi}{4}
+\]
+<p>
+Differentiate the relation with respect to \(\mu_P\):
+</p>
+\[
+\cos e\,\frac{de}{d\mu_P}=\frac{\sqrt{3}\mu_P}{\sqrt{2}\sqrt{2\mu_P^2-1}}
+\]
+<p>
+At
+\[
+\mu_P=\sqrt{2},
+\qquad e=45^\circ,
+\]
+this gives
+</p>
+\[
+\frac{de}{d\mu_P}=\sqrt{2}.
+\]
+<p>
+A \(1\%\) increase in \(\mu_P\) gives
+</p>
+\[
+\Delta\mu_P=0.01\sqrt{2}
+\]
+<p>
+and therefore, for a small change,
+</p>
+\[
+\Delta e
+\approx
+\frac{de}{d\mu_P}\Delta\mu_P
+=
+\sqrt{2}(0.01\sqrt{2})
+=
+0.02\text{ rad}.
+\]
+<p>
+Hence the percentage change in \(e\) is
+</p>
+\[
+\frac{\Delta e}{e}\times100
+=
+\frac{0.02}{\pi/4}\times100
+\approx 2.55\%.
+\]
+\[
+\boxed{\text{Percentage change in }e\approx2.55\%}
+\]
+<div class="insightbox">
+The important point is that once the prism system gives the relation between \(e\) and \(\mu_P\), the same relation can be used to answer different questions: finding a variable, finding the limiting condition for transmission, or studying the sensitivity of one variable to another.
+</div>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

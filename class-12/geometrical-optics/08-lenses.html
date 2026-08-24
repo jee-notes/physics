@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thin Lenses | Geometrical Optics</title>
+<title>Lenses | Geometrical Optics</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,45 +14,160 @@
 <span>&larr;</span> Back to Geometrical Optics
 </a>
 </nav>
-
 <h1>Lenses</h1>
 <p class="subtitle">
 Image formation by transparent media bounded by spherical surfaces.
 </p>
 <section>
-<h2>Introduction to Thin Lenses</h2>
+<h2>Introduction to Lenses</h2>
 <p>
-A lens is a transparent optical medium bounded by two surfaces, at least one of which is spherical. Lenses are fundamentally categorized into two main types based on their shape and how they affect a parallel beam of light:
+A lens is a transparent optical medium bounded by two surfaces, at least one of which is spherical.
 </p>
-<ul>
-<li><strong>Convex Lens (Converging):</strong> Thicker in the middle and thinner at the edges. Examples include bi-convex, plano-convex, and concavo-convex lenses.</li>
-<li><strong>Concave Lens (Diverging):</strong> Thinner in the middle and thicker at the edges. Examples include bi-concave, plano-concave, and convexo-concave lenses.</li>
+<p>
+Physically, a lens is similar to a glass slab, but with curved bounding surfaces. Therefore, a lens involves <strong>sequential refraction at two surfaces</strong>, and we are ultimately concerned with the <strong>emergent ray</strong> produced by the two refractions.
+</p>
+<p>
+The curvature of the surfaces is the key geometric difference between a lens and a plane-parallel slab. Although the difference may appear small physically, it fundamentally changes how a beam of light—that is, a system of rays—is transformed by the lens.
+</p>
+<p>
+Based on this optical behaviour, lenses are fundamentally classified according to how they transform a parallel beam of incident paraxial rays:
+</p>
+<ul class="model-box">
+<li><strong>Converging Lens:</strong> A parallel beam of incident paraxial rays emerges as a converging beam and meets at the principal focus.</li>
+<li><strong>Diverging Lens:</strong> A parallel beam of incident paraxial rays emerges as a diverging beam, whose backward extensions appear to originate from the principal focus.</li>
 </ul>
-<div class="concept-box">
-<p><strong>Key Terminologies:</strong></p>
-<ul>
-<li><strong>Optical Center (\(O\)):</strong> A point within or outside the lens through which a ray of light passes without suffering any deviation.</li>
-<li><strong>Principal Axis:</strong> The line passing through the centers of curvature of the two bounding surfaces.</li>
-<li><strong>Principal Focus (\(F\)):</strong> For a convex lens, it is the point where rays parallel to the principal axis converge. For a concave lens, it is the point from which they appear to diverge. Because a lens has two surfaces, it has two principal foci (\(F_1\) and \(F_2\)).</li>
+<p>
+Lenses can also be classified according to their physical geometric shape:
+</p>
+<ul class="model-box">
+<li><strong>Convex Lens:</strong> Thicker at the middle and thinner at the edges. Examples include bi-convex, plano-convex and concavo-convex lenses.</li>
+<li><strong>Concave Lens:</strong> Thinner at the middle and thicker at the edges. Examples include bi-concave, plano-concave and convexo-concave lenses.</li>
 </ul>
-</div>
+<p>
+These two classifications are not fundamentally the same. <strong>Converging/diverging</strong> describes the optical behaviour of the lens, whereas <strong>convex/concave</strong> describes its physical geometry.
+</p>
+<p>
+In the usual setup of a glass lens placed in air, a convex lens is converging and a concave lens is diverging. However, this correspondence is not universal; changing the surrounding medium can change the optical behaviour of the lens.
+</p>
+<h3>Key Terminologies</h3>
+<p>
+A lens is a two-surface optical system, so its important geometrical and optical points are defined by the combined geometry and optical behaviour of its two bounding surfaces.
+</p>
+<ul class="model-box">
+<li><strong>Optical Center (\(O\)):</strong> The optical center is the physically distinguished point of a thin lens through which a ray passes without undergoing any <strong>net angular deviation</strong>. Hence, geometrically its the point where the 2 lens surfaces are parallel.<br>
+Unlike the pole of a single spherical surface, the optical center is not merely a logical reference point chosen for convention. It is a specific physical point determined by the physical geometry of the lens as a two-surface optical system.</li>
+<li><strong>Principal Axis:</strong> The principal axis is the line passing through the centers of curvature \(C_1\) and \(C_2\) of the two spherical surfaces of the lens and the optical center \(O\).<br>
+It is the natural axis of symmetry of the lens system. The principal axis is used as the reference direction for defining object and image positions, focal points, and the paraxial approximation.</li>
+<li><strong>Principal Focus (\(F\)):</strong> A lens has two foci, one on each side of the lens, because light can be incident from either side.<br>
+For a <strong>converging lens</strong>, the principal focus is the point at which a beam of rays parallel to the principal axis converges after emerging from the lens.<br>
+For a <strong>diverging lens</strong>, the principal focus is the point from which a beam of rays parallel to the principal axis appears to diverge when the emergent rays are extended backward.<br>
+The "principality" of the focus depends on the direction of incident light. The two foci are conventionally denoted by \(F_1\) and \(F_2\).</li>
+<li><strong>Focal Length (\(f\)):</strong> The focal length is the signed distance from the optical center \(O\) to the relevant principal focus \(F\):\(f=OF\) . For a converging lens, \(f\gt0\); for a diverging lens, \(f\lt0\) as per sign convention.<br>
+The focal length characterizes the bending power (converging or diverging) of the lens. A smaller \(|f|\) corresponds to a stronger change in the direction of a parallel paraxial beam.</li>
+</ul>
 <div class="insightbox">
-We will exclusively study <strong>Thin Lenses</strong>. A lens is considered "thin" if its maximum thickness is negligible compared to its radii of curvature, object distance, and image distance. For a thin lens, distances can be measured from the optical center \(O\) without significant error.
+<strong>Reference point of the lens:</strong><br>
+For a single spherical surface, object and image distances are measured from its pole \(P\), which serves as the reference point of that surface.<br>
+For a thin lens, the corresponding reference point of the complete two-surface system is its <strong>optical center \(O\)</strong>. Unlike a merely chosen geometrical reference, \(O\) is physically determined by the geometry and optical action of the lens.<br>
+<br>
+<strong>Thin-lens model:</strong><br>
+Throughout this chapter, we treat the lens as a <strong>thin lens</strong>.<br>
+The thickness of the lens is assumed negligible compared with the relevant object distance, image distance, and radii of curvature.<br>
+Consequently, the two refractions can be treated as occurring sufficiently close together that the lens is represented by a single optical center \(O\), from which \(u\), \(v\), and \(f\) are measured.
+</div>
+</section>
+<section>
+<h2>Lens Formula</h2>
+<p>
+Once the focal length \(f\) is known, the position of the image is determined by the <strong>lens formula</strong>, which relates the object distance \(u\), image distance \(v\), and focal length \(f\):
+</p>
+<div class="math-block">
+\[
+\boxed{\frac{1}{v}-\frac{1}{u}=\frac{1}{f}}
+\]
+</div>
+<p>
+Here:
+</p>
+<ul class="model-box">
+<li>\(u\) = signed object distance measured from the optical center \(O\).</li>
+<li>\(v\) = signed image distance measured from the optical center \(O\).</li>
+<li>\(f\) = signed focal length. \(f>0\) for a converging lens and \(f \lt 0\) for a diverging lens.</li>
+</ul>
+<p>
+The lens formula looks different from the spherical-mirror formula
+\[
+\frac{1}{v}+\frac{1}{u}=\frac{1}{f}
+\]
+but the difference is fundamentally due to the different sign conventions for the image and focal point.
+</p>
+<p>
+For a spherical mirror, a real image lies on the same side as the incident rays, so under the Cartesian sign convention a real image has \(v \lt 0\). Similarly, a converging mirror has \(f \lt 0\). For a lens, a real image lies on the opposite side of the optical element from the incident rays, so \(v>0\), and a converging lens has \(f>0\).
+</p>
+<p>
+Thus, relative to the mirror convention, both \(v\) and \(f\) change sign. Replacing
+\[
+v\rightarrow -v,\qquad f\rightarrow -f
+\]
+in the mirror equation gives
+\[
+-\frac{1}{v}+\frac{1}{u}=-\frac{1}{f}
+\]
+or equivalently,
+\[
+\boxed{\frac{1}{v}-\frac{1}{u}=\frac{1}{f}}
+\]
+The familiar lens formula therefore differs by one apparent sign only because <strong>two physical quantities have changed sign under the corresponding optical geometry</strong>.
+</p>
+<h3>Magnification (\(m\))</h3>
+<p>
+Magnification is the transverse scaling factor of the image. It is defined as the ratio of image height \(h_i\) to object height \(h_o\):
+</p>
+<div class="math-block">
+\[
+\boxed{m=\frac{h_i}{h_o}}
+\]
+</div>
+<p>
+For a thin lens, the geometry of the ray passing through the optical center gives
+</p>
+<div class="math-block">
+\[
+\boxed{m=\frac{v}{u}}
+\]
+<p>
+Using the lens formula, this can also be written as
+</p>
+\[
+\boxed{m=\frac{f}{f+u}=\frac{f-v}{f}}
+\]
+</div>
+<h3>Interpreting \(m\) for Lenses</h3>
+<ul class="model-box">
+<li>\(m>0\): the image is <strong>erect</strong> relative to the object.</li>
+<li>\(m \lt 0\): the image is <strong>inverted</strong> relative to the object.</li>
+<li>\(|m|>1\): the image is <strong>enlarged</strong>.</li>
+<li>\(|m| \lt 1\): the image is <strong>diminished</strong>.</li>
+</ul>
+<div class="insightbox">
+\[
+\boxed{m=\frac{v}{u}}
+\]
+A real object has \(u \lt 0\), a real image \((v>0)\) necessarily gives \(m \lt 0\): the image is inverted.<br>
+A virtual image \((v \lt 0)\) gives \(m>0\): the image is erect.
 </div>
 </section>
 <section>
 <h2>Lens Maker's Formula</h2>
 <p>
-The Lens Maker's Formula relates the focal length of a lens to the refractive index of its material and the radii of curvature of its two surfaces. It is derived by considering refraction at the two spherical surfaces successively.
+The Lens Maker's Formula relates the focal length of a lens to the refractive index of its material and the radii of curvature of its two surfaces. It is derived in detail later by considering refraction at the two spherical surfaces successively.
 </p>
-<p>
-Consider a thin lens of refractive index \(\mu_L\) placed in a surrounding medium of refractive index \(\mu_S\). Let \(R_1\) and \(R_2\) be the radii of curvature of the first and second surfaces, respectively.
-</p>
-<div class="model-box">
-<h3>The Lens Maker's Formula</h3>
-\[ \frac{1}{f} = \left( \frac{\mu_L}{\mu_S} - 1 \right) \left( \frac{1}{R_1} - \frac{1}{R_2} \right) \]
-<p>Where:</p>
-<ul>
+<div class="math-block">
+\[
+\frac{1}{f} = \left( \frac{\mu_L}{\mu_S} - 1 \right) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)
+\]
+</div>
+<ul class="model-box">
 <li>\(f\) = focal length of the lens.</li>
 <li>\(\mu_L\) = refractive index of the lens material.</li>
 <li>\(\mu_S\) = refractive index of the surrounding medium.</li>
@@ -60,57 +175,23 @@ Consider a thin lens of refractive index \(\mu_L\) placed in a surrounding mediu
 <li>\(R_1\) = Radius of curvature of the surface upon which light falls first.</li>
 <li>\(R_2\) = Radius of curvature of the second surface.</li>
 </ul>
-<p><em>Proper Cartesian sign convention must be strictly followed for \(R_1, R_2,\) and \(f\).</em></p>
-</div>
+<p>
+Proper Cartesian sign convention must be strictly followed for \(R_1, R_2,\) and \(f\).
+</p>
 <div class="examplebox">
 <h3>Dependence on Surrounding Medium</h3>
 <p>
 The focal length of a lens is not a fixed property; it depends heavily on the medium in which it is placed. If a glass convex lens (\(\mu_L \approx 1.5\)) is placed in water (\(\mu_S \approx 1.33\)), the relative refractive index \(\left(\frac{1.5}{1.33}\right)\) is less than its refractive index in air \(\left(\frac{1.5}{1}\right)\).
 </p>
 <p>
-Consequently, when placed in water, the term \(\left( \frac{\mu_L}{\mu_S} - 1 \right)\) decreases, meaning '1/f' decreases, and therefore the <strong>focal length \(f\) increases</strong> (usually by a factor of 4).
+Consequently, when placed in water, the term \(\left( \frac{\mu_L}{\mu_S} - 1 \right)\) decreases, meaning '1/f' decreases, and therefore the <strong>focal length \(f\) increases</strong>.
 </p>
 <p>
-If the lens is placed in a medium with a refractive index <em>greater</em> than its own material (\(n_m > n_L\)), the term \(\left( \frac{n_L}{n_m} - 1 \right)\) becomes negative. This means <strong>the nature of the lens reverses</strong>: a convex lens begins to act as a diverging concave lens, and a concave lens acts as a converging convex lens.
+If the lens is placed in a medium with a refractive index <strong>greater</strong> than its own material (\(\mu_L \lt \mu_S\)), the term \(\left( \frac{\mu_L}{\mu_S} - 1 \right)\) becomes negative.
 </p>
-</div>
-</section>
-<section>
-<h2>Lens Formula and Lateral Magnification</h2>
 <p>
-Once the focal length \(f\) is known via the Lens Maker's formula, the position of the image is found using the Lens Formula, which connects \(u\), \(v\), and \(f\).
+This means <strong>the nature of the lens reverses</strong>: a convex lens acts as a diverging lens, and a concave lens acts as a converging lens.
 </p>
-<div class="model-box">
-<h3>The Thin Lens Formula</h3>
-\[ \frac{1}{v} - \frac{1}{u} = \frac{1}{f} \]
-<p>Where:</p>
-<ul>
-<li>\(u\) = object distance from the optical center.</li>
-<li>\(v\) = image distance from the optical center.</li>
-<li>\(f\) = focal length. Positive for convex, negative for concave.</li>
-</ul>
-</div>
-<p>
-Notice the difference in sign compared to the mirror formula (which has a plus sign: \(1/v + 1/u = 1/f\)).
-</p>
-<hr>
-<h3>Lateral Magnification (\(m\))</h3>
-<p>
-The lateral (or transverse) magnification is the ratio of image height \(h_i\) to object height \(h_o\). From the geometry of similar triangles passing through the optical center:
-</p>
-<div class="model-box">
-\[ m = \frac{h_i}{h_o} = \frac{v}{u} \]
-<p>Also expressed in terms of focal length:</p>
-\[ m = \frac{f}{f + u} = \frac{f - v}{f} \]
-</div>
-<div class="concept-box">
-<p><strong>Interpreting \(m\) for Lenses:</strong></p>
-<ul>
-<li>\(m\) is <strong>positive</strong>: The image is erect and virtual.</li>
-<li>\(m\) is <strong>negative</strong>: The image is inverted and real.</li>
-<li>\(|m| > 1\): Image is magnified (larger than object).</li>
-<li>\(|m| \lt 1\): Image is diminished (smaller than object).</li>
-</ul>
 </div>
 </section>
 <section>
