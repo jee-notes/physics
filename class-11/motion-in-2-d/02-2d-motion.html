@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2D Motion | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 2D
+</a>
+</nav>
+<h1>2D Motion</h1>
+<p class="subtitle">
+How to identify 2D motion.
+</p>
+<section>
+<h2>Dimensionality of Motion</h2>
+<p>
+2D motion means motion with <strong>two-dimensional spatial extent</strong>. Dimensionality is thus a geometric concept by nature, as it concerns spatial extent.
+</p>
+<p>
+We can geometrically define motion in 1D as motion along a straight line and motion in 2D as motion confined to a flat plane (and non-linear). But can we define dimensionality algebraically?
+</p>
+<div class="insightbox">
+We often hear the definition of 1D motion as: motion in which only 1 independent variable changes. Similarly, 2D motion is defined as motion in which 2 independent variables change. But these are just <strong>consequences</strong> of dimensionality, and not its defining basis.<br>
+The defining basis is geometric.
+</div>
+<p>
+We can algebraically define dimensionality using the mathematical construct of <strong>linear span</strong>, but it would still need geometric definitions of collinear and coplanar.
+</p>
+<p>
+The dimensionality of motion is determined by the <strong>dimension of the space spanned by all possible displacement vectors</strong> of the particle.
+</p>
+<div class="insightbox">
+Note that motion is described by <strong>displacement</strong> rather than position.<br>
+A position vector can be specified with respect to any reference point, such as the North Star or a random point chosen in the ground frame.<br>
+Displacement, on the other hand, represents the change in position between two states:
+\[
+\Delta\vec r=\vec r_2-\vec r_1
+\]
+</div>
+<p>
+If all possible displacement vectors of the particle can be expressed as scalar multiples of a single vector, their span is one-dimensional and the motion is <strong>1D</strong>.
+</p>
+\[
+\boxed{\dim\operatorname{span}\{\Delta\vec r\}=1\quad\Rightarrow\quad \text{1D motion}}
+\]
+<p>
+If the displacement vectors require two linearly independent vectors to span them, their span is two-dimensional and the motion is <strong>2D</strong>.
+</p>
+\[
+\boxed{\dim\operatorname{span}\{\Delta\vec r\}=2\quad\Rightarrow\quad \text{2D motion}}
+\]
+<p>
+Thus, the dimensionality of motion is a property of the <strong>spatial extent of the motion</strong>, not simply the number of variables used to describe its path.
+</p>
+</section>
+<section>
+<h2>Vector-based Classification</h2>
+<p>
+Another way to classify the dimensionality of motion is through the relationship between its velocity and acceleration vectors.
+</p>
+<p>
+Let \(\vec v(t)\) be the instantaneous velocity and \(\vec a(t)\) the instantaneous acceleration of a moving body. We consider <strong>smooth motion</strong> for which velocity and acceleration have finite values at every instant.
+</p>
+<p>
+For <strong>1D motion</strong>, the velocity always remains along the same straight line. Therefore, the acceleration can only be parallel or anti-parallel to the velocity:
+</p>
+\[
+\boxed{\vec v(t)\times\vec a(t)=0}
+\]
+<p>
+Thus, if this relation holds at all instants, the direction of velocity never changes and the motion remains along a single straight line.
+</p>
+<p>
+For <strong>2D motion</strong>, the velocity and acceleration vectors always remain in the same fixed plane. Hence, their cross product is normal to that plane. Its magnitude may change with time, but its direction remains fixed.
+</p>
+<p>
+Therefore, choose an instant \(t_1\) at which
+\[
+\vec v(t_1)\times\vec a(t_1)\neq0
+\]
+For the motion to remain 2D, the normal obtained at any other instant must be parallel or anti-parallel to this reference normal:
+</p>
+\[
+\boxed{\left[\vec v(t)\times\vec a(t)\right]\times\left[\vec v(t_1)\times\vec a(t_1)\right]=0}
+\]
+<p>
+Thus, the direction of \(\vec v\times\vec a\) must remain fixed throughout the motion.
+</p>
+</section>
+<section>
+<h2>Orthogonality</h2>
+<p>
+The reason we study 1D and 2D motion separately is mathematical. The mathematical framework used to describe 1D motion is simpler than that required for 2D motion because, in 2D, we need to track two spatial dimensions simultaneously.
+</p>
+<p>
+The major mathematical tool that allows us to track these two dimensions independently is <strong>orthogonality</strong>.
+</p>
+<p>
+The special role of \(90^\circ\) comes from the fact that it is exactly halfway between two opposite directions separated by \(180^\circ\). Thus, two perpendicular directions provide two independent directions in a plane.
+</p>
+<p>
+Geometrically, consider a line segment joining two points. Every point on the perpendicular bisector of this segment is equidistant from its two endpoints. Moving along this perpendicular direction therefore does not make the point closer to one endpoint and farther from the other; the two distances change in the same way.
+</p>
+<p>
+Algebraically, this independence can be seen from the resultant formula:
+</p>
+\[
+R^2=a^2+b^2+2ab\cos\theta
+\]
+<p>
+Suppose \(a\) and \(\theta\) are kept constant while the magnitude \(b\) is changed. Then
+</p>
+\[
+2R\frac{dR}{db}=2b+2a\cos\theta
+\]
+<p>
+so
+</p>
+\[
+\frac{dR}{db}=\frac{b+a\cos\theta}{R}
+\]
+<p>
+For perpendicular vectors,
+</p>
+\[
+\theta=90^\circ \qquad \Rightarrow \qquad \cos\theta=0
+\]
+<p>
+and therefore
+</p>
+\[
+\boxed{\frac{dR}{db}=\frac{b}{R}}
+\]
+<p>
+The effect of changing \(b\) is now independent of \(a\). Similarly,
+</p>
+\[
+\boxed{\frac{dR}{da}=\frac{a}{R}}
+\]
+<p>
+so the effect of changing \(a\) is independent of \(b\).
+</p>
+<div class="insightbox">
+<strong>Orthogonality makes the effect of a change in the magnitude of one component independent of the magnitude of the other component.</strong><br>
+This mathematical independence is the key reason perpendicular components are so useful for tracking two dimensions separately.
+</div>
+</section>
+<section>
+<h2>Examples of 2D Motion</h2>
+<p>
+When we talk about 2D motion, we are talking about the motion of a <strong>point body</strong>, not the motion of an extended body. Any smooth motion confined to a flat plane is an example of 2D motion.
+</p>
+<p>
+In our syllabus, the main examples are <strong>projectile motion</strong> and <strong>circular motion</strong>.
+</p>
+<p>
+Projectile motion is an example of <strong>constant-acceleration motion in 2D</strong>. It can be viewed as an extension of the motion under gravity studied earlier in 1D, with the additional spatial dimension now taken into account.
+</p>
+<p>
+Uniform circular motion is a special type of motion because its <strong>speed remains constant</strong> while the direction of its velocity continuously changes.
+</p>
+<p>
+The motion of a point body along a straight line is called <strong>rectilinear motion</strong>, while general motion of a point body along a curved path (in 2D or 3D) is called <strong>curvilinear motion</strong>.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

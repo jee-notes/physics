@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematics of 2D Motion | Motion in 2D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 2D
+</a>
+</nav>
+<h1>Kinematics of 2D Motion</h1>
+<p class="subtitle">
+Describing vector relations for position, velocity and acceleration.
+</p>
+<section>
+<h2>Kinematics</h2>
+<p>
+In general, kinematics is concerned with the mathematical description of <strong>position, velocity, and acceleration</strong>.
+</p>
+<p>
+The kinematics of 2D (and 3D) motion is more general than that of 1D motion because the position is no longer restricted to a single spatial extent.
+</p>
+<p>
+The primary quantity to be formulated is <strong>position</strong>. The descriptions of velocity and acceleration then follow by definition from how position changes with time.
+</p>
+<p>
+We take cues from coordinate geometry to describe position mathematically in 2D. In Cartesian geometry, the coordinates of a point \(P\) in the \(xy\)-plane are \((x,y)\), and these coordinates specify its location in the plane.
+</p>
+<p>
+The position vector of a point \(P(x,y)\) can therefore be written as
+</p>
+\[
+\vec r=x\hat i+y\hat j
+\]
+<p>
+where \(\hat i\) is the unit vector along the \(+x\)-axis and \(\hat j\) is the unit vector along the \(+y\)-axis.
+</p>
+<p>
+In general, a vector can be written in magnitude-unit-vector form as
+</p>
+\[
+\vec r=r\hat r \qquad r=|\vec r|
+\]
+<p>
+But when we write
+</p>
+\[
+\vec r=x\hat i+y\hat j
+\]
+<p>
+we have resolved the vector into two component directions. In fact,
+</p>
+\[
+\hat r=\frac{x}{r}\hat i+\frac{y}{r}\hat j
+\]
+<p>
+so the resolved form simply expresses the same vector in terms of the chosen component directions.
+</p>
+<p>
+The resolved form is like a sorted form of a vector: instead of describing the vector only by its overall magnitude and direction, we express it separately along the chosen directions.
+</p>
+<p>
+The position vector of a point \(P(x,y)\) in the 2D plane is drawn from the chosen origin \((0,0)\) to the point \(P(x,y)\). It specifies the position of the particle relative to that origin.
+</p>
+\[
+\vec r=x\hat i+y\hat j
+\]
+<p>
+Its magnitude is
+</p>
+\[
+|\vec r|=\sqrt{x^2+y^2}
+\]
+<p>
+and if it makes an angle \(\theta\) with the \(+x\)-axis, then
+</p>
+\[
+\tan\theta=\frac{y}{x}
+\]
+</section>
+<section>
+<h2>Displacement Vector</h2>
+<p>
+The displacement vector immediately highlights the advantage of a resolved position vector. Consider a particle whose position changes from \(\vec r_i\) to \(\vec r_f\).
+</p>
+<p>
+If we write the initial and final position vectors in magnitude-unit-vector form,
+</p>
+\[
+\vec r_i=r_i\hat r_i \qquad \vec r_f = r_f\hat r_f
+\]
+<p>
+then the displacement is
+</p>
+\[
+\vec s=\vec r_f-\vec r_i
+\]
+<p>
+To subtract the two vectors in this form, we need their magnitudes as well as the angular relation between their directions.
+</p>
+<p>
+However, if we write the same position vectors in terms of the fixed component directions,
+</p>
+\[
+\vec r_i=x_i\hat i+y_i\hat j \qquad \vec r_f=x_f\hat i+y_f\hat j
+\]
+<p>
+then the subtraction becomes directly
+</p>
+\[
+\vec s=\vec r_f-\vec r_i=(x_f-x_i)\hat i+(y_f-y_i)\hat j
+\]
+<p>
+When the particle moves from \(P_1(x_1,y_1)\) to \(P_2(x_2,y_2)\), its displacement is therefore
+</p>
+\[
+\Delta\vec r=\vec r_2-\vec r_1=(x_2-x_1)\hat i+(y_2-y_1)\hat j
+\]
+\[
+\Delta\vec r=\Delta x\hat i+\Delta y\hat j
+\]
+<p>
+The magnitudes and directions of the two position vectors are already encoded in their scalar components. We therefore do not need to separately determine the angle between the two position vectors before performing the subtraction. The vector subtraction is reduced to ordinary algebraic subtraction of the corresponding components.
+</p>
+<div class="insightbox">
+The advantage of a resolved representation is that directional information is already organized into fixed component directions.<br>
+Vector addition or subtraction can therefore be carried out directly on the scalar components.<br>
+It is exactly similar to simultaneously tracking two separate 1D displacements.
+</div>
+</section>
+<section>
+<h2>Velocity Vector</h2>
+<p>
+We know that the position vector \(\vec r\) of a particle moving smoothly in a 2D plane is given by
+</p>
+\[
+\vec r=x\hat i+y\hat j
+\]
+<p>
+By definition, velocity is the rate of change of position with time. Thus, the <strong>instantaneous velocity vector</strong> \(\vec v\) is
+</p>
+\[
+\vec v=\frac{d\vec r}{dt}=\frac{d}{dt}(x\hat i+y\hat j)=\frac{dx}{dt}\hat i+\frac{dy}{dt}\hat j
+\]
+\[
+\vec v=v_x\hat i+v_y\hat j \qquad v_x=\frac{dx}{dt} \qquad v_y=\frac{dy}{dt}
+\]
+<p>
+Thus, the velocity of a 2D particle can be tracked as two separate 1D velocity components, \(v_x\) and \(v_y\).
+</p>
+<p>
+The instantaneous velocity vector is always <strong>tangential</strong> to the particle's trajectory at that instant.
+</p>
+<p>
+To see this algebraically, let \(\theta\) be the angle that \(\vec v\) makes with the \(+x\)-axis. Since
+</p>
+\[
+\vec v=v_x\hat i+v_y\hat j
+\]
+<p>
+we have
+</p>
+\[
+\tan\theta=\frac{v_y}{v_x}
+\]
+<p>
+On the other hand, if the trajectory is described by
+</p>
+\[
+y=f(x)
+\]
+<p>
+then the slope of its tangent at any point is
+</p>
+\[
+\frac{dy}{dx}
+\]
+<p>
+Since
+</p>
+\[
+v_x=\frac{dx}{dt} \qquad v_y=\frac{dy}{dt}
+\]
+<p>
+we get
+</p>
+\[
+\frac{dy}{dx}=\frac{dy/dt}{dx/dt}=\frac{v_y}{v_x}=\tan\theta
+\]
+<p>
+Therefore, the slope of the trajectory is the same as the slope of the velocity vector. Hence, the instantaneous velocity vector is always directed along the <strong>tangent to the trajectory</strong>.
+</p>
+</section>
+<section>
+<h2>Acceleration Vector</h2>
+<p>
+We know that the velocity vector \(\vec v\) of a particle moving smoothly in a 2D plane is given by
+</p>
+\[
+\vec v = v_x\hat i + v_y\hat j
+\]
+<p>
+By definition, acceleration is the rate of change of velocity with time. Thus, the <strong>instantaneous acceleration vector</strong> \(\vec a\) is
+</p>
+\[
+\vec a=\frac{d\vec v}{dt}=\frac{d}{dt}(v_x\hat i+v_y\hat j)=\frac{dv_x}{dt}\hat i+\frac{dv_y}{dt}\hat j
+\]
+\[
+\vec a = a_x\hat i+a_y\hat j \qquad a_x=\frac{dv_x}{dt} \qquad a_y=\frac{dv_y}{dt}
+\]
+<p>
+Thus, the acceleration of a 2D particle can be tracked as two separate 1D acceleration components, \(a_x\) and \(a_y\).
+</p>
+<p>
+Acceleration is also defined as the double time differential of position.
+</p>
+\[
+\vec a=\frac{d^2\vec r}{dt^2}=\frac{d^2}{dt^2}(x\hat i+y\hat j)=\frac{d^2x}{dt^2}\hat i+\frac{d^2y}{dt^2}\hat j
+\]
+\[
+\vec a = a_x\hat i+a_y\hat j \qquad a_x=\frac{d^2x}{dt^2}=\frac{dv_x}{dt} \qquad a_y=\frac{d^2y}{dt^2}=\frac{dv_y}{dt}
+\]
+<div class="insightbox">
+The direction of acceleration is not constrained by the path in the way the direction of instantaneous velocity is.<br>
+Acceleration is the rate of change of velocity, so its direction depends on <strong>how the velocity is changing</strong>, not on the direction of the velocity itself.<br>
+Thus, the directions of position, velocity and acceleration are not required to coincide; each can have its own direction.<br>
+For an instantaneous displacement \(d\vec r\), however,
+\[
+d\vec r=\vec v\,dt
+\]
+so \(d\vec r\) and \(\vec v\) have the same direction.<br>
+For 2D motion, acceleration is generally resolved into components <strong>along the velocity</strong> and <strong>normal to the velocity</strong> to analyse its effect on the velocity.<br>
+The component of acceleration along the velocity changes the <strong>magnitude of velocity (speed)</strong>, while the component normal to the velocity changes the <strong>direction of velocity</strong>.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
