@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radial Conduction in Cylinders & Spheres | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-conduction-fourier-law.html" class="back-btn">
+<span>&larr;</span> Back to Conduction & Fourier's Law
+</a>
+</nav>
+
+<h1>Radial Conduction in Cylinders & Spheres</h1>
+<p class="subtitle">
+Curvilinear heat conduction, logarithmic and inverse-radial temperature distributions, and critical insulation thickness.
+</p>
+
+<section>
+<h2>Radial Heat Flow Through a Cylindrical Shell</h2>
+<p>
+Consider a hollow cylindrical pipe of inner radius \( r_1 \), outer radius \( r_2 \), length \( L \) (where \( L \gg r_2 \) to neglect end effects), and thermal conductivity \( k \).
+Let the inner surface be maintained at a uniform temperature \( T_1 \) and the outer surface at \( T_2 \) (\( T_1 > T_2 \)).
+</p>
+<p>
+Because of axial and angular symmetry, heat flows purely radially outward. Consider an infinitesimal coaxial cylindrical shell of radius \( r \) and thickness \( dr \) within the pipe wall.
+</p>
+<ul class="points-list">
+<li>Surface area normal to radial heat flow at radius \( r \): \( A(r) = 2\pi r L \)</li>
+<li>Temperature drop across differential thickness: \( dT \)</li>
+</ul>
+
+<div class="diagram">
+<svg width="560" height="230" viewBox="0 0 560 230">
+  <!-- Outer circle -->
+  <circle cx="280" cy="115" r="90" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/>
+  <!-- Differential shell -->
+  <circle cx="280" cy="115" r="60" fill="none" stroke="#e67e22" stroke-width="2" stroke-dasharray="4,4"/>
+  <!-- Inner circle -->
+  <circle cx="280" cy="115" r="35" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <!-- Radial arrows -->
+  <line x1="280" y1="80" x2="280" y2="40" stroke="#e74c3c" stroke-width="2"/>
+  <polygon points="275,45 285,45 280,35" fill="#e74c3c"/>
+  <line x1="280" y1="150" x2="280" y2="190" stroke="#e74c3c" stroke-width="2"/>
+  <polygon points="275,185 285,185 280,195" fill="#e74c3c"/>
+  <!-- Radius labels -->
+  <line x1="280" y1="115" x2="315" y2="115" stroke="#333" stroke-width="1.5"/>
+  <text x="295" y="110" font-size="12" font-weight="bold">r₁</text>
+  <line x1="280" y1="115" x2="370" y2="115" stroke="#333" stroke-width="1.5"/>
+  <text x="345" y="110" font-size="12" font-weight="bold">r₂</text>
+  <!-- Labels -->
+  <text x="280" y="120" font-size="13" font-weight="bold" fill="#c0392b" text-anchor="middle">T₁</text>
+  <text x="385" y="115" font-size="14" font-weight="bold" fill="#2980b9" text-anchor="start">T₂</text>
+</svg>
+</div>
+
+<p>
+Applying Fourier's Law across the differential shell in steady state:
+</p>
+\[
+H = -k A(r) \frac{dT}{dr} = -k(2\pi r L)\frac{dT}{dr}
+\]
+<p>
+Separating variables and integrating from the inner boundary (\( r = r_1, T = T_1 \)) to the outer boundary (\( r = r_2, T = T_2 \)):
+</p>
+\[
+H \int_{r_1}^{r_2} \frac{dr}{r} = -2\pi k L \int_{T_1}^{T_2} dT
+\]
+\[
+H \ln\left(\frac{r_2}{r_1}\right) = 2\pi k L (T_1 - T_2)
+\]
+<div class="model-box">
+\[
+H = \frac{2\pi k L (T_1 - T_2)}{\ln(r_2 / r_1)}
+\]
+</div>
+</section>
+
+<section>
+<h2>Thermal Resistance of a Cylindrical Pipe</h2>
+<p>
+Comparing with the general definition \( H = \frac{\Delta T}{R_{th}} \), we obtain:
+</p>
+<div class="model-box">
+\[
+R_{\text{cyl}} = \frac{\ln(r_2 / r_1)}{2\pi k L}
+\]
+</div>
+<p>
+<strong>Temperature Profile inside the Cylindrical Wall:</strong><br>
+Integrating from \( r_1 \) to an intermediate radius \( r \):
+</p>
+\[
+T(r) = T_1 - (T_1 - T_2)\frac{\ln(r/r_1)}{\ln(r_2/r_1)}
+\]
+<div class="insightbox">
+Unlike planar slabs where the steady-state temperature profile is strictly linear, the radial temperature distribution in a cylindrical conductor is <strong>logarithmic</strong>. The temperature gradient \( |\frac{dT}{dr}| = \frac{H}{2\pi k L r} \) is steepest at the inner surface and decays inversely with radius \( r \).
+</div>
+</section>
+
+<section>
+<h2>Radial Heat Flow Through a Concentric Spherical Shell</h2>
+<p>
+Consider a hollow sphere of inner radius \( r_1 \), outer radius \( r_2 \), and thermal conductivity \( k \). Let the inner and outer spherical surfaces be maintained at steady temperatures \( T_1 \) and \( T_2 \) respectively (\( T_1 > T_2 \)).
+</p>
+<p>
+Consider a differential concentric spherical shell of radius \( r \) and thickness \( dr \):
+</p>
+<ul class="points-list">
+<li>Area normal to heat flow: \( A(r) = 4\pi r^2 \)</li>
+<li>Fourier's Law in differential form:
+\[
+H = -k (4\pi r^2) \frac{dT}{dr}
+\]
+</li>
+</ul>
+<p>
+Separating variables and integrating across the shell:
+</p>
+\[
+H \int_{r_1}^{r_2} \frac{dr}{r^2} = -4\pi k \int_{T_1}^{T_2} dT
+\]
+\[
+H \left[ -\frac{1}{r} \right]_{r_1}^{r_2} = 4\pi k (T_1 - T_2)
+\]
+\[
+H \left( \frac{1}{r_1} - \frac{1}{r_2} \right) = 4\pi k (T_1 - T_2) \implies H\left(\frac{r_2 - r_1}{r_1 r_2}\right) = 4\pi k (T_1 - T_2)
+\]
+<div class="model-box">
+\[
+H = \frac{4\pi k r_1 r_2 (T_1 - T_2)}{r_2 - r_1}
+\]
+</div>
+</section>
+
+<section>
+<h2>Thermal Resistance of a Spherical Shell</h2>
+<p>
+The thermal resistance of a spherical shell is given by:
+</p>
+<div class="model-box">
+\[
+R_{\text{sph}} = \frac{r_2 - r_1}{4\pi k r_1 r_2} = \frac{1}{4\pi k}\left(\frac{1}{r_1} - \frac{1}{r_2}\right)
+\]
+</div>
+<p>
+<strong>Temperature Distribution:</strong><br>
+Integrating from \( r_1 \) to an intermediate radius \( r \):
+</p>
+\[
+T(r) = T_1 - (T_1 - T_2)\frac{\left(\frac{1}{r_1} - \frac{1}{r}\right)}{\left(\frac{1}{r_1} - \frac{1}{r_2}\right)}
+\]
+<div class="concept-box">
+In a spherical conductor, the steady-state temperature profile varies hyperbolically as \( T(r) \sim \frac{1}{r} \).
+</div>
+</section>
+
+<section>
+<h2>Critical Thickness of Insulation</h2>
+<p>
+When insulation of thermal conductivity \( k \) is wrapped around a small cylindrical wire or pipe carrying heat, two competing effects occur simultaneously as insulation radius \( r \) increases:
+</p>
+<ol>
+<li><strong>Conduction resistance increases:</strong> \( R_{\text{cond}} = \frac{\ln(r/r_1)}{2\pi k L} \) increases logarithmically.</li>
+<li><strong>Convection resistance to surroundings decreases:</strong> Because the outer surface area \( A = 2\pi r L \) increases, the convective resistance \( R_{\text{conv}} = \frac{1}{h A} = \frac{1}{2\pi r L h} \) decreases.</li>
+</ol>
+<p>
+The total thermal resistance is:
+</p>
+\[
+R_{\text{total}} = \frac{\ln(r/r_1)}{2\pi k L} + \frac{1}{2\pi r L h}
+\]
+<p>
+To find the radius corresponding to minimum total resistance (maximum heat dissipation), we differentiate with respect to \( r \) and set to zero:
+</p>
+\[
+\frac{d R_{\text{total}}}{dr} = \frac{1}{2\pi k L r} - \frac{1}{2\pi r^2 L h} = 0 \implies \frac{1}{k} = \frac{1}{r h}
+\]
+<div class="model-box">
+\[
+r_{\text{cr}} = \frac{k}{h} \quad (\text{For Cylinder}), \qquad r_{\text{cr}} = \frac{2k}{h} \quad (\text{For Sphere})
+\]
+</div>
+<div class="insightbox">
+If the outer radius of a wire is less than \( r_{\text{cr}} \), adding insulation initially <em>increases</em> the rate of heat loss until \( r = r_{\text{cr}} \). Only when \( r > r_{\text{cr}} \) does additional insulation reduce heat loss. For electric cables where heat dissipation is desirable, the outer radius is designed to be close to \( r_{\text{cr}} \).
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

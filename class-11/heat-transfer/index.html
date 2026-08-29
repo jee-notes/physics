@@ -1,231 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heat Transfer | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #c0392b; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #fdecea; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat Transfer | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
 
-    <h1>Heat Transfer</h1>
-    <p style="text-align: center;"><em>Mechanisms by which heat flows from one body to another.</em></p>
+<h1>Heat Transfer</h1>
+<p class="subtitle">
+The fundamental mechanisms governing the non-equilibrium flow of thermal energy.
+</p>
 
-    <section id="mechanisms">
-        <h2>1. Modes of Heat Transfer</h2>
-        <p>
-            Heat can be transferred between systems by three distinct mechanisms.
-        </p>
-
-        <ul>
-            <li><strong>Conduction</strong> — without bulk motion</li>
-            <li><strong>Convection</strong> — with bulk motion of fluid</li>
-            <li><strong>Radiation</strong> — via electromagnetic waves</li>
-        </ul>
-
-        <div class="insightbox">
-            The mechanism depends on the medium,
-            not on how hot the body is.
-        </div>
-    </section>
-
-    <section id="conduction">
-        <h2>2. Conduction</h2>
-        <p>
-            <strong>Conduction</strong> is heat transfer through a material
-            without any macroscopic movement of matter.
-        </p>
-
-        <div class="formula-block">
-            Rate of heat flow:
-            \[
-            \frac{dQ}{dt} = kA\frac{(T_1 - T_2)}{L}
-            \]
-        </div>
-
-        <ul>
-            <li>\(k\): thermal conductivity</li>
-            <li>High for metals, low for insulators</li>
-        </ul>
-
-        <div class="insightbox">
-            Temperature gradient drives conduction,
-            not temperature itself.
-        </div>
-    </section>
-
-    <section id="thermal-resistance">
-        <h2>3. Thermal Resistance</h2>
-        <p>
-            Conduction problems are simplified using thermal resistance,
-            analogous to electrical resistance.
-        </p>
-
-        <div class="formula-block">
-            \[
-            R = \frac{L}{kA}
-            \]
-            <br><br>
-            \[
-            \frac{dQ}{dt} = \frac{\Delta T}{R}
-            \]
-        </div>
-
-        <ul>
-            <li>Series and parallel combinations apply</li>
-            <li>Extremely useful for composite slabs</li>
-        </ul>
-    </section>
-
-    <section id="convection">
-        <h2>4. Convection</h2>
-        <p>
-            <strong>Convection</strong> is heat transfer by bulk motion of a fluid.
-        </p>
-
-        <ul>
-            <li><strong>Natural convection</strong> — due to density differences</li>
-            <li><strong>Forced convection</strong> — due to external agency (fan, pump)</li>
-        </ul>
-
-        <div class="formula-block">
-            Newton’s law of cooling:
-            \[
-            \frac{dQ}{dt} = hA(T - T_0)
-            \]
-        </div>
-
-        <div class="insightbox">
-            Convection requires a fluid;
-            solids do not convect.
-        </div>
-    </section>
-
-    <section id="newton-cooling">
-        <h2>5. Newton’s Law of Cooling</h2>
-        <p>
-            The rate of cooling of a body is proportional to
-            the temperature difference with surroundings
-            for small temperature differences.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \frac{dT}{dt} \propto (T - T_0)
-            \]
-        </div>
-
-        <ul>
-            <li>Valid for small \(\Delta T\)</li>
-            <li>Depends on surface conditions</li>
-        </ul>
-    </section>
-
-    <section id="radiation">
-        <h2>6. Radiation</h2>
-        <p>
-            <strong>Radiation</strong> is heat transfer via electromagnetic waves
-            and does not require a material medium.
-        </p>
-
-        <div class="formula-block">
-            Stefan–Boltzmann law:
-            \[
-            P = \sigma A T^4
-            \]
-        </div>
-
-        <ul>
-            <li>Occurs even in vacuum</li>
-            <li>Depends strongly on temperature</li>
-        </ul>
-
-        <div class="insightbox">
-            Radiation dominates at high temperatures
-            and in vacuum.
-        </div>
-    </section>
-
-    <section id="emissivity">
-        <h2>7. Emissivity & Absorptivity</h2>
-        <p>
-            Real bodies deviate from ideal blackbody behavior.
-        </p>
-
-        <div class="formula-block">
-            \[
-            P = e\sigma A T^4
-            \]
-        </div>
-
-        <ul>
-            <li>\(e = 1\): perfect black body</li>
-            <li>Good absorbers are good emitters</li>
-        </ul>
-
-        <div class="insightbox">
-            Surface nature matters more than material bulk.
-        </div>
-    </section>
-
-    <section id="comparison">
-        <h2>8. Comparison of Heat Transfer Mechanisms</h2>
-
-        <div class="grid">
-            <div>
-                <strong>Conduction</strong>
-                <ul>
-                    <li>Requires medium</li>
-                    <li>No bulk motion</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Radiation</strong>
-                <ul>
-                    <li>No medium required</li>
-                    <li>Fast at high temperature</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>9. Common Mistakes</h2>
-        <ul>
-            <li>Using Newton’s law for large temperature differences</li>
-            <li>Ignoring surface area in radiation problems</li>
-            <li>Confusing conduction with convection</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Thermodynamics establishes whether a thermal process is energetically permissible and dictates the equilibrium end states of a system. However, classical thermodynamics is inherently silent regarding the <em>rate</em> at which equilibrium is attained. In real physical systems, energy transfer is a dynamic, rate-dependent process driven by spatial and temporal temperature gradients.
+</p>
+<p>
+<strong>Heat Transfer</strong> is the branch of thermal physics that investigates the rates, mechanisms, and physical laws by which thermal energy propagates across space or matter from higher temperature regions to lower temperature regions. Whenever a non-zero temperature difference \( \Delta T \) exists between two spatial coordinates or bodies, spontaneous energy transfer occurs in accordance with the Second Law of Thermodynamics.
+</p>
+<div class="insightbox">
+Thermodynamics tells us how much heat is exchanged between initial and final equilibrium states (\( \Delta Q = \Delta U + W \)), while Heat Transfer tells us how fast that energy flows (\( \frac{dQ}{dt} \)) and what temperature distribution evolves over time.
 </div>
+</section>
 
+<section>
+<h2>Three Fundamental Modes of Heat Transfer</h2>
+<p>
+Thermal energy traverses space and matter through three distinct physical mechanisms:
+</p>
+<ul>
+<li><strong>Conduction:</strong> The transfer of thermal energy at the microscopic scale through atomic lattice vibrations (phonons) and the diffusion of free electrons without any macroscopic translational motion of the medium. Conduction is the dominant mode in solids.</li>
+<li><strong>Convection:</strong> The transport of heat mediated by the macroscopic collective movement of fluid particles. It occurs exclusively in liquids and gases and combines microscopic diffusion with bulk macroscopic fluid advection.</li>
+<li><strong>Radiation:</strong> The transmission of thermal energy via electromagnetic waves emitted by all matter having a temperature strictly greater than absolute zero (\( T > 0\text{ K} \)). Radiation requires no material intervening medium and can propagate through a complete vacuum at the speed of light \( c \).</li>
+</ul>
+<div class="concept-box">
+The mechanism governing heat exchange depends on the physical nature of the intervening medium rather than solely the temperature of the participating bodies.
+</div>
+</section>
+
+<section>
+<h2>Conduction and Thermal Resistance Analogy</h2>
+<p>
+In solid media, one-dimensional steady-state heat conduction obeys Fourier's Law:
+</p>
+<div class="model-box">
+\[
+\frac{dQ}{dt} = -kA \frac{dT}{dx}
+\]
+</div>
+<p>
+where \( k \) is the material's thermal conductivity, \( A \) is the cross-sectional area perpendicular to heat flow, and \( \frac{dT}{dx} \) is the temperature gradient.
+</p>
+<p>
+This law exhibits an exact mathematical isomorphism with Ohm's Law in electrical circuits (\( I = \frac{\Delta V}{R_e} \)). By defining thermal current \( H = \frac{dQ}{dt} \) and thermal resistance \( R_{th} = \frac{L}{kA} \), composite slabs, cylindrical pipes, and complex networks can be solved using standard series, parallel, and Kirchhoff-type network theorems.
+</p>
+</section>
+
+<section>
+<h2>Convection and Bulk Transport</h2>
+<p>
+Convection couples fluid dynamics with thermal energy transport. It is broadly categorized into:
+</p>
+<ul>
+<li><strong>Natural (Free) Convection:</strong> Fluid motion is generated spontaneously by buoyancy forces arising from temperature-induced density gradients in a gravitational field.</li>
+<li><strong>Forced Convection:</strong> Fluid motion is driven by an external mechanical agency such as a pump, blower, or fan.</li>
+</ul>
+<p>
+Convective heat transfer from a solid surface to an adjacent fluid is modeled by Newton's Law of Cooling:
+</p>
+<div class="model-box">
+\[
+\frac{dQ}{dt} = h A (T - T_0)
+\]
+</div>
+<p>
+where \( h \) is the convective heat transfer coefficient.
+</p>
+</section>
+
+<section>
+<h2>Radiation and the Electromagnetic Nature of Thermal Energy</h2>
+<p>
+Thermal radiation is emitted across a continuous spectrum of wavelengths as a consequence of the thermal agitation and oscillations of charged subatomic particles within matter. An ideal radiator and absorber—termed a <em>Blackbody</em>—emits radiation at a maximum theoretical rate described by the Stefan-Boltzmann Law:
+</p>
+<div class="model-box">
+\[
+P = \sigma A T^4
+\]
+</div>
+<p>
+where \( \sigma = 5.67 \times 10^{-8} \text{ W}\cdot\text{m}^{-2}\cdot\text{K}^{-4} \) is the Stefan-Boltzmann constant. Real bodies emit a fraction \( e \) (emissivity) of blackbody radiation. Kirchhoff's Law establishes that at thermal equilibrium, good emitters are necessarily good absorbers (\( e = a \)).
+</p>
+<div class="insightbox">
+Because radiative power scales with the fourth power of absolute temperature (\( T^4 \)), radiation dominates over conduction and convection at high temperatures and in rarefied environments.
+</div>
+</section>
+
+<section>
+<h2>Key Laws Governing Heat Flow</h2>
+<ul class="points-list">
+<li><strong>Fourier's Law of Conduction:</strong> Relates heat flux directly to the negative spatial temperature gradient.</li>
+<li><strong>Stefan-Boltzmann Law:</strong> Establishes the \( T^4 \) dependence of total emissive power for thermal radiators.</li>
+<li><strong>Wien's Displacement Law:</strong> Governs the spectral shift of peak emission wavelength with temperature (\( \lambda_m T = b \)).</li>
+<li><strong>Kirchhoff's Law of Radiation:</strong> Proves equality between spectral emissivity and spectral absorptivity under thermal equilibrium.</li>
+<li><strong>Newton's Law of Cooling:</strong> Provides a linear differential approximation for rate of cooling at small temperature differences.</li>
+</ul>
+</section>
+
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-modes-of-heat-transfer.html">1. Modes of Heat Transfer & Fundamentals</a>
+<a href="./02-conduction-fourier-law.html">2. Conduction & Fourier's Law</a>
+<a href="./03-convection.html">3. Convection & Fluid Heat Transport</a>
+<a href="./04-thermal-radiation-blackbody.html">4. Thermal Radiation & Blackbody Theory</a>
+<a href="./05-stefan-boltzmann-law.html">5. Stefan-Boltzmann Law & Radiative Exchange</a>
+<a href="./06-wien-displacement-law.html">6. Wien's Displacement Law & Radiation Spectrum</a>
+<a href="./07-newton-law-of-cooling.html">7. Newton's Law of Cooling</a>
+<a href="./08-solar-constant-and-radiation-applications.html">8. Solar Constant & Astrophysical Applications</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>

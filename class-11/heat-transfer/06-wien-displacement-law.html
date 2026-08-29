@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wien's Displacement Law | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Heat Transfer
+</a>
+</nav>
+
+<h1>Wien's Displacement Law</h1>
+<p class="subtitle">
+Spectral energy distributions, peak wavelength shifts, stellar thermometry, and the origin of quantum theory.
+</p>
+
+<section>
+<h2>Blackbody Radiation Energy Distribution Spectrum</h2>
+<p>
+Lummer and Pringsheim experimentally measured the spectral distribution of energy in blackbody cavity radiation across different temperatures. The resulting curves of spectral emissive power \( E_\lambda \) plotted against wavelength \( \lambda \) reveal fundamental physical properties:
+</p>
+
+<div class="diagram">
+<svg width="600" height="280" viewBox="0 0 600 280">
+  <!-- Axes -->
+  <line x1="60" y1="240" x2="560" y2="240" stroke="#2c3e50" stroke-width="2"/>
+  <polygon points="560,235 570,240 560,245" fill="#2c3e50"/>
+  <text x="540" y="265" font-size="14" font-weight="bold" fill="#2c3e50">Wavelength λ</text>
+
+  <line x1="60" y1="240" x2="60" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <polygon points="55,30 60,20 65,30" fill="#2c3e50"/>
+  <text x="40" y="25" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="end">E_λ</text>
+
+  <!-- Curve T3 (Highest) -->
+  <path d="M 65 240 Q 130 50 160 50 T 260 170 T 520 238" fill="none" stroke="#e74c3c" stroke-width="3"/>
+  <text x="175" y="45" font-size="13" font-weight="bold" fill="#c0392b">T₃ = 2000 K</text>
+  <!-- Peak line T3 -->
+  <line x1="160" y1="50" x2="160" y2="240" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="160" y="255" font-size="12" fill="#c0392b" text-anchor="middle">λ_m3</text>
+
+  <!-- Curve T2 (Medium) -->
+  <path d="M 65 240 Q 160 120 210 120 T 320 200 T 520 239" fill="none" stroke="#f39c12" stroke-width="2.5"/>
+  <text x="225" y="115" font-size="13" font-weight="bold" fill="#d35400">T₂ = 1600 K</text>
+  <!-- Peak line T2 -->
+  <line x1="210" y1="120" x2="210" y2="240" stroke="#d35400" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="210" y="255" font-size="12" fill="#d35400" text-anchor="middle">λ_m2</text>
+
+  <!-- Curve T1 (Lowest) -->
+  <path d="M 65 240 Q 210 180 280 180 T 400 220 T 520 239" fill="none" stroke="#2980b9" stroke-width="2"/>
+  <text x="295" y="175" font-size="13" font-weight="bold" fill="#2980b9">T₁ = 1200 K</text>
+  <!-- Peak line T1 -->
+  <line x1="280" y1="180" x2="280" y2="240" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="280" y="255" font-size="12" fill="#2980b9" text-anchor="middle">λ_m1</text>
+
+  <!-- Wien displacement curve arrow -->
+  <path d="M 280 180 Q 210 120 160 50" fill="none" stroke="#8e44ad" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="260" y="80" font-size="12" font-style="italic" fill="#8e44ad">Peak Shifts to Shorter λ</text>
+</svg>
+</div>
+
+<ol>
+<li>At a given temperature, the radiant energy is non-uniformly distributed across wavelengths. It starts from zero at \( \lambda = 0 \), reaches a distinct maximum at a specific wavelength \( \lambda_m \), and approaches zero again as \( \lambda \to \infty \).</li>
+<li>As temperature increases, the radiant energy emitted at <em>every</em> wavelength increases (\( E_{\lambda}(T_3) > E_{\lambda}(T_2) \) for all \( \lambda \)).</li>
+<li>The peak wavelength \( \lambda_m \) shifts ("displaces") toward shorter wavelengths (higher frequencies) as temperature rises.</li>
+<li><strong>Total Area under the curve:</strong> The area bounded by the curve and the \( \lambda \)-axis equals the total emissive power \( E \):
+\[
+\text{Area} = \int_0^\infty E_\lambda \, d\lambda = \sigma T^4
+\]
+</li>
+<li><strong>Peak Intensity Scaling:</strong> The maximum spectral emissive power \( E_{\lambda,\max} \) at the peak wavelength scales with the <strong>fifth power of temperature</strong>:
+<div class="model-box">
+\[
+E_{\lambda,\max} \propto T^5
+\]
+</div>
+</li>
+</ol>
+</section>
+
+<section>
+<h2>Wien's Displacement Law and Constant</h2>
+<p>
+Wilhelm Wien derived the mathematical law governing the shift of the peak emission wavelength with temperature:
+</p>
+<div class="model-box">
+<strong>Wien's Displacement Law:</strong> The wavelength \( \lambda_m \) corresponding to maximum spectral emissive power of a blackbody is inversely proportional to its absolute thermodynamic temperature \( T \):
+\[
+\lambda_m \propto \frac{1}{T} \implies \lambda_m T = b = \text{constant}
+\]
+</div>
+
+<h3>Wien's Displacement Constant (\( b \)):</h3>
+<ul class="points-list">
+<li><strong>Numerical Value:</strong> \( b \approx 2.8978 \times 10^{-3} \, \text{m}\cdot\text{K} \approx 2.9 \times 10^{-3} \, \text{m}\cdot\text{K} = 0.2898 \, \text{cm}\cdot\text{K} \)</li>
+<li><strong>SI Unit:</strong> Meter-Kelvin (\(\text{m}\cdot\text{K}\))</li>
+<li><strong>Dimensional Formula:</strong> \([L^1 K^1]\)</li>
+</ul>
+<div class="insightbox">
+In terms of frequency \( \nu_m \), the law states that the peak frequency is directly proportional to temperature: \( \nu_m \propto T \). (Note: \( \nu_m \neq c / \lambda_m \) because \( dE = E_\lambda d\lambda = E_\nu d\nu \), which alters the derivative maximum condition by a numerical factor).
+</div>
+</section>
+
+<section>
+<h2>Physical Significance of Peak Wavelength</h2>
+<p>
+Wien's Displacement Law explains why the perceived color of an incandescent heating object shifts progressively through the visible spectrum as its temperature increases:
+</p>
+<ul>
+<li><strong>At \( T \approx 800\text{ K} \) (\( \approx 500^\circ\text{C} \)):</strong> Peak is deep in the infrared; object glows faint dull red.</li>
+<li><strong>At \( T \approx 1500\text{ K} \):</strong> Peak approaches red-orange (\( \lambda_m \approx 1.9\ \mu\text{m} \)); object glows bright cherry red.</li>
+<li><strong>At \( T \approx 3000\text{ K} \) (Incandescent bulb):</strong> Emits significant yellow-orange light.</li>
+<li><strong>At \( T \approx 6000\text{ K} \) (Solar surface):</strong> Peak is at \( \lambda_m \approx 500\text{ nm} \) (green-yellow visible band); Sun appears brilliant yellowish-white.</li>
+<li><strong>At \( T > 10000\text{ K} \) (Hot stars):</strong> Peak shifts into the ultraviolet; star appears intense blue-white.</li>
+</ul>
+</section>
+
+<section>
+<h2>Temperature Determination of Celestial Bodies</h2>
+<p>
+By measuring the continuous emission spectrum of distant astronomical bodies and identifying the peak wavelength \( \lambda_m \), astrophysicists directly calculate surface temperatures using Wien's formula:
+</p>
+<div class="model-box">
+\[
+T = \frac{b}{\lambda_m}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Example: Calculating the Solar Surface Temperature</h3>
+<p>
+The solar radiation spectrum exhibits maximum spectral emissive power at a wavelength of \( \lambda_m = 490\text{ nm} \). Calculate the effective surface temperature of the Sun. (Given: Wien's constant \( b = 2.898 \times 10^{-3}\text{ m}\cdot\text{K} \)).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+\[
+\lambda_m = 490\text{ nm} = 490 \times 10^{-9}\text{ m} = 4.9 \times 10^{-7}\text{ m}
+\]
+\[
+T = \frac{b}{\lambda_m} = \frac{2.898 \times 10^{-3}\text{ m}\cdot\text{K}}{4.9 \times 10^{-7}\text{ m}} \approx 5914\text{ K} \approx 5900\text{ K}
+\]
+</div>
+</section>
+
+<section>
+<h2>Classical Failure and Planck's Quantum Hypothesis</h2>
+<p>
+Classical physics attempted to explain the blackbody radiation curve using equipartition of energy:
+</p>
+<ul>
+<li><strong>Wien's Distribution Law:</strong> Succeeded for short wavelengths (\( \lambda \ll \lambda_m \)) but completely failed for long wavelengths.</li>
+<li><strong>Rayleigh-Jeans Law:</strong> Treated cavity radiation as standing electromagnetic modes with average kinetic energy \( k_B T \). It predicted:
+\[
+E_\lambda d\lambda = \frac{8\pi k_B T}{\lambda^4} d\lambda
+\]
+While accurate for long wavelengths (\( \lambda \gg \lambda_m \)), as \( \lambda \to 0 \) (ultraviolet and beyond), the predicted energy diverged to infinity (\( E_\lambda \to \infty \)). This catastrophic breakdown was famously termed the <strong>Ultraviolet Catastrophe</strong>.
+</li>
+</ul>
+
+<div class="concept-box">
+<strong>Max Planck's Quantum Revolution (1900):</strong>
+Planck resolved the paradox by introducing the revolutionary hypothesis that atomic oscillators in cavity walls exchange energy with the radiation field only in discrete, quantized packets called <strong>quanta (photons)</strong>:
+\[
+E = n h \nu = n \frac{hc}{\lambda} \quad (n = 1, 2, 3, \dots)
+\]
+Using Bose-Einstein type quantum statistics, Planck derived his universal radiation law:
+\[
+E_\lambda d\lambda = \frac{8\pi h c}{\lambda^5 \left(e^{\frac{hc}{\lambda k_B T}} - 1\right)} d\lambda
+\]
+Planck's law reproduces both Wien's Displacement Law (\( \frac{dE_\lambda}{d\lambda} = 0 \implies \lambda_m T = b \)) and the Stefan-Boltzmann Law (\( \int_0^\infty E_\lambda d\lambda = \sigma T^4 \)) exactly across all wavelengths!
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

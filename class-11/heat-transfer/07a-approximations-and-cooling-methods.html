@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Approximations & Cooling Methods | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./07-newton-law-of-cooling.html" class="back-btn">
+<span>&larr;</span> Back to Newton's Law of Cooling
+</a>
+</nav>
+
+<h1>Approximations & Cooling Methods</h1>
+<p class="subtitle">
+Average temperature approximation methods, comparative analysis, and experimental calorimetric specific heat determination.
+</p>
+
+<section>
+<h2>Average Temperature Approximation Method</h2>
+<p>
+While the exact differential equation yields an exponential decay function, solving transcendental exponential equations during numerical calculations can be cumbersome. For small temperature intervals where a body cools from \( T_1 \) to \( T_2 \) over time \( t \), Newton's Law is approximated using the <strong>Arithmetic Mean Temperature</strong>:
+</p>
+<div class="model-box">
+\[
+\frac{T_1 - T_2}{t} = K \left( \frac{T_1 + T_2}{2} - T_0 \right)
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( \frac{T_1 - T_2}{t} \) is the average rate of fall of temperature, \( \frac{T_1 + T_2}{2} \) is the mean temperature of the body during time interval \( t \), and \( T_0 \) is the surrounding ambient temperature.
+</p>
+</div>
+<div class="insightbox">
+This linear average approximation is exceptionally accurate whenever \( (T_1 - T_2) \) is relatively small (typically \( \le 10-15^\circ\text{C} \)) and represents the standard method used in JEE Main and Advanced problem solving.
+</div>
+</section>
+
+<section>
+<h2>Comparison of Exact vs Approximate Methods</h2>
+
+<div class="examplebox">
+<h3>Comparative Benchmark Problem</h3>
+<p>
+A body cools from \( 80^\circ\text{C} \) to \( 60^\circ\text{C} \) in 5 minutes in a room maintained at \( 20^\circ\text{C} \). How long will it take to cool from \( 60^\circ\text{C} \) to \( 40^\circ\text{C} \) under identical surroundings?
+</p>
+<hr>
+<p><strong>Method 1: Approximate (Average) Method:</strong></p>
+<p>
+<em>Case 1 (\( 80^\circ\text{C} \to 60^\circ\text{C} \) in \( t_1 = 5\text{ min} \)):</em>
+</p>
+\[
+\frac{80 - 60}{5} = K \left( \frac{80 + 60}{2} - 20 \right) \implies \frac{20}{5} = K(70 - 20) \implies 4 = 50K \implies K = \frac{4}{50} = \frac{2}{25}\text{ min}^{-1}
+\]
+<p>
+<em>Case 2 (\( 60^\circ\text{C} \to 40^\circ\text{C} \) in time \( t_2 \)):</em>
+</p>
+\[
+\frac{60 - 40}{t_2} = K \left( \frac{60 + 40}{2} - 20 \right) \implies \frac{20}{t_2} = K(50 - 20) = 30K
+\]
+\[
+\frac{20}{t_2} = 30 \left( \frac{4}{50} \right) = \frac{12}{5} \implies t_2 = \frac{20 \times 5}{12} = \frac{100}{12} \approx 8.33\text{ minutes} = 8\text{ min } 20\text{ sec}
+\]
+
+<hr>
+<p><strong>Method 2: Exact (Logarithmic) Method:</strong></p>
+<p>
+Using \( \ln\left(\frac{T - T_0}{T_i - T_0}\right) = -Kt \):
+</p>
+<p>
+<em>Case 1:</em>
+</p>
+\[
+\ln\left( \frac{60 - 20}{80 - 20} \right) = -K(5) \implies \ln\left(\frac{40}{60}\right) = -5K \implies \ln\left(\frac{2}{3}\right) = -5K \implies K = \frac{\ln(1.5)}{5} \approx \frac{0.4055}{5} \approx 0.0811\text{ min}^{-1}
+\]
+<p>
+<em>Case 2:</em>
+</p>
+\[
+\ln\left( \frac{40 - 20}{60 - 20} \right) = -K(t_2) \implies \ln\left(\frac{20}{40}\right) = -K t_2 \implies \ln(0.5) = -K t_2
+\]
+\[
+t_2 = \frac{\ln 2}{K} = \frac{0.6931}{0.0811} \approx 8.55\text{ minutes}
+\]
+<div class="concept-box">
+The difference between the two results is merely \( \approx 2.5\% \). In examinations, unless explicit natural logarithms are provided, the average method is preferred.
+</div>
+</div>
+</section>
+
+<section>
+<h2>Cooling of Two Liquids (Calorimetric Applications)</h2>
+<p>
+Consider two distinct liquids of masses \( m_1, m_2 \) and specific heat capacities \( c_1, c_2 \) filled successively to the same volume in identical calorimeter vessels of water equivalent \( W = m_{\text{cal}} c_{\text{cal}} \).
+</p>
+<p>
+Because the calorimeter vessels have identical surface area \( A \), surface finish (emissivity \( e \)), and are placed in the same ambient surroundings at temperature \( T_0 \), their rate of heat loss \( \frac{dQ}{dt} \) at any temperature \( T \) is <strong>identical</strong>:
+</p>
+\[
+\frac{dQ}{dt} = \text{constant for both liquids at same } T
+\]
+<p>
+The total heat lost by each liquid-calorimeter system in cooling across the same temperature range from \( T_1 \) to \( T_2 \) is:
+</p>
+\[
+\Delta Q_1 = (m_1 c_1 + W)(T_1 - T_2) \implies \frac{dQ_1}{dt} \approx \frac{(m_1 c_1 + W)(T_1 - T_2)}{t_1}
+\]
+\[
+\Delta Q_2 = (m_2 c_2 + W)(T_1 - T_2) \implies \frac{dQ_2}{dt} \approx \frac{(m_2 c_2 + W)(T_1 - T_2)}{t_2}
+\]
+<p>
+Equating the rates of heat loss:
+</p>
+<div class="model-box">
+\[
+\frac{m_1 c_1 + W}{t_1} = \frac{m_2 c_2 + W}{t_2}
+\]
+</div>
+</section>
+
+<section>
+<h2>Experimental Determination of Specific Heat</h2>
+<p>
+The relation derived above forms the basis of the standard laboratory method for finding the specific heat capacity \( c_2 \) of an unknown liquid by comparison with a reference liquid (usually water, where \( c_1 = 4184\text{ J/kg}\cdot\text{K} \)):
+</p>
+<ol>
+<li>Fill a polished copper calorimeter with a known mass \( m_1 \) of water, heat it to \( \approx 80^\circ\text{C} \), and record the cooling time \( t_1 \) taken to cool from \( T_1 \) to \( T_2 \).</li>
+<li>Empty and dry the calorimeter. Fill it with an equal volume of the experimental liquid of mass \( m_2 \).</li>
+<li>Heat to the same initial temperature \( T_1 \) and record the cooling time \( t_2 \) across the identical temperature range \( T_1 \to T_2 \).</li>
+<li>Calculate \( c_2 \) using:
+<div class="model-box">
+\[
+c_2 = \frac{1}{m_2} \left[ \frac{t_2}{t_1}(m_1 c_1 + W) - W \right]
+\]
+</div>
+</li>
+</ol>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

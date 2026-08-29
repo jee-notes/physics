@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atmospheric Radiation & Greenhouse Effect | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-thermal-radiation-blackbody.html" class="back-btn">
+<span>&larr;</span> Back to Thermal Radiation & Blackbody Theory
+</a>
+</nav>
+
+<h1>Atmospheric Radiation & Greenhouse Effect</h1>
+<p class="subtitle">
+Wavelength-selective transmission in atmospheric optics and planetary radiative equilibrium.
+</p>
+
+<section>
+<h2>Greenhouse Effect Mechanism</h2>
+<p>
+The <strong>Greenhouse Effect</strong> is the natural warming process by which an atmosphere traps thermal infrared radiation emitted by a planet's surface, maintaining the surface temperature higher than it would be in radiative equilibrium with space alone.
+</p>
+<p>
+The physical principle rests entirely on the wavelength-dependent transmission properties of glass (or atmospheric gases):
+</p>
+<ol>
+<li>The Sun's surface temperature is extremely high (\( T_{\odot} \approx 5800\text{ K} \)). According to Wien's Displacement Law (\( \lambda_m \propto 1/T \)), solar radiation peaks in the short-wavelength visible and near-infrared band (\( \lambda \approx 0.5\ \mu\text{m} \)).</li>
+<li>Glass and Earth's atmosphere are transparent (diathermanous) to these short-wavelength solar rays, allowing sunlight to pass through almost unattenuated to warm the ground.</li>
+<li>The warmed Earth's surface re-radiates this absorbed energy at a much lower temperature (\( T_E \approx 288\text{ K} \)). The re-radiated terrestrial spectrum peaks in the long-wavelength thermal infrared band (\( \lambda \approx 10\ \mu\text{m} \)).</li>
+<li>Atmospheric greenhouse gases and glass are opaque (athermanous) to long-wavelength infrared radiation. They absorb this terrestrial radiation and re-emit a significant fraction back toward the Earth's surface.</li>
+</ol>
+
+<div class="diagram">
+<svg width="580" height="240" viewBox="0 0 580 240">
+  <!-- Sun -->
+  <circle cx="60" cy="50" r="30" fill="#f39c12"/>
+  <text x="60" y="55" font-size="12" font-weight="bold" fill="white" text-anchor="middle">Sun</text>
+  <!-- Shortwave incident solar rays -->
+  <line x1="90" y1="60" x2="200" y2="120" stroke="#f1c40f" stroke-width="3"/>
+  <polygon points="190,110 205,122 195,128" fill="#f1c40f"/>
+  <text x="140" y="80" font-size="11" font-weight="bold" fill="#d35400">Shortwave Solar (λ ~ 0.5 µm)</text>
+
+  <!-- Atmosphere Layer -->
+  <rect x="180" y="110" width="360" height="35" rx="5" fill="#d6eaf8" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="360" y="132" font-size="13" font-weight="bold" fill="#2980b9" text-anchor="middle">Atmosphere (CO₂, H₂O vapor, CH₄)</text>
+
+  <!-- Ground Layer -->
+  <rect x="180" y="190" width="360" height="25" rx="4" fill="#58d68d"/>
+  <text x="360" y="208" font-size="13" font-weight="bold" fill="#196f3d" text-anchor="middle">Earth's Surface (Warmed to ~288 K)</text>
+
+  <!-- Longwave terrestrial re-radiation -->
+  <line x1="280" y1="190" x2="280" y2="148" stroke="#e74c3c" stroke-width="3"/>
+  <polygon points="275,155 280,145 285,155" fill="#e74c3c"/>
+  <text x="235" y="175" font-size="11" font-weight="bold" fill="#c0392b">IR (λ ~ 10 µm)</text>
+
+  <!-- Downward atmospheric back-radiation -->
+  <line x1="420" y1="145" x2="420" y2="187" stroke="#e67e22" stroke-width="3"/>
+  <polygon points="415,180 420,190 425,180" fill="#e67e22"/>
+  <text x="440" y="175" font-size="11" font-weight="bold" fill="#d35400">Trapped Back-Radiation</text>
+</svg>
+</div>
+</section>
+
+<section>
+<h2>Selective Absorption by Atmospheric Gases</h2>
+<p>
+Atmospheric gases exhibit quantized rotational and vibrational molecular absorption bands that interact strongly with infrared photon energies:
+</p>
+<ul>
+<li><strong>Water Vapor (\( \text{H}_2\text{O} \)):</strong> Responsible for the largest component of natural greenhouse warming (\( \approx 60\% \)), with strong absorption bands around \( 2.7\ \mu\text{m}, 6.3\ \mu\text{m} \), and above \( 12\ \mu\text{m} \).</li>
+<li><strong>Carbon Dioxide (\( \text{CO}_2 \)):</strong> Strong vibrational bending mode absorption centered at \( 15\ \mu\text{m} \), right in the peak emission band of terrestrial radiation.</li>
+<li><strong>Methane (\( \text{CH}_4 \)) & Nitrous Oxide (\( \text{N}_2\text{O} \)):</strong> Extremely potent greenhouse gases per molecule, absorbing in the \( 7-8\ \mu\text{m} \) atmospheric window.</li>
+</ul>
+</section>
+
+<section>
+<h2>Planetary Heat Balance</h2>
+<p>
+For a planet of radius \( R_p \) at distance \( d \) from the Sun to maintain a steady mean surface temperature \( T_p \), the total solar radiative power absorbed must equal the total infrared power radiated by the planet:
+</p>
+\[
+P_{\text{absorbed}} = (1 - \mathcal{A}) \cdot S \cdot (\pi R_p^2)
+\]
+\[
+P_{\text{emitted}} = e \sigma (4\pi R_p^2) T_p^4
+\]
+<p>
+where \( \mathcal{A} \) is the planet's albedo (fraction of solar radiation reflected directly into space, \( \approx 0.30 \) for Earth) and \( S \) is the solar constant at the planet's orbit.
+</p>
+<p>
+Equating \( P_{\text{absorbed}} = P_{\text{emitted}} \) (assuming blackbody emission \( e = 1 \)):
+</p>
+<div class="model-box">
+\[
+T_{\text{effective}} = \left[ \frac{(1 - \mathcal{A}) S}{4 \sigma} \right]^{1/4}
+\]
+</div>
+<div class="insightbox">
+Without the natural greenhouse effect, Earth's radiative equilibrium temperature would be \( T_{\text{effective}} \approx 255\text{ K} \) (\( -18^\circ\text{C} \)), causing the entire globe to freeze over. The atmospheric greenhouse blanket raises Earth's average surface temperature to a hospitable \( 288\text{ K} \) (\( +15^\circ\text{C} \)).
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

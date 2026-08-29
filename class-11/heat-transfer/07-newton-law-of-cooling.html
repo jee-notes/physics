@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newton's Law of Cooling | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Heat Transfer
+</a>
+</nav>
+
+<h1>Newton's Law of Cooling</h1>
+<p class="subtitle">
+Linearized thermal radiation loss, differential cooling equations, and exponential decay dynamics.
+</p>
+
+<section>
+<h2>Statement and Validity Conditions</h2>
+<p>
+<strong>Newton's Law of Cooling</strong> states that the rate of loss of heat (or rate of cooling) of a body is directly proportional to the temperature difference between the body and its surrounding environment, provided the temperature difference is small.
+</p>
+<div class="model-box">
+\[
+\frac{dQ}{dt} \propto (T - T_0) \implies -\frac{dT}{dt} = K(T - T_0)
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( T \) is the instantaneous temperature of the body, \( T_0 \) is the constant ambient temperature of the surroundings, and \( K \) is the cooling constant.
+</p>
+</div>
+
+<div class="concept-box">
+<strong>Strict Validity Conditions:</strong>
+<ol>
+<li>The temperature difference between the body and surroundings must be small compared to the absolute temperature (\( \Delta T = T - T_0 \ll T_0 \), practically \( \Delta T \lesssim 30-40^\circ\text{C} \)).</li>
+<li>Heat loss occurs predominantly by natural convection and radiation in still air.</li>
+<li>The surrounding temperature \( T_0 \) remains strictly constant throughout the cooling process.</li>
+<li>The temperature within the body is spatially uniform at any instant (negligible internal conductive resistance, Biot number \( Bi \ll 0.1 \)).</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h2>Derivation of Newton's Law of Cooling from Stefan's Law</h2>
+<p>
+According to the Stefan-Boltzmann Law, the net rate of radiative heat loss from a body of area \( A \), emissivity \( e \), mass \( m \), and specific heat capacity \( c \) at absolute temperature \( T \) in surroundings at \( T_0 \) is:
+</p>
+\[
+P_{\text{net}} = -m c \frac{dT}{dt} = e \sigma A (T^4 - T_0^4)
+\]
+<p>
+Let \( T = T_0 + \Delta T \), where \( \Delta T \ll T_0 \). We express \( T^4 \) as:
+</p>
+\[
+T^4 = (T_0 + \Delta T)^4 = T_0^4 \left( 1 + \frac{\Delta T}{T_0} \right)^4
+\]
+<p>
+Expanding binomially because \( \frac{\Delta T}{T_0} \ll 1 \) and neglecting second- and higher-order terms:
+</p>
+\[
+\left( 1 + \frac{\Delta T}{T_0} \right)^4 \approx 1 + 4\frac{\Delta T}{T_0}
+\]
+<p>
+Substituting back into the fourth-power temperature difference:
+</p>
+\[
+T^4 - T_0^4 = T_0^4 \left( 1 + 4\frac{\Delta T}{T_0} \right) - T_0^4 = 4 T_0^3 \Delta T = 4 T_0^3 (T - T_0)
+\]
+<p>
+Substituting this linear approximation into the heat loss equation:
+</p>
+\[
+-m c \frac{dT}{dt} = e \sigma A \left[ 4 T_0^3 (T - T_0) \right] = (4 e \sigma A T_0^3)(T - T_0)
+\]
+<div class="model-box">
+\[
+-\frac{dT}{dt} = K (T - T_0), \qquad \text{where } K = \frac{4 e \sigma A T_0^3}{m c}
+\]
+</div>
+<div class="insightbox">
+The cooling constant \( K \) depends on:
+<ol>
+<li>Surface area \( A \) and emissivity \( e \).</li>
+<li>Ambient temperature cubed (\( T_0^3 \)). Higher surrounding temperatures increase \( K \).</li>
+<li>Inversely on thermal capacity (\( m c = \rho V c \)).</li>
+</ol>
+<strong>SI Unit of \( K \):</strong> \(\text{s}^{-1}\) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([T^{-1}]\)
+</div>
+</section>
+
+<section>
+<h2>Differential Equation and Exponential Decay Form</h2>
+<p>
+To determine the explicit temporal temperature profile \( T(t) \), we solve the first-order differential equation:
+</p>
+\[
+\frac{dT}{T - T_0} = -K \, dt
+\]
+<p>
+Integrating from initial time \( t = 0 \) (where \( T = T_i \)) to time \( t \) (where temperature is \( T \)):
+</p>
+\[
+\int_{T_i}^T \frac{dT'}{T' - T_0} = -K \int_0^t dt'
+\]
+\[
+\ln\left( \frac{T - T_0}{T_i - T_0} \right) = -K t
+\]
+<p>
+Exponentiating both sides:
+</p>
+<div class="model-box">
+\[
+T(t) = T_0 + (T_i - T_0) e^{-K t}
+\]
+</div>
+<div class="concept-box">
+The temperature of the cooling body decays <strong>exponentially</strong> toward the surrounding temperature \( T_0 \). Asymptotically, as \( t \to \infty \), \( T \to T_0 \).
+</div>
+</section>
+
+<section>
+<h2>Cooling Curves and Physical Graphs</h2>
+
+<div class="diagram">
+<svg width="600" height="260" viewBox="0 0 600 260">
+  <!-- Graph 1: T vs t -->
+  <line x1="50" y1="210" x2="260" y2="210" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="50" y1="210" x2="50" y2="40" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="235" font-size="12" font-weight="bold">Time t</text>
+  <text x="35" y="35" font-size="12" font-weight="bold">T(t)</text>
+  <!-- Ambient T0 line -->
+  <line x1="50" y1="160" x2="250" y2="160" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="35" y="165" font-size="11" fill="#7f8c8d">T₀</text>
+  <text x="35" y="65" font-size="11" fill="#c0392b">T_i</text>
+  <!-- Decay Curve -->
+  <path d="M 50 60 Q 90 140 250 160" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="150" y="30" font-size="13" font-weight="bold" fill="#2c3e50" text-anchor="middle">Temperature vs Time</text>
+
+  <!-- Graph 2: ln(T - T0) vs t -->
+  <line x1="340" y1="210" x2="550" y2="210" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="340" y1="210" x2="340" y2="40" stroke="#2c3e50" stroke-width="2"/>
+  <text x="540" y="235" font-size="12" font-weight="bold">Time t</text>
+  <text x="310" y="35" font-size="12" font-weight="bold">ln(T - T₀)</text>
+  <!-- Straight Line -->
+  <line x1="340" y1="60" x2="530" y2="190" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="450" y="100" font-size="12" font-weight="bold" fill="#2980b9">Slope = -K</text>
+  <text x="445" y="30" font-size="13" font-weight="bold" fill="#2c3e50" text-anchor="middle">Logarithmic Cooling</text>
+</svg>
+</div>
+
+<ul class="points-list">
+<li><strong>\( T \) versus \( t \) Curve:</strong> Starts at \( T_i \) with a steep negative slope (\( -K(T_i - T_0) \)) and flattens out exponentially, asymptotically approaching \( T_0 \).</li>
+<li><strong>\( \ln(T - T_0) \) versus \( t \) Graph:</strong> Yields a perfectly straight line with intercept \( \ln(T_i - T_0) \) and constant negative slope equal to \( -K \).</li>
+<li><strong>Rate of Cooling \( \left(-\frac{dT}{dt}\right) \) versus Temperature Difference \( (T - T_0) \):</strong> A straight line passing through the origin with slope \( K \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Sub-Topics & Calculation Methods</h2>
+<div class="chapter-list">
+<a href="./07a-approximations-and-cooling-methods.html">1. Average Temperature Approximations & Experimental Calorimetry</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

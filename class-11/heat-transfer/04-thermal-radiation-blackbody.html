@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermal Radiation & Blackbody Theory | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Heat Transfer
+</a>
+</nav>
+
+<h1>Thermal Radiation & Blackbody Theory</h1>
+<p class="subtitle">
+Electromagnetic origin of thermal energy emission, radiation properties of surfaces, and blackbody cavity dynamics.
+</p>
+
+<section>
+<h2>Electromagnetic Nature of Thermal Radiation</h2>
+<p>
+All matter composed of atoms and molecules at temperatures above absolute zero (\( T > 0\text{ K} \)) continually emits electromagnetic energy into space. This emission is termed <strong>Thermal Radiation</strong>.
+</p>
+<p>
+At the microscopic level, thermal energy manifests as rapid, random thermal motion, oscillations, and collisions of bound ions and valence electrons. Because charged particles undergo acceleration during these thermal collisions, Maxwell's electromagnetic theory dictates that they must continuously radiate electromagnetic waves.
+</p>
+<ul class="points-list">
+<li><strong>Propagation Velocity:</strong> Radiative energy travels at the speed of light in vacuum (\( c \approx 3 \times 10^8\text{ m/s} \)) without requiring any material medium.</li>
+<li><strong>Wavelength Spectrum:</strong> Thermal radiation spans a broad continuous electromagnetic band—predominantly Infrared (\( \approx 780\text{ nm} - 100\ \mu\text{m} \)), visible light (\( 380\text{ nm} - 780\text{ nm} \) at elevated temperatures), and Ultraviolet.</li>
+<li><strong>Properties:</strong> Thermal radiation obeys all wave optics principles: rectilinear propagation in homogeneous media, reflection, refraction, interference, diffraction, and transverse polarization. It exerts radiation pressure \( P_{\text{rad}} = \frac{I}{c} \) upon surfaces.</li>
+</ul>
+</section>
+
+<section>
+<h2>Absorptive Power, Reflective Power, and Transmissive Power</h2>
+<p>
+When a total quantity of radiant energy \( Q \) impinges upon the surface of a body:
+</p>
+<ul class="points-list">
+<li>A fraction \( Q_a \) is absorbed by the body.</li>
+<li>A fraction \( Q_r \) is reflected from the surface.</li>
+<li>A fraction \( Q_t \) is transmitted through the body.</li>
+</ul>
+<p>
+By conservation of energy:
+</p>
+\[
+Q_a + Q_r + Q_t = Q
+\]
+<p>
+Dividing both sides by the total incident energy \( Q \):
+</p>
+<div class="model-box">
+\[
+\frac{Q_a}{Q} + \frac{Q_r}{Q} + \frac{Q_t}{Q} = 1 \implies a + r + t = 1
+\]
+</div>
+<p>
+where:
+</p>
+<ul>
+<li><strong>Absorptive Power / Absorptance (\( a \)):</strong> \( a = \frac{Q_a}{Q} \). The fraction of incident radiation absorbed. (Dimensionless scalar, \( 0 \le a \le 1 \)).</li>
+<li><strong>Reflective Power / Reflectance (\( r \)):</strong> \( r = \frac{Q_r}{Q} \). The fraction of incident radiation reflected. (Dimensionless scalar, \( 0 \le r \le 1 \)).</li>
+<li><strong>Transmissive Power / Transmittance (\( t \)):</strong> \( t = \frac{Q_t}{Q} \). The fraction of incident radiation transmitted. (Dimensionless scalar, \( 0 \le t \le 1 \)).</li>
+</ul>
+
+<div class="concept-box">
+<strong>Special Classifications of Surfaces:</strong>
+<ul>
+<li><strong>Opaque Body (Athermanous):</strong> \( t = 0 \implies a + r = 1 \). (Most solids and liquids).</li>
+<li><strong>Transparent Body (Diathermanous):</strong> \( t = 1, a = 0, r = 0 \). (e.g., dry air, rock salt, quartz).</li>
+<li><strong>Perfect Reflector:</strong> \( r = 1, a = 0, t = 0 \). (e.g., highly polished silver mirror).</li>
+<li><strong>Perfect Blackbody:</strong> \( a = 1, r = 0, t = 0 \).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Emissive Power and Spectral Emissive Power</h2>
+<p>
+To quantify the rate of emission of radiant energy from a real surface, two physical definitions are introduced:
+</p>
+
+<h3>1. Total Emissive Power (\( E \))</h3>
+<div class="model-box">
+<strong>Definition:</strong> Total emissive power of a body is the total radiative energy emitted per unit surface area per unit time across all wavelengths in all forward directions at absolute temperature \( T \).
+\[
+E = \frac{dQ}{A \cdot dt} = \frac{P}{A}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>SI Unit:</strong> \(\text{W}\cdot\text{m}^{-2}\) (or \(\text{J}\cdot\text{s}^{-1}\cdot\text{m}^{-2}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^1 L^0 T^{-3}]\)
+</p>
+</div>
+
+<h3>2. Spectral Emissive Power (\( E_\lambda \))</h3>
+<p>
+Radiant energy is distributed across a continuum of wavelengths. The emissive power within a differential wavelength interval \( [\lambda, \lambda + d\lambda] \) is \( dE = E_\lambda d\lambda \).
+</p>
+<div class="model-box">
+<strong>Definition:</strong> Spectral emissive power is the radiant energy emitted per unit surface area per unit time per unit wavelength interval centered at wavelength \( \lambda \).
+\[
+E_\lambda = \frac{dE}{d\lambda} = \frac{dQ}{A \cdot dt \cdot d\lambda}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>SI Unit:</strong> \(\text{W}\cdot\text{m}^{-3}\) (or \(\text{W}\cdot\text{m}^{-2}\cdot\text{nm}^{-1}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^1 L^{-1} T^{-3}]\)
+</p>
+</div>
+<p>
+The total emissive power is the integral of spectral emissive power over all wavelengths from zero to infinity:
+</p>
+\[
+E = \int_0^\infty E_\lambda \, d\lambda
+\]
+</section>
+
+<section>
+<h2>Concept of an Ideal Blackbody</h2>
+<p>
+An <strong>Ideal Blackbody</strong> is defined as an idealized physical object that possesses the following properties:
+</p>
+<ol>
+<li>It completely absorbs all electromagnetic radiation incident upon it, regardless of frequency, wavelength, or angle of incidence (\( a = 1, r = 0, t = 0 \)).</li>
+<li>It reflects zero radiation and transmits zero radiation; hence, at room temperature, it appears completely black.</li>
+<li>At any given temperature \( T \), a blackbody emits the maximum possible thermal radiation at every wavelength compared to any other body of the same surface area and temperature. It is a <em>perfect emitter</em>.</li>
+<li>The radiation emitted by a blackbody depends solely on its absolute temperature \( T \) and is completely independent of the material composition, geometry, or nature of the surface.</li>
+</ol>
+<div class="insightbox">
+A blackbody is not necessarily black in color when hot! When heated to high temperatures, a blackbody glows brightly because it emits maximum thermal radiation. The Sun, molten iron, and the filament of an incandescent lamp behave to a very close approximation as blackbodies.
+</div>
+</section>
+
+<section>
+<h2>Fery's Black Body and Cavity Radiation</h2>
+<p>
+Because no naturally occurring surface is a perfect blackbody (even lampblack absorbs only \( \approx 96-98\% \)), practical blackbody simulators are constructed using an isothermal enclosed cavity with a tiny aperture.
+</p>
+
+<h3>1. Construction of Fery's Blackbody</h3>
+<p>
+Fery designed a hollow, double-walled spherical copper sphere with a very small opening (pinhole) \( O \). The interior surface is coated with finely divided lampblack or platinum black, and the space between double walls is evacuated to prevent conduction loss. Directly opposite the aperture, a conical projection \( C \) is formed on the inner wall.
+</p>
+
+<div class="diagram">
+<svg width="560" height="240" viewBox="0 0 560 240">
+  <!-- Double wall cavity -->
+  <circle cx="280" cy="120" r="95" fill="#2c3e50" stroke="#1a252f" stroke-width="2"/>
+  <circle cx="280" cy="120" r="85" fill="#f8fafc" stroke="#1a252f" stroke-width="2"/>
+  <circle cx="280" cy="120" r="80" fill="#111" stroke="#333" stroke-width="1"/>
+  <!-- Pinhole aperture left -->
+  <rect x="180" y="112" width="30" height="16" fill="white"/>
+  <circle cx="195" cy="120" r="8" fill="white"/>
+  <!-- Conical spike opposite aperture -->
+  <polygon points="360,120 335,110 335,130" fill="#111" stroke="#444" stroke-width="1"/>
+  <!-- Incident ray -->
+  <line x1="100" y1="120" x2="195" y2="120" stroke="#f1c40f" stroke-width="2.5"/>
+  <polygon points="175,115 190,120 175,125" fill="#f1c40f"/>
+  <text x="140" y="110" font-size="12" font-weight="bold" fill="#d35400">Incident Ray</text>
+  <!-- Multiple reflections inside -->
+  <line x1="195" y1="120" x2="335" y2="115" stroke="#f39c12" stroke-width="1.5"/>
+  <line x1="335" y1="115" x2="250" y2="45" stroke="#e67e22" stroke-width="1.5"/>
+  <line x1="250" y1="45" x2="330" y2="175" stroke="#d35400" stroke-width="1.5"/>
+  <line x1="330" y1="175" x2="220" y2="175" stroke="#c0392b" stroke-width="1.5"/>
+  <!-- Labels -->
+  <text x="195" y="95" font-size="12" fill="#333" text-anchor="middle">Aperture</text>
+  <text x="350" y="100" font-size="12" fill="#fff">Conical Spike</text>
+  <text x="280" y="230" font-size="13" font-weight="bold" fill="#2c3e50" text-anchor="middle">Fery's Black Body (Multiple Internal Reflections)</text>
+</svg>
+</div>
+
+<h3>2. Physical Action</h3>
+<p>
+Any ray entering through the small pinhole strikes the conical projection and is reflected at an angle. It undergoes dozens of successive internal reflections off the lampblack walls. At each reflection, \( \approx 98\% \) of the energy is absorbed. After only a few reflections:
+</p>
+\[
+\text{Fraction Remaining Unabsorbed} = (0.02)^n \approx 0
+\]
+<p>
+The probability of the ray finding its way back out through the tiny hole is virtually zero. Thus, the <strong>aperture behaves as a 100% perfect blackbody absorber (\( a = 1 \))</strong>, regardless of the wall material!
+</p>
+<div class="insightbox">
+When the entire enclosure is heated uniformly to temperature \( T \), the radiation issuing out from the aperture is pure <strong>Blackbody Cavity Radiation</strong>.
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Radiation Principles</h2>
+<div class="chapter-list">
+<a href="./04a-kirchhoff-law-radiation.html">1. Kirchhoff's Law of Radiation & Emissivity</a>
+<a href="./04b-greenhouse-effect-atmosphere.html">2. Atmospheric Radiation & Greenhouse Effect</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

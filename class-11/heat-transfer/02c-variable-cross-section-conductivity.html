@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variable Cross-Section & Conductivity | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-conduction-fourier-law.html" class="back-btn">
+<span>&larr;</span> Back to Conduction & Fourier's Law
+</a>
+</nav>
+
+<h1>Variable Cross-Section & Conductivity</h1>
+<p class="subtitle">
+Integral formulation of Fourier's law for non-uniform geometries and non-linear transport coefficients.
+</p>
+
+<section>
+<h2>Heat Conduction Through a Truncated Cone</h2>
+<p>
+Consider a solid rod in the shape of a frustum of a circular cone having length \( L \), base radii \( r_1 \) at \( x = 0 \) and \( r_2 \) at \( x = L \), and thermal conductivity \( k \).
+Let the lateral surface be perfectly insulated, with the ends maintained at steady temperatures \( T_1 \) and \( T_2 \) (\( T_1 > T_2 \)).
+</p>
+
+<div class="diagram">
+<svg width="560" height="200" viewBox="0 0 560 200">
+  <!-- Truncated cone body -->
+  <polygon points="120,70 420,40 420,160 120,130" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/>
+  <!-- Left face -->
+  <ellipse cx="120" cy="100" rx="15" ry="30" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <text x="90" y="105" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="end">T₁, r₁</text>
+  <!-- Right face -->
+  <ellipse cx="420" cy="100" rx="25" ry="60" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="455" y="105" font-size="14" font-weight="bold" fill="#2980b9" text-anchor="start">T₂, r₂</text>
+  <!-- Differential slice -->
+  <line x1="260" y1="56" x2="260" y2="144" stroke="#e67e22" stroke-width="2.5"/>
+  <text x="260" y="170" font-size="12" fill="#d35400" text-anchor="middle">dx at x</text>
+  <!-- Dimension L -->
+  <line x1="120" y1="185" x2="420" y2="185" stroke="#555" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="270" y="198" font-size="13" fill="#333" text-anchor="middle">Length L</text>
+</svg>
+</div>
+
+<p>
+The radius of the circular cross-section increases linearly along the axis:
+</p>
+\[
+r(x) = r_1 + \left(\frac{r_2 - r_1}{L}\right)x
+\]
+<p>
+The cross-sectional area at position \( x \) is:
+</p>
+\[
+A(x) = \pi [r(x)]^2 = \pi \left[ r_1 + \left(\frac{r_2 - r_1}{L}\right)x \right]^2
+\]
+<p>
+In steady state, the thermal current \( H \) is constant across every section. The thermal resistance of a differential slice of thickness \( dx \) is:
+</p>
+\[
+d R_{th} = \frac{dx}{k A(x)} = \frac{dx}{k \pi [r(x)]^2}
+\]
+<p>
+Integrating over the length of the cone from \( x = 0 \) to \( x = L \):
+</p>
+\[
+R_{th} = \int_0^L \frac{dx}{k \pi \left[ r_1 + \left(\frac{r_2 - r_1}{L}\right)x \right]^2}
+\]
+<p>
+Let \( u = r(x) \implies du = \left(\frac{r_2 - r_1}{L}\right)dx \):
+</p>
+\[
+R_{th} = \frac{L}{\pi k (r_2 - r_1)} \int_{r_1}^{r_2} \frac{du}{u^2} = \frac{L}{\pi k (r_2 - r_1)} \left( \frac{1}{r_1} - \frac{1}{r_2} \right) = \frac{L}{\pi k (r_2 - r_1)} \left(\frac{r_2 - r_1}{r_1 r_2}\right)
+\]
+<div class="model-box">
+\[
+R_{\text{cone}} = \frac{L}{\pi k r_1 r_2} \implies H = \frac{\pi k r_1 r_2 (T_1 - T_2)}{L}
+\]
+</div>
+<div class="insightbox">
+Notice that the equivalent area of a truncated cone for heat conduction is the <strong>geometric mean</strong> of the two end areas: \( A_{eq} = \sqrt{A_1 A_2} = \sqrt{(\pi r_1^2)(\pi r_2^2)} = \pi r_1 r_2 \).
+</div>
+</section>
+
+<section>
+<h2>Variable Cross-Section Rods Integration</h2>
+<p>
+For any generalized one-dimensional solid with a cross-sectional area \( A(x) \) varying along its axial coordinate \( x \in [0, L] \):
+</p>
+<div class="model-box">
+\[
+R_{th} = \int_0^L \frac{dx}{k A(x)}
+\]
+</div>
+<p>
+The steady-state temperature distribution \( T(x) \) is determined by integrating from \( 0 \) to \( x \):
+</p>
+\[
+T(x) = T_1 - H \int_0^x \frac{dx'}{k A(x')} = T_1 - (T_1 - T_2)\frac{\int_0^x \frac{dx'}{A(x')}}{\int_0^L \frac{dx'}{A(x')}}
+\]
+<div class="concept-box">
+Because \( H = -k A(x) \frac{dT}{dx} = \text{constant} \), the local temperature gradient is inversely proportional to cross-sectional area: \( |\frac{dT}{dx}| \propto \frac{1}{A(x)} \). Temperature drops most steeply where the rod is narrowest.
+</div>
+</section>
+
+<section>
+<h2>Temperature Dependent Thermal Conductivity</h2>
+<p>
+In many engineering and real physical materials, thermal conductivity is not strictly constant but varies with temperature \( T \). A widely encountered linear model is:
+</p>
+<div class="model-box">
+\[
+k(T) = k_0 (1 + \alpha T)
+\]
+</div>
+<p>
+where \( k_0 \) is the conductivity at reference temperature \( T = 0 \) and \( \alpha \) is the thermal temperature coefficient of conductivity.
+</p>
+<p>
+Applying Fourier's Law across a uniform rod of length \( L \) and constant area \( A \):
+</p>
+\[
+H = -k(T) A \frac{dT}{dx} \implies \frac{H}{A} dx = -k_0(1 + \alpha T) dT
+\]
+<p>
+Integrating from \( x = 0 \) (\( T = T_1 \)) to \( x = L \) (\( T = T_2 \)):
+</p>
+\[
+\frac{H}{A} \int_0^L dx = -k_0 \int_{T_1}^{T_2} (1 + \alpha T) dT = k_0 \int_{T_2}^{T_1} (1 + \alpha T) dT
+\]
+\[
+\frac{H L}{A} = k_0 \left[ (T_1 - T_2) + \frac{\alpha}{2}(T_1^2 - T_2^2) \right] = k_0(T_1 - T_2)\left[ 1 + \alpha \left(\frac{T_1 + T_2}{2}\right) \right]
+\]
+<div class="model-box">
+\[
+H = \frac{k_{\text{avg}} A(T_1 - T_2)}{L}, \qquad \text{where } k_{\text{avg}} = k\left(\frac{T_1 + T_2}{2}\right) = k_0 \left[1 + \alpha \left(\frac{T_1 + T_2}{2}\right)\right]
+\]
+</div>
+<div class="insightbox">
+For linearly temperature-dependent conductivity, the heat current is computed exactly using standard Fourier's Law evaluated at the <strong>mean temperature</strong> \( T_{\text{mean}} = \frac{T_1 + T_2}{2} \).
+</div>
+</section>
+
+<section>
+<h2>Spatially Varying Thermal Conductivity</h2>
+<p>
+Consider a functionally graded material or composite rod where thermal conductivity varies along the length as \( k(x) = k_0(1 + \beta x) \).
+</p>
+<p>
+The total thermal resistance is:
+</p>
+\[
+R_{th} = \int_0^L \frac{dx}{k(x) A} = \frac{1}{A} \int_0^L \frac{dx}{k_0(1 + \beta x)} = \frac{1}{k_0 A \beta} \ln(1 + \beta L)
+\]
+<p>
+The resulting steady-state heat current is:
+</p>
+<div class="model-box">
+\[
+H = \frac{k_0 \beta A (T_1 - T_2)}{\ln(1 + \beta L)}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

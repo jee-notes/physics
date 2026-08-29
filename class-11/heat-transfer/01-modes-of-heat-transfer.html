@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modes of Heat Transfer | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Heat Transfer
+</a>
+</nav>
+
+<h1>Modes of Heat Transfer</h1>
+<p class="subtitle">
+Comparative mechanics, microscopic processes, and macroscopic pathways of thermal energy propagation.
+</p>
+
+<section>
+<h2>Introduction to Heat Transfer</h2>
+<p>
+Whenever two points in a continuous medium or two distinct macroscopic bodies exist at different temperatures, thermal energy automatically migrates from the higher temperature region to the lower temperature region. This spontaneous non-equilibrium transport is defined as <strong>Heat Flow</strong>.
+</p>
+<p>
+The quantity of heat exchanged over an infinitesimal time interval \( dt \) is denoted by \( dQ \). The fundamental quantity measuring the time rate of thermal energy transfer is the <strong>Thermal Current (Heat Current)</strong>, defined as:
+</p>
+<div class="model-box">
+\[
+H = \frac{dQ}{dt}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>SI Unit:</strong> Watt (\(\text{W}\) or \(\text{J}\cdot\text{s}^{-1}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^1 L^2 T^{-3}]\)
+</p>
+</div>
+<p>
+Here, \( dQ \) represents the net thermal energy crossing a defined surface boundary in Joules (\(\text{J}\)), and \( dt \) is the elapsed time in seconds (\(\text{s}\)).
+</p>
+<div class="insightbox">
+Heat is energy in transit across a boundary due solely to a temperature difference. A body does not "possess" heat; it possesses internal energy \( U \). Once heat is transferred into a system, it manifests as an increase in internal energy.
+</div>
+</section>
+
+<section>
+<h2>Distinction Between Heat and Temperature</h2>
+<p>
+In physics, precise distinctions must be drawn between state functions and boundary path phenomena:
+</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Temperature (\( T \))</th>
+<th>Heat (\( Q \)) / Internal Energy (\( U \))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical Nature</strong></td>
+<td>Macroscopic measure of the average translational kinetic energy per molecule of a substance.</td>
+<td>Thermal energy transferred across boundaries due to temperature differential (\( Q \)); total microscopic kinetic and potential energy stored within the system (\( U \)).</td>
+</tr>
+<tr>
+<td><strong>Thermodynamic Status</strong></td>
+<td>State variable; intensive property (independent of system mass).</td>
+<td>\( Q \) is a path-dependent energy transfer (not a state variable); \( U \) is an extensive state function.</td>
+</tr>
+<tr>
+<td><strong>SI Unit & Dimension</strong></td>
+<td>Kelvin (\(\text{K}\)); \([\Theta]\) or \([K^1]\)</td>
+<td>Joule (\(\text{J}\)); \([M^1 L^2 T^{-2}]\)</td>
+</tr>
+<tr>
+<td><strong>Measurement Tool</strong></td>
+<td>Thermometer / Pyrometer</td>
+<td>Calorimeter</td>
+</tr>
+<tr>
+<td><strong>Direction of Flow</strong></td>
+<td>Determines the direction of spontaneous thermal energy flow (from higher \( T \) to lower \( T \)).</td>
+<td>The actual energy that migrates during the equilibration process.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Overview of Conduction, Convection, and Radiation</h2>
+<p>
+Thermal energy transmission operates through three mutually distinct pathways, each governed by different physical constraints:
+</p>
+
+<h3>1. Conduction</h3>
+<p>
+In solids, atoms and ions occupy fixed lattice equilibrium positions and cannot drift through the material. When one boundary is heated, atoms near that surface gain kinetic energy and oscillate with larger amplitudes. Through interatomic bonding forces (harmonic coupling), these oscillations are transferred to neighboring atoms in the form of quantized elastic waves known as <strong>phonons</strong>.
+</p>
+<p>
+In metallic conductors, an additional and dominant mechanism operates: <strong>free electron diffusion</strong>. Thermal energy is rapidly transported by the high-velocity drift of the sea of free conduction electrons.
+</p>
+
+<h3>2. Convection</h3>
+<p>
+In fluid media (liquids and gases), molecules possess translational freedom. When a parcel of fluid is heated, it expands, causing its mass density \( \rho \) to decrease. Under gravity, the buoyant force lifts the warmer, less dense fluid upward, while cooler, denser fluid descends to occupy the vacated space. This establishes continuous circulation currents known as <strong>convection loops</strong>.
+</p>
+
+<h3>3. Radiation</h3>
+<p>
+Every physical body with temperature \( T > 0\text{ K} \) constantly emits electromagnetic waves across a broad continuous spectrum due to the thermal oscillations and accelerations of charged subatomic particles within its atoms. Unlike conduction and convection, radiation requires no material particles and transmits directly through vacuum at the speed of light (\( c \approx 3 \times 10^8\text{ m/s} \)).
+</p>
+
+<div class="diagram">
+<svg width="680" height="260" viewBox="0 0 680 260">
+  <!-- Conduction Box -->
+  <rect x="30" y="40" width="180" height="170" rx="10" fill="#f8fafc" stroke="#2c3e50" stroke-width="2"/>
+  <text x="120" y="70" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Conduction</text>
+  <circle cx="70" cy="110" r="10" fill="#e74c3c"/>
+  <circle cx="105" cy="110" r="10" fill="#e67e22"/>
+  <circle cx="140" cy="110" r="10" fill="#f1c40f"/>
+  <circle cx="175" cy="110" r="10" fill="#3498db"/>
+  <path d="M 60 140 Q 80 130 100 140 T 140 140 T 180 140" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="3,3"/>
+  <text x="120" y="175" font-size="12" fill="#555" text-anchor="middle">Lattice Vibrations &</text>
+  <text x="120" y="195" font-size="12" fill="#555" text-anchor="middle">Free Electrons (No Bulk Motion)</text>
+
+  <!-- Convection Box -->
+  <rect x="250" y="40" width="180" height="170" rx="10" fill="#f8fafc" stroke="#2c3e50" stroke-width="2"/>
+  <text x="340" y="70" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Convection</text>
+  <!-- Circulation loop arrows -->
+  <path d="M 310 110 A 30 30 0 1 1 370 150" fill="none" stroke="#e74c3c" stroke-width="3"/>
+  <polygon points="370,155 375,145 365,145" fill="#e74c3c"/>
+  <path d="M 370 150 A 30 30 0 1 1 310 110" fill="none" stroke="#3498db" stroke-width="3"/>
+  <polygon points="310,105 305,115 315,115" fill="#3498db"/>
+  <text x="340" y="175" font-size="12" fill="#555" text-anchor="middle">Bulk Fluid Movement</text>
+  <text x="340" y="195" font-size="12" fill="#555" text-anchor="middle">Density Differences</text>
+
+  <!-- Radiation Box -->
+  <rect x="470" y="40" width="180" height="170" rx="10" fill="#f8fafc" stroke="#2c3e50" stroke-width="2"/>
+  <text x="560" y="70" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">Radiation</text>
+  <!-- EM waves -->
+  <path d="M 500 110 Q 515 95 530 110 T 560 110 T 590 110 T 620 110" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
+  <path d="M 500 140 Q 515 125 530 140 T 560 140 T 590 140 T 620 140" fill="none" stroke="#9b59b6" stroke-width="2.5"/>
+  <text x="560" y="175" font-size="12" fill="#555" text-anchor="middle">Electromagnetic Waves</text>
+  <text x="560" y="195" font-size="12" fill="#555" text-anchor="middle">No Medium Needed (\( v = c \))</text>
+</svg>
+</div>
+</section>
+
+<section>
+<h2>Comparative Analysis of Heat Transfer Mechanisms</h2>
+<p>
+The table below highlights the crucial distinctions across all three mechanisms:
+</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Conduction</th>
+<th>Convection</th>
+<th>Radiation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Material Medium</strong></td>
+<td>Essential (Solids, stationary liquids/gases).</td>
+<td>Essential (Liquids and gases exclusively).</td>
+<td>Not required (Propagates through high vacuum as well as transparent media).</td>
+</tr>
+<tr>
+<td><strong>Macroscopic Motion</strong></td>
+<td>No bulk movement of particles.</td>
+<td>Bulk macroscopic mass movement occurs.</td>
+<td>No particle movement involved.</td>
+</tr>
+<tr>
+<td><strong>Speed of Propagation</strong></td>
+<td>Slow (Diffusive process governed by thermal diffusivity \( \alpha = k / \rho c \)).</td>
+<td>Moderate (Determined by fluid flow velocity and viscous forces).</td>
+<td>Extremely fast (Speed of light \( c \approx 3 \times 10^8\text{ m/s} \) in vacuum).</td>
+</tr>
+<tr>
+<td><strong>Path of Heat Flow</strong></td>
+<td>Irregular/tortuous along temperature gradient lines.</td>
+<td>Curved circulation loops.</td>
+<td>Straight lines in homogeneous media.</td>
+</tr>
+<tr>
+<td><strong>Governing Law</strong></td>
+<td>Fourier's Law (\( H = -kA \frac{dT}{dx} \))</td>
+<td>Newton's Law of Cooling (\( H = hA\Delta T \))</td>
+<td>Stefan-Boltzmann Law (\( P = e\sigma A T^4 \))</td>
+</tr>
+<tr>
+<td><strong>Dominant Conditions</strong></td>
+<td>High thermal conductivity solids; low temperature differentials.</td>
+<td>Fluids subjected to gravity or forced pumping.</td>
+<td>High absolute temperatures (\( P \propto T^4 \)); evacuated systems (e.g., outer space, vacuum flasks).</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Thermal Equilibrium and Zeroth Law Connection</h2>
+<p>
+When heat transfer proceeds between isolated systems, thermal current continues until temperature homogeneity is attained throughout.
+</p>
+<div class="concept-box">
+<strong>Zeroth Law of Thermodynamics:</strong> If two thermodynamic systems \( A \) and \( B \) are each in thermal equilibrium with a third system \( C \), then they are in mutual thermal equilibrium with each other (\( T_A = T_B \)).
+</div>
+<p>
+At thermal equilibrium:
+</p>
+\[
+\frac{dQ_{net}}{dt} = 0 \iff T_1 = T_2
+\]
+<p>
+Microscopically, dynamic thermal exchanges between systems never cease; however, the forward and reverse rates of energy exchange become strictly equal, resulting in zero net thermal current.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

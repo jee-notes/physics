@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Constant & Radiation Applications | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Heat Transfer
+</a>
+</nav>
+
+<h1>Solar Constant & Radiation Applications</h1>
+<p class="subtitle">
+Solar flux measurements, stellar photosphere temperature estimations, and planetary thermal equilibrium.
+</p>
+
+<section>
+<h2>Definition and Value of Solar Constant</h2>
+<p>
+The <strong>Solar Constant (\( S \))</strong> is defined as the total radiant solar energy received normally per unit surface area per unit time at the outer boundary of Earth's atmosphere, when Earth is at its mean distance from the Sun.
+</p>
+<div class="model-box">
+\[
+S = \frac{\text{Solar Power Received}}{\text{Normal Area}} = \frac{P_{\odot,\text{inc}}}{A_{\perp}}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>Accepted Value:</strong> \( S \approx 1361 \, \text{W}\cdot\text{m}^{-2} \approx 1.36 \, \text{kW}\cdot\text{m}^{-2} \approx 1.95 \, \text{cal}\cdot\text{cm}^{-2}\cdot\text{min}^{-1} \)
+</p>
+<p style="text-align: center; margin-bottom: 0;">
+<strong>SI Unit:</strong> \(\text{W}\cdot\text{m}^{-2}\) (or \(\text{J}\cdot\text{s}^{-1}\cdot\text{m}^{-2}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^1 L^0 T^{-3}]\)
+</p>
+</div>
+<div class="insightbox">
+The solar constant is measured outside Earth's atmosphere using satellite radiometers or pyrheliometers on high mountain peaks (corrected for atmospheric Rayleigh scattering, water vapor, and ozone absorption).
+</div>
+</section>
+
+<section>
+<h2>Estimation of the Surface Temperature of the Sun</h2>
+<p>
+Assuming the Sun acts as an ideal spherical blackbody of radius \( R_s \) at uniform surface photosphere temperature \( T_s \):
+</p>
+
+<div class="diagram">
+<svg width="600" height="220" viewBox="0 0 600 220">
+  <!-- Sun -->
+  <circle cx="90" cy="110" r="45" fill="#f39c12" stroke="#d35400" stroke-width="2"/>
+  <text x="90" y="115" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Sun (T_s, R_s)</text>
+  <!-- Expanding Sphere of radius r -->
+  <path d="M 90 20 A 400 400 0 0 1 490 110 A 400 400 0 0 1 90 200" fill="none" stroke="#bdc3c7" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <!-- Distance r line -->
+  <line x1="90" y1="110" x2="490" y2="110" stroke="#7f8c8d" stroke-width="1.5"/>
+  <text x="290" y="100" font-size="13" fill="#333" text-anchor="middle">Mean Distance to Earth r = 1 AU</text>
+  <!-- Earth -->
+  <circle cx="490" cy="110" r="12" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="490" y="138" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="middle">Earth (R_e)</text>
+  <!-- Solar constant label -->
+  <text x="440" y="75" font-size="12" font-weight="bold" fill="#e67e22">Solar Flux S (W/m²)</text>
+</svg>
+</div>
+
+<ol>
+<li><strong>Total Solar Luminosity (Total Power Radiated by Sun):</strong><br>
+According to the Stefan-Boltzmann Law:
+\[
+L_{\odot} = \sigma (4\pi R_s^2) T_s^4
+\]
+</li>
+<li><strong>Solar Energy Flux at Earth's Orbit:</strong><br>
+This total radiated power spreads uniformly over the surface of a giant imaginary sphere of radius \( r \) (mean Earth-Sun orbital distance, \( 1\text{ AU} \approx 1.496 \times 10^{11}\text{ m} \)):
+\[
+S = \frac{L_{\odot}}{4\pi r^2} = \frac{\sigma (4\pi R_s^2) T_s^4}{4\pi r^2} = \sigma T_s^4 \left(\frac{R_s}{r}\right)^2
+\]
+</li>
+<li><strong>Solving for the Surface Temperature \( T_s \):</strong>
+<div class="model-box">
+\[
+T_s = \left[ \frac{S}{\sigma} \left(\frac{r}{R_s}\right)^2 \right]^{1/4} = \left[ \frac{S}{\sigma} \right]^{1/4} \sqrt{\frac{r}{R_s}}
+\]
+</div>
+</li>
+</ol>
+
+<div class="examplebox">
+<h3>Numerical Calculation:</h3>
+<p>
+Given:
+</p>
+<ul>
+<li>Solar constant \( S = 1360\text{ W/m}^2 \)</li>
+<li>Stefan-Boltzmann constant \( \sigma = 5.67 \times 10^{-8}\text{ W/m}^2\text{K}^4 \)</li>
+<li>Mean Earth-Sun distance \( r = 1.5 \times 10^{11}\text{ m} \)</li>
+<li>Solar radius \( R_s = 7.0 \times 10^8\text{ m} \)</li>
+</ul>
+<hr>
+\[
+\frac{S}{\sigma} = \frac{1360}{5.67 \times 10^{-8}} \approx 2.3986 \times 10^{10}\text{ K}^4
+\]
+\[
+\left(\frac{S}{\sigma}\right)^{1/4} \approx 393.3\text{ K}
+\]
+\[
+\sqrt{\frac{r}{R_s}} = \sqrt{\frac{1.5 \times 10^{11}}{7.0 \times 10^8}} = \sqrt{214.28} \approx 14.64
+\]
+\[
+T_s \approx 393.3 \times 14.64 \approx 5760\text{ K} \approx 5800\text{ K}
+\]
+</div>
+</section>
+
+<section>
+<h2>Solar Radiation Reaching Earth</h2>
+<p>
+Earth intercepts solar radiation with its circular projected cross-sectional area perpendicular to the incident parallel solar beam:
+</p>
+<div class="model-box">
+\[
+A_{\text{intercepted}} = \pi R_E^2
+\]
+\[
+P_{\text{intercepted}} = S \cdot (\pi R_E^2)
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( R_E \approx 6.4 \times 10^6\text{ m} \) is the radius of the Earth.
+</p>
+</div>
+<div class="insightbox">
+Although the total surface area of spherical Earth is \( 4\pi R_E^2 \), the projected area facing the unidirectional solar radiation beam is strictly circular: \( \pi R_E^2 \). Thus, the average solar irradiance distributed over the entire spinning globe is \( \frac{S \pi R_E^2}{4\pi R_E^2} = \frac{S}{4} \approx 340\text{ W/m}^2 \).
+</div>
+</section>
+
+<section>
+<h2>Thermal Equilibrium Temperature of Planets</h2>
+<p>
+Consider a spherical planet of radius \( R_p \) with albedo \( \mathcal{A} \) (reflectivity) at distance \( r \) from a star of surface temperature \( T_s \) and radius \( R_s \).
+</p>
+<p>
+In steady-state thermal equilibrium:
+</p>
+\[
+P_{\text{absorbed}} = P_{\text{emitted}}
+\]
+\[
+(1 - \mathcal{A}) S (\pi R_p^2) = e \sigma (4\pi R_p^2) T_p^4
+\]
+<p>
+Substituting \( S = \sigma T_s^4 \left(\frac{R_s}{r}\right)^2 \) and assuming blackbody emissivity for thermal infrared emission (\( e = 1 \)):
+</p>
+\[
+(1 - \mathcal{A}) \left[ \sigma T_s^4 \left(\frac{R_s}{r}\right)^2 \right] (\pi R_p^2) = \sigma (4\pi R_p^2) T_p^4
+\]
+<p>
+Canceling common terms \( \pi R_p^2 \sigma \) from both sides:
+</p>
+\[
+(1 - \mathcal{A}) T_s^4 \left(\frac{R_s}{r}\right)^2 = 4 T_p^4
+\]
+<div class="model-box">
+\[
+T_p = T_s \sqrt{\frac{R_s}{2r}} (1 - \mathcal{A})^{1/4} \implies T_p \propto \frac{1}{\sqrt{r}}
+\]
+</div>
+<div class="concept-box">
+The equilibrium temperature of a planet is independent of its own size (\( R_p \)) and decays inversely with the square root of its orbital distance from the star (\( T_p \propto r^{-1/2} \)).
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

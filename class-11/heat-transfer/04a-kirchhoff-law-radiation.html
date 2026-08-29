@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirchhoff's Law of Radiation | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-thermal-radiation-blackbody.html" class="back-btn">
+<span>&larr;</span> Back to Thermal Radiation & Blackbody Theory
+</a>
+</nav>
+
+<h1>Kirchhoff's Law of Radiation</h1>
+<p class="subtitle">
+Thermodynamic proof of the equivalence of emission and absorption, emissivity scales, and spectral absorption lines.
+</p>
+
+<section>
+<h2>Kirchhoff's Law of Thermal Radiation</h2>
+<p>
+Gustav Kirchhoff established a fundamental law connecting the emission and absorption capabilities of any physical body in thermal equilibrium.
+</p>
+<div class="model-box">
+<strong>Kirchhoff's Law:</strong> At any given temperature \( T \), the ratio of the spectral emissive power (\( E_\lambda \)) to the spectral absorptive power (\( a_\lambda \)) for all bodies is identical and strictly equal to the spectral emissive power of a perfect blackbody (\( E_{bb,\lambda} \)) at that same temperature:
+\[
+\frac{E_\lambda}{a_\lambda} = E_{bb,\lambda} = f(\lambda, T)
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( f(\lambda, T) \) is a universal function of wavelength and temperature independent of material composition.
+</p>
+</div>
+
+<h3>Thermodynamic Derivation:</h3>
+<p>
+Consider a constant-temperature evacuated isothermal enclosure maintained at temperature \( T \).
+Inside this enclosure, place two small bodies:
+</p>
+<ol>
+<li>A body of arbitrary material with surface area \( A \), spectral emissive power \( E_\lambda \), and spectral absorptive power \( a_\lambda \).</li>
+<li>A perfect blackbody of identical surface area \( A \), with \( a_{bb,\lambda} = 1 \) and spectral emissive power \( E_{bb,\lambda} \).</li>
+</ol>
+<p>
+Let \( I_\lambda d\lambda \) be the radiant energy incident upon unit area of each body per second within wavelength range \( d\lambda \).
+</p>
+<ul class="points-list">
+<li>For the arbitrary body:
+\[
+\text{Energy absorbed per second} = a_\lambda (I_\lambda d\lambda) A
+\]
+\[
+\text{Energy emitted per second} = (E_\lambda d\lambda) A
+\]
+</li>
+<li>At thermal equilibrium with the enclosure, temperature \( T \) is constant, so net heat exchange must be zero:
+\[
+a_\lambda I_\lambda d\lambda A = E_\lambda d\lambda A \implies \frac{E_\lambda}{a_\lambda} = I_\lambda
+\]
+</li>
+<li>For the perfect blackbody (\( a_{bb,\lambda} = 1 \)):
+\[
+(1) I_\lambda d\lambda A = E_{bb,\lambda} d\lambda A \implies E_{bb,\lambda} = I_\lambda
+\]
+</li>
+</ul>
+<p>
+Equating both expressions for \( I_\lambda \):
+</p>
+<div class="model-box">
+\[
+\frac{E_\lambda}{a_\lambda} = E_{bb,\lambda}
+\]
+</div>
+</section>
+
+<section>
+<h2>Good Absorbers are Good Emitters Principle</h2>
+<p>
+Because \( E_{bb,\lambda} \) is a constant for a given temperature:
+</p>
+\[
+E_\lambda = a_\lambda \cdot E_{bb,\lambda} \implies E_\lambda \propto a_\lambda
+\]
+<div class="concept-box">
+<strong>Fundamental Takeaway:</strong> A body that absorbs strongly at a particular wavelength \( \lambda \) will also emit strongly at that exact same wavelength at the same temperature. Conversely, poor absorbers are necessarily poor emitters.
+</div>
+
+<h3>Classic Demonstrations:</h3>
+<ul>
+<li><strong>Ritchie's Experiment:</strong> A hollow metal box has one face coated with lampblack (high absorptance \( a \approx 1 \)) and the opposite face polished silver (high reflectance \( r \approx 1 \)). When hot water is poured inside, the black face radiates far more intensely than the polished face. When cold water is placed inside and radiation shines on both faces, the black face absorbs far more energy.</li>
+<li><strong>Black Spots on White Porcelain:</strong> If a piece of white porcelain with dark spots painted on it is heated in a dark furnace to \( 1000^\circ\text{C} \), the dark spots appear much brighter than the surrounding white ceramic because the dark spots absorbed more radiation at room temperature and must emit more intensely at high temperature.</li>
+</ul>
+</section>
+
+<section>
+<h2>Fraunhofer Lines and Practical Applications</h2>
+<p>
+Kirchhoff used his law of radiation to explain the mysterious dark absorption lines in the solar spectrum discovered by Joseph von Fraunhofer.
+</p>
+<div class="insightbox">
+<strong>Explanation of Fraunhofer Lines:</strong> The central core of the Sun (Photosphere) is at an extremely high temperature (\( \approx 6000\text{ K} \)) and emits a continuous spectrum of all wavelengths. Surrounding the photosphere is a cooler gaseous atmosphere (Chromosphere). Atoms and elements in the chromosphere absorb precisely those discrete characteristic wavelengths that they would emit when heated to incandescence. These selectively absorbed wavelengths appear as dark lines (Fraunhofer Lines) in the observed solar spectrum on Earth.
+</div>
+<p>
+During a total solar eclipse, when the brilliant light of the photosphere is completely blocked by the Moon, the chromosphere's emission becomes directly visible. The dark Fraunhofer lines instantly turn into bright, incandescent emission lines!
+</p>
+</section>
+
+<section>
+<h2>Emissivity of Real Surfaces</h2>
+<p>
+<strong>Emissivity (\( e \) or \( \varepsilon \))</strong> of a real body is the ratio of its total emissive power (\( E \)) to the total emissive power of a perfect blackbody (\( E_{bb} \)) at the exact same temperature:
+</p>
+<div class="model-box">
+\[
+e = \frac{E}{E_{bb}} = \frac{\int_0^\infty E_\lambda d\lambda}{\int_0^\infty E_{bb,\lambda} d\lambda}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>Dimensional Status:</strong> Dimensionless scalar &emsp;|&emsp; <strong>Range:</strong> \( 0 \le e \le 1 \)
+</p>
+</div>
+<p>
+From Kirchhoff's Law (\( E_\lambda = a_\lambda E_{bb,\lambda} \)), integrated over all wavelengths:
+</p>
+<div class="concept-box">
+\[
+e = a
+\]
+At thermal equilibrium, the total emissivity of any surface is strictly equal to its total absorptive power.
+</div>
+<ul class="points-list">
+<li>For a perfect blackbody: \( e = 1 \)</li>
+<li>For a perfect reflector: \( e = 0 \)</li>
+<li>For a <em>gray body</em>: \( e = \text{constant} < 1 \) across all wavelengths.</li>
+</ul>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

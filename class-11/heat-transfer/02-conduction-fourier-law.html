@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conduction & Fourier's Law | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Heat Transfer
+</a>
+</nav>
+
+<h1>Conduction & Fourier's Law</h1>
+<p class="subtitle">
+Microscopic conduction transport, differential temperature gradients, and the thermal-electrical circuit analogy.
+</p>
+
+<section>
+<h2>Mechanism of Conduction in Solids</h2>
+<p>
+Thermal conduction is the process of energy propagation through matter via microscopic collisions and vibrations of constituents without gross macroscopic motion. In crystalline solids, conduction is mediated by two primary carriers:
+</p>
+<ul>
+<li><strong>Lattice Vibrational Waves (Phonons):</strong> When a region of a solid is heated, atoms vibrate with enhanced kinetic energy about their mean lattice positions. Because atoms are elastically coupled by interatomic electrostatic bonds, these vibrations propagate through the crystal lattice as elastic wave packets called <em>phonons</em>. This is the exclusive mechanism of conduction in non-metallic solids (e.g., diamond, quartz, wood).</li>
+<li><strong>Free Electron Diffusion:</strong> In metallic conductors, valence electrons detach from individual atoms and form a free electron gas. These electrons move with high Fermi velocities and collide with vibrating lattice ions, transporting thermal energy rapidly across macroscopic distances.</li>
+</ul>
+<div class="insightbox">
+Good electrical conductors are almost universally good thermal conductors (Wiedemann-Franz Law: \( \frac{k}{\sigma T} = \text{constant} \)) because free electrons dominate both electric current and thermal current. A notable exception is diamond, which is an electrical insulator but an exceptional thermal conductor due to extremely strong carbon-carbon covalent bonds that propagate phonons with minimal scattering.
+</div>
+</section>
+
+<section>
+<h2>Fourier's Law of Heat Conduction</h2>
+<p>
+Consider a solid slab of cross-sectional area \( A \) perpendicular to the direction of heat flow. Let the opposite faces be maintained at uniform temperatures \( T_1 \) and \( T_2 \) separated by a distance \( L \), where \( T_1 > T_2 \).
+</p>
+
+<div class="diagram">
+<svg width="600" height="240" viewBox="0 0 600 240">
+  <!-- Solid Rod/Slab -->
+  <polygon points="120,60 480,60 440,180 80,180" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2"/>
+  <!-- Hot Face Left -->
+  <polygon points="80,180 120,60 140,60 100,180" fill="#e74c3c" fill-opacity="0.7"/>
+  <text x="70" y="125" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="end">Hot Face (T₁)</text>
+  <!-- Cold Face Right -->
+  <polygon points="440,180 480,60 500,60 460,180" fill="#3498db" fill-opacity="0.7"/>
+  <text x="510" y="125" font-size="14" font-weight="bold" fill="#2980b9" text-anchor="start">Cold Face (T₂)</text>
+  <!-- Heat Flow Vector -->
+  <line x1="200" y1="120" x2="380" y2="120" stroke="#e67e22" stroke-width="5"/>
+  <polygon points="380,110 405,120 380,130" fill="#e67e22"/>
+  <text x="290" y="105" font-size="16" font-weight="bold" fill="#d35400" text-anchor="middle">Heat Current H = dQ/dt</text>
+  <!-- Dimensions -->
+  <line x1="120" y1="40" x2="480" y2="40" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="300" y="30" font-size="13" fill="#333" text-anchor="middle">Length L</text>
+  <text x="290" y="215" font-size="13" fill="#333" text-anchor="middle">Cross-Sectional Area A</text>
+</svg>
+</div>
+
+<p>
+Empirical observation establishes that in the steady state, the quantity of heat \( dQ \) conducted through the slab in time \( dt \) satisfies:
+</p>
+<ol>
+<li>\( dQ \propto A \) (directly proportional to area).</li>
+<li>\( dQ \propto (T_1 - T_2) \) (directly proportional to temperature difference).</li>
+<li>\( dQ \propto dt \) (directly proportional to time elapsed).</li>
+<li>\( dQ \propto \frac{1}{L} \) (inversely proportional to length of path).</li>
+</ol>
+<p>
+Combining these proportionalities yields the integral form of <strong>Fourier's Law</strong>:
+</p>
+<div class="model-box">
+\[
+H = \frac{dQ}{dt} = \frac{kA(T_1 - T_2)}{L}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( k \) is the coefficient of thermal conductivity of the material.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Thermal Conductivity and Material Dependence</h2>
+<p>
+<strong>Thermal Conductivity (\( k \))</strong> is an intrinsic transport property of a material representing its ability to conduct thermal energy.
+</p>
+<div class="concept-box">
+<strong>Definition:</strong> Thermal conductivity is the rate of heat flow per unit area per unit temperature gradient under steady-state conditions normal to the area.
+</div>
+<p>
+From Fourier's equation:
+</p>
+\[
+k = \frac{H / A}{|\frac{dT}{dx}|}
+\]
+<ul class="points-list">
+<li><strong>SI Unit:</strong> \(\text{W}\cdot\text{m}^{-1}\cdot\text{K}^{-1}\) (or \(\text{J}\cdot\text{s}^{-1}\cdot\text{m}^{-1}\cdot\text{K}^{-1}\))</li>
+<li><strong>Dimensional Formula:</strong>
+\[
+[k] = \frac{[H]}{[A][\frac{dT}{dx}]} = \frac{M^1 L^2 T^{-3}}{(L^2)(K^1 L^{-1})} = [M^1 L^1 T^{-3} K^{-1}]
+\]
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Material Category</th>
+<th>Representative Material</th>
+<th>Thermal Conductivity \( k \) (\(\text{W}\cdot\text{m}^{-1}\cdot\text{K}^{-1}\))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Super Thermal Conductor</td>
+<td>Diamond</td>
+<td>\( \approx 2000 \)</td>
+</tr>
+<tr>
+<td>Excellent Conductor (Metals)</td>
+<td>Silver (\(\text{Ag}\))</td>
+<td>\( \approx 429 \)</td>
+</tr>
+<tr>
+<td>Excellent Conductor (Metals)</td>
+<td>Copper (\(\text{Cu}\))</td>
+<td>\( \approx 401 \)</td>
+</tr>
+<tr>
+<td>Good Conductor (Metals)</td>
+<td>Aluminium (\(\text{Al}\))</td>
+<td>\( \approx 237 \)</td>
+</tr>
+<tr>
+<td>Poor Conductor (Non-metal)</td>
+<td>Glass / Brick</td>
+<td>\( \approx 0.8 - 1.2 \)</td>
+</tr>
+<tr>
+<td>Insulator</td>
+<td>Wood / Asbestos</td>
+<td>\( \approx 0.1 - 0.15 \)</td>
+</tr>
+<tr>
+<td>Outstanding Insulator (Gases)</td>
+<td>Stationary Air / Wool</td>
+<td>\( \approx 0.026 \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Temperature Gradient and Differential Form</h2>
+<p>
+In continuous media with arbitrary temperature profiles \( T(x) \), Fourier's Law is formulated in differential terms across an infinitesimal layer of thickness \( dx \) bounded by temperatures \( T \) and \( T + dT \):
+</p>
+<div class="model-box">
+\[
+H = \frac{dQ}{dt} = -kA \frac{dT}{dx}
+\]
+</div>
+<p>
+The quantity \( \frac{dT}{dx} \) is defined as the <strong>Temperature Gradient</strong> along the direction of heat flow:
+</p>
+<ul class="points-list">
+<li><strong>SI Unit of Temperature Gradient:</strong> \(\text{K}\cdot\text{m}^{-1}\) (or \(^\circ\text{C}\cdot\text{m}^{-1}\))</li>
+<li><strong>Dimensional Formula:</strong> \([L^{-1} K^1]\)</li>
+</ul>
+<div class="insightbox">
+<strong>Physical Significance of the Negative Sign:</strong> Heat spontaneously flows from higher temperature to lower temperature. Consequently, as spatial coordinate \( x \) increases along the direction of heat flow, temperature \( T \) decreases (\( dT < 0 \)). Hence \( \frac{dT}{dx} \) is inherently negative. The negative sign ensures that the heat current \( H = \frac{dQ}{dt} \) is a positive scalar quantity along the \( +x \) direction.
+</div>
+</section>
+
+<section>
+<h2>Steady State vs Transient State Heat Flow</h2>
+<p>
+When heat begins entering a cold solid conductor, its thermal behavior undergoes two distinct regimes:
+</p>
+
+<h3>1. Variable / Transient State</h3>
+<p>
+During this initial phase, heat entering any elemental section \( dx \) of the rod performs two distinct functions:
+</p>
+\[
+dQ_{\text{in}} = dQ_{\text{absorbed}} + dQ_{\text{transmitted}} + dQ_{\text{lost to surroundings}}
+\]
+<p>
+The temperature of each point in the rod increases over time (\( \frac{\partial T}{\partial t} \neq 0 \)). Because different cross-sections absorb energy according to their thermal capacity (\( m c \Delta T \)), the heat current \( H \) varies from section to section along the rod.
+</p>
+
+<h3>2. Steady State</h3>
+<p>
+When thermal equilibrium with constant boundary conditions is established and the sides of the rod are perfectly insulated:
+</p>
+<div class="concept-box">
+<strong>Steady State Conditions:</strong>
+<ol>
+<li>The temperature at every specific spatial coordinate \( x \) becomes constant in time: \( \frac{\partial T}{\partial t} = 0 \).</li>
+<li>No elemental segment absorbs or accumulates heat: \( dQ_{\text{absorbed}} = 0 \).</li>
+<li>The thermal current \( H = \frac{dQ}{dt} \) is identical across every cross-section of the rod.</li>
+</ol>
+</div>
+<div class="insightbox">
+Steady state does NOT mean the whole rod is at the same temperature. It means the temperature profile \( T(x) \) at each point is stationary in time. A non-zero temperature gradient \( \frac{dT}{dx} \) must persist to sustain heat conduction.
+</div>
+</section>
+
+<section>
+<h2>Concept of Thermal Resistance</h2>
+<p>
+Rewriting the steady-state Fourier equation:
+</p>
+\[
+H = \frac{T_1 - T_2}{\left(\frac{L}{kA}\right)} = \frac{\Delta T}{R_{th}}
+\]
+<p>
+We define the <strong>Thermal Resistance (\( R_{th} \))</strong> of a uniform conductor as:
+</p>
+<div class="model-box">
+\[
+R_{th} = \frac{L}{kA}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>SI Unit:</strong> \(\text{K}\cdot\text{W}^{-1}\) (or \(^\circ\text{C}\cdot\text{s}\cdot\text{J}^{-1}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^{-1} L^{-2} T^3 K^1]\)
+</p>
+</div>
+<p>
+Thermal resistance quantifies the opposition offered by a physical medium to the transfer of heat through conduction. It increases with length \( L \) and decreases with thermal conductivity \( k \) and cross-sectional area \( A \).
+</p>
+</section>
+
+<section>
+<h2>Electrical-Thermal Analogy (Ohm's Law Analogy)</h2>
+<p>
+There exists a direct mathematical isomorphism between electrostatic current flow in resistors and thermal conduction in conductors:
+</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Electrical Conduction (Ohm's Law)</th>
+<th>Thermal Conduction (Fourier's Law)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Driving Potential</strong></td>
+<td>Electric Potential Difference (\( \Delta V = V_1 - V_2 \))</td>
+<td>Temperature Difference (\( \Delta T = T_1 - T_2 \))</td>
+</tr>
+<tr>
+<td><strong>Rate of Flow</strong></td>
+<td>Electric Current (\( I = \frac{dq}{dt} \))</td>
+<td>Heat Current (\( H = \frac{dQ}{dt} \))</td>
+</tr>
+<tr>
+<td><strong>Material Property</strong></td>
+<td>Electrical Conductivity (\( \sigma_e = 1/\rho \))</td>
+<td>Thermal Conductivity (\( k \))</td>
+</tr>
+<tr>
+<td><strong>Resistance</strong></td>
+<td>\( R_e = \frac{L}{\sigma_e A} = \frac{\rho L}{A} \)</td>
+<td>\( R_{th} = \frac{L}{kA} \)</td>
+</tr>
+<tr>
+<td><strong>Constitutive Relation</strong></td>
+<td>\( I = \frac{\Delta V}{R_e} \)</td>
+<td>\( H = \frac{\Delta T}{R_{th}} \)</td>
+</tr>
+<tr>
+<td><strong>Junction Law</strong></td>
+<td>Kirchhoff's Current Law: \( \sum I = 0 \)</td>
+<td>Thermal Junction Law: \( \sum H = 0 \)</td>
+</tr>
+</tbody>
+</table>
+
+<div class="examplebox">
+<h3>Example: Calculating Junction Temperature using Electrical Analogy</h3>
+<p>
+Three identical metallic rods of identical length \( L \) and cross-sectional area \( A \) are joined at a common junction \( J \). The other ends are maintained at \( 100^\circ\text{C} \), \( 50^\circ\text{C} \), and \( 20^\circ\text{C} \) with thermal conductivities \( 3k \), \( 2k \), and \( k \) respectively. Find the steady-state junction temperature \( T_J \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>
+The thermal resistance of each rod is:
+</p>
+\[
+R_1 = \frac{L}{3kA} = \frac{R_0}{3}, \quad R_2 = \frac{L}{2kA} = \frac{R_0}{2}, \quad R_3 = \frac{L}{kA} = R_0 \quad \left(\text{where } R_0 = \frac{L}{kA}\right)
+\]
+<p>
+Applying Kirchhoff's Thermal Junction Law at steady state (\( \sum H_{\text{entering}} = 0 \)):
+</p>
+\[
+\frac{100 - T_J}{R_1} + \frac{50 - T_J}{R_2} + \frac{20 - T_J}{R_3} = 0
+\]
+\[
+3(100 - T_J) + 2(50 - T_J) + 1(20 - T_J) = 0
+\]
+\[
+300 - 3T_J + 100 - 2T_J + 20 - T_J = 0 \implies 6T_J = 420 \implies T_J = 70^\circ\text{C}
+\]
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Advanced Applications</h2>
+<div class="chapter-list">
+<a href="./02a-composite-slabs-series-parallel.html">1. Composite Slabs in Series & Parallel</a>
+<a href="./02b-radial-conduction-cylinders-spheres.html">2. Radial Conduction in Cylinders & Spheres</a>
+<a href="./02c-variable-cross-section-conductivity.html">3. Variable Cross-Section & Temperature-Dependent \( k \)</a>
+<a href="./02d-growth-of-ice-on-lakes.html">4. Stefan Problem: Growth of Ice on Lakes</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

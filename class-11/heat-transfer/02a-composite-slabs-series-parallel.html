@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Composite Slabs in Series & Parallel | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-conduction-fourier-law.html" class="back-btn">
+<span>&larr;</span> Back to Conduction & Fourier's Law
+</a>
+</nav>
+
+<h1>Composite Slabs in Series & Parallel</h1>
+<p class="subtitle">
+Equivalent thermal conductivity, interface temperature derivations, and complex resistor networks.
+</p>
+
+<section>
+<h2>Slabs Connected in Series</h2>
+<p>
+When two or more slabs of different materials and thicknesses are placed in end-to-end contact such that heat flows sequentially from one slab through the next, the arrangement is a <strong>Series Combination</strong>.
+</p>
+<p>
+Consider two slabs of lengths \( L_1 \) and \( L_2 \), thermal conductivities \( k_1 \) and \( k_2 \), sharing an identical cross-sectional area \( A \). The outer faces are maintained at constant temperatures \( T_1 \) and \( T_2 \) (\( T_1 > T_2 \)), and the common interface reaches steady-state temperature \( T_0 \).
+</p>
+
+<div class="diagram">
+<svg width="580" height="200" viewBox="0 0 580 200">
+  <!-- Slab 1 -->
+  <rect x="100" y="40" width="180" height="120" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="190" y="90" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="middle">Slab 1 (k₁, L₁)</text>
+  <!-- Slab 2 -->
+  <rect x="280" y="40" width="200" height="120" fill="#e8f8f5" stroke="#16a085" stroke-width="2"/>
+  <text x="380" y="90" font-size="16" font-weight="bold" fill="#16a085" text-anchor="middle">Slab 2 (k₂, L₂)</text>
+  <!-- Temperatures -->
+  <text x="90" y="105" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="end">T₁</text>
+  <text x="280" y="30" font-size="15" font-weight="bold" fill="#2c3e50" text-anchor="middle">Interface T₀</text>
+  <line x1="280" y1="35" x2="280" y2="165" stroke="#2c3e50" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="490" y="105" font-size="16" font-weight="bold" fill="#2980b9" text-anchor="start">T₂</text>
+  <!-- Heat Flow arrow -->
+  <line x1="40" y1="100" x2="70" y2="100" stroke="#e67e22" stroke-width="4"/>
+  <polygon points="70,95 85,100 70,105" fill="#e67e22"/>
+  <text x="55" y="85" font-size="13" font-weight="bold" fill="#d35400" text-anchor="middle">H</text>
+  <text x="290" y="185" font-size="13" fill="#555" text-anchor="middle">Cross-Sectional Area A</text>
+</svg>
+</div>
+
+<p>
+In the steady state, by conservation of energy, the rate of heat entering slab 1 must equal the rate of heat passing through slab 2:
+</p>
+\[
+H_1 = H_2 = H
+\]
+\[
+H = \frac{k_1 A(T_1 - T_0)}{L_1} = \frac{k_2 A(T_0 - T_2)}{L_2}
+\]
+<p>
+Using thermal resistance notation where \( R_1 = \frac{L_1}{k_1 A} \) and \( R_2 = \frac{L_2}{k_2 A} \):
+</p>
+\[
+T_1 - T_0 = H R_1, \qquad T_0 - T_2 = H R_2
+\]
+<p>
+Adding these two expressions eliminates the unknown interface temperature \( T_0 \):
+</p>
+\[
+T_1 - T_2 = H(R_1 + R_2) \implies H = \frac{T_1 - T_2}{R_1 + R_2}
+\]
+<div class="model-box">
+\[
+R_{\text{series}} = R_1 + R_2 + R_3 + \dots = \sum_{i} \frac{L_i}{k_i A_i}
+\]
+</div>
+</section>
+
+<section>
+<h2>Equivalent Thermal Conductivity for Series Combination</h2>
+<p>
+Let the composite slab be replaced by a single homogeneous equivalent slab of total length \( L = L_1 + L_2 \), same cross-sectional area \( A \), and equivalent thermal conductivity \( k_{eq} \).
+</p>
+<p>
+Its thermal resistance is:
+</p>
+\[
+R_{eq} = \frac{L_1 + L_2}{k_{eq} A}
+\]
+<p>
+Equating \( R_{eq} = R_1 + R_2 \):
+</p>
+\[
+\frac{L_1 + L_2}{k_{eq} A} = \frac{L_1}{k_1 A} + \frac{L_2}{k_2 A}
+\]
+<div class="model-box">
+\[
+k_{eq} = \frac{L_1 + L_2}{\frac{L_1}{k_1} + \frac{L_2}{k_2}} = \frac{\sum L_i}{\sum \frac{L_i}{k_i}}
+\]
+</div>
+
+<div class="concept-box">
+<strong>Special Case (Equal Lengths \( L_1 = L_2 = L \)):</strong>
+\[
+k_{eq} = \frac{2L}{\frac{L}{k_1} + \frac{L}{k_2}} = \frac{2 k_1 k_2}{k_1 + k_2}
+\]
+The equivalent thermal conductivity for two slabs of equal length in series is the <strong>harmonic mean</strong> of their individual conductivities.
+</div>
+</section>
+
+<section>
+<h2>Interface Temperature Calculation</h2>
+<p>
+Equating the heat currents through each slab:
+</p>
+\[
+\frac{k_1 A(T_1 - T_0)}{L_1} = \frac{k_2 A(T_0 - T_2)}{L_2}
+\]
+\[
+\frac{k_1}{L_1}(T_1 - T_0) = \frac{k_2}{L_2}(T_0 - T_2)
+\]
+<p>
+Solving explicitly for \( T_0 \):
+</p>
+<div class="model-box">
+\[
+T_0 = \frac{\frac{k_1}{L_1}T_1 + \frac{k_2}{L_2}T_2}{\frac{k_1}{L_1} + \frac{k_2}{L_2}} = \frac{\frac{T_1}{R_1} + \frac{T_2}{R_2}}{\frac{1}{R_1} + \frac{1}{R_2}}
+\]
+</div>
+<div class="insightbox">
+Notice that the interface temperature is a weighted average of boundary temperatures weighted inversely by the thermal resistances (or directly by thermal conductances \( G = 1/R \)). If \( k_1 \gg k_2 \), \( R_1 \ll R_2 \), meaning almost the entire temperature drop occurs across the poorer conductor (insulator).
+</div>
+</section>
+
+<section>
+<h2>Slabs Connected in Parallel</h2>
+<p>
+When two or more slabs are arranged side by side between two common isothermal surfaces at temperatures \( T_1 \) and \( T_2 \), the arrangement is a <strong>Parallel Combination</strong>.
+</p>
+
+<div class="diagram">
+<svg width="560" height="220" viewBox="0 0 560 220">
+  <!-- Hot boundary Left -->
+  <line x1="100" y1="20" x2="100" y2="200" stroke="#c0392b" stroke-width="4"/>
+  <text x="85" y="115" font-size="16" font-weight="bold" fill="#c0392b" text-anchor="end">T₁</text>
+  <!-- Top Slab -->
+  <rect x="100" y="30" width="360" height="70" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="280" y="70" font-size="15" font-weight="bold" fill="#c0392b" text-anchor="middle">Slab 1 (k₁, A₁, L)</text>
+  <!-- Bottom Slab -->
+  <rect x="100" y="110" width="360" height="70" fill="#e8f8f5" stroke="#16a085" stroke-width="2"/>
+  <text x="280" y="150" font-size="15" font-weight="bold" fill="#16a085" text-anchor="middle">Slab 2 (k₂, A₂, L)</text>
+  <!-- Cold boundary Right -->
+  <line x1="460" y1="20" x2="460" y2="200" stroke="#2980b9" stroke-width="4"/>
+  <text x="475" y="115" font-size="16" font-weight="bold" fill="#2980b9" text-anchor="start">T₂</text>
+  <!-- Dimension L -->
+  <line x1="100" y1="195" x2="460" y2="195" stroke="#555" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="280" y="210" font-size="13" fill="#333" text-anchor="middle">Common Length L</text>
+</svg>
+</div>
+
+<p>
+In parallel:
+</p>
+<ol>
+<li>The temperature difference across each slab is identical: \( \Delta T = T_1 - T_2 \).</li>
+<li>The total thermal current is the sum of currents flowing through individual branches: \( H_{\text{total}} = H_1 + H_2 \).</li>
+</ol>
+\[
+H_{\text{total}} = \frac{T_1 - T_2}{R_1} + \frac{T_1 - T_2}{R_2} = (T_1 - T_2)\left(\frac{1}{R_1} + \frac{1}{R_2}\right)
+\]
+<div class="model-box">
+\[
+\frac{1}{R_{\text{parallel}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots = \sum_i \frac{1}{R_i}
+\]
+</div>
+</section>
+
+<section>
+<h2>Equivalent Thermal Conductivity for Parallel Combination</h2>
+<p>
+For an equivalent slab of common length \( L \), total area \( A = A_1 + A_2 \), and conductivity \( k_{eq} \):
+</p>
+\[
+H_{\text{total}} = \frac{k_{eq}(A_1 + A_2)(T_1 - T_2)}{L}
+\]
+<p>
+Equating to \( H_1 + H_2 = \frac{k_1 A_1 (T_1 - T_2)}{L} + \frac{k_2 A_2 (T_1 - T_2)}{L} \):
+</p>
+<div class="model-box">
+\[
+k_{eq} = \frac{k_1 A_1 + k_2 A_2}{A_1 + A_2} = \frac{\sum k_i A_i}{\sum A_i}
+\]
+</div>
+<div class="concept-box">
+<strong>Special Case (Equal Areas \( A_1 = A_2 = A \)):</strong>
+\[
+k_{eq} = \frac{k_1 + k_2}{2}
+\]
+The equivalent thermal conductivity for two slabs of equal cross-sectional area in parallel is the <strong>arithmetic mean</strong> of their individual conductivities.
+</div>
+</section>
+
+<section>
+<h2>Complex Thermal Resistor Networks</h2>
+<p>
+Symmetry arguments and circuit theorems apply directly to complex thermal conductor lattices:
+</p>
+
+<h3>1. Thermal Wheatstone Bridge</h3>
+<p>
+Five rods of thermal resistances \( R_1, R_2, R_3, R_4, R_5 \) form a bridge network between hot and cold reservoirs. If the bridge condition is satisfied:
+</p>
+<div class="model-box">
+\[
+\frac{R_1}{R_2} = \frac{R_3}{R_4} \implies T_C = T_D
+\]
+</div>
+<p>
+The central bridge rod carries zero thermal current (\( H_5 = 0 \)) and may be removed from the network calculation.
+</p>
+
+<div class="examplebox">
+<h3>Example: Symmetrical Thermal Bridge</h3>
+<p>
+Five identical conducting rods, each of length \( L \), cross-sectional area \( A \), and thermal conductivity \( k \), are arranged in a bridge form. The two main nodes are kept at \( 100^\circ\text{C} \) and \( 0^\circ\text{C} \). Calculate the equivalent thermal resistance and total rate of heat flow.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>
+Let \( R = \frac{L}{kA} \) be the resistance of each rod.
+Because all four branch resistors are identical (\( R_1 = R_2 = R_3 = R_4 = R \)), the bridge is perfectly balanced:
+</p>
+\[
+\frac{R_1}{R_2} = \frac{R}{R} = 1 = \frac{R_3}{R_4}
+\]
+<p>
+No heat flows through the central rod (\( R_5 \)). The circuit reduces to two parallel branches, each consisting of two resistors in series:
+</p>
+\[
+R_{\text{branch 1}} = R + R = 2R, \qquad R_{\text{branch 2}} = R + R = 2R
+\]
+\[
+R_{eq} = \frac{(2R)(2R)}{2R + 2R} = R = \frac{L}{kA}
+\]
+\[
+H_{\text{total}} = \frac{\Delta T}{R_{eq}} = \frac{100 - 0}{\left(\frac{L}{kA}\right)} = \frac{100 k A}{L}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

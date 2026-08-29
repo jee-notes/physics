@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stefan-Boltzmann Law & Radiative Exchange | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Heat Transfer
+</a>
+</nav>
+
+<h1>Stefan-Boltzmann Law & Radiative Exchange</h1>
+<p class="subtitle">
+The fundamental fourth-power temperature law of thermal radiation and net energy exchange in enclosures.
+</p>
+
+<section>
+<h2>Stefan-Boltzmann Law for a Blackbody</h2>
+<p>
+Formulated empirically by Josef Stefan and subsequently derived from thermodynamic principles and Maxwell's electromagnetic theory by Ludwig Boltzmann, the <strong>Stefan-Boltzmann Law</strong> governs the total radiant power emitted by an ideal blackbody.
+</p>
+<div class="model-box">
+<strong>Stefan-Boltzmann Law:</strong> The total radiant energy emitted per unit surface area per unit time (total emissive power \( E \)) by a perfect blackbody is directly proportional to the fourth power of its absolute thermodynamic temperature (\( T \)):
+\[
+E = \sigma T^4
+\]
+</div>
+<p>
+For a blackbody of total surface area \( A \), the total radiative power emitted (rate of thermal energy loss \( P = \frac{dQ}{dt} \)) is:
+</p>
+<div class="model-box">
+\[
+P = \sigma A T^4
+\]
+</div>
+
+<h3>Stefan's Constant (\( \sigma \)):</h3>
+<ul class="points-list">
+<li><strong>Numerical Value:</strong> \( \sigma \approx 5.67037 \times 10^{-8} \, \text{W}\cdot\text{m}^{-2}\cdot\text{K}^{-4} \) (or \( \text{J}\cdot\text{s}^{-1}\cdot\text{m}^{-2}\cdot\text{K}^{-4} \))</li>
+<li><strong>Dimensional Formula:</strong>
+\[
+[\sigma] = \frac{[P]}{[A][T^4]} = \frac{M^1 L^2 T^{-3}}{(L^2)(K^4)} = [M^1 L^0 T^{-3} K^{-4}]
+\]
+</li>
+<li><strong>Fundamental Constant Formulation:</strong> From Planck's radiation distribution:
+\[
+\sigma = \frac{2\pi^5 k_B^4}{15 c^2 h^3}
+\]
+where \( k_B \) is Boltzmann's constant, \( c \) is the speed of light, and \( h \) is Planck's constant.
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Stefan-Boltzmann Law for Real Bodies</h2>
+<p>
+A real physical body (non-blackbody) emits radiant power at a fraction of an ideal blackbody, scaled by its surface <strong>emissivity (\( e \))</strong>:
+</p>
+<div class="model-box">
+\[
+P = e \sigma A T^4
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( e \) is the emissivity of the surface (\( 0 < e < 1 \)).
+</p>
+</div>
+<div class="concept-box">
+If a body has emissivity \( e \) and surface area \( A \), its total radiant power scales extremely sensitively with absolute temperature. Doubling the absolute temperature (\( T \to 2T \)) increases emitted power by a factor of \( 2^4 = 16 \)!
+</div>
+</section>
+
+<section>
+<h2>Net Rate of Radiation Heat Exchange with Surroundings</h2>
+<p>
+Consider a body of surface area \( A \), emissivity \( e \), and absolute temperature \( T \) placed inside an enclosure whose walls are maintained at absolute temperature \( T_0 \).
+</p>
+<p>
+According to Prevost's Theory of Heat Exchanges, thermal radiation is a continuous bidirectional process:
+</p>
+<ol>
+<li><strong>Radiative power emitted by the body:</strong>
+\[
+P_{\text{emit}} = e \sigma A T^4
+\]
+</li>
+<li><strong>Radiative power incident from enclosure walls:</strong> The enclosure radiates as a blackbody cavity with intensity \( \sigma T_0^4 \). The body absorbs a fraction equal to its absorptive power \( a \):
+\[
+P_{\text{absorb}} = a \sigma A T_0^4
+\]
+</li>
+</ol>
+<p>
+By Kirchhoff's Law (\( a = e \)), the net rate of heat loss \( P_{\text{net}} \) is:
+</p>
+<div class="model-box">
+\[
+P_{\text{net}} = \frac{dQ_{\text{net}}}{dt} = P_{\text{emit}} - P_{\text{absorb}} = e \sigma A (T^4 - T_0^4)
+\]
+</div>
+<div class="insightbox">
+<strong>Prevost's Dynamic Equilibrium:</strong>
+<ul>
+<li>If \( T > T_0 \): \( P_{\text{net}} > 0 \implies \) The body cools down by net radiation emission.</li>
+<li>If \( T < T_0 \): \( P_{\text{net}} < 0 \implies \) The body warms up by net radiation absorption.</li>
+<li>If \( T = T_0 \): \( P_{\text{net}} = 0 \implies \) The body is in dynamic radiative equilibrium with the enclosure (rates of emission and absorption are identically equal).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Rate of Cooling Due to Radiation</h2>
+<p>
+Let a body of mass \( m \), specific heat capacity \( c \), surface area \( A \), and emissivity \( e \) cool by radiation in an evacuated enclosure at temperature \( T_0 \).
+</p>
+<p>
+The heat lost in time \( dt \) causes a temperature decrease \( -dT \):
+</p>
+\[
+dQ = -m c \, dT
+\]
+<p>
+Equating to the net rate of radiative loss \( P_{\text{net}} = e \sigma A (T^4 - T_0^4) \):
+</p>
+\[
+-m c \frac{dT}{dt} = e \sigma A (T^4 - T_0^4)
+\]
+<div class="model-box">
+\[
+\text{Rate of Cooling } \left(-\frac{dT}{dt}\right) = \frac{e \sigma A}{m c} (T^4 - T_0^4)
+\]
+</div>
+<p>
+If the body has volume \( V \) and density \( \rho \) (\( m = \rho V \)):
+</p>
+\[
+-\frac{dT}{dt} = \frac{e \sigma}{\rho c} \left(\frac{A}{V}\right) (T^4 - T_0^4)
+\]
+<div class="concept-box">
+<strong>Geometric Dependence of Cooling Rate:</strong>
+The rate of cooling is directly proportional to the <strong>surface-area-to-volume ratio (\( A/V \))</strong>:
+<ul>
+<li>For a sphere of radius \( R \): \( \frac{A}{V} = \frac{4\pi R^2}{\frac{4}{3}\pi R^3} = \frac{3}{R} \implies \left(-\frac{dT}{dt}\right) \propto \frac{1}{R} \) (Smaller spheres cool faster).</li>
+<li>For a cube of side \( a \): \( \frac{A}{V} = \frac{6a^2}{a^3} = \frac{6}{a} \).</li>
+<li>For a thin disc of radius \( R \) and thickness \( t \): \( \frac{A}{V} \approx \frac{2\pi R^2}{\pi R^2 t} = \frac{2}{t} \) (Cools very rapidly).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Radiation Loss in Concentric Enclosures and Radiation Shields</h2>
+
+<h3>1. Concentric Spheres / Cylinders Radiative Exchange</h3>
+<p>
+For two long concentric cylinders or concentric spheres with emissivities \( e_1, e_2 \) and surface areas \( A_1, A_2 \) maintained at temperatures \( T_1 \) and \( T_2 \):
+</p>
+<div class="model-box">
+\[
+P_{12} = \frac{\sigma A_1 (T_1^4 - T_2^4)}{\frac{1}{e_1} + \frac{A_1}{A_2}\left(\frac{1}{e_2} - 1\right)}
+\]
+</div>
+
+<h3>2. Radiation Shields</h3>
+<p>
+A <strong>Radiation Shield</strong> is a thin, highly reflective sheet (low emissivity \( e \)) inserted between two radiating surfaces to minimize radiative heat transfer.
+</p>
+<div class="insightbox">
+If \( N \) identical thin radiation shields of emissivity \( e \) are placed in series between two large parallel blackbody surfaces:
+\[
+P_{\text{with } N \text{ shields}} = \frac{1}{N + 1} P_{\text{without shield}}
+\]
+Inserting a single radiation shield cuts radiative heat transfer by 50% (\( N=1 \implies \frac{1}{2} \)).
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
