@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Microscope | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-microscopes.html" class="back-btn">
+<span>&larr;</span> Back to Microscopes
+</a>
+</nav>
+<h1>Compound Microscope</h1>
+<p class="subtitle">
+Achieving high magnification through a two-lens system.
+</p>
+
+<section>
+<h2>Ray Diagram and Construction</h2>
+<p>
+To achieve much higher magnification than a simple microscope, a <strong>compound microscope</strong> uses two convex lenses:
+</p>
+<ul>
+<li><strong>Objective Lens:</strong> The lens facing the object. It has a very short focal length (\( f_o \)) and a small aperture. It forms a real, inverted, and magnified intermediate image of the object.</li>
+<li><strong>Eyepiece (Ocular) Lens:</strong> The lens close to the eye. It has a slightly larger focal length (\( f_e \)) and larger aperture than the objective. It acts as a simple microscope, taking the intermediate image as its object and forming a highly magnified, virtual final image.</li>
+</ul>
+<div class="insightbox">
+The final image in a compound microscope is inverted with respect to the original object. For biological observations, this inversion is usually acceptable.
+</div>
+</section>
+
+<section>
+<h2>Magnifying Power Calculations</h2>
+<p>
+The total magnifying power \( M \) is the product of the linear magnification of the objective (\( m_o \)) and the angular magnification of the eyepiece (\( m_e \)):
+\[ M = m_o \times m_e \]
+The intermediate image formed by the objective is at distance \( v_o \), and the object is at \( u_o \). Thus, \( m_o = \frac{v_o}{|u_o|} \). If the intermediate image is formed close to the eyepiece, \( v_o \) is approximately equal to the tube length \( L \) (the distance between the focal point of the objective and the focal point of the eyepiece). Since \( u_o \approx f_o \), we can write \( m_o \approx \frac{L}{f_o} \).
+</p>
+<h3>Case 1: Final Image at Least Distance of Distinct Vision (\( v_e = -D \))</h3>
+<div class="model-box">
+\[ M = \left(\frac{v_o}{u_o}\right) \left(1 + \frac{D}{f_e}\right) \approx \left(\frac{L}{f_o}\right) \left(1 + \frac{D}{f_e}\right) \]
+</div>
+
+<h3>Case 2: Final Image at Infinity (Normal Adjustment)</h3>
+<div class="model-box">
+\[ M = \left(\frac{v_o}{u_o}\right) \left(\frac{D}{f_e}\right) \approx \left(\frac{L}{f_o}\right) \left(\frac{D}{f_e}\right) \]
+</div>
+</section>
+
+<section>
+<h2>Resolving Power of a Microscope</h2>
+<p>
+The resolving power of a microscope is its ability to separate the images of two closely spaced point objects. It is the reciprocal of the minimum limit of resolution (\( \Delta d \)).
+</p>
+<div class="model-box">
+\[ \text{Resolving Power} = \frac{1}{\Delta d} = \frac{2 n \sin \theta}{\lambda} \]
+Where:
+<ul>
+<li>\( \lambda \) is the wavelength of light used.</li>
+<li>\( n \) is the refractive index of the medium between the object and the objective lens.</li>
+<li>\( \theta \) is the half-angle of the cone of light entering the objective from the object.</li>
+</ul>
+The term \( n \sin \theta \) is called the <strong>Numerical Aperture (NA)</strong> of the objective lens.
+</div>
+<div class="concept-box">
+To increase the resolving power, we can use a medium of higher refractive index (like oil immersion), use light of shorter wavelength (like blue light or UV), or increase the aperture of the objective.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
