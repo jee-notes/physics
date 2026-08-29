@@ -14,65 +14,166 @@
 <span>&larr;</span> Back to Motion in 2D
 </a>
 </nav>
-
 <h1>Projectile Motion</h1>
 <p class="subtitle">
-The most celebrated classical example of independent two-dimensional kinematics under constant acceleration.
+Representation of 2D motion as two simultaneous 1D motions.
 </p>
-
 <section>
-<h2>Principle of Physical Independence of Motions</h2>
+<h2>Application of Orthogonal Independence</h2>
 <p>
-When an object is thrown into the air, its subsequent unpowered flight under the sole influence of gravity (ignoring air resistance) is called <strong>Projectile Motion</strong>. The object mathematically traces a distinct, beautifully symmetric curve traversing both the horizontal and vertical spatial dimensions.
+When an object is thrown into the air, its subsequent unpowered motion under the sole influence of gravity, with air resistance neglected, is called <strong>projectile motion</strong>.
 </p>
 <p>
-Galileo was the first to mathematically codify the secret to solving projectile motion: <strong>Physical Independence</strong>. The horizontal progression of the projectile is absolutely completely mechanically blind to its vertical vertical rise and fall.
-</p>
-<div class="insightbox">
-A projectile is merely two independent 1D motions happening simultaneously on the exact same stopwatch:
-<br>1. A simple, perfectly uniform horizontal motion (constant velocity).
-<br>2. A standard, 1D vertical free-fall motion (constant acceleration \(g\)).
-</div>
-<p>
-Because gravity (\(\vec{g}\)) points strictly vertically downward, it definitively possesses absolutely zero horizontal geometric component (\(g\cos 90^\circ = 0\)). Therefore, throughout the entirety of the flight, the horizontal mathematical acceleration \(a_x\) is rigidly exactly zero.
-</p>
-</section>
-
-<section>
-<h2>Equation of Trajectory</h2>
-<p>
-To visualize the exact physical path the projectile traces in the actual \((x,y)\) sky, we must derive its Equation of Trajectory—a direct mathematical relationship seamlessly connecting the \(y\) coordinate to the \(x\) coordinate, effectively eliminating the temporal parameter \(t\).
+The projectile moves in two spatial dimensions: horizontally and vertically. The key to solving this 2D motion is to resolve it into two mutually perpendicular 1D motions.
 </p>
 <p>
-Suppose a particle is launched strictly from the origin \((0,0)\) with an initial specific velocity \(u\) dynamically oriented at an angle \(\theta\) above the purely horizontal plane.
+The horizontal and vertical directions are orthogonal, so their contributions can be treated independently. This is a direct application of the <strong>orthogonal independence</strong> discussed earlier.
 </p>
-<div class="model-box">
-<strong>Resolution of Launch Velocity:</strong>
-<ul>
-<li>Horizontal: \(u_x = u\cos\theta\)  (constant since \(a_x = 0\))</li>
-<li>Vertical: \(u_y = u\sin\theta\)  (subject to \(a_y = -g\))</li>
+<p>
+Gravity acts vertically downward. Therefore, its horizontal component is zero:
+</p>
+\[
+g_x=g\cos90^\circ=0
+\]
+<p>
+Hence, the acceleration components are
+</p>
+\[
+a_x=0 \qquad a_y=-g
+\]
+<p>
+Thus, the horizontal velocity component remains constant, while the vertical velocity component changes with time according to the vertical acceleration. The projectile can therefore be treated as two simultaneous 1D motions occurring over the same time interval.
+</p>
+<ul class="model-box">
+<li><strong>Horizontal:</strong> uniform motion with constant velocity.</li>
+<li><strong>Vertical:</strong> 1D motion with constant downward acceleration \(g\).</li>
 </ul>
-</div>
 <p>
-Using basic 1D kinematic equations, the position explicitly at any given time \(t\) is:
+This is the mathematical advantage of the orthogonal resolution: the horizontal motion can be analysed without needing the details of the vertical motion, and the vertical motion can be analysed without needing the details of the horizontal motion.
 </p>
-<ol>
-<li><strong>Horizontal constraint:</strong> \( x(t) = (u\cos\theta)t \)</li>
-<li><strong>Vertical constraint:</strong> \( y(t) = (u\sin\theta)t - \frac{1}{2}gt^2 \)</li>
-</ol>
-<p>
-To ruthlessly eliminate \(t\), we mathematically cleanly securely isolate it precisely rigidly from Equation 1: \(t = \frac{x}{u\cos\theta}\) and vigorously precisely directly effectively neatly efficiently safely neatly accurately explicitly precisely smoothly neatly substitute it fundamentally strictly directly mathematically cleanly into Equation 2.
-</p>
-\[ y = (u\sin\theta)\left(\frac{x}{u\cos\theta}\right) - \frac{1}{2}g\left(\frac{x}{u\cos\theta}\right)^2 \]
-<div class="concept-box">
-<strong>The Classical Equation of Trajectory:</strong>
-\[ y = x\tan\theta - \frac{gx^2}{2u^2\cos^2\theta} \]
-<p>
-Because this rigorous equation clearly natively algebraically elegantly systematically cleanly mathematically identically perfectly securely inherently firmly accurately purely firmly firmly visibly smoothly neatly precisely takes the strict form \(y = ax - bx^2\), which is the standard canonical mathematical representation of a parabola, we brilliantly rigorously explicitly rigorously mathematically elegantly conclusively physically formally unequivocally definitively rigorously logically scientifically conclude that unresisted projectiles rigorously rigidly identically naturally natively physically universally systematically safely elegantly strictly natively elegantly strictly travel along <strong>parabolic paths</strong>.
-</p>
-</div>
 </section>
-
+<section>
+<h2>Resolving Projectile Motion</h2>
+<p>
+In projectile motion, we have three vector quantities to describe: <strong>position, velocity and acceleration</strong>. The question is not simply whether a vector should be resolved, but <strong>which vector should be resolved and along which directions</strong>.
+</p>
+<p>
+To understand this, we first need to understand the physical significance of these quantities. Imagine a body at rest at the point \(O(0,0)\). If its velocity is zero, its position remains unchanged. Conversely, a non-zero velocity means that the position is changing with time. These are simply two ways of describing the same kinematic fact.
+</p>
+<p>
+Similarly, a non-zero acceleration means that the velocity is changing with time. Again, this is a kinematic relation between the two quantities, not a causal statement.
+</p>
+<p>
+In projectile motion, acceleration is specified by gravity, while the initial velocity is specified by how the body is projected. The two therefore enter the description of the motion as separately specified quantities.
+</p>
+<p>
+The choice of what to resolve depends on what is already known and what needs to be determined. We choose the resolution that makes the unknown quantities easiest to track.
+</p>
+<p>
+In projectile motion, the acceleration is completely known: its magnitude is \(g\), its direction is vertically downward, and it remains constant with time. Therefore, we use the direction of the known acceleration to choose the orthogonal component directions and resolve the <strong>initial velocity</strong>.
+</p>
+<p>
+Suppose a particle is projected from the origin \((0,0)\) with initial speed \(u\) at an angle \(\theta\) above the horizontal.
+</p>
+<h3>Resolution along Horizontal and Vertical</h3>
+<p>
+We resolve the initial velocity because the subsequent \(\vec v(t)\) and \(\vec r(t)\) are determined by the initial velocity \(\vec u\) and the acceleration \(\vec a\). The acceleration is already expressed entirely along one of the chosen component directions because its direction itself is used as a reference direction.
+</p>
+<p>
+The vertical direction is fixed by the known acceleration due to gravity. For the horizontal direction, any direction perpendicular to it could be chosen. We choose the direction of the horizontal projection of the initial velocity \(\vec u\).
+</p>
+\[
+\vec u=u\cos\theta\,\hat i+u\sin\theta\,\hat j
+\]
+\[
+\boxed{u_x=u\cos\theta \qquad u_y=u\sin\theta}
+\]
+<p>
+The acceleration is already known:
+</p>
+\[
+\vec a=0\hat i-g\hat j
+\]
+<p>
+so
+</p>
+\[
+\boxed{a_x=0 \qquad a_y=-g}
+\]
+<p>
+The velocity therefore evolves independently through its two components:
+</p>
+\[
+\vec v(t)=v_x(t)\hat i+v_y(t)\hat j
+\]
+<p>
+where
+</p>
+\[
+v_x(t)=u\cos\theta
+\]
+\[
+v_y(t)=u\sin\theta-gt
+\]
+<p>
+Similarly, the position vector is
+</p>
+\[
+\vec r(t)=x(t)\hat i+y(t)\hat j
+\]
+<p>
+where the two 1D position equations are
+</p>
+\[
+x(t)=u\cos\theta\,t
+\]
+\[
+y(t)=u\sin\theta\,t-\frac12gt^2
+\]
+<p>
+Thus, the single 2D motion has been represented through the three resolved vectors
+</p>
+\[
+\boxed{
+\begin{aligned}
+\vec a(t)&=a_x\hat i+a_y\hat j\\
+\vec v(t)&=v_x(t)\hat i+v_y(t)\hat j\\
+\vec r(t)&=x(t)\hat i+y(t)\hat j
+\end{aligned}
+}
+\]
+<p>
+Each scalar component is then governed by the corresponding 1D kinematics. Thus, the 2D motion can be treated as two simultaneous 1D motions.
+</p>
+<p>
+The two 1D motions are independent in their spatial components, but they occur simultaneously and therefore share the same time parameter \(t\). This common parameter connects the two component motions to form the single 2D motion.
+</p>
+<p>
+To find the <strong>equation of trajectory</strong>, we eliminate this common parameter and obtain a direct relation between \(x\) and \(y\). From the horizontal equation,
+</p>
+\[
+t=\frac{x}{u\cos\theta}
+\]
+<p>
+Substituting this into the vertical equation eliminates \(t\):
+</p>
+\[
+y=(u\sin\theta)\left(\frac{x}{u\cos\theta}\right)-\frac12g\left(\frac{x}{u\cos\theta}\right)^2
+\]
+<h3>The Equation of Trajectory</h3>
+\[
+\boxed{y=x\tan\theta-\frac{gx^2}{2u^2\cos^2\theta}}
+\]
+<p>
+This has the form
+</p>
+\[
+y=Ax-Bx^2
+\]
+<p>
+where \(A\) and \(B\) are constants. Therefore, the trajectory is a <strong>parabola</strong>.
+</p>
+</section>
 <section>
 <h2>Projectile Variations</h2>
 <div class="chapter-list">
@@ -81,7 +182,6 @@ Because this rigorous equation clearly natively algebraically elegantly systemat
 <a href="./02c-safety-parabola.html">3. Envelope and Safety Parabola</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

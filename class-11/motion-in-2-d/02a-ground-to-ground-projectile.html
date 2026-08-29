@@ -14,66 +14,275 @@
 <span>&larr;</span> Back to Projectile Motion
 </a>
 </nav>
-
 <h1>Ground-to-Ground Projectile</h1>
 <p class="subtitle">
 Analyzing the standard symmetric trajectory over a level plane.
 </p>
-
 <section>
-<h2>Time of Flight and Maximum Height</h2>
+<h2>Key Parameters</h2>
 <p>
-Consider a projectile launched from the level ground \((y=0)\) with an initial velocity \(u\) at an angle \(\theta\) above the horizontal. It traces a parabolic path and eventually impacts the ground again.
+Consider a projectile launched from the level ground \((y=0)\) with initial speed \(u\) at an angle \(\theta\) above the horizontal.
 </p>
-<div class="model-box">
-<strong>Time of Flight (\(T\)):</strong>
 <p>
-The total time the projectile remains airborne can be found by setting the final vertical displacement \(y = 0\) in the fundamental kinematic equation:
-\[ y = u_y t + \frac{1}{2}a_y t^2 \]
-\[ 0 = (u\sin\theta)T - \frac{1}{2}g T^2 \]
-Assuming \(T \neq 0\) (which represents the launch moment), we solve for the impact time:
-\[ T = \frac{2u\sin\theta}{g} \]
+The projectile follows a parabolic path and eventually returns to the same ground level. Thus, in a <strong>ground-to-ground (G2G)</strong> projectile, the initial and final \(y\)-coordinates are equal, so the net vertical displacement is zero:
 </p>
-</div>
-<div class="model-box">
-<strong>Maximum Height (\(H\)):</strong>
+\[
+\Delta y=0
+\]
 <p>
-At the absolute peak of its trajectory, the vertical component of the projectile's velocity momentarily becomes zero (\(v_y = 0\)). Using the velocity-displacement kinematic equation:
-\[ v_y^2 = u_y^2 + 2a_y H \]
-\[ 0 = (u\sin\theta)^2 - 2g H \]
-\[ H = \frac{u^2\sin^2\theta}{2g} \]
+The three main parameters of a G2G projectile are:
 </p>
-</div>
-</section>
-
-<section>
-<h2>Horizontal Range and Maximum Range Conditions</h2>
+<ul class="model-box">
+<li><strong>Time of Flight (\(T\)):</strong> The total time for which the particle remains in the air.</li>
+<li><strong>Maximum Height (\(H\)):</strong> The greatest height reached by the particle above the launch level.</li>
+<li><strong>Range (\(R\)):</strong> The net horizontal displacement of the particle between launch and landing.</li>
+</ul>
 <p>
-The <strong>Horizontal Range (\(R\))</strong> is the total horizontal distance covered by the projectile during its complete time of flight \(T\).
+The key point is that these three quantities can be determined from the horizontal and vertical components of the initial velocity, \(u_x\) and \(u_y\), because the gravitational acceleration \(g\) is already known.
 </p>
-<div class="model-box">
-<strong>Range Formula (\(R\)):</strong>
+\[
+u_x=u\cos\theta \qquad u_y=u\sin\theta
+\]
 <p>
-Since there is zero acceleration horizontally (\(a_x = 0\)), the horizontal distance is simply velocity multiplied by time:
-\[ R = u_x \times T = (u\cos\theta) \times \left(\frac{2u\sin\theta}{g}\right) \]
-Using the trigonometric identity \(2\sin\theta\cos\theta = \sin(2\theta)\), we elegantly obtain:
-\[ R = \frac{u^2\sin(2\theta)}{g} \]
+Knowing \(u_x\) and \(u_y\) is equivalent to knowing the initial speed \(u\) and launch angle \(\theta\), since
 </p>
-</div>
-<div class="concept-box">
-<strong>Maximum Range Condition:</strong>
-For a fixed launch speed \(u\), the range \(R\) strictly depends on the angle \(\theta\). The range is mathematically maximized when \(\sin(2\theta)\) attains its maximum value of \(1\).
-<br><br>
-This explicitly occurs when \(2\theta = 90^\circ\), or unequivocally when exactly:
-\[ \theta = 45^\circ \]
-At this optimal launch angle, the absolute maximum horizontal range evaluates to:
-\[ R_{max} = \frac{u^2}{g} \]
-</div>
+\[
+u=\sqrt{u_x^2+u_y^2} \qquad \tan\theta=\frac{u_y}{u_x}
+\]
+<p>
+Thus, the G2G projectile problem can be understood entirely through the two initial 1D velocity components \(u_x\) and \(u_y\).
+</p>
+<h3>Time of Flight (\(T\)):</h3>
+<p>
+The total time the projectile remains airborne can be found by using the vertical displacement equation and setting the final vertical displacement to zero:
+</p>
+\[
+\Delta y=u_y t+\frac12a_y t^2
+\]
+\[
+0=(u\sin\theta)T-\frac12gT^2
+\]
+<p>
+The solution \(T=0\) represents the instant of launch. Taking the non-zero solution gives the time at which the projectile returns to the ground:
+</p>
+\[
+T=\frac{2u\sin\theta}{g}=\frac{2u_y}{g}
+\]
+<h3>Maximum Height (\(H\)):</h3>
+<p>
+At the highest point of the trajectory, the vertical component of velocity momentarily becomes zero:
+</p>
+\[
+v_y=0
+\]
+<p>
+Since the vertical motion is a 1D motion with initial velocity \(u_y\) and constant acceleration \(a_y=-g\), we use the velocity-displacement equation:
+</p>
+\[
+v_y^2=u_y^2+2a_yH
+\]
+<p>
+At maximum height,
+</p>
+\[
+0=u_y^2-2gH
+\]
+<p>
+Therefore,
+</p>
+\[
+\boxed{H=\frac{u_y^2}{2g}=\frac{u^2\sin^2\theta}{2g}}
+\]
+<p>
+Thus, the maximum height and the time of flight depend only on the <strong>vertical component</strong> of the initial velocity.
+</p>
+<h3>Range (\(R\))</h3>
+<p>
+The <strong>horizontal range (\(R\))</strong> is the net horizontal displacement of the projectile between its launch and landing points.
+</p>
+<p>
+Since the horizontal acceleration is zero,
+</p>
+\[
+a_x=0
+\]
+<p>
+the horizontal velocity remains constant at \(u_x\). Therefore, the horizontal displacement during the complete time of flight \(T\) is
+</p>
+\[
+R=u_xT
+\]
+<p>
+Using
+</p>
+\[
+u_x=u\cos\theta \qquad T=\frac{2u_y}{g}
+\]
+<p>
+we obtain
+</p>
+\[
+R=u_xT=(u\cos\theta)\left(\frac{2u\sin\theta}{g}\right)=\boxed{\frac{2u_xu_y}{g}}
+\]
+<p>
+Using the identity
+</p>
+\[
+2\sin\theta\cos\theta=\sin2\theta
+\]
+<p>
+this can also be written as
+</p>
+\[
+\boxed{R=\frac{u^2\sin2\theta}{g}}
+\]
+<h3>Maximum Range Condition:</h3>
+<p>
+For a fixed launch speed \(u\), the range is
+</p>
+\[
+R=\frac{u^2\sin(2\theta)}{g}
+\]
+<p>
+Since \(u\) and \(g\) are fixed, the range is determined by the launch angle \(\theta\). The maximum range therefore occurs when \(\sin(2\theta)\) has its maximum possible value, \(1\):
+</p>
+\[
+\sin(2\theta)=1
+\]
+\[
+2\theta=90^\circ
+\]
+<p>
+and hence
+</p>
+\[
+\boxed{\theta=45^\circ}
+\]
+<p>
+At this angle, the maximum horizontal range is
+</p>
+\[
+\boxed{R_{\max}=\frac{u^2}{g}}
+\]
+<p>
+But why are problems of this type formulated by keeping \(u\) fixed and varying \(\theta\)? Imagine a cannon firing a cannonball. The available launch speed is determined by the cannon and its charge—for example, by the amount of gunpowder used. The cannon can then be aimed at different launch angles.
+</p>
+<p>
+Mathematically, the two quantities also have very different ranges of possible values. The launch speed can take any positive value:
+</p>
+\[
+0 \lt u \lt \infty
+\]
+<p>
+whereas the launch angle for a projectile launched above the horizontal and below the vertical is restricted to
+</p>
+\[
+0^\circ \lt \theta \lt 90^\circ
+\]
+<p>
+Thus, in the usual maximum-range problem, the launch speed is treated as a fixed property of the projectile-launching setup, while the launch angle is the controllable variable. The question is therefore:
+</p>
+<p>
+<strong>Given a fixed launch speed, at what launch angle should the cannon be aimed to make the cannonball travel the greatest horizontal distance?</strong>
+</p>
 <div class="insightbox">
-<strong>Complementary Launch Angles:</strong> Note that \(\sin(2\theta) = \sin(180^\circ - 2\theta) = \sin(2(90^\circ - \theta))\). This mathematical symmetry proves that two distinct complementary launch angles, \(\theta\) and \((90^\circ - \theta)\), will fundamentally produce the identically exact same horizontal range \(R\), despite tracing dramatically different height trajectories.
+<strong>Complementary Launch Angles:</strong><br>
+For the two complementary angles \(\theta\) and \(90^\circ-\theta\), the horizontal and vertical components of the same launch speed are interchanged:
+\[
+u_x \leftrightarrow u_y
+\]
+Since
+\[
+R=\frac{2u_xu_y}{g}
+\]
+the range remains unchanged. However, the maximum height depends only on \(u_y\):
+\[
+H=\frac{u_y^2}{2g}
+\]
+so the two trajectories have different maximum heights.
 </div>
 </section>
-
+<section>
+<h2>Key Relations</h2>
+<p>
+There are several useful relations hidden in the basic component equations. These relations form the basis of many projectile-motion problems.
+</p>
+<h3>Constant Horizontal Velocity (\(u_x\))</h3>
+<p>
+A common type of question gives the direction of the velocity at some instant: the velocity \(v\) makes an angle \(\alpha\) with the horizontal, and we are asked to determine \(v\).
+</p>
+<p>
+A direct approach is to write
+</p>
+\[
+\tan\alpha=\frac{v_y}{v_x}=\frac{u\sin\theta-gt}{u\cos\theta}
+\]
+<p>
+This determines the time \(t\), but it is not necessary if the objective is only to find the magnitude \(v\). The key relation is that, as the horizontal acceleration is zero, the horizontal component of velocity remains constant throughout the motion:
+</p>
+\[
+v_x=u_x=u\cos\theta
+\]
+<p>
+At the instant when the velocity has magnitude \(v\) and makes an angle \(\alpha\) with the horizontal,
+</p>
+\[
+v_x=v\cos\alpha
+\]
+<p>
+Hence,
+</p>
+\[
+u\cos\theta=v\cos\alpha
+\]
+<p>
+and therefore
+</p>
+\[
+\boxed{v=\frac{u\cos\theta}{\cos\alpha}}
+\]
+<div class="insightbox">
+The important point is that the <strong>horizontal component of velocity is conserved</strong>.<br>
+Whenever the direction of the velocity is given, use the fixed horizontal component directly instead of first finding the time.
+</div>
+<h3>Minimum Speed</h3>
+<p>
+Resolving the initial velocity along and perpendicular to the acceleration has another important advantage: acceleration cannot change the velocity component perpendicular to itself.
+</p>
+<p>
+In projectile motion, the acceleration is vertical. Therefore, it changes only the vertical component of velocity, while the horizontal component remains constant:
+</p>
+\[
+v_x=u_x=\text{constant}
+\]
+<p>
+Thus, the speed
+</p>
+\[
+v=\sqrt{v_x^2+v_y^2}
+\]
+<p>
+is minimum when the vertical component of velocity becomes zero:
+</p>
+\[
+v_y=0
+\]
+<p>
+At this instant, the velocity is entirely perpendicular to the acceleration:
+</p>
+\[
+\boxed{\vec a\cdot\vec v=0}
+\]
+<p>
+This is therefore the point of <strong>minimum speed</strong>. Since kinetic energy depends on speed,
+</p>
+\[
+K=\frac12mv^2
+\]
+<p>
+the kinetic energy is also minimum at this instant.
+</p>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
