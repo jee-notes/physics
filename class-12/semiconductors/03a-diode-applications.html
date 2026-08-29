@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diode Applications | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-pn-junction-diode.html" class="back-btn">
+<span>&larr;</span> Back to p-n Junction Diode
+</a>
+</nav>
+<h1>Diode Applications</h1>
+<p class="subtitle">
+Rectification, power supply conversions, and waveform filtering circuits.
+</p>
+
+<section>
+<h2>Diode as a Half-Wave Rectifier</h2>
+<p>
+<strong>Rectification</strong> is the process of converting alternating current (AC) into unidirectional direct current (DC). Since a p-n junction diode conducts current only in forward bias and blocks it in reverse bias, it acts as an ideal electronic valve for rectification.
+</p>
+<p>
+In a <strong>half-wave rectifier</strong>, an AC supply is connected to the primary of a step-down transformer. The secondary is connected in series with a single diode \( D \) and a load resistor \( R_L \).
+</p>
+<ul>
+<li><strong>Positive Half Cycle:</strong> The diode is forward biased, conducts, and a current flows through \( R_L \), developing an output voltage across it.</li>
+<li><strong>Negative Half Cycle:</strong> The diode is reverse biased, does not conduct, and the output voltage is zero.</li>
+</ul>
+
+<div class="model-box">
+<h3>Half-Wave Rectifier Parameters</h3>
+<ul>
+<li><strong>Output Frequency:</strong> \( f_{\text{out}} = f_{\text{in}} \) (e.g., for \( 50 \text{ Hz} \) AC input, output pulse frequency is \( 50 \text{ Hz} \)).</li>
+<li><strong>Maximum Theoretical Efficiency (\( \eta_{\text{max}} \)):</strong>
+\[ \eta = \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.406 R_L}{r_f + R_L} \implies \eta_{\text{max}} = 40.6\% \]
+</li>
+<li><strong>Peak Inverse Voltage (PIV):</strong> The maximum reverse voltage the diode must withstand: \( \text{PIV} = V_m \).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Diode as a Full-Wave Rectifier (Center-Tapped and Bridge)</h2>
+<p>
+A <strong>full-wave rectifier</strong> rectifies both the positive and negative half-cycles of the AC input, providing continuous unidirectional pulsating DC.
+</p>
+
+<h3>1. Center-Tapped Transformer Rectifier</h3>
+<p>
+Uses a center-tapped secondary winding and two diodes (\( D_1 \) and \( D_2 \)):
+<ul>
+<li>During the positive half-cycle, \( D_1 \) is forward biased (conducts) and \( D_2 \) is reverse biased.</li>
+<li>During the negative half-cycle, \( D_2 \) is forward biased (conducts) and \( D_1 \) is reverse biased.</li>
+<li>In both half cycles, current flows through the load resistor \( R_L \) in the exact same direction.</li>
+<li>\( \text{PIV} = 2V_m \).</li>
+</ul>
+</p>
+
+<h3>2. Bridge Rectifier</h3>
+<p>
+Uses four diodes (\( D_1, D_2, D_3, D_4 \)) in a bridge network without requiring a bulky center-tapped transformer. Diodes conduct in diagonal pairs: \( (D_1, D_3) \) during positive half cycle and \( (D_2, D_4) \) during negative half cycle.
+<ul>
+<li>\( \text{PIV} = V_m \).</li>
+</ul>
+</p>
+
+<div class="model-box">
+<h3>Full-Wave Rectifier Parameters</h3>
+<ul>
+<li><strong>Output Frequency:</strong> \( f_{\text{out}} = 2 f_{\text{in}} \) (e.g., for \( 50 \text{ Hz} \) input, output ripple frequency is \( 100 \text{ Hz} \)).</li>
+<li><strong>Maximum Theoretical Efficiency (\( \eta_{\text{max}} \)):</strong>
+\[ \eta = \frac{P_{\text{dc}}}{P_{\text{ac}}} = \frac{0.812 R_L}{r_f + R_L} \implies \eta_{\text{max}} = 81.2\% \]
+</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Filter Circuits and Ripple Factor</h2>
+<p>
+The output of a rectifier is a unidirectional pulsating DC voltage containing both a steady DC component and an undesirable fluctuating AC component called <strong>ripple</strong>.
+</p>
+
+<div class="model-box">
+<h3>Ripple Factor (\( r \))</h3>
+Defined as the ratio of the RMS value of the AC ripple component (\( V_{\text{ac}} \)) to the DC component value (\( V_{\text{dc}} \)):
+\[ r = \frac{V_{\text{ac}}}{V_{\text{dc}}} = \sqrt{\left(\frac{V_{\text{rms}}}{V_{\text{dc}}}\right)^2 - 1} \]
+<ul>
+<li>For Half-Wave Rectifier: \( r = 1.21 \) (Ripple is larger than DC component).</li>
+<li>For Full-Wave Rectifier: \( r = 0.482 \).</li>
+</ul>
+</div>
+
+<h3>Filter Types</h3>
+<div class="concept-box">
+<ol>
+<li><strong>Shunt Capacitor Filter:</strong> A large capacitor \( C \) is connected in parallel across the load resistor \( R_L \).
+<ul>
+<li>During conduction, the capacitor charges to peak voltage \( V_m \).</li>
+<li>When the rectifier voltage drops below \( V_m \), the diode turns off and the capacitor discharges slowly through \( R_L \), maintaining a nearly smooth output voltage.</li>
+<li>Capacitor impedance \( X_C = \frac{1}{2\pi f C} \) offers an easy path to high-frequency AC ripple to ground while forcing DC through \( R_L \).</li>
+</ul>
+</li>
+<li><strong>Series Inductor Filter:</strong> An inductor \( L \) in series with \( R_L \). Inductive reactance \( X_L = 2\pi f L \) blocks AC ripple while allowing DC with zero reactance.</li>
+</ol>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

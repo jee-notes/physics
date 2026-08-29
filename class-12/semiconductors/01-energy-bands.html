@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Bands in Solids | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Semiconductors
+</a>
+</nav>
+<h1>Energy Bands in Solids</h1>
+<p class="subtitle">
+Quantum mechanical origin of electrical classification in condensed matter.
+</p>
+
+<section>
+<h2>Classification of Solids: Conductors, Insulators, and Semiconductors</h2>
+<p>
+Solids can be broadly categorized according to their electrical conductivity (\( \sigma \)) and resistivity (\( \rho = 1/\sigma \)) at room temperature (\( T \approx 300 \text{ K} \)):
+</p>
+<ul>
+<li><strong>Metals (Conductors):</strong> Possess extremely low resistivity and very high conductivity.
+\[ \rho \sim 10^{-2} \text{ to } 10^{-8} \ \Omega\cdot\text{m}, \quad \sigma \sim 10^{2} \text{ to } 10^{8} \ \text{S}\cdot\text{m}^{-1} \]
+</li>
+<li><strong>Insulators:</strong> Possess extremely high resistivity and negligible conductivity.
+\[ \rho \sim 10^{11} \text{ to } 10^{19} \ \Omega\cdot\text{m}, \quad \sigma \sim 10^{-11} \text{ to } 10^{-19} \ \text{S}\cdot\text{m}^{-1} \]
+</li>
+<li><strong>Semiconductors:</strong> Possess intermediate resistivity and conductivity that can be finely tuned.
+\[ \rho \sim 10^{-5} \text{ to } 10^{6} \ \Omega\cdot\text{m}, \quad \sigma \sim 10^{5} \text{ to } 10^{-6} \ \text{S}\cdot\text{m}^{-1} \]
+</li>
+</ul>
+<div class="insightbox">
+Elemental semiconductors include Silicon (\( \text{Si}, Z=14 \)) and Germanium (\( \text{Ge}, Z=32 \)). Compound semiconductors include inorganic compounds like \( \text{GaAs} \), \( \text{CdS} \), \( \text{InP} \), as well as organic semiconductors and polymers like polyaniline.
+</div>
+</section>
+
+<section>
+<h2>Energy Band Theory (Valence Band, Conduction Band, Forbidden Energy Gap)</h2>
+<p>
+In an isolated atom, electron energies occupy sharp, discrete quantum states according to the Bohr model. However, when \( N \) atoms come together to form a crystal lattice, the outer electron wavefunctions overlap. In accordance with the <strong>Pauli Exclusion Principle</strong>, each discrete atomic energy level splits into \( N \) closely spaced sub-levels, forming continuous <strong>energy bands</strong>.
+</p>
+
+<div class="model-box">
+<h3>Key Energy Bands</h3>
+<ul>
+<li><strong>Valence Band (VB):</strong> The energy band formed by the outermost valence electrons. It is completely or partially filled at \( 0 \text{ K} \). Electrons in this band do not contribute directly to conduction unless excited.</li>
+<li><strong>Conduction Band (CB):</strong> The lowest unfilled or partially filled energy band above the valence band. Electrons excited into this band are free to drift under an external electric field.</li>
+<li><strong>Forbidden Energy Gap (\( E_g \)):</strong> The energy separation between the top of the valence band (\( E_v \)) and the bottom of the conduction band (\( E_c \)):
+\[ E_g = E_c - E_v \]
+No allowed quantum states exist within this gap.
+</li>
+</ul>
+</div>
+
+<p>
+The distinction between the three classes of solids lies directly in their bandgap magnitude:
+</p>
+<ol>
+<li><strong>Conductors:</strong> Either the conduction band is partially filled with electrons, or the conduction band overlaps with the valence band (\( E_g \approx 0 \)). A large pool of free electrons is readily available for conduction without thermal activation.</li>
+<li><strong>Insulators:</strong> A very large forbidden energy gap exists (\( E_g > 3 \text{ eV} \)). For instance, in Diamond, \( E_g \approx 5.4 \text{ eV} \). Thermal energy at room temperature (\( k_B T \approx 0.026 \text{ eV} \)) is insufficient to excite valence electrons across this gap, resulting in zero conductivity.</li>
+<li><strong>Semiconductors:</strong> Possess a small, finite forbidden energy gap (\( E_g < 3 \text{ eV} \)). At room temperature (\( 300 \text{ K} \)):
+\[ E_g(\text{Si}) \approx 1.1 \text{ eV}, \quad E_g(\text{Ge}) \approx 0.7 \text{ eV}, \quad E_g(\text{GaAs}) \approx 1.42 \text{ eV} \]
+Thermal energy excites a noticeable fraction of electrons from VB to CB, creating electrical conductivity.
+</li>
+</ol>
+</section>
+
+<section>
+<h2>Temperature Dependence of Conductivity</h2>
+<p>
+The electrical resistivity of semiconductors behaves fundamentally differently from that of metals:
+</p>
+<div class="concept-box">
+<strong>Semiconductors possess a Negative Temperature Coefficient of Resistance (\( \alpha < 0 \)):</strong><br>
+As temperature \( T \) increases, thermal agitation breaks covalent bonds, exponentially increasing the number density of free carriers \( n(T) \propto e^{-E_g / (2 k_B T)} \). The massive increase in carrier concentration overwhelmingly dominates over increased lattice scattering, causing resistivity to drop and electrical conductivity to surge:
+\[ \sigma(T) = \sigma_0 e^{-E_g / (2 k_B T)} \]
+</div>
+<p>
+In contrast, metals have a fixed carrier concentration; rising temperature only increases electron-phonon lattice collisions, causing resistance to increase linearly (\( \alpha > 0 \)).
+</p>
+<div class="insightbox">
+At absolute zero (\( T = 0 \text{ K} \)), a pure semiconductor has all valence electrons locked in bonds and an empty conduction band. Thus, at \( 0 \text{ K} \), a semiconductor behaves as an ideal insulator.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

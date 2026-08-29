@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>p-n Junction Diode | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Semiconductors
+</a>
+</nav>
+<h1>p-n Junction Diode</h1>
+<p class="subtitle">
+The foundational building block of non-linear semiconductor devices.
+</p>
+
+<section>
+<h2>Formation of p-n Junction (Diffusion and Drift Current)</h2>
+<p>
+A <strong>p-n junction</strong> is formed when a single semiconductor crystal (like Si) is fabricated such that one side is doped with acceptor impurities (p-type) and the adjacent side is doped with donor impurities (n-type). It cannot be created by simply pressing two separate blocks together, because microscopic surface roughness prevents continuous atomic contact.
+</p>
+<p>
+Upon junction formation, two opposing transport processes immediately occur:
+</p>
+<ol>
+<li><strong>Diffusion Current (\( I_{\text{diff}} \)):</strong> Due to the steep concentration gradient, majority holes from the p-side diffuse across the junction into the n-side, and majority electrons from the n-side diffuse into the p-side. This flow of majority carriers constitutes the diffusion current directed from the <strong>p-side to the n-side</strong>.</li>
+<li><strong>Uncovering of Space Charge:</strong> As electrons leave the n-side, they leave behind uncompensated, immobile positive donor ions (\( N_d^+ \)). As holes leave the p-side, they leave behind uncompensated, immobile negative acceptor ions (\( N_a^- \)).</li>
+<li><strong>Drift Current (\( I_{\text{drift}} \)):</strong> The uncompensated ions create a strong internal electric field \( \vec{E}_{\text{in}} \) directed from the n-side to the p-side. This field sweeps minority carriers (electrons generated in the p-side to n-side, and holes generated in the n-side to p-side). This minority carrier flow is the drift current directed from the <strong>n-side to the p-side</strong>.</li>
+</ol>
+<div class="model-box">
+<h3>Equilibrium Condition</h3>
+Diffusion current starts large and decreases as the internal field builds up. Drift current starts at zero and increases until:
+\[ I_{\text{diff}} = I_{\text{drift}} \]
+At this point, the net current across the unbiased junction is strictly zero.
+</div>
+</section>
+
+<section>
+<h2>Depletion Region and Barrier Potential</h2>
+<div class="model-box">
+<h3>Depletion Layer</h3>
+The region on either side of the junction which is completely depleted of mobile charge carriers (electrons and holes) and contains only immobile space-charge ions is called the <strong>depletion region</strong> (or space-charge region).
+</div>
+<p>
+Key characteristics:
+<ul>
+<li><strong>Depletion Width (\( w \)):</strong> Typically of the order of \( 10^{-6} \text{ m} \) (\( \sim 0.5 - 1 \ \mu\text{m} \)). Higher doping levels result in a narrower depletion layer.</li>
+<li><strong>Barrier Potential (\( V_0 \) or \( V_b \)):</strong> The potential difference developed across the depletion layer due to the immobile space-charge ions. It acts as a potential hill preventing further majority carrier diffusion.
+\[ V_0 \approx 0.7 \text{ V for Silicon}, \quad V_0 \approx 0.3 \text{ V for Germanium} \]
+</li>
+<li><strong>Internal Electric Field (\( E_{\text{in}} \)):</strong>
+\[ E_{\text{in}} = \frac{V_0}{w} \approx \frac{0.7 \text{ V}}{10^{-6} \text{ m}} = 7 \times 10^5 \text{ V/m} \sim 10^6 \text{ V/m} \]
+Even though the barrier voltage is under 1 volt, the microscopic thickness creates an intense electric field.
+</li>
+</ul>
+</p>
+</section>
+
+<section>
+<h2>p-n Junction Under Forward and Reverse Bias</h2>
+
+<h3>Forward Biasing</h3>
+<p>
+When the p-side of the diode is connected to the positive terminal of an external DC voltage source \( V \) and the n-side is connected to the negative terminal:
+</p>
+<ul>
+<li>The applied electric field opposes the internal barrier field \( E_{\text{in}} \).</li>
+<li>The effective barrier height is lowered to \( (V_0 - V) \).</li>
+<li>The depletion layer width <strong>decreases</strong>.</li>
+<li>Majority carriers gain sufficient energy to cross the junction, producing a large forward diffusion current (measured in milliamperes, \( \text{mA} \)).</li>
+</ul>
+
+<h3>Reverse Biasing</h3>
+<p>
+When the p-side is connected to the negative terminal and the n-side to the positive terminal of the voltage source \( V \):
+</p>
+<ul>
+<li>The applied field aids the internal barrier field.</li>
+<li>The effective barrier height is raised to \( (V_0 + V) \).</li>
+<li>The depletion layer width <strong>increases</strong>.</li>
+<li>Majority carrier diffusion is completely halted. Only thermally generated minority carriers are swept across, resulting in an extremely small, almost constant reverse saturation current \( I_s \) (microamperes \( \mu\text{A} \) for Ge, nanoamperes \( \text{nA} \) for Si).</li>
+</ul>
+</section>
+
+<section>
+<h2>V-I Characteristics of a p-n Junction Diode</h2>
+<p>
+The mathematical relationship describing the current through a p-n diode is given by the <strong>Shockley Diode Equation</strong>:
+\[ I = I_s \left( e^{\frac{e V}{\eta k_B T}} - 1 \right) \]
+where \( \eta \) is the ideality factor (\( \eta=1 \) for Ge, \( \eta \approx 1 \text{ to } 2 \) for Si).
+</p>
+
+<div class="concept-box">
+<h3>Salient Features of the V-I Curve</h3>
+<ol>
+<li><strong>Threshold / Cut-in / Knee Voltage (\( V_k \)):</strong> In forward bias, current remains negligible until the applied voltage overcomes the barrier potential. Beyond \( V_k \) (0.7 V for Si, 0.3 V for Ge), current increases exponentially.</li>
+<li><strong>Dynamic (AC) Resistance (\( r_d \)):</strong> Defined as the reciprocal of the slope of the V-I characteristic:
+\[ r_d = \frac{\Delta V}{\Delta I} \]
+In forward bias, \( r_d \) is very small (\( \sim 1 - 25 \ \Omega \)). In reverse bias, \( r_d \) is extremely high (\( \sim \text{M}\Omega \)).
+</li>
+<li><strong>Reverse Breakdown Voltage (\( V_{\text{BR}} \)):</strong> If the reverse voltage is increased to a critical threshold, reverse current suddenly rises sharply. Operating an ordinary diode in this region causes thermal destruction.</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./03a-diode-applications.html">3a. Diode Applications (Rectifiers and Filters)</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

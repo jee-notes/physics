@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>p-Type and n-Type Semiconductors | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-intrinsic-extrinsic-semiconductors.html" class="back-btn">
+<span>&larr;</span> Back to Intrinsic and Extrinsic Semiconductors
+</a>
+</nav>
+<h1>p-Type and n-Type Semiconductors</h1>
+<p class="subtitle">
+Impurity energy levels, majority/minority carriers, and mass action equilibrium.
+</p>
+
+<section>
+<h2>n-type Semiconductors and Donor Energy Levels</h2>
+<p>
+When a tetravalent crystal (Si or Ge) is doped with a pentavalent atom (such as Phosphorus, Arsenic, or Antimony), four of the dopant's valence electrons form covalent bonds with four neighboring host atoms. The fifth valence electron remains loosely bound to the parent dopant nucleus.
+</p>
+<p>
+The ionization energy required to free this fifth electron is extremely small:
+\[ \Delta E_d \approx 0.05 \text{ eV for Si}, \quad \Delta E_d \approx 0.01 \text{ eV for Ge} \]
+At room temperature (\( k_B T \approx 0.026 \text{ eV} \)), thermal energy easily ionizes virtually all pentavalent dopant atoms, releasing their fifth electrons directly into the conduction band.
+</p>
+
+<div class="model-box">
+<h3>Donor Energy Level (\( E_d \))</h3>
+In the energy band diagram of an n-type semiconductor, the dopants create a discrete energy level \( E_d \) located just below the bottom of the conduction band \( E_c \) by an energy gap \( \Delta E_d = E_c - E_d \).
+</div>
+
+<p>
+In an n-type semiconductor:
+<ul>
+<li><strong>Majority Carriers:</strong> Electrons (\( n_e \approx N_d \), where \( N_d \) is the donor concentration).</li>
+<li><strong>Minority Carriers:</strong> Holes (\( n_h \ll n_e \)).</li>
+<li>\( n_e \gg n_h \)</li>
+</ul>
+</p>
+</section>
+
+<section>
+<h2>p-type Semiconductors and Acceptor Energy Levels</h2>
+<p>
+When a tetravalent crystal is doped with a trivalent impurity (such as Boron, Aluminum, or Indium), the dopant forms three covalent bonds with adjacent Si/Ge atoms. The fourth bond remains incomplete, presenting a vacant quantum state or a hole.
+</p>
+<p>
+An electron from a neighboring covalent bond can easily jump into this vacancy with very little energy expenditure (\( \Delta E_a \approx 0.01 - 0.05 \text{ eV} \)), leaving a hole behind in the host lattice while turning the trivalent dopant into an immobile negative ion (\( \text{B}^- \)).
+</p>
+
+<div class="model-box">
+<h3>Acceptor Energy Level (\( E_a \))</h3>
+In the energy band diagram of a p-type semiconductor, the trivalent dopants introduce a discrete acceptor level \( E_a \) located just above the top of the valence band \( E_v \) by an energy gap \( \Delta E_a = E_a - E_v \).
+</div>
+
+<p>
+In a p-type semiconductor:
+<ul>
+<li><strong>Majority Carriers:</strong> Holes (\( n_h \approx N_a \), where \( N_a \) is the acceptor concentration).</li>
+<li><strong>Minority Carriers:</strong> Electrons (\( n_e \ll n_h \)).</li>
+<li>\( n_h \gg n_e \)</li>
+</ul>
+</p>
+</section>
+
+<section>
+<h2>Law of Mass Action and Charge Neutrality</h2>
+
+<div class="model-box">
+<h3>Law of Mass Action</h3>
+Under thermal equilibrium, the product of the free electron concentration (\( n_e \)) and hole concentration (\( n_h \)) is constant at a given temperature, and is strictly equal to the square of the intrinsic carrier concentration (\( n_i \)):
+\[ n_e \cdot n_h = n_i^2 \]
+</div>
+
+<p>
+This law holds for intrinsic, n-type, and p-type semiconductors. Adding donor impurities heavily increases \( n_e \), which exponentially increases the rate of electron-hole recombination, suppressing \( n_h \) well below \( n_i \) such that the product remains \( n_i^2 \).
+</p>
+
+<div class="concept-box">
+<h3>Electrical Neutrality Condition</h3>
+Even though an n-type semiconductor is dominated by electrons and a p-type by holes, <strong>extrinsic semiconductors are strictly electrically neutral</strong> as a whole.
+<br><br>
+In an n-type crystal, every free electron is paired with an immobile positively charged ionized donor core (\( \text{P}^+ \)). In a p-type crystal, every free hole is paired with an immobile negatively charged ionized acceptor core (\( \text{B}^- \)):
+\[ n_e + N_a^- = n_h + N_d^+ \]
+</div>
+
+<div class="examplebox">
+<h3>Example: Calculating Minority Carrier Concentration</h3>
+<p>
+A pure Silicon crystal with intrinsic carrier concentration \( n_i = 1.5 \times 10^{16} \text{ m}^{-3} \) is doped with Indium atoms such that the acceptor concentration is \( N_a = 4.5 \times 10^{22} \text{ m}^{-3} \). Assuming all dopants are ionized, calculate the majority and minority carrier concentrations.
+</p>
+<hr>
+<p>
+<strong>Solution:</strong><br>
+Since Indium is trivalent, this forms a p-type semiconductor.
+\[ \text{Majority carrier (hole) density: } n_h \approx N_a = 4.5 \times 10^{22} \text{ m}^{-3} \]
+Using the Law of Mass Action:
+\[ n_e \cdot n_h = n_i^2 \implies n_e = \frac{n_i^2}{n_h} \]
+\[ n_e = \frac{(1.5 \times 10^{16})^2}{4.5 \times 10^{22}} = \frac{2.25 \times 10^{32}}{4.5 \times 10^{22}} = 5 \times 10^9 \text{ m}^{-3} \]
+<em>Notice that minority electron concentration is drastically suppressed from \( 1.5 \times 10^{16} \) down to \( 5 \times 10^{9} \text{ m}^{-3} \).</em>
+</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Electronics and Logic Gates | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Semiconductors
+</a>
+</nav>
+<h1>Digital Electronics and Logic Gates</h1>
+<p class="subtitle">
+Binary logic operations, Boolean algebra, universal gates, and circuit synthesis.
+</p>
+
+<section>
+<h2>Analog vs Digital Signals and Binary Logic</h2>
+<p>
+In electronics, information is processed via electric signals:
+</p>
+<ul>
+<li><strong>Analog Signals:</strong> Continuous, time-varying voltage or current signals that can assume any value within a continuous range (e.g., audio signals, sine waves).</li>
+<li><strong>Digital Signals:</strong> Discrete signals that have only two allowed voltage levels:
+  <ul>
+    <li><strong>Binary 0 (Low / OFF / False):</strong> Typically \( 0 \text{ V} \).</li>
+    <li><strong>Binary 1 (High / ON / True):</strong> Typically \( +5 \text{ V} \).</li>
+  </ul>
+</li>
+</ul>
+<p>
+A <strong>Logic Gate</strong> is a digital circuit with one or more binary inputs but only one binary output, operating in accordance with logical rules.
+</p>
+</section>
+
+<section>
+<h2>Fundamental Logic Gates: NOT, OR, and AND</h2>
+
+<div class="model-box">
+<h3>1. NOT Gate (Inverter)</h3>
+<p>
+Has a single input and single output. It inverts the logic level:
+\[ Y = \overline{A} \]
+<strong>Truth Table:</strong>
+<br>Input \( A = 0 \implies Y = 1 \); Input \( A = 1 \implies Y = 0 \).
+</p>
+</div>
+
+<div class="model-box">
+<h3>2. OR Gate</h3>
+<p>
+Output is High (1) if any input is High (1). It performs logical addition:
+\[ Y = A + B \]
+<strong>Truth Table:</strong>
+<table style="border-collapse: collapse; margin-top: 5px;">
+<tr style="border-bottom: 1px solid #ccc;"><th style="padding: 4px 12px;">A</th><th style="padding: 4px 12px;">B</th><th style="padding: 4px 12px;">Y = A + B</th></tr>
+<tr><td style="padding: 4px 12px;">0</td><td style="padding: 4px 12px;">0</td><td style="padding: 4px 12px;">0</td></tr>
+<tr><td style="padding: 4px 12px;">0</td><td style="padding: 4px 12px;">1</td><td style="padding: 4px 12px;">1</td></tr>
+<tr><td style="padding: 4px 12px;">1</td><td style="padding: 4px 12px;">0</td><td style="padding: 4px 12px;">1</td></tr>
+<tr><td style="padding: 4px 12px;">1</td><td style="padding: 4px 12px;">1</td><td style="padding: 4px 12px;">1</td></tr>
+</table>
+</p>
+</div>
+
+<div class="model-box">
+<h3>3. AND Gate</h3>
+<p>
+Output is High (1) only if all inputs are High (1). It performs logical multiplication:
+\[ Y = A \cdot B \]
+<strong>Truth Table:</strong>
+<table style="border-collapse: collapse; margin-top: 5px;">
+<tr style="border-bottom: 1px solid #ccc;"><th style="padding: 4px 12px;">A</th><th style="padding: 4px 12px;">B</th><th style="padding: 4px 12px;">Y = A · B</th></tr>
+<tr><td style="padding: 4px 12px;">0</td><td style="padding: 4px 12px;">0</td><td style="padding: 4px 12px;">0</td></tr>
+<tr><td style="padding: 4px 12px;">0</td><td style="padding: 4px 12px;">1</td><td style="padding: 4px 12px;">0</td></tr>
+<tr><td style="padding: 4px 12px;">1</td><td style="padding: 4px 12px;">0</td><td style="padding: 4px 12px;">0</td></tr>
+<tr><td style="padding: 4px 12px;">1</td><td style="padding: 4px 12px;">1</td><td style="padding: 4px 12px;">1</td></tr>
+</table>
+</p>
+</div>
+</section>
+
+<section>
+<h2>Universal Logic Gates: NAND and NOR</h2>
+<p>
+<strong>NAND</strong> and <strong>NOR</strong> gates are called <strong>Universal Gates</strong> because repeated combinations of either gate alone can synthesize all three fundamental logic operations (NOT, AND, OR), as well as any arbitrary complex digital circuit.
+</p>
+
+<div class="concept-box">
+<h3>1. NAND Gate (NOT-AND)</h3>
+\[ Y = \overline{A \cdot B} \]
+Output is 0 only when both inputs are 1; otherwise output is 1.
+<br><br>
+<strong>Synthesizing Gates using NAND:</strong>
+<ul>
+<li><strong>NOT:</strong> Tie inputs together \( \implies Y = \overline{A \cdot A} = \overline{A} \).</li>
+<li><strong>AND:</strong> Follow a NAND with a NAND inverter \( \implies Y = \overline{\overline{A \cdot B}} = A \cdot B \).</li>
+<li><strong>OR:</strong> Invert inputs with NANDs before feeding to a NAND \( \implies Y = \overline{\overline{A} \cdot \overline{B}} = A + B \).</li>
+</ul>
+</div>
+
+<div class="concept-box">
+<h3>2. NOR Gate (NOT-OR)</h3>
+\[ Y = \overline{A + B} \]
+Output is 1 only when both inputs are 0; otherwise output is 0.
+<br><br>
+<strong>Synthesizing Gates using NOR:</strong>
+<ul>
+<li><strong>NOT:</strong> Tie inputs together \( \implies Y = \overline{A + A} = \overline{A} \).</li>
+<li><strong>OR:</strong> Follow a NOR with a NOR inverter \( \implies Y = \overline{\overline{A + B}} = A + B \).</li>
+<li><strong>AND:</strong> Invert inputs with NORs before feeding to a NOR \( \implies Y = \overline{\overline{A} + \overline{B}} = A \cdot B \).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>De Morgan's Laws and Logic Circuit Simplification</h2>
+
+<div class="model-box">
+<h3>De Morgan's Theorems</h3>
+<ol>
+<li><strong>First Theorem:</strong> The complement of a logical sum equals the product of the individual complements:
+\[ \overline{A + B} = \overline{A} \cdot \overline{B} \]
+</li>
+<li><strong>Second Theorem:</strong> The complement of a logical product equals the sum of the individual complements:
+\[ \overline{A \cdot B} = \overline{A} + \overline{B} \]
+</li>
+</ol>
+</div>
+
+<div class="examplebox">
+<h3>Example: Boolean Simplification</h3>
+<p>
+Simplify the Boolean expression: \( Y = \overline{\overline{A} \cdot B + \overline{A \cdot B}} \).
+</p>
+<hr>
+<p>
+<strong>Step 1:</strong> Apply De Morgan's First Theorem to the outer sum:
+\[ Y = \overline{(\overline{A} \cdot B)} \cdot \overline{(\overline{A \cdot B})} \]
+<strong>Step 2:</strong> Use double negation \( \overline{\overline{X}} = X \) on the second term:
+\[ \overline{(\overline{A \cdot B})} = A \cdot B \]
+<strong>Step 3:</strong> Apply De Morgan's Second Theorem to the first term:
+\[ \overline{(\overline{A} \cdot B)} = \overline{\overline{A}} + \overline{B} = A + \overline{B} \]
+<strong>Step 4:</strong> Multiply and simplify using Boolean identities:
+\[ Y = (A + \overline{B}) \cdot (A \cdot B) = (A \cdot A \cdot B) + (\overline{B} \cdot A \cdot B) \]
+Since \( A \cdot A = A \) and \( \overline{B} \cdot B = 0 \):
+\[ Y = (A \cdot B) + 0 = A \cdot B \]
+The entire complex logic network reduces to a simple <strong>AND gate</strong>.
+</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

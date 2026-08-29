@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Purpose Diodes | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Semiconductors
+</a>
+</nav>
+<h1>Special Purpose p-n Junction Diodes</h1>
+<p class="subtitle">
+Voltage regulation, optical detection, light generation, and solar energy harvesting.
+</p>
+
+<section>
+<h2>Zener Diode and Breakdown Mechanisms (Zener vs Avalanche Breakdown)</h2>
+<p>
+A <strong>Zener Diode</strong> is a specially fabricated, heavily doped silicon p-n junction diode designed to operate continuously and safely in the reverse breakdown region without damage.
+</p>
+
+<div class="model-box">
+<h3>Comparison of Breakdown Mechanisms</h3>
+<table style="width:100%; border-collapse: collapse; margin-top: 10px;">
+<tr style="border-bottom: 2px solid #ccc; text-align: left;">
+<th style="padding: 8px;">Parameter</th>
+<th style="padding: 8px;">Zener Breakdown</th>
+<th style="padding: 8px;">Avalanche Breakdown</th>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+<td style="padding: 8px;"><strong>Doping Level</strong></td>
+<td style="padding: 8px;">Very heavily doped (\( \sim 1:10^4 \))</td>
+<td style="padding: 8px;">Lightly to moderately doped</td>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+<td style="padding: 8px;"><strong>Depletion Width</strong></td>
+<td style="padding: 8px;">Extremely thin (\( < 10^{-7} \text{ m} \))</td>
+<td style="padding: 8px;">Relatively wide (\( > 10^{-6} \text{ m} \))</td>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+<td style="padding: 8px;"><strong>Breakdown Voltage</strong></td>
+<td style="padding: 8px;">Low voltage (\( V_z < 6 \text{ V} \))</td>
+<td style="padding: 8px;">Higher voltage (\( V_z > 6 \text{ V} \))</td>
+</tr>
+<tr style="border-bottom: 1px solid #eee;">
+<td style="padding: 8px;"><strong>Physical Mechanism</strong></td>
+<td style="padding: 8px;">High electric field (\( > 10^7 \text{ V/m} \)) directly pulls valence electrons out of covalent bonds (field emission).</td>
+<td style="padding: 8px;">Thermally generated minority carriers accelerate, gain kinetic energy, and break bonds via collisions (impact ionization / carrier multiplication).</td>
+</tr>
+<tr>
+<td style="padding: 8px;"><strong>Temperature Coeff.</strong></td>
+<td style="padding: 8px;">Negative (\( V_z \) decreases with \( T \))</td>
+<td style="padding: 8px;">Positive (\( V_z \) increases with \( T \))</td>
+</tr>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Zener Diode as a Voltage Regulator (Design and Calculations)</h2>
+<p>
+The sharp breakdown characteristic of a Zener diode makes it ideal for maintaining a constant DC output voltage across a load, despite fluctuations in input unregulated DC voltage or changes in load current.
+</p>
+<p>
+<strong>Circuit Configuration:</strong> The Zener diode is connected in reverse bias across the load resistance \( R_L \), in series with a current-limiting resistor \( R_s \).
+</p>
+
+<div class="model-box">
+<h3>Governing Circuit Equations</h3>
+\[ I = I_z + I_L \]
+\[ V_{\text{in}} = I R_s + V_z \]
+\[ V_{\text{out}} = V_z = I_L R_L \]
+\[ R_s = \frac{V_{\text{in}} - V_z}{I_z + I_L} \]
+</div>
+
+<div class="examplebox">
+<h3>Example: Calculating Series Resistance \( R_s \)</h3>
+<p>
+A \( 10 \text{ V} \) Zener diode is used to provide a regulated voltage to a load needing \( I_L = 20 \text{ mA} \) from an unregulated DC source fluctuating between \( 14 \text{ V} \) and \( 20 \text{ V} \). If the minimum Zener current is \( I_{z,\text{min}} = 5 \text{ mA} \), determine the suitable value of \( R_s \).
+</p>
+<hr>
+<p>
+<strong>Solution:</strong><br>
+Regulation must be maintained at minimum input voltage (\( V_{\text{in,min}} = 14 \text{ V} \)), where Zener current is at its minimum:
+\[ I_{\text{min}} = I_{z,\text{min}} + I_L = 5 \text{ mA} + 20 \text{ mA} = 25 \text{ mA} \]
+\[ R_s = \frac{V_{\text{in,min}} - V_z}{I_{\text{min}}} = \frac{14 \text{ V} - 10 \text{ V}}{25 \times 10^{-3} \text{ A}} = \frac{4}{0.025} = 160 \ \Omega \]
+</p>
+</div>
+</section>
+
+<section>
+<h2>Optoelectronic Junction Devices: Photodiode, LED, and Solar Cell</h2>
+
+<h3>1. Photodiode</h3>
+<p>
+A reverse-biased p-n junction diode with a transparent window. When photons with energy \( h\nu \ge E_g \) strike the depletion layer, electron-hole pairs are optically generated. The internal field sweeps electrons to n-side and holes to p-side, increasing the reverse current.
+</p>
+<div class="insightbox">
+<strong>Why operate Photodiodes in Reverse Bias?</strong><br>
+In forward bias, the majority carrier density is already huge (\( \sim 10^{22} \)), so a light-induced carrier increase \( \Delta n \) creates a tiny fractional change (\( \Delta n / n_{\text{maj}} \ll 1 \)). In reverse bias, the dark current is governed by minority carriers (\( \sim 10^9 \)), so the same \( \Delta n \) creates a massive fractional change (\( \Delta n / n_{\text{min}} \gg 1 \)), making optical detection highly sensitive.
+</div>
+
+<h3>2. Light Emitting Diode (LED)</h3>
+<p>
+A heavily doped, forward-biased p-n junction made of direct bandgap compound semiconductors (like \( \text{GaAs}_{1-x}\text{P}_x \)).
+<ul>
+<li>Under forward bias, minority carrier injection occurs.</li>
+<li>Electrons and holes recombine radiatively across the bandgap, releasing photons:
+\[ \lambda \approx \frac{hc}{E_g} \]
+</li>
+<li>To emit visible light (\( 400 - 700 \text{ nm} \)), the bandgap must satisfy \( E_g \ge 1.8 \text{ eV} \). Silicon (\( E_g = 1.1 \text{ eV} \)) and Germanium (\( E_g = 0.7 \text{ eV} \)) are indirect bandgap semiconductors where recombination releases phonons (heat), not light.</li>
+</ul>
+</p>
+
+<h3>3. Solar Cell</h3>
+<p>
+An unbiased p-n junction designed to convert photon energy directly into electrical energy via the <strong>Photovoltaic Effect</strong> in three sequential steps:
+<ol>
+<li><strong>Generation:</strong> Absorption of photons (\( h\nu > E_g \)) creates electron-hole pairs near the junction.</li>
+<li><strong>Separation:</strong> The built-in electric field sweeps photo-electrons to the n-layer and photo-holes to the p-layer.</li>
+<li><strong>Collection:</strong> Charges accumulate on the front and back metal contacts, developing an Open Circuit Voltage (\( V_{\text{oc}} \)) and supplying a Short Circuit Current (\( I_{\text{sc}} \)).</li>
+</ol>
+The V-I characteristic of a solar cell lies in the <strong>4th quadrant</strong> because the device delivers power rather than consuming it.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
