@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connected Vessels & Bulbs | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-ideal-gas-equation.html" class="back-btn">
+<span>&larr;</span> Back to Ideal Gas Equation
+</a>
+</nav>
+
+<h1>Connected Vessels & Bulbs</h1>
+<p class="subtitle">
+Mass conservation principles, stopcock mixing dynamics, temperature differential baths, and partition equilibria.
+</p>
+
+<section>
+<h2>Two-Bulb System with Stopcock</h2>
+<p>
+A classical paradigm in JEE thermal physics involves two rigid vessels of volumes \( V_1 \) and \( V_2 \) containing ideal gases at initial states \( (P_1, V_1, T_1) \) and \( (P_2, V_2, T_2) \), connected by a narrow tube of negligible volume with a valve (stopcock).
+</p>
+
+<div class="diagram">
+<svg width="580" height="200" viewBox="0 0 580 200">
+  <!-- Bulb 1 Left -->
+  <circle cx="150" cy="100" r="60" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="150" y="85" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Bulb 1</text>
+  <text x="150" y="110" font-size="13" fill="#333" text-anchor="middle">P₁, V₁, T₁, n₁</text>
+
+  <!-- Connecting Pipe & Valve -->
+  <rect x="210" y="93" width="160" height="14" fill="#bdc3c7" stroke="#2c3e50" stroke-width="1.5"/>
+  <circle cx="290" cy="100" r="12" fill="#e74c3c" stroke="#2c3e50" stroke-width="2"/>
+  <text x="290" y="70" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="middle">Stopcock</text>
+
+  <!-- Bulb 2 Right -->
+  <circle cx="430" cy="100" r="60" fill="#eaf2fb" stroke="#2980b9" stroke-width="2"/>
+  <text x="430" y="85" font-size="14" font-weight="bold" fill="#2980b9" text-anchor="middle">Bulb 2</text>
+  <text x="430" y="110" font-size="13" fill="#333" text-anchor="middle">P₂, V₂, T₂, n₂</text>
+</svg>
+</div>
+
+<p>
+The total initial moles of gas in the combined closed system is conserved:
+</p>
+\[
+n_{\text{total}} = n_1 + n_2 = \frac{P_1 V_1}{R T_1} + \frac{P_2 V_2}{R T_2}
+\]
+<p>
+When the stopcock is opened, gas flows between the vessels until a uniform final equilibrium pressure \( P_f \) is established throughout the entire combined volume \( V_{\text{total}} = V_1 + V_2 \).
+</p>
+</section>
+
+<section>
+<h2>Common Equilibrium Pressure and Temperature</h2>
+
+<h3>Case 1: Isothermal Mixing (Constant Temperature \( T \))</h3>
+<p>
+If both bulbs are maintained at the same constant temperature \( T \) throughout the process:
+</p>
+\[
+n_{\text{total}} = \frac{P_f (V_1 + V_2)}{R T} = \frac{P_1 V_1}{R T} + \frac{P_2 V_2}{R T}
+\]
+<div class="model-box">
+\[
+P_f = \frac{P_1 V_1 + P_2 V_2}{V_1 + V_2}
+\]
+</div>
+
+<h3>Case 2: Thermally Insulated (Adiabatic) Mixing</h3>
+<p>
+If the bulbs are rigid and completely thermally insulated from the surroundings (\( W = 0, Q = 0 \)):
+By the First Law of Thermodynamics, the total internal energy is conserved:
+</p>
+\[
+\Delta U = 0 \implies U_{\text{final}} = U_1 + U_2
+\]
+\[
+(n_1 + n_2) C_V T_f = n_1 C_{V1} T_1 + n_2 C_{V2} T_2
+\]
+<p>
+For the same gas (\( C_{V1} = C_{V2} = C_V \)):
+</p>
+<div class="model-box">
+\[
+T_f = \frac{n_1 T_1 + n_2 T_2}{n_1 + n_2} = \frac{P_1 V_1 + P_2 V_2}{\frac{P_1 V_1}{T_1} + \frac{P_2 V_2}{T_2}}
+\]
+</div>
+<p>
+The final common equilibrium pressure is then:
+</p>
+<div class="model-box">
+\[
+P_f = \frac{(n_1 + n_2) R T_f}{V_1 + V_2} = \frac{P_1 V_1 + P_2 V_2}{V_1 + V_2}
+\]
+</div>
+<div class="insightbox">
+Remarkably, for adiabatic mixing of the same ideal gas, the final equilibrium pressure \( P_f = \frac{P_1 V_1 + P_2 V_2}{V_1 + V_2} \) takes the exact same mathematical form as isothermal mixing, because \( P \propto U/V \) for an ideal gas!
+</div>
+</section>
+
+<section>
+<h2>Connecting Tubes at Different Constant Temperatures</h2>
+<p>
+Consider two bulbs of volumes \( V_1 \) and \( V_2 \) initially containing \( n_0 \) total moles of gas at initial pressure \( P_0 \) and uniform initial temperature \( T_0 \).
+The valve is kept open, but bulb 1 is placed in a thermal bath at temperature \( T_1 \) and bulb 2 is placed in a thermal bath at temperature \( T_2 \).
+</p>
+<p>
+Because the connecting tube remains open, the pressure in both vessels must equalize to a common final steady-state value \( P \):
+</p>
+\[
+P_1 = P_2 = P
+\]
+<p>
+By conservation of total moles:
+</p>
+\[
+n_1 + n_2 = n_{\text{total}}
+\]
+\[
+\frac{P V_1}{R T_1} + \frac{P V_2}{R T_2} = \frac{P_0 (V_1 + V_2)}{R T_0}
+\]
+<div class="model-box">
+\[
+P = P_0 (V_1 + V_2) \left[ \frac{1}{T_0 \left( \frac{V_1}{T_1} + \frac{V_2}{T_2} \right)} \right] = \frac{n_{\text{total}} R}{\frac{V_1}{T_1} + \frac{V_2}{T_2}}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Example: Equal Bulbs in Hot and Cold Baths</h3>
+<p>
+Two identical glass bulbs of volume \( V \) are connected by a narrow tube and filled with gas at \( 0^\circ\text{C} \) and \( 76\text{ cm of Hg} \). One bulb is immersed in melting ice (\( 0^\circ\text{C} \)) and the other in steam at \( 100^\circ\text{C} \). Find the resulting common pressure.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>
+Given \( V_1 = V_2 = V \), \( P_0 = 76\text{ cm Hg} \), \( T_0 = 273\text{ K} \), \( T_1 = 273\text{ K} \), \( T_2 = 373\text{ K} \).
+</p>
+\[
+\frac{P V}{R(273)} + \frac{P V}{R(373)} = \frac{P_0 (2V)}{R(273)}
+\]
+\[
+P \left[ \frac{1}{273} + \frac{1}{373} \right] = \frac{2 P_0}{273}
+\]
+\[
+P \left[ \frac{373 + 273}{273 \times 373} \right] = \frac{2 \times 76}{273}
+\]
+\[
+P \left[ \frac{646}{373} \right] = 152 \implies P = \frac{152 \times 373}{646} \approx 87.77\text{ cm of Hg}
+\]
+</div>
+</section>
+
+<section>
+<h2>Multiple Bulb Systems and Partition Walls</h2>
+<p>
+For a container divided into \( k \) chambers by movable frictionless pistons:
+</p>
+<ol>
+<li><strong>Mechanical Equilibrium:</strong> All internal movable pistons must experience equal net force, requiring uniform pressure across all compartments: \( P_1 = P_2 = \dots = P_k \).</li>
+<li><strong>Diathermic Partitions:</strong> Temperatures equalize across conductive walls: \( T_1 = T_2 = \dots = T_k \).</li>
+<li><strong>Adiabatic Partitions:</strong> Each compartment undergoes an independent reversible adiabatic process (\( P V^\gamma = \text{constant} \)) until mechanical force balance is achieved.</li>
+</ol>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

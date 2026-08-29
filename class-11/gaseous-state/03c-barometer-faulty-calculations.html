@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faulty Barometer Calculations | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-ideal-gas-equation.html" class="back-btn">
+<span>&larr;</span> Back to Ideal Gas Equation
+</a>
+</nav>
+
+<h1>Faulty Barometer Calculations</h1>
+<p class="subtitle">
+Torricellian vacuum imperfections, trapped air column corrections, and aqueous vapor tension.
+</p>
+
+<section>
+<h2>Torricellian Vacuum and Ideal Barometer</h2>
+<p>
+An ideal Torricellian mercury barometer consists of a long glass tube of uniform bore (length \( \approx 1\text{ m} \)) filled completely with pure, dry mercury and inverted into a mercury cistern.
+</p>
+<p>
+In an ideal barometer:
+</p>
+<ul class="points-list">
+<li>The space above the mercury column is a pure <strong>Torricellian Vacuum</strong> (\( P_{\text{top}} = 0 \), neglecting negligible mercury vapor pressure \( \approx 0.0012\text{ mmHg} \) at room temperature).</li>
+<li>The vertical height of the mercury column \( H_0 \) directly indicates true atmospheric pressure:
+\[
+P_{\text{atm}} = H_0 \quad (\text{in cm or mm of Hg})
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Faulty Barometer with Trapped Air Column</h2>
+<p>
+If a small air bubble or moisture accidentally leaks into the space above the mercury column, the barometer becomes <strong>faulty</strong>.
+</p>
+
+<div class="diagram">
+<svg width="560" height="250" viewBox="0 0 560 250">
+  <!-- Cistern -->
+  <rect x="180" y="190" width="200" height="40" fill="#7f8c8d" stroke="#2c3e50" stroke-width="2"/>
+  <text x="280" y="215" font-size="12" fill="white" font-weight="bold" text-anchor="middle">Mercury Cistern</text>
+
+  <!-- Barometer Tube -->
+  <rect x="265" y="30" width="30" height="170" fill="#f8fafc" stroke="#2c3e50" stroke-width="2"/>
+  <!-- Mercury column -->
+  <rect x="265" y="90" width="30" height="110" fill="#95a5a6"/>
+  <!-- Trapped Air Space -->
+  <rect x="265" y="30" width="30" height="60" fill="#fdedec"/>
+  <text x="280" y="65" font-size="11" font-weight="bold" fill="#c0392b" text-anchor="middle">Air (P_air)</text>
+
+  <!-- Height markers -->
+  <line x1="310" y1="30" x2="360" y2="30" stroke="#2c3e50" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="310" y1="90" x2="360" y2="90" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="310" y1="190" x2="360" y2="190" stroke="#2c3e50" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <line x1="350" y1="30" x2="350" y2="90" stroke="#c0392b" stroke-width="2"/>
+  <text x="365" y="65" font-size="12" font-weight="bold" fill="#c0392b">l = L - h</text>
+
+  <line x1="350" y1="90" x2="350" y2="190" stroke="#2980b9" stroke-width="2"/>
+  <text x="365" y="145" font-size="12" font-weight="bold" fill="#2980b9">h (observed)</text>
+
+  <!-- Formula -->
+  <text x="120" y="110" font-size="14" font-weight="bold" fill="#2c3e50">P_atm = h + P_air</text>
+</svg>
+</div>
+
+<p>
+Let:
+</p>
+<ul class="points-list">
+<li>\( L \): Total height of the closed top of the barometer tube above the cistern mercury level.</li>
+<li>\( h \): Observed height of the mercury column (\( h < H_0 \)).</li>
+<li>\( l = L - h \): Length of the trapped air column in the tube of cross-sectional area \( A \).</li>
+<li>\( P_{\text{air}} \): Pressure exerted downward by the trapped air.</li>
+</ul>
+<p>
+Balancing pressures at the level of the open mercury surface:
+</p>
+<div class="model-box">
+\[
+P_{\text{atm}} = h + P_{\text{air}} \iff P_{\text{air}} = P_{\text{atm}} - h
+\]
+</div>
+<p>
+Since the mass of trapped air and temperature remain constant, the trapped air obeys Boyle's Law:
+</p>
+<div class="model-box">
+\[
+P_{\text{air}} \cdot V_{\text{air}} = \text{constant} \iff (P_{\text{atm}} - h)(L - h)A = \text{constant}
+\]
+\[
+(P_{\text{atm}1} - h_1)(L - h_1) = (P_{\text{atm}2} - h_2)(L - h_2)
+\]
+</div>
+</section>
+
+<section>
+<h2>Aqueous Tension and Vapor Pressure Corrections</h2>
+<p>
+When a drop of water is introduced into the barometer tube, it vaporizes into the vacuum space until saturated water vapor is formed.
+</p>
+<p>
+The pressure exerted by saturated water vapor at a given temperature is called <strong>Aqueous Tension (\( p_v \))</strong>:
+</p>
+<div class="model-box">
+\[
+P_{\text{atm}} = h_{\text{obs}} + P_{\text{dry air}} + p_v
+\]
+</div>
+<div class="insightbox">
+Aqueous tension \( p_v \) depends <em>solely on temperature</em> and is completely independent of the volume of the space above the mercury column, provided liquid water droplets remain present to maintain vapor saturation.
+</div>
+</section>
+
+<section>
+<h2>True Atmospheric Pressure Determination</h2>
+
+<div class="examplebox">
+<h3>Example: Finding True Pressure from a Faulty Barometer</h3>
+<p>
+The height of mercury in a faulty barometer is \( 70\text{ cm} \) when the true atmospheric pressure is \( 76\text{ cm of Hg} \). The length of the air column above mercury is \( 10\text{ cm} \). What will be the true atmospheric pressure when this barometer reads \( 68\text{ cm} \)? (Assume constant temperature).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>
+<strong>Case 1:</strong>
+</p>
+<ul>
+<li>Observed reading \( h_1 = 70\text{ cm} \)</li>
+<li>Length of air column \( l_1 = 10\text{ cm} \)</li>
+<li>Total tube height above cistern: \( L = h_1 + l_1 = 70 + 10 = 80\text{ cm} \)</li>
+<li>True atmospheric pressure \( P_1 = 76\text{ cm of Hg} \)</li>
+<li>Pressure of trapped air: \( P_{\text{air},1} = P_1 - h_1 = 76 - 70 = 6\text{ cm of Hg} \)</li>
+</ul>
+<p>
+<strong>Case 2:</strong>
+</p>
+<ul>
+<li>Observed reading \( h_2 = 68\text{ cm} \)</li>
+<li>Length of air column: \( l_2 = L - h_2 = 80 - 68 = 12\text{ cm} \)</li>
+<li>Let \( P_2 \) be the unknown true atmospheric pressure.</li>
+<li>Pressure of trapped air: \( P_{\text{air},2} = P_2 - h_2 = P_2 - 68 \)</li>
+</ul>
+<p>
+Applying Boyle's Law on the trapped air column (\( P_{\text{air},1} l_1 = P_{\text{air},2} l_2 \)):
+</p>
+\[
+6 \times 10 = (P_2 - 68) \times 12
+\]
+\[
+60 = 12(P_2 - 68) \implies P_2 - 68 = 5 \implies P_2 = 73\text{ cm of Hg}
+\]
+<p>
+The true atmospheric pressure is <strong>\( 73\text{ cm of Hg} \)</strong>.
+</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

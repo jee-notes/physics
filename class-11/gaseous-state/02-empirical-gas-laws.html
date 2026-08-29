@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empirical Gas Laws & Graphical Analysis | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Gaseous State
+</a>
+</nav>
+
+<h1>Empirical Gas Laws & Graphical Analysis</h1>
+<p class="subtitle">
+Boyle's, Charles', Gay-Lussac's, and Avogadro's laws with indicator diagrams and coordinate transformations.
+</p>
+
+<section>
+<h2>Historical Development of Gas Laws</h2>
+<p>
+The formulation of thermal physics began with controlled experimental observations of gases. By holding two of the four state variables (\( P, V, T, n \)) constant, early investigators isolated the fundamental relationships linking the remaining two variables. These empirical generalizations laid the foundation for classical thermodynamics.
+</p>
+</section>
+
+<section>
+<h2>Boyle's Law (Isothermal Processes)</h2>
+<p>
+Formulated by Robert Boyle in 1662:
+</p>
+<div class="model-box">
+<strong>Boyle's Law:</strong> For a fixed mass (\( n = \text{constant} \)) of an ideal gas maintained at constant temperature (\( T = \text{constant} \)), the pressure exerted by the gas is inversely proportional to its volume:
+\[
+P \propto \frac{1}{V} \iff P V = \text{constant} = k_1
+\]
+\[
+P_1 V_1 = P_2 V_2
+\]
+</div>
+<div class="insightbox">
+<strong>Physical Mechanism:</strong> When the volume of a container is halved at constant temperature, the number density of gas molecules (\( N/V \)) doubles. Consequently, the frequency of molecular collisions per unit wall area doubles, leading to twice the macroscopic pressure.
+</div>
+</section>
+
+<section>
+<h2>Charles' Law (Isobaric Processes)</h2>
+<p>
+Formulated by Jacques Charles (1787) and Joseph Louis Gay-Lussac (1802):
+</p>
+<div class="model-box">
+<strong>Charles' Law:</strong> For a fixed mass (\( n = \text{constant} \)) of an ideal gas maintained at constant pressure (\( P = \text{constant} \)), the volume occupied by the gas is directly proportional to its absolute thermodynamic temperature:
+\[
+V \propto T \iff \frac{V}{T} = \text{constant} = k_2
+\]
+\[
+\frac{V_1}{T_1} = \frac{V_2}{T_2}
+\]
+</div>
+<p>
+<strong>In terms of Celsius scale:</strong><br>
+Starting from volume \( V_0 \) at \( 0^\circ\text{C} \), the volume at temperature \( t^\circ\text{C} \) is:
+</p>
+\[
+V_t = V_0 \left( 1 + \alpha_v t \right) = V_0 \left( 1 + \frac{t}{273.15} \right)
+\]
+<p>
+where \( \alpha_v = \frac{1}{273.15} \, ^\circ\text{C}^{-1} \) is the volume expansion coefficient of all ideal gases.
+</p>
+</section>
+
+<section>
+<h2>Gay-Lussac's Law (Isochoric Processes)</h2>
+<p>
+Also known as Amontons' Law of Pressure-Temperature:
+</p>
+<div class="model-box">
+<strong>Gay-Lussac's Law:</strong> For a fixed mass (\( n = \text{constant} \)) of an ideal gas maintained in a rigid container of constant volume (\( V = \text{constant} \)), the pressure of the gas is directly proportional to its absolute thermodynamic temperature:
+\[
+P \propto T \iff \frac{P}{T} = \text{constant} = k_3
+\]
+\[
+\frac{P_1}{T_1} = \frac{P_2}{T_2}
+\]
+</div>
+<p>
+<strong>In terms of Celsius scale:</strong>
+</p>
+\[
+P_t = P_0 \left( 1 + \beta_p t \right) = P_0 \left( 1 + \frac{t}{273.15} \right)
+\]
+<p>
+where \( \beta_p = \frac{1}{273.15} \, ^\circ\text{C}^{-1} \) is the pressure coefficient of an ideal gas.
+</p>
+</section>
+
+<section>
+<h2>Avogadro's Hypothesis and Molar Volume</h2>
+<p>
+Amedeo Avogadro (1811) proposed:
+</p>
+<div class="concept-box">
+<strong>Avogadro's Law:</strong> Equal volumes of all gases under identical conditions of temperature and pressure contain an equal number of molecules, regardless of their chemical identity:
+\[
+V \propto n \quad (\text{at constant } P, T)
+\]
+</div>
+
+<h3>Standard Molar Volumes:</h3>
+<ul class="points-list">
+<li><strong>Traditional STP (\( T = 273.15\text{ K} = 0^\circ\text{C}, P = 1\text{ atm} = 101.325\text{ kPa} \)):</strong>
+\[
+V_m = \frac{RT}{P} = \frac{0.0821 \times 273.15}{1} \approx 22.414\text{ L/mol} \approx 22.4\text{ L}
+\]
+</li>
+<li><strong>IUPAC Standard STP (\( T = 273.15\text{ K}, P = 1\text{ bar} = 100\text{ kPa} \)):</strong>
+\[
+V_m = \frac{8.314 \times 273.15}{10^5} \approx 22.711\text{ L/mol} \approx 22.7\text{ L}
+\]
+</li>
+<li><strong>NTP (Normal Temperature and Pressure: \( 20^\circ\text{C} = 293.15\text{ K}, 1\text{ atm} \)):</strong> \( V_m \approx 24.05\text{ L/mol} \)</li>
+</ul>
+</section>
+
+<section>
+<h2>Graphical Representations of Gas Laws</h2>
+<p>
+Mastery of graphical transformations is essential for JEE problem solving:
+</p>
+
+<h3>1. Isothermal Graphs (Boyle's Law)</h3>
+<div class="diagram">
+<svg width="640" height="230" viewBox="0 0 640 230">
+  <!-- Graph A: P vs V -->
+  <line x1="40" y1="190" x2="190" y2="190" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="40" y1="190" x2="40" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="180" y="210" font-size="12" font-weight="bold">V</text>
+  <text x="25" y="35" font-size="12" font-weight="bold">P</text>
+  <!-- Rectangular hyperbolas -->
+  <path d="M 55 45 Q 70 120 180 175" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="135" y="110" font-size="11" font-weight="bold" fill="#c0392b">T₂</text>
+  <path d="M 50 75 Q 65 145 160 182" fill="none" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="95" y="150" font-size="11" font-weight="bold" fill="#2980b9">T₁</text>
+  <text x="115" y="25" font-size="13" font-weight="bold" text-anchor="middle">P vs V (T₂ > T₁)</text>
+
+  <!-- Graph B: P vs 1/V -->
+  <line x1="250" y1="190" x2="400" y2="190" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="250" y1="190" x2="250" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="390" y="210" font-size="12" font-weight="bold">1/V</text>
+  <text x="235" y="35" font-size="12" font-weight="bold">P</text>
+  <!-- Straight lines -->
+  <line x1="250" y1="190" x2="390" y2="60" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="385" y="55" font-size="11" font-weight="bold" fill="#c0392b">T₂</text>
+  <line x1="250" y1="190" x2="390" y2="115" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="385" y="110" font-size="11" font-weight="bold" fill="#2980b9">T₁</text>
+  <text x="325" y="25" font-size="13" font-weight="bold" text-anchor="middle">P vs 1/V (Slope ∝ T)</text>
+
+  <!-- Graph C: PV vs P -->
+  <line x1="460" y1="190" x2="610" y2="190" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="460" y1="190" x2="460" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="600" y="210" font-size="12" font-weight="bold">P</text>
+  <text x="430" y="35" font-size="12" font-weight="bold">PV</text>
+  <!-- Horizontal lines -->
+  <line x1="460" y1="75" x2="600" y2="75" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="580" y="65" font-size="11" font-weight="bold" fill="#c0392b">T₂</text>
+  <line x1="460" y1="125" x2="600" y2="125" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="580" y="115" font-size="11" font-weight="bold" fill="#2980b9">T₁</text>
+  <text x="535" y="25" font-size="13" font-weight="bold" text-anchor="middle">PV vs P</text>
+</svg>
+</div>
+
+<h3>2. Isobaric & Isochoric Graphs</h3>
+<div class="diagram">
+<svg width="600" height="210" viewBox="0 0 600 210">
+  <!-- V vs T(K) -->
+  <line x1="60" y1="170" x2="260" y2="170" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="60" y1="170" x2="60" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="250" y="195" font-size="12" font-weight="bold">T (K)</text>
+  <text x="40" y="35" font-size="12" font-weight="bold">V</text>
+  <line x1="60" y1="170" x2="240" y2="50" stroke="#16a085" stroke-width="2.5"/>
+  <text x="245" y="55" font-size="11" font-weight="bold" fill="#16a085">P₁</text>
+  <line x1="60" y1="170" x2="240" y2="100" stroke="#8e44ad" stroke-width="2.5"/>
+  <text x="245" y="105" font-size="11" font-weight="bold" fill="#8e44ad">P₂ (P₂ > P₁)</text>
+  <text x="160" y="25" font-size="13" font-weight="bold" text-anchor="middle">V vs T (Isobars: Slope ∝ 1/P)</text>
+
+  <!-- V vs t(°C) -->
+  <line x1="330" y1="170" x2="560" y2="170" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="410" y1="170" x2="410" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="545" y="195" font-size="12" font-weight="bold">t (°C)</text>
+  <text x="390" y="35" font-size="12" font-weight="bold">V</text>
+  <!-- Intercept at -273.15 -->
+  <line x1="350" y1="170" x2="410" y2="120" stroke="#c0392b" stroke-width="2" stroke-dasharray="3,3"/>
+  <line x1="410" y1="120" x2="540" y2="40" stroke="#c0392b" stroke-width="2.5"/>
+  <circle cx="350" cy="170" r="3" fill="#c0392b"/>
+  <text x="350" y="190" font-size="11" font-weight="bold" fill="#c0392b" text-anchor="middle">-273.15°C</text>
+  <text x="420" y="125" font-size="11" fill="#333">V₀</text>
+  <text x="460" y="25" font-size="13" font-weight="bold" text-anchor="middle">V vs t (°C) Extrapolation</text>
+</svg>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

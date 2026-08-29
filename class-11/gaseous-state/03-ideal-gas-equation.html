@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideal Gas Equation & Mechanical Systems | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Gaseous State
+</a>
+</nav>
+
+<h1>Ideal Gas Equation & Mechanical Systems</h1>
+<p class="subtitle">
+Equation of state derivation, universal gas constants, gas density relations, and variable-mass open vessels.
+</p>
+
+<section>
+<h2>Derivation of the Ideal Gas Equation of State</h2>
+<p>
+The behavior of an ideal gas across all arbitrary thermodynamic states is unified by combining the three fundamental empirical laws:
+</p>
+<ol>
+<li>According to Boyle's Law: \( V \propto \frac{1}{P} \) (at constant \( T, n \))</li>
+<li>According to Charles' Law: \( V \propto T \) (at constant \( P, n \))</li>
+<li>According to Avogadro's Law: \( V \propto n \) (at constant \( P, T \))</li>
+</ol>
+<p>
+Combining these three simultaneous proportionalities:
+</p>
+\[
+V \propto \frac{n T}{P} \implies V = R \frac{n T}{P}
+\]
+<div class="model-box">
+\[
+PV = nRT
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( R \) is the Universal Gas Constant.
+</p>
+</div>
+
+<h3>Alternative Microscopic and Mass Formulations:</h3>
+<ul>
+<li><strong>In terms of Total Number of Molecules (\( N \)):</strong>
+\[
+PV = \left(\frac{N}{N_A}\right) R T = N \left(\frac{R}{N_A}\right) T = N k_B T
+\]
+</li>
+<li><strong>In terms of Total Mass (\( m \)) and Molar Mass (\( M \)):</strong>
+\[
+PV = \left(\frac{m}{M}\right) R T
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Universal Gas Constant and Boltzmann Constant</h2>
+
+<h3>1. Universal Gas Constant (\( R \))</h3>
+<p>
+\( R \) is a universal physical constant representing the molar work done by a gas during isobaric thermal expansion per Kelvin:
+</p>
+<div class="model-box">
+\[
+R = \frac{PV}{nT} = \frac{\text{Work}}{\text{Mole} \cdot \text{Temperature}}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>Dimensional Formula:</strong> \([M^1 L^2 T^{-2} K^{-1} \text{mol}^{-1}]\)
+</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>System of Units</th>
+<th>Value of \( R \)</th>
+<th>Practical Application Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SI Units</strong></td>
+<td>\( 8.31446 \, \text{J}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \) (\(\approx \frac{25}{3}\))</td>
+<td>Thermodynamic work, internal energy, speed of sound, KTG.</td>
+</tr>
+<tr>
+<td><strong>Litre-Atmosphere</strong></td>
+<td>\( 0.08206 \, \text{L}\cdot\text{atm}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \) (\(\approx \frac{1}{12}\))</td>
+<td>Direct volume-pressure calculations in laboratory chemistry.</td>
+</tr>
+<tr>
+<td><strong>Calorie</strong></td>
+<td>\( \approx 1.987 \, \text{cal}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \approx 2 \, \text{cal}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \)</td>
+<td>Calorimetry and thermal capacity problems.</td>
+</tr>
+<tr>
+<td><strong>CGS Units</strong></td>
+<td>\( 8.314 \times 10^7 \, \text{erg}\cdot\text{mol}^{-1}\cdot\text{K}^{-1} \)</td>
+<td>CGS dynamical calculations.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>2. Boltzmann Constant (\( k_B \))</h3>
+<p>
+The gas constant per individual molecule:
+</p>
+<div class="model-box">
+\[
+k_B = \frac{R}{N_A} \approx \frac{8.314}{6.022 \times 10^{23}} \approx 1.3806 \times 10^{-23} \, \text{J}\cdot\text{K}^{-1}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>Dimensional Formula:</strong> \([M^1 L^2 T^{-2} K^{-1}]\)
+</p>
+</div>
+</section>
+
+<section>
+<h2>Gas Density and Molar Mass Relationships</h2>
+<p>
+From the mass form of the ideal gas law:
+</p>
+\[
+PV = \frac{m}{M} R T \implies P M = \left(\frac{m}{V}\right) R T
+\]
+<p>
+Since mass density is \( \rho = \frac{m}{V} \):
+</p>
+<div class="model-box">
+\[
+\rho = \frac{P M}{R T} \iff \frac{P}{\rho T} = \frac{R}{M} = \text{constant for a given gas}
+\]
+</div>
+<div class="insightbox">
+<strong>Physical Implications of the Density Formula:</strong>
+<ol>
+<li><strong>Pressure Dependence:</strong> At constant temperature, \( \rho \propto P \). Compressing a gas increases its density linearly.</li>
+<li><strong>Temperature Dependence:</strong> At constant pressure, \( \rho \propto \frac{1}{T} \). Heating a gas causes thermal expansion, decreasing density (driving buoyant convection).</li>
+<li><strong>Molar Mass Dependence:</strong> Under identical \( P \) and \( T \), \( \rho \propto M \). Heavier gases are denser and settle downward.</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h2>Characteristic Gas Constant</h2>
+<p>
+In engineering thermodynamics, the <strong>Characteristic Gas Constant (\( r \) or \( R_{\text{specific}} \))</strong> is defined per unit mass rather than per mole:
+</p>
+<div class="model-box">
+\[
+r = \frac{R}{M}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>SI Unit:</strong> \(\text{J}\cdot\text{kg}^{-1}\cdot\text{K}^{-1}\) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([L^2 T^{-2} K^{-1}]\)
+</p>
+</div>
+<p>
+The ideal gas equation in terms of specific volume \( v = \frac{V}{m} = \frac{1}{\rho} \) becomes:
+</p>
+\[
+P v = r T
+\]
+<p>
+For atmospheric air (\( M_{\text{air}} \approx 28.97\text{ g/mol} = 0.02897\text{ kg/mol} \)):
+</p>
+\[
+r_{\text{air}} = \frac{8.314}{0.02897} \approx 287 \, \text{J}\cdot\text{kg}^{-1}\cdot\text{K}^{-1}
+\]
+</section>
+
+<section>
+<h2>Equation of State for Open Systems and Changing Mass</h2>
+<p>
+When a gas container is unsealed (open flask) or develops a leak, the mass/moles of gas inside the vessel change over time.
+</p>
+
+<h3>Heating of an Open Vessel:</h3>
+<p>
+Consider a rigid flask of fixed volume \( V \) open to the atmosphere. Because the flask is open, the interior pressure is clamped to atmospheric pressure (\( P = P_0 = \text{constant} \)).
+</p>
+<p>
+When heated from initial temperature \( T_1 \) to final temperature \( T_2 \):
+</p>
+\[
+P_0 V = n_1 R T_1 = n_2 R T_2 \implies n_1 T_1 = n_2 T_2
+\]
+<div class="model-box">
+\[
+\frac{n_2}{n_1} = \frac{T_1}{T_2}
+\]
+</div>
+<ul class="points-list">
+<li><strong>Fraction of Gas Remaining in Vessel:</strong> \( f_{\text{remain}} = \frac{n_2}{n_1} = \frac{T_1}{T_2} \)</li>
+<li><strong>Fraction of Gas Expelled / Escaped:</strong>
+<div class="model-box">
+\[
+f_{\text{expelled}} = \frac{n_1 - n_2}{n_1} = 1 - \frac{T_1}{T_2} = \frac{T_2 - T_1}{T_2}
+\]
+</div>
+</li>
+</ul>
+
+<div class="examplebox">
+<h3>Example: Air Expelled on Heating an Open Vessel</h3>
+<p>
+An open glass bulb contains air at \( 27^\circ\text{C} \). To what temperature must it be heated so that one-third (\( 1/3 \)) of the air present initially is expelled into the atmosphere?
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>
+Initial temperature \( T_1 = 27 + 273 = 300\text{ K} \).<br>
+Fraction of air expelled:
+</p>
+\[
+f_{\text{expelled}} = \frac{1}{3} \implies f_{\text{remain}} = \frac{n_2}{n_1} = 1 - \frac{1}{3} = \frac{2}{3}
+\]
+<p>
+Applying \( n_1 T_1 = n_2 T_2 \):
+</p>
+\[
+T_2 = T_1 \left( \frac{n_1}{n_2} \right) = 300 \left( \frac{3}{2} \right) = 450\text{ K}
+\]
+<p>
+In Celsius:
+</p>
+\[
+t_2 = 450 - 273 = 177^\circ\text{C}
+\]
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Mechanical Constraint Systems</h2>
+<div class="chapter-list">
+<a href="./03a-connecting-vessels-and-bulbs.html">1. Connected Vessels, Bulbs & Temperature Differentials</a>
+<a href="./03b-capillary-tubes-and-mercury-pellets.html">2. Capillary Tubes, Trapped Pellets & Acceleration</a>
+<a href="./03c-barometer-faulty-calculations.html">3. Faulty Barometer Calculations & Vapor Corrections</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

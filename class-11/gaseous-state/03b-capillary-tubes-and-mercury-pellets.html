@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capillary Tubes & Mercury Pellets | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-ideal-gas-equation.html" class="back-btn">
+<span>&larr;</span> Back to Ideal Gas Equation
+</a>
+</nav>
+
+<h1>Capillary Tubes & Mercury Pellets</h1>
+<p class="subtitle">
+Trapped air column dynamics, orientation-dependent hydrostatic equilibria, tilting angles, and non-inertial frame kinetics.
+</p>
+
+<section>
+<h2>Trapped Air Column with Mercury Pellet</h2>
+<p>
+A uniform bore capillary tube closed at one end traps a fixed mass of dry air beneath a liquid mercury pellet (thread) of length \( h \).
+Because the temperature is kept constant and the tube cross-sectional area \( A \) is uniform:
+</p>
+\[
+\text{Air Volume: } V = A \cdot l \implies P \cdot l = \text{constant} \quad (\text{by Boyle's Law})
+\]
+<p>
+where \( l \) is the length of the enclosed air column and \( P \) is the pressure of the trapped air.
+</p>
+</section>
+
+<section>
+<h2>Vertical, Horizontal, and Inverted Orientations</h2>
+
+<div class="diagram">
+<svg width="640" height="250" viewBox="0 0 640 250">
+  <!-- Case 1: Horizontal -->
+  <rect x="30" y="50" width="160" height="20" fill="#f8fafc" stroke="#2c3e50" stroke-width="1.5"/>
+  <rect x="30" y="50" width="90" height="20" fill="#fdedec"/>
+  <rect x="120" y="50" width="40" height="20" fill="#7f8c8d"/>
+  <line x1="30" y1="45" x2="30" y2="75" stroke="#2c3e50" stroke-width="3"/>
+  <text x="75" y="65" font-size="11" font-weight="bold" fill="#c0392b" text-anchor="middle">Air (l₀)</text>
+  <text x="140" y="65" font-size="11" fill="white" text-anchor="middle">Hg (h)</text>
+  <text x="110" y="100" font-size="13" font-weight="bold" fill="#2c3e50" text-anchor="middle">1. Horizontal</text>
+  <text x="110" y="120" font-size="12" fill="#555" text-anchor="middle">P = P₀</text>
+
+  <!-- Case 2: Vertical (Open Up) -->
+  <rect x="250" y="30" width="20" height="150" fill="#f8fafc" stroke="#2c3e50" stroke-width="1.5"/>
+  <rect x="250" y="80" width="20" height="100" fill="#fdedec"/>
+  <rect x="250" y="40" width="20" height="40" fill="#7f8c8d"/>
+  <line x1="245" y1="180" x2="275" y2="180" stroke="#2c3e50" stroke-width="3"/>
+  <text x="260" y="135" font-size="11" font-weight="bold" fill="#c0392b" text-anchor="middle">l₁</text>
+  <text x="260" y="65" font-size="11" fill="white" text-anchor="middle">h</text>
+  <text x="260" y="205" font-size="13" font-weight="bold" fill="#2c3e50" text-anchor="middle">2. Open Upward</text>
+  <text x="260" y="225" font-size="12" fill="#555" text-anchor="middle">P = P₀ + h</text>
+
+  <!-- Case 3: Inverted (Open Down) -->
+  <rect x="460" y="30" width="20" height="150" fill="#f8fafc" stroke="#2c3e50" stroke-width="1.5"/>
+  <rect x="460" y="30" width="20" height="90" fill="#fdedec"/>
+  <rect x="460" y="120" width="20" height="40" fill="#7f8c8d"/>
+  <line x1="455" y1="30" x2="485" y2="30" stroke="#2c3e50" stroke-width="3"/>
+  <text x="470" y="75" font-size="11" font-weight="bold" fill="#c0392b" text-anchor="middle">l₂</text>
+  <text x="470" y="145" font-size="11" fill="white" text-anchor="middle">h</text>
+  <text x="470" y="205" font-size="13" font-weight="bold" fill="#2c3e50" text-anchor="middle">3. Open Downward</text>
+  <text x="470" y="225" font-size="12" fill="#555" text-anchor="middle">P = P₀ - h</text>
+</svg>
+</div>
+
+<p>
+Let \( P_0 \) be the atmospheric pressure expressed in equivalent height of mercury column (e.g., \( P_0 = 76\text{ cm of Hg} \)):
+</p>
+
+<h3>1. Tube Placed Horizontally:</h3>
+<p>
+The mercury pellet experiences equal atmospheric pressure on its open surface and gas pressure on its inner surface:
+</p>
+<div class="model-box">
+\[
+P_h = P_0 \implies P_0 \cdot l_0 = C
+\]
+</div>
+
+<h3>2. Tube Placed Vertically with Open End Upwards:</h3>
+<p>
+The trapped air supports both the atmospheric pressure and the weight of the mercury thread:
+</p>
+<div class="model-box">
+\[
+P_v = P_0 + h \implies (P_0 + h) l_1 = P_0 l_0
+\]
+</div>
+
+<h3>3. Tube Placed Vertically with Open End Downwards (Inverted):</h3>
+<p>
+The upward atmospheric pressure supports both the trapped air pressure and the downward weight of mercury:
+</p>
+<div class="model-box">
+\[
+P_{\text{inv}} = P_0 - h \implies (P_0 - h) l_2 = P_0 l_0
+\]
+</div>
+<div class="insightbox">
+Comparing the three states:
+\[
+(P_0 + h) l_1 = P_0 l_0 = (P_0 - h) l_2 \implies l_1 < l_0 < l_2
+\]
+From this relation, the atmospheric pressure \( P_0 \) can be directly calculated:
+\[
+P_0 = h \left( \frac{l_2 + l_1}{l_2 - l_1} \right)
+\]
+</div>
+</section>
+
+<section>
+<h2>Tilting of Capillary Tubes at an Angle</h2>
+<p>
+When the capillary tube is inclined at an angle \( \theta \) with the horizontal:
+</p>
+
+<div class="diagram">
+<svg width="500" height="180" viewBox="0 0 500 180">
+  <!-- Ground -->
+  <line x1="50" y1="150" x2="450" y2="150" stroke="#7f8c8d" stroke-width="1.5"/>
+  <!-- Tilted Tube -->
+  <polygon points="100,150 350,50 358,68 108,168" fill="#f8fafc" stroke="#2c3e50" stroke-width="1.5"/>
+  <!-- Air and Hg -->
+  <polygon points="100,150 240,94 248,112 108,168" fill="#fdedec"/>
+  <polygon points="240,94 300,70 308,88 248,112" fill="#7f8c8d"/>
+  <!-- Angle theta -->
+  <path d="M 160 150 A 60 60 0 0 0 150 130" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <text x="175" y="140" font-size="13" font-weight="bold" fill="#c0392b">θ</text>
+  <!-- Effective vertical height h sin θ -->
+  <line x1="320" y1="70" x2="320" y2="150" stroke="#2980b9" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="330" y="115" font-size="12" font-weight="bold" fill="#2980b9">h_eff = h sin θ</text>
+</svg>
+</div>
+
+<p>
+The effective vertical hydrostatic head contributed by the mercury thread is \( h_{\text{eff}} = h \sin\theta \).
+</p>
+<ul class="points-list">
+<li><strong>Open End Pointing Upwards at Angle \( \theta \) to horizontal:</strong>
+<div class="model-box">
+\[
+P = P_0 + h \sin\theta
+\]
+</div>
+</li>
+<li><strong>Open End Pointing Downwards at Angle \( \theta \) to horizontal:</strong>
+<div class="model-box">
+\[
+P = P_0 - h \sin\theta
+\]
+</div>
+</li>
+<li>If angle \( \alpha \) is measured with the vertical: \( h_{\text{eff}} = h \cos\alpha \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Accelerating and Rotating Capillary Systems</h2>
+
+<h3>1. Linearly Accelerating Vertical Capillary Tube</h3>
+<p>
+If the tube is in an elevator accelerating vertically with acceleration \( a \):
+</p>
+<ul class="points-list">
+<li><strong>Accelerating Upward (\( g_{\text{eff}} = g + a \)):</strong>
+\[
+P = P_0 + h\left(1 + \frac{a}{g}\right) \quad (\text{Open up})
+\]
+</li>
+<li><strong>Accelerating Downward (\( g_{\text{eff}} = g - a \)):</strong>
+\[
+P = P_0 + h\left(1 - \frac{a}{g}\right) \quad (\text{Open up})
+\]
+</li>
+<li><strong>Free Fall (\( a = g \)):</strong> \( P = P_0 \) (Weightlessness).</li>
+</ul>
+
+<h3>2. Horizontally Accelerating Capillary Tube</h3>
+<p>
+If a horizontal tube accelerates along its axis with horizontal acceleration \( a_x \):
+</p>
+\[
+P_{\text{gas}} = P_0 + \rho a_x h
+\]
+
+<h3>3. Rotating Horizontal Capillary Tube</h3>
+<p>
+A horizontal tube is rotated about a vertical axis through its closed end with angular velocity \( \omega \). A mercury pellet of length \( h \) is located between radii \( r_1 \) and \( r_2 = r_1 + h \):
+</p>
+\[
+dP = \rho \omega^2 r \, dr \implies \Delta P_{\text{centrifugal}} = \int_{r_1}^{r_2} \rho \omega^2 r \, dr = \frac{1}{2}\rho \omega^2 (r_2^2 - r_1^2)
+\]
+<div class="model-box">
+\[
+P_{\text{trapped gas}} = P_0 - \frac{1}{2}\rho \omega^2 (r_2^2 - r_1^2)
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

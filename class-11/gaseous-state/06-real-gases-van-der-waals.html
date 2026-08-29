@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real Gases & van der Waals Equation | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Gaseous State
+</a>
+</nav>
+
+<h1>Real Gases & van der Waals Equation</h1>
+<p class="subtitle">
+Deviations from ideality, compressibility factors, excluded co-volume, and non-ideal equations of state.
+</p>
+
+<section>
+<h2>Deviations from Ideal Gas Behavior</h2>
+<p>
+Real gases (such as \( \text{N}_2, \text{O}_2, \text{CO}_2, \text{NH}_3, \text{H}_2 \)) obey the ideal gas law \( PV = nRT \) only at <strong>low pressures and high temperatures</strong>.
+Under high pressures or low temperatures, significant experimental deviations occur.
+</p>
+
+<h3>Two Flawed Assumptions of the Ideal Gas Model:</h3>
+<ol>
+<li><strong>Assumption of Zero Molecular Volume:</strong> In reality, gas molecules are finite physical entities (hard elastic spheres). At high pressures, the volume occupied by the molecules themselves becomes a substantial fraction of the total container volume.</li>
+<li><strong>Assumption of Zero Intermolecular Forces:</strong> In reality, long-range attractive van der Waals forces exist between molecules. As molecules approach container walls, inward attractive pulls from neighboring interior molecules reduce the impact momentum against the wall, decreasing the measured pressure.</li>
+</ol>
+</section>
+
+<section>
+<h2>Compressibility Factor (Z) and Virial Equation</h2>
+
+<h3>1. Compressibility Factor (\( Z \))</h3>
+<p>
+The degree of deviation of a real gas from ideality is quantified by the <strong>Compressibility Factor (\( Z \))</strong>:
+</p>
+<div class="model-box">
+\[
+Z = \frac{PV}{nRT} = \frac{P V_m}{RT} = \frac{V_{\text{real}}}{V_{\text{ideal}}}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( V_m = V/n \) is the molar volume of the gas, and \( V_{\text{ideal}} = \frac{RT}{P} \) is the molar volume of an ideal gas at the same \( P \) and \( T \).
+</p>
+</div>
+
+<div class="diagram">
+<svg width="600" height="250" viewBox="0 0 600 250">
+  <!-- Axes -->
+  <line x1="60" y1="210" x2="560" y2="210" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="60" y1="210" x2="60" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="540" y="235" font-size="13" font-weight="bold">Pressure P (atm)</text>
+  <text x="35" y="35" font-size="14" font-weight="bold">Z</text>
+
+  <!-- Ideal Gas Line Z=1 -->
+  <line x1="60" y1="130" x2="550" y2="130" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="560" y="135" font-size="12" font-weight="bold" fill="#7f8c8d">Z = 1 (Ideal)</text>
+  <text x="40" y="135" font-size="12" font-weight="bold" fill="#7f8c8d">1.0</text>
+
+  <!-- H2 and He (Z > 1 always) -->
+  <path d="M 60 130 Q 200 100 520 40" fill="none" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="480" y="60" font-size="12" font-weight="bold" fill="#27ae60">H₂, He</text>
+
+  <!-- N2, O2 (Dip then rise) -->
+  <path d="M 60 130 Q 180 170 300 155 T 520 70" fill="none" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="480" y="95" font-size="12" font-weight="bold" fill="#2980b9">N₂, O₂</text>
+
+  <!-- CO2, CH4 (Deep dip then rise) -->
+  <path d="M 60 130 Q 150 200 280 175 T 500 100" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="450" y="125" font-size="12" font-weight="bold" fill="#c0392b">CO₂, CH₄</text>
+</svg>
+</div>
+
+<ul class="points-list">
+<li><strong>\( Z = 1 \):</strong> Ideal gas behavior (\( V_{\text{real}} = V_{\text{ideal}} \)).</li>
+<li><strong>\( Z < 1 \) (Negative Deviation):</strong> Attractive intermolecular forces dominate. The gas is more compressible than an ideal gas (\( V_{\text{real}} < V_{\text{ideal}} \)). Easily liquefied gases (\( \text{CO}_2, \text{SO}_2, \text{NH}_3 \)) exhibit deep dips.</li>
+<li><strong>\( Z > 1 \) (Positive Deviation):</strong> Repulsive/excluded volume effects dominate. The gas is less compressible than an ideal gas (\( V_{\text{real}} > V_{\text{ideal}} \)). For \( \text{H}_2 \) and \( \text{He} \), \( Z > 1 \) at all ordinary temperatures.</li>
+</ul>
+
+<h3>2. Virial Equation of State</h3>
+<p>
+A generalized power series expansion of \( Z \) in terms of molar density \( 1/V_m \) or pressure \( P \):
+</p>
+<div class="model-box">
+\[
+Z = 1 + \frac{B(T)}{V_m} + \frac{C(T)}{V_m^2} + \dots = 1 + B'(T)P + C'(T)P^2 + \dots
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \( B(T) \) is the Second Virial Coefficient (characterizing pair interactions) and \( C(T) \) is the Third Virial Coefficient.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Physical Basis of van der Waals Corrections</h2>
+<p>
+Johannes Diderik van der Waals (1873) modified the ideal gas equation by introducing two physical correction terms:
+</p>
+
+<h3>1. Volume Correction (Excluded Co-Volume \( b \))</h3>
+<p>
+Molecules are not point masses; they possess a finite hard-sphere radius \( r \). When two identical spherical molecules collide, their centers of mass cannot approach closer than a distance \( 2r \).
+</p>
+<p>
+The <strong>Excluded Volume</strong> for a single pair of colliding molecules is the volume of a sphere of radius \( 2r \):
+</p>
+\[
+v_{\text{excluded, pair}} = \frac{4}{3}\pi (2r)^3 = 8 \left(\frac{4}{3}\pi r^3\right) = 8 v_m
+\]
+<p>
+The excluded volume per individual molecule is half of this value:
+</p>
+\[
+v_{\text{excluded, single}} = 4 v_m = 4 \left( \frac{4}{3}\pi r^3 \right)
+\]
+<p>
+For one mole of gas (\( N_A \) molecules), the total <strong>Excluded Molar Co-Volume (\( b \))</strong> is:
+</p>
+<div class="model-box">
+\[
+b = 4 N_A v_m = 4 N_A \left(\frac{4}{3}\pi r^3\right) = \frac{16}{3}\pi N_A r^3
+\]
+</div>
+<p>
+The actual volume available for free molecular motion is:
+</p>
+<div class="model-box">
+\[
+V_{\text{free}} = V - n b
+\]
+</div>
+
+<h3>2. Pressure Correction (Intermolecular Attraction Parameter \( a \))</h3>
+<p>
+A molecule deep inside the gas experiences isotropic, symmetric attractive forces that cancel out on average. However, a molecule about to strike the wall experiences a net inward attractive drag from interior molecules.
+</p>
+<ul class="points-list">
+<li>The inward pulling force is proportional to the number density of striking molecules: \( \propto \frac{n}{V} \).</li>
+<li>The inward pulling force is also proportional to the number density of attracting interior molecules: \( \propto \frac{n}{V} \).</li>
+<li>Hence, the reduction in pressure (internal pressure) is:
+\[
+P_{\text{internal}} \propto \left(\frac{n}{V}\right)^2 \implies P_{\text{internal}} = \frac{a n^2}{V^2} = \frac{a}{V_m^2}
+\]
+</li>
+</ul>
+<p>
+The corrected ideal pressure is:
+</p>
+<div class="model-box">
+\[
+P_{\text{ideal}} = P_{\text{real}} + \frac{a n^2}{V^2}
+\]
+</div>
+</section>
+
+<section>
+<h2>van der Waals Equation of State</h2>
+<p>
+Substituting the corrected pressure and volume into the ideal gas law \( P_{\text{ideal}} V_{\text{free}} = nRT \):
+</p>
+<div class="model-box">
+\[
+\left( P + \frac{a n^2}{V^2} \right) (V - nb) = nRT
+\]
+</div>
+<p>
+For 1 mole of gas (\( n = 1 \), where \( V_m = V \)):
+</p>
+<div class="model-box">
+\[
+\left( P + \frac{a}{V_m^2} \right) (V_m - b) = RT
+\]
+</div>
+</section>
+
+<section>
+<h2>Units, Dimensions, and Physical Significance of Constants a and b</h2>
+
+<h3>1. Constant '\( a \)' (Measure of Intermolecular Attraction)</h3>
+<p>
+From \( P_{\text{correction}} = \frac{a n^2}{V^2} \implies a = \frac{P V^2}{n^2} \):
+</p>
+<ul class="points-list">
+<li><strong>SI Unit:</strong> \( \text{N}\cdot\text{m}^4\cdot\text{mol}^{-2} = \text{Pa}\cdot\text{m}^6\cdot\text{mol}^{-2} = \text{J}\cdot\text{m}^3\cdot\text{mol}^{-2} \)</li>
+<li><strong>Common Unit:</strong> \( \text{atm}\cdot\text{L}^2\cdot\text{mol}^{-2} \)</li>
+<li><strong>Dimensional Formula:</strong>
+\[
+[a] = \frac{[P][V^2]}{[n^2]} = \frac{(M^1 L^{-1} T^{-2})(L^6)}{\text{mol}^2} = [M^1 L^5 T^{-2} \text{mol}^{-2}]
+\]
+</li>
+<li><strong>Physical Significance:</strong> Higher values of '\( a \)' signify stronger intermolecular attractive forces, making the gas much easier to liquefy (e.g., \( a_{\text{SO}_2} > a_{\text{NH}_3} > a_{\text{CO}_2} > a_{\text{O}_2} > a_{\text{N}_2} > a_{\text{H}_2} > a_{\text{He}} \)).</li>
+</ul>
+
+<h3>2. Constant '\( b \)' (Measure of Effective Molecular Volume)</h3>
+<p>
+From \( V_{\text{correction}} = nb \implies b = \frac{V}{n} \):
+</p>
+<ul class="points-list">
+<li><strong>SI Unit:</strong> \( \text{m}^3\cdot\text{mol}^{-1} \) &emsp;|&emsp; <strong>Common Unit:</strong> \( \text{L}\cdot\text{mol}^{-1} \)</li>
+<li><strong>Dimensional Formula:</strong> \([L^3 \text{mol}^{-1}]\)</li>
+<li><strong>Physical Significance:</strong> Represents 4 times the actual molar volume of the gas molecules. Larger molecular radius corresponds to a larger value of \( b \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Limiting Cases: Low Pressure and High Pressure Approximations</h2>
+
+<h3>1. Moderately Low Pressure Regime</h3>
+<p>
+When pressure is low, molar volume \( V_m \) is large. Hence, \( V_m \gg b \), allowing \( (V_m - b) \approx V_m \):
+</p>
+\[
+\left( P + \frac{a}{V_m^2} \right) V_m \approx RT \implies P V_m + \frac{a}{V_m} = RT
+\]
+\[
+\frac{P V_m}{RT} = 1 - \frac{a}{R T V_m}
+\]
+<div class="model-box">
+\[
+Z = 1 - \frac{a}{R T V_m} \approx 1 - \frac{a P}{(RT)^2} < 1
+\]
+</div>
+<p>
+In this regime, attractive forces dominate, causing \( Z < 1 \).
+</p>
+
+<h3>2. High Pressure Regime</h3>
+<p>
+When pressure is very high, \( P \gg \frac{a}{V_m^2} \), allowing the attractive correction to be neglected:
+</p>
+\[
+P (V_m - b) \approx RT \implies P V_m - P b = RT
+\]
+\[
+\frac{P V_m}{RT} = 1 + \frac{P b}{RT}
+\]
+<div class="model-box">
+\[
+Z = 1 + \frac{P b}{RT} > 1
+\]
+</div>
+<p>
+In this regime, molecular excluded volume dominates, causing \( Z > 1 \) and making the curve increase linearly with pressure.
+</p>
+
+<h3>3. Exceptional Behavior of Hydrogen and Helium:</h3>
+<p>
+Because \( \text{H}_2 \) and \( \text{He} \) have extremely small masses and few electrons, their polarizability is negligible, resulting in extraordinarily weak attractive forces (\( a \approx 0 \)).
+</p>
+<div class="concept-box">
+For \( \text{H}_2 \) and \( \text{He} \) at ordinary temperatures:
+\[
+Z = 1 + \frac{P b}{RT} > 1 \quad (\text{for all } P > 0)
+\]
+Their compressibility curves never dip below 1 and rise monotonically with pressure.
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Critical Phenomena</h2>
+<div class="chapter-list">
+<a href="./06a-critical-phenomena-and-constants.html">1. Critical Phenomena, Andrews Isotherms & Critical Constants</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Critical Phenomena & Constants | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-real-gases-van-der-waals.html" class="back-btn">
+<span>&larr;</span> Back to Real Gases & van der Waals Equation
+</a>
+</nav>
+
+<h1>Critical Phenomena & Constants</h1>
+<p class="subtitle">
+Andrews isotherms, cubic equation derivations of critical constants, critical compressibility, and Boyle temperature.
+</p>
+
+<section>
+<h2>Andrews Isotherms of Carbon Dioxide</h2>
+<p>
+Thomas Andrews (1869) conducted pioneering experiments measuring the pressure-volume isotherms of \( \text{CO}_2 \) at various constant temperatures, providing the first clear thermodynamic map of vapor-liquid phase transitions.
+</p>
+
+<div class="diagram">
+<svg width="600" height="280" viewBox="0 0 600 280">
+  <!-- Axes -->
+  <line x1="60" y1="240" x2="560" y2="240" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="60" y1="240" x2="60" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="540" y="265" font-size="13" font-weight="bold">Volume V</text>
+  <text x="35" y="35" font-size="14" font-weight="bold">P</text>
+
+  <!-- Isotherm T > Tc (Smooth hyperbola) -->
+  <path d="M 80 50 Q 140 100 480 200" fill="none" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="485" y="195" font-size="12" font-weight="bold" fill="#27ae60">T > T_c (Gas Only)</text>
+
+  <!-- Isotherm T = Tc (Point of Inflection at C) -->
+  <path d="M 80 75 Q 160 125 240 135 T 480 215" fill="none" stroke="#e67e22" stroke-width="2.5"/>
+  <circle cx="240" cy="135" r="4" fill="#d35400"/>
+  <text x="250" y="130" font-size="12" font-weight="bold" fill="#d35400">Critical Point C (T_c = 31.1°C)</text>
+
+  <!-- Isotherm T < Tc (Liquid, Flat Coexistence, Vapor) -->
+  <path d="M 90 60 L 140 180 L 320 180 Q 400 210 480 230" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="485" y="235" font-size="12" font-weight="bold" fill="#c0392b">T < T_c</text>
+
+  <!-- Coexistence Dome -->
+  <path d="M 140 180 Q 240 135 320 180" fill="none" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="240" y="170" font-size="11" fill="#7f8c8d" text-anchor="middle">Liquid + Vapor Dome</text>
+  <text x="110" y="120" font-size="11" font-weight="bold" fill="#2980b9">Liquid</text>
+  <text x="380" y="210" font-size="11" font-weight="bold" fill="#8e44ad">Vapor</text>
+</svg>
+</div>
+
+<ol>
+<li><strong>For \( T > T_c \):</strong> The isotherms are smooth, hyperbolic-like curves. No amount of applied pressure can liquefy the gas. The substance exists exclusively as a supercritical fluid/gas.</li>
+<li><strong>At \( T = T_c \):</strong> The horizontal coexistence plateau shrinks to a single <strong>Point of Inflection (Critical Point \( C \))</strong> where:
+\[
+\left( \frac{\partial P}{\partial V_m} \right)_{T_c} = 0 \quad \text{and} \quad \left( \frac{\partial^2 P}{\partial V_m^2} \right)_{T_c} = 0
+\]
+</li>
+<li><strong>For \( T < T_c \):</strong> The isotherm exhibits three regions:
+<ul>
+<li>Right branch: Unsaturated vapor.</li>
+<li>Horizontal flat line: Coexistence region where vapor condenses into liquid at constant saturation vapor pressure.</li>
+<li>Steep left branch: Pure liquid phase (highly incompressible).</li>
+</ul>
+</li>
+</ol>
+</section>
+
+<section>
+<h2>Critical Temperature, Pressure, and Volume</h2>
+
+<h3>1. Critical Temperature (\( T_c \))</h3>
+<p>
+The maximum temperature at which a gas can be liquefied by application of pressure alone. Above \( T_c \), the kinetic energy of molecules exceeds the maximum attractive potential energy, making liquefaction impossible.
+</p>
+
+<h3>2. Critical Pressure (\( P_c \))</h3>
+<p>
+The minimum pressure required to liquefy a gas at its critical temperature \( T_c \).
+</p>
+
+<h3>3. Critical Molar Volume (\( V_c \))</h3>
+<p>
+The molar volume occupied by one mole of the gas at critical temperature \( T_c \) and critical pressure \( P_c \).
+</p>
+</section>
+
+<section>
+<h2>Derivation of Critical Constants from van der Waals Equation</h2>
+<p>
+Expanding the van der Waals equation for 1 mole of gas:
+</p>
+\[
+\left( P + \frac{a}{V_m^2} \right)(V_m - b) = RT
+\]
+\[
+P V_m - P b + \frac{a}{V_m} - \frac{ab}{V_m^2} = RT
+\]
+<p>
+Multiplying the entire equation by \( \frac{V_m^2}{P} \) to form a standard cubic polynomial in \( V_m \):
+</p>
+<div class="model-box">
+\[
+V_m^3 - \left( b + \frac{RT}{P} \right)V_m^2 + \left( \frac{a}{P} \right)V_m - \frac{ab}{P} = 0
+\]
+</div>
+<p>
+A cubic equation possesses three mathematical roots for \( V_m \).
+At the critical state (\( T = T_c, P = P_c \)), all three roots become real, identical, and coalesce at \( V_m = V_c \):
+</p>
+\[
+(V_m - V_c)^3 = 0
+\]
+<div class="model-box">
+\[
+V_m^3 - 3 V_c V_m^2 + 3 V_c^2 V_m - V_c^3 = 0
+\]
+</div>
+<p>
+Comparing coefficients of like powers of \( V_m \) between the two polynomials:
+</p>
+<ol>
+<li>Coefficient of \( V_m^2 \):
+\[
+3 V_c = b + \frac{R T_c}{P_c} \quad \text{--- (1)}
+\]
+</li>
+<li>Coefficient of \( V_m \):
+\[
+3 V_c^2 = \frac{a}{P_c} \quad \text{--- (2)}
+\]
+</li>
+<li>Constant term:
+\[
+V_c^3 = \frac{ab}{P_c} \quad \text{--- (3)}
+\]
+</li>
+</ol>
+
+<h3>Solving for the Critical Constants:</h3>
+<p>
+Dividing Eq. (3) by Eq. (2):
+</p>
+\[
+\frac{V_c^3}{3 V_c^2} = \frac{\left(\frac{ab}{P_c}\right)}{\left(\frac{a}{P_c}\right)} \implies \frac{V_c}{3} = b \implies \boxed{V_c = 3b}
+\]
+<p>
+Substituting \( V_c = 3b \) into Eq. (2):
+</p>
+\[
+3(3b)^2 = \frac{a}{P_c} \implies 27 b^2 = \frac{a}{P_c} \implies \boxed{P_c = \frac{a}{27 b^2}}
+\]
+<p>
+Substituting \( V_c \) and \( P_c \) into Eq. (1):
+</p>
+\[
+3(3b) = b + \frac{R T_c}{\left(\frac{a}{27 b^2}\right)} \implies 9b - b = \frac{27 b^2 R T_c}{a}
+\]
+\[
+8b = \frac{27 b^2 R T_c}{a} \implies \boxed{T_c = \frac{8a}{27 R b}}
+\]
+</section>
+
+<section>
+<h2>Critical Compressibility Factor</h2>
+<p>
+The value of the compressibility factor evaluated precisely at the critical point:
+</p>
+<div class="model-box">
+\[
+Z_c = \frac{P_c V_c}{R T_c} = \frac{\left( \frac{a}{27 b^2} \right) (3b)}{R \left( \frac{8a}{27 R b} \right)} = \frac{\frac{3a}{27 b}}{\frac{8a}{27 b}} = \frac{3}{8} = 0.375
+\]
+</div>
+<div class="insightbox">
+According to the van der Waals model, the critical compressibility factor \( Z_c = 0.375 \) is a <strong>universal constant</strong> for all gases, independent of their chemical identity or specific values of \( a \) and \( b \). (Experimental values for real gases typically lie between \( 0.28 \) and \( 0.30 \)).
+</div>
+</section>
+
+<section>
+<h2>Boyle Temperature and Inversion Temperature</h2>
+
+<h3>1. Boyle Temperature (\( T_B \))</h3>
+<p>
+The <strong>Boyle Temperature</strong> is the specific temperature at which a real gas obeys the ideal gas law (\( PV = nRT \)) over an appreciably wide range of pressures in the low-pressure limit (\( Z \approx 1 \)).
+</p>
+<p>
+At \( T_B \), the second virial coefficient vanishes: \( B(T_B) = b - \frac{a}{RT_B} = 0 \):
+</p>
+<div class="model-box">
+\[
+T_B = \frac{a}{R b}
+\]
+</div>
+
+<h3>2. Inversion Temperature (\( T_i \))</h3>
+<p>
+The temperature below which a gas undergoes cooling upon adiabatic throttling (Joule-Thomson expansion):
+</p>
+<div class="model-box">
+\[
+T_i = \frac{2a}{R b} = 2 T_B
+\]
+</div>
+<ul class="points-list">
+<li>If \( T < T_i \): Joule-Thomson expansion causes <strong>cooling</strong>.</li>
+<li>If \( T > T_i \): Joule-Thomson expansion causes <strong>heating</strong>. (For \( \text{H}_2 \) and \( \text{He} \), \( T_i \) is far below room temperature, so they warm up when expanded at room temperature unless pre-cooled).</li>
+<li>If \( T = T_i \): Neither cooling nor heating occurs.</li>
+</ul>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

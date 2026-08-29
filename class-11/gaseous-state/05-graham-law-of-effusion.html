@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Graham's Law of Effusion | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Gaseous State
+</a>
+</nav>
+
+<h1>Graham's Law of Effusion</h1>
+<p class="subtitle">
+Molecular orifice kinetics, differential rates of escape, pressure-drop effusion, and isotopic gas enrichment.
+</p>
+
+<section>
+<h2>Mechanisms of Diffusion and Effusion</h2>
+<p>
+Although often discussed together, <strong>Diffusion</strong> and <strong>Effusion</strong> represent distinct physical processes:
+</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Diffusion</th>
+<th>Effusion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical Process</strong></td>
+<td>The spontaneous mixing and transport of molecules of one gas into another through continuous inter-molecular collisions.</td>
+<td>The passage of gas molecules through an extremely small pinhole / orifice (diameter \( d \ll \) mean free path \( \lambda \)) into an evacuated region without molecular collisions.</td>
+</tr>
+<tr>
+<td><strong>Role of Collisions</strong></td>
+<td>Dominates the process; diffusion coefficient \( D \propto \lambda \overline{v} \).</td>
+<td>Zero collisions during escape through the orifice.</td>
+</tr>
+<tr>
+<td><strong>Driving Potential</strong></td>
+<td>Concentration / partial pressure gradient.</td>
+<td>Total pressure differential across the orifice.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Graham's Law of Effusion</h2>
+<p>
+Formulated empirically by Thomas Graham (1829):
+</p>
+<div class="model-box">
+<strong>Graham's Law of Effusion:</strong> Under identical conditions of temperature and pressure, the rate of effusion (\( r \)) of a gas through a tiny pinhole is inversely proportional to the square root of its mass density (\( \rho \)) or its molar mass (\( M \)):
+\[
+r \propto \frac{1}{\sqrt{\rho}} \propto \frac{1}{\sqrt{M}}
+\]
+\[
+\frac{r_1}{r_2} = \sqrt{\frac{\rho_2}{\rho_1}} = \sqrt{\frac{M_2}{M_1}} = \sqrt{\frac{\text{V.D.}_2}{\text{V.D.}_1}}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+where \(\text{V.D.} = M/2\) is the vapor density of the gas.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Dependence on Pressure, Area, Temperature, and Molar Mass</h2>
+<p>
+From the kinetic theory of gases, the collision frequency of gas molecules with a unit wall area per second is given by:
+</p>
+\[
+Z_{\text{wall}} = \frac{1}{4} n_V \bar{v} = \frac{1}{4} \left(\frac{P}{k_B T}\right) \sqrt{\frac{8 k_B T}{\pi m}} = \frac{P}{\sqrt{2\pi m k_B T}}
+\]
+<p>
+For an orifice of small cross-sectional area \( A \) (where diameter is much smaller than mean free path \( \lambda \)), every molecule striking the hole escapes. The rate of effusion (molecules escaping per second) is:
+</p>
+<div class="model-box">
+\[
+\text{Rate of Effusion } r = \frac{dN}{dt} = A \cdot Z_{\text{wall}} = \frac{P A}{\sqrt{2\pi m k_B T}} = \frac{P A N_A}{\sqrt{2\pi M R T}}
+\]
+</div>
+<div class="concept-box">
+<strong>Comprehensive Proportionality of Effusion Rate:</strong>
+\[
+r \propto \frac{P \cdot A}{\sqrt{M \cdot T}}
+\]
+For two gases effusing through identical apertures (\( A_1 = A_2 \)):
+\[
+\frac{r_1}{r_2} = \frac{P_1}{P_2} \sqrt{\frac{M_2 T_2}{M_1 T_1}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Time, Volume, and Pressure-Drop Effusion Calculations</h2>
+<p>
+The rate of effusion can be expressed in terms of diverse experimentally measurable parameters:
+</p>
+
+<h3>1. In terms of Volume Effused (\( V \)) in Time (\( t \)):</h3>
+\[
+r = \frac{V}{t} \implies \frac{r_1}{r_2} = \frac{V_1 / t_1}{V_2 / t_2} = \sqrt{\frac{M_2}{M_1}}
+\]
+<ul class="points-list">
+<li>For equal volumes effused (\( V_1 = V_2 \)): \( \frac{t_1}{t_2} = \sqrt{\frac{M_1}{M_2}} \) (Heavier gas takes longer).</li>
+<li>For equal time elapsed (\( t_1 = t_2 \)): \( \frac{V_1}{V_2} = \sqrt{\frac{M_2}{M_1}} \) (Lighter gas effuses larger volume).</li>
+</ul>
+
+<h3>2. In terms of Moles Effused (\( n \)):</h3>
+\[
+r = \frac{n}{t} \implies \frac{n_1 / t_1}{n_2 / t_2} = \frac{P_1}{P_2}\sqrt{\frac{M_2}{M_1}}
+\]
+
+<h3>3. In terms of Distance Travelled in a Diffusion Tube:</h3>
+<p>
+If two gases (e.g., \( \text{NH}_3 \) and \( \text{HCl} \)) diffuse toward each other from opposite ends of a glass tube of length \( L \):
+</p>
+\[
+\frac{d_1}{d_2} = \frac{r_1}{r_2} = \sqrt{\frac{M_{\text{HCl}}}{M_{\text{NH}_3}}} = \sqrt{\frac{36.5}{17}} \approx 1.46
+\]
+
+<div class="examplebox">
+<h3>Example: Effusion Time Comparison</h3>
+<p>
+\( 50\text{ mL} \) of hydrogen gas effuses through a pinhole in \( 20\text{ seconds} \). Under identical conditions of temperature and pressure, calculate the time required for \( 40\text{ mL} \) of oxygen gas to effuse through the same pinhole.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>
+Given: \( V_1 = 50\text{ mL}, t_1 = 20\text{ s}, M_1 = 2\text{ g/mol} (\text{H}_2) \); \( V_2 = 40\text{ mL}, M_2 = 32\text{ g/mol} (\text{O}_2) \).
+</p>
+\[
+\frac{V_1 / t_1}{V_2 / t_2} = \sqrt{\frac{M_2}{M_1}} \implies \frac{50 / 20}{40 / t_2} = \sqrt{\frac{32}{2}} = \sqrt{16} = 4
+\]
+\[
+\frac{2.5}{40 / t_2} = 4 \implies \frac{2.5 \cdot t_2}{40} = 4 \implies t_2 = \frac{160}{2.5} = 64\text{ seconds}
+\]
+</div>
+</section>
+
+<section>
+<h2>Isotopic Separation by Fractional Effusion</h2>
+<p>
+Because isotopic molecules have slightly different molecular weights, their effusion rates differ:
+</p>
+\[
+\alpha = \frac{r_1}{r_2} = \sqrt{\frac{M_2}{M_1}}
+\]
+<p>
+For gaseous uranium hexafluoride isotopes \( ^{235}\text{UF}_6 \) (\( M_1 = 349\text{ g/mol} \)) and \( ^{238}\text{UF}_6 \) (\( M_2 = 352\text{ g/mol} \)):
+</p>
+\[
+\alpha = \sqrt{\frac{352}{349}} \approx 1.0043
+\]
+<p>
+Although the single-stage separation factor \( \alpha \) is tiny (\( 0.43\% \) enrichment), passing the gas mixture through thousands of successive porous effusion barriers in a cascade separates pure \( ^{235}\text{U} \) for nuclear reactors.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

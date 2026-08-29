@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gas Mixtures & Dalton's Law | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Gaseous State
+</a>
+</nav>
+
+<h1>Gas Mixtures & Dalton's Law</h1>
+<p class="subtitle">
+Partial pressure distributions, molar averages, volumetric fractions, and moist gas hygrometric corrections.
+</p>
+
+<section>
+<h2>Dalton's Law of Partial Pressures</h2>
+<p>
+Formulated by John Dalton (1801):
+</p>
+<div class="model-box">
+<strong>Dalton's Law of Partial Pressures:</strong> The total pressure exerted by a mixture of non-reacting ideal gases enclosed in a common volume \( V \) at temperature \( T \) is equal to the sum of the partial pressures that each individual gas would exert if it occupied the entire container volume alone at the same temperature:
+\[
+P_{\text{total}} = P_1 + P_2 + P_3 + \dots + P_k = \sum_{i=1}^k P_i
+\]
+</div>
+<p>
+Applying the Ideal Gas Law to each individual component:
+</p>
+\[
+P_i = \frac{n_i R T}{V}
+\]
+<p>
+Summing all components:
+</p>
+\[
+P_{\text{total}} = \sum_{i=1}^k \frac{n_i R T}{V} = \left( \sum_{i=1}^k n_i \right) \frac{R T}{V} = \frac{n_{\text{total}} R T}{V}
+\]
+<div class="insightbox">
+Dalton's law is strictly valid only for <strong>chemically non-reacting</strong> ideal gases (e.g., \( \text{N}_2 + \text{O}_2 \), \( \text{He} + \text{Ar} \)). If gases react chemically (such as \( \text{NH}_3 + \text{HCl} \to \text{NH}_4\text{Cl(s)} \) or \( 2\text{NO} + \text{O}_2 \to 2\text{NO}_2 \)), the total number of moles changes and Dalton's Law cannot be applied directly without stoichiometric adjustment.
+</div>
+</section>
+
+<section>
+<h2>Amagat's Law of Partial Volumes</h2>
+<p>
+Complementary to Dalton's Law:
+</p>
+<div class="model-box">
+<strong>Amagat-Leduc Law:</strong> The total volume \( V_{\text{total}} \) of a mixture of non-reacting ideal gases maintained at constant total pressure \( P \) and temperature \( T \) is equal to the sum of the partial volumes that each constituent gas would occupy individually at that same \( P \) and \( T \):
+\[
+V_{\text{total}} = V_1 + V_2 + \dots + V_k = \sum_{i=1}^k V_i
+\]
+</div>
+<p>
+where the <strong>Partial Volume (\( V_i \))</strong> of component \( i \) is:
+</p>
+\[
+V_i = \frac{n_i R T}{P_{\text{total}}}
+\]
+</section>
+
+<section>
+<h2>Mole Fraction and Pressure Fraction</h2>
+<p>
+The <strong>Mole Fraction (\( x_i \))</strong> of gas \( i \) in a mixture containing \( n_{\text{total}} = \sum n_j \) total moles is defined as:
+</p>
+<div class="model-box">
+\[
+x_i = \frac{n_i}{n_{\text{total}}} = \frac{n_i}{\sum n_j} \quad \left(\text{such that } \sum x_i = 1\right)
+\]
+</div>
+<p>
+Dividing the partial pressure \( P_i \) by the total pressure \( P_{\text{total}} \):
+</p>
+\[
+\frac{P_i}{P_{\text{total}}} = \frac{\left(\frac{n_i R T}{V}\right)}{\left(\frac{n_{\text{total}} R T}{V}\right)} = \frac{n_i}{n_{\text{total}}} = x_i
+\]
+<div class="model-box">
+\[
+P_i = x_i P_{\text{total}}
+\]
+</div>
+<p>
+Similarly, for partial volumes:
+</p>
+<div class="model-box">
+\[
+\frac{V_i}{V_{\text{total}}} = x_i \implies V_i = x_i V_{\text{total}}
+\]
+</div>
+<div class="concept-box">
+For ideal gas mixtures:
+\[
+\text{Mole Fraction } (x_i) = \text{Pressure Fraction } \left(\frac{P_i}{P_{\text{total}}}\right) = \text{Volume Fraction } \left(\frac{V_i}{V_{\text{total}}}\right)
+\]
+</div>
+</section>
+
+<section>
+<h2>Equivalent Molar Mass and Density of Gas Mixtures</h2>
+
+<h3>1. Apparent / Equivalent Molar Mass (\( M_{\text{mix}} \))</h3>
+<p>
+The equivalent molar mass of a gas mixture is defined as the total mass of the mixture divided by the total number of moles:
+</p>
+<div class="model-box">
+\[
+M_{\text{mix}} = \frac{m_{\text{total}}}{n_{\text{total}}} = \frac{\sum m_i}{\sum n_i} = \frac{\sum n_i M_i}{\sum n_i} = \sum_{i=1}^k x_i M_i
+\]
+</div>
+
+<h3>2. Mass Density of a Gas Mixture</h3>
+<p>
+Applying the ideal gas equation of state to the mixture:
+</p>
+<div class="model-box">
+\[
+\rho_{\text{mix}} = \frac{P_{\text{total}} M_{\text{mix}}}{R T}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Example: Apparent Molar Mass of Atmospheric Air</h3>
+<p>
+Atmospheric dry air is composed of approximately \( 80\% \, \text{N}_2 \) (\( M_1 = 28\text{ g/mol} \)) and \( 20\% \, \text{O}_2 \) (\( M_2 = 32\text{ g/mol} \)) by mole. Find the apparent molar mass and density of air at STP (\( 1\text{ atm}, 273\text{ K} \)).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+\[
+M_{\text{air}} = x_1 M_1 + x_2 M_2 = (0.80)(28) + (0.20)(32) = 22.4 + 6.4 = 28.8\text{ g/mol} = 0.0288\text{ kg/mol}
+\]
+\[
+\rho_{\text{air}} = \frac{P M}{R T} = \frac{(1.013 \times 10^5)(0.0288)}{8.314 \times 273} \approx 1.284\text{ kg/m}^3
+\]
+</div>
+</section>
+
+<section>
+<h2>Moist Gas and Aqueous Tension Corrections</h2>
+<p>
+When an insoluble gas is collected in the laboratory by downward displacement of water, the collected gas bubble becomes saturated with water vapor.
+</p>
+<p>
+The observed total pressure of the moist gas is the sum of the dry gas partial pressure and the saturated water vapor pressure (<strong>Aqueous Tension \( p_v \)</strong>):
+</p>
+<div class="model-box">
+\[
+P_{\text{moist}} = P_{\text{dry gas}} + p_v \iff P_{\text{dry gas}} = P_{\text{moist}} - p_v
+\]
+</div>
+
+<h3>Relative Humidity (\(\text{RH}\)):</h3>
+<p>
+In unsaturated atmospheric conditions, the <strong>Relative Humidity</strong> is defined as:
+</p>
+<div class="model-box">
+\[
+\text{RH} = \frac{\text{Partial pressure of water vapor present in air}}{\text{Saturated vapor pressure of water at the same temperature } (p_v)} \times 100\%
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

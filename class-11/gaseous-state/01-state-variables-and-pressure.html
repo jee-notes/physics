@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State Variables & Pressure Measurement | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Gaseous State
+</a>
+</nav>
+
+<h1>State Variables & Pressure Measurement</h1>
+<p class="subtitle">
+Thermodynamic state coordinates, hydrostatic manometry, barometric principles, and absolute temperature scales.
+</p>
+
+<section>
+<h2>Thermodynamic State Variables of Gases</h2>
+<p>
+A thermodynamic system composed of a gas is macroscopically specified when its state variables are defined:
+</p>
+
+<h3>1. Pressure (\( P \))</h3>
+<p>
+The normal compressive force exerted by gas molecules colliding against unit surface area of the enclosing walls:
+</p>
+<div class="model-box">
+\[
+P = \frac{F_\perp}{A}
+\]
+<p style="text-align: center; margin-bottom: 0;">
+<strong>SI Unit:</strong> Pascal (\(\text{Pa} = \text{N}\cdot\text{m}^{-2}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^1 L^{-1} T^{-2}]\)
+</p>
+</div>
+
+<h3>Standard Pressure Units & Conversions:</h3>
+<table>
+<thead>
+<tr>
+<th>Unit</th>
+<th>Symbol</th>
+<th>Equivalent in Pascal (\(\text{Pa}\))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard Atmosphere</td>
+<td>\(\text{atm}\)</td>
+<td>\( 1\text{ atm} = 1.01325 \times 10^5\text{ Pa} = 101.325\text{ kPa} \)</td>
+</tr>
+<tr>
+<td>Bar</td>
+<td>\(\text{bar}\)</td>
+<td>\( 1\text{ bar} = 10^5\text{ Pa} = 0.98692\text{ atm} \)</td>
+</tr>
+<tr>
+<td>Torr / Millimeter of Mercury</td>
+<td>\(\text{torr} / \text{mmHg}\)</td>
+<td>\( 1\text{ atm} = 760\text{ mmHg} = 760\text{ torr} \implies 1\text{ torr} \approx 133.322\text{ Pa} \)</td>
+</tr>
+<tr>
+<td>Pounds per Square Inch</td>
+<td>\(\text{psi}\)</td>
+<td>\( 1\text{ atm} \approx 14.696\text{ psi} \)</td>
+</tr>
+</tbody>
+</table>
+
+<h3>2. Volume (\( V \))</h3>
+<p>
+The volume of a gas equals the internal volume of the vessel enclosing it.
+</p>
+<ul class="points-list">
+<li><strong>SI Unit:</strong> Cubic meter (\(\text{m}^3\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([L^3]\)</li>
+<li><strong>Conversions:</strong> \( 1\text{ m}^3 = 10^3\text{ dm}^3 = 10^3\text{ L} = 10^6\text{ cm}^3 = 10^6\text{ mL} = 10^6\text{ cc} \)</li>
+<li>\( 1\text{ L} = 10^{-3}\text{ m}^3 = 1\text{ dm}^3 = 1000\text{ cm}^3 \)</li>
+</ul>
+
+<h3>3. Temperature (\( T \))</h3>
+<p>
+An intensive measure of the average kinetic energy of molecular translational motion:
+</p>
+<ul class="points-list">
+<li><strong>SI Unit:</strong> Kelvin (\(\text{K}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([\Theta]\) or \([K^1]\)</li>
+<li><strong>Conversion:</strong> \( T(\text{K}) = t(^\circ\text{C}) + 273.15 \)</li>
+</ul>
+
+<h3>4. Amount of Substance (\( n \))</h3>
+<p>
+The quantity of matter in moles:
+</p>
+\[
+n = \frac{m}{M} = \frac{N}{N_A}
+\]
+<p>
+where \( m \) is sample mass, \( M \) is molar mass in \(\text{g/mol}\), \( N \) is total number of molecules, and \( N_A \approx 6.022 \times 10^{23}\text{ mol}^{-1} \) is Avogadro's constant.
+</p>
+</section>
+
+<section>
+<h2>Macroscopic vs Microscopic Description</h2>
+<p>
+Thermal physics analyzes gases from two distinct but mutually consistent viewpoints:
+</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Macroscopic (Thermodynamic / Gaseous State)</th>
+<th>Microscopic (Kinetic Theory / Statistical)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Variables</strong></td>
+<td>\( P, V, T, n, \rho \)</td>
+<td>Molecular mass \( m \), velocity \( \vec{v} \), momentum \( \vec{p} \), mean free path \( \lambda \)</td>
+</tr>
+<tr>
+<td><strong>Measurement</strong></td>
+<td>Directly measurable using macroscopic instruments (gauges, thermometers).</td>
+<td>Statistical averages inferred through molecular distributions.</td>
+</tr>
+<tr>
+<td><strong>Pressure Origin</strong></td>
+<td>Continuous normal surface stress (\( F/A \)).</td>
+<td>Time-averaged rate of momentum transfer during molecular wall collisions (\( P = \frac{1}{3}\rho v_{\text{rms}}^2 \)).</td>
+</tr>
+<tr>
+<td><strong>Temperature Origin</strong></td>
+<td>Equilibrium condition verified by Zeroth Law.</td>
+<td>Measure of mean translational kinetic energy (\( \frac{1}{2}m\overline{v^2} = \frac{3}{2}k_B T \)).</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Hydrostatic Pressure of Gases</h2>
+<p>
+Because the mass density of gases at ordinary pressures is small (\( \rho_{\text{air}} \approx 1.2\text{ kg/m}^3 \)), the hydrostatic gravitational pressure variation across standard laboratory containers (\( \Delta P = \rho g \Delta h \approx 1.2 \times 9.8 \times 1 \approx 12\text{ Pa} \)) is negligible compared to atmospheric pressure (\( \approx 10^5\text{ Pa} \)).
+</p>
+<div class="insightbox">
+Under normal conditions, gas pressure inside a container is strictly <strong>homogeneous and isotropic</strong>: it exerts identical pressure in all directions and on all interior walls regardless of orientation.
+</div>
+</section>
+
+<section>
+<h2>Manometers and Barometers in Gas Systems</h2>
+
+<h3>1. Open-End U-Tube Manometer</h3>
+<p>
+A U-tube containing a liquid of density \( \rho \) (typically mercury, \( \rho_{\text{Hg}} = 13.6 \times 10^3\text{ kg/m}^3 \)) has one limb connected to a gas container and the other open to atmosphere (\( P_0 \)).
+</p>
+
+<div class="diagram">
+<svg width="580" height="240" viewBox="0 0 580 240">
+  <!-- Gas bulb left -->
+  <circle cx="100" cy="100" r="45" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="100" y="105" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Gas (P)</text>
+  
+  <!-- Connecting tube -->
+  <path d="M 145 100 L 220 100 L 220 180 A 30 30 0 0 0 280 180 L 280 40" fill="none" stroke="#2c3e50" stroke-width="8"/>
+  <path d="M 145 100 L 220 100 L 220 180 A 30 30 0 0 0 280 180 L 280 40" fill="none" stroke="#ffffff" stroke-width="4"/>
+
+  <!-- Manometer Liquid Mercury -->
+  <!-- Left limb liquid at y=130 -->
+  <path d="M 220 130 L 220 180 A 30 30 0 0 0 280 180 L 280 80" fill="none" stroke="#7f8c8d" stroke-width="4"/>
+
+  <!-- Height difference h -->
+  <line x1="230" y1="130" x2="330" y2="130" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="270" y1="80" x2="330" y2="80" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="320" y1="130" x2="320" y2="80" stroke="#c0392b" stroke-width="2"/>
+  <text x="335" y="110" font-size="13" font-weight="bold" fill="#c0392b">h</text>
+
+  <!-- Open limb label -->
+  <text x="280" y="30" font-size="13" font-weight="bold" fill="#2980b9" text-anchor="middle">P₀ (Atm)</text>
+  <!-- Formula -->
+  <text x="440" y="110" font-size="15" font-weight="bold" fill="#2c3e50">P = P₀ + ρ g h</text>
+  <text x="440" y="135" font-size="12" fill="#7f8c8d">(Gauge Pressure = ρ g h)</text>
+</svg>
+</div>
+
+<ul class="points-list">
+<li>If the open limb level is higher by \( h \):
+\[
+P = P_0 + \rho g h
+\]
+</li>
+<li>If the connected limb level is higher by \( h \):
+\[
+P = P_0 - \rho g h
+\]
+</li>
+</ul>
+
+<h3>2. Closed-End U-Tube Manometer</h3>
+<p>
+The outer limb is evacuated and sealed (Torricellian vacuum, \( P_{\text{vacuum}} \approx 0 \)).
+</p>
+<div class="model-box">
+\[
+P_{\text{gas}} = \rho g h
+\]
+</div>
+
+<h3>3. Simple Mercury Barometer</h3>
+<p>
+An inverted glass tube filled with mercury submerged in a mercury trough establishes atmospheric pressure:
+</p>
+\[
+P_{\text{atm}} = \rho_{\text{Hg}} g h = 13600 \times 9.8 \times 0.760 \approx 1.013 \times 10^5\text{ Pa} = 760\text{ mmHg}
+\]
+</section>
+
+<section>
+<h2>Thermal Scales and Absolute Zero</h2>
+<p>
+The relationship between standard temperature measurement scales is given by:
+</p>
+<div class="model-box">
+\[
+\frac{C - 0}{100} = \frac{F - 32}{180} = \frac{K - 273.15}{100} = \frac{R - 491.67}{180}
+\]
+</div>
+
+<h3>Concept of Absolute Zero (\( T = 0\text{ K} = -273.15^\circ\text{C} \)):</h3>
+<p>
+Extrapolating Charles' and Gay-Lussac's empirical lines to zero volume or zero pressure reveals an absolute lower temperature limit:
+</p>
+<div class="concept-box">
+<strong>Absolute Zero:</strong> The theoretical baseline temperature at which the volume and pressure of an ideal gas extrapolate to zero. Microscopically, it is the state of minimum possible kinetic energy of matter.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

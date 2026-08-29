@@ -1,220 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaseous State | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #8e44ad; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #f5eef8; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaseous State | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
 
-    <h1>Gaseous State</h1>
-    <p style="text-align: center;"><em>Macroscopic description of gases under mechanical constraints.</em></p>
+<h1>Gaseous State</h1>
+<p class="subtitle">
+Macroscopic thermodynamics of gases, empirical laws of state, mechanical boundary constraints, and non-ideal behavior.
+</p>
 
-    <section id="state-variables">
-        <h2>1. State Variables</h2>
-        <p>
-            The thermodynamic state of a gas is described using measurable
-            macroscopic quantities.
-        </p>
-
-        <ul>
-            <li><strong>Pressure (P)</strong> — mechanical constraint via container walls</li>
-            <li><strong>Volume (V)</strong> — geometrical constraint of the container</li>
-            <li><strong>Temperature (T)</strong> — thermal state of the gas</li>
-            <li><strong>Amount of gas (n)</strong> — number of moles</li>
-        </ul>
-
-        <div class="insightbox">
-            In gases, pressure and volume are not intrinsic —
-            they are imposed by boundaries.
-        </div>
-    </section>
-
-    <section id="pressure">
-        <h2>2. Pressure of a Gas</h2>
-        <p>
-            Gas pressure arises due to collisions of gas molecules
-            with the container walls.
-        </p>
-
-        <div class="formula-block">
-            \[
-            P = \frac{F}{A}
-            \]
-        </div>
-
-        <ul>
-            <li>Scalar quantity</li>
-            <li>Acts normal to surfaces</li>
-        </ul>
-    </section>
-
-    <section id="boyle">
-        <h2>3. Boyle’s Law (Isothermal Process)</h2>
-        <p>
-            For a fixed mass of gas at constant temperature,
-            pressure is inversely proportional to volume.
-        </p>
-
-        <div class="formula-block">
-            \[
-            P \propto \frac{1}{V}
-            \quad \Rightarrow \quad
-            PV = \text{constant}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Boyle’s law reflects a purely mechanical constraint
-            at constant thermal state.
-        </div>
-    </section>
-
-    <section id="charles">
-        <h2>4. Charles’ Law (Isobaric Process)</h2>
-        <p>
-            At constant pressure, the volume of a gas
-            is directly proportional to its absolute temperature.
-        </p>
-
-        <div class="formula-block">
-            \[
-            V \propto T
-            \quad \Rightarrow \quad
-            \frac{V}{T} = \text{constant}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Temperature must be measured on the Kelvin scale.
-        </div>
-    </section>
-
-    <section id="gay-lussac">
-        <h2>5. Gay–Lussac’s Law (Isochoric Process)</h2>
-        <p>
-            At constant volume, pressure of a gas
-            is directly proportional to absolute temperature.
-        </p>
-
-        <div class="formula-block">
-            \[
-            P \propto T
-            \quad \Rightarrow \quad
-            \frac{P}{T} = \text{constant}
-            \]
-        </div>
-    </section>
-
-    <section id="combined">
-        <h2>6. Combined Gas Law</h2>
-        <p>
-            For a fixed mass of gas:
-        </p>
-
-        <div class="formula-block">
-            \[
-            \frac{PV}{T} = \text{constant}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Gas laws connect different mechanical constraints
-            through temperature.
-        </div>
-    </section>
-
-    <section id="ideal-gas">
-        <h2>7. Ideal Gas Equation</h2>
-        <p>
-            Combining all gas laws gives the equation of state
-            for an ideal gas.
-        </p>
-
-        <div class="formula-block">
-            \[
-            PV = nRT
-            \]
-        </div>
-
-        <ul>
-            <li>\(n\): number of moles</li>
-            <li>\(R\): universal gas constant</li>
-        </ul>
-
-        <div class="insightbox">
-            The ideal gas is a model —
-            real gases approximate it at low pressure and high temperature.
-        </div>
-    </section>
-
-    <section id="density">
-        <h2>8. Density of a Gas</h2>
-
-        <div class="formula-block">
-            \[
-            \rho = \frac{PM}{RT}
-            \]
-        </div>
-
-        <ul>
-            <li>\(M\): molar mass</li>
-            <li>Explains why lighter gases rise</li>
-        </ul>
-    </section>
-
-    <section id="limitations">
-        <h2>9. Limitations of Gas Laws</h2>
-        <ul>
-            <li>Break down at high pressure</li>
-            <li>Fail at very low temperatures</li>
-            <li>Ignore intermolecular forces and molecular volume</li>
-        </ul>
-
-        <div class="insightbox">
-            Limitations motivate the kinetic theory
-            and real gas models.
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>10. Common Mistakes</h2>
-        <ul>
-            <li>Using Celsius instead of Kelvin</li>
-            <li>Applying gas laws to changing mass</li>
-            <li>Forgetting process constraints (iso-*)</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Matter exists in distinct thermodynamic states of aggregation. In the gaseous state, thermal kinetic energy of molecules vastly overwhelms intermolecular attractive potential energy. Consequently, gas molecules exhibit chaotic, high-velocity translational motion, filling any enclosing boundary uniformly and exerting isotropic pressure upon the confining walls.
+</p>
+<p>
+The <strong>Gaseous State</strong> chapter establishes the macroscopic, classical description of gases. While the companion chapter on the <em>Kinetic Theory of Gases (KTG)</em> focuses on microscopic statistical mechanics, this chapter focuses on measurable macroscopic state variables (\( P, V, T, n \)), empirical gas laws, the ideal equation of state, gas mixtures, mechanical constraints (manometers, pistons, capillary tubes, barometers), and the non-ideal corrections of real gases described by the van der Waals equation.
+</p>
+<div class="insightbox">
+In gases, volume is not an intrinsic material constant—it is an extrinsic boundary constraint imposed entirely by the enclosing vessel. Pressure and temperature serve as the primary conjugate thermodynamic coordinates.
 </div>
+</section>
 
+<section>
+<h2>Thermodynamic State Variables of Gases</h2>
+<p>
+The thermodynamic equilibrium state of a pure gas is uniquely characterized by four fundamental state parameters:
+</p>
+<ul>
+<li><strong>Pressure (\( P \)):</strong> The perpendicular compressive force exerted per unit area by colliding gas molecules on container boundaries (\( P = F_\perp / A \)).</li>
+<li><strong>Volume (\( V \)):</strong> The total three-dimensional geometrical space accessible for molecular motion (equal to vessel capacity).</li>
+<li><strong>Absolute Temperature (\( T \)):</strong> The intensive thermal parameter dictating the average translational kinetic energy of molecules, measured on the absolute Kelvin scale.</li>
+<li><strong>Amount of Substance (\( n \)):</strong> The number of moles of gas present (\( n = m/M = N/N_A \)).</li>
+</ul>
+</section>
+
+<section>
+<h2>The Ideal Gas Model and Empirical Laws</h2>
+<p>
+The <strong>Ideal Gas Model</strong> is a theoretical construct wherein:
+</p>
+<ol>
+<li>The physical volume occupied by the gas molecules themselves is strictly negligible compared to the total container volume.</li>
+<li>Intermolecular attractive and repulsive forces between molecules are zero (except during instantaneous elastic collisions).</li>
+</ol>
+<p>
+Historically, this model emerged by synthesizing individual empirical gas laws:
+</p>
+<div class="model-box">
+\[
+\begin{aligned}
+\text{Boyle's Law (Constant } T, n\text{):} & \quad P \propto \frac{1}{V} \implies PV = \text{constant} \\
+\text{Charles' Law (Constant } P, n\text{):} & \quad V \propto T \implies \frac{V}{T} = \text{constant} \\
+\text{Gay-Lussac's Law (Constant } V, n\text{):} & \quad P \propto T \implies \frac{P}{T} = \text{constant} \\
+\text{Avogadro's Law (Constant } P, T\text{):} & \quad V \propto n \implies \frac{V}{n} = \text{constant}
+\end{aligned}
+\]
+</div>
+<p>
+Unifying these proportionalities yields the universal <strong>Ideal Gas Equation of State</strong>:
+</p>
+<div class="model-box">
+\[
+PV = nRT = N k_B T = \frac{m}{M}RT
+\]
+</div>
+</section>
+
+<section>
+<h2>Gas Mixtures and Mechanical Constraints</h2>
+<p>
+For mixtures of non-reacting gases, <strong>Dalton's Law of Partial Pressures</strong> states that the total pressure equals the sum of partial pressures exerted by each constituent:
+</p>
+\[
+P_{\text{total}} = \sum P_i = \sum \frac{n_i R T}{V}
+\]
+<p>
+Furthermore, analyzing gases under physical and mechanical constraints—such as connected bulbs with stopcocks, capillary tubes with trapped mercury pellets, open and closed manometers, and faulty barometers—forms a central pillar of JEE problem solving.
+</p>
+</section>
+
+<section>
+<h2>Real Gas Deviations and Critical Phenomena</h2>
+<p>
+At high pressures and low temperatures, real gases deviate significantly from ideal gas behavior due to finite molecular volume (excluded volume \( b \)) and long-range intermolecular van der Waals attractions (pressure correction \( a/V_m^2 \)).
+</p>
+<div class="model-box">
+\[
+\left( P + \frac{a n^2}{V^2} \right)(V - nb) = nRT
+\]
+</div>
+<p>
+The van der Waals equation quantitatively predicts continuous vapor-liquid phase transitions, critical constants (\( T_c, P_c, V_c \)), and the conditions required for gas liquefaction.
+</p>
+</section>
+
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+<li><strong>State Variables & Manometry:</strong> Pressure measurement, U-tube manometers, barometers, and thermal scales.</li>
+<li><strong>Empirical Gas Laws:</strong> Boyle's, Charles', Gay-Lussac's, and Avogadro's laws with transformation diagrams.</li>
+<li><strong>Ideal Gas Equation of State:</strong> \( PV = nRT \), gas density (\( \rho = \frac{PM}{RT} \)), and variable mass systems.</li>
+<li><strong>Mechanical Gas Systems:</strong> Two-bulb connecting systems, trapped mercury pellet capillary tubes, and faulty barometers.</li>
+<li><strong>Gas Mixtures:</strong> Dalton's and Amagat's laws, equivalent molar mass, and moist gas humidity corrections.</li>
+<li><strong>Graham's Law of Effusion:</strong> Rate of effusion, isotopic separation, and pressure-drop kinetics.</li>
+<li><strong>Real Gases & Critical Phenomena:</strong> Compressibility factor \( Z \), van der Waals equation of state, and critical constants (\( T_c, P_c, V_c \)).</li>
+</ul>
+</section>
+
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-state-variables-and-pressure.html">1. State Variables & Pressure Measurement</a>
+<a href="./02-empirical-gas-laws.html">2. Empirical Gas Laws & Graphical Analysis</a>
+<a href="./03-ideal-gas-equation.html">3. Ideal Gas Equation & Mechanical Systems</a>
+<a href="./04-gas-mixtures-dalton-law.html">4. Gas Mixtures & Dalton's Law of Partial Pressures</a>
+<a href="./05-graham-law-of-effusion.html">5. Graham's Law of Diffusion & Effusion</a>
+<a href="./06-real-gases-van-der-waals.html">6. Real Gases, van der Waals Equation & Critical Phenomena</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
