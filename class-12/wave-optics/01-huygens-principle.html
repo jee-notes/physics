@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huygens' Principle | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Wave Optics
+</a>
+</nav>
+<h1>Huygens' Principle</h1>
+<p class="subtitle">
+The geometrical construction of propagating wavefronts.
+</p>
+
+<section>
+<h2>Wavefronts and Wave Normal</h2>
+<p>
+When a stone is dropped into a quiet pool of water, circular ripples spread outward. All points on a given ripple are oscillating in phase. A similar concept applies to light waves.
+</p>
+<div class="model-box">
+<strong>Wavefront:</strong> The continuous locus of all particles of a medium which are vibrating in the same phase is called a wavefront.<br><br>
+<strong>Wave Normal (Ray):</strong> An imaginary line drawn perpendicular to the wavefront in the direction of propagation of the wave.
+</div>
+<p>
+Depending on the shape of the source, wavefronts can be:
+<ul>
+<li><strong>Spherical:</strong> From a point source at a finite distance.</li>
+<li><strong>Cylindrical:</strong> From a linear source (like a slit) at a finite distance.</li>
+<li><strong>Plane:</strong> From any source at an infinite distance (a small portion of a spherical or cylindrical wavefront at a large distance appears plane).</li>
+</ul>
+</p>
+</section>
+
+<section>
+<h2>Huygens' Construction of Wavefronts</h2>
+<p>
+Huygens proposed a geometrical method to find the new position of a wavefront at any later time \( t \), given its position at an initial time. It is based on two postulates:
+</p>
+<div class="concept-box">
+<ol>
+<li>Every point on a given primary wavefront acts as a fresh source of new disturbance, called <strong>secondary wavelets</strong>, which travel in all directions with the velocity of light in that medium.</li>
+<li>The forward envelope (tangential surface) touching these secondary wavelets at any instant gives the new position of the secondary wavefront at that time.</li>
+</ol>
+</div>
+<p>
+<em>Note: Huygens could not explain why there is no backward wavefront. This was later resolved by Kirchhoff's rigorous mathematical theory, which showed that the amplitude of the backward wavelet is zero.</em>
+</p>
+</section>
+
+<section>
+<h2>Reflection and Refraction based on Huygens' Principle</h2>
+<p>
+Huygens' principle successfully deduces the laws of reflection and refraction geometrically.
+</p>
+<h3>Law of Refraction (Snell's Law)</h3>
+<p>
+Consider a plane wavefront incident on a plane surface separating two media with wave velocities \( v_1 \) and \( v_2 \). Let \( i \) be the angle of incidence and \( r \) be the angle of refraction. The time taken by the wave to travel from one end of the wavefront to the interface must equal the time taken by the secondary wavelet in the second medium.
+</p>
+<p>
+From the geometry of the wavefront triangles:
+\[ \frac{\sin i}{\sin r} = \frac{v_1 t / \text{hypotenuse}}{v_2 t / \text{hypotenuse}} = \frac{v_1}{v_2} \]
+Since the absolute refractive index is \( n = c/v \), we get:
+\[ \frac{\sin i}{\sin r} = \frac{c/n_1}{c/n_2} = \frac{n_2}{n_1} \]
+This proves Snell's Law. Furthermore, the incident wavefront, the refracted wavefront, and the normal all lie in the same plane.
+</p>
+<div class="insightbox">
+A crucial deduction from this derivation is that when light enters a denser medium (\( n_2 > n_1 \)), its velocity must decrease (\( v_2 < v_1 \)). This directly contradicted Newton's corpuscular theory, which incorrectly predicted that light travels faster in denser media.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

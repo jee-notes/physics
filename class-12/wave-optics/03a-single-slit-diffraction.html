@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Single Slit Diffraction | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-diffraction.html" class="back-btn">
+<span>&larr;</span> Back to Diffraction
+</a>
+</nav>
+<h1>Fraunhofer Diffraction at a Single Slit</h1>
+<p class="subtitle">
+Understanding the central maximum and secondary fringes.
+</p>
+
+<section>
+<h2>Fraunhofer Diffraction at a Single Slit</h2>
+<p>
+Consider a plane wavefront incident on a narrow slit of width \( a \). According to Huygens' principle, every point on the exposed part of the wavefront acts as a source of secondary wavelets. These wavelets travel in all directions and interfere to produce a diffraction pattern on a screen placed at the focal plane of a convex lens.
+</p>
+<p>
+Let's find the intensity at a point \( P \) on the screen, corresponding to a diffraction angle \( \theta \).
+The path difference between the wavelets from the two edges of the slit is:
+\[ \Delta x = a \sin \theta \]
+Unlike YDSE where there are two discrete sources, the single slit acts as a continuous distribution of coherent sources.
+</p>
+
+<h3>Position of Minima (Dark Fringes)</h3>
+<p>
+A minimum occurs when the slit can be divided into an even number of equal parts, such that wavelets from corresponding points in adjacent parts cancel each other out (path difference of \( \lambda/2 \)).
+The condition for the \( n \)-th minimum is:
+</p>
+<div class="model-box">
+\[ a \sin \theta_n = n\lambda \quad (n = \pm1, \pm2, \dots) \]
+For small angles, \( \theta_n \approx \frac{n\lambda}{a} \). Notice that \( n=0 \) is NOT a minimum.
+</div>
+
+<h3>Position of Secondary Maxima (Bright Fringes)</h3>
+<p>
+A secondary maximum occurs when the slit can be divided into an odd number of equal parts. One part remains uncancelled, giving a weak intensity.
+The condition for the \( n \)-th secondary maximum is approximately:
+</p>
+<div class="model-box">
+\[ a \sin \theta_n = \left(n + \frac{1}{2}\right)\lambda \quad (n = \pm1, \pm2, \dots) \]
+</div>
+</section>
+
+<section>
+<h2>Width of Central Maximum</h2>
+<p>
+The central maximum lies between the first minimum on either side (\( n = +1 \) and \( n = -1 \)).
+The angular spread of the first minimum is \( \theta \approx \frac{\lambda}{a} \).
+The total angular width of the central maximum is:
+\[ \Delta\theta_{\text{central}} = 2\theta = \frac{2\lambda}{a} \]
+</p>
+<p>
+If the screen is at a distance \( D \) (or the focal length \( f \) of the lens), the linear width of the central maximum is:
+</p>
+<div class="concept-box">
+\[ w_{\text{central}} = \frac{2\lambda D}{a} \]
+The central maximum is twice as wide as the secondary maxima (\( w_{\text{sec}} = \frac{\lambda D}{a} \)).
+</div>
+</section>
+
+<section>
+<h2>Intensity Pattern of Diffraction</h2>
+<p>
+The intensity of the central maximum is very high (containing most of the light energy). The intensities of the secondary maxima decrease rapidly as \( n \) increases.
+Mathematically, the intensity is given by:
+\[ I = I_0 \left[ \frac{\sin(\beta)}{\beta} \right]^2 \]
+where \( \beta = \frac{\pi a \sin \theta}{\lambda} \).
+</p>
+<div class="insightbox">
+<strong>Difference between Interference (YDSE) and Diffraction:</strong>
+<br>1. In YDSE, all bright fringes have the same intensity. In diffraction, the central fringe is brightest and others fade out rapidly.
+<br>2. In YDSE, fringes are equally wide. In diffraction, the central maximum is twice as wide as the secondary maxima.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resolving Power | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-diffraction.html" class="back-btn">
+<span>&larr;</span> Back to Diffraction
+</a>
+</nav>
+<h1>Resolving Power</h1>
+<p class="subtitle">
+The diffraction limit of optical instruments.
+</p>
+
+<section>
+<h2>Rayleigh Criterion</h2>
+<p>
+Due to diffraction, the image of a point object formed by any optical instrument with a circular aperture (like a telescope or microscope lens) is not a perfect point but a bright central circular disc (Airy disc) surrounded by faint concentric dark and bright rings. 
+</p>
+<p>
+When two point objects are very close together, their diffraction patterns overlap. The <strong>Rayleigh Criterion for Resolution</strong> states that two point sources are just resolved when the central maximum of the diffraction pattern of one source coincides with the first minimum of the diffraction pattern of the other source.
+</p>
+<div class="insightbox">
+If the angular separation is less than the Rayleigh limit, the two objects appear as one unresolved blob.
+</div>
+</section>
+
+<section>
+<h2>Resolving Power of Microscopes and Telescopes</h2>
+<p>
+Resolving power is defined as the reciprocal of the smallest distance or angle by which two objects can be separated and still be seen as distinct.
+</p>
+
+<h3>Resolving Power of a Telescope</h3>
+<p>
+For a telescope, we measure the limit of resolution as an angle \( \Delta \theta \). A circular aperture of diameter \( D \) forms a first minimum at an angle \( \Delta \theta = \frac{1.22 \lambda}{D} \).
+</p>
+<div class="model-box">
+\[ \text{Resolving Power} = \frac{1}{\Delta \theta} = \frac{D}{1.22 \lambda} \]
+To increase the resolving power, telescopes are built with very large diameter objective mirrors or lenses.
+</div>
+
+<h3>Resolving Power of a Microscope</h3>
+<p>
+For a microscope, we measure the limit of resolution as a linear distance \( \Delta d \) between two close objects on a slide. 
+\[ \Delta d = \frac{1.22 \lambda}{2n \sin \theta} \]
+where \( n \sin \theta \) is the Numerical Aperture (NA) of the objective.
+</p>
+<div class="model-box">
+\[ \text{Resolving Power} = \frac{1}{\Delta d} = \frac{2n \sin \theta}{1.22 \lambda} \]
+To resolve finer cellular structures, scientists use oil immersion lenses (high \( n \)) and electron microscopes (extremely small \( \lambda \)).
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

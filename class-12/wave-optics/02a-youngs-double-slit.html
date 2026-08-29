@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Young's Double Slit Experiment | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-interference-of-light.html" class="back-btn">
+<span>&larr;</span> Back to Interference of Light
+</a>
+</nav>
+<h1>Young's Double Slit Experiment (YDSE)</h1>
+<p class="subtitle">
+The definitive proof of the wave nature of light.
+</p>
+
+<section>
+<h2>Experimental Setup (YDSE)</h2>
+<p>
+In 1801, Thomas Young experimentally demonstrated interference. A monochromatic source of light illuminates a narrow slit \( S \). The cylindrical wavefronts from \( S \) fall on two very closely spaced narrow parallel slits \( S_1 \) and \( S_2 \). 
+</p>
+<p>
+According to Huygens' principle, \( S_1 \) and \( S_2 \) act as coherent sources because they derive light from the same primary wavefront. The waves from \( S_1 \) and \( S_2 \) superimpose and produce an interference pattern on a screen placed at a distance \( D \). The pattern consists of alternate bright and dark bands called <strong>fringes</strong>.
+</p>
+</section>
+
+<section>
+<h2>Path Difference and Phase Difference</h2>
+<p>
+Let the distance between the two slits be \( d \) and the distance to the screen be \( D \). Let \( P \) be a point on the screen at a distance \( y \) from the central point \( O \).
+</p>
+<p>
+The waves from \( S_1 \) and \( S_2 \) travel different distances to reach \( P \). The path difference \( \Delta x \) is:
+\[ \Delta x = S_2P - S_1P \]
+By geometry, for \( d \ll D \) and \( y \ll D \), we can approximate the path difference as:
+</p>
+<div class="model-box">
+\[ \Delta x \approx d \sin \theta \approx d \tan \theta = d \left(\frac{y}{D}\right) \]
+Where \( \theta \) is the angular position of point \( P \).
+</div>
+<p>
+The corresponding phase difference is \( \phi = \frac{2\pi}{\lambda} \Delta x = \frac{2\pi}{\lambda} \frac{y d}{D} \).
+</p>
+</section>
+
+<section>
+<h2>Fringe Width Calculation</h2>
+<p>
+Using the conditions for constructive and destructive interference, we can find the positions of bright and dark fringes.
+</p>
+
+<h3>Position of Bright Fringes (Maxima)</h3>
+<p>
+For a bright fringe, \( \Delta x = n\lambda \).
+\[ \frac{y_n d}{D} = n\lambda \implies y_n = \frac{n\lambda D}{d} \quad (n = 0, \pm1, \pm2, \dots) \]
+The central bright fringe (Central Maximum) occurs at \( n=0 \) (\( y_0 = 0 \)).
+</p>
+
+<h3>Position of Dark Fringes (Minima)</h3>
+<p>
+For a dark fringe, \( \Delta x = (n - \frac{1}{2})\lambda \). (Using \( n = 1, 2, \dots \) for the 1st, 2nd dark fringe).
+\[ \frac{y_n d}{D} = \left(n - \frac{1}{2}\right)\lambda \implies y_n = \left(n - \frac{1}{2}\right) \frac{\lambda D}{d} \]
+</p>
+
+<h3>Fringe Width (\( \beta \) or \( w \))</h3>
+<p>
+The distance between two consecutive bright (or dark) fringes is called the fringe width.
+\[ \beta = y_{n+1} - y_n = \frac{(n+1)\lambda D}{d} - \frac{n\lambda D}{d} \]
+</p>
+<div class="model-box">
+\[ \beta = \frac{\lambda D}{d} \]
+This formula shows that the fringe width is directly proportional to wavelength \( \lambda \) and screen distance \( D \), and inversely proportional to the slit separation \( d \).
+</div>
+<div class="insightbox">
+In YDSE, the width of all bright and dark fringes is exactly the same, provided the slits are identical.
+</div>
+</section>
+
+<section>
+<h2>Intensity Distribution</h2>
+<p>
+If both slits have the same width, the amplitudes are equal (\( a_1 = a_2 = a \)) and the intensities are equal (\( I_1 = I_2 = I_0 \)). The resultant intensity at any point is:
+\[ I = 2I_0 + 2I_0 \cos \phi = 2I_0 (1 + \cos \phi) = 4I_0 \cos^2\left(\frac{\phi}{2}\right) \]
+Since \( I_{\text{max}} = 4I_0 \):
+</p>
+<div class="concept-box">
+\[ I = I_{\text{max}} \cos^2\left(\frac{\phi}{2}\right) \]
+The intensity vs phase difference graph is a \( \cos^2 \) curve, fluctuating perfectly between \( I_{\text{max}} \) and \( 0 \). The average intensity on the screen is \( 2I_0 \), which proves that interference does not create or destroy energy; it only redistributes it, obeying the law of conservation of energy.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
