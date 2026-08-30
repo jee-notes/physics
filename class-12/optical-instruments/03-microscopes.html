@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microscopes | Optical Instruments</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Optical Instruments
+</a>
+</nav>
+<h1>Microscopes</h1>
+<p class="subtitle">
+Microscopes and the principles of angular magnification.
+</p>
+<section>
+<h2>The Physical Role of a Microscope</h2>
+<p>
+A microscope is an optical instrument used to view small, nearby objects with enhanced detail. It achieves this by increasing the <strong>visual angle</strong> subtended by the object at the observer's eye, thereby enlarging the retinal image.
+</p>
+<p>
+To understand the optical role of a microscope, we evaluate the fundamental limitation of the <strong>unaided human eye</strong>.
+</p>
+<div class="insightbox">
+For the unaided eye, the image distance \(v\) is fixed because the retina is at a fixed position inside the eyeball.<br>
+The magnitude of linear magnification produced on the retina is:
+\[
+|m| = \frac{h_i}{h_o} = \frac{v}{|u|}
+\]
+Because \(v\) is fixed, the size of the image on the retina increases when the object is brought closer to the eye (as \(|u|\) decreases).
+</div>
+<p>
+However, the eye cannot accommodate indefinitely. A normal eye cannot form a sharp image if the object is placed closer than the <strong>least distance of distinct vision</strong> (\(D = 25\text{ cm}\)).
+</p>
+<p>
+Therefore, the <strong>maximum visual angle</strong> that an unaided eye can achieve for an object of height \(h\) while maintaining distinct vision is:
+</p>
+\[
+\boxed{\theta_o \approx \tan\theta_o = \frac{h}{D}}
+\]
+<p>
+A microscope bypasses this physical limit. It allows the actual object to be placed at a distance <strong>closer than \(D\)</strong>, while using converging optics to project an enlarged <strong>virtual image</strong> at a distance <strong>greater than or equal to \(D\)</strong>.
+</p>
+<div class="insightbox">
+\[
+\boxed{\text{Actual object at } |u| \lt D \;\xrightarrow{\text{microscope}}\; \text{Virtual image at } |v| \ge D}
+\]
+The observer's eye does not view the actual object directly; it focuses on the <strong>magnified virtual image</strong> produced by the microscope.<br>
+This allows the observer to gain the large visual angle corresponding to a very short object distance, while still presenting the eye with an image it can comfortably focus on.
+</div>
+</section>
+<section>
+<h2>Classification and Practical Limitations</h2>
+<p>
+Microscopes are broadly classified into two categories based on their optical construction:
+</p>
+<ul class="model-box">
+<li><strong>Simple Microscope:</strong> A single converging lens of short focal length acting as a magnifying glass.</li>
+<li><strong>Compound Microscope:</strong> A two-lens system (Objective and Eyepiece) that produces successive magnifications to achieve significantly larger angular magnifications.</li>
+</ul>
+<div class="insightbox">
+<strong>Why can we not achieve arbitrarily high magnification with a simple microscope?</strong><br>
+The magnifying power of a simple microscope is inversely proportional to its focal length (\(m \propto 1/f\)).<br>
+To increase magnification, one must decrease the focal length \(f\), which requires a thicker lens with highly curved spherical surfaces.<br>
+In practice, extremely thick lenses introduce severe optical defects:
+<ol>
+<li><strong>Spherical Aberration:</strong> Marginal and paraxial rays focus at different points along the optical axis, causing blurriness.</li>
+<li><strong>Chromatic Aberration:</strong> Different constituent wavelengths of white light refract by different amounts, creating colored fringes around the image.</li>
+</ol>
+Because of these aberrations and mechanical manufacturing limits, simple microscopes are practically restricted to magnifications of \(m \lesssim 9\). For higher magnifications, a compound microscope is required.
+</div>
+</section>
+<section>
+<h2>Defining Angular Magnification (Magnifying Power)</h2>
+<p>
+Because the human eye evaluates apparent size by the visual angle subtended at the retina, optical instruments are characterized by their <strong>Magnifying Power (Angular Magnification, \(m\))</strong> rather than purely linear magnification.
+</p>
+<p>
+<strong>Magnifying Power (\(m\))</strong> is defined as the ratio of the visual angle subtended at the eye by the final image formed by the instrument to the visual angle subtended by the object when placed at the near point and viewed directly by the unaided eye:
+</p>
+<div class="math-block">
+\[
+\boxed{m = \frac{\theta_i}{\theta_o}}
+\]
+</div>
+<p>
+where:
+</p>
+<ul class="model-box">
+<li>\(\theta_i\) is the angle subtended at the eye by the <strong>final image formed by the microscope</strong>.</li>
+<li>\(\theta_o\) is the angle subtended at the eye by the <strong>object placed at the near point \(D\) without the instrument</strong> (\(\theta_o \approx h/D\)).</li>
+</ul>
+<h3>Two Standard Operating Adjustments:</h3>
+<p>
+The final image produced by the microscope must lie within the range of clear vision of the unaided eye: \(-\infty \lt v \le -D\) . Thus, the two standard operating adjustments correspond to the two limiting positions of the final image.
+</p>
+<ol class="model-box">
+<li><strong>Near-Point Adjustment (Maximum Magnification / Stressed Eye):</strong> The final image is formed at the near point, \(v=-D=-25\text{ cm}\). This gives the maximum visual angle and hence maximum magnifying power, but the eye operates at its maximum accommodation.</li>
+<li><strong>Normal Adjustment (Relaxed Eye):</strong> The final image is formed at infinity, \(v\to-\infty\). The ciliary muscles are fully relaxed, allowing comfortable, fatigue-free viewing.</li>
+</ol>
+</section>
+<section>
+<h2>Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./03a-simple-microscope.html">1. Simple Microscope</a>
+<a href="./03b-compound-microscope.html">2. Compound Microscope</a>
+</div>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

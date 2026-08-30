@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compound Microscope | Microscopes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-microscopes.html" class="back-btn">
+<span>&larr;</span> Back to Microscopes
+</a>
+</nav>
+<h1>Compound Microscope</h1>
+<p class="subtitle">
+Magnification through a two-lens system.
+</p>
+<section>
+<h2>Compound Microscope</h2>
+<p>
+A compound microscope uses more than one convex lens arranged such that their magnifications compound each other to produce much higher magnifying power than a simple microscope.
+</p>
+<p>
+The standard compound microscope consists of two coaxial converging lenses:
+</p>
+<ul class="model-box">
+<li><strong>Objective Lens:</strong> The lens facing the object. It has a very short focal length (\(f_o\)) and a small aperture. It forms a real, inverted, and magnified intermediate image of the object.</li>
+<li><strong>Eyepiece (Ocular) Lens:</strong> The lens close to the eye. It has a slightly larger focal length (\(f_e\)) and larger aperture than the objective. It acts as a simple microscope, taking the intermediate image as its object and forming a highly magnified, virtual final image.</li>
+</ul>
+<div class="insightbox">
+The final image in a compound microscope is inverted with respect to the original object.<br>
+For biological observations, this inversion is usually acceptable.
+</div>
+<p>
+The objective lens may itself be a system of convex lenses. Its combined function as an optical system is to produce a real, inverted, and magnified intermediate image of the object. Hence, we evaluate the <strong>linear magnification</strong> (\(m_o\)) for the objective lens.
+</p>
+<p>
+The eyepiece then functions as a simple microscope to magnify this intermediate image. Hence, we evaluate the <strong>angular magnification</strong> (\(m_e\)) for the eyepiece.
+</p>
+</section>
+<section>
+<h2>Magnifying Power</h2>
+<p>
+The total magnifying power \(M\) of the compound microscope system is the product of the linear magnification of the objective (\(m_o\)) and the angular magnification of the eyepiece (\(m_e\)):
+</p>
+<div class="math-block">
+\[
+\boxed{M = m_o \times m_e}
+\]
+</div>
+<p>
+The object is placed at distance \(u_o\) in front of the objective. To form a real, inverted, and magnified intermediate image at distance \(v_o\), the object distance must satisfy \(f_o \lt |u_o| \lt 2f_o\).
+</p>
+<p>
+This real intermediate image (of height \(h_i'\)) is formed within the focal length \(f_e\) of the eyepiece, serving as the object for the eyepiece. The final virtual image seen by the observer's eye is formed by the eyepiece.
+</p>
+<p>
+The linear magnification of the objective lens \(m_o\) in magnitude is given by:
+</p>
+\[
+m_o = \frac{|v_o|}{|u_o|} = \frac{|h_i'|}{|h_o|}
+\]
+<h3>Optical Tube Length (\(L\)):</h3>
+<p>
+To describe the magnifying power of compound microscope, a new parameter that bridges both lenses is introduced - called as the <strong>optical tube length \(L\)</strong>
+</p>
+<p>
+It is defined as the distance between the focus of the objective (\(F_o'\)) and the focus of the eyepiece (\(F_e\)). These 2 focii are the ones that are between the 2 lenses and inside the casing.
+</p>
+\[
+\boxed{L = \text{distance between } F_o' \text{ and } F_e}
+\]
+If \(L_{\text{separation}}\) is the physical distance between the two lenses, then:
+\[
+L_{\text{separation}} = f_o + L + f_e \implies \boxed{L = L_{\text{separation}} - f_o - f_e}
+\]
+<p>
+Optical tube length is used to bridge the image distance of the intermediate image formed by objective. We describe \(v_o\) for the 2 boundary cases of magnification. 
+</p>
+<ul class="model-box">
+<li><strong>In Normal Adjustment:</strong> The objective forms the intermediate image <strong>exactly at</strong> \(F_e\). Therefore, the image distance from the objective is precisely \(v_o = f_o + L\), which gives \(v_o - f_o = L\) and \(m_o = \frac{L}{f_o}\) .</li>
+<li><strong>In Near-Point Adjustment:</strong> The intermediate image is formed <strong>inside</strong> \(F_e\) (at \(|u_e| \lt f_e\)). Thus, \(v_o \neq f_o + L\), and the exact magnification requires \(m_o = \frac{v_o}{|u_o|}\) .</li>
+</ul>
+<h3>Case 1: Final Image at Infinity (Normal Adjustment / Relaxed Eye)</h3>
+<p>
+This is the standard operating state of the microscope for fatigue-free observation.
+</p>
+<p>
+The objective forms the real, inverted intermediate image exactly at the principal focus of the eyepiece (\(|u_e| = f_e\)). The eyepiece then projects the final virtual image to <strong>infinity</strong> (\(v_e \to -\infty\)).
+</p>
+<p>
+The angular magnification of the eyepiece in normal adjustment is:
+</p>
+\[
+m_e = \frac{D}{f_e}
+\]
+<p>
+For the objective, the intermediate image distance is \(v_o = f_o + L\). By similar triangles on the ray diagram passing through the focus \(F_o'\):
+</p>
+\[
+m_o = \frac{|h_i'|}{|h_o|} = \frac{v_o - f_o}{f_o} = \frac{L}{f_o}
+\]
+<p>
+Multiplying \(m_o\) and \(m_e\), the magnifying power in normal adjustment is:
+</p>
+<div class="math-block">
+\[
+\boxed{M_{\text{relaxed}} = m_o \times m_e = \left(\frac{v_o}{|u_o|}\right)\left(\frac{D}{f_e}\right) = \left(\frac{L}{f_o}\right)\left(\frac{D}{f_e}\right)}
+\]
+</div>
+<p>
+The separation between the two lenses in normal adjustment is:
+</p>
+<div class="math-block">
+\[
+\boxed{L_{\text{tube}} = v_o + f_e = f_o + L + f_e}
+\]
+</div>
+
+<h3>Case 2: Final Image at Least Distance of Distinct Vision (Near Point / Stressed Eye)</h3>
+<p>
+To achieve maximum magnification, the objective forms the intermediate image inside the focal length of the eyepiece (\(|u_e| \lt f_e\)) such that the eyepiece forms the final virtual image at the near point (\(v_e = -D = -25\text{ cm}\)).
+</p>
+<p>
+The angular magnification of the eyepiece in near-point adjustment is:
+</p>
+\[
+m_e = 1 + \frac{D}{f_e}
+\]
+<p>
+Using the exact linear magnification of the objective \(m_o = \frac{|v_o|}{|u_o|}\), the total magnifying power is:
+</p>
+<div class="math-block">
+\[
+\boxed{M_{\max} = \left(\frac{v_o}{|u_o|}\right)\left(1 + \frac{D}{f_e}\right)}
+\]
+</div>
+<p>
+When the focal lengths \(f_o\) and \(f_e\) are very small compared to the tube length (so that \(|u_o| \approx f_o\) and \(v_o \approx L\)), this is commonly approximated as:
+</p>
+<div class="math-block">
+\[
+\boxed{M_{\max} \approx \left(\frac{L}{f_o}\right)\left(1 + \frac{D}{f_e}\right)}
+\]
+</div>
+<p>
+The separation between the two lenses in near-point adjustment is:
+</p>
+<div class="math-block">
+\[
+\boxed{L_{\text{tube}} = v_o + |u_e| = v_o + \frac{D f_e}{D + f_e}}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

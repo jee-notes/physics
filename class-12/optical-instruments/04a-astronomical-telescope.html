@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astronomical Telescope | Telescopes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-telescopes.html" class="back-btn">
+<span>&larr;</span> Back to Telescopes
+</a>
+</nav>
+<h1>Astronomical Telescope</h1>
+<p class="subtitle">
+The standard refracting design for celestial observation.
+</p>
+<section>
+<h2>Refracting Telescope</h2>
+<p>
+An astronomical telescope consists of two coaxial converging (convex) lenses mounted in a tube:
+</p>
+<ul class="model-box">
+<li><strong>Objective Lens:</strong> Has a large focal length (\(f_o\)) and a large aperture. Its large aperture allows it to gather sufficient light from faint, distant astronomical objects. It forms a real, inverted, and diminished intermediate image of the celestial object in its focal plane.</li>
+<li><strong>Eyepiece:</strong> Has a short focal length (\(f_e\)) and a smaller aperture. It is positioned such that the intermediate image formed by the objective falls within its focal length, acting as a simple microscope to magnify this intermediate image.</li>
+</ul>
+<div class="insightbox">
+The final image is inverted with respect to the original object.<br>
+Since astronomical bodies are large and distinct, an inverted image does not hinder observations.
+</div>
+</section>
+<section>
+<h2>Magnifying Power</h2>
+<p>
+Magnifying power (\(M\)) is the ratio of the visual angle subtended by the final image at the eye (\(\beta\)) to the visual angle subtended by the distant object at the unaided eye (\(\alpha\)):
+</p>
+<div class="math-block">
+\[
+\boxed{M = \frac{\beta}{\alpha}}
+\]
+</div>
+<p>
+This highlights the key operational difference between a microscope and a telescope. In a compound microscope, \(M = m_o \times m_e\), where the objective provides large linear magnification.
+</p>
+<p>
+In a telescope, the distant object is at infinity, so the objective does not produce angular magnification by itself. All it does is gather light and form a real, inverted intermediate image in its focal plane, preserving the angle \(\alpha \approx \frac{h_i'}{f_o}\).
+</p>
+<p>
+We already saw its example when magnifying glass is used to focus sunlight. The angle of the sun (\(\theta_\odot \approx 0.53^\circ\)) is retained by the real image.
+</p>
+<p>
+The intermediate image formed at distance \(f_o\) serves as the object for the eyepiece, which then acts as a simple microscope to present the observer with a magnified visual angle \(\beta\).
+</p>
+
+<h3>Case 1: Normal Adjustment (Final Image at Infinity / Relaxed Eye)</h3>
+<p>
+In <strong>Normal Adjustment</strong>, the final image is formed by the eyepiece at infinity (\(v_e \to \infty\)), allowing the eye to view the celestial body with relaxed ciliary muscles.
+</p>
+<p>
+This occurs when the intermediate image formed by the objective lies <strong>exactly at the principal focus of the eyepiece</strong> (\(|u_e| = f_e\)).
+</p>
+<p>
+Using the intermediate image height \(h_i'\) to bridge the angular relations:
+</p>
+\[
+\alpha \approx \tan \alpha = \frac{h_i'}{f_o}
+\]
+\[
+\beta \approx \tan \beta = \frac{h_i'}{f_e}
+\]
+<p>
+Substituting these into the definition of magnifying power:
+</p>
+<div class="math-block">
+\[
+\boxed{M_{\text{relaxed}} = \frac{\beta}{\alpha} = \frac{\frac{h_i'}{f_e}}{\frac{h_i'}{f_o}} = \frac{f_o}{f_e}}
+\]
+</div>
+<p>
+To achieve high magnifying power, the objective must have a <strong>large focal length (\(f_o\))</strong> and the eyepiece must have a <strong>short focal length (\(f_e\))</strong>.
+</p>
+
+<h3>Case 2: Near-Point Adjustment (Final Image at \(D\) / Stressed Eye)</h3>
+<p>
+If the final image is formed at the least distance of distinct vision (\(v_e = -D = -25\text{ cm}\)), the eye is in maximum accommodation, producing a slightly larger visual angle.
+</p>
+<p>
+Here, the intermediate image is placed inside the eyepiece focus at distance \(|u_e|\), subtending:
+</p>
+\[
+\beta \approx \tan \beta = \frac{h_i'}{|u_e|}
+\]
+<p>
+The magnifying power becomes:
+</p>
+<div class="math-block">
+\[
+M_{\max} = \frac{\beta}{\alpha} = \frac{\frac{h_i'}{|u_e|}}{\frac{h_i'}{f_o}} = \frac{f_o}{|u_e|}
+\]
+</div>
+<p>
+From the thin-lens formula for the eyepiece (\(\frac{1}{v_e} - \frac{1}{u_e} = \frac{1}{f_e}\) with \(v_e = -D\)):
+</p>
+\[
+\frac{1}{-D} - \frac{1}{-|u_e|} = \frac{1}{f_e} \implies \frac{1}{|u_e|} = \frac{1}{f_e} + \frac{1}{D} = \frac{1}{f_e}\left(1 + \frac{f_e}{D}\right)
+\]
+<p>
+Substituting \(\frac{1}{|u_e|}\) into the magnifying power expression:
+</p>
+<div class="math-block">
+\[
+\boxed{M_{\max} = \frac{f_o}{f_e}\left(1 + \frac{f_e}{D}\right)}
+\]
+</div>
+</section>
+
+<section>
+<h2>Length of Telescope Tube</h2>
+<p>
+The physical length of the telescope tube (\(L\)) is the separation distance between the objective lens and the eyepiece.
+</p>
+<table style="width:100%; border-collapse: collapse; text-align: left;">
+<thead>
+<tr>
+<th>Adjustment State</th>
+<th>Magnifying Power (\(M\))</th>
+<th>Tube Length (\(L\))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal Adjustment (Relaxed Eye, \(v_e \to \infty\))</strong></td>
+<td>\(\displaystyle M = \frac{f_o}{f_e}\)</td>
+<td>\(\displaystyle L = f_o + f_e\)</td>
+</tr>
+<tr>
+<td><strong>Near-Point Adjustment (Stressed Eye, \(v_e = -D\))</strong></td>
+<td>\(\displaystyle M = \frac{f_o}{f_e}\left(1 + \frac{f_e}{D}\right)\)</td>
+<td>\(\displaystyle L = f_o + |u_e| = f_o + \frac{f_e D}{f_e + D}\)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

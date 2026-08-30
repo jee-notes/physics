@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Microscope | Microscopes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-microscopes.html" class="back-btn">
+<span>&larr;</span> Back to Microscopes
+</a>
+</nav>
+<h1>Simple Microscope</h1>
+<p class="subtitle">
+The magnifying glass: utilizing a single convex lens.
+</p>
+<section>
+<h2>Simple Microscope</h2>
+<p>
+A simple microscope is essentially a single convex (converging) lens of short focal length. It is also commonly known as a magnifying glass.
+</p>
+<p>
+The lens is held close to the object, with the object placed at a distance <strong>less than or equal to its focal length</strong>, and the eye is positioned close to the lens on the other side.
+</p>
+<h3>Principle:</h3>
+<p>
+When the object is placed <strong>between the optical center and the principal focus</strong> of a convex lens, a <strong>virtual, erect, and magnified image</strong> is formed on the same side as the object. If the object is placed exactly at the principal focus, the emergent rays are parallel and the image is formed at infinity.
+</p>
+<p>
+By holding the lens close to the eye, the eye views the <strong>virtual image produced by the lens</strong>.
+</p>
+<p>
+For clear vision, the final virtual image should lie within the <strong>range of clear vision of the eye</strong>, i.e. between the near point (\(D\)) and infinity.
+</p>
+<p>
+The two limiting cases are image formation at \(D\), which gives <strong>maximum magnification with maximum accommodation</strong>, and image formation at infinity, called <strong>normal adjustment</strong>, which allows the eye to remain relaxed.
+</p>
+</section>
+<section>
+<h2>Magnifying Power (Stressed)</h2>
+<p>
+The basic problem is to determine the magnifying power \(M\) of a simple microscope of given focal length \(f\) when the eye is in the <strong>stressed state</strong>.
+</p>
+<p>
+For the stressed state, the virtual image is formed at the near point of the eye:
+\(|v|=D\) . The object is therefore placed between the <strong>optical center</strong> and the <strong>principal focus</strong> of the convex lens: \(|u|<f\) .
+</p>
+<p>
+<strong>The stressed state is also the state of maximum magnification for a lens of given focal length.</strong> This is because bringing the object still closer would bring the virtual image closer than \(D\), outside the range of distinct vision of the eye.
+</p>
+<p>
+Thus, for maximum magnification, the object is positioned between the optical center and the principal focus such that the virtual image is formed exactly at the near point \(D\) of the eye.
+</p>
+<p>
+The magnifying power \(M\) of the microscope is defined as the ratio of the angle subtended at the eye by the final image to the angle subtended at the eye by the actual object when viewed directly at the near point \(D\).
+</p>
+<p>
+For small angles, using \(\tan\theta\approx\theta\),
+</p>
+\[
+\theta_o\approx\frac{h_o}{D}
+\]
+\[
+\theta_i\approx\frac{h_i}{|v|}
+\]
+<p>
+Therefore, the angular magnification is
+</p>
+\[
+M=\frac{\theta_i}{\theta_o}=\frac{\frac{h_i}{|v|}}{\frac{h_o}{D}}=\frac{h_i}{h_o}\frac{D}{|v|}
+\]
+<p>
+The linear magnification of the lens is
+</p>
+\[
+m_L=\frac{h_i}{h_o}=\frac{|v|}{|u|}
+\]
+<p>
+Hence,
+</p>
+\[
+M=m_L\frac{D}{|v|}=\frac{|v|}{|u|}\frac{D}{|v|}
+\]
+\[
+\boxed{M=\frac{D}{|u|}}
+\]
+<p>
+Thus, for a finite final image, we can use either
+</p>
+\[
+\boxed{M=m_L\frac{D}{|v|}}
+\]
+<p>
+or, equivalently,
+</p>
+\[
+\boxed{M=\frac{D}{|u|}}
+\]
+<div class="insightbox">
+The two forms are useful in different situations:
+<ul>
+<li>Use \(M=\frac{D}{|u|}\) when the <strong>object distance</strong> is known.</li>
+<li>Use \(M=m_L\frac{D}{|v|}\) when the <strong>image distance</strong> and linear magnification are known.</li>
+</ul>
+</div>
+<p>
+For the stressed state, \(|v|=D\) . Therefore,
+\[
+M=m_L
+\]
+</p>
+<p>
+Using the lens formula
+\[
+\frac{1}{v}-\frac{1}{u}=\frac{1}{f}
+\]
+with \(v=-D\),
+</p>
+\[
+\frac{1}{u}=\frac{1}{v}-\frac{1}{f}
+\]
+\[
+m_L=\frac{v}{u}=v\left(\frac{1}{v}-\frac{1}{f}\right)=1-\frac{v}{f}
+\]
+<p>
+Putting \(v=-D\),
+</p>
+<div class="math-block">
+\[
+\boxed{M=1+\frac{D}{f}}
+\]
+</div>
+<p>
+This is the <strong>maximum possible magnifying power</strong> for a simple microscope of given focal length \(f\).
+</p>
+<p>
+For a normal eye, \(D=25\text{ cm}\). Therefore, a simple microscope with \(f=5\text{ cm}\) has
+\[
+M_{\max}=1+\frac{25}{5}=6
+\]
+This is the maximum magnification we can get from it. Reverse also is true. If we need magnifying power of 6X then we need a convex lens of focal length 5 cm or lesser.
+</p>
+</section>
+<section>
+<h2>Magnifying Power (Normal Adjustment)</h2>
+<p>
+The basic problem is to determine the magnifying power \(M\) of a simple microscope of given focal length \(f\) when it is used in the <strong>normal adjustment</strong> state.
+</p>
+<p>
+In normal adjustment, the object is placed exactly at the principal focus of the convex lens: \(|u|=f\) , so that the virtual image is formed at infinity: \(|v|\to\infty\) .
+</p>
+<p>
+<strong>Normal adjustment is also the state of minimum magnification for a lens of given focal length.</strong> If the object is moved farther from the lens, it crosses the principal focus and the image ceases to be virtual, erect, and magnified.
+</p>
+<p>
+Thus, the minimum magnification is obtained when the object is placed at \(f\), producing a virtual image at the far point \(\infty\) of the eye.
+</p>
+<p>
+Since the final image is now at infinity, its linear magnification cannot be used directly in the form
+\[
+m_L=\frac{h_i}{h_o}
+\]
+because \(h_i\) and \(v\) both tend to infinity. We therefore use the relation between angular and linear magnification derived earlier:
+</p>
+\[
+M=m_L\frac{D}{|v|}
+\]
+<p>
+For a finite image,
+\[
+m_L=\frac{|v|}{|u|}
+\]
+Hence, taking the limiting form as \(|v|\to\infty\),
+</p>
+\[
+M=\frac{|v|}{|u|}\frac{D}{|v|}=\frac{D}{|u|}
+\]
+<p>
+In normal adjustment, \(|u|=f\). Therefore,
+</p>
+<div class="math-block">
+\[
+\boxed{M=\frac{D}{f}}
+\]
+</div>
+<p>
+This is the <strong>minimum magnifying power</strong> for a simple microscope of given focal length \(f\).
+</p>
+<p>
+For a normal eye, \(D=25\text{ cm}\). Therefore, a convex lens of focal length \(5\text{ cm}\) gives:
+\[
+M=\frac{25}{5}=5
+\]
+</p>
+<div class="insightbox">
+<strong>Important Convention:</strong><br>
+In numerical problems, when the magnifying power of a simple microscope is stated without specifying the state of adjustment, it is commonly taken to refer to <strong>normal adjustment</strong>:
+\[
+\boxed{M=\frac{D}{f}}
+\]
+corresponding to viewing with a relaxed eye.
+</div>
+</section>
+<section>
+<h2>Summary</h2>
+<p>
+For a convex lens of focal length \(f\) used as a simple microscope, the magnifying power can be varied between the two limiting adjustments:
+</p>
+<div class="math-block">
+\[
+\boxed{\frac{D}{f}\le M\le 1+\frac{D}{f}}
+\]
+</div>
+<p>
+Consider a convex lens of focal length \(5\text{ cm}\) used as a simple microscope.
+</p>
+<p>
+For the lens to produce a virtual, erect and magnified image, the object must be placed within the focal length:
+\[
+|u|\le f
+\]
+The <strong>minimum magnification</strong> is obtained when the object is placed exactly at the focal point,
+\[
+|u|=f
+\]
+The final image is then formed at infinity, corresponding to <strong>normal adjustment</strong> and a relaxed eye.
+</p>
+\[
+M_{\min}=\frac{D}{f}=\frac{25}{5}=5
+\]
+<p>
+This normal-adjustment value is the <strong>standard magnifying power</strong> of a simple microscope when no other adjustment is specified.
+</p>
+<p>
+Now, keeping the same lens, move the object closer to the lens, so that
+\[
+|u|\lt f
+\]
+The virtual image then moves closer to the lens. As the object is moved progressively closer, the virtual image also moves closer to the eye.
+</p>
+<p>
+The <strong>maximum magnification</strong> is reached when the virtual image is formed exactly at the near point:
+\[
+|v|=D
+\]
+The object cannot be brought any closer while retaining distinct vision, because that would place the virtual image closer than the near point of the eye.
+</p>
+\[
+M_{\max}=1+\frac{D}{f}=1+\frac{25}{5}=6
+\]
+<p>
+Therefore, the complete range of magnification obtainable from this \(5\text{ cm}\) convex lens, when used as a simple microscope, is:
+</p>
+\[
+\boxed{5\le M\le6}
+\]
+<p>
+For a convex lens of focal length \(f=5\text{ cm}\), the object can be moved through a definite range while the lens functions as a simple microscope and the eye continues to obtain a clear image.
+</p>
+<p>
+In <strong>normal adjustment</strong>, the object is placed at the focal point:
+\[
+|u|=f=5\text{ cm}
+\]
+and the final image is formed at infinity. This gives the minimum magnifying power:
+\[
+M_{\min}=\frac{D}{f}=\frac{25}{5}=5
+\]
+</p>
+<p>
+The object can then be moved closer to the lens, increasing the magnifying power. The closest usable position is obtained when the final virtual image reaches the near point:
+\[
+|v|=D=25\text{ cm}
+\]
+Using the lens formula,
+\[
+\frac{1}{f}=\frac{1}{v}-\frac{1}{u}
+\]
+with \(v=-D\),
+\[
+\frac{1}{f}=-\frac{1}{D}+\frac{1}{|u|}
+\]
+Therefore,
+\[
+\boxed{|u|=\frac{Df}{D+f}}
+\]
+For \(D=25\text{ cm}\) and \(f=5\text{ cm}\),
+\[
+|u|=\frac{25\times5}{25+5}=\frac{125}{30}\approx4.17\text{ cm}
+\]
+</p>
+<div class="insightbox">
+Thus, for this \(5\text{ cm}\) convex lens, the object can be moved from
+\[
+\boxed{|u|=5\text{ cm}}
+\]
+at normal adjustment to
+\[
+\boxed{|u|\approx4.17\text{ cm}}
+\]
+at maximum magnification.<br>
+Hence,
+\[
+\boxed{4.17\text{ cm}\le |u|\le5\text{ cm}}
+\]
+and the corresponding magnifying power varies from
+\[
+\boxed{M=5\quad\text{to}\quad M=6}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
