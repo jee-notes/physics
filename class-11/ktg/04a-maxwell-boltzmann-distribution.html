@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Theory of Gases | Maxwell-Boltzmann Distribution</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./04-molecular-speeds-and-averages.html" class="back-btn">
+<span>&larr;</span> Back to Molecular Speeds & Averages
+</a>
+</nav>
+
+<h1>Maxwell-Boltzmann Speed Distribution</h1>
+<p class="subtitle">
+Statistical mechanics of molecular velocities: probability density functions, peak shifts, and temperature broadening.
+</p>
+
+<section>
+<h2>Maxwell-Boltzmann Speed Distribution Function</h2>
+<p>
+In 1859, James Clerk Maxwell derived the theoretical probability distribution governing the speeds of ideal gas molecules in thermal equilibrium at temperature \( T \).
+</p>
+<p>
+The number of molecules \( dN \) having speeds between \( v \) and \( v + dv \) out of a total of \( N \) molecules is given by the <strong>Maxwell-Boltzmann Speed Distribution Law</strong>:
+</p>
+<div class="model-box">
+\[
+\frac{dN}{dv} = N \, f(v) = 4\pi N \left( \frac{m}{2\pi k_B T} \right)^{3/2} v^2 \exp\left( -\frac{m v^2}{2 k_B T} \right)
+\]
+In terms of molar mass \( M = m N_A \) and universal gas constant \( R = N_A k_B \):
+\[
+f(v) = 4\pi \left( \frac{M}{2\pi R T} \right)^{3/2} v^2 e^{-\frac{M v^2}{2 R T}}
+\]
+where:
+<ul>
+<li>\( f(v) = \frac{1}{N} \frac{dN}{dv} \): Speed probability density function (SI Unit: <strong>\( \text{s/m} \)</strong>)</li>
+<li>\( v \): Molecular speed (in \( \text{m/s} \))</li>
+<li>\( m \): Mass of a single molecule</li>
+<li>\( k_B \): Boltzmann constant</li>
+<li>\( T \): Absolute temperature in Kelvin</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Graphical Analysis of the Maxwell Distribution Curve</h2>
+<p>
+Plotting the probability density \( f(v) \) versus speed \( v \) yields the characteristic asymmetric Maxwell-Boltzmann curve:
+</p>
+
+<div class="diagram">
+<svg width="620" height="300" viewBox="0 0 620 300">
+  <!-- Axes -->
+  <line x1="60" y1="250" x2="570" y2="250" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="60" y1="250" x2="60" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="560" y="275" font-size="14" font-weight="bold">Speed v</text>
+  <text x="30" y="35" font-size="14" font-weight="bold">f(v)</text>
+
+  <!-- Curve for T1 (Blue, Tall & Narrow) -->
+  <path d="M 60 250 C 100 250, 140 70, 190 70 C 240 70, 310 210, 520 248" fill="none" stroke="#2980b9" stroke-width="3"/>
+  <text x="195" y="60" font-size="14" fill="#2980b9" font-weight="bold">T1 (Lower Temp)</text>
+
+  <!-- Speed Markers on T1 -->
+  <!-- v_mp -->
+  <line x1="190" y1="70" x2="190" y2="250" stroke="#e74c3c" stroke-dasharray="4" stroke-width="1.5"/>
+  <circle cx="190" cy="70" r="4" fill="#e74c3c"/>
+  <text x="175" y="265" font-size="12" fill="#e74c3c" font-weight="bold">v_mp</text>
+
+  <!-- v_avg -->
+  <line x1="215" y1="95" x2="215" y2="250" stroke="#27ae60" stroke-dasharray="4" stroke-width="1.5"/>
+  <circle cx="215" cy="95" r="4" fill="#27ae60"/>
+  <text x="210" y="280" font-size="12" fill="#27ae60" font-weight="bold">v_avg</text>
+
+  <!-- v_rms -->
+  <line x1="235" y1="120" x2="235" y2="250" stroke="#8e44ad" stroke-dasharray="4" stroke-width="1.5"/>
+  <circle cx="235" cy="120" r="4" fill="#8e44ad"/>
+  <text x="235" y="265" font-size="12" fill="#8e44ad" font-weight="bold">v_rms</text>
+
+  <!-- Curve for T2 > T1 (Orange, Flatter & Broadened) -->
+  <path d="M 60 250 C 120 250, 200 130, 270 130 C 350 130, 440 220, 560 245" fill="none" stroke="#e67e22" stroke-width="3" stroke-dasharray="6,3"/>
+  <text x="310" y="125" font-size="14" fill="#e67e22" font-weight="bold">T2 > T1 (Higher Temp)</text>
+</svg>
+</div>
+
+<div class="concept-box">
+<strong>Geometric Properties of the Curve:</strong>
+<ol>
+<li><strong>Origin Behavior (\( v \to 0 \)):</strong> \( f(v) \propto v^2 \). The curve starts at \( (0,0) \) with zero slope and parabolic curvature. Zero molecules have strictly zero speed.</li>
+<li><strong>High Speed Behavior (\( v \to \infty \)):</strong> As \( v \) becomes large, the exponential decay factor \( e^{-\frac{mv^2}{2k_BT}} \) dominates the polynomial \( v^2 \) factor, causing the curve to approach the horizontal axis asymptotically.</li>
+<li><strong>Total Area Under Curve:</strong> The total area under the probability density curve is normalized to unity:
+\[
+\int_0^\infty f(v) \, dv = 1 \quad \text{or} \quad \int_0^\infty \left(\frac{dN}{dv}\right) dv = N \quad (\text{Total Molecules})
+\]
+</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h2>Physical Significance of Peak and Distribution Tail</h2>
+<ul>
+<li><strong>The Peak (\( v_{\text{mp}} \)):</strong> The highest point on the curve represents the <em>Most Probable Speed</em>. Finding the maximum:
+\[
+\frac{df(v)}{dv} = 0 \implies \frac{d}{dv}\left[ v^2 e^{-\frac{mv^2}{2k_BT}} \right] = 0 \implies 2v - \frac{m v^3}{k_BT} = 0 \implies v_{\text{mp}} = \sqrt{\frac{2k_BT}{m}}
+\]
+</li>
+<li><strong>Asymmetric Tail:</strong> Because speeds can extend to large positive values but cannot be negative, the curve is skewed to the right. Consequently:
+\[
+v_{\text{mp}} < v_{\text{avg}} < v_{\text{rms}}
+\]
+</li>
+<li><strong>Activation Tail:</strong> The high-speed tail contains the energetic molecules capable of surmounting chemical activation barriers or escaping planetary atmospheres (Jeans escape).</li>
+</ul>
+</section>
+
+<section>
+<h2>Effect of Temperature Changes on Velocity Distribution</h2>
+<p>
+When the absolute temperature of a gas is increased from \( T_1 \) to \( T_2 \) (\( T_2 > T_1 \)):
+</p>
+<ol>
+<li><strong>Rightward Shift of Peak:</strong> Since \( v_{\text{mp}} = \sqrt{\frac{2RT}{M}} \propto \sqrt{T} \), the peak shifts toward higher speeds.</li>
+<li><strong>Decrease in Peak Height:</strong> The maximum value of \( f(v) \) is inversely proportional to \( \sqrt{T} \):
+\[
+f(v_{\text{mp}}) \propto \frac{1}{\sqrt{T}}
+\]
+</li>
+<li><strong>Flattening and Broadening:</strong> Because the total number of molecules \( N \) (total area under the curve) is strictly conserved, the curve must broaden and flatten out across a wider range of speeds.</li>
+</ol>
+</section>
+
+<section>
+<h2>Effect of Molecular Mass at Constant Temperature</h2>
+<p>
+At a fixed temperature \( T \), lighter gases have higher average and most probable speeds than heavier gases (\( v \propto 1/\sqrt{M} \)):
+</p>
+<ul>
+<li><strong>Lighter Gas (e.g., \( \text{H}_2, \text{He} \)):</strong> The distribution curve is stretched far to the right, flat, and wide.</li>
+<li><strong>Heavier Gas (e.g., \( \text{O}_2, \text{CO}_2, \text{Xe} \)):</strong> The distribution curve is tall, sharply peaked at low speeds, and narrow.</li>
+</ul>
+
+<div class="insightbox">
+This explains why light atmospheric gases like Hydrogen and Helium have escaped Earth's gravitational pull into space, while heavier gases (Nitrogen and Oxygen) remain gravitationally bound.
+</div>
+</section>
+
+<section>
+<h2>Fraction of Molecules within a Speed Range</h2>
+<p>
+The fraction of molecules having speeds in a finite interval between \( v_1 \) and \( v_2 \) is given by the integral:
+</p>
+<div class="model-box">
+\[
+\frac{\Delta N}{N} = \int_{v_1}^{v_2} f(v) \, dv = \text{Area under the } f(v) \text{ curve between } v = v_1 \text{ and } v = v_2
+\]
+</div>
+<p>
+For a very narrow speed range \( \Delta v \) centered around speed \( v \):
+\[
+\Delta N \approx N \, f(v) \, \Delta v
+\]
+</p>
+
+<div class="examplebox">
+<h3>Solved Example: Ratio of Peak Heights at Different Temperatures</h3>
+<p>
+A gas sample is heated from \( T_1 = 300 \, \text{K} \) to \( T_2 = 1200 \, \text{K} \).
+<br>Find:
+<br>(a) The ratio of the most probable speed \( \frac{v_{\text{mp}, 2}}{v_{\text{mp}, 1}} \).
+<br>(b) The ratio of the maximum value of the distribution function \( \frac{f(v_{\text{mp}, 2})}{f(v_{\text{mp}, 1})} \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>(a) \( v_{\text{mp}} \propto \sqrt{T} \):</p>
+\[
+\frac{v_{\text{mp}, 2}}{v_{\text{mp}, 1}} = \sqrt{\frac{T_2}{T_1}} = \sqrt{\frac{1200}{300}} = \sqrt{4} = \mathbf{2}
+\]
+<p>(b) Substituting \( v_{\text{mp}} = \sqrt{\frac{2k_BT}{m}} \) into \( f(v) \):</p>
+\[
+f(v_{\text{mp}}) = 4\pi \left(\frac{m}{2\pi k_BT}\right)^{3/2} \left(\frac{2k_BT}{m}\right) e^{-1} = \frac{4}{\sqrt{\pi} e} \sqrt{\frac{m}{2k_BT}} \propto \frac{1}{\sqrt{T}}
+\]
+\[
+\frac{f(v_{\text{mp}, 2})}{f(v_{\text{mp}, 1})} = \sqrt{\frac{T_1}{T_2}} = \sqrt{\frac{300}{1200}} = \sqrt{\frac{1}{4}} = \mathbf{\frac{1}{2}}
+\]
+<p>As temperature quadruples, the most probable speed doubles, and the peak height is halved.</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

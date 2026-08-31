@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Theory of Gases | Internal Energy & Specific Heats</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Kinetic Theory of Gases
+</a>
+</nav>
+
+<h1>Internal Energy & Specific Heats from KTG</h1>
+<p class="subtitle">
+Theoretical derivations of molar heat capacities, adiabatic exponents, and thermodynamic properties of gas mixtures.
+</p>
+
+<section>
+<h2>Total Internal Energy of an Ideal Gas</h2>
+<p>
+In the kinetic theory of gases, molecules of an ideal gas exert no intermolecular attractive forces. Therefore, the intermolecular potential energy is identically zero (\( U_{\text{pot}} = 0 \)), and the total macroscopic internal energy \( U \) consists entirely of the kinetic energy of its constituent molecules.
+</p>
+<p>
+For \( n \) moles of an ideal gas possessing \( f \) active degrees of freedom at absolute temperature \( T \):
+</p>
+<div class="model-box">
+\[
+U = n \cdot N_A \left( \frac{f}{2} k_B T \right) = n \left( \frac{f}{2} R T \right)
+\]
+where:
+<ul>
+<li>\( U \): Internal energy of the gas (SI Unit: <strong>Joule (\( \text{J} \))</strong>, Dimension: \( [M L^2 T^{-2}] \))</li>
+<li>\( n \): Number of moles of gas</li>
+<li>\( f \): Active degrees of freedom</li>
+<li>\( R \approx 8.314 \, \text{J}/(\text{mol}\cdot\text{K}) \): Universal gas constant</li>
+<li>\( T \): Absolute temperature in Kelvin</li>
+</ul>
+</div>
+<div class="insightbox">
+Internal energy depends solely on temperature \( T \) and degrees of freedom \( f \). For any process involving temperature change \( \Delta T \):
+\[
+\Delta U = n \left( \frac{f}{2} R \right) \Delta T = \frac{\Delta(PV)}{\gamma - 1} = \frac{P_f V_f - P_i V_i}{\gamma - 1}
+\]
+</div>
+</section>
+
+<section>
+<h2>Theoretical Derivation of Cv from Equipartition Theorem</h2>
+<p>
+The <strong>Molar Heat Capacity at Constant Volume (\( C_v \))</strong> is the rate of change of molar internal energy with respect to temperature:
+</p>
+\[
+C_v = \frac{1}{n} \left(\frac{\partial U}{\partial T}\right)_V = \frac{1}{n} \frac{d}{dT}\left[ n \left(\frac{f}{2} R T\right) \right]
+\]
+<div class="model-box">
+\[
+C_v = \frac{f}{2} R
+\]
+where \( C_v \) is expressed in <strong>\( \text{J}/(\text{mol}\cdot\text{K}) \)</strong>.
+</div>
+</section>
+
+<section>
+<h2>Theoretical Derivation of Cp and Mayer's Relation</h2>
+<p>
+Under constant pressure heating, the heat supplied increases the internal energy and performs boundary work (\( dW = P\,dV = nR\,dT \)):
+</p>
+\[
+dQ = dU + dW = n C_v dT + n R dT = n (C_v + R) dT
+\]
+<p>
+By definition of molar heat capacity at constant pressure (\( dQ = n C_p dT \)):
+</p>
+<div class="model-box">
+\[
+C_p = C_v + R = \frac{f}{2} R + R = \left( \frac{f}{2} + 1 \right) R = \left( \frac{f + 2}{2} \right) R
+\]
+\[
+C_p - C_v = R \quad \text{(Mayer's Relation)}
+\]
+</div>
+</section>
+
+<section>
+<h2>Specific Heat Ratio for Various Gas Atomicity</h2>
+<p>
+The <strong>Adiabatic Index (Poisson's Ratio, \( \gamma \))</strong> is the ratio of molar heat capacities:
+</p>
+<div class="model-box">
+\[
+\gamma = \frac{C_p}{C_v} = \frac{\left(\frac{f}{2}+1\right)R}{\frac{f}{2}R} = 1 + \frac{2}{f}
+\]
+</div>
+
+<p>
+Theoretical values derived from KTG across molecular atomicities:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Gas Type</th>
+<th>Degrees of Freedom (\( f \))</th>
+<th>\( C_v = \frac{f}{2}R \)</th>
+<th>\( C_p = C_v + R \)</th>
+<th>\( \gamma = \frac{C_p}{C_v} = 1 + \frac{2}{f} \)</th>
+<th>Experimental Verification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monoatomic</strong></td>
+<td>3</td>
+<td>\( \frac{3}{2}R \approx 12.47 \, \text{J}/(\text{mol}\cdot\text{K}) \)</td>
+<td>\( \frac{5}{2}R \approx 20.78 \, \text{J}/(\text{mol}\cdot\text{K}) \)</td>
+<td>\( \frac{5}{3} \approx \mathbf{1.67} \)</td>
+<td>Helium (\( \gamma = 1.66 \)), Argon (\( \gamma = 1.67 \))</td>
+</tr>
+<tr>
+<td><strong>Diatomic (Rigid)</strong></td>
+<td>5</td>
+<td>\( \frac{5}{2}R \approx 20.78 \, \text{J}/(\text{mol}\cdot\text{K}) \)</td>
+<td>\( \frac{7}{2}R \approx 29.10 \, \text{J}/(\text{mol}\cdot\text{K}) \)</td>
+<td>\( \frac{7}{5} = \mathbf{1.40} \)</td>
+<td>\( \text{N}_2 \) (\( \gamma = 1.40 \)), \( \text{O}_2 \) (\( \gamma = 1.40 \)), Air (\( \gamma \approx 1.4 \))</td>
+</tr>
+<tr>
+<td><strong>Diatomic (Vibrating)</strong></td>
+<td>7</td>
+<td>\( \frac{7}{2}R \approx 29.10 \, \text{J}/(\text{mol}\cdot\text{K}) \)</td>
+<td>\( \frac{9}{2}R \approx 37.41 \, \text{J}/(\text{mol}\cdot\text{K}) \)</td>
+<td>\( \frac{9}{7} \approx \mathbf{1.29} \)</td>
+<td>\( \text{Cl}_2 \) at elevated temperature</td>
+</tr>
+<tr>
+<td><strong>Non-linear Polyatomic</strong></td>
+<td>6</td>
+<td>\( 3R \approx 24.94 \, \text{J}/(\text{mol}\cdot\text{K}) \)</td>
+<td>\( 4R \approx 33.26 \, \text{J}/(\text{mol}\cdot\text{K}) \)</td>
+<td>\( \frac{4}{3} \approx \mathbf{1.33} \)</td>
+<td>\( \text{CH}_4 \) (\( \gamma \approx 1.31 \)), \( \text{H}_2\text{O} \) vapor (\( \gamma \approx 1.33 \))</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Molar Heat Capacity and Internal Energy of Gas Mixtures</h2>
+<p>
+Consider a non-reacting mixture of \( k \) gases containing \( n_1, n_2, \dots, n_k \) moles with degrees of freedom \( f_1, f_2, \dots, f_k \) at temperature \( T \).
+</p>
+
+<h3>1. Total Internal Energy of Mixture:</h3>
+\[
+U_{\text{mix}} = U_1 + U_2 + \dots = \left( n_1 \frac{f_1}{2} + n_2 \frac{f_2}{2} + \dots \right) R T
+\]
+
+<h3>2. Equivalent \( C_{v,\text{mix}} \) and \( C_{p,\text{mix}} \):</h3>
+<div class="model-box">
+\[
+C_{v,\text{mix}} = \frac{n_1 C_{v1} + n_2 C_{v2} + \dots + n_k C_{vk}}{n_1 + n_2 + \dots + n_k} = \frac{\sum n_i C_{vi}}{\sum n_i}
+\]
+\[
+C_{p,\text{mix}} = C_{v,\text{mix}} + R = \frac{\sum n_i C_{pi}}{\sum n_i}
+\]
+</div>
+
+<h3>3. Equivalent Mixture Ratio \( \gamma_{\text{mix}} \):</h3>
+<div class="model-box">
+\[
+\gamma_{\text{mix}} = \frac{C_{p,\text{mix}}}{C_{v,\text{mix}}} = \frac{\sum n_i C_{pi}}{\sum n_i C_{vi}} = \frac{\sum n_i \left(\frac{\gamma_i}{\gamma_i - 1}\right)}{\sum n_i \left(\frac{1}{\gamma_i - 1}\right)}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Mixture Thermodynamics</h3>
+<p>
+One mole of Helium (\( \text{He} \), monoatomic, \( f_1 = 3 \)) is mixed with two moles of Nitrogen (\( \text{N}_2 \), rigid diatomic, \( f_2 = 5 \)).
+<br>Calculate: (a) Total internal energy at \( 300 \, \text{K} \), (b) \( C_{v,\text{mix}} \), (c) \( \gamma_{\text{mix}} \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>(a) Total Internal Energy:</p>
+\[
+U = n_1 C_{v1} T + n_2 C_{v2} T = (1)\left(\frac{3}{2}R\right)(300) + (2)\left(\frac{5}{2}R\right)(300) = 450R + 1500R = 1950R = 1950 \times 8.314 \approx \mathbf{16.21 \, \text{kJ}}
+\]
+<p>(b) \( C_{v,\text{mix}} \):</p>
+\[
+C_{v,\text{mix}} = \frac{1(1.5R) + 2(2.5R)}{1 + 2} = \frac{1.5R + 5R}{3} = \frac{6.5R}{3} = \frac{13}{6}R \approx \mathbf{2.167 \, R}
+\]
+<p>(c) \( \gamma_{\text{mix}} \):</p>
+\[
+C_{p,\text{mix}} = C_{v,\text{mix}} + R = \frac{13}{6}R + R = \frac{19}{6}R
+\]
+\[
+\gamma_{\text{mix}} = \frac{C_{p,\text{mix}}}{C_{v,\text{mix}}} = \frac{19/6}{13/6} = \frac{19}{13} \approx \mathbf{1.462}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

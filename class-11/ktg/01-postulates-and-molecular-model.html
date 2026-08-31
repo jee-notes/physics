@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Theory of Gases | Postulates & Molecular Model</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Kinetic Theory of Gases
+</a>
+</nav>
+
+<h1>Postulates of KTG & Molecular Model</h1>
+<p class="subtitle">
+The foundational assumptions, particle mechanics, and boundary conditions of ideal gas theory.
+</p>
+
+<section>
+<h2>Macroscopic vs Microscopic Perspective of Gases</h2>
+<p>
+The physical state of a gas can be described from two fundamentally different philosophical and scientific perspectives:
+</p>
+<ul>
+<li><strong>The Macroscopic Perspective (Classical Thermodynamics):</strong> Treats the gas as a continuous medium without reference to its atomic structure. The system is described using large-scale laboratory coordinates such as pressure \( P \), volume \( V \), and temperature \( T \). These quantities are directly measured by macroscopic instruments like pressure gauges, thermometers, and manometers.</li>
+<li><strong>The Microscopic Perspective (Kinetic Theory & Statistical Mechanics):</strong> Recognizes that a macroscopic volume of gas contains an astronomical number of discrete submicroscopic particles (\(\sim 10^{23}\) molecules per mole). It tracks their mechanical properties (mass \( m \), velocity \( \vec{v} \), momentum \( \vec{p} \), kinetic energy \( E_k \)) using Newtonian mechanics and statistical distributions.</li>
+</ul>
+
+<div class="insightbox">
+The primary achievement of the Kinetic Theory of Gases is proving that macroscopic state variables (\( P, T, U \)) are direct statistical reflections of microscopic particle dynamics.
+</div>
+</section>
+
+<section>
+<h2>Basic Postulates of the Kinetic Theory of Gases</h2>
+<p>
+The classical kinetic theory of an ideal gas is established on the following physical postulates:
+</p>
+
+<div class="model-box">
+<ol>
+<li><strong>Discrete Composition:</strong> Every gas consists of an extremely large number of identical, tiny, discrete particles called <em>molecules</em> (or atoms in monoatomic gases).</li>
+<li><strong>Point Mass Approximation:</strong> The physical dimensions of the molecules are vanishingly small compared to the average intermolecular distance between them. Consequently, the actual volume occupied by the gas molecules themselves is entirely negligible compared to the total volume of the container:
+\[
+V_{\text{molecules}} \ll V_{\text{container}}
+\]
+</li>
+<li><strong>Perpetual Chaotic Motion:</strong> The molecules are in continuous, random, chaotic motion in all possible directions with a broad distribution of speeds. The motion is completely <strong>isotropic</strong> (there is no preferred direction of velocity).</li>
+<li><strong>Newtonian Mechanics:</strong> The motion and collisions of individual molecules obey classical Newtonian laws of mechanics.</li>
+<li><strong>Perfect Elasticity:</strong> All collisions (both between molecules and against the container walls) are <strong>perfectly elastic</strong>. There is zero net loss of kinetic energy during impacts.</li>
+<li><strong>Negligible Collision Duration:</strong> The time duration during which a collision takes place is negligibly small compared to the time interval between two successive collisions.</li>
+<li><strong>Zero Intermolecular Forces:</strong> In the absence of collisions, molecules exert absolutely zero attractive or repulsive forces on one another. The potential energy of intermolecular interaction is zero:
+\[
+U_{\text{intermolecular}} = 0 \implies U_{\text{total}} = \sum E_{\text{kinetic, microscopic}}
+\]
+</li>
+<li><strong>Negligible Gravitational Effects:</strong> The kinetic energy of molecular motion is so vastly larger than the gravitational potential energy differences within a typical laboratory vessel that gravitational settling is completely negligible.</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h2>Molecular Model of an Ideal Gas</h2>
+<p>
+Under the KTG framework, an <strong>Ideal Gas</strong> is a theoretical construct that strictly satisfies all the microscopic postulates under all conditions of temperature and pressure.
+</p>
+
+<div class="diagram">
+<svg width="600" height="240" viewBox="0 0 600 240">
+  <!-- Container Box -->
+  <rect x="100" y="30" width="400" height="180" fill="#fdfefe" stroke="#2c3e50" stroke-width="3" rx="8"/>
+  <text x="300" y="20" font-size="14" fill="#2c3e50" font-weight="bold" text-anchor="middle">Rigid Container with Ideal Gas Molecules</text>
+
+  <!-- Molecules and Velocity Vectors -->
+  <!-- Molecule 1 -->
+  <circle cx="160" cy="80" r="5" fill="#e74c3c"/>
+  <line x1="160" y1="80" x2="200" y2="60" stroke="#e74c3c" stroke-width="2"/>
+  <polygon points="195,57 205,58 200,66" fill="#e74c3c"/>
+
+  <!-- Molecule 2 (Colliding with wall) -->
+  <circle cx="495" cy="110" r="5" fill="#2980b9"/>
+  <line x1="460" y1="90" x2="495" y2="110" stroke="#2980b9" stroke-width="2" stroke-dasharray="3,3"/>
+  <line x1="495" y1="110" x2="455" y2="135" stroke="#2980b9" stroke-width="2"/>
+  <polygon points="460,130 450,138 455,145" fill="#2980b9"/>
+
+  <!-- Molecule 3 -->
+  <circle cx="280" cy="140" r="5" fill="#27ae60"/>
+  <line x1="280" y1="140" x2="250" y2="180" stroke="#27ae60" stroke-width="2"/>
+  <polygon points="255,175 248,185 258,182" fill="#27ae60"/>
+
+  <!-- Molecule 4 -->
+  <circle cx="380" cy="70" r="5" fill="#8e44ad"/>
+  <line x1="380" y1="70" x2="420" y2="90" stroke="#8e44ad" stroke-width="2"/>
+  <polygon points="415,85 425,92 417,97" fill="#8e44ad"/>
+
+  <!-- Molecule 5 -->
+  <circle cx="220" cy="170" r="5" fill="#d35400"/>
+  <line x1="220" y1="170" x2="180" y2="150" stroke="#d35400" stroke-width="2"/>
+  <polygon points="185,155 175,147 181,142" fill="#d35400"/>
+
+  <!-- Molecule 6 -->
+  <circle cx="340" cy="160" r="5" fill="#16a085"/>
+  <line x1="340" y1="160" x2="380" y2="175" stroke="#16a085" stroke-width="2"/>
+  <polygon points="375,170 385,177 377,182" fill="#16a085"/>
+</svg>
+</div>
+
+<p>
+<strong>Key Microscopic Parameters of the Ideal Gas Model:</strong>
+</p>
+<ul>
+<li><strong>Molecular Mass (\( m \)):</strong> The rest mass of a single molecule:
+\[
+m = \frac{M}{N_A}
+\]
+where \( M \) is the molar mass (in \( \text{kg/mol} \)) and \( N_A \approx 6.022 \times 10^{23} \, \text{mol}^{-1} \) is Avogadro's number.
+</li>
+<li><strong>Total Number of Molecules (\( N \)):</strong>
+\[
+N = n \cdot N_A
+\]
+where \( n \) is the amount of substance in moles.
+</li>
+<li><strong>Number Density (\( n_0 \) or \( n \)):</strong> The number of molecules per unit volume:
+\[
+n_0 = \frac{N}{V} = \frac{\rho}{m} \quad (\text{SI Unit: } \text{m}^{-3})
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Elastic Collisions and Momentum Exchange at Boundaries</h2>
+<p>
+Consider a single gas molecule of mass \( m \) moving with velocity vector \( \vec{v} = (v_x, v_y, v_z) \) approaching a rigid wall perpendicular to the \( x \)-axis.
+</p>
+<p>
+When the molecule strikes the smooth, stationary wall elastically:
+</p>
+<ul>
+<li>The parallel velocity components remain unchanged: \( v_y' = v_y \), \( v_z' = v_z \).</li>
+<li>The normal velocity component is reversed in direction without change in magnitude: \( v_x' = -v_x \).</li>
+</ul>
+
+<div class="model-box">
+<strong>Change in Momentum of the Molecule:</strong>
+\[
+\Delta p_{x, \text{molecule}} = p_{\text{final}} - p_{\text{initial}} = (-m v_x) - (+m v_x) = -2 m v_x
+\]
+<strong>Momentum Transferred to the Wall:</strong>
+By Newton's Third Law, the momentum delivered to the container wall per collision is:
+\[
+\Delta p_{x, \text{wall}} = +2 m v_x
+\]
+</div>
+<div class="concept-box">
+The continuous, steady macroscopic pressure registered by a pressure sensor is the time-averaged cumulative force produced by trillions of these individual momentum-transfer impacts per second across each square meter of the wall.
+</div>
+</section>
+
+<section>
+<h2>Regime of Validity and Ideal Gas Approximations</h2>
+<p>
+Real gases deviate from ideal behavior because real molecules have finite physical volumes and exert intermolecular attractive forces (van der Waals interactions).
+</p>
+
+<h3>When do Real Gases behave like Ideal Gases?</h3>
+<div class="model-box">
+A real gas approaches ideal gas behavior under:
+\[
+\mathbf{\text{High Temperature } (T \uparrow)} \quad \text{and} \quad \mathbf{\text{Low Pressure } (P \downarrow)}
+\]
+</div>
+<ul>
+<li><strong>Why Low Pressure?</strong> At low pressure, the gas density is extremely low, meaning the average distance between molecules is huge compared to the molecular diameter. Thus, the actual molecular volume is truly negligible compared to the container volume (\( V_{\text{molecules}} \ll V \)).</li>
+<li><strong>Why High Temperature?</strong> At high temperature, the average molecular kinetic energy (\( \frac{1}{2}m\overline{v^2} \propto T \)) is vastly larger than the weak intermolecular attractive potential energy. Consequently, molecules zip past each other without getting captured or significantly deflected by intermolecular forces.</li>
+</ul>
+
+<div class="examplebox">
+<h3>Conceptual Example: Checking KTG Validity</h3>
+<p>
+At Standard Temperature and Pressure (STP: \( T = 273.15 \, \text{K}, P = 1.013 \times 10^5 \, \text{Pa} \)), the volume of \( 1 \, \text{mole} \) of gas is \( 22.4 \, \text{litres} = 0.0224 \, \text{m}^3 \).
+<br>Estimate the fraction of volume occupied by the molecules themselves if the molecular radius is \( r \approx 10^{-10} \, \text{m} \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>Volume occupied by \( N_A \) molecules:</p>
+\[
+V_{\text{actual}} = N_A \times \left( \frac{4}{3} \pi r^3 \right) = (6.022 \times 10^{23}) \times \left( \frac{4}{3} \pi (10^{-10})^3 \right) \approx 2.52 \times 10^{-6} \, \text{m}^3
+\]
+<p>Fraction of container volume occupied by molecules:</p>
+\[
+\frac{V_{\text{actual}}}{V_{\text{total}}} = \frac{2.52 \times 10^{-6}}{0.0224} \approx 1.1 \times 10^{-4} \approx 0.01\%
+\]
+<p>The molecules occupy only about \( 0.01\% \) of the container space at STP, thoroughly validating the point-mass postulate under standard conditions.</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Theory of Gases | Molecular Speeds & Averages</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Kinetic Theory of Gases
+</a>
+</nav>
+
+<h1>Molecular Speeds & Averages</h1>
+<p class="subtitle">
+Mathematical formulations of RMS, average, and most probable speeds, their ratios, and sonic analogies.
+</p>
+
+<section>
+<h2>Concept of Molecular Velocity Distribution</h2>
+<p>
+Due to billions of random intermolecular collisions occurring every second, the velocity and kinetic energy of any individual gas molecule fluctuate incessantly. Some molecules are temporarily slowed to near-rest after head-on collisions, while others are accelerated to extremely high speeds after glancing collisions.
+</p>
+<p>
+Consequently, a gas in thermal equilibrium does not possess a single uniform speed. Instead, molecular speeds are distributed across a continuous statistical spectrum characterized by three fundamental statistical averages:
+</p>
+<ol>
+<li><strong>Root Mean Square Speed (\( v_{\text{rms}} \))</strong></li>
+<li><strong>Average / Mean Speed (\( v_{\text{avg}} \) or \( \bar{v} \))</strong></li>
+<li><strong>Most Probable Speed (\( v_{\text{mp}} \) or \( v_p \))</strong></li>
+</ol>
+</section>
+
+<section>
+<h2>Root Mean Square Speed and Formulae</h2>
+<p>
+The <strong>Root Mean Square Speed (\( v_{\text{rms}} \))</strong> is defined as the square root of the arithmetic mean of the squares of the speeds of all molecules:
+</p>
+\[
+v_{\text{rms}} = \sqrt{\overline{v^2}} = \sqrt{\frac{v_1^2 + v_2^2 + \dots + v_N^2}{N}}
+\]
+<p>
+Because translational kinetic energy is directly proportional to \( \overline{v^2} \) (\( \overline{E_k} = \frac{1}{2}m\overline{v^2} = \frac{3}{2}k_BT \)), \( v_{\text{rms}} \) directly gauges the thermal energy content of the gas.
+</p>
+
+<div class="model-box">
+<strong>Master Formulas for \( v_{\text{rms}} \):</strong>
+\[
+v_{\text{rms}} = \sqrt{\frac{3 k_B T}{m}} = \sqrt{\frac{3 R T}{M}} = \sqrt{\frac{3 P}{\rho}}
+\]
+where:
+<ul>
+<li>\( v_{\text{rms}} \): Root mean square speed (SI Unit: <strong>\( \text{m/s} \)</strong>, Dimension: \( [L T^{-1}] \))</li>
+<li>\( k_B \approx 1.38 \times 10^{-23} \, \text{J/K} \): Boltzmann constant</li>
+<li>\( R \approx 8.314 \, \text{J}/(\text{mol}\cdot\text{K}) \): Universal gas constant</li>
+<li>\( T \): Absolute temperature in Kelvin</li>
+<li>\( m \): Molecular mass of single molecule (\( \text{kg} \))</li>
+<li>\( M = m N_A \): Molar mass (in <strong>\( \text{kg/mol} \)</strong>; e.g., \( 0.032 \, \text{kg/mol} \) for \( \text{O}_2 \))</li>
+<li>\( P \): Absolute pressure (\( \text{Pa} \))</li>
+<li>\( \rho \): Mass density (\( \text{kg/m}^3 \))</li>
+</ul>
+</div>
+
+<div class="insightbox">
+<strong>Crucial Calculation Warning:</strong> When evaluating \( \sqrt{\frac{3RT}{M}} \), molar mass \( M \) MUST be inserted in <strong>\( \text{kg/mol} \)</strong> (SI Units). For Oxygen (\( \text{O}_2 \)), use \( M = 32 \times 10^{-3} \, \text{kg/mol} \), NOT \( 32 \, \text{g/mol} \)!
+</div>
+</section>
+
+<section>
+<h2>Average or Mean Speed</h2>
+<p>
+The <strong>Average Speed (\( v_{\text{avg}} \) or \( \bar{v} \))</strong> is the simple arithmetic mean of the speeds of all the molecules in the gas:
+</p>
+\[
+v_{\text{avg}} = \frac{v_1 + v_2 + \dots + v_N}{N} = \int_0^\infty v \, f(v) \, dv
+\]
+<p>
+Evaluating the integral using the Maxwell-Boltzmann distribution function yields:
+</p>
+<div class="model-box">
+\[
+v_{\text{avg}} = \sqrt{\frac{8 k_B T}{\pi m}} = \sqrt{\frac{8 R T}{\pi M}} = \sqrt{\frac{8 P}{\pi \rho}} \approx \sqrt{\frac{2.546 R T}{M}}
+\]
+</div>
+<p>
+Average speed directly dictates collision rates and transport phenomena such as diffusion and effusion.
+</p>
+</section>
+
+<section>
+<h2>Most Probable Speed</h2>
+<p>
+The <strong>Most Probable Speed (\( v_{\text{mp}} \) or \( v_p \))</strong> is the speed possessed by the maximum fraction of molecules in the gas sample at temperature \( T \).
+</p>
+<p>
+It corresponds mathematically to the peak (maximum) of the Maxwell-Boltzmann distribution curve (\( \frac{df(v)}{dv} = 0 \)):
+</p>
+<div class="model-box">
+\[
+v_{\text{mp}} = \sqrt{\frac{2 k_B T}{m}} = \sqrt{\frac{2 R T}{M}} = \sqrt{\frac{2 P}{\rho}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Comparison, Ratios, and Ordering of Molecular Speeds</h2>
+<p>
+Comparing the numerical pre-factors under the radical for the three speeds:
+</p>
+\[
+v_{\text{mp}} = \sqrt{2 \left(\frac{RT}{M}\right)} \approx 1.414 \sqrt{\frac{RT}{M}}
+\]
+\[
+v_{\text{avg}} = \sqrt{\frac{8}{\pi} \left(\frac{RT}{M}\right)} \approx \sqrt{2.546 \left(\frac{RT}{M}\right)} \approx 1.596 \sqrt{\frac{RT}{M}}
+\]
+\[
+v_{\text{rms}} = \sqrt{3 \left(\frac{RT}{M}\right)} \approx 1.732 \sqrt{\frac{RT}{M}}
+\]
+
+<div class="model-box">
+<strong>The Fundamental Inequality & Ratio:</strong>
+\[
+\mathbf{v_{\text{rms}} > v_{\text{avg}} > v_{\text{mp}}}
+\]
+\[
+v_{\text{mp}} : v_{\text{avg}} : v_{\text{rms}} = \sqrt{2} : \sqrt{\frac{8}{\pi}} : \sqrt{3} \approx 1 : 1.128 : 1.225
+\]
+\[
+v_{\text{rms}} : v_{\text{avg}} : v_{\text{mp}} = \sqrt{3} : \sqrt{\frac{8}{\pi}} : \sqrt{2} \approx 1.732 : 1.596 : 1.414
+\]
+</div>
+
+<div class="concept-box">
+<strong>Memory Mnemonic ("RAM Rule"):</strong>
+<br>In descending magnitude: \( \mathbf{R} \to \mathbf{A} \to \mathbf{M} \) (\( v_{\text{rms}} > v_{\text{avg}} > v_{\text{mp}} \)).
+</div>
+</section>
+
+<section>
+<h2>Relationship Between RMS Speed and Speed of Sound in Gases</h2>
+<p>
+According to Laplace's formula, the speed of longitudinal sound waves in an ideal gas of adiabatic index \( \gamma = C_p / C_v \) is:
+</p>
+\[
+v_{\text{sound}} = \sqrt{\frac{\gamma R T}{M}} = \sqrt{\frac{\gamma P}{\rho}}
+\]
+<p>
+Comparing \( v_{\text{sound}} \) with the RMS molecular speed \( v_{\text{rms}} = \sqrt{\frac{3RT}{M}} \):
+</p>
+<div class="model-box">
+\[
+\frac{v_{\text{rms}}}{v_{\text{sound}}} = \sqrt{\frac{3}{\gamma}} \implies v_{\text{rms}} = \sqrt{\frac{3}{\gamma}} \, v_{\text{sound}}
+\]
+</div>
+<div class="insightbox">
+Since \( \gamma < 3 \) for all gases (maximum \( \gamma = 5/3 = 1.67 \) for monoatomic gases), \( \sqrt{\frac{3}{\gamma}} > 1 \).
+<br>Therefore, <strong>\( v_{\text{rms}} > v_{\text{sound}} \) always</strong>. Sound is carried by mechanical molecular collisions; information cannot travel through the gas faster than the microscopic particles carrying it!
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Speed Calculation for Oxygen</h3>
+<p>
+Calculate \( v_{\text{mp}} \), \( v_{\text{avg}} \), and \( v_{\text{rms}} \) for Oxygen gas (\( M = 32 \, \text{g/mol} = 0.032 \, \text{kg/mol} \)) at \( 27^\circ\text{C} \) (\( 300 \, \text{K} \)).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+\[
+\frac{RT}{M} = \frac{8.314 \times 300}{0.032} = \frac{2494.2}{0.032} = 77943.75 \, \text{m}^2/\text{s}^2
+\]
+<p>1. Most Probable Speed:</p>
+\[
+v_{\text{mp}} = \sqrt{2 \times 77943.75} = \sqrt{155887.5} \approx \mathbf{394.8 \, \text{m/s}}
+\]
+<p>2. Average Speed:</p>
+\[
+v_{\text{avg}} = \sqrt{\frac{8}{\pi} \times 77943.75} = \sqrt{2.5465 \times 77943.75} = \sqrt{198483} \approx \mathbf{445.5 \, \text{m/s}}
+\]
+<p>3. RMS Speed:</p>
+\[
+v_{\text{rms}} = \sqrt{3 \times 77943.75} = \sqrt{233831.25} \approx \mathbf{483.6 \, \text{m/s}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Detailed Distribution Analysis</h2>
+<div class="chapter-list">
+<a href="./04a-maxwell-boltzmann-distribution.html">4a. Maxwell-Boltzmann Speed Distribution Curve</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

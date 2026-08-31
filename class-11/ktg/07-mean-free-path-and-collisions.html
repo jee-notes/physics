@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Theory of Gases | Mean Free Path & Collisions</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Kinetic Theory of Gases
+</a>
+</nav>
+
+<h1>Mean Free Path & Molecular Collisions</h1>
+<p class="subtitle">
+Collision cross-sections, kinetic derivation of mean free path, parametric variations, and transport phenomena.
+</p>
+
+<section>
+<h2>Concept of Molecular Diameter and Collision Cross-Section</h2>
+<p>
+Although ideal gas molecules are treated as point masses in early KTG derivations, real molecules possess a finite physical size. When two spherical molecules, each of effective hard-sphere diameter \( d \), approach each other, a collision occurs whenever the center-to-center distance between them becomes less than or equal to \( d \).
+</p>
+
+<div class="diagram">
+<svg width="600" height="220" viewBox="0 0 600 220">
+  <!-- Swept Collision Cylinder -->
+  <rect x="120" y="60" width="360" height="100" fill="#eafaf1" stroke="#2ecc71" stroke-width="2" rx="10"/>
+  <ellipse cx="120" cy="110" rx="20" ry="50" fill="#d4efdf" stroke="#2ecc71" stroke-width="2"/>
+  <ellipse cx="480" cy="110" rx="20" ry="50" fill="#d4efdf" stroke="#2ecc71" stroke-width="2"/>
+
+  <!-- Center Moving Molecule -->
+  <circle cx="120" cy="110" r="15" fill="#e74c3c"/>
+  <line x1="120" y1="110" x2="480" y2="110" stroke="#e74c3c" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="480" cy="110" r="15" fill="#e74c3c"/>
+  <text x="300" y="100" font-size="14" fill="#e74c3c" font-weight="bold">v_avg · Δt</text>
+
+  <!-- Stationary Target Molecule at edge of cylinder -->
+  <circle cx="340" cy="70" r="15" fill="#2980b9"/>
+  <line x1="340" y1="110" x2="340" y2="70" stroke="#2c3e50" stroke-width="1.5"/>
+  <text x="350" y="95" font-size="12">d</text>
+
+  <!-- Radius / Diameter Indicators -->
+  <line x1="120" y1="110" x2="120" y2="60" stroke="#2c3e50" stroke-width="1.5"/>
+  <text x="95" y="85" font-size="13" font-weight="bold">d</text>
+  <text x="300" y="190" font-size="13" fill="#27ae60" font-weight="bold" text-anchor="middle">Collision Cross-Section Area σ = π d²</text>
+</svg>
+</div>
+
+<p>
+The circular area of radius \( d \) centered on a moving molecule is its <strong>Collision Cross-Section (\( \sigma \))</strong>:
+</p>
+<div class="model-box">
+\[
+\sigma = \pi d^2
+\]
+where \( d \) is the effective molecular diameter (typically \( \sim 10^{-10} \, \text{m} = 1 \, \text{Å} \)).
+</div>
+</section>
+
+<section>
+<h2>Collision Frequency and Collision Rate</h2>
+<p>
+Let \( n = N/V \) be the molecular number density (molecules per unit volume).
+</p>
+<p>
+If a single molecule moves with average speed \( v_{\text{avg}} \) for a time interval \( \Delta t \), it sweeps out an imaginary cylindrical volume of cross-sectional area \( \sigma = \pi d^2 \) and length \( v_{\text{avg}} \Delta t \):
+</p>
+\[
+V_{\text{swept}} = (\pi d^2) (v_{\text{avg}} \Delta t)
+\]
+<p>
+The single molecule will collide with every other molecule whose center lies within this swept volume. The number of collisions it experiences in time \( \Delta t \) is:
+</p>
+\[
+\text{Collisions} = n \cdot V_{\text{swept}} = n \, (\pi d^2) \, v_{\text{avg}} \, \Delta t
+\]
+<p>
+The <strong>Collision Frequency (\( Z_1 \))</strong> for a single molecule (collisions per second per molecule):
+</p>
+\[
+Z_1 = \frac{\text{Collisions}}{\Delta t} = \pi n d^2 v_{\text{avg}}
+\]
+
+<h3>Relative Velocity Correction:</h3>
+<p>
+In reality, the target molecules are not stationary; all molecules are in simultaneous random thermal motion. The effective collision speed is the <em>average relative speed</em> between any two colliding molecules:
+</p>
+\[
+v_{\text{rel}} = \sqrt{\overline{|\vec{v}_1 - \vec{v}_2|^2}} = \sqrt{\overline{v_1^2} + \overline{v_2^2} - 2\overline{\vec{v}_1\cdot\vec{v}_2}} = \sqrt{\overline{v^2} + \overline{v^2} - 0} = \sqrt{2} \, v_{\text{avg}}
+\]
+<div class="model-box">
+<strong>Corrected Collision Frequency for a Single Molecule (\( Z_1 \)):</strong>
+\[
+Z_1 = \sqrt{2} \pi n d^2 v_{\text{avg}}
+\]
+<strong>Total Collision Rate per Unit Volume (\( Z_{11} \)):</strong>
+Since each collision involves two molecules, multiplying \( Z_1 \) by \( n \) and dividing by \( 2 \) avoids double-counting:
+\[
+Z_{11} = \frac{1}{2} n Z_1 = \frac{1}{\sqrt{2}} \pi n^2 d^2 v_{\text{avg}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Derivation of the Mean Free Path Formula</h2>
+<p>
+The <strong>Mean Free Path (\( \lambda \))</strong> is defined as the average distance traversed by a molecule between two successive collisions.
+</p>
+<div class="model-box">
+\[
+\lambda = \frac{\text{Total distance traveled in time } \Delta t}{\text{Total number of collisions in time } \Delta t} = \frac{v_{\text{avg}} \, \Delta t}{Z_1 \, \Delta t} = \frac{v_{\text{avg}}}{\sqrt{2} \pi n d^2 v_{\text{avg}}}
+\]
+\[
+\lambda = \frac{1}{\sqrt{2} \pi n d^2}
+\]
+where:
+<ul>
+<li>\( \lambda \): Mean Free Path (SI Unit: <strong>meter (\( \text{m} \))</strong>)</li>
+<li>\( n = \frac{N}{V} = \frac{P}{k_B T} \): Number density of gas molecules (\( \text{m}^{-3} \))</li>
+<li>\( d \): Molecular collision diameter (\( \text{m} \))</li>
+</ul>
+</div>
+
+<h3>In Terms of Macroscopic State Variables (\( P, T \)):</h3>
+<p>
+Substituting \( n = \frac{P}{k_B T} \):
+</p>
+<div class="model-box">
+\[
+\lambda = \frac{k_B T}{\sqrt{2} \pi d^2 P}
+\]
+In terms of mass density \( \rho = n m \):
+\[
+\lambda = \frac{m}{\sqrt{2} \pi d^2 \rho}
+\]
+</div>
+</section>
+
+<section>
+<h2>Variation of Mean Free Path with Temperature, Pressure, and Density</h2>
+<p>
+Analyzing the dependence of \( \lambda \) across various thermodynamic conditions:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Thermodynamic Condition</th>
+<th>Constraint</th>
+<th>Formula Dependence</th>
+<th>Variation of \( \lambda \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Constant Volume (Isochoric)</strong></td>
+<td>\( V = \text{const} \implies n = \frac{N}{V} = \text{const} \)</td>
+<td>\( \lambda = \frac{1}{\sqrt{2}\pi n d^2} \)</td>
+<td><strong>\( \lambda \) is Constant</strong> (Independent of \( T \) or \( P \))</td>
+</tr>
+<tr>
+<td><strong>Constant Pressure (Isobaric)</strong></td>
+<td>\( P = \text{const} \)</td>
+<td>\( \lambda = \frac{k_B T}{\sqrt{2}\pi d^2 P} \)</td>
+<td>\( \lambda \propto T \) (\( \lambda \) increases with temperature)</td>
+</tr>
+<tr>
+<td><strong>Constant Temperature (Isothermal)</strong></td>
+<td>\( T = \text{const} \)</td>
+<td>\( \lambda = \frac{k_B T}{\sqrt{2}\pi d^2 P} \)</td>
+<td>\( \lambda \propto \frac{1}{P} \) (\( \lambda \) decreases with pressure)</td>
+</tr>
+<tr>
+<td><strong>Density Variation</strong></td>
+<td>General</td>
+<td>\( \lambda = \frac{m}{\sqrt{2}\pi d^2 \rho} \)</td>
+<td>\( \lambda \propto \frac{1}{\rho} \) (Inversely proportional to density)</td>
+</tr>
+</tbody>
+</table>
+
+<div class="insightbox">
+<strong>Classic JEE Trap Question:</strong> If a gas enclosed in a rigid container is heated from \( 300 \, \text{K} \) to \( 600 \, \text{K} \), what happens to its mean free path?
+<br><strong>Answer:</strong> Because the container is rigid, \( V \) is constant \( \implies n = N/V \) is constant. Therefore, \( \lambda \) remains <strong>strictly unchanged</strong>! (The molecules move faster and collide more frequently, but the average spatial distance between collisions remains invariant).
+</div>
+</section>
+
+<section>
+<h2>Qualitative Overview of Transport Phenomena</h2>
+<p>
+When a gas is in a non-equilibrium state, molecular collisions transport physical quantities across layers, generating three fundamental <strong>Transport Phenomena</strong>:
+</p>
+<ul>
+<li><strong>1. Viscosity (Transport of Momentum):</strong> When adjacent layers of gas move with different drift velocities, molecular exchange between layers transports linear momentum, generating an internal shear stress:
+\[
+\eta_{\text{visc}} \approx \frac{1}{3} \rho \, v_{\text{avg}} \, \lambda \propto \sqrt{T} \quad (\text{Independent of pressure at moderate } P)
+\]
+</li>
+<li><strong>2. Thermal Conduction (Transport of Thermal Energy):</strong> When a temperature gradient \( \frac{dT}{dx} \) exists across a gas, energetic molecules colliding with slower molecules transport internal energy:
+\[
+K_{\text{thermal}} \approx \frac{1}{3} \rho \, C_v \, v_{\text{avg}} \, \lambda \propto \sqrt{T}
+\]
+</li>
+<li><strong>3. Molecular Diffusion (Transport of Mass):</strong> When a concentration gradient \( \frac{dn}{dx} \) exists, random molecular migration transports mass:
+\[
+D \approx \frac{1}{3} v_{\text{avg}} \, \lambda \propto \frac{T^{3/2}}{P}
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Brownian Motion and Evidence for Molecular Reality</h2>
+<p>
+First observed by Robert Brown in 1827 (pollen grains suspended in water) and theoretically explained by Albert Einstein in 1905:
+</p>
+<div class="concept-box">
+<strong>Microscopic Mechanism:</strong>
+<br>Microscopic colloidal particles suspended in a fluid undergo continuous, erratic, zig-zag random motion due to <strong>unbalanced statistical bombardment</strong> from surrounding fluid molecules.
+<br>Because the suspended particle is tiny, the number of molecular collisions on its left and right faces does not balance perfectly at every microsecond, creating a net fluctuating force.
+</div>
+<p>
+Jean Perrin's experimental verification of Einstein's Brownian motion equations provided the conclusive, undeniable proof of the atomic and molecular reality of matter, earning Perrin the 1926 Nobel Prize in Physics.
+</p>
+
+<div class="examplebox">
+<h3>Solved Example: Calculating Mean Free Path</h3>
+<p>
+Estimate the mean free path of Nitrogen molecules at standard temperature and pressure (\( T = 273 \, \text{K}, P = 1.013 \times 10^5 \, \text{Pa} \)), assuming the molecular diameter is \( d = 2.0 \times 10^{-10} \, \text{m} = 2.0 \, \text{Å} \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>Using \( \lambda = \frac{k_B T}{\sqrt{2} \pi d^2 P} \):</p>
+\[
+\lambda = \frac{(1.38 \times 10^{-23}) \times 273}{\sqrt{2} \times 3.1416 \times (2.0 \times 10^{-10})^2 \times (1.013 \times 10^5)}
+\]
+\[
+\lambda = \frac{3.7674 \times 10^{-21}}{1.4142 \times 3.1416 \times (4.0 \times 10^{-20}) \times 1.013 \times 10^5} = \frac{3.7674 \times 10^{-21}}{1.800 \times 10^{-14}} \approx \mathbf{2.09 \times 10^{-7} \, \text{m}} \approx 209 \, \text{nm}
+\]
+<p>Comparison: The mean free path (\( \sim 200 \, \text{nm} \)) is roughly \( 1000 \) times larger than the molecular diameter (\( \sim 0.2 \, \text{nm} \)), corroborating the point-mass assumption of kinetic theory.</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

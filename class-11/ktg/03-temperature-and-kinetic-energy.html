@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Theory of Gases | Temperature & Kinetic Energy</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Kinetic Theory of Gases
+</a>
+</nav>
+
+<h1>Temperature, Kinetic Energy, & Gas Laws</h1>
+<p class="subtitle">
+The molecular interpretation of absolute temperature and the microscopic deduction of empirical gas laws.
+</p>
+
+<section>
+<h2>Kinetic Interpretation of Absolute Temperature</h2>
+<p>
+From the kinetic derivation of pressure, we have:
+</p>
+\[
+P V = \frac{1}{3} m N \overline{v^2} = \frac{2}{3} N \left( \frac{1}{2} m \overline{v^2} \right)
+\]
+<p>
+Comparing this microscopic expression with the macroscopic Ideal Gas Equation of State:
+</p>
+\[
+P V = n R T = N k_B T \quad \left(\text{since } k_B = \frac{R}{N_A} \text{ and } N = n N_A\right)
+\]
+<p>
+Equating the two expressions for \( P V \):
+</p>
+\[
+\frac{2}{3} N \left( \frac{1}{2} m \overline{v^2} \right) = N k_B T
+\]
+<div class="model-box">
+\[
+\overline{E_k} = \frac{1}{2} m \overline{v^2} = \frac{3}{2} k_B T
+\]
+where:
+<ul>
+<li>\( \overline{E_k} \): Average translational kinetic energy per molecule (SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
+<li>\( k_B \approx 1.3806 \times 10^{-23} \, \text{J/K} \): <strong>Boltzmann Constant</strong> (Dimension: \( [M L^2 T^{-2} K^{-1}] \))</li>
+<li>\( T \): Absolute temperature of the gas on the Kelvin scale (SI Unit: <strong>Kelvin (\( \text{K} \))</strong>)</li>
+</ul>
+</div>
+
+<div class="insightbox">
+<strong>Profounds Physical Insight:</strong>
+<br>Absolute temperature \( T \) is directly proportional to the average translational kinetic energy of the gas molecules:
+\[
+T = \frac{2}{3 k_B} \left( \frac{1}{2} m \overline{v^2} \right)
+\]
+Temperature is NOT a property of an isolated single molecule; it is a statistical ensemble average over many particles. Two different gases (e.g., light Helium and heavy Xenon) at the same temperature have <strong>identical average translational kinetic energy</strong> per molecule, even though their individual molecular speeds differ greatly!
+</div>
+</section>
+
+<section>
+<h2>Average Translational Kinetic Energy per Molecule</h2>
+<p>
+Because molecular motion occurs in three-dimensional space with three independent translational degrees of freedom (\( x, y, z \)):
+</p>
+\[
+\overline{E_k} = \frac{1}{2} m \overline{v_x^2} + \frac{1}{2} m \overline{v_y^2} + \frac{1}{2} m \overline{v_z^2} = \frac{3}{2} k_B T
+\]
+<p>
+By spatial isotropy, the average kinetic energy associated with motion along <strong>any single Cartesian axis</strong> is:
+</p>
+<div class="model-box">
+\[
+\overline{E_{kx}} = \frac{1}{2} m \overline{v_x^2} = \frac{1}{2} k_B T, \quad \overline{E_{ky}} = \frac{1}{2} k_B T, \quad \overline{E_{kz}} = \frac{1}{2} k_B T
+\]
+</div>
+</section>
+
+<section>
+<h2>Average Kinetic Energy per Mole of Gas</h2>
+<p>
+For one mole of an ideal gas containing Avogadro's number \( N_A \) of molecules, multiplying the average molecular kinetic energy by \( N_A \) yields:
+</p>
+<div class="model-box">
+\[
+E_{\text{trans, molar}} = N_A \times \left( \frac{3}{2} k_B T \right) = \frac{3}{2} (N_A k_B) T = \frac{3}{2} R T
+\]
+where \( R = N_A k_B \approx 8.314 \, \text{J}/(\text{mol}\cdot\text{K}) \) is the Universal Gas Constant.
+</div>
+
+<p>
+<strong>For \( n \) moles of an ideal gas:</strong>
+</p>
+\[
+E_{\text{trans, total}} = \frac{3}{2} n R T
+\]
+
+<p>
+<strong>Average Translational Kinetic Energy per Unit Mass (Specific Kinetic Energy):</strong>
+</p>
+\[
+E_{\text{trans, mass}} = \frac{E_{\text{trans, molar}}}{M} = \frac{3 R T}{2 M} = \frac{3}{2} r T
+\]
+where \( M \) is the molar mass (in \( \text{kg/mol} \)) and \( r = R/M \) is the characteristic gas constant.
+</p>
+</section>
+
+<section>
+<h2>Physical Meaning of Absolute Zero in Classical KTG</h2>
+<p>
+Setting \( T = 0 \, \text{K} \) in the fundamental relation:
+</p>
+\[
+\frac{1}{2} m \overline{v^2} = \frac{3}{2} k_B (0) = 0 \implies \overline{v^2} = 0 \implies v_{\text{rms}} = 0
+\]
+<div class="concept-box">
+In the framework of classical kinetic theory, <strong>Absolute Zero (\( 0 \, \text{K} \))</strong> is the absolute floor of temperature at which all translational molecular motion ceases entirely, and the pressure of an ideal gas drops to zero.
+<br><em>(Quantum Note: In quantum mechanics, zero-point vibrational energy persists at \( 0 \, \text{K} \) due to Heisenberg's Uncertainty Principle, but classical thermal motion vanishes).</em>
+</div>
+</section>
+
+<section>
+<h2>Microscopic Derivation of Gas Laws</h2>
+<p>
+Starting purely from the kinetic equation \( P = \frac{1}{3} \frac{m N}{V} \overline{v^2} = \frac{2}{3} \frac{N}{V} \left( \frac{1}{2} m \overline{v^2} \right) = \frac{2}{3} \frac{N}{V} \left(\frac{3}{2} k_B T\right) \), all classical empirical gas laws follow rigorously:
+</p>
+
+<h3>1. Boyle's Law (\( T = \text{constant}, n = \text{constant} \)):</h3>
+<p>
+Since \( T \) is constant, \( \overline{v^2} = \text{constant} \). Therefore:
+\[
+P V = \frac{2}{3} N \left(\frac{3}{2} k_B T\right) = \text{constant} \implies P_1 V_1 = P_2 V_2
+\]
+</p>
+
+<h3>2. Charles's Law (\( P = \text{constant}, n = \text{constant} \)):</h3>
+\[
+V = \left( \frac{N k_B}{P} \right) T \implies V \propto T \implies \frac{V_1}{T_1} = \frac{V_2}{T_2}
+\]
+
+<h3>3. Gay-Lussac's Law (\( V = \text{constant}, n = \text{constant} \)):</h3>
+\[
+P = \left( \frac{N k_B}{V} \right) T \implies P \propto T \implies \frac{P_1}{T_1} = \frac{P_2}{T_2}
+\]
+
+<h3>4. Avogadro's Law (Equal \( P, V, T \)):</h3>
+<p>
+Consider two different gases \( 1 \) and \( 2 \) at the same \( P, V, T \):
+\[
+P_1 = \frac{1}{3} \frac{m_1 N_1}{V} \overline{v_1^2}, \qquad P_2 = \frac{1}{3} \frac{m_2 N_2}{V} \overline{v_2^2}
+\]
+Since \( P_1 = P_2 \implies m_1 N_1 \overline{v_1^2} = m_2 N_2 \overline{v_2^2} \).
+<br>Since \( T_1 = T_2 \implies \frac{1}{2} m_1 \overline{v_1^2} = \frac{1}{2} m_2 \overline{v_2^2} \).
+<br>Dividing the two equations:
+<div class="model-box">
+\[
+N_1 = N_2
+\]
+Equal volumes of all gases under identical temperature and pressure contain an identical number of molecules!
+</div>
+</p>
+
+<h3>5. Dalton's Law of Partial Pressures:</h3>
+<p>
+For a mixture of non-reacting gases with molecular counts \( N_1, N_2, \dots \) and masses \( m_1, m_2, \dots \) in volume \( V \) at temperature \( T \):
+\[
+P_{\text{total}} = \frac{1}{3V} \left( m_1 N_1 \overline{v_1^2} + m_2 N_2 \overline{v_2^2} + \dots \right) = \frac{k_B T}{V} (N_1 + N_2 + \dots) = P_1 + P_2 + \dots
+\]
+</p>
+
+<div class="examplebox">
+<h3>Solved Example: Ratio of Molecular Energies</h3>
+<p>
+Vessel \( A \) contains \( 1 \, \text{g} \) of Hydrogen (\( M = 2 \, \text{g/mol} \)) at \( 300 \, \text{K} \), and Vessel \( B \) contains \( 1 \, \text{g} \) of Oxygen (\( M = 32 \, \text{g/mol} \)) at \( 600 \, \text{K} \).
+<br>Find:
+<br>(a) The ratio of average kinetic energy per molecule between Hydrogen and Oxygen.
+<br>(b) The ratio of total translational kinetic energy of the gas in Vessel \( A \) to Vessel \( B \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>(a) Average kinetic energy per molecule depends solely on temperature (\( \overline{E_k} = \frac{3}{2} k_B T \)):</p>
+\[
+\frac{\overline{E_{k, \text{H}_2}}}{\overline{E_{k, \text{O}_2}}} = \frac{T_{\text{H}_2}}{T_{\text{O}_2}} = \frac{300 \, \text{K}}{600 \, \text{K}} = \frac{1}{2}
+\]
+
+<p>(b) Total translational kinetic energy is \( E_{\text{total}} = \frac{3}{2} n R T = \frac{3}{2} \left(\frac{m_{\text{sample}}}{M}\right) R T \):</p>
+\[
+\frac{E_{\text{total, H}_2}}{E_{\text{total, O}_2}} = \frac{\frac{m_H}{M_H} T_H}{\frac{m_O}{M_O} T_O} = \frac{\frac{1}{2} \times 300}{\frac{1}{32} \times 600} = \frac{150}{\frac{600}{32}} = \frac{150 \times 32}{600} = \frac{32}{4} = 8
+\]
+<p>Total translational kinetic energy in the Hydrogen vessel is \( 8 \) times greater due to the much higher mole count of Hydrogen for the same mass.</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

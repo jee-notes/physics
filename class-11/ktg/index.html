@@ -1,255 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinetic Theory of Gases | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #16a085; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #e8f8f5; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Theory of Gases | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
 
-    <h1>Kinetic Theory of Gases</h1>
-    <p style="text-align: center;"><em>Microscopic origin of pressure, temperature, and internal energy.</em></p>
+<h1>Kinetic Theory of Gases</h1>
+<p class="subtitle">
+The statistical bridge connecting microscopic molecular chaos to macroscopic thermodynamic laws.
+</p>
 
-    <section id="model">
-        <h2>1. Molecular Model of an Ideal Gas</h2>
-        <p>
-            The kinetic theory models a gas as a large number of identical molecules
-            moving randomly in all directions.
-        </p>
-
-        <ul>
-            <li>Molecules are point masses</li>
-            <li>Intermolecular forces negligible (except during collisions)</li>
-            <li>Collisions are perfectly elastic</li>
-        </ul>
-
-        <div class="insightbox">
-            KTG replaces macroscopic averages
-            with microscopic statistics.
-        </div>
-    </section>
-
-    <section id="pressure-origin">
-        <h2>2. Origin of Gas Pressure</h2>
-        <p>
-            Gas pressure arises due to repeated collisions
-            of molecules with container walls.
-        </p>
-
-        <div class="formula-block">
-            \[
-            P = \frac{1}{3}\rho \overline{c^2}
-            \]
-        </div>
-
-        <ul>
-            <li>\(\rho\): mass density of gas</li>
-            <li>\(\overline{c^2}\): mean square speed</li>
-        </ul>
-
-        <div class="insightbox">
-            Pressure is a momentum-transfer phenomenon.
-        </div>
-    </section>
-
-    <section id="speed">
-        <h2>3. Molecular Speeds</h2>
-        <p>
-            Gas molecules do not all move with the same speed.
-            We describe them using averages.
-        </p>
-
-        <div class="formula-block">
-            Most probable speed:
-            \[
-            c_p = \sqrt{\frac{2kT}{m}}
-            \]
-        </div>
-
-        <div class="formula-block">
-            Mean speed:
-            \[
-            \bar c = \sqrt{\frac{8kT}{\pi m}}
-            \]
-        </div>
-
-        <div class="formula-block">
-            RMS speed:
-            \[
-            c_{\text{rms}} = \sqrt{\frac{3kT}{m}}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Temperature controls speed distribution,
-            not individual molecular motion.
-        </div>
-    </section>
-
-    <section id="temperature">
-        <h2>4. Temperature and Kinetic Energy</h2>
-        <p>
-            Absolute temperature is a measure of
-            average translational kinetic energy.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \frac{1}{2}m\overline{c^2} = \frac{3}{2}kT
-            \]
-        </div>
-
-        <div class="insightbox">
-            Temperature is a statistical quantity,
-            not a property of a single molecule.
-        </div>
-    </section>
-
-    <section id="ideal-gas">
-        <h2>5. Ideal Gas Equation from KTG</h2>
-        <p>
-            Using molecular interpretation,
-            the ideal gas equation can be derived.
-        </p>
-
-        <div class="formula-block">
-            \[
-            PV = NkT
-            \]
-        </div>
-
-        <p>
-            Where \(N\) is number of molecules and \(k\) is Boltzmann constant.
-        </p>
-
-        <div class="insightbox">
-            Gas laws emerge naturally
-            from molecular motion.
-        </div>
-    </section>
-
-    <section id="internal-energy">
-        <h2>6. Internal Energy of an Ideal Gas</h2>
-        <p>
-            Internal energy equals total kinetic energy
-            of all molecules.
-        </p>
-
-        <div class="formula-block">
-            \[
-            U = \frac{f}{2}NkT
-            \]
-        </div>
-
-        <ul>
-            <li>\(f\): degrees of freedom</li>
-            <li>Monatomic gas: \(f = 3\)</li>
-        </ul>
-
-        <div class="insightbox">
-            Ideal gas has no potential energy contribution.
-        </div>
-    </section>
-
-    <section id="degrees">
-        <h2>7. Degrees of Freedom</h2>
-
-        <div class="grid">
-            <div>
-                <strong>Monatomic</strong>
-                <ul>
-                    <li>3 translational</li>
-                    <li>\(U = \frac{3}{2}RT\)</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Diatomic (room temp)</strong>
-                <ul>
-                    <li>3 translational + 2 rotational</li>
-                    <li>\(U = \frac{5}{2}RT\)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="insightbox">
-            Degrees of freedom depend on temperature.
-        </div>
-    </section>
-
-    <section id="specific-heats">
-        <h2>8. Specific Heats from KTG</h2>
-
-        <div class="formula-block">
-            \[
-            C_V = \frac{f}{2}R
-            \quad,\quad
-            C_P = C_V + R
-            \]
-        </div>
-
-        <div class="formula-block">
-            \[
-            \gamma = \frac{C_P}{C_V}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Heat capacities reflect energy storage modes.
-        </div>
-    </section>
-
-    <section id="limitations">
-        <h2>9. Limitations of KTG</h2>
-        <ul>
-            <li>Fails at high pressure</li>
-            <li>Fails at low temperature</li>
-            <li>Cannot explain liquefaction</li>
-        </ul>
-
-        <div class="insightbox">
-            Real gas behavior requires
-            intermolecular forces.
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>10. Common Mistakes</h2>
-        <ul>
-            <li>Interpreting temperature of a single molecule</li>
-            <li>Mixing macroscopic and microscopic constants</li>
-            <li>Forgetting factor of 3 in RMS speed</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+While classical thermodynamics investigates bulk properties of matter (such as pressure \( P \), volume \( V \), and temperature \( T \)) from a purely macroscopic observational viewpoint without assuming anything about the atomic constituents of matter, the <strong>Kinetic Theory of Gases (KTG)</strong> builds a direct, mechanistic bridge between the microscopic atomic world and macroscopic laboratory observables.
+</p>
+<p>
+Developed through the pioneering works of Daniel Bernoulli, Rudolf Clausius, James Clerk Maxwell, and Ludwig Boltzmann, KTG treats a gas as an immense ensemble of submicroscopic particles (atoms or molecules) in ceaseless, chaotic, random motion. By applying the fundamental laws of classical Newtonian mechanics along with statistical averaging to this vast collection of particles, macroscopic properties emerge naturally:
+</p>
+<ul>
+<li><strong>Pressure</strong> emerges as the time-averaged macroscopic momentum transferred to container walls per unit area during trillions of elastic collisions every second.</li>
+<li><strong>Temperature</strong> emerges as an objective statistical measure of the average translational kinetic energy per molecule.</li>
+<li><strong>Internal Energy</strong> is identified as the sum total of the microscopic kinetic energies (translational, rotational, vibrational) of all the molecules.</li>
+</ul>
+<div class="insightbox">
+KTG replaces purely empirical macroscopic observations with microscopic Newtonian physics and statistical mechanics. A macroscopic state variable does not belong to any single molecule; it is a statistical ensemble average over astronomical numbers of particles.
 </div>
+</section>
 
+<section>
+<h2>Molecular Postulates and Microscopic Foundations</h2>
+<p>
+The classical kinetic theory of an ideal gas is established upon a set of well-defined microscopic postulates:
+</p>
+<ul>
+<li><strong>Point Mass Assumption:</strong> A gas consists of an enormous number of identical, tiny molecules whose actual volume is negligible compared to the total volume occupied by the gas.</li>
+<li><strong>Chaotic Random Motion:</strong> Molecules are in perpetual, isotropic random motion in all directions across a continuous spectrum of velocities.</li>
+<li><strong>Elastic Collisions:</strong> Intermolecular collisions and collisions with the container walls are perfectly elastic, conserving both kinetic energy and linear momentum.</li>
+<li><strong>Negligible Collision Duration:</strong> The time duration of an impact is vanishingly small compared to the time spent traveling freely between collisions.</li>
+<li><strong>Zero Intermolecular Forces:</strong> Molecules exert zero forces on one another except during the brief instant of physical impact (zero intermolecular potential energy).</li>
+</ul>
+</section>
+
+<section>
+<h2>Kinetic Derivation of Pressure and Temperature</h2>
+<p>
+By analyzing the rate of momentum exchange when gas molecules rebound elastically from the container walls, kinetic theory derives the fundamental equation of gas pressure:
+</p>
+<div class="model-box">
+\[
+P = \frac{1}{3} \rho \, \overline{v^2} = \frac{1}{3} \left( \frac{m N}{V} \right) \overline{v^2}
+\]
+where \( \rho \) is the mass density, \( m \) is the molecular mass, \( N \) is the total number of molecules, \( V \) is the volume, and \( \overline{v^2} \) is the mean square speed.
+</div>
+<p>
+Connecting this pressure expression with the ideal gas equation (\( PV = N k_B T \)) establishes the microscopic interpretation of absolute temperature:
+</p>
+<div class="model-box">
+\[
+\frac{1}{2} m \, \overline{v^2} = \frac{3}{2} k_B T \quad \implies \quad E_{\text{trans, molar}} = \frac{3}{2} R T
+\]
+</div>
+</section>
+
+<section>
+<h2>Molecular Speeds and Maxwell-Boltzmann Distribution</h2>
+<p>
+In a gas sample at thermal equilibrium, molecular collisions continuously redistribute energy. Consequently, molecules do not all possess the same speed; instead, their speeds follow the statistical <strong>Maxwell-Boltzmann Distribution</strong>:
+</p>
+<ul>
+<li><strong>Root Mean Square (RMS) Speed:</strong> \( v_{\text{rms}} = \sqrt{\frac{3 k_B T}{m}} = \sqrt{\frac{3 R T}{M}} = \sqrt{\frac{3 P}{\rho}} \)</li>
+<li><strong>Average (Mean) Speed:</strong> \( v_{\text{avg}} = \sqrt{\frac{8 k_B T}{\pi m}} = \sqrt{\frac{8 R T}{\pi M}} = \sqrt{\frac{8 P}{\pi \rho}} \)</li>
+<li><strong>Most Probable Speed:</strong> \( v_{\text{mp}} = \sqrt{\frac{2 k_B T}{m}} = \sqrt{\frac{2 R T}{M}} = \sqrt{\frac{2 P}{\rho}} \)</li>
+</ul>
+<div class="concept-box">
+For any gas at temperature \( T \), the speeds obey the invariant ordering:
+\[
+v_{\text{rms}} > v_{\text{avg}} > v_{\text{mp}} \quad \text{with ratio } \sqrt{3} : \sqrt{\frac{8}{\pi}} : \sqrt{2} \approx 1.732 : 1.596 : 1.414
+\]
+</div>
+</section>
+
+<section>
+<h2>Degrees of Freedom and Equipartition of Energy</h2>
+<p>
+The <strong>Law of Equipartition of Energy</strong> states that in thermal equilibrium at temperature \( T \), the total thermal energy is shared equally among all active quadratic degrees of freedom, each contributing an average energy of \( \frac{1}{2} k_B T \) per molecule (\( \frac{1}{2} R T \) per mole).
+</p>
+<p>
+This provides the theoretical derivation for the molar heat capacities and adiabatic index of gases:
+</p>
+\[
+U = \frac{f}{2} n R T, \quad C_v = \frac{f}{2} R, \quad C_p = \left(\frac{f}{2} + 1\right) R, \quad \gamma = \frac{C_p}{C_v} = 1 + \frac{2}{f}
+\]
+where \( f \) is the number of active degrees of freedom (\( f = 3 \) for monoatomic, \( f = 5 \) for rigid diatomic at room temperature).
+</p>
+</section>
+
+<section>
+<h2>Mean Free Path and Transport Properties</h2>
+<p>
+Real gas molecules have finite cross-sectional diameters \( d \). The average distance a molecule travels between two successive collisions is its <strong>Mean Free Path (\( \lambda \))</strong>:
+</p>
+<div class="model-box">
+\[
+\lambda = \frac{1}{\sqrt{2} \pi n d^2} = \frac{k_B T}{\sqrt{2} \pi d^2 P}
+\]
+where \( n = N/V \) is the molecular number density, \( d \) is the molecular collision diameter, and \( P \) is the absolute pressure.
+</div>
+<p>
+Collisions and mean free path govern all non-equilibrium transport phenomena in gases, including thermal conductivity, viscosity, and molecular diffusion.
+</p>
+</section>
+
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+<li><strong>Postulates of KTG & Molecular Model</strong> — Microscopic assumptions, elastic collisions, and ideal gas approximations.</li>
+<li><strong>Kinetic Derivation of Pressure</strong> — Detailed momentum balance, derivation of \( P = \frac{1}{3}\rho\overline{v^2} \), and kinetic energy density.</li>
+<li><strong>Temperature & Kinetic Energy</strong> — Microscopic meaning of \( T \), molecular translational kinetic energy, and deduction of empirical gas laws.</li>
+<li><strong>Molecular Speeds & Averages</strong> — Formulas and comparisons for \( v_{\text{rms}} \), \( v_{\text{avg}} \), \( v_{\text{mp}} \), and the RAM rule.</li>
+<li><strong>Maxwell-Boltzmann Distribution</strong> — Statistical distribution curves, temperature shifts, and speed interval fractions.</li>
+<li><strong>Degrees of Freedom & Equipartition</strong> — Translational, rotational, and vibrational modes, energy partitioning, and quantum freezing.</li>
+<li><strong>Internal Energy & Specific Heats</strong> — Theoretical derivations of \( C_v, C_p, \gamma \), and gas mixtures from kinetic theory.</li>
+<li><strong>Mean Free Path & Collisions</strong> — Derivation of \( \lambda \), collision frequencies, transport phenomena, and Brownian motion.</li>
+</ul>
+</section>
+
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-postulates-and-molecular-model.html">1. Postulates of KTG & Molecular Model</a>
+<a href="./02-kinetic-derivation-of-pressure.html">2. Kinetic Derivation of Gas Pressure</a>
+<a href="./03-temperature-and-kinetic-energy.html">3. Temperature, Kinetic Energy, & Gas Laws</a>
+<a href="./04-molecular-speeds-and-averages.html">4. Molecular Speeds & Averages</a>
+<a href="./05-degrees-of-freedom-and-equipartition.html">5. Degrees of Freedom & Law of Equipartition</a>
+<a href="./06-internal-energy-and-specific-heats.html">6. Internal Energy & Specific Heats from KTG</a>
+<a href="./07-mean-free-path-and-collisions.html">7. Mean Free Path & Molecular Collisions</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>

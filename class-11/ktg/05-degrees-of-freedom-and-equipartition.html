@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinetic Theory of Gases | Degrees of Freedom & Equipartition</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Kinetic Theory of Gases
+</a>
+</nav>
+
+<h1>Degrees of Freedom & Law of Equipartition</h1>
+<p class="subtitle">
+Energy storage coordinates in molecules, the equipartition theorem, and thermal activation of internal modes.
+</p>
+
+<section>
+<h2>Concept and Definition of Degrees of Freedom</h2>
+<p>
+The <strong>Degrees of Freedom (\( f \))</strong> of a dynamic system is defined as the total number of independent coordinates or independent velocity components required to completely specify the position and configuration of all constituent atoms in space.
+</p>
+<p>
+Equivalently in statistical mechanics, \( f \) represents the total number of independent <strong>quadratic terms</strong> appearing in the total energy expression of a molecule:
+</p>
+\[
+E_{\text{total}} = \sum_{i=1}^f \alpha_i q_i^2
+\]
+<p>
+For a molecule consisting of \( N_a \) atoms:
+</p>
+<div class="model-box">
+\[
+f_{\text{total}} = 3 N_a - k
+\]
+where \( N_a \) is the number of atoms in the molecule and \( k \) is the number of fixed geometric constraints (fixed bond lengths or fixed angles).
+</div>
+</section>
+
+<section>
+<h2>Translational, Rotational, and Vibrational Degrees of Freedom</h2>
+<p>
+The total energy of a molecule is partitioned across three independent mechanical modes:
+</p>
+\[
+f_{\text{total}} = f_{\text{trans}} + f_{\text{rot}} + f_{\text{vib}}
+\]
+
+<h3>1. Translational Modes (\( f_{\text{trans}} = 3 \)):</h3>
+<p>
+The center of mass of any molecule can translate freely along the three independent Cartesian directions (\( x, y, z \)):
+\[
+E_{\text{trans}} = \frac{1}{2} m v_x^2 + \frac{1}{2} m v_y^2 + \frac{1}{2} m v_z^2 \implies f_{\text{trans}} = 3 \quad \text{(Universal for all gases)}
+\]
+</p>
+
+<h3>2. Rotational Modes (\( f_{\text{rot}} \)):</h3>
+<ul>
+<li><strong>Linear Molecules:</strong> Can rotate about two mutually perpendicular axes orthogonal to the internuclear bond axis. Rotation about the bond axis has an imperceptibly tiny moment of inertia (\( I \approx 0 \)), which is quantum-mechanically inactive at ordinary temperatures. Thus, \( f_{\text{rot}} = 2 \):
+\[
+E_{\text{rot}} = \frac{1}{2} I_x \omega_x^2 + \frac{1}{2} I_y \omega_y^2
+\]
+</li>
+<li><strong>Non-Linear Molecules:</strong> Possess three distinct non-zero principal moments of inertia about three mutually orthogonal axes. Thus, \( f_{\text{rot}} = 3 \):
+\[
+E_{\text{rot}} = \frac{1}{2} I_x \omega_x^2 + \frac{1}{2} I_y \omega_y^2 + \frac{1}{2} I_z \omega_z^2
+\]
+</li>
+</ul>
+
+<h3>3. Vibrational Modes (\( f_{\text{vib}} \)):</h3>
+<p>
+At elevated temperatures, atoms vibrate periodically about their equilibrium bond distances. Each vibrational mode involves <strong>two quadratic terms</strong> in the energy (kinetic energy of oscillation + potential energy of bond stretching):
+</p>
+\[
+E_{\text{vib, mode}} = \frac{1}{2} \mu \dot{x}^2 + \frac{1}{2} k_{\text{bond}} x^2
+\]
+<div class="insightbox">
+<strong>Critical Rule for Vibrational Modes:</strong>
+<br>Each active vibrational mode contributes <strong>2 degrees of freedom</strong> (or \( 2 \times \frac{1}{2}k_BT = 1 k_BT \) energy per molecule), unlike translational and rotational modes which contribute only \( 1 \) quadratic term (\( \frac{1}{2}k_BT \)) each!
+</div>
+</section>
+
+<section>
+<h2>Classification for Monoatomic, Diatomic, and Polyatomic Molecules</h2>
+<p>
+A systematic summary of active degrees of freedom across molecular structures:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Molecular Structure</th>
+<th>Translational (\( f_{\text{tr}} \))</th>
+<th>Rotational (\( f_{\text{rot}} \))</th>
+<th>Vibrational Modes</th>
+<th>Total Active \( f \) (Room Temp)</th>
+<th>Total Active \( f \) (High Temp)</th>
+<th>Typical Gases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monoatomic</strong></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td><strong>3</strong></td>
+<td><strong>3</strong></td>
+<td>\( \text{He}, \text{Ne}, \text{Ar}, \text{Kr}, \text{Xe} \)</td>
+</tr>
+<tr>
+<td><strong>Diatomic (Rigid)</strong></td>
+<td>3</td>
+<td>2</td>
+<td>0 (inactive)</td>
+<td><strong>5</strong></td>
+<td><strong>7</strong> (with 1 vib mode)</td>
+<td>\( \text{H}_2, \text{N}_2, \text{O}_2, \text{CO}, \text{HCl} \)</td>
+</tr>
+<tr>
+<td><strong>Linear Polyatomic</strong></td>
+<td>3</td>
+<td>2</td>
+<td>\( 3N_a - 5 \)</td>
+<td><strong>5</strong></td>
+<td>\( 5 + 2(3N_a - 5) \)</td>
+<td>\( \text{CO}_2, \text{C}_2\text{H}_2, \text{BeF}_2 \)</td>
+</tr>
+<tr>
+<td><strong>Non-Linear Polyatomic</strong></td>
+<td>3</td>
+<td>3</td>
+<td>\( 3N_a - 6 \)</td>
+<td><strong>6</strong></td>
+<td>\( 6 + 2(3N_a - 6) \)</td>
+<td>\( \text{H}_2\text{O}, \text{NH}_3, \text{CH}_4, \text{SO}_2 \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Temperature Dependence and Activation of Energy Modes</h2>
+<p>
+In classical physics, degrees of freedom were expected to be constant at all temperatures. However, quantum mechanics dictates that energy levels of rotation and vibration are discrete (quantized):
+</p>
+<ul>
+<li><strong>Low Temperatures (\( T < 100 \, \text{K} \)):</strong> Thermal energy \( k_B T \) is insufficient to excite even the first rotational quantum level (\( \Delta E_{\text{rot}} > k_B T \)). Rotation freezes out; the gas behaves as a pure monoatomic gas with \( f = 3 \).</li>
+<li><strong>Moderate / Room Temperatures (\( 100 \, \text{K} < T < 750 \, \text{K} \)):</strong> Rotational modes are fully activated (\( k_B T \gg \Delta E_{\text{rot}} \)), but vibrational energy spacings remain too wide (\( \Delta E_{\text{vib}} \gg k_B T \)). Diatomic gases exhibit \( f = 5 \).</li>
+<li><strong>High Temperatures (\( T > 1000 \, \text{K} \)):</strong> Vibrational modes become thermally accessible (\( k_B T \ge \Delta E_{\text{vib}} \)), unlocking \( f = 7 \) (or higher).</li>
+</ul>
+</section>
+
+<section>
+<h2>Law of Equipartition of Energy</h2>
+<p>
+Formulated by James Clerk Maxwell and generalized by Ludwig Boltzmann, the <strong>Law of Equipartition of Energy</strong> governs thermal distribution in classical statistical mechanics.
+</p>
+<div class="model-box">
+<strong>Formal Statement:</strong>
+<p>
+<em>For any dynamic system in thermal equilibrium at absolute temperature \( T \), the total internal thermal energy is distributed equally among all active quadratic degrees of freedom, and the average energy associated with each active degree of freedom is exactly equal to:</em>
+</p>
+\[
+\overline{\epsilon} = \frac{1}{2} k_B T \quad (\text{per molecule}) = \frac{1}{2} R T \quad (\text{per mole})
+\]
+where:
+<ul>
+<li>\( k_B \approx 1.38 \times 10^{-23} \, \text{J/K} \): Boltzmann constant</li>
+<li>\( R \approx 8.314 \, \text{J}/(\text{mol}\cdot\text{K}) \): Universal gas constant</li>
+<li>\( T \): Absolute temperature in Kelvin</li>
+</ul>
+</div>
+
+<p>
+<strong>Average Total Energy of a Molecule with \( f \) Active Degrees of Freedom:</strong>
+</p>
+\[
+\overline{E}_{\text{molecule}} = f \left( \frac{1}{2} k_B T \right) = \frac{f}{2} k_B T
+\]
+</section>
+
+<section>
+<h2>Classical Limitations and Quantum Freezing of Degrees of Freedom</h2>
+<p>
+The classical equipartition theorem assumes that energy modes can absorb arbitrarily small amounts of continuous energy. This classical assumption led to historic failures:
+</p>
+<ol>
+<li><strong>Specific Heat of Hydrogen at Low Temperatures:</strong> Below \( 50 \, \text{K} \), the molar heat capacity of \( \text{H}_2 \) drops from \( \frac{5}{2}R \) to \( \frac{3}{2}R \), exactly matching a monoatomic gas.</li>
+<li><strong>Dulong-Petit Law Violations:</strong> The molar heat capacity of diamond and silicon at room temperature is far below the classical \( 3R \) prediction because high-frequency lattice vibrations are frozen.</li>
+</ol>
+<div class="concept-box">
+These discrepancies were resolved only by <strong>Einstein and Debye's Quantum Theories of Specific Heat</strong>, proving that energy is absorbed in discrete quanta \( \hbar \omega \). Below a threshold characteristic temperature \( \Theta = \frac{\hbar \omega}{k_B} \), degrees of freedom "freeze out".
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Total Energy Calculation</h3>
+<p>
+Calculate the total thermal energy contained in \( 0.5 \, \text{moles} \) of Oxygen gas (\( \text{O}_2 \)) at \( 300 \, \text{K} \) assuming rigid rotator behavior.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>For rigid diatomic \( \text{O}_2 \) at \( 300 \, \text{K} \), \( f = 5 \) (\( 3 \) translational + \( 2 \) rotational):</p>
+\[
+U = n \left(\frac{f}{2} R T\right) = (0.5) \left( \frac{5}{2} \times 8.314 \times 300 \right) = 0.5 \times (6235.5) \approx \mathbf{3117.75 \, \text{J}} \approx 3.12 \, \text{kJ}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
