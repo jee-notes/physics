@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Adiabatic Process</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./04-thermodynamic-processes.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamic Processes
+</a>
+</nav>
+
+<h1>Adiabatic Process (Zero Heat Exchange)</h1>
+<p class="subtitle">
+Thermodynamics of thermally insulated systems: Poisson's relations, adiabatic work, and curve comparisons.
+</p>
+
+<section>
+<h2>Definition and Condition (Zero Heat Exchange)</h2>
+<p>
+An <strong>Adiabatic Process</strong> is a thermodynamic transformation in which absolutely no heat enters or leaves the system across its boundary:
+</p>
+<div class="model-box">
+\[
+dQ = 0 \quad \text{and} \quad Q = 0
+\]
+</div>
+<p>
+<strong>Physical Realization Requirements:</strong>
+</p>
+<ol>
+<li>The container walls and piston must be made of a perfectly insulating material (adiabatic boundary).</li>
+<li>Alternatively, the process must occur <strong>extremely rapidly (sudden expansion or compression)</strong> so that negligible time is available for heat to conduct across the boundaries (e.g., propagation of sound waves in air, sudden bursting of an inflated tyre, or compression strokes in an internal combustion engine).</li>
+</ol>
+<p>
+Applying the First Law of Thermodynamics (\( dQ = dU + dW \)):
+</p>
+<div class="model-box">
+\[
+0 = dU + dW \implies dW = -dU = -n \, C_v \, dT
+\]
+\[
+W = -\Delta U = n \, C_v \, (T_i - T_f)
+\]
+</div>
+<div class="concept-box">
+<ul>
+<li><strong>Adiabatic Expansion (\( W > 0 \)):</strong> Work is done <em>by</em> the gas solely at the expense of its own internal energy. Therefore, \( \Delta U < 0 \implies \) <strong>the gas cools down (\( T_f < T_i \))</strong>.</li>
+<li><strong>Adiabatic Compression (\( W < 0 \)):</strong> Work is done <em>on</em> the gas, increasing its internal energy. Therefore, \( \Delta U > 0 \implies \) <strong>the gas heats up (\( T_f > T_i \))</strong>.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Adiabatic Relations Between P, V, and T</h2>
+<p>
+For a quasi-static reversible adiabatic process of an ideal gas, the state variables satisfy <strong>Poisson's Relations</strong>:
+</p>
+
+<h3>1. Derivation of \( P V^\gamma = \text{constant} \):</h3>
+<p>
+From the differential First Law:
+\[
+dQ = n \, C_v \, dT + P \, dV = 0 \implies n \, C_v \, dT = -P \, dV
+\]
+From the ideal gas equation (\( PV = nRT \)), differentiating yields \( P\,dV + V\,dP = nR\,dT \). Substituting \( n\,dT = \frac{P\,dV + V\,dP}{R} \):
+\[
+C_v \left( \frac{P\,dV + V\,dP}{R} \right) = -P \, dV
+\]
+Using Mayer's relation \( R = C_p - C_v \):
+\[
+C_v (P\,dV + V\,dP) = -(C_p - C_v) P \, dV
+\]
+\[
+C_v V \, dP + C_p P \, dV = 0
+\]
+Dividing throughout by \( C_v P V \) and setting \( \gamma = C_p / C_v \):
+\[
+\frac{dP}{P} + \gamma \frac{dV}{V} = 0
+\]
+Integrating both sides:
+<div class="model-box">
+\[
+\ln P + \gamma \ln V = \text{constant} \implies P V^\gamma = \text{constant}
+\]
+</div>
+
+<h3>2. Equivalent State Formulations:</h3>
+<ul>
+<li><strong>Temperature - Volume Relation:</strong> Using \( P = \frac{nRT}{V} \):
+<div class="model-box">
+\[
+T V^{\gamma - 1} = \text{constant} \implies T_1 V_1^{\gamma - 1} = T_2 V_2^{\gamma - 1}
+\]
+</div>
+</li>
+<li><strong>Temperature - Pressure Relation:</strong> Using \( V = \frac{nRT}{P} \):
+<div class="model-box">
+\[
+T^\gamma P^{1-\gamma} = \text{constant} \quad \text{or} \quad \frac{T^\gamma}{P^{\gamma - 1}} = \text{constant} \implies \frac{T_1^\gamma}{P_1^{\gamma - 1}} = \frac{T_2^\gamma}{P_2^{\gamma - 1}}
+\]
+</div>
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Work Done in Adiabatic Expansion and Compression</h2>
+<p>
+To calculate the boundary work done as volume changes from \( V_i \) to \( V_f \) along \( P V^\gamma = K \):
+</p>
+\[
+W = \int_{V_i}^{V_f} P \, dV = \int_{V_i}^{V_f} K V^{-\gamma} \, dV = K \left[ \frac{V^{1-\gamma}}{1-\gamma} \right]_{V_i}^{V_f} = \frac{K V_f^{1-\gamma} - K V_i^{1-\gamma}}{1-\gamma}
+\]
+Since \( K = P_f V_f^\gamma = P_i V_i^\gamma \):
+<div class="model-box">
+\[
+W = \frac{P_i V_i - P_f V_f}{\gamma - 1} = \frac{n R (T_i - T_f)}{\gamma - 1}
+\]
+where:
+<ul>
+<li>\( W \): Work done by the gas (SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
+<li>\( \gamma \): Ratio of specific heats (\( C_p / C_v \))</li>
+<li>\( P_i, V_i, T_i \): Initial state parameters</li>
+<li>\( P_f, V_f, T_f \): Final state parameters</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Adiabatic Slope vs Isothermal Slope Comparison</h2>
+<p>
+Differentiating the adiabatic equation \( P V^\gamma = \text{constant} \):
+</p>
+\[
+\frac{dP}{P} + \gamma \frac{dV}{V} = 0 \implies \left(\frac{dP}{dV}\right)_{\text{adiabatic}} = -\gamma \frac{P}{V}
+\]
+<p>
+Recalling that the isothermal slope is \( \left(\frac{dP}{dV}\right)_{\text{isothermal}} = -\frac{P}{V} \):
+</p>
+<div class="model-box">
+\[
+\text{Slope}_{\text{adiabatic}} = \gamma \times \text{Slope}_{\text{isothermal}}
+\]
+Since \( \gamma > 1 \), the adiabatic curve on a \( P \)-\( V \) plane is always <strong>\( \gamma \) times steeper</strong> than the isothermal curve at any given intersection point \( (P_0, V_0) \).
+</div>
+</section>
+
+<section>
+<h2>Adiabatic Bulk Modulus of an Ideal Gas</h2>
+<p>
+The <strong>Adiabatic Bulk Modulus (\( B_S \))</strong> represents the elastic stiffness of a gas under rapid, adiabatic pressure variations:
+</p>
+<div class="model-box">
+\[
+B_S = -V \left(\frac{dP}{dV}\right)_{\text{adiabatic}} = -V \left(-\gamma \frac{P}{V}\right) = \gamma P
+\]
+where \( P \) is the absolute pressure.
+</div>
+
+<p>
+<strong>Ratio of Elastic Moduli:</strong>
+</p>
+\[
+\frac{B_S}{B_T} = \frac{\gamma P}{P} = \gamma = \frac{C_p}{C_v}
+\]
+<div class="insightbox">
+This fundamental relationship explains Laplace's correction to Newton's formula for the speed of sound in gases: \( v = \sqrt{\frac{B_S}{\rho}} = \sqrt{\frac{\gamma P}{\rho}} \).
+</div>
+</section>
+
+<section>
+<h2>Comparison of Isothermal and Adiabatic Curves</h2>
+<p>
+Starting from a single common initial state \( A \, (P_0, V_0, T_0) \):
+</p>
+
+<div class="diagram">
+<svg width="640" height="320" viewBox="0 0 640 320">
+  <line x1="70" y1="280" x2="580" y2="280" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="70" y1="280" x2="70" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="575" y="305" font-size="14" font-weight="bold">V</text>
+  <text x="45" y="35" font-size="14" font-weight="bold">P</text>
+
+  <!-- Initial Point A -->
+  <circle cx="260" cy="140" r="6" fill="#e74c3c"/>
+  <text x="270" y="135" font-size="15" font-weight="bold" fill="#e74c3c">A (P0, V0, T0)</text>
+
+  <!-- Isothermal Expansion & Compression (blue) -->
+  <path d="M 120 40 Q 180 90 260 140 Q 380 200 520 230" fill="none" stroke="#2980b9" stroke-width="3"/>
+  <text x="525" y="225" font-size="13" fill="#2980b9" font-weight="bold">Isothermal (T = const)</text>
+
+  <!-- Adiabatic Expansion & Compression (purple/steeper) -->
+  <path d="M 160 30 Q 200 70 260 140 Q 340 220 480 270" fill="none" stroke="#8e44ad" stroke-width="3" stroke-dasharray="6,3"/>
+  <text x="485" y="270" font-size="13" fill="#8e44ad" font-weight="bold">Adiabatic (Q = 0, Steeper)</text>
+</svg>
+</div>
+
+<div class="concept-box">
+<strong>Comprehensive Ranking Rules from Common Initial State \( (P_0, V_0) \):</strong>
+<ol>
+<li><strong>During Expansion to the same final volume \( V_f > V_0 \):</strong>
+  <ul>
+    <li>\( P_{\text{iso}} > P_{\text{adia}} \)</li>
+    <li>\( T_{\text{iso}} > T_{\text{adia}} \) (Adiabatic cools down)</li>
+    <li>\( W_{\text{iso}} > W_{\text{adia}} \) (Area under isothermal is strictly larger)</li>
+  </ul>
+</li>
+<li><strong>During Compression to the same final volume \( V_f < V_0 \):</strong>
+  <ul>
+    <li>\( P_{\text{adia}} > P_{\text{iso}} \)</li>
+    <li>\( T_{\text{adia}} > T_{\text{iso}} \) (Adiabatic heats up)</li>
+    <li>\( |W_{\text{adia}}| > |W_{\text{iso}}| \) (More external work is required to compress adiabatically)</li>
+  </ul>
+</li>
+</ol>
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Sudden tyre burst</h3>
+<p>
+An ideal diatomic gas (\( \gamma = 1.4 \)) at \( 27^\circ\text{C} \) (\( 300 \, \text{K} \)) and \( 32 \, \text{atm} \) pressure expands adiabatically to atmospheric pressure (\( 1 \, \text{atm} \)). Find the final temperature of the gas.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>Using the temperature-pressure relation \( \frac{T_2^\gamma}{P_2^{\gamma-1}} = \frac{T_1^\gamma}{P_1^{\gamma-1}} \):</p>
+\[
+T_2 = T_1 \left( \frac{P_2}{P_1} \right)^{\frac{\gamma - 1}{\gamma}} = 300 \left( \frac{1}{32} \right)^{\frac{1.4 - 1}{1.4}} = 300 \left( \frac{1}{2^5} \right)^{\frac{0.4}{1.4}} = 300 \left( 2^{-5} \right)^{2/7} = 300 \times 2^{-10/7} \approx 300 \times 0.3715 \approx 111.4 \, \text{K}
+\]
+<p>In Celsius: \( T_2 = 111.4 - 273.15 \approx -161.7^\circ\text{C} \). The rapid expansion results in severe cooling.</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

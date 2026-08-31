@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Molar Heat Capacities & Mayer's Relation</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./03-first-law-of-thermodynamics.html" class="back-btn">
+<span>&larr;</span> Back to First Law of Thermodynamics
+</a>
+</nav>
+
+<h1>Molar Heat Capacities & Mayer's Relation</h1>
+<p class="subtitle">
+Kinetic origins of specific heats, the isobaric-isochoric disparity, and gas mixture thermodynamics.
+</p>
+
+<section>
+<h2>Molar Heat Capacity at Constant Volume (Cv)</h2>
+<p>
+The <strong>Molar Heat Capacity at Constant Volume (\( C_v \))</strong> is the quantity of heat required to raise the temperature of one mole of a gas by one Kelvin (or \( 1^\circ\text{C} \)) while maintaining its volume strictly constant.
+</p>
+<div class="model-box">
+\[
+C_v = \left( \frac{dQ}{n \, dT} \right)_V = \frac{1}{n} \left( \frac{\partial U}{\partial T} \right)_V
+\]
+where:
+<ul>
+<li>\( C_v \): Molar heat capacity at constant volume (SI Unit: <strong>\( \text{J}/(\text{mol}\cdot\text{K}) \)</strong>, Dimension: \( [M L^2 T^{-2} K^{-1} N^{-1}] \))</li>
+<li>\( dQ \): Heat supplied under isochoric conditions (\( dV = 0 \))</li>
+<li>\( n \): Number of moles of gas</li>
+<li>\( dT \): Temperature increment</li>
+</ul>
+</div>
+
+<p>
+Because no external work is performed in an isochoric process (\( dW = P\,dV = 0 \)), all thermal energy supplied goes entirely into increasing the microscopic internal kinetic energy of the gas:
+</p>
+\[
+dQ = dU \implies dU = n \, C_v \, dT
+\]
+</section>
+
+<section>
+<h2>Molar Heat Capacity at Constant Pressure (Cp)</h2>
+<p>
+The <strong>Molar Heat Capacity at Constant Pressure (\( C_p \))</strong> is the quantity of heat required to raise the temperature of one mole of a gas by one Kelvin while the pressure is maintained strictly constant.
+</p>
+<div class="model-box">
+\[
+C_p = \left( \frac{dQ}{n \, dT} \right)_P
+\]
+where:
+<ul>
+<li>\( C_p \): Molar heat capacity at constant pressure (SI Unit: <strong>\( \text{J}/(\text{mol}\cdot\text{K}) \)</strong>)</li>
+</ul>
+</div>
+
+<p>
+In an isobaric process, heating causes the gas to expand. Consequently, the heat supplied must accomplish <strong>two tasks simultaneously</strong>:
+</p>
+<ol>
+<li>Increase the internal energy (\( dU \)) to raise the temperature by \( dT \).</li>
+<li>Perform external mechanical work (\( dW = P\,dV \)) against the constant external pressure as the volume expands.</li>
+</ol>
+<p>
+Therefore, more heat is required to achieve the same temperature rise at constant pressure than at constant volume:
+</p>
+<div class="concept-box">
+\[
+C_p > C_v \quad \text{always for any gas}
+\]
+</div>
+</section>
+
+<section>
+<h2>Mayer's Relation: Cp - Cv = R</h2>
+<p>
+The quantitative relationship between \( C_p \) and \( C_v \) for an ideal gas is known as <strong>Mayer's Relation</strong>.
+</p>
+
+<h3>Rigorous Derivation:</h3>
+<p>
+Consider 1 mole of an ideal gas (\( n = 1 \)).
+</p>
+<p>
+1. Under constant volume, supplying heat \( dQ_V \) raises temperature by \( dT \):
+\[
+dQ_V = dU = C_v \, dT
+\]
+2. Under constant pressure, supplying heat \( dQ_P \) raises temperature by the same \( dT \):
+\[
+dQ_P = C_p \, dT
+\]
+3. From the First Law of Thermodynamics for the isobaric process:
+\[
+dQ_P = dU + dW
+\]
+\[
+C_p \, dT = dU + P \, dV
+\]
+4. Since \( U \) depends only on \( T \) for an ideal gas, \( dU = C_v \, dT \) in both processes:
+\[
+C_p \, dT = C_v \, dT + P \, dV
+\]
+5. From the ideal gas equation for 1 mole (\( PV = RT \)), differentiating at constant pressure yields:
+\[
+P \, dV = R \, dT
+\]
+6. Substituting \( P\,dV = R\,dT \) into the energy balance:
+\[
+C_p \, dT = C_v \, dT + R \, dT
+\]
+Dividing throughout by \( dT \):
+<div class="model-box">
+\[
+C_p - C_v = R
+\]
+where \( R \approx 8.314 \, \text{J}/(\text{mol}\cdot\text{K}) \) is the Universal Gas Constant.
+</div>
+
+<div class="insightbox">
+For specific heat capacities per unit mass (\( c_p \) and \( c_v \) in \( \text{J}/(\text{kg}\cdot\text{K}) \)):
+\[
+c_p - c_v = \frac{R}{M} = r
+\]
+where \( M \) is the molar mass of the gas (in \( \text{kg/mol} \)) and \( r \) is the characteristic gas constant.
+</div>
+</section>
+
+<section>
+<h2>Ratio of Specific Heats (Gamma)</h2>
+<p>
+The ratio of molar heat capacities is denoted by the dimensionless parameter <strong>\( \gamma \) (Adiabatic Index or Poisson's Ratio)</strong>:
+</p>
+<div class="model-box">
+\[
+\gamma = \frac{C_p}{C_v} = 1 + \frac{R}{C_v} = 1 + \frac{2}{f}
+\]
+where \( f \) is the active degrees of freedom of the gas molecules.
+</div>
+
+<p>
+From \( C_p - C_v = R \) and \( \gamma = C_p / C_v \), we can express \( C_v \) and \( C_p \) directly in terms of \( \gamma \):
+</p>
+\[
+C_v = \frac{R}{\gamma - 1}, \qquad C_p = \frac{\gamma R}{\gamma - 1}
+\]
+</section>
+
+<section>
+<h2>Degrees of Freedom and Heat Capacities for Different Gas Types</h2>
+<p>
+The <strong>Equipartition Theorem of Energy</strong> states that each active quadratic degree of freedom of a gas molecule in thermal equilibrium contributes an average thermal energy of \( \frac{1}{2} k_B T \) per molecule, or \( \frac{1}{2} R T \) per mole.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Gas Atomicity / Structure</th>
+<th>Degrees of Freedom (\( f \))</th>
+<th>\( C_v = \frac{f}{2}R \)</th>
+<th>\( C_p = \left(\frac{f}{2}+1\right)R \)</th>
+<th>\( \gamma = \frac{C_p}{C_v} \)</th>
+<th>Typical Physical Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monoatomic Gas</strong></td>
+<td>3 Translational (\( f = 3 \))</td>
+<td>\( \frac{3}{2}R \)</td>
+<td>\( \frac{5}{2}R \)</td>
+<td>\( \frac{5}{3} \approx 1.67 \)</td>
+<td>\( \text{He}, \text{Ne}, \text{Ar}, \text{Kr} \)</td>
+</tr>
+<tr>
+<td><strong>Diatomic Gas (Rigid, Room Temp)</strong></td>
+<td>3 Trans + 2 Rotational (\( f = 5 \))</td>
+<td>\( \frac{5}{2}R \)</td>
+<td>\( \frac{7}{2}R \)</td>
+<td>\( \frac{7}{5} = 1.40 \)</td>
+<td>\( \text{H}_2, \text{N}_2, \text{O}_2, \text{CO} \)</td>
+</tr>
+<tr>
+<td><strong>Diatomic Gas (High Temp, Vibrating)</strong></td>
+<td>3 Trans + 2 Rot + 2 Vib (\( f = 7 \))</td>
+<td>\( \frac{7}{2}R \)</td>
+<td>\( \frac{9}{2}R \)</td>
+<td>\( \frac{9}{7} \approx 1.29 \)</td>
+<td>\( \text{Cl}_2, \text{Br}_2 \) (at elevated \( T \))</td>
+</tr>
+<tr>
+<td><strong>Non-linear Triatomic / Polyatomic</strong></td>
+<td>3 Trans + 3 Rotational (\( f = 6 \))</td>
+<td>\( 3R \)</td>
+<td>\( 4R \)</td>
+<td>\( \frac{4}{3} \approx 1.33 \)</td>
+<td>\( \text{H}_2\text{O}, \text{NH}_3, \text{CH}_4, \text{SO}_2 \)</td>
+</tr>
+<tr>
+<td><strong>Linear Polyatomic Gas</strong></td>
+<td>3 Trans + 2 Rotational (\( f = 5 \))</td>
+<td>\( \frac{5}{2}R \)</td>
+<td>\( \frac{7}{2}R \)</td>
+<td>\( \frac{7}{5} = 1.40 \)</td>
+<td>\( \text{CO}_2, \text{C}_2\text{H}_2 \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Specific Heat Capacity of Gas Mixtures</h2>
+<p>
+Consider a non-reacting mixture of \( k \) ideal gases containing \( n_1, n_2, \dots, n_k \) moles with molar heat capacities \( C_{v1}, C_{v2}, \dots, C_{vk} \).
+</p>
+
+<h3>1. Equivalent \( C_{v,\text{mix}} \):</h3>
+<p>
+Since internal energy is extensive (\( U_{\text{mix}} = U_1 + U_2 + \dots \)):
+</p>
+<div class="model-box">
+\[
+C_{v,\text{mix}} = \frac{n_1 C_{v1} + n_2 C_{v2} + \dots + n_k C_{vk}}{n_1 + n_2 + \dots + n_k} = \frac{\sum n_i C_{vi}}{\sum n_i}
+\]
+</div>
+
+<h3>2. Equivalent \( C_{p,\text{mix}} \):</h3>
+<div class="model-box">
+\[
+C_{p,\text{mix}} = \frac{n_1 C_{p1} + n_2 C_{p2} + \dots + n_k C_{pk}}{n_1 + n_2 + \dots + n_k} = C_{v,\text{mix}} + R
+\]
+</div>
+
+<h3>3. Equivalent \( \gamma_{\text{mix}} \):</h3>
+<div class="model-box">
+\[
+\gamma_{\text{mix}} = \frac{C_{p,\text{mix}}}{C_{v,\text{mix}}} = \frac{n_1 C_{p1} + n_2 C_{p2} + \dots}{n_1 C_{v1} + n_2 C_{v2} + \dots} = \frac{\sum n_i \left(\frac{\gamma_i}{\gamma_i - 1}\right)}{\sum n_i \left(\frac{1}{\gamma_i - 1}\right)}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Mixture of Helium and Oxygen</h3>
+<p>
+A gas mixture consists of \( 2 \, \text{moles} \) of Helium (monoatomic, \( C_{v1} = 1.5R \)) and \( 3 \, \text{moles} \) of Oxygen (diatomic, \( C_{v2} = 2.5R \)). Calculate \( C_{v,\text{mix}} \), \( C_{p,\text{mix}} \), and \( \gamma_{\text{mix}} \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+\[
+C_{v,\text{mix}} = \frac{2(1.5R) + 3(2.5R)}{2 + 3} = \frac{3R + 7.5R}{5} = \frac{10.5R}{5} = 2.1 \, R
+\]
+\[
+C_{p,\text{mix}} = C_{v,\text{mix}} + R = 2.1R + R = 3.1 \, R
+\]
+\[
+\gamma_{\text{mix}} = \frac{C_{p,\text{mix}}}{C_{v,\text{mix}}} = \frac{3.1R}{2.1R} = \frac{31}{21} \approx 1.476
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

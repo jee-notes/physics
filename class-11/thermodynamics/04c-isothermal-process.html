@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Isothermal Process</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./04-thermodynamic-processes.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamic Processes
+</a>
+</nav>
+
+<h1>Isothermal Process (Constant Temperature)</h1>
+<p class="subtitle">
+Thermodynamics of thermal reservoirs: invariant internal energy, logarithmic work, and isothermal elasticity.
+</p>
+
+<section>
+<h2>Definition and Condition (Constant Temperature)</h2>
+<p>
+An <strong>Isothermal Process</strong> is a thermodynamic transformation in which the absolute temperature of the system remains strictly constant throughout:
+</p>
+<div class="model-box">
+\[
+T = \text{constant} \implies dT = 0 \quad \text{and} \quad \Delta T = 0
+\]
+</div>
+<p>
+<strong>Physical Realization Requirements:</strong>
+</p>
+<ol>
+<li>The container walls must be made of a perfectly conducting material (diathermic boundary) placed in intimate contact with a large constant-temperature thermal reservoir.</li>
+<li>The process must be carried out <strong>infinitely slowly (quasi-statically)</strong> so that any heat generated or absorbed is instantly equilibrated with the reservoir, maintaining \( T_{\text{system}} = T_{\text{reservoir}} \) at every instant.</li>
+</ol>
+<p>
+For an ideal gas, since \( T \) is fixed, the equation of state reduces to <strong>Boyle's Law</strong>:
+</p>
+\[
+P V = n R T_0 = \text{constant} \implies P_1 V_1 = P_2 V_2
+\]
+</section>
+
+<section>
+<h2>Work Done in Isothermal Process</h2>
+<p>
+As the gas expands from volume \( V_i \) to \( V_f \), its pressure varies as \( P = \frac{nRT_0}{V} \). Substituting this into the work integral:
+</p>
+<div class="model-box">
+\[
+W = \int_{V_i}^{V_f} P \, dV = \int_{V_i}^{V_f} \frac{n R T_0}{V} \, dV = n R T_0 \int_{V_i}^{V_f} \frac{dV}{V}
+\]
+\[
+W = n R T_0 \ln\left(\frac{V_f}{V_i}\right) = 2.303 \, n R T_0 \log_{10}\left(\frac{V_f}{V_i}\right)
+\]
+Since \( P_i V_i = P_f V_f \implies \frac{V_f}{V_i} = \frac{P_i}{P_f} \):
+\[
+W = n R T_0 \ln\left(\frac{P_i}{P_f}\right)
+\]
+where:
+<ul>
+<li>\( W \): Work done by the gas (SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
+<li>\( T_0 \): Constant absolute temperature in Kelvin</li>
+<li>\( V_i, V_f \): Initial and final volumes</li>
+<li>\( P_i, P_f \): Initial and final pressures</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Heat Transfer in Isothermal Process</h2>
+<p>
+According to Joule's Law, the internal energy of an ideal gas depends exclusively on absolute temperature. Because \( \Delta T = 0 \):
+</p>
+<div class="model-box">
+\[
+\Delta U = n \, C_v \, \Delta T = 0 \quad \text{(Strictly for an Ideal Gas)}
+\]
+</div>
+<p>
+Applying the First Law of Thermodynamics (\( Q = \Delta U + W \)):
+</p>
+<div class="model-box">
+\[
+Q = W = n R T_0 \ln\left(\frac{V_f}{V_i}\right) = n R T_0 \ln\left(\frac{P_i}{P_f}\right)
+\]
+</div>
+
+<p>
+<strong>Physical Interpretation:</strong>
+</p>
+<ul>
+<li><strong>Isothermal Expansion (\( V_f > V_i \implies W > 0 \)):</strong> The gas absorbs heat from the thermal reservoir (\( Q > 0 \)) and converts \( 100\% \) of this absorbed heat into mechanical boundary work without changing its internal energy.</li>
+<li><strong>Isothermal Compression (\( V_f < V_i \implies W < 0 \)):</strong> External work done on the gas is completely extracted and dumped into the reservoir as heat (\( Q < 0 \)).</li>
+<li><strong>Molar Heat Capacity:</strong> Since \( dQ \neq 0 \) while \( dT = 0 \):
+\[
+C_{\text{isothermal}} = \frac{dQ}{n \, dT} = \frac{dQ}{0} = \pm \infty
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Slope of Isothermal Curve on P-V Diagram</h2>
+<p>
+On a \( P \)-\( V \) diagram, the locus of an isothermal process is a <strong>rectangular hyperbola</strong> called an <em>isotherm</em>.
+</p>
+<p>
+Differentiating \( P V = \text{constant} \):
+</p>
+\[
+P \, dV + V \, dP = 0 \implies \left(\frac{dP}{dV}\right)_{\text{isothermal}} = -\frac{P}{V}
+\]
+<div class="insightbox">
+The slope is negative everywhere, indicating that pressure decreases monotonically as volume increases. For two different isotherms, the isotherm corresponding to a higher temperature \( T_2 > T_1 \) lies strictly above and to the right of the lower-temperature isotherm.
+</div>
+</section>
+
+<section>
+<h2>Isothermal Bulk Modulus of an Ideal Gas</h2>
+<p>
+The <strong>Bulk Modulus of Elasticity (\( B \))</strong> measures the resistance of a substance to uniform volumetric compression:
+</p>
+\[
+B = -\frac{\Delta P}{\frac{\Delta V}{V}} = -V \frac{dP}{dV}
+\]
+<p>
+Substituting the isothermal slope \( \left(\frac{dP}{dV}\right)_T = -\frac{P}{V} \):
+</p>
+<div class="model-box">
+\[
+B_T = -V \left(-\frac{P}{V}\right) = P
+\]
+where:
+<ul>
+<li>\( B_T \): Isothermal Bulk Modulus of an ideal gas (SI Unit: <strong>Pascal (\( \text{Pa} \))</strong>)</li>
+<li>\( P \): Instantaneous absolute pressure of the gas</li>
+</ul>
+</div>
+<p>
+<strong>Isothermal Compressibility (\( \kappa_T \)):</strong> The reciprocal of the bulk modulus:
+\[
+\kappa_T = \frac{1}{B_T} = \frac{1}{P}
+\]
+</p>
+
+<div class="examplebox">
+<h3>Solved Example: Isothermal Compression Work</h3>
+<p>
+Two moles of an ideal gas at \( 300 \, \text{K} \) are compressed isothermally from an initial pressure of \( 1 \, \text{atm} \) to a final pressure of \( 4 \, \text{atm} \). Calculate the work done and the heat exchanged with the reservoir. (\( R = 8.314 \, \text{J}/(\text{mol}\cdot\text{K}) \), \( \ln 4 \approx 1.386 \)).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+\[
+W = n R T \ln\left(\frac{P_i}{P_f}\right) = (2)(8.314)(300) \ln\left(\frac{1}{4}\right) = (4988.4)(-\ln 4) = (4988.4)(-1.386) \approx -6914 \, \text{J}
+\]
+<p>Since \( \Delta U = 0 \), the heat exchanged is:</p>
+\[
+Q = W = -6914 \, \text{J}
+\]
+<p>Interpretation: \( 6914 \, \text{J} \) of mechanical work was done on the gas, and an equal amount (\( 6.914 \, \text{kJ} \)) of heat was released to the thermal reservoir.</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

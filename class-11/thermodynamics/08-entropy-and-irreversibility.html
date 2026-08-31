@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Entropy & Irreversibility</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamics
+</a>
+</nav>
+
+<h1>Entropy, Clausius Inequality, & Irreversibility</h1>
+<p class="subtitle">
+The quantitative measure of disorder, the Clausius theorem, and the thermodynamic arrow of time.
+</p>
+
+<section>
+<h2>Clausius Theorem and Clausius Inequality</h2>
+<p>
+Rudolf Clausius generalized the Second Law of Thermodynamics to arbitrary cyclic processes, arriving at the fundamental <strong>Clausius Inequality</strong>:
+</p>
+<div class="model-box">
+\[
+\oint \frac{dQ}{T} \le 0
+\]
+where:
+<ul>
+<li>\( \oint \frac{dQ}{T} = 0 \): Strictly for a <strong>Reversible Cycle</strong>.</li>
+<li>\( \oint \frac{dQ}{T} < 0 \): For any real <strong>Irreversible Cycle</strong>.</li>
+<li>\( \oint \frac{dQ}{T} > 0 \): Physically <strong>Impossible Cycle</strong> (violates Second Law).</li>
+</ul>
+</div>
+
+<p>
+For a Carnot cycle operating reversibly between \( T_H \) and \( T_C \):
+\[
+\oint \frac{dQ}{T} = \frac{Q_H}{T_H} - \frac{Q_C}{T_C} = 0 \quad \left(\text{since } \frac{Q_H}{T_H} = \frac{Q_C}{T_C}\right)
+\]
+</p>
+</section>
+
+<section>
+<h2>Definition of Entropy as a State Variable</h2>
+<p>
+Since \( \oint \frac{dQ_{\text{rev}}}{T} = 0 \) for any reversible closed loop, the line integral of \( \frac{dQ_{\text{rev}}}{T} \) between two equilibrium states \( A \) and \( B \) is completely independent of the reversible path chosen.
+</p>
+<p>
+This mathematical property proves that there exists an exact macroscopic state function called <strong>Entropy (\( S \))</strong>:
+</p>
+<div class="model-box">
+\[
+dS = \left( \frac{dQ_{\text{rev}}}{T} \right)
+\]
+\[
+\Delta S = S_B - S_A = \int_A^B \frac{dQ_{\text{rev}}}{T}
+\]
+where:
+<ul>
+<li>\( S \): Entropy (Extensive State Function, SI Unit: <strong>\( \text{J/K} \)</strong> (Joules per Kelvin), Dimension: \( [M L^2 T^{-2} K^{-1}] \))</li>
+<li>\( dQ_{\text{rev}} \): Heat exchanged along any arbitrary <em>reversible</em> path connecting state \( A \) to state \( B \)</li>
+<li>\( T \): Absolute temperature at which the heat exchange occurs (in Kelvin)</li>
+</ul>
+</div>
+
+<div class="insightbox">
+Even if a process is irreversible, the entropy change \( \Delta S = S_{\text{final}} - S_{\text{initial}} \) of the system is calculated by devising an imaginary <strong>reversible path</strong> connecting the same initial and final equilibrium states and integrating \( \int \frac{dQ_{\text{rev}}}{T} \).
+</div>
+</section>
+
+<section>
+<h2>Entropy Change of an Ideal Gas in Various Thermodynamic Processes</h2>
+<p>
+From the differential First Law: \( dQ_{\text{rev}} = n C_v dT + P dV \). Dividing by \( T \):
+\[
+dS = \frac{dQ_{\text{rev}}}{T} = n C_v \frac{dT}{T} + \frac{P}{T} dV = n C_v \frac{dT}{T} + n R \frac{dV}{V}
+\]
+Integrating between state \( 1 \, (P_1, V_1, T_1) \) and state \( 2 \, (P_2, V_2, T_2) \):
+</p>
+
+<div class="model-box">
+<strong>Master Formulas for Entropy Change of an Ideal Gas:</strong>
+\[
+\Delta S = n \, C_v \ln\left(\frac{T_2}{T_1}\right) + n \, R \ln\left(\frac{V_2}{V_1}\right)
+\]
+Using \( C_p = C_v + R \) and \( PV = nRT \), in terms of \( T \) and \( P \):
+\[
+\Delta S = n \, C_p \ln\left(\frac{T_2}{T_1}\right) - n \, R \ln\left(\frac{P_2}{P_1}\right)
+\]
+In terms of \( P \) and \( V \):
+\[
+\Delta S = n \, C_v \ln\left(\frac{P_2}{P_1}\right) + n \, C_p \ln\left(\frac{V_2}{V_1}\right)
+\]
+</div>
+
+<h3>Standard Process Specializations:</h3>
+<ul>
+<li><strong>Isochoric Process (\( V_1 = V_2 \)):</strong>
+\[
+\Delta S = n \, C_v \ln\left(\frac{T_2}{T_1}\right) = n \, C_v \ln\left(\frac{P_2}{P_1}\right)
+\]
+</li>
+<li><strong>Isobaric Process (\( P_1 = P_2 \)):</strong>
+\[
+\Delta S = n \, C_p \ln\left(\frac{T_2}{T_1}\right) = n \, C_p \ln\left(\frac{V_2}{V_1}\right)
+\]
+</li>
+<li><strong>Isothermal Process (\( T_1 = T_2 \)):</strong>
+\[
+\Delta S = n \, R \ln\left(\frac{V_2}{V_1}\right) = n \, R \ln\left(\frac{P_1}{P_2}\right)
+\]
+</li>
+<li><strong>Reversible Adiabatic Process (\( dQ_{\text{rev}} = 0 \)):</strong>
+\[
+dS = 0 \implies \Delta S = 0 \quad \implies S = \text{constant} \quad \text{(Isentropic Process)}
+\]
+</li>
+<li><strong>Free Expansion of Ideal Gas into Vacuum (\( V_1 \to V_2 \)):</strong>
+\[
+\Delta T = 0 \implies \Delta S = n \, R \ln\left(\frac{V_2}{V_1}\right) > 0
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Principle of Increase of Entropy for Isolated Systems</h2>
+<p>
+The <strong>Principle of Increase of Entropy</strong> is the most universal formulation of the Second Law of Thermodynamics:
+</p>
+<div class="model-box">
+\[
+\Delta S_{\text{universe}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}} \ge 0
+\]
+<ul>
+<li>\( \Delta S_{\text{universe}} = 0 \): For an idealized, completely reversible process.</li>
+<li>\( \Delta S_{\text{universe}} > 0 \): For any real, spontaneous, natural irreversible process.</li>
+<li>\( \Delta S_{\text{universe}} < 0 \): Physically impossible.</li>
+</ul>
+</div>
+<p>
+The entropy of an isolated system (or the entire cosmos) can never decrease; it continually increases towards a maximum equilibrium state.
+</p>
+</section>
+
+<section>
+<h2>Microscopic Interpretation of Entropy</h2>
+<p>
+Ludwig Boltzmann established the statistical-mechanical foundation of entropy, linking macroscopic thermodynamics to microscopic molecular disorder:
+</p>
+<div class="model-box">
+\[
+S = k_B \ln \Omega
+\]
+where:
+<ul>
+<li>\( S \): Macroscopic entropy</li>
+<li>\( k_B \approx 1.38 \times 10^{-23} \, \text{J/K} \): Boltzmann Constant</li>
+<li>\( \Omega \): Thermodynamic probability (the number of microscopic quantum states, or microstates, corresponding to the observed macroscopic state)</li>
+</ul>
+</div>
+<p>
+Spontaneous processes progress from states of lower probability (ordered microstates) to states of maximum probability (disordered microstates).
+</p>
+</section>
+
+<section>
+<h2>Degradation of Energy and the Thermodynamic Arrow of Time</h2>
+<p>
+Although the total quantity of energy in the universe is strictly conserved (First Law), the <strong>quality (availability)</strong> of that energy continuously degrades over time:
+</p>
+<ul>
+<li>High-grade energy (organized mechanical work, electrical energy, chemical bonds) is relentlessly dissipated through friction, electrical resistance, and heat transfer into low-grade thermal energy distributed uniformly at ambient temperature.</li>
+<li>Once thermalized, this low-temperature heat cannot be fully reclaimed into useful mechanical work without generating even greater entropy elsewhere.</li>
+<li>The relentless increase of entropy defines the unique, non-reversible <strong>Arrow of Time</strong> in the physical universe.</li>
+</ul>
+</section>
+
+<section>
+<h2>Sub-Topics & Entropy in Complex Processes</h2>
+<div class="chapter-list">
+<a href="./08a-entropy-in-mixing-and-phase-changes.html">8a. Entropy in Phase Changes, Mixing, & Thermal Equilibrium</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

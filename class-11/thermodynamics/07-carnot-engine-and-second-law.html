@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Carnot Engine & Second Law</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamics
+</a>
+</nav>
+
+<h1>Carnot Engine & Second Law of Thermodynamics</h1>
+<p class="subtitle">
+The ultimate theoretical ceiling on thermal efficiency, reversible cycles, and the directional laws of nature.
+</p>
+
+<section>
+<h2>The Ideal Carnot Engine Concept</h2>
+<p>
+In 1824, French engineer Nicolas Léonard Sadi Carnot devised a theoretical idealized heat engine operating completely reversibly between two constant-temperature thermal reservoirs.
+</p>
+<p>
+The <strong>Carnot Engine</strong> establishes the absolute upper thermodynamic limit on the efficiency that any heat engine can possibly achieve when operating between a high-temperature heat source at absolute temperature \( T_H \) (or \( T_1 \)) and a low-temperature heat sink at absolute temperature \( T_C \) (or \( T_2 \)).
+</p>
+<div class="insightbox">
+Because all four processes in a Carnot cycle are strictly reversible and frictionless, there is zero dissipation of mechanical energy into unrecoverable heat, and all heat transfer occurs across infinitesimal temperature differences.
+</div>
+</section>
+
+<section>
+<h2>The Four Stages of the Carnot Cycle</h2>
+<p>
+The working substance (typically an ideal gas) undergoes four alternating reversible transformations in sequence:
+</p>
+
+<div class="diagram">
+<svg width="600" height="300" viewBox="0 0 600 300">
+  <line x1="70" y1="260" x2="550" y2="260" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="70" y1="260" x2="70" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="545" y="285" font-size="14" font-weight="bold">V</text>
+  <text x="45" y="35" font-size="14" font-weight="bold">P</text>
+
+  <!-- Cycle vertices -->
+  <!-- 1: (160, 60), 2: (320, 110), 3: (440, 220), 4: (240, 180) -->
+  <path d="M 160 60 Q 230 80 320 110 Q 380 160 440 220 Q 330 200 240 180 Q 190 120 160 60 Z" fill="#eafaf1" stroke="#2ecc71" stroke-width="3"/>
+
+  <!-- Points -->
+  <circle cx="160" cy="60" r="5" fill="#e74c3c"/>
+  <text x="140" y="55" font-size="14" font-weight="bold">1 (P1, V1, TH)</text>
+
+  <circle cx="320" cy="110" r="5" fill="#e74c3c"/>
+  <text x="330" y="105" font-size="14" font-weight="bold">2 (P2, V2, TH)</text>
+
+  <circle cx="440" cy="220" r="5" fill="#2980b9"/>
+  <text x="445" y="235" font-size="14" font-weight="bold">3 (P3, V3, TC)</text>
+
+  <circle cx="240" cy="180" r="5" fill="#2980b9"/>
+  <text x="170" y="195" font-size="14" font-weight="bold">4 (P4, V4, TC)</text>
+
+  <!-- Arrows and Labels -->
+  <text x="240" y="75" font-size="13" fill="#e74c3c" font-weight="bold">Q_H (Isotherm at T_H)</text>
+  <text x="395" y="160" font-size="12" fill="#8e44ad">Adiabatic Exp.</text>
+  <text x="320" y="235" font-size="13" fill="#2980b9" font-weight="bold">Q_C (Isotherm at T_C)</text>
+  <text x="150" y="130" font-size="12" fill="#8e44ad">Adiabatic Comp.</text>
+</svg>
+</div>
+
+<ol>
+<li><strong>\( 1 \to 2 \): Reversible Isothermal Expansion at \( T_H \):</strong>
+  <br>The cylinder base is in contact with the hot source at \( T_H \). The gas absorbs heat \( Q_H \) and expands from \( V_1 \) to \( V_2 \):
+  \[
+  Q_H = W_{1\to 2} = n R T_H \ln\left(\frac{V_2}{V_1}\right)
+  \]
+</li>
+<li><strong>\( 2 \to 3 \): Reversible Adiabatic Expansion (\( T_H \to T_C \)):</strong>
+  <br>The cylinder is placed on an insulating stand (\( Q = 0 \)). The gas expands from \( V_2 \) to \( V_3 \), cooling down to \( T_C \):
+  \[
+  T_H V_2^{\gamma - 1} = T_C V_3^{\gamma - 1} \implies \frac{T_H}{T_C} = \left(\frac{V_3}{V_2}\right)^{\gamma - 1}
+  \]
+</li>
+<li><strong>\( 3 \to 4 \): Reversible Isothermal Compression at \( T_C \):</strong>
+  <br>The cylinder is placed in contact with the cold sink at \( T_C \). The gas is compressed from \( V_3 \) to \( V_4 \), rejecting heat \( Q_C \):
+  \[
+  Q_C = |W_{3\to 4}| = n R T_C \ln\left(\frac{V_3}{V_4}\right)
+  \]
+</li>
+<li><strong>\( 4 \to 1 \): Reversible Adiabatic Compression (\( T_C \to T_H \)):</strong>
+  <br>The cylinder is placed back on the insulating stand. The gas is compressed from \( V_4 \) back to \( V_1 \), heating back up to \( T_H \):
+  \[
+  T_C V_4^{\gamma - 1} = T_H V_1^{\gamma - 1} \implies \frac{T_H}{T_C} = \left(\frac{V_4}{V_1}\right)^{\gamma - 1}
+  \]
+</li>
+</ol>
+</section>
+
+<section>
+<h2>Derivation of Carnot Efficiency Formula</h2>
+<p>
+Equating the temperature-volume ratios from the two adiabatic legs:
+</p>
+\[
+\left(\frac{V_3}{V_2}\right)^{\gamma - 1} = \left(\frac{V_4}{V_1}\right)^{\gamma - 1} \implies \frac{V_3}{V_2} = \frac{V_4}{V_1} \implies \frac{V_2}{V_1} = \frac{V_3}{V_4}
+\]
+<p>
+Now taking the ratio of heats exchanged:
+</p>
+\[
+\frac{Q_C}{Q_H} = \frac{n R T_C \ln(V_3 / V_4)}{n R T_H \ln(V_2 / V_1)} = \frac{T_C}{T_H}
+\]
+<p>
+Substituting this ratio into the general engine efficiency formula:
+</p>
+<div class="model-box">
+\[
+\eta_{\text{Carnot}} = 1 - \frac{Q_C}{Q_H} = 1 - \frac{T_C}{T_H} = \frac{T_H - T_C}{T_H}
+\]
+where:
+<ul>
+<li>\( \eta_{\text{Carnot}} \): Carnot thermal efficiency (Dimensionless, \( 0 < \eta < 1 \))</li>
+<li>\( T_H \): Absolute temperature of the hot source (in <strong>Kelvin</strong>)</li>
+<li>\( T_C \): Absolute temperature of the cold sink (in <strong>Kelvin</strong>)</li>
+</ul>
+</div>
+
+<div class="concept-box">
+<strong>Critical Takeaways for Carnot Efficiency:</strong>
+<ul>
+<li>\( \eta \) depends <em>only</em> on the temperatures of the source and sink; it is completely independent of the working substance (air, helium, steam, etc.).</li>
+<li>\( \eta = 1 \) (\( 100\% \)) is achievable only if the sink temperature \( T_C = 0 \, \text{K} \) (Absolute Zero), which is physically unattainable by the Third Law of Thermodynamics.</li>
+<li>To increase efficiency, one must either increase \( T_H \) or decrease \( T_C \).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Reversed Carnot Cycle: Ideal Refrigerator and Heat Pump</h2>
+<p>
+Because every stage of the Carnot cycle is completely reversible, operating the cycle in reverse (counter-clockwise on \( P \)-\( V \)) yields the ideal refrigerator and heat pump.
+</p>
+
+<h3>1. Carnot Refrigerator COP:</h3>
+<div class="model-box">
+\[
+\beta_{\text{Carnot}} = \frac{Q_C}{W} = \frac{Q_C}{Q_H - Q_C} = \frac{T_C}{T_H - T_C}
+\]
+</div>
+
+<h3>2. Carnot Heat Pump COP:</h3>
+<div class="model-box">
+\[
+\text{COP}_{\text{hp, Carnot}} = \frac{Q_H}{W} = \frac{T_H}{T_H - T_C} = \beta_{\text{Carnot}} + 1
+\]
+</div>
+</section>
+
+<section>
+<h2>Carnot's Theorem and Corollaries</h2>
+<p>
+Carnot formalized the theoretical supremacy of reversible cycles in two fundamental theorems:
+</p>
+<div class="model-box">
+<strong>Carnot's Theorem:</strong>
+<ol>
+<li><em>No heat engine operating between two given constant-temperature thermal reservoirs can ever be more efficient than a reversible Carnot engine operating between the exact same reservoirs:</em>
+\[
+\eta_{\text{irreversible}} \le \eta_{\text{reversible}} = 1 - \frac{T_C}{T_H}
+\]
+</li>
+<li><em>All reversible heat engines operating between the same two thermal reservoirs have identical efficiency, regardless of the nature or properties of the working substance.</em>
+</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h2>Statements of the Second Law of Thermodynamics</h2>
+<p>
+While the First Law guarantees that energy must balance, the <strong>Second Law of Thermodynamics</strong> dictates the permissible direction of spontaneous natural processes.
+</p>
+
+<h3>1. Kelvin-Planck Statement (Engine Formulation):</h3>
+<div class="model-box">
+<p>
+<em>It is impossible to construct a cyclic device that operates in a cycle and produces no other effect than the absorption of heat from a single thermal reservoir and the complete conversion of this heat into an equivalent amount of mechanical work.</em>
+</p>
+\[
+\eta < 100\% \quad \text{always}
+\]
+</div>
+<p>
+A 100% efficient heat engine (a Perpetual Motion Machine of the Second Kind, PMM-2) is fundamentally impossible. Every engine must reject some waste heat to a colder sink.
+</p>
+
+<h3>2. Clausius Statement (Refrigerator Formulation):</h3>
+<div class="model-box">
+<p>
+<em>It is impossible to construct a device that operates in a cycle and produces no other effect than the transfer of heat from a cooler body to a hotter body without requiring external work input.</em>
+</p>
+\[
+W_{\text{input}} > 0 \quad \text{for any refrigerator}
+\]
+</div>
+<p>
+Heat cannot spontaneously flow uphill from cold to hot without external work.
+</p>
+</section>
+
+<section>
+<h2>Proof of Equivalence Between Kelvin-Planck and Clausius Statements</h2>
+<p>
+Although phrased differently, the Kelvin-Planck and Clausius statements are logically equivalent: a violation of either statement leads directly to a violation of the other.
+</p>
+
+<h3>Proof 1: Violation of Clausius implies Violation of Kelvin-Planck</h3>
+<ol>
+<li>Suppose a hypothetical Clausius-violating refrigerator transfers heat \( Q \) from a cold reservoir at \( T_C \) to a hot reservoir at \( T_H \) with <strong>zero external work input</strong> (\( W = 0 \)).</li>
+<li>Now run a regular heat engine between the same reservoirs, absorbing heat \( Q_H \) from \( T_H \), delivering useful work \( W = Q_H - Q_C \), and rejecting heat \( Q \) to the cold sink at \( T_C \).</li>
+<li>Couple the two devices into a single combined composite system:
+  <ul>
+    <li>The cold reservoir receives heat \( Q \) from the engine and loses heat \( Q \) to the refrigerator: net heat exchange at \( T_C \) is \( Q - Q = 0 \).</li>
+    <li>The hot reservoir provides \( Q_H \) and receives \( Q \): net heat drawn from \( T_H \) is \( Q_H - Q \).</li>
+    <li>Net work produced by the composite engine: \( W_{\text{net}} = Q_H - Q \).</li>
+  </ul>
+</li>
+<li>The composite machine extracts heat from a single reservoir at \( T_H \) and converts \( 100\% \) of it into mechanical work with zero heat rejected anywhere else, directly violating the <strong>Kelvin-Planck Statement</strong>.</li>
+</ol>
+
+<div class="insightbox">
+Hence, the Kelvin-Planck statement and Clausius statement are two complementary perspectives of the same underlying physical truth: spontaneous thermal irreversibility.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

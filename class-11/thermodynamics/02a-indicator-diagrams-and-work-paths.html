@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Indicator Diagrams & Work Paths</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./02-work-heat-and-internal-energy.html" class="back-btn">
+<span>&larr;</span> Back to Work, Heat & Internal Energy
+</a>
+</nav>
+
+<h1>Indicator Diagrams & Work Along Paths</h1>
+<p class="subtitle">
+Geometric representation of state transitions, area interpretations, and diagram transformations.
+</p>
+
+<section>
+<h2>Indicator Diagrams and State Representations</h2>
+<p>
+An <strong>Indicator Diagram</strong> is a graphical representation of the successive equilibrium states through which a thermodynamic system passes during a quasi-static process.
+</p>
+<p>
+Because any two independent state variables completely specify the equilibrium state of a fixed mass of an ideal gas (via the equation of state \( PV = nRT \)), a process can be mapped onto any two-dimensional coordinate plane:
+</p>
+<ul>
+<li><strong>\( P \)-\( V \) Diagram (Clapeyron Diagram):</strong> The standard mechanical representation where work is directly visible as an area.</li>
+<li><strong>\( P \)-\( T \) Diagram:</strong> Pressure vs Absolute Temperature, useful for identifying phase lines and constant volume isochores (straight lines passing through origin: \( P \propto T \)).</li>
+<li><strong>\( V \)-\( T \) Diagram:</strong> Volume vs Absolute Temperature, where isobaric processes are straight lines through the origin (\( V \propto T \)).</li>
+<li><strong>\( T \)-\( S \) Diagram:</strong> Temperature vs Entropy, where the area under the curve represents the reversible heat exchanged: \( Q_{\text{rev}} = \int T\,dS \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Geometric Interpretation of Work as Area Under P-V Curve</h2>
+<p>
+The mathematical definition of mechanical work done during an expansion from \( V_i \) to \( V_f \) is:
+</p>
+<div class="model-box">
+\[
+W = \int_{V_i}^{V_f} P \, dV = \text{Area under the } P\text{-}V \text{ curve bounded by } V = V_i, V = V_f, \text{ and the } V\text{-axis}
+\]
+</div>
+
+<div class="diagram">
+<svg width="600" height="280" viewBox="0 0 600 280">
+  <!-- Axes -->
+  <line x1="80" y1="240" x2="540" y2="240" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="80" y1="240" x2="80" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <!-- Axis Arrows -->
+  <polygon points="540,235 550,240 540,245" fill="#2c3e50"/>
+  <polygon points="75,30 80,20 85,30" fill="#2c3e50"/>
+  <text x="535" y="265" font-size="14" font-weight="bold">V</text>
+  <text x="50" y="35" font-size="14" font-weight="bold">P</text>
+
+  <!-- Shaded Area Under Curve -->
+  <path d="M 160 240 L 160 80 Q 280 150 440 180 L 440 240 Z" fill="#eafaf1" stroke="none"/>
+
+  <!-- Curve -->
+  <path d="M 160 80 Q 280 150 440 180" fill="none" stroke="#2ecc71" stroke-width="3"/>
+  <!-- Direction Arrow -->
+  <polygon points="305,142 318,145 310,154" fill="#2ecc71"/>
+
+  <!-- Points and Dotted Lines -->
+  <circle cx="160" cy="80" r="5" fill="#2c3e50"/>
+  <text x="140" y="70" font-size="14" font-weight="bold">State 1 (P1, V1)</text>
+  <line x1="160" y1="80" x2="160" y2="240" stroke="#7f8c8d" stroke-dasharray="4"/>
+  <text x="150" y="260" font-size="13">V1</text>
+
+  <circle cx="440" cy="180" r="5" fill="#2c3e50"/>
+  <text x="420" y="170" font-size="14" font-weight="bold">State 2 (P2, V2)</text>
+  <line x1="440" y1="180" x2="440" y2="240" stroke="#7f8c8d" stroke-dasharray="4"/>
+  <text x="430" y="260" font-size="13">V2</text>
+
+  <!-- Area Label -->
+  <text x="270" y="210" font-size="15" fill="#27ae60" font-weight="bold">Work = Area under curve (W > 0)</text>
+</svg>
+</div>
+
+<div class="concept-box">
+<strong>Sign Rules for Area:</strong>
+<ul>
+<li>If moving from <strong>Left to Right</strong> (\( V \) increases, expansion): \( W = +\text{Area} > 0 \).</li>
+<li>If moving from <strong>Right to Left</strong> (\( V \) decreases, compression): \( W = -\text{Area} < 0 \).</li>
+<li>For a <strong>Closed Loop (Cyclic Process)</strong>:
+  <ul>
+    <li><em>Clockwise Cycle:</em> \( W_{\text{net}} = +\text{Enclosed Area of Loop} > 0 \) (Heat Engine).</li>
+    <li><em>Counter-Clockwise Cycle:</em> \( W_{\text{net}} = -\text{Enclosed Area of Loop} < 0 \) (Refrigerator).</li>
+  </ul>
+</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Path Dependence of Work along Linear and Non-Linear Paths</h2>
+<p>
+Because work is an inexact differential, the area under the curve depends on the trajectory taken between the same initial state \( (P_1, V_1) \) and final state \( (P_2, V_2) \).
+</p>
+
+<div class="examplebox">
+<h3>Linear P-V Process Calculation</h3>
+<p>
+A gas expands from state \( (P_1, V_1) \) to state \( (P_2, V_2) \) along a straight line path on the \( P \)-\( V \) diagram. Calculate the work done.
+</p>
+<hr>
+<p><strong>Method: Area of Trapezoid</strong></p>
+<p>The area under a straight line on the \( P \)-\( V \) plane forms a right trapezoid bounded by parallel vertical heights \( P_1 \) and \( P_2 \), and base \( (V_2 - V_1) \):</p>
+\[
+W = \text{Area} = \frac{1}{2} (P_1 + P_2) (V_2 - V_1)
+\]
+<p>This simple formula avoids explicit integration and solves a large family of standard JEE problems.</p>
+</div>
+
+<div class="insightbox">
+Even though \( \Delta U \) is identical for all paths connecting state 1 and state 2, \( W_{\text{path A}} \neq W_{\text{path B}} \). Therefore, by the First Law (\( Q = \Delta U + W \)), the heat absorbed \( Q \) is also strictly path-dependent.
+</div>
+</section>
+
+<section>
+<h2>Conversion Between Different Thermodynamic State Diagrams</h2>
+<p>
+A critical skill in JEE Advanced thermodynamics is mapping a process described on one diagram (e.g., \( P \)-\( T \) or \( V \)-\( T \)) to another (e.g., \( P \)-\( V \)).
+</p>
+
+<h3>Transformation Strategy:</h3>
+<ol>
+<li><strong>Identify the Process Equation:</strong> Use the Ideal Gas Equation \( PV = nRT \) to find how the variables relate along each leg.
+  <ul>
+    <li><em>Isochoric (\( V = \text{const} \)):</em> \( P \propto T \) (straight line through origin on \( P \)-\( T \); vertical line on \( P \)-\( V \)).</li>
+    <li><em>Isobaric (\( P = \text{const} \)):</em> \( V \propto T \) (straight line through origin on \( V \)-\( T \); horizontal line on \( P \)-\( V \)).</li>
+    <li><em>Isothermal (\( T = \text{const} \)):</em> \( PV = \text{const} \) (hyperbola on \( P \)-\( V \); vertical line on \( P \)-\( T \); horizontal on \( V \)-\( T \)).</li>
+  </ul>
+</li>
+<li><strong>Map the Coordinates of Key Vertices:</strong> Determine \( (P, V, T) \) at every state vertex \( A, B, C, \dots \).</li>
+<li><strong>Trace the Sense of Rotation:</strong> A clockwise cycle on \( P \)-\( V \) corresponds to positive net work; ensure the mapped cycle maintains the proper thermodynamic sequence of expansion and compression.</li>
+</ol>
+
+<div class="examplebox">
+<h3>Diagram Conversion Example</h3>
+<p>
+Consider a cycle \( A \to B \to C \to A \) on a \( P \)-\( T \) diagram:
+<br>\( A \to B \): Isochoric heating from \( (P_0, T_0) \) to \( (2P_0, 2T_0) \) with volume \( V_0 \).
+<br>\( B \to C \): Isothermal expansion at \( 2T_0 \) from \( 2P_0 \) to \( P_0 \) (volume expands to \( 2V_0 \)).
+<br>\( C \to A \): Isobaric cooling at \( P_0 \) from \( 2T_0 \) back to \( T_0 \) (volume compresses from \( 2V_0 \) to \( V_0 \)).
+</p>
+<hr>
+<p><strong>Mapping onto P-V Diagram:</strong></p>
+<ul>
+<li>\( A \to B \): Vertical straight line upward at \( V = V_0 \) from \( P_0 \) to \( 2P_0 \).</li>
+<li>\( B \to C \): Rectangular hyperbola curving downward from \( (2P_0, V_0) \) to \( (P_0, 2V_0) \).</li>
+<li>\( C \to A \): Horizontal straight line to the left at \( P = P_0 \) from \( 2V_0 \) to \( V_0 \).</li>
+</ul>
+<p>The resulting closed loop on the \( P \)-\( V \) plane runs clockwise, demonstrating that this system operates as a net work-producing heat engine.</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

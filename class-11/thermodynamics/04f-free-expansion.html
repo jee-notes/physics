@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Free Expansion & Joule Expansion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./04-thermodynamic-processes.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamic Processes
+</a>
+</nav>
+
+<h1>Free Expansion & Joule Expansion</h1>
+<p class="subtitle">
+Thermodynamics of unrestrained vacuum expansion: zero work, zero heat, and absolute irreversibility.
+</p>
+
+<section>
+<h2>Concept of Free Expansion (Joule Expansion into Vacuum)</h2>
+<p>
+<strong>Free Expansion</strong> (historically investigated in Joule's famous porous-plug and double-chamber experiments) occurs when a gas initially confined in an insulated compartment is allowed to suddenly rush into an adjacent evacuated chamber through a valve or ruptured membrane.
+</p>
+
+<div class="diagram">
+<svg width="600" height="220" viewBox="0 0 600 220">
+  <!-- Outer insulated boundary -->
+  <rect x="80" y="30" width="440" height="150" fill="#f8f9fa" stroke="#8e44ad" stroke-width="4" stroke-dasharray="8,4" rx="10"/>
+  <text x="300" y="20" font-size="14" fill="#8e44ad" font-weight="bold" text-anchor="middle">Thermally Insulated Rigid Walls (Q = 0, dV_total = 0)</text>
+
+  <!-- Left Chamber (Gas) -->
+  <rect x="90" y="40" width="210" height="130" fill="#eaf2fb" stroke="none"/>
+  <text x="195" y="100" font-size="16" fill="#2980b9" font-weight="bold" text-anchor="middle">Gas (P1, V1, T1)</text>
+
+  <!-- Central Partition / Valve -->
+  <line x1="300" y1="40" x2="300" y2="170" stroke="#e74c3c" stroke-width="4"/>
+  <text x="300" y="200" font-size="13" fill="#e74c3c" font-weight="bold" text-anchor="middle">Ruptured Membrane / Valve</text>
+
+  <!-- Right Chamber (Vacuum) -->
+  <rect x="300" y="40" width="210" height="130" fill="#fdfefe" stroke="none"/>
+  <text x="405" y="100" font-size="16" fill="#7f8c8d" font-weight="bold" text-anchor="middle">Vacuum (P = 0)</text>
+</svg>
+</div>
+</section>
+
+<section>
+<h2>Conditions: W = 0, Q = 0 implies Delta U = 0</h2>
+<p>
+Analyzing the energy ledger of free expansion:
+</p>
+<ol>
+<li><strong>Work Done (\( W = 0 \)):</strong> Because the gas expands into an absolute vacuum, there is no opposing external pressure (\( P_{\text{ext}} = 0 \)). The gas pushes against nothing:
+\[
+W = \int P_{\text{ext}} \, dV = \int (0) \, dV = 0
+\]
+</li>
+<li><strong>Heat Exchanged (\( Q = 0 \)):</strong> The outer chamber walls are thermally insulated:
+\[
+Q = 0
+\]
+</li>
+<li><strong>Internal Energy Change (\( \Delta U = 0 \)):</strong> Applying the First Law of Thermodynamics:
+<div class="model-box">
+\[
+\Delta U = Q - W = 0 - 0 = 0 \implies U_{\text{final}} = U_{\text{initial}}
+\]
+</div>
+</li>
+</ol>
+<p>
+Free expansion is an <strong>isoenergetic process</strong> (\( U = \text{constant} \)).
+</p>
+</section>
+
+<section>
+<h2>Irreversibility and Non-Quasistatic Nature</h2>
+<p>
+Free expansion is the archetypal example of an intrinsically <strong>irreversible, non-quasistatic process</strong>:
+</p>
+<ul>
+<li>During the violent expansion, pressure, density, and temperature are highly non-uniform throughout the chamber; macroscopic state variables are undefined while the gas is rushing.</li>
+<li>The process <strong>cannot be represented as a continuous line on a \( P \)-\( V \) diagram</strong>. Only the initial equilibrium state \( (P_1, V_1) \) and final equilibrium state \( (P_2, V_2) \) can be plotted as isolated points.</li>
+<li>The gas will never spontaneously compress itself back into the left chamber without external mechanical intervention, proving it generates entropy in the universe (\( \Delta S > 0 \)).</li>
+</ul>
+</section>
+
+<section>
+<h2>Temperature Behavior of Ideal Gas vs Real Gas in Free Expansion</h2>
+<p>
+The effect of free expansion on temperature reveals the presence or absence of intermolecular forces:
+</p>
+
+<h3>1. Ideal Gas:</h3>
+<p>
+For an ideal gas, internal energy depends solely on temperature (\( U = n C_v T \)). Since \( \Delta U = 0 \):
+</p>
+<div class="model-box">
+\[
+\Delta U = 0 \implies \Delta T = 0 \implies T_{\text{final}} = T_{\text{initial}}
+\]
+An ideal gas undergoes <strong>zero temperature change</strong> during free expansion.
+</div>
+<p>
+Final pressure for an ideal gas expanding from \( V_1 \) to \( V_2 = V_1 + V_{\text{vacuum}} \):
+\[
+P_2 = \frac{n R T}{V_2} = P_1 \left(\frac{V_1}{V_2}\right)
+\]
+</p>
+
+<h3>2. Real Gas (van der Waals Gas):</h3>
+<p>
+For a real gas, attractive intermolecular forces exist (described by the van der Waals parameter \( a \)). The internal energy includes intermolecular potential energy:
+\[
+U(T, V) = n C_v T - \frac{a n^2}{V}
+\]
+As volume increases from \( V_1 \) to \( V_2 \), molecules are pulled apart against mutual attractive forces, increasing intermolecular potential energy. Since total \( U \) is conserved (\( \Delta U = 0 \)):
+\[
+n C_v \Delta T = \Delta U_{\text{pot}} = -a n^2 \left( \frac{1}{V_1} - \frac{1}{V_2} \right) < 0 \implies \Delta T < 0
+\]
+<div class="concept-box">
+A real gas <strong>cools down (\( T_f < T_i \))</strong> during free expansion into a vacuum because it must expend kinetic energy to overcome internal molecular attractive forces.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

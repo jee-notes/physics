@@ -1,263 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thermodynamics | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #2ecc71; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #eafaf1; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav { margin-bottom: 30px; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; font-size: 1.1rem; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
 
-    <h1>Thermodynamics</h1>
-    <p style="text-align: center;"><em>General laws governing heat, work, and energy.</em></p>
+<h1>Thermodynamics</h1>
+<p class="subtitle">
+The macroscopic science of heat, work, internal energy, and the fundamental direction of natural processes.
+</p>
 
-    <section id="system">
-        <h2>1. Thermodynamic System</h2>
-        <p>
-            A <strong>thermodynamic system</strong> is a macroscopic part of the universe
-            chosen for analysis.
-        </p>
-
-        <ul>
-            <li><strong>Open system</strong> — exchanges mass and energy</li>
-            <li><strong>Closed system</strong> — exchanges energy only</li>
-            <li><strong>Isolated system</strong> — exchanges neither</li>
-        </ul>
-
-        <div class="insightbox">
-            Thermodynamics ignores microscopic details
-            and focuses on macroscopic state.
-        </div>
-    </section>
-
-    <section id="state">
-        <h2>2. Thermodynamic State & Variables</h2>
-        <p>
-            The state of a system is defined by state variables
-            such as pressure, volume, and temperature.
-        </p>
-
-        <div class="grid">
-            <div>
-                <strong>State variables</strong>
-                <ul>
-                    <li>P, V, T, U</li>
-                    <li>Path independent</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Path variables</strong>
-                <ul>
-                    <li>Heat (Q), Work (W)</li>
-                    <li>Depend on process</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="insightbox">
-            A state variable remembers only
-            where the system is — not how it got there.
-        </div>
-    </section>
-
-    <section id="process">
-        <h2>3. Thermodynamic Process</h2>
-        <p>
-            A <strong>process</strong> is a transformation from one equilibrium state
-            to another.
-        </p>
-
-        <ul>
-            <li>Isothermal (T constant)</li>
-            <li>Isobaric (P constant)</li>
-            <li>Isochoric (V constant)</li>
-            <li>Adiabatic (Q = 0)</li>
-        </ul>
-    </section>
-
-    <section id="work">
-        <h2>4. Work in Thermodynamics</h2>
-        <p>
-            Work is done when the boundary of a system moves.
-        </p>
-
-        <div class="formula-block">
-            \[
-            W = \int P\,dV
-            \]
-        </div>
-
-        <ul>
-            <li>Area under P–V curve represents work</li>
-            <li>Depends on path followed</li>
-        </ul>
-
-        <div class="insightbox">
-            Same initial and final states
-            can involve different work.
-        </div>
-    </section>
-
-    <section id="internal-energy">
-        <h2>5. Internal Energy</h2>
-        <p>
-            <strong>Internal energy (U)</strong> is the total microscopic energy
-            of a system.
-        </p>
-
-        <ul>
-            <li>State function</li>
-            <li>For ideal gas, depends only on temperature</li>
-        </ul>
-    </section>
-
-    <section id="first-law">
-        <h2>6. First Law of Thermodynamics</h2>
-        <p>
-            The first law is the law of energy conservation
-            for thermodynamic systems.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \Delta U = Q - W
-            \]
-        </div>
-
-        <ul>
-            <li>Q &gt; 0: heat added to system</li>
-            <li>W &gt; 0: work done by system</li>
-        </ul>
-
-        <div class="insightbox">
-            The first law does not say
-            which processes are possible —
-            only how energy balances.
-        </div>
-    </section>
-
-    <section id="special-processes">
-        <h2>7. First Law for Special Processes</h2>
-
-        <div class="grid">
-            <div>
-                <strong>Isochoric</strong>
-                <ul>
-                    <li>W = 0</li>
-                    <li>Q = ΔU</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Isothermal (ideal gas)</strong>
-                <ul>
-                    <li>ΔU = 0</li>
-                    <li>Q = W</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="grid">
-            <div>
-                <strong>Adiabatic</strong>
-                <ul>
-                    <li>Q = 0</li>
-                    <li>ΔU = −W</li>
-                </ul>
-            </div>
-            <div>
-                <strong>Isobaric</strong>
-                <ul>
-                    <li>W = PΔV</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="heat-capacity">
-        <h2>8. Heat Capacities of Gases</h2>
-        <p>
-            Heat capacity depends on the constraint
-            under which heating occurs.
-        </p>
-
-        <div class="formula-block">
-            \[
-            C_V = \left(\frac{dQ}{dT}\right)_V,
-            \quad
-            C_P = \left(\frac{dQ}{dT}\right)_P
-            \]
-        </div>
-
-        <div class="formula-block">
-            Mayer’s relation:
-            \[
-            C_P - C_V = R
-            \]
-        </div>
-
-        <div class="insightbox">
-            Constraints change energy pathways.
-        </div>
-    </section>
-
-    <section id="cyclic">
-        <h2>9. Cyclic Process</h2>
-        <p>
-            In a cyclic process, the system returns
-            to its initial state.
-        </p>
-
-        <div class="formula-block">
-            \[
-            \Delta U = 0
-            \Rightarrow
-            Q = W
-            \]
-        </div>
-
-        <div class="insightbox">
-            Cycles convert heat into work
-            without storing energy.
-        </div>
-    </section>
-
-    <section id="mistakes">
-        <h2>10. Common Mistakes</h2>
-        <ul>
-            <li>Forgetting sign convention in first law</li>
-            <li>Confusing heat with internal energy</li>
-            <li>Assuming work depends only on states</li>
-        </ul>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Thermodynamics is the branch of physics that investigates the relationships between heat, mechanical work, temperature, and energy transformations in macroscopic physical systems. Unlike classical mechanics, which tracks every individual particle's trajectory using Newton's laws, or kinetic theory, which models molecular statistical mechanics, thermodynamics takes a purely <strong>macroscopic viewpoint</strong>. It describes bulk matter in terms of state variables such as pressure \( P \), volume \( V \), and absolute temperature \( T \).
+</p>
+<p>
+The foundations of thermodynamics rest on empirical laws of nature that cannot be derived from purely mechanical principles alone. These laws define what transformations of energy are universally conserved (The First Law), set absolute limits on the efficiency of thermal engines, and govern the spontaneous, irreversible arrow of time in the universe (The Second Law).
+</p>
+<div class="insightbox">
+Thermodynamics ignores microscopic atomic details and focuses strictly on macroscopic equilibrium states. A thermodynamic state variable remembers only where a system currently is — never the historical path it took to get there.
 </div>
+</section>
 
+<section>
+<h2>Thermodynamic Systems and State Variables</h2>
+<p>
+A <strong>thermodynamic system</strong> is a clearly defined quantity of matter or region in space enclosed by a boundary across which energy or matter may be exchanged with the surrounding environment.
+</p>
+<ul>
+<li><strong>Open System:</strong> Can freely exchange both matter and energy with its surroundings (e.g., an open beaker of boiling water).</li>
+<li><strong>Closed System:</strong> Can exchange energy (heat and work) but no mass across its boundary (e.g., gas sealed inside a cylinder with a movable piston).</li>
+<li><strong>Isolated System:</strong> Cannot exchange either mass or energy in any form with the universe (e.g., gas inside a perfectly rigid, insulated dewar flask).</li>
+</ul>
+<p>
+The equilibrium condition of a system is uniquely characterized by <em>state variables</em> (such as \( P, V, T, n, U \)), which do not depend on the history of the process, distinct from <em>path variables</em> (such as Heat \( Q \) and Work \( W \)) that depend intrinsically on the path connecting two states.
+</p>
+</section>
+
+<section>
+<h2>First Law of Thermodynamics and Energy Conservation</h2>
+<p>
+The First Law of Thermodynamics is the rigorous formulation of the principle of conservation of energy applied to thermal systems. When an amount of heat \( dQ \) is supplied to a system, it is partitioned into increasing the internal energy \( dU \) of the constituent matter and performing external mechanical work \( dW \) on the surroundings:
+</p>
+<div class="model-box">
+\[
+dQ = dU + dW \quad \text{or} \quad \Delta U = Q - W
+\]
+</div>
+<p>
+Here, \( U \) is a unique single-valued state function depending only on absolute temperature \( T \) for an ideal gas (\( \Delta U = n C_v \Delta T \)), whereas \( Q \) and \( W = \int P\,dV \) are path-dependent quantities.
+</p>
+</section>
+
+<section>
+<h2>Thermodynamic Processes and Indicator Diagrams</h2>
+<p>
+A thermodynamic process represents the physical trajectory along which a system transitions from an initial equilibrium state to a final equilibrium state. The geometric representation of these quasi-static transitions on coordinate planes (such as the \( P \)-\( V \), \( T \)-\( S \), or \( P \)-\( T \) diagrams) is known as an <strong>indicator diagram</strong>.
+</p>
+<div class="concept-box">
+The area under any curve in a \( P \)-\( V \) indicator diagram represents the total mechanical boundary work done during that quasi-static process: \( W = \int_{V_i}^{V_f} P\,dV \).
+</div>
+<p>
+Four fundamental ideal gas processes form the backbone of thermal analysis:
+</p>
+<ul>
+<li><strong>Isochoric (\( V = \text{const} \)):</strong> No boundary work is done (\( W = 0 \)); all supplied heat directly changes internal energy (\( Q = \Delta U \)).</li>
+<li><strong>Isobaric (\( P = \text{const} \)):</strong> Pressure remains fixed as the gas expands, performing boundary work (\( W = P\Delta V = nR\Delta T \)) and absorbing heat (\( Q = n C_p \Delta T \)).</li>
+<li><strong>Isothermal (\( T = \text{const} \)):</strong> Temperature is strictly clamped; internal energy remains unchanged (\( \Delta U = 0 \)), so \( Q = W = nRT \ln(V_f / V_i) \).</li>
+<li><strong>Adiabatic (\( Q = 0 \)):</strong> Perfectly insulated system where expansion occurs solely at the expense of internal energy (\( \Delta U = -W \)), following \( P V^\gamma = \text{constant} \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Heat Engines, Refrigerators, and Cyclic Processes</h2>
+<p>
+A <strong>cyclic process</strong> is a sequence of thermodynamic operations that repeatedly returns the working substance to its exact initial thermodynamic state (\( \Delta U_{\text{cycle}} = 0 \)).
+</p>
+<p>
+In a <strong>Heat Engine</strong>, the system executes a clockwise cycle on a \( P \)-\( V \) diagram, absorbing heat \( Q_{\text{in}} \) from a high-temperature reservoir, performing net external work \( W_{\text{net}} = \text{Area of loop} \), and rejecting waste heat \( Q_{\text{out}} \) to a low-temperature sink. The thermal efficiency is defined as:
+</p>
+\[
+\eta = \frac{W_{\text{net}}}{Q_{\text{in}}} = 1 - \frac{Q_{\text{out}}}{Q_{\text{in}}}
+\]
+<p>
+Reversing the cycle operates as a <strong>Refrigerator or Heat Pump</strong> (counter-clockwise cycle), utilizing external work to pump heat out of a cold space and reject it into a hotter ambient environment.
+</p>
+</section>
+
+<section>
+<h2>Second Law of Thermodynamics and Entropy</h2>
+<p>
+While the First Law guarantees energy balance, it does not explain why heat flows spontaneously only from hot to cold bodies, or why 100% of heat cannot be continuously converted into mechanical work. The <strong>Second Law of Thermodynamics</strong> formalizes this fundamental irreversibility through the Kelvin-Planck and Clausius statements.
+</p>
+<p>
+The Second Law introduces the universal state function <strong>Entropy (\( S \))</strong>, defined differentially for a reversible process as:
+</p>
+<div class="model-box">
+\[
+dS = \frac{dQ_{\text{rev}}}{T}
+\]
+</div>
+<p>
+For any real, spontaneous process occurring in an isolated system (or the entire universe), the total entropy always increases: \( \Delta S_{\text{universe}} \ge 0 \). This defines the thermodynamic arrow of time.
+</p>
+</section>
+
+<section>
+<h2>Core Topics</h2>
+<ul class="points-list">
+<li><strong>Thermodynamic Systems & State Functions</strong> — Intensive vs extensive variables, equilibrium states, equation of state.</li>
+<li><strong>Work, Heat, & Internal Energy</strong> — Path integrals, \( P \)-\( V \) indicator diagrams, Joule's law of internal energy.</li>
+<li><strong>First Law of Thermodynamics</strong> — Energy conservation, differential formulation, molar heat capacities \( C_v, C_p \), Mayer's relation.</li>
+<li><strong>Thermodynamic Processes</strong> — Detailed quantitative analysis of isochoric, isobaric, isothermal, adiabatic, and polytropic expansions.</li>
+<li><strong>Constrained & Composite Systems</strong> — Piston-spring assemblies, partitioned chambers, and non-linear process curves.</li>
+<li><strong>Cyclic Processes & Heat Engines</strong> — Net work as enclosed area, thermal efficiency, Otto, Diesel, and Stirling cycles.</li>
+<li><strong>Carnot Engine & Second Law</strong> — Maximum theoretical efficiency \( \eta = 1 - T_C/T_H \), Carnot's theorem, Kelvin-Planck & Clausius equivalence.</li>
+<li><strong>Entropy & Irreversibility</strong> — Clausius inequality, entropy changes in ideal gas processes, entropy of mixing, degradation of energy.</li>
+</ul>
+</section>
+
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-thermodynamic-systems-and-variables.html">1. Thermodynamic Systems & Variables</a>
+<a href="./02-work-heat-and-internal-energy.html">2. Work, Heat, & Internal Energy</a>
+<a href="./03-first-law-of-thermodynamics.html">3. First Law of Thermodynamics</a>
+<a href="./04-thermodynamic-processes.html">4. Thermodynamic Processes on Ideal Gases</a>
+<a href="./05-constrained-and-composite-systems.html">5. Constrained & Composite Mechanical Systems</a>
+<a href="./06-cyclic-processes-and-heat-engines.html">6. Cyclic Processes, Heat Engines, & Refrigerators</a>
+<a href="./07-carnot-engine-and-second-law.html">7. Carnot Engine & Second Law of Thermodynamics</a>
+<a href="./08-entropy-and-irreversibility.html">8. Entropy, Clausius Inequality, & Irreversibility</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>

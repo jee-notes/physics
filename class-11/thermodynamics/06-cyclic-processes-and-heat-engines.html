@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Cyclic Processes & Heat Engines</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamics
+</a>
+</nav>
+
+<h1>Cyclic Processes, Heat Engines, & Refrigerators</h1>
+<p class="subtitle">
+Continuous energy conversion: closed loops on state diagrams, thermal efficiency, and refrigeration metrics.
+</p>
+
+<section>
+<h2>Definition of Cyclic Process and Delta U = 0 Condition</h2>
+<p>
+A <strong>Cyclic Process</strong> is a closed series of thermodynamic transformations in which the system is brought through various states of pressure, volume, and temperature, and ultimately returned back to its exact initial thermodynamic state.
+</p>
+<p>
+Because internal energy \( U \) is a single-valued state function, the net change in internal energy over any complete cycle is identically zero:
+</p>
+<div class="model-box">
+\[
+\oint dU = 0 \implies \Delta U_{\text{net}} = U_{\text{final}} - U_{\text{initial}} = 0
+\]
+</div>
+<p>
+Applying the First Law of Thermodynamics over the complete cycle:
+</p>
+<div class="model-box">
+\[
+Q_{\text{net}} = \Delta U_{\text{net}} + W_{\text{net}} \implies Q_{\text{net}} = W_{\text{net}}
+\]
+where \( Q_{\text{net}} = \sum Q_{\text{in}} - \sum Q_{\text{out}} \).
+</div>
+<div class="insightbox">
+A cyclic engine operates continuously without permanently accumulating or depleting internal energy: every Joule of net heat absorbed over the cycle is completely converted into net external mechanical work.
+</div>
+</section>
+
+<section>
+<h2>Net Work Done as Area of Closed Loop on P-V Diagram</h2>
+<p>
+On a \( P \)-\( V \) indicator diagram, a cyclic process forms a closed loop.
+</p>
+
+<div class="diagram">
+<svg width="600" height="280" viewBox="0 0 600 280">
+  <line x1="80" y1="240" x2="540" y2="240" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="80" y1="240" x2="80" y2="30" stroke="#2c3e50" stroke-width="2"/>
+  <text x="535" y="265" font-size="14" font-weight="bold">V</text>
+  <text x="50" y="35" font-size="14" font-weight="bold">P</text>
+
+  <!-- Enclosed Area -->
+  <ellipse cx="300" cy="135" rx="140" ry="65" fill="#eafaf1" stroke="#2ecc71" stroke-width="3"/>
+
+  <!-- Clockwise Arrow markers -->
+  <polygon points="305,65 318,70 305,75" fill="#27ae60"/>
+  <polygon points="295,205 282,200 295,195" fill="#27ae60"/>
+
+  <text x="300" y="130" font-size="15" fill="#27ae60" font-weight="bold" text-anchor="middle">W_net = + (Enclosed Area)</text>
+  <text x="300" y="155" font-size="13" fill="#2c3e50" text-anchor="middle">Clockwise Loop (Heat Engine)</text>
+</svg>
+</div>
+
+<div class="concept-box">
+The net mechanical work done during one complete cycle is geometrically equal to the <strong>enclosed area of the loop</strong> on the \( P \)-\( V \) diagram:
+\[
+W_{\text{net}} = \oint P \, dV = \text{Area of the closed loop}
+\]
+</div>
+</section>
+
+<section>
+<h2>Clockwise Cycles vs Counter-Clockwise Cycles</h2>
+<p>
+The sense of traversal around the closed loop determines whether the device functions as a work-producing engine or a work-consuming refrigerator:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Clockwise Cycle (\( \circlearrowright \))</th>
+<th>Counter-Clockwise Cycle (\( \circlearrowleft \))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Expansion vs Compression</strong></td>
+<td>Expansion path lies <em>above</em> compression path</td>
+<td>Compression path lies <em>above</em> expansion path</td>
+</tr>
+<tr>
+<td><strong>Net Work Done (\( W_{\text{net}} \))</strong></td>
+<td>\( W_{\text{net}} > 0 \) (Work done <em>by</em> the gas)</td>
+<td>\( W_{\text{net}} < 0 \) (Work done <em>on</em> the gas)</td>
+</tr>
+<tr>
+<td><strong>Net Heat Exchanged (\( Q_{\text{net}} \))</strong></td>
+<td>\( Q_{\text{net}} > 0 \) (Net heat absorbed)</td>
+<td>\( Q_{\text{net}} < 0 \) (Net heat rejected)</td>
+</tr>
+<tr>
+<td><strong>Physical Machine</strong></td>
+<td><strong>Heat Engine</strong> (Converts heat into work)</td>
+<td><strong>Refrigerator / Heat Pump</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Thermal Efficiency of a Heat Engine</h2>
+<p>
+A <strong>Heat Engine</strong> absorbs heat \( Q_{\text{in}} \) (or \( Q_1 \)) from a high-temperature source at \( T_H \), delivers useful mechanical work \( W_{\text{net}} \), and rejects waste heat \( Q_{\text{out}} \) (or \( Q_2 \)) to a low-temperature sink at \( T_C \).
+</p>
+<p>
+The <strong>Thermal Efficiency (\( \eta \))</strong> is defined as the ratio of useful work output to total heat input:
+</p>
+<div class="model-box">
+\[
+\eta = \frac{\text{Desired Output}}{\text{Required Input}} = \frac{W_{\text{net}}}{Q_{\text{in}}} = \frac{Q_{\text{in}} - Q_{\text{out}}}{Q_{\text{in}}} = 1 - \frac{Q_{\text{out}}}{Q_{\text{in}}}
+\]
+where:
+<ul>
+<li>\( \eta \): Thermal efficiency (Dimensionless, \( 0 \le \eta < 1 \))</li>
+<li>\( W_{\text{net}} = Q_{\text{in}} - Q_{\text{out}} \): Net work produced per cycle</li>
+<li>\( Q_{\text{in}} \): Total heat absorbed only along legs where \( dQ > 0 \)</li>
+<li>\( Q_{\text{out}} \): Total heat rejected along legs where \( dQ < 0 \)</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Coefficient of Performance of Refrigerator and Heat Pump</h2>
+<p>
+When a cycle is driven counter-clockwise by supplying external mechanical work \( |W_{\text{net}}| \), it extracts heat \( Q_C \) from a cold space and rejects heat \( Q_H \) into a warmer environment.
+</p>
+
+<h3>1. Refrigerator (Focus on Cooling):</h3>
+<p>
+The performance is quantified by the <strong>Coefficient of Performance (\( \beta \) or \( \text{COP}_{\text{ref}} \))</strong>:
+</p>
+<div class="model-box">
+\[
+\beta = \frac{\text{Cooling Effect}}{\text{Work Input}} = \frac{Q_C}{W} = \frac{Q_C}{Q_H - Q_C}
+\]
+</div>
+
+<h3>2. Heat Pump (Focus on Heating):</h3>
+<p>
+The performance is quantified by \( \text{COP}_{\text{hp}} \):
+</p>
+<div class="model-box">
+\[
+\text{COP}_{\text{hp}} = \frac{\text{Heating Delivered}}{\text{Work Input}} = \frac{Q_H}{W} = \frac{Q_H}{Q_H - Q_C} = \beta + 1
+\]
+</div>
+</section>
+
+<section>
+<h2>Step-by-Step Analysis of Standard Geometric Cycles</h2>
+<p>
+In JEE physics, standard geometric cycles (triangular, rectangular, or elliptical loops) are analyzed by calculating \( W_{\text{net}} \) geometrically and \( Q_{\text{in}} \) by summing \( dQ > 0 \) across individual legs.
+</p>
+
+<div class="examplebox">
+<h3>Solved Example: Triangular Cyclic Engine</h3>
+<p>
+One mole of an ideal monoatomic gas (\( C_v = 1.5R \)) executes the cyclic path \( A(P_0, V_0) \to B(2P_0, V_0) \to C(P_0, 2V_0) \to A(P_0, V_0) \).
+<br>Calculate: (a) Net work done \( W_{\text{net}} \), (b) Total heat input \( Q_{\text{in}} \), (c) Thermal efficiency \( \eta \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>(a) Net work done is the area of the right-angled triangle in the \( P \)-\( V \) plane:</p>
+\[
+W_{\text{net}} = \frac{1}{2} \times \text{Base} \times \text{Height} = \frac{1}{2} (2V_0 - V_0)(2P_0 - P_0) = \frac{1}{2} P_0 V_0
+\]
+
+<p>(b) Heat supplied along individual legs:</p>
+<ul>
+<li>\( A \to B \) (Isochoric heating): \( W_{AB} = 0 \implies Q_{AB} = \Delta U_{AB} = \frac{V_0(2P_0 - P_0)}{\gamma - 1} = \frac{P_0 V_0}{2/3} = \frac{3}{2} P_0 V_0 \) (Heat enters, \( Q > 0 \)).</li>
+<li>\( B \to C \) (Linear expansion from \( (2P_0, V_0) \) to \( (P_0, 2V_0) \)):
+  <br>\( \Delta U_{BC} = \frac{P_C V_C - P_B V_B}{\gamma - 1} = \frac{(P_0)(2V_0) - (2P_0)(V_0)}{\gamma - 1} = 0 \).
+  <br>\( W_{BC} = \text{Trapezoid} = \frac{1}{2}(2P_0 + P_0)(2V_0 - V_0) = \frac{3}{2} P_0 V_0 \).
+  <br>\( Q_{BC} = \Delta U_{BC} + W_{BC} = 0 + \frac{3}{2} P_0 V_0 = \frac{3}{2} P_0 V_0 \) (Heat enters, \( Q > 0 \)).
+</li>
+<li>\( C \to A \) (Isobaric cooling): \( Q_{CA} = n C_p \Delta T < 0 \) (Heat is rejected).</li>
+</ul>
+\[
+Q_{\text{in}} = Q_{AB} + Q_{BC} = \frac{3}{2} P_0 V_0 + \frac{3}{2} P_0 V_0 = 3 P_0 V_0
+\]
+
+<p>(c) Efficiency:</p>
+\[
+\eta = \frac{W_{\text{net}}}{Q_{\text{in}}} = \frac{\frac{1}{2} P_0 V_0}{3 P_0 V_0} = \frac{1}{6} \approx 16.67\%
+\]
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Standard Engineering Cycles</h2>
+<div class="chapter-list">
+<a href="./06a-standard-thermodynamic-cycles.html">6a. Standard Thermodynamic Cycles (Otto, Diesel, Stirling)</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

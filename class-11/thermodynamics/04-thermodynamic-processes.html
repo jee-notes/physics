@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Thermodynamic Processes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamics
+</a>
+</nav>
+
+<h1>Thermodynamic Processes on Ideal Gases</h1>
+<p class="subtitle">
+Comparative mechanics, governing constraints, slopes, and energy balances of standard gas processes.
+</p>
+
+<section>
+<h2>Classification and Overview of Thermodynamic Processes</h2>
+<p>
+A <strong>thermodynamic process</strong> describes the path through which a system transitions from an initial equilibrium state \( (P_i, V_i, T_i) \) to a final equilibrium state \( (P_f, V_f, T_f) \). In JEE Physics, processes on ideal gases are categorized according to which state parameter or physical constraint remains constant during the transition:
+</p>
+<ul>
+<li><strong>Isochoric (Isometric) Process:</strong> Volume remains constant (\( V = \text{const} \)). No boundary work is done (\( W = 0 \)).</li>
+<li><strong>Isobaric Process:</strong> Pressure remains constant (\( P = \text{const} \)). The gas does mechanical work against constant external load.</li>
+<li><strong>Isothermal Process:</strong> Absolute temperature remains constant (\( T = \text{const} \)). Internal energy remains invariant for ideal gases (\( \Delta U = 0 \)).</li>
+<li><strong>Adiabatic Process:</strong> System is thermally isolated from surroundings (\( Q = 0 \)). Work is done entirely at the expense of internal energy.</li>
+<li><strong>Polytropic Process:</strong> General process following the path equation \( P V^x = \text{constant} \), unifying all classical processes.</li>
+<li><strong>Free Expansion:</strong> Sudden, non-quasistatic expansion of gas into a vacuum without external work or heat transfer.</li>
+</ul>
+</section>
+
+<section>
+<h2>Governing Equations and Constraints</h2>
+<p>
+Each fundamental process satisfies a characteristic constraint equation linking the macroscopic state variables \( P, V, T \):
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Constraint Condition</th>
+<th>P-V Relation</th>
+<th>T-V Relation</th>
+<th>P-T Relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Isochoric</strong></td>
+<td>\( V = \text{const} \)</td>
+<td>\( V = C \)</td>
+<td>\( T \propto P \)</td>
+<td>\( \frac{P}{T} = \text{const} \)</td>
+</tr>
+<tr>
+<td><strong>Isobaric</strong></td>
+<td>\( P = \text{const} \)</td>
+<td>\( P = C \)</td>
+<td>\( \frac{V}{T} = \text{const} \)</td>
+<td>\( T \propto V \)</td>
+</tr>
+<tr>
+<td><strong>Isothermal</strong></td>
+<td>\( T = \text{const} \)</td>
+<td>\( PV = \text{const} \)</td>
+<td>\( T = C \)</td>
+<td>\( T = C \)</td>
+</tr>
+<tr>
+<td><strong>Adiabatic</strong></td>
+<td>\( dQ = 0 \)</td>
+<td>\( P V^\gamma = \text{const} \)</td>
+<td>\( T V^{\gamma-1} = \text{const} \)</td>
+<td>\( T^\gamma P^{1-\gamma} = \text{const} \)</td>
+</tr>
+<tr>
+<td><strong>Polytropic</strong></td>
+<td>\( PV^x = \text{const} \)</td>
+<td>\( P V^x = \text{const} \)</td>
+<td>\( T V^{x-1} = \text{const} \)</td>
+<td>\( T^x P^{1-x} = \text{const} \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Comparative Slopes on P-V Diagrams</h2>
+<p>
+The slope of a process curve at any point on the \( P \)-\( V \) diagram represents the rate of change of pressure with respect to volume, \( \left( \frac{dP}{dV} \right) \).
+</p>
+
+<h3>1. Isothermal Slope:</h3>
+<p>
+Differentiating \( PV = \text{constant} \) with respect to \( V \):
+\[
+P + V \frac{dP}{dV} = 0 \implies \left( \frac{dP}{dV} \right)_{\text{iso}} = -\frac{P}{V}
+\]
+</p>
+
+<h3>2. Adiabatic Slope:</h3>
+<p>
+Differentiating \( PV^\gamma = \text{constant} \) with respect to \( V \):
+\[
+\gamma P V^{\gamma-1} + V^\gamma \frac{dP}{dV} = 0 \implies \left( \frac{dP}{dV} \right)_{\text{adia}} = -\gamma \frac{P}{V}
+\]
+</p>
+
+<div class="model-box">
+\[
+\left( \frac{dP}{dV} \right)_{\text{adiabatic}} = \gamma \times \left( \frac{dP}{dV} \right)_{\text{isothermal}}
+\]
+Since \( \gamma > 1 \), the adiabatic curve on a \( P \)-\( V \) diagram is strictly <strong>steeper</strong> (has a greater negative slope) than the isothermal curve passing through the same point.
+</div>
+
+<div class="concept-box">
+<strong>Expansion vs Compression Comparisons from a Common Initial State \( (P_0, V_0) \):</strong>
+<ul>
+<li><strong>During Expansion (\( V > V_0 \)):</strong>
+\[
+P_{\text{isobaric}} > P_{\text{isothermal}} > P_{\text{adiabatic}}
+\]
+\[
+W_{\text{isobaric}} > W_{\text{isothermal}} > W_{\text{adiabatic}}
+\]
+</li>
+<li><strong>During Compression (\( V < V_0 \)):</strong>
+\[
+P_{\text{adiabatic}} > P_{\text{isothermal}} > P_{\text{isobaric}}
+\]
+\[
+|W_{\text{adiabatic}}| > |W_{\text{isothermal}}| > |W_{\text{isobaric}}|
+\]
+</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Summary Table of Work, Heat, and Internal Energy Changes</h2>
+<p>
+The energy balance for 1 mole (or \( n \) moles) of an ideal gas across all standard processes:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Work Done (\( W \))</th>
+<th>Internal Energy (\( \Delta U \))</th>
+<th>Heat Supplied (\( Q \))</th>
+<th>Molar Heat Capacity (\( C \))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Isochoric</strong></td>
+<td>\( 0 \)</td>
+<td>\( n C_v \Delta T \)</td>
+<td>\( n C_v \Delta T \)</td>
+<td>\( C_v = \frac{R}{\gamma - 1} \)</td>
+</tr>
+<tr>
+<td><strong>Isobaric</strong></td>
+<td>\( P\Delta V = nR\Delta T \)</td>
+<td>\( n C_v \Delta T \)</td>
+<td>\( n C_p \Delta T \)</td>
+<td>\( C_p = \frac{\gamma R}{\gamma - 1} \)</td>
+</tr>
+<tr>
+<td><strong>Isothermal</strong></td>
+<td>\( nRT \ln\left(\frac{V_f}{V_i}\right) \)</td>
+<td>\( 0 \)</td>
+<td>\( nRT \ln\left(\frac{V_f}{V_i}\right) \)</td>
+<td>\( \infty \)</td>
+</tr>
+<tr>
+<td><strong>Adiabatic</strong></td>
+<td>\( \frac{P_i V_i - P_f V_f}{\gamma - 1} = \frac{nR\Delta T}{1-\gamma} \)</td>
+<td>\( n C_v \Delta T \)</td>
+<td>\( 0 \)</td>
+<td>\( 0 \)</td>
+</tr>
+<tr>
+<td><strong>Polytropic (\( PV^x=C \))</strong></td>
+<td>\( \frac{P_i V_i - P_f V_f}{x - 1} = \frac{nR\Delta T}{1-x} \)</td>
+<td>\( n C_v \Delta T \)</td>
+<td>\( n C \Delta T \)</td>
+<td>\( C = C_v + \frac{R}{1-x} \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Sub-Topics & Specific Process Modules</h2>
+<div class="chapter-list">
+<a href="./04a-isochoric-process.html">4a. Isochoric Process (Constant Volume)</a>
+<a href="./04b-isobaric-process.html">4b. Isobaric Process (Constant Pressure)</a>
+<a href="./04c-isothermal-process.html">4c. Isothermal Process (Constant Temperature)</a>
+<a href="./04d-adiabatic-process.html">4d. Adiabatic Process (Thermally Insulated)</a>
+<a href="./04e-polytropic-process.html">4e. Polytropic Process (General Index)</a>
+<a href="./04f-free-expansion.html">4f. Free Expansion & Joule Expansion</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | First Law of Thermodynamics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamics
+</a>
+</nav>
+
+<h1>First Law of Thermodynamics</h1>
+<p class="subtitle">
+The universal law of conservation of energy applied to thermodynamic systems.
+</p>
+
+<section>
+<h2>Statement of the First Law of Thermodynamics</h2>
+<p>
+The <strong>First Law of Thermodynamics</strong> is the generalization of the universal law of conservation of energy to include thermal energy transfers (heat) alongside mechanical work.
+</p>
+<div class="model-box">
+<strong>Formal Statement:</strong>
+<p>
+<em>Energy can neither be created nor destroyed; it can only be transformed from one form into another. The net amount of energy transferred to a thermodynamic system in the form of heat is equal to the increase in the internal energy of the system plus the external work done by the system on its surroundings.</em>
+</p>
+</div>
+<p>
+The First Law asserts that a perpetual motion machine of the first kind (PMM-1) — an engine that could continuously produce mechanical work without consuming an equivalent amount of heat or chemical energy — is physically impossible.
+</p>
+</section>
+
+<section>
+<h2>Mathematical Formulation: dQ = dU + dW</h2>
+<p>
+For an infinitesimal quasi-static thermodynamic change, the First Law is expressed differentially as:
+</p>
+<div class="model-box">
+\[
+dQ = dU + dW
+\]
+where:
+<ul>
+<li>\( dQ \): Infinitesimal heat supplied to the system (Inexact differential, SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
+<li>\( dU \): Infinitesimal change in internal energy (Exact differential of a state function, SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
+<li>\( dW = P\,dV \): Infinitesimal boundary work done by the system (Inexact differential, SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
+</ul>
+</div>
+
+<p>
+For a finite process transitioning between equilibrium state 1 and equilibrium state 2:
+</p>
+\[
+Q = \Delta U + W \quad \implies \quad \Delta U = Q - W
+\]
+where \( \Delta U = U_2 - U_1 \).
+</p>
+</section>
+
+<section>
+<h2>Sign Conventions for Heat, Work, and Internal Energy</h2>
+<p>
+Strict adherence to the algebraic sign conventions of the First Law is essential for accurate calculations in physics:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Thermodynamic Quantity</th>
+<th>Algebraic Condition</th>
+<th>Sign in First Law</th>
+<th>Physical Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><strong>Heat (\( Q \))</strong></td>
+<td>Heat enters the system</td>
+<td>\( Q > 0 \) (Positive)</td>
+<td>System absorbs thermal energy from surroundings.</td>
+</tr>
+<tr>
+<td>Heat leaves the system</td>
+<td>\( Q < 0 \) (Negative)</td>
+<td>System rejects thermal energy to surroundings.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Work (\( W \))</strong></td>
+<td>System expands (\( dV > 0 \))</td>
+<td>\( W > 0 \) (Positive)</td>
+<td>Gas does work on external surroundings.</td>
+</tr>
+<tr>
+<td>System compresses (\( dV < 0 \))</td>
+<td>\( W < 0 \) (Negative)</td>
+<td>External surroundings do work on the gas.</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>Internal Energy (\( \Delta U \))</strong></td>
+<td>Temperature rises (\( \Delta T > 0 \))</td>
+<td>\( \Delta U > 0 \) (Positive)</td>
+<td>Internal microscopic kinetic energy increases.</td>
+</tr>
+<tr>
+<td>Temperature drops (\( \Delta T < 0 \))</td>
+<td>\( \Delta U < 0 \) (Negative)</td>
+<td>Internal microscopic kinetic energy decreases.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Differential and Integrated Forms of First Law</h2>
+<p>
+Substituting the ideal gas relations into the differential First Law gives its most versatile operational formulas:
+</p>
+<div class="model-box">
+\[
+dQ = n \, C_v \, dT + P \, dV
+\]
+Using the ideal gas equation of state in differential form (\( P\,dV + V\,dP = nR\,dT \)):
+\[
+dQ = n \, C_p \, dT - V \, dP
+\]
+</div>
+
+<p>
+<strong>Specialized Formulations for Standard Processes:</strong>
+</p>
+<ul>
+<li><strong>Isochoric Process (\( dV = 0 \)):</strong>
+\[
+dW = 0 \implies Q = \Delta U = n C_v \Delta T
+\]
+</li>
+<li><strong>Isobaric Process (\( dP = 0 \)):</strong>
+\[
+W = P\Delta V = nR\Delta T \implies Q = \Delta U + W = n C_v \Delta T + n R \Delta T = n C_p \Delta T
+\]
+</li>
+<li><strong>Isothermal Process (\( dT = 0 \)):</strong>
+\[
+\Delta U = 0 \implies Q = W = nRT \ln\left(\frac{V_f}{V_i}\right)
+\]
+</li>
+<li><strong>Adiabatic Process (\( dQ = 0 \)):</strong>
+\[
+Q = 0 \implies \Delta U = -W \implies W = -\Delta U = \frac{nR(T_i - T_f)}{\gamma - 1}
+\]
+</li>
+<li><strong>Cyclic Process (Returns to initial state):</strong>
+\[
+\Delta U_{\text{net}} = 0 \implies Q_{\text{net}} = W_{\text{net}}
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Physical Consequences and Energy Conservation</h2>
+<p>
+The First Law reveals several fundamental characteristics of macroscopic physical systems:
+</p>
+<ol>
+<li><strong>Equivalence of Mechanical Work and Thermal Energy:</strong> Mechanical energy can be completely converted into heat (as established in Joule's mechanical equivalent of heat experiments).</li>
+<li><strong>Internal Energy as an Integrating Factor:</strong> Although neither \( dQ \) nor \( dW \) is an exact differential individually, their difference \( dQ - dW = dU \) is an exact differential of a true state function.</li>
+<li><strong>Limitation of the First Law:</strong> The First Law is strictly a balance sheet of energy. It asserts that energy must be conserved in any transformation, but it makes no prediction about whether a given process can occur spontaneously or which direction heat will flow. (This directional necessity requires the Second Law).</li>
+</ol>
+
+<div class="insightbox">
+The First Law does not say which processes are physically possible in nature — it only states how energy must balance if a process does occur.
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Application of the First Law</h3>
+<p>
+A sample of ideal gas expands from volume \( V_1 \) to \( V_2 \) while absorbing \( 500 \, \text{J} \) of heat. If the work done by the gas during this expansion is \( 320 \, \text{J} \), calculate the change in the internal energy of the gas and state whether its temperature increased or decreased.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>From the First Law of Thermodynamics:</p>
+\[
+\Delta U = Q - W = (+500 \, \text{J}) - (+320 \, \text{J}) = +180 \, \text{J}
+\]
+<p>Since \( \Delta U > 0 \), and for an ideal gas \( \Delta U = n C_v \Delta T \), the positive internal energy change implies that \( \Delta T > 0 \). The temperature of the gas increases.</p>
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Detailed Analysis</h2>
+<div class="chapter-list">
+<a href="./03a-molar-heat-capacities-and-mayer-relation.html">3a. Molar Heat Capacities & Mayer's Relation</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

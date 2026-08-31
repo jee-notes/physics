@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Polytropic Process</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./04-thermodynamic-processes.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamic Processes
+</a>
+</nav>
+
+<h1>Polytropic Process (General Index)</h1>
+<p class="subtitle">
+The master generalized process: polytropic heat capacity, general work integrals, and negative specific heats.
+</p>
+
+<section>
+<h2>General Polytropic Equation: PV^x = Constant</h2>
+<p>
+A <strong>Polytropic Process</strong> is any reversible thermodynamic transformation undergone by an ideal gas that satisfies the general empirical relation:
+</p>
+<div class="model-box">
+\[
+P V^x = \text{constant}
+\]
+where \( x \) is the <strong>Polytropic Index</strong> (\( -\infty < x < \infty \)).
+</div>
+
+<p>
+Equivalent state relations in terms of temperature \( T \) and volume \( V \) or pressure \( P \):
+</p>
+<ul>
+<li><strong>Temperature - Volume:</strong> \( T V^{x - 1} = \text{constant} \implies T_1 V_1^{x - 1} = T_2 V_2^{x - 1} \)</li>
+<li><strong>Temperature - Pressure:</strong> \( T^x P^{1 - x} = \text{constant} \implies \frac{T_1^x}{P_1^{x - 1}} = \frac{T_2^x}{P_2^{x - 1}} \)</li>
+</ul>
+</section>
+
+<section>
+<h2>Molar Heat Capacity for Polytropic Process</h2>
+<p>
+The molar heat capacity \( C \) for a general polytropic process \( P V^x = C \) is derived directly from the First Law of Thermodynamics.
+</p>
+
+<h3>Rigorous Derivation:</h3>
+<p>
+1. From the First Law for 1 mole of an ideal gas:
+\[
+dQ = dU + dW = C_v \, dT + P \, dV
+\]
+2. Differentiating \( P V^x = K \):
+\[
+P (x V^{x-1} \, dV) + V^x \, dP = 0 \implies P x \, dV + V \, dP = 0
+\]
+3. From the ideal gas equation (\( PV = RT \)), differentiating gives \( P\,dV + V\,dP = R\,dT \). Substituting \( V\,dP = -x P\,dV \):
+\[
+P \, dV - x P \, dV = R \, dT \implies P (1 - x) \, dV = R \, dT \implies P \, dV = \frac{R \, dT}{1 - x}
+\]
+4. Substituting \( P\,dV \) back into the First Law:
+\[
+dQ = C_v \, dT + \frac{R \, dT}{1 - x} = \left( C_v + \frac{R}{1 - x} \right) dT
+\]
+By definition of molar heat capacity \( dQ = C \, dT \):
+<div class="model-box">
+\[
+C = C_v + \frac{R}{1 - x} = \frac{R}{\gamma - 1} + \frac{R}{1 - x}
+\]
+where:
+<ul>
+<li>\( C \): Molar heat capacity for the polytropic process (SI Unit: <strong>\( \text{J}/(\text{mol}\cdot\text{K}) \)</strong>)</li>
+<li>\( C_v = \frac{R}{\gamma - 1} \): Molar heat capacity at constant volume</li>
+<li>\( x \): Polytropic index</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Work Done in Polytropic Process</h2>
+<p>
+The boundary work done during a polytropic expansion from \( (P_i, V_i) \) to \( (P_f, V_f) \) (for \( x \neq 1 \)):
+</p>
+<div class="model-box">
+\[
+W = \int_{V_i}^{V_f} P \, dV = \int_{V_i}^{V_f} K V^{-x} \, dV = \frac{P_i V_i - P_f V_f}{x - 1} = \frac{n R (T_i - T_f)}{x - 1}
+\]
+</div>
+<p>
+For the special case \( x = 1 \) (Isothermal), the integral yields the logarithmic form: \( W = n R T \ln(V_f / V_i) \).
+</p>
+</section>
+
+<section>
+<h2>Special Cases for Various Values of Index x</h2>
+<p>
+The polytropic framework elegantly unifies all classical thermodynamic processes under a single equation:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Polytropic Index (\( x \))</th>
+<th>Governing Equation</th>
+<th>Process Identity</th>
+<th>Molar Heat Capacity (\( C \))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\( x = 0 \)</td>
+<td>\( P V^0 = P = \text{const} \)</td>
+<td><strong>Isobaric</strong></td>
+<td>\( C = C_v + R = C_p \)</td>
+</tr>
+<tr>
+<td>\( x = 1 \)</td>
+<td>\( P V^1 = \text{const} \)</td>
+<td><strong>Isothermal</strong></td>
+<td>\( C = C_v + \frac{R}{0} = \pm \infty \)</td>
+</tr>
+<tr>
+<td>\( x = \gamma \)</td>
+<td>\( P V^\gamma = \text{const} \)</td>
+<td><strong>Adiabatic</strong></td>
+<td>\( C = C_v + \frac{R}{1 - \gamma} = C_v - C_v = \mathbf{0} \)</td>
+</tr>
+<tr>
+<td>\( x \to \pm \infty \)</td>
+<td>\( P^{1/x} V = V = \text{const} \)</td>
+<td><strong>Isochoric</strong></td>
+<td>\( C = C_v + \frac{R}{\infty} = C_v \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Condition for Negative Heat Capacity and Physical Interpretation</h2>
+<p>
+A frequently tested phenomenon in advanced physics is the occurrence of a <strong>negative molar heat capacity (\( C < 0 \))</strong>.
+</p>
+
+<h3>Mathematical Criterion:</h3>
+<p>
+Setting \( C < 0 \):
+\[
+C_v + \frac{R}{1 - x} < 0 \implies \frac{R}{\gamma - 1} < \frac{R}{x - 1}
+\]
+Since \( x > 1 \) and \( \gamma > 1 \):
+<div class="model-box">
+\[
+1 < x < \gamma \iff C < 0
+\]
+</div>
+
+<h3>Physical Meaning of Negative Heat Capacity:</h3>
+<p>
+When \( 1 < x < \gamma \), heat is supplied to the gas (\( dQ > 0 \)), yet its temperature <strong>decreases</strong> (\( dT < 0 \)).
+</p>
+<div class="insightbox">
+<strong>Why does temperature drop when heat is added?</strong>
+<br>In this intermediate regime, the gas expands so aggressively that the external mechanical work it performs (\( dW \)) is <em>strictly greater</em> than the heat energy supplied (\( dQ \)). To make up the energy deficit, the gas must extract energy from its own internal store (\( dU = dQ - dW < 0 \)), causing its temperature to fall despite absorbing heat!
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Process with Negative Heat Capacity</h3>
+<p>
+An ideal monoatomic gas (\( \gamma = 5/3 \)) undergoes a process following \( P V^2 = \text{constant} \).
+<br>Find: (a) Molar heat capacity \( C \), (b) Work done when \( 1 \, \text{mole} \) heats up from \( 300 \, \text{K} \) to \( 400 \, \text{K} \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>(a) Here \( x = 2 \). Since \( \gamma = 5/3 \approx 1.67 \), \( x > \gamma \), so \( C \) will be positive:</p>
+\[
+C = C_v + \frac{R}{1 - x} = \frac{3}{2}R + \frac{R}{1 - 2} = \frac{3}{2}R - R = \frac{1}{2}R
+\]
+<p>(b) Work done for \( \Delta T = 400 - 300 = 100 \, \text{K} \):</p>
+\[
+W = \frac{nR(T_i - T_f)}{x - 1} = \frac{(1)(R)(300 - 400)}{2 - 1} = -100 \, R
+\]
+<p>Heat supplied: \( Q = n C \Delta T = (1)\left(\frac{1}{2}R\right)(100) = +50 \, R \).</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Thermodynamic Systems & Variables</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamics
+</a>
+</nav>
+
+<h1>Thermodynamic Systems & Variables</h1>
+<p class="subtitle">
+Macroscopic foundations, equilibrium criteria, state coordinates, and the Zeroth Law.
+</p>
+
+<section>
+<h2>Definition of Thermodynamic System, Surroundings, and Boundary</h2>
+<p>
+In physics, thermodynamics isolates a macroscopic portion of the physical universe from everything else to analyze its energy transformations.
+</p>
+<ul>
+<li><strong>System:</strong> A specified collection of matter or a spatial region enclosed by defined boundaries chosen for macroscopic study (e.g., a gas confined within a cylinder).</li>
+<li><strong>Surroundings (Environment):</strong> Everything external to the thermodynamic system that can interact with it by exchanging matter, heat, or mechanical work.</li>
+<li><strong>Boundary:</strong> The real or imaginary surface enclosing the system that separates it from the surroundings. Boundaries are classified based on their physical constraints:
+  <ul>
+    <li><em>Rigid Boundary:</em> Immovable boundary that prevents any mechanical work (\( dV = 0 \)).</li>
+    <li><em>Flexible (Movable) Boundary:</em> Can expand or contract, permitting \( P\,dV \) work.</li>
+    <li><em>Diathermic Boundary:</em> Thermally conducting wall that permits free heat exchange between system and surroundings.</li>
+    <li><em>Adiabatic Boundary:</em> Perfectly insulating wall that strictly prevents any heat exchange (\( dQ = 0 \)).</li>
+  </ul>
+</li>
+</ul>
+
+<div class="insightbox">
+The choice of system boundary is purely arbitrary and chosen for mathematical convenience. However, once defined, the boundary must be strictly adhered to throughout the energy balance analysis.
+</div>
+</section>
+
+<section>
+<h2>Types of Systems: Open, Closed, and Isolated Systems</h2>
+<p>
+Depending on the permeability of the boundary to mass and energy transfer, thermodynamic systems are classified into three distinct categories:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>System Type</th>
+<th>Mass Exchange</th>
+<th>Heat Exchange</th>
+<th>Work Exchange</th>
+<th>Physical Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Open System</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Water boiling in an open beaker; a turbine or compressor.</td>
+</tr>
+<tr>
+<td><strong>Closed System</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Gas sealed inside a cylinder with a movable piston.</td>
+</tr>
+<tr>
+<td><strong>Isolated System</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Rigid, evacuated, perfectly insulated thermos flask; the Universe itself.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="concept-box">
+In JEE Physics, closed systems containing a fixed quantity of gas (constant number of moles \( n \)) form the standard focus, except in specific effusion or leaking-vessel problems.
+</div>
+</section>
+
+<section>
+<h2>Thermodynamic State and State Variables (Extensive vs Intensive)</h2>
+<p>
+The <strong>thermodynamic state</strong> of a macroscopic system is its condition at a specific instant, uniquely specified by a set of measurable physical properties termed <strong>state variables</strong> (or state coordinates).
+</p>
+
+<h3>Intensive vs. Extensive Variables</h3>
+<p>
+Consider a system in thermodynamic equilibrium. If we divide the system into two equal halves by inserting an imaginary partition:
+</p>
+<ul>
+<li><strong>Extensive Variables:</strong> Properties that depend directly on the size, mass, or total extent of the system. Their values are additive:
+\[
+X_{\text{total}} = X_1 + X_2
+\]
+<em>Examples:</em> Total Volume \( V \) (\( \text{m}^3 \)), Total Mass \( M \) (\( \text{kg} \)), Number of Moles \( n \) (\( \text{mol} \)), Internal Energy \( U \) (\( \text{J} \)), Entropy \( S \) (\( \text{J/K} \)), Heat Capacity \( C \) (\( \text{J/K} \)).
+</li>
+<li><strong>Intensive Variables:</strong> Properties that are entirely independent of the size or amount of matter in the system. Their values remain invariant under division:
+\[
+Y_{\text{half}} = Y_{\text{total}}
+\]
+<em>Examples:</em> Pressure \( P \) (\( \text{N/m}^2 \)), Temperature \( T \) (\( \text{K} \)), Density \( \rho = M/V \) (\( \text{kg/m}^3 \)), Molar Heat Capacity \( C_m \) (\( \text{J/(mol}\cdot\text{K)} \)), Specific Heat \( c \) (\( \text{J/(kg}\cdot\text{K)} \)), Viscosity, Refractive Index.
+</li>
+</ul>
+
+<div class="model-box">
+<strong>General Mathematical Theorem:</strong> The ratio of any two extensive properties is always an intensive property:
+\[
+\text{Density } \rho = \frac{M \, (\text{Extensive})}{V \, (\text{Extensive})} \quad \implies \text{Intensive}
+\]
+\[
+\text{Molar Volume } V_m = \frac{V \, (\text{Extensive})}{n \, (\text{Extensive})} \quad \implies \text{Intensive}
+\]
+</div>
+</section>
+
+<section>
+<h2>Thermodynamic Equilibrium: Mechanical, Thermal, and Chemical</h2>
+<p>
+A thermodynamic system is said to be in a state of <strong>Thermodynamic Equilibrium</strong> if and only if its macroscopic state variables do not undergo any spontaneous change with time and satisfy three simultaneous equilibrium criteria:
+</p>
+<ul>
+<li><strong>1. Mechanical Equilibrium:</strong> There are no unbalanced forces either within the interior of the system or between the system and its surroundings. The pressure is uniform throughout the system:
+\[
+\nabla P = 0 \quad \text{and} \quad P_{\text{system}} = P_{\text{surroundings}} \quad \text{(at movable boundaries)}
+\]
+</li>
+<li><strong>2. Thermal Equilibrium:</strong> There is no net heat flow between any two parts of the system or between the system and the surroundings. The temperature is strictly uniform throughout:
+\[
+\nabla T = 0 \quad \text{and} \quad T_{\text{system}} = T_{\text{surroundings}}
+\]
+</li>
+<li><strong>3. Chemical Equilibrium:</strong> There are no chemical reactions taking place, and there is no net diffusion or transport of matter from one part of the system to another. The chemical potential of each species is uniform throughout.</li>
+</ul>
+
+<div class="insightbox">
+If even one of these three conditions is violated, the system is in a non-equilibrium state, and classical macroscopic state variables (like a single uniform temperature \( T \) or pressure \( P \)) cannot be assigned to the system as a whole.
+</div>
+</section>
+
+<section>
+<h2>Equation of State and State Functions vs Path Functions</h2>
+<p>
+An <strong>Equation of State</strong> is a functional mathematical relation connecting the state variables of a system in thermodynamic equilibrium. For an ideal gas containing \( n \) moles:
+</p>
+<div class="model-box">
+\[
+P V = n R T
+\]
+where:
+<ul>
+<li>\( P \): Absolute Pressure of gas (SI Unit: \( \text{Pa} = \text{N/m}^2 \), Dimension: \( [M L^{-1} T^{-2}] \))</li>
+<li>\( V \): Volume occupied by gas (SI Unit: \( \text{m}^3 \), Dimension: \( [L^3] \))</li>
+<li>\( n \): Amount of substance in moles (SI Unit: \( \text{mol} \), Dimension: \( [N] \))</li>
+<li>\( R \): Universal Gas Constant (\( R \approx 8.314 \, \text{J}/(\text{mol}\cdot\text{K}) \), Dimension: \( [M L^2 T^{-2} K^{-1} N^{-1}] \))</li>
+<li>\( T \): Absolute Temperature on Kelvin scale (SI Unit: \( \text{K} \), Dimension: \( [K] \))</li>
+</ul>
+</div>
+
+<h3>State Functions vs. Path Functions</h3>
+<p>
+Thermodynamic quantities are fundamentally partitioned into two mathematical categories:
+</p>
+<ul>
+<li><strong>State Functions (Point Functions):</strong> Quantities whose values depend solely on the current thermodynamic state of the system, independent of how that state was reached.
+  <br><em>Examples:</em> \( P, V, T, U, S, H \).
+  <br>Mathematically, the cyclic integral of an exact differential of a state function is identically zero:
+  \[
+  \oint dU = 0, \quad \oint dS = 0, \quad \Delta U = U_f - U_i
+  \]
+</li>
+<li><strong>Path Functions:</strong> Quantities whose values depend explicitly on the specific trajectory or process path taken by the system between the initial and final states.
+  <br><em>Examples:</em> Heat (\( Q \)), Mechanical Work (\( W \)).
+  <br>Their differentials are inexact (denoted \( \delta Q, \delta W \) or \( dQ, dW \)):
+  \[
+  \oint dW = W_{\text{net}} \neq 0, \quad \oint dQ = Q_{\text{net}} \neq 0
+  \]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Reversible, Irreversible, and Quasi-Static Processes</h2>
+<p>
+A <strong>thermodynamic process</strong> occurs when a system transitions from an initial equilibrium state to a final equilibrium state through changes in its state variables.
+</p>
+
+<h3>Quasi-Static Process</h3>
+<p>
+A process that occurs infinitely slowly, such that at every infinitesimal stage, the system deviates only infinitesimally from thermodynamic equilibrium. At every point along a quasi-static path, the system's state variables (\( P, V, T \)) are precisely defined and can be represented as a continuous curve on an indicator diagram.
+</p>
+
+<h3>Reversible Process</h3>
+<p>
+A process that can be reversed in direction by an infinitesimal alteration in external conditions, such that both the system and the surroundings return exactly to their initial states with no trace left in the universe.
+</p>
+<ul>
+<li><strong>Necessary Conditions:</strong>
+  <ol>
+    <li>The process must be completely quasi-static (infinitely slow).</li>
+    <li>There must be absolutely zero dissipative forces (no mechanical friction, viscous drag, inelastic deformation, or electrical resistance).</li>
+    <li>Heat transfer must occur across an infinitesimal temperature difference (\( \Delta T \to 0 \)).</li>
+  </ol>
+</li>
+</ul>
+
+<h3>Irreversible Process</h3>
+<p>
+Any real, natural process that occurs spontaneously at a finite rate. Friction, turbulence, rapid unrestrained expansion, and heat transfer across a finite temperature gradient render all natural processes strictly irreversible.
+</p>
+
+<div class="insightbox">
+Reversible processes are idealized theoretical benchmarks. Every real, spontaneous thermodynamic process in nature is fundamentally irreversible and generates entropy in the universe.
+</div>
+</section>
+
+<section>
+<h2>Zeroth Law of Thermodynamics and Temperature Definition</h2>
+<p>
+The Zeroth Law of Thermodynamics establishes the physical concept of temperature as an objective, transitive thermal state variable.
+</p>
+<div class="model-box">
+<strong>Statement of the Zeroth Law:</strong>
+<p>
+<em>If two thermodynamic systems \( A \) and \( B \) are each separately in thermal equilibrium with a third system \( C \), then systems \( A \) and \( B \) are also in mutual thermal equilibrium with each other when brought into thermal contact.</em>
+</p>
+\[
+T_A = T_C \quad \text{and} \quad T_B = T_C \implies T_A = T_B
+\]
+</div>
+
+<p>
+<strong>Physical Significance:</strong> The Zeroth Law guarantees that there exists a scalar state property called <strong>Temperature (\( T \))</strong> common to all systems in thermal equilibrium. It provides the theoretical foundation for thermometry, where system \( C \) acts as a calibrated thermometer.
+</p>
+
+<div class="examplebox">
+<h3>Conceptual Example: Thermal Transitivity</h3>
+<p>
+A copper block \( A \) and an aluminum block \( B \) are placed in an insulated chamber. When a mercury thermometer \( C \) is placed in contact with block \( A \), it reads \( 300 \, \text{K} \). When subsequently placed in contact with block \( B \), it also reads \( 300 \, \text{K} \).
+</p>
+<hr>
+<p>
+<strong>Conclusion:</strong> According to the Zeroth Law, if blocks \( A \) and \( B \) are placed in thermal contact through a diathermic partition, zero net heat will flow between them because they possess the same absolute temperature: \( T_A = T_B = 300 \, \text{K} \).
+</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

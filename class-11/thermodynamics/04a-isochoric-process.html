@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Isochoric Process</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./04-thermodynamic-processes.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamic Processes
+</a>
+</nav>
+
+<h1>Isochoric Process (Constant Volume)</h1>
+<p class="subtitle">
+Thermodynamics of rigid containers: zero boundary work and direct thermal-to-internal conversion.
+</p>
+
+<section>
+<h2>Definition and Condition (Constant Volume)</h2>
+<p>
+An <strong>Isochoric Process</strong> (also referred to as an <em>isometric</em> or <em>isovolumetric</em> process) is a thermodynamic transformation in which the volume of the system remains strictly constant throughout:
+</p>
+<div class="model-box">
+\[
+V = \text{constant} \implies dV = 0 \quad \text{and} \quad \Delta V = 0
+\]
+</div>
+<p>
+This condition is physically achieved whenever a gas is confined inside a rigid, immovable container (such as a closed metallic autoclave or a sealed bomb calorimeter).
+</p>
+<p>
+From the ideal gas equation of state (\( PV = nRT \)), with \( V \) and \( n \) fixed:
+</p>
+\[
+\frac{P}{T} = \frac{nR}{V} = \text{constant} \implies \frac{P_1}{T_1} = \frac{P_2}{T_2} \quad \text{(Gay-Lussac's Law)}
+\]
+</section>
+
+<section>
+<h2>Work Done in Isochoric Process</h2>
+<p>
+Because the boundaries of the system do not undergo any physical displacement, the boundary mechanical work performed is identically zero:
+</p>
+<div class="model-box">
+\[
+W = \int_{V_i}^{V_f} P \, dV = \int_{V_0}^{V_0} P \, (0) = 0
+\]
+</div>
+<div class="insightbox">
+No matter how intensely a gas is heated or pressurized inside a rigid container, if the boundary does not move (\( dV = 0 \)), the mechanical boundary work done by the gas is strictly zero.
+</div>
+</section>
+
+<section>
+<h2>Heat Added and Internal Energy Change</h2>
+<p>
+Applying the First Law of Thermodynamics (\( dQ = dU + dW \)) with \( dW = 0 \):
+</p>
+<div class="model-box">
+\[
+dQ = dU = n \, C_v \, dT
+\]
+\[
+Q = \Delta U = n \, C_v \, (T_2 - T_1) = \frac{V_0 \, (P_2 - P_1)}{\gamma - 1}
+\]
+where:
+<ul>
+<li>\( Q \): Heat added to the system (SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
+<li>\( \Delta U \): Change in internal energy (SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
+<li>\( C_v = \frac{R}{\gamma - 1} = \frac{f}{2}R \): Molar heat capacity at constant volume</li>
+<li>\( \Delta T = T_2 - T_1 = \frac{V_0(P_2 - P_1)}{nR} \): Temperature increment</li>
+</ul>
+</div>
+
+<p>
+<strong>Key Energy Partitioning:</strong>
+</p>
+<ul>
+<li><strong>Heating (\( Q > 0 \)):</strong> \( \Delta U > 0 \implies T \) increases and \( P \) increases proportionally. Exactly \( 100\% \) of added heat is stored as microscopic internal kinetic energy.</li>
+<li><strong>Cooling (\( Q < 0 \)):</strong> \( \Delta U < 0 \implies T \) drops and \( P \) decreases proportionally. Heat is released purely from internal energy depletion.</li>
+</ul>
+</section>
+
+<section>
+<h2>Slope and Representation on State Diagrams</h2>
+<p>
+The mathematical slope on the standard \( P \)-\( V \) plane is vertical:
+</p>
+\[
+\left( \frac{dP}{dV} \right)_{\text{isochoric}} = \lim_{dV \to 0} \frac{\Delta P}{dV} = \pm \infty
+\]
+
+<h3>Diagrammatic Profiles:</h3>
+<ul>
+<li><strong>\( P \)-\( V \) Diagram:</strong> A vertical straight line parallel to the pressure axis at fixed abscissa \( V = V_0 \). (Area under vertical line = 0, confirming \( W = 0 \)).</li>
+<li><strong>\( P \)-\( T \) Diagram:</strong> A straight line passing through the origin (\( P = \frac{nR}{V_0} T \)). The slope is inversely proportional to volume: \( \text{Slope} = \frac{nR}{V_0} \).</li>
+<li><strong>\( V \)-\( T \) Diagram:</strong> A horizontal straight line at constant ordinate \( V = V_0 \).</li>
+</ul>
+
+<div class="examplebox">
+<h3>Solved Example: Heating Rigidly Enclosed Gas</h3>
+<p>
+A rigid container of volume \( 0.05 \, \text{m}^3 \) contains \( 2 \, \text{moles} \) of an ideal monoatomic gas (\( C_v = 1.5R \)) at an initial pressure of \( 1.0 \times 10^5 \, \text{Pa} \). Heat is supplied until the pressure triples to \( 3.0 \times 10^5 \, \text{Pa} \).
+<br>Calculate: (a) Work done \( W \), (b) Change in internal energy \( \Delta U \), (c) Heat supplied \( Q \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>(a) Since the container is rigid, \( dV = 0 \implies W = 0 \).</p>
+<p>(b) Using the state-variable formula for \( \Delta U \):</p>
+\[
+\Delta U = \frac{\Delta(PV)}{\gamma - 1} = \frac{V_0(P_f - P_i)}{\frac{5}{3} - 1} = \frac{0.05 \times (3.0 \times 10^5 - 1.0 \times 10^5)}{2/3} = \frac{0.05 \times 2.0 \times 10^5}{2/3} = 15,000 \, \text{J} = 15 \, \text{kJ}
+\]
+<p>(c) By the First Law: \( Q = \Delta U + W = 15 \, \text{kJ} + 0 = 15 \, \text{kJ} \).</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

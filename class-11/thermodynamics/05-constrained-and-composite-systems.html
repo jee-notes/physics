@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Constrained & Composite Systems</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamics
+</a>
+</nav>
+
+<h1>Constrained & Composite Mechanical Systems</h1>
+<p class="subtitle">
+Piston-spring interactions, multi-compartment partitions, linear P-V curves, and extremal temperature points.
+</p>
+
+<section>
+<h2>Thermodynamics of Piston-Cylinder Systems</h2>
+<p>
+A major portion of advanced JEE problems involves composite thermodynamic-mechanical systems where the gas pressure is dynamically constrained by gravity, external atmospheric forces, and movable pistons.
+</p>
+<p>
+For a vertical cylinder sealed by a frictionless piston of mass \( M \) and cross-sectional area \( A \) in mechanical equilibrium:
+</p>
+<div class="model-box">
+\[
+P_{\text{gas}} \cdot A = P_0 \cdot A + M g \implies P_{\text{gas}} = P_0 + \frac{M g}{A}
+\]
+where \( P_0 \) is the external ambient atmospheric pressure.
+</div>
+</section>
+
+<section>
+<h2>Systems with External Atmospheric Pressure and Springs</h2>
+<p>
+When the piston is coupled to a linear mechanical spring of spring constant \( k \), the gas pressure becomes a linear function of piston displacement \( x \), and therefore of gas volume \( V \).
+</p>
+
+<div class="diagram">
+<svg width="600" height="200" viewBox="0 0 600 200">
+  <!-- Cylinder -->
+  <rect x="100" y="40" width="380" height="120" fill="#fdfdfd" stroke="#2c3e50" stroke-width="3"/>
+  <!-- Gas inside left -->
+  <rect x="103" y="43" width="160" height="114" fill="#eaf2fb" stroke="none"/>
+  <text x="180" y="105" font-size="16" fill="#2980b9" font-weight="bold" text-anchor="middle">Gas (P, V, T)</text>
+  <!-- Piston -->
+  <rect x="263" y="43" width="20" height="114" fill="#34495e" stroke="none"/>
+  <!-- Spring -->
+  <path d="M 283 100 L 300 80 L 320 120 L 340 80 L 360 120 L 380 80 L 400 120 L 420 80 L 440 120 L 460 100 L 480 100" fill="none" stroke="#e74c3c" stroke-width="3"/>
+  <text x="380" y="150" font-size="14" fill="#e74c3c" font-weight="bold" text-anchor="middle">Spring (k)</text>
+  <text x="520" y="105" font-size="14" fill="#7f8c8d">P_0 (Atm)</text>
+</svg>
+</div>
+
+<h3>Force Balance & Equation of Path:</h3>
+<p>
+Let \( x \) be the displacement of the piston from the relaxed state of the spring. The volume is \( V = V_0 + A x \implies x = \frac{V - V_0}{A} \).
+<br>Force balance on the piston:
+\[
+P(V) \cdot A = P_0 \cdot A + k x = P_0 A + k \left(\frac{V - V_0}{A}\right)
+\]
+<div class="model-box">
+\[
+P(V) = P_0 + \frac{k}{A^2}(V - V_0)
+\]
+This represents a <strong>straight line</strong> on the \( P \)-\( V \) diagram with positive slope \( \frac{dP}{dV} = \frac{k}{A^2} \).
+</div>
+
+<h3>Total Work Done in Spring-Piston Expansion:</h3>
+\[
+W_{\text{gas}} = \int P(V) \, dV = P_0 (V_f - V_i) + \frac{1}{2} k (x_f^2 - x_i^2) = W_{\text{atm}} + \Delta U_{\text{spring}}
+\]
+<div class="insightbox">
+Work done by the expanding gas is partitioned into pushing back the atmosphere (\( P_0 \Delta V \)) and storing elastic potential energy in the compressed spring (\( \frac{1}{2} k x^2 \)).
+</div>
+</section>
+
+<section>
+<h2>Compartments Separated by Fixed or Movable Partitions</h2>
+<p>
+Consider an insulated cylinder divided into two compartments \( 1 \) and \( 2 \) by a partition:
+</p>
+<ul>
+<li><strong>Rigid & Insulating Partition:</strong> Both compartments are completely decoupled; \( \Delta V_1 = 0, \Delta V_2 = 0 \), and \( Q_{1\to 2} = 0 \).</li>
+<li><strong>Movable & Insulating Partition:</strong> The partition moves until mechanical equilibrium is reached:
+\[
+P_{1,\text{final}} = P_{2,\text{final}}
+\]
+Total volume is conserved: \( V_1 + V_2 = V_{\text{total}} \). Each compartment undergoes an independent adiabatic process: \( P_1 V_1^\gamma = \text{const} \).
+</li>
+<li><strong>Movable & Conducting Partition:</strong> Reaches both <strong>mechanical equilibrium</strong> and <strong>thermal equilibrium</strong> simultaneously:
+\[
+P_{1,\text{final}} = P_{2,\text{final}} \quad \text{and} \quad T_{1,\text{final}} = T_{2,\text{final}}
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Conducting vs Insulating Separators and Thermal Equilibrium</h2>
+<p>
+When two gas samples of moles \( n_1, n_2 \) with molar heat capacities \( C_{v1}, C_{v2} \) at initial temperatures \( T_1, T_2 \) are brought into thermal contact via a rigid diathermic partition:
+</p>
+\[
+Q_1 + Q_2 = 0 \implies n_1 C_{v1} (T_f - T_1) + n_2 C_{v2} (T_f - T_2) = 0
+\]
+<div class="model-box">
+\[
+T_{\text{equilibrium}} = \frac{n_1 C_{v1} T_1 + n_2 C_{v2} T_2}{n_1 C_{v1} + n_2 C_{v2}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Linear P-V Processes and Triangular or Elliptical Paths</h2>
+<p>
+In JEE physics problems, an ideal gas often undergoes a non-standard process represented by a linear relationship:
+</p>
+\[
+P = -\alpha V + \beta \quad (\alpha, \beta > 0)
+\]
+<p>
+For an expansion from \( (P_1, V_1) \) to \( (P_2, V_2) \):
+</p>
+<ul>
+<li><strong>Work Done:</strong> Trapezoidal area: \( W = \frac{1}{2}(P_1 + P_2)(V_2 - V_1) \).</li>
+<li><strong>Internal Energy Change:</strong> \( \Delta U = \frac{P_2 V_2 - P_1 V_1}{\gamma - 1} \).</li>
+<li><strong>Heat Exchanged:</strong> \( Q = \Delta U + W \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Maximum and Minimum Temperature Determination along Process Paths</h2>
+<p>
+A classic JEE problem involves determining the maximum temperature achieved by a gas during a linear \( P \)-\( V \) process \( P = -\alpha V + \beta \).
+</p>
+
+<h3>Mathematical Method:</h3>
+<p>
+1. From the ideal gas equation: \( T = \frac{PV}{nR} = \frac{(-\alpha V + \beta)V}{nR} = \frac{-\alpha V^2 + \beta V}{nR} \).
+<br>2. To find the extremum, set \( \frac{dT}{dV} = 0 \):
+\[
+\frac{d}{dV} \left( -\alpha V^2 + \beta V \right) = -2\alpha V + \beta = 0 \implies V_m = \frac{\beta}{2\alpha} = \frac{V_0}{2}
+\]
+3. The corresponding pressure at maximum temperature:
+\[
+P_m = -\alpha \left(\frac{\beta}{2\alpha}\right) + \beta = \frac{\beta}{2} = \frac{P_0}{2}
+\]
+4. Maximum Temperature:
+<div class="model-box">
+\[
+T_{\max} = \frac{P_m V_m}{nR} = \frac{\left(\frac{\beta}{2}\right)\left(\frac{\beta}{2\alpha}\right)}{nR} = \frac{\beta^2}{4\alpha n R} = \frac{P_0 V_0}{4 n R}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Maximum Temperature on a Line</h3>
+<p>
+One mole of an ideal gas undergoes a process given by \( P = P_0 \left[ 1 - \left(\frac{V}{2V_0}\right)^2 \right] \) from \( V = 0 \) to \( V = 2V_0 \). Find the maximum temperature reached.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+\[
+T(V) = \frac{PV}{R} = \frac{P_0}{R} \left[ V - \frac{V^3}{4V_0^2} \right]
+\]
+Setting \( \frac{dT}{dV} = 0 \implies 1 - \frac{3V^2}{4V_0^2} = 0 \implies V_m = \frac{2}{\sqrt{3}}V_0 \).
+<br>Substituting \( V_m \) back into \( T(V) \):
+\[
+T_{\max} = \frac{P_0}{R} \left[ \frac{2}{\sqrt{3}}V_0 - \frac{\frac{8}{3\sqrt{3}}V_0^3}{4V_0^2} \right] = \frac{P_0 V_0}{R} \left[ \frac{2}{\sqrt{3}} - \frac{2}{3\sqrt{3}} \right] = \frac{4 P_0 V_0}{3\sqrt{3} R}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

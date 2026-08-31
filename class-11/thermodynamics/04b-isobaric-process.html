@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Isobaric Process</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./04-thermodynamic-processes.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamic Processes
+</a>
+</nav>
+
+<h1>Isobaric Process (Constant Pressure)</h1>
+<p class="subtitle">
+Thermodynamics under constant load: boundary work, isobaric heating, and work-heat fractioning.
+</p>
+
+<section>
+<h2>Definition and Condition (Constant Pressure)</h2>
+<p>
+An <strong>Isobaric Process</strong> is a thermodynamic transformation in which the pressure of the system is maintained strictly constant throughout:
+</p>
+<div class="model-box">
+\[
+P = \text{constant} \implies dP = 0 \quad \text{and} \quad \Delta P = 0
+\]
+</div>
+<p>
+This is physically realized when a gas expands or contracts in a vertical cylinder fitted with a frictionless piston of mass \( M \) subject to constant atmospheric pressure \( P_0 \):
+\[
+P_{\text{gas}} = P_0 + \frac{Mg}{A} = \text{constant}
+\]
+</p>
+<p>
+From the ideal gas equation (\( PV = nRT \)), with \( P \) constant:
+</p>
+\[
+\frac{V}{T} = \frac{nR}{P} = \text{constant} \implies \frac{V_1}{T_1} = \frac{V_2}{T_2} \quad \text{(Charles's Law)}
+\]
+</section>
+
+<section>
+<h2>Work Done in Isobaric Process</h2>
+<p>
+Since pressure \( P_0 \) is invariant, it can be factored directly out of the work integral:
+</p>
+<div class="model-box">
+\[
+W = \int_{V_i}^{V_f} P_0 \, dV = P_0 \int_{V_i}^{V_f} dV = P_0 (V_f - V_i) = P_0 \Delta V
+\]
+Using the ideal gas equation (\( P\Delta V = nR\Delta T \)):
+\[
+W = n \, R \, (T_f - T_i) = n \, R \, \Delta T
+\]
+</div>
+</section>
+
+<section>
+<h2>Heat Supplied and Internal Energy Change</h2>
+<p>
+When heat is added at constant pressure, it splits simultaneously into increasing internal energy and doing mechanical boundary work:
+</p>
+<div class="model-box">
+\[
+Q = n \, C_p \, \Delta T = n \left(\frac{\gamma R}{\gamma - 1}\right) \Delta T
+\]
+\[
+\Delta U = n \, C_v \, \Delta T = n \left(\frac{R}{\gamma - 1}\right) \Delta T = \frac{P_0 \Delta V}{\gamma - 1}
+\]
+\[
+W = n \, R \, \Delta T = P_0 \Delta V
+\]
+</div>
+<p>
+Verifying energy balance via the First Law:
+\[
+\Delta U + W = n C_v \Delta T + n R \Delta T = n (C_v + R) \Delta T = n C_p \Delta T = Q
+\]
+</p>
+</section>
+
+<section>
+<h2>Fraction of Heat Converted into Work</h2>
+<p>
+A cornerstone concept in competitive examinations is the partitioning ratio of heat supplied during an isobaric expansion of an ideal gas:
+</p>
+
+<h3>1. Fraction of Heat Converted to Mechanical Work (\( f_W \)):</h3>
+<div class="model-box">
+\[
+f_W = \frac{W}{Q} = \frac{n R \Delta T}{n C_p \Delta T} = \frac{R}{C_p} = \frac{C_p - C_v}{C_p} = 1 - \frac{1}{\gamma} = \frac{2}{f + 2}
+\]
+</div>
+
+<h3>2. Fraction of Heat Stored as Internal Energy (\( f_U \)):</h3>
+<div class="model-box">
+\[
+f_U = \frac{\Delta U}{Q} = \frac{n C_v \Delta T}{n C_p \Delta T} = \frac{C_v}{C_p} = \frac{1}{\gamma} = \frac{f}{f + 2}
+\]
+Notice that \( f_W + f_U = \left(1 - \frac{1}{\gamma}\right) + \frac{1}{\gamma} = 1 \).
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Gas Atomicity</th>
+<th>Degrees of Freedom (\( f \))</th>
+<th>\( \gamma = \frac{C_p}{C_v} \)</th>
+<th>Fraction to Work (\( \frac{W}{Q} \))</th>
+<th>Fraction to Internal Energy (\( \frac{\Delta U}{Q} \))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monoatomic Gas</strong></td>
+<td>3</td>
+<td>\( 5/3 \)</td>
+<td>\( 1 - \frac{3}{5} = \frac{2}{5} = \mathbf{40\%} \)</td>
+<td>\( \frac{3}{5} = \mathbf{60\%} \)</td>
+</tr>
+<tr>
+<td><strong>Diatomic Gas (Rigid)</strong></td>
+<td>5</td>
+<td>\( 7/5 \)</td>
+<td>\( 1 - \frac{5}{7} = \frac{2}{7} \approx \mathbf{28.6\%} \)</td>
+<td>\( \frac{5}{7} \approx \mathbf{71.4\%} \)</td>
+</tr>
+<tr>
+<td><strong>Polyatomic Gas (Non-linear)</strong></td>
+<td>6</td>
+<td>\( 4/3 \)</td>
+<td>\( 1 - \frac{3}{4} = \frac{1}{4} = \mathbf{25\%} \)</td>
+<td>\( \frac{3}{4} = \mathbf{75\%} \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Graphical Analysis on P-V and V-T Planes</h2>
+<p>
+The mathematical slope of an isobaric curve on the \( P \)-\( V \) diagram is strictly horizontal:
+</p>
+\[
+\left( \frac{dP}{dV} \right)_{\text{isobaric}} = 0
+\]
+
+<h3>Diagrammatic Shapes:</h3>
+<ul>
+<li><strong>\( P \)-\( V \) Diagram:</strong> A horizontal straight line at constant ordinate \( P = P_0 \). The area under the line from \( V_1 \) to \( V_2 \) is a simple rectangle of area \( P_0(V_2 - V_1) \).</li>
+<li><strong>\( V \)-\( T \) Diagram:</strong> A straight line passing through the origin (\( V = \frac{nR}{P_0} T \)). The slope is inversely proportional to pressure: \( \text{Slope} = \frac{nR}{P_0} \).</li>
+<li><strong>\( P \)-\( T \) Diagram:</strong> A horizontal straight line at constant height \( P = P_0 \).</li>
+</ul>
+
+<div class="examplebox">
+<h3>Solved Example: Isobaric Expansion</h3>
+<p>
+\( 1 \, \text{mole} \) of an ideal monoatomic gas (\( \gamma = 5/3 \)) at \( 300 \, \text{K} \) expands isobarically until its volume doubles. Find \( W \), \( \Delta U \), and \( Q \) in terms of \( R \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>Since \( V_2 = 2V_1 \) at constant pressure, by Charles's Law: \( T_2 = 2T_1 = 600 \, \text{K} \implies \Delta T = 300 \, \text{K} \).</p>
+\[
+W = n R \Delta T = (1)(R)(300) = 300 \, R
+\]
+\[
+\Delta U = n C_v \Delta T = (1)\left(\frac{3}{2}R\right)(300) = 450 \, R
+\]
+\[
+Q = n C_p \Delta T = (1)\left(\frac{5}{2}R\right)(300) = 750 \, R
+\]
+<p>Check: \( Q = \Delta U + W = 450R + 300R = 750R \) (Exact conservation).</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Entropy in Phase Changes & Mixing</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./08-entropy-and-irreversibility.html" class="back-btn">
+<span>&larr;</span> Back to Entropy & Irreversibility
+</a>
+</nav>
+
+<h1>Entropy in Phase Changes, Mixing, & Equilibrium</h1>
+<p class="subtitle">
+Thermodynamic entropy changes during phase transformations, irreversible thermal mixing, and cosmological implications.
+</p>
+
+<section>
+<h2>Entropy Change During Isothermal Phase Change</h2>
+<p>
+A phase change (melting, vaporization, sublimation) occurs at a strictly constant temperature and pressure. The heat absorbed or released is the latent heat:
+</p>
+\[
+Q = m L
+\]
+where \( m \) is the mass and \( L \) is the specific latent heat of the transformation.
+</p>
+<p>
+Because temperature remains invariant throughout the phase transition (\( T = T_{\text{phase}} \)), the entropy change is calculated directly:
+</p>
+<div class="model-box">
+\[
+\Delta S_{\text{phase}} = \frac{Q_{\text{rev}}}{T_{\text{phase}}} = \pm \frac{m L}{T_{\text{phase}}}
+\]
+where \( T_{\text{phase}} \) must be expressed in <strong>Kelvin (\( \text{K} \))</strong>.
+</div>
+
+<h3>Key Phase Transition Values:</h3>
+<ul>
+<li><strong>Melting of Ice at \( 0^\circ\text{C} \) (\( 273.15 \, \text{K} \)):</strong>
+\[
+\Delta S_{\text{fusion}} = +\frac{m L_f}{273.15 \, \text{K}} > 0 \quad (\text{Order of crystal lattice breaks down into liquid disorder})
+\]
+</li>
+<li><strong>Freezing of Water at \( 0^\circ\text{C} \):</strong>
+\[
+\Delta S_{\text{freezing}} = -\frac{m L_f}{273.15 \, \text{K}} < 0
+\]
+</li>
+<li><strong>Vaporization of Water at \( 100^\circ\text{C} \) (\( 373.15 \, \text{K} \)):</strong>
+\[
+\Delta S_{\text{vap}} = +\frac{m L_v}{373.15 \, \text{K}} > 0 \quad (\text{Massive volume expansion into gaseous state})
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Entropy of Mixing of Ideal Gases</h2>
+<p>
+Consider two distinct, non-reacting ideal gases \( 1 \) (moles \( n_1 \)) and \( 2 \) (moles \( n_2 \)) initially held in separate compartments of volumes \( V_1 \) and \( V_2 \) at the same temperature \( T \) and pressure \( P \).
+</p>
+<p>
+When the partition is removed, both gases expand into the combined total volume \( V = V_1 + V_2 \).
+</p>
+<div class="model-box">
+<strong>Entropy of Mixing:</strong>
+\[
+\Delta S_{\text{mix}} = \Delta S_1 + \Delta S_2 = n_1 R \ln\left(\frac{V_1 + V_2}{V_1}\right) + n_2 R \ln\left(\frac{V_1 + V_2}{V_2}\right)
+\]
+In terms of mole fractions \( x_1 = \frac{n_1}{n_1 + n_2} \) and \( x_2 = \frac{n_2}{n_1 + n_2} \):
+\[
+\Delta S_{\text{mix}} = -(n_1 + n_2) R \left[ x_1 \ln x_1 + x_2 \ln x_2 \right]
+\]
+Since \( x_1, x_2 < 1 \), \( \ln x_i < 0 \), ensuring that \( \Delta S_{\text{mix}} > 0 \) always.
+</div>
+
+<div class="insightbox">
+<strong>Gibbs Paradox Note:</strong> If the two gases are identical (e.g., Helium mixing with Helium at identical \( T \) and \( P \)), removing the partition causes zero physical change in macroscopic state, so \( \Delta S_{\text{mix, identical}} = 0 \). Entropy increases only when distinct, distinguishable chemical species mix.
+</div>
+</section>
+
+<section>
+<h2>Entropy Changes in Thermal Equilibrium of Composite Bodies</h2>
+<p>
+Consider two bodies \( A \) and \( B \) of heat capacities \( C_A \) and \( C_B \) at initial temperatures \( T_A > T_B \) placed inside a thermally insulated container and allowed to reach a common final equilibrium temperature \( T_f \).
+</p>
+<p>
+From thermal energy conservation:
+\[
+C_A (T_A - T_f) = C_B (T_f - T_B) \implies T_f = \frac{C_A T_A + C_B T_B}{C_A + C_B}
+\]
+</p>
+
+<h3>Entropy Change of Individual Bodies:</h3>
+<ul>
+<li>Body \( A \) (Hotter): \( \Delta S_A = \int_{T_A}^{T_f} \frac{C_A \, dT}{T} = C_A \ln\left(\frac{T_f}{T_A}\right) < 0 \) (Entropy decreases)</li>
+<li>Body \( B \) (Colder): \( \Delta S_B = \int_{T_B}^{T_f} \frac{C_B \, dT}{T} = C_B \ln\left(\frac{T_f}{T_B}\right) > 0 \) (Entropy increases)</li>
+</ul>
+
+<h3>Total Entropy Change of the Isolated System (Universe):</h3>
+<div class="model-box">
+\[
+\Delta S_{\text{total}} = \Delta S_A + \Delta S_B = C_A \ln\left(\frac{T_f}{T_A}\right) + C_B \ln\left(\frac{T_f}{T_B}\right)
+\]
+For two identical bodies with equal heat capacity \( C_A = C_B = C \):
+\[
+T_f = \frac{T_A + T_B}{2} \quad (\text{Arithmetic Mean})
+\]
+\[
+\Delta S_{\text{total}} = C \ln\left( \frac{T_f^2}{T_A T_B} \right) = 2 C \ln\left( \frac{\frac{T_A + T_B}{2}}{\sqrt{T_A T_B}} \right) = 2 C \ln\left( \frac{\text{Arithmetic Mean}}{\text{Geometric Mean}} \right)
+\]
+Since \( \text{Arithmetic Mean} > \text{Geometric Mean} \) for any two unequal positive numbers (\( T_A \neq T_B \)), \( \frac{\text{AM}}{\text{GM}} > 1 \implies \ln\left(\frac{\text{AM}}{\text{GM}}\right) > 0 \).
+<br>Therefore:
+\[
+\Delta S_{\text{total}} > 0 \quad \text{strictly}
+\]
+</div>
+</section>
+
+<section>
+<h2>Heat Death of the Universe Concept</h2>
+<p>
+The cosmological consequence of the Second Law of Thermodynamics, first proposed by Lord Kelvin and Hermann von Helmholtz, is known as the <strong>Heat Death of the Universe</strong> (or the Big Freeze).
+</p>
+<ul>
+<li>Because the entire universe is an isolated system, all irreversible thermal, mechanical, chemical, and nuclear processes continually generate entropy: \( \Delta S_{\text{universe}} > 0 \).</li>
+<li>Over astronomical timescales, all temperature gradients across stars, galaxies, and interstellar gas clouds will eventually equilibrate.</li>
+<li>Once the universe reaches its maximum possible entropy state, all matter will be at a uniform, microscopic thermal equilibrium temperature.</li>
+<li>In this state of maximum entropy, zero thermodynamic work can ever be extracted, no heat engines can operate, and all physical, chemical, and biological activity will cease permanently.</li>
+</ul>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

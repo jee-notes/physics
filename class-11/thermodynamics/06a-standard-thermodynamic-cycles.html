@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Standard Thermodynamic Cycles</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./06-cyclic-processes-and-heat-engines.html" class="back-btn">
+<span>&larr;</span> Back to Cyclic Processes & Heat Engines
+</a>
+</nav>
+
+<h1>Standard Thermodynamic Cycles</h1>
+<p class="subtitle">
+Theoretical models of internal combustion and regenerative gas cycles: Otto, Diesel, Stirling, and Dual cycles.
+</p>
+
+<section>
+<h2>Otto Cycle (Air Standard Constant Volume Cycle)</h2>
+<p>
+The <strong>Otto Cycle</strong> is the idealized thermodynamic cycle that models the operation of spark-ignition (four-stroke petrol) internal combustion engines.
+</p>
+
+<h3>Four Sequential Stages:</h3>
+<ol>
+<li><strong>\( 1 \to 2 \): Reversible Adiabatic (Isentropic) Compression:</strong> Volume compresses from \( V_1 \) to \( V_2 \). Temperature rises from \( T_1 \) to \( T_2 = T_1 r^{\gamma - 1} \), where \( r = V_1 / V_2 \) is the <em>compression ratio</em>.</li>
+<li><strong>\( 2 \to 3 \): Constant Volume (Isochoric) Heat Addition:</strong> Spark ignition causes rapid combustion: \( Q_{\text{in}} = n C_v (T_3 - T_2) \).</li>
+<li><strong>\( 3 \to 4 \): Reversible Adiabatic Expansion (Power Stroke):</strong> High-pressure gas expands from \( V_2 \) back to \( V_1 \). Temperature drops from \( T_3 \) to \( T_4 = T_3 / r^{\gamma - 1} \).</li>
+<li><strong>\( 4 \to 1 \): Constant Volume Heat Rejection (Exhaust):</strong> \( Q_{\text{out}} = n C_v (T_4 - T_1) \).</li>
+</ol>
+
+<div class="model-box">
+<strong>Thermal Efficiency of the Otto Cycle:</strong>
+\[
+\eta_{\text{Otto}} = 1 - \frac{Q_{\text{out}}}{Q_{\text{in}}} = 1 - \frac{n C_v (T_4 - T_1)}{n C_v (T_3 - T_2)} = 1 - \frac{T_1(T_4/T_1 - 1)}{T_2(T_3/T_2 - 1)}
+\]
+Since \( T_4/T_1 = T_3/T_2 \):
+\[
+\eta_{\text{Otto}} = 1 - \frac{T_1}{T_2} = 1 - \frac{1}{r^{\gamma - 1}}
+\]
+where \( r = \frac{V_{\max}}{V_{\min}} \) is the compression ratio and \( \gamma = C_p / C_v \).
+</div>
+<div class="insightbox">
+The efficiency of an Otto cycle depends exclusively on the compression ratio \( r \) and the adiabatic index \( \gamma \). Higher compression ratios yield higher thermodynamic efficiencies.
+</div>
+</section>
+
+<section>
+<h2>Diesel Cycle (Air Standard Constant Pressure Cycle)</h2>
+<p>
+The <strong>Diesel Cycle</strong> models compression-ignition engines (diesel engines) where fuel is injected directly into highly compressed, hot air and ignites spontaneously without a spark plug.
+</p>
+
+<h3>Four Stages of Diesel Cycle:</h3>
+<ol>
+<li><strong>\( 1 \to 2 \): Adiabatic Compression:</strong> Compression ratio \( r = V_1 / V_2 \).</li>
+<li><strong>\( 2 \to 3 \): Constant Pressure (Isobaric) Heat Addition:</strong> Fuel injection during expansion: \( Q_{\text{in}} = n C_p (T_3 - T_2) \). The <em>cut-off ratio</em> is \( r_c = V_3 / V_2 \).</li>
+<li><strong>\( 3 \to 4 \): Adiabatic Expansion:</strong> Volume expands from \( V_3 \) to \( V_1 \).</li>
+<li><strong>\( 4 \to 1 \): Constant Volume Heat Rejection:</strong> \( Q_{\text{out}} = n C_v (T_4 - T_1) \).</li>
+</ol>
+
+<div class="model-box">
+<strong>Thermal Efficiency of the Diesel Cycle:</strong>
+\[
+\eta_{\text{Diesel}} = 1 - \frac{1}{r^{\gamma - 1}} \left[ \frac{r_c^\gamma - 1}{\gamma (r_c - 1)} \right]
+\]
+where \( r = V_1 / V_2 \) and \( r_c = V_3 / V_2 \) (\( r_c > 1 \)).
+</div>
+<p>
+Because \( \frac{r_c^\gamma - 1}{\gamma (r_c - 1)} > 1 \), for the same compression ratio \( r \), \( \eta_{\text{Otto}} > \eta_{\text{Diesel}} \). However, real diesel engines can operate at much higher compression ratios (\( r \approx 16 - 22 \)) than petrol engines (\( r \approx 8 - 11 \)) without premature detonation (knocking), yielding superior overall fuel economy.
+</p>
+</section>
+
+<section>
+<h2>Stirling and Ericsson Cycles</h2>
+<p>
+The <strong>Stirling and Ericsson cycles</strong> are external combustion closed-loop cycles incorporating thermal <em>regenerators</em> to achieve theoretical efficiencies equal to the Carnot efficiency.
+</p>
+
+<h3>1. Stirling Cycle (Isotherms + Isochores):</h3>
+<ul>
+<li>\( 1 \to 2 \): Isothermal expansion at \( T_H \) with heat addition \( Q_{\text{in}} = nRT_H \ln(V_2 / V_1) \).</li>
+<li>\( 2 \to 3 \): Isochoric cooling at \( V_2 \) to \( T_C \) (heat stored in internal regenerator).</li>
+<li>\( 3 \to 4 \): Isothermal compression at \( T_C \) with heat rejection \( Q_{\text{out}} = nRT_C \ln(V_2 / V_1) \).</li>
+<li>\( 4 \to 1 \): Isochoric heating at \( V_1 \) from \( T_C \) to \( T_H \) (regenerator restores heat to gas).</li>
+</ul>
+<div class="model-box">
+With an ideal regenerator (\( Q_{\text{regen, in}} = Q_{\text{regen, out}} \)):
+\[
+\eta_{\text{Stirling}} = 1 - \frac{T_C}{T_H} = \eta_{\text{Carnot}}
+\]
+</div>
+
+<h3>2. Ericsson Cycle (Isotherms + Isobars):</h3>
+<p>
+Replaces the two constant-volume regenerative processes of the Stirling cycle with two constant-pressure regenerative legs, also achieving \( \eta = 1 - T_C/T_H \).
+</p>
+</section>
+
+<section>
+<h2>Dual Combustion Cycle Overview</h2>
+<p>
+The <strong>Dual Combustion (Limited Pressure or Sabathe) Cycle</strong> is a hybrid cycle that combines features of both the Otto and Diesel cycles. Heat is added in two consecutive stages: partly at constant volume (simulating rapid initial deflagration) and partly at constant pressure (simulating ongoing controlled combustion).
+</p>
+<p>
+This provides the most accurate mathematical approximation for modern high-speed automotive diesel and gasoline direct-injection (GDI) engines.
+</p>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

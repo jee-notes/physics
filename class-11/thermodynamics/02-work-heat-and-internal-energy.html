@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thermodynamics | Work, Heat, and Internal Energy</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Thermodynamics
+</a>
+</nav>
+
+<h1>Work, Heat, and Internal Energy</h1>
+<p class="subtitle">
+The triad of thermodynamic energy transfer and the state function nature of internal energy.
+</p>
+
+<section>
+<h2>Concept of Work Done in Thermodynamics</h2>
+<p>
+In classical thermodynamics, <strong>work</strong> represents an organized transfer of energy across a system's boundary mediated by a macroscopic mechanical force displacing that boundary. Unlike thermal energy transfer (heat), which is random and molecular, mechanical work is coherent and directional.
+</p>
+<p>
+Consider a gas confined in a cylinder of cross-sectional area \( A \) sealed by a frictionless, movable piston. The gas exerts an outward pressure \( P \) on the piston face. The normal force exerted by the gas is:
+</p>
+\[
+F = P \cdot A
+\]
+<p>
+If the piston undergoes an infinitesimal quasi-static displacement \( dx \) outwards, the infinitesimal mechanical work done by the gas on the piston is:
+</p>
+\[
+dW = F \, dx = (P \cdot A) \, dx = P \, (A \, dx) = P \, dV
+\]
+where \( dV = A \, dx \) is the change in the volume of the gas.
+</p>
+</section>
+
+<section>
+<h2>Expansion and Compression Work Formula</h2>
+<p>
+For a finite quasi-static process where the volume changes from an initial volume \( V_i \) to a final volume \( V_f \), the total work done by the system on its surroundings is obtained by integrating the differential work along the process path:
+</p>
+<div class="model-box">
+\[
+W = \int_{V_i}^{V_f} P_{\text{ext}} \, dV \quad \xrightarrow{\text{quasi-static}} \quad W = \int_{V_i}^{V_f} P \, dV
+\]
+where:
+<ul>
+<li>\( W \): Mechanical work done (SI Unit: <strong>Joule (\( \text{J} \))</strong> or \( \text{N}\cdot\text{m} \), Dimension: \( [M L^2 T^{-2}] \))</li>
+<li>\( P \): Absolute pressure of the gas at that volume (SI Unit: \( \text{Pa} = \text{N/m}^2 \))</li>
+<li>\( V \): Volume occupied by the gas (SI Unit: \( \text{m}^3 \))</li>
+</ul>
+</div>
+
+<p>
+<strong>Key Physical Consequences:</strong>
+</p>
+<ul>
+<li><strong>Expansion (\( V_f > V_i \implies dV > 0 \)):</strong> The gas pushes the boundary outward; \( W > 0 \) (work is done <em>by</em> the gas on the surroundings).</li>
+<li><strong>Compression (\( V_f < V_i \implies dV < 0 \)):</strong> External forces compress the gas; \( W < 0 \) (work is done <em>on</em> the gas by the surroundings).</li>
+<li><strong>Constant Volume (\( V_f = V_i \implies dV = 0 \)):</strong> Rigid container; \( W = 0 \) (zero boundary work).</li>
+</ul>
+</section>
+
+<section>
+<h2>Sign Conventions in Physics vs Chemistry</h2>
+<p>
+A frequent source of confusion in competitive examinations arises from differing conventions between Physics (IUPAP) and Chemistry (IUPAC). Both formulations represent the exact same physical reality.
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Physics Convention (Standard in JEE Physics)</th>
+<th>Chemistry Convention (IUPAC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Work Done by System (Expansion)</strong></td>
+<td>\( W > 0 \) (Positive)</td>
+<td>\( W < 0 \) (Negative)</td>
+</tr>
+<tr>
+<td><strong>Work Done on System (Compression)</strong></td>
+<td>\( W < 0 \) (Negative)</td>
+<td>\( W > 0 \) (Positive)</td>
+</tr>
+<tr>
+<td><strong>Heat Added to System (\( Q_{\text{in}} \))</strong></td>
+<td>\( Q > 0 \) (Positive)</td>
+<td>\( Q > 0 \) (Positive)</td>
+</tr>
+<tr>
+<td><strong>Heat Released by System (\( Q_{\text{out}} \))</strong></td>
+<td>\( Q < 0 \) (Negative)</td>
+<td>\( Q < 0 \) (Negative)</td>
+</tr>
+<tr>
+<td><strong>First Law Equation</strong></td>
+<td>\[ \Delta U = Q - W \implies dQ = dU + dW \]</td>
+<td>\[ \Delta U = Q + W \implies dU = dQ + dW \]</td>
+</tr>
+</tbody>
+</table>
+
+<div class="insightbox">
+In Physics, we view the system as an engine built to perform useful work for us, so work done by the system is counted as positive (\( +W \)). In Chemistry, the focus is on the internal energy ledger of the system, so work done on the system increases its energy (\( +W \)).
+</div>
+</section>
+
+<section>
+<h2>Heat as Energy in Transit and Path Dependency</h2>
+<p>
+<strong>Heat (\( Q \))</strong> is defined strictly as energy in transit across a boundary as a direct consequence of a temperature difference between the system and its surroundings.
+</p>
+<ul>
+<li>Heat is not a substance ("caloric") stored inside matter. Matter contains internal energy, not heat.</li>
+<li>Heat appears only at the boundary while a process is taking place and ceases to exist once thermal equilibrium is reached.</li>
+<li>Heat is a <strong>path function</strong>: the total heat transferred between two equilibrium states depends entirely on the path followed.</li>
+</ul>
+
+<div class="model-box">
+\[
+dQ = n \, C \, dT
+\]
+where \( n \) is the number of moles, \( dT \) is the temperature increment, and \( C \) is the <em>molar heat capacity</em> for that particular process.
+</div>
+</section>
+
+<section>
+<h2>Internal Energy of an Ideal Gas</h2>
+<p>
+The <strong>Internal Energy (\( U \))</strong> of a thermodynamic system is the total macroscopic kinetic and potential energy of all its constituent atoms, molecules, and subatomic particles relative to a reference frame attached to the center of mass of the system.
+</p>
+\[
+U = E_{\text{kinetic, microscopic}} + E_{\text{potential, intermolecular}}
+\]
+<p>
+For an <strong>ideal gas</strong>, intermolecular forces are identically zero by definition. Therefore, the intermolecular potential energy vanishes (\( E_{\text{potential}} = 0 \)), and the internal energy consists entirely of the kinetic energy of molecular translation, rotation, and vibration.
+</p>
+<div class="model-box">
+For \( n \) moles of an ideal gas with \( f \) degrees of freedom:
+\[
+U = n \left( \frac{f}{2} R T \right) = n \, C_v \, T
+\]
+where:
+<ul>
+<li>\( U \): Internal Energy (SI Unit: <strong>Joule (\( \text{J} \))</strong>, Dimension: \( [M L^2 T^{-2}] \))</li>
+<li>\( f \): Degrees of freedom of the gas molecules (\( f=3 \) for monoatomic, \( f=5 \) for diatomic at room temperature)</li>
+<li>\( C_v = \frac{f}{2}R \): Molar heat capacity at constant volume</li>
+<li>\( T \): Absolute temperature (in Kelvin)</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Microscopic Interpretation and Joule's Law of Internal Energy</h2>
+<p>
+The dependency of the internal energy of an ideal gas exclusively on temperature is formalized by <strong>Joule's Law of Internal Energy</strong>.
+</p>
+
+<div class="concept-box">
+<strong>Joule's Law:</strong> The internal energy of a given mass of an ideal gas depends solely on its absolute temperature \( T \), and is completely independent of its pressure \( P \) and volume \( V \):
+\[
+\left(\frac{\partial U}{\partial V}\right)_T = 0, \quad \left(\frac{\partial U}{\partial P}\right)_T = 0
+\]
+</div>
+
+<p>
+Consequently, for <strong>any process whatsoever</strong> (isochoric, isobaric, isothermal, adiabatic, or arbitrary polytropic) undergone by an ideal gas:
+</p>
+<div class="model-box">
+\[
+\Delta U = n \, C_v \, \Delta T = n \, \left(\frac{f}{2} R\right) (T_f - T_i) = \frac{P_f V_f - P_i V_i}{\gamma - 1}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved Example: Internal Energy Change Across Different Paths</h3>
+<p>
+An ideal diatomic gas (\( \gamma = 7/5 \)) expands from state \( A \, (P_0, V_0) \) to state \( B \, (2P_0, 2V_0) \) via two different paths:
+<br>Path 1: A straight line on the \( P \)-\( V \) diagram.
+<br>Path 2: Isochoric heating to \( (2P_0, V_0) \) followed by isobaric expansion to \( (2P_0, 2V_0) \).
+<br>Find \( \Delta U \) for both paths.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>Since \( U \) is a state function, \( \Delta U \) depends only on the initial and final states, not the path:</p>
+\[
+T_A = \frac{P_0 V_0}{nR}, \quad T_B = \frac{(2P_0)(2V_0)}{nR} = \frac{4 P_0 V_0}{nR}
+\]
+\[
+\Delta U_1 = \Delta U_2 = n C_v (T_B - T_A) = n \left(\frac{5}{2} R\right) \left(\frac{4 P_0 V_0 - P_0 V_0}{nR}\right) = \frac{15}{2} P_0 V_0
+\]
+<p>The internal energy change is identical for both paths (\( 7.5 P_0 V_0 \)), while the work done and heat exchanged differ significantly.</p>
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Detailed Analysis</h2>
+<div class="chapter-list">
+<a href="./02a-indicator-diagrams-and-work-paths.html">2a. Indicator Diagrams & Work Along Different Paths</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
