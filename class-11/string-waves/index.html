@@ -1,145 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waves on a String | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #3498db; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #ebf5fb; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waves on a String | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
 
-    <h1>Waves on a Stretched String</h1>
-    <p style="text-align: center;"><em>One-dimensional mechanical wave propagation.</em></p>
+<h1>Waves on a String</h1>
+<p class="subtitle">
+One-dimensional transverse mechanical wave propagation, energy transmission, and normal modes.
+</p>
 
-    <section>
-        <h2>1. Mechanical Waves</h2>
-        <p>
-            A <strong>mechanical wave</strong> is a disturbance that propagates
-            through a material medium by transfer of energy, not matter.
-        </p>
-
-        <div class="insightbox">
-            Particles oscillate locally;  
-            the wave travels globally.
-        </div>
-    </section>
-
-    <section>
-        <h2>2. Transverse Waves on a String</h2>
-        <p>
-            Waves on a stretched string are <strong>transverse</strong>:
-            particle displacement is perpendicular to direction of propagation.
-        </p>
-    </section>
-
-    <section>
-        <h2>3. Wave Speed on a String</h2>
-
-        <div class="formula-block">
-            \[
-            v = \sqrt{\frac{T}{\mu}}
-            \]
-        </div>
-
-        <ul>
-            <li>\(T\): tension in the string</li>
-            <li>\(\mu\): mass per unit length</li>
-        </ul>
-
-        <div class="insightbox">
-            Wave speed depends on medium properties,
-            not on how the wave is produced.
-        </div>
-    </section>
-
-    <section>
-        <h2>4. Wave Equation</h2>
-
-        <div class="formula-block">
-            \[
-            y(x,t) = A\sin(kx - \omega t)
-            \]
-        </div>
-
-        <ul>
-            <li>\(k = \frac{2\pi}{\lambda}\)</li>
-            <li>\(\omega = 2\pi f\)</li>
-            <li>\(v = \frac{\omega}{k}\)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>5. Energy in a String Wave</h2>
-        <p>
-            Energy propagates along the string
-            through oscillatory motion of particles.
-        </p>
-
-        <div class="insightbox">
-            Higher amplitude → higher energy transport.
-        </div>
-    </section>
-
-    <section>
-        <h2>6. Reflection of Waves</h2>
-        <ul>
-            <li>Fixed end → phase reversal</li>
-            <li>Free end → no phase reversal</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>7. Standing Waves on a String</h2>
-
-        <div class="formula-block">
-            \[
-            \lambda_n = \frac{2L}{n}
-            \quad (n = 1,2,3,\dots)
-            \]
-        </div>
-
-        <div class="formula-block">
-            \[
-            f_n = \frac{nv}{2L}
-            \]
-        </div>
-
-        <ul>
-            <li>Nodes → zero displacement</li>
-            <li>Antinodes → maximum displacement</li>
-        </ul>
-
-        <div class="insightbox">
-            Standing waves arise from
-            superposition of identical waves.
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Wave motion represents one of the most fundamental mechanisms in nature by which energy and momentum are transferred from one region of space to another without any net transport of matter. In ordinary particulate mechanics, moving matter transports kinetic energy and momentum. In wave mechanics, a local disturbance created in an elastic medium propagates through the collective, coupled oscillations of adjacent medium particles.
+</p>
+<p>
+A taut, flexible string serves as the quintessential one-dimensional physical system for understanding mechanical waves. When an element of the string is displaced transversely from its equilibrium position, the tension in the string exerts a restoring force that pulls the element back toward equilibrium. Because the string possesses inertia (mass per unit length), the element overshoots its equilibrium position, initiating oscillations. Simultaneously, through intermolecular cohesive forces and tension, neighboring elements are set into motion with a systematic time delay, giving rise to a traveling transverse wave.
+</p>
+<div class="insightbox">
+Particles of the medium oscillate locally about their fixed equilibrium positions; it is the physical state of disturbance and energy that travels globally along the medium.
 </div>
+</section>
 
+<section>
+<h2>Mechanical Wave Fundamentals</h2>
+<p>
+A <strong>mechanical wave</strong> strictly requires a material medium possessing two essential physical properties:
+</p>
+<ul>
+<li><strong>Elasticity (Restoring Tendency):</strong> Enables medium elements to exert forces on displaced neighbors, providing the restoring force necessary to pull particles back to equilibrium.</li>
+<li><strong>Inertia (Mass/Density):</strong> Allows moving medium elements to store kinetic energy and overshoot their equilibrium positions, sustaining continuous oscillations.</li>
+</ul>
+<p>
+In waves on a string, the transverse restoring force is supplied by the tension \( T \) (elastic property), while the inertia is governed by the linear mass density \( \mu \) (inertial property).
+</p>
+<div class="concept-box">
+Wave speed is purely an intrinsic property of the medium. Changing the frequency or amplitude of the source alters the wavelength, but does not affect the speed of wave propagation through a homogeneous medium.
+</div>
+</section>
+
+<section>
+<h2>Kinematics & Dynamics of String Waves</h2>
+<p>
+The mathematical formulation of a one-dimensional wave involves functions of two independent variables: position \( x \) and time \( t \). Any disturbance maintaining a constant profile while traveling at constant velocity \( v \) along the \( \pm x \)-direction satisfies the fundamental traveling wave condition \( y(x,t) = f(kx \mp \omega t) \).
+</p>
+<p>
+Applying Newton's second law to an infinitesimal segment of a stretched string yields the classical 1D linear wave differential equation:
+</p>
+<div class="math-block">
+\[
+\frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2}
+\]
+</div>
+<p>
+where the wave propagation speed is given by the celebrated relation:
+</p>
+<div class="model-box">
+\[
+v = \sqrt{\frac{T}{\mu}}
+\]
+</div>
+<p>
+A crucial conceptual distinction in wave kinematics exists between the <strong>wave speed</strong> \( v \) (the constant rate at which the phase/disturbance moves along the string) and the <strong>particle velocity</strong> \( v_p = \frac{\partial y}{\partial t} \) (the time-varying transverse velocity of an individual medium particle).
+</p>
+</section>
+
+<section>
+<h2>Energy Transport & Power in Strings</h2>
+<p>
+As a wave propagates along a stretched string, medium elements continuously exchange kinetic energy (due to particle velocity) and potential energy (due to elastic stretching and tension).
+</p>
+<p>
+Remarkably, for a progressive traveling wave, the kinetic energy density and potential energy density are exactly equal at every instant and at every point in space:
+</p>
+<div class="math-block">
+\[
+u_k(x,t) = u_p(x,t) = \frac{1}{2}\mu \omega^2 A^2 \cos^2(kx - \omega t)
+\]
+</div>
+<p>
+The total energy density is maximum at the equilibrium positions (where the slope and particle velocity are both maximal) and vanishes at the wave crests and troughs (where the particles momentarily come to rest and the string is unstretched locally). The average rate of energy transmission across any cross-section gives the average power:
+</p>
+<div class="model-box">
+\[
+P_{\text{avg}} = \frac{1}{2} \mu v \omega^2 A^2
+\]
+</div>
+</section>
+
+<section>
+<h2>Boundary Behavior, Interference & Normal Modes</h2>
+<p>
+When a traveling wave encounters a boundary or discontinuity, boundary conditions dictate how the incident wave is partitioned into reflected and transmitted components:
+</p>
+<ul>
+<li><strong>Rigid / Fixed End:</strong> Total displacement is clamped to zero, resulting in total reflection with an abrupt phase shift of \( \pi \) radians (pulse inversion).</li>
+<li><strong>Free / Open End:</strong> Transverse restoring force is zero, resulting in total reflection with zero phase shift (reflected without inversion).</li>
+</ul>
+<p>
+When two identical harmonic waves travel in opposite directions along a string bounded by fixed boundaries, their linear superposition produces <strong>standing waves (stationary waves)</strong>:
+</p>
+<div class="math-block">
+\[
+y(x,t) = \left(2A \sin kx\right) \cos \omega t
+\]
+</div>
+<p>
+Standing waves feature stationary points of permanent zero motion called <strong>nodes</strong> and points of maximum oscillatory amplitude called <strong>antinodes</strong>. Because no net energy crosses a node, energy remains trapped in discrete normal modes characterized by quantized resonant frequencies:
+</p>
+<div class="model-box">
+\[
+f_n = \frac{n v}{2L} = \frac{n}{2L}\sqrt{\frac{T}{\mu}}, \quad n = 1, 2, 3, \dots
+\]
+</div>
+</section>
+
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-introduction-to-waves.html">1. Introduction to Waves & Wave Motion</a>
+<a href="./02-wave-equation.html">2. Differential Wave Equation & Kinematics</a>
+<a href="./03-sinusoidal-waves.html">3. Harmonic / Sinusoidal Traveling Waves</a>
+<a href="./04-speed-of-transverse-wave.html">4. Speed of Transverse Waves on a String</a>
+<a href="./05-energy-and-power.html">5. Energy Transport and Power in String Waves</a>
+<a href="./06-interference-and-superposition.html">6. Superposition Principle and Interference</a>
+<a href="./07-reflection-and-transmission.html">7. Boundary Reflection and Transmission</a>
+<a href="./08-standing-waves.html">8. Standing Waves and Energy Trapping</a>
+<a href="./09-normal-modes-of-vibration.html">9. Normal Modes of Vibration & Sonometer</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>

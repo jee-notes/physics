@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflection & Transmission | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Boundary Reflection and Transmission</h1>
+<p class="subtitle">
+Phase shifts at boundaries, junction boundary conditions, amplitude formulas, and power conservation.
+</p>
+
+<section>
+<h2>Reflection at a Rigid/Fixed Boundary (Phase Change of pi)</h2>
+<p>
+When a transverse wave pulse traveling along a string reaches a <strong>rigid fixed support</strong> (e.g., clamped rigidly to a wall at \( x = 0 \)), the physical boundary condition requires that the endpoint cannot move under any circumstances.
+</p>
+<div class="math-block">
+\[
+y_{\text{net}}(0, t) = y_{\text{incident}}(0, t) + y_{\text{reflected}}(0, t) = 0
+\]
+</div>
+<p>
+If the incident wave traveling in the \( +x \)-direction is \( y_i(x,t) = A_i \sin(kx - \omega t) \), the reflected wave traveling back in the \( -x \)-direction must satisfy:
+</p>
+<div class="math-block">
+\[
+y_r(0, t) = -y_i(0, t) = -A_i \sin(-\omega t) = A_i \sin(\omega t) = A_i \sin(-\omega t + \pi)
+\]
+</div>
+<div class="model-box">
+<strong>Reflected Wave Equation (Rigid End):</strong>
+\[
+y_r(x, t) = -A_i \sin(-kx - \omega t) = A_i \sin(kx + \omega t + \pi)
+\]
+</div>
+
+<div class="diagram">
+<svg width="720" height="200" viewBox="0 0 720 200">
+  <!-- Rigid Wall -->
+  <line x1="620" y1="30" x2="620" y2="170" stroke="#1f2937" stroke-width="5"/>
+  <path d="M 620 40 L 640 25 M 620 70 L 640 55 M 620 100 L 640 85 M 620 130 L 640 115 M 620 160 L 640 145" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Baseline -->
+  <line x1="50" y1="100" x2="620" y2="100" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Incident Crest -->
+  <path d="M 120 100 Q 200 40 280 100" fill="none" stroke="#2563eb" stroke-width="3"/>
+  <line x1="180" y1="50" x2="240" y2="50" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="235,46 245,50 235,54" fill="#2563eb"/>
+  <text x="140" y="35" font-size="12" font-weight="bold" fill="#2563eb">Incident Pulse (Crest)</text>
+
+  <!-- Reflected Inverted Trough -->
+  <path d="M 400 100 Q 480 160 560 100" fill="none" stroke="#ef4444" stroke-width="3"/>
+  <line x1="500" y1="150" x2="440" y2="150" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="445,146 435,150 445,154" fill="#ef4444"/>
+  <text x="390" y="180" font-size="12" font-weight="bold" fill="#ef4444">Reflected Pulse (Inverted Trough &rArr; &Delta;&Phi; = &pi;)</text>
+</svg>
+</div>
+
+<div class="insightbox">
+<strong>Newton's Third Law Mechanism:</strong>
+As the crest arrives at the wall, the string pulls upward on the support. By Newton's third law, the rigid support exerts an equal and opposite downward reaction force on the string, flipping the pulse upside-down. Reflection at a rigid boundary causes an abrupt <strong>phase shift of \( \pi \) radians (\( 180^\circ \))</strong>.
+</div>
+</section>
+
+<section>
+<h2>Reflection at a Free/Open Boundary (Zero Phase Change)</h2>
+<p>
+When the end of a string is attached to a massless, frictionless ring that can slide freely along a vertical rod at \( x = 0 \), the boundary condition requires that the net transverse force at the free end must be zero:
+</p>
+<div class="math-block">
+\[
+F_y = -T \left( \frac{\partial y_{\text{net}}}{\partial x} \right)_{x=0} = 0 \implies \left( \frac{\partial y_{\text{net}}}{\partial x} \right)_{x=0} = 0
+\]
+</div>
+<p>
+This condition implies that the string is always horizontal at the free boundary, resulting in:
+</p>
+<div class="model-box">
+<strong>Reflected Wave Equation (Free End):</strong>
+\[
+y_r(x, t) = A_i \sin(-kx - \omega t) = A_i \sin(kx + \omega t)
+\]
+</div>
+<div class="concept-box">
+Reflection at a free / open boundary occurs with <strong>zero phase change (\( \Delta\Phi = 0 \))</strong>. An incident crest reflects as a crest without inversion. The maximum instantaneous displacement at the free boundary reaches twice the incident amplitude (\( 2A_i \)).
+</div>
+</section>
+
+<section>
+<h2>Boundary Conditions and Continuity at String Junctions</h2>
+<p>
+Consider two semi-infinite strings of linear densities \( \mu_1 \) and \( \mu_2 \) joined at \( x = 0 \) under common tension \( T \). A wave \( y_i \) arrives from Medium 1. At the junction, it splits into a reflected wave \( y_r \) (returning into Medium 1) and a transmitted wave \( y_t \) (entering Medium 2):
+</p>
+<div class="math-block">
+\[
+y_i(x, t) = A_i \sin(k_1 x - \omega t)
+\]
+\[
+y_r(x, t) = A_r \sin(-k_1 x - \omega t)
+\]
+\[
+y_t(x, t) = A_t \sin(k_2 x - \omega t)
+\]
+</div>
+
+<p>The boundary conditions at the junction \( x = 0 \) are:</p>
+<ol>
+<li>
+<strong>Continuity of Displacement:</strong> The two string segments cannot detach at the junction:
+\[
+y_i(0, t) + y_r(0, t) = y_t(0, t) \implies A_i + A_r = A_t
+\]
+</li>
+<li>
+<strong>Continuity of Transverse Force (Slope Continuity):</strong> Because the junction has zero mass, the net vertical force on the junction must be zero:
+\[
+T \left( \frac{\partial (y_i + y_r)}{\partial x} \right)_{x=0} = T \left( \frac{\partial y_t}{\partial x} \right)_{x=0} \implies k_1 (A_i - A_r) = k_2 A_t
+\]
+Since \( k = \omega / v \):
+\[
+\frac{A_i - A_r}{v_1} = \frac{A_t}{v_2}
+\]
+</li>
+</ol>
+</section>
+
+<section>
+<h2>Formulas for Reflected and Transmitted Amplitudes (Ar and At)</h2>
+<p>
+Solving the simultaneous continuity equations:
+</p>
+<div class="math-block">
+\[
+A_i - A_r = \left(\frac{v_1}{v_2}\right) A_t = \left(\frac{v_1}{v_2}\right) (A_i + A_r)
+\]
+</div>
+<p>
+Rearranging gives the celebrated Fresnel amplitude equations for string waves:
+</p>
+<div class="model-box">
+<strong>Reflected and Transmitted Amplitudes:</strong>
+\[
+A_r = \left( \frac{v_2 - v_1}{v_2 + v_1} \right) A_i = \left( \frac{\sqrt{\mu_1} - \sqrt{\mu_2}}{\sqrt{\mu_1} + \sqrt{\mu_2}} \right) A_i
+\]
+\[
+A_t = \left( \frac{2v_2}{v_2 + v_1} \right) A_i = \left( \frac{2\sqrt{\mu_1}}{\sqrt{\mu_1} + \sqrt{\mu_2}} \right) A_i
+\]
+</div>
+
+<div class="concept-box">
+<strong>Physical Analysis of Amplitude Ratios:</strong>
+<table>
+<thead>
+<tr>
+<th>Boundary Transition</th>
+<th>Wave Speeds</th>
+<th>Reflected Amplitude \( A_r \)</th>
+<th>Phase Change on Reflection</th>
+<th>Transmitted Amplitude \( A_t \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rarer to Denser Medium</strong> (\( \mu_1 < \mu_2 \))</td>
+<td>\( v_2 < v_1 \)</td>
+<td>\( A_r < 0 \) (Negative)</td>
+<td>\( \pi \) radians (\( 180^\circ \) Phase Inversion)</td>
+<td>\( A_t > 0 \) (Always in phase)</td>
+</tr>
+<tr>
+<td><strong>Denser to Rarer Medium</strong> (\( \mu_1 > \mu_2 \))</td>
+<td>\( v_2 > v_1 \)</td>
+<td>\( A_r > 0 \) (Positive)</td>
+<td>\( 0 \) radians (No Phase Change)</td>
+<td>\( A_t > 0 \) (Always in phase)</td>
+</tr>
+<tr>
+<td><strong>Rigid Wall Limit</strong> (\( \mu_2 \to \infty, v_2 \to 0 \))</td>
+<td>\( v_2 = 0 \)</td>
+<td>\( A_r = -A_i \)</td>
+<td>\( \pi \) radians</td>
+<td>\( A_t = 0 \)</td>
+</tr>
+<tr>
+<td><strong>Free End Limit</strong> (\( \mu_2 \to 0, v_2 \to \infty \))</td>
+<td>\( v_2 \to \infty \)</td>
+<td>\( A_r = +A_i \)</td>
+<td>\( 0 \) radians</td>
+<td>\( A_t = 2A_i \)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section>
+<h2>Power Distribution and Conservation of Energy at Boundaries</h2>
+<p>
+Let us verify that energy is strictly conserved at the boundary without dissipation:
+</p>
+<ul>
+<li><strong>Incident Power:</strong> \( P_i = \frac{1}{2} \mu_1 v_1 \omega^2 A_i^2 \)</li>
+<li><strong>Reflected Power:</strong> \( P_r = \frac{1}{2} \mu_1 v_1 \omega^2 A_r^2 = P_i \left( \frac{v_2 - v_1}{v_2 + v_1} \right)^2 \)</li>
+<li><strong>Transmitted Power:</strong> \( P_t = \frac{1}{2} \mu_2 v_2 \omega^2 A_t^2 = \frac{1}{2} \left( \frac{T}{v_2^2} \right) v_2 \omega^2 \left( \frac{2v_2}{v_2 + v_1} \right)^2 A_i^2 = P_i \frac{4 v_1 v_2}{(v_1 + v_2)^2} \)</li>
+</ul>
+<p>
+Summing reflected and transmitted powers:
+</p>
+<div class="math-block">
+\[
+P_r + P_t = P_i \left[ \frac{(v_2 - v_1)^2 + 4v_1 v_2}{(v_1 + v_2)^2} \right] = P_i \left[ \frac{(v_1 + v_2)^2}{(v_1 + v_2)^2} \right] = P_i
+\]
+</div>
+<div class="model-box">
+<strong>Conservation of Wave Power:</strong>
+\[
+P_{\text{incident}} = P_{\text{reflected}} + P_{\text{transmitted}}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

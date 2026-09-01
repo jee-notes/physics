@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Normal Modes of Vibration | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Normal Modes of Vibration & Sonometer</h1>
+<p class="subtitle">
+Resonant standing wave frequencies, boundary mode quantization, and harmonic overtone spectra.
+</p>
+
+<section>
+<h2>Boundary Conditions for String Fixed at Both Ends</h2>
+<p>
+Consider a uniform flexible string of length \( L \) stretched under tension \( T \) and clamped rigidly at both ends \( x = 0 \) and \( x = L \).
+</p>
+<p>
+Because both ends are immovable, the total displacement must satisfy the <strong>Dirichlet boundary conditions</strong> for all time \( t \):
+</p>
+<div class="math-block">
+\[
+y(0, t) = 0 \quad \text{and} \quad y(L, t) = 0
+\]
+</div>
+<p>
+The general equation of a standing wave on the string is:
+</p>
+<div class="math-block">
+\[
+y(x, t) = \left[ 2A \sin(kx) \right] \cos(\omega t)
+\]
+</div>
+<p>
+The condition \( y(0,t) = 0 \) is automatically satisfied by \( \sin(0) = 0 \). Applying the second boundary condition at \( x = L \):
+</p>
+<div class="math-block">
+\[
+y(L, t) = 2A \sin(kL) \cos(\omega t) = 0 \implies \sin(kL) = 0
+\]
+</div>
+<p>
+This implies that \( kL \) must be an integer multiple of \( \pi \):
+</p>
+<div class="model-box">
+<strong>Allowed Wavelengths (String Fixed at Both Ends):</strong>
+\[
+k_n L = n\pi \implies \left(\frac{2\pi}{\lambda_n}\right) L = n\pi \implies \lambda_n = \frac{2L}{n} \quad (n = 1, 2, 3, \dots)
+\]
+</div>
+</section>
+
+<section>
+<h2>Fundamental Mode (1st Harmonic) and Overtones</h2>
+<p>
+Since only discrete wavelengths \( \lambda_n = \frac{2L}{n} \) can exist, the string can oscillate in steady resonance only at discrete, quantized natural frequencies \( f_n = \frac{v}{\lambda_n} \):
+</p>
+<div class="model-box">
+<strong>Quantized Natural Frequencies:</strong>
+\[
+f_n = \frac{n v}{2L} = \frac{n}{2L} \sqrt{\frac{T}{\mu}} \quad (n = 1, 2, 3, \dots)
+\]
+</div>
+
+<div class="diagram">
+<svg width="720" height="300" viewBox="0 0 720 300">
+  <!-- Mode 1: n = 1 -->
+  <text x="60" y="45" font-size="12" font-weight="bold" fill="#1f2937">n=1 (Fundamental):</text>
+  <line x1="220" y1="40" x2="660" y2="40" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 220 40 Q 440 5 660 40 Q 440 75 220 40" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="220" cy="40" r="4" fill="#ef4444"/><circle cx="660" cy="40" r="4" fill="#ef4444"/>
+  <circle cx="440" cy="40" r="4" fill="#059669"/>
+  <text x="670" y="45" font-size="12" fill="#2563eb">f_1 = v/(2L)</text>
+
+  <!-- Mode 2: n = 2 -->
+  <text x="60" y="135" font-size="12" font-weight="bold" fill="#1f2937">n=2 (2nd Harmonic):</text>
+  <line x1="220" y1="130" x2="660" y2="130" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 220 130 Q 330 95 440 130 Q 550 165 660 130 Q 550 95 440 130 Q 330 165 220 130" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="220" cy="130" r="4" fill="#ef4444"/><circle cx="440" cy="130" r="4" fill="#ef4444"/><circle cx="660" cy="130" r="4" fill="#ef4444"/>
+  <text x="670" y="135" font-size="12" fill="#2563eb">f_2 = 2f_1</text>
+
+  <!-- Mode 3: n = 3 -->
+  <text x="60" y="225" font-size="12" font-weight="bold" fill="#1f2937">n=3 (3rd Harmonic):</text>
+  <line x1="220" y1="220" x2="660" y2="220" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M 220 220 Q 293 185 366 220 Q 440 255 513 220 Q 586 185 660 220 Q 586 255 513 220 Q 440 185 366 220 Q 293 255 220 220" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <circle cx="220" cy="220" r="4" fill="#ef4444"/><circle cx="366" cy="220" r="4" fill="#ef4444"/><circle cx="513" cy="220" r="4" fill="#ef4444"/><circle cx="660" cy="220" r="4" fill="#ef4444"/>
+  <text x="670" y="225" font-size="12" fill="#2563eb">f_3 = 3f_1</text>
+</svg>
+</div>
+
+<h3>Terminology and Mode Spectra</h3>
+<table>
+<thead>
+<tr>
+<th>Harmonic Order (\( n \))</th>
+<th>Standard Musical Name</th>
+<th>Overtone Name</th>
+<th>Frequency (\( f_n \))</th>
+<th>Number of Loops</th>
+<th>Nodes / Antinodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\( n = 1 \)</td>
+<td><strong>Fundamental / 1st Harmonic</strong></td>
+<td>Fundamental</td>
+<td>\( f_1 = \frac{v}{2L} \)</td>
+<td>1 loop</td>
+<td>2 nodes, 1 antinode</td>
+</tr>
+<tr>
+<td>\( n = 2 \)</td>
+<td><strong>2nd Harmonic</strong></td>
+<td>1st Overtone</td>
+<td>\( f_2 = 2f_1 = \frac{v}{L} \)</td>
+<td>2 loops</td>
+<td>3 nodes, 2 antinodes</td>
+</tr>
+<tr>
+<td>\( n = 3 \)</td>
+<td><strong>3rd Harmonic</strong></td>
+<td>2nd Overtone</td>
+<td>\( f_3 = 3f_1 = \frac{3v}{2L} \)</td>
+<td>3 loops</td>
+<td>4 nodes, 3 antinodes</td>
+</tr>
+<tr>
+<td>\( n \)</td>
+<td><strong>\( n \)-th Harmonic</strong></td>
+<td>\( (n-1) \)-th Overtone</td>
+<td>\( f_n = n f_1 \)</td>
+<td>\( n \) loops</td>
+<td>\( (n+1) \) nodes, \( n \) antinodes</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>General Formula for Harmonics: fn = n*v / (2L)</h2>
+<p>
+The harmonic frequencies form an exact arithmetic progression with common ratio integer multiples:
+</p>
+<div class="model-box">
+\[
+f_1 : f_2 : f_3 : f_4 : \dots = 1 : 2 : 3 : 4 : \dots
+\]
+</div>
+<p>
+For a string clamped at both ends, <strong>all harmonics (both even and odd) are present</strong> in the acoustic spectrum.
+</p>
+<div class="insightbox">
+The difference between any two successive harmonic frequencies equals the fundamental frequency:
+\[
+\Delta f = f_{n+1} - f_n = \frac{(n+1)v}{2L} - \frac{nv}{2L} = \frac{v}{2L} = f_1
+\]
+</div>
+</section>
+
+<section>
+<h2>String Fixed at One End and Free at the Other</h2>
+<p>
+If a string of length \( L \) is clamped rigidly at \( x = 0 \) (forcing a <strong>Node</strong>) and attached to a frictionless ring at \( x = L \) (forcing an <strong>Antinode</strong>):
+</p>
+<p>
+The boundary conditions are:
+</p>
+<div class="math-block">
+\[
+y(0, t) = 0 \quad \text{and} \quad \left( \frac{\partial y}{\partial x} \right)_{x=L} = 0
+\]
+</div>
+<p>
+Applying this to \( y(x,t) = [2A\sin(kx)]\cos(\omega t) \):
+</p>
+<div class="math-block">
+\[
+\cos(kL) = 0 \implies k_n L = (2n - 1)\frac{\pi}{2} \implies \left(\frac{2\pi}{\lambda_n}\right) L = (2n - 1)\frac{\pi}{2}
+\]
+</div>
+<div class="model-box">
+<strong>Allowed Wavelengths and Frequencies (One End Free):</strong>
+\[
+\lambda_n = \frac{4L}{2n - 1} \quad (n = 1, 2, 3, \dots)
+\]
+\[
+f_n = \frac{(2n - 1)v}{4L} = (2n - 1) f_1 \quad \text{where } f_1 = \frac{v}{4L}
+\]
+</div>
+<div class="concept-box">
+For a string fixed at one end and free at the other:
+\[
+f_1 : f_2 : f_3 : \dots = 1 : 3 : 5 : 7 : \dots
+\]
+<strong>Only odd harmonics are present</strong>. Even harmonics cannot be excited.
+</div>
+</section>
+
+<section>
+<h2>Position of Nodes and Antinodes in Various Harmonics</h2>
+<p>
+For a string of length \( L \) fixed at both ends vibrating in its \( n \)-th harmonic:
+</p>
+
+<h3>1. Exact Positions of Nodes</h3>
+<div class="model-box">
+\[
+x_{\text{node}} = 0, \, \frac{L}{n}, \, \frac{2L}{n}, \, \frac{3L}{n}, \, \dots, \, L
+\]
+</div>
+
+<h3>2. Exact Positions of Antinodes</h3>
+<div class="model-box">
+\[
+x_{\text{antinode}} = \frac{L}{2n}, \, \frac{3L}{2n}, \, \frac{5L}{2n}, \, \dots, \, \frac{(2n-1)L}{2n}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Plucking and Touching Points</h3>
+<p>
+<strong>Problem:</strong> A guitar string of length \( L \) fixed at both ends is plucked at a point \( x = L/4 \) and touched lightly at \( x = L/2 \). Which harmonic will be excited?
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Touching the string at \( x = L/2 \) forces a <strong>Node at the center</strong> (\( x = L/2 \)). Hence, \( n \) must be an even integer (\( n = 2, 4, 6, \dots \)).</li>
+<li>Plucking the string at \( x = L/4 \) requires that \( x = L/4 \) must be an <strong>Antinode</strong> (or have non-zero displacement).</li>
+<li>For \( n = 2 \) (2nd harmonic): Nodes are at \( x = 0, L/2, L \); Antinodes are at \( x = L/4, 3L/4 \).</li>
+<li><strong>Conclusion:</strong> The string vibrates predominantly in its <strong>2nd harmonic (1st overtone)</strong> with frequency \( f_2 = \frac{v}{L} \).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Experimental Applications & Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./09a-sonometer-and-experiments.html">9a. Sonometer, Melde's Experiment & Resonance</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

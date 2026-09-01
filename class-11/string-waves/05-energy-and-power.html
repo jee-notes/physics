@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy & Power in String Waves | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Energy Transport and Power in String Waves</h1>
+<p class="subtitle">
+Kinetic and potential energy densities, instantaneous power flow, and average rate of energy transfer.
+</p>
+
+<section>
+<h2>Kinetic Energy Density of a Wave Element</h2>
+<p>
+Consider a sinusoidal transverse wave traveling along a taut string in the \( +x \)-direction:
+</p>
+<div class="math-block">
+\[
+y(x, t) = A \sin(kx - \omega t)
+\]
+</div>
+<p>
+Consider an infinitesimal element of the string located between \( x \) and \( x + dx \). Its mass is \( dm = \mu \, dx \), and its instantaneous transverse particle velocity is \( v_p = \frac{\partial y}{\partial t} = -\omega A \cos(kx - \omega t) \).
+</p>
+<p>
+The kinetic energy \( dK \) stored in this differential mass element is:
+</p>
+<div class="math-block">
+\[
+dK = \frac{1}{2} (dm) v_p^2 = \frac{1}{2} (\mu \, dx) \left( \frac{\partial y}{\partial t} \right)^2
+\]
+</div>
+<p>
+The <strong>kinetic energy density</strong> (kinetic energy per unit length of the string, \( u_k \)) is:
+</p>
+<div class="model-box">
+<strong>Kinetic Energy Density:</strong>
+\[
+u_k = \frac{dK}{dx} = \frac{1}{2} \mu \left( \frac{\partial y}{\partial t} \right)^2 = \frac{1}{2} \mu \omega^2 A^2 \cos^2(kx - \omega t)
+\]
+</div>
+</section>
+
+<section>
+<h2>Potential Energy Density (Elastic Strain Energy)</h2>
+<p>
+As the transverse wave passes, the string element is stretched from its undisturbed equilibrium length \( dx \) to an extended length \( dl \).
+</p>
+
+<div class="diagram">
+<svg width="720" height="200" viewBox="0 0 720 200">
+  <defs>
+    <marker id="tens" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- dx baseline -->
+  <line x1="200" y1="150" x2="480" y2="150" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="320" y="170" font-size="13" fill="#64748b">dx (Undisturbed)</text>
+
+  <!-- dy vertical -->
+  <line x1="480" y1="150" x2="480" y2="60" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="490" y="110" font-size="13" fill="#64748b">dy = (&part;y/&part;x) dx</text>
+
+  <!-- Stretched hypotenuse dl -->
+  <line x1="200" y1="150" x2="480" y2="60" stroke="#2563eb" stroke-width="4"/>
+  <text x="310" y="90" font-size="14" font-weight="bold" fill="#2563eb">dl = &radic;(dx&sup2; + dy&sup2;)</text>
+
+  <!-- Tension vector -->
+  <line x1="480" y1="60" x2="560" y2="35" stroke="#2563eb" stroke-width="2.5" marker-end="url(#tens)"/>
+  <text x="570" y="40" font-size="13" font-weight="bold" fill="#2563eb">T</text>
+</svg>
+</div>
+
+<p>
+From Pythagoras' theorem, the stretched length \( dl \) is:
+</p>
+<div class="math-block">
+\[
+dl = \sqrt{dx^2 + dy^2} = dx \sqrt{1 + \left( \frac{\partial y}{\partial x} \right)^2}
+\]
+</div>
+<p>
+Using the binomial approximation for small slopes (\( \left|\frac{\partial y}{\partial x}\right| \ll 1 \)):
+</p>
+<div class="math-block">
+\[
+dl \approx dx \left[ 1 + \frac{1}{2} \left( \frac{\partial y}{\partial x} \right)^2 \right] \implies \Delta l = dl - dx = \frac{1}{2} \left( \frac{\partial y}{\partial x} \right)^2 dx
+\]
+</div>
+<p>
+The work done by the tension \( T \) in stretching this element is stored as elastic potential energy \( dU \):
+</p>
+<div class="math-block">
+\[
+dU = T \Delta l = \frac{1}{2} T \left( \frac{\partial y}{\partial x} \right)^2 dx
+\]
+</div>
+<p>
+The <strong>potential energy density</strong> \( u_p = \frac{dU}{dx} \) is:
+</p>
+<div class="model-box">
+<strong>Potential Energy Density:</strong>
+\[
+u_p = \frac{1}{2} T \left( \frac{\partial y}{\partial x} \right)^2 = \frac{1}{2} T \left[ k A \cos(kx - \omega t) \right]^2 = \frac{1}{2} T k^2 A^2 \cos^2(kx - \omega t)
+\]
+</div>
+<p>
+Since \( T k^2 = (\mu v^2) \left(\frac{\omega}{v}\right)^2 = \mu \omega^2 \), we obtain the profound equality:
+</p>
+<div class="math-block">
+\[
+u_p = \frac{1}{2} \mu \omega^2 A^2 \cos^2(kx - \omega t) = u_k
+\]
+</div>
+
+<div class="insightbox">
+<strong>Critical Conceptual Comparison (Traveling Wave vs Isolated Harmonic Oscillator):</strong>
+<ul>
+<li>In a simple pendulum or mass-spring oscillator, kinetic energy and potential energy are \( 90^\circ \) out of phase: when \( K \) is maximum (mean position), \( U \) is zero, and vice-versa.</li>
+<li>In a <strong>traveling wave</strong>, kinetic energy density and potential energy density are <strong>exactly in phase and equal at every point and instant</strong> (\( u_k = u_p \)). Both are simultaneously maximal at the mean position (\( y = 0 \)), where slope and particle speed are greatest, and both are simultaneously zero at the crests and troughs (\( y = \pm A \)).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Total Energy Density and Energy in One Wavelength</h2>
+<p>
+The total mechanical energy density \( u(x,t) \) (total energy per unit length) at any point on the string is:
+</p>
+<div class="math-block">
+\[
+u(x, t) = u_k + u_p = \mu \omega^2 A^2 \cos^2(kx - \omega t)
+\]
+</div>
+
+<h3>Spatial / Time Average Energy Density</h3>
+<p>
+Since the average value of \( \cos^2 \theta \) over a complete cycle is \( \frac{1}{2} \):
+</p>
+<div class="model-box">
+<strong>Average Energy Density (\( \langle u \rangle \)):</strong>
+\[
+\langle u \rangle = \frac{1}{2} \mu \omega^2 A^2 = 2\pi^2 \mu f^2 A^2 \quad [\text{SI Unit: J/m}]
+\]
+</div>
+
+<h3>Total Energy Contained in One Full Wavelength (\( \lambda \))</h3>
+<div class="model-box">
+\[
+E_\lambda = \langle u \rangle \cdot \lambda = \frac{1}{2} \mu \omega^2 A^2 \lambda = 2\pi^2 \mu f^2 A^2 \lambda
+\]
+</div>
+</section>
+
+<section>
+<h2>Instantaneous Power Transmitted Along the String</h2>
+<p>
+Power is the rate at which mechanical work is done by the left part of the string on the right part across any given cross-section.
+</p>
+<p>
+The transverse force exerted by the string on the adjacent element across the cross-section is \( F_y = -T \frac{\partial y}{\partial x} \).
+</p>
+<p>
+The instantaneous power \( P(x,t) \) transmitted across that point is the rate of work done by this transverse force:
+</p>
+<div class="math-block">
+\[
+P(x, t) = F_y \cdot v_p = \left( -T \frac{\partial y}{\partial x} \right) \left( \frac{\partial y}{\partial t} \right)
+\]
+</div>
+<p>
+Substituting \( \frac{\partial y}{\partial x} = k A \cos(kx - \omega t) \) and \( \frac{\partial y}{\partial t} = -\omega A \cos(kx - \omega t) \):
+</p>
+<div class="math-block">
+\[
+P(x, t) = (-T)(k A \cos(kx - \omega t))(-\omega A \cos(kx - \omega t)) = T k \omega A^2 \cos^2(kx - \omega t)
+\]
+</div>
+<p>
+Since \( T k = (\mu v^2)\left(\frac{\omega}{v}\right) = \mu v \omega \):
+</p>
+<div class="model-box">
+<strong>Instantaneous Power Transmitted:</strong>
+\[
+P(x, t) = \mu v \omega^2 A^2 \cos^2(kx - \omega t) = u(x,t) \cdot v
+\]
+</div>
+<div class="concept-box">
+Instantaneous power equals the total instantaneous energy density multiplied by the wave propagation speed (\( P = u \cdot v \)). Power is always non-negative (\( P \ge 0 \)), meaning energy flows strictly in the direction of wave travel.
+</div>
+</section>
+
+<section>
+<h2>Average Power Transmitted and Wave Intensity</h2>
+<p>
+Averaging the instantaneous power over one complete period (\( \langle \cos^2(kx - \omega t) \rangle = 1/2 \)):
+</p>
+<div class="model-box">
+<strong>Average Power (\( P_{\text{avg}} \)):</strong>
+\[
+P_{\text{avg}} = \frac{1}{2} \mu v \omega^2 A^2 = 2\pi^2 \mu v f^2 A^2 \quad [\text{SI Unit: Watts (W)}]
+\]
+</div>
+
+<h3>Wave Intensity (\( I \))</h3>
+<p>
+<strong>Intensity</strong> is defined as the average power transmitted per unit cross-sectional area \( S \) of the string:
+</p>
+<div class="math-block">
+\[
+I = \frac{P_{\text{avg}}}{S} = \frac{\frac{1}{2} (\rho S) v \omega^2 A^2}{S} = \frac{1}{2} \rho v \omega^2 A^2 = 2\pi^2 \rho v f^2 A^2 \quad [\text{SI Unit: W/m}^2]
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Power Transmission</h3>
+<p>
+<strong>Problem:</strong> A taut string of linear mass density \( \mu = 5 \times 10^{-2} \text{ kg/m} \) is under a tension of \( T = 80 \text{ N} \). A sinusoidal wave of frequency \( f = 60 \text{ Hz} \) and amplitude \( A = 2 \text{ cm} = 0.02 \text{ m} \) propagates along the string.
+<br>Calculate: (a) Wave speed, (b) Average energy density, (c) Average power transmitted along the string.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<ul>
+<li><strong>(a) Wave Speed:</strong>
+\[
+v = \sqrt{\frac{T}{\mu}} = \sqrt{\frac{80}{0.05}} = \sqrt{1600} = 40 \text{ m/s}
+\]
+</li>
+<li><strong>(b) Angular frequency:</strong>
+\[
+\omega = 2\pi f = 2\pi (60) = 120\pi \text{ rad/s}
+\]
+<strong>Average Energy Density:</strong>
+\[
+\langle u \rangle = \frac{1}{2} \mu \omega^2 A^2 = \frac{1}{2} (0.05) (120\pi)^2 (0.02)^2 = 0.025 \times 14400\pi^2 \times 0.0004 \approx 1.42 \text{ J/m}
+\]
+</li>
+<li><strong>(c) Average Power:</strong>
+\[
+P_{\text{avg}} = \langle u \rangle \cdot v = 1.42 \times 40 \approx 56.85 \text{ W}
+\]
+</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

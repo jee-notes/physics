@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Waves | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Introduction to Waves & Wave Motion</h1>
+<p class="subtitle">
+Fundamental concepts of disturbance propagation, energy transport, and graphical descriptions.
+</p>
+
+<section>
+<h2>Disturbance and Energy Transport</h2>
+<p>
+In classical mechanics, there are two fundamental mechanisms for transporting energy and momentum between two distant spatial points:
+</p>
+<ol>
+<li><strong>Particle Transport:</strong> Matter itself moves from the source to the receiver, carrying kinetic energy (e.g., a fired bullet or flowing water).</li>
+<li><strong>Wave Motion:</strong> Energy and momentum propagate through an elastic medium via collective local oscillations of the constituent particles, without any net translational displacement of matter.</li>
+</ol>
+<p>
+When an external agent exerts a localized force on a medium, it introduces local strain (deformation) and supplies mechanical energy. Due to the elastic intermolecular forces connecting adjacent particles, this localized deformation pulls on neighboring particles, which in turn pull on their subsequent neighbors with a systematic time delay. Consequently, the disturbance travels outward through the medium at a characteristic speed \( v \).
+</p>
+
+<div class="diagram">
+<svg width="720" height="200" viewBox="0 0 720 200">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <!-- Equilibrium baseline -->
+  <line x1="50" y1="120" x2="670" y2="120" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="675" y="125" font-size="12" fill="#64748b">Equilibrium (y = 0)</text>
+
+  <!-- Wave Pulse -->
+  <path d="M 50 120 L 220 120 Q 300 120 330 40 Q 360 120 440 120 L 670 120" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+  
+  <!-- Wave velocity vector -->
+  <line x1="390" y1="60" x2="480" y2="60" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="490" y="65" font-size="14" font-weight="bold" fill="#2563eb">Wave Velocity v</text>
+  
+  <!-- Particle Motion Vector -->
+  <line x1="330" y1="120" x2="330" y2="50" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3"/>
+  <line x1="330" y1="90" x2="330" y2="35" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <circle cx="330" cy="40" r="5" fill="#ef4444"/>
+  <text x="230" y="35" font-size="13" font-weight="bold" fill="#ef4444">Particle Velocity v_p</text>
+</svg>
+</div>
+
+<div class="insightbox">
+The physical medium does not travel with the wave. Each particle performs localized periodic oscillations about its fixed equilibrium position, while the wave pattern (energy state) advances continuously through space.
+</div>
+</section>
+
+<section>
+<h2>Mechanical vs Non-Mechanical Waves</h2>
+<p>
+Waves in physics are broadly classified based on whether they require a physical material medium for propagation:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Mechanical Waves</th>
+<th>Non-Mechanical (Electromagnetic & Matter) Waves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Medium Requirement</strong></td>
+<td>Strictly required (e.g., solid string, water, air column). Cannot propagate in a vacuum.</td>
+<td>Do not require a medium. Can propagate through absolute vacuum.</td>
+</tr>
+<tr>
+<td><strong>Governing Physical Basis</strong></td>
+<td>Intermolecular elastic forces and inertial mass density of the medium.</td>
+<td>Oscillating, coupled electric and magnetic fields (Maxwell's equations) or quantum probability waves.</td>
+</tr>
+<tr>
+<td><strong>Speed of Propagation</strong></td>
+<td>Relatively low (typically \( 10^1 \) to \( 10^4 \text{ m/s} \)), dictated strictly by medium elasticity and inertia.</td>
+<td>Speed of light in vacuum \( c \approx 3 \times 10^8 \text{ m/s} \).</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td>Waves on strings, sound waves, seismic P & S waves, surface water waves.</td>
+<td>Light, radio waves, X-rays, gamma rays, de Broglie matter waves.</td>
+</tr>
+</tbody>
+</table>
+
+<div class="concept-box">
+For any mechanical wave to propagate, the medium must possess two fundamental properties: <strong>Elasticity</strong> (to provide a restoring force) and <strong>Inertia</strong> (to store kinetic energy and permit overshoot).
+</div>
+</section>
+
+<section>
+<h2>Transverse vs Longitudinal Waves</h2>
+<p>
+Mechanical waves are categorized by the geometric orientation of medium particle oscillations relative to the direction of wave energy propagation:
+</p>
+
+<h3>1. Transverse Waves</h3>
+<p>
+In a <strong>transverse wave</strong>, the individual particles of the medium oscillate in a direction perpendicular to the direction in which the wave propagates.
+</p>
+<ul>
+<li><strong>Direction:</strong> If wave travels along the \( x \)-axis, particles oscillate along the \( y \)- or \( z \)-axis (\( \vec{v}_p \perp \vec{v} \)).</li>
+<li><strong>Mechanism:</strong> Requires shearing elasticity (rigidity). Hence, transverse mechanical waves can propagate only in solids and along the surface of tensioned strings and membranes, but <em>not</em> through the interior of ideal fluids (liquids and gases) because fluids lack shear modulus.</li>
+<li><strong>Characteristic Features:</strong> Crests (positive maximum displacement) and Troughs (negative maximum displacement).</li>
+</ul>
+
+<div class="model-box">
+<strong>Transverse Condition:</strong>
+\[
+\vec{v}_{\text{particle}} \cdot \vec{v}_{\text{wave}} = 0
+\]
+</div>
+
+<h3>2. Longitudinal Waves</h3>
+<p>
+In a <strong>longitudinal wave</strong>, the particles of the medium oscillate parallel to the direction of wave propagation (\( \vec{v}_p \parallel \vec{v} \)).
+</p>
+<ul>
+<li><strong>Mechanism:</strong> Propagates via volume compression and rarefaction (governed by Bulk Modulus \( B \)). Can propagate through solids, liquids, and gases.</li>
+<li><strong>Examples:</strong> Sound waves in air, compression pulses in a spring.</li>
+</ul>
+</section>
+
+<section>
+<h2>Wave Pulse vs Periodic Continuous Wave Train</h2>
+<p>
+A disturbance introduced into a medium can take various temporal and spatial profiles:
+</p>
+
+<h3>1. Wave Pulse</h3>
+<p>
+A <strong>wave pulse</strong> is a single, isolated, non-repeating disturbance generated by a sudden, momentary displacement at the source. It has a finite spatial width and travels across the string maintaining its profile (in a non-dispersive medium).
+</p>
+
+<h3>2. Continuous / Periodic Wave Train</h3>
+<p>
+When the source vibrates continuously in a regular periodic or simple harmonic manner, it generates a succession of continuous wave pulses known as a <strong>periodic wave train</strong> or <strong>harmonic wave</strong>.
+</p>
+
+<div class="insightbox">
+A continuous harmonic wave has a definite wavelength \( \lambda \), frequency \( f \), and period \( T \). Every particle in the medium undergoes steady Simple Harmonic Motion (SHM) with the same frequency as the source, but with a phase lag that increases linearly with distance from the source.
+</div>
+</section>
+
+<section>
+<h2>Displacement Graphs: y-x Profile vs y-t History</h2>
+<p>
+Because wave displacement \( y(x,t) \) is a function of two independent variables (position \( x \) and time \( t \)), two distinct graphical representations are indispensable in wave analysis:
+</p>
+
+<h3>1. Wave Profile: Displacement-Position Graph (\( y \) vs \( x \))</h3>
+<p>
+A plot of \( y \) versus \( x \) at a <strong>fixed instant of time</strong> (\( t = t_0 \)). It represents a visual "freeze-frame snapshot" of the entire string at that exact moment.
+</p>
+<ul>
+<li>The spatial distance between two successive crests or troughs equals the <strong>wavelength (\( \lambda \))</strong>.</li>
+<li>The slope \( \frac{\partial y}{\partial x} \) represents the instantaneous geometric slope of the string at position \( x \).</li>
+</ul>
+
+<h3>2. Particle History: Displacement-Time Graph (\( y \) vs \( t \))</h3>
+<p>
+A plot of \( y \) versus \( t \) for a <strong>specific single particle</strong> located at a fixed position (\( x = x_0 \)). It represents the complete oscillatory time-history of that particular particle.
+</p>
+<ul>
+<li>The time duration between two successive peaks equals the <strong>time period (\( T \))</strong> of oscillation.</li>
+<li>The slope \( \frac{\partial y}{\partial t} \) represents the instantaneous particle velocity \( v_p \).</li>
+</ul>
+
+<div class="examplebox">
+<h3>Conceptual Comparison: Snapshot vs History</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Snapshot Graph (\( y \) vs \( x \))</th>
+<th>History Graph (\( y \) vs \( t \))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fixed Variable</strong></td>
+<td>Time \( t = \text{constant} \)</td>
+<td>Position \( x = \text{constant} \)</td>
+</tr>
+<tr>
+<td><strong>Horizontal Axis</strong></td>
+<td>Position along the string (\( x \))</td>
+<td>Time elapsed (\( t \))</td>
+</tr>
+<tr>
+<td><strong>Repetition Distance</strong></td>
+<td>Wavelength \( \lambda \) (meters)</td>
+<td>Time Period \( T \) (seconds)</td>
+</tr>
+<tr>
+<td><strong>Physical Interpretation</strong></td>
+<td>Shape of the string in physical space</td>
+<td>Vibrational motion of a single particle</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>
+<strong>Key Takeaway:</strong> Never confuse the wavelength \( \lambda \) from a \( y\text{-}x \) graph with the time period \( T \) from a \( y\text{-}t \) graph. They are linked through the wave speed relation:
+\[
+v = \frac{\lambda}{T} = f\lambda
+\]
+</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

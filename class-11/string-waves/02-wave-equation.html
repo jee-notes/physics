@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wave Equation & Kinematics | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Differential Wave Equation & Kinematics</h1>
+<p class="subtitle">
+Mathematical formulation of one-dimensional traveling waves, wave equation derivation, and particle kinematics.
+</p>
+
+<section>
+<h2>General Mathematical Form of a 1D Traveling Wave</h2>
+<p>
+Consider a localized disturbance or wave pulse propagating along a taut string along the \( +x \)-axis with a constant, non-dispersive speed \( v \).
+</p>
+<p>
+Suppose at the initial instant \( t = 0 \), the shape of the string is given by some mathematical function:
+</p>
+<div class="math-block">
+\[
+y(x, 0) = f(x)
+\]
+</div>
+<p>
+As time progresses, the disturbance translates rigidly to the right by a distance \( \Delta x = v t \) in time \( t \) without changing its shape. Therefore, the displacement of a particle at position \( x \) at time \( t \) is identical to the displacement that the particle at position \( (x - vt) \) experienced at \( t = 0 \):
+</p>
+<div class="model-box">
+<strong>Traveling Wave Representation:</strong>
+\[
+y(x, t) = f(x - vt) \quad \text{(Wave traveling in } +x \text{ direction)}
+\]
+\[
+y(x, t) = g(x + vt) \quad \text{(Wave traveling in } -x \text{ direction)}
+\]
+</div>
+<p>
+More generally, any single-valued function whose arguments combine in the linear form \( (kx - \omega t) \), \( (kx + \omega t) \), \( (t - x/v) \), or \( (ax \pm bt) \) represents a traveling wave, where the wave speed is given by the ratio of coefficients:
+</p>
+<div class="math-block">
+\[
+v = \frac{\text{Coefficient of } t}{\text{Coefficient of } x} = \frac{\omega}{k} = \frac{b}{a}
+\]
+</div>
+</section>
+
+<section>
+<h2>Conditions for a Function to Represent a Traveling Wave</h2>
+<p>
+Not every mathematical function of the form \( f(ax \pm bt) \) represents a physically acceptable wave pulse. For a function to describe a real, physical wave on a string, it must satisfy three rigorous conditions:
+</p>
+
+<div class="concept-box">
+<ol>
+<li><strong>Single-Valued:</strong> At any point \( x \) and time \( t \), the displacement \( y(x,t) \) must have one and only one unique value (a piece of string cannot be in two places simultaneously).</li>
+<li><strong>Finite / Bounded Everywhere:</strong> The displacement \( y(x,t) \) must remain finite for all \( x \in (-\infty, \infty) \) and all \( t \ge 0 \). It must not diverge to \( \pm \infty \).</li>
+<li><strong>Continuous and Differentiable:</strong> The partial derivatives \( \frac{\partial y}{\partial x} \) (slope) and \( \frac{\partial y}{\partial t} \) (particle velocity) must exist, be continuous, and be finite at all points.</li>
+</ol>
+</div>
+
+<div class="examplebox">
+<h3>Example: Evaluating Valid Wave Functions</h3>
+<p><strong>Case A:</strong> \( y(x,t) = \frac{4}{(2x - 3t)^2 + 5} \)</p>
+<p>
+<em>Analysis:</em> The argument is of the form \( (ax - bt) \). The denominator is always \( \ge 5 > 0 \), so \( y(x,t) \) is single-valued, smooth, bounded (maximum value \( = 4/5 \)), and finite for all \( x \) and \( t \).
+<br><strong>Conclusion:</strong> Valid traveling wave traveling along \( +x \) with speed \( v = 3/2 = 1.5 \text{ m/s} \).
+</p>
+<hr>
+<p><strong>Case B:</strong> \( y(x,t) = \ln(x - vt) \)</p>
+<p>
+<em>Analysis:</em> For \( (x - vt) \le 0 \), the logarithm is undefined in real space, and as \( (x - vt) \to 0^+ \), \( y \to -\infty \).
+<br><strong>Conclusion:</strong> Not a physically valid wave function over the full domain.
+</p>
+</div>
+</section>
+
+<section>
+<h2>The Differential Wave Equation</h2>
+<p>
+The fundamental partial differential equation governing all classical non-dispersive wave phenomena in one dimension is known as the <strong>Linear Wave Equation</strong>.
+</p>
+
+<h3>Mathematical Derivation from Wave Profile</h3>
+<p>
+Let \( y(x,t) = f(u) \), where \( u = x - vt \). Applying the multivariable chain rule:
+</p>
+<div class="math-block">
+\[
+\frac{\partial y}{\partial x} = f'(u)\frac{\partial u}{\partial x} = f'(u) \cdot 1 = f'(u)
+\]
+\[
+\frac{\partial^2 y}{\partial x^2} = f''(u) \cdot 1 = f''(u)
+\]
+</div>
+<p>
+Now computing the time derivatives:
+</p>
+<div class="math-block">
+\[
+\frac{\partial y}{\partial t} = f'(u)\frac{\partial u}{\partial t} = f'(u) \cdot (-v) = -v f'(u)
+\]
+\[
+\frac{\partial^2 y}{\partial t^2} = -v f''(u) \cdot (-v) = v^2 f''(u)
+\]
+</div>
+<p>
+Substituting \( f''(u) = \frac{\partial^2 y}{\partial x^2} \) into the second time derivative yields:
+</p>
+<div class="model-box">
+<strong>One-Dimensional Differential Wave Equation:</strong>
+\[
+\frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2}
+\]
+</div>
+<div class="insightbox">
+Any physical disturbance \( y(x,t) \) that satisfies this linear second-order partial differential equation represents a valid wave propagating with speed \( v \). Because the equation is linear, it satisfies the <strong>Principle of Superposition</strong>: if \( y_1 \) and \( y_2 \) are solutions, then \( y = c_1 y_1 + c_2 y_2 \) is also an exact solution.
+</div>
+</section>
+
+<section>
+<h2>Wave Velocity vs Particle Velocity & Acceleration</h2>
+<p>
+A critical source of conceptual confusion in wave mechanics is the distinction between the motion of the wave and the motion of individual medium particles:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Definition & Formula</th>
+<th>SI Unit & Dimensions</th>
+<th>Physical Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wave Velocity (\( v \))</strong></td>
+<td>
+\[
+v = \frac{dx}{dt}\Big|_{\text{phase}} = \frac{\omega}{k}
+\]
+</td>
+<td>
+\( \text{m/s} \)<br>
+\( [M^0 L^1 T^{-1}] \)
+</td>
+<td>The constant speed at which the wave profile/energy travels along the string (\( x \)-axis).</td>
+</tr>
+<tr>
+<td><strong>Particle Velocity (\( v_p \))</strong></td>
+<td>
+\[
+v_p = \frac{\partial y}{\partial t}
+\]
+</td>
+<td>
+\( \text{m/s} \)<br>
+\( [M^0 L^1 T^{-1}] \)
+</td>
+<td>The instantaneous transverse velocity of an individual string element moving along the \( y \)-axis.</td>
+</tr>
+<tr>
+<td><strong>Particle Acceleration (\( a_p \))</strong></td>
+<td>
+\[
+a_p = \frac{\partial^2 y}{\partial t^2}
+\]
+</td>
+<td>
+\( \text{m/s}^2 \)<br>
+\( [M^0 L^1 T^{-2}] \)
+</td>
+<td>The instantaneous transverse acceleration of the string element, directly caused by net tension forces.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Slope Relation for Particle Velocity: vp = -v (dy/dx)</h2>
+<p>
+There is a direct mathematical and physical connection between the transverse velocity of a particle and the geometric slope of the string at that point.
+</p>
+<p>
+For a wave traveling in the positive \( x \)-direction (\( y(x,t) = f(x - vt) \)):
+</p>
+<div class="math-block">
+\[
+\frac{\partial y}{\partial t} = -v f'(x - vt)
+\]
+\[
+\frac{\partial y}{\partial x} = f'(x - vt)
+\]
+</div>
+<p>
+Eliminating \( f'(x - vt) \) gives the fundamental kinematic slope relationship:
+</p>
+<div class="model-box">
+<strong>Particle Velocity – Slope Relationship:</strong>
+\[
+v_p = -v \left(\frac{\partial y}{\partial x}\right) \quad \text{(For wave moving in } +x\text{)}
+\]
+\[
+v_p = +v \left(\frac{\partial y}{\partial x}\right) \quad \text{(For wave moving in } -x\text{)}
+\]
+</div>
+
+<div class="diagram">
+<svg width="720" height="220" viewBox="0 0 720 220">
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="redarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Baseline -->
+  <line x1="50" y1="120" x2="670" y2="120" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Sine wave profile -->
+  <path d="M 50 120 Q 140 30 230 120 T 410 120 T 590 120" fill="none" stroke="#2563eb" stroke-width="3"/>
+
+  <!-- Wave velocity vector -->
+  <line x1="480" y1="40" x2="570" y2="40" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+  <text x="580" y="45" font-size="14" font-weight="bold" fill="#2563eb">v (Wave Speed)</text>
+
+  <!-- Point A (Negative slope, upward velocity) -->
+  <circle cx="100" cy="80" r="5" fill="#ef4444"/>
+  <line x1="100" y1="80" x2="100" y2="35" stroke="#ef4444" stroke-width="2.5" marker-end="url(#redarrow)"/>
+  <text x="50" y="55" font-size="12" font-weight="bold" fill="#ef4444">Slope &lt; 0 &rArr; v_p &gt; 0 (Up)</text>
+
+  <!-- Point B (Crest: Zero slope, zero velocity) -->
+  <circle cx="140" cy="52" r="5" fill="#1f2937"/>
+  <text x="110" y="30" font-size="12" font-weight="bold" fill="#1f2937">Crest: Slope = 0 &rArr; v_p = 0</text>
+
+  <!-- Point C (Positive slope, downward velocity) -->
+  <circle cx="180" cy="80" r="5" fill="#ef4444"/>
+  <line x1="180" y1="80" x2="180" y2="125" stroke="#ef4444" stroke-width="2.5" marker-end="url(#redarrow)"/>
+  <text x="190" y="110" font-size="12" font-weight="bold" fill="#ef4444">Slope &gt; 0 &rArr; v_p &lt; 0 (Down)</text>
+</svg>
+</div>
+
+<div class="insightbox">
+<strong>Physical Rule of Thumb:</strong>
+For a wave moving to the right (\(+x\)):
+<ul>
+<li>If the string slope is <strong>negative</strong> (\(\partial y / \partial x < 0\)), the particle is moving <strong>upward</strong> (\(v_p > 0\)).</li>
+<li>If the string slope is <strong>positive</strong> (\(\partial y / \partial x > 0\)), the particle is moving <strong>downward</strong> (\(v_p < 0\)).</li>
+<li>At the crests and troughs, the slope is momentarily zero, meaning the particles are at their extreme positions with <strong>zero instantaneous velocity</strong>.</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

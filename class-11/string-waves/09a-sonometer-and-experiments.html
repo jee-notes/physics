@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonometer & Experiments | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./09-normal-modes-of-vibration.html" class="back-btn">
+<span>&larr;</span> Back to Normal Modes of Vibration
+</a>
+</nav>
+
+<h1>Sonometer, Melde's Experiment & Resonance</h1>
+<p class="subtitle">
+Experimental acoustics, transverse vibration laws, Melde's electrical setup, and acoustic beat phenomena.
+</p>
+
+<section>
+<h2>Sonometer Construction and Principle</h2>
+<p>
+A <strong>sonometer</strong> is a classic experimental apparatus designed to study the transverse vibrations of stretched strings, verify the laws of vibration, and determine the unknown frequency of an acoustic source (such as a tuning fork).
+</p>
+
+<div class="diagram">
+<svg width="720" height="220" viewBox="0 0 720 220">
+  <!-- Wooden Hollow Box -->
+  <rect x="100" y="90" width="460" height="60" rx="6" fill="#f8fafc" stroke="#1f2937" stroke-width="2.5"/>
+  <circle cx="250" cy="120" r="12" fill="#e2e8f0" stroke="#1f2937" stroke-width="1.5"/>
+  <circle cx="410" cy="120" r="12" fill="#e2e8f0" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="330" y="145" font-size="12" fill="#64748b">Hollow Wooden Resonator Box</text>
+
+  <!-- Movable Bridges -->
+  <polygon points="170,90 180,70 190,90" fill="#2563eb"/>
+  <text x="165" y="65" font-size="11" font-weight="bold" fill="#2563eb">Bridge A</text>
+
+  <polygon points="470,90 480,70 490,90" fill="#2563eb"/>
+  <text x="465" y="65" font-size="11" font-weight="bold" fill="#2563eb">Bridge B</text>
+
+  <!-- Stretched Wire -->
+  <line x1="120" y1="70" x2="570" y2="70" stroke="#111827" stroke-width="3"/>
+  <text x="310" y="60" font-size="13" font-weight="bold" fill="#111827">Resonating Length L</text>
+
+  <!-- Pulley -->
+  <circle cx="580" cy="80" r="15" fill="#e2e8f0" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- Hanging Weights -->
+  <line x1="595" y1="80" x2="595" y2="170" stroke="#111827" stroke-width="2"/>
+  <rect x="580" y="170" width="30" height="35" rx="3" fill="#ef4444"/>
+  <text x="575" y="218" font-size="12" font-weight="bold" fill="#ef4444">Mass M (T = Mg)</text>
+</svg>
+</div>
+
+<p>
+<strong>Key Components:</strong>
+</p>
+<ul>
+<li><strong>Hollow Wooden Resonant Box:</strong> Communicates vibrations from the wire to the enclosed air column, amplifying the sound volume through resonance.</li>
+<li><strong>Movable Knife-Edge Bridges (A & B):</strong> Clamps the wire at defined nodal points, allowing precise adjustment of the vibrating length \( L \).</li>
+<li><strong>Frictionless Pulley and Hanger:</strong> Applies a known longitudinal tension \( T = M g \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Laws of Transverse Vibrations of a Stretched String</h2>
+<p>
+The fundamental resonant frequency of a stretched string is given by:
+</p>
+<div class="math-block">
+\[
+f = \frac{1}{2L} \sqrt{\frac{T}{\mu}}
+\]
+</div>
+<p>
+From this fundamental formula, three experimental laws of transverse vibration are derived:
+</p>
+
+<h3>1. Law of Length</h3>
+<p>
+The fundamental frequency of vibration is inversely proportional to the resonating length \( L \), provided the tension \( T \) and linear mass density \( \mu \) are kept constant:
+</p>
+<div class="model-box">
+\[
+f \propto \frac{1}{L} \implies f \cdot L = \text{Constant}
+\]
+</div>
+
+<h3>2. Law of Tension</h3>
+<p>
+The fundamental frequency is directly proportional to the square root of the tension \( T \), provided the vibrating length \( L \) and linear mass density \( \mu \) are constant:
+</p>
+<div class="model-box">
+\[
+f \propto \sqrt{T} \implies \frac{f}{\sqrt{T}} = \text{Constant}
+\]
+</div>
+
+<h3>3. Law of Mass</h3>
+<p>
+The fundamental frequency is inversely proportional to the square root of the linear mass density \( \mu \), provided the length \( L \) and tension \( T \) are constant:
+</p>
+<div class="model-box">
+\[
+f \propto \frac{1}{\sqrt{\mu}} = \frac{1}{r\sqrt{\pi\rho}} \implies f \cdot \sqrt{\mu} = \text{Constant}
+\]
+</div>
+</section>
+
+<section>
+<h2>Determination of Frequency of Tuning Fork</h2>
+<p>
+To determine the unknown frequency \( f \) of a tuning fork using a sonometer:
+</p>
+<ol>
+<li>A small V-shaped paper strip (called a <strong>paper rider</strong>) is placed at the exact midpoint of the string between the two bridges.</li>
+<li>The tuning fork is struck against a rubber pad and its vibrating stem is pressed firmly against the top of the wooden sonometer box.</li>
+<li>The distance \( L \) between the bridges is gradually adjusted until the paper rider violently flutters and is thrown off the wire.</li>
+</ol>
+<div class="concept-box">
+<strong>Resonance Condition:</strong>
+When the natural fundamental frequency of the vibrating string segment exactly matches the frequency of the tuning fork, <strong>acoustic resonance</strong> occurs. An antinode with large vibrational amplitude forms at the center, throwing off the paper rider. The tuning fork frequency is then calculated as:
+\[
+f = \frac{1}{2L} \sqrt{\frac{T}{\mu}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Melde's Experiment (Transverse and Longitudinal Arrangements)</h2>
+<p>
+In Melde's experiment, an electrically maintained tuning fork is used to generate standing waves in a long thread attached to one of its prongs.
+</p>
+
+<h3>1. Transverse Arrangement</h3>
+<p>
+The prong of the tuning fork vibrates <strong>perpendicular</strong> to the length of the thread.
+</p>
+<ul>
+<li>During one complete oscillation of the fork prong, the string is pulled up and down once.</li>
+<li>Frequency of string vibration equals the frequency of the fork: \( f_{\text{string}} = f_{\text{fork}} \).</li>
+<li>If the thread of length \( L \) vibrates in \( p \) loops:
+\[
+f_{\text{fork}} = \frac{p}{2L}\sqrt{\frac{T}{\mu}}
+\]
+</li>
+<li>Melde's Law: \( p^2 T = \text{Constant} \).</li>
+</ul>
+
+<h3>2. Longitudinal Arrangement</h3>
+<p>
+The prong of the tuning fork vibrates <strong>parallel</strong> to the length of the thread.
+</p>
+<ul>
+<li>When the prong moves forward, the thread slackens (forming a loop); when it moves backward, the thread tightens. Thus, the string completes one full transverse vibration for every <strong>two</strong> complete vibrations of the fork:
+\[
+f_{\text{string}} = \frac{1}{2} f_{\text{fork}}
+\]
+</li>
+<li>If the thread of length \( L \) vibrates in \( p \) loops:
+\[
+f_{\text{fork}} = \frac{p}{L}\sqrt{\frac{T}{\mu}}
+\]
+</li>
+<li>Melde's Law: \( p^2 T = \text{Constant} \).</li>
+</ul>
+
+<div class="insightbox">
+For the same string, length, and tension, the number of loops formed in the transverse arrangement is exactly <strong>twice</strong> the number of loops formed in the longitudinal arrangement (\( p_{\text{transverse}} = 2 \, p_{\text{longitudinal}} \)).
+</div>
+</section>
+
+<section>
+<h2>Beats Produced by Vibrating Strings</h2>
+<p>
+When two musical strings of nearly equal frequencies \( f_1 \) and \( f_2 \) vibrate simultaneously, their superposition produces periodic waxing and waning of acoustic intensity known as <strong>beats</strong>.
+</p>
+<div class="model-box">
+<strong>Beat Frequency:</strong>
+\[
+f_b = |f_1 - f_2| = \left| \frac{1}{2L_1}\sqrt{\frac{T_1}{\mu_1}} - \frac{1}{2L_2}\sqrt{\frac{T_2}{\mu_2}} \right| \quad [\text{beats/second}]
+\]
+</div>
+
+<div class="examplebox">
+<h3>Standard JEE Reasoning: Loading and Filing</h3>
+<table>
+<thead>
+<tr>
+<th>Action Performed</th>
+<th>Effect on Parameter</th>
+<th>Effect on Frequency \( f \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Loading tuning fork / string with wax</strong></td>
+<td>Increases mass / inertia (\( \mu \uparrow \))</td>
+<td>Frequency <strong>decreases</strong> (\( f \downarrow \))</td>
+</tr>
+<tr>
+<td><strong>Filing tuning fork / thinning string</strong></td>
+<td>Decreases mass / inertia (\( \mu \downarrow \))</td>
+<td>Frequency <strong>increases</strong> (\( f \uparrow \))</td>
+</tr>
+<tr>
+<td><strong>Tightening string (increasing peg tension)</strong></td>
+<td>Increases tension (\( T \uparrow \))</td>
+<td>Frequency <strong>increases</strong> (\( f \uparrow \))</td>
+</tr>
+<tr>
+<td><strong>Increasing bridge separation \( L \)</strong></td>
+<td>Increases vibrating length (\( L \uparrow \))</td>
+<td>Frequency <strong>decreases</strong> (\( f \downarrow \))</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

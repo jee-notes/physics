@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Composite Strings | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-speed-of-transverse-wave.html" class="back-btn">
+<span>&larr;</span> Back to Speed of Transverse Waves
+</a>
+</nav>
+
+<h1>Composite Strings & Medium Boundary Transitions</h1>
+<p class="subtitle">
+Wave propagation across spliced string junctions, frequency invariance, and wavelength transformations.
+</p>
+
+<section>
+<h2>Joint of Strings with Different Linear Densities</h2>
+<p>
+A <strong>composite string</strong> consists of two or more distinct strings of different materials, thicknesses, or linear mass densities (\( \mu_1 \) and \( \mu_2 \)) knotted or spliced together at a seamless junction point, held under a uniform longitudinal tension \( T \).
+</p>
+
+<div class="diagram">
+<svg width="720" height="200" viewBox="0 0 720 200">
+  <defs>
+    <marker id="waveArr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Left Wall -->
+  <line x1="50" y1="40" x2="50" y2="160" stroke="#1f2937" stroke-width="4"/>
+  <!-- Right Wall -->
+  <line x1="670" y1="40" x2="670" y2="160" stroke="#1f2937" stroke-width="4"/>
+
+  <!-- String 1 (Thinner / Lighter, mu1) -->
+  <line x1="50" y1="100" x2="360" y2="100" stroke="#2563eb" stroke-width="3"/>
+  <text x="180" y="80" font-size="14" font-weight="bold" fill="#2563eb">String 1 (&mu;_1, L_1)</text>
+  <text x="170" y="130" font-size="12" fill="#64748b">v_1 = &radic;(T/&mu;_1)</text>
+
+  <!-- Knot / Junction -->
+  <circle cx="360" cy="100" r="7" fill="#ef4444"/>
+  <text x="340" y="60" font-size="13" font-weight="bold" fill="#ef4444">Junction</text>
+
+  <!-- String 2 (Thicker / Denser, mu2) -->
+  <line x1="360" y1="100" x2="670" y2="100" stroke="#059669" stroke-width="7"/>
+  <text x="480" y="80" font-size="14" font-weight="bold" fill="#059669">String 2 (&mu;_2, L_2)</text>
+  <text x="470" y="130" font-size="12" fill="#64748b">v_2 = &radic;(T/&mu;_2)</text>
+
+  <!-- Tension T indicators -->
+  <text x="70" y="85" font-size="12" fill="#1f2937">T &larr;</text>
+  <text x="630" y="85" font-size="12" fill="#1f2937">&rarr; T</text>
+</svg>
+</div>
+
+<p>
+Because both string segments are in static longitudinal equilibrium under the same applied pulling force, the <strong>tension \( T \) is identical throughout both segments</strong>.
+</p>
+<p>
+The wave propagation speed in each medium is given by:
+</p>
+<div class="math-block">
+\[
+v_1 = \sqrt{\frac{T}{\mu_1}}, \quad v_2 = \sqrt{\frac{T}{\mu_2}}
+\]
+</div>
+<p>
+Taking the ratio of speeds:
+</p>
+<div class="model-box">
+<strong>Ratio of Wave Speeds in a Composite String:</strong>
+\[
+\frac{v_1}{v_2} = \sqrt{\frac{\mu_2}{\mu_1}}
+\]
+</div>
+<p>
+Waves travel faster in the rarer (lighter) medium and slower in the denser (heavier) medium.
+</p>
+</section>
+
+<section>
+<h2>Frequency Invariance Across Media Boundaries</h2>
+<p>
+When a continuous periodic wave arrives at the junction connecting String 1 and String 2, the physical continuity of the string requires that the single physical point forming the knot oscillates harmonically up and down.
+</p>
+<p>
+The knot serves as the periodic physical driver for String 2. Since the knot can oscillate only at the frequency \( f \) with which it is driven by the incident wave from String 1, the oscillatory frequency remains strictly invariant across the boundary:
+</p>
+<div class="model-box">
+<strong>Law of Frequency Invariance:</strong>
+\[
+f_1 = f_2 = f_{\text{source}} = \text{Constant}
+\]
+\[
+\omega_1 = \omega_2 = \omega_{\text{source}} = \text{Constant}
+\]
+</div>
+<div class="insightbox">
+Frequency is determined solely by the source that originates the oscillation. When a wave passes from one medium to another, its speed and wavelength change, but its <strong>frequency never changes</strong>.
+</div>
+</section>
+
+<section>
+<h2>Wavelength Variation in Composite Strings</h2>
+<p>
+Because the wave speed changes across the boundary while the frequency remains invariant, the spatial wavelength \( \lambda \) must adjust proportionally in accordance with the fundamental wave relation \( v = f \lambda \):
+</p>
+<div class="math-block">
+\[
+\lambda_1 = \frac{v_1}{f}, \quad \lambda_2 = \frac{v_2}{f}
+\]
+</div>
+<p>
+Dividing the two relations yields:
+</p>
+<div class="model-box">
+<strong>Ratio of Wavelengths:</strong>
+\[
+\frac{\lambda_1}{\lambda_2} = \frac{v_1}{v_2} = \sqrt{\frac{\mu_2}{\mu_1}}
+\]
+</div>
+
+<div class="concept-box">
+<ul>
+<li><strong>When moving from a lighter string to a denser string (\( \mu_1 < \mu_2 \)):</strong> Wave speed decreases (\( v_2 < v_1 \)) and wavelength contracts (\( \lambda_2 < \lambda_1 \)).</li>
+<li><strong>When moving from a denser string to a lighter string (\( \mu_1 > \mu_2 \)):</strong> Wave speed increases (\( v_2 > v_1 \)) and wavelength expands (\( \lambda_2 > \lambda_1 \)).</li>
+</ul>
+</div>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Transit Time in Composite Wire</h3>
+<p>
+<strong>Problem:</strong> A composite string is formed by joining a steel wire of length \( L_1 = 1.0 \text{ m} \) and linear mass density \( \mu_1 = 4 \times 10^{-3} \text{ kg/m} \) with an aluminum wire of length \( L_2 = 1.5 \text{ m} \) and linear mass density \( \mu_2 = 9 \times 10^{-3} \text{ kg/m} \). The combination is kept under a tension of \( T = 360 \text{ N} \).
+<br>Calculate: (a) The wave speed in each wire, (b) The total time taken for a pulse to travel from one end of the composite wire to the other.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>
+<strong>(a) Wave speeds:</strong>
+\[
+v_1 = \sqrt{\frac{T}{\mu_1}} = \sqrt{\frac{360}{4 \times 10^{-3}}} = \sqrt{90000} = 300 \text{ m/s}
+\]
+\[
+v_2 = \sqrt{\frac{T}{\mu_2}} = \sqrt{\frac{360}{9 \times 10^{-3}}} = \sqrt{40000} = 200 \text{ m/s}
+\]
+</li>
+<li>
+<strong>(b) Total Transit Time:</strong>
+\[
+t_{\text{total}} = t_1 + t_2 = \frac{L_1}{v_1} + \frac{L_2}{v_2}
+\]
+\[
+t_{\text{total}} = \frac{1.0}{300} + \frac{1.5}{200} = \frac{1}{300} + \frac{3}{400} = \frac{4 + 9}{1200} = \frac{13}{1200} \approx 0.0108 \text{ s} = 10.83 \text{ ms}
+\]
+</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

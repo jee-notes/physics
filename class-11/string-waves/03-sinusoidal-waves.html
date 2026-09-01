@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sinusoidal Waves | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Harmonic / Sinusoidal Traveling Waves</h1>
+<p class="subtitle">
+Mathematical formulation of harmonic waves, wave parameters, phase dynamics, and particle SHM kinematics.
+</p>
+
+<section>
+<h2>Standard Equation of a Harmonic Traveling Wave</h2>
+<p>
+When the source driving a string executes Simple Harmonic Motion (SHM) along the transverse direction, it generates a <strong>harmonic (sinusoidal) wave</strong>. Every particle of the string subsequently undergoes SHM with identical frequency and amplitude, but with a progressive phase delay proportional to its distance from the source.
+</p>
+<p>
+The standard displacement equation for a sinusoidal wave propagating along the \( +x \)-axis with amplitude \( A \), angular frequency \( \omega \), wave number \( k \), and initial phase angle \( \phi \) is given by:
+</p>
+<div class="model-box">
+<strong>Standard Form of a 1D Harmonic Wave:</strong>
+\[
+y(x, t) = A \sin(kx - \omega t + \phi) \quad \text{(Traveling along } +x\text{)}
+\]
+\[
+y(x, t) = A \sin(kx + \omega t + \phi) \quad \text{(Traveling along } -x\text{)}
+\]
+</div>
+<p>
+Equivalent alternative forms frequently used in physics include:
+</p>
+<div class="math-block">
+\[
+y(x,t) = A \sin\left[ 2\pi \left( \frac{x}{\lambda} - \frac{t}{T} \right) + \phi \right] = A \sin\left[ k(x - vt) + \phi \right]
+\]
+</div>
+</section>
+
+<section>
+<h2>Wave Parameters: Amplitude, Wavelength, Frequency, and Wave Number</h2>
+<p>
+The characteristics of a harmonic wave are defined by the following fundamental physical quantities:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Quantity & Symbol</th>
+<th>Definition & Governing Formula</th>
+<th>SI Unit</th>
+<th>Dimensional Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amplitude (\( A \))</strong></td>
+<td>Maximum transverse displacement of a string particle from its equilibrium position.</td>
+<td>\( \text{m} \)</td>
+<td>\( [M^0 L^1 T^0] \)</td>
+</tr>
+<tr>
+<td><strong>Wavelength (\( \lambda \))</strong></td>
+<td>Minimum spatial distance between two consecutive particles vibrating in the same phase.</td>
+<td>\( \text{m} \)</td>
+<td>\( [M^0 L^1 T^0] \)</td>
+</tr>
+<tr>
+<td><strong>Time Period (\( T \))</strong></td>
+<td>Time taken by any single particle to complete one full oscillation.</td>
+<td>\( \text{s} \)</td>
+<td>\( [M^0 L^0 T^1] \)</td>
+</tr>
+<tr>
+<td><strong>Frequency (\( f \) or \( \nu \))</strong></td>
+<td>Number of complete oscillations executed per unit time: \( f = 1/T \).</td>
+<td>\( \text{Hz } (\text{s}^{-1}) \)</td>
+<td>\( [M^0 L^0 T^{-1}] \)</td>
+</tr>
+<tr>
+<td><strong>Angular Frequency (\( \omega \))</strong></td>
+<td>Rate of change of phase angle with respect to time: \( \omega = 2\pi f = \frac{2\pi}{T} \).</td>
+<td>\( \text{rad/s} \)</td>
+<td>\( [M^0 L^0 T^{-1}] \)</td>
+</tr>
+<tr>
+<td><strong>Angular Wave Number (\( k \))</strong></td>
+<td>Spatial rate of change of phase: \( k = \frac{2\pi}{\lambda} \).</td>
+<td>\( \text{rad/m} \)</td>
+<td>\( [M^0 L^{-1} T^0] \)</td>
+</tr>
+<tr>
+<td><strong>Wave Speed (\( v \))</strong></td>
+<td>Propagation velocity of the phase / wave profile: \( v = f\lambda = \frac{\omega}{k} \).</td>
+<td>\( \text{m/s} \)</td>
+<td>\( [M^0 L^1 T^{-1}] \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Phase, Initial Phase Constant, and Path Difference</h2>
+<p>
+The argument of the sinusoidal function represents the <strong>total phase</strong> \( \Phi(x,t) \) of the particle at position \( x \) at time \( t \):
+</p>
+<div class="math-block">
+\[
+\Phi(x, t) = kx - \omega t + \phi
+\]
+</div>
+<p>
+The phase completely determines both the instantaneous displacement and the direction of velocity of the oscillating particle at that instant.
+</p>
+
+<h3>1. Phase Difference between Two Points at the Same Instant (\( \Delta t = 0 \))</h3>
+<p>
+For two particles separated by a spatial distance (path difference) \( \Delta x \):
+</p>
+<div class="model-box">
+\[
+\Delta \Phi = k \Delta x = \frac{2\pi}{\lambda} \Delta x
+\]
+</div>
+
+<h3>2. Phase Difference for the Same Particle over a Time Interval (\( \Delta x = 0 \))</h3>
+<p>
+For a single particle observed over a time duration \( \Delta t \):
+</p>
+<div class="model-box">
+\[
+\Delta \Phi = \omega \Delta t = \frac{2\pi}{T} \Delta t
+\]
+</div>
+
+<div class="concept-box">
+<strong>General Phase Difference Formula:</strong>
+When both spatial position and time change simultaneously:
+\[
+\Delta \Phi = \left| k \Delta x - \omega \Delta t \right| = 2\pi \left| \frac{\Delta x}{\lambda} - \frac{\Delta t}{T} \right|
+\]
+</div>
+</section>
+
+<section>
+<h2>Particle Velocity and Acceleration in SHM Wave</h2>
+<p>
+Every individual particle on the string undergoes transverse SHM along the \( y \)-axis. Differentiating the displacement equation with respect to time:
+</p>
+
+<h3>1. Particle Velocity (\( v_p \))</h3>
+<div class="math-block">
+\[
+v_p = \frac{\partial y}{\partial t} = \frac{\partial}{\partial t}\left[ A\sin(kx - \omega t + \phi) \right] = -\omega A \cos(kx - \omega t + \phi)
+\]
+</div>
+<p>
+In terms of instantaneous displacement \( y \):
+</p>
+<div class="math-block">
+\[
+v_p = \pm \omega \sqrt{A^2 - y^2}
+\]
+</div>
+<p>
+The maximum particle velocity occurs as the particle crosses its mean position (\( y = 0 \)):
+</p>
+<div class="model-box">
+\[
+v_{p,\text{max}} = \omega A = 2\pi f A
+\]
+</div>
+
+<h3>2. Particle Acceleration (\( a_p \))</h3>
+<div class="math-block">
+\[
+a_p = \frac{\partial^2 y}{\partial t^2} = -\omega^2 A \sin(kx - \omega t + \phi) = -\omega^2 y
+\]
+</div>
+<p>
+The maximum particle acceleration occurs at the extreme displacements (\( y = \pm A \)):
+</p>
+<div class="model-box">
+\[
+a_{p,\text{max}} = \omega^2 A = 4\pi^2 f^2 A
+\]
+</div>
+
+<div class="insightbox">
+<strong>Ratio of Maximum Particle Speed to Wave Speed:</strong>
+\[
+\frac{v_{p,\text{max}}}{v} = \frac{\omega A}{\omega / k} = k A = \frac{2\pi A}{\lambda}
+\]
+For small amplitude linear wave theory to hold strictly, the wave amplitude must be much smaller than the wavelength (\( A \ll \lambda \)), which guarantees that \( v_{p,\text{max}} \ll v \) and the slope \( \left|\frac{\partial y}{\partial x}\right| \ll 1 \).
+</div>
+</section>
+
+<section>
+<h2>Snapshot Graphs and Phase Differences between Particles</h2>
+<p>
+Let us analyze the snapshot graph of a sine wave \( y(x) = A\sin(kx) \) frozen at \( t = 0 \):
+</p>
+
+<div class="diagram">
+<svg width="720" height="240" viewBox="0 0 720 240">
+  <defs>
+    <marker id="arr1" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <!-- Axes -->
+  <line x1="50" y1="130" x2="680" y2="130" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="80" y1="20" x2="80" y2="220" stroke="#94a3b8" stroke-width="2"/>
+  <text x="685" y="135" font-size="14" fill="#64748b">x</text>
+  <text x="85" y="30" font-size="14" fill="#64748b">y</text>
+
+  <!-- Waveform -->
+  <path d="M 80 130 Q 160 30 240 130 T 400 130 T 560 130 T 680 130" fill="none" stroke="#2563eb" stroke-width="3"/>
+
+  <!-- Crest and Trough Annotations -->
+  <line x1="160" y1="130" x2="160" y2="55" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="160" cy="55" r="5" fill="#ef4444"/>
+  <text x="145" y="40" font-size="12" font-weight="bold" fill="#ef4444">+A (Crest)</text>
+
+  <line x1="320" y1="130" x2="320" y2="205" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="320" cy="205" r="5" fill="#ef4444"/>
+  <text x="305" y="225" font-size="12" font-weight="bold" fill="#ef4444">-A (Trough)</text>
+
+  <!-- Wavelength Indicator -->
+  <line x1="80" y1="15" x2="400" y2="15" stroke="#2563eb" stroke-width="2" marker-start="url(#arr1)" marker-end="url(#arr1)"/>
+  <text x="220" y="10" font-size="13" font-weight="bold" fill="#2563eb">Wavelength &lambda; (Phase diff = 2&pi;)</text>
+
+  <!-- Half Wavelength -->
+  <line x1="160" y1="75" x2="320" y2="75" stroke="#059669" stroke-width="1.5"/>
+  <text x="210" y="70" font-size="11" font-weight="bold" fill="#059669">&Delta;x = &lambda;/2 (&Delta;&Phi; = &pi;)</text>
+</svg>
+</div>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Wave Characteristics Extraction</h3>
+<p>
+<strong>Problem:</strong> The transverse displacement of a string wave is described by:
+\[
+y(x,t) = 0.05 \sin(4\pi x - 20\pi t + \pi/6) \quad (\text{SI units})
+\]
+Find: (a) Amplitude, (b) Wavelength, (c) Frequency, (d) Wave speed & direction, (e) Maximum particle speed.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<ul>
+<li><strong>(a) Amplitude:</strong> \( A = 0.05 \text{ m} = 5 \text{ cm} \).</li>
+<li><strong>(b) Wavelength:</strong> Comparing \( k = 4\pi \text{ rad/m} \implies \lambda = \frac{2\pi}{k} = \frac{2\pi}{4\pi} = 0.5 \text{ m} \).</li>
+<li><strong>(c) Frequency:</strong> Comparing \( \omega = 20\pi \text{ rad/s} \implies f = \frac{\omega}{2\pi} = \frac{20\pi}{2\pi} = 10 \text{ Hz} \).</li>
+<li><strong>(d) Wave Speed:</strong> \( v = \frac{\omega}{k} = \frac{20\pi}{4\pi} = 5 \text{ m/s} \). Since the sign between \( x \) and \( t \) is negative, the wave travels along the <strong>\( +x \)-direction</strong>.</li>
+<li><strong>(e) Maximum Particle Speed:</strong> \( v_{p,\text{max}} = \omega A = (20\pi)(0.05) = \pi \approx 3.14 \text{ m/s} \).</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

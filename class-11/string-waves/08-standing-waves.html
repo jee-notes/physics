@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standing Waves | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Standing Waves and Energy Trapping</h1>
+<p class="subtitle">
+Superposition of counter-propagating waves, nodal structures, spatial phase coherence, and energy localization.
+</p>
+
+<section>
+<h2>Superposition of Two Oppositely Directed Traveling Waves</h2>
+<p>
+When two identical harmonic waves having the same amplitude, frequency, and wavelength travel in <strong>opposite directions</strong> along the same stretched string, their linear superposition produces a wave pattern that does not advance along the medium. This stationary disturbance is called a <strong>Standing Wave</strong> (or <strong>Stationary Wave</strong>).
+</p>
+<p>
+Consider two such waves:
+</p>
+<div class="math-block">
+\[
+y_1(x, t) = A \sin(kx - \omega t) \quad \text{(Wave traveling along } +x\text{)}
+\]
+\[
+y_2(x, t) = A \sin(kx + \omega t) \quad \text{(Wave traveling along } -x\text{)}
+\]
+</div>
+</section>
+
+<section>
+<h2>Mathematical Equation of Standing Waves: y(x,t) = 2A sin(kx) cos(wt)</h2>
+<p>
+By the principle of superposition:
+</p>
+<div class="math-block">
+\[
+y(x, t) = y_1 + y_2 = A \left[ \sin(kx - \omega t) + \sin(kx + \omega t) \right]
+\]
+</div>
+<p>
+Using the standard trigonometric sum-to-product identity \( \sin(C) + \sin(D) = 2\sin\left(\frac{C+D}{2}\right)\cos\left(\frac{C-D}{2}\right) \):
+</p>
+<div class="model-box">
+<strong>Standing Wave Equation:</strong>
+\[
+y(x, t) = \left[ 2A \sin(kx) \right] \cos(\omega t) = A(x) \cos(\omega t)
+\]
+</div>
+<p>
+where \( A(x) = \left| 2A \sin(kx) \right| \) is the position-dependent amplitude of the particle at position \( x \).
+</p>
+
+<div class="insightbox">
+In a traveling wave \( y = A\sin(kx - \omega t) \), all particles oscillate with the same amplitude \( A \), but reach their peaks at different times (different phase). In a <strong>standing wave</strong> \( y = [2A\sin(kx)]\cos(\omega t) \), all particles oscillate with <strong>different amplitudes</strong> depending on their position \( x \), but they all pass through their extremes and zero displacements <strong>simultaneously</strong> in time.
+</div>
+</section>
+
+<section>
+<h2>Nodes and Antinodes: Positions and Spatial Separation</h2>
+
+<div class="diagram">
+<svg width="720" height="240" viewBox="0 0 720 240">
+  <!-- Baseline -->
+  <line x1="50" y1="120" x2="670" y2="120" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Standing wave loops (solid top, dashed bottom) -->
+  <path d="M 90 120 Q 180 30 270 120 Q 360 210 450 120 Q 540 30 630 120" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+  <path d="M 90 120 Q 180 210 270 120 Q 360 30 450 120 Q 540 210 630 120" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6,4"/>
+
+  <!-- Nodes (N) -->
+  <circle cx="90" cy="120" r="6" fill="#ef4444"/>
+  <text x="85" y="145" font-size="13" font-weight="bold" fill="#ef4444">N</text>
+  <circle cx="270" cy="120" r="6" fill="#ef4444"/>
+  <text x="265" y="145" font-size="13" font-weight="bold" fill="#ef4444">N</text>
+  <circle cx="450" cy="120" r="6" fill="#ef4444"/>
+  <text x="445" y="145" font-size="13" font-weight="bold" fill="#ef4444">N</text>
+  <circle cx="630" cy="120" r="6" fill="#ef4444"/>
+  <text x="625" y="145" font-size="13" font-weight="bold" fill="#ef4444">N</text>
+
+  <!-- Antinodes (A) -->
+  <circle cx="180" cy="30" r="5" fill="#059669"/>
+  <circle cx="180" cy="210" r="5" fill="#059669"/>
+  <text x="175" y="20" font-size="13" font-weight="bold" fill="#059669">A (2A)</text>
+
+  <circle cx="360" cy="30" r="5" fill="#059669"/>
+  <circle cx="360" cy="210" r="5" fill="#059669"/>
+  <text x="355" y="20" font-size="13" font-weight="bold" fill="#059669">A (2A)</text>
+
+  <circle cx="540" cy="30" r="5" fill="#059669"/>
+  <circle cx="540" cy="210" r="5" fill="#059669"/>
+  <text x="535" y="20" font-size="13" font-weight="bold" fill="#059669">A (2A)</text>
+
+  <!-- Spacing Annotations -->
+  <line x1="90" y1="180" x2="270" y2="180" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="155" y="175" font-size="12" fill="#1f2937">&Delta;x = &lambda;/2</text>
+
+  <line x1="90" y1="80" x2="180" y2="80" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="110" y="75" font-size="12" fill="#1f2937">&lambda;/4</text>
+</svg>
+</div>
+
+<h3>1. Nodes (Points of Zero Amplitude)</h3>
+<p>
+Points where the oscillatory amplitude is permanently zero (\( A(x) = 0 \)):
+</p>
+<div class="math-block">
+\[
+\sin(kx) = 0 \implies kx = n\pi \implies \frac{2\pi}{\lambda} x = n\pi
+\]
+</div>
+<div class="model-box">
+<strong>Positions of Nodes:</strong>
+\[
+x_N = \frac{n \lambda}{2} = 0, \frac{\lambda}{2}, \lambda, \frac{3\lambda}{2}, \dots \quad (n = 0, 1, 2, \dots)
+\]
+</div>
+<ul>
+<li>Permanent displacement = \( 0 \), particle velocity = \( 0 \).</li>
+<li><strong>Strain and pressure variation are maximum at nodes</strong> (maximum string slope).</li>
+</ul>
+
+<h3>2. Antinodes (Points of Maximum Amplitude)</h3>
+<p>
+Points where the oscillatory amplitude reaches its maximum value \( 2A \) (\( |\sin(kx)| = 1 \)):
+</p>
+<div class="math-block">
+\[
+kx = (2n + 1)\frac{\pi}{2} \implies \frac{2\pi}{\lambda} x = (2n + 1)\frac{\pi}{2}
+\]
+</div>
+<div class="model-box">
+<strong>Positions of Antinodes:</strong>
+\[
+x_A = (2n + 1)\frac{\lambda}{4} = \frac{\lambda}{4}, \frac{3\lambda}{4}, \frac{5\lambda}{4}, \dots \quad (n = 0, 1, 2, \dots)
+\]
+</div>
+
+<h3>Key Spatial Distances</h3>
+<div class="concept-box">
+<ul>
+<li>Distance between any two successive nodes: \( \Delta x_{NN} = \frac{\lambda}{2} \)</li>
+<li>Distance between any two successive antinodes: \( \Delta x_{AA} = \frac{\lambda}{2} \)</li>
+<li>Distance between adjacent node and antinode: \( \Delta x_{NA} = \frac{\lambda}{4} \)</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Phase Relationships Between Oscillating Particles</h2>
+<p>
+From the equation \( y(x,t) = [2A\sin(kx)]\cos(\omega t) \):
+</p>
+<ul>
+<li><strong>Particles within the same loop (between two adjacent nodes):</strong> The term \( \sin(kx) \) has the same algebraic sign for all points in the loop. Therefore, all particles in that loop oscillate in <strong>exact phase (\( \Delta\Phi = 0 \))</strong>, reaching their maximum displacements and crossing zero simultaneously.</li>
+<li><strong>Particles in adjacent loops:</strong> Crossing a node changes the sign of \( \sin(kx) \). Therefore, particles situated in adjacent loops oscillate in <strong>exact opposite phase (\( \Delta\Phi = \pi \text{ radians} = 180^\circ \))</strong>.</li>
+</ul>
+</section>
+
+<section>
+<h2>Energy Trapping and Energy Exchange in Standing Waves</h2>
+<p>
+In a standing wave, because the nodes are permanently motionless at all times (\( v_p = 0 \)), the instantaneous power flow across any node is identically zero:
+</p>
+<div class="math-block">
+\[
+P_{\text{node}} = \left( -T \frac{\partial y}{\partial x} \right) \cdot v_p = \left( -T \frac{\partial y}{\partial x} \right) \cdot (0) = 0
+\]
+</div>
+<p>
+Consequently, <strong>no energy can cross a node</strong>. The mechanical energy remains permanently trapped inside each individual loop between successive nodes.
+</p>
+<div class="concept-box">
+<strong>Dynamic Energy Exchange in Standing Waves:</strong>
+<ul>
+<li><strong>When the string is completely flat (\( t = \frac{T}{4}, \frac{3T}{4} \dots \)):</strong> Displacement \( y = 0 \) everywhere, potential energy \( U = 0 \). All trapped energy is in the form of <strong>pure Kinetic Energy</strong>, with particles moving at their maximum speeds.</li>
+<li><strong>When the string has maximum deformation (\( t = 0, \frac{T}{2} \dots \)):</strong> Particles are momentarily at rest (\( v_p = 0 \)), kinetic energy \( K = 0 \). All trapped energy is stored as <strong>pure Elastic Potential Energy</strong> in the stretched string.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Comparison Between Traveling and Standing Waves</h2>
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Progressive / Traveling Waves</th>
+<th>Stationary / Standing Waves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wave Equation</strong></td>
+<td>\( y = A\sin(kx \mp \omega t) \)</td>
+<td>\( y = [2A\sin(kx)]\cos(\omega t) \)</td>
+</tr>
+<tr>
+<td><strong>Energy Transport</strong></td>
+<td>Transports energy and momentum continuously through the medium at speed \( v \).</td>
+<td>Zero net energy transport; energy is trapped between nodes.</td>
+</tr>
+<tr>
+<td><strong>Particle Amplitudes</strong></td>
+<td>All particles vibrate with the <strong>same amplitude</strong> \( A \).</td>
+<td>Different particles have <strong>different amplitudes</strong> from \( 0 \) (nodes) to \( 2A \) (antinodes).</td>
+</tr>
+<tr>
+<td><strong>Phase Relations</strong></td>
+<td>Phase varies continuously from point to point (\( \Delta\Phi = k\Delta x \)).</td>
+<td>All particles in a loop are in phase; adjacent loops are in opposite phase (\( \pi \)).</td>
+</tr>
+<tr>
+<td><strong>Passage through Equilibrium</strong></td>
+<td>Different particles pass through equilibrium at different times.</td>
+<td>All particles across the entire medium pass through equilibrium <strong>simultaneously</strong> twice per period.</td>
+</tr>
+<tr>
+<td><strong>Particle Velocity vs Slope</strong></td>
+<td>Max velocity occurs at max slope (\( v_p = -v \frac{\partial y}{\partial x} \)).</td>
+<td>Nodes have zero velocity with maximum slope; Antinodes have maximum velocity with zero slope.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

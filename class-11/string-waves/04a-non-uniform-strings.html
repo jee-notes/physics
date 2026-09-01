@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Uniform Strings & Hanging Ropes | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-speed-of-transverse-wave.html" class="back-btn">
+<span>&larr;</span> Back to Speed of Transverse Waves
+</a>
+</nav>
+
+<h1>Non-Uniform Strings & Hanging Heavy Ropes</h1>
+<p class="subtitle">
+Kinematics and transit time calculations for transverse wave pulses propagating through variable-tension systems.
+</p>
+
+<section>
+<h2>Hanging Heavy Rope under Gravity</h2>
+<p>
+When a uniform rope of mass \( M \), length \( L \), and uniform linear mass density \( \mu = M/L \) is suspended vertically from a rigid ceiling, the tension in the rope is not constant. Instead, the tension at any point is created solely by supporting the weight of the rope segment hanging below that point.
+</p>
+<p>
+Let \( x \) denote the vertical coordinate measured upward from the <strong>free bottom end</strong> of the rope (\( x = 0 \)) toward the fixed ceiling (\( x = L \)).
+</p>
+
+<div class="diagram">
+<svg width="720" height="280" viewBox="0 0 720 280">
+  <!-- Ceiling -->
+  <line x1="260" y1="30" x2="460" y2="30" stroke="#1f2937" stroke-width="4"/>
+  <path d="M 260 30 L 250 15 M 280 30 L 270 15 M 300 30 L 290 15 M 320 30 L 310 15 M 340 30 L 330 15 M 360 30 L 350 15 M 380 30 L 370 15 M 400 30 L 390 15 M 420 30 L 410 15 M 440 30 L 430 15 M 460 30 L 450 15" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Rope -->
+  <line x1="360" y1="30" x2="360" y2="240" stroke="#2563eb" stroke-width="6"/>
+
+  <!-- Position x indicator -->
+  <line x1="390" y1="240" x2="390" y2="150" stroke="#ef4444" stroke-width="2"/>
+  <circle cx="360" cy="150" r="4" fill="#ef4444"/>
+  <text x="400" y="200" font-size="13" font-weight="bold" fill="#ef4444">x (Distance from bottom)</text>
+
+  <!-- Tension T(x) at point x -->
+  <line x1="330" y1="150" x2="330" y2="100" stroke="#059669" stroke-width="2.5"/>
+  <polygon points="325,105 335,105 330,95" fill="#059669"/>
+  <text x="230" y="125" font-size="13" font-weight="bold" fill="#059669">T(x) = &mu; g x</text>
+
+  <!-- Bottom and Top labels -->
+  <text x="375" y="245" font-size="13" fill="#64748b">x = 0 (Free bottom: T = 0, v = 0)</text>
+  <text x="470" y="45" font-size="13" fill="#64748b">x = L (Ceiling: T = Mg, v = &radic;gL)</text>
+</svg>
+</div>
+
+<p>
+The weight of the rope segment of length \( x \) below point \( P \) is:
+</p>
+<div class="math-block">
+\[
+W(x) = (\mu x) g
+\]
+</div>
+<p>
+For static equilibrium of this segment, the tension at height \( x \) from the bottom must be:
+</p>
+<div class="model-box">
+<strong>Tension Profile:</strong>
+\[
+T(x) = \mu g x = \left(\frac{M}{L}\right) g x
+\]
+</div>
+</section>
+
+<section>
+<h2>Variable Wave Velocity v(x) = sqrt(gx)</h2>
+<p>
+Since the local tension varies continuously with height \( x \), the local speed of a transverse wave pulse at position \( x \) is also position-dependent:
+</p>
+<div class="math-block">
+\[
+v(x) = \sqrt{\frac{T(x)}{\mu}} = \sqrt{\frac{\mu g x}{\mu}}
+\]
+</div>
+<div class="model-box">
+<strong>Local Wave Velocity:</strong>
+\[
+v(x) = \sqrt{g x}
+\]
+</div>
+
+<div class="insightbox">
+<strong>Remarkable Properties:</strong>
+<ul>
+<li>The speed of the wave at any height \( x \) is completely independent of the mass \( M \), length \( L \), or thickness of the rope! It depends only on the local acceleration due to gravity \( g \) and height \( x \).</li>
+<li>At the bottom end (\( x = 0 \)), the wave speed is zero (\( v = 0 \)).</li>
+<li>At the top support (\( x = L \)), the wave speed is maximum: \( v_{\text{top}} = \sqrt{gL} \).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Calculation of Transit Time for Wave Pulses</h2>
+<p>
+Let us find the total time \( t \) required for a wave pulse generated at the bottom free end (\( x = 0 \)) to reach the top support (\( x = L \)).
+</p>
+<p>
+From the definition of instantaneous velocity:
+</p>
+<div class="math-block">
+\[
+v(x) = \frac{dx}{dt} = \sqrt{gx} \implies dt = \frac{dx}{\sqrt{gx}} = \frac{1}{\sqrt{g}} x^{-1/2} dx
+\]
+</div>
+<p>
+Integrating from \( x = 0 \) to \( x = L \):
+</p>
+<div class="math-block">
+\[
+t = \int_0^L \frac{dx}{\sqrt{gx}} = \frac{1}{\sqrt{g}} \left[ \frac{x^{1/2}}{1/2} \right]_0^L = 2 \sqrt{\frac{L}{g}}
+\]
+</div>
+<div class="model-box">
+<strong>Transit Time (Bottom to Top):</strong>
+\[
+t = 2 \sqrt{\frac{L}{g}}
+\]
+</div>
+
+<h3>Acceleration of the Wave Pulse</h3>
+<p>
+Differentiating the wave speed with respect to time:
+</p>
+<div class="math-block">
+\[
+a_{\text{pulse}} = v \frac{dv}{dx} = (\sqrt{gx}) \cdot \frac{d}{dx}(\sqrt{gx}) = \sqrt{gx} \cdot \left(\frac{g}{2\sqrt{gx}}\right) = \frac{g}{2} = \text{constant}
+\]
+</div>
+<div class="concept-box">
+The wave pulse travels upward with a <strong>constant upward acceleration</strong> of \( a = \frac{g}{2} \). Applying standard kinematic equations with \( u = 0 \) and \( s = L \):
+\[
+s = ut + \frac{1}{2}at^2 \implies L = 0 + \frac{1}{2}\left(\frac{g}{2}\right)t^2 \implies t = \sqrt{\frac{4L}{g}} = 2\sqrt{\frac{L}{g}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Accelerating Systems and Vertically Suspended Mass-String Systems</h2>
+
+<h3>1. Hanging Rope with an Attached Load Block</h3>
+<p>
+Suppose a heavy block of mass \( M_0 \) is suspended from the bottom of the rope of mass \( M \) and length \( L \):
+</p>
+<p>
+The tension at distance \( x \) from the bottom end is now:
+</p>
+<div class="math-block">
+\[
+T(x) = (M_0 + \mu x) g
+\]
+</div>
+<p>
+The local wave speed becomes:
+</p>
+<div class="math-block">
+\[
+v(x) = \sqrt{\frac{(M_0 + \mu x)g}{\mu}} = \sqrt{\left(\frac{M_0}{\mu} + x\right) g}
+\]
+</div>
+<p>
+The total transit time from bottom to top is obtained by integration:
+</p>
+<div class="model-box">
+\[
+t = \int_0^L \frac{dx}{\sqrt{\left(\frac{M_0}{\mu} + x\right)g}} = \frac{2}{\sqrt{g}} \left[ \sqrt{\frac{M_0}{\mu} + L} - \sqrt{\frac{M_0}{\mu}} \right]
+\]
+</div>
+
+<div class="examplebox">
+<h3>Special Case Comparison</h3>
+<ul>
+<li><strong>If \( M_0 = 0 \) (No bottom load):</strong> \( t = \frac{2}{\sqrt{g}}[\sqrt{L} - 0] = 2\sqrt{\frac{L}{g}} \).</li>
+<li><strong>If \( M_0 \gg M \) (Light rope / Heavy block):</strong> The tension is approximately uniform throughout (\( T \approx M_0 g \)), so \( v \approx \sqrt{\frac{M_0 g}{\mu}} \), giving transit time \( t \approx \frac{L}{v} = L\sqrt{\frac{\mu}{M_0 g}} \).</li>
+</ul>
+</div>
+
+<h3>2. Rope in an Accelerating Elevator</h3>
+<p>
+If the entire system is placed inside an elevator accelerating vertically with acceleration \( a_0 \), the effective gravity is modified:
+</p>
+<div class="math-block">
+\[
+g_{\text{eff}} = 
+\begin{cases} 
+g + a_0 & \text{(Elevator accelerating upward)} \\
+g - a_0 & \text{(Elevator accelerating downward, } a_0 < g\text{)}
+\end{cases}
+\]
+</div>
+<p>
+The resulting transit time is:
+</p>
+<div class="model-box">
+\[
+t = 2\sqrt{\frac{L}{g_{\text{eff}}}}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

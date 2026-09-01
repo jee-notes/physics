@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed of Transverse Waves | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Speed of Transverse Waves on a String</h1>
+<p class="subtitle">
+Dynamic derivation of wave speed from Newton's laws, medium parameters, and environmental dependencies.
+</p>
+
+<section>
+<h2>Derivation of Wave Speed on a Stretched String: v = sqrt(T/mu)</h2>
+<p>
+The speed at which a transverse mechanical wave propagates along a flexible stretched string is determined entirely by the balance between the restoring tension (elastic property) and the linear mass density (inertial property).
+</p>
+
+<h3>Dynamic Derivation (Circular Arc Reference Frame)</h3>
+<p>
+Consider a symmetric transverse pulse traveling to the right at speed \( v \) along a string held under tension \( T \). Let us transform into a reference frame moving along with the pulse at speed \( v \). In this moving frame, the pulse shape is stationary, and the string appears to slide through the pulse to the left at speed \( v \).
+</p>
+
+<div class="diagram">
+<svg width="720" height="260" viewBox="0 0 720 260">
+  <defs>
+    <marker id="tensArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Center of curvature -->
+  <circle cx="360" cy="220" r="4" fill="#64748b"/>
+  <text x="365" y="235" font-size="12" fill="#64748b">O (Center of Curvature, Radius R)</text>
+
+  <!-- Radial lines -->
+  <line x1="360" y1="220" x2="300" y2="70" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="360" y1="220" x2="420" y2="70" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="360" y1="220" x2="360" y2="60" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Angle arc -->
+  <path d="M 345 180 A 45 45 0 0 1 375 180" fill="none" stroke="#64748b"/>
+  <text x="350" y="170" font-size="12" fill="#64748b">&Delta;&theta;</text>
+
+  <!-- String arc element -->
+  <path d="M 270 90 Q 360 40 450 90" fill="none" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M 300 70 A 160 160 0 0 1 420 70" fill="none" stroke="#2563eb" stroke-width="5"/>
+
+  <!-- Tension Vectors -->
+  <line x1="300" y1="70" x2="240" y2="95" stroke="#2563eb" stroke-width="2.5" marker-end="url(#tensArrow)"/>
+  <text x="220" y="115" font-size="13" font-weight="bold" fill="#2563eb">T</text>
+  <line x1="420" y1="70" x2="480" y2="95" stroke="#2563eb" stroke-width="2.5" marker-end="url(#tensArrow)"/>
+  <text x="490" y="115" font-size="13" font-weight="bold" fill="#2563eb">T</text>
+
+  <!-- Inward Centripetal Force -->
+  <line x1="360" y1="60" x2="360" y2="120" stroke="#ef4444" stroke-width="2.5" marker-end="url(#tensArrow)"/>
+  <text x="370" y="105" font-size="13" font-weight="bold" fill="#ef4444">F_net = 2T sin(&Delta;&theta;/2)</text>
+</svg>
+</div>
+
+<p>
+Consider a small differential element of the string of length \( \Delta l = R \Delta\theta \) at the peak of the pulse, where \( R \) is the local radius of curvature and \( \Delta\theta \) is the subtended angle:
+</p>
+<ul>
+<li>Mass of the small element: \( \Delta m = \mu \Delta l = \mu R \Delta\theta \), where \( \mu \) is the linear mass density.</li>
+<li>The tension \( T \) acts tangentially at both ends of the arc. The horizontal components of tension cancel by symmetry, while the downward radial components add up to provide the centripetal force:
+\[
+F_{\text{net}} = 2 T \sin\left(\frac{\Delta\theta}{2}\right)
+\]
+</li>
+</ul>
+<p>
+For an infinitesimal angle, using the small-angle approximation \( \sin(\Delta\theta / 2) \approx \Delta\theta / 2 \):
+</p>
+<div class="math-block">
+\[
+F_{\text{net}} \approx 2 T \left( \frac{\Delta\theta}{2} \right) = T \Delta\theta
+\]
+</div>
+<p>
+Equating this net radial restoring force to the required centripetal force \( \Delta m \frac{v^2}{R} \):
+</p>
+<div class="math-block">
+\[
+T \Delta\theta = (\mu R \Delta\theta) \frac{v^2}{R}
+\]
+</div>
+<p>
+Canceling \( R \Delta\theta \) on both sides yields the classical wave speed equation:
+</p>
+<div class="model-box">
+<strong>Transverse Wave Speed on a Taut String:</strong>
+\[
+v = \sqrt{\frac{T}{\mu}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Dependence on Elastic and Inertial Properties</h2>
+<p>
+The wave speed formula embodies the universal general principle of mechanical wave propagation:
+</p>
+<div class="model-box">
+\[
+v = \sqrt{\frac{\text{Elastic Property (Restoring Factor)}}{\text{Inertial Property (Mass Factor)}}}
+\]
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Physical Parameter</th>
+<th>Symbol & Unit</th>
+<th>Dimensional Formula</th>
+<th>Impact on Wave Speed \( v \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tension in String (\( T \))</strong></td>
+<td>\( \text{N} = \text{kg}\cdot\text{m/s}^2 \)</td>
+<td>\( [M^1 L^1 T^{-2}] \)</td>
+<td>\( v \propto \sqrt{T} \) (Increasing tension increases speed).</td>
+</tr>
+<tr>
+<td><strong>Linear Mass Density (\( \mu = m/L \))</strong></td>
+<td>\( \text{kg/m} \)</td>
+<td>\( [M^1 L^{-1} T^0] \)</td>
+<td>\( v \propto \frac{1}{\sqrt{\mu}} \) (Heavier strings transmit waves slower).</td>
+</tr>
+</tbody>
+</table>
+
+<div class="insightbox">
+Wave speed does <strong>not</strong> depend on the frequency \( f \), amplitude \( A \), or wave profile \( y(x,t) \) of the source. It is exclusively determined by the intrinsic physical properties of the medium.
+</div>
+</section>
+
+<section>
+<h2>Effect of Temperature, Strain, and Material Density</h2>
+<p>
+In realistic physical configurations and JEE Advanced problems, linear mass density and tension can be expressed in terms of microscopic material constants:
+</p>
+
+<h3>1. In Terms of Volumetric Density and Cross-Sectional Area</h3>
+<p>
+If a wire has volumetric density \( \rho \), radius \( r \), and cross-sectional area \( S = \pi r^2 \):
+</p>
+<div class="math-block">
+\[
+\mu = \frac{m}{L} = \frac{\rho \cdot (S \cdot L)}{L} = \rho S
+\]
+\[
+v = \sqrt{\frac{T}{\rho S}} = \sqrt{\frac{\sigma}{\rho}}
+\]
+</div>
+<p>
+where \( \sigma = \frac{T}{S} \) is the <strong>tensile stress</strong> in the wire.
+</p>
+
+<h3>2. In Terms of Young's Modulus and Elastic Strain</h3>
+<p>
+From Hooke's Law of Elasticity, stress is related to fractional elongation (strain) by \( \sigma = Y \frac{\Delta L}{L} \), where \( Y \) is Young's Modulus:
+</p>
+<div class="model-box">
+\[
+v = \sqrt{\frac{Y}{\rho} \left(\frac{\Delta L}{L}\right)}
+\]
+</div>
+
+<h3>3. Effect of Temperature Change</h3>
+<p>
+If a wire is clamped between two rigid, fixed supports at temperature \( \theta \) and cooled by \( \Delta\theta \), thermal contraction creates tension:
+</p>
+<div class="math-block">
+\[
+\frac{\Delta L}{L} = \alpha \Delta\theta \implies \sigma = Y \alpha \Delta\theta
+\]
+\[
+v = \sqrt{\frac{Y \alpha \Delta\theta}{\rho}}
+\]
+</div>
+<p>
+where \( \alpha \) is the coefficient of linear thermal expansion of the wire material.
+</p>
+</section>
+
+<section>
+<h2>Advanced Topics & Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./04a-non-uniform-strings.html">4a. Non-Uniform Strings & Hanging Heavy Ropes</a>
+<a href="./04b-composite-strings.html">4b. Composite Strings & Medium Boundary Transitions</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

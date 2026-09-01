@@ -14,43 +14,80 @@
 <span>&larr;</span> Back to Projectile Motion
 </a>
 </nav>
-
 <h1>Projectile from a Height</h1>
 <p class="subtitle">
 Examining trajectories initiated above the landing plane.
 </p>
-
 <section>
-<h2>Horizontal Projection from a Tower</h2>
+<h2>Projection from a Tower</h2>
 <p>
-Consider a particle projected exactly horizontally with an initial speed \(u\) from the top of a tower of height \(h\).
+Projection from a tower is closely related to the <strong>motion under gravity</strong> studied in the previous chapter. There, the ball was simply dropped from the tower.
 </p>
 <p>
-Because the launch is purely horizontal, the initial velocity components are:
-<ul>
-<li>\(u_x = u\)</li>
-<li>\(u_y = 0\)</li>
+Here, the particle is given an initial horizontal velocity. More generally, we can also consider an oblique projection.
+</p>
+<p>
+Consider a particle projected exactly horizontally with an initial speed \(u\) from the top of a tower of height \(H\) .
+</p>
+<p>
+As in motion under gravity from a tower, the key known quantities are \(u\) and \(H\) . We take the launch point as the origin, so the ground is at a vertical displacement \(s_y=-H\)
+<p>
+Since the projection is purely horizontal, the initial velocity has the components
+</p>
+<ul class="model-box">
+<li>\(u_x=u\)</li>
+<li>\(u_y=0\)</li>
 </ul>
-</p>
-<div class="model-box">
 <strong>Time of Descent (\(T\)):</strong>
 <p>
-The time taken to hit the ground strictly depends on the vertical free fall. Using \(S_y = h\), \(u_y = 0\), and \(a_y = g\) (taking downward as positive for convenience):
-\[ h = (0)T + \frac{1}{2}g T^2 \implies T = \sqrt{\frac{2h}{g}} \]
+The time taken to reach the ground is determined entirely by the vertical motion. Using
+\[
+s_y=-H \qquad u_y=0 \qquad a_y=-g
+\]
+we get
 </p>
-</div>
+\[
+-H=(0)T+\frac12(-g)T^2
+\]
+<p>
+and hence
+</p>
+\[
+\boxed{T=\sqrt{\frac{2H}{g}}}
+\]
 <div class="insightbox">
-This elegantly reveals that a bullet fired perfectly horizontally from a high cliff and an identical bullet simply dropped from rest from the same cliff will mathematically and physically strike the level ground at the absolute exact same moment. They share the same initial vertical velocity (zero) and undergo the same vertical acceleration (\(g\)).
+A particle dropped from the top of a tower and another particle projected horizontally from the same point, at the same instant, reach the ground at the same time.<br>
+Their horizontal motions are different, but their vertical motions are identical.
 </div>
-<div class="model-box">
 <strong>Horizontal Range (\(R\)):</strong>
 <p>
-The horizontal distance traveled from the base of the tower is simply:
-\[ R = u_x \times T = u \sqrt{\frac{2h}{g}} \]
+Since there is no horizontal acceleration, \(a_x=0\) , the horizontal velocity remains constant at \(u_x=u\). Therefore, during the time of descent \(T\),
 </p>
-</div>
+\[
+R=u_xT=uT
+\]
+<p>
+Thus,
+</p>
+\[
+\boxed{R=u\sqrt{\frac{2H}{g}}}
+\]
+<p>
+The given information in a problem may not be \(u\) and \(H\) directly. It may instead provide quantities such as the time of descent \(T\) and horizontal range \(R\). From
+</p>
+\[
+H=\frac12gT^2
+\]
+<p>
+we can determine \(H\), and from
+</p>
+\[
+u=\frac{R}{T}
+\]
+<p>
+we can determine \(u\).
+</p>
 </section>
-
 <section>
 <h2>Oblique Projection from a Tower</h2>
 <p>
@@ -79,7 +116,6 @@ Once the time of flight \(T\) is secured, the horizontal range from the base of 
 \[ R = (u\cos\theta)T \]
 </p>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

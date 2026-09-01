@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superposition & Interference | String Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to String Waves
+</a>
+</nav>
+
+<h1>Superposition Principle and Interference</h1>
+<p class="subtitle">
+Linear superposition of waves, resultant amplitude phasor derivation, and interference conditions.
+</p>
+
+<section>
+<h2>Principle of Linear Superposition</h2>
+<p>
+The <strong>Principle of Superposition</strong> states that when two or more wave disturbances travel simultaneously through the same elastic medium, the net displacement of any medium particle at any instant is equal to the algebraic (vector) sum of the displacements that would have been produced by each individual wave acting alone.
+</p>
+<div class="model-box">
+<strong>Superposition Principle:</strong>
+\[
+y_{\text{net}}(x, t) = y_1(x, t) + y_2(x, t) + \dots + y_n(x, t) = \sum_{i=1}^n y_i(x, t)
+\]
+</div>
+<div class="insightbox">
+The physical validity of the superposition principle arises directly from the <strong>linearity</strong> of the differential wave equation \( \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2}\frac{\partial^2 y}{\partial t^2} \). It holds strictly for small-amplitude linear elastic waves where Hooke's law is obeyed.
+</div>
+</section>
+
+<section>
+<h2>Superposition of Two Harmonic Waves of Same Frequency</h2>
+<p>
+Consider two harmonic waves having identical frequencies (\( \omega \)), wavelengths (\( k \)), and propagating in the positive \( x \)-direction along the same string, with amplitudes \( A_1 \) and \( A_2 \), and a mutual phase difference \( \phi \):
+</p>
+<div class="math-block">
+\[
+y_1(x, t) = A_1 \sin(kx - \omega t)
+\]
+\[
+y_2(x, t) = A_2 \sin(kx - \omega t + \phi)
+\]
+</div>
+<p>
+According to the principle of superposition, the resultant displacement is:
+</p>
+<div class="math-block">
+\[
+y_{\text{net}}(x, t) = y_1 + y_2 = A_1 \sin(kx - \omega t) + A_2 \sin(kx - \omega t + \phi)
+\]
+</div>
+<p>
+Expanding using trigonometric angle addition identities:
+</p>
+<div class="math-block">
+\[
+y_{\text{net}} = A_1 \sin(kx - \omega t) + A_2 \left[ \sin(kx - \omega t)\cos\phi + \cos(kx - \omega t)\sin\phi \right]
+\]
+\[
+y_{\text{net}} = \left( A_1 + A_2 \cos\phi \right) \sin(kx - \omega t) + \left( A_2 \sin\phi \right) \cos(kx - \omega t)
+\]
+</div>
+<p>
+Defining substitution variables:
+</p>
+<div class="math-block">
+\[
+A_1 + A_2 \cos\phi = A_{\text{net}} \cos\theta
+\]
+\[
+A_2 \sin\phi = A_{\text{net}} \sin\theta
+\]
+</div>
+<p>
+Substituting these yields the resultant wave equation:
+</p>
+<div class="model-box">
+<strong>Resultant Wave Equation:</strong>
+\[
+y_{\text{net}}(x, t) = A_{\text{net}} \sin(kx - \omega t + \theta)
+\]
+</div>
+<p>
+The resultant wave is also a simple harmonic traveling wave of the exact same frequency \( \omega \) and wave number \( k \).
+</p>
+</section>
+
+<section>
+<h2>Resultant Amplitude and Phase Angle</h2>
+<p>
+Squaring and adding the two substitution equations:
+</p>
+<div class="math-block">
+\[
+A_{\text{net}}^2 \left(\cos^2\theta + \sin^2\theta\right) = (A_1 + A_2 \cos\phi)^2 + (A_2 \sin\phi)^2
+\]
+\[
+A_{\text{net}}^2 = A_1^2 + A_2^2 \cos^2\phi + 2A_1 A_2 \cos\phi + A_2^2 \sin^2\phi
+\]
+</div>
+<div class="model-box">
+<strong>Resultant Amplitude Formula:</strong>
+\[
+A_{\text{net}} = \sqrt{A_1^2 + A_2^2 + 2A_1 A_2 \cos\phi}
+\]
+</div>
+<p>
+The initial phase angle \( \theta \) of the resultant wave is given by:
+</p>
+<div class="math-block">
+\[
+\tan\theta = \frac{A_2 \sin\phi}{A_1 + A_2 \cos\phi}
+\]
+</div>
+
+<h3>Special Case: Equal Amplitudes (\( A_1 = A_2 = A \))</h3>
+<p>
+When both superposing waves have identical amplitudes:
+</p>
+<div class="model-box">
+\[
+A_{\text{net}} = \sqrt{2A^2(1 + \cos\phi)} = \sqrt{4A^2 \cos^2\left(\frac{\phi}{2}\right)} = 2A \left|\cos\left(\frac{\phi}{2}\right)\right|
+\]
+</div>
+</section>
+
+<section>
+<h2>Constructive and Destructive Interference Conditions</h2>
+<p>
+The redistribution of wave energy resulting from the superposition of two or more coherent waves is known as <strong>Interference</strong>.
+</p>
+
+<h3>1. Constructive Interference (Maximum Amplitude & Intensity)</h3>
+<p>
+Occurs when the two waves arrive at the point in phase (\( \cos\phi = +1 \)):
+</p>
+<ul>
+<li><strong>Phase Difference:</strong> \( \phi = 2n\pi \quad (n = 0, 1, 2, 3, \dots) \)</li>
+<li><strong>Path Difference:</strong> \( \Delta x = \frac{\lambda}{2\pi} \phi = n\lambda \)</li>
+<li><strong>Maximum Resultant Amplitude:</strong> \( A_{\text{max}} = A_1 + A_2 \) (If \( A_1 = A_2 = A \implies A_{\text{max}} = 2A \))</li>
+<li><strong>Maximum Resultant Intensity:</strong> \( I_{\text{max}} = \left(\sqrt{I_1} + \sqrt{I_2}\right)^2 \) (If \( I_1 = I_2 = I_0 \implies I_{\text{max}} = 4I_0 \))</li>
+</ul>
+
+<h3>2. Destructive Interference (Minimum Amplitude & Intensity)</h3>
+<p>
+Occurs when the two waves arrive completely out of phase (\( \cos\phi = -1 \)):
+</p>
+<ul>
+<li><strong>Phase Difference:</strong> \( \phi = (2n + 1)\pi \quad (n = 0, 1, 2, 3, \dots) \)</li>
+<li><strong>Path Difference:</strong> \( \Delta x = (2n + 1)\frac{\lambda}{2} \)</li>
+<li><strong>Minimum Resultant Amplitude:</strong> \( A_{\text{min}} = |A_1 - A_2| \) (If \( A_1 = A_2 \implies A_{\text{min}} = 0 \))</li>
+<li><strong>Minimum Resultant Intensity:</strong> \( I_{\text{min}} = \left(\sqrt{I_1} - \sqrt{I_2}\right)^2 \) (If \( I_1 = I_2 \implies I_{\text{min}} = 0 \))</li>
+</ul>
+
+<div class="model-box">
+<strong>Intensity Contrast Ratio:</strong>
+\[
+\frac{I_{\text{max}}}{I_{\text{min}}} = \left( \frac{A_1 + A_2}{A_1 - A_2} \right)^2 = \left( \frac{\sqrt{I_1} + \sqrt{I_2}}{\sqrt{I_1} - \sqrt{I_2}} \right)^2
+\]
+</div>
+</section>
+
+<section>
+<h2>Coherence and Path Difference Relationships</h2>
+<p>
+For a stable, observable interference pattern to be sustained over time, the two wave sources must be <strong>coherent</strong>:
+</p>
+<div class="concept-box">
+<strong>Conditions for Coherence:</strong>
+<ol>
+<li>The two sources must have identical frequencies (\( \omega_1 = \omega_2 \)).</li>
+<li>The phase difference \( \phi \) between the sources must remain constant in time (\( \frac{d\phi}{dt} = 0 \)).</li>
+</ol>
+</div>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Interference Contrast</h3>
+<p>
+<strong>Problem:</strong> Two coherent waves on a string are given by \( y_1 = 3 \sin(kx - \omega t) \) and \( y_2 = 4 \sin(kx - \omega t + \phi) \) (in cm).
+<br>Calculate: (a) Maximum and minimum possible amplitudes, (b) The ratio \( I_{\text{max}} / I_{\text{min}} \), (c) The resultant amplitude if the phase difference is \( \phi = \pi/2 \).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<ul>
+<li><strong>(a) Extreme Amplitudes:</strong>
+\[
+A_{\text{max}} = A_1 + A_2 = 3 + 4 = 7 \text{ cm}
+\]
+\[
+A_{\text{min}} = |A_1 - A_2| = |3 - 4| = 1 \text{ cm}
+\]
+</li>
+<li><strong>(b) Intensity Ratio:</strong>
+\[
+\frac{I_{\text{max}}}{I_{\text{min}}} = \left(\frac{A_{\text{max}}}{A_{\text{min}}}\right)^2 = \left(\frac{7}{1}\right)^2 = 49
+\]
+</li>
+<li><strong>(c) At \( \phi = \pi/2 \) (\( 90^\circ \)):</strong>
+\[
+A_{\text{net}} = \sqrt{3^2 + 4^2 + 2(3)(4)\cos(\pi/2)} = \sqrt{9 + 16 + 0} = 5 \text{ cm}
+\]
+</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
