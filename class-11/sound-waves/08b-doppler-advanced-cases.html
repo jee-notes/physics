@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Doppler Cases | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./08-doppler-effect.html" class="back-btn">
+<span>&larr;</span> Back to Doppler Effect
+</a>
+</nav>
+
+<h1>Oblique Doppler, Echoes & Shock Waves</h1>
+<p class="subtitle">
+Two-dimensional oblique relative motion, circular source kinematics, acoustic echo reflections, and supersonic Mach cones.
+</p>
+
+<section>
+<h2>Oblique Doppler Effect (Non-Collinear Motion and Line of Sight)</h2>
+<p>
+When the source and observer move along lines that are not collinear, the Doppler shift is determined <strong>strictly by the components of velocity along the instantaneous line of sight (line joining the source and observer)</strong>.
+</p>
+
+<div class="diagram">
+<svg width="720" height="220" viewBox="0 0 720 220">
+  <defs>
+    <marker id="velArr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Straight path of source -->
+  <line x1="80" y1="60" x2="640" y2="60" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="650" y="65" font-size="12" fill="#94a3b8">Source Track</text>
+
+  <!-- Moving Source S -->
+  <circle cx="280" cy="60" r="7" fill="#ef4444"/>
+  <text x="260" y="45" font-size="13" font-weight="bold" fill="#ef4444">Source S</text>
+  <line x1="280" y1="60" x2="380" y2="60" stroke="#ef4444" stroke-width="3" marker-end="url(#velArr)"/>
+  <text x="340" y="50" font-size="13" font-weight="bold" fill="#ef4444">v_s</text>
+
+  <!-- Stationary Observer O -->
+  <circle cx="480" cy="180" r="7" fill="#1f2937"/>
+  <text x="495" y="195" font-size="13" font-weight="bold" fill="#1f2937">Observer O</text>
+
+  <!-- Line of Sight (S to O) -->
+  <line x1="280" y1="60" x2="480" y2="180" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="350" y="140" font-size="12" font-weight="bold" fill="#2563eb">Line of Sight r</text>
+
+  <!-- Angle theta -->
+  <path d="M 330 60 A 50 50 0 0 1 315 80" fill="none" stroke="#1f2937"/>
+  <text x="335" y="80" font-size="12" fill="#1f2937">&theta;</text>
+
+  <!-- Perpendicular distance d -->
+  <line x1="480" y1="60" x2="480" y2="180" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="490" y="120" font-size="12" fill="#64748b">d (closest approach)</text>
+</svg>
+</div>
+
+<p>
+Let \( \theta \) be the angle between the source velocity vector \( \vec{v}_s \) and the line joining the source to the observer. The effective velocity component of the source toward the observer is \( v_s \cos\theta \).
+</p>
+<div class="model-box">
+<strong>Oblique Doppler Formula:</strong>
+\[
+f' = f_0 \left( \frac{v}{v - v_s \cos\theta} \right)
+\]
+</div>
+<div class="insightbox">
+<strong>Variation of Observed Pitch as Source Passes By:</strong>
+<ul>
+<li><strong>When far away approaching (\( \theta \to 0^\circ \)):</strong> \( \cos\theta \approx 1 \implies f' \approx f_0 \left(\frac{v}{v - v_s}\right) \) (Maximum constant pitch).</li>
+<li><strong>At the point of closest approach (\( \theta = 90^\circ \)):</strong> \( \cos 90^\circ = 0 \implies f' = f_0 \) (True source frequency is heard at this precise instant!).</li>
+<li><strong>When far away receding (\( \theta \to 180^\circ \)):</strong> \( \cos 180^\circ = -1 \implies f' \approx f_0 \left(\frac{v}{v + v_s}\right) \) (Minimum constant pitch).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Source Moving in a Circular Trajectory</h2>
+<p>
+Consider a sound source of frequency \( f_0 \) moving with uniform circular speed \( v_s = \omega R \) in a horizontal circle of radius \( R \), observed by a stationary observer located in the same plane at a distance \( D > R \) from the circle center.
+</p>
+
+<div class="diagram">
+<svg width="720" height="220" viewBox="0 0 720 220">
+  <defs>
+    <marker id="circArr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Circular path -->
+  <circle cx="220" cy="110" r="70" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+  <circle cx="220" cy="110" r="4" fill="#64748b"/>
+  <text x="225" y="115" font-size="12" fill="#64748b">Center C</text>
+
+  <!-- Observer -->
+  <circle cx="600" cy="110" r="7" fill="#1f2937"/>
+  <text x="615" y="115" font-size="13" font-weight="bold" fill="#1f2937">Observer O</text>
+
+  <!-- Tangent A (Approaching - Top tangent) -->
+  <circle cx="220" cy="40" r="6" fill="#ef4444"/>
+  <line x1="220" y1="40" x2="300" y2="40" stroke="#ef4444" stroke-width="2.5" marker-end="url(#circArr)"/>
+  <line x1="220" y1="40" x2="600" y2="110" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="35" font-size="11" font-weight="bold" fill="#ef4444">Point A (Max Frequency f_max)</text>
+
+  <!-- Tangent B (Receding - Bottom tangent) -->
+  <circle cx="220" cy="180" r="6" fill="#ef4444"/>
+  <line x1="220" y1="180" x2="140" y2="180" stroke="#ef4444" stroke-width="2.5" marker-end="url(#circArr)"/>
+  <line x1="220" y1="180" x2="600" y2="110" stroke="#2563eb" stroke-width="2"/>
+  <text x="140" y="205" font-size="11" font-weight="bold" fill="#ef4444">Point B (Min Frequency f_min)</text>
+</svg>
+</div>
+
+<p>
+The maximum and minimum observed frequencies occur when the velocity vector (tangent to the circle) aligns directly along the line of sight:
+</p>
+<div class="model-box">
+\[
+f_{\text{max}} = f_0 \left( \frac{v}{v - v_s} \right) \quad \text{(At point of maximum approach along tangent)}
+\]
+\[
+f_{\text{min}} = f_0 \left( \frac{v}{v + v_s} \right) \quad \text{(At point of maximum recession along tangent)}
+\]
+</div>
+</section>
+
+<section>
+<h2>Acoustic Reflection from Moving Boundaries and Echo Doppler</h2>
+<p>
+When sound emitted by a stationary source is reflected by a moving target (e.g., a moving car, wall, or bat echolocating an insect), the Doppler shift occurs in <strong>two sequential stages</strong>:
+</p>
+
+<h3>Step 1: Moving Reflector Acts as an Observer</h3>
+<p>
+The moving wall/target of speed \( u \) receives sound waves with an apparent frequency \( f_1 \):
+</p>
+<div class="math-block">
+\[
+f_1 = f_0 \left( \frac{v + u}{v} \right) \quad (\text{Target moving toward source})
+\]
+</div>
+
+<h3>Step 2: Moving Reflector Acts as a Re-emitting Source</h3>
+<p>
+The reflector instantly re-radiates (reflects) this frequency \( f_1 \) while continuing its forward motion at speed \( u \). The sound travels back to the original observer at the source, who detects:
+</p>
+<div class="math-block">
+\[
+f_2 = f_1 \left( \frac{v}{v - u} \right) = f_0 \left( \frac{v + u}{v} \right) \left( \frac{v}{v - u} \right)
+\]
+</div>
+<div class="model-box">
+<strong>Echo Frequency Detected by Source:</strong>
+\[
+f_{\text{echo}} = f_0 \left( \frac{v + u}{v - u} \right)
+\]
+</div>
+
+<h3>Beat Frequency Heard by Source Operator</h3>
+<div class="model-box">
+\[
+f_b = f_{\text{echo}} - f_0 = f_0 \left( \frac{v + u}{v - u} - 1 \right) = f_0 \left( \frac{2u}{v - u} \right) \approx \left( \frac{2u}{v} \right) f_0 \quad (\text{for } u \ll v)
+\]
+</div>
+</section>
+
+<section>
+<h2>Supersonic Motion, Mach Number, and Shock Waves</h2>
+<p>
+When a source of sound travels faster than the speed of sound in the medium (\( v_s > v \)), it outruns its own acoustic wavefronts.
+</p>
+
+<h3>1. Mach Number (\( M \))</h3>
+<div class="model-box">
+\[
+M = \frac{v_{\text{source}}}{v_{\text{sound}}} = \frac{v_s}{v}
+\]
+</div>
+<ul>
+<li>\( M < 1 \): Subsonic motion</li>
+<li>\( M = 1 \): Transonic motion (sound barrier)</li>
+<li>\( M > 1 \): Supersonic motion</li>
+<li>\( M > 5 \): Hypersonic motion</li>
+</ul>
+
+<h3>2. Mach Cone & Shock Wave Envelope</h3>
+<p>
+The spherical wavefronts emitted at successive earlier times overlap and interfere constructively along a common conical tangent envelope known as the <strong>Mach Cone</strong>.
+</p>
+
+<div class="diagram">
+<svg width="720" height="220" viewBox="0 0 720 220">
+  <!-- Supersonic Source S -->
+  <circle cx="580" cy="110" r="6" fill="#ef4444"/>
+  <text x="595" y="115" font-size="13" font-weight="bold" fill="#ef4444">Source S (v_s &gt; v)</text>
+
+  <!-- Spherical Wavefronts -->
+  <circle cx="160" cy="110" r="140" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="300" cy="110" r="93" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <circle cx="440" cy="110" r="47" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+
+  <!-- Mach Cone Lines -->
+  <line x1="580" y1="110" x2="60" y2="0" stroke="#ef4444" stroke-width="2.5"/>
+  <line x1="580" y1="110" x2="60" y2="220" stroke="#ef4444" stroke-width="2.5"/>
+
+  <!-- Semi-vertical angle alpha -->
+  <text x="500" y="100" font-size="13" font-weight="bold" fill="#ef4444">&alpha;</text>
+  <text x="250" y="25" font-size="13" font-weight="bold" fill="#ef4444">Shock Wave Front (Sonic Boom)</text>
+</svg>
+</div>
+
+<p>
+The semi-vertical angle \( \alpha \) of the Mach cone is given by:
+</p>
+<div class="model-box">
+<strong>Mach Cone Half-Angle:</strong>
+\[
+\sin\alpha = \frac{v \cdot t}{v_s \cdot t} = \frac{v}{v_s} = \frac{1}{M}
+\]
+</div>
+<div class="concept-box">
+The concentrated envelope of constructive pressure interference carries a massive, abrupt pressure discontinuity known as a <strong>Shock Wave</strong>. When this shock wave sweeps past an observer on the ground, it produces a sudden, thunderous acoustic explosion called a <strong>Sonic Boom</strong>.
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

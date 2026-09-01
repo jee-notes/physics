@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature of Sound Waves | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Sound Waves
+</a>
+</nav>
+
+<h1>Nature of Sound Waves & Longitudinal Propagation</h1>
+<p class="subtitle">
+Mechanical longitudinal disturbance mechanism, compression-rarefaction dynamics, and acoustic spectra.
+</p>
+
+<section>
+<h2>Longitudinal Wave Propagation Mechanism</h2>
+<p>
+A <strong>sound wave</strong> is a mechanical disturbance that travels through an elastic material medium via the longitudinal oscillations of the medium particles. In a longitudinal wave, the constituent particles oscillate back and forth parallel to the direction of wave velocity:
+</p>
+<div class="model-box">
+<strong>Longitudinal Condition:</strong>
+\[
+\vec{v}_{\text{particle}} \parallel \vec{v}_{\text{wave}}
+\]
+</div>
+<p>
+When a vibrating object (such as a vibrating tuning fork prong or a piston in a cylinder) pushes forward, it exerts a force on the adjacent layer of fluid, compressing it and increasing both its local density and pressure above normal atmospheric equilibrium.
+</p>
+<p>
+This compressed fluid layer pushes against the next neighboring layer, transferring the disturbance forward. Due to the medium's inertia, the particles overshoot when moving backward during the return stroke of the vibrating source, creating a region of reduced density and lower pressure.
+</p>
+
+<div class="diagram">
+<svg width="720" height="220" viewBox="0 0 720 220">
+  <defs>
+    <marker id="waveArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="partArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Piston -->
+  <rect x="50" y="40" width="20" height="120" rx="3" fill="#64748b"/>
+  <line x1="10" y1="100" x2="50" y2="100" stroke="#64748b" stroke-width="6"/>
+
+  <!-- Cylinder Bounds -->
+  <line x1="70" y1="40" x2="680" y2="40" stroke="#1f2937" stroke-width="2"/>
+  <line x1="70" y1="160" x2="680" y2="160" stroke="#1f2937" stroke-width="2"/>
+
+  <!-- Compression bands (dense lines) -->
+  <g fill="#2563eb" opacity="0.8">
+    <!-- Compression 1 (140 - 200) -->
+    <line x1="140" y1="45" x2="140" y2="155" stroke="#2563eb" stroke-width="2"/>
+    <line x1="145" y1="45" x2="145" y2="155" stroke="#2563eb" stroke-width="2.5"/>
+    <line x1="150" y1="45" x2="150" y2="155" stroke="#2563eb" stroke-width="3"/>
+    <line x1="155" y1="45" x2="155" y2="155" stroke="#2563eb" stroke-width="3"/>
+    <line x1="160" y1="45" x2="160" y2="155" stroke="#2563eb" stroke-width="2.5"/>
+    <line x1="165" y1="45" x2="165" y2="155" stroke="#2563eb" stroke-width="2"/>
+
+    <!-- Rarefaction 1 (240 - 300) - sparse lines -->
+    <line x1="220" y1="45" x2="220" y2="155" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="260" y1="45" x2="260" y2="155" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="300" y1="45" x2="300" y2="155" stroke="#94a3b8" stroke-width="1"/>
+
+    <!-- Compression 2 (360 - 420) -->
+    <line x1="360" y1="45" x2="360" y2="155" stroke="#2563eb" stroke-width="2"/>
+    <line x1="365" y1="45" x2="365" y2="155" stroke="#2563eb" stroke-width="2.5"/>
+    <line x1="370" y1="45" x2="370" y2="155" stroke="#2563eb" stroke-width="3"/>
+    <line x1="375" y1="45" x2="375" y2="155" stroke="#2563eb" stroke-width="3"/>
+    <line x1="380" y1="45" x2="380" y2="155" stroke="#2563eb" stroke-width="2.5"/>
+    <line x1="385" y1="45" x2="385" y2="155" stroke="#2563eb" stroke-width="2"/>
+
+    <!-- Rarefaction 2 (460 - 520) -->
+    <line x1="440" y1="45" x2="440" y2="155" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="480" y1="45" x2="480" y2="155" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="520" y1="45" x2="520" y2="155" stroke="#94a3b8" stroke-width="1"/>
+  </g>
+
+  <!-- Labels -->
+  <text x="135" y="185" font-size="13" font-weight="bold" fill="#2563eb">Compression (C)</text>
+  <text x="240" y="185" font-size="13" font-weight="bold" fill="#64748b">Rarefaction (R)</text>
+  <text x="355" y="185" font-size="13" font-weight="bold" fill="#2563eb">Compression (C)</text>
+  <text x="460" y="185" font-size="13" font-weight="bold" fill="#64748b">Rarefaction (R)</text>
+
+  <!-- Wave propagation vector -->
+  <line x1="540" y1="100" x2="650" y2="100" stroke="#2563eb" stroke-width="3" marker-end="url(#waveArrow)"/>
+  <text x="560" y="90" font-size="13" font-weight="bold" fill="#2563eb">Wave Speed v</text>
+
+  <!-- Particle oscillation vector -->
+  <line x1="140" y1="20" x2="180" y2="20" stroke="#ef4444" stroke-width="2.5" marker-start="url(#partArrow)" marker-end="url(#partArrow)"/>
+  <text x="200" y="25" font-size="12" font-weight="bold" fill="#ef4444">Particle Oscillation (Parallel)</text>
+</svg>
+</div>
+
+<div class="insightbox">
+In a sound wave, energy and momentum travel horizontally along the channel, while individual fluid elements perform back-and-forth Simple Harmonic Motion about their fixed equilibrium coordinates.
+</div>
+</section>
+
+<section>
+<h2>Compressions and Rarefactions in Elastic Media</h2>
+<p>
+As a longitudinal harmonic wave propagates through a fluid medium:
+</p>
+
+<h3>1. Compressions (C)</h3>
+<ul>
+<li><strong>Physical State:</strong> Region where medium particles are crowded together closer than their normal equilibrium separation.</li>
+<li><strong>Density & Pressure:</strong> Local density \( \rho > \rho_0 \) and local pressure \( P > P_0 \).</li>
+<li><strong>Volume Strain:</strong> Negative volume strain (\( -\frac{\Delta V}{V} > 0 \)).</li>
+</ul>
+
+<h3>2. Rarefactions (R)</h3>
+<ul>
+<li><strong>Physical State:</strong> Region where medium particles are spread farther apart than normal equilibrium separation.</li>
+<li><strong>Density & Pressure:</strong> Local density \( \rho < \rho_0 \) and local pressure \( P < P_0 \).</li>
+<li><strong>Volume Strain:</strong> Positive volume strain (\( \frac{\Delta V}{V} > 0 \)).</li>
+</ul>
+
+<div class="concept-box">
+<strong>Spatial Distances:</strong>
+<ul>
+<li>The spatial distance between two successive compressions (or two successive rarefactions) equals the <strong>wavelength (\( \lambda \))</strong>.</li>
+<li>The spatial distance between a compression and the immediately adjacent rarefaction equals <strong>half a wavelength (\( \lambda / 2 \))</strong>.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Audible, Infrasonic, and Ultrasonic Acoustic Spectra</h2>
+<p>
+Mechanical longitudinal waves in elastic media are classified into three distinct frequency regimes based on human auditory perception:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Acoustic Band</th>
+<th>Frequency Range (\( f \))</th>
+<th>Physical Characteristics & Natural Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Infrasonic Waves</strong></td>
+<td>\( f < 20 \text{ Hz} \)</td>
+<td>Long wavelengths, low attenuation through earth crust. Produced by earthquakes (seismic waves), volcanic eruptions, ocean waves, elephants, and whales.</td>
+</tr>
+<tr>
+<td><strong>Audible Sound Waves</strong></td>
+<td>\( 20 \text{ Hz} \le f \le 20,000 \text{ Hz} \)</td>
+<td>Sensory range detected by the human ear. Generated by vibrating vocal cords, tuning forks, musical instruments, and loudspeakers.</td>
+</tr>
+<tr>
+<td><strong>Ultrasonic Waves</strong></td>
+<td>\( f > 20,000 \text{ Hz} \) (\( 20 \text{ kHz} \))</td>
+<td>Short wavelengths, high penetration and directional beam emission. Utilized by bats, dolphins, SONAR underwater navigation, medical ultrasound (sonography), and non-destructive material testing.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Comparison: Longitudinal vs Transverse Mechanical Waves</h2>
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Longitudinal Waves (e.g., Sound in Air)</th>
+<th>Transverse Waves (e.g., String Waves)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Particle Oscillation Direction</strong></td>
+<td>Parallel to wave propagation direction (\( \vec{v}_p \parallel \vec{v} \)).</td>
+<td>Perpendicular to wave propagation direction (\( \vec{v}_p \perp \vec{v} \)).</td>
+</tr>
+<tr>
+<td><strong>Pattern of Disturbance</strong></td>
+<td>Alternating <strong>Compressions</strong> and <strong>Rarefactions</strong>.</td>
+<td>Alternating <strong>Crests</strong> and <strong>Troughs</strong>.</td>
+</tr>
+<tr>
+<td><strong>Required Medium Elasticity</strong></td>
+<td><strong>Bulk Modulus (\( B \))</strong> (Volume elasticity). Can travel through solids, liquids, and gases.</td>
+<td><strong>Shear Modulus (\( \eta \))</strong> (Rigidity). Can travel only through solids and along tensioned strings/membranes.</td>
+</tr>
+<tr>
+<td><strong>Density & Pressure Variation</strong></td>
+<td>Substantial cyclic variation in local density and pressure.</td>
+<td>Negligible change in medium density and ambient pressure.</td>
+</tr>
+<tr>
+<td><strong>Polarization Phenomenon</strong></td>
+<td><strong>Cannot be polarized</strong> (oscillations are strictly 1D along wave line).</td>
+<td><strong>Can be polarized</strong> (transverse oscillations can occur along various planes).</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

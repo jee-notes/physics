@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resonance Tube & Kundt's Tube | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-standing-waves-organ-pipes.html" class="back-btn">
+<span>&larr;</span> Back to Standing Waves in Organ Pipes
+</a>
+</nav>
+
+<h1>Resonance Column Apparatus & Kundt's Tube</h1>
+<p class="subtitle">
+Laboratory acoustic resonance methods, exact speed of sound determination, and Kundt's dust tube.
+</p>
+
+<section>
+<h2>Resonance Tube Apparatus and Experimental Principle</h2>
+<p>
+The <strong>Resonance Column Apparatus</strong> is a classic laboratory instrument used to determine the speed of sound in air and measure the end correction of a pipe.
+</p>
+
+<div class="diagram">
+<svg width="720" height="260" viewBox="0 0 720 260">
+  <!-- Tuning Fork -->
+  <path d="M 120 20 L 120 60 L 130 60 L 130 20 M 120 45 L 110 45 L 110 80" fill="none" stroke="#1f2937" stroke-width="3"/>
+  <text x="75" y="45" font-size="11" font-weight="bold" fill="#1f2937">Fork (f)</text>
+
+  <!-- 1st Resonance Tube -->
+  <rect x="220" y="50" width="60" height="180" fill="#f8fafc" stroke="#1f2937" stroke-width="2"/>
+  <!-- Water -->
+  <rect x="220" y="130" width="60" height="100" fill="#93c5fd" opacity="0.7"/>
+  <line x1="220" y1="130" x2="280" y2="130" stroke="#2563eb" stroke-width="2"/>
+  <!-- Standing wave 1 -->
+  <path d="M 220 50 Q 250 90 250 130 M 280 50 Q 250 90 250 130" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="210" y="40" font-size="11" font-weight="bold" fill="#ef4444">1st Res (l_1)</text>
+
+  <!-- 2nd Resonance Tube -->
+  <rect x="460" y="50" width="60" height="180" fill="#f8fafc" stroke="#1f2937" stroke-width="2"/>
+  <!-- Water -->
+  <rect x="460" y="210" width="60" height="20" fill="#93c5fd" opacity="0.7"/>
+  <line x1="460" y1="210" x2="520" y2="210" stroke="#2563eb" stroke-width="2"/>
+  <!-- Standing wave 2 -->
+  <path d="M 460 50 Q 490 100 490 130 Q 460 170 490 210 M 520 50 Q 490 100 490 130 Q 520 170 490 210" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <text x="450" y="40" font-size="11" font-weight="bold" fill="#ef4444">2nd Res (l_2)</text>
+</svg>
+</div>
+
+<p>
+<strong>Experimental Setup:</strong>
+A long vertical glass tube is connected to a water reservoir. The water surface acts as a perfectly rigid closed end (Displacement Node), while the open top rim acts as an open boundary (Displacement Antinode with end correction \( e \)).
+</p>
+<p>
+A vibrating tuning fork of known frequency \( f \) is held above the open end. By lowering the water level, the length of the air column is increased until a sharp booming sound (acoustic resonance) is detected.
+</p>
+</section>
+
+<section>
+<h2>Determination of Speed of Sound in Air: v = 2 f (l2 - l1)</h2>
+<p>
+Let \( l_1 \) be the length of the air column for the <strong>first resonance</strong> (fundamental mode), and \( l_2 \) be the length for the <strong>second resonance</strong> (first overtone):
+</p>
+<div class="math-block">
+\[
+l_1 + e = \frac{\lambda}{4} \quad \text{--- (Equation 1)}
+\]
+\[
+l_2 + e = \frac{3\lambda}{4} \quad \text{--- (Equation 2)}
+\]
+</div>
+<p>
+Subtracting Equation (1) from Equation (2):
+</p>
+<div class="math-block">
+\[
+(l_2 + e) - (l_1 + e) = \frac{3\lambda}{4} - \frac{\lambda}{4} \implies l_2 - l_1 = \frac{\lambda}{2}
+\]
+\[
+\lambda = 2(l_2 - l_1)
+\]
+</div>
+<p>
+Since \( v = f \lambda \), the speed of sound is given by:
+</p>
+<div class="model-box">
+<strong>Speed of Sound from Resonance Column:</strong>
+\[
+v = 2 f (l_2 - l_1)
+\]
+</div>
+<div class="insightbox">
+Because the end correction \( e \) cancels out completely when subtracting the two lengths, this method provides an exact, error-free measurement of the speed of sound in air without requiring prior knowledge of the tube radius.
+</div>
+</section>
+
+<section>
+<h2>Experimental Calculation of End Correction e = (l2 - 3 l1) / 2</h2>
+<p>
+Multiplying Equation (1) by 3:
+</p>
+<div class="math-block">
+\[
+3 l_1 + 3e = \frac{3\lambda}{4}
+\]
+</div>
+<p>
+Equating this with Equation (2):
+</p>
+<div class="math-block">
+\[
+3 l_1 + 3e = l_2 + e \implies 2e = l_2 - 3 l_1
+\]
+</div>
+<div class="model-box">
+<strong>Experimental End Correction:</strong>
+\[
+e = \frac{l_2 - 3 l_1}{2}
+\]
+</div>
+<p>
+In an ideal tube with zero end correction (\( e = 0 \)), the second resonance occurs at exactly \( l_2 = 3 l_1 \). In real physical tubes, \( l_2 > 3 l_1 \).
+</p>
+</section>
+
+<section>
+<h2>Kundt's Tube Experiment for Rods and Gases</h2>
+<p>
+<strong>Kundt's Tube</strong> is an apparatus designed to measure the speed of sound in various gases as well as solid metal rods.
+</p>
+
+<div class="diagram">
+<svg width="720" height="160" viewBox="0 0 720 160">
+  <!-- Glass tube -->
+  <rect x="180" y="40" width="460" height="70" rx="4" fill="#f8fafc" stroke="#1f2937" stroke-width="2"/>
+  <!-- Clamped Metal Rod -->
+  <rect x="40" y="70" width="160" height="10" fill="#64748b"/>
+  <polygon points="120,60 120,90 110,75" fill="#ef4444"/>
+  <text x="80" y="55" font-size="11" font-weight="bold" fill="#ef4444">Clamped at Center (Node)</text>
+
+  <!-- Piston disc -->
+  <circle cx="200" cy="75" r="30" fill="#1f2937"/>
+
+  <!-- Lycopodium powder heaps (Nodes) -->
+  <path d="M 240 105 Q 260 85 280 105 M 340 105 Q 360 85 380 105 M 440 105 Q 460 85 480 105 M 540 105 Q 560 85 580 105" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
+  <text x="330" y="135" font-size="12" font-weight="bold" fill="#d97706">Powder Heaps at Displacement Nodes (&Delta;l = &lambda;_g / 2)</text>
+</svg>
+</div>
+
+<p>
+<strong>Working Principle:</strong>
+</p>
+<ol>
+<li>A metal rod of length \( L \) clamped at its center is stroked with a rosined cloth, setting up longitudinal standing waves with a Node at the clamp and Antinodes at both ends (\( \lambda_{\text{rod}} = 2L \)).</li>
+<li>The vibrating disc at the end of the rod excites standing waves in the gas enclosed in the glass tube. Fine lycopodium powder settles into heaps at the <strong>Displacement Nodes</strong> (where air is motionless) and is blown away from <strong>Displacement Antinodes</strong>.</li>
+<li>The distance between two consecutive powder heaps equals half the wavelength in the gas (\( \Delta l = \frac{\lambda_{\text{gas}}}{2} \)).</li>
+</ol>
+<div class="model-box">
+<strong>Ratio of Sound Speeds:</strong>
+\[
+\frac{v_{\text{rod}}}{v_{\text{gas}}} = \frac{f \lambda_{\text{rod}}}{f \lambda_{\text{gas}}} = \frac{2L}{2 \Delta l} = \frac{L}{\Delta l}
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

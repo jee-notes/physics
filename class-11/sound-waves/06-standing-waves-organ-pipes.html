@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standing Waves in Organ Pipes | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Sound Waves
+</a>
+</nav>
+
+<h1>Standing Waves in Organ Pipes & Air Columns</h1>
+<p class="subtitle">
+Longitudinal acoustic resonance in open and closed pipes, harmonic overtone spectra, and end corrections.
+</p>
+
+<section>
+<h2>Formation of Standing Sound Waves in Air Columns</h2>
+<p>
+An <strong>organ pipe</strong> is a cylindrical acoustic tube enclosing a column of air. When a source of sound (such as a vibrating tuning fork or a jet of air directed against a sharp lip) excites the air inside the pipe, longitudinal traveling waves reflect back and forth between the ends.
+</p>
+<p>
+The linear superposition of these counter-propagating longitudinal waves sets up stationary <strong>standing sound waves</strong> characterized by distinct nodes and antinodes.
+</p>
+</section>
+
+<section>
+<h2>Displacement Nodes/Antinodes vs Pressure Nodes/Antinodes</h2>
+<p>
+In describing standing sound waves, it is vital to specify whether nodes and antinodes refer to <strong>particle displacement</strong> or <strong>excess pressure</strong>:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Boundary Location</th>
+<th>Displacement Condition</th>
+<th>Pressure Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rigid Closed End</strong></td>
+<td><strong>Displacement Node (N)</strong><br>Air molecules cannot move past the barrier (\( s = 0 \)).</td>
+<td><strong>Pressure Antinode (A)</strong><br>Maximum pressure compression and rarefaction (\( \Delta P = \pm \Delta P_0 \)).</td>
+</tr>
+<tr>
+<td><strong>Open End</strong></td>
+<td><strong>Displacement Antinode (A)</strong><br>Air molecules oscillate freely in and out with maximum amplitude.</td>
+<td><strong>Pressure Node (N)</strong><br>Pressure is clamped to ambient atmospheric pressure (\( \Delta P = 0 \)).</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Open Organ Pipe: Normal Modes, Harmonics, and Overtones</h2>
+<p>
+An <strong>open organ pipe</strong> is open to the atmosphere at both ends. Therefore, <strong>Displacement Antinodes (Pressure Nodes)</strong> form at both ends:
+</p>
+
+<div class="diagram">
+<svg width="720" height="280" viewBox="0 0 720 280">
+  <!-- Mode 1: n = 1 -->
+  <text x="50" y="45" font-size="12" font-weight="bold" fill="#1f2937">n=1 (Fundamental):</text>
+  <rect x="220" y="20" width="420" height="40" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <path d="M 220 25 Q 430 55 640 25 M 220 55 Q 430 25 640 55" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="225" y="15" font-size="11" fill="#ef4444">A</text>
+  <text x="425" y="15" font-size="11" fill="#2563eb">N</text>
+  <text x="635" y="15" font-size="11" fill="#ef4444">A</text>
+  <text x="650" y="45" font-size="12" fill="#2563eb">f_1 = v/(2L)</text>
+
+  <!-- Mode 2: n = 2 -->
+  <text x="50" y="125" font-size="12" font-weight="bold" fill="#1f2937">n=2 (2nd Harmonic):</text>
+  <rect x="220" y="100" width="420" height="40" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <path d="M 220 105 Q 325 135 430 105 Q 535 135 640 105 M 220 135 Q 325 105 430 135 Q 535 105 640 135" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="650" y="125" font-size="12" fill="#2563eb">f_2 = 2 f_1</text>
+
+  <!-- Mode 3: n = 3 -->
+  <text x="50" y="205" font-size="12" font-weight="bold" fill="#1f2937">n=3 (3rd Harmonic):</text>
+  <rect x="220" y="180" width="420" height="40" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <path d="M 220 185 Q 290 215 360 185 Q 430 215 500 185 Q 570 215 640 185 M 220 215 Q 290 185 360 215 Q 430 185 500 215 Q 570 185 640 215" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="650" y="205" font-size="12" fill="#2563eb">f_3 = 3 f_1</text>
+</svg>
+</div>
+
+<p>
+The length \( L \) of the pipe accommodates an integer number of half-wavelengths:
+</p>
+<div class="math-block">
+\[
+L = n \left( \frac{\lambda_n}{2} \right) \implies \lambda_n = \frac{2L}{n} \quad (n = 1, 2, 3, \dots)
+\]
+</div>
+<div class="model-box">
+<strong>Frequencies of Open Organ Pipe:</strong>
+\[
+f_n = \frac{n v}{2L} = n f_1 \quad (n = 1, 2, 3, \dots)
+\]
+\[
+f_1 : f_2 : f_3 : f_4 : \dots = 1 : 2 : 3 : 4 : \dots
+\]
+</div>
+<div class="insightbox">
+In an open organ pipe, <strong>all harmonics (both even and odd) are present</strong>. The fundamental frequency is \( f_1 = \frac{v}{2L} \).
+</div>
+</section>
+
+<section>
+<h2>Closed Organ Pipe: Odd Harmonic Mode Spectrum</h2>
+<p>
+A <strong>closed organ pipe</strong> is closed at one end and open at the other. Thus, it must have a <strong>Displacement Node</strong> at the closed end and a <strong>Displacement Antinode</strong> at the open end:
+</p>
+
+<div class="diagram">
+<svg width="720" height="280" viewBox="0 0 720 280">
+  <!-- Mode 1: n = 1 -->
+  <text x="50" y="45" font-size="12" font-weight="bold" fill="#1f2937">1st Harmonic (Fundamental):</text>
+  <path d="M 640 20 L 220 20 L 220 60 L 640 60" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <line x1="220" y1="20" x2="220" y2="60" stroke="#1f2937" stroke-width="5"/>
+  <path d="M 220 40 Q 430 25 640 25 M 220 40 Q 430 55 640 55" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="225" y="15" font-size="11" fill="#2563eb">N</text>
+  <text x="635" y="15" font-size="11" fill="#ef4444">A</text>
+  <text x="650" y="45" font-size="12" fill="#2563eb">f_1 = v/(4L)</text>
+
+  <!-- Mode 2: 3rd Harmonic -->
+  <text x="50" y="125" font-size="12" font-weight="bold" fill="#1f2937">3rd Harmonic (1st Overtone):</text>
+  <path d="M 640 100 L 220 100 L 220 140 L 640 140" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <line x1="220" y1="100" x2="220" y2="140" stroke="#1f2937" stroke-width="5"/>
+  <path d="M 220 120 Q 290 105 360 120 Q 500 135 640 105 M 220 120 Q 290 135 360 120 Q 500 105 640 135" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="650" y="125" font-size="12" fill="#2563eb">f_3 = 3 f_1</text>
+
+  <!-- Mode 3: 5th Harmonic -->
+  <text x="50" y="205" font-size="12" font-weight="bold" fill="#1f2937">5th Harmonic (2nd Overtone):</text>
+  <path d="M 640 180 L 220 180 L 220 220 L 640 220" fill="none" stroke="#1f2937" stroke-width="2"/>
+  <line x1="220" y1="180" x2="220" y2="220" stroke="#1f2937" stroke-width="5"/>
+  <text x="650" y="205" font-size="12" fill="#2563eb">f_5 = 5 f_1</text>
+</svg>
+</div>
+
+<p>
+The length \( L \) of the pipe contains an odd multiple of quarter-wavelengths:
+</p>
+<div class="math-block">
+\[
+L = (2n - 1) \frac{\lambda_n}{4} \implies \lambda_n = \frac{4L}{2n - 1} \quad (n = 1, 2, 3, \dots)
+\]
+</div>
+<div class="model-box">
+<strong>Frequencies of Closed Organ Pipe:</strong>
+\[
+f_n = \frac{(2n - 1)v}{4L} = (2n - 1) f_1 \quad \text{where } f_1 = \frac{v}{4L}
+\]
+\[
+f_1 : f_3 : f_5 : f_7 : \dots = 1 : 3 : 5 : 7 : \dots
+\]
+</div>
+<div class="concept-box">
+In a closed organ pipe, <strong>only odd harmonics are produced</strong>; all even harmonics are completely absent. Because open organ pipes produce all harmonics, their acoustic quality (timbre) is much richer and sweeter than closed pipes.
+</div>
+</section>
+
+<section>
+<h2>End Correction (Rayleigh Correction e = 0.6 r)</h2>
+<p>
+In real physical pipes, air molecules at an open end do not experience a sudden transition to unconstrained free space at the exact geometric boundary. Instead, the displacement antinode forms slightly outside the physical rim of the pipe at an acoustic distance \( e \), known as the <strong>End Correction</strong>.
+</p>
+<p>
+According to Lord Rayleigh:
+</p>
+<div class="model-box">
+<strong>Rayleigh's End Correction:</strong>
+\[
+e \approx 0.6 \, r \approx 0.3 \, d
+\]
+</div>
+<p>
+where \( r \) is the internal radius and \( d = 2r \) is the internal diameter of the pipe.
+</p>
+
+<h3>Effective Acoustic Lengths:</h3>
+<ul>
+<li><strong>Open Organ Pipe (Two Open Ends):</strong>
+\[
+L_{\text{eff}} = L + 2e = L + 1.2 \, r \implies f_n = \frac{n v}{2(L + 2e)}
+\]
+</li>
+<li><strong>Closed Organ Pipe (One Open End):</strong>
+\[
+L_{\text{eff}} = L + e = L + 0.6 \, r \implies f_n = \frac{(2n - 1) v}{4(L + e)}
+\]
+</li>
+</ul>
+</section>
+
+<section>
+<h2>Experimental Apparatus & Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./06a-resonance-column-apparatus.html">6a. Resonance Column Apparatus & Kundt's Tube</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

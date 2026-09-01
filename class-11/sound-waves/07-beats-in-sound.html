@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beats in Sound Waves | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Sound Waves
+</a>
+</nav>
+
+<h1>Beats in Sound Waves & Tuning Fork Calibration</h1>
+<p class="subtitle">
+Acoustic interference in the time domain, envelope modulation derivation, and tuning fork calibration techniques.
+</p>
+
+<section>
+<h2>Physical Mechanism of Acoustic Beats</h2>
+<p>
+When two sound waves having nearly equal frequencies (\( f_1 \approx f_2 \)) and traveling in the same direction superpose at a point, they produce a periodic rise and fall in the resultant acoustic intensity. This phenomenon is known as <strong>Acoustic Beats</strong>.
+</p>
+<ul>
+<li><strong>Waxing:</strong> Moment when the two waves are temporarily in phase, producing constructive interference and a peak in loudness.</li>
+<li><strong>Waning:</strong> Moment when the two waves become \( 180^\circ \) out of phase, producing destructive interference and silence.</li>
+<li><strong>Beat Period (\( T_b \)):</strong> The time elapsed between two successive maxima (or two successive minima).</li>
+<li><strong>Beat Frequency (\( f_b \)):</strong> The number of intensity peaks heard per second: \( f_b = 1/T_b \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Mathematical Derivation of Beat Frequency fb = |f1 - f2|</h2>
+<p>
+Consider a point in space (take \( x = 0 \)) where two harmonic sound waves of equal amplitude \( A \) and slightly different angular frequencies \( \omega_1 = 2\pi f_1 \) and \( \omega_2 = 2\pi f_2 \) arrive:
+</p>
+<div class="math-block">
+\[
+s_1(t) = A \sin(\omega_1 t)
+\]
+\[
+s_2(t) = A \sin(\omega_2 t)
+\]
+</div>
+<p>
+By the principle of linear superposition:
+</p>
+<div class="math-block">
+\[
+s_{\text{net}}(t) = s_1 + s_2 = A \left[ \sin(\omega_1 t) + \sin(\omega_2 t) \right]
+\]
+</div>
+<p>
+Applying the trigonometric identity \( \sin C + \sin D = 2\cos\left(\frac{C-D}{2}\right)\sin\left(\frac{C+D}{2}\right) \):
+</p>
+<div class="model-box">
+<strong>Resultant Beat Wave Equation:</strong>
+\[
+s_{\text{net}}(t) = \left[ 2A \cos\left( \frac{\omega_1 - \omega_2}{2} t \right) \right] \sin\left( \frac{\omega_1 + \omega_2}{2} t \right) = A_{\text{mod}}(t) \sin(\omega_{\text{avg}} t)
+\]
+</div>
+<p>
+where:
+</p>
+<ul>
+<li>\( A_{\text{mod}}(t) = \left| 2A \cos\left( \pi (f_1 - f_2) t \right) \right| \): Slowly varying <strong>Amplitude Envelope</strong>.</li>
+<li>\( \omega_{\text{avg}} = \frac{\omega_1 + \omega_2}{2} \): Rapid carrier oscillation frequency.</li>
+</ul>
+
+<div class="diagram">
+<svg width="720" height="200" viewBox="0 0 720 200">
+  <!-- Baseline -->
+  <line x1="50" y1="100" x2="680" y2="100" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- Modulated Beat Envelope (Top and Bottom) -->
+  <path d="M 80 20 Q 200 100 320 20 Q 440 100 560 20 Q 640 100 680 20" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+  <path d="M 80 180 Q 200 100 320 180 Q 440 100 560 180 Q 640 100 680 180" fill="none" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- High frequency carrier wave inside envelope -->
+  <path d="M 80 100 Q 95 30 110 100 Q 125 170 140 100 Q 155 45 170 100 Q 185 155 200 100 Q 215 80 230 100 Q 245 120 260 100 Q 275 60 290 100 Q 305 140 320 100 Q 335 30 350 100 Q 365 170 380 100 Q 395 45 410 100 Q 425 155 440 100 Q 455 80 470 100 Q 485 120 500 100 Q 515 60 530 100 Q 545 140 560 100" fill="none" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- Beat period annotation -->
+  <line x1="80" y1="15" x2="320" y2="15" stroke="#1f2937" stroke-width="2"/>
+  <text x="160" y="10" font-size="12" font-weight="bold" fill="#1f2937">Beat Period T_b = 1 / |f_1 - f_2|</text>
+</svg>
+</div>
+</section>
+
+<section>
+<h2>Time Envelope of Amplitude and Intensity Waxing/Waning</h2>
+<p>
+Since intensity is proportional to the square of the amplitude (\( I \propto A_{\text{mod}}^2 \)):
+</p>
+
+<h3>1. Condition for Intensity Maxima (Waxing)</h3>
+<div class="math-block">
+\[
+\cos\left( \pi (f_1 - f_2) t \right) = \pm 1 \implies \pi (f_1 - f_2) t = n\pi \implies t_n = \frac{n}{|f_1 - f_2|} \quad (n = 0, 1, 2, \dots)
+\]
+</div>
+<p>
+The time interval between consecutive maxima is:
+</p>
+<div class="math-block">
+\[
+T_b = t_{n+1} - t_n = \frac{1}{|f_1 - f_2|}
+\]
+</div>
+
+<h3>2. Condition for Intensity Minima (Waning)</h3>
+<div class="math-block">
+\[
+\cos\left( \pi (f_1 - f_2) t \right) = 0 \implies \pi (f_1 - f_2) t = (2n + 1)\frac{\pi}{2} \implies t_n' = \frac{2n + 1}{2|f_1 - f_2|}
+\]
+</div>
+<div class="model-box">
+<strong>Beat Frequency Formula:</strong>
+\[
+f_b = \frac{1}{T_b} = |f_1 - f_2| \quad [\text{beats per second}]
+\]
+</div>
+
+<div class="insightbox">
+<strong>Persistence of Hearing Limit:</strong>
+The human auditory system has an acoustic persistence time of approximately \( 0.1 \text{ seconds} \). For distinct beats to be counted by the human ear, the beat frequency must satisfy:
+\[
+f_b \le 10 \text{ beats/second} \implies |f_1 - f_2| \le 10 \text{ Hz}
+\]
+If \( f_b > 10 \text{ Hz} \), the ear perceives a continuous harsh buzzing tone rather than discrete beats.
+</div>
+</section>
+
+<section>
+<h2>Determination of Unknown Tuning Fork Frequency (Waxing and Filing)</h2>
+<p>
+Suppose an unknown tuning fork \( X \) of frequency \( f_x \) produces \( f_b \) beats per second when sounded with a standard calibrated fork \( A \) of known frequency \( f_A \).
+</p>
+<p>
+The unknown frequency must be:
+</p>
+<div class="math-block">
+\[
+f_x = f_A + f_b \quad \text{or} \quad f_x = f_A - f_b
+\]
+</div>
+<p>
+To resolve this ambiguity, we modify the mass of fork \( X \) (or fork \( A \)):
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Action Performed</th>
+<th>Effect on Inertia / Mass</th>
+<th>Effect on Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Loading a fork with Wax</strong></td>
+<td>Increases mass (\( m \uparrow \))</td>
+<td>Frequency <strong>Decreases</strong> (\( f \downarrow \))</td>
+</tr>
+<tr>
+<td><strong>Filing the prongs of a fork</strong></td>
+<td>Decreases mass (\( m \downarrow \))</td>
+<td>Frequency <strong>Increases</strong> (\( f \uparrow \))</td>
+</tr>
+</tbody>
+</table>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Finding Unknown Frequency</h3>
+<p>
+<strong>Problem:</strong> A tuning fork \( A \) of frequency \( 256 \text{ Hz} \) produces \( 4 \text{ beats/second} \) with an unknown tuning fork \( B \). When the prongs of \( B \) are loaded with a little wax, the beat frequency increases to \( 6 \text{ beats/second} \). What was the original frequency of tuning fork \( B \)?
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Possible initial values for \( f_B \):
+\[
+f_B = 256 + 4 = 260 \text{ Hz} \quad \text{or} \quad f_B = 256 - 4 = 252 \text{ Hz}
+\]
+</li>
+<li>Loading \( B \) with wax causes its frequency to <strong>decrease</strong> (\( f_B' < f_B \)).</li>
+<li>Let us test both possibilities:
+<ul>
+<li><strong>If \( f_B = 260 \text{ Hz} \):</strong> When \( f_B \) decreases (e.g., to \( 258 \text{ Hz} \)), the beat frequency \( |f_B' - 256| = |258 - 256| = 2 \text{ Hz} \) &rarr; Beat frequency <em>decreases</em>. (Contradicts problem statement).</li>
+<li><strong>If \( f_B = 252 \text{ Hz} \):</strong> When \( f_B \) decreases (e.g., to \( 250 \text{ Hz} \)), the beat frequency \( |f_B' - 256| = |250 - 256| = 6 \text{ Hz} \) &rarr; Beat frequency <em>increases</em>! (Matches problem statement).</li>
+</ul>
+</li>
+<li><strong>Conclusion:</strong> The original frequency of fork \( B \) was \( \mathbf{252 \text{ Hz}} \).</li>
+</ol>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

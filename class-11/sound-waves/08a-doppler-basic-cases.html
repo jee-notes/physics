@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collinear Doppler Motion | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./08-doppler-effect.html" class="back-btn">
+<span>&larr;</span> Back to Doppler Effect
+</a>
+</nav>
+
+<h1>Collinear Doppler Motion: Source & Observer</h1>
+<p class="subtitle">
+Systematic mathematical analysis of standard one-dimensional relative motion configurations.
+</p>
+
+<section>
+<h2>Moving Source and Stationary Observer</h2>
+<p>
+Consider a source emitting sound of frequency \( f_0 \) and wavelength \( \lambda_0 = v / f_0 \), observed by a stationary observer (\( v_o = 0 \)).
+</p>
+
+<h3>1. Source Moving Toward Stationary Observer (Approaching)</h3>
+<p>
+In time \( t = T_0 = 1/f_0 \), the source moves forward by a distance \( v_s T_0 \). The wavelength in the direction of motion contracts:
+</p>
+<div class="math-block">
+\[
+\lambda' = \lambda_0 - v_s T_0 = \frac{v - v_s}{f_0}
+\]
+</div>
+<p>
+The apparent frequency detected by the observer is:
+</p>
+<div class="model-box">
+\[
+f' = \frac{v}{\lambda'} = f_0 \left( \frac{v}{v - v_s} \right) \quad (f' > f_0)
+\]
+</div>
+
+<h3>2. Source Moving Away from Stationary Observer (Receding)</h3>
+<p>
+The wavelength expands: \( \lambda'' = \frac{v + v_s}{f_0} \).
+</p>
+<div class="model-box">
+\[
+f'' = \frac{v}{\lambda''} = f_0 \left( \frac{v}{v + v_s} \right) \quad (f'' < f_0)
+\]
+</div>
+</section>
+
+<section>
+<h2>Stationary Source and Moving Observer</h2>
+<p>
+When the source is at rest (\( v_s = 0 \)), the wavelength in the medium remains completely unchanged at \( \lambda_0 = v / f_0 \).
+</p>
+
+<h3>1. Observer Moving Toward Stationary Source (Approaching)</h3>
+<p>
+The relative speed with which the observer encounters the oncoming wavefronts is \( v_{\text{rel}} = v + v_o \):
+</p>
+<div class="model-box">
+\[
+f' = \frac{v_{\text{rel}}}{\lambda_0} = \frac{v + v_o}{v / f_0} = f_0 \left( \frac{v + v_o}{v} \right) \quad (f' > f_0)
+\]
+</div>
+
+<h3>2. Observer Moving Away from Stationary Source (Receding)</h3>
+<p>
+The relative speed is \( v_{\text{rel}} = v - v_o \):
+</p>
+<div class="model-box">
+\[
+f'' = \frac{v_{\text{rel}}}{\lambda_0} = f_0 \left( \frac{v - v_o}{v} \right) \quad (f'' < f_0)
+\]
+</div>
+
+<div class="insightbox">
+<strong>Asymmetry of Classical Doppler Effect:</strong>
+Notice that moving the source toward the observer produces \( f' = f_0 \left(\frac{v}{v - u}\right) \), whereas moving the observer toward the source with the same speed \( u \) produces \( f'' = f_0 \left(\frac{v + u}{v}\right) \).
+<br>Since \( \frac{v}{v - u} > \frac{v + u}{v} \), the frequency shift is <strong>greater when the source moves</strong> than when the observer moves with the identical speed relative to the medium!
+</div>
+</section>
+
+<section>
+<h2>Simultaneous Collinear Motion of Source, Observer, and Medium</h2>
+
+<table>
+<thead>
+<tr>
+<th>Physical Configuration</th>
+<th>Relative Motion</th>
+<th>Apparent Frequency Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Both Source & Observer approaching each other</strong></td>
+<td>Distance decreasing rapidly</td>
+<td>
+\[
+f' = f_0 \left( \frac{v + v_o}{v - v_s} \right)
+\]
+</td>
+</tr>
+<tr>
+<td><strong>Both Source & Observer receding from each other</strong></td>
+<td>Distance increasing rapidly</td>
+<td>
+\[
+f' = f_0 \left( \frac{v - v_o}{v + v_s} \right)
+\]
+</td>
+</tr>
+<tr>
+<td><strong>Source chasing Observer</strong> (\( v_s \) and \( v_o \) in same direction)</td>
+<td>Source moves toward Observer, Observer moves away</td>
+<td>
+\[
+f' = f_0 \left( \frac{v - v_o}{v - v_s} \right)
+\]
+</td>
+</tr>
+<tr>
+<td><strong>Observer chasing Source</strong></td>
+<td>Observer moves toward Source, Source moves away</td>
+<td>
+\[
+f' = f_0 \left( \frac{v + v_o}{v + v_s} \right)
+\]
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Low-Speed Approximation (\( v_s, v_o \ll v \))</h3>
+<p>
+When the relative speed \( v_{\text{rel}} \) between source and observer is much smaller than the speed of sound:
+</p>
+<div class="model-box">
+<strong>Fractional Frequency Shift:</strong>
+\[
+\frac{\Delta f}{f_0} = \frac{f' - f_0}{f_0} \approx \pm \frac{v_{\text{rel}}}{v}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Crossing Whistle Train</h3>
+<p>
+<strong>Problem:</strong> A train moving at \( v_s = 36 \text{ km/h} = 10 \text{ m/s} \) blows a whistle of frequency \( f_0 = 660 \text{ Hz} \) as it passes a stationary observer on a platform. If the speed of sound in air is \( v = 340 \text{ m/s} \), calculate:
+<br>(a) The frequency heard as the train approaches,
+<br>(b) The frequency heard as the train recedes,
+<br>(c) The percentage change in frequency heard by the observer.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<ul>
+<li><strong>(a) Approaching:</strong>
+\[
+f_1 = f_0 \left( \frac{v}{v - v_s} \right) = 660 \left( \frac{340}{340 - 10} \right) = 660 \left( \frac{340}{330} \right) = 680 \text{ Hz}
+\]
+</li>
+<li><strong>(b) Receding:</strong>
+\[
+f_2 = f_0 \left( \frac{v}{v + v_s} \right) = 660 \left( \frac{340}{340 + 10} \right) = 660 \left( \frac{340}{350} \right) \approx 641.14 \text{ Hz}
+\]
+</li>
+<li><strong>(c) Percentage Drop across Crossing:</strong>
+\[
+\Delta f = f_1 - f_2 = 680 - 641.14 = 38.86 \text{ Hz}
+\]
+\[
+\% \text{ change} = \frac{38.86}{680} \times 100\% \approx 5.71\%
+\]
+</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed of Sound | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Sound Waves
+</a>
+</nav>
+
+<h1>Speed of Sound & Thermodynamic Corrections</h1>
+<p class="subtitle">
+Newton's elastic propagation law, speed of sound across different states of matter, and bulk elasticity.
+</p>
+
+<section>
+<h2>Newton's Elastic Formulation v = sqrt(E/rho)</h2>
+<p>
+Sir Isaac Newton established that the speed of propagation of a mechanical longitudinal wave through any continuous elastic medium is governed universally by the ratio of the medium's restoring elasticity to its inertial mass density:
+</p>
+<div class="model-box">
+<strong>Newton's General Wave Speed Formula:</strong>
+\[
+v = \sqrt{\frac{E}{\rho}}
+\]
+</div>
+<p>
+where:
+</p>
+<ul>
+<li>\( E \): Modulus of elasticity of the medium \([\text{N/m}^2 \text{ or Pa}]\), Dimension: \([M^1 L^{-1} T^{-2}]\).</li>
+<li>\( \rho \): Mass density of the medium \([\text{kg/m}^3]\), Dimension: \([M^1 L^{-3} T^0]\).</li>
+<li>\( v \): Resulting wave speed \([\text{m/s}]\), Dimension: \([M^0 L^1 T^{-1}]\).</li>
+</ul>
+</section>
+
+<section>
+<h2>Speed of Sound in Solids, Liquids, and Gases</h2>
+<p>
+The specific modulus of elasticity \( E \) applicable depends on the physical state and geometric constraints of the medium:
+</p>
+
+<h3>1. Long Thin Solid Rod</h3>
+<p>
+When sound propagates along a thin solid rod or wire, lateral expansion and contraction occur freely without significant transverse stress. The relevant elastic modulus is <strong>Young's Modulus (\( Y \))</strong>:
+</p>
+<div class="model-box">
+\[
+v_{\text{rod}} = \sqrt{\frac{Y}{\rho}}
+\]
+</div>
+
+<h3>2. Extended 3D Bulk Solid</h3>
+<p>
+In an extended, bulk 3-dimensional solid, longitudinal compressions involve both volume compression (Bulk Modulus \( B \)) and shearing rigidity (Shear Modulus \( \eta \)):
+</p>
+<div class="math-block">
+\[
+v_{\text{solid (bulk)}} = \sqrt{\frac{B + \frac{4}{3}\eta}{\rho}}
+\]
+</div>
+
+<h3>3. Fluids (Liquids)</h3>
+<p>
+Liquids have no shear modulus (\( \eta = 0 \)) but resist volumetric compression through their <strong>Bulk Modulus (\( B \))</strong>:
+</p>
+<div class="model-box">
+\[
+v_{\text{liquid}} = \sqrt{\frac{B}{\rho}}
+\]
+</div>
+
+<h3>4. Gases</h3>
+<p>
+Gases undergo adiabatic volumetric compression governed by the <strong>Adiabatic Bulk Modulus (\( B_S = \gamma P \))</strong>:
+</p>
+<div class="model-box">
+\[
+v_{\text{gas}} = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Bulk Modulus and Medium Elasticity</h2>
+<p>
+Comparing sound speeds across the three states of matter reveals a key physical trend:
+</p>
+<div class="model-box">
+\[
+v_{\text{solids}} > v_{\text{liquids}} > v_{\text{gases}}
+\]
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Medium</th>
+<th>Typical Density \( \rho \, (\text{kg/m}^3) \)</th>
+<th>Elastic Modulus \( E \, (\text{N/m}^2) \)</th>
+<th>Speed of Sound \( v \, (\text{m/s}) \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Steel (Solid)</strong></td>
+<td>\( 7800 \)</td>
+<td>\( Y \approx 2 \times 10^{11} \)</td>
+<td>\( \approx 5100 \text{ m/s} \)</td>
+</tr>
+<tr>
+<td><strong>Water (Liquid)</strong></td>
+<td>\( 1000 \)</td>
+<td>\( B \approx 2.2 \times 10^9 \)</td>
+<td>\( \approx 1480 \text{ m/s} \)</td>
+</tr>
+<tr>
+<td><strong>Air (Gas, 20°C)</strong></td>
+<td>\( 1.2 \)</td>
+<td>\( \gamma P \approx 1.4 \times 10^5 \)</td>
+<td>\( \approx 343 \text{ m/s} \)</td>
+</tr>
+</tbody>
+</table>
+
+<div class="insightbox">
+<strong>Why is sound fastest in solids despite solids having the highest densities?</strong><br>
+Although solids are much denser than gases, their elastic moduli (restoring interatomic forces) are greater by a factor of over \( 10^6 \). Because elasticity \( E \) in the numerator vastly overwhelms density \( \rho \) in the denominator, sound travels fastest in rigid solids and slowest in compressible gases.
+</div>
+</section>
+
+<section>
+<h2>Sub-Topics & Deep Dives</h2>
+<div class="chapter-list">
+<a href="./03a-newton-and-laplace-correction.html">3a. Newton's Formula & Laplace's Adiabatic Correction</a>
+<a href="./03b-factors-affecting-speed-of-sound.html">3b. Environmental Factors Affecting Speed of Sound</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

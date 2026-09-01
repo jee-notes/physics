@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newton & Laplace Correction | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-speed-of-sound.html" class="back-btn">
+<span>&larr;</span> Back to Speed of Sound
+</a>
+</nav>
+
+<h1>Newton's Formula & Laplace's Adiabatic Correction</h1>
+<p class="subtitle">
+Thermodynamic foundations of sound propagation in gases, isothermal discrepancy, and adiabatic correction.
+</p>
+
+<section>
+<h2>Newton's Isothermal Assumption and Its Discrepancy</h2>
+<p>
+Sir Isaac Newton assumed that when sound travels through a gas, the compressions and rarefactions take place so slowly that any heat generated during compression is instantly conducted away to the surroundings, and any cooling in rarefactions is balanced by heat flow from adjacent regions. Consequently, he assumed sound propagation was an <strong>isothermal process</strong> (\( T = \text{constant} \)).
+</p>
+
+<h3>Derivation of Isothermal Bulk Modulus (\( B_T \))</h3>
+<p>
+For an ideal gas undergoing an isothermal process:
+</p>
+<div class="math-block">
+\[
+P V = \text{Constant}
+\]
+</div>
+<p>
+Differentiating both sides:
+</p>
+<div class="math-block">
+\[
+P \, dV + V \, dP = 0 \implies V \, dP = -P \, dV \implies -V \frac{dP}{dV} = P
+\]
+</div>
+<p>
+By definition of Bulk Modulus:
+</p>
+<div class="math-block">
+\[
+B_T = -\frac{dP}{dV / V} = P
+\]
+</div>
+<p>
+Substituting \( B_T = P \) into Newton's wave speed formula gives:
+</p>
+<div class="model-box">
+<strong>Newton's Isothermal Speed of Sound:</strong>
+\[
+v_{\text{Newton}} = \sqrt{\frac{P}{\rho}}
+\]
+</div>
+
+<h3>Numerical Calculation at STP:</h3>
+<ul>
+<li>Standard Atmospheric Pressure: \( P = 1.013 \times 10^5 \text{ N/m}^2 \)</li>
+<li>Density of dry air at STP: \( \rho = 1.293 \text{ kg/m}^3 \)</li>
+</ul>
+<div class="math-block">
+\[
+v_{\text{Newton}} = \sqrt{\frac{1.013 \times 10^5}{1.293}} \approx 280 \text{ m/s}
+\]
+</div>
+<p>
+However, accurate experimental measurements yield a sound speed of \( 332 \text{ m/s} \) in air at STP. Newton's formula underestimated the true speed by:
+</p>
+<div class="math-block">
+\[
+\text{Error} = \frac{332 - 280}{332} \times 100\% \approx 15.6\%
+\]
+</div>
+</section>
+
+<section>
+<h2>Laplace's Adiabatic Formulation v = sqrt(gamma P / rho)</h2>
+<p>
+In 1816, French physicist and mathematician Pierre-Simon Laplace resolved this error by pointing out that sound propagation in gases is fundamentally an <strong>adiabatic process</strong> (\( dQ = 0 \)), not isothermal.
+</p>
+
+<h3>Derivation of Adiabatic Bulk Modulus (\( B_S \))</h3>
+<p>
+For an ideal gas undergoing an adiabatic process:
+</p>
+<div class="math-block">
+\[
+P V^\gamma = \text{Constant}
+\]
+</div>
+<p>
+where \( \gamma = C_p / C_v \) is the ratio of molar heat capacities (adiabatic index). Differentiating both sides:
+</p>
+<div class="math-block">
+\[
+(V^\gamma) dP + P (\gamma V^{\gamma - 1}) dV = 0 \implies V^\gamma dP = -\gamma P V^{\gamma - 1} dV
+\]
+\[
+-\frac{dP}{dV / V} = \gamma P
+\]
+</div>
+<p>
+Therefore, the <strong>adiabatic bulk modulus</strong> is:
+</p>
+<div class="model-box">
+\[
+B_S = \gamma P
+\]
+</div>
+<p>
+Substituting \( B_S = \gamma P \) into the wave speed formula gives:
+</p>
+<div class="model-box">
+<strong>Laplace's Formula for Speed of Sound:</strong>
+\[
+v = \sqrt{\frac{\gamma P}{\rho}}
+\]
+</div>
+
+<h3>Numerical Calculation with Laplace's Correction</h3>
+<p>
+For air (predominantly diatomic nitrogen and oxygen), \( \gamma \approx 1.41 \):
+</p>
+<div class="math-block">
+\[
+v_{\text{Laplace}} = \sqrt{\frac{1.41 \times 1.013 \times 10^5}{1.293}} \approx 332.5 \text{ m/s}
+\]
+</div>
+<div class="insightbox">
+Laplace's theoretical value of \( 332.5 \text{ m/s} \) matches the experimentally measured velocity (\( 332 \text{ m/s} \)) with remarkable precision, fully validating the adiabatic nature of acoustic waves.
+</div>
+</section>
+
+<section>
+<h2>Thermodynamic Justification for Adiabatic Acoustic Propagation</h2>
+<p>
+Why is sound propagation strictly adiabatic rather than isothermal?
+</p>
+<div class="concept-box">
+<ol>
+<li><strong>High Frequency of Acoustic Oscillations:</strong> The compression and rarefaction cycles occur extremely rapidly (hundreds to thousands of times per second). There is virtually no time for heat to flow between adjacent compressed and rarefied air layers.</li>
+<li><strong>Poor Thermal Conductivity of Gases:</strong> Air and gases in general are extremely poor thermal conductors. The thermal diffusion time over a distance of half a wavelength (\( \lambda / 2 \)) is vastly larger than the wave oscillation period (\( T \)).</li>
+</ol>
+</div>
+</section>
+
+<section>
+<h2>Ideal Gas Formula v = sqrt(gamma R T / M)</h2>
+<p>
+From the ideal gas equation of state:
+</p>
+<div class="math-block">
+\[
+P V = n R T = \left( \frac{m}{M} \right) R T \implies P = \left( \frac{m}{V} \right) \frac{R T}{M} = \frac{\rho R T}{M}
+\]
+\[
+\frac{P}{\rho} = \frac{R T}{M}
+\]
+</div>
+<p>
+Substituting \( \frac{P}{\rho} = \frac{R T}{M} \) into Laplace's formula:
+</p>
+<div class="model-box">
+<strong>Speed of Sound in an Ideal Gas:</strong>
+\[
+v = \sqrt{\frac{\gamma R T}{M}}
+\]
+</div>
+<p>
+where:
+</p>
+<ul>
+<li>\( \gamma \): Adiabatic index (\( 5/3 \) for monoatomic, \( 7/5 \) for diatomic).</li>
+<li>\( R \): Universal gas constant (\( 8.314 \text{ J/(mol}\cdot\text{K)} \)).</li>
+<li>\( T \): <strong>Absolute temperature in Kelvin (K)</strong>.</li>
+<li>\( M \): Molar mass of the gas \([\text{kg/mol}]\).</li>
+</ul>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

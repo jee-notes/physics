@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interference of Sound Waves | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Sound Waves
+</a>
+</nav>
+
+<h1>Interference of Sound Waves & Quincke's Tube</h1>
+<p class="subtitle">
+Acoustic superposition, constructive and destructive path conditions, boundary phase reflections, and Quincke's interferometer.
+</p>
+
+<section>
+<h2>Principle of Acoustic Superposition</h2>
+<p>
+When two or more coherent sound waves travel simultaneously through the same elastic medium, the net acoustic disturbance at any point in space and time is the linear superposition of the individual waves.
+</p>
+<div class="model-box">
+<strong>Acoustic Superposition:</strong>
+\[
+\Delta P_{\text{net}}(x, t) = \Delta P_1(x, t) + \Delta P_2(x, t)
+\]
+\[
+s_{\text{net}}(x, t) = s_1(x, t) + s_2(x, t)
+\]
+</div>
+<p>
+For two harmonic sound waves with mutual phase difference \( \phi \):
+</p>
+<div class="math-block">
+\[
+\Delta P_{\text{net}} = \sqrt{\Delta P_1^2 + \Delta P_2^2 + 2\Delta P_1 \Delta P_2 \cos\phi}
+\]
+\[
+I_{\text{net}} = I_1 + I_2 + 2\sqrt{I_1 I_2} \cos\phi
+\]
+</div>
+</section>
+
+<section>
+<h2>Constructive and Destructive Interference Conditions</h2>
+<p>
+The resultant acoustic intensity is modulated by the path difference \( \Delta x \) and phase difference \( \phi = \frac{2\pi}{\lambda} \Delta x \):
+</p>
+
+<h3>1. Constructive Interference (Loud Sound / Maxima)</h3>
+<p>
+Occurs when the superposing sound waves arrive in phase (\( \cos\phi = +1 \)):
+</p>
+<div class="model-box">
+\[
+\text{Phase Difference: } \phi = 2n\pi \quad (n = 0, 1, 2, \dots)
+\]
+\[
+\text{Path Difference: } \Delta x = n\lambda
+\]
+\[
+I_{\text{max}} = \left( \sqrt{I_1} + \sqrt{I_2} \right)^2 \quad (\text{For } I_1 = I_2 = I_0 \implies I_{\text{max}} = 4I_0)
+\]
+</div>
+
+<h3>2. Destructive Interference (Silence / Minima)</h3>
+<p>
+Occurs when the superposing sound waves arrive completely out of phase (\( \cos\phi = -1 \)):
+</p>
+<div class="model-box">
+\[
+\text{Phase Difference: } \phi = (2n + 1)\pi \quad (n = 0, 1, 2, \dots)
+\]
+\[
+\text{Path Difference: } \Delta x = (2n + 1)\frac{\lambda}{2}
+\]
+\[
+I_{\text{min}} = \left( \sqrt{I_1} - \sqrt{I_2} \right)^2 \quad (\text{For } I_1 = I_2 = I_0 \implies I_{\text{min}} = 0)
+\]
+</div>
+</section>
+
+<section>
+<h2>Phase Shifts at Acoustic Boundaries (Open vs Closed Ends)</h2>
+<p>
+When sound waves reflect from boundaries, the nature of the phase shift depends fundamentally on whether we track the <strong>Displacement Wave</strong> or the <strong>Pressure Wave</strong>:
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Boundary Type</th>
+<th>Displacement Wave \( s(x,t) \)</th>
+<th>Excess Pressure Wave \( \Delta P(x,t) \)</th>
+<th>Boundary Nature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rigid Closed End</strong> (Rigid Wall / Closed Pipe)</td>
+<td>Particles cannot move: <strong>Displacement Node (\( s = 0 \))</strong>.<br>Reflects with <strong>\( \pi \) phase change</strong>.</td>
+<td>Pressure variation is maximized: <strong>Pressure Antinode (\( \Delta P = \pm \Delta P_0 \))</strong>.<br>Reflects with <strong>\( 0 \) phase change</strong>.</td>
+<td>Acoustically Denser Boundary</td>
+</tr>
+<tr>
+<td><strong>Open End</strong> (Open Pipe to Free Atmosphere)</td>
+<td>Particles oscillate with maximum amplitude: <strong>Displacement Antinode</strong>.<br>Reflects with <strong>\( 0 \) phase change</strong>.</td>
+<td>Pressure is clamped to ambient atmospheric pressure: <strong>Pressure Node (\( \Delta P = 0 \))</strong>.<br>Reflects with <strong>\( \pi \) phase change</strong>.</td>
+<td>Acoustically Rarer Boundary</td>
+</tr>
+</tbody>
+</table>
+
+<div class="insightbox">
+Remember: A <strong>Displacement Node is always a Pressure Antinode</strong>, and a <strong>Displacement Antinode is always a Pressure Node</strong>!
+</div>
+</section>
+
+<section>
+<h2>Quincke's Tube Experiment and Path Difference Measurements</h2>
+<p>
+<strong>Quincke's Tube</strong> is an acoustic interferometer used to demonstrate interference of sound waves and accurately measure the speed of sound.
+</p>
+
+<div class="diagram">
+<svg width="720" height="220" viewBox="0 0 720 220">
+  <!-- Sound Source -->
+  <circle cx="80" cy="110" r="25" fill="#f1f5f9" stroke="#1f2937" stroke-width="2"/>
+  <text x="65" y="115" font-size="11" font-weight="bold" fill="#1f2937">Source S</text>
+
+  <!-- Fixed Path A (Top) -->
+  <path d="M 105 110 L 160 110 L 160 40 L 560 40 L 560 110 L 615 110" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <text x="320" y="30" font-size="13" font-weight="bold" fill="#2563eb">Fixed Path A (Length L_1)</text>
+
+  <!-- Sliding Path B (Bottom) -->
+  <path d="M 160 110 L 160 180 L 560 180 L 560 110" fill="none" stroke="#059669" stroke-width="4"/>
+  <text x="300" y="200" font-size="13" font-weight="bold" fill="#059669">Sliding Path B (Length L_2)</text>
+
+  <!-- Slider adjustment arrows -->
+  <line x1="560" y1="180" x2="620" y2="180" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3"/>
+  <text x="630" y="185" font-size="12" font-weight="bold" fill="#ef4444">&Delta;d (Extension)</text>
+
+  <!-- Detector / Earpiece -->
+  <circle cx="640" cy="110" r="25" fill="#f1f5f9" stroke="#1f2937" stroke-width="2"/>
+  <text x="625" y="115" font-size="11" font-weight="bold" fill="#1f2937">Detector D</text>
+</svg>
+</div>
+
+<p>
+<strong>Operating Principle:</strong>
+</p>
+<ol>
+<li>Sound from source \( S \) splits equally into two branches: fixed tube \( A \) and sliding adjustable tube \( B \).</li>
+<li>The two waves recombine at detector \( D \). When the sliding tube is pulled out by a distance \( d \), the path length of branch \( B \) increases by \( 2d \) (since the sound travels forward and backward through the extended section):
+\[
+\Delta x = 2d
+\]
+</li>
+<li>As the tube is continuously pulled out, the sound at \( D \) alternates between intense loudness (maxima) and complete silence (minima).</li>
+</ol>
+
+<div class="model-box">
+<strong>Acoustic Wavelength from Quincke's Tube:</strong>
+If the sliding tube is displaced by distance \( d \) between two consecutive intensity maxima (or two consecutive minima):
+\[
+2d = \lambda \implies \lambda = 2d
+\]
+If moved between a consecutive maximum and minimum:
+\[
+2d = \frac{\lambda}{2} \implies \lambda = 4d
+\]
+\[
+\text{Speed of Sound: } v = f \lambda = 4 f d
+\]
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

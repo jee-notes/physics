@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Factors Affecting Speed of Sound | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-speed-of-sound.html" class="back-btn">
+<span>&larr;</span> Back to Speed of Sound
+</a>
+</nav>
+
+<h1>Environmental Factors Affecting Speed of Sound</h1>
+<p class="subtitle">
+Impact of pressure, absolute temperature, relative humidity, wind drift, and molecular composition.
+</p>
+
+<section>
+<h2>Effect of Pressure at Constant Temperature</h2>
+<p>
+From Laplace's formula, the speed of sound is given by \( v = \sqrt{\frac{\gamma P}{\rho}} \).
+</p>
+<p>
+According to Boyle's Law, at a constant temperature \( T \), the pressure of an ideal gas is directly proportional to its density:
+</p>
+<div class="math-block">
+\[
+\frac{P}{\rho} = \frac{R T}{M} = \text{Constant}
+\]
+</div>
+<p>
+If atmospheric pressure is doubled or halved while the temperature remains fixed, the gas density \( \rho \) adjusts proportionally by the exact same factor, leaving the ratio \( P/\rho \) unchanged.
+</p>
+<div class="model-box">
+<strong>Effect of Pressure:</strong>
+At constant temperature, <strong>change in pressure has NO effect</strong> on the speed of sound in a gas.
+</div>
+</section>
+
+<section>
+<h2>Effect of Temperature and Temperature Coefficient</h2>
+<p>
+For a given gas of fixed molar mass \( M \) and adiabatic index \( \gamma \), the speed of sound is directly proportional to the square root of the <strong>absolute temperature (\( T \))</strong> in Kelvin:
+</p>
+<div class="model-box">
+\[
+v \propto \sqrt{T} \implies \frac{v_1}{v_2} = \sqrt{\frac{T_1}{T_2}}
+\]
+</div>
+
+<h3>Temperature Coefficient of Sound Speed</h3>
+<p>
+Let \( v_0 \) be the speed of sound at \( 0^\circ\text{C} \) (\( 273.15 \text{ K} \)), and \( v_t \) be the speed at temperature \( t^\circ\text{C} \) (\( 273.15 + t \text{ K} \)):
+</p>
+<div class="math-block">
+\[
+\frac{v_t}{v_0} = \sqrt{\frac{273.15 + t}{273.15}} = \left( 1 + \frac{t}{273.15} \right)^{1/2}
+\]
+</div>
+<p>
+Using the binomial expansion for \( t \ll 273.15 \):
+</p>
+<div class="math-block">
+\[
+v_t \approx v_0 \left( 1 + \frac{1}{2}\frac{t}{273.15} \right) = v_0 + \left( \frac{v_0}{546.3} \right) t
+\]
+</div>
+<p>
+Substituting \( v_0 \approx 332 \text{ m/s} \):
+</p>
+<div class="model-box">
+<strong>Linear Temperature Approximation:</strong>
+\[
+v_t \approx v_0 + 0.61 \, t \quad (\text{where } t \text{ is in } ^\circ\text{C})
+\]
+</div>
+<div class="concept-box">
+The speed of sound in air increases by approximately <strong>\( 0.61 \text{ m/s} \) for every \( 1^\circ\text{C} \) rise in temperature</strong>.
+</div>
+</section>
+
+<section>
+<h2>Effect of Humidity (Moist Air vs Dry Air)</h2>
+<p>
+Water vapor has a molar mass of \( M_{\text{H}_2\text{O}} \approx 18 \text{ g/mol} \), whereas dry air (predominantly \( \text{N}_2 \) and \( \text{O}_2 \)) has an average effective molar mass of \( M_{\text{dry}} \approx 28.8 \text{ g/mol} \).
+</p>
+<p>
+When humidity increases, lighter water vapor molecules displace heavier nitrogen and oxygen molecules, reducing the effective average density of the air mixture:
+</p>
+<div class="math-block">
+\[
+\rho_{\text{moist}} < \rho_{\text{dry}}
+\]
+</div>
+<p>
+Since \( v = \sqrt{\frac{\gamma P}{\rho}} \):
+</p>
+<div class="model-box">
+\[
+v_{\text{moist}} > v_{\text{dry}}
+\]
+</div>
+<div class="insightbox">
+Sound travels <strong>faster in humid (moist) air</strong> than in dry air at the same temperature and pressure. That is why sounds are heard more clearly and travel faster on humid days or over water surfaces.
+</div>
+</section>
+
+<section>
+<h2>Effect of Wind Velocity and Medium Drift</h2>
+<p>
+Because sound waves propagate through the medium, any bulk translational motion of the medium (wind) carries the sound wavefronts with it.
+</p>
+
+<div class="diagram">
+<svg width="720" height="180" viewBox="0 0 720 180">
+  <defs>
+    <marker id="wArr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <!-- Sound Vector v -->
+  <line x1="120" y1="90" x2="380" y2="90" stroke="#2563eb" stroke-width="3" marker-end="url(#wArr)"/>
+  <text x="220" y="80" font-size="14" font-weight="bold" fill="#2563eb">Sound Velocity v</text>
+
+  <!-- Wind Vector w at angle theta -->
+  <line x1="380" y1="90" x2="520" y2="40" stroke="#059669" stroke-width="3" marker-end="url(#wArr)"/>
+  <text x="440" y="55" font-size="13" font-weight="bold" fill="#059669">Wind w</text>
+
+  <!-- Resultant effective vector -->
+  <line x1="120" y1="90" x2="520" y2="40" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="280" y="140" font-size="13" font-weight="bold" fill="#ef4444">v_eff = v + w cos&theta;</text>
+</svg>
+</div>
+
+<p>
+If wind blows with speed \( w \) at an angle \( \theta \) relative to the direction of sound propagation:
+</p>
+<div class="model-box">
+<strong>Effective Speed of Sound:</strong>
+\[
+v_{\text{eff}} = v + w \cos\theta
+\]
+</div>
+<ul>
+<li><strong>Sound in the direction of wind (\( \theta = 0^\circ \)):</strong> \( v_{\text{eff}} = v + w \) (Speed increases).</li>
+<li><strong>Sound against the wind (\( \theta = 180^\circ \)):</strong> \( v_{\text{eff}} = v - w \) (Speed decreases).</li>
+<li><strong>Sound perpendicular to wind (\( \theta = 90^\circ \)):</strong> \( v_{\text{eff}} = \sqrt{v^2 - w^2} \).</li>
+</ul>
+</section>
+
+<section>
+<h2>Effect of Gas Composition and Molecular Weight</h2>
+<p>
+From \( v = \sqrt{\frac{\gamma R T}{M}} \), at identical temperatures:
+</p>
+<div class="model-box">
+\[
+v \propto \sqrt{\frac{\gamma}{M}}
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Comparison of Sound Speeds</h3>
+<p>
+<strong>Problem:</strong> Compare the speed of sound in Hydrogen gas (\( \text{H}_2 \), \( M = 2 \text{ g/mol} \), \( \gamma = 7/5 \)) and Helium gas (\( \text{He} \), \( M = 4 \text{ g/mol} \), \( \gamma = 5/3 \)) at the same temperature.
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<div class="math-block">
+\[
+\frac{v_{\text{H}_2}}{v_{\text{He}}} = \sqrt{\frac{\gamma_{\text{H}_2} / M_{\text{H}_2}}{\gamma_{\text{He}} / M_{\text{He}}}} = \sqrt{\frac{(7/5) / 2}{(5/3) / 4}} = \sqrt{\frac{7/10}{5/12}} = \sqrt{\frac{7 \times 12}{10 \times 5}} = \sqrt{\frac{84}{50}} = \sqrt{\frac{42}{25}} = \frac{\sqrt{42}}{5} \approx 1.296
+\]
+</div>
+<p>
+Sound travels approximately \( 30\% \) faster in Hydrogen than in Helium at the same temperature due to Hydrogen's lower molecular weight.
+</p>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

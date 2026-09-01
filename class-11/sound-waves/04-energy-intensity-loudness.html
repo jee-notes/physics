@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy, Intensity & Loudness | Sound Waves</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Sound Waves
+</a>
+</nav>
+
+<h1>Energy, Intensity and the Decibel Scale</h1>
+<p class="subtitle">
+Acoustic energy density, intensity formulations, geometric spreading laws, and logarithmic decibel scaling.
+</p>
+
+<section>
+<h2>Energy Density of Sound Waves</h2>
+<p>
+As a longitudinal sound wave travels through an elastic medium, the fluid elements simultaneously possess kinetic energy (due to longitudinal particle velocity \( v_p = \frac{\partial s}{\partial t} \)) and potential energy (due to elastic volumetric compression and excess pressure \( \Delta P \)).
+</p>
+
+<h3>1. Kinetic Energy Density (\( u_k \))</h3>
+<p>
+For a differential fluid element of volume \( dV = A \, dx \) and mass \( dm = \rho \, dV \):
+</p>
+<div class="math-block">
+\[
+u_k = \frac{dK}{dV} = \frac{1}{2}\rho \left( \frac{\partial s}{\partial t} \right)^2 = \frac{1}{2} \rho \omega^2 s_0^2 \cos^2(kx - \omega t)
+\]
+</div>
+
+<h3>2. Potential Energy Density (\( u_p \))</h3>
+<p>
+The work done in compressing the fluid volume against the bulk modulus is:
+</p>
+<div class="math-block">
+\[
+u_p = \frac{dU}{dV} = \frac{\Delta P^2}{2B} = \frac{1}{2} B k^2 s_0^2 \cos^2(kx - \omega t) = \frac{1}{2} \rho \omega^2 s_0^2 \cos^2(kx - \omega t)
+\]
+</div>
+
+<h3>3. Average Total Energy Density (\( \langle u \rangle \))</h3>
+<p>
+Summing \( u_k \) and \( u_p \) and taking the time average over one period (\( \langle \cos^2\theta \rangle = 1/2 \)):
+</p>
+<div class="model-box">
+<strong>Average Energy Density (\( \langle u \rangle \)):</strong>
+\[
+\langle u \rangle = \frac{1}{2} \rho \omega^2 s_0^2 = \frac{\Delta P_0^2}{2\rho v^2} = \frac{\Delta P_0^2}{2B} \quad [\text{SI Unit: J/m}^3]
+\]
+</div>
+</section>
+
+<section>
+<h2>Sound Intensity Formula I = Delta P0^2 / (2 rho v)</h2>
+<p>
+<strong>Sound Intensity (\( I \))</strong> is defined as the average acoustic energy flowing per unit time across a unit surface area perpendicular to the direction of sound propagation.
+</p>
+<div class="math-block">
+\[
+I = \langle u \rangle \cdot v
+\]
+</div>
+<p>
+Substituting the energy density expressions:
+</p>
+<div class="model-box">
+<strong>Acoustic Intensity Formulas:</strong>
+\[
+I = \frac{1}{2} \rho v \omega^2 s_0^2 = 2\pi^2 \rho v f^2 s_0^2
+\]
+\[
+I = \frac{\Delta P_0^2}{2\rho v} = \frac{\Delta P_0^2 v}{2B} \quad [\text{SI Unit: W/m}^2]
+\]
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>SI Unit</th>
+<th>Dimensional Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sound Intensity</strong></td>
+<td>\( I \)</td>
+<td>\( \text{W/m}^2 = \text{J/(s}\cdot\text{m}^2) \)</td>
+<td>\( [M^1 L^0 T^{-3}] \)</td>
+</tr>
+<tr>
+<td><strong>Characteristic Acoustic Impedance</strong></td>
+<td>\( Z = \rho v \)</td>
+<td>\( \text{kg/(m}^2\cdot\text{s)} = \text{Rayl} \)</td>
+<td>\( [M^1 L^{-2} T^{-1}] \)</td>
+</tr>
+<tr>
+<td><strong>Pressure Amplitude</strong></td>
+<td>\( \Delta P_0 \)</td>
+<td>\( \text{Pa} = \text{N/m}^2 \)</td>
+<td>\( [M^1 L^{-1} T^{-2}] \)</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<h2>Inverse Square Law for Point and Line Acoustic Sources</h2>
+<p>
+In an ideal, non-absorbing medium, acoustic power \( P \) emitted by a source spreads geometrically across expanding wavefronts:
+</p>
+
+<h3>1. Isotropic Point Source (Spherical Wavefronts)</h3>
+<p>
+A point source emits sound uniformly in all directions over a spherical surface of area \( A = 4\pi r^2 \):
+</p>
+<div class="model-box">
+\[
+I(r) = \frac{P_{\text{source}}}{4\pi r^2} \propto \frac{1}{r^2}
+\]
+\[
+\text{Amplitude: } s_0(r) \propto \frac{1}{r}, \quad \Delta P_0(r) \propto \frac{1}{r}
+\]
+</div>
+
+<h3>2. Line Source (Cylindrical Wavefronts)</h3>
+<p>
+A long, uniform line source (such as a busy highway or long vibrating wire) emits cylindrical wavefronts of area \( A = 2\pi r L \):
+</p>
+<div class="model-box">
+\[
+I(r) = \frac{P/L}{2\pi r} \propto \frac{1}{r}
+\]
+\[
+\text{Amplitude: } s_0(r) \propto \frac{1}{\sqrt{r}}, \quad \Delta P_0(r) \propto \frac{1}{\sqrt{r}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Loudness, Weber-Fechner Law, and the Decibel (dB) Scale</h2>
+<p>
+<strong>Loudness (\( L \))</strong> is the subjective physiological sensation of sound magnitude perceived by the human auditory system. According to the <strong>Weber-Fechner Law</strong>, the physiological sensation is proportional to the logarithm of the physical stimulus intensity:
+</p>
+<div class="math-block">
+\[
+L \propto \log_{10} I
+\]
+</div>
+
+<h3>The Decibel (dB) Sound Level Scale</h3>
+<p>
+The <strong>Sound Level (\( \beta \))</strong> of a sound wave of intensity \( I \) is defined logarithmically relative to the reference threshold of human hearing (\( I_0 \)):
+</p>
+<div class="model-box">
+<strong>Sound Intensity Level in Decibels:</strong>
+\[
+\beta = 10 \log_{10} \left( \frac{I}{I_0} \right) \quad [\text{dB}]
+\]
+</div>
+<p>
+where \( I_0 = 10^{-12} \text{ W/m}^2 \) is the standard <strong>Threshold of Hearing</strong> at \( 1000 \text{ Hz} \).
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Acoustic Environment</th>
+<th>Intensity \( I \, (\text{W/m}^2) \)</th>
+<th>Sound Level \( \beta \, (\text{dB}) \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threshold of Hearing</td>
+<td>\( 10^{-12} \)</td>
+<td>\( 0 \text{ dB} \)</td>
+</tr>
+<tr>
+<td>Quiet Whisper (1 m)</td>
+<td>\( 10^{-10} \)</td>
+<td>\( 20 \text{ dB} \)</td>
+</tr>
+<tr>
+<td>Normal Conversation</td>
+<td>\( 10^{-6} \)</td>
+<td>\( 60 \text{ dB} \)</td>
+</tr>
+<tr>
+<td>Heavy Traffic / Vacuum Cleaner</td>
+<td>\( 10^{-4} \)</td>
+<td>\( 80 \text{ dB} \)</td>
+</tr>
+<tr>
+<td>Threshold of Pain</td>
+<td>\( 1.0 \)</td>
+<td>\( 120 \text{ dB} \)</td>
+</tr>
+</tbody>
+</table>
+
+<div class="concept-box">
+<strong>Useful Decibel Relationships:</strong>
+<ul>
+<li>If sound intensity doubles (\( I \to 2I \)): \( \Delta\beta = 10\log_{10}(2) \approx \mathbf{+3.01 \text{ dB}} \).</li>
+<li>If sound intensity increases by a factor of 10 (\( I \to 10I \)): \( \Delta\beta = 10\log_{10}(10) = \mathbf{+10 \text{ dB}} \).</li>
+<li>If sound intensity increases by a factor of 100 (\( I \to 100I \)): \( \Delta\beta = \mathbf{+20 \text{ dB}} \).</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Sound Level Addition for Incoherent and Coherent Sources</h2>
+
+<h3>1. Superposition of Incoherent Sources (Independent Sounds)</h3>
+<p>
+When multiple independent, random sound sources (such as multiple people speaking or independent engines) sound simultaneously, their physical intensities add directly:
+</p>
+<div class="math-block">
+\[
+I_{\text{total}} = I_1 + I_2 + \dots + I_n = \sum_{i=1}^n I_i
+\]
+</div>
+<p>
+For \( n \) identical, independent sources each having sound level \( \beta_1 \):
+</p>
+<div class="model-box">
+\[
+\beta_n = 10 \log_{10}\left( \frac{n I_1}{I_0} \right) = \beta_1 + 10 \log_{10}(n)
+\]
+</div>
+
+<div class="examplebox">
+<h3>Solved JEE Problem: Decibel Addition</h3>
+<p>
+<strong>Problem:</strong> A single person speaking normally produces a sound level of \( 60 \text{ dB} \) at a certain distance. If \( 100 \) identical people speak simultaneously from the same location, what is the resulting sound level?
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<div class="math-block">
+\[
+\beta_{100} = \beta_1 + 10\log_{10}(100) = 60 + 10(2) = 60 + 20 = 80 \text{ dB}
+\]
+</div>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

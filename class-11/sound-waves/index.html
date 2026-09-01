@@ -1,155 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sound Waves | JEE Physics Notes</title>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-
-    <style>
-        :root { --primary: #2c3e50; --secondary: #9b59b6; --accent: #2980b9; --bg: #fdfdfd; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: var(--bg); margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2 { color: var(--primary); }
-        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 10px; text-align: center; }
-        h2 { border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
-        .insightbox { background: #f4ecf7; border-left: 5px solid var(--secondary); padding: 20px; margin: 25px 0; border-radius: 0 8px 8px 0; font-style: italic; }
-        nav a { text-decoration: none; color: var(--accent); font-weight: bold; }
-        .formula-block { background: #f8f9fa; border: 1px solid #e1e4e8; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: center; }
-        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.9rem; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sound Waves | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
-
 <div class="container">
-    <nav><a href="../../index.html">← Back to Syllabus</a></nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
 
-    <h1>Sound Waves</h1>
-    <p style="text-align: center;"><em>Longitudinal waves in elastic media.</em></p>
+<h1>Sound Waves</h1>
+<p class="subtitle">
+Longitudinal mechanical compressional waves, acoustic pressure dynamics, organ pipes, beats, and Doppler effect.
+</p>
 
-    <section>
-        <h2>1. Nature of Sound Waves</h2>
-        <p>
-            Sound waves are <strong>longitudinal mechanical waves</strong>
-            that propagate through a material medium.
-        </p>
-
-        <ul>
-            <li>Require a medium</li>
-            <li>Cannot propagate in vacuum</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>2. Compressional Waves</h2>
-        <ul>
-            <li>Compressions → high pressure regions</li>
-            <li>Rarefactions → low pressure regions</li>
-        </ul>
-
-        <div class="insightbox">
-            Sound propagation is pressure oscillation,
-            not particle transport.
-        </div>
-    </section>
-
-    <section>
-        <h2>3. Speed of Sound</h2>
-
-        <div class="formula-block">
-            \[
-            v = \sqrt{\frac{E}{\rho}}
-            \]
-        </div>
-
-        <ul>
-            <li>Solids: Young’s modulus</li>
-            <li>Liquids: Bulk modulus</li>
-            <li>Gases: Adiabatic bulk modulus</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>4. Speed of Sound in Gases</h2>
-
-        <div class="formula-block">
-            \[
-            v = \sqrt{\frac{\gamma RT}{M}}
-            \]
-        </div>
-
-        <div class="insightbox">
-            Speed of sound in gases
-            depends on temperature, not pressure.
-        </div>
-    </section>
-
-    <section>
-        <h2>5. Intensity & Loudness</h2>
-
-        <div class="formula-block">
-            \[
-            I = \frac{P}{A}
-            \]
-        </div>
-
-        <ul>
-            <li>Intensity ∝ amplitude²</li>
-            <li>Loudness is subjective</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>6. Doppler Effect</h2>
-
-        <div class="formula-block">
-            \[
-            f' = f \frac{v \pm v_o}{v \mp v_s}
-            \]
-        </div>
-
-        <ul>
-            <li>Observed frequency differs due to relative motion</li>
-        </ul>
-
-        <div class="insightbox">
-            Doppler effect arises from
-            changing wavefront spacing.
-        </div>
-    </section>
-
-    <section>
-        <h2>7. Standing Sound Waves</h2>
-        <ul>
-            <li>Open pipes → antinode at ends</li>
-            <li>Closed pipes → node at closed end</li>
-        </ul>
-
-        <div class="formula-block">
-            Open pipe:
-            \[
-            f_n = \frac{nv}{2L}
-            \]
-        </div>
-
-        <div class="formula-block">
-            Closed pipe:
-            \[
-            f_n = \frac{nv}{4L}
-            \quad (n = 1,3,5\dots)
-            \]
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K | Managed via GitHub Pages</p>
-    </footer>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Sound represents the primary auditory medium through which information and acoustic energy travel in our everyday physical environment. Fundamentally, a <strong>sound wave</strong> is a longitudinal mechanical wave that propagates through an elastic medium (solid, liquid, or gas) via collective, coupled oscillations of the constituent molecules parallel to the direction of energy propagation.
+</p>
+<p>
+Unlike transverse waves on a string where particles oscillate perpendicular to the wave velocity and require shear elasticity, sound waves propagate via alternating spatial variations in volume, density, and pressure. When a vibrating source (such as a tuning fork prong, loudspeaker cone, or vibrating vocal cord) moves forward, it compresses the adjacent fluid layer, forming a <strong>compression</strong> (region of high density and pressure). When it moves backward, the fluid expands into the rarefied space, forming a <strong>rarefaction</strong> (region of low density and pressure).
+</p>
+<div class="insightbox">
+Sound propagation is fundamentally a traveling pressure and density oscillation in an elastic medium, not a net translational migration of air particles.
 </div>
+</section>
 
+<section>
+<h2>Nature of Longitudinal Compressional Waves</h2>
+<p>
+Because fluids (liquids and gases) lack shear rigidity (shear modulus \( \eta = 0 \)), transverse mechanical waves cannot propagate through their interior bulk. Fluids can, however, resist volume changes and compressions through their <strong>Bulk Modulus (\( B \))</strong>.
+</p>
+<p>
+Consequently, sound waves inside fluids are strictly <strong>longitudinal</strong>. In solids, which possess both volume elasticity (Bulk Modulus \( B \)) and shear elasticity (Shear Modulus \( \eta \)), sound can propagate both as longitudinal compressional waves and as transverse shear waves.
+</p>
+<div class="concept-box">
+Mechanical sound waves strictly require a physical material medium possessing both <strong>Elasticity</strong> (Bulk Modulus \( B \)) and <strong>Inertia</strong> (Mass Density \( \rho \)). Sound cannot propagate through an absolute vacuum.
+</div>
+</section>
+
+<section>
+<h2>Displacement and Pressure Formulations</h2>
+<p>
+A sound wave can be described equivalently using two distinct mathematical representations:
+</p>
+<ul>
+<li><strong>Longitudinal Displacement Wave \( s(x,t) \):</strong> Tracks the instantaneous longitudinal displacement of medium particles from their equilibrium positions:
+\[
+s(x,t) = s_0 \sin(kx - \omega t)
+\]
+</li>
+<li><strong>Excess Pressure Wave \( \Delta P(x,t) \):</strong> Tracks the local instantaneous deviation of pressure from ambient atmospheric pressure \( P_0 \):
+\[
+\Delta P(x,t) = \Delta P_0 \cos(kx - \omega t) = \Delta P_0 \sin\left(kx - \omega t + \frac{\pi}{2}\right)
+\]
+where the pressure amplitude is \( \Delta P_0 = B k s_0 = \rho v \omega s_0 \).
+</li>
+</ul>
+<div class="model-box">
+<strong>Fundamental Phase Shift:</strong>
+The acoustic pressure wave leads the displacement wave by a phase angle of \( \frac{\pi}{2} \) radians (\( 90^\circ \)). Points of zero displacement (displacement nodes) correspond to points of maximum pressure variation (pressure antinodes).
+</div>
+</section>
+
+<section>
+<h2>Speed of Sound and Thermodynamic Corrections</h2>
+<p>
+Newton originally formulated the speed of sound in fluids using an isothermal compression assumption (\( v = \sqrt{P/\rho} \)), which predicted a speed of \( \approx 280 \text{ m/s} \) in air at STP—underestimating the experimental value (\( 332 \text{ m/s} \)) by about \( 15\% \).
+</p>
+<p>
+Laplace resolved this historic discrepancy by recognizing that sound compressions and rarefactions occur so rapidly that negligible heat is conducted between adjacent layers. Sound propagation is strictly an <strong>adiabatic process</strong> governed by the adiabatic bulk modulus \( B_S = \gamma P \):
+</p>
+<div class="model-box">
+<strong>Laplace's Formula for Speed of Sound in Gases:</strong>
+\[
+v = \sqrt{\frac{\gamma P}{\rho}} = \sqrt{\frac{\gamma R T}{M}}
+\]
+</div>
+</section>
+
+<section>
+<h2>Acoustic Intensity, Organ Pipes, Beats & Doppler Shift</h2>
+<p>
+The study of sound encompasses diverse physical phenomena central to JEE Main and Advanced:
+</p>
+<ul class="points-list">
+<li><strong>Sound Intensity & Decibels:</strong> Acoustic power transmitted per unit area \( I = \frac{\Delta P_0^2}{2\rho v} \), and logarithmic loudness scaling \( \beta = 10\log_{10}(I/I_0) \).</li>
+<li><strong>Organ Pipes & Air Columns:</strong> Standing sound waves in open pipes (all harmonics \( f_n = \frac{nv}{2L} \)) and closed pipes (odd harmonics \( f_n = \frac{(2n-1)v}{4L} \)), along with end corrections.</li>
+<li><strong>Acoustic Beats:</strong> Periodic waxing and waning of sound intensity produced by the superposition of two waves with close frequencies (\( f_b = |f_1 - f_2| \)).</li>
+<li><strong>Doppler Effect:</strong> The apparent shift in observed acoustic frequency due to relative motion between source, observer, and medium.</li>
+</ul>
+</section>
+
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-nature-of-sound-waves.html">1. Nature of Sound Waves & Longitudinal Propagation</a>
+<a href="./02-mathematical-representation.html">2. Displacement & Pressure Wave Formulations</a>
+<a href="./03-speed-of-sound.html">3. Speed of Sound & Thermodynamic Corrections</a>
+<a href="./04-energy-intensity-loudness.html">4. Energy, Intensity and the Decibel Scale</a>
+<a href="./05-interference-of-sound-waves.html">5. Interference of Sound Waves & Quincke's Tube</a>
+<a href="./06-standing-waves-organ-pipes.html">6. Standing Waves in Organ Pipes & Air Columns</a>
+<a href="./07-beats-in-sound.html">7. Beats in Sound Waves & Tuning Fork Calibration</a>
+<a href="./08-doppler-effect.html">8. Doppler Effect in Sound Waves</a>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 </html>
