@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potential of Continuous Bodies | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./04-gravitational-potential-and-energy.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitational Potential & Energy
+        </a>
+    </nav>
+
+    <h1>Gravitational Potential of Continuous Bodies</h1>
+    <p class="subtitle">
+        Integration techniques and exact potential profiles for spherical shells, solid spheres, rings, and discs.
+    </p>
+
+    <section>
+        <h2>Gravitational Potential of Uniform Spherical Shell</h2>
+        <p>
+            Consider a thin spherical shell of mass \( M \) and radius \( R \). The gravitational potential at any distance \( r \) from its center is derived using \( V(r) = -\int_\infty^r I(r') dr' \):
+        </p>
+
+        <div class="model-box">
+            <h3>1. Outside the Shell (\( r \ge R \))</h3>
+            \[
+            V_{\text{out}}(r) = -\int_\infty^r \left(\frac{GM}{{r'}^2}\right) dr' = -\frac{GM}{r}
+            \]
+            <hr>
+            <h3>2. On the Surface (\( r = R \))</h3>
+            \[
+            V_{\text{surface}} = -\frac{GM}{R}
+            \]
+            <hr>
+            <h3>3. Inside the Shell (\( r < R \))</h3>
+            <p>
+                Since \( I_{\text{in}} = 0 \), \( \frac{dV}{dr} = 0 \), meaning the potential inside a hollow shell is completely constant and equals its surface value:
+            </p>
+            \[
+            V_{\text{in}}(r) = -\frac{GM}{R} = \text{Constant}
+            \]
+        </div>
+
+        <div class="insightbox">
+            No work is done in moving any test mass from one point inside a hollow spherical shell to another point inside it, because the potential is uniform throughout the interior cavity.
+        </div>
+    </section>
+
+    <section>
+        <h2>Gravitational Potential of Uniform Solid Sphere</h2>
+        <p>
+            Consider a solid sphere of uniform mass \( M \) and radius \( R \).
+        </p>
+
+        <div class="model-box">
+            <h3>1. Outside the Sphere (\( r \ge R \))</h3>
+            \[
+            V_{\text{out}}(r) = -\frac{GM}{r}
+            \]
+            <hr>
+            <h3>2. On the Surface (\( r = R \))</h3>
+            \[
+            V_{\text{surface}} = -\frac{GM}{R}
+            \]
+            <hr>
+            <h3>3. Inside the Sphere (\( r \le R \))</h3>
+            <p>
+                Integrating the piecewise field from infinity to an internal radius \( r \):
+            </p>
+            \[
+            V_{\text{in}}(r) = V(R) - \int_R^r I_{\text{in}}(r') dr' = -\frac{GM}{R} - \int_R^r \frac{GM}{R^3} r' dr'
+            \]
+            \[
+            V_{\text{in}}(r) = -\frac{GM}{R} - \frac{GM}{2R^3} (r^2 - R^2) = -\frac{GM}{2R^3} \left[ 2R^2 + r^2 - R^2 \right]
+            \]
+            \[
+            V_{\text{in}}(r) = -\frac{GM}{2R^3} (3R^2 - r^2)
+            \]
+            <p><strong>At the Center of the Sphere (\( r = 0 \)):</strong></p>
+            \[
+            V_{\text{center}} = -\frac{3GM}{2R} = 1.5 \, V_{\text{surface}}
+            \]
+        </div>
+
+        <div class="concept-box">
+            <strong>Deepest Potential Well:</strong> The gravitational potential reaches its minimum (most negative) value at the very center of the sphere: \( V_{\text{center}} = \frac{3}{2} V_{\text{surface}} \).
+        </div>
+    </section>
+
+    <section>
+        <h2>Gravitational Potential Along the Axis of a Uniform Ring and Disc</h2>
+
+        <div class="model-box">
+            <h3>1. Axis of a Uniform Ring of Mass \( M \) and Radius \( R \)</h3>
+            <p>
+                Every element \( dm \) of the ring is at the same distance \( s = \sqrt{R^2 + x^2} \) from an axial point \( P \) at distance \( x \) from the center. Since potential is a scalar:
+            </p>
+            \[
+            V_{\text{ring}}(x) = - \int \frac{G dm}{\sqrt{R^2 + x^2}} = -\frac{G}{\sqrt{R^2 + x^2}} \int dm = -\frac{GM}{\sqrt{R^2 + x^2}}
+            \]
+            <p>At the center (\( x = 0 \)): \( V_{\text{center}} = -\frac{GM}{R} \).</p>
+            <hr>
+            <h3>2. Axis of a Uniform Disc of Mass \( M \), Radius \( R \), and Surface Density \( \sigma = \frac{M}{\pi R^2} \)</h3>
+            <p>
+                Summing the potential contributions of concentric elemental rings of radius \( y \) and area \( 2\pi y dy \):
+            </p>
+            \[
+            V_{\text{disc}}(x) = -\int_0^R \frac{G (\sigma 2\pi y dy)}{\sqrt{y^2 + x^2}} = -2\pi G \sigma \left[ \sqrt{y^2 + x^2} \right]_0^R
+            \]
+            \[
+            V_{\text{disc}}(x) = -2\pi G \sigma \left( \sqrt{R^2 + x^2} - x \right) = -\frac{2GM}{R^2} \left( \sqrt{R^2 + x^2} - x \right)
+            \]
+            <p>At the center of the disc (\( x = 0 \)): \( V_{\text{center}} = -2\pi G \sigma R = -\frac{2GM}{R} \).</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Graphical Representation of Potential vs Distance</h2>
+        <p>
+            Summary of potential profiles:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th>Center (\( r = 0 \))</th>
+                    <th>Inside Profile (\( r < R \))</th>
+                    <th>Surface (\( r = R \))</th>
+                    <th>Outside Profile (\( r > R \))</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Spherical Shell</strong></td>
+                    <td>\( -\frac{GM}{R} \)</td>
+                    <td>Constant (Flat line)</td>
+                    <td>\( -\frac{GM}{R} \)</td>
+                    <td>\( -\frac{GM}{r} \) (Hyperbolic increase toward 0)</td>
+                </tr>
+                <tr>
+                    <td><strong>Solid Sphere</strong></td>
+                    <td>\( -\frac{3GM}{2R} \)</td>
+                    <td>Parabolic curve: \( -\frac{GM}{2R^3}(3R^2 - r^2) \)</td>
+                    <td>\( -\frac{GM}{R} \)</td>
+                    <td>\( -\frac{GM}{r} \) (Hyperbolic increase toward 0)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="examplebox">
+            <h3>Example: Projection from Center of Earth</h3>
+            <p>
+                A particle is projected from the center of the Earth through a smooth diametrical tunnel with initial velocity \( v_0 \). What minimum velocity \( v_0 \) is required for the particle to reach infinity?
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            <p>By conservation of mechanical energy between the center (\( r=0 \)) and infinity (\( r=\infty \)):</p>
+            \[
+            E_i = E_f \implies \frac{1}{2}m v_0^2 + m V_{\text{center}} = 0 + 0
+            \]
+            \[
+            \frac{1}{2}m v_0^2 + m\left(-\frac{3GM}{2R}\right) = 0 \implies v_0^2 = \frac{3GM}{R}
+            \]
+            \[
+            v_0 = \sqrt{\frac{3GM}{R}} = \sqrt{\frac{3}{2}} \sqrt{\frac{2GM}{R}} = \sqrt{1.5} \, v_e \approx 1.225 \, v_e
+            \]
+            <p>The speed required from the center is \( \sqrt{1.5} \) times the surface escape speed.</p>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

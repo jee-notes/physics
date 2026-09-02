@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Velocity | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitation
+        </a>
+    </nav>
+
+    <h1>Escape Velocity</h1>
+    <p class="subtitle">
+        The threshold projection speed required for a projectile to overcome planetary gravitational binding.
+    </p>
+
+    <section>
+        <h2>Concept of Escape Velocity and Bound Systems</h2>
+        <p>
+            When a projectile of mass \( m \) is launched from a celestial body of mass \( M \) and radius \( R \), its total mechanical energy \( E = K + U \) dictates the nature of its trajectory:
+        </p>
+        <ul>
+            <li><strong>\( E < 0 \) (Bound State):</strong> The projectile does not have sufficient energy to reach infinity. It follows an elliptical or parabolic sub-orbital trajectory and falls back or remains in orbit.</li>
+            <li><strong>\( E = 0 \) (Parabolic Trajectory):</strong> The projectile just reaches infinity with zero residual kinetic energy (\( v_\infty = 0 \)). This is the critical threshold of escape.</li>
+            <li><strong>\( E > 0 \) (Hyperbolic Trajectory):</strong> The projectile escapes to infinity and retains a non-zero residual speed \( v_\infty > 0 \).</li>
+        </ul>
+        <div class="model-box">
+            <h3>Definition of Escape Velocity (\( v_e \))</h3>
+            <p>
+                <strong>Escape velocity</strong> is the minimum speed with which a body must be projected from a planet so that it completely overcomes the gravitational attraction of the planet and reaches infinity.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Derivation of Escape Velocity from Earth's Surface</h2>
+        <p>
+            Let a particle of mass \( m \) be projected with initial speed \( v_e \) from the surface of Earth (mass \( M \), radius \( R \)). Neglecting atmospheric drag, total mechanical energy is conserved:
+        </p>
+        \[
+        E_{\text{surface}} = K_i + U_i = \frac{1}{2}m v_e^2 - \frac{GMm}{R}
+        \]
+        <p>
+            At infinity (\( r \to \infty \)), the potential energy \( U_\infty = 0 \). For minimum escape speed, the particle just reaches infinity with \( K_\infty = 0 \):
+        </p>
+        \[
+        E_\infty = K_\infty + U_\infty = 0 + 0 = 0
+        \]
+        <p>Equating initial and final mechanical energy (\( E_{\text{surface}} = E_\infty \)):</p>
+        \[
+        \frac{1}{2}m v_e^2 - \frac{GMm}{R} = 0 \implies \frac{1}{2}m v_e^2 = \frac{GMm}{R}
+        \]
+
+        <div class="model-box">
+            <h3>Escape Speed Formula</h3>
+            \[
+            v_e = \sqrt{\frac{2GM}{R}} = \sqrt{2gR}
+            \]
+            <p>In terms of mean density \( \rho \) of the planet (\( M = \frac{4}{3}\pi R^3 \rho \)):</p>
+            \[
+            v_e = \sqrt{\frac{2G\left(\frac{4}{3}\pi R^3 \rho\right)}{R}} = R \sqrt{\frac{8\pi G \rho}{3}}
+            \]
+            <hr>
+            <h3>Numerical Value for Earth</h3>
+            <p>Taking \( g = 9.8 \, \text{m/s}^2 \) and \( R = 6.4 \times 10^6 \, \text{m} \):</p>
+            \[
+            v_e = \sqrt{2 \times 9.8 \times 6.4 \times 10^6} \approx 11.2 \times 10^3 \, \text{m/s} = 11.2 \, \text{km/s}
+            \]
+        </div>
+    </section>
+
+    <section>
+        <h2>Escape Velocity from a Given Height or Depth</h2>
+        
+        <div class="model-box">
+            <h3>1. Escape Velocity from an Altitude \( h \) Above Surface</h3>
+            <p>At radial distance \( r = R + h \):</p>
+            \[
+            \frac{1}{2}m v_e'^2 - \frac{GMm}{R+h} = 0 \implies v_e' = \sqrt{\frac{2GM}{R+h}} = v_e \sqrt{\frac{R}{R+h}}
+            \]
+            <hr>
+            <h3>2. Escape Velocity from a Depth \( d \) Below Surface</h3>
+            <p>Using the internal potential \( V_{\text{in}} = -\frac{GM}{2R^3}(3R^2 - r^2) \) with \( r = R - d \):</p>
+            \[
+            \frac{1}{2}m v_e''^2 + m V_{\text{in}}(R-d) = 0 \implies v_e'' = \sqrt{-2 V_{\text{in}}(R-d)} = \sqrt{\frac{GM}{R^3}\left[ 3R^2 - (R-d)^2 \right]}
+            \]
+            <p>From the exact center of Earth (\( d = R \)):</p>
+            \[
+            v_{e, \text{center}} = \sqrt{\frac{3GM}{R}} = \sqrt{1.5} \, v_e \approx 1.225 \, v_e \approx 13.7 \, \text{km/s}
+            \]
+        </div>
+    </section>
+
+    <section>
+        <h2>Independence of Escape Velocity on Projection Angle and Mass</h2>
+        <div class="concept-box">
+            <h3>Key Invariances of Escape Velocity</h3>
+            <ul>
+                <li><strong>Independent of Mass of Projectile:</strong> \( v_e \) is identical for a single hydrogen atom, a pebble, or a 100-ton spacecraft.</li>
+                <li><strong>Independent of Angle of Projection:</strong> Because energy is a scalar quantity and gravity is conservative, a projectile launched at any angle \( \theta \) with the horizontal (provided it does not collide with the planetary surface) will successfully escape to infinity if launched with \( v \ge v_e \).</li>
+                <li><strong>Residual Speed at Infinity (\( v_\infty \)):</strong> If launched with speed \( v > v_e \):
+                    \[
+                    \frac{1}{2}m v^2 - \frac{GMm}{R} = \frac{1}{2}m v_\infty^2 \implies v_\infty = \sqrt{v^2 - v_e^2}
+                    \]
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Black Holes and Schwarzschild Radius Concept</h2>
+        <p>
+            If a celestial body of mass \( M \) is compressed so intensely that its escape velocity equals or exceeds the speed of light (\( v_e \ge c \)), not even light can escape its gravitational field. Such an object is known as a <strong>Black Hole</strong>.
+        </p>
+        <p>
+            Setting \( v_e = c \) in the escape velocity equation:
+        </p>
+        \[
+        c = \sqrt{\frac{2GM}{R_s}} \implies R_s = \frac{2GM}{c^2}
+        \]
+
+        <div class="model-box">
+            <h3>Schwarzschild Radius (\( R_s \))</h3>
+            \[
+            R_s = \frac{2GM}{c^2}
+            \]
+            <p>
+                The boundary at radius \( R_s \) is called the <strong>event horizon</strong>. For the Earth (\( M \approx 6 \times 10^{24} \, \text{kg} \)), the Schwarzschild radius is:
+            </p>
+            \[
+            R_s = \frac{2(6.67 \times 10^{-11})(6 \times 10^{24})}{(3 \times 10^8)^2} \approx 8.9 \times 10^{-3} \, \text{m} \approx 9 \, \text{mm}
+            \]
+            <p>If Earth were crushed into a sphere smaller than a marble of radius 9 mm, it would become a black hole.</p>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

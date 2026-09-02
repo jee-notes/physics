@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceleration Due to Gravity | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitation
+        </a>
+    </nav>
+
+    <h1>Acceleration Due to Gravity</h1>
+    <p class="subtitle">
+        The acceleration experienced by a freely falling body under the influence of Earth's gravitational field.
+    </p>
+
+    <section>
+        <h2>Definition of Acceleration Due to Gravity</h2>
+        <p>
+            When a body of mass \( m \) is released near the surface of a celestial body (such as Earth), it experiences a downward gravitational force \( \vec{F}_g \). According to Newton's second law of motion (\( \vec{F} = m \vec{a} \)), this force imparts an acceleration to the body known as the <strong>acceleration due to gravity</strong>, denoted by \( \vec{g} \).
+        </p>
+        <div class="model-box">
+            \[
+            \vec{g} = \frac{\vec{F}_g}{m}
+            \]
+            <ul>
+                <li><strong>Nature:</strong> Vector quantity pointing toward the center of the planet.</li>
+                <li><strong>SI Unit:</strong> \(\text{m/s}^2\) (or equivalently \(\text{N/kg}\)).</li>
+                <li><strong>Dimensions:</strong> \([g] = [M^0 L^1 T^{-2}]\).</li>
+                <li><strong>Standard Standard Sea-Level Value (Earth):</strong> \( g_0 \approx 9.80665 \, \text{m/s}^2 \approx 9.81 \, \text{m/s}^2 \).</li>
+            </ul>
+        </div>
+        <div class="insightbox">
+            The acceleration due to gravity is <strong>independent of the mass, shape, size, or material composition</strong> of the falling object in vacuum. A feather and a heavy lead sphere fall with precisely the same acceleration under gravity alone, as demonstrated by Galileo's classic experiments.
+        </div>
+    </section>
+
+    <section>
+        <h2>Relation Between Universal Constant (G) and Surface Gravity (g)</h2>
+        <p>
+            Consider Earth as a uniform solid sphere of mass \( M \) and radius \( R \). By Newton's Shell Theorem, the gravitational force exerted on a test particle of mass \( m \) situated on the surface is:
+        </p>
+        \[
+        F_g = G \frac{M m}{R^2}
+        \]
+        <p>
+            Equating this gravitational force to the body's weight \( F_g = m g \):
+        </p>
+        \[
+        m g = G \frac{M m}{R^2} \implies g = \frac{GM}{R^2}
+        \]
+
+        <div class="model-box">
+            <h3>Surface Acceleration Formula</h3>
+            \[
+            g = \frac{GM}{R^2}
+            \]
+            <p>In terms of mean mass density \( \rho \) of the planet (\( M = \frac{4}{3}\pi R^3 \rho \)):</p>
+            \[
+            g = \frac{G \left(\frac{4}{3}\pi R^3 \rho\right)}{R^2} = \frac{4}{3}\pi G \rho R
+            \]
+        </div>
+
+        <div class="concept-box">
+            <strong>Key Scaling Relations:</strong>
+            <ul>
+                <li>If density \( \rho \) is constant: \( g \propto R \).</li>
+                <li>If mass \( M \) is constant: \( g \propto \frac{1}{R^2} \).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Factors Affecting Acceleration Due to Gravity</h2>
+        <p>
+            The value of \( g \) is not strictly constant across the surface or surroundings of Earth. It varies significantly due to four distinct physical mechanisms:
+        </p>
+        <ol>
+            <li><strong>Altitude (\( h \)):</strong> As one ascends above the surface, the distance from the Earth's center increases, causing \( g \) to decrease as \( 1/(R+h)^2 \).</li>
+            <li><strong>Depth (\( d \)):</strong> As one descends into a mine shaft, only the mass of the inner sphere of radius \( (R-d) \) contributes to gravity, causing \( g \) to decrease linearly to zero at the center.</li>
+            <li><strong>Rotation of the Earth (Latitude \( \lambda \)):</strong> Centrifugal effects in the rotating frame of reference reduce apparent gravity most at the equator and zero at the poles.</li>
+            <li><strong>Shape (Oblateness) of the Earth:</strong> Earth is an oblate spheroid flattened at the poles, making equatorial radius \( R_e \) about \( 21 \, \text{km} \) larger than polar radius \( R_p \), which makes \( g_{\text{pole}} > g_{\text{equator}} \).</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Detailed Variations of Gravity</h2>
+        <div class="chapter-list">
+            <a href="./02a-variation-with-altitude-and-depth.html">1. Variation of \( g \) with Altitude and Depth</a>
+            <a href="./02b-variation-with-rotation-and-shape.html">2. Variation of \( g \) due to Earth's Rotation & Shape</a>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

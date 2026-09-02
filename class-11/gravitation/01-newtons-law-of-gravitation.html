@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newton's Law of Gravitation | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitation
+        </a>
+    </nav>
+
+    <h1>Newton's Law of Gravitation</h1>
+    <p class="subtitle">
+        The fundamental inverse-square law describing the mutual attraction between point masses.
+    </p>
+
+    <section>
+        <h2>Universal Law of Gravitation Formulation</h2>
+        <p>
+            In 1687, Sir Isaac Newton published his universal law of gravitation in the <em>Philosophiae Naturalis Principia Mathematica</em>. The law asserts that every point mass in the universe attracts every other point mass along the straight line joining them.
+        </p>
+        <p>
+            The magnitude of this gravitational force \( F \) is directly proportional to the product of their inertial masses \( m_1 \) and \( m_2 \), and inversely proportional to the square of the distance \( r \) between their centers:
+        </p>
+
+        <div class="model-box">
+            <h3>Scalar Statement of Newton's Law</h3>
+            \[
+            F = G \frac{m_1 m_2}{r^2}
+            \]
+            <p>Where:</p>
+            <ul>
+                <li>\( F \) = Magnitude of the mutual attractive gravitational force (\(\text{N}\)).</li>
+                <li>\( m_1, m_2 \) = Inertial/gravitational masses of the interacting point particles (\(\text{kg}\)).</li>
+                <li>\( r \) = Center-to-center distance separating the two masses (\(\text{m}\)).</li>
+                <li>\( G \) = Universal gravitational constant.</li>
+            </ul>
+        </div>
+
+        <div class="insightbox">
+            Newton's law strictly applies to <strong>point particles</strong>. For extended spherical bodies with spherically symmetric mass distributions, Newton's Shell Theorem proves that they attract external objects as if all their mass were concentrated strictly at their geometric center.
+        </div>
+    </section>
+
+    <section>
+        <h2>Vector Form of Newton's Gravitational Law</h2>
+        <p>
+            Because force is a vector quantity, directional precision is critical for multi-particle problem solving. Let position vectors of particles with masses \( m_1 \) and \( m_2 \) be \( \vec{r}_1 \) and \( \vec{r}_2 \) relative to an arbitrary origin \( O \).
+        </p>
+        <p>
+            The displacement vector pointing from mass \( 1 \) to mass \( 2 \) is:
+        </p>
+        \[
+        \vec{r}_{12} = \vec{r}_2 - \vec{r}_1, \quad r = |\vec{r}_{12}|, \quad \hat{r}_{12} = \frac{\vec{r}_{12}}{r}
+        \]
+        <p>
+            The gravitational force \( \vec{F}_{21} \) exerted <strong>on mass 2 by mass 1</strong> is directed inward toward mass 1 (opposite to \( \hat{r}_{12} \)):
+        </p>
+
+        <div class="model-box">
+            \[
+            \vec{F}_{21} = -G \frac{m_1 m_2}{r^2} \hat{r}_{12} = -G \frac{m_1 m_2}{|\vec{r}_2 - \vec{r}_1|^3} (\vec{r}_2 - \vec{r}_1)
+            \]
+        </div>
+
+        <p>
+            Similarly, the force \( \vec{F}_{12} \) exerted on mass 1 by mass 2 is:
+        </p>
+        \[
+        \vec{F}_{12} = -G \frac{m_1 m_2}{r^2} \hat{r}_{21} = +G \frac{m_1 m_2}{|\vec{r}_2 - \vec{r}_1|^3} (\vec{r}_2 - \vec{r}_1)
+        \]
+
+        <div class="concept-box">
+            <strong>Newton's Third Law Verification:</strong>
+            \[
+            \vec{F}_{12} = -\vec{F}_{21}
+            \]
+            Gravitational forces always form an action-reaction pair: equal in magnitude, opposite in direction, act along the line connecting the particles, and act on different bodies simultaneously.
+        </div>
+    </section>
+
+    <section>
+        <h2>The Universal Gravitational Constant (G)</h2>
+        <p>
+            The constant \( G \) is a fundamental physical constant of nature. It was first accurately measured in the laboratory by <strong>Henry Cavendish</strong> in 1798 using a highly sensitive torsion balance (often referred to as "weighing the Earth").
+        </p>
+
+        <div class="model-box">
+            <h3>Value, Units and Dimensions of \( G \)</h3>
+            \[
+            G \approx 6.67430 \times 10^{-11} \, \text{N}\cdot\text{m}^2/\text{kg}^2 \quad (\text{or } \text{m}^3\cdot\text{kg}^{-1}\cdot\text{s}^{-2})
+            \]
+            <p>From \( F = G \frac{m_1 m_2}{r^2} \), we have \( G = \frac{F r^2}{m_1 m_2} \):</p>
+            \[
+            [G] = \frac{[F][L]^2}{[M]^2} = \frac{[M L T^{-2}][L^2]}{[M^2]} = [M^{-1} L^3 T^{-2}]
+            \]
+        </div>
+
+        <div class="insightbox">
+            The numerical value of \( G \) is extremely small (\(\sim 10^{-11}\)), which explains why we do not notice gravitational attraction between ordinary everyday objects (e.g., two 1 kg masses separated by 1 m exert a mutual force of only \( \approx 6.67 \times 10^{-11} \, \text{N} \)). Noticeable gravitational forces require at least one astronomical mass (such as Earth, \( M \approx 6 \times 10^{24} \, \text{kg} \)).
+        </div>
+    </section>
+
+    <section>
+        <h2>Principle of Superposition for Gravitational Forces</h2>
+        <p>
+            The gravitational interaction between any pair of particles is completely unaffected by the presence of other surrounding particles. Therefore, the net gravitational force \( \vec{F}_{\text{net}} \) acting on a test mass \( m_0 \) due to a system of \( N \) discrete point masses \( m_1, m_2, \ldots, m_N \) is the <strong>vector sum</strong> of the individual forces:
+        </p>
+
+        <div class="model-box">
+            \[
+            \vec{F}_{\text{net}} = \sum_{i=1}^{N} \vec{F}_{i} = -G m_0 \sum_{i=1}^{N} \frac{m_i}{|\vec{r}_0 - \vec{r}_i|^3} (\vec{r}_0 - \vec{r}_i)
+            \]
+        </div>
+
+        <div class="examplebox">
+            <h3>Example: Three Identical Masses at the Vertices of an Equilateral Triangle</h3>
+            <p>
+                Three equal point masses \( m \) are placed at the vertices of an equilateral triangle of side length \( a \). Find the magnitude of the net gravitational force on any one mass.
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            <p>
+                Let the target mass be at vertex \( A \). The other two masses at vertices \( B \) and \( C \) exert forces \( \vec{F}_1 \) and \( \vec{F}_2 \) directed along \( AB \) and \( AC \) respectively.
+            </p>
+            <p>
+                The magnitudes of both forces are equal:
+            </p>
+            \[
+            F_1 = F_2 = F_0 = \frac{G m^2}{a^2}
+            \]
+            <p>
+                The angle between \( \vec{F}_1 \) and \( \vec{F}_2 \) is \( \theta = 60^\circ \). Using the vector resultant formula:
+            </p>
+            \[
+            F_{\text{net}} = \sqrt{F_1^2 + F_2^2 + 2 F_1 F_2 \cos 60^\circ} = \sqrt{F_0^2 + F_0^2 + 2 F_0^2 \left(\frac{1}{2}\right)} = \sqrt{3} F_0
+            \]
+            \[
+            F_{\text{net}} = \sqrt{3} \frac{G m^2}{a^2}
+            \]
+            <p>The net force is directed along the angle bisector toward the centroid of the triangle.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Gravitational Force for Continuous Bodies & Cavity Problems</h2>
+        <p>
+            For a continuous mass distribution with volume mass density \( \rho(\vec{r}') \), the total gravitational force exerted on an external point mass \( m \) is obtained by integrating infinitesimal contributions \( dm = \rho(\vec{r}') dV' \):
+        </p>
+        \[
+        \vec{F} = -G m \int \frac{\rho(\vec{r}')}{|\vec{r} - \vec{r}'|^3} (\vec{r} - \vec{r}') dV'
+        \]
+
+        <h3>The Cavity Method (Superposition Technique)</h3>
+        <p>
+            When a spherical cavity is carved out of a uniform solid sphere of mass \( M \) and radius \( R \), the gravitational force on an external mass \( m \) can be evaluated without difficult integration by treating the cavity as a superposition of the original intact sphere and a negative mass sphere occupying the cavity region:
+        </p>
+
+        <div class="model-box">
+            \[
+            \vec{F}_{\text{net}} = \vec{F}_{\text{complete sphere}} - \vec{F}_{\text{removed mass sphere}}
+            \]
+        </div>
+
+        <div class="examplebox">
+            <h3>Example: Gravitational Force on a Point Mass near a Sphere with a Spherical Cavity</h3>
+            <p>
+                A solid uniform sphere of radius \( R \) and mass \( M \) has a spherical cavity of radius \( R/2 \) carved out such that the cavity's surface touches the outer surface and the center of the sphere. Find the gravitational force exerted on a point mass \( m \) placed at a distance \( d = 2R \) from the center of the original sphere along the line joining both centers (on the side of the cavity).
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            <p>
+                1. Mass of the original complete sphere = \( M \).
+            </p>
+            <p>
+                2. Volume of cavity of radius \( R/2 \) is \( V_{\text{cavity}} = \frac{4}{3}\pi (R/2)^3 = \frac{1}{8} V_{\text{total}} \). Thus, the mass of the removed sphere is:
+            </p>
+            \[
+            M_{\text{cav}} = \frac{M}{8}
+            \]
+            <p>
+                3. The center of the removed sphere is located at distance \( R/2 \) from the main center toward the test mass. Therefore, the distance from the center of the cavity to the test mass \( m \) is:
+            </p>
+            \[
+            d_{\text{cav}} = 2R - \frac{R}{2} = \frac{3R}{2}
+            \]
+            <p>
+                4. Applying superposition of forces:
+            </p>
+            \[
+            F_{\text{net}} = F_{\text{full}} - F_{\text{cav}} = \frac{G M m}{(2R)^2} - \frac{G (M/8) m}{\left(\frac{3R}{2}\right)^2}
+            \]
+            \[
+            F_{\text{net}} = \frac{G M m}{4R^2} - \frac{G M m}{8 \cdot \frac{9}{4} R^2} = \frac{G M m}{R^2} \left[ \frac{1}{4} - \frac{1}{18} \right] = \frac{7}{36} \frac{G M m}{R^2}
+            \]
+            <p>
+                The net attractive force is \( \frac{7}{36} \frac{G M m}{R^2} \).
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

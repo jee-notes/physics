@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravitational Field and Intensity | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitation
+        </a>
+    </nav>
+
+    <h1>Gravitational Field and Intensity</h1>
+    <p class="subtitle">
+        Vector field representation of gravitational interaction per unit test mass.
+    </p>
+
+    <section>
+        <h2>Concept of Gravitational Field and Field Intensity</h2>
+        <p>
+            The concept of a "field" avoids the problematic concept of instantaneous action-at-a-distance. Instead of particle 1 directly acting across empty space on particle 2, mass \( M \) creates an alteration in the properties of the surrounding space known as a <strong>gravitational field</strong>. Any other mass \( m \) placed at a field point simply interacts locally with the field existing at that point.
+        </p>
+        <p>
+            The <strong>gravitational field intensity</strong> (or gravitational field strength), denoted by \( \vec{I} \) or \( \vec{E}_g \), at any point in space is defined as the gravitational force experienced per unit test mass placed at that point, in the limit where the test mass \( m_0 \to 0 \) so that it does not perturb the source distribution:
+        </p>
+
+        <div class="model-box">
+            <h3>Definition of Gravitational Field Intensity</h3>
+            \[
+            \vec{I} = \lim_{m_0 \to 0} \frac{\vec{F}}{m_0}
+            \]
+            <ul>
+                <li><strong>Vector Nature:</strong> Points in the direction of the force experienced by a positive test mass (radially toward the attractive source).</li>
+                <li><strong>SI Units:</strong> \(\text{N/kg}\) or \(\text{m/s}^2\).</li>
+                <li><strong>Dimensions:</strong> \([I] = [M^0 L^1 T^{-2}]\).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Field Intensity Due to Point Mass</h2>
+        <p>
+            Consider an isolated point mass \( M \) located at the origin \( O \). Let a test mass \( m_0 \) be placed at a position vector \( \vec{r} \). The gravitational force on \( m_0 \) is:
+        </p>
+        \[
+        \vec{F} = -G \frac{M m_0}{r^2} \hat{r} = -G \frac{M m_0}{r^3} \vec{r}
+        \]
+        <p>Dividing by \( m_0 \):</p>
+
+        <div class="model-box">
+            <h3>Field of a Point Mass</h3>
+            \[
+            \vec{I}(\vec{r}) = -\frac{GM}{r^2} \hat{r} = -\frac{GM}{r^3} \vec{r}
+            \]
+            <p>Magnitude of field intensity at distance \( r \):</p>
+            \[
+            I = \frac{GM}{r^2}
+            \]
+        </div>
+
+        <div class="insightbox">
+            The negative sign indicates that the field vector \( \vec{I} \) is radially <strong>inward</strong> (directed toward the source mass \( M \)), opposite to the outward unit vector \( \hat{r} \).
+        </div>
+    </section>
+
+    <section>
+        <h2>Principle of Superposition for Gravitational Fields</h2>
+        <p>
+            Like forces, gravitational field intensities obey the principle of linear superposition. If multiple point masses \( M_1, M_2, \ldots, M_N \) are located at position vectors \( \vec{r}_1, \vec{r}_2, \ldots, \vec{r}_N \), the net gravitational field at position \( \vec{r} \) is the vector sum:
+        </p>
+
+        <div class="model-box">
+            \[
+            \vec{I}_{\text{net}}(\vec{r}) = \sum_{i=1}^{N} \vec{I}_i(\vec{r}) = -G \sum_{i=1}^{N} \frac{M_i}{|\vec{r} - \vec{r}_i|^3} (\vec{r} - \vec{r}_i)
+            \]
+        </div>
+
+        <div class="examplebox">
+            <h3>Null Point Calculation</h3>
+            <p>
+                Two bodies of masses \( M_1 \) and \( M_2 \) are fixed at a distance \( d \) apart. Find the location of the point along the line joining them where the net gravitational field intensity is zero (the "Null Point").
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            <p>
+                Let the null point \( P \) be at distance \( x \) from \( M_1 \), so its distance from \( M_2 \) is \( d - x \).
+            </p>
+            <p>
+                At the null point, the attractive fields due to \( M_1 \) and \( M_2 \) are equal in magnitude and opposite in direction:
+            </p>
+            \[
+            \frac{G M_1}{x^2} = \frac{G M_2}{(d - x)^2} \implies \frac{\sqrt{M_1}}{x} = \frac{\sqrt{M_2}}{d - x}
+            \]
+            \[
+            \sqrt{M_1}(d - x) = \sqrt{M_2} x \implies x(\sqrt{M_1} + \sqrt{M_2}) = \sqrt{M_1} d
+            \]
+            \[
+            x = \frac{\sqrt{M_1}}{\sqrt{M_1} + \sqrt{M_2}} d
+            \]
+            <p>
+                Notice that the null point lies closer to the smaller mass. If \( M_1 = M_2 \), \( x = d/2 \) (the exact midpoint).
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Gravitational Field Lines and Their Properties</h2>
+        <p>
+            A <strong>gravitational field line</strong> is an imaginary continuous curve drawn in space such that the tangent to the curve at any point gives the direction of the gravitational field intensity vector \( \vec{I} \) at that point.
+        </p>
+        <div class="model-box">
+            <h3>Fundamental Properties of Gravitational Field Lines</h3>
+            <ol>
+                <li><strong>Always Inward:</strong> Field lines originate at infinity and terminate on masses (since negative gravitational charges do not exist).</li>
+                <li><strong>No Closed Loops:</strong> Field lines never form closed loops because the gravitational field is strictly conservative (\( \oint \vec{I} \cdot d\vec{r} = 0 \)).</li>
+                <li><strong>Never Intersect:</strong> Two field lines never cross each other. If they did, there would be two different directions of gravitational field at the intersection point, which is physically impossible.</li>
+                <li><strong>Field Density Represents Magnitude:</strong> The number of field lines crossing perpendicularly through a unit surface area is proportional to the magnitude of the field intensity at that region.</li>
+                <li><strong>Perpendicular to Equipotential Surfaces:</strong> Gravitational field lines are always orthogonal to equipotential surfaces at every point.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h2>Field Due to Various Mass Geometries</h2>
+        <div class="chapter-list">
+            <a href="./03a-field-of-spherical-masses.html">1. Gravitational Field of Spherical Masses (Shell & Solid Sphere)</a>
+            <a href="./03b-field-of-linear-and-circular-bodies.html">2. Gravitational Field of Linear and Circular Bodies (Ring, Rod, Disc)</a>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

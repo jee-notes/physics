@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravitational Potential and Energy | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitation
+        </a>
+    </nav>
+
+    <h1>Gravitational Potential & Potential Energy</h1>
+    <p class="subtitle">
+        Scalar energy formulation of gravitational interactions, potential functions, and gradient relationships.
+    </p>
+
+    <section>
+        <h2>Gravitational Potential Energy (U) of Point Masses</h2>
+        <p>
+            Because the gravitational force is strictly conservative, the work done by gravitational forces in moving a mass between two points depends solely on the initial and final positions, and is completely independent of the path taken.
+        </p>
+        <p>
+            The <strong>gravitational potential energy</strong> \( U \) of a two-particle system with masses \( M \) and \( m \) separated by distance \( r \) is defined as the external work done in assembling the system from an initial infinite separation (where \( U(\infty) = 0 \) is chosen as the standard zero reference):
+        </p>
+        \[
+        U(r) = - \int_{\infty}^r \vec{F}_g \cdot d\vec{r}' = -\int_{\infty}^r \left(-\frac{GMm}{{r'}^2}\right) dr' = GMm \left[ -\frac{1}{r'} \right]_\infty^r
+        \]
+
+        <div class="model-box">
+            <h3>Potential Energy Formula</h3>
+            \[
+            U(r) = -\frac{GMm}{r}
+            \]
+            <ul>
+                <li><strong>Scalar Quantity:</strong> Can be positive, zero, or negative.</li>
+                <li><strong>SI Unit:</strong> Joule (\(\text{J}\)).</li>
+                <li><strong>Dimensions:</strong> \([U] = [M^1 L^2 T^{-2}]\).</li>
+                <li><strong>Significance of Negative Sign:</strong> A negative potential energy signifies a <strong>bound system</strong>. Positive work must be supplied from an external agent to separate the masses to infinity.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Concept and Definition of Gravitational Potential (V)</h2>
+        <p>
+            The <strong>gravitational potential</strong> \( V \) at any point in a gravitational field is defined as the work done by an external agent per unit mass in bringing a small test mass from infinity to that point slowly (without changing kinetic energy):
+        </p>
+        \[
+        V(\vec{r}) = \frac{U(\vec{r})}{m} = -\int_{\infty}^{\vec{r}} \vec{I} \cdot d\vec{r}'
+        \]
+
+        <div class="model-box">
+            <h3>Potential Due to an Isolated Point Mass \( M \)</h3>
+            \[
+            V(r) = -\frac{GM}{r}
+            \]
+            <ul>
+                <li><strong>Nature:</strong> Scalar field.</li>
+                <li><strong>SI Units:</strong> \(\text{J/kg}\) or \(\text{m}^2/\text{s}^2\).</li>
+                <li><strong>Dimensions:</strong> \([V] = [M^0 L^2 T^{-2}]\).</li>
+                <li><strong>Superposition:</strong> For multiple point masses, potentials add algebraically:
+                    \[
+                    V_{\text{net}} = \sum_{i=1}^N V_i = -G \sum_{i=1}^N \frac{M_i}{r_i}
+                    \]
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Relation Between Gravitational Field and Potential (g = -grad V)</h2>
+        <p>
+            The relationship between the vector field intensity \( \vec{I} \) and the scalar potential \( V \) is given by the negative spatial gradient:
+        </p>
+
+        <div class="model-box">
+            <h3>Vector Gradient Relationship</h3>
+            \[
+            \vec{I} = -\nabla V = -\left( \frac{\partial V}{\partial x}\hat{i} + \frac{\partial V}{\partial y}\hat{j} + \frac{\partial V}{\partial z}\hat{k} \right)
+            \]
+            <p>For spherically symmetric (radial) fields:</p>
+            \[
+            I(r) = -\frac{dV}{dr} \implies \Delta V = V(r_2) - V(r_1) = -\int_{r_1}^{r_2} I(r) dr
+            \]
+        </div>
+
+        <div class="concept-box">
+            <strong>Directional Takeaways:</strong>
+            <ol>
+                <li>The gravitational field vector \( \vec{I} \) always points in the direction of the <strong>steepest decrease of gravitational potential \( V \)</strong>.</li>
+                <li>The slope of the \( V \text{ vs } r \) graph equals the negative of the gravitational field intensity: \( \text{Slope} = -I \).</li>
+            </ol>
+        </div>
+    </section>
+
+    <section>
+        <h2>Work Done in Moving Mass in a Gravitational Field</h2>
+        <p>
+            When a particle of mass \( m \) is displaced from point \( A \) (potential \( V_A \)) to point \( B \) (potential \( V_B \)):
+        </p>
+        <div class="model-box">
+            <ul>
+                <li><strong>Work done by internal gravitational force:</strong>
+                    \[
+                    W_{\text{grav}} = -\Delta U = -(U_B - U_A) = -m(V_B - V_A)
+                    \]
+                </li>
+                <li><strong>Work done by external agent (moving without acceleration):</strong>
+                    \[
+                    W_{\text{ext}} = \Delta U = U_B - U_A = m(V_B - V_A)
+                    \]
+                </li>
+            </ul>
+        </div>
+
+        <div class="examplebox">
+            <h3>Work Done in Raising a Mass to Height \( h \) Above Earth's Surface</h3>
+            <p>
+                Find the minimum work done by an external agent to lift a mass \( m \) from the Earth's surface (\( r_1 = R \)) to an altitude \( h \) (\( r_2 = R+h \)).
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            \[
+            W_{\text{ext}} = U_f - U_i = \left(-\frac{GMm}{R+h}\right) - \left(-\frac{GMm}{R}\right) = GMm \left( \frac{1}{R} - \frac{1}{R+h} \right)
+            \]
+            \[
+            W_{\text{ext}} = GMm \left( \frac{h}{R(R+h)} \right) = \frac{GM}{R^2} m \frac{h}{1 + \frac{h}{R}} = \frac{mgh}{1 + \frac{h}{R}}
+            \]
+            <p>
+                <strong>Special Case (\( h \ll R \)):</strong> As \( \frac{h}{R} \to 0 \), \( W_{\text{ext}} \approx mgh \), recovering the familiar constant-gravity expression.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Continuous Mass Potential & Self-Energy</h2>
+        <div class="chapter-list">
+            <a href="./04a-potential-of-continuous-bodies.html">1. Gravitational Potential of Continuous Bodies (Shells, Spheres, Rings)</a>
+            <a href="./04b-gravitational-self-energy.html">2. Gravitational Self-Energy & Mass Disassembly</a>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

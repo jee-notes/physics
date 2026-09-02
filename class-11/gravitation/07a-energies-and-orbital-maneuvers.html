@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energies and Orbital Maneuvers | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./07-satellite-motion.html" class="back-btn">
+            <span>&larr;</span> Back to Motion of Satellites
+        </a>
+    </nav>
+
+    <h1>Orbital Energies and Maneuvers</h1>
+    <p class="subtitle">
+        Energy relationships of orbiting bodies, binding mechanics, and orbital transition transfers.
+    </p>
+
+    <section>
+        <h2>Kinetic, Potential, and Total Mechanical Energy of Satellite</h2>
+        <p>
+            Consider a satellite of mass \( m \) in a stable circular orbit of radius \( r \) around a planet of mass \( M \).
+        </p>
+
+        <div class="model-box">
+            <h3>1. Kinetic Energy (\( K \))</h3>
+            <p>Using orbital speed \( v_o = \sqrt{\frac{GM}{r}} \):</p>
+            \[
+            K = \frac{1}{2}m v_o^2 = \frac{1}{2}m \left(\frac{GM}{r}\right) = +\frac{GMm}{2r}
+            \]
+            <hr>
+            <h3>2. Potential Energy (\( U \))</h3>
+            \[
+            U = -\frac{GMm}{r}
+            \]
+            <hr>
+            <h3>3. Total Mechanical Energy (\( E \))</h3>
+            \[
+            E = K + U = \frac{GMm}{2r} - \frac{GMm}{r} = -\frac{GMm}{2r}
+            \]
+        </div>
+
+        <div class="concept-box">
+            <strong>Fundamental Energy Inter-Relations:</strong>
+            \[
+            E = -K = \frac{U}{2}, \quad |U| = 2K = 2|E|
+            \]
+            <ul>
+                <li>Total mechanical energy \( E \) is strictly <strong>negative</strong>, confirming that the satellite is in a bound closed orbit.</li>
+                <li>As orbital radius \( r \) increases: Potential energy \( U \) becomes less negative (increases), Kinetic energy \( K \) decreases (satellite slows down), and Total energy \( E \) becomes less negative (increases).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Binding Energy of a Satellite</h2>
+        <p>
+            The <strong>binding energy</strong> \( E_b \) of a satellite is the minimum external energy that must be supplied to liberate the satellite from its orbit and send it to infinity:
+        </p>
+
+        <div class="model-box">
+            <h3>Binding Energy Formula</h3>
+            \[
+            E_b = -E = +\frac{GMm}{2r}
+            \]
+            <p>
+                If an external energy equal to \( +\frac{GMm}{2r} \) is provided to the orbiting satellite (e.g., via rocket thrusters), its total energy becomes zero (\( E = 0 \)) and it escapes along a parabolic trajectory.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Change of Orbit and Hohmann Transfer Trajectory</h2>
+        <p>
+            To transfer a satellite from a lower circular orbit of radius \( r_1 \) to a higher circular orbit of radius \( r_2 \) (\( r_2 > r_1 \)), the minimum required work is the difference in total mechanical energies:
+        </p>
+        \[
+        W = E_2 - E_1 = \left(-\frac{GMm}{2r_2}\right) - \left(-\frac{GMm}{2r_1}\right) = \frac{GMm}{2}\left(\frac{1}{r_1} - \frac{1}{r_2}\right)
+        \]
+
+        <h3>The Hohmann Transfer Orbit</h3>
+        <p>
+            In practical orbital mechanics, the transition between two coplanar circular orbits is executed via an elliptical transfer orbit known as a <strong>Hohmann Transfer Orbit</strong>:
+        </p>
+        <ul>
+            <li>Semi-major axis of the elliptical transfer orbit: \( a_{\text{trans}} = \frac{r_1 + r_2}{2} \).</li>
+            <li>First velocity boost at periapsis (\( r_1 \)): Increases speed from circular speed \( v_{c1} = \sqrt{\frac{GM}{r_1}} \) to the elliptical transfer speed \( v_{t1} = \sqrt{\frac{GM}{r_1}\left(\frac{2r_2}{r_1+r_2}\right)} \).</li>
+            <li>Second velocity boost at apoapsis (\( r_2 \)): Increases speed from elliptical arrival speed \( v_{t2} = \sqrt{\frac{GM}{r_2}\left(\frac{2r_1}{r_1+r_2}\right)} \) to circular speed \( v_{c2} = \sqrt{\frac{GM}{r_2}} \).</li>
+            <li>Transfer time (half of the elliptical orbital period):
+                \[
+                t_{\text{transfer}} = \frac{T_{\text{trans}}}{2} = \pi \sqrt{\frac{a_{\text{trans}}^3}{GM}} = \pi \sqrt{\frac{(r_1 + r_2)^3}{8GM}}
+                \]
+            </li>
+        </ul>
+
+        <div class="insightbox">
+            <strong>Atmospheric Braking Paradox:</strong> When a satellite in low Earth orbit experiences atmospheric friction, it loses mechanical energy (\( E \) becomes more negative). Paradoxically, this causes its orbital radius \( r \) to decrease, which in turn causes its kinetic energy and speed to <strong>increase</strong> (\( v \propto 1/\sqrt{r} \)) as it spirals down!
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellite Motion | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitation
+        </a>
+    </nav>
+
+    <h1>Motion of Satellites</h1>
+    <p class="subtitle">
+        Orbital kinematics, velocity conditions, revolution periods, and satellite dynamics around central bodies.
+    </p>
+
+    <section>
+        <h2>Principle of Satellite Launching and Orbital Speed</h2>
+        <p>
+            A satellite is any natural or artificial body that continuously revolves around a planet in a stable gravitational orbit.
+        </p>
+        <p>
+            To place a satellite into a stable circular orbit at an altitude \( h \) above Earth's surface (orbital radius \( r = R + h \)), it must first be lifted above the dense atmosphere to minimize aerodynamic drag and then injected with a specific horizontal velocity known as the <strong>orbital velocity (\( v_o \))</strong>.
+        </p>
+        <p>
+            In a stable circular orbit, the centripetal force required for circular motion is provided entirely by the gravitational attraction of the planet:
+        </p>
+        \[
+        F_{\text{centripetal}} = F_{\text{gravitational}} \implies \frac{m v_o^2}{r} = \frac{GMm}{r^2}
+        \]
+        <p>Solving for the orbital speed \( v_o \):</p>
+
+        <div class="model-box">
+            <h3>Orbital Speed Formula</h3>
+            \[
+            v_o = \sqrt{\frac{GM}{r}} = \sqrt{\frac{GM}{R+h}} = R \sqrt{\frac{g}{R+h}}
+            \]
+            <ul>
+                <li><strong>Independence of Satellite Mass:</strong> Orbital velocity depends solely on the central body's mass \( M \) and the orbital radius \( r \), not on the mass \( m \) of the satellite.</li>
+                <li><strong>Radial Fall-Off:</strong> Higher orbits require lower orbital speeds: \( v_o \propto \frac{1}{\sqrt{r}} \).</li>
+                <li><strong>Near-Earth Orbit (\( h \ll R \)):</strong> For satellites orbiting just above the atmosphere (\( r \approx R \)):
+                    \[
+                    v_{o, \text{near}} = \sqrt{\frac{GM}{R}} = \sqrt{gR} \approx \sqrt{9.8 \times 6.4 \times 10^6} \approx 7.92 \, \text{km/s} \approx 8 \, \text{km/s}
+                    \]
+                </li>
+                <li><strong>Relation to Escape Velocity:</strong>
+                    \[
+                    v_e = \sqrt{2} \, v_o \approx 1.414 \, v_o
+                    \]
+                    If the speed of an orbiting satellite in a circular orbit increases by \( \approx 41.4\% \), it escapes the gravitational field completely along a parabolic path.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Time Period and Angular Velocity of Satellites</h2>
+        <p>
+            The <strong>orbital period (\( T \))</strong> is the total time taken by the satellite to complete one full revolution around the planet:
+        </p>
+        \[
+        T = \frac{\text{Circumference}}{\text{Orbital Speed}} = \frac{2\pi r}{v_o} = \frac{2\pi r}{\sqrt{\frac{GM}{r}}} = 2\pi \sqrt{\frac{r^3}{GM}}
+        \]
+        <p>Substituting \( r = R + h \) and \( GM = gR^2 \):</p>
+
+        <div class="model-box">
+            <h3>Orbital Time Period Formula</h3>
+            \[
+            T = 2\pi \sqrt{\frac{(R+h)^3}{GM}} = 2\pi \sqrt{\frac{(R+h)^3}{gR^2}}
+            \]
+            <p><strong>Near-Earth Satellite Period (\( h \ll R \)):</strong></p>
+            \[
+            T_{\text{near}} = 2\pi \sqrt{\frac{R}{g}} \approx 2\pi \sqrt{\frac{6.4 \times 10^6}{9.8}} \approx 5077 \, \text{s} \approx 84.6 \, \text{minutes}
+            \]
+            <hr>
+            <h3>Angular Velocity (\( \omega \)) and Frequency (\( f \))</h3>
+            \[
+            \omega = \frac{2\pi}{T} = \sqrt{\frac{GM}{r^3}}, \quad f = \frac{1}{T} = \frac{1}{2\pi}\sqrt{\frac{GM}{r^3}}
+            \]
+        </div>
+
+        <div class="insightbox">
+            No satellite orbiting the Earth in a closed orbit can have a period shorter than \( \approx 84.6 \, \text{minutes} \), since the smallest possible orbital radius is the Earth's radius itself (\( r = R \)).
+        </div>
+    </section>
+
+    <section>
+        <h2>Orbital Dynamics and Satellite Classes</h2>
+        <div class="chapter-list">
+            <a href="./07a-energies-and-orbital-maneuvers.html">1. Orbital Energies, Binding Energy & Hohmann Transfer Maneuvers</a>
+            <a href="./07b-special-satellites-and-weightlessness.html">2. Geostationary Satellites, Polar Satellites & Weightlessness</a>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

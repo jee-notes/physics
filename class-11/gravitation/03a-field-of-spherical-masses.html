@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field of Spherical Masses | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./03-gravitational-field-and-intensity.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitational Field & Intensity
+        </a>
+    </nav>
+
+    <h1>Gravitational Field of Spherical Masses</h1>
+    <p class="subtitle">
+        Rigorous derivations and field distributions for uniform thin spherical shells and uniform solid spheres.
+    </p>
+
+    <section>
+        <h2>Field Due to Uniform Thin Spherical Shell (Internal, Surface, External)</h2>
+        <p>
+            Consider a thin spherical shell of total mass \( M \), uniform surface mass density \( \sigma = \frac{M}{4\pi R^2} \), and radius \( R \). Let \( r \) be the distance from the center of the shell to the field point \( P \).
+        </p>
+
+        <div class="model-box">
+            <h3>1. Outside the Shell (\( r > R \))</h3>
+            <p>
+                By Newton's first shell theorem, the external field behaves exactly as if the entire mass \( M \) were concentrated at the center:
+            </p>
+            \[
+            I_{\text{out}} = \frac{GM}{r^2} \quad (\text{radially inward})
+            \]
+            <hr>
+            <h3>2. On the Surface (\( r = R \))</h3>
+            \[
+            I_{\text{surface}} = \frac{GM}{R^2}
+            \]
+            <hr>
+            <h3>3. Inside the Shell (\( r < R \))</h3>
+            <p>
+                By Newton's second shell theorem, symmetrical cancellation of opposing solid angle elements ensures that the net gravitational field inside a hollow spherical shell is identically zero everywhere:
+            </p>
+            \[
+            I_{\text{in}} = 0
+            \]
+        </div>
+
+        <div class="insightbox">
+            <strong>Gravitational Shielding Fallacy:</strong> While \( I_{\text{in}} = 0 \) for the shell's own mass, a hollow spherical shell does <em>not</em> shield an inside object from the gravitational field of an external external mass! Gravity cannot be screened.
+        </div>
+    </section>
+
+    <section>
+        <h2>Field Due to Uniform Solid Sphere (Internal, Surface, External)</h2>
+        <p>
+            Consider a solid sphere of uniform mass density \( \rho = \frac{M}{\frac{4}{3}\pi R^3} \), total mass \( M \), and radius \( R \).
+        </p>
+
+        <div class="model-box">
+            <h3>1. Outside the Sphere (\( r \ge R \))</h3>
+            <p>
+                The entire sphere acts as a point mass \( M \) located at its center:
+            </p>
+            \[
+            I_{\text{out}} = \frac{GM}{r^2}
+            \]
+            <hr>
+            <h3>2. On the Surface (\( r = R \))</h3>
+            \[
+            I_{\text{surface}} = \frac{GM}{R^2} = \frac{4}{3}\pi G \rho R
+            \]
+            <hr>
+            <h3>3. Inside the Sphere (\( r < R \))</h3>
+            <p>
+                Construct a concentric Gaussian sphere of radius \( r < R \). The shell outside radius \( r \) contributes zero field. Only the enclosed mass \( M_{\text{enc}} \) contributes:
+            </p>
+            \[
+            M_{\text{enc}} = \rho \left(\frac{4}{3}\pi r^3\right) = M \frac{r^3}{R^3}
+            \]
+            \[
+            I_{\text{in}} = \frac{G M_{\text{enc}}}{r^2} = \frac{G \left(M \frac{r^3}{R^3}\right)}{r^2} = \frac{GM}{R^3} r = \frac{4}{3}\pi G \rho r
+            \]
+        </div>
+
+        <div class="concept-box">
+            <strong>SHM of a Particle Dropped in a Tunnel Through Earth:</strong>
+            <p>
+                Inside the solid Earth, the restoring force on a particle of mass \( m \) at distance \( r \) from the center is:
+            </p>
+            \[
+            F(r) = -m I_{\text{in}} = -\left(\frac{GMm}{R^3}\right) r = -k r
+            \]
+            <p>
+                Since \( F \propto -r \), the motion is Simple Harmonic Motion (SHM) with time period:
+            </p>
+            \[
+            T = 2\pi \sqrt{\frac{m}{k}} = 2\pi \sqrt{\frac{R^3}{GM}} = 2\pi \sqrt{\frac{R}{g}} \approx 84.6 \, \text{minutes}
+            \]
+            <p>This period is completely independent of the mass \( m \) of the particle and the orientation or length of the chord/tunnel!</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Graphical Representation of Gravitational Field vs Distance</h2>
+        <p>
+            Summary of the radial behavior of gravitational field magnitude \( I(r) \):
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Geometry</th>
+                    <th>Inside (\( r < R \))</th>
+                    <th>Surface (\( r = R \))</th>
+                    <th>Outside (\( r > R \))</th>
+                    <th>Continuity at \( r = R \)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Spherical Shell</strong></td>
+                    <td>\( I = 0 \)</td>
+                    <td>\( I = \frac{GM}{R^2} \)</td>
+                    <td>\( I \propto \frac{1}{r^2} \)</td>
+                    <td><strong>Discontinuous jump</strong> from \( 0 \) to \( \frac{GM}{R^2} \)</td>
+                </tr>
+                <tr>
+                    <td><strong>Solid Sphere</strong></td>
+                    <td>\( I \propto r \) (Linear)</td>
+                    <td>\( I = \frac{GM}{R^2} \)</td>
+                    <td>\( I \propto \frac{1}{r^2} \)</td>
+                    <td><strong>Continuous</strong> function everywhere</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="model-box">
+            <h3>Non-Uniform Density Sphere (Advanced JEE Case)</h3>
+            <p>
+                If the density varies with distance as \( \rho(r) = C r^n \), the enclosed mass is:
+            </p>
+            \[
+            M(r) = \int_0^r \rho(r') 4\pi {r'}^2 dr' = 4\pi C \int_0^r {r'}^{n+2} dr' = \frac{4\pi C}{n+3} r^{n+3}
+            \]
+            <p>The internal field then scales as:</p>
+            \[
+            I_{\text{in}}(r) = \frac{G M(r)}{r^2} = \frac{4\pi G C}{n+3} r^{n+1}
+            \]
+            <p>For a constant internal field \( I = \text{const} \), we must have \( n+1 = 0 \implies n = -1 \implies \rho(r) \propto \frac{1}{r} \).</p>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

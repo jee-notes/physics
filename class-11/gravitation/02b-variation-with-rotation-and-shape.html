@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variation of g with Rotation and Shape | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./02-acceleration-due-to-gravity.html" class="back-btn">
+            <span>&larr;</span> Back to Acceleration Due to Gravity
+        </a>
+    </nav>
+
+    <h1>Variation of \( g \) due to Rotation and Shape of Earth</h1>
+    <p class="subtitle">
+        Understanding centrifugal fictitious forces on a rotating planet and the geometric influence of oblateness.
+    </p>
+
+    <section>
+        <h2>Effect of Earth's Axial Rotation (Centrifugal Effect & Latitude)</h2>
+        <p>
+            The Earth rotates about its polar axis from West to East with a steady angular velocity \( \omega \):
+        </p>
+        \[
+        \omega = \frac{2\pi}{T} = \frac{2\pi}{24 \times 3600 \, \text{s}} \approx 7.27 \times 10^{-5} \, \text{rad/s}
+        \]
+        <p>
+            Consider a particle of mass \( m \) situated on the Earth's surface at latitude \( \lambda \) (where \( \lambda = 0^\circ \) at the equator and \( \lambda = 90^\circ \) at the poles). As the Earth rotates, the particle moves in a circular path of radius \( r = R \cos\lambda \) centered on the rotation axis.
+        </p>
+        <p>
+            In the rotating (non-inertial) reference frame of the Earth, the particle experiences two distinct forces:
+        </p>
+        <ol>
+            <li>True gravitational force: \( F_g = m g \) directed radially toward the center of the Earth.</li>
+            <li>Outward centrifugal pseudo-force: \( F_c = m \omega^2 r = m \omega^2 R \cos\lambda \) directed perpendicularly away from the rotation axis.</li>
+        </ol>
+        <p>
+            The angle between the true gravitational force vector (pointing to center) and the centrifugal force vector is \( 180^\circ - \lambda \). The effective weight \( m g' \) is the vector sum:
+        </p>
+        \[
+        (m g')^2 = (m g)^2 + (m \omega^2 R \cos\lambda)^2 + 2(m g)(m \omega^2 R \cos\lambda)\cos(180^\circ - \lambda)
+        \]
+        <p>
+            Since \( \omega^2 R \approx 0.034 \, \text{m/s}^2 \ll g \), higher-order terms in \( \omega^4 \) can be neglected. Expanding to first order in \( \omega^2 \):
+        </p>
+
+        <div class="model-box">
+            <h3>Effective Acceleration Due to Gravity at Latitude \( \lambda \)</h3>
+            \[
+            g' = g - \omega^2 R \cos^2\lambda
+            \]
+            <ul>
+                <li>\( g \) = True acceleration due to gravity without rotation.</li>
+                <li>\( \omega \) = Angular speed of Earth's rotation (\(\text{rad/s}\)).</li>
+                <li>\( R \) = Radius of Earth (\(\approx 6.4 \times 10^6 \, \text{m}\)).</li>
+                <li>\( \lambda \) = Geographic latitude angle.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Effective Gravity at Equator and Poles</h2>
+        <p>
+            Applying the rotation formula to specific geographic locations:
+        </p>
+
+        <div class="model-box">
+            <h3>1. At the Equator (\( \lambda = 0^\circ \), \( \cos 0^\circ = 1 \))</h3>
+            \[
+            g_{\text{equator}} = g - \omega^2 R
+            \]
+            <p>Centrifugal force is maximum and acts directly opposite to gravity. The reduction in \( g \) due to rotation is:</p>
+            \[
+            \Delta g_{\text{rot}} = \omega^2 R \approx (7.27 \times 10^{-5})^2 \times (6.4 \times 10^6) \approx 0.0338 \, \text{m/s}^2
+            \]
+            <hr>
+            <h3>2. At the Poles (\( \lambda = 90^\circ \), \( \cos 90^\circ = 0 \))</h3>
+            \[
+            g_{\text{pole}} = g
+            \]
+            <p>At the poles, the radius of the circular path of rotation is zero (\( r = 0 \)). Thus, there is <strong>zero centrifugal effect</strong>.</p>
+        </div>
+
+        <div class="examplebox">
+            <h3>Special Case: Condition for Weightlessness at Equator</h3>
+            <p>
+                What would be the angular speed of Earth's rotation so that bodies at the equator feel completely weightless (\( g_{\text{equator}} = 0 \))? What would be the duration of a day in that scenario?
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            <p>Setting \( g' = 0 \) at the equator (\( \lambda = 0^\circ \)):</p>
+            \[
+            g - \omega^2 R = 0 \implies \omega = \sqrt{\frac{g}{R}}
+            \]
+            \[
+            \omega = \sqrt{\frac{9.8}{6.4 \times 10^6}} \approx 1.237 \times 10^{-3} \, \text{rad/s}
+            \]
+            <p>This is approximately <strong>17 times faster</strong> than Earth's current angular velocity (\( \omega \approx 17 \omega_0 \)).</p>
+            <p>The duration of a day (time period \( T \)) would then become:</p>
+            \[
+            T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{R}{g}} \approx 2\pi \sqrt{\frac{6.4 \times 10^6}{9.8}} \approx 5077 \, \text{s} \approx 84.6 \, \text{minutes} \approx 1.41 \, \text{hours}
+            \]
+        </div>
+    </section>
+
+    <section>
+        <h2>Effect of Non-Spherical Shape (Oblateness) of Earth</h2>
+        <p>
+            The Earth is not a perfect sphere; it is an <strong>oblate spheroid</strong> due to billions of years of centrifugal bulging during its molten formation.
+        </p>
+        <ul>
+            <li>Equatorial radius: \( R_e \approx 6378 \, \text{km} \)</li>
+            <li>Polar radius: \( R_p \approx 6357 \, \text{km} \)</li>
+            <li>Difference: \( R_e - R_p \approx 21 \, \text{km} \)</li>
+        </ul>
+        <p>
+            From the fundamental surface gravity relation \( g = \frac{GM}{R^2} \), since \( g \propto \frac{1}{R^2} \):
+        </p>
+        \[
+        R_e > R_p \implies g_{\text{equator}} < g_{\text{pole}}
+        \]
+
+        <div class="concept-box">
+            <strong>Combined Difference Between Pole and Equator:</strong>
+            <p>The total observed difference \( g_{\text{pole}} - g_{\text{equator}} \approx 0.052 \, \text{m/s}^2 \) arises from two factors:</p>
+            <ol>
+                <li><strong>Due to rotation:</strong> \( \approx 0.034 \, \text{m/s}^2 \) (\(\approx 65\%\) of total difference).</li>
+                <li><strong>Due to shape (oblateness):</strong> \( \approx 0.018 \, \text{m/s}^2 \) (\(\approx 35\%\) of total difference).</li>
+            </ol>
+            <p>Therefore, a body weighs more at the poles than at the equator on both counts.</p>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Satellites and Weightlessness | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./07-satellite-motion.html" class="back-btn">
+            <span>&larr;</span> Back to Motion of Satellites
+        </a>
+    </nav>
+
+    <h1>Special Satellites & Weightlessness</h1>
+    <p class="subtitle">
+        Geostationary communication orbits, polar remote sensing orbits, and the physics of zero normal reaction.
+    </p>
+
+    <section>
+        <h2>Geostationary and Geosynchronous Satellites</h2>
+        <p>
+            A <strong>geostationary satellite</strong> (also known as a geosynchronous equatorial satellite) is a satellite that appears completely stationary relative to an observer at a fixed point on the Earth's surface.
+        </p>
+
+        <div class="model-box">
+            <h3>Essential Conditions for a Geostationary Orbit</h3>
+            <ol>
+                <li><strong>Orbital Period:</strong> Must equal the Earth's sidereal rotation period: \( T = 24 \, \text{hours} = 86,400 \, \text{s} \).</li>
+                <li><strong>Direction of Rotation:</strong> Must orbit from <strong>West to East</strong>, matching Earth's rotation.</li>
+                <li><strong>Orbital Plane:</strong> Must lie strictly in the <strong>equatorial plane</strong> of the Earth (inclination \( i = 0^\circ \)).</li>
+                <li><strong>Orbit Shape:</strong> Must be a concentric circular orbit.</li>
+            </ol>
+            <hr>
+            <h3>Calculation of Geostationary Orbital Radius and Altitude</h3>
+            <p>From Kepler's Third Law \( T = 2\pi \sqrt{\frac{r^3}{GM}} \):</p>
+            \[
+            r = \left( \frac{G M T^2}{4\pi^2} \right)^{1/3}
+            \]
+            <p>Substituting \( G = 6.67 \times 10^{-11} \), \( M = 6 \times 10^{24} \, \text{kg} \), and \( T = 86,400 \, \text{s} \):</p>
+            \[
+            r_{\text{geo}} \approx 42,400 \, \text{km} \approx 6.6 \, R
+            \]
+            <p>Altitude \( h \) above Earth's surface (\( R \approx 6400 \, \text{km} \)):</p>
+            \[
+            h_{\text{geo}} = r - R \approx 42,400 - 6400 \approx 36,000 \, \text{km}
+            \]
+            <p>Orbital velocity in geostationary orbit:</p>
+            \[
+            v_{\text{geo}} = \frac{2\pi r}{T} \approx 3.1 \, \text{km/s}
+            \]
+        </div>
+
+        <div class="insightbox">
+            <strong>Geostationary vs Geosynchronous:</strong> Every geostationary satellite is geosynchronous, but not every geosynchronous satellite is geostationary. If an orbit has \( T = 24 \, \text{hours} \) but is tilted at an angle to the equator (inclination \( i > 0 \)), it is geosynchronous and traces an "analemma" (figure-8 pattern) in the sky rather than staying fixed at a single point.
+        </div>
+    </section>
+
+    <section>
+        <h2>Polar Satellites and Sun-Synchronous Orbits</h2>
+        <p>
+            A <strong>polar satellite</strong> revolves in a low-altitude orbit that passes over or near the geographic North and South poles (inclination \( i \approx 90^\circ \)).
+        </p>
+
+        <div class="model-box">
+            <h3>Characteristics and Applications</h3>
+            <ul>
+                <li><strong>Altitude:</strong> Typically low Earth orbits at \( h \approx 500 \text{ to } 800 \, \text{km} \).</li>
+                <li><strong>Orbital Period:</strong> Very short, approximately \( T \approx 100 \, \text{minutes} \).</li>
+                <li><strong>Global Coverage:</strong> As the satellite orbits North-South and the Earth rotates West-East beneath it, the satellite passes over different longitudinal strips of Earth on every successive orbit, mapping the entire globe within a few days.</li>
+                <li><strong>Applications:</strong> Remote sensing, meteorological forecasting, environmental monitoring, spy/reconnaissance, and oceanography.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Physical Concept of Weightlessness in Orbit</h2>
+        <p>
+            A widespread misconception is that astronauts in an orbiting spacecraft experience "weightlessness" because "there is no gravity in space."
+        </p>
+        <p>
+            At the altitude of the International Space Station (\( h \approx 400 \, \text{km} \)), the acceleration due to gravity is:
+        </p>
+        \[
+        g_h = g \left(\frac{R}{R+h}\right)^2 = 9.8 \left(\frac{6400}{6800}\right)^2 \approx 8.7 \, \text{m/s}^2 \approx 89\% \text{ of surface gravity}
+        \]
+        <p>
+            Earth's gravity is very strong in orbit!
+        </p>
+
+        <div class="concept-box">
+            <h3>True Origin of Weightlessness: Zero Normal Reaction</h3>
+            <p>
+                What a human observer perceives as "weight" is not the gravitational pull itself, but the <strong>normal contact force (\( N \))</strong> exerted by the floor or scale supporting them.
+            </p>
+            <p>
+                Inside an orbiting satellite, both the satellite and the astronaut have the exact same centripetal acceleration toward Earth's center:
+            </p>
+            \[
+            a = g_h = \frac{GM}{r^2}
+            \]
+            <p>Writing Newton's second law for the astronaut inside the spacecraft:</p>
+            \[
+            m g_h - N = m a = m g_h \implies N = 0
+            \]
+            <p>
+                Because both the spacecraft and astronaut are in a state of continuous, perpetual <strong>free fall</strong> toward Earth at the exact same rate, the contact force \( N = 0 \). This sensation of zero normal reaction is known as <strong>apparent weightlessness</strong>.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field of Linear and Circular Bodies | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./03-gravitational-field-and-intensity.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitational Field & Intensity
+        </a>
+    </nav>
+
+    <h1>Gravitational Field of Linear and Circular Bodies</h1>
+    <p class="subtitle">
+        Calculus-based derivations for gravitational field distributions of rings, rods, arcs, and discs.
+    </p>
+
+    <section>
+        <h2>Gravitational Field on the Axis of a Uniform Ring</h2>
+        <p>
+            Consider a uniform ring of mass \( M \) and radius \( R \) placed in the \( yz \)-plane with its center at the origin \( O \). We wish to find the gravitational field intensity at point \( P \) on the \( x \)-axis at distance \( x \) from the center.
+        </p>
+        <p>
+            Let an infinitesimal element of mass \( dm \) be located on the ring. The distance from this element to point \( P \) is \( s = \sqrt{R^2 + x^2} \). The field contribution \( d\vec{I} \) is directed toward \( dm \):
+        </p>
+        \[
+        dI = \frac{G dm}{R^2 + x^2}
+        \]
+        <p>
+            By symmetry, the transverse components perpendicular to the axis cancel out when integrated around the ring. Only the axial components \( dI_x = dI \cos\theta \) add constructively, where \( \cos\theta = \frac{x}{\sqrt{R^2 + x^2}} \):
+        </p>
+        \[
+        I(x) = \int dI \cos\theta = \int \frac{G dm}{R^2 + x^2} \frac{x}{\sqrt{R^2 + x^2}} = \frac{G x}{(R^2 + x^2)^{3/2}} \int dm
+        \]
+
+        <div class="model-box">
+            <h3>Axial Field Formula for Uniform Ring</h3>
+            \[
+            I_{\text{ring}}(x) = \frac{G M x}{(R^2 + x^2)^{3/2}} \quad (\text{directed toward center } O)
+            \]
+            <ul>
+                <li><strong>At the Center (\( x = 0 \)):</strong> \( I = 0 \).</li>
+                <li><strong>At Far Distances (\( x \gg R \)):</strong> \( I \approx \frac{GM}{x^2} \) (behaves as a point mass).</li>
+                <li><strong>Maximum Field Condition:</strong> Differentiating \( \frac{dI}{dx} = 0 \):
+                    \[
+                    \frac{d}{dx}\left[ x(R^2 + x^2)^{-3/2} \right] = (R^2 + x^2)^{-3/2} - 3x^2(R^2 + x^2)^{-5/2} = 0
+                    \]
+                    \[
+                    R^2 + x^2 - 3x^2 = 0 \implies x_{\text{max}} = \pm \frac{R}{\sqrt{2}}
+                    \]
+                    \[
+                    I_{\text{max}} = \frac{GM (R/\sqrt{2})}{(R^2 + R^2/2)^{3/2}} = \frac{2}{3\sqrt{3}} \frac{GM}{R^2}
+                    \]
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Gravitational Field Due to Uniform Finite and Infinite Rod / Wire</h2>
+        <p>
+            Consider a thin uniform straight rod of mass \( M \), length \( L \), and linear mass density \( \lambda = M/L \).
+        </p>
+
+        <div class="model-box">
+            <h3>1. Field at an Axial Point at Distance \( d \) from Near End</h3>
+            <p>
+                Integrating elements \( dm = \lambda dx \) from \( x = d \) to \( x = d + L \):
+            </p>
+            \[
+            I_{\text{axial}} = \int_d^{d+L} \frac{G (\lambda dx)}{x^2} = G \lambda \left[ -\frac{1}{x} \right]_d^{d+L} = G \lambda \left( \frac{1}{d} - \frac{1}{d+L} \right) = \frac{G M}{d(d+L)}
+            \]
+            <hr>
+            <h3>2. Field at a Broadside (Perpendicular) Point at Distance \( d \)</h3>
+            <p>
+                Let point \( P \) be at perpendicular distance \( d \) from the rod, and let the ends subtend angles \( \alpha \) and \( \beta \) with the perpendicular:
+            </p>
+            <ul>
+                <li>Perpendicular component: \( I_\perp = \frac{G \lambda}{d} (\sin\alpha + \sin\beta) \)</li>
+                <li>Parallel component: \( I_\parallel = \frac{G \lambda}{d} (\cos\alpha - \cos\beta) \)</li>
+            </ul>
+            <p><strong>For an Infinitely Long Rod / Wire (\( \alpha = \beta = 90^\circ \)):</strong></p>
+            \[
+            I_{\text{infinite}} = \frac{2G\lambda}{d} \quad (\text{directed perpendicularly inward toward wire})
+            \]
+        </div>
+    </section>
+
+    <section>
+        <h2>Gravitational Field Due to Uniform Circular Arc and Disc</h2>
+        
+        <div class="model-box">
+            <h3>1. Center of Uniform Circular Arc of Subtended Angle \( \theta_0 \)</h3>
+            <p>
+                For a circular arc of radius \( R \) and linear mass density \( \lambda \) subtending an angle \( \theta_0 \) at its center of curvature:
+            </p>
+            \[
+            I_{\text{arc}} = \frac{2 G \lambda}{R} \sin\left(\frac{\theta_0}{2}\right) = \frac{2 G M}{\theta_0 R^2} \sin\left(\frac{\theta_0}{2}\right)
+            \]
+            <p>For a semicircle (\( \theta_0 = \pi \)): \( I_{\text{semicircle}} = \frac{2GM}{\pi R^2} \).</p>
+            <hr>
+            <h3>2. Axis of a Uniform Flat Disc of Radius \( R \) and Surface Density \( \sigma \)</h3>
+            <p>
+                Dividing the disc into concentric elemental rings of radius \( y \) and width \( dy \), each of mass \( dm = \sigma (2\pi y dy) \):
+            </p>
+            \[
+            I_{\text{disc}}(x) = \int_0^R \frac{G (\sigma 2\pi y dy) x}{(y^2 + x^2)^{3/2}} = 2\pi G \sigma x \left[ -\frac{1}{\sqrt{y^2 + x^2}} \right]_0^R
+            \]
+            \[
+            I_{\text{disc}}(x) = 2\pi G \sigma \left( 1 - \frac{x}{\sqrt{R^2 + x^2}} \right) = 2\pi G \sigma (1 - \cos\theta)
+            \]
+            <p>
+                where \( \theta \) is the semi-vertical angle subtended by the disc rim at point \( P \).
+            </p>
+            <p><strong>For an Infinite Sheet of Mass (\( R \to \infty \) or \( \theta \to 90^\circ \)):</strong></p>
+            \[
+            I_{\text{sheet}} = 2\pi G \sigma = \text{Constant (Uniform field)}
+            \]
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

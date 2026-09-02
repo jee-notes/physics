@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Star Systems | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./index.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitation
+        </a>
+    </nav>
+
+    <h1>Binary Star Systems & Two-Body Dynamics</h1>
+    <p class="subtitle">
+        Mechanics of mutually interacting gravitational systems, center of mass orbits, and the reduced mass formulation.
+    </p>
+
+    <section>
+        <h2>The Two-Body Problem Under Gravitational Interaction</h2>
+        <p>
+            In elementary planetary mechanics, we usually assume the central body (like the Sun or Earth) is fixed rigidly in space because its mass is vastly larger than the satellite's mass (\( M \gg m \)).
+        </p>
+        <p>
+            However, when two celestial bodies have comparable masses \( m_1 \) and \( m_2 \) (such as binary star pairs, the Pluto-Charon system, or the Earth-Moon system), neither star is stationary. Both stars revolve continuously in circular or elliptical orbits around their <strong>common Center of Mass (COM)</strong> under their mutual gravitational attraction.
+        </p>
+    </section>
+
+    <section>
+        <h2>Motion About Common Center of Mass</h2>
+        <p>
+            Let two stars of masses \( m_1 \) and \( m_2 \) be separated by a constant mutual distance \( d = r_1 + r_2 \).
+        </p>
+        <p>
+            By definition of the Center of Mass (chosen as the origin):
+        </p>
+        \[
+        m_1 r_1 = m_2 r_2 \implies r_2 = \frac{m_1}{m_2} r_1
+        \]
+        <p>Using \( r_1 + r_2 = d \):</p>
+        \[
+        r_1 + \frac{m_1}{m_2}r_1 = d \implies r_1 \left(\frac{m_1 + m_2}{m_2}\right) = d
+        \]
+
+        <div class="model-box">
+            <h3>Orbital Radii of the Two Stars</h3>
+            \[
+            r_1 = \left( \frac{m_2}{m_1 + m_2} \right) d, \quad r_2 = \left( \frac{m_1}{m_1 + m_2} \right) d
+            \]
+            <ul>
+                <li>The heavier star moves in a smaller circle closer to the center of mass (\( r \propto 1/m \)).</li>
+                <li>The center of mass always lies on the line segment connecting the two stars.</li>
+                <li>Both stars are always on diametrically opposite sides of the center of mass at all instants, ensuring they have the <strong>exact same angular velocity \( \omega \)</strong> and the <strong>exact same orbital time period \( T \)</strong>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Orbital Radii, Speeds, and Common Time Period of Binary Stars</h2>
+        <p>
+            The mutual gravitational attraction between the two stars provides the necessary centripetal force for each star to maintain its circular orbit of radius \( r_1 \) and \( r_2 \) about the COM:
+        </p>
+        \[
+        F_{\text{grav}} = G \frac{m_1 m_2}{d^2}
+        \]
+        <p>Writing the equation of circular motion for star 1:</p>
+        \[
+        G \frac{m_1 m_2}{d^2} = m_1 \omega^2 r_1 = m_1 \omega^2 \left( \frac{m_2}{m_1 + m_2} d \right)
+        \]
+        <p>Canceling \( m_1 m_2 \):</p>
+        \[
+        \frac{G}{d^2} = \frac{\omega^2 d}{m_1 + m_2} \implies \omega^2 = \frac{G(m_1 + m_2)}{d^3}
+        \]
+
+        <div class="model-box">
+            <h3>Common Angular Velocity (\( \omega \)) and Time Period (\( T \))</h3>
+            \[
+            \omega = \sqrt{\frac{G(m_1 + m_2)}{d^3}}
+            \]
+            \[
+            T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{d^3}{G(m_1 + m_2)}}
+            \]
+            <hr>
+            <h3>Orbital Speeds</h3>
+            \[
+            v_1 = \omega r_1 = \frac{m_2}{\sqrt{m_1 + m_2}} \sqrt{\frac{G}{d}}
+            \]
+            \[
+            v_2 = \omega r_2 = \frac{m_1}{\sqrt{m_1 + m_2}} \sqrt{\frac{G}{d}}
+            \]
+            \[
+            \frac{v_1}{v_2} = \frac{r_1}{r_2} = \frac{m_2}{m_1}
+            \]
+        </div>
+
+        <div class="insightbox">
+            Notice that Kepler's Third Law generalizes seamlessly to binary systems:
+            \[
+            T^2 = \left[ \frac{4\pi^2}{G(m_1 + m_2)} \right] d^3
+            \]
+            When \( m_1 = M \) and \( m_2 = m \ll M \), this simplifies directly to the classic single-body Kepler's law: \( T^2 = \frac{4\pi^2}{GM} d^3 \).
+        </div>
+    </section>
+
+    <section>
+        <h2>Reduced Mass Concept in Gravitational Dynamics</h2>
+        <p>
+            The two-body problem can be elegantly transformed into an equivalent single-body problem by defining the <strong>reduced mass</strong> \( \mu \):
+        </p>
+
+        <div class="model-box">
+            <h3>Reduced Mass Formulation</h3>
+            \[
+            \mu = \frac{m_1 m_2}{m_1 + m_2} \quad \left( \frac{1}{\mu} = \frac{1}{m_1} + \frac{1}{m_2} \right)
+            \]
+            <p>
+                In the relative coordinate frame, the relative position vector \( \vec{r} = \vec{r}_2 - \vec{r}_1 \) (where \( |\vec{r}| = d \)) satisfies the single-body equation of motion:
+            </p>
+            \[
+            \mu \frac{d^2\vec{r}}{dt^2} = -G \frac{m_1 m_2}{r^2}\hat{r} = -\frac{G (m_1 + m_2) \mu}{r^2}\hat{r}
+            \]
+            <hr>
+            <h3>Total Mechanical Energy in Terms of Reduced Mass</h3>
+            \[
+            E = K_{\text{total}} + U = \frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2 - \frac{G m_1 m_2}{d} = \frac{1}{2}\mu (\omega d)^2 - \frac{G m_1 m_2}{d}
+            \]
+            \[
+            E = -\frac{G m_1 m_2}{2d}
+            \]
+        </div>
+
+        <div class="examplebox">
+            <h3>Example: Symmetrical Two-Body Problem</h3>
+            <p>
+                Two identical stars of mass \( M \) each revolve in a circular orbit under their mutual gravitational attraction. If the distance between them is \( 2R \), find the speed of each star and the period of revolution.
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            <p>1. The distance between the stars is \( d = 2R \). The radius of the circular orbit of each star about the COM is \( r = R \).</p>
+            <p>2. Centripetal force equation for one star:</p>
+            \[
+            \frac{G M^2}{(2R)^2} = \frac{M v^2}{R} \implies \frac{G M^2}{4R^2} = \frac{M v^2}{R}
+            \]
+            \[
+            v = \frac{1}{2} \sqrt{\frac{GM}{R}}
+            \]
+            <p>3. Time period of revolution:</p>
+            \[
+            T = \frac{2\pi R}{v} = \frac{2\pi R}{\frac{1}{2}\sqrt{\frac{GM}{R}}} = 4\pi \sqrt{\frac{R^3}{GM}}
+            \]
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

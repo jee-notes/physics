@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravitational Self-Energy | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./04-gravitational-potential-and-energy.html" class="back-btn">
+            <span>&larr;</span> Back to Gravitational Potential & Energy
+        </a>
+    </nav>
+
+    <h1>Gravitational Self-Energy</h1>
+    <p class="subtitle">
+        Work required to assemble an extended mass distribution from mutual gravitational binding.
+    </p>
+
+    <section>
+        <h2>Concept of Gravitational Self-Energy</h2>
+        <p>
+            The <strong>gravitational self-energy</strong> \( U_{\text{self}} \) of a body is defined as the total mechanical work done by external forces in assembling the entire body by bringing all its constituent infinitesimal mass elements from mutual infinite separation to their final positions.
+        </p>
+        <p>
+            Equivalently, it is the negative of the work done by the mutual gravitational forces during the assembly process:
+        </p>
+        \[
+        U_{\text{self}} = \frac{1}{2} \int V(\vec{r}) dm = \frac{1}{2} \int V(\vec{r}) \rho(\vec{r}) dV
+        \]
+        <div class="insightbox">
+            Because gravitational forces are strictly attractive, the gravitational self-energy of any physical body is always <strong>negative</strong> (\( U_{\text{self}} < 0 \)). This reflects the inherent mechanical binding of astronomical bodies like stars and planets.
+        </div>
+    </section>
+
+    <section>
+        <h2>Self-Energy of Uniform Spherical Shell</h2>
+        <p>
+            Consider assembling a thin spherical shell of radius \( R \) and total final mass \( M \). Suppose at some intermediate stage, the shell has accumulated mass \( m \). The gravitational potential at the surface of this shell is \( V = -\frac{Gm}{R} \).
+        </p>
+        <p>
+            The work done by an external agent in bringing an additional mass element \( dm \) from infinity to the surface of the shell is:
+        </p>
+        \[
+        dW = V dm = -\frac{Gm}{R} dm
+        \]
+        <p>Integrating as \( m \) grows from \( 0 \) to \( M \):</p>
+
+        <div class="model-box">
+            <h3>Self-Energy of a Thin Spherical Shell</h3>
+            \[
+            U_{\text{self, shell}} = -\int_0^M \frac{Gm}{R} dm = -\frac{G}{R} \left[ \frac{m^2}{2} \right]_0^M = -\frac{GM^2}{2R}
+            \]
+        </div>
+    </section>
+
+    <section>
+        <h2>Self-Energy of Uniform Solid Sphere</h2>
+        <p>
+            Consider building a uniform solid sphere of final radius \( R \), total mass \( M \), and constant density \( \rho = \frac{M}{\frac{4}{3}\pi R^3} \).
+        </p>
+        <p>
+            Suppose at an intermediate stage, a solid core of radius \( r \) and mass \( m(r) = \frac{4}{3}\pi r^3 \rho \) has already been assembled. The potential at the surface of this core is:
+        </p>
+        \[
+        V(r) = -\frac{G m(r)}{r}
+        \]
+        <p>
+            Now, bring an additional thin spherical layer of thickness \( dr \), volume \( 4\pi r^2 dr \), and mass \( dm = \rho(4\pi r^2 dr) \) from infinity to wrap around the core:
+        </p>
+        \[
+        dW = V(r) dm = -\left( \frac{G \cdot \frac{4}{3}\pi r^3 \rho}{r} \right) (4\pi r^2 \rho dr) = -\frac{16\pi^2 G \rho^2}{3} r^4 dr
+        \]
+        <p>
+            Integrating over all shells from \( r = 0 \) to the final radius \( r = R \):
+        </p>
+        \[
+        U_{\text{self}} = -\frac{16\pi^2 G \rho^2}{3} \int_0^R r^4 dr = -\frac{16\pi^2 G \rho^2}{3} \frac{R^5}{5} = -\frac{3}{5} \frac{G}{R} \left( \frac{4}{3}\pi R^3 \rho \right)^2
+        \]
+
+        <div class="model-box">
+            <h3>Self-Energy of a Uniform Solid Sphere</h3>
+            \[
+            U_{\text{self, solid sphere}} = -\frac{3}{5} \frac{GM^2}{R}
+            \]
+            <ul>
+                <li>\( M \) = Total mass of the uniform sphere.</li>
+                <li>\( R \) = Radius of the sphere.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Energy Required to Disassemble Mass Distributions</h2>
+        <p>
+            The <strong>gravitational binding energy</strong> (or energy of disassembly) \( E_b \) is defined as the minimum energy required to completely break up a solid celestial body into infinitesimal pieces and scatter them to mutual infinite separation:
+        </p>
+
+        <div class="model-box">
+            <h3>Binding Energy of a Sphere</h3>
+            \[
+            E_b = -U_{\text{self}} = +\frac{3}{5}\frac{GM^2}{R}
+            \]
+        </div>
+
+        <div class="examplebox">
+            <h3>Example: Work Done to Blow Up the Earth</h3>
+            <p>
+                Calculate the minimum energy required to completely break the Earth apart and disperse all its pieces to infinity. Assume Earth to be a uniform sphere of mass \( M = 6 \times 10^{24} \, \text{kg} \) and radius \( R = 6.4 \times 10^6 \, \text{m} \).
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            \[
+            W = \frac{3}{5}\frac{GM^2}{R} = \frac{3}{5} \frac{(6.67 \times 10^{-11})(6 \times 10^{24})^2}{6.4 \times 10^6}
+            \]
+            \[
+            W = \frac{3}{5} \frac{(6.67 \times 10^{-11})(3.6 \times 10^{49})}{6.4 \times 10^6} \approx 2.25 \times 10^{32} \, \text{J}
+            \]
+            <p>
+                This colossal amount of energy (\(\approx 2.25 \times 10^{32} \, \text{J}\)) represents the total gravitational binding holding our planet together.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>

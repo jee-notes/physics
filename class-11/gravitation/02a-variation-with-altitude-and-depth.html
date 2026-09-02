@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variation of g with Altitude and Depth | JEE Physics Notes</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav">
+        <a href="./02-acceleration-due-to-gravity.html" class="back-btn">
+            <span>&larr;</span> Back to Acceleration Due to Gravity
+        </a>
+    </nav>
+
+    <h1>Variation of \( g \) with Altitude and Depth</h1>
+    <p class="subtitle">
+        Mathematical derivations and physical analysis of the radial dependence of gravitational acceleration.
+    </p>
+
+    <section>
+        <h2>Variation of g with Altitude (Height Above Surface)</h2>
+        <p>
+            Let \( M \) and \( R \) be the mass and radius of the Earth. The acceleration due to gravity at the Earth's surface is:
+        </p>
+        \[
+        g = \frac{GM}{R^2}
+        \]
+        <p>
+            At a point located at height \( h \) above the surface, the distance from the center of Earth is \( r = R + h \). The acceleration due to gravity \( g_h \) at this altitude is:
+        </p>
+        <div class="model-box">
+            <h3>Exact Formula for Any Altitude \( h \)</h3>
+            \[
+            g_h = \frac{GM}{(R+h)^2} = \frac{GM}{R^2\left(1 + \frac{h}{R}\right)^2} = \frac{g}{\left(1 + \frac{h}{R}\right)^2}
+            \]
+        </div>
+        <p>
+            As \( h \to \infty \), \( g_h \to 0 \). The decrease in gravity with height is purely governed by the inverse-square law.
+        </p>
+    </section>
+
+    <section>
+        <h2>Approximation for Small Altitudes (h << R)</h2>
+        <p>
+            When the height \( h \) is much smaller than the radius of the Earth (\( h \ll R \), typically \( h < 300 \, \text{km} \)), we can use the binomial expansion:
+        </p>
+        \[
+        g_h = g \left(1 + \frac{h}{R}\right)^{-2} = g \left(1 - \frac{2h}{R} + \frac{3h^2}{R^2} - \cdots\right)
+        \]
+        <p>Neglecting higher-order terms in \( h/R \):</p>
+
+        <div class="model-box">
+            <h3>Binomial Approximation (\( h \ll R \))</h3>
+            \[
+            g_h \approx g \left(1 - \frac{2h}{R}\right)
+            \]
+            <ul>
+                <li><strong>Absolute decrease in \( g \):</strong> \( \Delta g = g - g_h \approx \frac{2gh}{R} \)</li>
+                <li><strong>Fractional decrease in \( g \):</strong> \( \frac{\Delta g}{g} \approx \frac{2h}{R} \)</li>
+                <li><strong>Percentage decrease in \( g \):</strong> \( \frac{\Delta g}{g} \times 100\% \approx \frac{2h}{R} \times 100\% \)</li>
+            </ul>
+        </div>
+
+        <div class="insightbox">
+            <strong>Critical Exam Pitfall:</strong> Use the approximation formula \( g_h = g(1 - 2h/R) \) ONLY when \( h \le 0.05 R \) (\( h \le 320 \, \text{km} \)). If \( h = R \), the exact formula gives \( g_h = g/(1+1)^2 = g/4 \), whereas the approximation gives an impossible result \( g_h = g(1-2) = -g \).
+        </div>
+    </section>
+
+    <section>
+        <h2>Variation of g with Depth (Below Surface of Earth)</h2>
+        <p>
+            Consider a test mass \( m \) taken to a depth \( d \) below the Earth's surface. Its distance from the center of Earth is \( r = R - d \).
+        </p>
+        <p>
+            According to Newton's Shell Theorem:
+        </p>
+        <ol>
+            <li>The outer spherical shell of thickness \( d \) exerts <strong>zero net gravitational force</strong> on the mass inside it.</li>
+            <li>Only the inner solid sphere of radius \( r = R - d \) and mass \( M' \) attracts the mass toward the center.</li>
+        </ol>
+        <p>
+            Assuming uniform density \( \rho \), the mass of the inner sphere is:
+        </p>
+        \[
+        M' = \frac{4}{3}\pi (R-d)^3 \rho = M \frac{(R-d)^3}{R^3}
+        \]
+        <p>
+            The gravitational acceleration at depth \( d \) is:
+        </p>
+        \[
+        g_d = \frac{GM'}{(R-d)^2} = \frac{G}{(R-d)^2} \left[ M \frac{(R-d)^3}{R^3} \right] = \frac{GM}{R^3} (R - d)
+        \]
+
+        <div class="model-box">
+            <h3>Acceleration at Depth \( d \)</h3>
+            \[
+            g_d = g \left(1 - \frac{d}{R}\right) = g \left(\frac{r}{R}\right)
+            \]
+            <ul>
+                <li><strong>At the surface (\( d = 0 \)):</strong> \( g_d = g \).</li>
+                <li><strong>At the center of Earth (\( d = R \)):</strong> \( g_{\text{center}} = 0 \).</li>
+                <li><strong>Fractional decrease in \( g \):</strong> \( \frac{\Delta g}{g} = \frac{d}{R} \).</li>
+            </ul>
+        </div>
+
+        <div class="concept-box">
+            <strong>Exact vs Approximate Linear Form:</strong> Notice that \( g_d = g(1 - d/R) \) is an <strong>exact</strong> linear relation valid for all depths from \( d=0 \) to \( d=R \) (under uniform density assumption), unlike the altitude formula which is only an approximation for small \( h \).
+        </div>
+    </section>
+
+    <section>
+        <h2>Comparison and Variation Graph of g with Distance r</h2>
+        <p>
+            Let \( r \) denote the radial distance of a point from the center of the Earth:
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Distance Condition</th>
+                    <th>Formula for \( g(r) \)</th>
+                    <th>Dependence</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Inside Earth</strong></td>
+                    <td>\( 0 \le r \le R \)</td>
+                    <td>\( g(r) = \frac{GM}{R^3} r = g \frac{r}{R} \)</td>
+                    <td>\( g \propto r \) (Linear increase)</td>
+                </tr>
+                <tr>
+                    <td><strong>Surface of Earth</strong></td>
+                    <td>\( r = R \)</td>
+                    <td>\( g_{\text{max}} = \frac{GM}{R^2} \)</td>
+                    <td>Maximum value</td>
+                </tr>
+                <tr>
+                    <td><strong>Outside Earth</strong></td>
+                    <td>\( r \ge R \)</td>
+                    <td>\( g(r) = \frac{GM}{r^2} \)</td>
+                    <td>\( g \propto \frac{1}{r^2} \) (Inverse-square decay)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="examplebox">
+            <h3>Example: Equal Gravity at Altitude and Depth</h3>
+            <p>
+                At what height \( h \) above the surface of Earth does the acceleration due to gravity become equal to the value at a depth \( d = 64 \, \text{km} \)? (Take radius of Earth \( R = 6400 \, \text{km} \)).
+            </p>
+            <hr>
+            <p><strong>Solution:</strong></p>
+            <p>
+                Since \( d = 64 \, \text{km} \ll R \), \( h \) will also be very small compared to \( R \).
+            </p>
+            <p>
+                Equating \( g_h \) and \( g_d \):
+            </p>
+            \[
+            g\left(1 - \frac{2h}{R}\right) = g\left(1 - \frac{d}{R}\right) \implies \frac{2h}{R} = \frac{d}{R} \implies h = \frac{d}{2}
+            \]
+            \[
+            h = \frac{64 \, \text{km}}{2} = 32 \, \text{km}
+            \]
+            <p>
+                The decrease in \( g \) for a small height \( h \) is twice the decrease in \( g \) for the same depth \( d \).
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <p>By Hitendra K K</p>
+    </footer>
+</div>
+</body>
+</html>
