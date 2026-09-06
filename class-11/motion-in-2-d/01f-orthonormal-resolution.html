@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orthonormal Resolution | Vector Operations</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-vector-operations.html" class="back-btn">
+<span>&larr;</span> Back to Vector Operations
+</a>
+</nav>
+<h1>Orthonormal Resolution</h1>
+<p class="subtitle">
+The Gram matrix explains why orthonormal components make vector multiplication so simple.
+</p>
+<section>
+<h2>Orthonormal Resolution</h2>
+<p>
+We learned that if there are two vectors \(\vec P\) and \(\vec Q\), then we can perform operations such as:
+</p>
+<ul class="model-box">
+<li>Vector Addition</li>
+<li>Dot Product</li>
+<li>Cross Product</li>
+</ul>
+<p>
+To perform these operations, we need to know their magnitudes \(|\vec P|\) and \(|\vec Q|\), and the angle \(\theta\) between them. This much information completely specifies the mutual geometry between them.
+</p>
+<p>
+For the vector operations: 
+</p>
+\[
+\vec P\cdot\vec Q = |\vec P||\vec Q|\cos\theta
+\]
+\[
+|\vec P\times\vec Q|=|\vec P||\vec Q|\sin\theta
+\]
+\[
+|\vec P+\vec Q|^2=|\vec P|^2+|\vec Q|^2+2|\vec P||\vec Q|\cos\theta
+\]
+<p>
+However, instead of describing the vectors by their magnitudes and their mutual angle, we can choose a basis (a system of unit vectors) and resolve each vector into components.
+</p>
+<p>
+For example, choose two basis vectors \(\hat i\) and \(\hat j\), and write \(\vec P\) as \(\vec P=P_x\hat i+P_y\hat j\) and \(\vec Q=Q_x\hat i+Q_y\hat j\) .
+</p>
+<p>
+Now these vectors are described by their components only. Like \(\vec P\) is described by \(P_x\) and \(P_y\) and \(\vec Q\) by \(Q_x\) and \(Q_y\) .
+</p>
+<p>
+With this information, we dont need to separately know their magnitudes \(|\vec P|\) and \(|\vec Q|\), and the angle \(\theta\) between them to perform vector operations.
+</p>
+<p>
+So resolution does not add or remove information. It simply provides a different way of encoding the same vectors.
+</p>
+\[
+\boxed{|\vec P|,\, |\vec Q|,\, \theta \qquad \longrightarrow \qquad P_x,\, P_y,\, Q_x,\, Q_y}
+\]
+<p>
+The advantage of this representation is that vector operations on \(\vec P\) and \(\vec Q\) can now be performed by simple arithmetic operations on \(P_x,\, P_y,\, Q_x,\, Q_y\) . 
+</p>
+<p>
+In this topic, we try to understand what benefit orthonormal resolution provides over some other angle.
+</p>
+<p>
+When we talk of orthonormal resolution, angle between \(\hat i\) and \(\hat j\) is \(90^\circ\) .
+</p>
+<p>
+So, instead of \(\hat i\) and \(\hat j\) , we consider a basis having angle \(60^\circ\) degree between them, then how would operations be different.
+</p>
+<p>
+Like consider \(\hat a\) and \(\hat b\) , such that 
+</p>
+\[
+|\hat a| = |\hat b| = 1 \qquad \text{and} \qquad \angle(\hat{a},\hat{b})=60^\circ
+\]
+<p>
+Now write \(\vec P\) as \(\vec P=P_a\hat a+P_b\hat b\) and \(\vec Q=Q_a\hat a+Q_b\hat b\) .
+</p>
+<p>
+What advantage does \(P_x,\, P_y,\, Q_x,\, Q_y\) give over \(P_a,\, P_b,\, Q_a,\, Q_b\) .
+</p>
+</section>
+<section>
+<h2>Vector Addition</h2>
+<p>
+We first compare vector addition operation.
+</p>
+<p>
+For the orthonormal resolution:
+</p>
+\[
+\vec P=P_x\hat i+P_y\hat j \qquad \vec Q=Q_x\hat i+Q_y\hat j
+\]
+\[
+\vec P+\vec Q=(P_x+Q_x)\hat i+(P_y+Q_y)\hat j
+\]
+<p>
+So the components of \(\vec P+\vec Q\) are simply
+</p>
+\[
+\boxed{R_x=P_x+Q_x \qquad R_y=P_y+Q_y}
+\]
+<p>
+Now consider the \(60^\circ\) resolution:
+</p>
+\[
+\vec P=P_a\hat a+P_b\hat b \qquad \vec Q=Q_a\hat a+Q_b\hat b
+\]
+\[
+\vec P+\vec Q=(P_a+Q_a)\hat a+(P_b+Q_b)\hat b
+\]
+<p>
+Hence,
+</p>
+\[
+\boxed{R_a=P_a+Q_a \qquad R_b=P_b+Q_b}
+\]
+<p>
+The addition rule is exactly the same in both resolutions : <strong>Addition is componentwise, regardless of the angle between the basis vectors.</strong>
+</p>
+<p>
+Therefore, orthonormal resolution provides no special advantage for vector addition operation.
+</p>
+</section>
+<section>
+<h2>Dot Product</h2>
+<p>
+Now we compare the dot product operation which demonstrates the main benefit.
+</p>
+<p>
+In the case of orthonormal resolution \(\hat i\) and \(\hat j\) are unit vectors and perpendicular. So we get,
+</p>
+\[
+\boxed{\vec P\cdot\vec Q=P_xQ_x+P_yQ_y}
+\]
+<p>
+This is because:
+</p>
+\[
+\hat i\cdot\hat i=\hat j\cdot\hat j=1 \qquad \hat i\cdot\hat j=\hat j\cdot\hat i=0
+\]
+<p>
+In the case of \(60^\circ\) resolution:
+</p>
+\[
+\hat a\cdot\hat a=\hat b\cdot\hat b=1 \qquad \hat a\cdot\hat b=\hat b\cdot\hat a=\cos60^\circ=\frac12
+\]
+<p>
+And so for dot product of \(\vec P=P_a\hat a+P_b\hat b\) and \(\vec Q=Q_a\hat a+Q_b\hat b\)
+</p>
+\[
+\begin{aligned}
+\vec P\cdot\vec Q 
+&=(P_a\hat a+P_b\hat b)\cdot(Q_a\hat a+Q_b\hat b)\\
+&=P_aQ_a(\hat a\cdot\hat a)+P_aQ_b(\hat a\cdot\hat b)+P_bQ_a(\hat b\cdot\hat a)+P_bQ_b(\hat b\cdot\hat b)
+\end{aligned}
+\]
+\[
+\boxed{
+\vec P\cdot\vec Q=P_aQ_a+P_bQ_b+\frac12(P_aQ_b+P_bQ_a)}
+\]
+<p>
+The difference is clear. In the orthonormal resolution, multiplication of different components gives \(0\), while multiplication of a component with itself gives \(1\). Thus, we can use "1" as a multiplicative identity in the framework of directional multiplication.
+</p>
+<div class="insightbox">
+"1" is called as multiplicative identity and "0" is called as additive identity.<br>
+We use this like \(1^2 = 1^3 = 1\) .<br>
+</div>
+</section>
+
+<section>
+<h2>Matrix Representation</h2>
+<p>
+Write the components of \(\vec P\) and \(\vec Q\) as column matrices:
+</p>
+
+$$
+\mathbf p=
+\begin{pmatrix}
+P_x\\
+P_y
+\end{pmatrix}
+\qquad
+\mathbf q=
+\begin{pmatrix}
+Q_x\\
+Q_y
+\end{pmatrix}
+$$
+
+<p>
+For the orthonormal basis, the multiplication between the basis vectors can be represented by the matrix:
+</p>
+
+$$
+\boxed{
+G=
+\begin{pmatrix}
+\hat i\cdot\hat i & \hat i\cdot\hat j\\
+\hat j\cdot\hat i & \hat j\cdot\hat j
+\end{pmatrix}
+=
+\begin{pmatrix}
+1&0\\
+0&1
+\end{pmatrix}
+=I
+}
+$$
+
+<p>
+This matrix is called the <b>Gram matrix</b> of the basis. It contains all the information about how the basis vectors multiply with each other under dot product.
+</p>
+
+<p>
+Therefore, the dot product can be written as:
+</p>
+
+$$
+\boxed{
+\vec P\cdot\vec Q=\mathbf p^{T}G\mathbf q
+}
+$$
+
+<p>
+For the orthonormal basis, \(G=I\), so:
+</p>
+
+$$
+\vec P\cdot\vec Q
+=
+\mathbf p^{T}I\mathbf q
+=
+\mathbf p^{T}\mathbf q
+$$
+
+$$
+\boxed{
+\vec P\cdot\vec Q
+=
+\begin{pmatrix}
+P_x&P_y
+\end{pmatrix}
+\begin{pmatrix}
+Q_x\\
+Q_y
+\end{pmatrix}
+=
+P_xQ_x+P_yQ_y
+}
+$$
+
+<p>
+So the Gram matrix being the identity matrix is exactly what allows the dot product to be obtained by ordinary matrix multiplication of the component matrices.
+</p>
+
+<p>
+Now consider the \(60^\circ\) basis. Its Gram matrix is:
+</p>
+
+$$
+\boxed{
+G=
+\begin{pmatrix}
+\hat a\cdot\hat a & \hat a\cdot\hat b\\
+\hat b\cdot\hat a & \hat b\cdot\hat b
+\end{pmatrix}
+=
+\begin{pmatrix}
+1&\frac12\\
+\frac12&1
+\end{pmatrix}
+}
+$$
+
+<p>
+Hence:
+</p>
+
+$$
+\boxed{
+\vec P\cdot\vec Q
+=
+\begin{pmatrix}
+P_a&P_b
+\end{pmatrix}
+\begin{pmatrix}
+1&\frac12\\
+\frac12&1
+\end{pmatrix}
+\begin{pmatrix}
+Q_a\\
+Q_b
+\end{pmatrix}
+}
+$$
+
+<p>
+The extra \(\frac12\) terms appear because the basis vectors are not perpendicular.
+</p>
+
+<p>
+Thus, the difference between the two resolutions can be summarized by their Gram matrices:
+</p>
+
+$$
+\boxed{
+\text{Orthonormal: }\quad
+G=I=
+\begin{pmatrix}
+1&0\\
+0&1
+\end{pmatrix}
+}
+$$
+
+$$
+\boxed{
+60^\circ:\quad
+G=
+\begin{pmatrix}
+1&\frac12\\
+\frac12&1
+\end{pmatrix}
+}
+$$
+
+<p>
+Therefore, the main advantage of orthonormal resolution is that the Gram matrix of the basis is the identity matrix. The basis multiplication then requires no additional factors or cross terms.
+</p>
+
+</section>
+
+
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

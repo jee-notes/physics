@@ -14,70 +14,198 @@
 <span>&larr;</span> Back to Motion in 2D
 </a>
 </nav>
-
 <h1>Projectile on an Inclined Plane</h1>
 <p class="subtitle">
 Adjusting the coordinate system to simplify complex unlevel trajectories.
 </p>
-
+<section>
+<h2>Non-Vertical Resolution</h2>
+<p>
+We know that it is advantageous to resolve vectors orthogonally. When acceleration is constant, we resolve initial velocity because only the component of initial velocity along the acceleration changes with time.
+</p>
+<p>
+We used this concept in vertical projectiles in G2G and T2G cases.
+</p>
+<p>
+But, in case of inclined plane projectiles (up the incline and down the incline), we want to utilise the information that <strong>net displacement perpendicular to the plane is 0 </strong>.
+<p>
+This information is more convenient depending on what information is provided in the question and what we need to find.
+</p>
+<p>
+In this topic, we build a mathematical framework for such cases.
+</p>
+</section>
 <section>
 <h2>Projection Up the Incline</h2>
 <p>
-Consider an inclined plane making an angle \(\alpha\) with the horizontal. A projectile is launched from the bottom of this incline with an initial velocity \(u\) at an angle \(\theta\) <em>with respect to the horizontal</em>.
+Consider an inclined plane making an angle \(\alpha\) with the horizontal. A projectile is launched from the bottom of this incline with an initial velocity \(u\) at an angle \(\theta\) <strong>with respect to the incline</strong>. We need to solve this situation in terms of knowing T,H,R.
 </p>
 <p>
-The most efficient way to solve this is to rotate our axis system. Let the x-axis lie parallel <em>up</em> the incline, and the y-axis lie perpendicular to the incline.
-The angle of projection relative to the incline itself becomes \((\theta - \alpha)\).
+The most efficient way to solve this is to rotate our axis system.
 </p>
-<div class="model-box">
-<strong>Adjusted Kinematics:</strong>
-<ul>
-<li>\(u_x = u\cos(\theta - \alpha)\)</li>
-<li>\(u_y = u\sin(\theta - \alpha)\)</li>
+<p>
+Let the x-axis lie parallel <strong>up</strong> the incline, and the y-axis lie perpendicular to the incline above level positive. We determine \(\vec u\) and \(\vec a\) along the new axes: 
+</p>
+<ul class="model-box">
+<li>\(u_x = u\cos\theta\)</li>
+<li>\(u_y = u\sin\theta\)</li>
 <li>\(a_x = -g\sin\alpha\) (Gravity now critically has a component opposing the horizontal motion)</li>
 <li>\(a_y = -g\cos\alpha\)</li>
 </ul>
-</div>
+<h3>Time of Flight (\(T\)):</h3>
 <p>
-<strong>Time of Flight (\(T\)):</strong> The projectile hits the incline when its perpendicular displacement \(y = 0\).
-\[ y = u_y T + \frac{1}{2}a_y T^2 \implies 0 = u\sin(\theta - \alpha)T - \frac{1}{2}(g\cos\alpha)T^2 \]
-\[ T = \frac{2u\sin(\theta - \alpha)}{g\cos\alpha} \]
+The projectile hits the incline when its perpendicular displacement \(y = 0\).
+\[
+y = u_y T + \frac{1}{2}a_y T^2 \qquad 0 = u\sin\theta \, T - \frac{1}{2}(g\cos\alpha) \, T^2
+\]
+\[
+T = \frac{2u\sin\theta}{g\cos\alpha} \qquad T = \frac{2u_y}{a_y} 
+\]
+</p>
+<h3>Maximum Height (\(H\)):</h3>
+<p>
+The maximum height is attained \(v_y = 0\) . Using:
+\[
+v_y^2 = u_y^2 + 2(a_y)H \qquad 0 = u^2\sin^2\theta + 2 (-g\cos\alpha) \, H
+\]
+\[
+H = \frac{u^2\sin^2\theta}{2g\cos\alpha} \qquad H = \frac{u_y^2}{2a_y} 
+\]
 </p>
 <div class="insightbox">
-<strong>Range Up the Incline (\(R\)):</strong>
-Unlike ground-to-ground, we must account for \(a_x\):
-\[ R = u_x T + \frac{1}{2}a_x T^2 = u\cos(\theta - \alpha)T - \frac{1}{2}g\sin\alpha T^2 \]
-Through trigonometric simplification, the range simplifies nicely to:
-\[ R = \frac{u^2}{g\cos^2\alpha} \left[ \sin(2\theta - \alpha) - \sin\alpha \right] \]
-Maximum range up the incline occurs when \(\sin(2\theta - \alpha) = 1\), or \(2\theta - \alpha = \pi/2\).
+The expressions for \(T\) and \(H\) are same for both cases: up the incine as well as down the incine.<br>
+This is because time of flight and maximum height depend only on the Y component as we define the Y component itself in this way.
 </div>
+<h3>Range Up the Incline (\(R\)):</h3>
+<p>
+Unlike ground-to-ground, we must account for \(a_x\):
+</p>
+\[
+R = u_x T + \frac{1}{2}a_x T^2 = u\cos\theta \, T + \frac{1}{2}(-g\sin\alpha)\, T^2
+\]
+<p>
+We need to substitute the value for \(T\) in the above equation to get \(R\) . 
+</p>
 </section>
-
 <section>
 <h2>Projection Down the Incline</h2>
 <p>
-If the projectile is launched from the top of the incline, pointing downwards, we adjust our rotated axis so the positive x-axis points <em>down</em> the incline. The projection angle relative to the incline surface is now \((\theta + \alpha)\).
+Now consider a particle projected from the top of the incline <strong>down the incline</strong> with an initial speed \(u\) at an angle \(\theta\) <strong>with respect to the incline</strong>. We again want to determine the time of flight \(T\), maximum height \(H\), and range \(R\).
 </p>
-<div class="model-box">
-<strong>Adjusted Downward Kinematics:</strong>
-<ul>
-<li>\(u_x = u\cos(\theta + \alpha)\)</li>
-<li>\(u_y = u\sin(\theta + \alpha)\)</li>
-<li>\(a_x = +g\sin\alpha\) (Gravity now assists the horizontal motion down the plane)</li>
-<li>\(a_y = -g\cos\alpha\)</li>
+<p>
+We use the same rotated coordinate system, but take the positive \(x\)-axis <strong>down</strong> the incline. The positive \(y\)-axis is perpendicular to the incline, away from the plane.
+</p>
+<p>
+The initial velocity and acceleration are then resolved along these axes:
+</p>
+<ul class="model-box">
+<li>\(u_x=u\cos\theta\)</li>
+<li>\(u_y=u\sin\theta\)</li>
+<li>\(a_x=+g\sin\alpha\)</li>
+<li>\(a_y=-g\cos\alpha\)</li>
 </ul>
-</div>
 <p>
-<strong>Time of Flight (\(T\)):</strong>
-\[ T = \frac{2u\sin(\theta + \alpha)}{g\cos\alpha} \]
+Gravity now has a component along the positive \(x\)-direction, so it <strong>assists</strong> the motion down the incline.
 </p>
+<h3>Time of Flight (\(T\)):</h3>
 <p>
-<strong>Range Down the Incline (\(R\)):</strong>
-Since gravity assists, the formula adds the sine terms rather than subtracting:
-\[ R = \frac{u^2}{g\cos^2\alpha} \left[ \sin(2\theta + \alpha) + \sin\alpha \right] \]
+As in the projection up the incline, the projectile hits the incline when its perpendicular displacement returns to zero:
+</p>
+\[
+\Delta y=0
+\]
+<p>
+Using the 1D kinematic equation in the perpendicular direction,
+</p>
+\[
+\Delta y=u_yT+\frac12a_yT^2
+\]
+<p>
+we get
+</p>
+\[
+0=u\sin\theta\,T-\frac12(g\cos\alpha)T^2
+\]
+<p>
+The non-zero solution gives the time of flight:
+</p>
+\[
+\boxed{T=\frac{2u\sin\theta}{g\cos\alpha}=\frac{2u_y}{g\cos\alpha}}
+\]
+<h3>Maximum Height (\(H\)):</h3>
+<p>
+The maximum perpendicular height is attained when the perpendicular component of velocity becomes zero:
+</p>
+\[
+v_y=0
+\]
+<p>
+Using the velocity-displacement equation in the perpendicular direction,
+</p>
+\[
+v_y^2=u_y^2+2a_yH
+\]
+<p>
+we get
+</p>
+\[
+0=u^2\sin^2\theta-2g\cos\alpha\,H
+\]
+<p>
+Therefore,
+</p>
+\[
+\boxed{H=\frac{u^2\sin^2\theta}{2g\cos\alpha}=\frac{u_y^2}{2g\cos\alpha}}
+\]
+<div class="insightbox">
+The expressions for \(T\) and \(H\) are the same as for projection up the incline.<br>
+This is because both quantities are determined entirely by the motion in the direction perpendicular to the incline.<br>
+In both cases, the particle starts from the plane and returns to the same plane, so the net perpendicular displacement is zero.
+</div>
+<h3>Range Down the Incline (\(R\)):</h3>
+<p>
+Unlike the perpendicular motion, the motion along the incline is affected by gravity:
+</p>
+\[
+a_x=+g\sin\alpha
+\]
+<p>
+Since gravity assists the motion down the incline, the range is obtained from
+</p>
+\[
+R=u_xT+\frac12a_xT^2
+\]
+<p>
+Substituting the resolved quantities,
+</p>
+\[
+R=u\cos\theta\,T+\frac12g\sin\alpha\,T^2
+\]
+<p>
+Using
+</p>
+\[
+T=\frac{2u\sin\theta}{g\cos\alpha}
+\]
+<p>
+we obtain
+</p>
+\[
+R=\frac{u^2}{g\cos^2\alpha}\left[\sin(2\theta-\alpha)+\sin\alpha\right]
+\]
+\[
+\boxed{R=\frac{u^2}{g\cos^2\alpha}\left[\sin(2\theta-\alpha)+\sin\alpha\right]}
+\]
+<p>
+The \(+\sin\alpha\) term appears because gravity has a component in the same direction as the projectile's motion along the incline.
 </p>
 </section>
-
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./07a-range-incline-plane.html">1. Range Formula</a>
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>

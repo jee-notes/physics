@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Range Formula | Projectile Inclined Plane</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./07-projectile-on-inclined-plane.html" class="back-btn">
+<span>&larr;</span> Back to Projectile Inclined Plane
+</a>
+</nav>
+<h1>Range Formula</h1>
+<p class="subtitle">
+Different Range Formula for Inclined Plane Projectile
+</p>
+<section>
+<h2>Range Formula</h2>
+<p>
+The direct method of finding the range along an inclined plane using the inclined resolution is long and tedious and hence prone to manual error.
+</p>
+<p>
+We can obtain a simpler expression by using the fact that, in the usual horizontal-vertical resolution, the horizontal velocity remains constant because gravity has no horizontal component.
+</p>
+<p>
+Consider a projectile projected <strong>up the incline</strong>. The incline make an angle \(\alpha\) with the horizontal, and the projectile be launched with velocity \(u\) and at an angle \(\theta\) with respect to the incline.
+</p>
+<p>
+If \(R\) is the range measured <strong>along the incline</strong>, then its horizontal projection is
+</p>
+\[
+R\cos\alpha
+\]
+<p>
+Since gravity has no horizontal component, the horizontal velocity remains constant. The projectile is launched at an angle \((\theta+\alpha)\) with the horizontal, so its horizontal velocity is
+</p>
+\[
+u_x=u\cos(\theta+\alpha)
+\]
+<p>
+Therefore, the horizontal displacement during the time of flight \(T\) is simply
+</p>
+\[
+R\cos\alpha=u\cos(\theta+\alpha)\,T
+\]
+<p>
+Hence,
+</p>
+\[
+\boxed{
+R=\frac{u\cos(\theta+\alpha)}{\cos\alpha}\,T}
+\]
+<p>
+From the inclined resolution, the time of flight is already known:
+</p>
+\[
+T=\frac{2u\sin\theta}{g\cos\alpha}
+\]
+<p>
+Substituting this gives
+</p>
+\[
+R=\frac{u\cos(\theta+\alpha)}{\cos\alpha}\left(\frac{2u\sin\theta}{g\cos\alpha}\right)
+\]
+<p>
+so the range up the incline is
+</p>
+\[
+\boxed{R=\frac{2u^2\sin\theta\cos(\theta+\alpha)}{g\cos^2\alpha}}
+\]
+<div class="insightbox">
+We use two different resolutions for two different purposes.<br>
+The direction perpendicular to the incline is used to determine the <strong>time of flight</strong>, because the projectile starts and ends on the incline.<br>
+The horizontal direction is then used to determine the <strong>range</strong>, because horizontal velocity remains constant under gravity.
+</div>
+</section>
+<section>
+<h2>Sign of \(\alpha\)</h2>
+<p>
+The difference between projection up the incline and projection down the incline can be incorporated simply by assigning a <strong>sign to \(\alpha\)</strong>.
+</p>
+<p>
+For projection <strong>up the incline</strong>, we take \(\alpha\) as positive. The angle of the initial velocity with the horizontal is then
+</p>
+\[
+\theta+\alpha
+\]
+<p>
+so the horizontal component of the initial velocity is
+</p>
+\[
+u_x=u\cos(\theta+\alpha)
+\]
+<p>
+For projection <strong>down the incline</strong>, we can equivalently take
+</p>
+\[
+\alpha\rightarrow-\alpha
+\]
+<p>
+The angle of the initial velocity with the horizontal then becomes
+</p>
+\[
+\theta-\alpha
+\]
+<p>
+giving
+</p>
+\[
+u_x=u\cos(\theta-\alpha)
+\]
+<p>
+Thus, instead of writing separate formulas for the two cases, we can use the same range formula and simply change the sign of \(\alpha\). For the general expression,
+</p>
+\[
+R=\frac{u\cos(\theta+\alpha)}{\cos\alpha}\left(\frac{2u\sin\theta}{g\cos\alpha}\right)
+\]
+<p>
+putting \(\alpha\rightarrow-\alpha\) gives the down-the-incline case:
+</p>
+\[
+R=\frac{u\cos(\theta+(-\alpha))}{\cos(-\alpha)}\left(\frac{2u\sin\theta}{g\cos(-\alpha)}\right)
+\]
+<p>
+Since
+</p>
+\[
+\cos(-\alpha)=\cos\alpha
+\]
+<p>
+we obtain
+</p>
+\[
+\boxed{R=\frac{2u^2\sin\theta\cos(\theta-\alpha)}{g\cos^2\alpha}}
+\]
+<div class="insightbox">
+The up-the-incline and down-the-incline cases are not fundamentally different formulas.<br>
+They can be represented by the same formula with the sign of \(\alpha\) chosen according to the orientation of the incline.
+</div>
+</section>
+<section>
+<h2>Maximum Range : \(R_{\text{max}}\)</h2>
+<p>
+When we talk about maximum range \(R_{\text{max}}\) we are talking about maintaining the same speed \(u\) and changing \(\theta\) .  
+</p>
+<p>
+The common brute force method is to write range \(R\) as a function of \(\theta\) and differentiate. But, we can make use of trigonometry directly. 
+</p>
+<p>
+We first use:
+</p>
+\[
+2 \, \sin A \,\cos B = \sin (A+B) + \sin (A-B)  
+\]
+<p>
+For projection <strong>up the incline</strong>, the range is
+</p>
+\[
+R=\frac{2u^2\sin\theta\cos(\theta+\alpha)}{g\cos^2\alpha}
+\]
+<p>
+Using
+</p>
+\[
+2\sin A\cos B=\sin(A+B)+\sin(A-B)
+\]
+<p>
+with
+\[
+A=\theta,\qquad B=\theta+\alpha
+\]
+we get
+</p>
+\[
+2\sin\theta\cos(\theta+\alpha)=\sin(2\theta+\alpha)-\sin\alpha
+\]
+<p>
+Therefore,
+</p>
+\[
+R=\frac{u^2}{g\cos^2\alpha}\left[\sin(2\theta+\alpha)-\sin\alpha\right]
+\]
+<p>
+Here \(u\) and \(\alpha\) are fixed, so the only quantity that can vary is \(\theta\). The term \(-\sin\alpha\) is therefore constant. Hence, the range is maximum when
+</p>
+\[
+\sin(2\theta+\alpha)=1
+\]
+<p>
+Therefore,
+</p>
+\[
+2\theta+\alpha=90^\circ
+\]
+\[
+\boxed{\theta_{\max}=\frac{90^\circ-\alpha}{2}}
+\]
+<p>
+At this angle,
+</p>
+\[
+\boxed{R_{\max}=\frac{u^2}{g\cos^2\alpha}\left(1-\sin\alpha\right)}
+\]
+<p>
+Using
+\[
+1-\sin\alpha=\frac{\cos^2\alpha}{1+\sin\alpha}
+\]
+this can also be written as
+</p>
+\[
+\boxed{R_{\max}=\frac{u^2}{g(1+\sin\alpha)}}
+\]
+<h3>Down the Incline</h3>
+<p>
+For projection <strong>down the incline</strong>, the signed-angle form gives
+</p>
+\[
+R=\frac{2u^2\sin\theta\cos(\theta-\alpha)}{g\cos^2\alpha}
+\]
+<p>
+Using the same identity, with
+\[
+A=\theta,\qquad B=\theta-\alpha
+\]
+we get
+</p>
+\[
+2\sin\theta\cos(\theta-\alpha)=\sin(2\theta-\alpha)+\sin\alpha
+\]
+<p>
+Hence,
+</p>
+\[
+R=\frac{u^2}{g\cos^2\alpha}\left[\sin(2\theta-\alpha)+\sin\alpha\right]
+\]
+<p>
+Again, \(u\) and \(\alpha\) are fixed, so the range is maximum when the sine term is \(1\):
+</p>
+\[
+\sin(2\theta-\alpha)=1
+\]
+<p>
+Therefore,
+</p>
+\[
+2\theta-\alpha=90^\circ
+\]
+\[
+\boxed{\theta_{\max}=\frac{90^\circ+\alpha}{2}}
+\]
+<p>
+The corresponding maximum range is
+</p>
+\[
+\boxed{R_{\max}=\frac{u^2}{g\cos^2\alpha}\left(1+\sin\alpha\right)}
+\]
+or, using
+\[
+1+\sin\alpha=\frac{\cos^2\alpha}{1-\sin\alpha}
+\]
+\[
+\boxed{R_{\max}=\frac{u^2}{g(1-\sin\alpha)}}
+\]
+<div class="insightbox">
+Once the range is written as a sine of a linear function of \(\theta\) plus a constant, the maximum is obtained immediately by setting that sine term equal to \(1\).<br>
+For projection up the incline:
+\[
+\boxed{\theta_{\max}=\frac{90^\circ-\alpha}{2}}
+\]
+and for projection down the incline:
+\[
+\boxed{\theta_{\max}=\frac{90^\circ+\alpha}{2}}
+\]
+The <strong>maximum range</strong> is greater for projection down the incline because the component of gravitational acceleration along the incline, \(g\sin\alpha\), acts in the same direction as the initial velocity along the incline.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

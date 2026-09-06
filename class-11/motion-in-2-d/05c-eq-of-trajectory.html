@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trajectory | Projectile Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./05-projectile-motion.html" class="back-btn">
+<span>&larr;</span> Back to Projectile Motion
+</a>
+</nav>
+<h1>Trajectory</h1>
+<p class="subtitle">
+Trajectory Path and its Equation.
+</p>
+<section>
+<h2>What is Trajectory</h2>
+<p>
+The <strong>trajectory</strong> of a moving particle is the path traced by the particle during its motion.
+</p>
+<p>
+For example, if a ball is thrown vertically upward, the particle moves along a straight line: it rises, reaches a maximum height, and then comes back down along the same line. Therefore, the trajectory of this motion is a <strong>straight line</strong>.
+</p>
+<p>
+In 2D projectile motion, the particle is projected at an angle and its trajectory is a <strong>curved path</strong>. Under the ideal projectile assumptions of constant gravitational acceleration and negligible air resistance, this path is a <strong>parabola</strong>.
+</p>
+<p>
+We can derive this parabola algebraically by finding a direct relation between the horizontal coordinate \(x\) and the vertical coordinate \(y\).
+</p>
+</section>
+<section>
+<h2>Equation of Trajectory</h2>
+<p>
+From the previous analysis of projectile motion, \(x\) and \(y\) are both functions of the same time parameter \(t\):
+</p>
+\[
+x=u\cos\theta\,t
+\]
+\[
+y=u\sin\theta\,t-\frac12gt^2
+\]
+<p>
+What are \(x\) and \(y\) here? They are the co-ordinates of the particle in \(XY\) plane at different values of \(t\) when the launch-point is taken as origin. 
+</p>
+<p>
+The trajectory is the relation between \(x\) and \(y\) that describes the path independently of time. Therefore, we eliminate the common parameter \(t\).
+</p>
+<p>
+From the horizontal equation,
+</p>
+\[
+t=\frac{x}{u\cos\theta} \qquad t = \frac{x}{u_x} 
+\]
+<p>
+Substituting this into the vertical equation,
+</p>
+\[
+y=(u\sin\theta)\left(\frac{x}{u\cos\theta}\right)-\frac12g\left(\frac{x}{u\cos\theta}\right)^2
+\]
+<p>
+and simplifying gives <strong>The Equation of Trajectory</strong>
+</p>
+\[
+y=x\tan\theta-\frac{gx^2}{2u^2\cos^2\theta} \qquad y=x\tan\theta-\frac{g}{2}\frac{x^2}{u_x^2}
+\]
+<p>
+This has the form
+</p>
+\[
+y=Ax-Bx^2
+\]
+<p>
+where \(A\) and \(B\) are constants for a given projectile. Therefore, the trajectory is a <strong>parabola</strong>. Note that \(u\) and \(\theta\) are both constants. They are initial velocity and initial angle.
+</p>
+</section>
+<section>
+<h2>Other Forms of the Equation</h2>
+<p>
+Consider the form:
+</p>
+\[
+y=x\tan\theta-\frac{g}{2}\frac{x^2}{u_x^2}
+\]
+<p>
+Put \(u_x = u_y / \tan \theta \) ,
+</p>
+\[
+y=x\tan\theta-\frac{g}{2}\frac{x^2\tan\theta}{u_xu_y} = x\tan\theta\left( 1 - \frac{g}{2u_xu_y}x\right)
+\]
+<p>
+We get,
+</p>
+\[
+y = \tan\theta \, x \left( 1 - \frac{x}{R}\right)
+\]
+<p>
+When \(x = R/2\) , \(y = H\) 
+</p>
+\[
+H = \tan\theta \, \frac{R}{2} \left( 1 - \frac{1}{2}\right) \qquad H = \tan\theta \, \frac{R}{4} \qquad R \tan \theta = 4H 
+\]
+</section>
+<section>
+<h2>Solved Examples</h2>
+<div class="examplebox">
+<h3>Question</h3>
+<p>
+Consider a projectile whose equation of trajectory is \(2y=4x-x^2\) . Find 
+<ul>
+<li>the maximum height \(H_{\max}\),</li>
+<li>the horizontal range \(R\),</li>
+<li>the angle \(\alpha\) made by the instantaneous velocity with the horizontal at \(x=1\,\mathrm m\).</li>
+</ul>
+<h3>Solution</h3>
+<p>
+Given that
+</p>
+\[
+2y=4x-x^2
+\]
+<p>
+To compare with the useful form, first we make the co-efficient of \(y\) as 1.
+\[
+y=2x-\frac{x^2}{2}
+\]
+Now, we compare this with the useful form \(y=x\tan\theta\left(1-\frac{x}{R}\right)\) . Writing the given equation in the same form,
+</p>
+\[
+y=2x\left(1-\frac{x}{4}\right)
+\]
+<p>
+we can immediately identify
+</p>
+\[
+\boxed{\tan\theta=2\qquad R=4\,\mathrm m}
+\]
+<h3>Maximum Height</h3>
+<p>
+The trajectory is symmetric about its highest point, which occurs halfway between the two points where it meets the ground. Since the range is \(4\,\mathrm m\),
+</p>
+\[
+x=\frac R2=2\,\mathrm m
+\]
+<p>
+Therefore,
+</p>
+\[
+H=y(2)=2(2)-\frac{2^2}{2}=2\,\mathrm m
+\]
+\[
+\boxed{H=2\,\mathrm m}
+\]
+<p>
+This also agrees with the relation \(R\tan\theta=4H_\text{max}\)
+</p>
+\[
+H_\text{max} = \frac{R \tan \theta}{4} = \frac{4(2)}{4} 
+\]
+<h3>Direction of Velocity at \(x=1\,\mathrm m\)</h3>
+<p>
+The instantaneous velocity is tangent to the trajectory. Therefore, its angle \(\alpha\) with the horizontal is determined by the slope of the trajectory:
+</p>
+\[
+\tan\alpha=\frac{dy}{dx}
+\]
+\[
+\frac{dy}{dx}=2-x
+\]
+<p>
+At \(x=1\,\mathrm m\),
+</p>
+\[
+\tan\alpha=2-1=1
+\]
+<p>
+Hence,
+</p>
+\[
+\boxed{\alpha=45^\circ}
+\]
+</div>
+<div class="insightbox">
+The trajectory equation itself contains a large amount of information. From
+\[
+y=x\tan\theta\left(1-\frac{x}{R}\right)
+\]
+we can extract the range \(R\) and launch angle \(\theta\).<br>
+The maximum height follows from the point \(x=R/2\), while the instantaneous direction of velocity follows from the slope
+\[
+\tan\alpha=\frac{dy}{dx}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

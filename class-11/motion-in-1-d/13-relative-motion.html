@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relative Motion | Motion in 1D</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Motion in 1D
+</a>
+</nav>
+<h1>Relative Motion</h1>
+<p class="subtitle">
+Observing motion from a moving frame of reference.
+</p>
+<section>
+<h2>Motion is Relative</h2>
+<p>
+We know that motion is relative. This is true for any 1D, 2D motion of any type.
+</p>
+<p>
+In this topic, we will learn how to use this property to solve questions of relative motion.
+</p>
+<p>
+In questions, when frame details are not mentioned, then ground frame is assumed. We will try to understand mathematically as to what exactly do we mean by a frame to solve it mathematically.
+</p>
+<p>
+To get an idea of the relativeness of motion physically, imagine yourself in a car on a straight road. The car is parked and so stationary on the road.
+</p>
+<p>
+There is another car at rest to your right. You look at your right and you are able to see the car not changing its position and so you say that the car is at rest.
+</p>
+<p>
+Now, imagine same cars but this time, the car in which you are sitting is moving with a speed of \(30 \, km/h \) . The car at your right is also moving with the same speed \(30 \, km/h \) .
+</p>
+<p>
+The question is that with respect to you, is the car at your right at rest or in motion?
+</p>
+<p>
+The answer is that it is at rest with respect to you because for you the situation is exactly similar to when both cars were parked side-by-side. 
+</p>
+</section>
+<section>
+<h2>Your Frame</h2>
+<p>
+In the example above, we already know that the car in which you are sitting is moving with \(30\,\text{km/h}\) with respect to the ground. We now want to construct <strong>your frame of reference</strong> so that we can describe the motion as seen by you.
+</p>
+<p>
+Rather than constructing a completely new coordinate system, we emulate the ground frame as much as possible. We keep the same definitions of spatial direction, basis and time, and change only the origin of the coordinate system.
+</p>
+<p>
+Suppose the ground frame has origin \(O\), coordinate axes and basis directions. To construct your frame, we attach a new origin \(O'\) to your car.
+</p>
+<p>
+Since your car is only translating and is not rotating, the basis directions are kept the same as those of the ground frame. The coordinate axes are then translated so that they pass through the new origin \(O'\).
+</p>
+\[
+\boxed{\text{Your frame}=\text{Ground frame with its origin translated to your car}}
+\]
+<p>
+Thus, for translational relative motion, we inherit the ground frame's directions, basis and time coordinate, and change the origin and hence the location of the coordinate axes.
+</p>
+<div class="insightbox">
+The purpose of constructing the frame this way is to change as little as possible from the already defined ground frame for maximum reusability.<br>
+For a translating frame:
+\[
+\boxed{\text{same basis and time, new origin and translated axes}}
+\]
+For a rotating frame, the basis directions themselves change with time.<br>
+Rotating frames will be studied later.
+</div>
+</section>
+<section>
+<h2>Relating Co-ordinates</h2>
+<p>
+Now that we have defined your frame of reference, we can mathematically relate the co-ordinates measured in your frame to those measured in the ground frame.
+</p>
+<p>
+Consider your car and the car to your right. At \(t=0\), both cars are at the same position. Your car moves with \(10\,\text{km/h}\) and the other car moves with \(20\,\text{km/h}\), both in the same direction.
+</p>
+<p>
+We want to find the position of the other car as measured in the ground frame and in your frame, and then relate the two.
+</p>
+<p>
+Take the common initial position as the origin \(O\) of the ground frame. At time \(t\), the positions of your car and the other car in the ground frame are
+</p>
+\[
+x_{\text{you}}=10t
+\]
+\[
+x_{\text{other}}=20t
+\]
+<p>
+Now construct your frame by attaching its origin \(O'\) to your car. Since the two frames have the same basis and parallel axes, the co-ordinate of the other car in your frame is simply its distance from your new origin.
+</p>
+\[
+x'_{\text{other}}=x_{\text{other}}-x_{\text{you}}
+\]
+<p>
+Therefore,
+</p>
+\[
+x'_{\text{other}}=20t-10t
+\]
+\[
+\boxed{x'_{\text{other}}=10t}
+\]
+<p>
+Thus, the same object has different positions in different reference frames:
+</p>
+\[
+\boxed{x=20t\qquad\text{(ground frame)}}
+\]
+\[
+\boxed{x'=10t\qquad\text{(your frame)}}
+\]
+<p>
+The general relation is therefore
+</p>
+\[
+\boxed{x'=x-X}
+\]
+<p>
+where \(X\) is the position of the origin of your frame measured in the ground frame.
+</p>
+<h3>Relative Position</h3>
+<p>
+The quantity \(x'\) is the <strong>position of the object relative to your origin</strong>. It is therefore called its <strong>relative position</strong> with respect to your frame.
+</p>
+<div class="insightbox">
+Relative position is simply the position of an object measured from the origin of the chosen reference frame.<br>
+Changing the reference frame changes the origin from which position is measured. Hence,
+\[
+\boxed{x'=x-X}
+\]
+is a direct consequence of changing the origin.
+</div>
+<h3>Relative Displacement</h3>
+<p>
+Consider the same object at two different instants \(t_1\) and \(t_2\). Its relative positions in your frame are
+\[
+x'_1=x_1-X_1
+\]
+and
+\[
+x'_2=x_2-X_2
+\]
+Therefore, its displacement in your frame is
+</p>
+\[
+\Delta x'=x'_2-x'_1
+\]
+\[
+\Delta x'=(x_2-X_2)-(x_1-X_1)
+\]
+\[
+\boxed{\Delta x'=\Delta x-\Delta X}
+\]
+<p>
+Thus, relative displacement is obtained by subtracting the displacement of the origin of the new frame from the displacement of the object, with both displacements measured in the original frame.
+</p>
+<p>
+This is an important reason for using the term <strong>reference frame</strong> rather than simply <strong>observer</strong>. A reference frame provides a common framework for describing motion, so all observers using the same frame obtain the <strong>same displacement</strong> for the object between the same two instants.
+</p>
+<div class="insightbox">
+<strong>Position</strong> depends on the choice of origin.<br>
+<strong>Displacement</strong> describes the change in position between two instants within a reference frame.<br>
+Thus, different observers using the <strong>same reference frame</strong> obtain the same displacement, even though their physical locations may be different.
+</div>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./13a-relative-velocity.html">1. Relative Velocity</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
