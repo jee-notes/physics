@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bohr Energy | Bohr Model</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-bohr-model.html" class="back-btn">
+<span>&larr;</span> Back to Bohr Model
+</a>
+</nav>
+<h1>Bohr Energy</h1>
+<p class="subtitle">
+Energy Levels in Bohr Model.
+</p>
+<section>
+<h2>Third Postulate</h2>
+<p>
+The third postulate is the <strong>main operational postulate</strong> of Bohr's model. The first two postulates establish the allowed structure of the atom; the third describes how this quantized atom actually <strong>interacts with its surroundings through energy exchange</strong>.
+</p>
+<p>
+We can think of a single atom as a system with which we can interact by supplying or extracting energy. In the context of atomic physics, this interaction is primarily observed through <strong>photons</strong>.
+</p>
+<p>
+If an atom absorbs an incident photon, the atom gains energy. If an atom emits a photon, the atom loses energy.
+</p>
+<p>
+The crucial point is that, because the atom has only <strong>discrete allowed energy states</strong>, its energy cannot change by an arbitrary amount. Energy exchange occurs through transitions between these allowed states.
+</p>
+<p>
+When a photon is absorbed, the electron moves from a lower-energy state \(E_i\) to a higher-energy state \(E_f\). The energy of the absorbed photon is
+</p>
+\[
+h\nu=\frac{hc}{\lambda}=E_f-E_i
+\]
+<p>
+When a photon is emitted, the electron moves from a higher-energy state \(E_i\) to a lower-energy state \(E_f\). The energy of the emitted photon is
+</p>
+\[
+h\nu=\frac{hc}{\lambda}=E_i-E_f
+\]
+<p>
+Thus, the mechanism of atomic energy interaction is a <strong>transition between allowed energy states</strong>.
+</p>
+<p>
+In the Bohr picture, these transitions correspond to jumps between the corresponding stationary orbits.
+</p>
+<p>
+The <strong>quantized nature of the atom's interaction with its surroundings</strong> is therefore a direct consequence of its <strong>quantized internal structure</strong>: the electron is restricted to certain stationary orbits, and the atom can exchange only the energy differences between those allowed states.
+</p>
+<div class="insightbox">
+Our direct experimental interaction with an atom is essentially through the <strong>energy it absorbs or emits</strong>.<br>
+We cannot directly observe an electron sitting in a particular stationary orbit.<br>
+Instead, we probe the atom through its interaction with energy, especially through absorption and emission of photons.<br>
+The third postulate therefore connects the <strong>internal quantized structure of the atom</strong> to its <strong>observable experimental behaviour</strong>.
+</div>
+<p>
+The transition itself takes place over a very short time, typically on the order of \(10^{-9}\,\text{s}\) for many allowed atomic transitions.
+</p>
+</section>
+<section>
+<h2>Energy Levels in Hydrogen like Atom</h2>
+<p>
+The total energy of the atom as a complete system, is determined by the total mechanical energy of the entire atom system:
+</p>
+<ul class="model-box">
+<li><strong>Kinetic Energy:</strong> The electron revolves around a fixed nucleus. So, only electron is assumed to have Kinetic Energy of the atom.</li>
+<li><strong>Potential Energy:</strong> This represents the electric potential energy of the electron-nucleus system.</li>
+</ul>
+<p>
+The potential energy of the electron-nucleus system is negative which indicates that the electrostatic force between them is attractive in nature.
+</p>
+<p>
+As the electrostatic force is attractive, if the distance between them increases, then the attractive force does negative work and the electric potential energy of the electron-nucleus system increases.
+</p>
+<p>
+If the potential energy of the electron-nucleus system is represented by \(U(r)\) , where \(r\) is the distance between electron and nucleus, then \(U \uparrow\) when \(r \uparrow\) .
+</p>
+<p>
+Thus, \(dU/dr \gt 0\) and \(F = -dU/dr \lt 0\) . Negative force indicates attraction.
+</p>
+<p>
+We now derive energy relations. Mathematically, we can start with Kinetic Energy \(KE_n\) first. This is because we know the centripetal force relation
+</p>
+\[
+\frac{mv^2}{r}=\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{r^2} \qquad mv^2 = \frac{Ze^2}{4\pi\epsilon_0r}
+\]
+<p>
+We know that \(KE=\frac{1}{2}mv^2\) and so: 
+</p>
+\[
+KE = \frac12mv^2 = \frac12\frac{Ze^2}{4\pi\epsilon_0r}
+\]
+<p>
+Before substituting for \(r_n\) , we first determine potential energy (\(PE\)) as well. This is because there is an interesting relation between KE and PE.
+</p>
+<p>
+For the electron-nucleus system, the electrostatic potential energy at a separation \(r\) is
+</p>
+\[
+U(r)=U=PE=-\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{r}
+\]
+<p>
+Thus, by observing the expression for both - PE and KE, we can say that: 
+</p>
+\[
+PE=-2(KE)
+\]
+<p>
+The total mechanical energy of the atom (\(TE\)) is by definition given as \(E=K+U\):
+</p>
+\[
+TE = PE+KE = -2(KE) + KE = -(KE)
+\]
+<p>
+Thus,
+</p>
+<div class="math-block">
+\[
+\boxed{TE=-KE}
+\]
+\[
+\boxed{PE=-2KE=2TE}
+\]
+</div>
+<p>
+We now substitute the expression for \(r_n\) into the kinetic energy relation:
+</p>
+\[
+KE_n=\frac12\frac{Ze^2}{4\pi\epsilon_0r_n}
+\]
+<p>
+We know that
+</p>
+\[
+r_n=\frac{\epsilon_0h^2}{\pi me^2}\frac{n^2}{Z}
+\]
+<p>
+Therefore,
+</p>
+\[
+KE_n=\frac12\frac{Ze^2}{4\pi\epsilon_0}\frac{1}{\frac{\epsilon_0h^2}{\pi me^2}\frac{n^2}{Z}}
+\]
+<p>
+On simplifying,
+</p>
+\[
+KE_n=\frac{me^4}{8\epsilon_0^2h^2}\frac{Z^2}{n^2}
+\]
+<div class="math-block">
+\[
+\boxed{KE_n=\frac{me^4}{8\epsilon_0^2h^2}\frac{Z^2}{n^2}}
+\]
+\[
+\boxed{KE_n=13.6\frac{Z^2}{n^2}\text{ eV}}
+\]
+</div>
+<p>
+We have already established that \(TE=-KE\) .
+</p>
+<p>
+Hence, the total energy of the electron in the \(n\)-th allowed orbit is
+</p>
+<div class="math-block">
+\[
+\boxed{TE_n=-\frac{me^4}{8\epsilon_0^2h^2}\frac{Z^2}{n^2}}
+\]
+\[
+\boxed{TE_n=-13.6\frac{Z^2}{n^2}\text{ eV}}
+\]
+</div>
+<p>
+Similarly, since \(PE=-2KE=2TE\) , the potential energy of the electron in the \(n\)-th orbit is
+</p>
+<div class="math-block">
+\[
+\boxed{PE_n=-\frac{me^4}{4\epsilon_0^2h^2}\frac{Z^2}{n^2}}
+\]
+\[
+\boxed{PE_n=-27.2\frac{Z^2}{n^2}\text{ eV}}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

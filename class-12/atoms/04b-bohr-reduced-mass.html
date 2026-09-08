@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bohr Energy | Bohr Model</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./04-bohr-model.html" class="back-btn">
+<span>&larr;</span> Back to Bohr Model
+</a>
+</nav>
+<h1>Bohr Energy</h1>
+<p class="subtitle">
+Energy Levels in Bohr Model.
+</p>
+<section>
+<h2>Third Postulate</h2>
+<p>
+The third postulate is the <strong>main operational postulate</strong> of Bohr's model. The first two postulates establish the allowed structure of the atom; the third describes how this quantized atom actually <strong>interacts with its surroundings through energy exchange</strong>.
+</p>
+<p>
+We can think of a single atom as a system with which we can interact by supplying or extracting energy. In the context of atomic physics, this interaction is primarily observed through <strong>photons</strong>.
+</p>
+<p>
+If an atom absorbs an incident photon, the atom gains energy. If an atom emits a photon, the atom loses energy.
+</p>
+<p>
+The crucial point is that, because the atom has only <strong>discrete allowed energy states</strong>, its energy cannot change by an arbitrary amount. Energy exchange occurs through transitions between these allowed states.
+</p>
+<p>
+When a photon is absorbed, the electron moves from a lower-energy state \(E_i\) to a higher-energy state \(E_f\). The energy of the absorbed photon is
+</p>
+\[
+h\nu=\frac{hc}{\lambda}=E_f-E_i
+\]
+<p>
+When a photon is emitted, the electron moves from a higher-energy state \(E_i\) to a lower-energy state \(E_f\). The energy of the emitted photon is
+</p>
+\[
+h\nu=\frac{hc}{\lambda}=E_i-E_f
+\]
+<p>
+Thus, the mechanism of atomic energy interaction is a <strong>transition between allowed energy states</strong>.
+</p>
+<p>
+In the Bohr picture, these transitions correspond to jumps between the corresponding stationary orbits.
+</p>
+<p>
+The <strong>quantized nature of the atom's interaction with its surroundings</strong> is therefore a direct consequence of its <strong>quantized internal structure</strong>: the electron is restricted to certain stationary orbits, and the atom can exchange only the energy differences between those allowed states.
+</p>
+<div class="insightbox">
+Our direct experimental interaction with an atom is essentially through the <strong>energy it absorbs or emits</strong>.<br>
+We cannot directly observe an electron sitting in a particular stationary orbit.<br>
+Instead, we probe the atom through its interaction with energy, especially through absorption and emission of photons.<br>
+The third postulate therefore connects the <strong>internal quantized structure of the atom</strong> to its <strong>observable experimental behaviour</strong>.
+</div>
+<p>
+The transition itself takes place over a very short time, typically on the order of \(10^{-9}\,\text{s}\) for many allowed atomic transitions.
+</p>
+</section>
+<section>
+<h2>Energy Levels in Hydrogen Atom</h2>
+<p>
+The total energy of the electron in the \( n \)-th orbit is the sum of its kinetic energy (due to its motion) and its electrostatic potential energy (due to the nucleus).
+</p>
+<ul>
+<li><strong>Kinetic Energy (\(K_n\)):</strong> \( K_n = \frac{1}{2}mv_n^2 = \frac{1}{8\pi\epsilon_0}\frac{Ze^2}{r_n} \)</li>
+<li><strong>Potential Energy (\(U_n\)):</strong> \( U_n = \frac{1}{4\pi\epsilon_0}\frac{(Ze)(-e)}{r_n} = -\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{r_n} \)</li>
+</ul>
+<p>Total Energy \( E_n = K_n + U_n = -\frac{1}{8\pi\epsilon_0}\frac{Ze^2}{r_n} \). Notice that \( E_n = -K_n \) and \( U_n = 2E_n \).</p>
+<p>Substituting the expression for \( r_n \), we get the energy quantization formula:</p>
+<div class="model-box">
+<p><strong>Total Energy in \(n\)-th orbit (\(E_n\)):</strong></p>
+\[ E_n = -\frac{m e^4}{8\epsilon_0^2 h^2} \cdot \frac{Z^2}{n^2} \]
+\[ E_n = -13.6 \frac{Z^2}{n^2} \text{ eV} \]
+</div>
+<div class="insightbox">
+<p>The negative sign in the total energy indicates that the electron is <strong>bound</strong> to the nucleus. If energy is supplied such that the total energy becomes positive or zero, the electron will escape the atom (ionization).</p>
+</div>
+</section>
+<section>
+<h2>Correction for Nuclear Motion (Reduced Mass)</h2>
+<p>
+In deriving the above formulas, we assumed the nucleus is infinitely heavy and remains stationary while the electron revolves around it. In reality, both the nucleus (mass \( M \)) and the electron (mass \( m \)) revolve around their common center of mass.
+</p>
+<p>To account for this, we replace the mass of the electron \( m \) with the <strong>reduced mass</strong> \( \mu \) of the system:</p>
+\[ \mu = \frac{m \cdot M}{m + M} \]
+<p>Since the nucleus is much heavier than the electron (\( M \gg m \)), \( \mu \approx m \), which is why the previous formulas hold well. However, for precision spectroscopy or for positronium (an electron and a positron revolving around each other, where \( M = m \)), the reduced mass must be used.</p>
+<div class="model-box">
+<p><strong>Corrected Rydberg Energy:</strong> Using reduced mass \( \mu \), the modified energy levels are:</p>
+\[ E_n' = \left(\frac{\mu}{m}\right) E_n \]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

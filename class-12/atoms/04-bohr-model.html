@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bohr Model | Atoms</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Atoms
+</a>
+</nav>
+<h1>Bohr Model</h1>
+<p class="subtitle">
+Bridging classical electromagnetism and quantum mechanics.
+</p>
+<section>
+<h2>Postulates of Bohr's Model</h2>
+<p>
+To overcome the limitations of Rutherford's model, Niels Bohr formulated his model of the hydrogen atom in 1913.
+</p>
+<p>
+He retained the basic nuclear model and the classical picture of orbital motion, but introduced new quantum conditions.
+</p>
+<p>
+The model can be expressed through three fundamental postulates.
+</p>
+<div class="insightbox">
+A <strong>postulate</strong> is an assumption that we accept as true and use as the basis for building further explanations.<br>
+It is similar to a crime detective saying, "Let us assume that person A is the killer. Where would he go after committing the crime?"
+</div>
+<h3>1. Postulate of Stationary Orbits</h3>
+<p>
+An electron revolves around the nucleus in certain <strong>allowed circular orbits</strong> without continuously radiating energy.
+</p>
+<p>
+These special non-radiating orbits are called <strong>stationary orbits</strong> or <strong>stationary states</strong>.
+</p>
+<p>
+For an allowed circular orbit, the electrostatic attraction between the nucleus of atomic number \(Z\) and the electron provides the required centripetal force:
+</p>
+\[
+\frac{mv^2}{r}=\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{r^2}
+\]
+<p>
+\(m\) is the mass of electron (constant), \(\epsilon_0\) is the permittivity of free space (constant), \(v\) is the speed of electron performing uniform circular motion (variable), \(r\) is the radius of the circle and also distance between nucleus and electron (variable).
+</p>
+<p>
+The existence of these non-radiating orbits is the quantum modification to the classical Rutherford model.
+</p>
+<h3>2. Postulate of Angular Momentum Quantization</h3>
+<p>
+Classically, an electron could revolve in a circular orbit of any radius and therefore could have any value of angular momentum.
+</p>
+<p>
+Bohr proposed that only certain orbits are allowed.
+</p>
+<p>
+An electron can occupy only those circular orbits for which its orbital angular momentum is an integral multiple of \(h/2\pi\), where \(h\) is Planck's constant:
+</p>
+<div class="model-box">
+\[
+L=mvr=n\frac{h}{2\pi}
+\]
+</div>
+<p>
+Here, \(n=1,2,3,\dots\) is an integer called the <strong>principal quantum number</strong>. Thus, quantization selects a discrete set of otherwise classically possible orbits.
+</p>
+<h3>3. Postulate of Energy Transition</h3>
+<p>
+An electron in a stationary orbit does not continuously radiate energy.
+</p>
+<p>
+Energy is exchanged with the surroundings only when the electron <strong>transitions between two allowed stationary states</strong>.
+</p>
+<p>
+When an electron moves from a higher-energy state \(E_i\) to a lower-energy state \(E_f\), the energy difference is emitted as a photon:
+</p>
+\[
+h\nu=\frac{hc}{\lambda}=E_i-E_f
+\]
+<p>
+Conversely, an electron can absorb energy and move from a lower-energy state to a higher-energy state.
+</p>
+<p>
+Thus, radiation is emitted or absorbed only in <strong>discrete energy amounts</strong> corresponding to transitions between allowed states.
+</p>
+<div class="insightbox">
+Rutherford's model gave us the nuclear structure of the atom and the picture of an electron revolving around the nucleus under electrostatic attraction.<br>
+Bohr's first postulate essentially says: <strong>retain this part of Rutherford's model, but do not apply the classical radiation prediction to these special allowed orbits.</strong><br>
+In other words, Bohr accepts the orbital picture of Rutherford's atom as valid, but postulates that certain orbits are <strong>stationary</strong> and the electron in such an orbit does not continuously radiate energy.<br>
+This postulate of "stationary orbit" was also explained by deBroglie Hypothesis and stationary wave taught in waves chapter. 
+</div>
+</section>
+<section>
+<h2>Understanding Quantization</h2>
+<p>
+If we ask, <strong>what exactly do Bohr's postulates quantize?</strong>, the answer is much broader than just angular momentum.
+</p>
+<p>
+Bohr explicitly postulated the quantization of the electron's orbital angular momentum: \(L=mvr=n\frac{h}{2\pi}\) .
+</p>
+<p>
+However, once this condition is imposed, the other properties of the allowed orbit are no longer arbitrary.
+</p>
+<p>
+For a given atom, the electron mass and nuclear charge are fixed, so the allowed values of the <strong>radius \(r\)</strong> and the <strong>speed \(v\)</strong> are also quantized.
+</p>
+<p>
+Consequently, all quantities that are functions of these orbital parameters also acquire discrete allowed values.
+</p>
+<p>
+The kinetic energy, potential energy and total energy are therefore quantized.
+</p>
+<p>
+Similarly, quantities such as the time period of revolution, frequency of revolution and other derived orbital quantities can take only discrete values. Such quantities are therefore also frequently encountered as quantized quantities in problems.
+</p>
+<div class="insightbox">
+What exactly does "quantized" mean?<br>
+It means that a physical quantity cannot take arbitrary continuous values.<br>
+It can take only certain allowed discrete values corresponding to the allowed values of the principal quantum number \(n=1,2,3,\dots\) .
+</div>
+<p>
+Thus, even though Bohr's postulate is about quantizing angular momentum, every dynamic parameter that changes when energy is absorbed or released by the atom, is quantized.
+</p>
+<p>
+Bohr's postulate only mentions angular momentum quantization as it is supported by deBroglie's hypothesis later.
+</p>
+</section>
+<section>
+<h2>Bohr Parameters</h2>
+<p>
+Bohr indirectly quantized almost every dynamic parameter of the atom. We call these parameters as <strong>Bohr Parameters</strong> and we discuss the derivation of relation of a few main parameters: 
+</p>
+<p>
+Bohr explained for Hydrogen model, but behavior of any single electron species can be explained using Bohr's model. Single electron species is \(H\) (\(Z\) = 1), \(He^+\) (\(Z\) = 2), \(Li^{2+}\) (\(Z\) = 3) etc. We derive relations for a general given \(Z\) .   
+</p>
+<h3>Velocity \(v_n\)</h3>
+<p>
+We combine the classical centripetal force equation and the quantum condition for angular momentum, to find the velocity (\(v_n\)) of the \( n \)-th allowed orbit for a Hydrogen-like atom (Atomic number \( Z \), 1 electron). This is because the maths can be simplified as such which is important to learn as well.
+</p>
+\[
+\frac{mv^2}{r}=\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{r^2} \qquad mv^2r = \frac{1}{4\pi\epsilon_0}Ze^2
+\]
+<p>
+From angular momentum quantization, we have:
+</p>
+\[
+mvr=n\frac{h}{2\pi}
+\]
+<p>
+If we compare the LHS of both equations, then the 1st has only extra factor (\(v\)). So, if we divide 1 by 2, we eliminate the variable (\(r\)) and are left with only (\(v\)) as variable:  
+</p>
+\[
+\frac{mv^2r}{mvr}=\frac{Ze^2}{4\pi\epsilon_0\frac{nh}{2\pi}}
+\]
+<div class="math-block">
+\[
+v_n = \frac{e^2}{2\epsilon_0 h} \cdot \frac{Z}{n}
+\]
+\[
+v_n = \frac{c}{137} \cdot \frac{Z}{n} \approx 2.18 \times 10^6 \frac{Z}{n} \text{ m/s}
+\]
+</div>
+<p>
+Thus,
+</p>
+\[
+\boxed{v_n\propto\frac{Z}{n}}
+\] 
+<h3>Radius \(r_n\)</h3>
+<p>
+We use the relation determined for \(v_n\) in the angular momentum condition, inorder to determine \(r_n\) . The angular momentum condition is:
+</p>
+\[
+mvr=n\frac{h}{2\pi} \qquad r = n\frac{h}{2mv\pi}
+\]
+<p>
+We substitute the relation for \(v_n\) as found before:
+</p>
+\[
+v = \frac{e^2}{2\epsilon_0 h} \cdot \frac{Z}{n}
+\]
+<p>
+Above relation only has \(n\) and \(Z\) as variables. So we use it:
+</p>
+\[
+r = n\frac{h}{2m\pi \frac{e^2}{2\epsilon_0 h} \cdot \frac{Z}{n}}
+\]
+<div class="math-block">
+\[
+r_n = \frac{\epsilon_0 h^2}{m\pi e^2} \cdot \frac{n^2}{Z}
+\]
+\[
+r_n = 0.529 \frac{n^2}{Z} \mathring{\text{A}}
+\]
+</div>
+<p>
+Thus,
+</p>
+\[
+\boxed{r_n\propto\frac{n^2}{Z}}
+\]
+</section>
+<section>
+<h2>Velocity and Frequency of Electron</h2>
+<p>
+Substituting \( r_n \) back into the velocity expression gives the speed of the electron in the \( n \)-th orbit.
+</p>
+<div class="model-box">
+<p><strong>Velocity of electron (\(v_n\)):</strong></p>
+\[ v_n = \frac{e^2}{2\epsilon_0 h} \cdot \frac{Z}{n} \]
+\[ v_n = \frac{c}{137} \cdot \frac{Z}{n} \approx 2.18 \times 10^6 \frac{Z}{n} \text{ m/s} \]
+</div>
+<p>Here, \( \alpha = \frac{e^2}{2\epsilon_0 h c} \approx \frac{1}{137} \) is the fine-structure constant. Note that \( v_n \propto \frac{Z}{n} \).</p>
+<p>The time period \( T_n = \frac{2\pi r_n}{v_n} \propto \frac{(n^2/Z)}{(Z/n)} = \frac{n^3}{Z^2} \). The frequency of revolution \( f_n = \frac{1}{T_n} \propto \frac{Z^2}{n^3} \).</p>
+</section>
+<section>
+<h2>Energy Levels in Hydrogen Atom</h2>
+<p>
+The total energy of the electron in the \( n \)-th orbit is the sum of its kinetic energy (due to its motion) and its electrostatic potential energy (due to the nucleus).
+</p>
+<ul>
+<li><strong>Kinetic Energy (\(K_n\)):</strong> \( K_n = \frac{1}{2}mv_n^2 = \frac{1}{8\pi\epsilon_0}\frac{Ze^2}{r_n} \)</li>
+<li><strong>Potential Energy (\(U_n\)):</strong> \( U_n = \frac{1}{4\pi\epsilon_0}\frac{(Ze)(-e)}{r_n} = -\frac{1}{4\pi\epsilon_0}\frac{Ze^2}{r_n} \)</li>
+</ul>
+<p>Total Energy \( E_n = K_n + U_n = -\frac{1}{8\pi\epsilon_0}\frac{Ze^2}{r_n} \). Notice that \( E_n = -K_n \) and \( U_n = 2E_n \).</p>
+<p>Substituting the expression for \( r_n \), we get the energy quantization formula:</p>
+<div class="model-box">
+<p><strong>Total Energy in \(n\)-th orbit (\(E_n\)):</strong></p>
+\[ E_n = -\frac{m e^4}{8\epsilon_0^2 h^2} \cdot \frac{Z^2}{n^2} \]
+\[ E_n = -13.6 \frac{Z^2}{n^2} \text{ eV} \]
+</div>
+<div class="insightbox">
+<p>The negative sign in the total energy indicates that the electron is <strong>bound</strong> to the nucleus. If energy is supplied such that the total energy becomes positive or zero, the electron will escape the atom (ionization).</p>
+</div>
+</section>
+<section>
+<h2>Correction for Nuclear Motion (Reduced Mass)</h2>
+<p>
+In deriving the above formulas, we assumed the nucleus is infinitely heavy and remains stationary while the electron revolves around it. In reality, both the nucleus (mass \( M \)) and the electron (mass \( m \)) revolve around their common center of mass.
+</p>
+<p>To account for this, we replace the mass of the electron \( m \) with the <strong>reduced mass</strong> \( \mu \) of the system:</p>
+\[ \mu = \frac{m \cdot M}{m + M} \]
+<p>Since the nucleus is much heavier than the electron (\( M \gg m \)), \( \mu \approx m \), which is why the previous formulas hold well. However, for precision spectroscopy or for positronium (an electron and a positron revolving around each other, where \( M = m \)), the reduced mass must be used.</p>
+<div class="model-box">
+<p><strong>Corrected Rydberg Energy:</strong> Using reduced mass \( \mu \), the modified energy levels are:</p>
+\[ E_n' = \left(\frac{\mu}{m}\right) E_n \]
+</div>
+</section>
+<section>
+<h2>Sub Topics</h2>
+<div class="chapter-list">
+<a href="./04a-bohr-energy.html">1. Bohr Energy</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
