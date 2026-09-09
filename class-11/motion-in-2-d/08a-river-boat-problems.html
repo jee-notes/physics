@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>River-Boat Problems | Motion in 2D</title>
+<title>River-Boat Problems | Relative Motion</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,34 +14,79 @@
 <span>&larr;</span> Back to Relative Motion in 2D
 </a>
 </nav>
-
 <h1>River-Boat Problems</h1>
 <p class="subtitle">
 Navigating cross-currents using vector velocity addition.
 </p>
-
 <section>
-<h2>Vector Setup</h2>
+<h2>Setup</h2>
 <p>
-Consider a river of uniform width \(d\) flowing horizontally with a constant velocity \(\vec{v}_r\). A motorboat capable of a maximum speed \(v_b\) <em>in still water</em> attempts to cross it.
+Consider a patch of still water of width \(L\) and a motorboat capable of speed \(v_b\) attempts to cross the patch. It will head straight towards the opposite side and reach the other saide in time \(L/v_b\) . 
 </p>
-<div class="model-box">
-<strong>Velocity Definitions:</strong>
-<ul>
-<li>\(\vec{v}_r\): Velocity of the river current relative to the ground.</li>
-<li>\(\vec{v}_{br}\): Velocity of the boat explicitly <em>relative to the river water</em>. Its magnitude is strictly the still-water speed \(v_b\).</li>
-<li>\(\vec{v}_b\): Actual net velocity of the boat relative to the stationary ground observer.</li>
-</ul>
+<p>
+Now the same motorboat is in a river of uniform width \(L\) flowing horizontally with a constant velocity \(\vec{v}_r\). The motorboat attempts to cross it by heading straight towards the opposite side.
+</p>
+<p>
+In this case, the motorboat is headed towards the opposite side. <strong>Velocity of boat relative to river \(=\vec{v}_{br} = v_{\text{br}}\hat j\)</strong> . This is also the headed velocity of the boat. 
+</p>
+<p>
+However, the boat will not reach the opposite side at the point exactly opposite to the starting point. This is because the river is dragging the boat horizontally.
+</p>
+<p>
+If we want to determine the location of boat on ground, we need velocity of boat in the ground frame \(=\vec{v}_{b}\) .
+</p>
 <p>
 Following our fundamental relative velocity equation \(\vec{v}_{br} = \vec{v}_b - \vec{v}_r\), resolving for the actual ground velocity yields a vector addition:
-\[ \vec{v}_b = \vec{v}_{br} + \vec{v}_r \]
+\[
+\vec{v}_b = \vec{v}_{br} + \vec{v}_r
+\]
 </p>
-</div>
 <div class="insightbox">
 The boat structurally possesses entirely autonomous physical control over its orientation relative to the water (\(\vec{v}_{br}\)), but it has absolutely zero control over the unyielding downstream flow of the river (\(\vec{v}_r\)). The resultant path is their geometric sum.
 </div>
+<p>
+For building a generic formula structure, we take velocity of river along X axis \(=\vec{v}_{r} = v_{\text{r}}\hat i\) . And we take the width of the river \(=\vec{s}_{y} = L\hat j\) . 
+</p>
 </section>
-
+<section>
+<h2>Time and Drift</h2>
+<p>
+We need to determine the time taken by the boat to cross the river \(T\). This is same as saying that the displacement along Y axis in the ground frame is given as \(L\) - the width of the river.
+</p>
+<p>
+Thus, we need the Y component of the velocity of boat in ground frame.
+</p>
+<p>
+Let:
+</p>
+\[
+\vec{v}_{br} = v_{br/x}\hat i + v_{br/y}\hat j
+\]
+<p>
+Going by
+</p>
+\[
+\vec{v}_b = \vec{v}_{br} + \vec{v}_r =  (v_{br/x} + v_r)\hat i + v_{br/y}\hat j
+\]
+<p>
+We get,
+</p>
+\[
+v_{b/x} =  (v_{br/x} + v_r) \qquad v_{b/y} = v_{br/y}
+\]
+<p>
+For time to cross the river \(T\) , we evaluate motion in Y axis:
+</p>
+\[
+T = \frac{s_y}{v_y} = \frac{L}{v_{b/y}}  = \frac{L}{v_{br/y}} 
+\]
+<p>
+Drift \(D\) is give by the horizontal distance from the starting point.
+</p>
+\[
+D = v_{b/x}T =  v_{b/x}\frac{L}{v_{b/y}}  = (v_{br/x} + v_r)\frac{L}{v_{br/y}} 
+\]
+</section>
 <section>
 <h2>Crossing the River in Shortest Time</h2>
 <p>
