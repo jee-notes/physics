@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perpendicular Velocity | Projectile Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./05-projectile-motion.html" class="back-btn">
+<span>&larr;</span> Back to Projectile Motion
+</a>
+</nav>
+<h1>Perpendicular Velocity</h1>
+<p class="subtitle">
+Perpendicular velocity time duration.
+</p>
+<section>
+<h2>Perpendicular Velocity</h2>
+<p>
+A very common question in projectile motion is to determine the time at which the instantaneous velocity vector \(\vec v(t)\) becomes perpendicular to the initial velocity vector \(\vec u\), where \(\vec u=\vec v(0)\) .
+</p>
+<p>
+This problem is actually a special case of a more general result. The result is often memorized as a piece of theory or as a formula because it can be reused in other problems.
+</p>
+<p>
+The condition for using this result as a general formula is that the motion has <strong>constant acceleration</strong>.
+</p>
+<p>
+This is because, under constant acceleration, the velocity changes linearly with time and the trajectory is a parabola in 2D case.
+</p>
+<p>
+The formula is not restricted to the launch point. It can be applied between <strong>any two points</strong> on a constant-acceleration trajectory whose velocity vectors are perpendicular.
+</p>
+<p>
+Suppose \(A\) and \(B\) are any two points on such a trajectory and it is given that \(\vec v_A\perp\vec v_B\) .
+</p>
+<p>
+If the magnitude and direction of \(\vec v_A\), together with the magnitude and direction of the constant acceleration, are known, then the time taken to move from \(A\) to \(B\) can be determined directly from this perpendicularity condition.
+</p>
+<p>
+The familiar projectile-motion question at the launch point is simply one particular case of a general constant-acceleration result.
+</p>
+<p>
+The method is useful as an advanced problem-solving approach. In general, when a problem gives the <strong>angle between two velocity vectors</strong>, it is often faster to work directly with the vector relation between them rather than first resolving the motion into \(x(t)\) and \(y(t)\) and then eliminating time.
+</p>
+<p>
+For constant acceleration,
+</p>
+\[
+\vec v_B=\vec v_A+\vec a\,\Delta t
+\]
+<p>
+This is the vector form of the familiar triangle law of addition. We can therefore construct a vector triangle whose three sides correspond to
+</p>
+\[
+\vec v_A,\qquad \vec a\,\Delta t,\qquad \vec v_B
+\]
+<p>
+with
+</p>
+\[
+\vec v_A+\vec a\,\Delta t=\vec v_B
+\]
+<p>
+The angle between \(\vec v_A\) and \(\vec v_B\) then becomes a geometry problem of this triangle. We can use the usual triangle relations, such as the cosine rule, to determine the unknown magnitude \(a\Delta t\), and hence the time interval \(\Delta t\).
+</p>
+<div class="insightbox">
+<strong>The key idea:</strong><br>
+When the relation between two velocity vectors is given geometrically, use the 2D vector triangle
+\[
+\boxed{\vec v_B=\vec v_A+\vec a\,\Delta t}
+\]
+directly. There is no need to first construct the complete time-dependent trajectory.
+</div>
+<h3>Determining \(v_B\)</h3>
+
+<p>
+We know the magnitude of the velocity at \(A\), \(v_A\), and the angle \(\theta\) that \(\vec v_A\) makes with the horizontal. We are also given the angle \(\alpha\) through which the velocity turns from \(A\) to \(B\).
+</p>
+
+<p>
+Therefore, the velocity at \(B\) makes an angle \((\theta-\alpha)\) with the horizontal.
+</p>
+
+<p>
+Since the acceleration is vertical, the horizontal component of velocity remains constant:
+</p>
+
+\[
+v_A\cos\theta=v_B\cos(\theta-\alpha)
+\]
+
+<p>
+Hence,
+</p>
+
+\[
+\boxed{
+v_B=
+\frac{v_A\cos\theta}
+{\cos(\theta-\alpha)}
+}
+\]
+
+<h3>Using the Velocity Triangle</h3>
+
+<p>
+Now the three sides of the velocity triangle are known in magnitude:
+</p>
+
+\[
+v_A,\qquad v_B,\qquad a\Delta t.
+\]
+
+<p>
+The angle between the two velocity vectors is also known:
+</p>
+
+\[
+\angle(\vec v_A,\vec v_B)=\alpha.
+\]
+
+<p>
+Therefore, we can apply the cosine rule to the velocity triangle:
+</p>
+
+\[
+(a\Delta t)^2
+=
+v_A^2+v_B^2-2v_Av_B\cos\alpha.
+\]
+
+<p>
+Thus,
+</p>
+
+\[
+\boxed{
+a\Delta t=
+\sqrt{v_A^2+v_B^2-2v_Av_B\cos\alpha}
+}
+\]
+
+<p>
+For gravitational projectile motion, \(a=g\), so
+</p>
+
+\[
+\boxed{
+\Delta t=
+\frac{
+\sqrt{v_A^2+v_B^2-2v_Av_B\cos\alpha}
+}{g}
+}.
+\]
+
+<div class="insightbox">
+<strong>Why can we use the cosine rule?</strong><br>
+The velocity triangle becomes numerically solvable because \(v_A\) is known, \(v_B\) can first be obtained from the constant horizontal-velocity condition, and the angle \(\alpha\) between the two velocity vectors is given. Thus, all the information needed for the cosine rule is available.
+</div>
+</section>
+<section>
+<h2>Method to Determine Time</h2>
+<p>
+The condition we are interested in is that the velocity vectors at two points \(A\) and \(B\) on the trajectory are perpendicular:
+</p>
+\[
+\vec v_A\perp\vec v_B
+\]
+<p>
+For constant acceleration, the velocity changes linearly with time. If \(\Delta t\) is the time taken to move from \(A\) to \(B\), then
+</p>
+\[
+\vec v_B=\vec v_A+\vec a\,\Delta t
+\]
+<p>
+We now use the perpendicularity condition directly through the dot product:
+</p>
+\[
+\vec v_A\cdot\vec v_B=0
+\]
+<p>
+Substituting for \(\vec v_B\),
+</p>
+\[
+\vec v_A\cdot\left(\vec v_A+\vec a\,\Delta t\right)=0
+\]
+\[
+v_A^2+(\vec v_A\cdot\vec a)\Delta t=0
+\]
+<p>
+Therefore, the required time interval is
+</p>
+\[
+\boxed{\Delta t=-\frac{v_A^2}{\vec v_A\cdot\vec a}}
+\]
+<p>
+Thus, we do not need to solve the complete trajectory or find the coordinates of \(B\). The time interval follows directly from the velocity at \(A\) and the constant acceleration.
+</p>
+<h3>For Projectile Motion</h3>
+<p>
+For an ordinary projectile,
+</p>
+\[
+\vec a= -g \hat j
+\]
+<p>
+If the velocity at \(A\) has magnitude \(v_A\) and makes an angle \(\theta\) with the horizontal, then
+</p>
+\[
+\vec v_A = v_A \cos \theta\, \hat i + v_A \sin \theta\, \hat j \qquad \vec v_A\cdot\vec a=-g\,v_A\sin\theta 
+\]
+<p>
+Hence,
+</p>
+\[
+\boxed{\Delta t=\frac{v_A}{g\sin\theta}}
+\]
+<p>
+where \(\theta\) is the instantaneous angle made by \(\vec v_A\) with the horizontal.
+</p>
+<p>
+If \(A\) is the point of projection, then \(v_A=u\) and \(\theta\) is the angle of projection. The familiar result becomes
+</p>
+\[
+\boxed{t=\frac{u}{g\sin\theta}}
+\]
+<div class="insightbox">
+This result is not specific to the launch point.<br>
+It is also not specific to gravitational projectile motion.<br>
+It is applicable to any 2D motion with <strong>constant acceleration</strong>. Such motion has a parabolic trajectory.
+</div>
+</section>
+<section>
+<h2>Velocity at \(B\)</h2>
+
+<p>
+We know that
+</p>
+
+\[
+\vec v_B=\vec v_A+\vec a\,\Delta t
+\]
+
+<p>
+and the condition given is
+</p>
+
+\[
+\vec v_A\perp\vec v_B.
+\]
+
+<p>
+We have already found the time interval between \(A\) and \(B\):
+</p>
+
+\[
+\Delta t
+=
+-\frac{v_A^2}{\vec v_A\cdot\vec a}.
+\]
+
+<p>
+To determine the magnitude of \(\vec v_B\), take the square of its magnitude:
+</p>
+
+\[
+v_B^2
+=
+|\vec v_A+\vec a\,\Delta t|^2
+\]
+
+\[
+v_B^2
+=
+v_A^2+a^2\Delta t^2
++2(\vec v_A\cdot\vec a)\Delta t.
+\]
+
+<p>
+From the perpendicularity condition,
+</p>
+
+\[
+\vec v_A\cdot\vec v_B=0
+\]
+
+<p>
+and therefore
+</p>
+
+\[
+v_A^2+(\vec v_A\cdot\vec a)\Delta t=0.
+\]
+
+<p>
+Hence,
+</p>
+
+\[
+2(\vec v_A\cdot\vec a)\Delta t=-2v_A^2.
+\]
+
+<p>
+Substituting this into the expression for \(v_B^2\),
+</p>
+
+\[
+v_B^2
+=
+a^2\Delta t^2-v_A^2.
+\]
+
+<p>
+Now let \(\phi\) be the angle between \(\vec v_A\) and \(\vec a\). Then
+</p>
+
+\[
+\vec v_A\cdot\vec a=v_Aa\cos\phi.
+\]
+
+<p>
+Using
+</p>
+
+\[
+\Delta t
+=
+-\frac{v_A}{a\cos\phi},
+\]
+
+<p>
+we get
+</p>
+
+\[
+v_B^2
+=
+\frac{a^2v_A^2}{a^2\cos^2\phi}-v_A^2
+\]
+
+\[
+=
+v_A^2
+\left(
+\frac{1}{\cos^2\phi}-1
+\right).
+\]
+
+<p>
+Therefore,
+</p>
+
+\[
+\boxed{
+v_B=v_A|\tan\phi|
+}.
+\]
+
+<h3>For Projectile Motion</h3>
+
+<p>
+For an ordinary projectile,
+</p>
+
+\[
+\vec a=-g\hat j.
+\]
+
+<p>
+If the velocity at \(A\) has magnitude \(v_A\) and makes an angle \(\theta\) with the horizontal, then the angle between \(\vec v_A\) and the downward acceleration is \(90^\circ+\theta\). Hence,
+</p>
+
+\[
+|\tan\phi|=\cot\theta.
+\]
+
+<p>
+Therefore,
+</p>
+
+\[
+\boxed{
+v_B=v_A\cot\theta
+}.
+\]
+
+<div class="insightbox">
+<strong>Perpendicular velocity gives the velocity at \(B\) directly.</strong><br>
+For any constant-acceleration motion, if
+\[
+\vec v_A\perp\vec v_B,
+\]
+then the magnitude of the later velocity is determined entirely by the velocity at \(A\) and the angle between \(\vec v_A\) and the constant acceleration:
+\[
+\boxed{v_B=v_A|\tan\phi|}.
+\]
+</div>
+
+</section>
+<section>
+<h2>Height Difference Between \(A\) and \(B\)</h2>
+<p>
+Once the time interval \(\Delta t\) between \(A\) and \(B\) has been determined, we can also find the change in height between the two points.
+</p>
+<p>
+For ordinary projectile motion, acceleration is vertically downward:
+</p>
+\[
+\vec a=-g\hat j
+\]
+<p>
+Therefore, the vertical displacement from \(A\) to \(B\) is obtained from the 1D vertical equation:
+</p>
+\[
+h_B-h_A=v_{Ay}\Delta t-\frac12g\Delta t^2
+\]
+<p>
+If the velocity at \(A\) has magnitude \(v_A\) and makes an angle \(\theta\) with the horizontal, then
+</p>
+\[
+v_{Ay}=v_A\sin\theta
+\]
+<p>
+From the perpendicular-velocity condition, we already obtained
+</p>
+\[
+\Delta t=\frac{v_A}{g\sin\theta}
+\]
+<p>
+Substituting this into the height equation,
+</p>
+\[
+h_B-h_A=v_A\sin\theta\left(\frac{v_A}{g\sin\theta}\right)-\frac12g\left(\frac{v_A}{g\sin\theta_A}\right)^2
+\]
+\[
+=\frac{v_A^2}{g}-\frac{v_A^2}{2g\sin^2\theta}
+\]
+<p>
+Hence,
+</p>
+\[
+\boxed{h_A-h_B=\frac{v_A^2}{2g}\left(\cot^2\theta-1\right)}
+\]
+
+<h3>Another Useful Form</h3>
+
+<p>
+There is an even more elegant way to obtain the height difference. For motion under gravity,
+</p>
+
+\[
+v_B^2=v_A^2-2g(h_B-h_A).
+\]
+
+<p>
+Thus,
+</p>
+
+\[
+\boxed{
+h_B-h_A=\frac{v_A^2-v_B^2}{2g}
+}.
+\]
+
+<p>
+From the perpendicularity condition,
+\[
+\vec v_A\perp\vec v_B,
+\]
+the velocity at \(B\) can also be expressed in terms of the velocity at \(A\). Using
+\[
+\Delta t=\frac{v_A}{g\sin\theta_A},
+\]
+we obtain
+</p>
+
+\[
+v_B^2
+=
+v_A^2-2g(h_B-h_A),
+\]
+
+<p>
+and therefore the same height relation follows.
+</p>
+
+<div class="insightbox">
+<strong>The perpendicular-velocity result gives more than just the time interval.</strong><br>
+Once the time from \(A\) to \(B\) is known, it can be combined with the 1D vertical kinematics to determine the height difference between the two points.
+<br><br>
+Thus, for two points on a constant-acceleration projectile trajectory with
+\[
+\vec v_A\perp\vec v_B,
+\]
+the perpendicularity condition can be used to determine both the <strong>time interval</strong> and the <strong>change in height</strong>.
+</div>
+
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
