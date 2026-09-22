@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rain-Man Problems | Motion in 2D</title>
+<title>Rain-Man Problems | Relative Motion</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,56 +14,279 @@
 <span>&larr;</span> Back to Relative Motion in 2D
 </a>
 </nav>
-
 <h1>Rain-Man Problems</h1>
 <p class="subtitle">
 Determining the exact geometric angle required for moving observers to stay dry.
 </p>
-
 <section>
-<h2>Velocity of Rain relative to a Moving Observer</h2>
+<h2>Rain relative to a Moving Man</h2>
 <p>
-When it rains, the droplets typically fall vertically downward relative to the stationary ground, denoted \(\vec{v}_r\). If a man (the observer) is standing perfectly still on the ground, he experiences the rain falling straight down from the sky.
+When it rains, the droplets typically fall vertically downward relative to the stationary ground, denoted by \(\vec v_r\).
 </p>
 <p>
-However, if the man begins to run horizontally with a velocity \(\vec{v}_m\), his frame of reference shifts dynamically. He will perceive the rain to be falling at an oblique slant, striking him in the face. To mathematically determine exactly how the rain appears to him, we must calculate the relative velocity of the rain with respect to the man, \(\vec{v}_{rm}\).
-</p>
-<div class="model-box">
-<strong>Vector Calculation:</strong>
-<p>
-Using the universal relative velocity formulation:
-\[ \vec{v}_{rm} = \vec{v}_r - \vec{v}_m \]
+If a man (the observer) is standing perfectly still on the ground, he experiences the rain falling straight down from the sky.
 </p>
 <p>
-Geometrically, this asserts that you take the downward pointing rain vector \(\vec{v}_r\) and add the reversed vector of the man's velocity \(-\vec{v}_m\). Because \(\vec{v}_r\) points vertically down and \(\vec{v}_m\) points horizontally, they constitute the two perpendicular legs of a right-angled triangle.
+However, if the man begins to run horizontally with velocity \(\vec v_m\), his frame of reference changes and he perceives the rain as falling at an angle, striking him in the face.
 </p>
-</div>
+<p>
+To determine the direction in which the rain appears to fall to the man, we calculate the relative velocity of the rain with respect to the man:
+</p>
+\[
+\vec v_{rm}=\vec v_r-\vec v_m
+\]
+<p>
+We use the universal relative-velocity relation, and the problem can therefore be solved using vector resolution.
+</p>
+<p>
+However, there is a more useful way to visualize this problem geometrically.
+</p>
+<p>
+The man cannot control the rain velocity \(\vec v_r\), and his velocity is constrained to lie in the horizontal plane. In this idealized problem, he controls the <strong>magnitude</strong> of his velocity \(\vec v_m\). Changing \(|\vec v_m|\) changes both the magnitude and direction of the relative rain velocity \(\vec v_{rm}\).
+</p>
+<p>
+We can therefore represent the relative velocity using the triangle law of vector addition. Take the downward rain velocity \(\vec v_r\) and add the reversed velocity of the man, \(-\vec v_m\), to obtain the relative rain velocity:
+</p>
+\[
+\boxed{\vec v_{rm}=\vec v_r+(-\vec v_m)}
+\]
+<p>
+Thus, the apparent motion of the rain is represented by the vector sum of the actual rain velocity and the observer's reversed velocity.
+</p>
 </section>
-
 <section>
-<h2>Adjusting Umbrella Angle</h2>
+<h2>Umbrella Angle</h2>
 <p>
-To protect himself from the apparent slanted rain, the man must tilt his umbrella to directly oppose the relative velocity vector \(\vec{v}_{rm}\).
+To protect himself from the rain, the man must tilt his umbrella so that it directly opposes the <strong>relative velocity of the rain with respect to himself</strong>, \(\vec v_{rm}\), and not the actual rain velocity \(\vec v_r\) relative to the ground.
 </p>
-<div class="model-box">
-<strong>Calculating the Tilt Angle (\(\theta\)):</strong>
+<div class="insightbox">
+<strong>This is the key understanding here.</strong><br>
+Imagine that you are inside a cubical room and water is falling vertically downward from the ceiling.<br>
+Now imagine another observer outside the room moving eastward at \(500\,\mathrm{m/s}\). To this outside observer, the water appears to fall at an angle.<br>
+But if you are inside the room, would you hold your umbrella vertically or at the angle seen by the outside observer?<br>
+You would hold it vertically, because what matters is the motion of the water <strong>relative to you</strong>.<br>
+The same principle applies to any observer: to protect himself, he must orient the sheild in the opposite direction of velocity as seen in his own frame.
+</div>
 <p>
-Let the angle the umbrella needs to make with the vertical axis be \(\theta\).
+Therefore, for the general case, we determine the angle made by the relative velocity \(\vec v_{rm}\) with the downward vertical direction \(-\hat j\).
 </p>
 <p>
-From the right-angled vector subtraction triangle:
-<ul>
-<li>Opposite side magnitude = \( |\vec{v}_m| \) (speed of the man)</li>
-<li>Adjacent side magnitude = \( |\vec{v}_r| \) (speed of the rain)</li>
+This is the same angle which the umbrella should make with the vertical.
+</p>
+\[
+\boxed{\theta=\angle\left(\vec v_{rm},-\hat j\right)}
+\]
+</section>
+<section>
+<h2>Angle as a Function of \(|\vec v_m|\)</h2>
+<p>
+Let the rain velocity relative to the ground be
+</p>
+\[
+\vec v_r=v_{r/x}\hat i-v_{r/y}\hat j
+\]
+<p>
+and let the man move horizontally with
+</p>
+\[
+\vec v_m=v_m\hat i
+\]
+<p>
+Here \(v_{r/x}\) may be positive, negative, or zero, while \(v_{r/y}\) and \(v_m\) are necessarily positive.
+</p>
+<p>
+Using the relative-velocity relation,
+</p>
+\[
+\vec v_{rm}=\vec v_r-\vec v_m
+\]
+<p>
+we get
+</p>
+\[
+\boxed{\vec v_{rm}=(v_{r/x}-v_m)\,\hat i-v_{r/y}\,\hat j}
+\]
+<p>
+Let \(\theta\) be the <strong>signed angle</strong> made by \(\vec v_{rm}\) with the downward vertical direction \(-\hat j\), taking the counterclockwise direction as positive (toward \(+\hat i\)).
+</p>
+<p>
+Then the horizontal component of \(\vec v_{rm}\) is the signed numerator and the downward vertical component is \(v_{r/y}\). Therefore,
+</p>
+\[
+\boxed{\tan\theta=\frac{v_{r/x}-v_m}{v_{r/y}}}
+\]
+<p>
+The sign of \(\theta\) therefore directly tells us on which side of the downward vertical the rain appears to move.
+</p>
+</section>
+<section>
+<h2>Determining True Rain Velocity (The Two-State Inversion)</h2>
+<p>
+In standard problem setups, the true velocity of rain \(\vec v_r = v_{r/x}\hat i - v_{r/y}\hat j\) is unknown and must be determined by observing how the apparent angle changes as the man changes his speed or reverses direction.
+</p>
+<p>
+Since \(\vec v_r\) has two independent unknowns (\(v_{r/x}\) and \(v_{r/y}\)), two distinct kinematic states are sufficient to determine both components uniquely.
+</p>
+
+<h3>Case 1: Reversing Direction</h3>
+<p>
+Suppose a man walking forward with speed \(v\) finds the rain appearing at angle \(\theta_1\) with the vertical, and upon reversing direction at the same speed (\(-v\hat i\)), he observes the rain at angle \(\theta_2\).
+</p>
+<div class="math-block">
+\[
+\tan\theta_1 = \frac{v_{r/x} - v}{v_{r/y}}, \qquad \tan\theta_2 = \frac{v_{r/x} - (-v)}{v_{r/y}} = \frac{v_{r/x} + v}{v_{r/y}}
+\]
+</div>
+<p>
+Subtracting and adding these two equations isolates the components algebraically:
+</p>
+<div class="math-block">
+\[
+\tan\theta_2 - \tan\theta_1 = \frac{2v}{v_{r/y}} \implies \boxed{v_{r/y} = \frac{2v}{\tan\theta_2 - \tan\theta_1}}
+\]
+\[
+\tan\theta_2 + \tan\theta_1 = \frac{2v_{r/x}}{v_{r/y}} \implies \boxed{v_{r/x} = v\left(\frac{\tan\theta_2 + \tan\theta_1}{\tan\theta_2 - \tan\theta_1}\right)}
+\]
+</div>
+
+<h3>Case 2: Doubling Speed to Shift Appearance</h3>
+<p>
+A classical benchmark problem: A man walking with speed \(v_1 = v\) observes rain falling vertically (\(\theta_1 = 0^\circ\)). When he doubles his speed to \(v_2 = 2v\), the rain appears to strike him at an angle \(\theta_2 = \theta\) with the vertical.
+</p>
+<ul class="model-box">
+<li><strong>State 1 (\(v_m = v\)):</strong> The rain appears vertical, which requires the horizontal component to vanish identically:
+\[
+v_{r/x} - v = 0 \implies v_{r/x} = v
+\]
+</li>
+<li><strong>State 2 (\(v_m = 2v\)):</strong> The horizontal relative component becomes \(v_{r/x} - 2v = v - 2v = -v\).
+\[
+\tan\theta = \frac{|-v|}{v_{r/y}} = \frac{v}{v_{r/y}} \implies v_{r/y} = \frac{v}{\tan\theta}
+\]
+</li>
 </ul>
+<p>
+The true ground speed of the rain is therefore:
 </p>
-\[ \tan\theta = \frac{|\vec{v}_m|}{|\vec{v}_r|} \implies \theta = \tan^{-1}\left(\frac{v_m}{v_r}\right) \]
+<div class="math-block">
+\[
+|\vec v_r| = \sqrt{v_{r/x}^2 + v_{r/y}^2} = v\sqrt{1 + \cot^2\theta} = \boxed{v\csc\theta}
+\]
+</div>
+</section>
+<section>
+<h2>Rain-Man on an Inclined Plane</h2>
+<p>
+When the observer walks along an incline of angle \(\alpha\) with the horizontal, velocity vector resolution can be executed in two valid ways:
+</p>
+<ul class="model-box">
+<li><strong>Standard Cartesian Frame:</strong> Decompose both \(\vec v_m\) and \(\vec v_r\) into horizontal (\(\hat i\)) and vertical (\(\hat j\)) components.</li>
+<li><strong>Tilted Frame:</strong> Project vectors parallel (\(\hat i'\)) and perpendicular (\(\hat j'\)) to the incline.</li>
+</ul>
+
+<p>
+Let the incline make an angle \(\alpha\) with the horizontal, and let the man move up the plane with speed \(u\):
+</p>
+<div class="math-block">
+\[
+\vec v_m = (u\cos\alpha)\hat i + (u\sin\alpha)\hat j
+\]
 </div>
 <p>
-This relation proves that the faster the man runs (increasing \(v_m\)), the larger the angle \(\theta\) becomes, forcing him to tilt the umbrella further forward.
+Assuming rain falls with ground velocity \(\vec v_r = v_{r/x}\hat i - v_{r/y}\hat j\), the relative velocity vector is:
 </p>
-</section>
+<div class="math-block">
+\[
+\vec v_{rm} = \vec v_r - \vec v_m = (v_{r/x} - u\cos\alpha)\hat i - (v_{r/y} + u\sin\alpha)\hat j
+\]
+</div>
 
+<div class="insightbox">
+<strong>Physical Check on the Vertical Component:</strong><br>
+Because the man is ascending (\(+u\sin\alpha\hat j\)), the downward apparent velocity of the raindrops increases in magnitude from \(v_{r/y}\) to \((v_{r/y} + u\sin\alpha)\). The drops strike faster vertically due to head-on relative motion along the Y axis.
+</div>
+
+<p>
+If the umbrella must be held perpendicular to the incline face to stay dry, the component of relative velocity parallel to the plane must be zero:
+</p>
+<div class="math-block">
+\[
+(\vec v_{rm}) \cdot \hat u_{\parallel} = 0
+\]
+</div>
+<p>
+where \(\hat u_{\parallel} = \cos\alpha\,\hat i + \sin\alpha\,\hat j\). This gives the condition:
+</p>
+<div class="math-block">
+\[
+(v_{r/x} - u\cos\alpha)\cos\alpha - (v_{r/y} + u\sin\alpha)\sin\alpha = 0
+\]
+\[
+\boxed{u = v_{r/x}\cos\alpha - v_{r/y}\sin\alpha}
+\]
+</div>
+</section>
+<section>
+<h2>Flag Flutter Problems</h2>
+<p>
+Flag-flutter problems have essentially the same mathematical structure as rain-man problems. There are three velocity vectors:
+</p>
+<ul class="model-box">
+<li>\(\vec v_w\) — velocity of the wind relative to the ground.</li>
+<li>\(\vec v_s\) — velocity of the flag staff (pole) relative to the ground.</li>
+<li>\(\vec v_{ws}\) — velocity of the wind relative to the staff.</li>
+</ul>
+<p>
+They are related by the same relative-velocity equation:
+</p>
+\[
+\boxed{\vec v_{ws}=\vec v_w-\vec v_s}
+\]
+<p>
+The flag responds to \(\vec v_{ws}\), because this is the velocity of the air as seen by the flag staff.
+</p>
+<p>
+Consider two limiting cases. If the staff is at rest, then
+</p>
+\[
+\vec v_s=0
+\]
+<p>
+and therefore
+</p>
+\[
+\vec v_{ws}=\vec v_w
+\]
+<p>
+So the flag flutters in the same direction as the wind.
+</p>
+<p>
+On the other hand, if the wind is still,
+</p>
+\[
+\vec v_w=0
+\]
+<p>
+then
+</p>
+\[
+\vec v_{ws}=-\vec v_s
+\]
+<p>
+Therefore, the flag flutters opposite to the direction in which the staff is moving.
+</p>
+<p>
+These are just two special cases of the same general principle:
+</p>
+<div class="insightbox">
+<strong>The flag flutters according to the wind velocity relative to the staff.</strong><br>
+It is therefore the relative velocity
+\[
+\boxed{\vec v_{ws}=\vec v_w-\vec v_s}
+\]
+that determines the direction in which the flag flutters, rather than the wind velocity alone.
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>

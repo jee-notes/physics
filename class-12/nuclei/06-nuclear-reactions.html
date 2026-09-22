@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nuclear Reactions | JEE Physics</title>
+<title>Nuclear Reactions | Nuclei</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -12,25 +12,200 @@
 <nav class="top-nav">
 <a href="./index.html" class="back-btn"><span>&larr;</span> Back to Nuclei</a>
 </nav>
-<header>
 <h1>Nuclear Reactions</h1>
-<p class="subtitle">Fission, Fusion, and Energy generation</p>
-</header>
+<p class="subtitle">
+Fission, Fusion, and Energy generation
+</p>
 <section>
 <h2>Q-value of Nuclear Reactions</h2>
-<p>A nuclear reaction generally involves bombarding a target nucleus with a projectile (like a neutron, proton, or alpha particle), resulting in a new product nucleus and an emitted particle.</p>
-<p>Reaction equation: \(A + a \longrightarrow B + b\)</p>
-<p>Where \(A\) is the target, \(a\) is the projectile, \(B\) is the product, and \(b\) is the emitted particle.</p>
-<p>The <strong>Q-value</strong> represents the energy released or absorbed in the reaction, calculated from the mass difference between reactants and products.</p>
-<div class="model-box">
-\[ Q = [ (m_A + m_a) - (m_B + m_b) ] c^2 \]
+<p>
+A nuclear reaction generally involves bombarding a target nucleus with a projectile such as a neutron, proton or \(\alpha\)-particle, resulting in new products.
+</p>
+<p>
+A general reaction can be written as
+</p>
+\[
+\boxed{A+a\longrightarrow B+b+Q}
+\]
+<p>
+where \(A\) is the target nucleus, \(a\) is the projectile, \(B\) is the product nucleus and \(b\) is the emitted particle.
+</p>
+<p>
+The endeavour here is to study the <strong>energy change</strong> involved in the reaction.
+So, how do we determine this energy change? At the nuclear scale, one important form of energy is associated with mass. Using Einstein's relation \(E=mc^2\), we can determine the energy change from the difference between the total masses of the reactants and products.
+</p>
+\[
+\boxed{Q=\left[(m_A+m_a)-(m_B+m_b)\right]c^2}
+\]
+<p>
+Thus, the <strong>Q-value</strong> represents the energy associated with the <strong>mass defect</strong> of the reaction.
+</p>
+<p>
+However, the next question is: <strong>how does this \(Q\)-energy manifest itself?</strong>
+</p>
+<p>
+In ordinary chemical reactions, we generally study energy changes for bulk matter and use thermodynamic quantities such as enthalpy \(\Delta H\). We may describe a reaction as <strong>exothermic</strong> when energy is released to the surroundings, usually as heat, or <strong>endothermic</strong> when energy is absorbed from the surroundings.
+</p>
+<p>
+At the <strong>nuclear scale</strong>, however, we can follow the energy more directly. The mass of a particle represents mass-energy \(mc^2\), its motion carries kinetic energy, and electromagnetic radiation carries energy \(h\nu\).
+</p>
+\[
+\boxed{E_{\text{mass}}=mc^2,\qquad E_{\text{kinetic}}=K,\qquad E_{\text{radiation}}=h\nu}
+\]
+<p>
+Therefore, when \(Q>0\), the decrease in mass-energy can manifest itself as <strong>kinetic energy of the products</strong> and/or as <strong>energy carried by photons</strong>.
+</p>
+\[
+\Delta E_{\text{mass}}\rightarrow \Delta K \quad \text{and/or} \quad E_\gamma
+\]
+<p>
+Thus, for a reaction in which no radiation is emitted and the final nuclei remain in their ground states,
+</p>
+\[
+\boxed{Q=K_{\text{final}}-K_{\text{initial}}}
+\]
+<p>
+so a positive \(Q\)-value means that the products have gained kinetic energy.
+</p>
+<p>
+If \(Q \lt 0\), the final particles have greater mass-energy than the initial particles. That additional mass-energy has to be supplied by the initial system, usually through the kinetic energy of the projectile. Hence an endothermic reaction requires a minimum threshold kinetic energy to occur.
+</p>
+<div class="insightbox">
+At the nuclear scale, an individual reaction is not described in terms of <strong>heat</strong>.<br>
+We directly track how the energy is distributed among its different forms: mass-energy, kinetic energy and radiation energy.<br>
+A single nucleus does not possess a temperature merely because its constituent particles have kinetic energy.<br>
+Temperature is a macroscopic quantity associated with bulk matter.<br>
+However, heat is still relevant when we consider <strong>bulk nuclear matter</strong>.<br>
+The energy released by a huge number of nuclear reactions can be transferred through the material and eventually appear as thermal energy. At that macroscopic scale, temperature and heat become meaningful quantities.
 </div>
-<ul>
-<li>If \(Q > 0\), the reaction is <strong>Exothermic</strong> (releases energy). The total kinetic energy of the products is greater than that of the reactants.</li>
-<li>If \(Q \lt 0\), the reaction is <strong>Endothermic</strong> (absorbs energy). The reaction requires a minimum threshold kinetic energy from the projectile to occur.</li>
-</ul>
+<div class="insightbox">
+At the nuclear scale, an individual nucleus can certainly have constituent particles with kinetic energy. But kinetic energy by itself does not imply temperature.
+<br><br>
+Temperature is a thermodynamic quantity whose physical meaning comes from <strong>thermal energy transfer</strong>: a temperature difference between systems in thermal contact drives energy flow from higher temperature to lower temperature.
+<br><br>
+Thus,
+\[
+\boxed{\text{temperature}\rightarrow\text{thermal energy transfer}}
+\]
+but not
+\[
+\boxed{\text{kinetic energy}\rightarrow\text{temperature}}.
+\]
+A single nucleus therefore is not assigned a temperature merely because its constituent nucleons possess kinetic energy.
+<br><br>
+For bulk nuclear matter or a sufficiently large collection of nuclei in thermal equilibrium, temperature becomes meaningful again.
+</div>
+<p>
+Thus, the Q-value is essentially an energy-conservation statement written in the nuclear language of mass:
+</p>
+\[
+\boxed{\text{initial mass-energy}+\text{initial kinetic energy}=\text{final mass-energy}+\text{final kinetic/radiation energy}}
+\]
 </section>
 <section>
+<h2>Q-value from Binding Energy</h2>
+<p>
+The Q-value can also be understood through the change in the <strong>binding energy</strong> of the nuclei involved.
+</p>
+
+<p>
+If a nucleus has binding energy per nucleon \(b\) and mass number \(A\), then its total binding energy is simply
+</p>
+
+\[
+BE=Ab
+\]
+
+<p>
+Therefore, for a nuclear reaction,
+</p>
+
+\[
+\boxed{
+Q=\sum BE_{\text{products}}-\sum BE_{\text{reactants}}
+}
+\]
+
+<p>
+So, if the products are more tightly bound than the reactants, their total binding energy is greater and
+</p>
+
+\[
+Q>0.
+\]
+
+<p>
+The increase in binding energy appears as released energy.
+Conversely, if the products are less tightly bound,
+</p>
+
+\[
+Q<0.
+\]
+
+<p>
+Thus, when the \(BE/A\) values of the nuclei involved are known, we can calculate the Q-value directly without separately calculating the masses.
+</p>
+
+<p>
+For example, consider the complete breakup of an alpha particle:
+</p>
+
+\[
+{}^{4}_{2}\mathrm{He}\rightarrow2p+2n
+\]
+
+<p>
+The alpha particle has binding energy per nucleon \(b\), so its total binding energy is
+</p>
+
+\[
+BE_{\alpha}=4b.
+\]
+
+<p>
+The final protons and neutrons are free nucleons, so their binding energy is zero.
+Therefore,
+</p>
+
+\[
+Q=0-4b
+\]
+
+\[
+\boxed{Q=-4b}.
+\]
+
+<p>
+So complete breakup of a bound nucleus into free nucleons is always endothermic: we have to supply the binding energy that was holding the nucleus together.
+</p>
+
+<div class="insightbox">
+This gives a very useful way of looking at the \(BE/A\) curve.
+<br><br>
+For a reaction involving bound nuclei, compare the <strong>total binding energy</strong> of the products and reactants:
+\[
+BE=A\left(\frac{BE}{A}\right).
+\]
+<br><br>
+If the total binding energy increases,
+\[
+\boxed{Q>0}
+\]
+and the reaction releases energy.
+If the total binding energy decreases,
+\[
+\boxed{Q<0}
+\]
+and energy must be supplied.
+<br><br>
+For a free proton or neutron,
+\[
+\boxed{BE=0}.
+\]
+So whenever a single nucleon is produced or consumed, its binding-energy contribution is simply zero.
+</div>
+</section><section>
 <h2>Nuclear Fission Mechanism</h2>
 <p>Nuclear fission is the splitting of a heavy nucleus (like Uranium-235) into two lighter, more stable intermediate-mass nuclei, accompanied by the release of a massive amount of energy and typically a few fast neutrons.</p>
 <p>When a slow (thermal) neutron strikes a \(^{235}\text{U}\) nucleus, it is absorbed to form a highly unstable intermediate \(^{236}\text{U}^*\), which rapidly undergoes fission.</p>

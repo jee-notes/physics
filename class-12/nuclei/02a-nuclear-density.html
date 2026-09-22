@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuclear Density | Size and Composition</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-history-nucleus.html" class="back-btn">
+<span>&larr;</span> Back to Size and Composition
+</a>
+</nav>
+<h1>Nuclear Density</h1>
+<p class="subtitle">
+Super Dense Nucleus.
+</p>
+<section>
+<h2>Experimental Determination</h2>
+<p>
+To resolve a length scale of the order of \(10^{-15}\text{ m}\), the de Broglie wavelength of the probing particle must satisfy the diffraction resolution criterion:
+</p>
+\[
+\lambda = \frac{h}{p} \lesssim R
+\]
+<p>
+If we attempt to use alpha particles (as in Rutherford's scattering experiments), the distance of closest approach for a head-on collision is affected by Coulomb repulsion.
+</p>
+<p>
+Modern precision measurements therefore use <strong>ultra-relativistic electron scattering</strong> (e.g., Hofstadter's experiments). Electrons interact purely through the electromagnetic force (governed strictly by quantum electrodynamics), acting as clean, non-destructive point-like probes of the nuclear charge distribution.
+</p>
+<div class="math-block">
+\[
+E \approx pc = \frac{hc}{\lambda} \gtrsim \frac{1240\text{ MeV}\cdot\text{fm}}{1\text{ fm}} \sim 100\text{--}500\text{ MeV}
+\]
+</div>
+<p>
+These electron-scattering diffraction patterns reveal that <strong>the nuclear volume \(V\) is directly proportional to the total number of nucleons \(A\).</strong>
+</p>
+<div class="math-block">
+\[
+V \propto A
+\]
+</div>
+</section>
+<section>
+<h2>Radius Scaling Law: \(R = R_0 A^{1/3}\)</h2>
+<p>
+Treating the nucleus as an approximately spherical distribution of mass and charge with radius \(R\):
+</p>
+\[
+V = \frac{4}{3}\pi R^3
+\]
+<p>
+Because the total volume increases linearly with the mass number \(A\):
+</p>
+\[
+V \propto A \implies \frac{4}{3}\pi R^3 \propto A \implies R^3 \propto A
+\]
+<p>
+Taking the cube root yields the empirical nuclear radius relation:
+</p>
+\[
+\boxed{R = R_0 A^{1/3}}
+\]
+<p>
+where \(R_0\) is an experimentally determined constant:
+</p>
+\[
+\boxed{R_0 \approx 1.2\text{ fm} = 1.2 \times 10^{-15}\text{ m}}
+\]
+<h3>Order of Magnitude Scaling:</h3>
+<ul class="model-box">
+<li>For Carbon-12 (\(A = 12\)): \(R \approx 1.2 \times (12)^{1/3} \approx 2.7\text{ fm}\)</li>
+<li>For Iron-56 (\(A = 56\)): \(R \approx 1.2 \times (56)^{1/3} \approx 4.6\text{ fm}\)</li>
+<li>For Uranium-238 (\(A = 238\)): \(R \approx 1.2 \times (238)^{1/3} \approx 7.4\text{ fm}\)</li>
+</ul>
+<p>
+A twentyfold increase in nucleon count (\(A = 12 \rightarrow 238\)) increases the physical radius by a factor of only \((238/12)^{1/3} \approx 2.7\).
+</p>
+</section>
+<section>
+<h2>Nuclear Density</h2>
+<p>
+Nuclear matter density \(\rho_{\text{nuc}}\) is defined as the total mass of the nucleus divided by its spatial volume:
+</p>
+\[
+\rho_{\text{nuc}} = \frac{M_{\text{nucleus}}}{V_{\text{nucleus}}}
+\]
+<p>
+Let \(m_u\) be the average rest mass of a bound nucleon (\(m_u \approx 1\text{ u} \approx 1.6605 \times 10^{-27}\text{ kg}\)). The total nuclear mass is:
+</p>
+\[
+M_{\text{nucleus}} \approx A \cdot m_u
+\]
+<p>
+Assuming spherical geometry:
+</p>
+\[
+V_{\text{nucleus}} = \frac{4}{3}\pi R^3 = \frac{4}{3}\pi \left(R_0 A^{1/3}\right)^3 = \frac{4}{3}\pi R_0^3 A
+\]
+<p>
+Substituting \(M_{\text{nucleus}}\) and \(V_{\text{nucleus}}\) into the density definition:
+</p>
+\[
+\rho_{\text{nuc}} = \frac{A \cdot m_u}{\frac{4}{3}\pi R_0^3 A} = \frac{m_u}{\frac{4}{3}\pi R_0^3}
+\]
+<p>
+Notice that the mass number \(A\) cancels completely:
+</p>
+\[
+\boxed{\rho_{\text{nuc}} = \frac{3 m_u}{4\pi R_0^3} = \text{constant}}
+\]
+<p>
+Substituting numerical values:
+</p>
+\[
+\rho_{\text{nuc}} = \frac{3 \times (1.6605 \times 10^{-27}\text{ kg})}{4\pi \times (1.2 \times 10^{-15}\text{ m})^3} \approx 2.29 \times 10^{17}\text{ kg/m}^3
+\]
+\[
+\boxed{\rho_{\text{nuc}} \approx 2.3 \times 10^{17}\text{ kg/m}^3 = 2.3 \times 10^{14}\text{ g/cm}^3}
+\]
+<div class="insightbox">
+<strong>Physical Meaning of \(A\)-Independence:</strong><br>
+Unlike macroscopic planetary bodies or atomic electron clouds, where density varies widely across species, <strong>all nuclei have approximately the same internal mass density</strong>.<br>
+Whether it is a light nucleus like \({}^{4}_{2}\text{He}\) or a heavy nucleus like \({}^{238}_{92}\text{U}\), the concentration of nucleons per unit volume remains invariant:
+\[
+n = \frac{A}{V} = \frac{3}{4\pi R_0^3} \approx 0.14\text{ nucleons/fm}^3
+\]
+</div>
+</section>
+<section>
+<h2>What Does \(V/A=\text{constant}\) Tell Us?</h2>
+<p>
+The experimentally observed relation
+</p>
+\[
+\boxed{V\propto A}
+\]
+<p>
+can be rewritten as
+</p>
+\[
+\boxed{\frac VA=\text{constant}}
+\]
+<p>
+This means that each nucleon occupies approximately the same amount of nuclear volume. As we add more nucleons, the nucleus therefore grows in size rather than continuously becoming denser.
+</p>
+<p>
+In other words, nuclear matter has an approximately fixed equilibrium density. The nucleus does not become progressively more "squeezed" as \(A\) increases.
+</p>
+<div class="insightbox">
+Think of putting more and more balloons into a chamber.<br>
+If the balloons could be squeezed more and more as their number increased, the volume per balloon would keep decreasing:
+\[
+\frac VA\downarrow
+\]
+But for nuclei,
+\[
+\boxed{\frac VA\approx\text{constant}}
+\]
+So adding nucleons mainly means <strong>adding more nuclear volume</strong>, rather than continuously compressing the existing nuclear matter.
+</div>
+<p>
+This tells us something important about the physical interaction between nucleons. The nucleus behaves as a <strong>saturating system</strong>: there is a characteristic nuclear density beyond which adding more nucleons does not simply keep compressing the existing matter.
+</p>
+<p>
+This observation will become even more meaningful when we look at the <strong>binding energy per nucleon</strong>.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
