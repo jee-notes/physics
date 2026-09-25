@@ -1,71 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Measurements and Errors | Propagation of Errors</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propagation of Errors | Measurements and Errors</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Measurements and Errors
-            </a>
-        </nav>
-
-        <h1>Propagation of Errors</h1>
-        <p class="subtitle">
-            How uncertainties combine in complex calculations.
-        </p>
-
-        <section>
-            <h2>1. Addition and Subtraction</h2>
-            <p>
-                When quantities are added or subtracted, the absolute error of the final result is the sum of the
-                absolute errors of the individual quantities.
-            </p>
-            <div class="formula-block">
-                If \( Z = A \pm B \), then
-                \[ \Delta Z = \Delta A + \Delta B \]
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Multiplication and Division</h2>
-            <p>
-                When quantities are multiplied or divided, the relative error of the result is the sum of the relative
-                errors of the individual quantities.
-            </p>
-            <div class="formula-block">
-                If \( Z = AB \) or \( Z = A/B \), then
-                \[ \frac{\Delta Z}{Z} = \frac{\Delta A}{A} + \frac{\Delta B}{B} \]
-            </div>
-        </section>
-
-        <section>
-            <h2>3. General Rule for Powers</h2>
-            <p>
-                If a quantity is raised to a power, its relative error is multiplied by the index of that power.
-            </p>
-            <div class="formula-block">
-                If \( Z = A^p B^q C^r \), then
-                \[ \frac{\Delta Z}{Z} = p\frac{\Delta A}{A} + q\frac{\Delta B}{B} + r\frac{\Delta C}{C} \]
-            </div>
-            <div class="insightbox">
-                This is the most general and useful formula for competitive exams. Remember that absolute error of the
-                result is rarely used directly; we always calculate relative/percentage error first.
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Measurements and Errors
+</a>
+</nav>
+<h1>Propagation of Errors</h1>
+<p class="subtitle">
+How uncertainties in measured quantities affect a calculated quantity.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+What do we actually mean by <strong>propagation of errors</strong>? To understand this, we first need to look at how physical quantities are measured and how measured quantities are used in calculations.
+</p>
+<p>
+Consider the familiar experiment of determining the acceleration due to gravity \(g\) using the time period \(T\) of a simple pendulum:
+</p>
+\[
+T = 2\pi \sqrt{\frac{l}{g}} \qquad g = 4 \pi^2 \frac{l}{T^2} 
+\]
+<p>
+We can measure the length of the pendulum \(l\) and time period of the pendulum \(T\) and plugin those values in the formula to get the value of \(g\) at that location.
+</p>
+<p>
+However, neither measurement can be perfectly exact. There will be some uncertainty in the measured values of \(l\) and \(T\), represented by their absolute errors \(\Delta l\) and \(\Delta T\), or by their fractional errors \(\frac{\Delta l}{l}\) and \(\frac{\Delta T}{T}\) respectively.
+</p>
+<p>
+The question is therefore: <strong>how does the error in the measured quantities affect the error in the calculated quantity?</strong>
+</p>
+<p>
+For the pendulum experiment, we want to determine the maximum fractional error in \(g\),\(\frac{\Delta g}{g}\) , when the fractional errors in \(l\) and \(T\) are known.
+</p>
+<ul class="model-box">
+<li>We are interested in the <strong>maximum possible error</strong> in the calculated quantity.</li>
+<li>The mathematical constants appearing in the relation, such as \(4\) and \(\pi\), are treated as exact. Only the errors in the measured quantities are propagated.</li>
+</ul>
+<p>
+Thus, propagation of error is essentially the mathematical study of how uncertainties in measured quantities appear in a quantity calculated from them.
+</p>
+<p>
+The procedure is therefore:
+</p>
+<ol class="model-box">
+<li>Establish the mathematical relation between the quantities.</li>
+<li>Determine how small changes in the measured quantities affect the calculated quantity.</li>
+<li>Use this relation to determine the maximum error in the calculated result.</li>
+</ol>
+<p>
+In general, if \(Z\) is calculated from measured quantities \(A,B,C,\ldots\), then an error in those quantities propagates through the mathematical relation and produces an error in \(Z\).
+</p>
+</section>
+<section>
+<h2>Addition and Subtraction</h2>
+<p>
+We try to establish rules based on the <strong>mathematical relation</strong> between the calculated quantity and the measured quantities. These rules arise from the mathematical form of the relation and are therefore applicable to any quantities related in the same way.
+</p>
+<p>
+We begin with the simplest relation: <strong>Addition (or Subtraction)</strong>.
+</p>
+<p>
+For maximum error, addition and subtraction are treated in exactly the same way. Thus, they can be considered together as an “OR” case.
+</p>
+<p>
+When measured quantities are added or subtracted to obtain a calculated quantity, their <strong>absolute errors add</strong> to give the maximum absolute error in the calculated quantity.
+</p>
+<div class="concept-box">
+If
+\[
+Z=A\pm B
+\]
+then the maximum absolute error is
+\[
+\boxed{\Delta Z=\Delta A+\Delta B}
+\]
+</div>
+<p>
+The absolute errors therefore add irrespective of whether the measured quantities are added or subtracted.
+</p>
+</section>
+<section>
+<h2>Multiplication and Division</h2>
+<p>
+We next consider the mathematical relations involving <strong>Multiplication (or Division)</strong>.
+</p>
+<p>
+For maximum error, multiplication and division are treated in exactly the same way. Thus, they can be considered together as an "OR" case.
+</p>
+<p>
+When measured quantities are multiplied or divided to obtain a calculated quantity, their <strong>fractional errors add</strong> to give the maximum fractional error in the calculated quantity.
+</p>
+<div class="concept-box">
+If
+\[
+Z=AB \qquad \text{or} \qquad Z=\frac{A}{B}
+\]
+then the maximum fractional error is
+\[
+\boxed{\frac{\Delta Z}{Z}=\frac{\Delta A}{A}+\frac{\Delta B}{B}}
+\]
+</div>
+<p>
+The fractional errors therefore add irrespective of whether the measured quantities are multiplied or one is divided by the other.
+</p>
+</section>
+<section>
+<h2>Logarithmic Differentiation</h2>
+<p>
+This topic is entirely mathematical. We can transform the mathematical relation between physical quantities so that multiplication and division become addition and subtraction, and then use differentiation to determine how errors are related.
+</p>
+<div class="concept-box">
+<p>
+Consider
+\[
+Z=AB
+\]
+Taking natural logarithm on both sides,
+\[
+\ln Z=\ln A+\ln B
+\]
+</p>
+<p>
+We may introduce transformed mathematical variables
+\[
+Z'=\ln Z \qquad A'=\ln A \qquad B'=\ln B
+\]
+The relation then becomes
+\[
+Z'=A'+B'
+\]
+</p>
+<p>
+For maximum error, the addition rule gives
+\[
+\Delta Z'=\Delta A'+\Delta B'
+\]
+</p>
+<p>
+But
+\[
+Z'=\ln Z \qquad\Longrightarrow\qquad dZ'=\frac{dZ}{Z}
+\]
+Similarly,
+\[
+dA'=\frac{dA}{A} \qquad dB'=\frac{dB}{B}
+\]
+</p>
+<p>
+Therefore,
+\[
+\Delta Z'=\frac{\Delta Z}{Z} \qquad \Delta A'=\frac{\Delta A}{A} \qquad \Delta B'=\frac{\Delta B}{B}
+\]
+and hence
+\[
+\boxed{\frac{\Delta Z}{Z}=\frac{\Delta A}{A}+\frac{\Delta B}{B}}
+\]
+</p>
+<p>
+Thus, the familiar rule for multiplication is obtained directly from the addition rule by logarithmic differentiation.
+</p>
+<p>
+For division,
+\[
+Z=\frac{A}{B}
+\]
+taking logarithm gives
+\[
+\ln Z=\ln A-\ln B
+\]
+Differentiating,
+\[
+\frac{dZ}{Z}=\frac{dA}{A}-\frac{dB}{B}
+\]
+For maximum error, the magnitudes of the individual contributions are added:
+\[
+\boxed{\frac{\Delta Z}{Z}=\frac{\Delta A}{A}+\frac{\Delta B}{B}}
+\]
+</p>
+</div>
+<p>
+Thus, <strong>logarithmic differentiation</strong> provides a general mathematical method for obtaining error relations. The familiar multiplication, division and power rules are simply particular applications of this method.
+</p>
+</section>
+<section>
+<h2>General Rule for Powers</h2>
+<p>
+We can extend the same logarithmic differentiation method to quantities raised to powers.
+</p>
+<div class="concept-box">
+<p>
+Consider the mathematical relation
+\[
+Z=kA^pB^qC^r
+\]
+Taking natural logarithm on both sides,
+\[
+\ln Z=\ln k + p\ln A+q\ln B+r\ln C
+\]
+</p>
+<p>
+Differentiating,
+\[
+\frac{dZ}{Z}=p\frac{dA}{A}+q\frac{dB}{B}+r\frac{dC}{C}
+\]
+</p>
+<p>
+For maximum error, the magnitudes of the individual error contributions are added. Therefore,
+\[
+\boxed{
+\frac{\Delta Z}{Z}=|p|\frac{\Delta A}{A}+|q|\frac{\Delta B}{B}+|r|\frac{\Delta C}{C}}
+\]
+</p>
+</div>
+<p>
+Thus, the fractional error contributed by a quantity is multiplied by the <strong>absolute value of its power</strong>.
+</p>
+<p>
+For example, if
+\[
+Z=A^2B^{-3}
+\]
+then
+\[
+\boxed{\frac{\Delta Z}{Z}=2\frac{\Delta A}{A}+3\frac{\Delta B}{B}}
+\]
+</p>
+<p>
+The rules for multiplication, division and powers are therefore not separate formulas to memorize. They all follow from the same method of <strong>logarithmic differentiation</strong>.
+</p>
+</section>
+<section>
+<h2>Non-Algebraic Functions</h2>
+<p>
+The same method can be extended to mathematical relations that are not just algebraic (products of powers) functions of the measured quantities.
+</p>
+<p>
+For example, a quantity may involve an exponential or trigonometric mathematical function.
+</p>
+<p>
+Consider a relation of the form
+\[
+Z=f(A,B,C,\ldots)
+\]
+We can take logarithm of the dependent quantity and then differentiate:
+\[
+\ln Z=\ln[f(A,B,C,\ldots)]
+\]
+</p>
+<p>
+The resulting differential relation gives the fractional change in \(Z\):
+\[
+\frac{dZ}{Z}=d(\ln Z)
+\]
+For maximum error, the magnitudes of the individual contributions are added.
+</p>
+<div class="examplebox">
+<p>
+For example, consider the JEE Advanced 2015 question: The energy of a system as a function of time t is given as
+\[
+E=A^2e^{-\alpha t}
+\]
+where \(\alpha = 0.2 \, s^{-1}\) . The measurement of A has an error of \(1.25\%\) . If the error in the measurement of time is \(1.5\%\) , what is the percentage error in the value of \(E(t)\) at \(t=5\,s\)
+</p>
+<p>
+\[
+E=A^2e^{-\alpha t}
+\]
+Taking natural logarithm,
+\[
+\ln E=2\ln A-\alpha t
+\]
+</p>
+<p>
+Differentiating,
+\[
+\frac{dE}{E}=2\frac{dA}{A}-\alpha\,dt-t\,d\alpha
+\]
+</p>
+<p>
+Therefore, the maximum fractional error is
+\[
+\boxed{
+\frac{\Delta E}{E}=2\frac{\Delta A}{A}+\alpha\Delta t+t\Delta\alpha}
+\]
+</p>
+<p>
+If \(\alpha\) is exact, then \(\Delta\alpha=0\), giving
+\[
+\boxed{\frac{\Delta E}{E}=2\frac{\Delta A}{A}+\alpha\Delta t}
+\]
+</p>
+<p>
+As fractional error in time measurement is given:
+\[
+\boxed{\frac{\Delta E}{E}=2\frac{\Delta A}{A}+\alpha t \frac{\Delta t}{t}}
+\]
+</p>
+</div>
+<div class="examplebox">
+<p>
+For trigonometric functions too, we can use the same logarithmic differentiation method.
+</p>
+<p>
+Consider,
+\[
+Z=A\sin\theta
+\]
+</p>
+<p>
+Taking natural logarithm,
+\[
+\ln Z=\ln A+\ln(\sin\theta)
+\]
+</p>
+<p>
+Differentiating,
+\[
+\frac{dZ}{Z}=\frac{dA}{A}+\cot\theta\,d\theta
+\]
+</p>
+<p>
+Considering that fractional error in \(\theta\) is provided, the maximum fractional error is
+\[
+\boxed{\frac{\Delta Z}{Z}=\frac{\Delta A}{A}+\theta\,|\cot\theta|\,\frac{\Delta\theta}{\theta}}
+\]
+</p>
+<p>
+Thus, unlike the algebraic case, the contribution of the error in \(\theta\) depends on the value of \(\theta\) through the derivative of the trigonometric function.
+</p>
+<p>
+The angle \(\theta\) must be measured in <strong>radians</strong> when using this differential relation.
+</p>
+</div>
+</section>
+<section>
+<h2>Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./06a-dependent-error.html">1. Dependent Error</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

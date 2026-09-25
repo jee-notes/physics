@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dependent Errors | Propagation of Errors</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./05-propagation-of-errors.html" class="back-btn">
+<span>&larr;</span> Back to Propagation of Errors
+</a>
+</nav>
+<h1>Dependent Errors</h1>
+<p class="subtitle">
+Propagation of Dependent Errors.
+</p>
+<section>
+<h2>Dependent Errors</h2>
+<p>
+We have so far considered mathematical relations in which the quantities involved in the final calculation can be treated as independent inputs.
+</p>
+<p>
+However, sometimes the quantities appearing in a mathematical relation are themselves dependent on a common measured quantity.
+</p>
+<p>
+This creates a situation of what we call <strong>dependent errors</strong>.
+</p>
+<div class="concept-box">
+<p>
+Consider
+\[
+Z=\frac{a}{b}
+\]
+Here \(a\) and \(b\) are independently measured quantities. Therefore, their errors
+\[
+\Delta a \qquad \text{and} \qquad \Delta b
+\]
+come from separate measurements.
+</p>
+<p>
+We can therefore apply the usual quotient rule:
+\[
+\boxed{\frac{\Delta Z}{Z}=\frac{\Delta a}{a}+\frac{\Delta b}{b}}
+\]
+</p>
+<p>
+We directly add the individual error contributions to obtain the maximum error in \(Z\).
+</p>
+</div>
+<p>
+Now consider a different relation:
+\[
+Z=\frac{a}{a+b}
+\]
+</p>
+<p>
+The numerator and denominator are now
+\[
+(a) \qquad \text{and} \qquad (a+b)
+\]
+These are <strong>not independent quantities</strong>, because both contain the same measured quantity \(a\).
+</p>
+<p>
+Therefore, the error in \(a\) appears in both the numerator and the denominator. We cannot simply treat the errors in \(a\) and \(a+b\) as two independent error contributions.
+</p>
+<p>
+In such cases, we cannot treat
+\[
+a+b=u
+\]
+as a separate measured quantity and then apply the usual quotient rule directly.
+</p>
+<p>
+To determine the maximum error in \(Z\), we need to resolve the differential \(dZ\) in terms of the errors in the originally measured independent quantities \(da\) and \(db\).
+</p>
+<p>
+For this purpose, we use the same logarithmic and differential method, but we do not add the error contributions directly at first.
+</p>
+<p>
+Before determining the maximum error, we resolve the differential relation by collecting all terms involving the same independent error sources \(da\) and \(db\).
+</p>
+</section>
+<section>
+<h2>Examples of Dependent Errors</h2>
+<p>
+Let us now apply the method to mathematical relations in which the quantities appearing in the final expression are not independent of one another.
+</p>
+<div class="examplebox">
+<p>
+<strong>Example 1:</strong> Consider
+\[
+Z=\frac{a}{a+b}
+\]
+</p>
+<p>
+Taking natural logarithm,
+\[
+\ln Z=\ln a-\ln(a+b)
+\]
+</p>
+<p>
+Differentiating,
+\[
+\frac{dZ}{Z}=\frac{da}{a}-\frac{da+db}{a+b}
+\]
+</p>
+<p>
+Before determining the maximum error, we first collect the terms involving the same independent error sources \(da\) and \(db\):
+\[
+\frac{dZ}{Z}=\left(\frac{1}{a}-\frac{1}{a+b}\right)da-\frac{db}{a+b}
+\]
+</p>
+<p>
+Therefore,
+\[
+\frac{dZ}{Z}=\frac{b}{a(a+b)}\,da-\frac{1}{a+b}\,db
+\]
+</p>
+<p>
+For maximum error, the magnitudes of the independent error contributions are added:
+\[
+\boxed{\frac{\Delta Z}{Z}=\frac{b}{a(a+b)}\,\Delta a+\frac{1}{a+b}\,\Delta b}
+\]
+</p>
+<p>
+Notice that we did not treat \(a\) and \(a+b\) as independent quantities. The common error in \(a\) was first resolved in terms of the original independent errors \(da\) and \(db\).
+</p>
+</div>
+<div class="examplebox">
+<p>
+<strong>Example 2:</strong> Consider
+\[
+Z=\frac{ab}{a+b}
+\]
+</p>
+<p>
+Taking natural logarithm,
+\[
+\ln Z=\ln a+\ln b-\ln(a+b)
+\]
+</p>
+<p>
+Differentiating,
+\[
+\frac{dZ}{Z}=\frac{da}{a}+\frac{db}{b}-\frac{da+db}{a+b}
+\]
+</p>
+<p>
+Collecting the terms involving the same independent error sources,
+\[
+\frac{dZ}{Z}=\left(\frac{1}{a}-\frac{1}{a+b}\right)da+\left(\frac{1}{b}-\frac{1}{a+b}\right)db
+\]
+</p>
+<p>
+Therefore,
+\[
+\frac{dZ}{Z}=\frac{b}{a(a+b)}\,da+\frac{a}{b(a+b)}\,db
+\]
+</p>
+<p>
+For maximum error,
+\[
+\boxed{\frac{\Delta Z}{Z}=\frac{b}{a(a+b)}\,\Delta a+\frac{a}{b(a+b)}\,\Delta b}
+\]
+</p>
+<p>
+Again, the important step is to first resolve the differential relation in terms of the original independent errors \(da\) and \(db\), and only then add their maximum contributions.
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
