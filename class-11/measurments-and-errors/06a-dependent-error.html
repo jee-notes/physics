@@ -172,6 +172,76 @@ Again, the important step is to first resolve the differential relation in terms
 </p>
 </div>
 </section>
+<section>
+<h2>Careful Addition</h2>
+<p>
+The main difference in <strong>dependent errors</strong> is that we should not directly add up the error contributions before considering their dependence.
+</p>
+<p>
+Consider
+\[
+Z=\frac{A}{B}
+\]
+Even though it is a division, we directly add the fractional errors to determine the maximum error in \(Z\):
+</p>
+\[
+\boxed{\frac{\Delta Z}{Z}=\frac{\Delta A}{A}+\frac{\Delta B}{B}}
+\]
+<p>
+Now let us consider the simplest case of dependency:
+\[
+Z=\frac{A}{A}
+\]
+Whatever the error in \(A\), it does not propagate to \(Z\), because
+\[
+Z=1
+\]
+for every value of \(A\).
+</p>
+<p>
+Therefore, if we mechanically apply the previous rule without considering the dependence, we would obtain
+</p>
+\[
+\frac{\Delta Z}{Z}=2\frac{\Delta A}{A}
+\]
+<p>
+which is clearly wrong.
+</p>
+<p>
+So, before converting all error contributions into positive quantities for maximum error, we must first collect all terms belonging to the same underlying error source.
+</p>
+<p>
+First take logarithm and implicitly differentiate:
+</p>
+\[
+\ln Z=\ln A-\ln A
+\]
+\[
+\frac{dZ}{Z}=\frac{dA}{A}-\frac{dA}{A}
+\]
+<p>
+Now, before replacing the individual terms by their magnitudes, collect all the terms containing \(dA\):
+</p>
+\[
+\frac{dZ}{Z}=dA\left(\frac{1}{A}-\frac{1}{A}\right)
+\]
+<p>
+Hence,
+\[
+\frac{dZ}{Z}=0
+\]
+</p>
+<p>
+Only after resolving and simplifying the contributions of each independent error source do we convert them into positive contributions to determine the maximum error.
+</p>
+<div class="insightbox">
+The order of operations is therefore important:
+\[
+\boxed{\text{Differentiate} \longrightarrow \text{collect common error sources} \longrightarrow \text{simplify} \longrightarrow \text{take magnitudes}
+}
+\]
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>
