@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature of Surface | Heat Transfer</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Heat Transfer
+</a>
+</nav>
+<h1>Nature of Surface</h1>
+<p class="subtitle">
+Nature of Surface and Kirchoff's Law.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+Stefan-Boltzmann law represents the <strong>nature of the radiating surface</strong> quantitatively through \(e\), called the <strong>emissivity</strong> of the body.
+</p>
+<p>
+Thus, while using Stefan-Boltzmann law,
+\[
+P=e\sigma AT^4
+\]
+the two quantities we need to know are the <strong>emissivity \(e\)</strong> and the <strong>area \(A\)</strong>.
+</p>
+<p>
+Here, we focus on understanding the <strong>nature of the surface</strong> represented by \(e\).
+</p>
+<p>
+The nature of a surface is understood through how it <strong>absorbs radiation</strong>. We then relate this absorptive nature to emissivity using <strong>Kirchhoff's law</strong>.
+</p>
+<p>
+Therefore, to understand \(e\), we first need to understand how <strong>colour is produced by selective absorption of radiation</strong>. We will then relate this absorptive behaviour to emissivity.
+</p>
+</section>
+<section>
+<h2>How is an Apple Red?</h2>
+<p>
+The main question is: how do we see the red colour of an apple, or more generally, how do we perceive the colour of an object?
+</p>
+<p>
+Here, we are not concerned with the mechanism of colour perception in our eyes. We are asking how an apple appears red to everyone as a shared physical reality.
+</p>
+<p>
+White light falls on the surface of the apple. The surface selectively absorbs some of the colours present in white light and reflects the red component.
+</p>
+<p>
+This selective absorption is a characteristic of the pigment present in the skin of the apple. Thus, the apple does not emit the red colour on its own. It selectively interacts with the incident radiation by absorbing some wavelengths and reflecting others.
+</p>
+<p>
+The apple appears red because red light incident on its surface is predominantly reflected back rather than absorbed. This reflected red light reaches the observer's eye and produces the perception of red.
+</p>
+<p>
+Thus, absorption is determined primarily by the <strong>incident radiation</strong> and the <strong>nature of the surface</strong>, rather than by the temperature of the body.
+</p>
+<p>
+In complete darkness, the apple is not visible because there is no incident light to be reflected. Under green light, the apple would appear black because the incident green light is predominantly absorbed rather than reflected.
+</p>
+<p>
+This visible colour behaviour is not a consequence of the temperature of the apple but of its nature and so we use absorption phenomenon to determine the nature of surface.
+</p>
+</section>
+<section>
+<h2>Absorptive Power, Reflective Power, and Transmissive Power</h2>
+<p>
+To determine the nature of surface, we study absorption process. We consider what happens when, a total quantity of radiant energy \( Q \) is incident upon the surface of a body:
+</p>
+<ul class="model-box">
+<li>A fraction \( Q_a \) is absorbed by the body.</li>
+<li>A fraction \( Q_r \) is reflected from the surface.</li>
+<li>A fraction \( Q_t \) is transmitted through the body.</li>
+</ul>
+<p>
+By conservation of energy:
+</p>
+\[
+Q_a + Q_r + Q_t = Q
+\]
+<p>
+Dividing both sides by the total incident energy \( Q \):
+</p>
+<div class="math-block">
+\[
+\frac{Q_a}{Q} + \frac{Q_r}{Q} + \frac{Q_t}{Q} = 1 \implies a + r + t = 1
+\]
+</div>
+<p>
+where:
+</p>
+<ul class="model-box">
+<li><strong>Absorptive Power / Absorptance (\( a \)):</strong> \( a = \frac{Q_a}{Q} \). The fraction of incident radiation absorbed. (Dimensionless scalar, \( 0 \le a \le 1 \)).</li>
+<li><strong>Reflective Power / Reflectance (\( r \)):</strong> \( r = \frac{Q_r}{Q} \). The fraction of incident radiation reflected. (Dimensionless scalar, \( 0 \le r \le 1 \)).</li>
+<li><strong>Transmissive Power / Transmittance (\( t \)):</strong> \( t = \frac{Q_t}{Q} \). The fraction of incident radiation transmitted. (Dimensionless scalar, \( 0 \le t \le 1 \)).</li>
+</ul>
+<h3>Special Classifications of Surfaces:</h3>
+<ul class="model-box">
+<li><strong>Opaque Body (Athermanous):</strong> \( t = 0 \implies a + r = 1 \). (Most solids and liquids).</li>
+<li><strong>Transparent Body (Diathermanous):</strong> \( t = 1, a = 0, r = 0 \). (e.g., dry air, rock salt, quartz).</li>
+<li><strong>Perfect Reflector:</strong> \( r = 1, a = 0, t = 0 \). (e.g., highly polished silver mirror).</li>
+<li><strong>Perfect Blackbody:</strong> \( a = 1, r = 0, t = 0 \).</li>
+</ul>
+<p>
+We classify surfaces in connection with colour because a <strong>perfect blackbody absorbs all incident radiation</strong>. It therefore reflects none of the incident light and appears perfectly black.
+</p>
+</section>
+<section>
+<h2>Kirchhoff's Law of Thermal Radiation</h2>
+<p>
+Gustav Kirchhoff established (derived) a fundamental law connecting the emission and absorption capabilities of any physical body using the principle of thermal equilibrium.
+</p>
+<p>
+The derivation is not important for exam but what actually is that we understand the physical quantities used to derive the relation.
+</p>
+<h3>Spectral Absorptive Power:</h3>
+<p>
+This is an important concept that is ignored quite often. Remember that we talked about selective absorption by the apple? 
+</p>
+<p>
+White light indicates a continuous spectrum is  incident on the apple and as per the nature of apple:
+</p>
+\[
+a_{\text{red}} = 0 \qquad a_{\text{green}} \approx 1 
+\]
+<p>
+Thus, for a real body, there are different values of absorptance (\( a \)) depending upon the wavelengths (color): \(a_{\lambda} = f(\lambda)\) .
+</p>
+<h3>Emissive Power:</h3>
+<p>
+Emissive Power is given by:
+</p>
+\[
+E = \frac{P}{A} = e \sigma T^4
+\]
+<p>
+It is a quantity that only depends on the temperature and nature of the body. Thus, 2 bodies of different area (size) but of the same nature and temperature will have the same emissive power.
+</p>
+<h3>Spectral Emissive Power:</h3>
+<p>
+This is an important concept that is ignored quite often. Remember that we talked about continuous spectrum of emissive thermal radiation? 
+</p>
+<p>
+That is true only in the case of a perfectly black body. For a real body (like an apple), absorption as well as emission depend on wavelength that is a characteristic of the nature of the surface.
+</p>
+<p>
+In emmissive power, this is mathematically represented by (\( e_{\lambda} \)) 
+</p>
+\[
+E_{\lambda} =  e_{\lambda} \sigma T^4
+\]
+<p>
+Thus, for a real body, the emissive power depends on emissivity and temperature. This emissivity is a also a function of wavelengths (color): \(e_{\lambda} = f(\lambda)\) .
+</p>
+<h3>Emissivity in Terms of a Blackbody</h3>
+<p>
+Emissivity tells us how strongly a real surface emits compared with a blackbody at the same temperature.
+</p>
+\[
+\boxed{e=\frac{E}{E_{bb}}}
+\]
+<p>
+This means that an ideal blackbody is assumed to emit maximum at any temperature and any real body has \(e \le 1\) and its emissive power is fraction of black body.
+</p>
+<p>
+This implies that:
+</p>
+\[
+\boxed{e_{bb}=1}
+\]
+<p>
+But, emissive power is also a function of wavelength. For a particular wavelength, the corresponding spectral emissivity is:
+</p>
+\[
+\boxed{e_\lambda=\frac{E_\lambda}{E_{bb,\lambda}}}
+\]
+<p>
+Thus, emissivity depends on wavelength and is a characteristic of the nature of the surface:
+</p>
+\[
+e_\lambda=f(\lambda) \qquad e_{bb,\lambda}=1 \text{ for  all } \lambda
+\]
+<h3>Kirchhoff's Law</h3>
+<p>
+Kirchhoff's law gives the relation between spectral emission and spectral absorption:
+</p>
+\[
+\boxed{\frac{E_\lambda}{a_\lambda}=E_{bb,\lambda}}
+\]
+<p>
+But from the definition of spectral emissivity,
+</p>
+\[
+E_\lambda=e_\lambda E_{bb,\lambda}
+\]
+<p>
+Hence,
+</p>
+\[
+e_\lambda E_{bb,\lambda}= a_\lambda E_{bb,\lambda}
+\]
+and therefore,
+\[
+\boxed{e_\lambda=a_\lambda}
+\]
+<p>
+Thus, <strong>at each wavelength, the emissivity of a surface equals its absorptivity</strong>.
+</p>
+<p>
+This is derived using thermodynamic equilibrium and energy conservation but the derivation is not important. What is more important is what does this mean?
+</p>
+</section>
+<section>
+<h2>Sub-Topics</h2>
+<p>
+To understand the implications, we study them as separate sub-topics
+</p>
+<div class="chapter-list">
+<a href="./05a-spectral-emission.html">1. Spectral Implication</a>
+<a href="./05b-absorber-emitter.html">2. Good Absorbers are Good Emitters</a>
+<a href="./04-latent-heat.html">3. Perfect Black Body</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -177,7 +177,121 @@ P_{\text{with } N \text{ shields}} = \frac{1}{N + 1} P_{\text{without shield}}
 Inserting a single radiation shield cuts radiative heat transfer by 50% (\( N=1 \implies \frac{1}{2} \)).
 </div>
 </section>
-
+<section>
+<h2>Absorptive Power, Reflective Power, and Transmissive Power</h2>
+<p>
+When a total quantity of radiant energy \( Q \) impinges upon the surface of a body:
+</p>
+<ul class="model-box">
+<li>A fraction \( Q_a \) is absorbed by the body.</li>
+<li>A fraction \( Q_r \) is reflected from the surface.</li>
+<li>A fraction \( Q_t \) is transmitted through the body.</li>
+</ul>
+<p>
+By conservation of energy:
+</p>
+\[
+Q_a + Q_r + Q_t = Q
+\]
+<p>
+Dividing both sides by the total incident energy \( Q \):
+</p>
+<div class="math-block">
+\[
+\frac{Q_a}{Q} + \frac{Q_r}{Q} + \frac{Q_t}{Q} = 1 \implies a + r + t = 1
+\]
+</div>
+<p>
+where:
+</p>
+<ul>
+<li><strong>Absorptive Power / Absorptance (\( a \)):</strong> \( a = \frac{Q_a}{Q} \). The fraction of incident radiation absorbed. (Dimensionless scalar, \( 0 \le a \le 1 \)).</li>
+<li><strong>Reflective Power / Reflectance (\( r \)):</strong> \( r = \frac{Q_r}{Q} \). The fraction of incident radiation reflected. (Dimensionless scalar, \( 0 \le r \le 1 \)).</li>
+<li><strong>Transmissive Power / Transmittance (\( t \)):</strong> \( t = \frac{Q_t}{Q} \). The fraction of incident radiation transmitted. (Dimensionless scalar, \( 0 \le t \le 1 \)).</li>
+</ul>
+<div class="concept-box">
+<strong>Special Classifications of Surfaces:</strong>
+<ul>
+<li><strong>Opaque Body (Athermanous):</strong> \( t = 0 \implies a + r = 1 \). (Most solids and liquids).</li>
+<li><strong>Transparent Body (Diathermanous):</strong> \( t = 1, a = 0, r = 0 \). (e.g., dry air, rock salt, quartz).</li>
+<li><strong>Perfect Reflector:</strong> \( r = 1, a = 0, t = 0 \). (e.g., highly polished silver mirror).</li>
+<li><strong>Perfect Blackbody:</strong> \( a = 1, r = 0, t = 0 \).</li>
+</ul>
+</div>
+</section>
+<section>
+<h2>Emissive Power and Spectral Emissive Power</h2>
+<p>
+To quantify the rate of emission of radiant energy from a real surface, two physical definitions are introduced:
+</p>
+<h3>Total Emissive Power (\( E \))</h3>
+<div class="model-box">
+<strong>Definition:</strong> Total emissive power of a body is the total radiative energy emitted per unit surface area per unit time across all wavelengths in all forward directions at absolute temperature \( T \).
+\[
+E = \frac{dQ}{A \cdot dt} = \frac{P}{A}
+\]
+<p>
+<strong>SI Unit:</strong> \(\text{W}\cdot\text{m}^{-2}\) (or \(\text{J}\cdot\text{s}^{-1}\cdot\text{m}^{-2}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^1 L^0 T^{-3}]\)
+</p>
+</div>
+<h3>Spectral Emissive Power (\( E_\lambda \))</h3>
+<p>
+Radiant energy is distributed across a continuum of wavelengths. The emissive power within a differential wavelength interval \( [\lambda, \lambda + d\lambda] \) is \( dE = E_\lambda d\lambda \).
+</p>
+<div class="model-box">
+<strong>Definition:</strong> Spectral emissive power is the radiant energy emitted per unit surface area per unit time per unit wavelength interval centered at wavelength \( \lambda \).
+\[
+E_\lambda = \frac{dE}{d\lambda} = \frac{dQ}{A \cdot dt \cdot d\lambda}
+\]
+<p>
+<strong>SI Unit:</strong> \(\text{W}\cdot\text{m}^{-3}\) (or \(\text{W}\cdot\text{m}^{-2}\cdot\text{nm}^{-1}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^1 L^{-1} T^{-3}]\)
+</p>
+</div>
+<p>
+The total emissive power is the integral of spectral emissive power over all wavelengths from zero to infinity:
+</p>
+\[
+E = \int_0^\infty E_\lambda \, d\lambda
+\]
+</section>
+<section>
+<h2>Concept of an Ideal Blackbody</h2>
+<p>
+An <strong>Ideal Blackbody</strong> is defined as an idealized physical object that possesses the following properties:
+</p>
+<ol>
+<li>It completely absorbs all electromagnetic radiation incident upon it, regardless of frequency, wavelength, or angle of incidence (\( a = 1, r = 0, t = 0 \)).</li>
+<li>It reflects zero radiation and transmits zero radiation; hence, at room temperature, it appears completely black.</li>
+<li>At any given temperature \( T \), a blackbody emits the maximum possible thermal radiation at every wavelength compared to any other body of the same surface area and temperature. It is a <em>perfect emitter</em>.</li>
+<li>The radiation emitted by a blackbody depends solely on its absolute temperature \( T \) and is completely independent of the material composition, geometry, or nature of the surface.</li>
+</ol>
+<div class="insightbox">
+A blackbody is not necessarily black in color when hot! When heated to high temperatures, a blackbody glows brightly because it emits maximum thermal radiation. The Sun, molten iron, and the filament of an incandescent lamp behave to a very close approximation as blackbodies.
+</div>
+</section>
+<section>
+<h2>Fery's Black Body and Cavity Radiation</h2>
+<p>
+Because no naturally occurring surface is a perfect blackbody (even lampblack absorbs only \( \approx 96-98\% \)), practical blackbody simulators are constructed using an isothermal enclosed cavity with a tiny aperture.
+</p>
+<h3>Construction of Fery's Blackbody</h3>
+<p>
+Fery designed a hollow, double-walled spherical copper sphere with a very small opening (pinhole) \( O \). The interior surface is coated with finely divided lampblack or platinum black, and the space between double walls is evacuated to prevent conduction loss. Directly opposite the aperture, a conical projection \( C \) is formed on the inner wall.
+</p>
+<h3>Physical Action</h3>
+<p>
+Any ray entering through the small pinhole strikes the conical projection and is reflected at an angle. It undergoes dozens of successive internal reflections off the lampblack walls. At each reflection, \( \approx 98\% \) of the energy is absorbed. After only a few reflections:
+</p>
+\[
+\text{Fraction Remaining Unabsorbed} = (0.02)^n \approx 0
+\]
+<p>
+The probability of the ray finding its way back out through the tiny hole is virtually zero. Thus, the <strong>aperture behaves as a 100% perfect blackbody absorber (\( a = 1 \))</strong>, regardless of the wall material!
+</p>
+<div class="insightbox">
+When the entire enclosure is heated uniformly to temperature \( T \), the radiation issuing out from the aperture is pure <strong>Blackbody Cavity Radiation</strong>.
+</div>
+</section>
 <footer>
 <hr>
 <p>By Hitendra K K</p>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect Black Body | Kirchoff's Law</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./05-kirchoffs-law.html" class="back-btn">
+<span>&larr;</span> Back to Kirchoff's Law
+</a>
+</nav>
+<h1>Perfect Black Body</h1>
+<p class="subtitle">
+Perfect Black Body Assumption and its implications.
+</p>
+<section>
+<h2>Concept of an Ideal Blackbody</h2>
+<p>
+An <strong>Ideal Blackbody</strong> is defined as an idealized physical object that possesses the following properties:
+</p>
+<ol class="model-box">
+<li>It completely absorbs all electromagnetic radiation incident upon it, regardless of frequency, wavelength, or angle of incidence (\( a = 1, r = 0, t = 0 \)).</li>
+<li>It reflects zero radiation and transmits zero radiation; hence, at room temperature, it appears completely black.</li>
+<li>At any given temperature \( T \), a blackbody emits the maximum possible thermal radiation at every wavelength compared to any other body of the same surface area and temperature. It is a <em>perfect emitter</em>.</li>
+<li>The radiation emitted by a blackbody depends solely on its absolute temperature \( T \) and is completely independent of the material composition, geometry, or nature of the surface.</li>
+</ol>
+<div class="insightbox">
+A blackbody is not necessarily black in color when hot!<br>
+As a matter of fact, when heated to high temperatures, a blackbody glows brighter than any other body as it emits maximum thermal radiation.<br>
+The Sun, molten iron, and the filament of an incandescent lamp behave to a very close approximation as blackbodies.<br>
+At room temperature (298K), perfectly black bodies emit majorly in the IR range. This will be learned further in Wiens displacement law.<br>
+So, at room temperature, perfectly black bodies appear black. 
+</div>
+</section>
+<section>
+<h2>Fery's Black Body Cavity</h2>
+<p>
+Because no naturally occurring surface is a perfect blackbody (even lampblack absorbs only \( \approx 96-98\% \)), practical blackbody simulators are constructed using an isothermal enclosed cavity with a tiny aperture.
+</p>
+<h3>Construction of Fery's Blackbody</h3>
+<p>
+Fery designed a hollow, double-walled spherical copper sphere with a very small opening (pinhole) \( O \). The interior surface is coated with finely divided lampblack or platinum black, and the space between double walls is evacuated to prevent conduction loss. Directly opposite the aperture, a conical projection \( C \) is formed on the inner wall.
+</p>
+<p>
+Any ray entering through the small pinhole strikes the conical projection and is reflected at an angle. It undergoes dozens of successive internal reflections off the lampblack walls. At each reflection, \( \approx 98\% \) of the energy is absorbed. After only a few reflections:
+</p>
+\[
+\text{Fraction Remaining Unabsorbed} = (0.02)^n \approx 0
+\]
+<p>
+The probability of the ray finding its way back out through the tiny hole is virtually zero. Thus, the <strong>aperture behaves as a 100% perfect blackbody absorber (\( a = 1 \))</strong>, regardless of the wall material!
+</p>
+<div class="insightbox">
+When the entire enclosure is heated uniformly to temperature \( T \), the radiation issuing out from the aperture is pure <strong>Blackbody Cavity Radiation</strong>.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
