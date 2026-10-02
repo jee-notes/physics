@@ -1,71 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laws of Motion | Free Body Diagrams</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Body Diagrams | Laws of Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Laws of Motion
-            </a>
-        </nav>
-
-        <h1>Free Body Diagrams and Equilibrium</h1>
-        <p class="subtitle">
-            The visual tool for solving dynamics problems.
-        </p>
-
-        <section>
-            <h2>1. What is an FBD?</h2>
-            <p>
-                A Free Body Diagram (FBD) consists of a diagrammatic representation of a single body or a subsystem of
-                bodies isolated from its surroundings, showing all the forces acting on it.
-            </p>
-            <div class="insightbox">
-                Crucially, an FBD shows forces acting <strong>on</strong> the body, not forces exerted
-                <strong>by</strong> the body.
-            </div>
-        </section>
-
-        <section>
-            <h2>2. Steps to draw an FBD</h2>
-            <ol>
-                <li>Identify the body or system to be analyzed.</li>
-                <li>Draw the body as a point or a simple shape.</li>
-                <li>Identify and draw all external forces:
-                    <ul>
-                        <li><strong>Field Forces:</strong> Weight (\(mg\)) acting vertically downwards.</li>
-                        <li><strong>Contact Forces:</strong> Normal force (\(N\)), Tension (\(T\)), Friction (\(f\)),
-                            etc.</li>
-                    </ul>
-                </li>
-                <li>Choose a coordinate system (usually along the direction of motion and perpendicular to it).</li>
-                <li>Resolve forces into components along the chosen axes.</li>
-            </ol>
-        </section>
-
-        <section>
-            <h2>3. Translational Equilibrium</h2>
-            <p>
-                A body is in translational equilibrium if the net force acting on it is zero.
-            </p>
-            <div class="formula-block">
-                \[ \Sigma \vec{F} = 0 \implies \Sigma F_x = 0 \text{ and } \Sigma F_y = 0 \]
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Laws of Motion
+</a>
+</nav>
+<h1>Free Body Diagram</h1>
+<p class="subtitle">
+The visual tool for solving dynamics problems.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+A Free Body Diagram (FBD) is a visual (or diagrammatic) representation of a single body or a subsystem of bodies <strong>isolated from its surroundings</strong>, showing all the forces acting on it.
+</p>
+<p>
+Basically, we are visually representing our study of the dynamics of the system.
+</p>
+<p>
+Dynamics concerns the forces acting on the system and their effect on its motion.
+</p>
+<div class="insightbox">
+Crucially, an FBD shows forces acting <strong>on</strong> the body, and not the forces exerted <strong>by</strong> the body.
+</div>
+<p>
+The main use of an FBD is to represent the forces acting on the system as vectors.
+</p>
+<p>
+It allows us to visualize their directions and resolve them into components along convenient coordinate axes.
+</p>
+</section>
+<section>
+<h2>Steps to draw an FBD</h2>
+<p>
+There is a well-defined algorithm for drawing an FBD.
+</p>
+<p>
+Learning this procedure is important initially because this is the first time students learn to represent a physical system diagrammatically for the analysis of dynamics.
+</p>
+<p>
+Later in physics, we study circuit diagrams and ray diagrams that fulfil a similar purpose.
+</p>
+<p>
+By then, students are expected to be comfortable with the basic skill of representing a physical situation through a diagram, which is developed here through FBDs.
+</p>
+<ol class="model-box">
+<li>Identify the body or system to be analyzed.</li>
+<li>Isolate the body or system and represent it as a point or a simple shape.</li>
+<li>Identify and draw all external forces acting on it:
+<ul>
+<li><strong>Field Forces:</strong> Weight (\(mg\)) acting vertically downwards.</li>
+<li><strong>Contact Forces:</strong> Normal force (\(N\)), Tension (\(T\)), Friction (\(f\)), etc.</li>
+</ul>
+</li>
+<li>Choose a convenient coordinate system and define the corresponding unit vectors. The axes are usually chosen along important directions such as the expected acceleration, motion, or constraints.</li>
+<li>Resolve the forces into components along the chosen axes.</li>
+</ol>
+</section>
+<section>
+<h2>Vector Equation</h2>
+<p>
+We need to write <strong>1D vector equations</strong> that are equal in both magnitude and direction.
+</p>
+<div class="math-block">
+\[
+\Sigma \vec{F}_x=m\vec{a}_x \qquad \Sigma \vec{F}_y=m\vec{a}_y \qquad \Sigma \vec{F}_z=m\vec{a}_z
+\]
+</div>
+<p>
+The FBD provides the physical information about the <strong>directions</strong> of all the forces acting on the body.
+</p>
+<p>
+We use this information while constructing the 1D vector equation.
+</p>
+<p>
+This directional information cannot be ignored because an equation between vectors must represent equality of both <strong>magnitude and direction</strong>.
+</p>
+<p>
+In one dimension, direction is represented mathematically by the \(+\) and \(-\) signs.
+</p>
+<p>
+Therefore, we first use the FBD to anticipate the direction of acceleration and choose that direction as positive.
+</p>
+<p>
+The forces acting along this direction are then written with positive signs, while forces acting opposite to it are written with negative signs.
+</p>
+<p>
+For example, if \(F_1,F_2\) act along the anticipated direction of \(a_x\), while \(F_3,F_4\) act opposite to it, the FBD is translated into the 1D vector equation:
+</p>
+\[
+\Sigma \vec{F}_x = F_1+F_2-F_3-F_4 = ma_x
+\]
+<p>
+The signs are therefore not arbitrary algebraic choices. They are required by the vector equation so that the equation remains equal in both magnitude and direction.
+</p>
+<div class="insightbox">
+The <strong>FBD</strong> contains the physical directional information, while the \(+\) and \(-\) signs in the <strong>1D vector equation</strong> are the mathematical representation of that information.<br>
+Changing a sign arbitrarily changes the direction represented by the equation and hence changes the physical equation itself.<br>
+The direction of a force is determined from the FBD. For example, weight acts downwards.<br>
+The choice available to us is whether to assign the downward direction as positive \((+)\) or negative \((-)\).<br>
+This choice does not change the fact that the weight still acts downwards.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
