@@ -20,98 +20,7 @@
 The fundamental fourth-power temperature law of thermal radiation and net energy exchange in enclosures.
 </p>
 
-<section>
-<h2>Stefan-Boltzmann Law for a Blackbody</h2>
-<p>
-Formulated empirically by Josef Stefan and subsequently derived from thermodynamic principles and Maxwell's electromagnetic theory by Ludwig Boltzmann, the <strong>Stefan-Boltzmann Law</strong> governs the total radiant power emitted by an ideal blackbody.
-</p>
-<div class="model-box">
-<strong>Stefan-Boltzmann Law:</strong> The total radiant energy emitted per unit surface area per unit time (total emissive power \( E \)) by a perfect blackbody is directly proportional to the fourth power of its absolute thermodynamic temperature (\( T \)):
-\[
-E = \sigma T^4
-\]
-</div>
-<p>
-For a blackbody of total surface area \( A \), the total radiative power emitted (rate of thermal energy loss \( P = \frac{dQ}{dt} \)) is:
-</p>
-<div class="model-box">
-\[
-P = \sigma A T^4
-\]
-</div>
 
-<h3>Stefan's Constant (\( \sigma \)):</h3>
-<ul class="points-list">
-<li><strong>Numerical Value:</strong> \( \sigma \approx 5.67037 \times 10^{-8} \, \text{W}\cdot\text{m}^{-2}\cdot\text{K}^{-4} \) (or \( \text{J}\cdot\text{s}^{-1}\cdot\text{m}^{-2}\cdot\text{K}^{-4} \))</li>
-<li><strong>Dimensional Formula:</strong>
-\[
-[\sigma] = \frac{[P]}{[A][T^4]} = \frac{M^1 L^2 T^{-3}}{(L^2)(K^4)} = [M^1 L^0 T^{-3} K^{-4}]
-\]
-</li>
-<li><strong>Fundamental Constant Formulation:</strong> From Planck's radiation distribution:
-\[
-\sigma = \frac{2\pi^5 k_B^4}{15 c^2 h^3}
-\]
-where \( k_B \) is Boltzmann's constant, \( c \) is the speed of light, and \( h \) is Planck's constant.
-</li>
-</ul>
-</section>
-
-<section>
-<h2>Stefan-Boltzmann Law for Real Bodies</h2>
-<p>
-A real physical body (non-blackbody) emits radiant power at a fraction of an ideal blackbody, scaled by its surface <strong>emissivity (\( e \))</strong>:
-</p>
-<div class="model-box">
-\[
-P = e \sigma A T^4
-\]
-<p style="text-align: center; margin-bottom: 0;">
-where \( e \) is the emissivity of the surface (\( 0 < e < 1 \)).
-</p>
-</div>
-<div class="concept-box">
-If a body has emissivity \( e \) and surface area \( A \), its total radiant power scales extremely sensitively with absolute temperature. Doubling the absolute temperature (\( T \to 2T \)) increases emitted power by a factor of \( 2^4 = 16 \)!
-</div>
-</section>
-
-<section>
-<h2>Net Rate of Radiation Heat Exchange with Surroundings</h2>
-<p>
-Consider a body of surface area \( A \), emissivity \( e \), and absolute temperature \( T \) placed inside an enclosure whose walls are maintained at absolute temperature \( T_0 \).
-</p>
-<p>
-According to Prevost's Theory of Heat Exchanges, thermal radiation is a continuous bidirectional process:
-</p>
-<ol>
-<li><strong>Radiative power emitted by the body:</strong>
-\[
-P_{\text{emit}} = e \sigma A T^4
-\]
-</li>
-<li><strong>Radiative power incident from enclosure walls:</strong> The enclosure radiates as a blackbody cavity with intensity \( \sigma T_0^4 \). The body absorbs a fraction equal to its absorptive power \( a \):
-\[
-P_{\text{absorb}} = a \sigma A T_0^4
-\]
-</li>
-</ol>
-<p>
-By Kirchhoff's Law (\( a = e \)), the net rate of heat loss \( P_{\text{net}} \) is:
-</p>
-<div class="model-box">
-\[
-P_{\text{net}} = \frac{dQ_{\text{net}}}{dt} = P_{\text{emit}} - P_{\text{absorb}} = e \sigma A (T^4 - T_0^4)
-\]
-</div>
-<div class="insightbox">
-<strong>Prevost's Dynamic Equilibrium:</strong>
-<ul>
-<li>If \( T > T_0 \): \( P_{\text{net}} > 0 \implies \) The body cools down by net radiation emission.</li>
-<li>If \( T < T_0 \): \( P_{\text{net}} < 0 \implies \) The body warms up by net radiation absorption.</li>
-<li>If \( T = T_0 \): \( P_{\text{net}} = 0 \implies \) The body is in dynamic radiative equilibrium with the enclosure (rates of emission and absorption are identically equal).</li>
-</ul>
-</div>
-</section>
 
 <section>
 <h2>Rate of Cooling Due to Radiation</h2>
@@ -177,48 +86,7 @@ P_{\text{with } N \text{ shields}} = \frac{1}{N + 1} P_{\text{without shield}}
 Inserting a single radiation shield cuts radiative heat transfer by 50% (\( N=1 \implies \frac{1}{2} \)).
 </div>
 </section>
-<section>
-<h2>Absorptive Power, Reflective Power, and Transmissive Power</h2>
-<p>
-When a total quantity of radiant energy \( Q \) impinges upon the surface of a body:
-</p>
-<ul class="model-box">
-<li>A fraction \( Q_a \) is absorbed by the body.</li>
-<li>A fraction \( Q_r \) is reflected from the surface.</li>
-<li>A fraction \( Q_t \) is transmitted through the body.</li>
-</ul>
-<p>
-By conservation of energy:
-</p>
-\[
-Q_a + Q_r + Q_t = Q
-\]
-<p>
-Dividing both sides by the total incident energy \( Q \):
-</p>
-<div class="math-block">
-\[
-\frac{Q_a}{Q} + \frac{Q_r}{Q} + \frac{Q_t}{Q} = 1 \implies a + r + t = 1
-\]
-</div>
-<p>
-where:
-</p>
-<ul>
-<li><strong>Absorptive Power / Absorptance (\( a \)):</strong> \( a = \frac{Q_a}{Q} \). The fraction of incident radiation absorbed. (Dimensionless scalar, \( 0 \le a \le 1 \)).</li>
-<li><strong>Reflective Power / Reflectance (\( r \)):</strong> \( r = \frac{Q_r}{Q} \). The fraction of incident radiation reflected. (Dimensionless scalar, \( 0 \le r \le 1 \)).</li>
-<li><strong>Transmissive Power / Transmittance (\( t \)):</strong> \( t = \frac{Q_t}{Q} \). The fraction of incident radiation transmitted. (Dimensionless scalar, \( 0 \le t \le 1 \)).</li>
-</ul>
-<div class="concept-box">
-<strong>Special Classifications of Surfaces:</strong>
-<ul>
-<li><strong>Opaque Body (Athermanous):</strong> \( t = 0 \implies a + r = 1 \). (Most solids and liquids).</li>
-<li><strong>Transparent Body (Diathermanous):</strong> \( t = 1, a = 0, r = 0 \). (e.g., dry air, rock salt, quartz).</li>
-<li><strong>Perfect Reflector:</strong> \( r = 1, a = 0, t = 0 \). (e.g., highly polished silver mirror).</li>
-<li><strong>Perfect Blackbody:</strong> \( a = 1, r = 0, t = 0 \).</li>
-</ul>
-</div>
-</section>
+
 <section>
 <h2>Emissive Power and Spectral Emissive Power</h2>
 <p>
@@ -254,44 +122,8 @@ The total emissive power is the integral of spectral emissive power over all wav
 E = \int_0^\infty E_\lambda \, d\lambda
 \]
 </section>
-<section>
-<h2>Concept of an Ideal Blackbody</h2>
-<p>
-An <strong>Ideal Blackbody</strong> is defined as an idealized physical object that possesses the following properties:
-</p>
-<ol>
-<li>It completely absorbs all electromagnetic radiation incident upon it, regardless of frequency, wavelength, or angle of incidence (\( a = 1, r = 0, t = 0 \)).</li>
-<li>It reflects zero radiation and transmits zero radiation; hence, at room temperature, it appears completely black.</li>
-<li>At any given temperature \( T \), a blackbody emits the maximum possible thermal radiation at every wavelength compared to any other body of the same surface area and temperature. It is a <em>perfect emitter</em>.</li>
-<li>The radiation emitted by a blackbody depends solely on its absolute temperature \( T \) and is completely independent of the material composition, geometry, or nature of the surface.</li>
-</ol>
-<div class="insightbox">
-A blackbody is not necessarily black in color when hot! When heated to high temperatures, a blackbody glows brightly because it emits maximum thermal radiation. The Sun, molten iron, and the filament of an incandescent lamp behave to a very close approximation as blackbodies.
-</div>
-</section>
-<section>
-<h2>Fery's Black Body and Cavity Radiation</h2>
-<p>
-Because no naturally occurring surface is a perfect blackbody (even lampblack absorbs only \( \approx 96-98\% \)), practical blackbody simulators are constructed using an isothermal enclosed cavity with a tiny aperture.
-</p>
-<h3>Construction of Fery's Blackbody</h3>
-<p>
-Fery designed a hollow, double-walled spherical copper sphere with a very small opening (pinhole) \( O \). The interior surface is coated with finely divided lampblack or platinum black, and the space between double walls is evacuated to prevent conduction loss. Directly opposite the aperture, a conical projection \( C \) is formed on the inner wall.
-</p>
-<h3>Physical Action</h3>
-<p>
-Any ray entering through the small pinhole strikes the conical projection and is reflected at an angle. It undergoes dozens of successive internal reflections off the lampblack walls. At each reflection, \( \approx 98\% \) of the energy is absorbed. After only a few reflections:
-</p>
-\[
-\text{Fraction Remaining Unabsorbed} = (0.02)^n \approx 0
-\]
-<p>
-The probability of the ray finding its way back out through the tiny hole is virtually zero. Thus, the <strong>aperture behaves as a 100% perfect blackbody absorber (\( a = 1 \))</strong>, regardless of the wall material!
-</p>
-<div class="insightbox">
-When the entire enclosure is heated uniformly to temperature \( T \), the radiation issuing out from the aperture is pure <strong>Blackbody Cavity Radiation</strong>.
-</div>
-</section>
+
+
 <footer>
 <hr>
 <p>By Hitendra K K</p>

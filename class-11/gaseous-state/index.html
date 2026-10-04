@@ -14,51 +14,137 @@
 <span>&larr;</span> Back to Syllabus
 </a>
 </nav>
-
 <h1>Gaseous State</h1>
 <p class="subtitle">
-Macroscopic thermodynamics of gases, empirical laws of state, mechanical boundary constraints, and non-ideal behavior.
+Macroscopic thermodynamics of gases.
 </p>
-
 <section>
-<h2>Conceptual Overview</h2>
+<h2>Concept</h2>
 <p>
-Matter exists in distinct thermodynamic states of aggregation. In the gaseous state, thermal kinetic energy of molecules vastly overwhelms intermolecular attractive potential energy. Consequently, gas molecules exhibit chaotic, high-velocity translational motion, filling any enclosing boundary uniformly and exerting isotropic pressure upon the confining walls.
+The first question we need to address is — why do we study the <strong>gaseous state</strong> separately? The answer is <strong>bulk matter</strong>.
 </p>
 <p>
-The <strong>Gaseous State</strong> chapter establishes the macroscopic, classical description of gases. While the companion chapter on the <em>Kinetic Theory of Gases (KTG)</em> focuses on microscopic statistical mechanics, this chapter focuses on measurable macroscopic state variables (\( P, V, T, n \)), empirical gas laws, the ideal equation of state, gas mixtures, mechanical constraints (manometers, pistons, capillary tubes, barometers), and the non-ideal corrections of real gases described by the van der Waals equation.
+From <strong>Elasticity</strong> onwards, much of Class 11 Physics deals with the behaviour of <strong>bulk matter</strong>. Bulk matter can exist in different states — <strong>solid, liquid and gas</strong> — and its macroscopic behaviour depends strongly on the state in which it exists.
 </p>
-<div class="insightbox">
-In gases, volume is not an intrinsic material constant—it is an extrinsic boundary constraint imposed entirely by the enclosing vessel. Pressure and temperature serve as the primary conjugate thermodynamic coordinates.
-</div>
+<p>
+If energy is transferred to a <strong>point mass</strong>, then, within the framework of mechanics, it can change only its mechanical energy — such as kinetic energy and potential energy.
+</p>
+<p>
+When energy is transferred to <strong>bulk matter</strong>, however, the response can be much richer:
+</p>
+<ul class="model-box">
+<li>It can change its <strong>Mechanical Energy</strong> (Rigid Body Mechanics).</li>
+<li>It can change its <strong>Phase</strong> — solid, liquid or gas.</li>
+<li>It can change its <strong>Temperature</strong>.</li>
+<li>It can change its <strong>Shape or Size</strong> (Deformation).</li>
+<li>It may propagate through the matter as <strong>Mechanical Waves</strong>.</li>
+</ul>
+<p>
+Thus, the nature of bulk matter determines how transferred energy manifests itself as a macroscopic change or as energy propagation through the material.
+</p>
+<p>
+Later, we will also study the <strong>electromagnetic</strong> behaviour of bulk matter, where properties such as relative permeability, relative permittivity and electrical conductivity become relevant.
+</p>
 </section>
-
+<section>
+<h2>Gaseous State</h2>
+<p>
+Why study gases separately in thermodynamics? It is because the thermodynamic behaviour of gases is qualitatively different from that of ordinary solids and liquids.
+</p>
+<p>
+In our syllabus, we primarily deal with <strong>ideal gases</strong>. Real gases are studied mainly to understand the limitations of the ideal-gas model and gaseous-state properties such as compressibility.
+</p>
+<p>
+In the ideal-gas model, gas molecules exhibit random, high-velocity translational motion and do not exert intermolecular forces on one another except during instantaneous elastic collisions, in which momentum and kinetic energy are exchanged.
+</p>
+<p>
+In ordinary solids and liquids, intermolecular interactions are significant (manifested as poential energy) and contribute to the internal energy of the bulk matter.
+</p>
+<p>
+While the companion chapter on the <strong>Kinetic Theory of Gases (KTG)</strong> focuses on the microscopic statistical description of gases, this chapter focuses on measurable macroscopic state variables (\(P,V,T,n\)), empirical gas laws, the ideal equation of state, gas mixtures, mechanical constraints (manometers, pistons, capillary tubes, barometers), and the non-ideal behaviour of real gases described by the van der Waals equation.
+</p>
+</section>
 <section>
 <h2>Thermodynamic State Variables of Gases</h2>
 <p>
-The thermodynamic equilibrium state of a pure gas is uniquely characterized by four fundamental state parameters:
+The thermodynamic equilibrium state of a gas is described by the state variables \(P,V,T,n\).
 </p>
-<ul>
-<li><strong>Pressure (\( P \)):</strong> The perpendicular compressive force exerted per unit area by colliding gas molecules on container boundaries (\( P = F_\perp / A \)).</li>
-<li><strong>Volume (\( V \)):</strong> The total three-dimensional geometrical space accessible for molecular motion (equal to vessel capacity).</li>
-<li><strong>Absolute Temperature (\( T \)):</strong> The intensive thermal parameter dictating the average translational kinetic energy of molecules, measured on the absolute Kelvin scale.</li>
-<li><strong>Amount of Substance (\( n \)):</strong> The number of moles of gas present (\( n = m/M = N/N_A \)).</li>
+<ul class="model-box">
+<li><strong>Pressure (\(P\)):</strong> The normal force exerted by the gas per unit area:
+\[
+P=\frac{F_\perp}{A}
+\]
+</li>
+<li><strong>Volume (\(V\)):</strong> The volume occupied by the gas.</li>
+<li><strong>Temperature (\(T\)):</strong> The variable that describes the thermal state of the gas.</li>
+<li><strong>Amount of Substance (\(n\)):</strong> The amount of gas present, measured in moles:
+\[
+n=\frac{m}{M}=\frac{N}{N_A}
+\]
+</li>
 </ul>
+<p>
+To understand what a <strong>thermodynamic state</strong> is, we first need to understand what <strong>thermodynamics</strong> studies.
+</p>
+<p>
+Basically, thermodynamics is the study of <strong>energy exchange of bulk matter (system) with its surroundings</strong>.
+</p>
+<p>
+In physics, we primarily study <strong>thermal and mechanical</strong> energy exchange, whereas chemistry also deals with <strong>chemical</strong> energy exchange.
+</p>
+<p>
+Processes that involve thermal and mechanical energy exchange involving bulk matter are <strong>thermodynamic processes</strong>. These processes change the <strong>thermodynamic state</strong> of the bulk matter.
+</p>
+<div class="insightbox">
+<strong>Thermodynamic State:</strong> The condition of bulk matter at a particular instant, described by its state variables.<br>
+<strong>Thermodynamic Process:</strong> A process in which energy is exchanged between bulk matter and its surroundings, causing its thermodynamic state to change.
+</div>
+<p>
+For ordinary solids and liquids, the thermal state can usually be described by the temperature \(T\), while the mechanical state is treated separately.
+</p>
+<p>
+For gases, however, the thermal and mechanical states are coupled. Therefore, the thermodynamic state of a gas cannot be specified by temperature \(T\) alone.
+</p>
+<p>
+For a fixed sample of ideal gas (\(n=\text{constant}\)), any two independent state variables can be used to specify its equilibrium state. We commonly use pressure and temperature, \(P\) and \(T\), with the volume then determined by the ideal gas equation:
+\[
+PV=nRT
+\]
+</p>
+<p>
+However, this does not imply that \(P\), \(T\), or \(V\) cannot be constrained externally. Depending on the physical setup, any of these variables may be externally constrained, while the other variables respond accordingly.
+</p>
+<div class="insightbox">
+Solids have a definite shape and volume. Gases have neither a definite shape nor a definite volume.<br>
+When a gas is enclosed in a rigid container, its volume is externally constrained by the container:
+\[
+V_{\text{gas}} = V_{\text{container}}
+\]
+When a gas is enclosed in a container fitted with a movable piston, its pressure is externally constrained. At mechanical equilibrium,
+\[
+P_{\text{gas}} = P_{\text{ext}}
+\]
+When a gas is brought into thermal equilibrium with a thermal reservoir, its temperature is externally constrained:
+\[
+T_{\text{gas}} = T_{\text{ext}}
+\]
+Thus, (P), (V), and (T) are state variables of the gas, but it is the external conditions that determine which of them is constrained in a particular physical situation.<br>
+For a fixed sample of gas, (P) and (T) are simply one convenient choice of two independent state variables. We could equally use (P,V) or (V,T) to describe its thermodynamic state.
+</div>
 </section>
-
 <section>
 <h2>The Ideal Gas Model and Empirical Laws</h2>
 <p>
 The <strong>Ideal Gas Model</strong> is a theoretical construct wherein:
 </p>
-<ol>
+<ol class="model-box">
 <li>The physical volume occupied by the gas molecules themselves is strictly negligible compared to the total container volume.</li>
 <li>Intermolecular attractive and repulsive forces between molecules are zero (except during instantaneous elastic collisions).</li>
 </ol>
 <p>
 Historically, this model emerged by synthesizing individual empirical gas laws:
 </p>
-<div class="model-box">
+<div class="math-block">
 \[
 \begin{aligned}
 \text{Boyle's Law (Constant } T, n\text{):} & \quad P \propto \frac{1}{V} \implies PV = \text{constant} \\
@@ -71,13 +157,12 @@ Historically, this model emerged by synthesizing individual empirical gas laws:
 <p>
 Unifying these proportionalities yields the universal <strong>Ideal Gas Equation of State</strong>:
 </p>
-<div class="model-box">
+<div class="math-block">
 \[
 PV = nRT = N k_B T = \frac{m}{M}RT
 \]
 </div>
 </section>
-
 <section>
 <h2>Gas Mixtures and Mechanical Constraints</h2>
 <p>
@@ -90,13 +175,12 @@ P_{\text{total}} = \sum P_i = \sum \frac{n_i R T}{V}
 Furthermore, analyzing gases under physical and mechanical constraints—such as connected bulbs with stopcocks, capillary tubes with trapped mercury pellets, open and closed manometers, and faulty barometers—forms a central pillar of JEE problem solving.
 </p>
 </section>
-
 <section>
 <h2>Real Gas Deviations and Critical Phenomena</h2>
 <p>
 At high pressures and low temperatures, real gases deviate significantly from ideal gas behavior due to finite molecular volume (excluded volume \( b \)) and long-range intermolecular van der Waals attractions (pressure correction \( a/V_m^2 \)).
 </p>
-<div class="model-box">
+<div class="math-block">
 \[
 \left( P + \frac{a n^2}{V^2} \right)(V - nb) = nRT
 \]
@@ -105,32 +189,17 @@ At high pressures and low temperatures, real gases deviate significantly from id
 The van der Waals equation quantitatively predicts continuous vapor-liquid phase transitions, critical constants (\( T_c, P_c, V_c \)), and the conditions required for gas liquefaction.
 </p>
 </section>
-
-<section>
-<h2>Core Topics</h2>
-<ul class="points-list">
-<li><strong>State Variables & Manometry:</strong> Pressure measurement, U-tube manometers, barometers, and thermal scales.</li>
-<li><strong>Empirical Gas Laws:</strong> Boyle's, Charles', Gay-Lussac's, and Avogadro's laws with transformation diagrams.</li>
-<li><strong>Ideal Gas Equation of State:</strong> \( PV = nRT \), gas density (\( \rho = \frac{PM}{RT} \)), and variable mass systems.</li>
-<li><strong>Mechanical Gas Systems:</strong> Two-bulb connecting systems, trapped mercury pellet capillary tubes, and faulty barometers.</li>
-<li><strong>Gas Mixtures:</strong> Dalton's and Amagat's laws, equivalent molar mass, and moist gas humidity corrections.</li>
-<li><strong>Graham's Law of Effusion:</strong> Rate of effusion, isotopic separation, and pressure-drop kinetics.</li>
-<li><strong>Real Gases & Critical Phenomena:</strong> Compressibility factor \( Z \), van der Waals equation of state, and critical constants (\( T_c, P_c, V_c \)).</li>
-</ul>
-</section>
-
 <section>
 <h2>Chapter Structure</h2>
 <div class="chapter-list">
-<a href="./01-state-variables-and-pressure.html">1. State Variables & Pressure Measurement</a>
-<a href="./02-empirical-gas-laws.html">2. Empirical Gas Laws & Graphical Analysis</a>
-<a href="./03-ideal-gas-equation.html">3. Ideal Gas Equation & Mechanical Systems</a>
-<a href="./04-gas-mixtures-dalton-law.html">4. Gas Mixtures & Dalton's Law of Partial Pressures</a>
+<a href="./01-state-variables-and-pressure.html">1. State Variables</a>
+<a href="./02-empirical-gas-laws.html">2. Empirical Gas Laws</a>
+<a href="./03-ideal-gas-equation.html">3. Ideal Gas Equation</a>
+<a href="./04-gas-mixtures-dalton-law.html">4. Gas Mixtures</a>
 <a href="./05-graham-law-of-effusion.html">5. Graham's Law of Diffusion & Effusion</a>
 <a href="./06-real-gases-van-der-waals.html">6. Real Gases, van der Waals Equation & Critical Phenomena</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

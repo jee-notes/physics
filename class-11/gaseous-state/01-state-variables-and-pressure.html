@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>State Variables & Pressure Measurement | JEE Physics Notes</title>
+<title>State Variables | Gaseous State</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,32 +14,135 @@
 <span>&larr;</span> Back to Gaseous State
 </a>
 </nav>
-
-<h1>State Variables & Pressure Measurement</h1>
+<h1>State Variables</h1>
 <p class="subtitle">
-Thermodynamic state coordinates, hydrostatic manometry, barometric principles, and absolute temperature scales.
+Thermodynamic state coordinates and their measurements.
 </p>
-
 <section>
-<h2>Thermodynamic State Variables of Gases</h2>
+<h2>Concept</h2>
 <p>
-A thermodynamic system composed of a gas is macroscopically specified when its state variables are defined:
+The thermal state of bulk matter is characterised by its temperature \(T\). However, the temperature of bulk matter can be changed through more than one kind of energy exchange.
 </p>
-
-<h3>1. Pressure (\( P \))</h3>
+<ul class="model-box">
+<li><strong>Supplying Heat:</strong> For example, heating a body over a hot flame can increase its temperature.</li>
+<li><strong>Mechanical Work:</strong> For example, continuous rubbing or mechanical vibration can also increase the temperature of the body.</li>
+</ul>
 <p>
-The normal compressive force exerted by gas molecules colliding against unit surface area of the enclosing walls:
+In both cases, the thermal state of the bulk matter changes:
+\[
+T_1 \rightarrow T_2
+\]
+However, the mode of energy exchange is different. In the first case, energy is transferred thermally as heat, whereas in the second case, energy is transferred mechanically as work.
 </p>
-<div class="model-box">
+<div class="insightbox">
+A change in temperature does not tell us how the energy was transferred.<br>
+The same change in thermal state can be produced either by heat transfer or by mechanical work.
+</div>
+<p>
+Such changes in thermal state of bulk matter - through energy exchange with its surroundings, are studied in <strong>thermodynamics</strong>.
+</p>
+<p>
+For ordinary solids and liquids, the thermal state is described by their temperature \(T\), while the mechanical state is treated independently.
+</p>
+<p> 
+For gases, the thermal and mechanical states are coupled and a change in its mechanical condition can affect its thermal condition and vice versa.
+</p>
+<p>
+When a gas undergoes <strong>rapid expansion</strong>, its mechanical state changes and its temperature decreases.
+</p>
+<p>
+This cooling on expansion is an important practical principle used in <strong>refrigerators and air conditioners</strong>, in which the gas is first compressed by a compressor and then allowed to expand through an expansion device, causing its pressure and temperature to decrease.
+</p>
+<p>
+Therefore, temperature alone is not sufficient to describe the thermodynamic state of a gas. We use the state variables
+\[
+P,\;V,\;T,\;n
+\]
+to describe its thermodynamic state.
+</p>
+<p>
+For a fixed sample of gas, \(n\) remains fixed and the remaining state variables are related. For an ideal gas,
+\[
+PV=nRT
+\]
+Thus, any two independent variables among \(P\), \(V\), and \(T\) can be used to specify the equilibrium state of the sample.
+</p>
+<div class="insightbox">
+<strong>State Variable vs Process</strong><br>
+\(P\), \(V\), \(T\), and \(n\) describe the state of the gas.<br>
+Heat \(Q\) and work \(W\) describe energy exchange during a process.<br>
+A thermodynamic process changes the state variables of the gas as the gas interacts with its surroundings.
+</div>
+<p>
+We say that a sample of gas (of \(n\) moles) has undergone a thermodynamic process, when one or more of its state variables \(P\), \(V\), and \(T\) change with time.
+</p>
+<p>
+In a cyclic process, these variables may return to their initial values after the process is completed, just as a moving body may return to its initial position after undergoing a finite displacement during its motion.
+</p>
+</section>
+<section>
+<h2>Thermodynamic State Variables and their Measurements</h2>
+<p>
+The mechanical condition of a gas is described by two state variables:
+</p>
+<ul class="model-box">
+<li><strong>Pressure (\(P\))</strong></li>
+<li><strong>Volume (\(V\))</strong></li>
+</ul>
+<h3>Volume (\(V\))</h3>
+<p>
+We start with volume because the volume of a gas is not inherent to the material in the same way as the volume of a solid or liquid.
+</p>
+<p>
+A gas has no definite volume of its own; its volume is determined by the boundary enclosing it.
+</p>
+<div class="insightbox">
+We know that a state variable has to be a property of the state. So, if the volume of a gas is determined by its enclosing boundary, how can it be a state variable?<br>
+The answer is that the volume is inherent to the <strong>gas system in its particular state</strong>, even though it is not an inherent geometrical property of the gas material itself. The state of the gas includes the spatial region available to it.
+</div>
+<p>
+The volume of a gas is therefore defined as the <strong>region of space available for the gas molecules to perform translational motion</strong>.
+</p>
+<p>
+For a gas completely enclosed within a vessel, this is equal to the internal volume of the vessel.
+</p>
+<p>
+We need to be careful in measuring volume in different units. The SI unit of volume is
+\[
+1\,\mathrm{m^3}
+\]
+A commonly used unit is the litre:
+\[
+1\,\mathrm{L}=1\,\mathrm{dm^3}=10^{-3}\,\mathrm{m^3}
+\]
+Also,
+\[
+1\,\mathrm{mL}=1\,\mathrm{cm^3}=1\,\mathrm{cc}
+\]
+and
+\[
+1000\,\mathrm{mL}=1\,\mathrm{L}
+\]
+</p>
+<h3>Pressure (\( P \))</h3>
+<p>
+Pressure of a gas is defined as the normal force exerted by the gas on unit surface area of the enclosing walls:
+</p>
+<div class="math-block">
 \[
 P = \frac{F_\perp}{A}
 \]
-<p style="text-align: center; margin-bottom: 0;">
-<strong>SI Unit:</strong> Pascal (\(\text{Pa} = \text{N}\cdot\text{m}^{-2}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([M^1 L^{-1} T^{-2}]\)
-</p>
 </div>
-
-<h3>Standard Pressure Units & Conversions:</h3>
+<p>
+<strong>SI Unit:</strong> Pascal (\(\text{Pa} = \text{N}\cdot\text{m}^{-2}\))
+</p>
+<p>
+<strong>Dimensional Formula:</strong> \([M^1 L^{-1} T^{-2}]\)
+</p>
+<p>
+Like temperature, pressure is an <strong>intensive property</strong>, whereas volume is an <strong>extensive property</strong>. Therefore, pressure is conventionally preferred over volume as the mechanical variable for describing the thermodynamic state of a gas.
+</p>
+<h3>Standard Pressure Units &amp; Conversions:</h3>
 <table>
 <thead>
 <tr>
@@ -52,193 +155,153 @@ P = \frac{F_\perp}{A}
 <tr>
 <td>Standard Atmosphere</td>
 <td>\(\text{atm}\)</td>
-<td>\( 1\text{ atm} = 1.01325 \times 10^5\text{ Pa} = 101.325\text{ kPa} \)</td>
+<td>\(1\text{ atm} = 1.01325 \times 10^5\text{ Pa} = 101.325\text{ kPa}\)</td>
 </tr>
 <tr>
 <td>Bar</td>
 <td>\(\text{bar}\)</td>
-<td>\( 1\text{ bar} = 10^5\text{ Pa} = 0.98692\text{ atm} \)</td>
+<td>\(1\text{ bar} = 10^5\text{ Pa} = 0.98692\text{ atm}\)</td>
 </tr>
 <tr>
-<td>Torr / Millimeter of Mercury</td>
+<td>Torr</td>
 <td>\(\text{torr} / \text{mmHg}\)</td>
-<td>\( 1\text{ atm} = 760\text{ mmHg} = 760\text{ torr} \implies 1\text{ torr} \approx 133.322\text{ Pa} \)</td>
-</tr>
-<tr>
-<td>Pounds per Square Inch</td>
-<td>\(\text{psi}\)</td>
-<td>\( 1\text{ atm} \approx 14.696\text{ psi} \)</td>
+<td>\(1\text{ atm} = 760\text{ mmHg} = 760\text{ torr} \implies 1\text{ torr} \approx 133.322\text{ Pa}\)</td>
 </tr>
 </tbody>
 </table>
-
-<h3>2. Volume (\( V \))</h3>
 <p>
-The volume of a gas equals the internal volume of the vessel enclosing it.
+Both pressure and volume are state variables that describe the mechanical state of a gas. However, the mechanical condition of the gas is established by its interaction with the external surroundings.
 </p>
-<ul class="points-list">
-<li><strong>SI Unit:</strong> Cubic meter (\(\text{m}^3\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([L^3]\)</li>
-<li><strong>Conversions:</strong> \( 1\text{ m}^3 = 10^3\text{ dm}^3 = 10^3\text{ L} = 10^6\text{ cm}^3 = 10^6\text{ mL} = 10^6\text{ cc} \)</li>
-<li>\( 1\text{ L} = 10^{-3}\text{ m}^3 = 1\text{ dm}^3 = 1000\text{ cm}^3 \)</li>
-</ul>
-
-<h3>3. Temperature (\( T \))</h3>
 <p>
-An intensive measure of the average kinetic energy of molecular translational motion:
-</p>
-<ul class="points-list">
-<li><strong>SI Unit:</strong> Kelvin (\(\text{K}\)) &emsp;|&emsp; <strong>Dimensional Formula:</strong> \([\Theta]\) or \([K^1]\)</li>
-<li><strong>Conversion:</strong> \( T(\text{K}) = t(^\circ\text{C}) + 273.15 \)</li>
-</ul>
-
-<h3>4. Amount of Substance (\( n \))</h3>
-<p>
-The quantity of matter in moles:
-</p>
+In a rigid container, the volume of the gas is constrained by the container:
 \[
-n = \frac{m}{M} = \frac{N}{N_A}
+V_{\text{gas}}=V_{\text{container}}
 \]
-<p>
-where \( m \) is sample mass, \( M \) is molar mass in \(\text{g/mol}\), \( N \) is total number of molecules, and \( N_A \approx 6.022 \times 10^{23}\text{ mol}^{-1} \) is Avogadro's constant.
 </p>
-</section>
-
-<section>
-<h2>Macroscopic vs Microscopic Description</h2>
 <p>
-Thermal physics analyzes gases from two distinct but mutually consistent viewpoints:
+In a container with a freely movable piston, the pressure of the gas is constrained by the external mechanical condition. At equilibrium,
+\[
+P_{\text{gas}}=P_{\text{ext}}
+\]
 </p>
-<table>
-<thead>
-<tr>
-<th>Aspect</th>
-<th>Macroscopic (Thermodynamic / Gaseous State)</th>
-<th>Microscopic (Kinetic Theory / Statistical)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Variables</strong></td>
-<td>\( P, V, T, n, \rho \)</td>
-<td>Molecular mass \( m \), velocity \( \vec{v} \), momentum \( \vec{p} \), mean free path \( \lambda \)</td>
-</tr>
-<tr>
-<td><strong>Measurement</strong></td>
-<td>Directly measurable using macroscopic instruments (gauges, thermometers).</td>
-<td>Statistical averages inferred through molecular distributions.</td>
-</tr>
-<tr>
-<td><strong>Pressure Origin</strong></td>
-<td>Continuous normal surface stress (\( F/A \)).</td>
-<td>Time-averaged rate of momentum transfer during molecular wall collisions (\( P = \frac{1}{3}\rho v_{\text{rms}}^2 \)).</td>
-</tr>
-<tr>
-<td><strong>Temperature Origin</strong></td>
-<td>Equilibrium condition verified by Zeroth Law.</td>
-<td>Measure of mean translational kinetic energy (\( \frac{1}{2}m\overline{v^2} = \frac{3}{2}k_B T \)).</td>
-</tr>
-</tbody>
-</table>
-</section>
-
-<section>
-<h2>Hydrostatic Pressure of Gases</h2>
 <p>
-Because the mass density of gases at ordinary pressures is small (\( \rho_{\text{air}} \approx 1.2\text{ kg/m}^3 \)), the hydrostatic gravitational pressure variation across standard laboratory containers (\( \Delta P = \rho g \Delta h \approx 1.2 \times 9.8 \times 1 \approx 12\text{ Pa} \)) is negligible compared to atmospheric pressure (\( \approx 10^5\text{ Pa} \)).
+Thus, the same state variables \(P\) and \(V\) may be constrained in different ways depending on the physical arrangement.
+</p>
+<p>
+What is important is that the gas is in <strong>thermodynamic equilibrium</strong>, so that its state variables have definite values.
+</p>
+<h3>Temperature (\( T \))</h3>
+<p>
+The thermal condition of a gas is represented by its <strong>Temperature (\(T\))</strong>.
+</p>
+<p>
+At the macroscopic level, temperature is the <strong>measure of the thermal condition</strong> of the gas.
+</p>
+<p>
+It is an intensive state variable and is used to describe its thermal state.
+</p>
+<p>
+At the microscopic level, temperature has a physical interpretation in terms of the <strong>average kinetic energy of molecular translational motion</strong>.
+</p>
+<p>
+For an ideal gas,
+\[
+\langle K_{\mathrm{trans}} \rangle = \frac{3}{2}k_B T
+\]
+The microscopic interpretation of temperature is developed in the sister chapter on <strong>Kinetic Theory of Gases (KTG)</strong>.
+</p>
+<p>
+<strong>SI Unit:</strong> Kelvin (\(\text{K}\))
+</p>
+<p>
+<strong>Dimensional Formula:</strong> \([K^1]\)
+</p>
+<h3>Amount of Substance (\( n \))</h3>
+<p>
+The <strong>amount of substance</strong> tells us how much gas is present, measured in moles:
+</p>
+<div class="math-block">
+\[
+n=\frac{m}{M}=\frac{N}{N_A}
+\]
+</div>
+<p>
+Here, the units are important. The unit used for the <strong>molar mass \(M\)</strong> must be consistent with the unit used for the mass of the gas sample \(m\).
+</p>
+<p>
+In chemistry, we often write quantities such as the molecular weight of nitrogen gas as
+\[
+M(\mathrm{N}_2)=28
+\]
+These numbers are dimensionless relative masses. They are <strong>not</strong> exactly same as the molar mass \(M\) used in
+\[
+n=\frac{m}{M}
+\]
+</p>
+<p>
+The corresponding molar mass of nitrogen gas is
+\[
+M(\mathrm{N}_2)=28\,\mathrm{g/mol}
+\]
+Thus, if the sample mass is expressed in grams, \(M\) must be used in \(\mathrm{g/mol}\).
+</p>
+<p>
+In SI units, the same molar mass is
+\[
+M(\mathrm{N}_2)=28\times10^{-3}\,\mathrm{kg/mol}
+\]
+Therefore, if \(m\) is expressed in kilograms, \(M\) must be expressed in \(\mathrm{kg/mol}\).
 </p>
 <div class="insightbox">
-Under normal conditions, gas pressure inside a container is strictly <strong>homogeneous and isotropic</strong>: it exerts identical pressure in all directions and on all interior walls regardless of orientation.
+<strong>Unit Consistency:</strong>
+\[
+n=\frac{m}{M}
+\]
+the units of \(m\) and \(M\) must be consistent. For example,
+\[
+\frac{\mathrm g}{\mathrm{g/mol}}=\mathrm{mol} \qquad \frac{\mathrm{kg}}{\mathrm{kg/mol}}=\mathrm{mol}
+\]
 </div>
 </section>
-
 <section>
-<h2>Manometers and Barometers in Gas Systems</h2>
-
-<h3>1. Open-End U-Tube Manometer</h3>
+<h2>Other Variables as State Variables</h2>
 <p>
-A U-tube containing a liquid of density \( \rho \) (typically mercury, \( \rho_{\text{Hg}} = 13.6 \times 10^3\text{ kg/m}^3 \)) has one limb connected to a gas container and the other open to atmosphere (\( P_0 \)).
+We say that in mechanics, the mechanical state of a body is represented by its <strong>position</strong> and <strong>velocity</strong>.
 </p>
-
-<div class="diagram">
-<svg width="580" height="240" viewBox="0 0 580 240">
-  <!-- Gas bulb left -->
-  <circle cx="100" cy="100" r="45" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
-  <text x="100" y="105" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">Gas (P)</text>
-  
-  <!-- Connecting tube -->
-  <path d="M 145 100 L 220 100 L 220 180 A 30 30 0 0 0 280 180 L 280 40" fill="none" stroke="#2c3e50" stroke-width="8"/>
-  <path d="M 145 100 L 220 100 L 220 180 A 30 30 0 0 0 280 180 L 280 40" fill="none" stroke="#ffffff" stroke-width="4"/>
-
-  <!-- Manometer Liquid Mercury -->
-  <!-- Left limb liquid at y=130 -->
-  <path d="M 220 130 L 220 180 A 30 30 0 0 0 280 180 L 280 80" fill="none" stroke="#7f8c8d" stroke-width="4"/>
-
-  <!-- Height difference h -->
-  <line x1="230" y1="130" x2="330" y2="130" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <line x1="270" y1="80" x2="330" y2="80" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <line x1="320" y1="130" x2="320" y2="80" stroke="#c0392b" stroke-width="2"/>
-  <text x="335" y="110" font-size="13" font-weight="bold" fill="#c0392b">h</text>
-
-  <!-- Open limb label -->
-  <text x="280" y="30" font-size="13" font-weight="bold" fill="#2980b9" text-anchor="middle">P₀ (Atm)</text>
-  <!-- Formula -->
-  <text x="440" y="110" font-size="15" font-weight="bold" fill="#2c3e50">P = P₀ + ρ g h</text>
-  <text x="440" y="135" font-size="12" fill="#7f8c8d">(Gauge Pressure = ρ g h)</text>
-</svg>
-</div>
-
-<ul class="points-list">
-<li>If the open limb level is higher by \( h \):
-\[
-P = P_0 + \rho g h
-\]
-</li>
-<li>If the connected limb level is higher by \( h \):
-\[
-P = P_0 - \rho g h
-\]
-</li>
-</ul>
-
-<h3>2. Closed-End U-Tube Manometer</h3>
 <p>
-The outer limb is evacuated and sealed (Torricellian vacuum, \( P_{\text{vacuum}} \approx 0 \)).
-</p>
-<div class="model-box">
+However, position and velocity are only considered to be the <strong>fundamental state variables</strong> in our usual description. We can use other variables to represent the same state. For example, velocity can be replaced by momentum:
 \[
-P_{\text{gas}} = \rho g h
+\vec p=m\vec v
 \]
-</div>
-
-<h3>3. Simple Mercury Barometer</h3>
+Similarly, position can be represented through its potential energy when the potential-energy function is known:
+\[
+PE=U(\vec r)
+\]
+Therefore, the mechanical state can also be represented using quantities such as kinetic energy and potential energy.
+</p>
 <p>
-An inverted glass tube filled with mercury submerged in a mercury trough establishes atmospheric pressure:
+The point is that <strong>different variables can provide the same information about the state</strong>.
 </p>
+<p>
+Similarly, for gases, the thermodynamic state can be represented using other state quantities such as <strong>internal energy</strong> or, at the microscopic level, the <strong>average speed of the molecules</strong>.
+</p>
+<p>
+So, as a convention, we consider
 \[
-P_{\text{atm}} = \rho_{\text{Hg}} g h = 13600 \times 9.8 \times 0.760 \approx 1.013 \times 10^5\text{ Pa} = 760\text{ mmHg}
+\boxed{P,\;V,\;T,\;n}
 \]
+as the <strong>fundamental state variables</strong> of a gas.
+</p>
+<p>
+These are fundamental state variables, but they are not all independent because they are related by an equation of state. For an ideal gas:
+\[
+PV=nRT
+\]
+</p>
+<p>
+As a convention, for a fixed sample of gas, we take \(P\) and \(T\) as the two independent state variables, while \(V\) is then determined from the equation of state.
+</p>
 </section>
-
-<section>
-<h2>Thermal Scales and Absolute Zero</h2>
-<p>
-The relationship between standard temperature measurement scales is given by:
-</p>
-<div class="model-box">
-\[
-\frac{C - 0}{100} = \frac{F - 32}{180} = \frac{K - 273.15}{100} = \frac{R - 491.67}{180}
-\]
-</div>
-
-<h3>Concept of Absolute Zero (\( T = 0\text{ K} = -273.15^\circ\text{C} \)):</h3>
-<p>
-Extrapolating Charles' and Gay-Lussac's empirical lines to zero volume or zero pressure reveals an absolute lower temperature limit:
-</p>
-<div class="concept-box">
-<strong>Absolute Zero:</strong> The theoretical baseline temperature at which the volume and pressure of an ideal gas extrapolate to zero. Microscopically, it is the state of minimum possible kinetic energy of matter.
-</div>
-</section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>
