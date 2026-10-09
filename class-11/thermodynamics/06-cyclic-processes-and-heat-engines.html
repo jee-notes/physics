@@ -3,90 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thermodynamics | Cyclic Processes & Heat Engines</title>
+<title>Cyclic Processes & Heat Engines | Thermodynamics</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-
 <nav class="top-nav">
 <a href="./index.html" class="back-btn">
 <span>&larr;</span> Back to Thermodynamics
 </a>
 </nav>
-
-<h1>Cyclic Processes, Heat Engines, & Refrigerators</h1>
+<h1>Cyclic Processes and Heat Engines</h1>
 <p class="subtitle">
-Continuous energy conversion: closed loops on state diagrams, thermal efficiency, and refrigeration metrics.
+Continuous energy conversion: closed loop process and efficiency metrics.
 </p>
-
 <section>
-<h2>Definition of Cyclic Process and Delta U = 0 Condition</h2>
+<h2>Concept</h2>
 <p>
-A <strong>Cyclic Process</strong> is a closed series of thermodynamic transformations in which the system is brought through various states of pressure, volume, and temperature, and ultimately returned back to its exact initial thermodynamic state.
+We have already studied different thermodynamic processes like isobaric, isochoric, isothermal, adiabatic, polytropic etc. We also learned how the First Law of Thermodynamics, \(Q=\Delta U+W\) accounts for the energy exchange during these processes.
 </p>
 <p>
-Because internal energy \( U \) is a single-valued state function, the net change in internal energy over any complete cycle is identically zero:
+Now we change the framework in which we study the same thermodynamics. Instead of studying a thermodynamic process only to understand how the state of the gas changes, we now study how these processes can be used in a <strong>machine to produce useful mechanical power</strong>.
 </p>
-<div class="model-box">
+<p>
+To understand why this is needed, go back to the old <strong>steam engine</strong>. Any machine that is required to produce continuous useful motion needs a <strong>mechanical drive</strong> — some source of mechanical power that can provide the force or torque required to keep the machine operating. Earlier, machines such as mills could obtain this mechanical drive from natural sources such as wind or flowing water.
+</p>
+<p>
+The steam engine provided a new way of obtaining this mechanical drive. We can burn fuel such as coal to supply heat to water and produce steam. The steam is then made to undergo thermodynamic processes with the intention of extracting mechanical work from it. This mechanical work becomes the useful mechanical power output of the engine.
+</p>
+<p>
+Thus, an <strong>engine</strong> is a machine whose purpose is to provide mechanical drive. In the steam engine, thermal energy supplied to the working substance is used to produce this mechanical power output. Modern engines such as the IC engine work through a different set of processes, but the basic purpose remains the same: to provide a controllable source of mechanical power.
+</p>
+<p>
+This is why we are now concerned with parameters such as <strong>efficiency</strong>. We want to know how effectively the energy supplied to the working substance can be converted into useful mechanical work.
+</p>
+</section>
+<section>
+<h2>Cyclic Process - \(\Delta U = 0\)</h2>
+<p>
+A <strong>cyclic process</strong> is a series of multiple thermodynamic processes in which the gas (closed system) passes through various stages (states described by pressure, volume, temperature) and ultimately returns to its exact initial thermodynamic state.
+</p>
+<p>
+If the initial state of \(n\) moles of gas is \(P_i, V_i, T_i\), then after the 1st process it becomes \(P_1, V_1, T_1\), after the 2nd process it becomes \(P_2, V_2, T_2\), and so on. After the last process, the gas must again return to the initial state \(P_i, V_i, T_i\).
+</p>
+<p>
+Because internal energy \(U\) is a single-valued state function, the net change in internal energy over any complete cycle is zero:
+</p>
+<div class="math-block">
 \[
 \oint dU = 0 \implies \Delta U_{\text{net}} = U_{\text{final}} - U_{\text{initial}} = 0
 \]
 </div>
 <p>
-Applying the First Law of Thermodynamics over the complete cycle:
+Applying the First Law of Thermodynamics to the complete cycle:
 </p>
-<div class="model-box">
+<div class="math-block">
 \[
 Q_{\text{net}} = \Delta U_{\text{net}} + W_{\text{net}} \implies Q_{\text{net}} = W_{\text{net}}
 \]
-where \( Q_{\text{net}} = \sum Q_{\text{in}} - \sum Q_{\text{out}} \).
 </div>
+<p>
+where \(Q_{\text{net}} = \sum Q_{\text{in}} - \sum Q_{\text{out}}\) .
+</p>
+<p>
+The treatment is similar to how we consider a system of particles in mechanics and cancel the internal forces while studying the system as a whole. Here also, we deliberately consider a <strong>system of thermodynamic processes</strong> such that the gas finally returns to its initial state and hence \(\Delta U_{\text{net}}=0\) .
+</p>
+<p>
+Till now, while studying individual thermodynamic processes, we were concerned with determining how the internal energy of the gas changes. For efficiency studies, however, we are mainly interested in how much useful mechanical work can be obtained from the heat supplied. Therefore, we intentionally combine thermodynamic processes into a cycle so that the net change in internal energy becomes zero. The internal energy term then does not have to be considered in the net energy accounting, and we can focus on \(Q_{\text{net}}\) and \(W_{\text{net}}\) .
+</p>
+<p>
+Thus, a cyclic process is not defined by a specific constraint like isochoric (\(dV=0\)) or isobaric (\(dP=0\)). It simply means that we continue through a sequence of thermodynamic processes until the system returns to its initial state. The important consequence is that, for the complete cycle, \(\Delta U_{\text{net}}=0\), and therefore the First Law reduces to a relation between \(Q_{\text{net}}\) and \(W_{\text{net}}\).
+</p>
 <div class="insightbox">
-A cyclic engine operates continuously without permanently accumulating or depleting internal energy: every Joule of net heat absorbed over the cycle is completely converted into net external mechanical work.
+The purpose of introducing a cyclic process is to formulate a framework to make efficiency calculations by making the net change in internal energy as zero.<br>
+The gas returns to its initial state, so there is no permanent accumulation or depletion of its internal energy from one complete cycle to the next.
+\[
+\boxed{\Delta U_{\text{net}}=0} \qquad \Rightarrow \qquad \boxed{Q_{\text{net}}=W_{\text{net}}}
+\]
+This also allows the same sequence of processes to be repeated, which is why a cyclic process is useful in an engine.<br>
+For one complete cycle, every joule of <strong>net heat absorbed</strong> by the gas appears as one joule of <strong>net external mechanical work</strong>.
 </div>
 </section>
-
 <section>
-<h2>Net Work Done as Area of Closed Loop on P-V Diagram</h2>
+<h2>Net Work Done as Area on P-V Diagram</h2>
 <p>
 On a \( P \)-\( V \) indicator diagram, a cyclic process forms a closed loop.
 </p>
-
-<div class="diagram">
-<svg width="600" height="280" viewBox="0 0 600 280">
-  <line x1="80" y1="240" x2="540" y2="240" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="80" y1="240" x2="80" y2="30" stroke="#2c3e50" stroke-width="2"/>
-  <text x="535" y="265" font-size="14" font-weight="bold">V</text>
-  <text x="50" y="35" font-size="14" font-weight="bold">P</text>
-
-  <!-- Enclosed Area -->
-  <ellipse cx="300" cy="135" rx="140" ry="65" fill="#eafaf1" stroke="#2ecc71" stroke-width="3"/>
-
-  <!-- Clockwise Arrow markers -->
-  <polygon points="305,65 318,70 305,75" fill="#27ae60"/>
-  <polygon points="295,205 282,200 295,195" fill="#27ae60"/>
-
-  <text x="300" y="130" font-size="15" fill="#27ae60" font-weight="bold" text-anchor="middle">W_net = + (Enclosed Area)</text>
-  <text x="300" y="155" font-size="13" fill="#2c3e50" text-anchor="middle">Clockwise Loop (Heat Engine)</text>
-</svg>
-</div>
-
-<div class="concept-box">
-The net mechanical work done during one complete cycle is geometrically equal to the <strong>enclosed area of the loop</strong> on the \( P \)-\( V \) diagram:
-\[
-W_{\text{net}} = \oint P \, dV = \text{Area of the closed loop}
-\]
-</div>
-</section>
-
-<section>
-<h2>Clockwise Cycles vs Counter-Clockwise Cycles</h2>
 <p>
-The sense of traversal around the closed loop determines whether the device functions as a work-producing engine or a work-consuming refrigerator:
+For an individual \(i^{\text{th}}\) process, \( W_i = \int_{V_1}^{V_2} P_i\,dV \), where \(P_i=f_i(V)\) is the pressure along that process.
 </p>
-
+<p>
+If \( V_2 \lessgtr V_1 \) then , \( W_i \lessgtr 0 \).
+</p>
+<p>
+For a cyclic process, we add the work done by the gas in the individual processes, since work is a scalar quantity.
+</p>
+<p>
+As it is a cyclic process, if there is expansion in any component process, then there must be compression in another component process.
+</p>
+<p>
+The net mechanical work done during one complete cycle is geometrically equal to the <strong>enclosed area of the loop</strong> on the \( P \)-\( V \) diagram:
+</p>
+\[
+|W_{\text{net}}| = \oint P\,dV = \text{Area of the closed loop}
+\]
+<p>
+From the area, we can only determine \( |W_{\text{net}}| \). For the sign, just as for an individual process we check whether \( V_2 \lessgtr V_1 \), here we check whether the cycle is clockwise or anti-clockwise.
+</p>
+<h3>Clockwise vs Counter-Clockwise</h3>
+<p>
+The sense of traversal around the closed loop determines whether the cycle is <strong>work-producing</strong> or <strong>work-consuming</strong>:
+</p>
 <table>
 <thead>
 <tr>
@@ -103,23 +131,22 @@ The sense of traversal around the closed loop determines whether the device func
 </tr>
 <tr>
 <td><strong>Net Work Done (\( W_{\text{net}} \))</strong></td>
-<td>\( W_{\text{net}} > 0 \) (Work done <em>by</em> the gas)</td>
-<td>\( W_{\text{net}} < 0 \) (Work done <em>on</em> the gas)</td>
+<td>\( W_{\text{net}} > 0 \) (Net work done <em>by</em> the gas)</td>
+<td>\( W_{\text{net}} < 0 \) (Net work done <em>on</em> the gas)</td>
 </tr>
 <tr>
 <td><strong>Net Heat Exchanged (\( Q_{\text{net}} \))</strong></td>
 <td>\( Q_{\text{net}} > 0 \) (Net heat absorbed)</td>
-<td>\( Q_{\text{net}} < 0 \) (Net heat rejected)</td>
+<td>\( Q_{\text{net}} \lt 0 \) (Net heat rejected)</td>
 </tr>
 <tr>
 <td><strong>Physical Machine</strong></td>
-<td><strong>Heat Engine</strong> (Converts heat into work)</td>
-<td><strong>Refrigerator / Heat Pump</strong></td>
+<td><strong>Heat Engine</strong> (Uses net heat input to produce net work)</td>
+<td><strong>Refrigerator / Heat Pump</strong> (Requires net work input)</td>
 </tr>
 </tbody>
 </table>
 </section>
-
 <section>
 <h2>Thermal Efficiency of a Heat Engine</h2>
 <p>
@@ -130,7 +157,7 @@ The <strong>Thermal Efficiency (\( \eta \))</strong> is defined as the ratio of 
 </p>
 <div class="model-box">
 \[
-\eta = \frac{\text{Desired Output}}{\text{Required Input}} = \frac{W_{\text{net}}}{Q_{\text{in}}} = \frac{Q_{\text{in}} - Q_{\text{out}}}{Q_{\text{in}}} = 1 - \frac{Q_{\text{out}}}{Q_{\text{in}}}
+\eta = \frac{\text{Desired Output}}{\text{Required Input}} = \frac{W_{\text{net}}}{Q_{\text{in}}} = \frac{Q_{\text{in}} - Q_{\text{out}}}{Q_{\text{in}}} = 1 -\frac{Q_{\text{out}}}{Q_{\text{in}}}
 \]
 where:
 <ul>
@@ -141,13 +168,11 @@ where:
 </ul>
 </div>
 </section>
-
 <section>
 <h2>Coefficient of Performance of Refrigerator and Heat Pump</h2>
 <p>
 When a cycle is driven counter-clockwise by supplying external mechanical work \( |W_{\text{net}}| \), it extracts heat \( Q_C \) from a cold space and rejects heat \( Q_H \) into a warmer environment.
 </p>
-
 <h3>1. Refrigerator (Focus on Cooling):</h3>
 <p>
 The performance is quantified by the <strong>Coefficient of Performance (\( \beta \) or \( \text{COP}_{\text{ref}} \))</strong>:
@@ -157,7 +182,6 @@ The performance is quantified by the <strong>Coefficient of Performance (\( \bet
 \beta = \frac{\text{Cooling Effect}}{\text{Work Input}} = \frac{Q_C}{W} = \frac{Q_C}{Q_H - Q_C}
 \]
 </div>
-
 <h3>2. Heat Pump (Focus on Heating):</h3>
 <p>
 The performance is quantified by \( \text{COP}_{\text{hp}} \):
@@ -168,13 +192,11 @@ The performance is quantified by \( \text{COP}_{\text{hp}} \):
 \]
 </div>
 </section>
-
 <section>
 <h2>Step-by-Step Analysis of Standard Geometric Cycles</h2>
 <p>
 In JEE physics, standard geometric cycles (triangular, rectangular, or elliptical loops) are analyzed by calculating \( W_{\text{net}} \) geometrically and \( Q_{\text{in}} \) by summing \( dQ > 0 \) across individual legs.
 </p>
-
 <div class="examplebox">
 <h3>Solved Example: Triangular Cyclic Engine</h3>
 <p>
@@ -187,7 +209,6 @@ One mole of an ideal monoatomic gas (\( C_v = 1.5R \)) executes the cyclic path 
 \[
 W_{\text{net}} = \frac{1}{2} \times \text{Base} \times \text{Height} = \frac{1}{2} (2V_0 - V_0)(2P_0 - P_0) = \frac{1}{2} P_0 V_0
 \]
-
 <p>(b) Heat supplied along individual legs:</p>
 <ul>
 <li>\( A \to B \) (Isochoric heating): \( W_{AB} = 0 \implies Q_{AB} = \Delta U_{AB} = \frac{V_0(2P_0 - P_0)}{\gamma - 1} = \frac{P_0 V_0}{2/3} = \frac{3}{2} P_0 V_0 \) (Heat enters, \( Q > 0 \)).</li>
@@ -201,21 +222,18 @@ W_{\text{net}} = \frac{1}{2} \times \text{Base} \times \text{Height} = \frac{1}{
 \[
 Q_{\text{in}} = Q_{AB} + Q_{BC} = \frac{3}{2} P_0 V_0 + \frac{3}{2} P_0 V_0 = 3 P_0 V_0
 \]
-
 <p>(c) Efficiency:</p>
 \[
 \eta = \frac{W_{\text{net}}}{Q_{\text{in}}} = \frac{\frac{1}{2} P_0 V_0}{3 P_0 V_0} = \frac{1}{6} \approx 16.67\%
 \]
 </div>
 </section>
-
 <section>
 <h2>Sub-Topics & Standard Engineering Cycles</h2>
 <div class="chapter-list">
-<a href="./06a-standard-thermodynamic-cycles.html">6a. Standard Thermodynamic Cycles (Otto, Diesel, Stirling)</a>
+<a href="./06a-standard-thermodynamic-cycles.html">1. Standard Thermodynamic Cycles (Otto, Diesel, Stirling)</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

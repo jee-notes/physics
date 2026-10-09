@@ -3,28 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thermodynamics | Work, Heat, and Internal Energy</title>
+<title>Work, Heat, Internal Energy | Thermodynamics</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-
 <nav class="top-nav">
 <a href="./index.html" class="back-btn">
 <span>&larr;</span> Back to Thermodynamics
 </a>
 </nav>
-
-<h1>Work, Heat, and Internal Energy</h1>
+<h1>Work, Heat, Internal Energy</h1>
 <p class="subtitle">
-The triad of thermodynamic energy transfer and the state function nature of internal energy.
+The triad of thermodynamic energy accounting heads.
 </p>
-
 <section>
-<h2>Concept of Work Done in Thermodynamics</h2>
+<h2>Concept of Work in Thermodynamics</h2>
 <p>
-In classical thermodynamics, <strong>work</strong> represents an organized transfer of energy across a system's boundary mediated by a macroscopic mechanical force displacing that boundary. Unlike thermal energy transfer (heat), which is random and molecular, mechanical work is coherent and directional.
+In mechanics, we learn how to define mechanical work and determine it in different scenarios. It is given by:
+</p>
+\[
+dW = \vec{F} \cdot d\vec{s}
+\]
+<p>
+In thermodynamics, when we say <strong>work</strong>, we are specifically concerned here with the mechanical work done by the gas, which is the thermodynamic system.
+</p>
+<p>
+Thus, thermodynamic work represents an exchange of energy between the system and surroundings, across the system's boundary which is mediated by the pressure force that is moving the system boundary (piston).
 </p>
 <p>
 Consider a gas confined in a cylinder of cross-sectional area \( A \) sealed by a frictionless, movable piston. The gas exerts an outward pressure \( P \) on the piston face. The normal force exerted by the gas is:
@@ -33,109 +39,205 @@ Consider a gas confined in a cylinder of cross-sectional area \( A \) sealed by 
 F = P \cdot A
 \]
 <p>
-If the piston undergoes an infinitesimal quasi-static displacement \( dx \) outwards, the infinitesimal mechanical work done by the gas on the piston is:
-</p>
+If the piston undergoes an infinitesimal quasi-static displacement \( dx \) outwards, the infinitesimal mechanical work done by the gas (on the piston) is:
 \[
 dW = F \, dx = (P \cdot A) \, dx = P \, (A \, dx) = P \, dV
 \]
 where \( dV = A \, dx \) is the change in the volume of the gas.
 </p>
-</section>
-
-<section>
-<h2>Expansion and Compression Work Formula</h2>
-<p>
-For a finite quasi-static process where the volume changes from an initial volume \( V_i \) to a final volume \( V_f \), the total work done by the system on its surroundings is obtained by integrating the differential work along the process path:
-</p>
-<div class="model-box">
-\[
-W = \int_{V_i}^{V_f} P_{\text{ext}} \, dV \quad \xrightarrow{\text{quasi-static}} \quad W = \int_{V_i}^{V_f} P \, dV
-\]
-where:
-<ul>
-<li>\( W \): Mechanical work done (SI Unit: <strong>Joule (\( \text{J} \))</strong> or \( \text{N}\cdot\text{m} \), Dimension: \( [M L^2 T^{-2}] \))</li>
-<li>\( P \): Absolute pressure of the gas at that volume (SI Unit: \( \text{Pa} = \text{N/m}^2 \))</li>
-<li>\( V \): Volume occupied by the gas (SI Unit: \( \text{m}^3 \))</li>
-</ul>
-</div>
-
-<p>
-<strong>Key Physical Consequences:</strong>
-</p>
-<ul>
-<li><strong>Expansion (\( V_f > V_i \implies dV > 0 \)):</strong> The gas pushes the boundary outward; \( W > 0 \) (work is done <em>by</em> the gas on the surroundings).</li>
-<li><strong>Compression (\( V_f < V_i \implies dV < 0 \)):</strong> External forces compress the gas; \( W < 0 \) (work is done <em>on</em> the gas by the surroundings).</li>
-<li><strong>Constant Volume (\( V_f = V_i \implies dV = 0 \)):</strong> Rigid container; \( W = 0 \) (zero boundary work).</li>
-</ul>
-</section>
-
-<section>
-<h2>Sign Conventions in Physics vs Chemistry</h2>
-<p>
-A frequent source of confusion in competitive examinations arises from differing conventions between Physics (IUPAP) and Chemistry (IUPAC). Both formulations represent the exact same physical reality.
-</p>
-
-<table>
-<thead>
-<tr>
-<th>Quantity</th>
-<th>Physics Convention (Standard in JEE Physics)</th>
-<th>Chemistry Convention (IUPAC)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Work Done by System (Expansion)</strong></td>
-<td>\( W > 0 \) (Positive)</td>
-<td>\( W < 0 \) (Negative)</td>
-</tr>
-<tr>
-<td><strong>Work Done on System (Compression)</strong></td>
-<td>\( W < 0 \) (Negative)</td>
-<td>\( W > 0 \) (Positive)</td>
-</tr>
-<tr>
-<td><strong>Heat Added to System (\( Q_{\text{in}} \))</strong></td>
-<td>\( Q > 0 \) (Positive)</td>
-<td>\( Q > 0 \) (Positive)</td>
-</tr>
-<tr>
-<td><strong>Heat Released by System (\( Q_{\text{out}} \))</strong></td>
-<td>\( Q < 0 \) (Negative)</td>
-<td>\( Q < 0 \) (Negative)</td>
-</tr>
-<tr>
-<td><strong>First Law Equation</strong></td>
-<td>\[ \Delta U = Q - W \implies dQ = dU + dW \]</td>
-<td>\[ \Delta U = Q + W \implies dU = dQ + dW \]</td>
-</tr>
-</tbody>
-</table>
-
 <div class="insightbox">
-In Physics, we view the system as an engine built to perform useful work for us, so work done by the system is counted as positive (\( +W \)). In Chemistry, the focus is on the internal energy ledger of the system, so work done on the system increases its energy (\( +W \)).
-</div>
-</section>
-
-<section>
-<h2>Heat as Energy in Transit and Path Dependency</h2>
-<p>
-<strong>Heat (\( Q \))</strong> is defined strictly as energy in transit across a boundary as a direct consequence of a temperature difference between the system and its surroundings.
-</p>
-<ul>
-<li>Heat is not a substance ("caloric") stored inside matter. Matter contains internal energy, not heat.</li>
-<li>Heat appears only at the boundary while a process is taking place and ceases to exist once thermal equilibrium is reached.</li>
-<li>Heat is a <strong>path function</strong>: the total heat transferred between two equilibrium states depends entirely on the path followed.</li>
-</ul>
-
-<div class="model-box">
+The purpose of choosing this particular geometry is to express the mechanical work done by the gas in terms of its thermodynamic state variables \(P\) and \(V\).<br>
+The geometric description is very specific: \(A\) is the cross-sectional area, and the displacement \(dx\) is along the normal to that area. Therefore:
 \[
-dQ = n \, C \, dT
+dV=A\,dx \quad dW=P\,dV 
 \]
-where \( n \) is the number of moles, \( dT \) is the temperature increment, and \( C \) is the <em>molar heat capacity</em> for that particular process.
+This is important because \(P\) and \(V\) are thermodynamic state variables.<br>
+We already have an equation of state, such as the ideal-gas equation:
+\[
+PV=nRT
+\]
+which relates the thermodynamic state variables.<br>
+Thus, this simple piston-cylinder geometry allows us to translate the mechanical work relation into the thermodynamic \(P\)-\(V\) state space:
+\[
+\boxed{dW=P\,dV}
+\]
+We can therefore study mechanical work using the same \(P\)-\(V\) description that we use to describe the thermodynamic state of the gas.
 </div>
 </section>
-
+<section>
+<h2>Sign of Work - Expansion and Compression</h2>
+<p>
+To determine the sign of work done by the gas on the piston, we only need to examine whether the volume of the gas increases or decreases.
+</p>
+<p>
+The pressure of a gas is non-negative:
+\[
+P_{\rm gas}\ge 0
+\]
+The force exerted by the gas on the piston is therefore:
+\[
+F_{\rm gas}=P_{\rm gas}A
+\]
+</p>
+<p>
+If the piston undergoes an infinitesimal displacement \(dx\) in the direction of the force exerted by the gas, the infinitesimal work done by the gas on the piston is:
+\[
+dW=F_{\rm gas}\,dx=P_{\rm gas}A\,dx=P_{\rm gas}\,dV
+\]
+where
+\[
+dV=A\,dx
+\]
+is the corresponding change in the volume of the gas. Thus:
+\[
+\boxed{dW=P_{\rm gas}\,dV}
+\]
+</p>
+<p>
+Since \(P_{\rm gas}\ge0\), the sign of \(dW\) is determined only by the sign of \(dV\). Therefore, the sign of work done by the gas is directly connected to whether the system boundary moves outward or inward.
+</p>
+<ul class="model-box">
+<li><strong>Expansion:</strong>
+\[
+dV>0
+\]
+so
+\[
+dW\ge0
+\]
+The gas does positive work on the surroundings. The work may be zero in a special case such as free expansion, where there is no opposing mechanical force at the boundary.</li>
+<li><strong>Compression:</strong>
+\[
+dV\lt0
+\]
+so
+\[
+dW\lt0
+\]
+Thus, work is done on the gas by the surroundings.</li>
+<li><strong>Constant Volume:</strong>
+\[
+dV=0
+\]
+so
+\[
+dW=0
+\]
+There is no boundary displacement and hence no boundary work.</li>
+</ul>
+</section>
+<section>
+<h2>Quasi-Static Work</h2>
+<p>
+From the work-energy theorem, we know that the net mechanical work done on a body changes its kinetic energy:
+\[
+W_{\rm net}=\Delta K
+\]
+</p>
+<p>
+The gas is confined in a cylinder with a movable piston. During expansion or compression, the piston itself is also a mechanical body and therefore its kinetic energy can change.
+</p>
+<p>
+However, in thermodynamics, our primary concern is the change in the macroscopic thermodynamic state of the gas — described by quantities such as pressure \(P\), volume \(V\) and temperature \(T\) — rather than the kinetic energy of the piston.
+</p>
+<p>
+Therefore, when we study mechanical energy exchange between a thermodynamic system and its surroundings, we consider a <strong>quasi-static process</strong>.
+</p>
+<p>
+The process is carried out sufficiently slowly so that, after each infinitesimal change, the piston remains in mechanical equilibrium (\(F_{net} = 0\)). In this ideal limit, the piston moves without acquiring any appreciable kinetic energy.
+</p>
+<p>
+Thus, although the piston changes its position as the gas expands or contracts, we idealize its kinetic energy as remaining unchanged:
+\[
+\Delta K_{\rm piston}=0
+\]
+The piston is therefore effectively in mechanical equilibrium at each stage, with the net force tending to zero.
+</p>
+<p>
+Consequently, the pressure exerted by the gas on the piston and the external pressure opposing the piston become equal in the quasi-static limit:
+\[
+\boxed{P_{\rm gas}=P_{\rm ext}}
+\]
+</p>
+<p>
+For the work done by the gas on the surroundings, we first write the general boundary-work expression in terms of the external pressure:
+</p>
+<div class="math-block">
+\[
+W=\int_{V_i}^{V_f}P_{\rm ext}\,dV
+\]
+</div>
+<p>
+In the quasi-static limit,
+\[
+P_{\rm gas}=P_{\rm ext}=P
+\]
+so the work can be written directly in terms of the thermodynamic pressure and volume:
+</p>
+<div class="math-block">
+\[
+\boxed{W=\int_{V_i}^{V_f}P\,dV
+}
+\]
+</div>
+<p>
+Thus, quasi-static motion gives us a particularly useful connection between mechanics and thermodynamics: the piston moves, but its kinetic energy does not accumulate, while the mechanical work done through the moving boundary can be described directly using the thermodynamic state variables \(P\) and \(V\).
+</p>
+<div class="insightbox">
+Quasi-static displacement is used in mechanics to determine the potential-energy change associated with a conservative force.<br>
+If a body is displaced quasi-statically, its kinetic energy remains unchanged, so the applied work can be related directly to the change in potential energy:
+\[
+W_{\rm applied}=\Delta U
+\]
+The same physical idea — separating the energy transfer from the kinetic energy of the moving object — is useful here in thermodynamics.<br>
+Thus, quasi-static does not mean that nothing is happening. The piston is continuously moving and the gas continuously undergoes the thermodynamic process.<br>
+The process is slow enough that the system remains infinitesimally close to equilibrium at every stage, so the piston does not acquire appreciable kinetic energy and
+\[
+P_{\rm gas} \to P_{\rm ext}
+\]
+This allows mechanical work to be represented directly in the thermodynamic \(P\)-\(V\) domain.
+</div>
+</section>
+<section>
+<h2>Heat as Energy in Transit</h2>
+<p>
+Just as mechanical work represents an amount of energy exchanged between a system and its surroundings, <strong>heat</strong> also represents energy exchanged across the system boundary.
+</p>
+<p>
+The distinguishing feature is that heat is energy transferred as a direct consequence of a <strong>temperature difference</strong> between the system and its surroundings.
+</p>
+<p>
+<strong>Heat (\(Q\))</strong> can therefore enter a system from its surroundings or leave the system and be transferred to the surroundings. Heat is not something that a system possesses in a particular state; it refers to the <strong>energy transferred during the interaction</strong>.
+</p>
+<ul class="model-box">
+<li><strong>Heat is not a substance:</strong> Heat is not a material fluid such as the old idea of “caloric” stored inside matter.
+A system possesses <strong>internal energy</strong>, whereas heat describes energy transferred because of a temperature difference.</li>
+<li><strong>Heat exists only during energy transfer:</strong> We use the term heat while energy is being transferred across the system boundary due to a temperature difference.
+Once that temperature-driven transfer reaches balance, there is no net heat transfer due to that temperature difference.</li>
+<li><strong>Heat is path-dependent:</strong> For the same initial and final equilibrium states, the amount of heat transferred can be different for different thermodynamic paths.
+Thus, heat is a <strong>path function</strong>, not a state function.</li>
+</ul>
+<div class="math-block">
+\[
+dQ=n\,C\,dT
+\]
+</div>
+<p>
+where \(n\) is the number of moles, \(dT\) is the infinitesimal change in temperature, and \(C\) is the <strong>molar heat capacity corresponding to the particular process</strong>. The value of \(C\), and hence the amount of heat required for a given temperature change, depends on how the process is carried out.
+</p>
+<div class="insightbox">
+Heat and work are both ways in which energy is exchanged between a system and its surroundings.<br>
+The difference is in the nature of the interaction:
+\[
+\boxed{\text{Heat} \;\rightarrow\; \text{thermal energy interaction}}
+\]
+\[
+\boxed{\text{Work} \;\rightarrow\; \text{mechanical energy interaction}}
+\]
+Neither \(Q\) nor \(W\) is a property stored in the system.<br>
+They describe energy transfer occurring during a thermodynamic process.
+</div>
+</section>
 <section>
 <h2>Internal Energy of an Ideal Gas</h2>
 <p>
@@ -145,45 +247,42 @@ The <strong>Internal Energy (\( U \))</strong> of a thermodynamic system is the 
 U = E_{\text{kinetic, microscopic}} + E_{\text{potential, intermolecular}}
 \]
 <p>
-For an <strong>ideal gas</strong>, intermolecular forces are identically zero by definition. Therefore, the intermolecular potential energy vanishes (\( E_{\text{potential}} = 0 \)), and the internal energy consists entirely of the kinetic energy of molecular translation, rotation, and vibration.
+For an <strong>ideal gas</strong>, intermolecular forces are zero. Therefore, the intermolecular potential energy vanishes (\( E_{\text{potential}} = 0 \)), and the internal energy consists entirely of the kinetic energy of molecular translation, rotation, and vibration.
 </p>
-<div class="model-box">
+<p>
 For \( n \) moles of an ideal gas with \( f \) degrees of freedom:
+</p>
+<div class="math-block">
 \[
 U = n \left( \frac{f}{2} R T \right) = n \, C_v \, T
 \]
-where:
-<ul>
+</div>
+<ul  class="model-box">
 <li>\( U \): Internal Energy (SI Unit: <strong>Joule (\( \text{J} \))</strong>, Dimension: \( [M L^2 T^{-2}] \))</li>
 <li>\( f \): Degrees of freedom of the gas molecules (\( f=3 \) for monoatomic, \( f=5 \) for diatomic at room temperature)</li>
 <li>\( C_v = \frac{f}{2}R \): Molar heat capacity at constant volume</li>
 <li>\( T \): Absolute temperature (in Kelvin)</li>
 </ul>
-</div>
 </section>
-
 <section>
 <h2>Microscopic Interpretation and Joule's Law of Internal Energy</h2>
 <p>
 The dependency of the internal energy of an ideal gas exclusively on temperature is formalized by <strong>Joule's Law of Internal Energy</strong>.
 </p>
-
 <div class="concept-box">
 <strong>Joule's Law:</strong> The internal energy of a given mass of an ideal gas depends solely on its absolute temperature \( T \), and is completely independent of its pressure \( P \) and volume \( V \):
 \[
 \left(\frac{\partial U}{\partial V}\right)_T = 0, \quad \left(\frac{\partial U}{\partial P}\right)_T = 0
 \]
 </div>
-
 <p>
 Consequently, for <strong>any process whatsoever</strong> (isochoric, isobaric, isothermal, adiabatic, or arbitrary polytropic) undergone by an ideal gas:
 </p>
-<div class="model-box">
+<div class="math-block">
 \[
 \Delta U = n \, C_v \, \Delta T = n \, \left(\frac{f}{2} R\right) (T_f - T_i) = \frac{P_f V_f - P_i V_i}{\gamma - 1}
 \]
 </div>
-
 <div class="examplebox">
 <h3>Solved Example: Internal Energy Change Across Different Paths</h3>
 <p>
@@ -192,7 +291,6 @@ An ideal diatomic gas (\( \gamma = 7/5 \)) expands from state \( A \, (P_0, V_0)
 <br>Path 2: Isochoric heating to \( (2P_0, V_0) \) followed by isobaric expansion to \( (2P_0, 2V_0) \).
 <br>Find \( \Delta U \) for both paths.
 </p>
-<hr>
 <p><strong>Solution:</strong></p>
 <p>Since \( U \) is a state function, \( \Delta U \) depends only on the initial and final states, not the path:</p>
 \[
@@ -204,14 +302,12 @@ T_A = \frac{P_0 V_0}{nR}, \quad T_B = \frac{(2P_0)(2V_0)}{nR} = \frac{4 P_0 V_0}
 <p>The internal energy change is identical for both paths (\( 7.5 P_0 V_0 \)), while the work done and heat exchanged differ significantly.</p>
 </div>
 </section>
-
 <section>
 <h2>Sub-Topics & Detailed Analysis</h2>
 <div class="chapter-list">
-<a href="./02a-indicator-diagrams-and-work-paths.html">2a. Indicator Diagrams & Work Along Different Paths</a>
+<a href="./02a-indicator-diagrams-and-work-paths.html">1. Indicator Diagrams</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>
