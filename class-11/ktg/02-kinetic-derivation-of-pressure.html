@@ -3,30 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kinetic Theory of Gases | Derivation of Gas Pressure</title>
+<title>Derivation of Pressure | Kinetic Theory of Gases</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-
 <nav class="top-nav">
 <a href="./index.html" class="back-btn">
 <span>&larr;</span> Back to Kinetic Theory of Gases
 </a>
 </nav>
-
 <h1>Kinetic Derivation of Gas Pressure</h1>
 <p class="subtitle">
-Rigorous mathematical derivation of the kinetic pressure equation from Newtonian momentum conservation.
+Derivation of pressure equation from Newtonian momentum conservation.
 </p>
-
 <section>
-<h2>Momentum Transfer During Molecular Collisions with Walls</h2>
+<h2>Momentum Transfer During Wall Collisions</h2>
 <p>
 Consider an ideal gas containing \( N \) identical molecules, each of mass \( m \), enclosed within a cubical container of side length \( L \) and volume \( V = L^3 \). Let the edges of the cube lie along the Cartesian axes \( x, y, z \).
 </p>
-
 <div class="diagram">
 <svg width="600" height="280" viewBox="0 0 600 280">
   <!-- 3D Cube Perspective -->
@@ -57,7 +53,6 @@ Consider an ideal gas containing \( N \) identical molecules, each of mass \( m 
   <text x="110" y="180" font-size="13" font-weight="bold">L</text>
 </svg>
 </div>
-
 <p>
 Let the velocity of the \( i \)-th molecule be \( \vec{v}_i = (v_{xi}, v_{yi}, v_{zi}) \). Its speed squared is given by:
 </p>
@@ -67,19 +62,23 @@ v_i^2 = v_{xi}^2 + v_{yi}^2 + v_{zi}^2
 <p>
 When this molecule collides elastically with the right-hand wall \( A_1 \) (perpendicular to the \( x \)-axis at \( x = L \)):
 </p>
-<ul>
+<ul class="model-box">
 <li>Initial \( x \)-momentum: \( p_{xi} = +m v_{xi} \)</li>
 <li>Final \( x \)-momentum after rebound: \( p_{xi}' = -m v_{xi} \)</li>
-<li>Momentum imparted to the wall per collision:
+<li>Impulse imparted to the molecule during collision:
 \[
-\Delta p_{xi} = p_{xi} - p_{xi}' = (+m v_{xi}) - (-m v_{xi}) = 2 m v_{xi}
+J_{xi} = \Delta p_{xi} = p_{xi}' - p_{xi} = (-m v_{xi}) - (m v_{xi}) = -2 m v_{xi}
+\]
+</li>
+<li>Impulse imparted to the wall per collision:
+\[
+J_{\text{wall}} = -J_{xi} = 2 m v_{xi}
 \]
 </li>
 </ul>
 </section>
-
 <section>
-<h2>Rate of Change of Momentum and Force on Wall</h2>
+<h2>Force on Wall</h2>
 <p>
 After rebounding from wall \( A_1 \), the molecule travels across the length of the container to the opposite wall at \( x = 0 \), rebounds, and returns to strike wall \( A_1 \) again.
 </p>
@@ -93,28 +92,58 @@ The distance covered between two successive collisions with wall \( A_1 \) is \(
 According to Newton's Second Law, the time-averaged force \( F_{xi} \) exerted by the \( i \)-th molecule on wall \( A_1 \) is:
 </p>
 \[
-F_{xi} = \frac{\Delta p_{xi}}{\Delta t_i} = \frac{2 m v_{xi}}{\frac{2L}{v_{xi}}} = \frac{m v_{xi}^2}{L}
+F_{xi} = \frac{J_{\text{wall}}}{\Delta t_i} = \frac{2 m v_{xi}}{\frac{2L}{v_{xi}}} = \frac{m v_{xi}^2}{L}
 \]
 <p>
-Summing over all \( N \) molecules in the container, the total normal force \( F_x \) acting on wall \( A_1 \) of area \( A = L^2 \) is:
-</p>
+Summing over all \( N \) molecules in the container, the total normal force \( F_x \) acting on wall \( A_1 \) is:
 \[
-F_x = \sum_{i=1}^N F_{xi} = \frac{m}{L} \sum_{i=1}^N v_{xi}^2 = \frac{m N}{L} \, \overline{v_x^2}
+F_x = \sum_{i=1}^N F_{xi} = \frac{m}{L} \sum_{i=1}^N v_{xi}^2
 \]
-where \( \overline{v_x^2} = \frac{1}{N} \sum_{i=1}^N v_{xi}^2 \) is the mean square velocity component along the \( x \)-axis.
 </p>
 </section>
-
 <section>
-<h2>Derivation of the Kinetic Pressure Equation</h2>
+<h2>Root Mean Square Speed</h2>
 <p>
-The pressure \( P \) exerted on wall \( A_1 \) is the total normal force per unit area:
+We are trying to relate the pressure of gas with microscopic parameters using collision.
+</p>
+<p>
+We got the value of force on the wall due to single molecule \(F_{xi} = \frac{m v_{xi}^2}{L}\). It depends on molecular mass, directional speed and container dimensions.
+</p>
+<p>
+However, we are considering thermodynamic equilibrium in which the gas is present in container and pressure and temperature are well-defined and uniform. 
+</p>
+<p>
+The situation is like a steady state dynamic equilibrium and we can say that the pressure is due to all the \( N \) molecules in the container colliding with the wall as the momentum is distributed. The summed value obtained is: 
 </p>
 \[
-P = \frac{F_x}{A} = \frac{F_x}{L^2} = \frac{\frac{m N}{L} \overline{v_x^2}}{L^2} = \frac{m N}{L^3} \overline{v_x^2} = \frac{m N}{V} \overline{v_x^2}
+F_x = \sum_{i=1}^N F_{xi} = \frac{m}{L} \sum_{i=1}^N v_{xi}^2
 \]
-
-<h3>Applying Isotropic Symmetry:</h3>
+<p>
+The pressure \( P \) exerted on wall \( A_1 \) of area \( A = L^2 \) is the total normal force per unit area:
+</p>
+\[
+P = \frac{F_x}{A} = \frac{F_x}{L^2} = \frac{m}{L^3} \sum_{i=1}^N v_{xi}^2 = \frac{m}{V} \sum_{i=1}^N v_{xi}^2 
+\]
+<p>
+We need a way to mathematically resolve \( \sum_{i=1}^N v_{xi}^2 \) and this is done using statiscal math concept of root mean square.
+</p>
+<h3>Root Mean Square Speed</h3>
+<p>
+The speed of ith molecule is \(v_{xi}\) and there are \(N\) such molecules.
+</p>
+<p>
+We define a quantity called root mean square speed:
+</p>
+\[
+\overline{v_x} =  \sqrt{\frac{1}{N} \sum_{i=1}^N v_{xi}^2} \implies N \overline{v_x^2} = \sum_{i=1}^N v_{xi}^2
+\]
+<p>
+We use rms speed in pressure equation:
+</p>
+\[
+P = \frac{m}{V} \sum_{i=1}^N v_{xi}^2 = \frac{mN}{V} \overline{v_x^2} = \frac{m_{\text{gas}}}{V} \overline{v_x^2} = \rho \overline{v_x^2} 
+\]
+<h3>Applying Isotropic Symmetry</h3>
 <p>
 Because molecular motion is completely random and chaotic with no preferred direction of velocity, the mean square velocity components along all three Cartesian axes must be identically equal:
 </p>
@@ -130,12 +159,12 @@ The total mean square speed \( \overline{v^2} \) is:
 <p>
 Substituting \( \overline{v_x^2} = \frac{1}{3} \overline{v^2} \) into the pressure formula yields the <strong>Fundamental Kinetic Pressure Equation</strong>:
 </p>
-<div class="model-box">
+<div class="math-block">
 \[
 P = \frac{1}{3} \frac{m N}{V} \overline{v^2} = \frac{1}{3} \rho \, \overline{v^2} = \frac{1}{3} \rho \, v_{\text{rms}}^2
 \]
-where:
-<ul>
+</div>
+<ul class="model-box">
 <li>\( P \): Absolute pressure of the gas (SI Unit: <strong>Pascal (\( \text{Pa} = \text{N/m}^2 \))</strong>, Dimension: \( [M L^{-1} T^{-2}] \))</li>
 <li>\( m \): Mass of an individual molecule (SI Unit: \( \text{kg} \))</li>
 <li>\( N \): Total number of molecules in the vessel</li>
@@ -143,34 +172,9 @@ where:
 <li>\( \rho = \frac{m N}{V} \): Mass density of the gas (SI Unit: \( \text{kg/m}^3 \))</li>
 <li>\( \overline{v^2} = v_{\text{rms}}^2 \): Mean square speed of the molecules (SI Unit: \( \text{m}^2/\text{s}^2 \))</li>
 </ul>
-</div>
 </section>
-
 <section>
-<h2>Pressure in Terms of Molecular Mass, Number Density, and Volume</h2>
-<p>
-The kinetic pressure equation can be expressed in various useful equivalent forms:
-</p>
-
-<h3>1. In terms of Number Density (\( n_0 = N/V \)):</h3>
-<div class="model-box">
-\[
-P = \frac{1}{3} n_0 \, m \, \overline{v^2}
-\]
-where \( n_0 \) is the number of molecules per unit volume (\( \text{m}^{-3} \)).
-</div>
-
-<h3>2. In terms of Total Mass (\( M_{\text{gas}} = m N \)):</h3>
-<div class="model-box">
-\[
-P V = \frac{1}{3} M_{\text{gas}} \, \overline{v^2} = \frac{1}{3} (n M) \, \overline{v^2}
-\]
-where \( n \) is the number of moles and \( M \) is the molar mass (in \( \text{kg/mol} \)).
-</div>
-</section>
-
-<section>
-<h2>Translational Kinetic Energy Density Relationship</h2>
+<h2>Translational Kinetic Energy</h2>
 <p>
 The total translational kinetic energy \( E_{\text{trans}} \) of all \( N \) molecules in the container is:
 </p>
@@ -186,30 +190,56 @@ u = \frac{E_{\text{trans}}}{V} = \frac{1}{2} \left(\frac{m N}{V}\right) \overlin
 <p>
 Comparing with the pressure equation \( P = \frac{1}{3} \rho \overline{v^2} \):
 </p>
-<div class="model-box">
+<div class="math-block">
 \[
 P = \frac{2}{3} \left( \frac{1}{2} \rho \overline{v^2} \right) = \frac{2}{3} u = \frac{2}{3} \left( \frac{E_{\text{trans}}}{V} \right)
 \]
 \[
-E_{\text{trans}} = \frac{3}{2} P V
+E_{\text{trans}} = \frac{3}{2} P V = \frac{3}{2} nRT 
 \]
 </div>
 <div class="insightbox">
-The pressure of an ideal gas is strictly equal to two-thirds of its translational kinetic energy density, regardless of whether the gas is monoatomic, diatomic, or polyatomic!
+The pressure of an ideal gas is strictly equal to two-thirds of its translational kinetic energy density, regardless of whether the gas is monoatomic, diatomic, or polyatomic!<br>
+Translational KE is a function of temperature, regardless of whether the gas is monoatomic, diatomic, or polyatomic! 
 </div>
 </section>
-
+<section>
+<h2>Elastic Collisions and Momentum Exchange at Walls</h2>
+<p>
+Consider a single gas molecule of mass \( m \) moving with velocity vector \( \vec{v} = (v_x, v_y, v_z) \) approaching a rigid wall perpendicular to the \( x \)-axis.
+</p>
+<p>
+When the molecule strikes the smooth, stationary wall elastically:
+</p>
+<ul class="model-box">
+<li>The parallel velocity components remain unchanged: \( v_y' = v_y \), \( v_z' = v_z \).</li>
+<li>The normal velocity component is reversed in direction without change in magnitude: \( v_x' = -v_x \).</li>
+</ul>
+<p>
+<strong>Change in Momentum of the Molecule:</strong>
+\[
+\Delta p_{x, \text{molecule}} = p_{\text{final}} - p_{\text{initial}} = (-m v_x) - (+m v_x) = -2 m v_x
+\]
+<strong>Momentum Transferred to the Wall:</strong>
+By Newton's Third Law, the momentum delivered to the container wall per collision is:
+\[
+\Delta p_{x, \text{wall}} = +2 m v_x
+\]
+</p>
+<div class="concept-box">
+The continuous, steady macroscopic pressure registered by a pressure sensor is the time-averaged cumulative force produced by trillions of these individual momentum-transfer impacts per second across each square meter of the wall.
+</div>
+</section>
 <section>
 <h2>Pressure Invariance in Non-Cubical and Arbitrary Geometry Vessels</h2>
 <p>
 Although derived using a cubical box for Cartesian simplicity, the result \( P = \frac{1}{3}\rho\overline{v^2} \) is universally valid for <strong>any container of arbitrary geometry</strong> (spherical, cylindrical, or irregular):
 </p>
-<ul>
+<ul class="model-box">
 <li>For any surface element \( d\vec{A} \) on an arbitrary boundary wall, the momentum exchanged depends solely on the normal velocity component \( v_n = \vec{v} \cdot \hat{n} \).</li>
 <li>Because the velocity distribution is perfectly isotropic in space, the directional average of \( (\vec{v}\cdot\hat{n})^2 \) over a sphere of unit normals is always \( \frac{1}{3}\overline{v^2} \).</li>
 <li>Thus, pressure is completely uniform and isotropic across all walls of any container in thermal equilibrium.</li>
 </ul>
-
 <div class="examplebox">
 <h3>Solved Example: Gas Pressure from RMS Speed</h3>
 <p>
@@ -217,7 +247,6 @@ Nitrogen gas (\( M = 28 \, \text{g/mol} = 0.028 \, \text{kg/mol} \)) is enclosed
 <br>(a) The gas pressure \( P \).
 <br>(b) The translational kinetic energy per unit volume.
 </p>
-<hr>
 <p><strong>Solution:</strong></p>
 <p>(a) Using the kinetic pressure equation:</p>
 \[
@@ -230,7 +259,6 @@ u = \frac{1}{2} \rho \, v_{\text{rms}}^2 = \frac{1}{2} (1.25) (250000) = 1.5625 
 <p>Check: \( P = \frac{2}{3} u = \frac{2}{3}(156250) \approx 1.042 \times 10^5 \, \text{Pa} \).</p>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

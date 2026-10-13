@@ -3,73 +3,164 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thermodynamics | First Law of Thermodynamics</title>
+<title>First Law of Thermodynamics | Thermodynamics</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-
 <nav class="top-nav">
 <a href="./index.html" class="back-btn">
 <span>&larr;</span> Back to Thermodynamics
 </a>
 </nav>
-
 <h1>First Law of Thermodynamics</h1>
 <p class="subtitle">
-The universal law of conservation of energy applied to thermodynamic systems.
+Principle of Conservation of Energy for thermodynamics.
 </p>
-
 <section>
-<h2>Statement of the First Law of Thermodynamics</h2>
+<h2>First Law of Thermodynamics</h2>
 <p>
-The <strong>First Law of Thermodynamics</strong> is the generalization of the universal law of conservation of energy to include thermal energy transfers (heat) alongside mechanical work.
+The First Law of Thermodynamics is an application of the principle of conservation of energy to the energy interactions of bulk matter. It accounts for thermal energy interactions (heat) along with the mechanical interactions that we already studied for elastic bodies.
 </p>
-<div class="model-box">
-<strong>Formal Statement:</strong>
 <p>
-<em>Energy can neither be created nor destroyed; it can only be transformed from one form into another. The net amount of energy transferred to a thermodynamic system in the form of heat is equal to the increase in the internal energy of the system plus the external work done by the system on its surroundings.</em>
+It majorly addresses the <strong>elasto-thermal behaviour of bulk matter</strong>: especially for gases, as the specific heat of gases as well as the bulk modulus of gases are both process-dependent.
 </p>
+<p>
+It is similar to the work-energy theorem in mechanics, as in providing an energy-accounting framework. The difference is that in thermodynamics it is categorized as a law because it is found to be true experimentally and not derived mathematically like the work-energy theorem. Experiments, such as Joule's mechanical equivalent of heat experiments, established the quantitative equivalence between mechanical work and thermal energy transfer.
+</p>
+<div class="insightbox">
+Before heat was established as a form of energy, it was thought to be an invisible, weightless fluid called <strong>caloric</strong> that surrounded the atom as part of matter.<br>
+It spontaneously flowed from hotter to colder bodies.<br>
+It was Joule's friction experiments that proved heat could be generated endlessly by doing mechanical work, proving it was energy in transit rather than a conserved physical fluid.
 </div>
 <p>
-The First Law asserts that a perpetual motion machine of the first kind (PMM-1) — an engine that could continuously produce mechanical work without consuming an equivalent amount of heat or chemical energy — is physically impossible.
+The underlying principle is universal: energy can neither be created nor destroyed; it can only be transferred between systems or transformed from one form into another.
+</p>
+<p>
+<strong>The net amount of heat transferred to a thermodynamic system is equal to the change in the internal energy of the system plus the external work done by the system on its surroundings.</strong>
+</p>
+<div class="insightbox">
+It is this concept of <strong>internal energy</strong> which makes this law applicable to bulk matter.<br>
+And <strong>heat</strong> makes it applicable for thermal interactions.<br>
+The work part primarily addresses mechanical work at this stage, but the general statement of the First Law encompasses all forms of work.<br>
+Later in electrodynamics, we will apply this same law to electrical work (e.g., the thermodynamics of a gas acting as a capacitor dielectric).
+</div>
+<p>
+In mechanics, we studied point masses and perfectly rigid bodies involved only in macroscopic mechanical energy interactions. In bulk matter, however, energy interactions also involve microscopic energy stored within the system (internal energy). Mechanical work can change this internal energy, and heat transfer can change it as well. During a change of state, such as melting or vaporization, energy transfer also changes the internal configuration of the matter.
+</p>
+<p>
+Thermodynamics therefore requires an energy-accounting law that bridges such multi-form interactions together. The First Law relates heat transfer and macroscopic work to the change in internal energy, allowing us to study the energy transformations of bulk matter within one consistent framework.
+</p>
+<p>
+Since the First Law expresses the universal principle of energy conservation, it applies to thermodynamic processes regardless of whether they are quasi-static, reversible, irreversible, or involve free expansion. The specific process determines the actual path-dependent amounts of heat transferred and work done, but the absolute energy balance must hold in every case.
 </p>
 </section>
-
 <section>
-<h2>Mathematical Formulation: dQ = dU + dW</h2>
+<h2>Mathematical Formulation</h2>
 <p>
-For an infinitesimal quasi-static thermodynamic change, the First Law is expressed differentially as:
+The mathematical formulation of the First Law of Thermodynamics is commonly expressed in two related forms: a differential form and an integrated form.
 </p>
-<div class="model-box">
+<p>
+This is identical to how we express the Work-Energy Theorem in mechanics: differentially for an infinitesimal displacement (\( dW = dK \)) and integrated over a finite path (\( W = \Delta K \)).
+</p>
+<p>
+Similarly, when a gas undergoes a thermodynamic process, there are two ways to represent the energy accounting of that process. We can consider the infinitesimal energy transfers occurring along the process, or we can integrate these transfers over the complete process and relate the initial and final states of the system.
+</p>
+<p>
+When the system undergoes a quasi-static process, it passes through a sequence of equilibrium states. We can therefore describe its energy accounting differentially, considering an infinitesimally small step of the process:
+</p>
+<div class="math-block">
 \[
-dQ = dU + dW
+\boxed{\delta Q = dU + \delta W}
 \]
-where:
-<ul>
-<li>\( dQ \): Infinitesimal heat supplied to the system (Inexact differential, SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
-<li>\( dU \): Infinitesimal change in internal energy (Exact differential of a state function, SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
-<li>\( dW = P\,dV \): Infinitesimal boundary work done by the system (Inexact differential, SI Unit: <strong>Joule (\( \text{J} \))</strong>)</li>
-</ul>
 </div>
-
+<ul class="model-box">
+<li>\(\delta Q\): Infinitesimal amount of heat transferred during the process (path-dependent; positive when heat enters the system).</li>
+<li>\(dU\): Infinitesimal change in internal energy (exact differential of a state function).</li>
+<li>\(\delta W\): Infinitesimal amount of work done by the system (path-dependent; positive when work is done by the system).</li>
+</ul>
 <p>
-For a finite process transitioning between equilibrium state 1 and equilibrium state 2:
+Notice that \(dU\) represents an infinitesimal change in a state property, whereas \(\delta Q\) and \(\delta W\) represent infinitesimal amounts of energy transferred during the process. This is why their mathematical treatment is different.
 </p>
+<h3>The Mathematical Distinction:</h3>
+<p>
+Notice that only \( dU \) uses the standard differential operator \(d\). This is because internal energy is a state variable; \( dU \) represents a true differential change between two infinitesimally close states. Thus, it is an <strong>exact differential</strong>:
+</p>
+\[ 
+\int_{U_1}^{U_2} dU = U_2 - U_1 = \Delta U 
+\]
+<p>
+If the gas begins in equilibrium state 1, with internal energy \(U_1\), and reaches equilibrium state 2, with internal energy \(U_2\), then its net change in internal energy is determined entirely by these two states:
+</p>
+\[
+\Delta U = U_2-U_1 = \int_{U_1}^{U_2} dU
+\]
+<p>
+The initial and final values of internal energy are well-defined, regardless of the path followed between those states.
+</p>
+<p>
+We cannot write an analogous thermodynamic state-change expression for heat or work, such as \(\int_{Q_1}^{Q_2}\delta Q=Q_2-Q_1=\Delta Q\) . The reason is that \(Q_1\) and \(Q_2\) do not identify particular thermodynamic states of the gas. There is no state property called heat \(Q\) (or work \(W\)) of the system (gas) whose initial and final values characterize the system.
+</p>
+<p>
+Instead, heat and work are accumulated quantities associated with the process that changes the thermodynamic state of the gas. We add their infinitesimal contributions over the particular process to determine the total amounts transferred:
+</p>
+<div class="math-block">
+\[
+\boxed{Q_{\text{net}}=\int_{\text{process}}\delta Q} \qquad \boxed{W_{\text{net}}=\int_{\text{process}}\delta W}
+\]
+</div>
+<p>
+Thus, we use \( \delta \) for heat and work because they are <strong>inexact differentials</strong>. They depend on the path taken. A system does not "possess" heat \(Q_1\) in state 1 and \(Q_2\) in state 2.
+</p>
+<p>
+Instead, \( \delta Q \) and \( \delta W \) represent tiny amounts of energy <strong>in transit</strong>. When integrated, they simply yield the total accumulated energy transferred over the specific path:
+</p>
+<div class="insightbox">
+There is nothing contradictory about expressing cumulative heat transfer as a mathematical function of another variable.<br>
+The important distinction is between using \(Q\) as a cumulative quantity defined for a particular transfer history and using \(Q\) as though it were a thermodynamic state property.<br>
+For example, consider a heater that supplies heat to a system at a constant rate \(\mathcal{P}\).<br>
+Let \(Q(t)\) denote the cumulative amount of heat supplied by this heater to the system up to time \(t\). Then
+\[
+\frac{dQ}{dt}=\mathcal{P} \qquad \implies \qquad dQ=\mathcal{P}\,dt
+\]
+Here, \(Q(t)\) is a well-defined mathematical function because we have defined it as the accumulated heat supplied over this particular history.<br>
+Its ordinary differential \(dQ\) represents the infinitesimal increment in that accumulated total.<br>
+When this increment corresponds to heat physically crossing the boundary into the thermodynamic system, it is precisely the infinitesimal heat transfer denoted by \(\delta Q\) in the First Law. Therefore, for this physical setup,
+\[
+\boxed{dQ=\delta Q=\mathcal{P}\,dt}
+\]
+The equality arises from the physical setup and the definition of \(Q(t)\): the increment in cumulative heat supplied is the actual heat transferred during the time interval.<br>
+Notice that we have not changed the notation used in the differential formulation of the First Law:
+\[
+\delta Q=dU+\delta W
+\]
+We have independently defined a cumulative function \(Q(t)\), whose ordinary differential \(dQ\) coincides with the physical heat-transfer increment \(\delta Q\) along the specified history.<br>
+Thus, \(dQ\) is justified here by the separate mathematical and physical setup, rather than being substituted casually for \(\delta Q\) in the First Law.<br>
+Saying that heat is not a state property does not mean that cumulative heat transfer cannot be expressed as a function of another variable, or that its infinitesimal increments cannot be calculated.<br>
+It only means that the total heat transferred is not determined by the thermodynamic state of the gas alone.<br>
+It depends on the particular energy-transfer history.
+</div>
+<p>
+In case of a finite process, integrating the differential equation over a finite thermodynamic path from equilibrium state 1 to equilibrium state 2 yields the macroscopic form of the First Law:
+</p>
+<div class="math-block">
 \[
 Q = \Delta U + W \quad \implies \quad \Delta U = Q - W
 \]
-where \( \Delta U = U_2 - U_1 \).
+</div>
+<p>
+where \( \Delta U = U_2 - U_1 \) .
+</p>
+<p>
+This integrated form relates the net heat transferred and net work done during the process to the change in internal energy between the initial and final states.
 </p>
 </section>
-
 <section>
-<h2>Sign Conventions for Heat, Work, and Internal Energy</h2>
+<h2>Sign Conventions for Heat, Work and Internal Energy</h2>
 <p>
-Strict adherence to the algebraic sign conventions of the First Law is essential for accurate calculations in physics:
+As all scalar quantities are involved in the First Law, adherence to algebraic sign convention is essential for accurate energy-accounting calculations:
 </p>
-
 <table>
 <thead>
 <tr>
@@ -88,7 +179,7 @@ Strict adherence to the algebraic sign conventions of the First Law is essential
 </tr>
 <tr>
 <td>Heat leaves the system</td>
-<td>\( Q < 0 \) (Negative)</td>
+<td>\( Q \lt 0 \) (Negative)</td>
 <td>System rejects thermal energy to surroundings.</td>
 </tr>
 <tr>
@@ -98,8 +189,8 @@ Strict adherence to the algebraic sign conventions of the First Law is essential
 <td>Gas does work on external surroundings.</td>
 </tr>
 <tr>
-<td>System compresses (\( dV < 0 \))</td>
-<td>\( W < 0 \) (Negative)</td>
+<td>System compresses (\( dV \lt 0 \))</td>
+<td>\( W \lt 0 \) (Negative)</td>
 <td>External surroundings do work on the gas.</td>
 </tr>
 <tr>
@@ -109,83 +200,118 @@ Strict adherence to the algebraic sign conventions of the First Law is essential
 <td>Internal microscopic kinetic energy increases.</td>
 </tr>
 <tr>
-<td>Temperature drops (\( \Delta T < 0 \))</td>
-<td>\( \Delta U < 0 \) (Negative)</td>
+<td>Temperature drops (\( \Delta T \lt 0 \))</td>
+<td>\( \Delta U \lt 0 \) (Negative)</td>
 <td>Internal microscopic kinetic energy decreases.</td>
 </tr>
 </tbody>
 </table>
 </section>
-
 <section>
-<h2>Differential and Integrated Forms of First Law</h2>
+<h2>Using the State Equation in the First Law</h2>
 <p>
-Substituting the ideal gas relations into the differential First Law gives its most versatile operational formulas:
+For an ideal gas, the thermodynamic state is governed by the equation of state: \(PV = nRT\). Differentiating this implicitly, we relate the infinitesimal changes in state variables:
 </p>
-<div class="model-box">
 \[
-dQ = n \, C_v \, dT + P \, dV
+P\,dV + V\,dP = nR\,dT
 \]
-Using the ideal gas equation of state in differential form (\( P\,dV + V\,dP = nR\,dT \)):
+<p>
+We use the differential form of the First Law to relate the inexact differentials of path-dependent energy transfers to these state variables. For a specific process, we can write:
+</p>
 \[
-dQ = n \, C_p \, dT - V \, dP
+\delta Q = n \, C \, dT \qquad  \delta W = P \, dV
+\]
+<p>
+Notice that \(\delta Q\) and \(\delta W\) are still inexact differentials. This is because the molar heat capacity \(C\) is not a fixed property of the gas; it is a <strong>path-dependent quantity</strong> whose value depends entirely on the thermodynamic process being executed.
+</p>
+<p>
+Similarly, integrating \(P \, dV\) requires knowing exactly how pressure \(P\) changes as a function of volume \(V\) during the process.
+</p>
+<p>
+This is analogous to mechanics: the work integral \(\int \vec{F} \cdot d\vec{s}\) is path-dependent. Only when the force is conservative that the differential becomes exact (integrable), making the work path-independent and directly related to a change in a state function (potential energy).
+</p>
+<p>
+The change in internal energy for ideal gas is already related to change in its temperature (\(dU = n \, C_v \, dT\)). Substituting for heat and work as well, into the First Law (\(\delta Q = dU + \delta W\)), we get:
+</p>
+<div class="math-block">
+\[
+n \, C \, dT = n \, C_v \, dT + P \, dV
 \]
 </div>
-
 <p>
-<strong>Specialized Formulations for Standard Processes:</strong>
+We can derive another equivalent form. Using  \(C_v = C_p - R\) and the differential ideal gas equation (\( P\,dV = nR\,dT - V\,dP\)):
 </p>
-<ul>
-<li><strong>Isochoric Process (\( dV = 0 \)):</strong>
+<div class="math-block">
 \[
-dW = 0 \implies Q = \Delta U = n C_v \Delta T
+n \, C \, dT = n (C_p - R) dT + (nR\,dT - V\,dP)
 \]
-</li>
-<li><strong>Isobaric Process (\( dP = 0 \)):</strong>
 \[
-W = P\Delta V = nR\Delta T \implies Q = \Delta U + W = n C_v \Delta T + n R \Delta T = n C_p \Delta T
+n \, C \, dT = n \, C_p \, dT - nR\,dT + nR\,dT - V\,dP
 \]
-</li>
-<li><strong>Isothermal Process (\( dT = 0 \)):</strong>
 \[
-\Delta U = 0 \implies Q = W = nRT \ln\left(\frac{V_f}{V_i}\right)
+\boxed{n \, C \, dT = n \, C_p \, dT - V \, dP}
 \]
-</li>
-<li><strong>Adiabatic Process (\( dQ = 0 \)):</strong>
-\[
-Q = 0 \implies \Delta U = -W \implies W = -\Delta U = \frac{nR(T_i - T_f)}{\gamma - 1}
-\]
-</li>
-<li><strong>Cyclic Process (Returns to initial state):</strong>
-\[
-\Delta U_{\text{net}} = 0 \implies Q_{\text{net}} = W_{\text{net}}
-\]
-</li>
-</ul>
-</section>
-
-<section>
-<h2>Physical Consequences and Energy Conservation</h2>
-<p>
-The First Law reveals several fundamental characteristics of macroscopic physical systems:
-</p>
-<ol>
-<li><strong>Equivalence of Mechanical Work and Thermal Energy:</strong> Mechanical energy can be completely converted into heat (as established in Joule's mechanical equivalent of heat experiments).</li>
-<li><strong>Internal Energy as an Integrating Factor:</strong> Although neither \( dQ \) nor \( dW \) is an exact differential individually, their difference \( dQ - dW = dU \) is an exact differential of a true state function.</li>
-<li><strong>Limitation of the First Law:</strong> The First Law is strictly a balance sheet of energy. It asserts that energy must be conserved in any transformation, but it makes no prediction about whether a given process can occur spontaneously or which direction heat will flow. (This directional necessity requires the Second Law).</li>
-</ol>
-
+</div>
 <div class="insightbox">
-The First Law does not say which processes are physically possible in nature — it only states how energy must balance if a process does occur.
+Writing the First Law in these forms (\(nC_vdT + P\,dV\) or \(nC_pdT - VdP\)) does not convert \(\delta Q\) and \(\delta W\) into state functions.<br>
+The beauty of these differential forms is that they map energy transfers directly to measurable state variables (\(P, V, T\)).<br>
+However, to actually integrate these equations to find total heat or work, we still must know the specific thermodynamic path—for instance, a constraint equation like \(P = f(V)\).<br>
+Knowing this path equation allows us to integrate \(P\,dV\) and determine the specific value of \(C\) for the process.
 </div>
-
+</section>
+<section>
+<h2>Implications of the First Law</h2>
+<p>
+The First Law is generally written as \( \delta Q = dU + \delta W \). But there is another illuminating way to arrange it: 
+</p>
+<div class="math-block">
+\[
+dU = \delta Q - \delta W
+\]
+</div>
+<p>
+This form particularly highlights the role of Internal Energy as the bridging property of the system.
+</p>
+<p>
+Although neither \( \delta Q \) nor \( \delta W \) is an exact differential individually, their difference \( \delta Q - \delta W \) yields \( dU \), which is an exact differential of a true state function.
+</p>
+<p>
+Mathematically, this is analogous to the product rule in calculus: neither \(x\,dy\) nor \(y\,dx\) are exact differentials individually, but their combination is: \( \int x\,dy + \int y\,dx = \int d(xy) \). The First Law asserts that nature behaves in exactly this way with energy transfers.
+</p>
+<h3>Limitations of the First Law</h3>
+<p>
+The First Law is limited to a balance sheet of energy. It only guarantees that energy must be conserved in any transformation, but it makes zero predictions about whether a given process can occur spontaneously or in which direction heat will naturally flow.
+</p>
+<p>
+This limitation is crucial because our ultimate engineering goal in thermodynamics is to extract continuous mechanical work from heat. The First Law only guarantees we won't get more energy out than we put in. It doesn't tell us if we can do the reverse.
+</p>
+<p>
+For example: a pebble falls from a height \(h\) to the ground. Upon impact, its macroscopic mechanical energy is converted into microscopic internal energy, and its temperature rises from \(T_i\) to \(T_f\) . Now, what if we reverse this? If we take a pebble resting on the ground at \(T_i\) and heat it externally to \(T_f\), will it absorb that heat to spontaneously launch itself back up to height \(h\)?
+</p>
+<p>
+According to the First Law, this reverse process perfectly balances the energy-accounting. Yet, it never happens in nature.
+</p>
+<p>
+There is a hidden physical constraint dictating the allowed direction of energy transformations. Establishing this directional arrow of time requires the <strong>Second Law of Thermodynamics</strong>.
+</p>
+<div class="insightbox">
+We already know that mechanical work can be 100% converted into heat (as established in Joule's mechanical equivalent of heat experiments. e.g., through friction).<br>
+But can 100% of supplied heat be converted into mechanical work?<br>
+Technically, yes—during a single <strong>isothermal expansion</strong> of an ideal gas, \(\Delta U=0\), meaning \(Q=W\). The gas converts all absorbed heat into work.<br>
+However, to repeat the operation using the <strong>same working substance</strong>, we need a cyclic process. We cannot perpetuate a monotonic change in a state variable indefinitely.<br>
+Consider isothermal expansion: we expand the gas to 50 litres, 100 litres, 10,000 litres, and so on. We cannot keep expanding it to the Moon and beyond! Also, we could keep supplying fresh gas, but that would require a continuous material supply.<br>
+Hence, we need a cyclic process. Once the expansion is over, we must bring the same working substance back to its initial state to repeat the cycle.<br>
+This requires compression, which involves work done on the gas and, along the reverse isothermal path, rejection of heat to the surroundings.<br>
+For a cyclic engine, the working substance returns to its initial state after every cycle.<br>
+Therefore, the fact that \(Q=W\) during one isothermal expansion does not establish that all the heat supplied can be converted into net work over a complete cycle.<br>
+That question requires the Second Law.
+</div>
 <div class="examplebox">
 <h3>Solved Example: Application of the First Law</h3>
 <p>
 A sample of ideal gas expands from volume \( V_1 \) to \( V_2 \) while absorbing \( 500 \, \text{J} \) of heat. If the work done by the gas during this expansion is \( 320 \, \text{J} \), calculate the change in the internal energy of the gas and state whether its temperature increased or decreased.
 </p>
-<hr>
-<p><strong>Solution:</strong></p>
+<h3>Solution:</h3>
 <p>From the First Law of Thermodynamics:</p>
 \[
 \Delta U = Q - W = (+500 \, \text{J}) - (+320 \, \text{J}) = +180 \, \text{J}
@@ -193,14 +319,12 @@ A sample of ideal gas expands from volume \( V_1 \) to \( V_2 \) while absorbing
 <p>Since \( \Delta U > 0 \), and for an ideal gas \( \Delta U = n C_v \Delta T \), the positive internal energy change implies that \( \Delta T > 0 \). The temperature of the gas increases.</p>
 </div>
 </section>
-
 <section>
 <h2>Sub-Topics & Detailed Analysis</h2>
 <div class="chapter-list">
-<a href="./03a-molar-heat-capacities-and-mayer-relation.html">3a. Molar Heat Capacities & Mayer's Relation</a>
+<a href="./03a-molar-heat-capacities-and-mayer-relation.html">1. Mayer's Relation</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>
