@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Force, Momentum & Impulse | Second Law</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-second-law-and-momentum.html" class="back-btn">
+<span>&larr;</span> Back to Second Law
+</a>
+</nav>
+<h1>Force, Momentum & Impulse</h1>
+<p class="subtitle">
+Relation between Force, Momentum & Impulse.
+</p>
+<section>
+<h2>Impulse</h2>
+<p>
+Force is an <strong>instantaneous</strong> physical quantity. At every instant of time, it specifies the instantaneous rate at which the momentum of a body changes.
+</p>
+<p>
+In many situations, however, we are interested in the <strong>total change in momentum</strong> produced over a finite time interval rather than the instantaneous rate of change. This motivates the definition of another physical quantity called <strong>impulse</strong>.
+</p>
+<p>
+Impulse measures the cumulative effect of a force acting over a time interval. It is equal to the change in momentum produced by the force.
+</p>
+<div class="math-block">
+\[
+\vec{J}
+=
+\int \vec{F}\,dt
+=
+\Delta\vec{p}
+\]
+</div>
+<p>
+In many practical situations, the variation of force with time is not known, but the total change in momentum is known or can be measured. In such cases, we use the concept of <strong>average force</strong>, defined by
+</p>
+<div class="math-block">
+\[
+\vec{F}_{\text{avg}}
+=
+\frac{\Delta\vec{p}}{\Delta t}
+\]
+</div>
+<div class="insightbox">
+As Force is instantaneous, we can write \(\vec{F}\) as \(\vec{F}(t)\).<br>
+But impulse is accumulated and so we cannot define anything like instantaneous impulse or write \(\vec{J}\) as \(\vec{J}(t)\).<br>
+The difference is analogous to how velocity is instantaneous but displacement is accumulated.
+</div>
+<div class="examplebox">
+<h3>Illustration</h3>
+<p>
+A ball of mass \(m\) is projected vertically upward with speed \(u\). It returns to the point of projection with the same speed. Determine the change in momentum of the ball during the complete journey and hence calculate the force exerted by gravity.
+</p>
+<h3>Solution</h3>
+<p>
+Taking the upward direction as positive,
+</p>
+<p>
+Initial momentum:
+</p>
+\[
+\vec{p}_i=mu
+\]
+<p>
+Final momentum:
+</p>
+\[
+\vec{p}_f=-mu
+\]
+<p>
+The time of flight is
+</p>
+\[
+T=\frac{2u}{g}
+\]
+<p>
+Therefore, the change in momentum is
+</p>
+\[
+\Delta\vec{p}=\vec{p}_f-\vec{p}_i =(-mu)-(+mu) = -2mu
+\]
+<p>
+During the flight, the only force acting on the ball (neglecting air resistance) is gravity. Hence,
+</p>
+\[
+\vec{F}_g=\frac{\Delta\vec{p}}{\Delta t}=\frac{-2mu}{2u/g}=-mg
+\]
+<p>
+The negative sign indicates that both the change in momentum and the gravitational force are directed downward.
+</p>
+<p>
+Since gravity is constant throughout the motion, the average force over the entire time of flight is equal to the instantaneous gravitational force.
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
