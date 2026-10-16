@@ -19,15 +19,18 @@
 Weight, Normal, Tension.
 </p>
 <section>
-<h2>Forces in Dynamics</h2>
+<h2>Concept</h2>
 <p>
 Newton's Laws tell us <strong>how</strong> forces affect the motion of bodies.
 </p>
 <p>
-The next step is to study the common forces that repeatedly appear in mechanics problems.
+However, problems in dynamics are not direct formula related \(F_{\text{net}}=ma\) . Instead, they describe a physical situation, such as: "A book is kept on a table."
 </p>
 <p>
-In this chapter, we shall develop the physical understanding, direction, point of application and mathematical models of these forces.
+To solve such a problem, we first need to understand the physical situation and identify the forces acting on the book. For this, we study the common forces that repeatedly appear in mechanics problems.
+</p>
+<p>
+In this section, we develop an understanding of how these forces behave, including their <strong>magnitude, direction, point of application</strong>, and establish the mathematical models used to describe them.
 </p>
 <ul class="model-box">
 <li>Weight (Gravitational Force)</li>
@@ -37,74 +40,158 @@ In this chapter, we shall develop the physical understanding, direction, point o
 <li>Pseudo Force</li>
 </ul>
 <p>
-Spring force requires an understanding of elasticity, while pseudo force arises only in non-inertial frames of reference. Therefore, these two forces are discussed in later chapters.
+Spring force requires an understanding of elasticity, while pseudo force arises when motion is described from a non-inertial frame of reference. Therefore, these two forces are discussed in later sections. Friction is studied as a separate chapter.
 </p>
 <p>
-We first study the three forces that appear in almost every mechanics problem: <strong>weight</strong>, <strong>normal force</strong> and <strong>tension</strong>.
+We shall first study three forces that appear frequently in mechanics problems: <strong>weight</strong>, <strong>normal force</strong> and <strong>tension force</strong>.
 </p>
 </section>
 <section>
 <h2>Weight</h2>
 <p>
-Weight is the <strong>gravitational force</strong> exerted on a body by the Earth (or any other astronomical body) near its surface.
-</p>
-In general, the gravitational force between two bodies is given by
-\[
-F=G\frac{m_1m_2}{r^2}
-\]
-Every pair of massive bodies in the universe exerts gravitational force on each other. However, the gravitational force between two ordinary bodies is extremely small and is usually neglected in mechanics. Gravitational effects become appreciable when at least one of the bodies (or both) is an astronomical body such as the Earth, Moon or Sun.
-<p>
-It is a non-contact force arising from the <strong>gravitational interaction</strong>.
+Weight is the <strong>gravitational force</strong> exerted on a body by the Earth near its surface. However, weight is not specific to planet Earth.
 </p>
 <p>
-Every pair of massive bodies in the universe exerts gravitational force on each other. Consequently, every body is simultaneously attracted by the Earth, the Moon, the Sun and countless other astronomical bodies. However, when we speak of the <strong>weight</strong> of a body, we specifically refer to the gravitational force exerted by the <strong>dominant astronomical body</strong>. Near the Earth's surface, this dominant body is the Earth itself.
-</p>
-<p>
-Near the Earth's surface, the Earth's gravitational field is approximately uniform. Consequently, the weight of a body is given by
-</p>
-\[
-W = mg
-\]
-<p>
-where \(m\) is the mass of the body and \(g\) is the local acceleration due to gravity.
-</p>
-<p>
-Since the Earth's gravitational field is approximately uniform over ordinary distances, the resultant weight acts through the <strong>centre of mass</strong> of the body and is directed towards the centre of the Earth. As the Earth's curvature is negligible over small regions, this direction is simply referred to as <strong>vertically downward</strong>.
-</p>
-<p>
-In fact, the <strong>vertical direction</strong> is defined as the direction of the local gravitational field (weight). The <strong>horizontal direction</strong> is any direction perpendicular to the vertical.
+Later, in Gravitation Chapter, we study the idea of <strong>weight</strong> more generally. For example, when we ask for the weight of a body on the Moon, we refer to the gravitational force exerted on that body by the Moon near its surface.
 </p>
 <div class="insightbox">
 Mass is an intrinsic property of a body, whereas weight depends on the gravitational field in which the body is placed.<br>
-Consequently, the mass of a body remains unchanged, but its weight varies from one astronomical body to another.
+Consequently, the mass of a body remains unchanged when it is moved from one astronomical body to another, but its weight changes according to the local gravitational field.
 </div>
 <p>
-In everyday language, people often say, "My weight is 60 kg." Strictly speaking, <strong>60 kg is the mass</strong>. The corresponding weight on the Earth's surface is approximately <strong>60 kgf (kilogram-force)</strong> or about <strong>600 N</strong>.
+In general, the gravitational force of attraction between two bodies is given by Newton's law of universal gravitation:
+</p>
+\[
+F=G\frac{m_1m_2}{r^2}
+\]
+<p>
+Gravitational interaction is a <strong>non-contact interaction</strong>, meaning that bodies can exert gravitational forces on each other without physically touching. It acts through the gravitational field.
+</p>
+<p>
+Every pair of bodies, big or small, exerts gravitational force on each other. However, the gravitational force between two ordinary bodies is extremely small and is usually neglected in elementary mechanics problems.
+</p>
+<p>
+Gravitational effects become particularly significant when one or both bodies are astronomical objects such as the Earth, Moon or Sun, because of their enormous masses.
+</p>
+<p>
+Even at the Earth's surface, we are subject to the gravitational attraction of other astronomical bodies. The Earth, Moon, Sun and other massive objects all exert gravitational forces on us simultaneously.
+</p>
+<p>
+However, when we speak of the <strong>weight</strong> of a body, we refer to the gravitational force exerted by the <strong>dominant astronomical body</strong> near its surface. Near the Earth's surface, the Earth's gravitational attraction overwhelmingly dominates this description of weight.
+</p>
+<div class="insightbox">
+The Moon's gravitational force acts on us even while we are standing on the Earth's surface.<br>
+In fact, the Moon's gravity is a major cause of ocean tides.<br>
+Nevertheless, when we calculate our weight near the Earth's surface, we use the gravitational force exerted by the Earth, since it is the dominant astronomical body in this situation.
+</div>
+<p>
+Near the Earth's surface, the Earth's gravitational field is approximately uniform. Consequently, the magnitude of the weight of a body is given by:
+</p>
+\[
+W=mg
+\]
+<p>
+Here, \(m\) is the mass of the body and \(g\) is called as acceleration due to gravity. Over a small region near the Earth's surface, \(g\) is treated as constant.
+</p>
+<p>
+The standard value of \(g\) is taken as \(9.8\,\text{m/s}^2\). For simpler calculations, it is often approximated as \(10\,\text{m/s}^2\). In examination, do not use \(g=10\) unless explicitly mentioned.
+</p>
+<p>
+If the mass \(m\) of a body is known, then the weight of the body too is known as the value of \(g\) is expected to be known. Thus, we can calculate the magnitude of the weight of the body, which is the gravitational force exerted on it by the Earth.
+</p>
+<h3>Direction of Weight</h3>
+<p>
+The shape of the Earth is approximately spherical and so, the gravitational force that it exerts on a body near its surface is directed towards the Earth's centre.
+</p>
+<p>
+Over small regions near the Earth's surface, the curvature of the Earth is negligible.
+</p>
+<p>
+Therefore, the direction towards the Earth's centre is locally described as <strong>vertically downward</strong>, and the ground is approximated as a flat horizontal plane.
+</p>
+<p>
+In fact, the <strong>vertical direction</strong> itself is defined by the direction of the gravitational field. The <strong>horizontal direction</strong> is any direction perpendicular to the vertical.
+</p>
+<p>
+This definition has a direct consequence in problem solving. When drawing a force diagram, drawing the weight vector first is recommended because it establishes the <strong>vertical axis</strong> for the problem.
+</p>
+<p>
+Once the weight vector pointing "downwards" is drawn, the vertically downward direction is fixed for the problem. From that point on:
+</p>
+<ul  class="model-box">
+<li>If another force is known to act vertically upward (such as a string pulling straight up), it must be drawn in the exact opposite direction of the weight vector.</li>
+<li>If another force acts horizontally, it must be drawn perpendicular to the weight vector.</li>
+</ul>
+<p>
+By letting the weight vector anchor our coordinate system, we prevent geometry errors when aligning all other forces in the system.
+</p>
+<h3>Weight v/s Mass</h3>
+<p>
+In everyday language, people often say, "My weight is 60 kg."
+</p>
+<p>
+Strictly speaking, \(60\,\text{kg}\) is the mass.
+</p>
+<p>
+The corresponding weight near the Earth's surface is approximately \(600\,\text{N}\) (\(g \approx 10\,\text{m/s}^2\)).
+</p>
+<p>
+The corresponding gravitational force is also sometimes expressed as approximately \(60\,\text{kgf}\) (kilogram-force).
 </p>
 </section>
 <section>
 <h2>Normal and Tension</h2>
 <p>
-Normal Force and Tension Force are common in many ways.
+Normal Force and Tension Force are similar in many ways. Both are macroscopic manifestations of the microscopic interactions between the constituents of matter.
 </p>
 <p>
-Both are macroscopic manifestations of inter-molecular forces. 
+At the microscopic level, these interactions can produce both attraction and repulsion.
 </p>
 <p>
-Normal can only push and Tension can only pull. But inter-molecular forces sustain rigidity at both sides. They can push as well as pull. 
+They maintain the rigidity of solid bodies by resisting changes in the relative positions of their constituent atoms and molecules.
 </p>
 <p>
-Normal enforces the non-penetration (compression) constraint, while tension enforces the inextensibility (extension) constraint.
+However, the two forces behave differently at the macroscopic level. <strong>Normal force can only push, whereas tension can only pull.</strong>
 </p>
 <p>
-Both are such that their directions are determined by geometry. So, if geometry is fixed, their directions are fixed.
+The underlying microscopic interactions can sustain both effects, but the resulting normal and tension forces have different roles in mechanical constraints.
 </p>
 <p>
-Their magnitudes is determined by the requirement to sustain the constraint.
+Normal force enforces the <strong>non-penetration constraint</strong>: contacting solid bodies cannot interpenetrate.
+</p>
+<p>
+Tension force enforces the <strong>inextensibility constraint</strong>: the distance between the ends of an ideal taut string or rope remains constant.
+</p>
+<p>
+The directions of both forces are determined by geometry.
+</p>
+<p>
+A normal force acts along the normal to the contacting surfaces, whereas tension acts along the length of the taut string or rope.
+</p>
+<p>
+Therefore, when the geometry is fixed, the directions of these forces are fixed as well.
+</p>
+<p>
+Their magnitudes, however, are determined by the requirement to sustain the respective constraints, in accordance with the other forces acting on the system and its motion. 
+</p>
+<p>
+Thus, geometry only determines the direction, but does not determine the magnitude.
+</p>
+<p>
+This is the main difference between <strong>weight</strong> and <strong>normal and tension forces</strong>.
+</p>
+<p>
+For a body in a specified gravitational field, gravity determines both the magnitude and direction of its weight.
+</p>
+<p>
+In contrast, the geometry can determine only the directions of normal and tension forces, while their magnitudes depend on the mechanical constraints and the other forces involved.
+</p>
+<p>
+We study these forces in more detail as subsequent sub-topics.
 </p>
 </section>
 <section>
-<h2>Chapter Structure</h2>
+<h2>Sub-Topics</h2>
 <div class="chapter-list">
 <a href="./04a-normal.html">1. Normal Force</a>
 <a href="./04b-tension.html">2. Tension Force</a>
