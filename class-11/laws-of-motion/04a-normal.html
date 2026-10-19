@@ -23,42 +23,154 @@ Self Adjusting contact force for solid surfaces.
 <p>
 The normal force is a <strong>contact force</strong> exerted by a solid surface on a solid body in contact with it.
 </p>
+<h3>Origin and Direction of Normal Force</h3>
 <p>
-In mechanics, solid bodies are modelled as perfectly rigid bodies, while liquids and gases are modelled as fluids. To understand rigidity, compare a hard steel ball with wet clay. A steel ball does not appreciably deform under ordinary forces, whereas wet clay readily changes its shape.
+In mechanics, solid bodies are commonly modelled as perfectly rigid bodies, while liquids and gases are modelled as fluids.
 </p>
 <p>
-Consequently, two rigid bodies cannot interpenetrate. The normal force arises to enforce this <strong>non-penetration constraint</strong>.
+This is an idealisation: real solid bodies deform, but their deformation is negligible for the problems being studied.
 </p>
 <p>
-The word <strong>normal</strong> means <strong>perpendicular</strong>. Therefore, the normal force always acts along the <strong>common normal</strong> to the two surfaces at the point of contact.
+To understand rigidity, compare a hard steel ball with wet clay or dough. Under ordinary forces, the steel ball retains its shape, whereas wet clay readily changes its shape. In the rigid-body model, we treat the steel ball as a body whose shape does not change.
 </p>
 <p>
-The concept of the <strong>common normal</strong> is important. A normal is defined only when a unique tangent exists. In mathematics, a unique tangent requires the surface to be <strong>continuous and differentiable</strong> at the point of contact. If one of the contacting bodies ends abruptly or has a sharp edge, then a unique tangent—and hence a unique normal—is not defined there. In such cases, the common normal is determined by the other continuously smooth contacting surface. For example, when a ladder leans against a wall, the end of the ladder is not a smooth surface, whereas the wall is. Therefore, the normal force acts perpendicular to the wall.
+Consequently, two rigid bodies pushed against each other cannot interpenetrate. The normal force arises to enforce this <strong>non-penetration constraint</strong>.
 </p>
 <p>
-The normal force always <strong>pushes the two contacting bodies away from each other</strong>. It can push, but it can never pull.
+The word <strong>normal</strong> means perpendicular. Therefore, at the point of contact, the normal force acts along the <strong>common normal</strong> to the contacting surfaces.
 </p>
 <p>
-When a body is pressed against a surface, the atoms of the two bodies are brought extremely close together. The resulting electromagnetic interaction prevents the bodies from occupying the same space and gives rise to the normal force.
+The concept of the <strong>common normal</strong> is important because the direction of the normal force depends on the geometry of the contacting surfaces.
 </p>
 <p>
-The magnitude of the normal force is not fixed. Instead, it automatically adjusts itself according to the mechanical interaction between the two bodies.
+A classic example of common normal is a sphere on a flat surface. The normal is defined for the flat surface as well as for the sphere.
 </p>
 <p>
-In mechanics problems, its magnitude is often determined using constraint conditions. From the viewpoint of constraints, the normal force adjusts itself so as to enforce the <strong>non-penetration constraint</strong>.
+For a surface to have a defined normal, a defined tangent must exist at the point of contact. In the usual mathematical description of surfaces, this requires the surface to be continuous and differentiable there, with a well-defined tangent plane.
 </p>
 <p>
-Suppose a body approaches a surface along the common normal. At the instant contact is established, the normal interaction acts impulsively to eliminate the approaching relative velocity. Thereafter, while contact is maintained, the normal force continuously adjusts itself so that the contacting points do not accelerate into each other along the common normal.
+If one of the contacting bodies ends abruptly or has a sharp edge, a unique tangent to that body may not be defined at the contact point. In such a case, the common normal can be determined by the other contacting surface if that surface is smooth and its normal is well-defined.
 </p>
 <p>
-Thus, if \(u_A \neq u_B\) just before contact is established, the impulsive normal interaction acts so that \(v_A = v_B\) . Once contact has been established, the continuous normal force acts so that \(a_A = a_B\) . Here, \(A\) and \(B\) denote the contacting points on the two bodies, and all quantities are measured along the common normal.
+For example, when a ladder leans against a smooth wall, the end of the ladder may terminate abruptly at the point of contact. The wall, however, has a well-defined surface normal. Therefore, the normal force exerted by the wall on the ladder acts perpendicular to the wall.
 </p>
 <p>
-For example, if you press a marble against a rigid wall, the wall first exerts an impulsive normal force to stop the marble from moving into it. As you continue to push, the wall continuously exerts the required normal force to oppose your push and prevent penetration.
+The normal force always <strong>pushes the contacting bodies away from each other</strong>. It can push, but it can never pull. If maintaining contact would require the surface to pull the body towards itself, contact cannot be maintained by a normal force alone.
 </p>
+<h3>Microscopic Origin</h3>
+<p>
+Why does a surface exert a normal force at all?
+</p>
+<p>
+When a body is pressed against a surface, the atoms of the two bodies are brought extremely close together. The electromagnetic interactions between their constituent particles resist further compression and prevent the bodies from occupying the same space.
+</p>
+<p>
+The normal force that we observe at the macroscopic level is a manifestation of these microscopic interactions. The microscopic interactions can involve both attraction and repulsion, but the resulting macroscopic normal force pushes the contacting bodies apart.
+</p>
+<h3>Magnitude of Normal Force</h3>
+<p>
+Unlike weight, the magnitude of the normal force is not generally fixed by the properties of the body alone. It adjusts according to the mechanical situation and the requirement to maintain the non-penetration constraint.
+</p>
+<p>
+Consider pushing a rigid wall with your hand, perpendicular to its surface, with a force of \(100\,\text{N}\). The wall exerts an equal and opposite normal force of \(100\,\text{N}\) on your hand. If you push with \(200\,\text{N}\), the wall exerts a normal force of \(200\,\text{N}\), provided the wall remains rigid and the contact is maintained. The normal force is not restricted to some predetermined value; it responds to the interaction.
+</p>
+<p>
+In mechanics problems, the magnitude of the normal force is often determined using the <strong>constraint condition</strong>. The force takes the value required by the equations of motion and the condition that the contacting bodies do not interpenetrate.
+</p>
+<p>
+From the viewpoint of constraints, therefore, the normal force is a <strong>self-adjusting contact force</strong>. Its direction follows from the geometry of contact, while its magnitude follows from the mechanical requirements of the situation.
+</p>
+<h3>Normal Force and the Kinematic Constraint</h3>
+<p>
+Consider two bodies A and B whose surfaces remain in contact.
+</p>
+<p>
+Let \(\hat n\) be the common normal at the point of contact, and let \(\vec v_A\) and \(\vec v_B\) be the velocities of the material points instantaneously in contact.
+</p>
+<p>
+Since the bodies cannot interpenetrate, their relative velocity along the common normal must be zero while contact is maintained.
+</p>
+<p>
+Therefore, the normal components of their velocities must be equal:
+</p>
+<div class="math-block">
+\[
+\boxed{(\vec v_A-\vec v_B)\cdot\hat n=0}
+\]
+</div>
+<p>
+This is the <strong>velocity constraint</strong> associated with maintained contact.
+</p>
+<p>
+It restricts relative motion along the common normal, but does not, by itself, prevent the bodies from sliding relative to each other along the tangential direction.
+</p>
+<p>
+Notice that this constraint concerns the velocities of the contacting points, not necessarily the velocities of the bodies as a whole.
+</p>
+<p>
+For example, a wheel rolling on stationary ground has a material point instantaneously at rest at the contact, even though the wheel itself is moving.
+</p>
+<p>
+Also notice that as it concerns relative velocity, it is frame invariant. This is because its a geometric constraint.
+</p>
+<p>
+The corresponding acceleration relation must be derived from the contact geometry and the velocity constraint. We cannot generally conclude that the normal components of the contacting points' accelerations are equal.
+</p>
+</section>
+<section>
+<h2>Acceleration Constraint of Normal</h2>
+<p>
+The velocity constraint of normal is  given by:
+</p>
+\[
+(\vec v_A-\vec v_B)\cdot\hat n=0
+\]
+<p>
+To get the acceleration constraint, we need to differentiate w.r.t. time:
+</p>
+\[
+\frac{d((\vec v_A-\vec v_B)\cdot\hat n)}{dt}=0
+\]
+\[
+\frac{d(\vec v_A-\vec v_B)}{dt}\cdot\hat n + (\vec v_A-\vec v_B)\cdot\frac{d(\hat n)}{dt} = 0
+\]
+<p>
+The main issue which makes it extremely difficult is the term:
+</p>
+\[
+(\vec v_A-\vec v_B)\cdot\frac{d(\hat n)}{dt}
+\]
+<p>
+If the geometry is not fixed - in the sense that \(\hat n\) is not constant in time (surface is not flat planar), then it becomes unnecessarily complicated and not asked in exam.
+</p>
+<p>
+So, in exam, we are expected to solve using constraints for flat planar surfaces only where \(\hat n\) is constant and \(\frac{d(\hat n)}{dt} = 0\) .
+</p>
+<p>
+Now the acceleration constraint matches the velocity constraint. When \(\hat n\) is constant, we get:
+</p>
+\[
+\frac{d(\vec v_A-\vec v_B)}{dt}\cdot\hat n = 0
+\]
+<div class="math-block">
+\[
+\boxed{(\vec a_A-\vec a_B)\cdot\hat n=0}
+\]
+</div>
 <div class="insightbox">
-The constraint condition associated with the normal force is often sufficient to solve mechanics problems.<br>
-Many problems can be solved directly from the constraint without explicitly calculating the magnitude of the normal force.
+<strong>Calculus Warning: Instantaneous vs. Continuous Constraints</strong><br>
+What we are doing here is differentiating a velocity constraint to find the acceleration constraint.<br>
+This requires the velocity constraint to remain valid over a time interval for the kinematic quantities being differentiated.<br>
+So, this method of finding acceleration constraint is true only for problems involving a sustained contact of the points of contact.<br>
+Consider a <strong>rolling wheel</strong>. Even though the wheel as a whole remains in contact with the ground, but the point of the wheel touching the ground changes continuously.<br>
+Each such point follows the velocity constraint at the instant it touches the stationary ground, but then at the next immediate instant, it is no longer in contact.<br>
+Therefore, we <strong>cannot differentiate that instantaneous velocity constraint condition</strong> to conclude that the acceleration of the wheel's contact point is zero.<br>
+In fact, the point instantaneously at the bottom of a rolling wheel has an upward centripetal acceleration of magnitude \(v^2/R\).<br>
+This is why the simple acceleration constraint
+\[
+a_{A,N}=a_{B,N}
+\]
+is applicable to the usual point-particle or non-rotating, purely translating-body problems that have a sustained contact, but cannot be applied indiscriminately to rolling contact.
 </div>
 </section>
 <footer>
