@@ -19,24 +19,90 @@
 The principle of conservation of energy applied to an ideal flowing fluid.
 </p>
 <section>
+<h2>Energy Dynamics</h2>
+<p>
+The variations in \(P(x)\), \(A(x)\), \(h(x)\), and \(v(x)\) in steady streamline flow are related through energy dynamics and the conservation of mass.
+</p>
+<p>
+Bernoulli's equation expresses the energy relationship for flowing fluids and can be derived using the Work-Energy Theorem.
+</p>
+<p>
+In fluid statics, we introduced the pressure field as a localized description of the mechanical state of the fluid.
+</p>
+<p>
+Our main intention in fluid dynamics is to use the velocity field of steady streamline flow and the gravitational-height field to construct corresponding energy fields describing the mechanical energy of a fluid element.
+</p>
+<p>
+A fluid element in motion possesses kinetic energy. Since it is also located at a height \(h\), it possesses gravitational potential energy as well.
+</p>
+<p>
+We first construct a kinetic-energy field because velocity is already represented as a field. We similarly construct a gravitational-potential-energy field because height is already represented as a field. However, to construct these energy fields, we need the density of the fluid.
+</p>
+<p>
+The reason we need density is that mass is an extensive quantity, whereas a field provides a localized description. We associate a differential mass with a differential volume through:
+</p>
+<div class="math-block">
+\[
+dm=\rho(x)\,dV
+\]
+</div>
+<p>
+Since we are dealing with an incompressible fluid of uniform density, \(\rho(x)=\rho=\text{constant}\). We can therefore express kinetic energy locally using the velocity field and density:
+</p>
+<div class="math-block">
+\[
+\frac{dK}{dV}=\frac12\rho v^2
+\]
+</div>
+<p>
+The gravitational potential field has already been covered in the Work, Energy and Power chapter. Since the height field is already available, density similarly allows us to construct a gravitational-potential-energy field:
+</p>
+<div class="math-block">
+\[
+\frac{dU_g}{dV}=\rho gh
+\]
+</div>
+<p>
+We have already introduced the pressure field in fluid statics. In fluid dynamics, pressure also contributes to the energy balance through pressure work. The corresponding pressure-work contribution per unit volume is represented by \(P\), commonly called pressure energy per unit volume.
+</p>
+<div class="insightbox">
+Pressure energy is often hard to understand for a beginner student.<br>
+Consider water falling from a height in a steady, streamlined flow, vertically downward.<br>
+You do not need a pump for such a phenomenon.<br>
+As a matter of fact, water at a height is considered a natural source of energy and is used to drive turbines to generate electric power.<br>
+However, if we consider steady streamline flow in the reverse direction, we realise the importance of a pump.<br>
+A pump supplies energy to push water against gravity by creating the required pressure difference.<br>
+Our heart is a natural fluid pump that works continuously, and we have something called blood pressure.
+</div>
+<p>
+Thus, we consider three energy contributions in our description of a flowing fluid:
+</p>
+<ol class="model-box">
+<li><strong>Kinetic Energy</strong></li>
+<li><strong>Gravitational Potential Energy</strong></li>
+<li><strong>Pressure Energy</strong></li>
+</ol>
+<p>
+Since these contributions can be expressed locally per unit volume, a fluid element at a given position \(x=x_1\) has corresponding kinetic, gravitational-potential, and pressure-work contributions. Bernoulli's equation relates these contributions along a streamline.
+</p>
+</section>
+<section>
 <h2>Energy of a Flowing Fluid</h2>
 <p>
 A fluid in motion possesses three distinct forms of mechanical energy per unit volume:
 </p>
 <ol>
-<li>
-<strong>Kinetic Energy (per unit volume):</strong> Energy due to the macroscopic velocity \( v \) of the fluid. <br>
-\[ K.E. = \frac{1}{2} \rho v^2 \]
+<li><strong>Kinetic Energy (per unit volume):</strong> Energy due to the macroscopic velocity \( v \) of the fluid.
+\[
+K.E. = \frac{1}{2} \rho v^2
+\]
 </li>
-<li>
-<strong>Potential Energy (per unit volume):</strong> Gravitational potential energy due to the fluid's elevation \( h \) above a reference level. <br>
-\[ P.E. = \rho g h \]
+<li><strong>Potential Energy (per unit volume):</strong> Gravitational potential energy due to the fluid's elevation \( h \) above a reference level.
+\[
+P.E. = \rho g h
+\]
 </li>
-<li>
-<strong>Pressure Energy (per unit volume):</strong>
-Energy associated with the work done by pressure forces in moving a fluid element.
-<br>
-When a fluid element of volume \( dV \) is pushed by pressure \( P \), the work done is:
+<li><strong>Pressure Energy (per unit volume):</strong> Energy associated with the work done by pressure forces in moving a fluid element. When a fluid element of volume \( dV \) is pushed by pressure \( P \), the work done is:
 \[
 dW = P \, dV
 \]
@@ -48,7 +114,8 @@ Hence, the work done per unit volume is:
 </ol>
 <div class="insightbox">
 Pressure energy represents the work required for a fluid element to occupy space within a pressure field.<br>
-When a fluid element moves forward, the region ahead is already filled with fluid. To move into that region, it must push the existing fluid out. The surrounding fluid resists this motion by exerting pressure.<br>
+When a fluid element moves forward, the region ahead is already filled with fluid. To move into that region, it must push the existing fluid out.<br>
+The surrounding fluid resists this motion by exerting pressure.<br>
 Thus, pressure does work not by accelerating the fluid, but by enabling it to displace the fluid already present. This work per unit volume is equal to \( P \).<br>
 Reverse happens when a fluid element moves out of a pressure field. It is pushed out or ejected like gas blown out of a hole in balloon.<br>
 Thus, upstream ejection pressure does work to push fluid downstream against injection pressure.<br>
@@ -60,16 +127,13 @@ Thus, upstream ejection pressure does work to push fluid downstream against inje
 In 1738, Daniel Bernoulli derived a profound relationship describing fluids. By applying the Work-Energy Theorem to a steady, incompressible, and non-viscous (ideal) fluid flowing smoothly through a pipe, he found that the total mechanical energy is conserved along any given streamline.
 </p>
 <div class="model-box">
-<strong>Bernoulli's Equation</strong>
-<br><br>
+<strong>Bernoulli's Equation</strong><br>
 The sum of pressure energy, kinetic energy per unit volume, and potential energy per unit volume remains constant at all points along a streamline.
-<br><br>
 \[
 P + \frac{1}{2}\rho v^2 + \rho g h = \text{Constant}
 \]
-<br>
 Where:
-<ul>
+<ul class="model-box">
 <li>\( P \) is the absolute pressure at that point.</li>
 <li>\( \rho \) is the continuous fluid density.</li>
 <li>\( v \) is the fluid velocity.</li>

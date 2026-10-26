@@ -14,12 +14,10 @@
 <span>&larr;</span> Back to String Waves
 </a>
 </nav>
-
 <h1>Differential Wave Equation & Kinematics</h1>
 <p class="subtitle">
 Mathematical formulation of one-dimensional traveling waves, wave equation derivation, and particle kinematics.
 </p>
-
 <section>
 <h2>General Mathematical Form of a 1D Traveling Wave</h2>
 <p>
@@ -54,13 +52,96 @@ v = \frac{\text{Coefficient of } t}{\text{Coefficient of } x} = \frac{\omega}{k}
 \]
 </div>
 </section>
+<section>
+<h2>Sign of wt and kx</h2>
+<p>
+The sign of \(\omega\) and \(k\) determine if the wave is moving towards +x or -x.
+</p>
+\[
+y(x, t) = A\,\sin(\omega t - kx)
+\]
+<p>
+Here \(\omega\) and \(k\) are opposite signs and so wave is moving towards +x.
+</p>
+<p>
+But what if at t = 0, the first particle started oscillation from down with phase difference of pi.
+</p>
+\[
+y(x, t) = A\,\sin(\omega t - kx + \pi) = A\,\sin(-\omega t + kx) 
+\]
+<p>
+Thus, the condition for +x travelling is that \(\omega\) and \(k\) should have opposite signs. It does not matter which is negative and which is positive.
+</p>
+</section>
+
+<section>
+  <h2>Sign of \(\omega t\) and \(kx\)</h2>
+
+  <p>
+    The direction of wave propagation is determined by how the
+    phase changes with position and time. Consider the wave
+  </p>
+
+  \[
+  y(x,t)=A\sin(\omega t-kx)
+  \]
+
+  <p>
+    For a point of constant phase,
+  </p>
+
+  \[
+  \omega t-kx=C
+  \]
+
+  <p>
+    Differentiating with respect to time gives
+  </p>
+
+  \[
+  v_{\text{wave}}=\frac{dx}{dt}=\frac{\omega}{k}
+  \]
+
+  <p>
+    Therefore, when \(\omega\) and \(k\) have the same sign,
+    the wave travels towards \(+x\). When they have opposite
+    signs, the wave travels towards \(-x\).
+  </p>
+
+  <p>
+    But what if the first particle starts oscillating downward
+    instead of upward? This corresponds to an initial phase
+    difference of \(\pi\).
+  </p>
+
+  \[
+  \begin{aligned}
+  y(x,t)
+  &=A\sin(\omega t-kx+\pi)\\
+  &=A\sin(-\omega t+kx)\\
+  &=A\sin(kx-\omega t)
+  \end{aligned}
+  \]
+
+  <p>
+    The wave still travels towards \(+x\). The phase difference
+    changes the initial state of oscillation, not the direction
+    of propagation.
+  </p>
+
+  <p>
+    <strong>Key insight:</strong> The direction of propagation
+    is determined by the relative signs of the time and position
+    terms in the phase. Changing the initial phase by a constant
+    does not change the direction of propagation.
+  </p>
+</section>
 
 <section>
 <h2>Conditions for a Function to Represent a Traveling Wave</h2>
 <p>
 Not every mathematical function of the form \( f(ax \pm bt) \) represents a physically acceptable wave pulse. For a function to describe a real, physical wave on a string, it must satisfy three rigorous conditions:
 </p>
-
 <div class="concept-box">
 <ol>
 <li><strong>Single-Valued:</strong> At any point \( x \) and time \( t \), the displacement \( y(x,t) \) must have one and only one unique value (a piece of string cannot be in two places simultaneously).</li>
@@ -68,7 +149,6 @@ Not every mathematical function of the form \( f(ax \pm bt) \) represents a phys
 <li><strong>Continuous and Differentiable:</strong> The partial derivatives \( \frac{\partial y}{\partial x} \) (slope) and \( \frac{\partial y}{\partial t} \) (particle velocity) must exist, be continuous, and be finite at all points.</li>
 </ol>
 </div>
-
 <div class="examplebox">
 <h3>Example: Evaluating Valid Wave Functions</h3>
 <p><strong>Case A:</strong> \( y(x,t) = \frac{4}{(2x - 3t)^2 + 5} \)</p>
@@ -84,13 +164,11 @@ Not every mathematical function of the form \( f(ax \pm bt) \) represents a phys
 </p>
 </div>
 </section>
-
 <section>
 <h2>The Differential Wave Equation</h2>
 <p>
 The fundamental partial differential equation governing all classical non-dispersive wave phenomena in one dimension is known as the <strong>Linear Wave Equation</strong>.
 </p>
-
 <h3>Mathematical Derivation from Wave Profile</h3>
 <p>
 Let \( y(x,t) = f(u) \), where \( u = x - vt \). Applying the multivariable chain rule:
@@ -127,13 +205,11 @@ Substituting \( f''(u) = \frac{\partial^2 y}{\partial x^2} \) into the second ti
 Any physical disturbance \( y(x,t) \) that satisfies this linear second-order partial differential equation represents a valid wave propagating with speed \( v \). Because the equation is linear, it satisfies the <strong>Principle of Superposition</strong>: if \( y_1 \) and \( y_2 \) are solutions, then \( y = c_1 y_1 + c_2 y_2 \) is also an exact solution.
 </div>
 </section>
-
 <section>
 <h2>Wave Velocity vs Particle Velocity & Acceleration</h2>
 <p>
 A critical source of conceptual confusion in wave mechanics is the distinction between the motion of the wave and the motion of individual medium particles:
 </p>
-
 <table>
 <thead>
 <tr>
@@ -186,7 +262,6 @@ a_p = \frac{\partial^2 y}{\partial t^2}
 </tbody>
 </table>
 </section>
-
 <section>
 <h2>Slope Relation for Particle Velocity: vp = -v (dy/dx)</h2>
 <p>
@@ -215,7 +290,6 @@ v_p = -v \left(\frac{\partial y}{\partial x}\right) \quad \text{(For wave moving
 v_p = +v \left(\frac{\partial y}{\partial x}\right) \quad \text{(For wave moving in } -x\text{)}
 \]
 </div>
-
 <div class="diagram">
 <svg width="720" height="220" viewBox="0 0 720 220">
   <defs>
@@ -252,7 +326,6 @@ v_p = +v \left(\frac{\partial y}{\partial x}\right) \quad \text{(For wave moving
   <text x="190" y="110" font-size="12" font-weight="bold" fill="#ef4444">Slope &gt; 0 &rArr; v_p &lt; 0 (Down)</text>
 </svg>
 </div>
-
 <div class="insightbox">
 <strong>Physical Rule of Thumb:</strong>
 For a wave moving to the right (\(+x\)):

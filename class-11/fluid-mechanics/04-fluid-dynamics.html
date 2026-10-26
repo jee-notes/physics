@@ -18,45 +18,110 @@
 <p class="subtitle">
 The study of fluids in motion, analyzing flow patterns and the conservation of mass.
 </p>
-
 <section>
-<h2>Types of Fluid Flow</h2>
+<h2>Fluid Dynamics</h2>
 <p>
-Fluid dynamics analyzes fluid motion by tracking variables like pressure and velocity at every point in space as time progresses. The complexity of actual fluid flow is immense, but we typically classify flow into distinct regimes.
+Fluid dynamics is the study of fluids in motion. By motion, we mean that fluid elements move relative to one another within the fluid bulk. Simply put, it is the study of flowing water.
 </p>
-<ol>
-    <li><strong>Steady Flow:</strong> The velocity of the fluid particles at any given point does not change with time.</li>
-    <li><strong>Unsteady Flow:</strong> The velocity at any given point changes with time.</li>
-    <li><strong>Incompressible Flow:</strong> The density of the fluid remains constant everywhere. This is an excellent approximation for most liquids and even for gases at low speeds (subsonic).</li>
-    <li><strong>Irrotational Flow:</strong> The fluid does not possess net angular momentum about any point. A small paddle wheel placed in the fluid would translate without spinning.</li>
+<p>
+Real fluid flow can be extremely complex to model mathematically, so we begin with simplified cases in our syllabus. This is similar to neglecting air resistance when studying kinematics.
+</p>
+<p>
+We initially consider <strong>steady-state flow</strong>. We studied the idea of steady state in the conduction of thermal current. It essentially means that the parameters we track may vary in space, but they do not change with time at any fixed point.
+</p>
+<p>
+Thus, if we take a snapshot at time \(t=t_1\) and another at time \(t=t_2\), the spatial distributions of the parameters remain the same.
+</p>
+<p>
+We begin by considering <strong>steady streamline flow</strong>. This is our first simplifying assumption.
+</p>
+<p>
+We describe the motion using a velocity field. In steady streamline flow, the velocity at any fixed position does not change with time. Thus, fluid elements passing through the same position at different times have the same velocity.
+</p>
+<p>
+We will explain streamline flow in detail later. For now, we use this assumption to simplify our study of fluid motion.
+</p>
+<p>
+We now introduce four variables that describe the flow and are related to one another through different physical principles:
+</p>
+<ol class="model-box">
+<li><strong>Height:</strong> Height is a purely geometrical variable. It specifies the elevation of a fluid-element relative to a chosen reference level. Height differences drive fluid flow along the vertical.</li>
+<li><strong>Velocity:</strong> We describe the motion of the fluid using a velocity field. Under our steady-flow assumption, the velocity at a fixed position does not change with time. We will study streamlined flow in detail later.</li>
+<li><strong>Area:</strong> We consider the cross-sectional area of flow, measured on a surface perpendicular to the direction of flow. In one-dimensional steady streamline flow, each cross-section is treated as isobaric, and pressure is represented by a single value for that cross-section. In a pipe completely filled with fluid, the flow area equals the internal cross-sectional area of the pipe.</li>
+<li><strong>Pressure:</strong> Each cross-sectional flow area is isobaric and pressure may vary from one cross-section to another in liquid flow. This pressure gradient along the flow may also drive fluid flow.</li>
 </ol>
 </section>
-
+<section>
+<h2>1D Steady Streamline Flow</h2>
+<p>
+In our exam syllabus, we primarily study the 1D steady streamline-flow model in fluid dynamics.
+</p>
+<p>
+This is similar to the 1D models used in thermal conduction and elasticity.
+</p>
+<p>
+Actual fluid flow is immensely complex, so we simplify its description by introducing different assumptions:
+</p>
+<ol class="model-box">
+<li><strong>Steady Flow:</strong> The velocity at any fixed position does not change with time. Thus, the velocity field remains unchanged as time progresses.</li>
+<li><strong>Incompressible Flow:</strong> The density of the fluid is treated as constant. This is a good approximation for liquids and can also be valid for gases at sufficiently low speeds.</li>
+<li><strong>Irrotational Flow:</strong> Fluid elements have zero local angular velocity as they move with the flow. A small paddle wheel carried by the fluid would translate without spinning due to local rotation.</li>
+<li><strong>1D Flow:</strong> The flow is described using a single spatial coordinate \(x\) measured along the flow. The four variables we track are represented as functions of this coordinate:
+\[
+P=P(x)\qquad v=v(x)\qquad A=A(x)\qquad h=h(x)
+\]
+As we are dealing with fields, these variables are space dependent and a single co-ordinate represents the changing space.</li>
+</ol>
+<div class="insightbox">
+Here, 1D refers to the use of a single spatial coordinate to describe the flow variables.<br>
+It does not mean that the flow must be confined to a straight line.<br>
+Even if a streamline is curved in 2D or 3D space, we can describe positions along it using a single coordinate, such as the distance \(s\) measured along the streamline.
+</div>
+</section>
 <section>
 <h2>Streamline and Turbulent Flow</h2>
 <p>
-A <strong>streamline</strong> is a continuous curve drawn in a fluid such that the tangent to it at any point provides the instantaneous direction of fluid velocity at that point. By definition, no two streamlines can ever cross; if they did, a particle at the intersection would have two different velocities simultaneously, which is physically impossible.
+A <strong>streamline</strong> is a continuous curve drawn in a fluid such that the tangent to it at any point gives the instantaneous direction of fluid velocity at that point. 
 </p>
-<div class="concept-box">
-<strong>Streamline (Laminar) Flow</strong><br>
-When the flow is steady, the paths of the fluid particles exactly follow the streamlines. The fluid flows in smooth, distinct layers (laminas) that never mix. This occurs at relatively low velocities.
-</div>
-<div class="concept-box">
-<strong>Turbulent Flow</strong><br>
-When the velocity exceeds a certain critical threshold, the flow loses its orderly structure. Eddies and chaotic vortices appear. The motion becomes highly unpredictable and dissipative. The streamlines are constantly breaking, crossing, and reforming.
+<p>
+Two streamlines cannot cross at a point where the velocity is well-defined and non-zero. Otherwise, the fluid velocity at their intersection would have two different directions simultaneously.
+</p>
+<p>
+<strong>Streamline (Laminar) Flow:</strong> In steady flow, the streamlines remain fixed in space, and fluid particles follow these streamlines. The flow is orderly, with adjacent layers moving smoothly relative to one another. Such flow commonly occurs at relatively low speeds, depending on the flow conditions.
+</p>
+<p>
+<strong>Turbulent Flow:</strong> The flow becomes irregular, with fluctuating velocities, eddies and vortices. The motion becomes more difficult to predict and involves enhanced mixing and energy dissipation. Instantaneous streamlines can still be drawn, but their patterns change with time. They do not literally cross one another at a point where the velocity is well-defined.
+</p>
+<p>
+To understand steady streamline flow, imagine an eight-lane expressway carrying continuous traffic. Suppose vehicles cannot change lanes and all vehicles entering a particular lane have the same initial speed, say \(50\,\text{km/h}\). Also, every vehicle in that lane experiences the same acceleration pattern along the road.
+</p>
+<p>
+For example, suppose the acceleration is \(1\,\text{km/h}^2\). A vehicle that has travelled for two hours will have a speed of \(52\,\text{km/h}\). As every vehicle experiences the same motion from entry, each vehicle reaches the same location after the same elapsed travel time and has the same speed there.
+</p>
+<p>
+The vehicles do not all reach that location simultaneously. They pass it one after another, but each has the same speed at that point. This illustrates the idea of a steady velocity field: the velocity at a fixed position remains unchanged with time.
+</p>
+<p>
+Note that the velocity field can be a 1D field even if the lane is not a straight line. We need only one coordinate, such as the distance \(s\) measured along the lane from the entry point, to describe the field. The speed can be written as \(v=v(s)\), while the direction of velocity at each point is given by the tangent to the lane.
+</p>
+<div class="insightbox">
+The traffic lanes provide an analogy for streamlines.<br>
+In steady streamline flow, different fluid elements pass through the same position at different times, but the velocity at that position remains the same.
 </div>
 </section>
-
 <section>
 <h2>Equation of Continuity</h2>
 <p>
 The Equation of Continuity is the mathematical expression of the <strong>Conservation of Mass</strong> for fluid flow. 
 </p>
 <p>
-Consider a steady, incompressible fluid flowing through a pipe of varying cross-sectional area. Let \( A_1 \) and \( A_2 \) be the cross-sectional areas at two different points, and let \( v_1 \) and \( v_2 \) be the fluid velocities at those respective points.
+Consider a steady, incompressible fluid flowing through a pipe of varying cross-sectional area - i.e. \(A(x)\).
 </p>
 <p>
-Because mass cannot be created or destroyed, the mass of fluid entering section 1 per unit time must precisely equal the mass of fluid exiting section 2 per unit time. 
+Let \( A_1 = A(x_1)\) and \( A_2  = A(x_2)\) be the cross-sectional areas at two different points, and let \( v_1 = v(x_1)\) and \( v_2 = v(x_2)\) be the fluid velocities at those respective points.
+</p>
+<p>
+Because mass cannot be created or destroyed, the mass of fluid entering at \(x = x_1\) per unit time must precisely equal the mass of fluid exiting at \(x = x_2\) per unit time. 
 </p>
 \[
 \frac{\Delta m_1}{\Delta t} = \frac{\Delta m_2}{\Delta t} \implies \rho A_1 v_1 = \rho A_2 v_2
@@ -64,24 +129,22 @@ Because mass cannot be created or destroyed, the mass of fluid entering section 
 <p>
 For an incompressible fluid, density \( \rho \) is constant and cancels out.
 </p>
-<div class="model-box">
-<strong>Equation of Continuity</strong>
-<br><br>
+<h3>Equation of Continuity</h3>
+<div class="math-block">
 \[
 A_1 v_1 = A_2 v_2 \implies A \cdot v = \text{Constant}
 \]
-<br>
-Where:
-<ul>
-    <li>\( A \) is the cross-sectional area of the flow.</li>
-    <li>\( v \) is the instantaneous velocity of the fluid.</li>
-</ul>
 </div>
+<ul class="model-box">
+<li>\( A \) is the cross-sectional area of the flow.</li>
+<li>\(v\) is the representative flow speed normal to the cross-section in the one-dimensional model.</li>
+</ul>
 <div class="insightbox">
-The product \( A \cdot v \) is the <strong>Volume Flow Rate</strong> (or discharge), historically denoted by \( Q \). Its SI unit is \( \text{m}^3\text{s}^{-1} \). The Continuity Equation physically implies that where the pipe narrows, the fluid must speed up to prevent a back-up of mass.
+The product \( A \cdot v \) is the <strong>Volume Flow Rate</strong> (or discharge), historically denoted by \( Q \).<br>
+Its SI unit is \( \text{m}^3\text{s}^{-1} \).<br>
+The Continuity Equation physically implies that where the pipe narrows, the fluid must speed up to prevent a back-up of mass.
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

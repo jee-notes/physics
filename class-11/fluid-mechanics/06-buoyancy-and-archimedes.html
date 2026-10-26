@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buoyancy & Archimedes' Principle | Fluid Mechanics</title>
+<title>Buoyancy | Fluid Mechanics</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,107 +14,183 @@
 <span>&larr;</span> Back to Fluid Mechanics
 </a>
 </nav>
-<h1>Buoyancy and Archimedes' Principle</h1>
+<h1>Buoyancy</h1>
 <p class="subtitle">
 Understanding exactly why massive ships float but dense coins sink.
 </p>
 <section>
 <h2>Buoyant Force</h2>
 <p>
-When a body is partially or fully immersed in a fluid, the surrounding fluid exerts pressure forces on its surface.
+When a body is partially or fully dipped in a fluid, the surrounding fluid exerts pressure forces on its surface.
 </p>
 <p>
-At every point on the surface, the force due to the fluid is perpendicular to the surface and equal to the local pressure multiplied by the area.
+At every differential area \(dA\) of the immersed surface of the body, the force due to the surrounding fluid acts perpendicular to the surface and has magnitude equal to the local pressure multiplied by the area.
+</p>
+\[
+dF = P\,dA
+\]
+<p>
+The resultant of all these contact forces is called the <strong>force of buoyancy or buoyant force (\(F_B\))</strong>.
 </p>
 <p>
-Since pressure increases with depth, the force acting on the bottom surface of the object is greater than the force acting on the top surface.
-</p><p>
-The horizontal components of pressure forces cancel out due to symmetry. However, the vertical components do not cancel.
+Since pressure increases with depth, the pressure forces acting on the lower surface of the object push harder than those acting on the upper surface of the object.
+</p>
+<p>
+The horizontal components of the pressure forces cancel in the resultant over the closed surface. However, the vertical components do not cancel.
 </p>
 <p>
 This imbalance of pressure forces results in a net upward force on the object.
 </p>
 <p>
-The resultant of all these pressure forces is called the <strong>buoyant force (\( F_B \))</strong>.
+Some common natural phenomena that demonstrate this principle are:
 </p>
-<div class="insightbox">
-Buoyancy is not a separate force — it is the resultant of pressure forces acting over the surface of the object.
-</div>
 <ul class="model-box">
 <li>A body immersed in water appears lighter</li>
 <li>Objects less dense than the fluid float</li>
 <li>A helium-filled balloon rises in air</li>
 </ul>
+<div class="concept-box">
+Buoyant force is the resultant force of pressure forces acting over the surface of a body immersed in a fluid.<br>
+Its direction is opposite to the direction of increasing pressure (the pressure gradient).
+</div>
 </section>
 <section>
 <h2>Archimedes' Principle</h2>
 <p>
-The magnitude of the buoyant force can be obtained by summing (integrating) the pressure forces over the surface of the object.
+Archimedes' principle provides a direct way to calculate the net buoyant force on a submerged body without explicitly summing or integrating all the pressure forces over its surface in every problem.
 </p>
-<div class="concept-box">
-<strong>Archimedes' Principle</strong><br>
-When a body is partially or completely immersed in a fluid at rest, it experiences an upward buoyant force equal to the weight of the fluid displaced.
-</div>
-<br>
+<p>
+Before stating Archimedes' principle, we will describe a common experiment that demonstrates it.
+</p>
+<p>
+Take a beaker of water and fill it to the brim. Place the beaker in a dish to collect the overflowing water. Suspend an iron ball from a spring balance. Suppose its weight in air is \(2\,\text{kgf}\). Now immerse the iron ball fully in the beaker without allowing it to touch the beaker. Collect the overflowed water.
+</p>
+<p>
+Suppose the spring balance reads \(1.5\,\text{kgf}\) when the iron ball is submerged. The reduction in its apparent weight is \(0.5\,\text{kgf}\).
+</p>
+<p>
+This means that the buoyant force acting on the iron ball is \(0.5\,\text{kgf}\).
+</p>
+<p>
+We will observe that the mass of the displaced water is \(0.5\,\text{kg}\), corresponding to a weight of \(0.5\,\text{kgf}\). Thus, the buoyant force is equal to the weight of the overflowed water.
+</p>
+<p>
+We call the overflowed water <strong>displaced water</strong> because, before the iron ball was immersed, this water occupied the volume now occupied by the ball inside the fluid bulk. The ball takes the place of that volume of water, which is consequently displaced.
+</p>
+<p>
+<strong>Archimedes' Principle:</strong> When a body is partially or completely immersed in a fluid at rest, it experiences an upward buoyant force equal in magnitude to the weight of the fluid displaced.
+</p>
 \[
-\vec{F}_B = \rho_{\text{fluid}} V_{\text{submerged}} g
+F_B=m_dg
 \]
 <ul class="model-box">
-<li>\( \rho_{\text{fluid}} \): density of the fluid</li>
-<li>\( V_{\text{submerged}} \): volume of fluid displaced</li>
-<li>\( g \): acceleration due to gravity</li>
+<li>\(F_B\): Magnitude of the buoyant force</li>
+<li>\(m_d\): Mass of the fluid displaced</li>
+<li>\(g\): Magnitude of gravitational acceleration</li>
 </ul>
-<div class="insightbox">
-The buoyant force depends only on the fluid and the volume of fluid displaced. It is independent of the material, shape, or mass of the object.
-</div>
-<div class="insightbox">
-Archimedes’ principle is a direct consequence of pressure variation with depth. The net pressure force over the surface equals the weight of the displaced fluid.
-</div>
-</section>
-<section>
-<h2>Laws of Floatation</h2>
 <p>
-The motion of an object in a fluid is determined by the balance between its weight and the buoyant force.
+The formula gives only the magnitude of the buoyant force. Its direction is upward, opposite to the direction of gravitational acceleration.
 </p>
+<p>
+The formula involving the mass of displaced fluid is not generally the most convenient form for solving problems, because problems often provide density and volume information.
+</p>
+\[
+m_d=\rho_{\text{fluid}}V_{\text{submerged}}
+\]
 <ul class="model-box">
-<li><strong>Sinking (\( W > F_B \)):</strong> Object is denser than fluid</li>
-<li><strong>Neutral Suspension (\( W = F_B \)):</strong> Densities are equal</li>
-<li><strong>Floating (\( W = F_B \), partial immersion):</strong> Object is less dense than fluid</li>
+<li>\(\rho_{\text{fluid}}\): Density of the fluid</li>
+<li>\(V_{\text{submerged}}\): Volume of the body submerged, equal to the volume of fluid displaced</li>
 </ul>
 <p>
-For a floating object:
+This form is particularly useful in tougher problems because it combines two ideas. The first is the density relation \(m=\rho V\), and the second is the understanding that
 </p>
 \[
-\rho_{\text{obj}} V_{\text{total}} g = \rho_{\text{fluid}} V_{\text{submerged}} g
+V_{\text{submerged body}}=V_{\text{fluid displaced}}
 \]
-\[
-\frac{V_{\text{submerged}}}{V_{\text{total}}} = \frac{\rho_{\text{obj}}}{\rho_{\text{fluid}}}
-\]
-</section>
-<section>
-<h2>Apparent Weight</h2>
 <p>
-When an object is immersed in a fluid, the buoyant force reduces the net force experienced by the object.
+Using these two ideas, we write Archimedes' principle as:
 </p>
+<div class="math-block">
 \[
-W_{\text{app}} = W_{\text{true}} - F_B
+\boxed{F_B=\rho_{\text{fluid}}V_{\text{submerged}}g}
 \]
-\[
-W_{\text{app}} = (\rho_{\text{obj}} - \rho_{\text{fluid}})\, V g
-\]
-<div class="insightbox">
-Apparent weight is the result of partial cancellation of gravity by buoyancy.
 </div>
+<div class="insightbox">
+Notice that the density belongs to the fluid, whereas the volume belongs to the submerged part of the body. Why?<br>
+We are calculating the mass of the displaced fluid, so we must use the density of the fluid.<br>
+However, the volume of fluid displaced is equal to the volume of the body submerged in the fluid.<br>
+Thus, the density comes from the fluid, while the volume comes from the submerged body.<br>
+This is the key step in converting the mass-based form of Archimedes' principle into its density-volume form.
+</div>
+<div class="insightbox">
+The buoyant force depends on the fluid density and the volume of fluid displaced.<br>
+For a given displaced volume, it is independent of the material, mass, shape or orientation of the immersed object.<br>
+For example, take a cube of wood and a cube of iron having the same volume.<br>
+If both are fully immersed in the same  fluid, they experience the same buoyant force, even though their masses and densities are different.<br>
+When released, however, the wood has a tendency to rise while the iron has a tendency to sink, because their own densities differ.<br>
+The buoyant force on them is the same initially, but their weights are different.<br>
+The wood rises until it floats with partial immersion, whereas the iron sinks.
+</div>
+</section>
+<section>
+<h2>Working Behind Archimedes</h2>
 <p>
-For a floating object, the buoyant force exactly balances the weight, and the apparent weight becomes zero.
+The buoyant force does not depend on the shape of the object. A cube or a sphere of equal volume, when fully submerged in the same fluid, experiences the same buoyant force.
+</p>
+<p>
+The buoyant force does not depend on orientation either. A cylinder submerged vertically experiences the same buoyant force as when it is submerged horizontally, provided the submerged volume remains the same.
+</p>
+<p>
+The buoyant force does not depend on the mass or material of the object. This was already illustrated in the previous example involving a cube of iron and a cube of wood having the same volume.
+</p>
+<p>
+How does this work? It works because the buoyant force is exerted by the surrounding fluid bulk. And, this bulk has no idea what object has been submerged in it!
+</p>
+<p>
+We can imagine that the volume now occupied by the object was previously occupied by the displaced fluid.
+</p>
+<p>
+The surrounding fluid exerts pressure forces on the boundaries of this volume just as it did before the object was inserted.
+</p>
+<p>
+If that volume were still occupied by the fluid, the resultant pressure force would have to balance the gravitational force acting on that fluid, since the fluid is in equilibrium.
+</p>
+<p>
+When the object occupies that same volume, the surrounding fluid exerts the pressure forces on the object's surface. Their resultant is the buoyant force.
+</p>
+<p>
+Therefore, the buoyant force equals the weight of the fluid displaced.
+</p>
+<div class="insightbox">
+The surrounding fluid does not need to know the material, mass or shape of the immersed object.<br>
+The buoyant force is determined by the pressure forces over the displaced volume.<br>
+This is the physical reasoning behind Archimedes' principle.
+</div>
+</section>
+<section>
+<h2>Center of Buoyancy</h2>
+<p>
+We have studied that the magnitude of buoyant force depends on the density of the fluid and the volume of fluid displaced. For a given displaced volume, it is independent of the material, mass, and shape of the immersed body.
+</p>
+<p>
+However, to study the torque due to buoyancy, we need to determine the effective line of action of the buoyant force.
+</p>
+<p>
+The point through which the resultant buoyant force acts is called the <strong>center of buoyancy</strong>.
+</p>
+<p>
+For a fluid of uniform density, the center of buoyancy is the geometric centroid of the volume of fluid displaced. Equivalently, it is the centroid of the submerged volume
+occupied by the body.
+</p>
+<p>
+The geometric centroid of a volume coincides with its center of mass when mass is distributed uniformly throughout that volume.
 </p>
 </section>
 <section>
-<h2>Applications</h2>
+<h2>Sub-Topics</h2>
 <div class="chapter-list">
 <a href="./06a-level-change.html">1. Change of Level</a>
 <a href="./06b-alloy-purity.html">2. Alloy Purity</a>
-
 </div>
 </section>
 <footer>

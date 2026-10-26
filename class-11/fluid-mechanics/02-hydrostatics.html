@@ -19,9 +19,9 @@
 Continuum of Scalar Fields
 </p>
 <section>
-<h2>What Hydrostatic Means?</h2>
+<h2>What does Hydrostatics Mean?</h2>
 <p>
-Fluid mechanics is broadly divided into two regimes based on whether the fluid is in motion or not:
+Fluid mechanics is broadly divided into two sub-topics based on whether the fluid is at rest or in motion:
 </p>
 <ul class="model-box">
 <li><strong>Fluid Statics:</strong> Study of fluids at rest</li>
@@ -31,73 +31,104 @@ Fluid mechanics is broadly divided into two regimes based on whether the fluid i
 The term <strong>hydrostatic</strong> specifically refers to fluids that are at rest.
 </p>
 <p>
-"Rest" here means that there is no relative motion between different parts of the fluid. The entire fluid may be moving as a whole (like water in a moving container), but as long as there is no internal flow, it is treated as static.
+For now, think of rest in the familiar sense of still water, as opposed to flowing water.
+</p>
+<p>
+The fluid and its container may move together as a whole, without the fluid flowing relative to the container. Such situations can also be studied under fluid statics.
 </p>
 <div class="insightbox">
-Hydrostatics is not about absolute rest — it is about absence of internal motion.<br>
-Physically, in hydrostatics - we can imagine a tank or container containing still water (or other liquid).
+Hydrostatics is not necessarily about absolute rest.<br>
+It is about the absence of internal flow in the situation being studied.
 </div>
 <p>
-In this condition, the fluid settles into a state of equilibrium where all forces balance exactly.
+In this condition, the fluid is in mechanical equilibrium in the appropriate reference frame.
+</p>
+<p>
+The condition of rest is the simplest form or case that is studied first to understand pressure and  its variation.
 </p>
 </section>
 <section>
-<h2>What Changes in Hydrostatics?</h2>
+<h2>Why divide it?</h2>
 <p>
-When a fluid is at rest, a major simplification occurs:
+When a fluid is at rest in the frame being used for analysis, a major simplification occurs:
 </p>
 <ul class="model-box">
-<li>No relative motion between layers</li>
-<li>No velocity field</li>
-<li>No shear stresses</li>
+<li>No relative flow between fluid elements</li>
+<li>No velocity field in this frame</li>
+<li>No viscous shear stresses</li>
 </ul>
 <p>
-Because there is no motion, the fluid cannot sustain tangential forces. As a result, the only internal force that exists is <strong>pressure</strong>, which always acts perpendicular to surfaces.
+Because the fluid is at rest without internal deformation, it cannot sustain static shear stress.
+</p>
+<p>
+As a result, the only internal contact stress that exists is <strong>pressure</strong>, which acts perpendicular to surfaces.
 </p>
 <div class="insightbox">
-In hydrostatics, all internal interactions in the fluid reduce to a single scalar field: pressure.
+In hydrostatics, the internal contact forces in the fluid are described by a single scalar field: pressure.
 </div>
 <p>
-This is what makes hydrostatics significantly simpler than fluid dynamics — we do not need to track motion or acceleration, only how pressure varies in space.
+This makes hydrostatics significantly simpler than fluid dynamics. Instead of solving for the fluid's motion, we focus on how pressure varies in space and how forces balance.
 </p>
 </section>
 <section>
 <h2>Forces in a Static Fluid</h2>
 <p>
-Even though the fluid is at rest, forces are still present.
+Even though the fluid is at rest, individual forces are still present. The forces must balance when the fluid is in equilibrium.
 </p>
 <p>
 Consider a small element of fluid inside a larger body:
 </p>
 <ul class="model-box">
-<li>It experiences pressure forces from surrounding fluid</li>
+<li>It experiences pressure forces from the surrounding fluid</li>
 <li>It experiences body forces such as gravity</li>
 </ul>
 <p>
-For the fluid to remain at rest, these forces must balance exactly.
+In an inertial frame, the net real force on each fluid element is zero. In a non-inertial frame, the appropriate pseudo-forces must also be included in the force balance.
 </p>
 <p>
 This leads to the central idea of hydrostatics:
 </p>
 <div class="math-block">
 \[
-\text{Net force on every fluid element} = 0
+\text{Net effective force on every fluid element}=0
 \]
 </div>
 <p>
 This condition of equilibrium determines how pressure varies inside the fluid.
 </p>
 <div class="insightbox">
-Pressure variation in a fluid is not arbitrary — it is dictated by force balance.
+This is the central theme of hydrostatics.<br>
+We take any fluid element in an inertial frame and sum of all forces on it is zero.<br>
+For hydrostatics in non-inertial frames, we include pseudo forces and equate their sums to zero.
 </div>
 </section>
 <section>
-<h2>Why Study Hydrostatics Separately?</h2>
+<h2>The Pressure Field is Static</h2>
 <p>
-Hydrostatics is studied separately because the absence of motion removes many complexities.
+The classification of fluid statics and fluid dynamics is analogous to that in electrostatics and electrodynamics.
 </p>
 <p>
-In fluid dynamics, we must consider:
+Just as electrostatics studies the static electric field, hydrostatics studies the static pressure field in the bulk of a fluid.
+</p>
+<p>
+The pressure field describes how pressure is distributed throughout the region occupied by the fluid.
+</p>
+<p>
+This involves a shift in our mental model. Just as we treat the electric field as a real physical entity and use it to describe the physical situation, we use a pressure field to describe the mechanical state of the fluid.
+</p>
+<p>
+We mentally replace the fluid bulk with a pressure-field model and study how pressure varies in space and how the resulting forces balance. It is this field that becomes the primary object of our study, rather than the motion of individual fluid elements.
+</p>
+<p>
+Our main focus is on:
+</p>
+<ul class="model-box">
+<li>Pressure distribution in space</li>
+<li>Force balance under gravity</li>
+<li>Force balance involving pseudo-forces in non-inertial frames</li>
+</ul>
+<p>
+In fluid dynamics, we need to consider more complex scenarios involving:
 </p>
 <ul class="model-box">
 <li>Velocity fields</li>
@@ -106,60 +137,84 @@ In fluid dynamics, we must consider:
 <li>Viscous effects</li>
 </ul>
 <p>
-In hydrostatics, all of this disappears. The problem reduces to:
-</p>
-<ul class="model-box">
-<li>Understanding pressure distribution</li>
-<li>Balancing forces under gravity</li>
-</ul>
-<p>
-This simplification allows us to derive powerful results such as:
+The simplification offered by hydrostatics allows us to derive important results such as:
 </p>
 <ul class="model-box">
 <li>Pressure variation with depth</li>
-<li>Pascal’s law</li>
-<li>Buoyant force (Archimedes’ principle)</li>
+<li>Pascal's law</li>
+<li>Buoyant force (Archimedes' principle)</li>
 </ul>
 <div class="insightbox">
-Hydrostatics is the foundation — once pressure distribution is understood, many real-world phenomena follow naturally.
+Hydrostatics helps explain many natural phenomena and practical devices.<br>
+We understand why only a small part of an iceberg remains above water, while most of it remains submerged.<br>
+This also helps us understand the danger posed by icebergs to ships, as illustrated by the sinking of the Titanic.<br>
+We understand the buoyant force described by Archimedes' principle, which is still used to determine density and assess the purity of materials.<br>
+We understand the force multiplication achieved by hydraulic lifts used in cranes.
 </div>
 </section>
 <section>
-<h2>Role of Motion and Kinetic Energy</h2>
+<h2>Energy Dynamics</h2>
 <p>
-Hydrostatics does not require the fluid to be absolutely at rest in every frame. It only requires that there is <strong>no relative motion between different parts of the fluid</strong>.
+In hydrostatics, energy methods are not generally the primary framework of analysis. Instead, we use force equilibrium to determine the pressure distribution.
 </p>
 <p>
-From mechanics, the kinetic energy of a system can be written as:
+In hydrodynamics, however, energy methods often play a fundamental role. Bernoulli's equation, for example, is based on the conservation of mechanical energy under its usual assumptions.
+</p>
+<p>
+After studying fluid dynamics and using energy methods to analyse fluid motion, there is a strong urge to re-examine fluid statics within the same framework.
+</p>
+<p>
+If we apply the energy model to hydrostatics, the pressure difference can be interpreted in terms of the difference in gravitational potential energy per unit volume of the fluid bulk.
+</p>
+<p>
+For a fluid of uniform density at rest under gravity, consider two points: point 1 at a lower elevation and point 2 at a higher elevation. Let the vertical height difference be \(h=z_2-z_1\) .
 </p>
 <div class="math-block">
 \[
-K_{\text{total}} = K_{\text{COM}} + K_{\text{internal}}
+P_1-P_2 = \rho gh = \frac{\Delta U}{V}
 \]
 </div>
 <p>
-Here:
+Here, \(\Delta U=U_2-U_1\) is the increase in gravitational potential energy when a fluid volume \(V\) is raised from the lower elevation to the higher elevation.
+</p>
+<p>
+Thus, as we move upward through a static fluid, the pressure decreases while the gravitational potential energy per unit volume increases by the same amount.
+</p>
+<p>
+The pressure difference balances the gravitational effect, allowing the fluid to remain at rest.
+</p>
+<p>
+Pressure differences often appear as potential-like differences that can drive physical processes.
+</p>
+<p>
+This is similar to how a potential difference between the terminals of a battery can drive electric current through a conducting circuit. Similarly, a pressure difference can drive the flow of a fluid.
+</p>
+<p>
+This creates a natural urge to understand pressure differences through an energy framework. Since pressure has the dimensions of energy per unit volume, a pressure difference can be related to a difference in energy per unit volume.
+</p>
+<p>
+In hydrostatics, the pressure difference is balanced by the gravitational effect. But in hydrodynamics, we will study how pressure differences can also contribute to accelerating fluid flow. A common example is squeezing the opening of a water pipe to increase the exit velocity of water.
+</p>
+</section>
+<section>
+<h2>Statics in Non-Inertial Frames</h2>
+<p>
+In hydrostatics, we also consider non-inertial reference frames. These include both translating and rotating frames.
+</p>
+<p>
+In a translating non-inertial frame, we may introduce an effective gravitational acceleration, \(g_{\text{eff}}\), to account for the pseudo-acceleration associated with the frame's translational acceleration.
+</p>
+<p>
+In a rotating non-inertial frame, the bulk fluid must rotate like a rigid body for it to remain at rest in that frame. All fluid elements have the same angular velocity \(\omega\) .
+</p>
+<p>
+Thus, we consider three cases of fluid statics in this syllabus:
 </p>
 <ul class="model-box">
-<li><strong>Bulk kinetic energy (\(K_{\text{COM}}\))</strong> → motion of the fluid as a whole</li>
-<li><strong>Internal kinetic energy (\(K_{\text{internal}}\))</strong> → relative motion between different parts of the fluid</li>
+<li>Fluid at rest in an inertial frame</li>
+<li>Fluid at rest in a non-inertial frame (translational)</li>
+<li>Fluid at rest in a non-inertial frame (rotational)</li>
 </ul>
-<p>
-In hydrostatics:
-</p>
-<ul class="model-box">
-<li>No relative motion between fluid elements → \(K_{\text{internal}} = 0\)</li>
-<li>The fluid may still have bulk motion → \(K_{\text{COM}}\) can be non-zero</li>
-</ul>
-<p>
-For example, a liquid inside an accelerating container is in hydrostatic equilibrium in the container frame, even though it has kinetic energy in the ground frame.
-</p>
-<div class="insightbox">
-Hydrostatics is defined by absence of internal motion, not by absence of kinetic energy.
-</div>
-<p>
-In this chapter, we focus only on the <strong>internal equilibrium of the fluid</strong>. Any overall motion of the system is treated separately using rigid-body mechanics.
-</p>
 </section>
 <footer>
 <hr>

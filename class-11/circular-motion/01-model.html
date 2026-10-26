@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinematic Model | Circular Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Circular Motion
+</a>
+</nav>
+<h1>Kinematic Model</h1>
+<p class="subtitle">
+Understanding circular motion through the magnitude and direction of a vector.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+Circular motion is a useful kinematic model for understanding two-dimensional motion. It provides a particularly natural setting in which to study how a vector changes with time, especially when its magnitude remains constant while its direction changes.
+</p>
+<p>
+To understand why, let us begin with two fundamental ideas: the nature of a vector and the mathematical description of position in a plane.
+</p>
+<h3>1. A Vector Has Two Inherent Characteristics</h3>
+<p>
+A vector inherently possesses two characteristic constituents: magnitude and direction. The magnitude tells us how much, while the direction tells us which way the vector points.
+</p>
+<p>
+These characteristics belong to the very nature of a vector. They are not exclusive to two-dimensional vectors; vectors in one, two or three dimensions all possess magnitude and direction. What differs with dimensionality is how the direction needs to be specified.
+</p>
+<p>
+For any non-zero vector, we can mathematically express this separation as:
+</p>
+\[
+\vec{A}=A\hat{A}
+\]
+<p>
+Here, \(A=|\vec{A}|\) is the magnitude, while \(\hat{A}\) is the unit vector that specifies the direction.
+</p>
+<p>
+The magnitude is represented by a scalar quantity. The direction, however, must be specified using an appropriate set of parameters, depending on the dimensionality of the space.
+</p>
+<h3>2. Position in Two Dimensions</h3>
+<p>
+To completely specify the position of a point in a plane, we require two independent scalar coordinates. In the Cartesian description, these coordinates are \(x\) and \(y\).
+</p>
+<p>
+Accordingly, the position vector of a particle can be expressed as:
+</p>
+\[
+\vec{r}(t)=x(t)\hat{i}+y(t)\hat{j}
+\]
+<p>
+Here, \(\hat{i}\) and \(\hat{j}\) are fixed unit vectors along the two perpendicular Cartesian axes. The coordinates \(x(t)\) and \(y(t)\) specify the position of the particle at each instant.
+</p>
+<p>
+Notice that this description uses two scalar coordinates to specify the position vector. But Cartesian coordinates are not the only way to describe a point in a plane.
+</p>
+<h3>3. Connecting the Two Characteristics of a Vector with Two-Dimensional Position</h3>
+<p>
+Recall that a vector has two inherent characteristics: magnitude and direction. Also recall that, in two dimensions, specifying position requires two independent scalar parameters.
+</p>
+<p>
+This brings us to a natural mathematical possibility: instead of using two coordinates to describe position through components along fixed axes, can we use one parameter for the magnitude of the position vector and another for its direction?
+</p>
+<p>
+The answer is yes. In two dimensions, the direction of a non-zero vector can be specified by a single angular parameter \(\theta\), measured from a chosen reference axis. Consequently, we can describe the position of a point using:
+</p>
+\[
+\boxed{r,\theta}
+\]
+<p>
+Here, \(r\) specifies the magnitude of the position vector, and \(\theta\) specifies its direction. This is the fundamental idea behind polar coordinates.
+</p>
+<p>
+The position vector can now be written as:
+</p>
+\[
+\boxed{\vec{r}(t)=r(t)\hat{r}(t)}
+\]
+<p>
+The polar unit vector \(\hat{r}(t)\) points from the origin towards the particle. Its direction is determined by the angular coordinate \(\theta(t)\).
+</p>
+<p>
+Thus, the two independent quantities used to specify a position in a plane can be organised in two different ways:
+</p>
+\[
+\begin{aligned}
+\text{Cartesian:}\quad
+&\vec{r}=x\hat{i}+y\hat{j}\\[6pt]
+\text{Polar:}\quad
+&\vec{r}=r\hat{r}(\theta)
+\end{aligned}
+\]
+<p>
+Both descriptions represent the same position. The difference lies in how the two scalar parameters are chosen. Cartesian coordinates use the two components of the position vector, whereas polar coordinates use its magnitude and direction.
+</p>
+<p>
+This connection is particularly natural in two dimensions: the magnitude requires one scalar quantity, and the direction requires one angular parameter.
+</p>
+<h3>4. Why Two Dimensions Are Particularly Convenient</h3>
+<p>
+The distinction becomes clearer when we compare different dimensionalities.
+</p>
+<p>
+In one dimension, the direction of a vector is restricted to one of two senses along a line. In two dimensions, its direction can vary continuously in a plane and is specified by one angle. In three dimensions, a general direction requires two independent angular parameters, such as the polar and azimuthal angles.
+</p>
+<p>
+Therefore, the magnitude and direction of a vector remain its inherent characteristics in every dimensionality. What is special about two dimensions is that the magnitude and a single angular parameter provide exactly two scalar parameters for describing a position.
+</p>
+<p>
+Polar coordinates are not restricted to two dimensions. However, the two-dimensional case gives us a particularly simple connection between the two characteristics of a vector and the two parameters needed to describe position.
+</p>
+<h3>5. Circular Motion: A Special Constraint</h3>
+<p>
+We can now apply this description to circular motion. Consider a particle moving along a circle of radius \(R\), with the origin located at the centre of the circle.
+</p>
+<p>
+The defining geometric property of the circle is that the distance of every point on it from the centre remains constant. Consequently, the magnitude of the position vector does not change:
+</p>
+\[
+\boxed{r(t)=R=\text{constant}}
+\]
+<p>
+The position vector can therefore be written as:
+</p>
+\[
+\boxed{\vec{r}(t)=R\hat{r}(t)}
+\]
+<p>
+The magnitude \(R\) is fixed, but the direction of the position vector changes as the particle moves around the circle. Its changing direction can be described by the time-dependent angular coordinate \(\theta(t)\).
+</p>
+<p>
+This means that, although the particle moves in a two-dimensional plane, the circular constraint fixes one of the two polar coordinates. The remaining coordinate, \(\theta(t)\), is sufficient to specify its position at every instant.
+</p>
+<p>
+We have therefore reduced the description of the particle's position from two independently varying Cartesian coordinates to one independently varying angular coordinate.
+</p>
+<h3>6. The Kinematic Significance</h3>
+<p>
+The real advantage of this representation becomes apparent when we study changes in the position vector. In general, a vector may change in magnitude, direction, or both. Polar coordinates allow us to distinguish these two kinds of change explicitly.
+</p>
+<p>
+For circular motion, the magnitude of the position vector remains constant. Thus, the change in position arises entirely from the change in its direction.
+</p>
+<p>
+This is especially useful when studying uniform circular motion. The particle's speed remains constant, but the direction of its velocity changes continuously. Hence, constant speed does not imply constant velocity.
+</p>
+<p>
+By expressing position through a fixed magnitude and a time-dependent direction, we establish a natural mathematical framework for studying circular motion and the kinematics of changing vectors.
+</p>
+<p>
+In the next step, we can differentiate the position vector to obtain velocity. This will reveal an important feature of polar representation: even though the magnitude \(R\) is constant, the polar unit vector \(\hat{r}\) changes with time.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
