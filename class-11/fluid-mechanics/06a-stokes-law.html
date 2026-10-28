@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stokes Law | Viscosity</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./06-viscosity.html" class="back-btn">
+<span>&larr;</span> Back to Viscosity
+</a>
+</nav>
+<h1>Stokes Law</h1>
+<p class="subtitle">
+Viscous Force on a sphere.
+</p>
+<section>
+<h2>Dimensional Analysis</h2>
+<p>
+We studied that the viscous force exerted by a fluid on a solid body depends on the geometry of the body (area is dependent on shape and size). 
+</p>
+<p>
+A generic shape is difficult to express mathematically because a shape involves several dimensions, surface features and orientations besides size.
+</p>
+<p>
+We simplify by considering symmetric shapes like a sphere or a cube. The dimensions of a sphere or a cube can be completely specified by a single coordinate (radius \(r\) and side length \(a\)).
+</p>
+<p>
+A sphere, however, is the final boss of symmetry as its orientation too does not matter.
+</p>
+<p>
+If we rotate a sphere, its geometry remains unchanged. Thus, inside a fluid, a sphere does not present a different shape to the flow merely because it has been rotated.
+</p>
+<p>
+We can therefore represent the entire geometric dependence relevant to the drag on a sphere using just one variable, \(r\) and reduce the problem of geometric dependence to a single variable.
+</p>
+<div class="insightbox">
+It is a useful general strategy in physics: choose a suitable physical model that reduces the number of variables, making the mathematical analysis simpler.<br>
+This allows to focus on the physical quantities that determine the viscous force without having to account for complicated geometric details or the orientation of the body.
+</div>
+<p>
+Now, consider a spherical body of radius \(r\) moving through a fluid with speed \(v\), relative to the surrounding fluid. The fluid exerts a viscous drag force on the sphere, opposing its motion relative to the fluid.
+</p>
+<p>
+The magnitude of this viscous force depends on the geometry of the sphere, its speed relative to the fluid, and the coefficient of dynamic viscosity \(\eta\) of the fluid.
+</p>
+<p>
+Since we have reduced the geometric dependence to a single length parameter, we can express the problem using just three independent variables:
+</p>
+<div class="math-block">
+\[
+F_v=f(r,v,\eta)
+\]
+</div>
+<p>
+Here, the three independent variables have dimensions expressible in terms of the fundamental mechanical dimensions \(\mathrm{M}\), \(\mathrm{L}\) and \(\mathrm{T}\):
+</p>
+<ul class="model-box">
+<li><strong>Radius:</strong> \([r]=[L]\)</li>
+<li><strong>Speed:</strong> \([v]=[LT^{-1}]\)</li>
+<li><strong>Coefficient of dynamic viscosity:</strong> \([\eta]=[ML^{-1}T^{-1}]\)</li>
+</ul>
+<p>
+The dependent variable, viscous force, has the dimensional formula \([F_v]=[MLT^{-2}]\).
+</p>
+<p>
+We now have a problem involving a small number of variables, all described using the same three fundamental dimensions and so we can use dimensional analysis.
+</p>
+</section>
+<section>
+<h2>Stokes' Law</h2>
+<p>
+Consider a spherical body of radius \(r\) moving through a fluid with speed \(v\), relative to the surrounding fluid.
+</p>
+<p>
+The fluid exerts a viscous drag force \(F_v\) on the sphere, directed opposite to its relative motion.
+</p>
+<p>
+The radius of the sphere is comparatively small or rain drops (assuming spherical in shape) falling through air is a common example of this situation.
+</p>
+<p>
+We consider three independent variables:
+</p>
+<ul class="model-box">
+<li>\(r\): radius of the sphere.</li>
+<li>\(v\): speed of the sphere relative to the fluid.</li>
+<li>\(\eta\): coefficient of dynamic viscosity of the fluid.</li>
+</ul>
+<p>
+The magnitude of the viscous force depends on these variables. We assume a power-law relationship of the form:
+</p>
+\[
+F_v=k\,r^a v^b\eta^c
+\]
+<p>
+Here, \(a\), \(b\), and \(c\) are unknown powers, while \(k\) is a dimensionless constant. Our objective is to determine the powers using dimensional analysis.
+</p>
+<h3>Applying Dimensional Analysis</h3>
+<p>
+The dimensional formulas of the quantities involved are:
+</p>
+<ul class="model-box">
+<li>Viscous force: \([F_v]=[MLT^{-2}]\)</li>
+<li>Radius: \([r]=[L]\)</li>
+<li>Speed: \([v]=[LT^{-1}]\)</li>
+<li>Coefficient of dynamic viscosity:
+\([\eta]=[ML^{-1}T^{-1}]\)</li>
+</ul>
+<p>
+Substituting these dimensional formulas into our assumed equation, we obtain:
+</p>
+\[
+[MLT^{-2}]=[L]^a[LT^{-1}]^b[ML^{-1}T^{-1}]^c
+\]
+\[
+[MLT^{-2}]=[M^cL^{a+b-c}T^{-b-c}]
+\]
+\[
+\begin{aligned}
+c&=1\\
+-b-c&=-2\\
+a+b-c&=1
+\end{aligned}
+\]
+\[
+-b-1=-2 \quad b=1
+\]
+\[
+a+1-1=1\quad a=1
+\]
+<p>
+Therefore, all three powers are equal to unity:
+</p>
+\[
+\boxed{a=b=c=1}
+\]
+<p>
+Substituting these powers into our assumed relationship, we obtain:
+</p>
+\[
+F_v=k\,r v\eta
+\]
+<h3>Stokes' Law</h3>
+<p>
+The complete theoretical solution for the motion of a sphere in a fluid is given through <strong>Stokes' law</strong>: 
+</p>
+\[
+k=6\pi
+\]
+<div class="math-block">
+\[
+\boxed{F_v=6\pi\eta r v}
+\]
+</div>
+<p>
+Notice that the drag force increases linearly with the relative speed. If the sphere moves twice as fast through the same fluid, its viscous drag is twice as large.
+</p>
+<p>
+Similarly, for the same relative speed and fluid, doubling the sphere's radius doubles the drag force. For the same sphere and relative speed, doubling the fluid's coefficient of viscosity also doubles the drag force.
+</p>
+</section>
+<section>
+<h2>Terminal Velocity</h2>
+<p>
+Consider a spherical body of radius \(r\) and density \(\sigma\) placed in a fluid of density \(\rho\), with \(\sigma \gt \rho\).
+</p>
+<p>
+Since the sphere is denser than the surrounding fluid, it tends to sink under gravity.
+</p>
+<p>
+Three forces act on the sphere as it falls through the fluid: its weight acts downwards, while the buoyant force and the viscous drag force exerted by the fluid act upwards.
+</p>
+<p>
+Initially, the sphere has zero speed relative to the fluid, so the viscous drag is zero.
+</p>
+<p>
+Since the sphere is denser than the fluid, its weight exceeds the buoyant force, and the sphere accelerates downwards.
+</p>
+<p>
+As the sphere falls, its speed increases. According to Stokes' law, the magnitude of the viscous drag force increases with the speed of the sphere.
+</p>
+<p>
+Thus, the upward viscous drag progressively reduces the net downward force and the acceleration of the sphere.
+</p>
+<p>
+Eventually, the upward forces balance the downward gravitational force.
+</p>
+<p>
+At this stage, the net force on the sphere becomes zero. Consequently, its acceleration becomes zero, and it continues to fall with a constant speed called the <strong>terminal velocity</strong>, denoted by \(v_t\).
+</p>
+<div class="insightbox">
+Without terminal velocity phenomenon, if rain drops would have fallen from 2 km height through vacuum, it would have killed everyone at the earths surface.<br>
+It  is also a major factor in scaling laws like an ant survives falls from large heights.
+</div>
+<h3>Derivation of Terminal Velocity</h3>
+<p>
+At terminal velocity, the upward viscous drag force balances the difference between the gravitational force and the buoyant force \(F_v = F_g - F_b\) :
+</p>
+\[
+F_g=\frac{4}{3}\pi r^3\sigma g
+\]
+\[
+F_b=\frac{4}{3}\pi r^3\rho g
+\]
+\[
+F_v=\frac{4}{3}\pi r^3g(\sigma-\rho)
+\]
+\[
+F_v=6\pi\eta r v_t =\frac{4}{3}\pi r^3g(\sigma-\rho)
+\]
+<div class="math-block">
+\[
+\boxed{v_t=\frac{2r^2(\sigma-\rho)g}{9\eta}}
+\]
+</div>
+<h3>What if the Sphere Is Less Dense Than the Fluid?</h3>
+<p>
+Now consider the opposite situation, in which \(\sigma \lt \rho\).
+</p>
+<p>
+The buoyant force is then greater than the gravitational force, so the sphere tends to rise through the fluid.
+</p>
+<p>
+As the sphere rises, the viscous drag acts downwards, opposing its upward motion. As its upward speed increases, the magnitude of the drag increases until the forces balance.
+</p>
+<p>
+At terminal velocity, the upward buoyant force balances the combined effect of the downward gravitational force and the downward viscous drag. Hence \(F_v = F_b - F_g\) ,
+</p>
+<p>
+Therefore, the terminal speed of the rising sphere is
+</p>
+<div class="math-block">
+\[
+\boxed{v_t=\frac{2r^2(\rho-\sigma)g}{9\eta}}
+\]
+</div>
+<p>
+Thus, we can use one formula for both situations or just have the formula for magnitude of terminal velocity and call it as terminal speed:
+</p>
+<div class="math-block">
+\[
+\boxed{v_t =\frac{2r^2 g}{9\eta} |\sigma-\rho|}
+\]
+</div>
+</section>
+<section>
+<h2>Scaling Laws: Why Can an Ant Survive a Fall?</h2>
+<p>
+Let us make a simple model: suppose you and an ant are both spheres. If you fall from a considerable height, you may suffer severe injury, whereas an ant can often survive a similar fall. Its because of difference in terminal velocity 
+</p>
+\[
+v_t \propto r^2
+\]
+<p>
+A much larger sphere therefore has a much greater terminal speed under the same conditions (equal densities).
+</p>
+<p>
+We can understand the broader scaling principle from this. Consider the ratio of surface area to volume. For a sphere,
+</p>
+<div class="math-block">
+\[
+\frac{A}{V}=\frac{4\pi r^2}{\frac43\pi r^3}=\frac{3}{r}
+\]
+</div>
+<p>
+For a smaller object, its surface area is greater relative to its volume (and hence mass as \(m = \rho V\)). For large objects, volume grows faster than surface area as the size increases.
+</p>
+<div class="insightbox">
+For small objects, surface-related effects are relatively more dominant; for large objects, volume-related effects become relatively more important.<br>
+An ant has a large surface-area-to-volume ratio compared with a human.<br>
+Air resistance is therefore more significant relative to its weight, helping it reach a comparatively low terminal speed.<br>
+Its small mass also means that its impact energy is much smaller at a given speed.
+</div>
+</section>
+<section>
+<h2>Power Dissipated at Terminal Velocity</h2>
+<p>
+A classic exam trap is to determine how the rate of heat dissipation (viscous power loss) scales with terminal speed when comparing spheres of different radii.
+</p>
+<p>
+From Stokes' law, the viscous drag force is \(F_v=6\pi\eta rv\). Therefore, the rate of energy dissipation is:
+</p>
+\[
+P=F_vv=(6\pi\eta rv)v=6\pi\eta rv^2
+\]
+<p>
+Students may conclude that power dissipation is proportional to \(v^2\). However, this overlooks the fact that the question compares spheres of different radii.
+</p>
+<p>
+For spheres of the same density falling through the same fluid, the terminal speed depends on the radius:
+</p>
+\[
+v_t\propto r^2 \quad\implies\quad r\propto v_t^{1/2}
+\]
+<p>
+Substituting this relation into the power expression, with the fluid viscosity and other relevant parameters held constant, we obtain:
+</p>
+<div class="math-block">
+\[
+P=6\pi\eta r v_t^2 \propto v_t^{1/2}v_t^2 \quad\implies\quad \boxed{P\propto v_t^{5/2}}
+\]
+</div>
+<p>
+Similarly, to determine how power dissipation scales with the <strong>radius</strong> at terminal velocity, substitute \(v_t\propto r^2\):
+</p>
+<div class="math-block">
+\[
+P\propto r(r^2)^2 \quad\implies\quad \boxed{P\propto r^5}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

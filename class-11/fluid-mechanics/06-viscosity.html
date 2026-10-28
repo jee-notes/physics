@@ -16,122 +16,225 @@
 </nav>
 <h1>Viscosity</h1>
 <p class="subtitle">
-The study of internal fluid friction, turning ideal models into real-world phenomena.
+The study of internal fluid friction.
 </p>
-
+<section>
+<h2>Viscosity</h2>
+<p>
+So far, we have studied ideal, non-viscous fluids in which viscous dissipation is neglected as this assumption allows us to apply Bernoulli.
+</p>
+<p>
+However, real fluids do not always behave like ideal fluids. When a real fluid flows, mechanical energy gets dissipated into internal energy of the fluid bulk.
+</p>
+<p>
+The property of fluid responsible for dissipation of of mechanical energy of fluid flow into dissipated heat is <strong>viscosity</strong>.
+</p>
+<p>
+To understand viscous forces, we only have a simplified model in our syllabus, in which the flow is layered.
+</p>
+<p>
+Imagine a fluid moving in such a way that adjacent layers slide relative to one another. This is a basic picture that is used to introduce viscous forces in laminar flow.
+</p>
+<p>
+Consider two adjacent layers of a fluid moving with different velocities. The faster layer tends to drag the slower layer along with it, while the slower layer exerts a force that resists the faster layer's motion relative to it.
+</p>
+<p>
+As a result, the layers experience tangential forces at their interface.
+</p>
+<p>
+These forces act in opposite directions on the two interacting layers, in accordance with Newton's third law. Their directions are such that they oppose the relative sliding motion between the layers.
+</p>
+<p>
+In this way, the faster layer tends to lose some of its motion relative to the slower layer, while the slower layer tends to gain motion.
+</p>
+<p>
+When a layer of fluid slips, or tends to slip, over another layer in contact with it, the layers exert tangential forces on each other  called <strong>viscous forces</strong>.
+</p>
+<p>
+They oppose relative motion between neighbouring layers, similar to how dry friction opposes relative motion between solid surfaces.
+</p>
+<p>
+The property of a fluid by virtue of which it resists relative motion between its layers is called <strong>viscosity</strong>.
+</p>
+<p>
+Thus, viscosity describes the fluid's resistance to relative sliding within its bulk.
+</p>
+<div class="insightbox">
+Honey is much more viscous than water, even though both are considerably less dense than steel.<br>
+Density and viscosity describe different aspects of a substance.<br>
+Imagine dropping an identical steel sphere into a jar of water and a jar of honey.<br>
+The sphere falls much more slowly through honey than through water.<br>
+To understand why, consider the forces acting on the falling sphere.<br>
+Its weight acts downward, while the buoyant force acts upward.<br>
+As the sphere moves through the fluid, viscous drag also acts upward, opposing its motion.<br>
+Honey is denser than water, so the buoyant force on the sphere is somewhat greater in honey.<br>
+However, because steel is much denser than either fluid, the difference in buoyancy produces only a comparatively modest change in the net downward driving force.<br>
+The much greater viscosity of honey produces a much stronger resistance to the sphere's motion at a given speed.<br>
+Consequently, the sphere falls much more slowly through honey.<br>
+</div>
+</section>
 <section>
 <h2>Velocity Gradient</h2>
 <p>
-Real fluids flowing over a stationary surface do not maintain a uniform velocity. The actual fluid layer in direct atomic contact with the solid surface "sticks" to it, locking its velocity to zero (the <em>no-slip condition</em>). The layer just above it flows slowly, dragging the next layer, which flows faster, and so on. 
+Just as the laws of dry friction were established through experiments, the behaviour of viscous forces in fluids has also been investigated experimentally.
 </p>
 <p>
-This continuous spatial variation of velocity perpendicular to the flow creates what is formally known as a <strong>velocity gradient</strong>.
+These experiments reveal that the magnitude of the viscous force depends on several factors.
 </p>
-<div class="model-box">
-<strong>Velocity Gradient</strong>
-<br><br>
-If the velocity of the fluid changes by \( dv \) over a perpendicular distance \( dy \), the velocity gradient is defined as:
-<br><br>
+<p>
+One such factor is such that it needs to be understood first. A quantity called the <strong>velocity gradient</strong>.
+</p>
+<p>
+Consider a real fluid flowing over a stationary solid surface. The fluid does not move with the same velocity at every distance from the surface.
+</p>
+<p>
+Instead, its velocity varies continuously from one layer of fluid to the other in contact with it.
+</p>
+<p>
+At an ordinary fluid-solid boundary, the fluid velocity matches the velocity of the solid surface due to the stickiness of fluid. This is known as the <strong>no-slip condition</strong>.
+</p>
+<p>
+Therefore, when in contact with a solid surface, the relative velocity of the layer of fluid in direct contact with the surface is zero relative to the surface.
+</p>
+<p>
+Now consider the fluid layer immediately above the stationary surface. In a typical flow, this layer moves relative to the surface, but its velocity may be small because of the influence of the stationary boundary.
+</p>
+<p>
+The layer above it moves faster, and successive layers have progressively different velocities.
+</p>
+<p>
+The neighbouring layers thus move relative to one another. The velocity of the fluid changes from one layer to the next, producing a spatial variation of velocity across the fluid.
+</p>
+<p>
+We are concerned with the variation of velocity in a direction <strong>perpendicular to the direction of flow</strong>. For example, if the fluid flows along the \(x\)-direction and the distance perpendicular to the flow is measured along the \(y\)-direction, we study how the flow velocity \(v\) changes with \(y\).
+</p>
+<p>
+This rate of change of velocity with perpendicular distance is called the <strong>velocity gradient</strong>. It tells us how rapidly the velocity changes as we move from one fluid layer to another.
+</p>
 \[
-\text{Velocity Gradient} = \frac{dv}{dy}
+\text{Velocity Gradient}=\frac{dv}{dy}
 \]
-<strong>SI Unit:</strong> \( \text{s}^{-1} \) <br>
-<strong>Dimensional Formula:</strong> \( [\text{M}^0 \text{L}^0 \text{T}^{-1}] \)
+<div class="math-block">
+\[
+\text{Velocity Gradient}=\frac{dv}{dy}=\frac{d}{dy}\bigl(v(y)\bigr)
+\]
 </div>
-</section>
-
-<section>
-<h2>Viscous Force and Coefficient of Viscosity</h2>
 <p>
-Because adjacent layers are moving at slightly different speeds relative to each other, they rub together. The faster upper layer tries to accelerate the lower layer, and the slower lower layer tries to violently retard the upper one. 
+A large magnitude of velocity gradient means that the velocity changes rapidly over a small perpendicular distance. A small magnitude means that the velocity changes more gradually. If the velocity is uniform across the layers, the velocity gradient is zero.
 </p>
-<p>
-This internal, macroscopic "friction" between fluid layers is called <strong>viscous force</strong>. Newton discovered that for many common fluids (Newtonian fluids), this viscous drag force \( F \) between two layers of contact area \( A \) is directly proportional to the area and the velocity gradient.
-</p>
-<div class="model-box">
-<strong>Newton's Law of Viscosity</strong>
-<br><br>
-\[
-F = -\eta A \frac{dv}{dy}
-\]
-<br>
-Where:
-<ul>
-    <li>\( F \) is the tangential viscous force opposing relative motion.</li>
-    <li>\( A \) is the contact area of the fluid layers.</li>
-    <li>\( \frac{dv}{dy} \) is the velocity gradient.</li>
-    <li>\( \eta \) (eta) is the <strong>Coefficient of Viscosity</strong>.</li>
+<h3>Unit and Dimensions</h3>
+<ul class="model-box">
+<li><strong>SI Unit:</strong> \(\text{s}^{-1}\)</li>
+<li><strong>Dimensional Formula:</strong> \([M^0L^0T^{-1}]\)</li>
 </ul>
-<strong>SI Unit of \( \eta \):</strong> \( \text{Pa}\cdot\text{s} \) (Pascal-second) or Poiseuille (Pl).<br>
-<strong>Dimensional Formula:</strong> \( [\text{M}^1 \text{L}^{-1} \text{T}^{-1}] \)
+</section>
+<section>
+<h2>Viscous Force</h2>
+<p>
+The interaction between layers of fluid is analogous to friction interaction between solid surfaces.
+</p>
+<p>
+Experiments show that the magnitude of the viscous force depends on the area of contact between the layers and on the velocity gradient.
+</p>
+<p>
+Such fluids are called <strong>Newtonian fluids</strong>.
+</p>
+<h3>Newton's Law of Viscosity</h3>
+<p>
+For a Newtonian fluid, the magnitude of the viscous force \(F\) between two adjacent layers is directly proportional to their common area of contact \(A\) and the magnitude of the velocity gradient \(\left|\dfrac{dv}{dy}\right|\).
+</p>
+<div class="math-block">
+\[
+F\propto A\left|\frac{dv}{dy}\right|
+\]
+\[
+\boxed{F=\eta A\left|\frac{dv}{dy}\right|}
+\]
+</div>
+<p>
+Introducing the proportionality constant \(\eta\), we obtain Newton's law of viscosity. The constant \(\eta\) is called the <strong>coefficient of dynamic viscosity</strong>, or simply the <strong>coefficient of viscosity</strong>.
+</p>
+<ul class="model-box">
+<li><strong>\(F\):</strong> Magnitude of the tangential viscous force between the fluid layers.</li>
+<li><strong>\(A\):</strong> Area of contact between the layers.</li>
+<li><strong>\(\dfrac{dv}{dy}\):</strong> Velocity gradient, describing how rapidly the fluid velocity changes in the direction perpendicular to the flow.</li>
+<li><strong>\(\eta\):</strong> Coefficient of dynamic viscosity, which measures the fluid's resistance to relative motion between its layers.</li>
+</ul>
+<p>
+The absolute value in the equation indicates that we are only calculating the magnitude of viscous force.
+</p>
+<p>
+The direction of the viscous force is determined separately: it opposes relative motion between adjacent layers.
+</p>
+<div class="insightbox">
+<strong>Understanding the relationship</strong><br><br>
+For a given fluid, the magnitude of the viscous force increases when the area of contact increases, provided the velocity gradient remains unchanged.<br>
+As viscous force depends on geometry of the area of contact, its  overall study is difficult for generic shapes.<br>
+For the same area and the same fluid, a larger velocity gradient produces a larger viscous force.<br>
+Thus, a ship sailing in deep waters faces lesser viscous force at the same speed.<br>
+The coefficient of viscosity determines the dependency on the material of bulk fluid - like honey has higher value of co-efficient of viscosity as compared to water.
+</div>
+<h3>Coefficient of Viscosity \(\eta\)</h3>
+<p>
+The coefficient of viscosity plays a role analogous to the coefficient of friction in the study of dry friction.
+</p>
+<p>
+In dry friction, the interaction usually involves two solid surfaces in contact. The coefficient of friction is dimensionless and characterises the frictional interaction between those surfaces.
+</p>
+<p>
+Viscosity, on the other hand, characterises the resistance to relative motion within the bulk fluid. Its value depends on the material of the fluid and temperature. Warming up a liquid drastically drops its viscosity. Unlike the coefficient of friction, the coefficient of viscosity has physical dimensions.
+</p>
+<h3>Unit and Dimensions</h3>
+<p>
+From Newton's law of viscosity,
+</p>
+\[
+\eta=\frac{F}{A\left|\dfrac{dv}{dy}\right|}
+\]
+<p>
+Since pressure is measured in pascals, where \(1\,\text{Pa}=1\,\text{N}/\text{m}^2\), the SI unit of \(\eta\) is:
+</p>
+<div class="math-block">
+\[
+\boxed{\text{Pa}\cdot\text{s}}
+\]
+</div>
+<p>
+This is called the <strong>pascal-second</strong>. The unit poiseuille (\(\text{Pl}\)) is also used for \(\text{Pa}\cdot\text{s}\).
+</p>
+<h3>CGS Unit of Viscosity</h3>
+<p>
+The CGS unit of \(\eta\) is the poise (P), whereas the SI unit is the pascal-second (Pa·s), also called the poiseuille (Pl).
+</p>
+<div class="math-block">
+\[
+10\,\text{P}=1\,\text{Pa}\cdot\text{s}=1\,\text{Pl}=1\,\text{decapoise}
+\]
 </div>
 <div class="insightbox">
-A high \( \eta \) means the fluid is very "thick" and resists flow (like cold honey or tar). A low \( \eta \) means the fluid flows extremely easily (like water or air). Viscosity is highly temperature-dependent; warming a liquid usually drastically drops its viscosity.
+Remember that one pascal-second is equal to ten poise.<br>
+This is also one decapoise and one poiseuille.<br>
+</div>
+<h3>Dimensional Formula of Viscosity</h3>
+<p>
+The dimensional formula can be obtained from SI unit \(\text{Pa}\cdot\text{s}\) .
+</p>
+<div class="math-block">
+\[
+[\eta]=\frac{[MLT^{-2}]}{[L^2][T^{-1}]}
+\]
+\[
+\boxed{[\eta]=[M^1L^{-1}T^{-1}]}
+\]
 </div>
 </section>
-
 <section>
-<h2>Stokes' Law and Terminal Velocity</h2>
-<p>
-When a solid object moves through a viscous medium—like a raindrop falling through air—it drags the adjacent fluid layers with it, setting up a velocity gradient and experiencing a viscous drag force.
-</p>
-<div class="concept-box">
-<strong>Stokes' Law</strong><br>
-Sir George Stokes proved that the viscous drag force \( F_v \) on a small spherical body of radius \( r \) moving with velocity \( v \) through a vast extent of fluid of viscosity \( \eta \) is given precisely by:
-<br><br>
-\[
-F_v = 6 \pi \eta r v
-\]
-</div>
-<p>
-Notice that the viscous drag force violently increases as the object's velocity \( v \) increases. If you drop a sphere into a fluid, gravity initially accelerates it downward. But as its speed rises, the upward viscous drag (from Stokes' Law) actively rises as well.
-</p>
-<p>
-Eventually, the upward drag force completely balances out the downward gravitational force (minus any buoyant force). At this exact moment, the net force drops to zero. The object ceases to accelerate and falls at a constant, maximum speed known as <strong>Terminal Velocity (\( v_t \))</strong>.
-</p>
-<div class="model-box">
-<strong>Expression for Terminal Velocity</strong>
-<br><br>
-By equating apparent weight \( \frac{4}{3}\pi r^3 (\rho - \sigma) g \) to the drag \( 6 \pi \eta r v_t \):
-<br><br>
-\[
-v_t = \frac{2 r^2 (\rho - \sigma) g}{9 \eta}
-\]
-<br>
-Where:
-<ul>
-    <li>\( r \) is the radius of the sphere.</li>
-    <li>\( \rho \) is the density of the sphere.</li>
-    <li>\( \sigma \) is the fluid density.</li>
-    <li>\( \eta \) is the viscosity coefficient.</li>
-</ul>
+<h2>Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./06a-stokes-law.html">1. Stoke's Law</a>
+<a href="./02-hydrostatics.html">2. Reynolds Number</a>
 </div>
 </section>
-
-<section>
-<h2>Reynolds Number</h2>
-<p>
-How do we know mathematically whether a flowing fluid will remain in a smooth streamline state or burst into chaotic turbulence? The answer is a dimensionless ratio.
-</p>
-<div class="model-box">
-<strong>Reynolds Number (\( R_e \))</strong>
-<br><br>
-\[
-R_e = \frac{\rho v d}{\eta}
-\]
-<br>
-Where \( \rho \) is density, \( v \) is average velocity, \( d \) is the pipe diameter, and \( \eta \) is viscosity.
-</div>
-<p>
-Physically, Reynolds Number represents the ratio of inertial forces (mass and speed) to viscous forces (internal friction).
-</p>
-<ul>
-    <li><strong>\( R_e < 1000 \):</strong> Viscous forces violently dominate. The flow is strictly streamline (laminar).</li>
-    <li><strong>\( 1000 < R_e < 2000 \):</strong> Transition state; the flow is highly unstable.</li>
-    <li><strong>\( R_e > 2000 \):</strong> Inertial forces dominate. The flow becomes fully turbulent.</li>
-</ul>
-</section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

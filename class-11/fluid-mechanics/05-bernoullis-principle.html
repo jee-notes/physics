@@ -89,50 +89,164 @@ Since these contributions can be expressed locally per unit volume, a fluid elem
 <section>
 <h2>Energy of a Flowing Fluid</h2>
 <p>
-A fluid in motion possesses three distinct forms of mechanical energy per unit volume:
+A fluid element in motion can possess three different forms of mechanical energy. We assume steady streamline flow and let the mass of the fluid element at position \(x\) be \(dm\).
 </p>
-<ol>
-<li><strong>Kinetic Energy (per unit volume):</strong> Energy due to the macroscopic velocity \( v \) of the fluid.
+<ol class="model-box">
+<li>
+<strong>Kinetic Energy:</strong> Energy due to the streamline velocity \(v\) of the fluid element.
 \[
-K.E. = \frac{1}{2} \rho v^2
+dK=\frac{1}{2}\,dm\,v(x)^2
 \]
 </li>
-<li><strong>Potential Energy (per unit volume):</strong> Gravitational potential energy due to the fluid's elevation \( h \) above a reference level.
+<li>
+<strong>Potential Energy:</strong> Gravitational potential energy due to the fluid element's elevation \(h\) above a reference level.
 \[
-P.E. = \rho g h
+dU_g=dm\,g\,h(x)
 \]
 </li>
-<li><strong>Pressure Energy (per unit volume):</strong> Energy associated with the work done by pressure forces in moving a fluid element. When a fluid element of volume \( dV \) is pushed by pressure \( P \), the work done is:
+<li>
+<strong>Pressure Energy:</strong> Pressure forces exerted by the surrounding fluid can do work on a fluid element. Consider a face of area \(A(x)\), perpendicular to the
+direction of flow. If the face moves a distance \(ds\) along the flow, the work done by the pressure force at that face is:
 \[
-dW = P \, dV
+dW=P(x)A(x)\,ds
 \]
-Hence, the work done per unit volume is:
+The volume of fluid swept through this face is
 \[
-\frac{dW}{dV} = P
+dV_{\text{swept}}=A(x)\,ds
+\]
+Therefore,
+\[
+dW=P(x)\,dV_{\text{swept}}
+\]
+Since the mass of the fluid swept through the face is \(dm=\rho\,dV_{\text{swept}}\), we can also write
+\[
+dW=P(x)\frac{dm}{\rho}
+\]
+This is the work done at one face. The pressure force at the opposite face also does work, generally with the opposite sign. The net pressure work on the flowing element therefore depends on the pressure difference between the two faces.
+</li>
+</ol>
+<p>
+The above expressions describe energy and work associated with a differential amount of fluid. We can also express the energy contributions per unit volume using the density relation \(dm=\rho\,dV\).
+</p>
+<p>
+As we are dealing with an incompressible fluid of uniform density, \(\rho\) is constant. We can therefore construct the corresponding energy-per-unit-volume expressions.
+</p>
+<ol class="model-box">
+<li>
+<strong>Kinetic Energy (per unit volume):</strong>
+\[
+\frac{dK}{dV}=\frac{1}{2}\rho v(x)^2
+\]
+</li>
+<li>
+<strong>Gravitational Potential Energy (per unit volume):</strong>
+\[
+\frac{dU_g}{dV}=\rho gh(x)
+\]
+</li>
+<li>
+<strong>Pressure Energy (per unit volume):</strong> At a cross-section where the pressure is \(P\), pressure does work \(dW=P\,dV_{\text{swept}}\) to push a volume of fluid through that cross-section. Hence, the pressure-work contribution per unit volume is
+\[
+\frac{dW}{dV_{\text{swept}}}=P(x)
 \]
 </li>
 </ol>
 <div class="insightbox">
-Pressure energy represents the work required for a fluid element to occupy space within a pressure field.<br>
-When a fluid element moves forward, the region ahead is already filled with fluid. To move into that region, it must push the existing fluid out.<br>
-The surrounding fluid resists this motion by exerting pressure.<br>
-Thus, pressure does work not by accelerating the fluid, but by enabling it to displace the fluid already present. This work per unit volume is equal to \( P \).<br>
-Reverse happens when a fluid element moves out of a pressure field. It is pushed out or ejected like gas blown out of a hole in balloon.<br>
-Thus, upstream ejection pressure does work to push fluid downstream against injection pressure.<br>
+Pressure energy is often hard to understand for a beginner student.<br>
+Consider a positive electric charge. To bring another positive charge into a region where it experiences repulsion, external work must be done against the electric force. This provides an analogy for understanding why work is required to push a fluid element into a region already occupied by fluid.<br>
+When a fluid element moves forward, it enters a region that is already filled with fluid. It must push the existing fluid onward. The surrounding fluid exerts pressure forces that resist this injection downstream.<br>
+Thus, pressure work may not be reflected simply in the observed acceleration of the fluid (change in KE).<br>
+For example, a pump can raise water to a greater height while its speed remains approximately unchanged. The work done by pressure force is then reflected mainly in the increase in gravitational potential energy.<br>
+The pressure-work contribution per unit volume is \(P\).<br>
+The reverse occurs when a ejection happens from high pressure region at upstream.<br>
+Its similar to when pressurized gas in a balloon, escapes through an opening. The pressure forces helps drive the gas outward.<br>
+The higher upstream ejection pressure does work to push the fluid element into the low-pressure region at down stream.
 </div>
+</section>
+<section>
+<h2>Pressure Energy</h2>
+<p>
+To understand pressure work, consider four solid blocks kept in contact in different configurations and study the normal forces acting between them.
+</p>
+<p>
+A normal force is a contact pushing force. It is similar in some ways to pressure in a fluid, where the surrounding fluid exerts normal contact forces over a surface.
+</p>
+<p>
+Let Block 1 be in contact with Block 2, Block 2 with Block 3, and Block 3 with Block 4. The blocks form a chain. Normal forces act at the interfaces between Blocks 1 and 2, 2 and 3, and 3 and 4.
+</p>
+<p>
+We are particularly interested in the differences between these contact forces. The difference between the forces acting on a block determines the resultant force on that block.
+</p>
+<h3>Case 1: Blocks stacked vertically.</h3>
+<p>
+Stack the four blocks one above another, with Block 1 at the bottom and Block 4 at the top. The blocks are at rest.
+</p>
+<p>
+The normal force at the interface between Blocks 1 and 2 supports the weight of all the blocks above it. The normal force between Blocks 2 and 3 supports fewer blocks, and the normal force between Blocks 3 and 4 supports only the blocks above that interface.
+</p>
+<p>
+Thus, the bottommost normal force is the greatest. Its magnitude also depends on any additional force applied to the stack, such as an external downward force on the topmost block.
+</p>
+<p>
+This is analogous to hydrostatic pressure: pressure forces balance gravity, and the pressure increases with depth.
+</p>
+<h3>Case 2: Blocks accelerated horizontally.</h3>
+<p>
+Now arrange the four blocks horizontally in a chain and push Block 1 towards the right. The blocks accelerate towards the right while remaining in contact.
+</p>
+<p>
+Block 1 pushes Block 2, which pushes Block 3, which pushes Block 4. The contact force between Blocks 1 and 2 must accelerate Blocks 2, 3 and 4. The force between Blocks 2 and 3 must accelerate Blocks 3 and 4, while the force between Blocks 3 and 4 must accelerate only Block 4.
+</p>
+<p>
+For four equal-mass blocks accelerating together with acceleration \(a\), the normal forces are:
+</p>
+<div class="math-block">
+\[
+N_{12}=3ma,\qquad
+N_{23}=2ma,\qquad
+N_{34}=ma
+\]
+</div>
+<p>
+The normal force is therefore greatest at the interface between Blocks 1 and 2. The differences between the normal forces account for the net force accelerating the intermediate blocks.
+</p>
+<div class="insightbox">
+This is often a source of confusion when studying fluids.<br>
+Pressure is not velocity. It describes the normal contact force per unit area exerted by the surrounding fluid.<br>
+Students may squeeze the opening of a pipe, observe an increase in the exit speed, and assume that the pressure must also increase at that location.<br>
+However, for horizontal ideal flow along a streamline, Bernoulli's equation shows that a higher speed corresponds to a lower static pressure.<br>
+The pressure difference, rather than the speed itself, is what enters the pressure-force and energy analysis.
+</div>
+<p>
+Now let us examine the work done by these normal forces on block 2. As block 2 accelerates towards the right, its displacement is towards the right. The normal force exerted by block 1 on block 2, \(N_{2/1}\), acts towards the right and therefore does positive work on block 2.
+</p>
+<p>
+However, the normal force exerted by block 3 on block 2, \(N_{2/3}\), acts towards the left. It therefore does negative work on block 2.
+</p>
+<p>
+The net work done by these two normal forces is
+\[
+W_2=(N_{2/1}-N_{2/3})\Delta x.
+\]
+This net work changes the kinetic energy of block 2.
+</p>
+<p>
+Thus, contact forces can transfer energy between neighbouring blocks. A force acting in the direction of displacement transfers energy to the block through positive work, while a force acting opposite to the displacement does negative work on it.
+</p>
 </section>
 <section>
 <h2>Bernoulli's Equation</h2>
 <p>
 In 1738, Daniel Bernoulli derived a profound relationship describing fluids. By applying the Work-Energy Theorem to a steady, incompressible, and non-viscous (ideal) fluid flowing smoothly through a pipe, he found that the total mechanical energy is conserved along any given streamline.
 </p>
-<div class="model-box">
-<strong>Bernoulli's Equation</strong><br>
-The sum of pressure energy, kinetic energy per unit volume, and potential energy per unit volume remains constant at all points along a streamline.
+<p>
+<strong>Bernoulli's Equation: </strong> The sum of pressure energy, kinetic energy per unit volume, and potential energy per unit volume remains constant at all points along a streamline.
+</p>
+<div class="math-block">
 \[
 P + \frac{1}{2}\rho v^2 + \rho g h = \text{Constant}
 \]
-Where:
+</div>
 <ul class="model-box">
 <li>\( P \) is the absolute pressure at that point.</li>
 <li>\( \rho \) is the continuous fluid density.</li>
@@ -140,13 +254,15 @@ Where:
 <li>\( h \) is the height above an arbitrary reference datum.</li>
 <li>\( g \) is the acceleration due to gravity.</li>
 </ul>
-</div>
 <div class="insightbox">
-A crucial takeaway from Bernoulli's Equation for horizontal flow (\( h_1 = h_2 \)) is the inverse relationship between speed and pressure: \( P + \frac{1}{2}\rho v^2 = \text{Constant} \). <strong>Where the fluid velocity is high, the pressure must be low; and where the fluid velocity is low, the pressure must be high.</strong> This is highly counter-intuitive to many, who assume fast streams "push harder."
+A crucial takeaway from Bernoulli's Equation for horizontal flow (\( h_1 = h_2 \)) is the inverse relationship between speed and pressure:<br>
+\( P + \frac{1}{2}\rho v^2 = \text{Constant} \)<br>
+<strong>Where the fluid velocity is high, the pressure must be low; and where the fluid velocity is low, the pressure must be high.</strong><br>
+This is highly counter-intuitive to many, who assume fast streams "push harder."
 </div>
-<p>
-This theoretical foundation has an immense number of phenomenological applications in the real world.
-</p>
+</section>
+<section>
+<h2>Sub-Topics</h2>
 <div class="chapter-list">
 <a href="./05a-applications-of-bernoulli.html">1. Venturi Meter</a>
 <a href="./05b-torricellis-law.html">2. Torricelli's Law of Efflux</a>
