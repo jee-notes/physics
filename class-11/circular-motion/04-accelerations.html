@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non Uniform Circular Motion | Circular Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Circular Motion
+</a>
+</nav>
+<h1>Non Uniform Circular Motion</h1>
+<p class="subtitle">
+The two orthogonal components of acceleration in a non-linear path.
+</p>
+<section>
+<h2>Accelerations in Planar Motion</h2>
+<p>
+We studied Uniform Circular Motion (UCM) and learned how the continuous change in the direction of the velocity vector gives rise to centripetal acceleration.
+</p>
+<p>
+In Non-Uniform Circular Motion (NUCM), the speed of the particle also changes with time. Consequently, apart from centripetal acceleration, we encounter another component of acceleration called <strong>tangential acceleration</strong>.
+</p>
+<p>
+To understand these two components, we analyse how the velocity vector changes with time.
+</p>
+<p>
+In UCM, only the direction of the velocity vector changes, which guarantees the presence of centripetal acceleration. In NUCM, both the direction and magnitude of the velocity vector change. The change in magnitude gives rise to tangential acceleration.
+</p>
+<p>
+We can logically infer that tangential acceleration is collinear with the velocity vector and changes only its magnitude. This is essentially the familiar situation from one-dimensional kinematics, where acceleration changes the magnitude of velocity. In NUCM, this effect is superimposed on the directional change already present in UCM.
+</p>
+<p>
+The key mathematical observation is that a velocity vector has two inherent characteristics: magnitude and direction. We can represent it as:
+</p>
+\[
+\boxed{\vec{v}=|\vec{v}|\,\hat{v}=v\hat{v}}
+\]
+<p>
+Here, \(v\) represents the speed, while \(\hat{v}\) specifies the instantaneous direction of velocity.
+</p>
+<p>
+Differentiating the velocity vector with respect to time:
+</p>
+\[
+\begin{aligned}
+\vec{a}
+&=\frac{d\vec{v}}{dt}\\
+&=\frac{d}{dt}(v\hat{v})\\
+&=\frac{dv}{dt}\hat{v}
++v\frac{d\hat{v}}{dt}
+\end{aligned}
+\]
+<p>
+This gives us two distinct contributions to acceleration, each associated with a different characteristic of the velocity vector.
+</p>
+<h3>1. Change in magnitude:</h3>
+<p>
+The first term is along the velocity vector and is responsible for changing its magnitude, i.e., the speed. This is tangential acceleration.
+</p>
+\[
+\boxed{
+a_t=\frac{d|\vec{v}|}{dt}=\frac{dv}{dt}
+}
+\]
+<p>
+The absence of tangential acceleration implies that the speed does not change at that instant.
+</p>
+<h3>2. Change in direction:</h3>
+<p>
+The second term is responsible for changing the direction of the velocity vector. This is normal acceleration. It is perpendicular to the velocity vector.
+</p>
+<p>
+The perpendicular nature of this term follows from the fact that \(\hat{v}\) is a unit vector. Since its magnitude is constant, we have:
+</p>
+\[
+\hat{v}\cdot\hat{v}=1
+\]
+<p>
+Differentiating:
+</p>
+\[
+\boxed{\hat{v}\cdot\frac{d\hat{v}}{dt}=0}
+\]
+<p>
+Thus, the derivative of a unit velocity vector is perpendicular to the velocity vector itself. The normal acceleration is therefore:
+</p>
+\[
+\boxed{\vec{a}_n=v\frac{d\hat{v}}{dt}}
+\]
+<p>
+For circular motion, the direction of the velocity vector rotates with angular speed \(\omega\). Hence, the magnitude of its rate of directional change is \(\frac{d\hat{v}}{dt} =\omega\), giving:
+</p>
+\[
+\boxed{a_n=v\omega=\frac{v^2}{R}}
+\]
+<p>
+Therefore, acceleration in non-uniform circular motion can be understood through the two independent ways in which a velocity vector can change: its magnitude and its direction.
+</p>
+</section>
+<section>
+<h2>Tangential Acceleration (\(a_t\))</h2>
+<p>
+<strong>Tangential acceleration</strong> is the component of instantaneous acceleration that acts along the tangent to the circular path.
+</p>
+<p>
+While centripetal acceleration is responsible for changing the direction of motion, the role of tangential acceleration is to change the <strong>magnitude</strong> of the velocity vector, i.e., the speed of the particle.
+</p>
+<p>
+If the speed of the particle changes with time, a tangential component of acceleration must be present. Its magnitude is the rate of change of speed:
+</p>
+<div class="math-block">
+\[
+a_t = \left|\frac{dv}{dt}\right| = \left|\frac{d(R\omega)}{dt}\right| = R\left|\frac{d(\omega)}{dt}\right| = R|\alpha|
+\]
+</div>
+<ul class="model-box">
+<li><strong>\(v\)</strong> : Instantaneous linear speed.</li>
+<li><strong>\(\alpha\)</strong> : Instantaneous angular acceleration.</li>
+<li><strong>\(R\)</strong> : Radius of the circular path.</li>
+</ul>
+<h3>Units and Dimensions</h3>
+<ul class="model-box">
+<li><strong>SI Unit:</strong> metre per second squared (\(\mathrm{m\,s^{-2}}\))</li>
+<li><strong>Dimensional Formula:</strong> \([M^0L^1T^{-2}]\)</li>
+</ul>
+<h3>Direction of Tangential Acceleration</h3>
+<p>
+Because it acts along the tangent, tangential acceleration is collinear with the instantaneous velocity vector. However, its exact direction depends on whether the particle is speeding up or slowing down:
+</p>
+<ul class="model-box">
+<li><strong>Speeding up:</strong> Tangential acceleration is directed <strong>parallel</strong> to the velocity vector. It acts in the direction of motion.</li>
+<li><strong>Slowing down:</strong> Tangential acceleration is directed <strong>antiparallel</strong> to the velocity vector. It acts opposite to the direction of motion.</li>
+</ul>
+<p>
+Consider a ceiling fan that has just been switched on. At the instant \(t=0\), the fan blades are at rest (\(\omega=0\)). Since \(a_c=R\omega^2\), the centripetal acceleration is initially zero. However, to start rotating, the motor provides an angular acceleration \(\alpha\), resulting in non-zero tangential acceleration (\(a_t\neq 0\)).
+</p>
+<p>
+It is the tangential acceleration that initiates the motion and builds up the speed. As soon as the particle acquires non-zero speed, centripetal acceleration also comes into existence to continuously change the direction of its velocity and maintain the circular trajectory.
+</p>
+<div class="insightbox">
+In <strong>Uniform Circular Motion (UCM)</strong>, the speed \(v\) is constant, meaning:
+\[
+\frac{dv}{dt}=0
+\]
+Therefore, tangential acceleration can remain zero indefinitely, even while centripetal acceleration continues to exist.<br>
+In contrast, centripetal acceleration (\(a_c=v^2/R\)) cannot remain zero while a particle continues moving along a circular path with non-zero speed.<br>
+Without centripetal acceleration, there is no continuous change in the direction of velocity, and the particle cannot follow the circular trajectory.<br>
+Centripetal acceleration can, however, become zero momentarily when the particle comes to rest. For example, this happens at the instant a ceiling fan starts rotating.<br>
+It may subsequently resume motion along the same circular path or reverse its direction.<br>
+This is somewhat analogous to contact forces on a surface: friction can be zero while normal reaction is present, as in the case of a smooth surface. However, if normal reaction vanishes, ordinary contact friction also vanishes.<br>
+The important distinction is that tangential acceleration is not required for maintaining circular motion, whereas centripetal acceleration is required whenever the particle moves along the circular path.
+</div>
+</section>
+<section>
+<h2>Net Acceleration (\(a_{net}\))</h2>
+<p>
+In a general circular motion, a particle may simultaneously experience a change in the <strong>magnitude</strong> of its velocity as well as a change in its <strong>direction</strong>.
+</p>
+<p>
+As discussed earlier, these two distinct aspects of the motion are associated with two mutually perpendicular components of acceleration:
+</p>
+<ul class="model-box">
+<li><strong>Centripetal Acceleration (\(a_c\))</strong> — Responsible solely for continuously changing the direction of the velocity vector.</li>
+<li><strong>Tangential Acceleration (\(a_t\))</strong> — Responsible solely for changing the magnitude (speed) of the velocity vector.</li>
+</ul>
+<p>
+The actual acceleration of the particle is therefore the combined effect of these two independent contributions.
+</p>
+<p>
+At every point on a circular path, the radial direction and the tangential direction are perpendicular to each other. Consequently, centripetal acceleration and tangential acceleration are also mutually orthogonal vectors.
+</p>
+<p>
+The net acceleration vector is simply obtained by vector addition:
+</p>
+<div class="math-block">
+\[
+\vec{a}_{net} = \vec{a}_c + \vec{a}_t
+\]
+</div>
+<p>
+Since these two components are always perpendicular, the magnitude of the resultant acceleration can be calculated using the Pythagorean theorem:
+</p>
+<div class="math-block">
+\[
+a_{net} = \sqrt{a_c^2 + a_t^2}
+\]
+</div>
+<p>
+Substituting the expressions for the two components gives
+</p>
+<div class="math-block">
+\[
+a_{net} = \sqrt{\left(\frac{v^2}{R}\right)^2 + (R\alpha)^2}
+\]
+</div>
+<h3>Direction of Net Acceleration</h3>
+<p>
+The net acceleration vector generally lies somewhere between the inward radial direction and the tangent to the circular path.
+</p>
+<p>
+Let \( \phi \) denote the angle made by the net acceleration vector with the inward radial direction.
+</p>
+<p>
+Since \(a_c\) and \(a_t\) form the two perpendicular sides of a right triangle, the direction of the resultant acceleration is given by
+</p>
+<div class="math-block">
+\[
+\tan \phi = \frac{a_t}{a_c}
+\]
+</div>
+<p>
+The value of \( \phi \) depends upon the relative magnitudes of the two acceleration components.
+</p>
+<ul class="model-box">
+<li>If \(a_t = 0\), then \(\phi = 0^\circ\), and the acceleration is purely centripetal. This corresponds to <strong>Uniform Circular Motion (UCM)</strong>.</li>
+<li>If \(a_c = 0\), then \(\phi = 90^\circ\), and the acceleration is purely tangential. This may occur momentarily when a particle starts from rest.</li>
+<li>If both \(a_c\) and \(a_t\) are non-zero, the acceleration vector lies somewhere between the radial and tangential directions.</li>
+</ul>
+<div class="insightbox">
+Circular motion can be viewed as the simultaneous execution of two independent tasks:<br>
+One component of acceleration continuously bends the trajectory, while the other speeds up or slows down the particle.<br>
+The net acceleration simply represents the combined effort required to accomplish both tasks simultaneously.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

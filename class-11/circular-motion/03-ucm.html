@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uniform Circular Motion | Circular Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Circular Motion
+</a>
+</nav>
+<h1>Uniform Circular Motion</h1>
+<p class="subtitle">
+Centripetal Acceleration.
+</p>
+<section>
+<h2>Uniform Circular Motion</h2>
+<p>
+Uniform Circular Motion (UCM) is the motion of a particle along the circumference of a circle with constant speed.
+</p>
+<p>
+Even though the speed remains constant, this motion is accelerated motion, i.e. \(\vec{a}\neq 0\).
+</p>
+<p>
+UCM provides a simple setting to establish the relationships between linear and angular kinematic quantities.
+</p>
+<p>
+It also introduces a special form of acceleration called <strong>centripetal acceleration</strong>, which changes only the direction of the velocity vector without changing its magnitude.
+</p>
+<p>
+The direction of the velocity vector continuously rotates as the particle moves along the circle. The rate of change of this rotating velocity vector gives rise to centripetal acceleration.
+</p>
+<p>
+Thus, UCM provides a useful model for understanding how the time-dependent change of a vector is mathematically described when its magnitude remains constant but its direction continuously rotates.
+</p>
+</section>
+<section>
+<h2>Relation Between Linear and Angular Variables</h2>
+<p>
+We first establish the relation between linear and angular variables. Here, linear does not mean one-dimensional motion. It refers to the actual motion observed in the two-dimensional plane.
+</p>
+<p>
+The particle moves in the \(XY\) plane, whereas the angular displacement, angular velocity and angular acceleration are represented along the \(Z\)-axis.
+</p>
+<p>
+The bridge between angular and linear variables is the radius vector \(\vec r\), which lies in the plane of the circle.
+</p>
+<h3>Angular Position</h3>
+<p>
+Let \(r,\theta\) be the polar coordinates and \(x,y\) be the Cartesian coordinates. Here, \(\theta\) is measured from the positive \(X\)-axis.
+</p>
+\[
+x=r\cos\theta,\qquad y=r\sin\theta
+\]
+<p>
+The position vector is given by:
+</p>
+\[
+\vec r=r\cos\theta\,\hat i+r\sin\theta\,\hat j
+\]
+<p>
+This representation is valid not only for circular motion, but for any motion in two dimensions.
+</p>
+<p>
+In general 2D motion, \(r=f(t)\). In circular motion, however, \(r\) remains constant.
+</p>
+<h3>Angular Displacement</h3>
+<p>
+Here, we establish the relations for circular motion. For generic 2D motion, we will study the corresponding relations using the polar basis later.
+</p>
+<p>
+We already know that angular displacement and angular velocity are related through:
+</p>
+\[
+d\theta=\omega\,dt
+\]
+<p>
+We now want to establish the relationship between linear displacement \(d\vec r\) and angular displacement \(d\theta\).
+</p>
+<p>
+For circular motion, we use the fact that \(r\) is constant and therefore:
+</p>
+\[
+dr=0
+\]
+<p>
+The linear displacement vector is:
+</p>
+\[
+d\vec r=dx\,\hat i+dy\,\hat j
+\]
+<p>
+We need to find the relationships between \(dx,d\theta\) and \(dy,d\theta\).
+</p>
+<p>
+Differentiating the Cartesian coordinate expressions, with \(r\) held constant, we obtain:
+</p>
+\[
+\begin{aligned}
+x&=r\cos\theta\\
+dx&=-r\sin\theta\,d\theta
+\end{aligned}
+\]
+\[
+\begin{aligned}
+y&=r\sin\theta\\
+dy&=r\cos\theta\,d\theta
+\end{aligned}
+\]
+<p>
+Substituting these expressions into the linear displacement vector:
+</p>
+\[
+\boxed{d\vec r=-r\sin\theta\,d\theta\,\hat i+r\cos\theta\,d\theta\,\hat j}
+\]
+<p>
+Thus, the linear displacement is perpendicular to the radius vector:
+</p>
+\[
+\vec r\cdot d\vec r=0
+\]
+<p>
+Its magnitude is:
+</p>
+\[
+|d\vec r|=r|d\vec\theta|
+\]
+<h3>Cross Product Relation</h3>
+<p>
+Angular and linear variables can also be related through vector cross-product relations.
+</p>
+<p>
+For planar motion in the \(XY\) plane, the infinitesimal angular displacement is represented by an axial vector along the \(Z\)-axis:
+</p>
+\[
+d\vec\theta=d\theta\,\hat k
+\]
+<p>
+The linear displacement lies in the \(XY\) plane. Using the cross product of the angular displacement vector with the radius vector, we obtain:
+</p>
+\[
+\boxed{d\vec r=d\vec\theta\times\vec r}
+\]
+<p>
+Equivalently:
+</p>
+\[
+\boxed{d\vec r=d\theta\,(\hat k\times\vec r)}
+\]
+<h3>Angular Velocity</h3>
+<p>
+Angular velocity is directed along the angular displacement axis, whereas instantaneous linear velocity is tangential to the circular path and along the infinitesimal linear displacement.
+</p>
+<p>
+We directly use the cross-product relation and differentiate with respect to time:
+</p>
+\[
+\begin{aligned}
+\frac{d\vec r}{dt}
+&=\frac{d\theta}{dt}
+(\hat k\times\vec r)\\
+\vec v&=\omega(\hat k\times\vec r)
+\end{aligned}
+\]
+<p>
+Since the angular velocity vector is \(\vec\omega=\omega\hat k\), we obtain:
+</p>
+\[
+\boxed{\vec v=\vec\omega\times\vec r}
+\]
+<p>
+More generally, for a vector \(\vec a\) carried by a rotating frame with angular velocity \(\vec\omega\), and whose magnitude remains constant, its instantaneous rate of change due to rotation is:
+</p>
+\[
+\boxed{\frac{d\vec a}{dt}=\vec\omega\times\vec a}
+\]
+<p>
+We will use this general relationship to understand the time-dependent behaviour of rotating vectors.
+</p>
+</section>
+<section>
+<h2>Centripetal Acceleration (\(a_c\))</h2>
+<p>
+<strong>Centripetal acceleration</strong> (also known as radial or normal acceleration) is the component of the instantaneous acceleration directed towards the centre of the circular path.
+</p>
+<p>
+Its sole physical role is to continuously change the <strong>direction</strong> of the velocity vector while leaving its magnitude unchanged.
+</p>
+<p>
+It is important to appreciate that a change in velocity does not necessarily imply a change in speed. Velocity is a vector quantity possessing both magnitude and direction. Consequently, changing either of these attributes produces an acceleration.
+</p>
+<p>
+In circular motion, even if the particle moves with a constant speed, the direction of the velocity vector changes continuously as the particle progresses along the curved path. Therefore, the particle must possess a non-zero acceleration.
+</p>
+<p>
+This component of acceleration responsible exclusively for changing the direction of motion is called the <strong>centripetal acceleration</strong>.
+</p>
+<p>
+For a particle moving along a circular path of radius \(R\) with instantaneous speed \(v\), its magnitude is given by
+</p>
+<div class="math-block">
+\[
+a_c =\frac{v^2}{R} = R\omega^2 = v\omega
+\]
+</div>
+<ul class="model-box">
+<li><strong>\(v\)</strong> : Instantaneous linear speed.</li>
+<li><strong>\(\omega\)</strong> : Instantaneous angular velocity.</li>
+<li><strong>\(R\)</strong> : Radius of the circular path.</li>
+</ul>
+<h3>Units and Dimensions</h3>
+<ul class="model-box">
+<li><strong>SI Unit :</strong> metre per second squared (\(\mathrm{m\,s^{-2}}\))</li>
+<li><strong>Dimensional Formula :</strong> \([M^0L^1T^{-2}]\)</li>
+</ul>
+<h3>Direction of Centripetal Acceleration</h3>
+<p>
+At every instant, the velocity vector is tangential to the circular path.
+</p>
+<p>
+To continuously bend this tangential velocity and keep the particle constrained to the circle, the acceleration must always act towards the centre of curvature.
+</p>
+<p>
+Consequently, centripetal acceleration is directed radially inward and is opposite to the outward radial unit vector.
+</p>
+<div class="math-block">
+\[
+\vec a_c = -\omega^2\vec r
+\]
+</div>
+<p>
+The negative sign indicates that the centripetal acceleration is antiparallel to the radius vector.
+</p>
+<div class="insightbox">
+Centripetal acceleration is an absolute requirement for circular motion.<br>
+It exists in <strong>every</strong> circular motion, including Uniform Circular Motion (UCM), where the speed remains constant.<br>
+Its presence signifies that changing the direction of a velocity vector requires acceleration, even when the magnitude of the velocity remains unchanged.<br>
+Without centripetal acceleration, the particle would no longer follow a curved trajectory and would continue moving along the instantaneous tangent in accordance with inertia.<br>
+The particle may rotate clockwise or anticlockwise, but the centripetal acceleration is always directed towards the centre of the circular path.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
