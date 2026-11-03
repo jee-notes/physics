@@ -1,177 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kepler's Laws of Planetary Motion | JEE Physics Notes</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kepler's Laws of Planetary Motion | Gravitation</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-    <nav class="top-nav">
-        <a href="./index.html" class="back-btn">
-            <span>&larr;</span> Back to Gravitation
-        </a>
-    </nav>
-
-    <h1>Kepler's Laws of Planetary Motion</h1>
-    <p class="subtitle">
-        Empirical kinematic laws of planetary orbits and their foundational dynamical explanations from Newton's laws.
-    </p>
-
-    <section>
-        <h2>Kepler's First Law: Law of Orbits and Ellipse Geometry</h2>
-        <div class="model-box">
-            <h3>Statement of Kepler's First Law (Law of Orbits)</h3>
-            <p>
-                <strong>All planets move in elliptical orbits around the Sun, with the Sun situated at one of the two foci of the ellipse.</strong>
-            </p>
-        </div>
-        <p>
-            An ellipse is defined mathematically by its semi-major axis \( a \), semi-minor axis \( b \), and eccentricity \( e \) (\( 0 \le e < 1 \)):
-        </p>
-        \[
-        b = a\sqrt{1 - e^2}
-        \]
-        <ul>
-            <li><strong>Focal Distance:</strong> The Sun is at distance \( c = ae \) from the center.</li>
-            <li><strong>Perihelion (Closest Approach):</strong> \( r_p = a - c = a(1 - e) \)</li>
-            <li><strong>Aphelion (Farthest Distance):</strong> \( r_a = a + c = a(1 + e) \)</li>
-            <li><strong>Major Axis Relation:</strong> \( r_p + r_a = 2a \implies a = \frac{r_p + r_a}{2} \)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Kepler's Second Law: Law of Areas & Conservation of Angular Momentum</h2>
-        <div class="model-box">
-            <h3>Statement of Kepler's Second Law (Law of Areas)</h3>
-            <p>
-                <strong>The radius vector drawn from the Sun to a planet sweeps out equal areas in equal intervals of time. That is, the areal velocity of the planet is strictly constant.</strong>
-            </p>
-            \[
-            \frac{dA}{dt} = \text{Constant}
-            \]
-        </div>
-
-        <h3>Proof from Conservation of Angular Momentum</h3>
-        <p>
-            Let a planet of mass \( m \) be at position \( \vec{r} \) relative to the Sun with velocity \( \vec{v} \). In a small time \( dt \), the displacement is \( d\vec{r} = \vec{v} dt \).
-        </p>
-        <p>
-            The elemental area swept by the radius vector is the area of the infinitesimal triangle:
-        </p>
-        \[
-        d\vec{A} = \frac{1}{2} (\vec{r} \times d\vec{r}) = \frac{1}{2} (\vec{r} \times \vec{v}) dt
-        \]
-        \[
-        \frac{d\vec{A}}{dt} = \frac{1}{2} (\vec{r} \times \vec{v}) = \frac{\vec{L}}{2m}
-        \]
-        <p>
-            Because gravitation is a strictly <strong>central force</strong>, the torque acting on the planet about the Sun is identically zero:
-        </p>
-        \[
-        \vec{\tau} = \vec{r} \times \vec{F}_g = \vec{r} \times \left(-\frac{GMm}{r^3}\vec{r}\right) = \vec{0}
-        \]
-        \[
-        \vec{\tau} = \frac{d\vec{L}}{dt} = \vec{0} \implies \vec{L} = \text{Constant vector}
-        \]
-        <p>
-            Since \( \vec{L} \) and \( m \) are constant:
-        </p>
-        \[
-        \frac{dA}{dt} = \frac{L}{2m} = \text{Constant}
-        \]
-
-        <div class="insightbox">
-            Kepler's Second Law is a direct mathematical consequence of the <strong>central nature</strong> of the gravitational force (torque is zero), regardless of whether the force follows an inverse-square law or any other radial force law \( F(r) \).
-        </div>
-    </section>
-
-    <section>
-        <h2>Kepler's Third Law: Law of Periods and Newton's Derivation</h2>
-        <div class="model-box">
-            <h3>Statement of Kepler's Third Law (Law of Periods)</h3>
-            <p>
-                <strong>The square of the orbital period \( T \) of revolution of a planet is directly proportional to the cube of the semi-major axis \( a \) of its elliptical orbit:</strong>
-            </p>
-            \[
-            T^2 \propto a^3 \implies \frac{T^2}{a^3} = \text{Constant}
-            \]
-        </div>
-
-        <h3>Derivation for a Circular Orbit of Radius \( r \)</h3>
-        <p>
-            For a circular orbit (\( a = r \)), the gravitational force supplies the necessary centripetal force:
-        </p>
-        \[
-        \frac{GMm}{r^2} = \frac{m v^2}{r} = m \omega^2 r = m \left(\frac{2\pi}{T}\right)^2 r
-        \]
-        \[
-        \frac{GM}{r^2} = \frac{4\pi^2 r}{T^2} \implies T^2 = \left(\frac{4\pi^2}{GM}\right) r^3
-        \]
-        <p>
-            For general elliptical orbits, advanced dynamics shows that replacing \( r \) with semi-major axis \( a \) preserves the exact proportionality constant:
-        </p>
-        \[
-        T^2 = \left(\frac{4\pi^2}{GM}\right) a^3
-        \]
-    </section>
-
-    <section>
-        <h2>Properties of Elliptical Orbits (Perihelion, Aphelion, Energy, Areal Velocity)</h2>
-        <p>
-            By conservation of angular momentum at perihelion (\( r_p \)) and aphelion (\( r_a \)):
-        </p>
-        \[
-        L = m r_p v_p = m r_a v_a \implies r_p v_p = r_a v_a
-        \]
-        \[
-        \frac{v_p}{v_a} = \frac{r_a}{r_p} = \frac{1+e}{1-e}
-        \]
-        <p>
-            Since \( r_p < r_a \), the planet moves fastest at perihelion (\( v_p = v_{\text{max}} \)) and slowest at aphelion (\( v_a = v_{\text{min}} \)).
-        </p>
-
-        <div class="model-box">
-            <h3>Total Mechanical Energy of an Elliptical Orbit</h3>
-            \[
-            E = K + U = -\frac{GMm}{2a}
-            \]
-            <ul>
-                <li>Total energy depends solely on the <strong>semi-major axis \( a \)</strong>, completely independent of the eccentricity \( e \)!</li>
-                <li>All orbits with the same major axis length \( 2a \) have identical total mechanical energy and identical orbital periods \( T \).</li>
-            </ul>
-        </div>
-
-        <div class="examplebox">
-            <h3>Example: Velocity at Perihelion and Aphelion</h3>
-            <p>
-                A planet of mass \( m \) orbits a star of mass \( M \) in an elliptical orbit of semi-major axis \( a \) and eccentricity \( e \). Express the speeds \( v_p \) and \( v_a \) in terms of \( G, M, a, e \).
-            </p>
-            <hr>
-            <p><strong>Solution:</strong></p>
-            <p>Using conservation of total mechanical energy \( E = -\frac{GMm}{2a} \) at perihelion \( r_p = a(1-e) \):</p>
-            \[
-            \frac{1}{2}m v_p^2 - \frac{GMm}{a(1-e)} = -\frac{GMm}{2a}
-            \]
-            \[
-            v_p^2 = \frac{2GM}{a(1-e)} - \frac{GM}{a} = \frac{GM}{a} \left[ \frac{2 - (1-e)}{1-e} \right] = \frac{GM}{a} \left( \frac{1+e}{1-e} \right)
-            \]
-            \[
-            v_p = \sqrt{\frac{GM}{a} \left(\frac{1+e}{1-e}\right)}
-            \]
-            <p>Similarly, at aphelion \( r_a = a(1+e) \):</p>
-            \[
-            v_a = \sqrt{\frac{GM}{a} \left(\frac{1-e}{1+e}\right)}
-            \]
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Gravitation
+</a>
+</nav>
+<h1>Kepler's Laws of Planetary Motion</h1>
+<p class="subtitle">
+Kinematic laws of planetary orbits and their explanations from Newton's law.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+In 1609, Johannes Kepler published his laws of planetary motion based on observations by Tycho Brahe.
+</p>
+<p>
+Tycho Brahe was a remarkable astronomer who made exceptionally precise observations of the night sky without the aid of telescopes. These extensive records were inherited by Kepler who used Brahe's observations particularly those of Mars to decipher the mathematical pattern of planetary motion.
+</p>
+<p>
+Before Newton formulated the mathematics of gravitation, the driving cause of planetary motion remained a mystery. Kepler proposed that the Sun exerted a magnetic influence on the planets. He imagined magnetic fibres within the planets that could be activated by this influence. He also associated the Sun's rotation with the driving power that sustained planetary motion.
+</p>
+<p>
+Kepler's laws were of historical importance, but their significance extends in modern era. They provide the kinematic description of planetary motion that Newton later explained through the laws of mechanics and gravitation.
+</p>
+<p>
+Newton deduced mathematically that gravitational force is a a central force and follows inverse-square law.
+</p>
+<p>
+Although originally formulated for planetary motion around the Sun, Kepler's Laws are applicable to satellites orbiting planets and other celestial bodies when the gravitational attraction of one central body dominates the motion.
+</p>
+<p>
+When we study the statements of Kepler's Laws, they only talk about planets and Sun.
+</p>
+</section>
+<section>
+<h2>First Law: Law of Orbits</h2>
+<p>
+<strong>All planets move in elliptical orbits around the Sun, with the Sun situated at one of the two foci of the ellipse.</strong>
+</p>
+<p>
+Before Kepler, astronomers—including Copernicus—firmly believed that celestial bodies must move in perfect circles, as the circle was considered the ultimate symbol of divine perfection. Kepler's First Law shattered this assumption, proving that planetary paths are actually "squashed" circles, or ellipses. 
+</p>
+<p>
+Geometrically, an ellipse has two focal points (foci) located along its longest axis. In our solar system, the Sun occupies one of these foci, while the other focus is simply empty space. 
+</p>
+<p>
+An elliptical orbit is defined by three fundamental mathematical parameters: the <strong>semi-major axis \(a\)</strong> (half of the longest diameter), the <strong>semi-minor axis \(b\)</strong> (half of the shortest diameter), and the <strong>eccentricity \(e\)</strong>.
+</p>
+<p>
+Eccentricity measures how much the orbit deviates from a perfect circle (\(0 \le e \lt 1\)), and these parameters are related by the equation:
+</p>
+\[
+b = a\sqrt{1 - e^2}
+\]
+<p>
+When a planet travels along this elliptical path, its distance from the Sun continuously changes.
+</p>
+<p>
+This leads to two critical points in the orbit known as the apsides: the point of closest approach to the Sun (Perihelion) and the point furthest from the Sun (Aphelion).
+</p>
+<div class="insightbox">
+"Helios" is Greek for the Sun.<br>
+"Peri-helion" is close to the Sun and "Ap-helion" is away from the Sun.
+</div>
+<ul class="model-box">
+<li><strong>Focal Distance (\(c\)):</strong> The distance from the geometric center of the ellipse to the Sun (the focus) is given by \( c = ae \).</li>
+<li><strong>Perihelion (\(r_p\)):</strong> The minimum distance to the Sun. It occurs when the planet is on the major axis, nearest the focus: <br>\( r_p = a - c = a(1 - e) \)</li>
+<li><strong>Aphelion (\(r_a\)):</strong> The maximum distance to the Sun. It occurs on the opposite end of the major axis: <br>\( r_a = a + c = a(1 + e) \)</li>
+<li><strong>Major Axis Relation:</strong> The total length of the major axis (\(2a\)) is simply the sum of the perihelion and aphelion distances. Thus, the semi-major axis is the arithmetic mean of the maximum and minimum distances: <br>\( r_p + r_a = 2a \implies a = \frac{r_p + r_a}{2} \)</li>
+</ul>
+<div class="insightbox">
+A perfect circle is simply a special, limiting case of an ellipse where the eccentricity is zero (\(e=0\)).<br>
+In a circular orbit, the two foci merge at the exact center, making the semi-major and semi-minor axes equal (\(a=b\)), and the distance to the Sun remains constant (\(r_p = r_a = R\)).<br>
+Most planets in our solar system have very low eccentricities, making their orbits nearly circular, which is why early astronomers were initially fooled!
+</div>
+</section>
+</section>
+<section>
+<h2>Second Law: Law of Areas</h2>
+<p>
+<strong>The radius vector drawn from the Sun to a planet sweeps out equal areas in equal intervals of time. That is, the areal velocity of the planet is strictly constant.</strong>
+</p>
+\[
+\frac{dA}{dt} = \text{Constant}
+\]
+<h3>Proof from Conservation of Angular Momentum</h3>
+<p>
+Let a planet of mass \( m \) be at position \( \vec{r} \) relative to the Sun with velocity \( \vec{v} \).
+</p>
+<p>
+In a small time \( dt \), the displacement is \( d\vec{r} = \vec{v} dt \) .
+</p>
+<p>
+The elemental area swept by the radius vector is the area of the infinitesimal triangle:
+</p>
+\[
+d\vec{A} = \frac{1}{2} (\vec{r} \times d\vec{r}) = \frac{1}{2} (\vec{r} \times \vec{v}) dt
+\]
+\[
+\frac{d\vec{A}}{dt} = \frac{1}{2} (\vec{r} \times \vec{v}) = \frac{\vec{L}}{2m}
+\]
+<p>
+Because gravitation is a strictly <strong>central force</strong>, the torque acting on the planet about the Sun is identically zero:
+</p>
+\[
+\vec{\tau} = \vec{r} \times \vec{F}_g = \vec{r} \times \left(-\frac{GMm}{r^3}\vec{r}\right) = \vec{0}
+\]
+\[
+\vec{\tau} = \frac{d\vec{L}}{dt} = \vec{0} \implies \vec{L} = \text{Constant vector}
+\]
+<p>
+Since \( \vec{L} \) and \( m \) are constant:
+</p>
+\[
+\frac{dA}{dt} = \frac{L}{2m} = \text{Constant}
+\]
+<div class="insightbox">
+Kepler's Second Law is a direct mathematical consequence of the <strong>central nature</strong> of the gravitational force (torque is zero), regardless of whether the force follows an inverse-square law or any other radial force law \(F(r)\).
+</div>
+</section>
+<section>
+<h2>Third Law: Law of Periods</h2>
+<p>
+<strong>The square of the orbital period \( T \) of revolution of a planet is directly proportional to the cube of the semi-major axis \( a \) of its elliptical orbit:</strong>
+</p>
+\[
+T^2 \propto a^3 \implies \frac{T^2}{a^3} = \text{Constant}
+\]
+<h3>Derivation for a Circular Orbit of Radius \( r \)</h3>
+<p>
+For a circular orbit (\( a = r \)), the gravitational force supplies the necessary centripetal force:
+</p>
+\[
+\frac{GMm}{r^2} = \frac{m v^2}{r} = m \omega^2 r = m \left(\frac{2\pi}{T}\right)^2 r
+\]
+\[
+\frac{GM}{r^2} = \frac{4\pi^2 r}{T^2} \implies T^2 = \left(\frac{4\pi^2}{GM}\right) r^3
+\]
+<p>
+For general elliptical orbits, advanced dynamics shows that replacing \( r \) with semi-major axis \( a \) preserves the exact proportionality constant:
+</p>
+\[
+T^2 = \left(\frac{4\pi^2}{GM}\right) a^3
+\]
+</section>
+<section>
+<h2>Properties of Elliptical Orbits</h2>
+<p>
+An elliptical orbit is characterized by a continuously changing distance between the orbiting body and the central body. Consequently, the orbital speed and gravitational potential energy also change throughout the revolution.
+</p>
+<p>
+However, gravitational force is a central and conservative central force. Therefore, both angular momentum and total mechanical energy of the orbiting body remain conserved.
+</p>
+<h3>1. Velocity at Perihelion and Aphelion</h3>
+<p>
+Perihelion and aphelion are the two extreme positions of an elliptical orbit. At perihelion, the planet is closest to the Sun, whereas at aphelion, it is farthest from the Sun.
+</p>
+<p>
+Since these are the extreme positions of radial distance, the radial component of velocity is momentarily zero at both positions. Therefore, the velocity is entirely tangential to the orbit and perpendicular to the radius vector.
+</p>
+<p>
+Gravitational force is a central force, so the angular momentum of the planet about the Sun is conserved:
+</p>
+\[
+L = |\vec r \times \vec p| = mrv
+\]
+<p>
+At perihelion and aphelion, this gives:
+</p>
+\[
+L = mr_pv_p = mr_av_a
+\]
+\[
+\boxed{r_pv_p=r_av_a}
+\]
+<p>
+Substituting the expressions for perihelion and aphelion distances:
+</p>
+\[
+a(1-e)v_p=a(1+e)v_a
+\]
+\[
+\boxed{\frac{v_p}{v_a}=\frac{r_a}{r_p}=\frac{1+e}{1-e}}
+\]
+<p>
+Since \(0\leq e \lt 1\), we obtain:
+</p>
+\[
+v_p\geq v_a
+\]
+<p>
+Thus, the planet moves fastest at perihelion and slowest at aphelion.
+</p>
+<div class="insightbox">
+According to Kepler's Second Law, the radius vector sweeps out equal areas in equal intervals of time.<br>
+When the planet approaches the Sun, its radial distance decreases.<br>
+To maintain constant areal velocity, its transverse speed must increase.<br>
+Similarly, as the planet moves away from the Sun, its transverse speed decreases.<br>
+Therefore, a planet moves fastest when closest to the Sun and slowest when farthest from the Sun.
+</div>
+<p>
+The difference between the maximum and minimum orbital speeds depends on the eccentricity of the orbit. A more eccentric orbit has a greater variation in orbital speed.
+</p>
+<h3>2. Total Mechanical Energy</h3>
+<p>
+A planet moving around the Sun possesses both kinetic energy due to its motion and gravitational potential energy due to its position.
+</p>
+\[
+K=\frac{1}{2}mv^2
+\]
+\[
+U=-\frac{GMm}{r}
+\]
+<p>
+Since gravitational force is conservative, the total mechanical energy remains constant throughout the orbit:
+</p>
+\[
+E=K+U=\text{Constant}
+\]
+\[
+E=\frac{1}{2}mv^2-\frac{GMm}{r}
+\]
+<p>
+For a bound elliptical orbit, the total mechanical energy is negative. The orbiting body does not possess sufficient energy to escape the gravitational attraction of the central body.
+</p>
+<p>
+For an elliptical orbit of semi-major axis \(a\), the total mechanical energy is given by:
+</p>
+\[
+\boxed{E=-\frac{GMm}{2a}}
+\]
+<p>
+Here, \(M\) is the mass of the central body, treated as fixed (\(M\gg m\)), and \(m\) is the mass of the orbiting body.
+</p>
+<div class="insightbox">
+The total mechanical energy depends on the <strong>semi-major axis \(a\)</strong> and is independent of the eccentricity \(e\), provided the masses remain fixed.<br>
+This means that two elliptical orbits with the same semi-major axis have identical total mechanical energy, even if their eccentricities and orbital shapes are different.<br>
+The semi-major axis determines the total mechanical energy of the orbit, whereas eccentricity determines its shape.
+</div>
+<p>
+Although the total mechanical energy remains constant, its kinetic and potential energy components continuously change during orbital motion.
+</p>
+<p>
+At perihelion, the planet has maximum kinetic energy and minimum (most negative) gravitational potential energy. At aphelion, it has minimum kinetic energy and maximum (least negative) gravitational potential energy.
+</p>
+\[
+K_p>K_a
+\]
+\[
+|U_p|>|U_a|
+\]
+\[
+K_p+U_p=K_a+U_a=E
+\]
+<h3>3. Velocity at Perihelion and Aphelion</h3>
+<p>
+We can calculate the orbital speeds at perihelion and aphelion using conservation of total mechanical energy.
+</p>
+<div class="examplebox">
+<h3>Velocities at Perihelion and Aphelion</h3>
+<p>
+A planet of mass \(m\) orbits a star of mass \(M\) in an elliptical orbit having semi-major axis \(a\) and eccentricity \(e\). Express its speeds \(v_p\) and \(v_a\) in terms of \(G,M,a\) and \(e\).
+</p>
+<h3>Solution:</h3>
+<p>
+The total mechanical energy of the elliptical orbit is:
+</p>
+\[
+E=-\frac{GMm}{2a}
+\]
+<p>
+At perihelion, the planet is at a distance:
+</p>
+\[
+r_p=a(1-e)
+\]
+<p>
+Using conservation of mechanical energy:
+</p>
+\[
+E=K_p+U_p
+\]
+\[
+-\frac{GMm}{2a}=\frac{1}{2}mv_p^2-\frac{GMm}{a(1-e)}
+\]
+<p>
+Rearranging:
+</p>
+\[
+\frac{1}{2}mv_p^2=\frac{GMm}{a(1-e)}-\frac{GMm}{2a}
+\]
+\[
+v_p^2=\frac{2GM}{a(1-e)}-\frac{GM}{a}
+\]
+\[
+v_p^2=\frac{GM}{a}\left(\frac{2-(1-e)}{1-e}\right)
+\]
+\[
+\boxed{v_p=\sqrt{\frac{GM}{a}\left(\frac{1+e}{1-e}\right)}}
+\]
+<p>
+Similarly, at aphelion, the distance from the Sun is:
+</p>
+\[
+r_a=a(1+e)
+\]
+<p>
+Using conservation of mechanical energy:
+</p>
+\[
+-\frac{GMm}{2a}=\frac{1}{2}mv_a^2-\frac{GMm}{a(1+e)}
+\]
+<p>
+Rearranging:
+</p>
+\[
+v_a^2=\frac{2GM}{a(1+e)}-\frac{GM}{a}
+\]
+\[
+v_a^2=\frac{GM}{a}\left(\frac{2-(1+e)}{1+e}\right)
+\]
+\[
+\boxed{v_a=\sqrt{\frac{GM}{a}\left(\frac{1-e}{1+e}\right)}}
+\]
+<div class="insightbox">
+The ratio of the two speeds is:
+\[
+\frac{v_p}{v_a}=\frac{1+e}{1-e}
+\]
+Their product is:
+\[
+v_pv_a=\frac{GM}{a}
+\]
+These results connect the orbital geometry directly to the orbital speed.
+</div>
+</div>
+<h3>4. Special Case: Circular Orbit</h3>
+<p>
+A circular orbit is a special case of an elliptical orbit with zero eccentricity (\(e=0\)).
+</p>
+\[
+r_p=r_a=a=R
+\]
+<p>
+Consequently, the velocity at perihelion and aphelion becomes identical:
+</p>
+\[
+v_p=v_a=\sqrt{\frac{GM}{a}}
+\]
+<p>
+Since the orbital radius remains constant, the planet moves with constant speed throughout its circular orbit.
+</p>
+<div class="insightbox">
+In a circular orbit, the maximum and minimum orbital speeds are equal.<br>
+As eccentricity increases, the difference between the speeds at perihelion and aphelion also increases.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
 </div>
 </body>
 </html>

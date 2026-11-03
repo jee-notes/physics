@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conical Pendulum | Circular Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Circular Motion
+</a>
+</nav>
+<h1>Conical Pendulum</h1>
+<p class="subtitle">
+Horizontal circular motion.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+A conical pendulum is a special case of circular motion dynamics. We study it separately because its basic configuration involves circular motion in a horizontal plane.
+</p>
+<p>
+Horizontal and vertical circular motions are categorized based on how gravity impacts the circular motion.
+</p>
+<p>
+In horizontal circular motion, the gravitational height of the particle remains constant.
+</p>
+<p>
+Consequently, its gravitational potential energy does not change, and gravity does no work. Gravity just plays the role of balancing the forces vertically to sustain planar horizontal motion.
+</p>
+<p>
+We will study more about regular simple pendulum in the later SHM chapter.
+</p>
+<p>
+For now, the setup of a conical pendulum comprises of a particle (bob) suspended from a string and made to perform circular motion in the horizontal plane.
+</p>
+<p>
+The string tilts away from the vertical as the bob revolves.
+</p>
+<p>
+The tension in the string has a vertical component that balances gravity and a horizontal component that provides the required centripetal force.
+</p>
+<p>
+The string traces out the surface of a cone, which gives rise to the name <strong>conical pendulum</strong>.
+</p>
+<p>
+In steady motion, the speed, radius of the circular path and angle made by the string with the vertical remain constant with time.
+</p>
+<p>
+This approach of force-resolution is also used in banked circular roads, which we will study later.
+</p>
+</section>
+<section>
+<h2>The Conical Pendulum</h2>
+<p>
+Consider a bob of mass \( m \) tied to a string of length \( L \), whirling in a horizontal circle of radius \( R \) with speed \( v \) .
+</p>
+<p>
+The string sweeps out a cone, making an angle \( \theta \) with the vertical. Let \( T \) be the tension in the string.
+</p>
+<p>
+We resolve the tension \( T \) into two orthogonal components:
+</p>
+<ol class="model-box">
+<li>A vertical component \( T \cos \theta \) which balances the gravitational force (weight).</li>
+<li>A horizontal component \( T \sin \theta \) which points toward the center of the circle and provides the required centripetal force.</li>
+</ol>
+<p>
+We use the fact that as the motion is planar, the net of forces perpendicular to the plane cancel each other.
+</p>
+<div class="math-block">
+\[
+T \cos \theta = mg
+\]
+</div>
+<p>
+The component \( T \sin \theta\) is in the plane of the circle and there is no other force. So we can say that it provides centripetal force.
+</p>
+<div class="math-block">
+\[
+T \sin \theta = \frac{mv^2}{R}
+\]
+</div>
+<p>
+Dividing the second equation by the first equation eliminates the tension \( T \):
+</p>
+<div class="math-block">
+\[
+\tan \theta = \frac{v^2}{Rg}
+\]
+</div>
+<p>
+From this, we can determine the necessary speed \( v \) for a given angle \( \theta \):
+</p>
+<div class="math-block">
+\[
+v = \sqrt{Rg \tan \theta}
+\]
+</div>
+<p>
+Above is basic equation of conical pendulum. In this equation, \(g\) is constant. So, the 3 variables \(v\) , \(R\) and \(\theta\) get related. 
+</p>
+<p>
+However, in this case, the radius \(R\) too is related to the angle \(\theta\) through string length \( L \) which is constant by geometric relation (\( R = L \sin \theta \)). And so, we can treat \( v \) too only as a function of \(\theta\) . 
+</p>
+<div class="math-block">
+\[
+v = \sqrt{Lg \tan \theta \sin \theta}
+\]
+</div>
+<div class="insightbox">
+The geometrical constraint in a conical pendulum is different from that in a banked circular track.<br>
+In a conical pendulum, the string length is fixed, so the radius depends on the angle:
+\[
+R=L\sin\theta
+\]
+In an idealised banked circular track, the banking angle remains fixed while the radius can vary.<br>
+Consequently, the required speed changes with radius.<br>
+This distinction will be useful when we study banked roads and velodromes.<br>
+Velodromes are funnel like structures used by cyclists.
+</div>
+<h3>Time Period</h3>
+<p>
+In SHM, we study that pendulum is a special machine that works under gravity and provides us motion whose time period is important. 
+</p>
+<p>
+In conical pendulum, we have to find the time period \( P \) of one complete revolution (\( P = 2\pi R / v \)):
+</p>
+\[
+P = 2\pi \sqrt{\frac{L \cos \theta}{g}}
+\]
+<div class="insightbox">
+We use different variable for time period as (\(P\) for Period) because (\(T\) for Tension). 
+</div>
+<p>
+This relation is important because the period \(P\) depends on height \(H\) alone \(L \cos \theta = H\). 
+</p>
+<div class="math-block">
+\[
+P = 2\pi \sqrt{\frac{H}{g}}
+\]
+</div>
+<p>
+Two different pendulums at same height from suspension point will have same time period even if their length of strings and speed are different. 
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

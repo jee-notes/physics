@@ -87,11 +87,47 @@ Thus, a particle completing two full revolutions has an angular position differi
 <section>
 <h2>Angular Displacement (\(\Delta\theta\))</h2>
 <p>
-Just as displacement is defined as the change in position, angular displacement is defined as the change in angular position.
+Just as displacement is defined as the change in position, angular displacement is defined as the change in angular position (\(\theta\)).
 </p>
 <p>
 <strong>Angular displacement</strong> is the angle swept out by the radius vector of a particle about a specified centre or axis of rotation.
 </p>
+<p>
+Thus, an important insight is that the angular displacement is not that of the particle but actually it is the angular displacement of its radius vector.
+</p>
+<p>
+Let the radius vector sweep an infinitesimal angle (\(d\theta\)) in time (\(dt\)), while the particle undergoes an infinitesimal displacement (\(ds\)) along the circumference of a circle of radius \(R\). We have:
+</p>
+\[
+d\theta=\frac{ds}{R}
+\]
+<p>
+Here, \(ds\) represents the infinitesimal arc length. It is important to distinguish this from the magnitude of the displacement vector.
+</p>
+<p>
+For a finite motion, the arc length and the magnitude of the net displacement are generally different. Consider a particle moving through a quarter circle. Its angular displacement is:
+</p>
+\[
+\Delta\theta=\frac{\pi}{2}
+\]
+<p>
+The arc length traversed is:
+</p>
+\[
+s_{\text{arc}}=\frac{\pi R}{2}
+\]
+<p>
+However, the magnitude of the net displacement is the length of the chord joining the initial and final positions:
+</p>
+\[
+|\Delta\vec r|=\sqrt{2}R
+\]
+<p>
+Thus, we must distinguish between arc length traversed and the magnitude of the net displacement. The relation between angular displacement and arc length remains valid for finite motion along a circle:
+</p>
+\[
+\boxed{\Delta\theta=\frac{s_{\text{arc}}}{R}}
+\]
 <p>
 As discussed earlier, angular kinematics in this chapter deals exclusively with planar (2D) motion. As a particle moves along a circular path, its radius vector continuously changes its orientation and sweeps out an angle.
 </p>
@@ -106,15 +142,15 @@ It is not reset after \(2\pi\). For example, a particle completing two full revo
 Angular displacement is a dimensionless quantity because it is defined as the ratio of two lengths.
 </p>
 <p>
-Angular displacement is a vector quantity. Consequently, angular displacement may be regarded as a <strong>dimensionless vector quantity</strong>.
+Angular displacement is treated as a vector quantity in planar circular motion. Consequently, it may be regarded as a <strong>dimensionless axial vector</strong>.
 </p>
 <ul class="model-box">
-<li><strong>SI Unit:</strong>radian (rad)</li>
+<li><strong>SI Unit:</strong> radian (rad)</li>
 <li><strong>Dimensional Formula:</strong> \([M^0L^0T^0]\)</li>
 </ul>
 <h3>Direction of Angular Displacement</h3>
 <p>
-Since angular displacement is a vector quantity, it also possess a direction.
+Since angular displacement is treated as a vector quantity, it also possesses a direction.
 </p>
 <p>
 As the motion is planar, angular displacement is associated with an axis perpendicular to the plane containing the motion.
@@ -125,11 +161,15 @@ Its direction is assigned using the <strong>Right-Hand Thumb Rule</strong>. Curl
 <p>
 For example, if a particle rotates anticlockwise in the \(xy\)-plane, the angular displacement is directed along the positive \(z\)-axis. Conversely, clockwise rotation corresponds to an angular displacement directed along the negative \(z\)-axis.
 </p>
+\[
+d\vec{\theta} = d \theta \, \hat{k}
+\]
 <div class="insightbox">
 The primary purpose of assigning a direction to angular displacement is to distinguish between the two possible senses of rotation in a plane.<br>
-For infinitesimally small rotations (\(d\theta\)), angular displacement may be represented by an axial vector perpendicular to the plane of motion.<br>
-Finite angular displacements, however, do not obey the usual laws of vector addition and are therefore not true vectors in the strict mathematical sense.<br>
-Such subtleties lie beyond the scope of this chapter.
+For infinitesimally small rotations (\(d\theta\)), angular displacement can be represented by an axial vector perpendicular to the plane of motion.<br>
+For planar rotations about the same fixed axis, successive angular displacements add algebraically.<br>
+However, finite rotations about different axes in 3D do not obey the usual laws of vector addition.<br>
+Such subtleties lie beyond the scope of exam.
 </div>
 </section>
 <section>

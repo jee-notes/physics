@@ -1,146 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gravitation | JEE Physics Notes</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravitation | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
 <body>
 <div class="container">
-    <nav class="top-nav">
-        <a href="../../index.html" class="back-btn">
-            <span>&larr;</span> Back to Syllabus
-        </a>
-    </nav>
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Gravitation</h1>
+<p class="subtitle">
+Universal inverse-square interaction governing the dynamics of celestial and terrestrial masses.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+Gravitation is the oldest of the fundamental interactions studied in physics.
+</p>
+<p>
+While gravity is by far the weakest of the four fundamental forces on a subatomic scale, its strictly attractive character and infinite range make it the dominant macroscopic force shaping planets, stars, galaxies, and the large-scale geometry of the cosmos.
+</p>
+<p>
+Historically, terrestrial gravity (objects falling to Earth) and celestial (astronomic) mechanics (the motion of planets and the Moon) were regarded as entirely separate domains.
+</p>
+<p>
+Newton's revolutionary insight in 1687 was the recognition of universality: the same gravitational force that pulls an apple toward the center of the Earth maintains the Moon in its closed orbit.
+</p>
+<p>
+In this chapter, we study gravitation as a central action-at-a-distance force and as a conservative vector field \( \vec{g} \) and scalar potential field \( V \).
+</p>
+<p>
+This is the same structure as to how we will study electrostatic field force in 12th Physics Syllabus but we exclude field lines and flux in gravitation.
+</p>
+<p>
+Understanding the vector properties of gravitational intensity and the work-energy principles of potential is foundational for exam.
+</p>
+<div class="insightbox">
+Gravity is an omnipresent, unshieldable force.<br>
+Unlike electromagnetism, where positive and negative charges can cancel to produce neutral systems, mass (gravitational charge) is strictly positive.<br>
+Consequently, gravitational effects always accumulate and never cancel out.
+</div>
+</section>
+<section>
+<h2>Universal Nature of Gravity</h2>
+<p>
+Gravitational interaction possesses several unique physical signatures that distinguish it from all other classical forces:
+</p>
+<h3>Key Characteristics of Gravitational Interaction</h3>
+<ul class="model-box">
+<li><strong>Universal:</strong> Acts between any two entities having mass, regardless of chemical composition or physical state.</li>
+<li><strong>Central Force:</strong> The force vector is strictly directed along the line joining the two interacting point masses (\( \vec{\tau} = \vec{r} \times \vec{F} = \vec{0} \)), guaranteeing the conservation of orbital angular momentum.</li>
+<li><strong>Conservative Field:</strong> Work done around any closed loop is zero (\( \oint \vec{F} \cdot d\vec{r} = 0 \)), enabling the rigorous definition of a scalar potential energy function \( U(r) \).</li>
+<li><strong>Medium Independence:</strong> The gravitational attraction between two bodies is entirely independent of the medium intervening between them (dielectric screening does not exist for gravity).</li>
+<li><strong>Inverse-Square Dependency:</strong> The attractive force decays as \( 1/r^2 \), resulting in closed, stable elliptical orbits.</li>
+</ul>
+</section>
+<section>
+<h2>Gravitational Field vs Electrostatic Field Analogy</h2>
+<p>
+Newton's law of gravitation and Coulomb's law of electrostatics share an identical mathematical structure as inverse-square central force laws. This duality allows powerful cross-application of field theory:
+</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Gravitation</th>
+<th>Electrostatics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source Property</strong></td>
+<td>Mass \( m \) (always positive)</td>
+<td>Charge \( q \) (positive or negative)</td>
+</tr>
+<tr>
+<td><strong>Force Law</strong></td>
+<td>\( F = G \frac{m_1 m_2}{r^2} \) (strictly attractive)</td>
+<td>\( F = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{r^2} \) (attractive or repulsive)</td>
+</tr>
+<tr>
+<td><strong>Coupling Constant</strong></td>
+<td>\( G \approx 6.674 \times 10^{-11} \, \text{N}\cdot\text{m}^2/\text{kg}^2 \)</td>
+<td>\( k = \frac{1}{4\pi\varepsilon_0} \approx 8.99 \times 10^9 \, \text{N}\cdot\text{m}^2/\text{C}^2 \)</td>
+</tr>
+<tr>
+<td><strong>Field Intensity</strong></td>
+<td>\( \vec{I} = \frac{\vec{F}}{m} = -\frac{GM}{r^2}\hat{r} \)</td>
+<td>\( \vec{E} = \frac{\vec{F}}{q} = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\hat{r} \)</td>
+</tr>
+<tr>
+<td><strong>Potential</strong></td>
+<td>\( V = -\frac{GM}{r} \) (always \( \le 0 \) relative to \( \infty \))</td>
+<td>\( V = \frac{1}{4\pi\varepsilon_0}\frac{q}{r} \)</td>
+</tr>
+<tr>
+<td><strong>Field-Potential Relation</strong></td>
+<td>\( \vec{I} = -\nabla V = -\frac{dV}{dr}\hat{r} \)</td>
+<td>\( \vec{E} = -\nabla V = -\frac{dV}{dr}\hat{r} \)</td>
+</tr>
+<tr>
+<td><strong>Gauss's Law Analogue</strong></td>
+<td>\( \oint \vec{I} \cdot d\vec{A} = -4\pi G M_{\text{enc}} \)</td>
+<td>\( \oint \vec{E} \cdot d\vec{A} = \frac{q_{\text{enc}}}{\varepsilon_0} \)</td>
+</tr>
+</tbody>
+</table>
+<div class="insightt-box">
+Notice the extra negative sign in gravitational Gauss's law and potential: because masses always attract, the gravitational field vector points inward toward mass concentrations, whereas positive charges act as outward field sources.
+</div>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="model-box">
+<li><strong>Newton's Law of Gravitation:</strong> Vector form, universal constant \( G \), superposition, continuous bodies, and cavity theorems.</li>
+<li><strong>Acceleration Due to Gravity (\( g \)):</strong> Surface value, variation with altitude, depth, latitude (centrifugal effect of rotation), and planetary oblateness.</li>
+<li><strong>Gravitational Field Intensity:</strong> Field vectors due to point masses, rings, spherical shells, and solid spheres.</li>
+<li><strong>Gravitational Potential & Energy:</strong> Point mass potential, continuous mass potentials, field-gradient relation, and gravitational self-energy.</li>
+<li><strong>Escape Velocity:</strong> Energy conservation criteria for unbound parabolic and hyperbolic trajectories from planet surfaces, altitudes, and depths.</li>
+<li><strong>Kepler's Laws of Planetary Motion:</strong> Law of orbits, law of areas (areal velocity conservation), and law of periods for circular and elliptical orbits.</li>
+<li><strong>Orbital Mechanics & Satellites:</strong> Orbital speed, period, mechanical binding energy, Hohmann transfer maneuvers, geostationary orbits, and apparent weightlessness.</li>
+<li><strong>Binary Star Systems:</strong> Two-body problem, reduced mass concept, and common center-of-mass circular orbits.</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-newtons-law-of-gravitation.html">1. Newton's Law of Gravitation & Superposition</a>
+<a href="./02-acceleration-due-to-gravity.html">2. Acceleration Due to Gravity (\( g \)) & Its Variations</a>
+<a href="./03-gravitational-field-and-intensity.html">3. Gravitational Field Intensity & Field Lines</a>
+<a href="./04-gravitational-potential-and-energy.html">4. Gravitational Potential, Potential Energy & Self-Energy</a>
+<a href="./05-escape-velocity.html">5. Escape Velocity & Unbound Trajectories</a>
+<a href="./06-keplers-laws-of-planetary-motion.html">6. Kepler's Laws of Planetary Motion</a>
+<a href="./07-satellite-motion.html">7. Motion of Satellites & Orbital Mechanics</a>
+<a href="./08-binary-star-systems.html">8. Binary Star Systems & Two-Body Dynamics</a>
+</div>
+</section>
 
-    <h1>Gravitation</h1>
-    <p class="subtitle">
-        Universal inverse-square interaction governing the dynamics of celestial and terrestrial masses.
-    </p>
-
-    <section>
-        <h2>Conceptual Overview</h2>
-        <p>
-            Gravitation is the oldest of the fundamental interactions studied in physics. While gravity is by far the weakest of the four fundamental forces on a subatomic scale, its strictly attractive character and infinite range make it the dominant macroscopic force shaping planets, stars, galaxies, and the large-scale geometry of the cosmos.
-        </p>
-        <p>
-            Historically, terrestrial gravity (objects falling to Earth) and celestial mechanics (the motion of planets and the Moon) were regarded as entirely separate domains. Sir Isaac Newton's revolutionary insight in 1687 was the recognition of universality: the same gravitational force that pulls an apple toward the center of the Earth maintains the Moon in its closed orbit.
-        </p>
-        <p>
-            In modern classical physics, gravitation is formulated both as a central action-at-a-distance force and as a conservative vector field \( \vec{g} \) associated with a scalar potential field \( V \). Understanding the vector properties of gravitational intensity and the work-energy principles of potential is foundational for JEE Advanced mechanics.
-        </p>
-        <div class="insightbox">
-            Gravity is an omnipresent, unshieldable force. Unlike electromagnetism, where positive and negative charges can cancel to produce neutral systems, mass (gravitational charge) is strictly positive. Consequently, gravitational effects always accumulate and never cancel out.
-        </div>
-    </section>
-
-    <section>
-        <h2>Universal Nature of Gravity</h2>
-        <p>
-            Gravitational interaction possesses several unique physical signatures that distinguish it from all other classical forces:
-        </p>
-        <div class="model-box">
-            <h3>Key Characteristics of Gravitational Interaction</h3>
-            <ul>
-                <li><strong>Universal:</strong> Acts between any two entities having mass-energy, regardless of chemical composition or physical state.</li>
-                <li><strong>Central Force:</strong> The force vector is strictly directed along the line joining the centers of mass of the interacting particles (\( \vec{\tau} = \vec{r} \times \vec{F} = \vec{0} \)), guaranteeing the conservation of orbital angular momentum.</li>
-                <li><strong>Conservative Field:</strong> Work done around any closed loop is zero (\( \oint \vec{F} \cdot d\vec{r} = 0 \)), enabling the rigorous definition of a scalar potential energy function \( U(r) \).</li>
-                <li><strong>Medium Independence:</strong> The gravitational attraction between two bodies is entirely independent of the medium intervening between them (dielectric screening does not exist for gravity).</li>
-                <li><strong>Inverse-Square Dependency:</strong> The force decays precisely as \( 1/r^2 \), resulting in closed, stable Keplerian conic orbits.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Gravitational Field vs Electrostatic Field Analogy</h2>
-        <p>
-            Newton's law of gravitation and Coulomb's law of electrostatics share an identical mathematical structure as inverse-square central force laws. This duality allows powerful cross-application of field theory:
-        </p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Concept</th>
-                    <th>Gravitation</th>
-                    <th>Electrostatics</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Source Property</strong></td>
-                    <td>Mass \( m \) (always positive)</td>
-                    <td>Charge \( q \) (positive or negative)</td>
-                </tr>
-                <tr>
-                    <td><strong>Force Law</strong></td>
-                    <td>\( F = G \frac{m_1 m_2}{r^2} \) (strictly attractive)</td>
-                    <td>\( F = \frac{1}{4\pi\varepsilon_0} \frac{q_1 q_2}{r^2} \) (attractive or repulsive)</td>
-                </tr>
-                <tr>
-                    <td><strong>Coupling Constant</strong></td>
-                    <td>\( G \approx 6.674 \times 10^{-11} \, \text{N}\cdot\text{m}^2/\text{kg}^2 \)</td>
-                    <td>\( k = \frac{1}{4\pi\varepsilon_0} \approx 8.99 \times 10^9 \, \text{N}\cdot\text{m}^2/\text{C}^2 \)</td>
-                </tr>
-                <tr>
-                    <td><strong>Field Intensity</strong></td>
-                    <td>\( \vec{I} = \frac{\vec{F}}{m} = -\frac{GM}{r^2}\hat{r} \)</td>
-                    <td>\( \vec{E} = \frac{\vec{F}}{q} = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\hat{r} \)</td>
-                </tr>
-                <tr>
-                    <td><strong>Potential</strong></td>
-                    <td>\( V = -\frac{GM}{r} \) (always \( \le 0 \) relative to \( \infty \))</td>
-                    <td>\( V = \frac{1}{4\pi\varepsilon_0}\frac{q}{r} \)</td>
-                </tr>
-                <tr>
-                    <td><strong>Field-Potential Relation</strong></td>
-                    <td>\( \vec{I} = -\nabla V = -\frac{dV}{dr}\hat{r} \)</td>
-                    <td>\( \vec{E} = -\nabla V = -\frac{dV}{dr}\hat{r} \)</td>
-                </tr>
-                <tr>
-                    <td><strong>Gauss's Law Analogue</strong></td>
-                    <td>\( \oint \vec{I} \cdot d\vec{A} = -4\pi G M_{\text{enc}} \)</td>
-                    <td>\( \oint \vec{E} \cdot d\vec{A} = \frac{q_{\text{enc}}}{\varepsilon_0} \)</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="concept-box">
-            <strong>Crucial Minus Sign:</strong> Notice the extra negative sign in gravitational Gauss's law and potential: because masses always attract, the gravitational field vector points inward toward mass concentrations, whereas positive charges act as outward field sources.
-        </div>
-    </section>
-
-    <section>
-        <h2>Core Topics</h2>
-        <ul class="points-list">
-            <li><strong>Newton's Law of Gravitation:</strong> Vector form, universal constant \( G \), superposition, continuous bodies, and cavity theorems.</li>
-            <li><strong>Acceleration Due to Gravity (\( g \)):</strong> Surface value, variation with altitude, depth, latitude (centrifugal effect of rotation), and planetary oblateness.</li>
-            <li><strong>Gravitational Field Intensity:</strong> Field vectors due to point masses, rings, spherical shells, and solid spheres.</li>
-            <li><strong>Gravitational Potential & Energy:</strong> Point mass potential, continuous mass potentials, field-gradient relation, and gravitational self-energy.</li>
-            <li><strong>Escape Velocity:</strong> Energy conservation criteria for unbound parabolic and hyperbolic trajectories from planet surfaces, altitudes, and depths.</li>
-            <li><strong>Kepler's Laws of Planetary Motion:</strong> Law of orbits, law of areas (areal velocity conservation), and law of periods for circular and elliptical orbits.</li>
-            <li><strong>Orbital Mechanics & Satellites:</strong> Orbital speed, period, mechanical binding energy, Hohmann transfer maneuvers, geostationary orbits, and apparent weightlessness.</li>
-            <li><strong>Binary Star Systems:</strong> Two-body problem, reduced mass concept, and common center-of-mass circular orbits.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Chapter Structure</h2>
-        <div class="chapter-list">
-            <a href="./01-newtons-law-of-gravitation.html">1. Newton's Law of Gravitation & Superposition</a>
-            <a href="./02-acceleration-due-to-gravity.html">2. Acceleration Due to Gravity (\( g \)) & Its Variations</a>
-            <a href="./03-gravitational-field-and-intensity.html">3. Gravitational Field Intensity & Field Lines</a>
-            <a href="./04-gravitational-potential-and-energy.html">4. Gravitational Potential, Potential Energy & Self-Energy</a>
-            <a href="./05-escape-velocity.html">5. Escape Velocity & Unbound Trajectories</a>
-            <a href="./06-keplers-laws-of-planetary-motion.html">6. Kepler's Laws of Planetary Motion</a>
-            <a href="./07-satellite-motion.html">7. Motion of Satellites & Orbital Mechanics</a>
-            <a href="./08-binary-star-systems.html">8. Binary Star Systems & Two-Body Dynamics</a>
-        </div>
-    </section>
-
-    <footer>
-        <hr>
-        <p>By Hitendra K K</p>
-    </footer>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
 </div>
 </body>
 </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Force due to Continuous Bodies | Law of Gravitation</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-newtons-law-of-gravitation.html" class="back-btn">
+<span>&larr;</span> Back to Law of Gravitation
+</a>
+</nav>
+<h1>Force due to Continuous Bodies</h1>
+<p class="subtitle">
+Integration techniques for mass distributions.
+</p>
+<section>
+<h2>Gravitational Force for Continuous Bodies & Cavity Problems</h2>
+<p>
+For a continuous mass distribution with volume mass density \( \rho(\vec{r}') \), the total gravitational force exerted on an external point mass \( m \) is obtained by integrating infinitesimal contributions \( dm = \rho(\vec{r}') dV' \):
+</p>
+\[
+\vec{F} = -G m \int \frac{\rho(\vec{r}')}{|\vec{r} - \vec{r}'|^3} (\vec{r} - \vec{r}') dV'
+\]
+<h3>The Cavity Method (Superposition Technique)</h3>
+<p>
+When a spherical cavity is carved out of a uniform solid sphere of mass \( M \) and radius \( R \), the gravitational force on an external mass \( m \) can be evaluated without difficult integration by treating the cavity as a superposition of the original intact sphere and a negative mass sphere occupying the cavity region:
+</p>
+<div class="model-box">
+\[
+\vec{F}_{\text{net}} = \vec{F}_{\text{complete sphere}} - \vec{F}_{\text{removed mass sphere}}
+\]
+</div>
+<div class="examplebox">
+<h3>Example: Gravitational Force on a Point Mass near a Sphere with a Spherical Cavity</h3>
+<p>
+A solid uniform sphere of radius \( R \) and mass \( M \) has a spherical cavity of radius \( R/2 \) carved out such that the cavity's surface touches the outer surface and the center of the sphere. Find the gravitational force exerted on a point mass \( m \) placed at a distance \( d = 2R \) from the center of the original sphere along the line joining both centers (on the side of the cavity).
+</p>
+<hr>
+<p><strong>Solution:</strong></p>
+<p>
+1. Mass of the original complete sphere = \( M \).
+</p>
+<p>
+2. Volume of cavity of radius \( R/2 \) is \( V_{\text{cavity}} = \frac{4}{3}\pi (R/2)^3 = \frac{1}{8} V_{\text{total}} \). Thus, the mass of the removed sphere is:
+</p>
+\[
+M_{\text{cav}} = \frac{M}{8}
+\]
+<p>
+3. The center of the removed sphere is located at distance \( R/2 \) from the main center toward the test mass. Therefore, the distance from the center of the cavity to the test mass \( m \) is:
+</p>
+\[
+d_{\text{cav}} = 2R - \frac{R}{2} = \frac{3R}{2}
+\]
+<p>
+4. Applying superposition of forces:
+</p>
+\[
+F_{\text{net}} = F_{\text{full}} - F_{\text{cav}} = \frac{G M m}{(2R)^2} - \frac{G (M/8) m}{\left(\frac{3R}{2}\right)^2}
+\]
+\[
+F_{\text{net}} = \frac{G M m}{4R^2} - \frac{G M m}{8 \cdot \frac{9}{4} R^2} = \frac{G M m}{R^2} \left[ \frac{1}{4} - \frac{1}{18} \right] = \frac{7}{36} \frac{G M m}{R^2}
+\]
+<p>
+The net attractive force is \( \frac{7}{36} \frac{G M m}{R^2} \).
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
