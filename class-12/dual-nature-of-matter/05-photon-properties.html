@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Properties of the Photon | Dual Nature of Radiation and Matter</title>
+<title>Photon Properties and Dynamics | Dual Nature of Radiation and Matter</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,38 +14,108 @@
 <span>&larr;</span> Back to Dual Nature of Radiation and Matter
 </a>
 </nav>
-<h1>Properties of the Photon</h1>
+<h1>Photon Properties and Dynamics</h1>
 <p class="subtitle">
-Understanding the basic "particle" of electromagnetic radiation.
+Properties of Photon that govern its behaviour in Dynamics.
 </p>
-
 <section>
-<h2>The Particle Nature of Light</h2>
+<h2>Concept</h2>
 <p>
-The success of Einstein's photoelectric theory permanently established the photon model. In interaction with matter, radiation behaves as if it is made up of particles called photons.
+The photon model was proposed by Einstein to describe the energy and momentum interactions of light with matter.
 </p>
 <p>
-Photons are fundamental gauge bosons. They travel through a vacuum at exactly the speed of light (\( c = 3 \times 10^8\text{ m/s} \)). Unlike classical particles, photons cannot be brought to rest; their rest mass is strictly zero. They only exist while moving.
+The energy and momentum exchange between light and matter can be analysed using conservation principles similar to those employed in particle-particle collision problems.
+</p>
+<p>
+To understand these interactions, we first need to study the properties of photons that govern their energy and momentum interaction behaviour.
+</p>
+<p>
+The main idea is to understand how a photon, as a quantum particle, differs from an ordinary matter particle and how these differences affect energy and momentum dynamics.
+</p>
+<p>
+The properties of photons are as follows:
+</p>
+<ul class="model-box">
+<li>The speed of a photon in vacuum is the speed of light (\(c = 3 \times 10^8\text{ m/s}\)). All inertial observers measure the same photon speed in vacuum, independent of their reference frame.</li>
+<li>All photons having a particular wavelength \(\lambda\) have the same momentum magnitude:
+\[
+p = \frac{h}{\lambda} = \frac{h\nu}{c}
+\]
+</li>
+li>All photons having a particular frequency \(\nu\), wavelength \(\lambda\), or momentum magnitude \(p\) have the same energy:
+\[
+E = h\nu = \frac{hc}{\lambda} = pc
+\]
+</li>
+<li>Photons have no electric charge and are electrically neutral. Consequently, they are not directly deflected by electric or magnetic fields like charged particles.</li>
+<li>The rest mass of a photon is zero. It cannot exist at rest.</li>
+</ul>
+<div class="insightbox">
+As per the Standard Model of particle physics, photons are bosons.<br>
+Photons always propagate at the speed of light in vacuum and cannot be brought to rest.<br>
+In light-matter interactions, photons can be absorbed, emitted or scattered.
+</div>
+<p>
+We shall study a few properties required for numerical problems and then discuss the main light-matter collision interaction.
 </p>
 </section>
-
 <section>
 <h2>Photon Energy and Momentum</h2>
-<div class="model-box">
-<h3>Energy of a Photon</h3>
-<p>All photons of light of a particular frequency \( \nu \), or wavelength \( \lambda \), have the same energy:</p>
-<p>\[ E = h\nu = \frac{hc}{\lambda} \]</p>
-</div>
-<div class="model-box">
-<h3>Momentum of a Photon</h3>
-<p>Though massless, photons transport momentum. The momentum \( p \) of a photon is given by:</p>
-<p>\[ p = \frac{E}{c} = \frac{h}{\lambda} \]</p>
-</div>
 <p>
-Because energy and momentum depend solely on frequency (or wavelength), all photons of a specific color are identical physical entities.
+The energy and momentum of photon are discussed separately as they are critical for problem solving.
+</p>
+<h3>Momentum of a Photon</h3>
+<p>
+Though massless, photons carry momentum. The momentum \(p\) of a photon is given by:
+</p>
+\[
+p = \frac{E}{c} = \frac{h}{\lambda}
+\]
+<h3>Energy of a Photon</h3>
+<p>
+All photons of light of a particular frequency \( \nu \), or wavelength \( \lambda \), have the same energy:
+</p>
+\[
+E = h\nu = \frac{hc}{\lambda}
+\]
+<p>
+As energy and momentum depend solely on frequency (or wavelength), all photons of a specific color are identical physical entities because photon is fundamentally a packet of energy (or momentum).
+</p>
+<p>
+We studied that mass is required to carry charge. Photon has 0 mass and so 0 charge.
 </p>
 </section>
-
+<section>
+<h2>Light-Matter Interaction</h2>
+<p>
+This  is the main interaction that is studied for which photon properties are defined.
+</p>
+<p>
+Let us understand the collision process from a sample absorption process. A particle of mass \(m\) is moving with speed \(v_i\) along \(\hat{i}\) . A photon of wavelength \(\lambda\) comes from behind and "interacts" with it. 
+</p>
+<p>
+We picture this interaction as "collision" and conserve energy and momentum. During collision, the photon got absorbed by the particle and lost its existence.
+</p>
+<p>
+So, we say that - energy and momentum are conserved but number of photons is not conserved. It could be that to conserve energy and momentum, the particle would have to emit photon or not.
+</p>
+<p>
+In this example, we assume only absorption and find out the new momentum and energy. Initial momentum \(\vec{p}_i = mv_i \hat{i}\) and final momentum \(\vec{p}_f = mv_f \hat{i}\) .
+</p>
+\[
+p_f - p_i = \frac{h}{\lambda}
+\]
+<p>
+After collision, photon was absorbed and it ceased to exist as it can only exist outside in motion. The mass of the particle did not change even after absorbing photon because its rest mass is 0.
+</p>
+<p>
+Even the kinetic energy of the particle is conserved as there is no heat dissipation at point mass level. Initial energy \(E_i = \frac12mv_i^2\) and final energy \(E_f = \frac12mv_f^2\) .
+</p>
+\[
+E_f - E_i = \frac{hc}{\lambda}
+\]
+<p>
+</section>
 <section>
 <h2>Radiation Pressure and Intensity</h2>
 <p>
@@ -58,7 +128,6 @@ In the photon picture, the intensity of light is determined by the *number* of p
 Increasing the intensity of light of a given wavelength increases the number of photons crossing a given area per second. It does *not* increase the energy of the individual photons. 
 </div>
 </section>
-
 <section>
 <h2>Wave-Particle Duality of Radiation</h2>
 <p>
@@ -71,7 +140,6 @@ In phenomena involving propagation, such as interference, diffraction, and polar
 Both descriptions are necessary for a complete understanding of light. The wave theory predicts the probability of finding a photon at a particular point, linking the two seemingly contradictory models.
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

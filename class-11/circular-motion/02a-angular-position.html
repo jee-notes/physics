@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angular Position | Angular Kinematics</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-angular-kinematics.html" class="back-btn">
+<span>&larr;</span> Back to Angular Kinematics
+</a>
+</nav>
+<h1>Angular Position</h1>
+<p class="subtitle">
+New mathematical definition of position in 2D plane.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+In this topic, we learn a different way of describing the position of a particle in a two-dimensional plane.
+</p>
+<p>
+Instead of using the Cartesian coordinate pair \((x,y)\), we introduce another coordinate pair known as the polar coordinates \((r,\theta)\).
+</p>
+<p>
+Both coordinate systems describe the same physical location, but they describe it using different geometrical quantities.
+</p>
+<p>
+In Cartesian coordinates, we specify the position using two perpendicular coordinates, \(x\) and \(y\). In polar coordinates, we specify the position using the distance \(r\) from a chosen origin and the angle \(\theta\) that the position vector makes with a chosen reference ray.
+</p>
+<p>
+Therefore, a complete description of position in polar coordinates requires both \(r\) and \(\theta\). The radial coordinate \(r\) tells us how far the particle is from the origin, while the angular coordinate \(\theta\) tells us the direction of the particle's position vector relative to the reference ray.
+</p>
+<p>
+Angular position, considered by itself, is incomplete information extracted from this complete two-coordinate description.
+</p>
+<p>
+Knowing the angular position only tells us the direction in which the particle is located, but not its distance from the origin.
+</p>
+<p>
+In fact, infinitely many points can have the same angular coordinate while having different radial coordinates.
+</p>
+<p>
+This is similar to discussing only the \(x\)-coordinate from a complete Cartesian coordinate pair \((x,y)\). Knowing the \(x\)-coordinate alone does not specify a unique location because the \(y\)-coordinate is still unknown.
+</p>
+<p>
+In the same way, <strong>angular position represents only the \(\theta\)-coordinate from the complete polar coordinate pair \((r,\theta)\)</strong>. It is one part of the complete geometrical description of the particle's location.
+</p>
+<p>
+We first learn how to convert between Cartesian coordinates \((x,y)\) and polar coordinates \((r,\theta)\).
+</p>
+<p>
+Once we understand how these two coordinate systems describe the same position, then we can focus on the angular coordinate \(\theta\) and study its significance in kinematics.
+</p>
+<p>
+To maintain a similar terminology for the two coordinates, we will call the \(r\)-coordinate from the complete polar coordinate pair \((r,\theta)\) the <strong>Radial Position</strong>.
+</p>
+<p>
+Thus, radial position describes the distance of the particle from the chosen origin, whereas angular position describes the orientation of its position vector relative to the chosen reference ray.
+</p>
+</section>
+<section>
+<h2>Coordinate Conversion</h2>
+<p>
+The definition of position requires a reference. A coordinate system provides this reference by specifying the geometrical elements with respect to which the position of a particle is described.
+</p>
+<p>
+In the Cartesian coordinate system, we choose an origin and two mutually perpendicular lines called the coordinate axes. The position of a particle is then described using its coordinates along these two axes, namely \(x\) and \(y\).
+</p>
+<p>
+In the polar coordinate system, we also require a reference origin. However, instead of using two perpendicular axes to describe the position, we use the distance of the particle from the origin and the angle made by its position vector with a chosen reference ray. Thus, we require a reference origin and a reference ray to define polar coordinates.
+</p>
+<p>
+The angular coordinate \(\theta\) is measured from the chosen reference ray according to a specified sense of rotation. We usually adopt the convention that anticlockwise rotation is positive and clockwise rotation is negative.
+</p>
+<p>
+This is analogous to the sign convention used in Cartesian coordinates, where displacement towards the right along the positive \(X\)-axis and upwards along the positive \(Y\)-axis is taken as positive. Just as we consistently follow the chosen positive directions in Cartesian coordinates, we maintain the anticlockwise-positive convention for angular coordinates.
+</p>
+<p>
+There is also a mathematical reason for maintaining this convention. In mathematics, standard trigonometric functions are defined using angles measured anticlockwise from the positive \(X\)-axis. Following the same convention allows us to directly use the familiar relationships between angles and trigonometric functions.
+</p>
+<p>
+To facilitate easy conversion between Cartesian and polar coordinates, we commonly choose the positive \(X\)-axis as the reference ray. This is a convenient convention, not a requirement of the polar coordinate system. Any fixed ray in the plane can be chosen as the reference ray, provided the angular coordinate is measured consistently from it.
+</p>
+<p>
+Consider a particle located at point \(P(x,y)\) in the \(XY\)-plane. Let \(O\) be the origin of our coordinate system.
+</p>
+<p>
+The position vector of the particle, measured from \(O\), is:
+</p>
+\[
+\vec r_P=x\,\hat i+y\,\hat j
+\]
+<p>
+The magnitude of this position vector gives the radial coordinate \(r\):
+</p>
+\[
+|\vec r_P|=r=\sqrt{x^2+y^2}
+\]
+<p>
+The angular coordinate \(\theta\) is the angle made by the position vector with the positive \(X\)-axis, measured in the anticlockwise-positive convention.
+</p>
+<p>
+Therefore, the Cartesian coordinates of the particle can be expressed in terms of its polar coordinates \((r,\theta)\) using the following relationships:
+</p>
+\[
+\boxed{x=r\cos\theta,\qquad y=r\sin\theta}
+\]
+<p>
+These equations allow us to convert a given polar coordinate pair \((r,\theta)\) into its corresponding Cartesian coordinate pair \((x,y)\).
+</p>
+<p>
+We can also express the angular coordinate in terms of the Cartesian coordinates. From the above equations:
+</p>
+\[
+\frac{y}{x}=\frac{r\sin\theta}{r\cos\theta}=\tan\theta \qquad \theta=\tan^{-1}\left(\frac{y}{x}\right)
+\]
+<p>
+However, there is an important limitation in using this ordinary inverse tangent function. It takes only one input, namely the ratio \(y/x\), and therefore cannot independently identify the signs of \(x\) and \(y\). As a result, it cannot distinguish between points lying in different quadrants when their ratios \(y/x\) are the same.
+</p>
+<p>
+To understand this limitation, consider two points:
+</p>
+\[
+P(3,4)\qquad\text{and}\qquad Q(-3,-4)
+\]
+<p>
+Although these are two different points, the ratio of their coordinates is identical:
+</p>
+\[
+\frac{y_P}{x_P}=\frac{4}{3},\qquad\frac{y_Q}{x_Q}=\frac{-4}{-3}=\frac{4}{3}
+\]
+<p>
+Consequently, applying the ordinary inverse tangent to either ratio gives the same principal angle:
+</p>
+\[
+\tan^{-1}\left(\frac{4}{3}\right) = 53^\circ
+\]
+<p>
+But the two points lie in different quadrants. Point \(P\) lies in the first quadrant, whereas point \(Q\) lies in the third quadrant. Their polar coordinates are therefore different:
+</p>
+\[
+P:\quad (r,\theta)=(5,53^\circ)
+\]
+\[
+Q:\quad (r,\theta)=(5,233^\circ) \qquad (180 + 53 = 233)
+\]
+<p>
+Thus, knowing only the ratio \(y/x\) is insufficient to determine the angular coordinate uniquely. We must also consider the signs of the individual Cartesian coordinates to identify the correct quadrant.
+</p>
+<p>
+So, to get the correct value of angular co-ordinate, we need both (\(x\)) value and (\(y\)) value separately.  
+</p>
+<div class="insightbox">
+At this stage, we are not learning the complete polar basis-vector system.<br>
+Our present objective is only to understand the conversion between Cartesian coordinates \((x,y)\) and polar coordinates \((r,\theta)\), so that we can understand angular position.<br>
+The complete polar basis-vector system will be studied separately when we discuss generic 2D curvilinear motion.<br>
+However, the coordinate conversion developed here is not restricted to circular motion.<br>
+It is valid for describing the position of a particle undergoing any kind of motion in a two-dimensional plane, including circular motion, parabolic projectile motion and other curvilinear paths.
+</p>
+</div>
+</section>
+<section>
+<h2>Angular Position vs Angular Coordinate</h2>
+<p>
+Angular position and Angular coordinate are closely related, but they do not convey the same information in kinematics.
+</p>
+<p>
+To understand the distinction, we must first separate the geometrical description of a particle's location from its kinematic description.
+</p>
+<p>
+When we describe the location of a particle using polar coordinates, the angular coordinate \(\theta\) specifies the orientation of its position vector with respect to the chosen reference ray. It is a geometrical quantity that identifies the direction in which the particle is located.
+</p>
+<p>
+However, when we talk about angular position in kinematics, we are concerned with a time-dependent variable \(\theta(t)\). In addition to specifying the instantaneous orientation of the position vector, this variable keeps track of the angular motion of the particle, including the number of revolutions it has completed.
+</p>
+<p>
+We already learned about this in 1D kinematics. A variable that describes kinematic position, inherently contains time factor information which is implicit.
+</p>
+<p>
+Consider a simple example. Your friend calls you and asks, "Where are you?" He is implicitly asking about your current location. You might have occupied several different locations in the past, but those past locations do not answer his question. He wants to know where you are now.
+</p>
+<p>
+Thus, a kinematic variable is associated with time because it describes the state of motion or position of a particle at an instant.
+</p>
+<p>
+It is related to the corresponding geometrical quantity, but the kinematic description can retain additional information about how the particle reached its present state.
+</p>
+<p>
+A similar distinction arises in angular position. The geometrical orientation of a ray repeats after every complete revolution. Mathematically, angles that differ by an integer multiple of \(2\pi\) represent the same geometrical direction:
+</p>
+\[
+\theta,\quad \theta+2\pi,\quad \theta+4\pi,\quad \ldots
+\]
+<p>
+Therefore, a geometrical angular coordinate used to identify a direction is defined only modulo \(2\pi\). It does not distinguish between a particle reaching a particular direction for the first time and reaching the same direction after completing one or more revolutions.
+</p>
+<p>
+Angular position in kinematics, on the other hand, keeps track of this accumulated angular motion. We do not discard the completed revolutions merely because the particle has returned to the same geometrical orientation.
+</p>
+<p>
+Consider a particle initially located at point \(P(0,5)\). Taking \(O\) as the origin and the positive \(X\)-axis as the reference ray, its initial polar coordinates are:
+</p>
+\[
+P(r,\theta)=(5,90^\circ)
+\]
+<p>
+Therefore, its initial angular position is:
+</p>
+\[
+\theta_i=90^\circ=\frac{\pi}{2}
+\]
+<p>
+Now suppose the particle performs one complete anticlockwise revolution about the origin and returns to its initial point \(P(0,5)\).
+</p>
+<p>
+After completing the revolution, the particle is again at the same geometrical location. Consequently, its radial coordinate and geometrical orientation are unchanged. Its polar coordinates, when expressed using the usual principal angular range, are still:
+</p>
+\[
+P(r,\theta)=(5,90^\circ)
+\]
+<p>
+However, its angular position in kinematics has changed because the particle has completed one full revolution. We must add \(360^\circ\) to its initial angular position:
+</p>
+\[
+\begin{aligned}
+\theta_f
+&=90^\circ+360^\circ\\
+&=450^\circ
+\end{aligned}
+\]
+<p>
+In radians:
+</p>
+\[
+\boxed{\theta_f=\frac{5\pi}{2}}
+\]
+<p>
+Notice that the particle has the same geometrical angular coordinate at the beginning and end of its motion, but its angular position is different:
+</p>
+\[
+\text{Initial:}\quad \theta_i=\frac{\pi}{2}
+\]
+\[
+\text{Final:}\quad \theta_f=\frac{5\pi}{2}
+\]
+<p>
+The difference between these two angular positions gives the angular displacement of the particle:
+</p>
+\[
+\Delta\theta=\theta_f-\theta_i=\frac{5\pi}{2}-\frac{\pi}{2}=2\pi
+\]
+<p>
+Thus, although the particle returns to its original geometrical location, its angular position records the complete revolution performed during the motion.
+</p>
+<div class="insightbox">
+The geometrical angular coordinate identifies the instantaneous orientation of the position vector and repeats after every \(2\pi\).<br>
+Angular position in kinematics is a time-dependent, accumulated angular variable that also records the revolutions completed by the particle.<br>
+This is why two different instants can have the same geometrical polar coordinates but different angular positions.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

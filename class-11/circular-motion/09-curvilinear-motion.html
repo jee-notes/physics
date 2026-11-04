@@ -1,90 +1,834 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Motion | Centrifugal Force</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curvilinear Motion | Circular Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Circular Motion
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Circular Motion
+</a>
+</nav>
+<h1>Curvilinear Motion</h1>
+<p class="subtitle">
+Angular kinematics for general two-dimensional motion.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+So far, in two-dimensional motion, we have studied projectile motion and circular motion. These are particular examples of motion along curved paths, which are collectively described as <strong>curvilinear motion</strong>.
+</p>
+<p>
+The general kinematic description of planar motion uses Cartesian coordinates \((x,y)\) to specify the position of a particle in space.
+</p>
+<p>
+However, there is another way to describe position in a plane. Instead of using two perpendicular coordinate distances, we can use a radial coordinate and an angular coordinate.
+</p>
+<p>
+This gives us the polar coordinate system, in which the position of a particle is described using \((r,\theta)\).
+</p>
+<p>
+For general curvilinear motion, both the radial coordinate and the angular coordinate can change with time. Unlike circular motion, the distance of the particle from the chosen origin need not remain constant.
+</p>
+<p>
+In this topic, we extend angular kinematics beyond circular motion. An important part of this study is understanding exactly which vector is rotating when we talk about angular displacement and angular velocity.
+</p>
+</section>
+<section>
+<h2>Revolution Rotation Equivalence</h2>
+<p>
+In Cartesian coordinates, we define the position of a particle with respect to an origin and two fixed coordinate axes.
+</p>
+<p>
+In angular kinematics, along with origin \(O\), we do not have two fixed axes but a <strong>reference vector</strong>. For a particle at \(P\), we consider its position vector \(\vec r\), extending from \(O\) to \(P\).
+</p>
+<p>
+The orientation of this position vector provides the basis for describing angular position. A fixed reference ray in the plane is also required to specify the zero angular position.
+</p>
+<p>
+When we say that a particle undergoes angular displacement, the actual geometrical meaning is that its position vector changes its orientation about the chosen origin - or in other words - the position vector rotates about the origin as the particle revolves.
+</p>
+<p>
+For example, an angular displacement of \(\pi/2\) radians clockwise means that the entire position vector has rotated clockwise through an angle of \(\pi/2\) radians.
+</p>
+<p>
+Similarly, the angular velocity of the particle, in this description, is the rate at which its position vector rotates about the chosen origin.
+</p>
+<div class="insightbox">
+The angular displacement conventionally attributed to a particle is actually the angular displacement of its position vector.<br>
+The origin determines the position vector, and the orientation of that vector determines its angular position.<br>
+Consequently, angular position and angular velocity of the position vector depend on the chosen origin.
+</div>
+<p>
+This distinction is important because particle's state of motion has another vector associated with it: its velocity vector. The direction of the velocity vector can also change with time. However, the rotation of the velocity vector is a different geometrical phenomenon from the rotation of the position vector.
+</p>
+<p>
+We will study both separately.
+</p>
+</section>
+<section>
+<h2>Polar Coordinates</h2>
+<p>
+Consider a particle \(P\) in the \(XY\) plane. Taking \(O\) as the origin, let its position vector have magnitude \(r\) and angular position \(\theta\), measured anticlockwise from the positive \(X\)-axis.
+</p>
+<p>
+The Cartesian coordinates can be expressed in terms of the polar coordinates:
+</p>
+\[
+x=r\cos\theta,\qquad y=r\sin\theta
+\]
+<p>
+Therefore, the position vector is:
+</p>
+\[
+\boxed{\vec r=r\cos\theta\,\hat i+r\sin\theta\,\hat j}
+\]
+<p>
+Alternatively, we can express it using a radial unit vector:
+</p>
+\[
+\boxed{\vec r=r\hat r}
+\]
+<p>
+where
+</p>
+\[
+\hat r=\cos\theta\,\hat i+\sin\theta\,\hat j
+\]
+<p>
+The radial unit vector points from the origin towards the particle.
+</p>
+<p>
+We also define another unit vector perpendicular to the radial direction, called the <strong>transverse unit vector</strong>:
+</p>
+\[
+\hat\theta=-\sin\theta\,\hat i+\cos\theta\,\hat j
+\]
+<p>
+The radial and transverse unit vectors are mutually perpendicular:
+</p>
+\[
+\hat r\cdot\hat\theta=0
+\]
+<p>
+Unlike Cartesian unit vectors, the polar unit vectors change their directions as the particle moves and its angular position changes.
+</p>
+<div class="insightbox">
+The Cartesian unit vectors \(\hat i\) and \(\hat j\) are fixed in direction.<br>
+The polar unit vectors \(\hat r\) and \(\hat\theta\) are time-dependent because their directions are determined by the instantaneous angular position of the particle.
+</div>
+<h3>Time Dependence of Polar Unit Vectors</h3>
+<p>
+Since the polar unit vectors depend on the angular position \(\theta\), we can differentiate them with respect to time.
+</p>
+<p>
+Starting with the radial unit vector:
+</p>
+\[
+\hat r=\cos\theta\,\hat i+\sin\theta\,\hat j
+\]
+<p>
+Differentiating:
+</p>
+\[
+\frac{d\hat r}{dt}=-\sin\theta\,\dot\theta\,\hat i+\cos\theta\,\dot\theta\,\hat j \qquad \dot\theta = \omega_r
+\]
+<p>
+Therefore:
+</p>
+\[
+\boxed{\frac{d\hat r}{dt}=\omega_r \,\hat\theta}
+\]
+<p>
+Similarly, differentiating the transverse unit vector:
+</p>
+\[
+\boxed{\frac{d\hat\theta}{dt}=-\omega_r \,\hat r}
+\]
+<p>
+We can also have implicit differential relations.
+</p>
+\[
+\boxed{d\hat\theta = -d\theta \,\hat r \qquad d\hat r = d\theta \,\hat \theta}
+\]
+</section>
+<section>
+<h2>Linear Displacement in Polar</h2>
+<p>
+Consider a particle moving through an infinitesimal displacement \(d\vec r\). Its radial coordinate changes by \(dr\), while its angular position changes by \(d\theta\).
+</p>
+<p>
+The position vector is:
+</p>
+\[
+\vec r=r\hat r
+\]
+<p>
+Differentiating:
+</p>
+\[
+d\vec r=d(r\hat r)
+\]
+\[
+d\vec r=\hat r\,dr+r\,d\hat r
+\]
+<p>
+Using the time-independent differential form of the unit-vector relation, we have:
+</p>
+\[
+d\hat r=\hat\theta\,d\theta
+\]
+<p>
+Substituting:
+</p>
+\[
+\boxed{d\vec r=dr\,\hat r+r\,d\theta\,\hat\theta}
+\]
+<p>
+Thus, the infinitesimal displacement has two mutually perpendicular contributions:
+</p>
+<ul class="model-box">
+<li><strong>Radial displacement:</strong> \(dr\,\hat r\) , which changes the magnitude of the position vector.</li>
+<li>
+<strong>Transverse displacement:</strong> \(r\,d\theta\,\hat\theta\) , which changes the direction of the position vector.</li>
+</ul>
+<p>
+Because these components are perpendicular, the magnitude of the infinitesimal linear displacement is:
+</p>
+\[
+\boxed{ds=\sqrt{dr^2+r^2d\theta^2}}
+\]
+<p>
+For circular motion, \(dr=0\), and this reduces to the familiar relationship between arc displacement and angular displacement:
+</p>
+\[
+ds=r\,|d\theta|
+\]
+<p>
+For general curvilinear motion, however, both radial and transverse contributions may be present.
+</p>
+</section>
+<section>
+<h2>Velocity in Polar</h2>
+<p>
+Linear velocity is the time rate of change of the position vector:
+</p>
+\[
+\vec v=\frac{d\vec r}{dt}
+\]
+<p>
+Using the polar displacement relation:
+</p>
+\[
+d\vec r=dr\,\hat r+r\,d\theta\,\hat\theta
+\]
+<p>
+Dividing by time:
+</p>
+\[
+\boxed{\vec v=\dot r\,\hat r+r\dot\theta\,\hat\theta}
+\]
+<p>
+The velocity therefore has two mutually perpendicular components:
+</p>
+<ul class="model-box">
+<li>
+<strong>Radial velocity:</strong> \(v_r=\dot r\). It describes the rate of change of the distance fromthe chosen origin.</li>
+<li><strong>Transverse velocity:</strong> \(v_\theta=r\dot\theta\). It describes the rate at which the position vector changesits direction.</li>
+</ul>
+<p>
+The magnitude of the linear velocity, i.e. the speed, is:
+</p>
+\[
+\boxed{v=\sqrt{\dot r^2+r^2\dot\theta^2}}
+\]
+<p>
+The transverse component of velocity is particularly important. It is responsible for changing the orientation of the position vector, whereas the radial component changes only its length.
+</p>
+</section>
+<section>
+<h2>Angular Velocity of the Position Vector</h2>
+<p>
+We now define the angular velocity associated with the rotation of the position vector.
+</p>
+<p>
+Let \(\theta\) be the angular position of the radius vector. Its angular velocity is:
+</p>
+\[
+\omega_r=\frac{d\theta}{dt}
+\]
+<p>
+For motion in the \(XY\) plane, we represent this angular velocity as an axial vector directed along the \(Z\)-axis:
+</p>
+\[
+\boxed{\vec\omega_r=\dot\theta\,\hat k}
+\]
+<p>
+Recall the transverse component of linear velocity:
+</p>
+\[
+\vec v_\theta=r\dot\theta\,\hat\theta
+\]
+<p>
+Since \(\hat k\times\hat r=\hat\theta\), we can express this relationship using a cross product:
+</p>
+\[
+\boxed{\vec v_\theta=\vec\omega_r\times\vec r}
+\]
+<p>
+This is the transverse component of velocity, not necessarily the complete linear velocity.
+</p>
+<p>
+We can also derive an expression for angular velocity directly using the position and velocity vectors.
+</p>
+\[
+\vec r\times\vec v=r\hat r\times\left(\dot r\hat r+r\dot\theta\hat\theta\right)
+\]
+<p>
+Since \(\hat r\times\hat r=0\) and \(\hat r\times\hat\theta=\hat k\):
+</p>
+\[
+\vec r\times\vec v=r^2\dot\theta\hat k
+\]
+<p>
+Therefore:
+</p>
+\[
+\boxed{\vec\omega_r=\frac{\vec r\times\vec v}{|\vec r|^2}}
+\]
+<div class="insightbox">
+This formula gives the instantaneous angular velocity of the position vector about the chosen origin.<br>
+It is valid for any planar motion, provided the position vector is non-zero.<br>
+The radial component of velocity does not contribute to this angular velocity because it is parallel to the position vector and disappears in the cross product.
+</div>
+<p>
+For general curvilinear motion, the radial velocity may be non-zero. Consequently, the complete velocity is:
+</p>
+\[
+\boxed{\vec v=\dot r\,\hat r+\vec\omega_r\times\vec r}
+\]
+<p>
+Only when \(r\) remains constant does the radial component vanish, giving:
+</p>
+\[
+\vec v=\vec\omega_r\times\vec r
+\]
+<p>
+Thus, the familiar circular-motion relation is a special case of the more general polar velocity description.
+</p>
+</section>
+<section>
+<h2>Acceleration in Polar Coordinates</h2>
+<p>
+Acceleration is the time rate of change of linear velocity:
+</p>
+\[
+\vec a=\frac{d\vec v}{dt}
+\]
+<p>
+We already established that:
+</p>
+\[
+\vec v=\dot r\,\hat r+r\dot\theta\,\hat\theta
+\]
+<p>
+Differentiating each term:
+</p>
+\[
+\vec a=\ddot r\,\hat r+\dot r\frac{d\hat r}{dt}+(\dot r\dot\theta+r\ddot\theta)\hat\theta+r\dot\theta\frac{d\hat\theta}{dt}
+\]
+<p>
+Using:
+</p>
+\[
+\frac{d\hat r}{dt}=\dot\theta\hat\theta, \qquad \frac{d\hat\theta}{dt}=-\dot\theta\hat r
+\]
+<p>
+We obtain:
+</p>
+\[
+\boxed{\vec a=(\ddot r-r\dot\theta^2)\hat r+(r\ddot\theta+2\dot r\dot\theta)\hat\theta}
+\]
+<p>
+This is the general acceleration expression in polar coordinates. It is valid for arbitrary planar motion.
+</p>
+<p>
+The radial and transverse components are therefore:
+</p>
+\[
+\boxed{a_r=\ddot r-r\dot\theta^2}
+\]
+\[
+\boxed{a_\theta=r\ddot\theta+2\dot r\dot\theta}
+\]
+<p>
+Notice that acceleration has radial and transverse components even when the particle does not move along a circle.
+</p>
+<p>
+For circular motion, \(r=R\) is constant, so:
+</p>
+\[
+\dot r=0,\qquad \ddot r=0
+\]
+<p>
+The acceleration simplifies to:
+</p>
+\[
+\boxed{\vec a=-R\dot\theta^2\hat r+R\ddot\theta\hat\theta}
+\]
+<p>
+The first term is centripetal acceleration, while the second is tangential acceleration.
+</p>
+<div class="insightbox">
+Radial and transverse components are defined relative to the chosen origin.<br>
+Tangential and normal components, introduced next, are defined relative to the instantaneous direction and curvature of the actual trajectory.<br>
+For general curvilinear motion, these two decompositions are not the same.
+</div>
+</section>
+<section>
+<h2>Angular Velocity of the Velocity Vector</h2>
+<p>
+So far, we have studied the angular velocity of the position
+vector. However, the velocity vector itself can also rotate
+as the particle follows a curved path.
+</p>
 
-        <h1>Centrifugal Force & Rotating Frames</h1>
-        <p class="subtitle">
-            The mathematical pseudo-force that emerges in accelerated reference systems.
-        </p>
+<p>
+This is a different geometrical phenomenon.
+</p>
 
-        <section>
-            <h2>1. What is Centrifugal Force?</h2>
-            <p>
-                Newton's laws of motion are strictly valid only in <strong>inertial frames of reference</strong> (frames that are either at rest or moving with constant velocity). A rotating frame—like a merry-go-round or the Earth itself—is continuously accelerating toward its center. Such frames are termed <strong>non-inertial frames</strong>.
-            </p>
-            <p>
-                To make Newton's laws artificially work within a rotating non-inertial frame, we must introduce a fictitious "correction" force. This fictitious force, which appears to act on all objects viewed from within the rotating frame, acts radially <em>outward</em> from the axis of rotation. This is the <strong>Centrifugal Force</strong>.
-            </p>
-            
-            <div class="model-box">
-                \[ \vec{F}_{cf} = -m (\vec{\omega} \times (\vec{\omega} \times \vec{r})) \]
-                \[ F_{cf} = m \omega^2 R = \frac{mv^2}{R} \]
-            </div>
+<p>
+The angular velocity of the position vector describes how
+the particle's position direction changes about the chosen
+origin. The angular velocity of the velocity vector describes
+how the direction of motion itself changes.
+</p>
 
-            <ul>
-                <li><strong>\( F_{cf} \)</strong>: Centrifugal force (magnitude).</li>
-                <li><strong>\( m \)</strong>: Mass of the object.</li>
-                <li><strong>\( \omega \)</strong>: Angular velocity of the rotating reference frame.</li>
-                <li><strong>\( R \)</strong>: Distance of the object from the axis of rotation.</li>
-            </ul>
-        </section>
+<p>
+Let the velocity vector be represented as:
+</p>
 
-        <section>
-            <h2>2. Real vs. Pseudo</h2>
-            <p>
-                A very common misconception among students is confusing Centripetal and Centrifugal forces as an action-reaction pair. They are absolutely not. They act on the same body but are invoked by different observers.
-            </p>
+\[
+\vec v=v\hat v
+\]
 
-            <div class="concept-box">
-                <ul>
-                    <li><strong>Centripetal Force (The Real Force):</strong> Observed exclusively from an <em>inertial frame</em> (e.g., someone standing on the ground watching a merry-go-round). It points <strong>inward</strong>. It is a real physical interaction (like tension or friction) causing the object to turn.</li>
-                    <li><strong>Centrifugal Force (The Pseudo Force):</strong> Observed exclusively from a <em>non-inertial (rotating) frame</em> (e.g., a person sitting on the merry-go-round). It points <strong>outward</strong>. It is a mathematical construct required to explain why objects "feel" thrown outward despite no physical hand pushing them.</li>
-                </ul>
-            </div>
+<p>
+Here, \(v=|\vec v|\) is the speed and \(\hat v\) is the
+unit vector along the instantaneous direction of velocity.
+</p>
 
-            <div class="insightbox">
-                Action-Reaction pairs (Newton's 3rd Law) must arise from fundamental physical interactions between two different bodies. A pseudo-force like centrifugal force has no physical agent causing it; it is purely a byproduct of the observer's own acceleration. Hence, a pseudo-force has no reaction counterpart.
-            </div>
-        </section>
+<p>
+Differentiating with respect to time:
+</p>
 
-        <section>
-            <h2>3. Applications</h2>
-            <p>
-                Rotating reference frames and the concept of centrifugal force are highly useful for analyzing complex systems from the perspective of the rotating object:
-            </p>
-            
-            <div class="examplebox">
-                <h3>Engineering and Space Applications</h3>
-                <hr>
-                <ul>
-                    <li><strong>Centrifuges:</strong> Used in biology and chemistry to separate suspensions (like blood cells from plasma). In the rotating frame of the test tube, the outward centrifugal force pushes denser particles to the bottom of the tube much faster than normal gravity ever could.</li>
-                    <li><strong>Washing Machine Dryers:</strong> Spinning drums force wet clothes into rapid circular motion. The water droplets, lacking sufficient inward centripetal force from the fabric, travel in straight lines through the drum's holes. In the frame of the clothes, it feels as if an outward centrifugal force "flicks" the water away.</li>
-                    <li><strong>Artificial Gravity:</strong> Conceptual space stations rotate specifically to create an artificial "down." To an astronaut inside the spinning ring, the outward centrifugal force presses them against the outer hull, perfectly simulating a gravitational pull.</li>
-                    <li><strong>Equatorial Bulge:</strong> The Earth itself is a rotating frame. The centrifugal force is highest at the equator (where \(R\) is maximum) and zero at the poles. This outward pseudo-force counteracts a tiny fraction of Earth's gravity, making objects weigh slightly less at the equator and causing the planet to bulge outward.</li>
-                </ul>
-            </div>
-        </section>
+\[
+\vec a=
+\frac{dv}{dt}\hat v+
+v\frac{d\hat v}{dt}
+\]
 
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<p>
+The first term represents a change in the magnitude of
+velocity, while the second represents a change in its direction.
+</p>
+
+<p>
+Since \(\hat v\) is a unit vector:
+</p>
+
+\[
+\hat v\cdot\hat v=1
+\]
+
+<p>
+Differentiating:
+</p>
+
+\[
+\boxed{
+\hat v\cdot\frac{d\hat v}{dt}=0
+}
+\]
+
+<p>
+Thus, the rate of change of a unit vector is perpendicular
+to the vector itself.
+</p>
+
+<p>
+Consequently, the change in direction of velocity is
+perpendicular to the instantaneous velocity vector.
+</p>
+
+<h3>Angular Velocity of the Velocity Vector</h3>
+
+<p>
+Let \(\psi\) denote the instantaneous direction angle of
+the velocity vector, measured from the positive \(X\)-axis.
+Its angular velocity is:
+</p>
+
+\[
+\omega_v=\frac{d\psi}{dt}
+\]
+
+<p>
+In vector notation, for planar motion:
+</p>
+
+\[
+\vec\omega_v=\dot\psi\,\hat k
+\]
+
+<p>
+The velocity vector changes direction according to:
+</p>
+
+\[
+\frac{d\hat v}{dt}
+=
+\vec\omega_v\times\hat v
+\]
+
+<p>
+Therefore, the acceleration can be expressed as:
+</p>
+
+\[
+\boxed{
+\vec a=
+\frac{dv}{dt}\hat v+
+\vec\omega_v\times\vec v
+}
+\]
+
+<p>
+The first term is responsible for changing the magnitude
+of velocity. The second term is responsible for changing
+its direction.
+</p>
+
+<p>
+We can also derive an expression for \(\vec\omega_v\)
+using the velocity and acceleration vectors.
+</p>
+
+<p>
+Taking the cross product:
+</p>
+
+\[
+\vec v\times\vec a
+=
+\vec v\times
+\left(
+\frac{dv}{dt}\hat v+
+v\frac{d\hat v}{dt}
+\right)
+\]
+
+<p>
+The first term vanishes because \(\vec v\) is parallel
+to \(\hat v\). Hence:
+</p>
+
+\[
+\vec v\times\vec a
+=
+v^2\left(
+\hat v\times\frac{d\hat v}{dt}
+\right)
+\]
+
+<p>
+Therefore:
+</p>
+
+\[
+\boxed{
+\vec\omega_v=
+\frac{\vec v\times\vec a}{|\vec v|^2}
+}
+\]
+
+<p>
+This gives the instantaneous angular velocity of the
+velocity vector. It is defined whenever the particle has
+non-zero speed.
+</p>
+</section>
+
+<section>
+<h2>Tangential and Normal Acceleration</h2>
+
+<p>
+We can now interpret the two components of acceleration
+in terms of the actual trajectory of the particle.
+</p>
+
+<p>
+The tangential acceleration changes the magnitude of
+the velocity vector:
+</p>
+
+\[
+\boxed{
+a_t=\frac{dv}{dt}
+}
+\]
+
+<p>
+The normal acceleration changes the direction of the
+velocity vector:
+</p>
+
+\[
+\boxed{
+\vec a_n=\vec\omega_v\times\vec v
+}
+\]
+
+<p>
+The magnitude of normal acceleration is therefore:
+</p>
+
+\[
+\boxed{
+a_n=v|\omega_v|
+}
+\]
+
+<p>
+This is the same mathematical structure we encountered
+when studying the transverse velocity of the position vector.
+</p>
+
+<ul class="model-box">
+<li>
+<strong>Position vector:</strong> Its transverse velocity
+is related to its angular velocity by
+\(\vec v_\theta=\vec\omega_r\times\vec r\).
+</li>
+<li>
+<strong>Velocity vector:</strong> Its normal acceleration
+is related to its angular velocity by
+\(\vec a_n=\vec\omega_v\times\vec v\).
+</li>
+</ul>
+
+<p>
+This gives us a useful symmetry: the transverse velocity
+is the rate of directional change of the position vector,
+whereas normal acceleration is the rate of directional
+change of the velocity vector.
+</p>
+
+<h3>Connection with Curvature</h3>
+
+<p>
+The rate at which the velocity direction changes also
+provides a geometrical measure of how sharply the trajectory
+bends.
+</p>
+
+<p>
+Let \(\rho\) be the radius of curvature of the trajectory
+at a particular point. It is the radius of the circle
+that best approximates the path locally at that point.
+</p>
+
+<p>
+For an infinitesimal arc displacement \(ds\), the change
+in the direction of the tangent is related to curvature:
+</p>
+
+\[
+|d\psi|=\frac{ds}{\rho}
+\]
+
+<p>
+Since speed is:
+</p>
+
+\[
+v=\frac{ds}{dt}
+\]
+
+<p>
+The angular speed of the velocity vector is:
+</p>
+
+\[
+|\omega_v|=\frac{v}{\rho}
+\]
+
+<p>
+Consequently:
+</p>
+
+\[
+\boxed{
+a_n=\frac{v^2}{\rho}
+}
+\]
+
+<p>
+Thus, normal acceleration depends on both the speed
+of the particle and the curvature of its trajectory.
+</p>
+
+<p>
+A smaller radius of curvature means a sharper bend and,
+for the same speed, a larger normal acceleration.
+</p>
+</section>
+<section>
+<h2>Two Different Angular Velocities</h2>
+<p>
+We have now introduced two angular velocities associated with two different vectors:
+</p>
+<ul class="model-box">
+<li><strong>Angular velocity of the position vector:</strong> \(\vec\omega_r\), which describes the rotation of the position vector about the chosen origin.</li>
+<li><strong>Angular velocity of the velocity vector:</strong> \(\vec\omega_v\), which describes the turning of the direction of motion along the trajectory.</li>
+</ul>
+<p>
+Their mathematical expressions are:
+</p>
+\[
+\boxed{\vec\omega_r=\frac{\vec r\times\vec v}{r^2}}
+\]
+\[
+\boxed{\vec\omega_v=\frac{\vec v\times\vec a}{v^2}}
+\]
+<p>
+These two angular velocities are generally different. The reason is that the position vector and velocity vector are different vectors, and their directions need not rotate at the same rate.
+</p>
+<p>
+There is another important distinction: the angular velocity of the position vector depends on the chosen origin, whereas the angular velocity of the velocity vector does not depend on the choice of position origin.
+</p>
+<h3>Special Case: Circular Motion About the Origin</h3>
+<p>
+Consider a particle moving along a circle whose centre is chosen as the origin.
+</p>
+<p>
+The position vector and velocity vector are always perpendicular. Moreover, the velocity vector remains at a constant angular offset of \(90^\circ\) from the radius vector.
+</p>
+<p>
+Therefore, both vectors rotate at the same angular rate:
+</p>
+\[
+\boxed{\vec\omega_r=\vec\omega_v}
+\]
+<p>
+This equality is a special feature of circular motion when the origin is located at the centre of the circle. It is not a general property of curvilinear motion.
+</p>
+<h3>Special Case: Circular Motion About an Off-Centre Origin</h3>
+<p>
+Now consider a circle whose equation is:
+</p>
+\[
+(x-R)^2+y^2=R^2
+\]
+<p>
+The centre of this circle is at \((R,0)\), while the chosen origin is at \((0,0)\). Thus, the origin lies on the circumference rather than at the centre.
+</p>
+<p>
+Let \(\phi\) represent the angular position measured from the actual centre of the circle. The Cartesian coordinates are:
+</p>
+\[
+x=R+R\cos\phi
+\]
+\[
+y=R\sin\phi
+\]
+<p>
+The position vector measured from the chosen origin is:
+</p>
+\[
+\vec r=R(1+\cos\phi)\hat i+R\sin\phi\hat j
+\]
+<p>
+The velocity vector is:
+</p>
+\[
+\vec v=R\dot\phi(-\sin\phi\,\hat i+\cos\phi\,\hat j)
+\]
+<p>
+Using the formula for the angular velocity of the position vector:
+</p>
+\[
+\vec\omega_r=\frac{\vec r\times\vec v}{r^2}
+\]
+<p>
+We obtain:
+</p>
+\[
+\boxed{\vec\omega_r=\frac{\dot\phi}{2}\hat k}
+\]
+<p>
+However, the velocity vector itself rotates at the rate \(\dot\phi\), giving:
+</p>
+\[
+\boxed{\vec\omega_v=\dot\phi\hat k}
+\]
+<p>
+Therefore:
+</p>
+\[
+\boxed{\vec\omega_v=2\vec\omega_r}
+\]
+<p>
+This relationship holds for this particular circle and the chosen origin, except when the particle passes through the origin, where its position vector vanishes and its angular velocity about that origin is undefined.
+</p>
+<div class="insightbox">
+This example demonstrates that even in circular motion, the angular velocity of the position vector need not equal the angular velocity of the velocity vector.<br>
+The result depends on where the position vector is measured from.<br>
+When the origin is at the centre of the circular path, both vectors rotate at the same angular rate.<br>
+When the origin is elsewhere, their angular velocities can differ.
+</div>
+</section>
+<section>
+<h2>Summary</h2>
+<p>
+General planar curvilinear motion can be described using both Cartesian coordinates and polar coordinates. The polar description introduces radial and transverse components, which are defined relative to a chosen origin.
+</p>
+<p>
+The angular velocity of the position vector describes how its direction changes about that origin:
+</p>
+\[
+\boxed{\vec\omega_r=\frac{\vec r\times\vec v}{r^2}}
+\]
+<p>
+The angular velocity of the velocity vector describes how the direction of motion changes along the trajectory:
+</p>
+\[
+\boxed{\vec\omega_v=\frac{\vec v\times\vec a}{v^2}}
+\]
+<p>
+These two rates of rotation give rise to two useful relationships:
+</p>
+\[
+\boxed{\vec v_\theta=\vec\omega_r\times\vec r}
+\]
+\[
+\boxed{\vec a_n=\vec\omega_v\times\vec v}
+\]
+<p>
+Thus, the transverse velocity describes the directional change of the position vector, while normal acceleration describes the directional change of the velocity vector.
+</p>
+<p>
+This distinction allows us to extend the ideas of angular kinematics from circular motion to general curvilinear motion.
+</p>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

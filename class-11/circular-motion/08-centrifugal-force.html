@@ -1,90 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Motion | Centrifugal Force</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centrifugal Force | Circular Motion</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Circular Motion
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Circular Motion
+</a>
+</nav>
+<h1>Centrifugal Force</h1>
+<p class="subtitle">
+Pseudo-force of rotating reference systems.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+We studied that if the non-inertal frame is translating with acceleration a, then we pseudo force correction.
+</p>
+<p>
+We also studied that a rotating frame of reference too is an accelerated and hence non-inertial frame.
+</p>
+<p>
+If the particle is at rest in rotating frame then we use the  pseudo force correction term called centrifugal force.
+</p>
+<p>
+If the particle is moving in rotating frame then we use the add another pseudo force correction term called coriollis force. But centrifugal force is still applicable.
+</p>
+<p>
+In exam syllabus, we are limited to centrifugal force only.
+</p>
+</section>
+<section>
+<h2>1. What is Centrifugal Force?</h2>
+<p>
+Newton's laws of motion are strictly valid only in <strong>inertial frames of reference</strong> (frames that are either at rest or moving with constant velocity). A rotating frame—like a merry-go-round or the Earth itself—is continuously accelerating toward its center. Such frames are termed <strong>non-inertial frames</strong>.
+</p>
+<p>
+To make Newton's laws artificially work within a rotating non-inertial frame, we must introduce a fictitious "correction" force. This fictitious force, which appears to act on all objects viewed from within the rotating frame, acts radially <em>outward</em> from the axis of rotation. This is the <strong>Centrifugal Force</strong>.
+</p>
 
-        <h1>Centrifugal Force & Rotating Frames</h1>
-        <p class="subtitle">
-            The mathematical pseudo-force that emerges in accelerated reference systems.
-        </p>
+<div class="model-box">
+\[ \vec{F}_{cf} = -m (\vec{\omega} \times (\vec{\omega} \times \vec{r})) \]
+\[ F_{cf} = m \omega^2 R = \frac{mv^2}{R} \]
+</div>
 
-        <section>
-            <h2>1. What is Centrifugal Force?</h2>
-            <p>
-                Newton's laws of motion are strictly valid only in <strong>inertial frames of reference</strong> (frames that are either at rest or moving with constant velocity). A rotating frame—like a merry-go-round or the Earth itself—is continuously accelerating toward its center. Such frames are termed <strong>non-inertial frames</strong>.
-            </p>
-            <p>
-                To make Newton's laws artificially work within a rotating non-inertial frame, we must introduce a fictitious "correction" force. This fictitious force, which appears to act on all objects viewed from within the rotating frame, acts radially <em>outward</em> from the axis of rotation. This is the <strong>Centrifugal Force</strong>.
-            </p>
-            
-            <div class="model-box">
-                \[ \vec{F}_{cf} = -m (\vec{\omega} \times (\vec{\omega} \times \vec{r})) \]
-                \[ F_{cf} = m \omega^2 R = \frac{mv^2}{R} \]
-            </div>
+<ul>
+<li><strong>\( F_{cf} \)</strong>: Centrifugal force (magnitude).</li>
+<li><strong>\( m \)</strong>: Mass of the object.</li>
+<li><strong>\( \omega \)</strong>: Angular velocity of the rotating reference frame.</li>
+<li><strong>\( R \)</strong>: Distance of the object from the axis of rotation.</li>
+</ul>
+</section>
+<section>
+<h2>2. Real vs. Pseudo</h2>
+<p>
+A very common misconception among students is confusing Centripetal and Centrifugal forces as an action-reaction pair. They are absolutely not. They act on the same body but are invoked by different observers.
+</p>
 
-            <ul>
-                <li><strong>\( F_{cf} \)</strong>: Centrifugal force (magnitude).</li>
-                <li><strong>\( m \)</strong>: Mass of the object.</li>
-                <li><strong>\( \omega \)</strong>: Angular velocity of the rotating reference frame.</li>
-                <li><strong>\( R \)</strong>: Distance of the object from the axis of rotation.</li>
-            </ul>
-        </section>
+<div class="concept-box">
+<ul>
+<li><strong>Centripetal Force (The Real Force):</strong> Observed exclusively from an <em>inertial frame</em> (e.g., someone standing on the ground watching a merry-go-round). It points <strong>inward</strong>. It is a real physical interaction (like tension or friction) causing the object to turn.</li>
+<li><strong>Centrifugal Force (The Pseudo Force):</strong> Observed exclusively from a <em>non-inertial (rotating) frame</em> (e.g., a person sitting on the merry-go-round). It points <strong>outward</strong>. It is a mathematical construct required to explain why objects "feel" thrown outward despite no physical hand pushing them.</li>
+</ul>
+</div>
 
-        <section>
-            <h2>2. Real vs. Pseudo</h2>
-            <p>
-                A very common misconception among students is confusing Centripetal and Centrifugal forces as an action-reaction pair. They are absolutely not. They act on the same body but are invoked by different observers.
-            </p>
+<div class="insightbox">
+Action-Reaction pairs (Newton's 3rd Law) must arise from fundamental physical interactions between two different bodies. A pseudo-force like centrifugal force has no physical agent causing it; it is purely a byproduct of the observer's own acceleration. Hence, a pseudo-force has no reaction counterpart.
+</div>
+</section>
 
-            <div class="concept-box">
-                <ul>
-                    <li><strong>Centripetal Force (The Real Force):</strong> Observed exclusively from an <em>inertial frame</em> (e.g., someone standing on the ground watching a merry-go-round). It points <strong>inward</strong>. It is a real physical interaction (like tension or friction) causing the object to turn.</li>
-                    <li><strong>Centrifugal Force (The Pseudo Force):</strong> Observed exclusively from a <em>non-inertial (rotating) frame</em> (e.g., a person sitting on the merry-go-round). It points <strong>outward</strong>. It is a mathematical construct required to explain why objects "feel" thrown outward despite no physical hand pushing them.</li>
-                </ul>
-            </div>
+<section>
+<h2>Centrifugal Force and Choice of Origin</h2>
 
-            <div class="insightbox">
-                Action-Reaction pairs (Newton's 3rd Law) must arise from fundamental physical interactions between two different bodies. A pseudo-force like centrifugal force has no physical agent causing it; it is purely a byproduct of the observer's own acceleration. Hence, a pseudo-force has no reaction counterpart.
-            </div>
-        </section>
+<p>
+The familiar expression for centrifugal force is usually
+written by considering a rotating reference frame whose
+origin lies on the axis of rotation. However, what happens
+if we choose an origin that is itself moving in the rotating
+plane?
+</p>
 
-        <section>
-            <h2>3. Applications</h2>
-            <p>
-                Rotating reference frames and the concept of centrifugal force are highly useful for analyzing complex systems from the perspective of the rotating object:
-            </p>
-            
-            <div class="examplebox">
-                <h3>Engineering and Space Applications</h3>
-                <hr>
-                <ul>
-                    <li><strong>Centrifuges:</strong> Used in biology and chemistry to separate suspensions (like blood cells from plasma). In the rotating frame of the test tube, the outward centrifugal force pushes denser particles to the bottom of the tube much faster than normal gravity ever could.</li>
-                    <li><strong>Washing Machine Dryers:</strong> Spinning drums force wet clothes into rapid circular motion. The water droplets, lacking sufficient inward centripetal force from the fabric, travel in straight lines through the drum's holes. In the frame of the clothes, it feels as if an outward centrifugal force "flicks" the water away.</li>
-                    <li><strong>Artificial Gravity:</strong> Conceptual space stations rotate specifically to create an artificial "down." To an astronaut inside the spinning ring, the outward centrifugal force presses them against the outer hull, perfectly simulating a gravitational pull.</li>
-                    <li><strong>Equatorial Bulge:</strong> The Earth itself is a rotating frame. The centrifugal force is highest at the equator (where \(R\) is maximum) and zero at the poles. This outward pseudo-force counteracts a tiny fraction of Earth's gravity, making objects weigh slightly less at the equator and causing the planet to bulge outward.</li>
-                </ul>
-            </div>
-        </section>
+<p>
+In that case, the reference frame has two characteristics:
+it translates along with the chosen origin and rotates
+with the angular velocity of the turntable. Consequently,
+we must account for both translational and rotational
+pseudo-force corrections.
+</p>
 
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<h3>Off-Axis Reference Frame</h3>
+
+<p>
+Consider a horizontal turntable rotating with constant
+angular velocity \(\vec\omega=\omega\hat k\) about an
+axis passing through \(O\).
+</p>
+
+<p>
+Let particle \(1\) be located at \((1,0)\) and particle
+\(2\) at \((1,1)\), at the instant under consideration.
+Both particles are fixed relative to the turntable.
+</p>
+
+<p>
+We now choose a reference frame attached to particle
+\(1\). This frame translates with particle \(1\) and
+rotates with the turntable. Since particle \(2\) is
+at rest relative to particle \(1\), its relative
+velocity and acceleration in this frame are zero.
+</p>
+
+<p>
+The position vectors are related through:
+</p>
+
+\[
+\vec r_{2/O}=\vec r_{1/O}+\vec r_{2/1}
+\]
+
+<p>
+At the considered instant:
+</p>
+
+\[
+\vec r_{1/O}=\hat i,\qquad
+\vec r_{2/1}=\hat j
+\]
+
+<h3>1. Translational Pseudo-Force Correction</h3>
+
+<p>
+Since particle \(1\) is rotating about \(O\), its
+acceleration in the inertial frame is centripetal:
+</p>
+
+\[
+\vec a_1=-\omega^2\vec r_{1/O}
+=-\omega^2\hat i
+\]
+
+<p>
+Since our reference frame has its origin at particle
+\(1\), we must introduce a translational pseudo-acceleration
+opposite to the acceleration of the origin:
+</p>
+
+\[
+\vec a_{pseudo,trans}=-\vec a_1
+\]
+
+\[
+\boxed{
+\vec a_{pseudo,trans}=\omega^2\hat i
+}
+\]
+
+<p>
+The corresponding pseudo-force correction is:
+</p>
+
+\[
+\boxed{
+\vec F_{pseudo,trans}=m\omega^2\hat i
+}
+\]
+
+<h3>2. Rotational Pseudo-Force Correction</h3>
+
+<p>
+Our reference frame also rotates with angular velocity
+\(\vec\omega\). Therefore, we must introduce the centrifugal
+pseudo-acceleration associated with the position of
+particle \(2\) relative to particle \(1\).
+</p>
+
+\[
+\vec a_{pseudo,rot}
+=-\vec\omega\times
+(\vec\omega\times\vec r_{2/1})
+\]
+
+<p>
+Since \(\vec r_{2/1}=\hat j\) and
+\(\vec\omega=\omega\hat k\):
+</p>
+
+\[
+\boxed{
+\vec a_{pseudo,rot}=\omega^2\hat j
+}
+\]
+
+<p>
+The corresponding pseudo-force is:
+</p>
+
+\[
+\boxed{
+\vec F_{pseudo,rot}=m\omega^2\hat j
+}
+\]
+
+<h3>3. Net Pseudo-Force Correction</h3>
+
+<p>
+The total pseudo-force is the sum of the translational
+and rotational corrections:
+</p>
+
+\[
+\begin{aligned}
+\vec F_{pseudo}
+&=\vec F_{pseudo,trans}
++\vec F_{pseudo,rot}\\
+&=m\omega^2\hat i+m\omega^2\hat j
+\end{aligned}
+\]
+
+<p>
+Taking \(m\omega^2\) common:
+</p>
+
+\[
+\vec F_{pseudo}
+=m\omega^2(\hat i+\hat j)
+\]
+
+<p>
+But geometrically:
+</p>
+
+\[
+\vec r_{2/O}=\hat i+\hat j
+\]
+
+<p>
+Therefore:
+</p>
+
+\[
+\boxed{
+\vec F_{pseudo}=m\omega^2\vec r_{2/O}
+}
+\]
+
+<div class="insightbox">
+Notice that the two pseudo-force corrections combine
+into the familiar centrifugal force measured from the
+axis of rotation.
+
+The translational correction accounts for the acceleration
+of our chosen origin, while the rotational correction
+accounts for the rotation of the reference frame itself.
+
+Their vector sum gives the centrifugal force that we
+would have obtained directly by choosing the axis of
+rotation as our origin.
+</div>
+
+<h3>Conclusion</h3>
+
+<p>
+When the origin of a rotating reference frame is located
+on the axis of rotation, there is no translational
+acceleration of the origin. The centrifugal force can
+therefore be written directly as:
+</p>
+
+\[
+\boxed{
+\vec F_{cf}=m\omega^2\vec r
+}
+\]
+
+<p>
+However, when the origin is chosen away from the axis,
+the translational pseudo-force correction must also
+be included along with the rotational correction.
+</p>
+
+<p>
+Thus, the familiar centrifugal force expression measured
+from the axis is actually the combined result of
+translational and rotational pseudo-force corrections
+when viewed from an off-axis reference frame.
+</p>
+
+</section>
+
+<section>
+<h2>3. Applications</h2>
+<p>
+Rotating reference frames and the concept of centrifugal force are highly useful for analyzing complex systems from the perspective of the rotating object:
+</p>
+
+<div class="examplebox">
+<h3>Engineering and Space Applications</h3>
+<hr>
+<ul>
+<li><strong>Centrifuges:</strong> Used in biology and chemistry to separate suspensions (like blood cells from plasma). In the rotating frame of the test tube, the outward centrifugal force pushes denser particles to the bottom of the tube much faster than normal gravity ever could.</li>
+<li><strong>Washing Machine Dryers:</strong> Spinning drums force wet clothes into rapid circular motion. The water droplets, lacking sufficient inward centripetal force from the fabric, travel in straight lines through the drum's holes. In the frame of the clothes, it feels as if an outward centrifugal force "flicks" the water away.</li>
+<li><strong>Artificial Gravity:</strong> Conceptual space stations rotate specifically to create an artificial "down." To an astronaut inside the spinning ring, the outward centrifugal force presses them against the outer hull, perfectly simulating a gravitational pull.</li>
+<li><strong>Equatorial Bulge:</strong> The Earth itself is a rotating frame. The centrifugal force is highest at the equator (where \(R\) is maximum) and zero at the poles. This outward pseudo-force counteracts a tiny fraction of Earth's gravity, making objects weigh slightly less at the equator and causing the planet to bulge outward.</li>
+</ul>
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>
