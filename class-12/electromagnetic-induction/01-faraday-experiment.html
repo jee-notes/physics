@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electromagnetic Induction | Faraday's Experiments</title>
+<title>Faraday's Experiments | Electromagnetic Induction</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -16,74 +16,124 @@
 </nav>
 <h1>Faraday's Experiments</h1>
 <p class="subtitle">
-The experiments that revealed how and when an EMF is induced.
+The experiments that revealed how EMF is induced.
 </p>
+<section>
+<h2>Concept</h2>
+<p>
+During the 1830s, pioneering experiments on electromagnetic induction were conducted independently in England by Michael Faraday and in America by Joseph Henry. These experiments revealed an unexpected connection between magnetic fields and electric circuits.
+</p>
+<p>
+Just as we studied the experiments of Galileo and Newton before developing the ideas of Newton's Laws of Motion, we begin here with Faraday's experiments.
+</p>
+<p>
+In mechanics, we mathematically formulated physical quantities such as momentum and force. Similarly, Faraday's experiments lead us to introduce a new physical quantity called <strong>magnetic flux</strong>.
+</p>
+<p>
+Flux provides a geometrical connection between a magnetic field and a circuit, allowing us to quantify how the field is linked with a particular circuit and how this association changes with time.
+</p>
+<p>
+These experiments also strengthened the <strong>field view</strong> of electromagnetism. Earlier explanations often relied on <strong>action at a distance</strong>, where objects were considered to influence one another directly across empty space.
+</p>
+<p>
+Faraday's field-based approach offered a different picture: the electromagnetic field exists throughout space and plays an active role in physical interactions. The experiments of electromagnetic induction provided strong support for this way of understanding electromagnetic phenomena.
+</p>
+<p>
+Thus, this chapter develops two closely connected ideas: <strong>magnetic flux</strong> as a physical quantity describing the geometrical association between a magnetic field and a circuit, and the <strong>field viewpoint</strong> as a way of understanding how electromagnetic interactions take place in space.
+</p>
+</section>
 <section>
 <h2>Faraday's Experiments</h2>
 <p>
-Michael Faraday discovered electromagnetic induction through a series of experiments performed in 1831.  
-These experiments revealed a single fundamental fact: <strong>an EMF is induced in a circuit whenever the magnetic flux linked with the circuit changes.</strong>
+Michael Faraday discovered <strong>electromagnetic induction</strong> through a series of experiments in 1831. These experiments revealed a fundamental phenomenon: an EMF is induced in a circuit whenever the magnetic flux linked with the circuit changes. This phenomenon is called electromagnetic induction.
 </p>
 <p>
-Although the experimental setups looked different, they can all be understood today as different ways of changing the magnetic flux through a loop.
+Although the experimental arrangements looked different, we can organise them by examining what changes in each arrangement. This helps us identify a common physical quantity — magnetic flux — that connects all these experiments.
 </p>
 <h3>Experiment 1 — Changing Magnetic Field</h3>
 <p>
-Faraday wound two coils \(P\) and \(S\) on a common iron core. Coil \(P\) was connected to a battery and a key, while coil \(S\) was connected to a galvanometer.
+Faraday wound two coils, \(P\) and \(S\), on a common iron core. Coil \(P\) was connected to a battery and a key, while coil \(S\) was connected to a galvanometer.
 </p>
 <ul class="model-box">
 <li>When the key was pressed, the galvanometer showed a momentary deflection.</li>
 <li>When the key was released, a deflection again appeared, but in the opposite direction.</li>
-<li>When the key remained pressed, no deflection occurred.</li>
+<li>When the key remained pressed, no deflection occurred after the initial transient.</li>
 </ul>
 <p>
-Pressing the key causes the current in coil \(P\) to grow, producing a growing magnetic field in the core. This increases the magnetic flux linked with coil \(S\), inducing a current. When the key is released, the magnetic field decreases and the induced current reverses direction.
+Pressing the key causes the current in coil \(P\) to grow, producing an increasing magnetic field in the iron core. Consequently, the magnetic flux linked with coil \(S\) increases, inducing an EMF in it. When the key is released, the current in \(P\) decreases, causing the magnetic field and linked flux to decrease. The induced EMF therefore reverses its direction.
 </p>
 <p>
-When the current becomes steady, the magnetic field and flux remain constant, so no EMF is produced.
+When the current becomes steady, the magnetic field and the linked flux remain constant, so no EMF is induced in coil \(S\).
 </p>
 <p>
-This type of induction occurs because the <strong>magnetic field strength changes with time</strong>.
+In this experiment, induction occurs because the <strong>magnetic field strength changes with time</strong>.
 </p>
 <h3>Experiment 2 — Relative Motion of Source and Coil</h3>
 <p>
-Faraday also observed that an EMF appears when the source of magnetic field moves relative to a nearby coil.
+Faraday also observed that an EMF appears when the source of the magnetic field moves relative to a nearby coil.
 </p>
 <ul class="model-box">
-<li>Moving an electromagnet or bar magnet toward a coil produces a galvanometer deflection.</li>
+<li>Moving an electromagnet or bar magnet towards a coil produces a galvanometer deflection.</li>
 <li>Moving it away produces a deflection in the opposite direction.</li>
-<li>If both remain stationary, no deflection occurs.</li>
+<li>If both remain stationary relative to each other, no deflection occurs.</li>
 </ul>
 <p>
-As the magnet approaches the coil, the magnetic flux through the coil increases. When it moves away, the flux decreases. The induced current appears only while this change in flux occurs.
-</p>
-<h3>Experiment 3 — Motion of the Coil in a Magnetic Field</h3>
-<p>
-Faraday also placed a coil connected to a galvanometer inside a region of uniform magnetic field.
-</p>
-<ul class="model-box">
-<li>If the coil moved entirely within the magnetic field, no deflection was observed.</li>
-<li>If the coil entered or left the magnetic field region, the galvanometer showed a deflection.</li>
-</ul>
-<p>
-When the coil moves so that the portion of the loop inside the magnetic field changes, the magnetic flux linked with the loop changes. This produces an induced current.
+As the magnet approaches the coil, the magnetic field distribution at the coil changes, causing the magnetic flux linked with the coil to change. When the magnet moves away, the flux changes in the opposite sense.
 </p>
 <p>
-The EMF generated in this situation is called <strong>motional EMF</strong>. It can be explained either using the Lorentz force acting on electrons in the conductor or by applying Faraday's law of induction.
+The induced EMF appears only while this change occurs. Notice that relative motion is important: we can either move the magnetic source relative to the coil or move the coil relative to the magnetic source.
 </p>
 <div class="insightbox">
-Although these experiments appear different, they all share a common feature: the magnetic flux through the circuit changes.
-In fact, magnetic flux is given by
+<strong>Experiments 1 and 2 — Changing Magnetic Field</strong><br>
+In both experiments, the geometry of the coil remains unchanged.<br>
+The magnetic field passing through the coil changes with time.<br>
+In Experiment 1, this happens because the current producing the field changes.<br>
+In Experiment 2, it happens because of relative motion between the magnetic source and the coil.
+</div>
+<h3>Experiment 3 — Changing Area of the Coil</h3>
+<p>
+An EMF can also be induced by changing the area enclosed by a coil while keeping the magnetic field and the orientation of the coil constant. Now we are changing geometry.
+</p>
+<p>
+Consider a conducting loop whose enclosed area can be varied while it remains in a uniform, steady magnetic field. As the area changes, the amount of magnetic field passing through the surface bounded by the loop also changes. Consequently, an EMF is induced in the circuit.
+</p>
+<p>
+Thus, induction does not necessarily require a changing magnetic field. Even with a constant magnetic field, changing the area of the coil can produce an induced EMF.
+</p>
+<h3>Experiment 4 — Changing Orientation of the Coil</h3>
+<p>
+An EMF can also be induced by rotating a coil in a steady magnetic field. Suppose the coil rotates with angular velocity \(\omega\), while the magnetic field remains unchanged.
+</p>
+<p>
+The area of the coil remains constant, but its orientation relative to the magnetic field changes continuously. Therefore, the magnetic flux linked with the coil changes, producing an induced EMF.
+</p>
+<p>
+This is the basic principle behind a rotating-coil generator.
+</p>
+<div class="insightbox">
+Although the experimental arrangements are different, they share one common feature: the magnetic flux through the circuit changes.<br>
+To understand this common feature, we introduce the concept of magnetic flux.<br>
+The infinitesimal contribution to flux through an area element \(dA\) at a point is:<br>
 \[
-\Phi_B = BA\cos\theta
+d\Phi = \vec B \cdot d\vec A
 \]
-so the flux can change in three ways:
+The total magnetic flux through the surface bounded by the circuit is obtained by integrating over the entire surface:
+\[
+\Phi = \int_S \vec B \cdot d\vec A
+\]
+For a uniform magnetic field passing through a plane surface, this reduces to:
+\[
+\Phi = BA\cos\theta
+\]
+Here, \(\theta\) is the angle between the magnetic field and the area vector (normal to the surface).<br>
+From this expression, we can identify three ways in which magnetic flux can change:
 <ul>
-<li>the magnetic field \(B\) may change,</li>
-<li>the area of the loop \(A\) may change,</li>
-<li>or the orientation of the loop (\(\theta\)) may change.</li>
+<li>The magnetic field strength \(B\) may change.</li>
+<li>The area \(A\) enclosed by the loop may change.</li>
+<li>The orientation of the loop relative to the magnetic field (\(\theta\)) may change.</li>
 </ul>
-All practical methods of electromagnetic induction — transformers, motional EMF, and generators — arise from one of these three possibilities.
+All three possibilities provide different ways of producing electromagnetic induction.<br>
+Transformers, sliding-rod motional EMF arrangements and rotating-coil generators illustrate these possibilities, respectively.
 </div>
 </section>
 <section>
@@ -92,33 +142,88 @@ All practical methods of electromagnetic induction — transformers, motional EM
 Faraday's experiments strongly supported the <strong>field view</strong> of electromagnetism.
 </p>
 <p>
-Earlier theories often explained forces through the idea of <em>action at a distance</em>, where objects influenced one another directly across empty space. Faraday's results suggested a different picture: the region of space around electric charges and currents is filled with a <strong>field</strong> that carries physical influence.
+Earlier theories often explained forces through the idea of <strong>action at a distance</strong>, where objects influenced one another directly across empty space. Faraday proposed a different picture: the region of space around electric charges and currents is filled with a <strong>field</strong> that carries physical influence.
 </p>
 <p>
-In this view, the electromagnetic field is treated as a real physical entity that exists throughout space. Changes in this field propagate through space and affect nearby circuits, producing phenomena such as electromagnetic induction.
+In this view, the electromagnetic field is treated as a real physical entity that exists throughout space. Changes in the field are not communicated instantaneously across empty space; they propagate through space and can affect other physical systems.
 </p>
 <p>
-Magnetic flux is therefore defined in terms of the <strong>magnetic field</strong>.
+Magnetic flux is therefore defined in terms of the <strong>magnetic field</strong>. To understand flux, we must first understand the idea of a field, because flux is a quantity obtained from a field.
 </p>
 <p>
-To understand <b>flux</b>, we must first understand the idea of a <b>field</b>, because flux is defined for a field.
+A field is a physical quantity that can be indexed by location (position) in space. For example, when we speak of <strong>instantaneous velocity</strong>, we mean the velocity associated with a particular instant of time. We can therefore define velocity at a specific time \(t=t_1\) as \(\vec v(t_1)\).
 </p>
 <p>
-A field is a physical quantity that can be indexed by location (position) in space. For example, when we speak of <em>instantaneous velocity</em>, we mean the velocity associated with a particular instant of time. We can therefore define velocity at a specific time \( t=t_1 \) as \( \vec{v}(t_1) \).
+Similarly, a field assigns a value to every point in space. Since electromagnetic fields can also change with time, the magnetic field can be represented as:
+</p>
+\[
+\vec B=\vec B(\vec r,t)
+\]
+<p>
+Thus, the intensity of magnetic field at a particular position \(\vec r=\vec r_1\) and instant \(t=t_1\) is:
+</p>
+\[
+\vec B(\vec r_1,t_1)
+\]
+<p>
+<strong>Magnetic Field as Flux Density</strong>
 </p>
 <p>
-In a similar way, a field assigns a value to every point in space. Thus the magnetic field at position \( \vec{r}=\vec{r}_1 \) can be written as \( \vec{B}(\vec{r}_1) \).
+We can understand the relationship between magnetic field and magnetic flux by considering how a local physical quantity is integrated over a domain to obtain a total quantity.
+</p>
+<p>
+For example, velocity describes the rate of change of displacement with time. If velocity is known as a function of time, the displacement over an interval is obtained by integration:
+</p>
+\[
+d\vec s=\vec v\,dt
+\]
+\[
+\Delta\vec s=\int_{t_1}^{t_2}\vec v(t)\,dt
+\]
+<p>
+Similarly, magnetic field is called magnetic flux density. The infinitesimal magnetic flux through an area element \(d\vec A\) is:
+</p>
+\[
+d\Phi=\vec B\cdot d\vec A
+\]
+<p>
+To obtain the total magnetic flux through a surface, we integrate over the entire surface:
+</p>
+\[
+\Phi=\int_S\vec B\cdot d\vec A
+\]
+<p>
+This is analogous to surface charge density. If \(\sigma\) is the surface charge density, the charge associated with an infinitesimal area element is:
+</p>
+\[
+dq=\sigma\,dA
+\]
+<p>
+The total charge distributed over the surface is therefore:
+</p>
+\[
+Q=\int_S\sigma\,dA
+\]
+<p>
+In the same way, magnetic flux is obtained by integrating the normal component of magnetic flux density over a surface. Thus, the magnetic field describes the local flux density, whereas magnetic flux through a surface gives the total field contribution through the surface.
 </p>
 <div class="insightbox">
-A useful way to view electromagnetic phenomena is through the behaviour of electric charges.
+Faraday developed the field-based understanding of electromagnetism, which Maxwell subsequently formulated mathematically into electromagnetic theory.<br>
+A useful way to understand electromagnetic phenomena is through the behaviour of electric charges in a specified reference frame:
 <ul>
-<li><strong>Charge at rest</strong> → produces only an electric field \( \vec{E} \).</li>
-<li><strong>Charge moving with constant velocity</strong> → produces both an electric field \( \vec{E} \) and a magnetic field \( \vec{B} \).</li>
-<li><strong>Accelerating charge</strong> → produces changing electric and magnetic fields that propagate through space as an <strong>electromagnetic wave</strong>.</li>
+<li><strong>Charge at rest:</strong> An ideal stationary point charge produces a static electric field \(\vec E\) in its rest frame.</li>
+<li><strong>Charge moving with constant velocity:</strong> A moving charge is associated with both an electric field \(\vec E\) and a static magnetic field \(\vec B\) in the observing frame.</li>
+<li><strong>Accelerating charge:</strong> An accelerating charge can produce changing electric and magnetic fields and radiate electromagnetic energy. The radiative fields propagate through space as electromagnetic waves.</li>
 </ul>
-Electrostatics studies charges at rest.  
-Magnetostatics studies charges in steady motion (steady currents). 
-Electromagnetic induction arises when fields change with time, and accelerating charges ultimately give rise to electromagnetic waves.
+<strong>Electrostatics</strong> studies static (time-independent) electric fields, typically produced by stationary charge distributions.<br>
+<strong>Magnetostatics</strong> studies static (time-independent) magnetic fields produced by permanent magnets and steady electric currents.<br>
+<strong>Electrodynamics</strong> deals with time-dependent electromagnetic fields. The electric and magnetic fields are dynamically connected:
+<ul>
+<li>A changing magnetic field produces a circulating electric field. This is the central field idea behind electromagnetic induction.</li>
+<li>A changing electric field also contributes to the production of a magnetic field, as described by Maxwell's extension of Ampere's law.</li>
+</ul>
+The coupled behaviour of changing electric and magnetic fields allows electromagnetic waves to propagate through space.<br>
+Electromagnetic waves will be studied towards the end of this unit.
 </div>
 </section>
 <footer>

@@ -16,42 +16,72 @@
 </nav>
 <h1>Electromagnetic Induction</h1>
 <p class="subtitle">
-A changing magnetic field creates an electric field — the principle behind every generator and transformer.
+A changing magnetic field creates an electric field.
 </p>
 <section>
 <h2>Conceptual Overview</h2>
 <p>
-Oersted showed that electricity produces magnetism. Faraday then spent years searching for the reverse — could magnetism produce electricity?
+Oersted demonstrated that an electric current produces a magnetic field. This was a pathbreaking discovery because, until then, magnetic fields were primarily associated with magnets. It established an unexpected connection between electricity and magnetism.
 </p>
 <p>
-In 1831 he found the answer: a <em>changing</em> magnetic field produces an electric field. The key word is <em>changing</em>. A static magnetic field, no matter how strong, produces no current. Only magnetic flux in motion — or changing — can do so.
+The motion of electric charge is associated with a magnetic field. This fact made Faraday wonder whether the reverse was also possible: could a moving magnet produce an electric effect? Faraday spent years searching for the answer.
 </p>
 <p>
-This discovery unlocked the entire modern world of electrical power. Every generator, every transformer, and every induction motor ultimately operates on a single principle: Faraday's Law of Electromagnetic Induction.
+In 1831, Faraday discovered electromagnetic induction. He found that a <strong>changing magnetic flux</strong> through a circuit induces an EMF. The key idea is <strong>change</strong>. A magnetic field, however strong, does not induce an EMF in a circuit if the magnetic flux through it remains constant.
 </p>
 <p>
-The emphasis on the word "changing" also explains why the earlier chapters were called <em>electrostatics</em> and <em>magnetostatics</em>. Those chapters dealt with fields that do not vary with time. Electromagnetic induction introduces a new idea — fields that change with time. Such phenomena belong to <strong>electrodynamics</strong>.
+A stationary charge produces an electrostatic field, and a stationary magnet produces a magnetostatic field. However, a stationary source is not a necessity for field production. A moving charge is associated with a magnetic field, and a moving magnet can produce an electric field. The field phenomena we associate with stationary sources can also arise when the sources are in motion.
+</p>
+<p>
+Faraday went beyond describing the phenomenon merely as the effect of a moving magnet. He expressed it in terms of changing magnetic flux. This was a more general description: an electric field can be induced by a changing magnetic field without requiring a magnetic pole to move physically near the circuit.
+</p>
+<p>
+This discovery unlocked the modern world of electrical power. Generators, transformers, and induction motors ultimately rely on the principle of electromagnetic induction.
+</p>
+<p>
+The emphasis on the word "changing" also explains why the earlier chapters were called <strong>electrostatics</strong> and <strong>magnetostatics</strong>. Those chapters dealt with fields that do not vary with time.
+</p>
+<p>
+Electromagnetic induction introduces a new idea: fields that change with time. Such phenomena belong to <strong>electrodynamics</strong>.
 </p>
 </section>
 <section>
 <h2>Faraday's Law — The Central Idea</h2>
 <p>
-The induced EMF in any closed loop is equal to the negative rate of change of the magnetic flux through the loop:
+A magnetic field may change with time in space. However, knowing that a magnetic field is changing somewhere in space is not sufficient to determine the induced EMF in a particular circuit. We need a way to establish a geometrical connection between the changing magnetic field and the circuit under consideration.
+</p>
+<p>
+For this, we introduce the idea of <strong>magnetic flux</strong>. We consider a surface bounded by the circuit and evaluate the magnetic field passing through that surface. This establishes the geometrical association between the magnetic field and the circuit.
+</p>
+<p>
+Think of a projector projecting an image onto a screen. The screen provides a definite surface on which the projected image can be captured. Similarly, the surface bounded by a circuit provides a geometrical reference through which we capture the magnetic field associated with that circuit. Magnetic flux quantifies this association.
+</p>
+<p>
+Faraday's Law states that the induced EMF around a closed loop is equal to the negative rate of change of the magnetic flux through the surface bounded by that loop:
 </p>
 \[
-\mathcal{E} = -\frac{d\Phi_B}{dt}
+\mathcal{E} = -\frac{d\Phi}{dt}
 \]
 <p>
-The negative sign — expressed through Lenz's Law — determines the direction of the induced current. The induced current always opposes the change in magnetic flux that produced it. This opposition is a direct consequence of the principle of energy conservation.
+The negative sign represents Lenz's Law. It determines the direction of the induced EMF: the magnetic field produced by the induced current opposes the change in magnetic flux responsible for the induction. This opposition is a direct consequence of the principle of energy conservation.
 </p>
 <p>
-The magnetic flux \( \Phi_B \) through a surface bounded by a loop is defined as:
+The magnetic flux \(\Phi\) through a surface bounded by a loop is defined as:
 </p>
 \[
-\Phi_B = \int \vec{B} \cdot d\vec{A} = BA\cos\theta
+\Phi = \int \vec{B} \cdot d\vec{A}
 \]
 <p>
-Magnetic flux can change in three ways: the magnetic field \( B \) may change, the area \( A \) of the loop may change, or the angle \( \theta \) between the field and the surface may change. Any of these changes produces an induced EMF.
+For a uniform magnetic field passing through a plane surface, this reduces to:
+</p>
+\[
+\Phi = BA\cos\theta
+\]
+<p>
+Here, \(\theta\) is the angle between the magnetic field and the area vector (normal to the surface).
+</p>
+<p>
+Magnetic flux can change in three ways: the magnetic field strength \(B\) may change, the area \(A\) of the surface may change, or the orientation \(\theta\) of the surface relative to the magnetic field may change. A change in any of these quantities can produce an induced EMF, provided it results in a net change in magnetic flux.
 </p>
 </section>
 <section>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electromagnetic Induction | Magnetic Flux</title>
+<title>Magnetic Flux | Electromagnetic Induction</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -16,337 +16,44 @@
 </nav>
 <h1>Magnetic Flux</h1>
 <p class="subtitle">
-What exactly is flux and its dependence on the orientation of the area vector.
+Calculating Flux is accumulating contributions of field over a surface for a given instant.
 </p>
 <section>
-<h2>Magnetic Flux</h2>
+<h2>Concept</h2>
 <p>
-Consider a region in space containing a magnetic field \( \vec{B}(\vec{r}) \). The magnetic field at a particular position \( \vec{r}=\vec{r}_1 \) is therefore written as \( \vec{B}(\vec{r}_1) \).
-</p>
-<p>
-To define <b>flux</b> at this location, we consider a small surface element \( d\vec{A} \) situated at the point \( \vec{r}=\vec{r}_1 \). The magnetic flux \( d\phi \) through this infinitesimal area represents the amount of magnetic field passing through that surface element.
-</p>
-<p>
-It is defined as
+Flux is field linkage with the circuit (bounded area). The definition of infinitesimal flux at a particular location and instant is given by:
 </p>
 \[
-d\phi = \vec{B}(\vec{r}_1)\cdot d\vec{A}
+d\phi = \vec{B}\cdot d\vec{A}
 \]
 <p>
-The above expression gives the flux through a differential area element at a point. To determine the total flux through a finite surface \( S \), we sum the contributions from all such infinitesimal elements over the surface. This leads to the surface integral
+To determine the total flux through a finite surface \( S \) at an instant, we sum the contributions from all such infinitesimal elements over the surface. This leads to the surface integral. This is how we convert changing field to moving flux.
 </p>
 \[
-\Phi_B = \int_S \vec{B}\cdot d\vec{A}
+\Phi(t) = \int_S \vec{B}(\vec{r},t)\cdot d\vec{A}
 \]
 <p>
-For the special case of a uniform magnetic field \( \vec{B} \) making an angle \( \theta \) with the normal \( \hat n \) to a flat surface of area \( A \), the flux simplifies to
+Surface integrals are compound integrals involving 2 variables (\(dA = dx\,dy\)) and not in syllabus. 
 </p>
-\[
-\Phi_B = BA\cos\theta
-\]
+<p>
+We use geometric tools to solve surface integrals .
+</p>
+<h3>Unit and Dimensions of magnetic flux</h3>
 <p>
 The SI unit of magnetic flux is the <strong>Weber (Wb)</strong>:
 </p>
 \[
 1\,\text{Wb} = 1\,\text{T·m}^2
 \]
-<ul class="model-box">
-<li>\( \theta = 0^\circ \): \( \Phi_B = BA \) — maximum flux, when the field is perpendicular to the surface.</li>
-<li>\( \theta = 90^\circ \): \( \Phi_B = 0 \) — the field is parallel to the surface, so no field lines pass through it.</li>
-</ul>
-<div class="insightbox">
-Flux is a scalar quantity. A positive flux means the predominant direction of \( \vec B \) is along the chosen surface normal; a negative flux means it is opposite to it. The sign therefore depends on the chosen orientation of the surface normal.
-</div>
-</section>
-<section>
-<h2>Flux Linkage</h2>
 <p>
-For a coil consisting of \( N \) turns, each turn experiences the same magnetic flux. The total flux linkage \( \Lambda \) is therefore the sum of the flux through all the turns:
-</p>
-\[
-\Lambda = N\Phi_B
-\]
-</section>
-<section>
-<h2>Magnetic Field as a Function</h2>
-<p>
-A magnetic field exists throughout a region of space. This means that at every point in space and at every instant of time we can assign a value to the magnetic field.
+Flux is a scalar quantity.
 </p>
 <p>
-Mathematically, this idea is expressed by writing the magnetic field as a function of position and time:
-</p>
-\[
-\vec{B} = \vec{B}(\vec{r},t)
-\]
-<p>
-Here \( \vec{r} = (x,y,z) \) represents the position in space and \(t\) represents time. This notation means that the value of the magnetic field may change when we move to a different point in space, and it may also change as time passes.
+A positive flux means the predominant direction of \(\vec B\) is along the chosen surface normal; a negative flux means it is opposite to it.
 </p>
 <p>
-Because the magnetic field can depend on both position and time, we can describe its behaviour using two independent questions:
+The sign therefore depends on the chosen orientation of the surface normal.
 </p>
-<ul class="model-box">
-<li>Does the magnetic field change from one place to another?</li>
-<li>Does the magnetic field change with time?</li>
-</ul>
-<p>
-These two questions lead to four possible types of magnetic fields.
-</p>
-</section>
-<section>
-<h2>1. Uniform and Static Field</h2>
-<p>
-A magnetic field is called <strong>uniform</strong> if it has the same value everywhere in space.  
-It is called <strong>static</strong> if it does not change with time.
-</p>
-<p>
-An example of such a field is
-</p>
-\[
-\vec{B} = (2\hat{i} + 3\hat{j} + 4\hat{k})
-\]
-<p>
-In this expression the magnetic field does not depend on position \(x,y,z\) and it also does not depend on time \(t\).
-</p>
-<p>
-Therefore:
-</p>
-<ul class="model-box">
-<li>The field is the same at every point in space.</li>
-<li>The field remains the same as time passes.</li>
-</ul>
-<p>
-A good physical example is the magnetic field inside a long solenoid carrying steady current.
-</p>
-</section>
-<section>
-<h2>2. Uniform but Time-Varying Field</h2>
-<p>
-Sometimes the magnetic field may remain the same at every point in space but may change with time.
-</p>
-<p>
-For example:
-</p>
-\[
-\vec{B} = (2t^2)\hat{i}
-\]
-<p>
-In this case the magnetic field depends only on time \(t\).
-</p>
-<p>
-This means:
-</p>
-<ul class="model-box">
-<li>At any given instant, the field is the same everywhere in space.</li>
-<li>However, the magnitude of the field changes as time passes.</li>
-</ul>
-<p>
-Such fields are very important in electromagnetic induction, because a magnetic field that changes with time can produce an electric field.
-</p>
-</section>
-<section>
-<h2>3. Non-Uniform but Static Field</h2>
-<p>
-In some situations the magnetic field changes from one place to another but remains constant with time.
-</p>
-<p>
-For example:
-</p>
-\[
-\vec{B} = (2x^2)\hat{i}
-\]
-<p>
-Here the magnetic field depends on the position coordinate \(x\).
-</p>
-<p>
-This means:
-</p>
-<ul class="model-box">
-<li>The magnetic field has different values at different points in space.</li>
-<li>However, once the field is established, it does not change with time.</li>
-</ul>
-<p>
-A familiar example of this type is the magnetic field around a straight current-carrying wire.
-</p>
-</section>
-<section>
-<h2>4. Non-Uniform and Time-Varying Field</h2>
-<p>
-The most general case occurs when the magnetic field changes both with position and with time.
-</p>
-<p>
-For example:
-</p>
-\[
-\vec{B} = (2x^3 t^2)\hat{i}
-\]
-<p>
-In this situation:
-</p>
-<ul class="model-box">
-<li>The magnetic field has different values at different points in space.</li>
-<li>The value of the field at a given point also changes with time.</li>
-</ul>
-<p>
-Such fields arise in many electromagnetic phenomena, especially when charges are accelerating or when electromagnetic waves are produced.
-</p>
-</section>
-<section>
-<h2>Relation with Derivatives</h2>
-<p>
-Mathematically, the change of the magnetic field with position or time is described using <strong>partial derivatives</strong>.
-</p>
-<p>
-If the field changes with position, then
-</p>
-\[
-\frac{\partial \vec{B}}{\partial \vec{r}} \neq 0
-\]
-<p>
-and if the field changes with time, then
-</p>
-\[
-\frac{\partial \vec{B}}{\partial t} \neq 0
-\]
-<p>
-Electromagnetic induction occurs whenever the magnetic field changes with time, that is, when
-</p>
-\[
-\frac{\partial \vec{B}}{\partial t} \neq 0
-\]
-</section>
-<section>
-<h2>Different Variables in the Calculus</h2>
-<p>
-Electromagnetic induction often involves two different types of calculus operations: integration over space and differentiation with respect to time. If these variables are not carefully distinguished, it is easy to make mistakes.
-</p>
-<p>
-Faraday's law relates the induced EMF to the time rate of change of magnetic flux:
-</p>
-\[
-\mathcal{E} = -\frac{d\Phi}{dt}
-\]
-<p>
-However, the magnetic flux itself is defined as a surface integral of the magnetic field:
-</p>
-\[
-\Phi = \int_S \vec{B}\cdot d\vec{A}
-\]
-<p>
-The magnetic field may depend on both position and time, and is generally written as
-</p>
-\[
-\vec{B} = \vec{B}(\vec{r},t)
-\]
-<p>
-When calculating the flux, the integration is performed over spatial coordinates. Therefore time \(t\) is treated as a constant parameter during the integration. Only after computing the flux do we differentiate the result with respect to time when applying Faraday's law.
-</p>
-<p>
-The following example illustrates how this works.
-</p>
-</section>
-<section>
-<h2>Solved Example</h2>
-<div class="examplebox">
-<h3>Question</h3>
-<p>
-A magnetic field passes through a rectangular surface of sides \(a\) and \(b\) placed in the \(xy\)-plane. Find the magnetic flux through the rectangle for the magnetic field
-</p>
-\[
-\vec B = (2t^3 x)\hat{k}
-\]
-<p>
-Assume the rectangle extends from \(x=0\) to \(x=a\) and from \(y=0\) to \(y=b\).
-</p>
-<div class="diagram">
-<svg width="380" height="300" viewBox="0 0 380 300">
-  <!-- axes -->
-  <line x1="40" y1="260" x2="340" y2="260" stroke="red" stroke-width="2"/>
-  <line x1="40" y1="260" x2="40" y2="40" stroke="red" stroke-width="2"/>
-  <text x="345" y="265" fill="red">x</text>
-  <text x="30" y="35" fill="red">y</text>
-
-  <!-- rectangle -->
-  <rect x="90" y="110" width="200" height="140"
-        fill="none" stroke="#4da6ff" stroke-width="3"/>
-
-  <!-- labels -->
-  <text x="185" y="275">a</text>
-  <text x="60" y="190">b</text>
-
-  <!-- differential strip -->
-  <rect x="200" y="110" width="12" height="140"
-        fill="#ffd966" stroke="orange" stroke-width="2"/>
-
-  <text x="210" y="100">dx</text>
-  <text x="214" y="180" transform="rotate(90 214 180)">b</text>
-
-  <!-- B direction -->
-  <text x="300" y="80">B = (2t³x)k</text>
-  <circle cx="315" cy="110" r="4" fill="black"/>
-  <circle cx="330" cy="130" r="4" fill="black"/>
-  <circle cx="300" cy="140" r="4" fill="black"/>
-</svg>
-</div>
-<hr>
-<h4>Solution</h4>
-<p>
-Magnetic flux through a surface is defined as
-</p>
-\[
-\Phi = \int_S \vec B \cdot d\vec A
-\]
-<p>
-Since the surface lies in the \(xy\)-plane, the area vector is along \( \hat{k} \).
-</p>
-\[
-d\vec A = dA\,\hat{k}
-\]
-<p>
-The magnetic field is also along \( \hat{k} \):
-</p>
-\[
-\vec B = (2t^3 x)\hat{k}
-\]
-<p>
-Therefore
-</p>
-\[
-\vec B \cdot d\vec A = (2t^3 x)\, dA
-\]
-<p>
-The rectangle has length \(a\) along the \(x\)-direction and height \(b\) along the \(y\)-direction. We divide the area into vertical strips of width \(dx\).
-</p>
-\[
-dA = b\,dx
-\]
-<p>
-Substituting into the flux integral:
-</p>
-\[
-\Phi = \int_0^a (2t^3 x)(b\,dx)
-\]
-<p>
-The integration variable is \(x\), so \(t\) behaves like a constant and can be taken outside the integral.
-</p>
-\[
-\Phi = 2bt^3 \int_0^a x\,dx
-\]
-<p>
-Evaluating the integral:
-</p>
-\[
-\int_0^a x\,dx = \frac{a^2}{2}
-\]
-<p>
-Therefore the magnetic flux is
-</p>
-\[
-\Phi = a^2 b t^3
-\]
-<div class="insightbox">
-During the surface integration we integrate over spatial coordinates. The time \(t\) is treated as a constant parameter. Only after computing the flux do we differentiate with respect to time when applying Faraday's law.
-</div>
-</div>
 </section>
 <section>
 <h2>Area Vector</h2>
@@ -363,14 +70,18 @@ The magnitude of the area vector equals the area of the surface, and its directi
 Using this convention, magnetic flux through a surface is defined as
 </p>
 \[
-\Phi_B = \vec{B}\cdot\vec{A}
+d\Phi = B\,dA\,\cos \theta
 \]
 <p>
 The dot product ensures that only the component of the magnetic field perpendicular to the surface contributes to the flux.
 </p>
-<div class="insightbox">
-If the magnetic field is parallel to the surface, no field lines pass through it and the flux is zero. If the field is perpendicular to the surface, the flux is maximum.
-</div>
+<p>
+We have 3 cases based on orientation, minimum, maximum and zero.
+</p>
+<ul class="model-box">
+<li>If the magnetic field is parallel to the surface, no field lines pass through it and the flux is zero. \(\theta = 90^\circ\)</li>
+<li>If the field is perpendicular to the surface, the flux is maximum or minimum depending on orientation of surface. \(\theta = 0^\circ\) or \(\theta = 180^\circ\)</li>
+</ul>
 </section>
 <section>
 <h2>Solved Example</h2>
@@ -379,7 +90,6 @@ If the magnetic field is parallel to the surface, no field lines pass through it
 <p>
 A uniform magnetic field exists in a region and is given by
 </p>
-
 \[
 \vec{B} = B_0 \hat{i}
 \]
@@ -554,6 +264,288 @@ because both sides of the triangle appear positive. However, the triangle only g
 \vec A = 3\hat i - 4\hat k
 \]
 Once the direction of the area vector is fixed, all its components must follow that same direction consistently.
+</div>
+</div>
+</section>
+<section>
+<h2>Magnetic Field Description</h2>
+<p>
+A magnetic field exists throughout a region of space. This means that at every point in space and at every instant of time we can assign a value to the magnetic field.
+</p>
+<p>
+Mathematically, this idea is expressed by writing the magnetic field as a function of position and time:
+</p>
+\[
+\vec{B} = \vec{B}(\vec{r},t)
+\]
+<p>
+Here \( \vec{r} = (x,y,z) \) represents the position in space and \(t\) represents time. This notation means that the value of the magnetic field may change when we move to a different point in space, and it may also change as time passes.
+</p>
+<p>
+Because the magnetic field can depend on both position and time, we can describe its behaviour using two independent questions:
+</p>
+<ul class="model-box">
+<li>Does the magnetic field change from one place to another?</li>
+<li>Does the magnetic field change with time?</li>
+</ul>
+<p>
+These two questions lead to four possible types of magnetic fields.
+</p>
+<h3>1. Uniform and Static Field</h3>
+<p>
+A magnetic field is called <strong>uniform</strong> if it has the same value everywhere in space.  
+It is called <strong>static</strong> if it does not change with time.
+</p>
+<p>
+An example of such a field is
+</p>
+\[
+\vec{B} = (2\hat{i} + 3\hat{j} + 4\hat{k})
+\]
+<p>
+In this expression the magnetic field does not depend on position \(x,y,z\) and it also does not depend on time \(t\).
+</p>
+<p>
+Therefore:
+</p>
+<ul class="model-box">
+<li>The field is the same at every point in space.</li>
+<li>The field remains the same as time passes.</li>
+</ul>
+<p>
+A good physical example is the magnetic field inside a long solenoid carrying steady current.
+</p>
+<h3>2. Uniform but Time-Varying Field</h3>
+<p>
+Sometimes the magnetic field may remain the same at every point in space but may change with time.
+</p>
+<p>
+For example:
+</p>
+\[
+\vec{B} = (2t^2)\hat{i}
+\]
+<p>
+In this case the magnetic field depends only on time \(t\).
+</p>
+<p>
+This means:
+</p>
+<ul class="model-box">
+<li>At any given instant, the field is the same everywhere in space.</li>
+<li>However, the magnitude of the field changes as time passes.</li>
+</ul>
+<p>
+Such fields are very important in electromagnetic induction, because a magnetic field that changes with time can produce an electric field.
+</p>
+<h3>3. Non-Uniform but Static Field</h3>
+<p>
+In some situations the magnetic field changes from one place to another but remains constant with time.
+</p>
+<p>
+For example:
+</p>
+\[
+\vec{B} = (2x^2)\hat{i}
+\]
+<p>
+Here the magnetic field depends on the position coordinate \(x\).
+</p>
+<p>
+This means:
+</p>
+<ul class="model-box">
+<li>The magnetic field has different values at different points in space.</li>
+<li>However, once the field is established, it does not change with time.</li>
+</ul>
+<p>
+A familiar example of this type is the magnetic field around a straight current-carrying wire.
+</p>
+<h3>4. Non-Uniform and Time-Varying Field</h3>
+<p>
+The most general case occurs when the magnetic field changes both with position and with time.
+</p>
+<p>
+For example:
+</p>
+\[
+\vec{B} = (2x^3 t^2)\hat{i}
+\]
+<p>
+In this situation:
+</p>
+<ul class="model-box">
+<li>The magnetic field has different values at different points in space.</li>
+<li>The value of the field at a given point also changes with time.</li>
+</ul>
+<p>
+Such fields arise in many electromagnetic phenomena, especially when charges are accelerating or when electromagnetic waves are produced.
+</p>
+</section>
+<section>
+<h2>Relation with Derivatives</h2>
+<p>
+Mathematically, the change of the magnetic field with position or time is described using <strong>partial derivatives</strong>.
+</p>
+<p>
+If the field changes with position, then
+</p>
+\[
+\frac{\partial \vec{B}}{\partial \vec{r}} \neq 0
+\]
+<p>
+and if the field changes with time, then
+</p>
+\[
+\frac{\partial \vec{B}}{\partial t} \neq 0
+\]
+<p>
+Electromagnetic induction occurs whenever the magnetic field changes with time, that is, when
+</p>
+\[
+\frac{\partial \vec{B}}{\partial t} \neq 0
+\]
+<p>
+This is called as transformer EMF in time-varying magnetic field (TVMF).
+</p>
+<p>
+Electromagnetic induction also occurs whenever there is relative motion in a static field.
+</p>
+\[
+\frac{\partial \vec{B}}{\partial t} = 0 \qquad \text{relative motion} \neq 0
+\]
+<p>
+This is called as motional EMF
+</p>
+<h3>Different Variables in the Calculus</h3>
+<p>
+Electromagnetic induction often involves two different types of calculus operations: integration over space and differentiation with respect to time. If these variables are not carefully distinguished, it is easy to make mistakes.
+</p>
+<p>
+Faraday's law relates the induced EMF to the time rate of change of magnetic flux:
+</p>	
+\[
+\mathcal{E} = -\frac{d\Phi}{dt}
+\]
+<p>
+However, the magnetic flux itself is defined as a surface integral of the magnetic field:
+</p>
+\[
+\Phi = \int_S \vec{B}\cdot d\vec{A}
+\]
+<p>
+The magnetic field may depend on both position and time, and is generally written as
+</p>
+\[
+\vec{B} = \vec{B}(\vec{r},t)
+\]
+<p>
+When calculating the flux, the integration is performed over spatial coordinates. Therefore time \(t\) is treated as a constant parameter during the integration. Only after computing the flux do we differentiate the result with respect to time when applying Faraday's law.
+</p>
+<p>
+The following example illustrates how this works.
+</p>
+<div class="examplebox">
+<h3>Question</h3>
+<p>
+A magnetic field passes through a rectangular surface of sides \(a\) and \(b\) placed in the \(xy\)-plane. Find the magnetic flux through the rectangle for the magnetic field
+</p>
+\[
+\vec B = (2t^3 x)\hat{k}
+\]
+<p>
+Assume the rectangle extends from \(x=0\) to \(x=a\) and from \(y=0\) to \(y=b\).
+</p>
+<div class="diagram">
+<svg width="380" height="300" viewBox="0 0 380 300">
+  <!-- axes -->
+  <line x1="40" y1="260" x2="340" y2="260" stroke="red" stroke-width="2"/>
+  <line x1="40" y1="260" x2="40" y2="40" stroke="red" stroke-width="2"/>
+  <text x="345" y="265" fill="red">x</text>
+  <text x="30" y="35" fill="red">y</text>
+
+  <!-- rectangle -->
+  <rect x="90" y="110" width="200" height="140"
+        fill="none" stroke="#4da6ff" stroke-width="3"/>
+
+  <!-- labels -->
+  <text x="185" y="275">a</text>
+  <text x="60" y="190">b</text>
+
+  <!-- differential strip -->
+  <rect x="200" y="110" width="12" height="140"
+        fill="#ffd966" stroke="orange" stroke-width="2"/>
+
+  <text x="210" y="100">dx</text>
+  <text x="214" y="180" transform="rotate(90 214 180)">b</text>
+
+  <!-- B direction -->
+  <text x="300" y="80">B = (2t³x)k</text>
+  <circle cx="315" cy="110" r="4" fill="black"/>
+  <circle cx="330" cy="130" r="4" fill="black"/>
+  <circle cx="300" cy="140" r="4" fill="black"/>
+</svg>
+</div>
+<hr>
+<h4>Solution</h4>
+<p>
+Magnetic flux through a surface is defined as
+</p>
+\[
+\Phi = \int_S \vec B \cdot d\vec A
+\]
+<p>
+Since the surface lies in the \(xy\)-plane, the area vector is along \( \hat{k} \).
+</p>
+\[
+d\vec A = dA\,\hat{k}
+\]
+<p>
+The magnetic field is also along \( \hat{k} \):
+</p>
+\[
+\vec B = (2t^3 x)\hat{k}
+\]
+<p>
+Therefore
+</p>
+\[
+\vec B \cdot d\vec A = (2t^3 x)\, dA
+\]
+<p>
+The rectangle has length \(a\) along the \(x\)-direction and height \(b\) along the \(y\)-direction. We divide the area into vertical strips of width \(dx\).
+</p>
+\[
+dA = b\,dx
+\]
+<p>
+Substituting into the flux integral:
+</p>
+\[
+\Phi = \int_0^a (2t^3 x)(b\,dx)
+\]
+<p>
+The integration variable is \(x\), so \(t\) behaves like a constant and can be taken outside the integral.
+</p>
+\[
+\Phi = 2bt^3 \int_0^a x\,dx
+\]
+<p>
+Evaluating the integral:
+</p>
+\[
+\int_0^a x\,dx = \frac{a^2}{2}
+\]
+<p>
+Therefore the magnetic flux is
+</p>
+\[
+\Phi = a^2 b t^3
+\]
+<div class="insightbox">
+During the surface integration we integrate over spatial coordinates.<br>
+The time \(t\) is treated as a constant parameter.<br>
+Only after computing the flux do we differentiate with respect to time when applying Faraday's law.
 </div>
 </div>
 </section>
