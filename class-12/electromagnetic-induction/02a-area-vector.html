@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area Vector | Magnetic Flux</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./02-flux-and-induction.html" class="back-btn">
+<span>&larr;</span> Back to Magnetic Flux
+</a>
+</nav>
+<h1>Area Vector</h1>
+<p class="subtitle">
+Area Vector Direction and Circulation.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+The direction of the area vector of an isolated surface can be chosen arbitrarily. We can choose either of the two possible surface normals as its positive direction.
+</p>
+<p>
+However, when resolving an area vector into components, those components cannot be assigned independent directions or signs. They must combine to reproduce the actual area vector.
+</p>
+<p>
+Similarly, when multiple surface patches are joined along their boundaries to form a single connected surface, their area-vector orientations cannot be chosen independently. They must be oriented consistently with the circulation along their common boundaries.
+</p>
+<p>
+We discuss both situations here.
+</p>
+</section>
+<section>
+<h2>Resolution of Area Vector</h2>
+<div class="examplebox">
+<h3>Solved Illustration</h3>
+<p>
+A magnetic field \(\vec{B} = (4\hat{i} + 3\hat{j} + 2\hat{k})\; \text{ T}\) passes through a rectangular surface of area \(5\,\text{m}^2\) placed in space as shown in the figure. The normal to the surface makes an angle of \(53^\circ\) with the \(x\)-axis in the \(xz\)-plane. Find the magnetic flux through the surface.
+</p>
+<div class="diagram">
+<svg width="420" height="320" viewBox="0 0 420 320">
+<!-- Axes -->
+<line x1="100" y1="240" x2="320" y2="240" stroke="red" stroke-width="2"/>
+<line x1="100" y1="240" x2="100" y2="60" stroke="red" stroke-width="2"/>
+<line x1="100" y1="240" x2="40" y2="290" stroke="red" stroke-width="2"/>
+<text x="325" y="245" fill="red">x</text>
+<text x="95" y="55" fill="red">y</text>
+<text x="25" y="300" fill="red">z</text>
+<!-- Surface (rectangle) -->
+<polygon points="100,120 200,170 200,290 100,240"
+         fill="none" stroke="#4da6ff" stroke-width="3"/>
+
+<!-- Area vector -->
+<line x1="150" y1="200" x2="240" y2="150" stroke="orange" stroke-width="3"/>
+<polygon points="240,150 232,150 238,160" fill="orange"/>
+<text x="245" y="150" fill="orange">A</text>
+
+<!-- Projection on x-axis -->
+<line x1="150" y1="200" x2="240" y2="200"
+      stroke="gray" stroke-dasharray="4"/>
+<text x="245" y="205" fill="gray">Aₓ</text>
+
+<!-- Projection on z-axis -->
+<line x1="150" y1="200" x2="120" y2="260"
+      stroke="gray" stroke-dasharray="4"/>
+<text x="105" y="270" fill="gray">A_z</text>
+
+<!-- Angle -->
+<path d="M150 200 A40 40 0 0 1 210 200"
+      fill="none" stroke="white" stroke-width="2"/>
+<text x="175" y="195" fill="white">53°</text>
+</svg>
+</div>
+<h3>Solution</h3>
+<p>
+The magnetic field is uniform and the surface is flat planar. Hence, the magnetic flux through a surface is
+</p>
+\[
+\Phi = \vec{B}\cdot\vec{A}
+\]
+<p>
+The magnitude of the area vector equals the area of the surface:
+</p>
+\[
+|\vec{A}| = 5 \text{ m}^2
+\]
+<p>
+It is difficult to use the geometric dot product \(\vec{B}\cdot\vec{A} = |\vec{B}|\,|\vec{A}|\,\cos\theta\) as we don't know the angle between vectors. Hence, we use algebraic dot product and focus on writing \(\vec{A} = A_x\,\hat{i}+A_z\,\hat{k}\)
+</p>
+<p>
+The surface normal lies in the \(xz\)-plane and makes an angle \(53^\circ\) with the +x axis. From the diagram the normal points toward +x and <strong>−z</strong>.
+</p>
+<p>
+Therefore the area vector must be written as
+</p>
+\[
+\vec A = A(\cos53^\circ \hat i - \sin53^\circ \hat k)
+\]
+<p>
+Substituting \(A = 5\):
+</p>
+\[
+\vec A = 5(\cos53^\circ \hat i - \sin53^\circ \hat k)
+\]
+\[
+\cos53^\circ = \frac35, \qquad \sin53^\circ = \frac45
+\]
+\[
+\vec A = 5\left(\frac35 \hat i - \frac45 \hat k\right)
+\]
+\[
+\vec A = 3\hat i - 4\hat k
+\]
+<p>
+Now compute the flux:
+</p>
+\[
+\Phi = (4\hat i + 3\hat j + 2\hat k)\cdot(3\hat i - 4\hat k)
+\]
+\[
+\Phi = 12 - 8
+\]
+\[
+\Phi = 4
+\]
+\[
+\boxed{\Phi = 4 \text{Wb}}
+\]
+</div>
+<div class="insightbox">
+The main idea of this illustration is that the area vector components \(A_x\) and \(A_z\) are not independent.<br>
+We cannot write the area vector as:
+\[
+\vec A = 3\hat i + 4\hat k
+\]
+This is because, the <strong>signs</strong> of the area vector components must be determined from the actual direction of the area vector.<br>
+In this figure the area vector points toward \(+x\) and \(-z\).<br>
+Therefore there is only 1 correct way to write the area vector:
+\[
+\vec A = 3\hat i - 4\hat k
+\]
+All components of the area vector should add up to give the area.
+</div>
+</section>
+<section>
+<h2>Surfaces Joined at the Boundaries</h2>
+<p>
+When calculating magnetic flux through an open surface, the choice of the area vector's direction is arbitrary. You can choose either the outward or inward normal. However, if a surface is composed of multiple connected sections, their area vectors are no longer independent.
+</p>
+<p>
+To understand why, we must look at the <strong>circulation</strong> around the boundary of the surface. By the Right-Hand Rule, the direction of the area vector is firmly linked to the direction we traverse the boundary (curl of the fingers).
+</p>
+<h3>Case 1: Disconnected Surfaces</h3>
+<p>
+Imagine two separate, non-overlapping square loops in the \(xy\)-plane.
+</p>
+<ul class="model-box">
+<li><strong>Square 1:</strong> vertices at (0,0), (1,0), (1,1), (0,1)</li>
+<li><strong>Square 2:</strong> vertices at (2,0), (3,0), (3,1), (2,1)</li>
+</ul>
+<p>
+Because they do not share a boundary, they are mathematically independent. We can choose the area vector of Square 1 to be either \(+\hat{k}\) or \(-\hat{k}\). We have the exact same two choices for Square 2.
+</p>
+<p>
+This gives us <strong>4 valid configurations</strong> for the area vectors: \((+\hat{k}, +\hat{k})\), \((+\hat{k}, -\hat{k})\), \((-\hat{k}, +\hat{k})\), and \((-\hat{k}, -\hat{k})\).
+</p>
+<h3>Case 2: Connected Surfaces</h3>
+<p>
+Now, move Square 2 so that it shares a boundary with Square 1.
+</p>
+<ul class="model-box">
+<li><strong>Square 1:</strong> vertices at (0,0), (1,0), (1,1), (0,1)</li>
+<li><strong>Square 2:</strong> vertices at (1,0), (2,0), (2,1), (1,1)</li>
+</ul>
+<p>
+They now share the edge from \(x=1, y=0\) to \(x=1, y=1\). To treat these two squares as a <strong>single continuous surface</strong>, the internal shared boundary must mathematically cancel out (since no actual physical outer boundary exists there in a unified surface).
+</p>
+<div class="diagram">
+<svg width="600" height="250" viewBox="0 0 600 250">
+<!-- Disconnected -->
+<text x="120" y="30" font-weight="bold" font-family="sans-serif">Disconnected (4 Choices)</text>
+<rect x="50" y="70" width="80" height="80" fill="none" stroke="#4da6ff" stroke-width="3"/>
+<rect x="180" y="70" width="80" height="80" fill="none" stroke="#4da6ff" stroke-width="3"/>
+<text x="85" y="115" font-family="sans-serif">+k or -k</text>
+<text x="215" y="115" font-family="sans-serif">+k or -k</text>
+<!-- Connected -->
+<text x="400" y="30" font-weight="bold" font-family="sans-serif">Connected (2 Choices)</text>
+<rect x="350" y="70" width="80" height="80" fill="none" stroke="#4da6ff" stroke-width="3"/>
+<rect x="430" y="70" width="80" height="80" fill="none" stroke="#4da6ff" stroke-width="3"/>
+<!-- CCW arrows Square 1 -->
+<path d="M 370 60 L 350 60 L 350 80" fill="none" stroke="blue" stroke-width="2"/>
+<polygon points="370,60 365,55 365,65" fill="blue"/>
+<path d="M 350 140 L 350 160 L 370 160" fill="none" stroke="blue" stroke-width="2"/>
+<polygon points="370,160 365,155 365,165" fill="blue"/>
+<path d="M 410 160 L 430 160 L 430 140" fill="none" stroke="blue" stroke-width="2"/>
+<polygon points="430,140 425,145 435,145" fill="blue"/>
+<!-- Shared edge arrows - Blue goes down -->
+<line x1="426" y1="100" x2="426" y2="130" stroke="blue" stroke-width="2"/>
+<polygon points="426,135 421,125 431,125" fill="blue"/>
+<!-- Shared edge arrows - Red goes up -->
+<line x1="434" y1="130" x2="434" y2="100" stroke="red" stroke-width="2"/>
+<polygon points="434,95 429,105 439,105" fill="red"/>
+<!-- CCW arrows Square 2 -->
+<path d="M 510 80 L 510 60 L 490 60" fill="none" stroke="red" stroke-width="2"/>
+<polygon points="490,60 495,55 495,65" fill="red"/>
+<path d="M 490 160 L 510 160 L 510 140" fill="none" stroke="red" stroke-width="2"/>
+<polygon points="510,140 505,145 515,145" fill="red"/>
+<text x="345" y="200" font-size="14" font-family="sans-serif">Circulation MUST cancel on shared edge</text>
+</svg>
+</div>
+<p>
+If we choose the area vector of Square 1 as \(+\hat{k}\), its circulation is Counter-Clockwise (CCW). This means the path goes from \((1,1)\) down to \((1,0)\) along the shared boundary.
+</p>
+<p>
+For the shared boundary to cancel, the circulation of Square 2 <strong>must</strong> traverse that same edge in the opposite direction: from \((1,0)\) up to \((1,1)\). This forces the circulation of Square 2 to also be CCW.
+</p>
+<p>
+Because Square 2 is forced into CCW circulation, its area vector is firmly locked to \(+\hat{k}\).
+</p>
+<div class="insightbox">
+<strong>The Orientability Lock</strong><br>
+When surfaces share a boundary, their area vectors are locked together by the circulation on that boundary.<br>
+Therefore, for the connected squares, there are only <strong>2 valid configurations</strong>: both must be \(+\hat{k}\), or both must be \(-\hat{k}\).<br>
+Mixed combinations like \((+\hat{k}, -\hat{k})\) are mathematically invalid because they would represent a surface where the boundary circulations crash into each other along the shared edge, failing to form a continuous surface.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

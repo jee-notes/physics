@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electromagnetic Induction | Lenz's Law</title>
+<title>Lenz's Law | Electromagnetic Induction</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,110 +14,117 @@
 <span>&larr;</span> Back to Electromagnetic Induction
 </a>
 </nav>
-<section>
 <h1>Lenz's Law</h1>
 <p class="subtitle">
 Direction of induced current determined by conservation of energy.
 </p>
-<h2>Lenz's Law</h2>
+<section>
+<h2>Concept</h2>
 <p>
-When the magnetic flux linked with a closed loop changes with time, an induced EMF appears in the loop. According to <strong>Lenz's Law</strong>, the direction of this induced EMF (and hence the induced current) is such that it always <strong>opposes the change in magnetic flux</strong> that produced it.
+The principle of conservation of energy is an inherent characteristic of the physical world. It governs how any event in nature takes place.
 </p>
-<div class="insightbox">
-<strong>Energy Perspective</strong><br>
-The induced current always acts in a way that resists the change causing it. Because of this opposition, an <strong>external agent must do positive work</strong> to change the magnetic flux. This external work is converted into electrical energy stored in the magnetic field produced around the current carrying conductor.
-</div>
+<p>
+Conservation can be understood through the idea of accounting. Consider the water cycle involving rainfall and evaporation. We say that rainfall happens because water on the ground evaporates to form clouds.
+</p>
+<p>
+Consider the water stored in clouds as an account. Evaporation, which is the cause, acts as a credit transaction because it increases the water stored in the clouds, whereas rainfall, which is the effect, acts as a debit transaction because it decreases the water stored in the clouds.
+</p>
+<p>
+Both transactions affect the same account, but in opposite directions. Thus, conservation involves opposing transactions on the same account. The cause and effect have opposite transactional natures. It cannot rain more water than what got evaporated.
+</p>
+<p>
+When this process of cause and effect is viewed as the one in which effect is birthed, the opposing nature of cause and effect, manifests as a resistance to the birth of the effect. When the cause produces the effect, the formation of that effect is accompanied by an opposing response. The effect does not emerge through an unrestricted, one-sided conversion of cause into effect. Else, all of the cause would have already converted to effect and only effect would have existed.
+</p>
+<p>
+We have already encountered this idea in mechanics through <strong>inertia</strong>. An applied force attempts to change the state of motion of a body, while inertia manifests as resistance to that change. We also encountered this in capacitance. If we try to store more charge on the capacitor, its potential increases and it gets more and more difficult.
+</p>
+<p>
+We encounter a similar philosophical requirement in electromagnetic induction. Faraday studied induced EMF and established its magnitude:
+</p>
+\[
+|\mathcal{E}| = \left|\frac{d\Phi}{dt}\right|
+\]
+<p>
+However, determining the magnitude of an induced EMF does not determine its polarity. The polarity describes the nature and direction of the induced response. To understand it, we must consider the underlying principle of energy conservation and the opposing nature of the physical transactions involved.
+</p>
 </section>
 <section>
-<h2>Opposition to Motion of Magnet</h2>
+<h2>Lenz's Law</h2>
+<p>
+Lenz's Law applies the energy conservation principle to determine the polarity of the emf induced in the coil.
+</p>
 <p>
 When a magnet is moved toward or away from a conducting loop, the magnetic flux through the loop changes. The induced current produces a magnetic field that opposes this change.
 </p>
 <div class="diagram">
-<div class="diagram">
-
-<svg width="520" height="260" viewBox="0 0 520 260">
-
+<svg width="600" height="260" viewBox="0 0 600 260">
 <!-- ===== CASE 1 ===== -->
-<text x="70" y="30" font-size="14">N pole approaching → coil face becomes N</text>
-
+<text x="10" y="30" font-size="14">N pole approaching → coil face becomes N.</text>
 <!-- magnet -->
 <rect x="20" y="80" width="80" height="40" fill="#ddd" stroke="black"/>
 <text x="35" y="105">N</text>
 <text x="75" y="105">S</text>
-
 <!-- arrow motion -->
 <line x1="100" y1="100" x2="140" y2="100" stroke="black" stroke-width="2"/>
 <polygon points="140,100 130,95 130,105" fill="black"/>
-
 <!-- coil -->
 <ellipse cx="200" cy="100" rx="45" ry="35" fill="none" stroke="blue" stroke-width="3"/>
-
 <!-- coil polarity -->
 <text x="188" y="60">N</text>
-
 <!-- repulsion arrows -->
 <line x1="120" y1="100" x2="160" y2="80" stroke="red"/>
 <line x1="120" y1="100" x2="160" y2="120" stroke="red"/>
-
-
 <!-- ===== CASE 2 ===== -->
-<text x="330" y="30" font-size="14">N pole moving away → coil face becomes S</text>
-
+<text x="300" y="30" font-size="14">N pole moving away → coil face becomes S</text>
 <!-- magnet -->
 <rect x="300" y="80" width="80" height="40" fill="#ddd" stroke="black"/>
 <text x="315" y="105">N</text>
 <text x="355" y="105">S</text>
-
 <!-- arrow motion -->
 <line x1="300" y1="100" x2="260" y2="100" stroke="black" stroke-width="2"/>
 <polygon points="260,100 270,95 270,105" fill="black"/>
-
 <!-- coil -->
 <ellipse cx="430" cy="100" rx="45" ry="35" fill="none" stroke="blue" stroke-width="3"/>
-
 <!-- coil polarity -->
 <text x="418" y="60">S</text>
-
 <!-- attraction arrows -->
 <line x1="380" y1="100" x2="410" y2="80" stroke="red"/>
 <line x1="380" y1="100" x2="410" y2="120" stroke="red"/>
 </svg>
-</div>
 </div>
 <ul class="model-box">
 <li>The induced current produces a magnetic field that <strong>opposes the motion of the magnet</strong>.</li>
 <li>An external force must be applied to keep the magnet moving.</li>
 <li>The work done by the external agent is converted into electrical energy.</li>
 </ul>
-</section>
-<section>
-<h2>Flux Interpretation</h2>
+<h3>Flux Interpretation</h3>
 <p>
 Lenz's Law can also be understood purely in terms of magnetic flux.
 </p>
 <ul class="model-box">
-<li>If the external magnetic flux through the coil <strong>increases</strong>, the coil produces a magnetic field that opposes it.</li>
-<li>If the external magnetic flux through the coil <strong>decreases</strong>, the coil produces a magnetic field that tries to maintain it.</li>
+<li>If the external magnetic flux through the coil <strong>increases</strong>, the coil produces a magnetic field in the same direction.</li>
+<li>If the external magnetic flux through the coil <strong>decreases</strong>, the coil produces a magnetic field in the opposite direction.</li>
 </ul>
-</section>
-<section>
-<h2>Case 1: External Flux Decreasing</h2>
+<h3>Case 1: External Flux Decreasing</h3>
 <p>
 If the external magnetic flux through the coil is decreasing, the induced current produces a magnetic field in the <strong>same direction</strong> as the original field.
 </p>
 <p>
 This attempts to maintain the original magnetic flux.
 </p>
-</section>
-<section>
-<h2>Case 2: External Flux Increasing</h2>
+<h3>Case 2: External Flux Increasing</h3>
 <p>
 If the external magnetic flux through the coil is increasing, the induced current produces a magnetic field in the <strong>opposite direction</strong> to the original field.
 </p>
 <p>
 This attempts to reduce the increase in flux.
 </p>
+<div class="insightbox">
+This is often a major source of confusion.</br>
+Students assume that the direction of induced magnetic field will always be opposite to that of the external field.</br>
+But, it depends on whether the flux due external field is decreasing or increasing.</br>
+If flux is increasing, then it will be in opposite direction, but if it is decreasing, then it will be in the same direction.
+</div>
 </section>
 <section>
 <h2>Example 1: Falling Magnet Through a Coil</h2>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electromagnetic Induction | Faraday's Law and Applications</title>
+<title>Faraday's Law | Electromagnetic Induction</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -16,52 +16,147 @@
 </nav>
 <h1>Faraday's Law</h1>
 <p class="subtitle">
-The laws that determine when an EMF is induced and the direction in which it acts.
+The law that determine when and how EMF is induced.
 </p>
 <section>
-<h2>Faraday's Law of Electromagnetic Induction</h2>
+<h2>Concept</h2>
 <p>
-In 1831, Michael Faraday discovered that an electromotive force (EMF) is induced in a conducting loop whenever the magnetic flux through the loop changes with time. This discovery revealed a deep connection between electricity and magnetism: a changing magnetic field can produce an electric field.
+Faraday's Law does much more than relate induced EMF to the rate of change of magnetic flux. It establishes the complete framework for understanding electromagnetic induction:
+</p>
+<ul class="model-box">
+<li><strong>Flux</strong> — Introduces the physical quantity used to describe the magnetic field linked with a circuit.</li>
+<li><strong>Induction</strong> — Establishes the process through which a changing magnetic flux produces an EMF.</li>
+<li><strong>EMF</strong> — Quantifies the magnitude of the induced EMF.</li>
+</ul>
+<p>
+Electromagnetic induction is also the physical principle behind wireless transfer of electrical power, where energy is transferred between circuits without direct electrical contact.
 </p>
 <p>
-The magnitude of the induced EMF depends only on how rapidly the magnetic flux through the loop changes. Mathematically,
+We have already studied how to calculate magnetic flux through an arbitrary imaginary surface in a region where a magnetic field exists. We have also understood magnetic field as <strong>flux density</strong>, which represents the local magnetic field contribution per unit area.
+</p>
+<p>
+However, while applying Faraday's Law, we are no longer considering an arbitrary surface. We consider a surface bounded by a <strong>closed conducting loop</strong>.
+</p>
+<p>
+This distinction is important because EMF is evaluated around the closed loop, whereas magnetic flux is evaluated through the surface bounded by that loop. Thus, we need to establish a geometrical connection between the surface integral and the circulation around its boundary.
+</p>
+<p>
+For this, the orientation of the area vector must be chosen consistently with the positive direction of circulation around the loop. We use the right-hand rule: curl the fingers in the chosen direction of circulation, and the thumb gives the positive direction of the area vector.
+</p>
+</section>
+<section>
+<h2>Faraday's Law</h2>
+<p>
+In 1831, Michael Faraday discovered that an EMF is induced in a conducting loop whenever the magnetic flux through the surface bounded by the loop changes with time. This phenomenon is called <strong>electromagnetic induction</strong>.
+</p>
+<p>
+This discovery revealed a fundamental connection between electricity and magnetism: a changing magnetic field can produce an electric field.
+</p>
+<p>
+For a single-turn conducting loop, the magnitude of the induced EMF depends on how rapidly the magnetic flux through the loop changes:
 </p>
 \[
-|\mathcal{E}| = \frac{d\Phi_B}{dt}
+|\mathcal{E}| = \left|\frac{d\Phi_B}{dt}\right|
 \]
 <p>
-If the circuit consists of a coil with \(N\) turns, each turn links the same magnetic flux \( \Phi_B \). The total flux linkage therefore becomes \(N\Phi_B\). Taking this into account, Faraday's law can be written as
+If the circuit consists of a coil with \(N\) turns, each turn linking the same magnetic flux \(\Phi\), the total flux linkage with the coil is:
 </p>
 \[
-\boxed{\mathcal{E} = -N\frac{d\Phi_B}{dt}}
+\lambda=N\Phi
 \]
 <p>
-The negative sign in the equation expresses <strong>Lenz's Law</strong>, which determines the direction of the induced EMF (and therefore the direction of the induced current).
+Taking the flux linkage into account, Faraday's Law for the coil becomes:
+</p>
+\[
+\boxed{\mathcal{E}=-\frac{d\lambda}{dt}=-N\frac{d\Phi}{dt}}
+\]
+<p>
+The negative sign expresses <strong>Lenz's Law</strong>. It determines the polarity of the induced EMF and, consequently, the direction of the induced current. We will study its physical significance separately.
 </p>
 <div class="insightbox">
-Faraday's Law is concerned only with the <strong>rate of change of magnetic flux</strong>. It does not matter how the flux changes — whether the magnetic field changes, the area of the loop changes, or the orientation of the loop changes. The induced EMF depends only on how fast the flux through the circuit changes with time.
+Faraday's Law relates the induced EMF to the rate of change of magnetic flux linkage.<br>
+It does not matter how the flux changes.<br>
+The physical mechanism producing the change may  differ, but the same fundamental law governs the induction.<br>
+For a plane loop in a uniform magnetic field:
+\[
+\Phi=BA\cos\theta
+\]
+We can therefore identify three ways of changing the magnetic flux:
+<ul>
+<li>The magnetic field strength \(B\) may change.</li>
+<li>The area \(A\) enclosed by the loop may change.</li>
+<li>The orientation of the loop relative to the magnetic field
+(\(\theta\)) may change.</li>
+</ul>
+These are three different ways of producing a change in magnetic flux, but they all lead to the same Faraday's Law.
 </div>
 </section>
 <section>
-<h2>Lenz's Law</h2>
+<h2>Average vs Instantaneous</h2>
 <p>
-Lenz's Law specifies the direction of the induced current. It states:
+Just like velocity in kinematics, induced EMF can be studied over a finite time interval (average) or at a particular instant (instantaneous).
 </p>
+<ul class="model-box">
+<li><strong>Average EMF:</strong> Evaluated over a finite time interval \(\Delta t\).
+\[
+\mathcal{E}_{\text{avg}}=-N\frac{\Delta\Phi}{\Delta t}=-N\frac{\Phi_{\text{final}}-\Phi_{\text{initial}}}{t_{\text{final}}-t_{\text{initial}}}
+\]
+</li>
+<li><strong>Instantaneous EMF:</strong> Evaluated at a particular instant using the derivative.
+\[
+\mathcal{E}_{\text{inst}}=-N\frac{d\Phi}{dt}
+\]
+</li>
+</ul>
+<h3>Important Deduction: Induced Charge</h3>
 <p>
-<em>The induced current flows in such a direction that the magnetic field produced by it opposes the change in magnetic flux that produced it.</em>
-</p>
-<p>
-In other words, the induced current always acts in a way that resists the change that created it. If the magnetic flux through the loop increases, the induced current produces a magnetic field that attempts to decrease it. If the flux decreases, the induced current produces a magnetic field that attempts to increase it.
-</p>
-<p>
-A deeper understanding of Lenz's Law requires analysing the physical cause of induction and the interaction between magnetic fields and currents. That discussion is taken up later. For now, it is sufficient to note that the negative sign in Faraday's law represents Lenz's Law:
+An induced EMF produces current in a closed conducting circuit. For a circuit of total resistance \(R\), Ohm's law gives:
 </p>
 \[
-\boxed{\mathcal{E} = -N\frac{d\Phi_B}{dt}}
+I=\frac{\mathcal{E}}{R}
 \]
 <p>
-Thus Faraday's law determines the <strong>magnitude</strong> of the induced EMF, while Lenz's law determines its <strong>direction</strong>.
+Since electric current is the rate of flow of charge:
 </p>
+\[
+I=\frac{dq}{dt}
+\]
+<p>
+Combining these relationships with Faraday's law:
+</p>
+\[
+\frac{dq}{dt}=-\frac{N}{R}\frac{d\Phi}{dt}
+\]
+<p>
+Rearranging and integrating over the complete time interval:
+</p>
+\[
+\int_{q_i}^{q_f}dq=-\frac{N}{R}\int_{\Phi_i}^{\Phi_f}d\Phi
+\]
+<p>
+Therefore:
+</p>
+\[
+\Delta q=-\frac{N}{R}(\Phi_f-\Phi_i)
+\]
+<p>
+Taking the magnitude, the total charge transferred for a monotonic change in flux is:
+</p>
+\[
+\boxed{|\Delta q|=\frac{N}{R}|\Delta\Phi|}
+\]
+<p>
+This gives us an interesting result: the total charge transferred depends only on the change in magnetic flux and the resistance of the circuit. It does not depend on the time taken for the change.
+</p>
+<div class="insightbox">
+<strong>Does the time taken to move the magnet matter?</strong><br>
+Suppose we pull a magnet out of a coil, producing the same initial and final magnetic flux in two different situations.<br>
+In the first case, we take 1 second, while in the second, we take 10 seconds.<br>
+The faster motion produces a larger induced EMF and hence a larger current.<br> 
+The slower motion produces a smaller EMF and current.<br>
+However, the duration of current flow changes accordingly.<br>
+Consequently, the total charge transferred is the same in both cases.
+</div>
 </section>
 <section>
 <h2>Three Ways to Change Flux</h2>
@@ -69,7 +164,7 @@ Thus Faraday's law determines the <strong>magnitude</strong> of the induced EMF,
 Magnetic flux through a loop is given by
 </p>
 \[
-\Phi_B = BA\cos\theta
+\Phi = BA\cos\theta
 \]
 <p>
 where \(B\) is the magnetic field strength, \(A\) is the area of the loop, and \(\theta\) is the angle between the magnetic field and the area vector of the loop.
@@ -121,21 +216,61 @@ All three cases — transformer EMF, motional EMF and generator EMF — are gove
 </div>
 </section>
 <section>
-<h2>Core Topics</h2>
+<h2>Role of Induced Fields</h2>
 <p>
-The classification above provides a useful framework for analysing electromagnetic induction problems. In practice, most applications of Faraday's Law can be understood in terms of these three mechanisms.
+Consider a permanent magnet moving towards a ring placed in its vicinity. As the magnet approaches, its magnetic field at the location of the ring changes with time. This changing magnetic field produces an electric field in the surrounding space.
+</p>
+<h3>Case 1: Insulating (Plastic) Ring</h3>
+<p>
+Suppose the ring is made of an ideal insulating and non-magnetic material such as plastic.
 </p>
 <p>
-Later we will see that motional EMF can also be explained using the <strong>Lorentz force</strong> acting on charges moving through a magnetic field. This provides an alternative physical explanation of the same phenomenon.
+The changing magnetic field still produces an electric field. However, the material does not have free mobile charge carriers that can sustain current in the ring.
 </p>
-<ul class="model-box">
-<li><strong>Transformer EMF</strong> — Occurs when the magnetic field through a stationary loop changes with time.</li>
-<li><strong>Motional EMF</strong> — Occurs when a conductor or loop moves through a magnetic field while the field itself remains static.</li>
-<li><strong>Generator EMF</strong> — Occurs when the loop rotates in a magnetic field, causing the angle between the field and the loop's area vector to change.</li>
+<p>
+Consequently, no induced current is produced and there is no induced magnetic field due to the circulating current in the ring. The magnet therefore does not experience any electromagnetic braking and continues to move with same speed.
+</p>
+<h3>Case 2: Conducting Loop</h3>
+<p>
+Now replace the plastic ring with a conducting loop. The changing magnetic field again produces an electric field. This induced electric field acts on the mobile charges in the conductor and drives a current in the closed circuit.
+</p>
+<p>
+The induced current produces its own magnetic field. This magnetic field repels the original magnet thus opposing its approach. Consequently, the magnet experiences a retarding magnetic force and loses kinetic energy.
+</p>
+<p>
+Thus, the conducting loop develops its own magnetic response because of the induced current.
+</p>
+<h3>Roles of the Fields</h3>
+<p>
+It is important to distinguish the original magnetic field from the fields produced during induction.
+</p>
+<ul>
+<li><strong>Magnetic field of the permanent magnet:</strong> Its change with time produces an electric field in the surrounding space.</li>
+<li><strong>Induced electric field:</strong> It acts on mobile charges in the conducting loop and drives the induced current.</li>
+<li><strong>Magnetic field of the induced current:</strong> It interacts with the permanent magnet and produces the magnetic force opposing its motion.</li>
 </ul>
+<p>
+The induced electric field does electrical work on the charges in the circuit. The magnetic interaction between the induced current and the permanent magnet produces negative mechanical work on the moving magnet.
+</p>
+<p>
+The loss of mechanical energy of the magnet is transferred to the electrical circuit and ultimately dissipated as heat in its resistance.
+</p>
+<h3>Connection with Electrostatic Induction</h3>
+<p>
+This phenomenon has a broad conceptual similarity with electrostatic induction.
+</p>
+<p>
+When a neutral conducting body is brought near a charged body, the external electric field redistributes the mobile charges in the conductor. This redistribution produces its own electric field, resulting in an electrostatic interaction between the two bodies.
+</p>
+<p>
+Similarly, in electromagnetic induction, a changing magnetic field produces an electric field that drives current in a conducting loop. The induced current produces its own magnetic field, which interacts with the original magnet.
+</p>
+<p>
+Thus, just as an external electric field can produce an induced charge distribution and its associated electric field, a changing magnetic field can produce an induced current and its associated magnetic field.
+</p>
 </section>
 <section>
-<h2>Core Sub-Topics</h2>
+<h2>Sub-Topics</h2>
 <div class="chapter-list">
 <a href="./03a-transformer-emf.html">1. Transformer EMF</a>
 <a href="./03b-motional-emf.html">2. Motional EMF</a>
