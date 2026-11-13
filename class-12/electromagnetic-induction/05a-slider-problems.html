@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider Problems | Motional EMF</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./05-motional-emf.html" class="back-btn">
+<span>&larr;</span> Back to Motional EMF
+</a>
+</nav>
+<h1>Slider Problems</h1>
+<p class="subtitle">
+Replace slider with battery.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+Slider problems are a classic category of EMI problems. The standard setup consists of two parallel conducting rails separated by a distance \(d\), connected electrically at one end to form a U-shape. 
+</p>
+<p>
+A "slider" (a conducting rod or wire) moves translationally on these rails through a magnetic field. We can solve these problems using either Faraday's law or the motional EMF formula, depending on which is more convenient.
+</p>
+<p>
+Assuming a uniform magnetic field \(\vec{B}\) perpendicular to the plane of the rails, there are three critical constraints to remember:
+</p>
+<ul class="model-box">
+<li><strong>Overhanging Slider:</strong> Even if the physical length of the slider is \( \ell > d \), the induced EMF contributing to the circuit is \(Bvd\) and not \(Bv\ell\). Only the segment between the rails cuts the flux that is linked with the closed circuit.</li>
+<li><strong>Curved Slider:</strong> The shape of the slider does not matter. The induced EMF is still \(Bvd\) (where \(d\) is the straight-line distance between the contact points) as long as the velocity \(v\) is parallel to the rails. This is because \(\int (\vec{v} \times \vec{B}) \cdot d\vec{\ell} = (\vec{v} \times \vec{B}) \cdot \vec{L}_{\text{displacement}}\).</li>
+<li><strong>Localized Field:</strong> If the magnetic field only exists in a restricted rectangular strip of width \(t\) (where \(t \lt d\)), the induced EMF is \(Bvt\), because only the charges within that width experience the Lorentz force.</li>
+</ul>
+<h3>The Equivalent Circuit Model</h3>
+<p>
+To easily solve for currents and voltages, we replace the moving mechanical slider with an <strong>equivalent electrical battery</strong>.
+</p>
+<ul class="model-box">
+<li>The magnitude of the battery's EMF is \( \mathcal{E} = B d v \).</li>
+<li>The <strong>positive terminal</strong> is determined using the Right-Hand Palm Rule for \( \vec{v} \times \vec{B} \).</li>
+<li>If the slider itself has an electrical resistance \( r \), it is treated as the <strong>internal resistance</strong> of this equivalent battery.</li>
+</ul>
+</section>
+<section>
+<h2>Standard Sliding Rod: Force & Energy</h2>
+<div class="examplebox">
+<h3>Question</h3>
+<p>
+A conducting rod of length \( \ell \) slides on two parallel conducting rails with constant velocity \( v \). The entire arrangement is placed in a uniform magnetic field \( B \) directed into the page.
+</p>
+<p>
+The rails are connected by a resistor \( R \). Assume the rails and the rod have negligible resistance. Find the current in the circuit, the force required to keep the rod moving at constant velocity, and prove that mechanical power equals electrical power.
+</p>
+<div class="diagram">
+<svg width="420" height="260" viewBox="0 0 420 260">
+<!-- rails -->
+<line x1="60" y1="80" x2="300" y2="80" stroke="black" stroke-width="3"/>
+<line x1="60" y1="180" x2="300" y2="180" stroke="black" stroke-width="3"/>
+<!-- rod -->
+<line x1="200" y1="80" x2="200" y2="180" stroke="#4da6ff" stroke-width="5"/>
+<!-- velocity arrow -->
+<line x1="200" y1="50" x2="260" y2="50" stroke="red" stroke-width="3"/>
+<polygon points="260,50 250,45 250,55" fill="red"/>
+<text x="265" y="55">v</text>
+<!-- resistor -->
+<rect x="60" y="120" width="30" height="20" fill="none" stroke="black" stroke-width="2"/>
+<text x="55" y="115">R</text>
+<!-- B field -->
+<text x="320" y="90">× × ×</text>
+<text x="320" y="130">× × ×</text>
+<text x="320" y="170">× × ×</text>
+</svg>
+</div>
+<hr>
+<h4>Solution</h4>
+<p><strong>1. Induced Current</strong></p>
+<p>
+The moving rod acts as a battery. By \( \vec{v} \times \vec{B} \), positive charges are pushed to the top end of the rod.
+</p>
+\[
+\mathcal{E} = B \ell v
+\]
+<p>
+This EMF drives a counter-clockwise current in the circuit:
+</p>
+\[
+I = \frac{\mathcal{E}}{R} = \frac{B \ell v}{R}
+\]
+<p><strong>2. Magnetic Retarding Force</strong></p>
+<p>
+The rod now carries a current \(I\) upward through a magnetic field \(B\) (into the page). It experiences a magnetic force (Laplace force):
+</p>
+\[
+F_m = I \ell B = \left( \frac{B \ell v}{R} \right) \ell B = \frac{B^2 \ell^2 v}{R}
+\]
+<p>
+By \( \vec{I} \times \vec{B} \), this force points to the <strong>left</strong>, opposing the motion (Lenz's Law).
+</p>
+
+<p><strong>3. Required External Force</strong></p>
+<p>
+To maintain a <em>constant velocity</em>, the net force must be zero. An external agent must pull the rod to the right with a force equal and opposite to the magnetic drag:
+</p>
+\[
+F_{\text{ext}} = \frac{B^2 \ell^2 v}{R}
+\]
+<p><strong>4. Power Conservation</strong></p>
+<p>
+The mechanical power delivered by the external agent is:
+</p>
+\[
+P_{\text{mech}} = F_{\text{ext}} \cdot v = \left( \frac{B^2 \ell^2 v}{R} \right) v = \frac{B^2 \ell^2 v^2}{R}
+\]
+<p>
+The electrical power dissipated as heat in the resistor is:
+</p>
+\[
+P_{\text{elec}} = I^2 R = \left( \frac{B \ell v}{R} \right)^2 R = \frac{B^2 \ell^2 v^2}{R}
+\]
+<div class="insightbox">
+<strong>Energy Conclusion</strong><br><br>
+\( P_{\text{mech}} = P_{\text{elec}} \). The external mechanical work done to move the rod is perfectly converted into electrical heat energy. The magnetic field acts merely as the "gearbox" or mediator for this energy transfer, doing zero net work itself.
+</div>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

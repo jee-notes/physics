@@ -49,12 +49,18 @@ Similarly, we will now study inductors as circuit elements and understand their 
 </p>
 </section>
 <section>
-<h2>What is Self Inductance?</h2>
+<h2>Self Inductance</h2>
 <p>
-When a current is established in a closed conducting loop, it produces a magnetic field around it.
+So far, we studied about the process of induction in an external magnetic field. But now we'll study about induction in an internal magnetic field.
 </p>
 <p>
-This magnetic field passes through the area enclosed by the loop. Therefore, there is a magnetic flux associated with the loop.
+It is just talked about in such a way to unnecessarily make it sound confusing. We already know that internal or external depends on what we consider as a system. 
+</p>
+<p>
+We establish a current in a closed conducting loop, and so it produces a magnetic field around it.
+</p>
+<p>
+The magnetic field lines due to this field also pass through the area enclosed by the loop. Therefore, a magnetic flux gets associated with the loop which is due to the current passing in the loop itself.
 </p>
 <p>
 If the current in the loop changes with time, the magnetic field also changes, and hence the magnetic flux linked with the loop changes.
@@ -65,33 +71,36 @@ According to Faraday’s Law, a change in magnetic flux induces an emf in the lo
 <p>
 This induced emf is produced in the <strong>same loop</strong> in which the current is changing. This phenomenon is called <strong>self induction</strong>.
 </p>
-<h3>Why is Flux Proportional to Current?</h3>
+<h3>Inductance</h3>
+<p>
+We studied Self Inductance as a process but Self Inductance is also a physical property of a conducting loop.
+</p>
 <p>
 The magnetic field produced by a current-carrying conductor is proportional to the current in the loop:
 </p>
 \[
-B \propto i(t)
+B(t) \propto i(t)
 \]
 <p>
 Magnetic flux is given by:
 </p>
 \[
-\Phi_B = \int \vec{B} \cdot d\vec{A}
+\Phi(t) = \int \vec{B}(t) \cdot d\vec{A}
 \]
 <p>
-Since \( B \propto i(t) \), the flux through the loop is also proportional to current:
+Since \( B(t) \propto i(t) \), the flux through the loop is also proportional to current:
 </p>
 \[
-\Phi_B \propto i(t)
+\Phi(t) \propto i(t)
 \]
 <p>
 To convert this proportionality into an equation, we introduce a constant:
 </p>
 \[
-\Phi_B = L i(t)
+\Phi(t) = L i(t)
 \]
 <p>
-This constant \( L \) depends only on the geometry of the loop (shape, size, number of turns, etc.).
+This constant \(L\) depends only on the geometry of the loop (shape, size, number of turns, etc.) and its material properties. It is similar to capacitance \(C = \frac{A\epsilon}{d}\) or resistance \(R = \rho\frac{l}{A}\) 
 </p>
 <p>
 This constant is called the <strong>self inductance</strong> of the loop.
@@ -101,16 +110,16 @@ This constant is called the <strong>self inductance</strong> of the loop.
 From Faraday’s Law:
 </p>
 \[
-\mathcal{E} = -\frac{d\Phi_B}{dt}
+\mathcal{E} = -\frac{d\Phi}{dt}
 \]
 <p>
-Substituting \( \Phi_B = LI \):
+Substituting \( \Phi = LI \):
 </p>
 \[
 \mathcal{E} = -\frac{d}{dt}(Li)
 \]
 <p>
-If \( L \) is constant:
+If \(L\) is constant:
 </p>
 \[
 \mathcal{E} = -L\frac{di}{dt}
@@ -121,44 +130,47 @@ This is the expression for self-induced EMF.
 <div class="concept-box">
 <strong>Chain of Cause → Effect</strong><br>
 Current → Magnetic Field → Magnetic Flux<br>
-Changing Flux → Induced EMF
-<br>
+Changing Flux → Induced EMF<br>
 Each step is proportional to the previous one, which is why:
 \[
 \Phi \propto i \quad \text{and} \quad \mathcal{E} \propto \frac{di}{dt}
 \]
 </div>
 <div class="insightbox">
-An inductor is the electromagnetic analogue of inertia.
-<br>
+An inductor is the electromagnetic analogue of inertia.<br>
 • Mass resists change in velocity<br>  
-• Inductance resists change in current  
-<br>
+• Inductance resists change in current <br>
 The larger the inductance, the harder it is to change the current.
 </div>
 </section>
 <section>
 <h2>Definition via Flux Linkage</h2>
 <p>
-Coil — A current-carrying loop that encloses an area is a coil. Just like we have systems of particles, systems of charges and systems of conductors (capacitor), we can extend this idea to systems of coils and systems of inductors.
+Coil — A system of current-carrying loops connected in series having same current passing through them.
+</p>
+<p>
+In case of a solenoid, the current-carrying loops are called as turns and all turns enclose an area individually through which flux gets linked.
+</p>
+<p>
+Just like we have systems of particles, systems of charges and systems of conductors (capacitor), we can extend this idea to systems of conducting loops and systems of coils and systems of inductors.
 </p>
 <p>
 A key feature of a system-level description is that it remains valid even for a single element. The same definition applies whether we consider one loop or many turns. This is why the system approach is useful and natural in electromagnetism.
 </p>
 <p>
-Even a single current-carrying conductor (for example, a finite length \( \Delta l \)) can have non-zero inductance. Multiple turns simply represent an extension of the same idea.
+Even a single conducting loop can have non-zero inductance. Multiple turns simply represent an extension of the same idea.
 </p>
 <p>
 We use a system approach because the physically relevant quantity is the <strong>total magnetic flux linked with the entire configuration</strong>. This quantity is called <strong>flux linkage</strong>.
 </p>
 <p>
-The simplest case is a coil of \( N \) turns such that all turns are connected in series and each turn encloses the same area. In this case, each turn experiences the same magnetic flux \( \Phi_B \).
+The simplest case is a coil of \(N\) turns such that all turns are connected in series and each turn encloses the same area. In this case, each turn experiences the same magnetic flux \(\Phi\).
 </p>
 <p>
 Therefore, the total flux linkage of the system is:
 </p>
 \[
-\Lambda = N\Phi_B
+\Lambda = N\Phi
 \]
 <p>
 From earlier, flux through a loop is proportional to the current producing it. Hence, the total flux linkage is also proportional to current:
@@ -176,7 +188,7 @@ Introducing the constant of proportionality:
 L = \frac{\Lambda}{I} = \frac{N\Phi_B}{I}
 \]
 <p>
-Thus, inductance measures how effectively a current produces magnetic flux linkage.
+Thus, <strong>inductance measures how effectively a current produces magnetic flux linkage.</strong>
 </p>
 <p>
 SI unit: <strong>Henry (H)</strong>
@@ -184,20 +196,11 @@ SI unit: <strong>Henry (H)</strong>
 \[
 1 \text{ H} = 1 \text{ Wb/A} = 1 \text{ V·s/A}
 \]
-<div class="insightbox">
-<strong>System Thinking</strong><br><br>
-For multi-turn coils, flux linkage naturally becomes a system-level quantity.
-<br>
-• Capacitor → inherently a system of conductors<br>  
-• Inductor → can exist for a single loop, but becomes richer for multiple turns  
-<br>
-Flux linkage plays a role analogous to charge in capacitors.
-</div>
 </section>
 <section>
 <h2>Self Inductance of a Solenoid</h2>
 <p>
-For a solenoid of \( N \) turns, length \( l \), and cross-sectional area \( A \):
+For a solenoid of \(N\) turns, length \(l\), and cross-sectional area \(A\):
 </p>
 <p>
 Magnetic field inside:
@@ -209,13 +212,13 @@ B = \mu_0 n I \quad \text{where } n = \frac{N}{l}
 Flux through one turn:
 </p>
 \[
-\Phi_B = BA = \mu_0 n I A
+\Phi = BA = \mu_0 n I A
 \]
 <p>
 Total flux linkage:
 </p>
 \[
-\Lambda = N\Phi_B = \mu_0 n^2 l A \cdot I
+\Lambda = N\Phi = \mu_0 n^2 l A \cdot I
 \]
 \[
 \boxed{L = \mu_0 \frac{N^2 A}{l}}
@@ -265,9 +268,8 @@ U = \frac{1}{2} L I^2
 This energy is stored in the magnetic field surrounding the coil.
 </p>
 <div class="insightbox">
-<strong>Where is the energy stored?</strong><br><br>
-Not in the wire — but in the magnetic field in space around it.
-<br><br>
+<strong>Where is the energy stored?</strong><br>
+Not in the wire — but in the magnetic field in space around it.<br>
 Energy density of magnetic field:
 \[
 u = \frac{B^2}{2\mu_0}

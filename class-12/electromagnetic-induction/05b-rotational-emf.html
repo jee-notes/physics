@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotational Motion Problems | Motional EMF</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./05-motional-emf.html" class="back-btn">
+<span>&larr;</span> Back to Motional EMF
+</a>
+</nav>
+<h1>Rotational Motion Problems</h1>
+<p class="subtitle">
+Rotating conductors act as radial batteries.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+Rotational motion problems are the next major category in motional EMF. The underlying physical principle—Lorentz force acting on moving charges—is exactly the same as in slider problems. 
+</p>
+<p>
+However, because the rigid conductor now performs rotational motion, the velocity of the conductor is <strong>no longer uniform</strong> across its length. A point near the pivot moves slowly, while a point at the far end moves rapidly (\(v = \omega r\)). 
+</p>
+<p>
+Because velocity varies with distance, we cannot simply use \( \mathcal{E} = B\ell v \). We must return to the differential form of motional EMF and integrate over the length of the conductor. 
+</p>
+<p>
+For complex Combined Translational and Rotational Motion (CRTM), we can drastically simplify the integration by utilizing the concept of the <strong>Instantaneous Axis of Rotation (IAOR)</strong>.
+</p>
+</section>
+<section>
+<h2>Standard Rotating Rod</h2>
+<p>
+A conducting rod \(AB\) of length \(\ell\) is attached to a pivot \(O\) through an insulating string \(OA\) of length \(a\). The rod and string rotate together with constant angular velocity \(\omega\) in a plane perpendicular to a uniform magnetic field \(B\). Find the induced EMF across the ends of the rod.
+</p>
+<div class="diagram">
+<svg width="420" height="280" viewBox="0 0 420 280">
+<!-- Magnetic field into the page -->
+<g fill="#555" font-size="17">
+<text x="35" y="45">×</text>
+<text x="110" y="45">×</text>
+<text x="185" y="45">×</text>
+<text x="260" y="45">×</text>
+<text x="335" y="45">×</text>
+<text x="35" y="95">×</text>
+<text x="110" y="95">×</text>
+<text x="185" y="95">×</text>
+<text x="260" y="95">×</text>
+<text x="335" y="95">×</text>
+<text x="35" y="225">×</text>
+<text x="110" y="225">×</text>
+<text x="185" y="225">×</text>
+<text x="260" y="225">×</text>
+<text x="335" y="225">×</text>
+<text x="35" y="265">×</text>
+<text x="110" y="265">×</text>
+<text x="185" y="265">×</text>
+<text x="260" y="265">×</text>
+<text x="335" y="265">×</text>
+</g>
+<!-- Pivot -->
+<circle cx="65" cy="150" r="5" fill="black"/>
+<text x="48" y="170" font-size="14">O</text>
+<!-- Insulating string OA -->
+<line x1="65" y1="150" x2="160" y2="150"
+stroke="gray" stroke-width="3" stroke-dasharray="6 4"/>
+<text x="95" y="137" font-size="13">Insulating string</text>
+<text x="105" y="180" font-size="14">a</text>
+<!-- Conducting rod AB -->
+<line x1="160" y1="150" x2="340" y2="150"
+stroke="#4da6ff" stroke-width="8" stroke-linecap="round"/>
+<circle cx="160" cy="150" r="4" fill="#245b91"/>
+<circle cx="340" cy="150" r="4" fill="#245b91"/>
+<text x="150" y="135" font-size="14">A</text>
+<text x="345" y="155" font-size="14">B</text>
+<text x="235" y="137" font-size="14">Conducting rod</text>
+<text x="245" y="180" font-size="14">ℓ</text>
+<!-- Infinitesimal element -->
+<line x1="250" y1="143" x2="250" y2="157"
+stroke="black" stroke-width="2"/>
+<text x="243" y="125" font-size="13">dx</text>
+<!-- Distance x from O -->
+<line x1="65" y1="205" x2="250" y2="205"
+stroke="gray" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="65" y1="198" x2="65" y2="211" stroke="gray"/>
+<line x1="250" y1="198" x2="250" y2="211" stroke="gray"/>
+<text x="150" y="220" font-size="14">x</text>
+<!-- Velocity arrow -->
+<line x1="250" y1="145" x2="250" y2="90"
+stroke="red" stroke-width="2.5"/>
+<polygon points="250,90 244,102 256,102" fill="red"/>
+<text x="260" y="105" fill="red" font-size="13">v = ωx</text>
+<!-- Rotation direction -->
+<path d="M 95 118 A 38 38 0 0 0 65 112"
+fill="none" stroke="green" stroke-width="2"/>
+<polygon points="65,112 76,108 73,119" fill="green"/>
+<text x="85" y="95" fill="green" font-size="14">ω</text>
+<text x="355" y="42" font-size="13">B into page</text>
+</svg>
+</div>
+<p>
+Consider a small element of length \(dx\) at a distance \(x\) from the axis of rotation \(O\).
+</p>
+<p>
+Since the rod undergoes rotational motion, the linear velocity of this element depends on its distance from the axis:
+</p>
+\[
+v=\omega x
+\]
+<p>
+The velocity of the element is tangential to its circular path and is perpendicular to both the rod and the magnetic field. Therefore, the magnitude of the infinitesimal motional EMF developed across this element is:
+</p>
+\[
+d\mathcal{E}=Bv\,dx
+\]
+\[
+d\mathcal{E}=B(\omega x)\,dx
+\]
+<p>
+To find the total EMF across the conducting rod, we add the contributions of all its infinitesimal elements. The rod extends from \(x=a\) to \(x=a+\ell\).
+</p>
+\[
+\mathcal{E}=\int_a^{a+\ell}B\omega x\,dx
+\]
+\[
+=B\omega\left[\frac{x^2}{2}\right]_a^{a+\ell}
+\]
+\[
+\boxed{|\mathcal{E}|=\frac{1}{2}B\omega\left[(a+\ell)^2-a^2\right]}
+\]
+<h3>Potential Distribution Along the Rod</h3>
+<p>
+Notice that the velocity of each element depends on its distance from the axis. Consequently, the infinitesimal EMF contribution also depends on its distance from the axis.
+</p>
+<p>
+For an element at a radial distance \(x\), the potential difference developed across it is:
+</p>
+\[
+|dV|=B\omega x\,dx
+\]
+<p>
+Therefore, the potential difference between any two points \(P\) and \(Q\) on the rod, situated at radial distances \(r_P\) and \(r_Q\), is:
+</p>
+\[
+|V_P-V_Q|=\left|\int_{r_P}^{r_Q}B\omega x\,dx\right|
+\]
+\[
+\boxed{|V_P-V_Q|=\frac{1}{2}B\omega|r_Q^2-r_P^2|}
+\]
+<div class="insightbox">
+The potential difference between two points depends on their radial distances from the axis of rotation, not on the shape of the rigid conductor.<br>
+In particular, two distinct points at the same radial distance from the axis have zero motional potential difference between them.<br>
+Thus, points lying on the same circle centred on the axis are at the same potential under these conditions.
+</div>
+<h3>Polarity</h3>
+<p>
+Let the rod rotate anticlockwise, as shown in the diagram, with the magnetic field directed into the page.
+</p>
+<p>
+At the instant shown, the velocity of the rod is upward. Using the right-hand rule for \(\vec v\times\vec B\), we find that the magnetic force on positive charges is directed radially inward, towards end \(A\).
+</p>
+<p>
+Positive charges therefore accumulate towards \(A\), while electrons are pushed towards \(B\). Consequently, \(A\) is at a higher potential than \(B\).
+</p>
+\[
+\boxed{V_A-V_B=\frac{1}{2}B\omega\left[(a+\ell)^2-a^2\right]}
+\]
+<p>
+The rotating rod therefore behaves like a battery whose positive terminal is towards the axis of rotation.
+</p>
+</section>
+<section>
+<h2>Alternate Method: Area Swept (Faraday's Law)</h2>
+<p>
+We can also derive this formula directly using Faraday's Law, which provides excellent physical intuition. As Faraday's law gives combined effect, we need not do integration.
+</p>
+<p>
+As the rod rotates, it "sweeps" out an annular ring area. In 1 rotation, the total area swept is given by:
+</p>
+\[
+A_{\text{swept}} = \pi\,(a+\ell)^2 - \pi\,a^2 = \pi\,((a+\ell)^2 - a^2)  
+\]
+<p>
+The time taken to sweep the area is the time period given by:
+</p>
+\[
+T = \frac{2\pi}{\omega}
+\]
+<p>
+The rate at which the rod sweeps area is therefore - area swept in 1 rotation divided by time for 1 rotation:
+</p>
+\[
+\frac{dA}{dt} = \frac{A_{\text{swept}}}{T} = \frac{\pi\,((a+\ell)^2 - a^2)}{2\pi/\omega}  = \frac{\omega}{2}((a+\ell)^2 - a^2)
+\]
+<p>
+By Faraday's law for motional EMF (changing area):
+</p>
+\[
+|\mathcal{E}| = B \frac{dA}{dt} = \frac{1}{2} B \omega ((a+\ell)^2 - a^2)
+\]
+<div class="insightbox">
+Both the microscopic Lorentz force method and the macroscopic Faraday's Law method yield the exact same result.<br>
+The area-swept method is often much faster for complex geometry problems.
+</div>
+</section>
+<section>
+<h2>The Faraday Disk (Spoked Wheel)</h2>
+<p>
+A very common JEE setup replaces the single rod with a conducting wheel having \( N \) metallic spokes, or a solid conducting disk of radius \( R \), rotating in a perpendicular magnetic field.
+</p>
+<p>
+What is the EMF induced between the center (axle) and the outer rim?
+</p>
+<ul class="model-box">
+<li>Each individual spoke acts as a rotating rod, generating an EMF of \( \mathcal{E} = \frac{1}{2} B \omega R^2 \).</li>
+<li>Because all the spokes are connected together at the center (axle) and at the outer conducting rim, they are electrically connected in <strong>parallel</strong>.</li>
+<li>Connecting identical batteries in parallel does not change the net voltage.</li>
+</ul>
+<div class="insightbox">
+<strong>The "N Spokes" Trap</strong><br>
+Students frequently multiply the EMF by the number of spokes, writing \( \mathcal{E} = N \left( \frac{1}{2} B \omega R^2 \right) \). This is <strong>incorrect</strong>.<br><br>
+Whether the wheel has 1 spoke, 10 spokes, or is a continuous solid metal disk (infinite spokes), the potential difference between the center and the rim remains exactly <strong>\( \mathcal{E} = \frac{1}{2} B \omega R^2 \)</strong>. More spokes only decrease the <em>internal resistance</em> of the equivalent battery, not its voltage.
+</div>
+</section>
+
+<section>
+<h2>General Motion (CRTM) and IAOR</h2>
+<p>
+If a conducting rod is both translating and rotating (e.g., a rod thrown spinning through the air, or a wheel rolling without slipping), finding the EMF by integrating \( (\vec{v} \times \vec{B}) \cdot d\vec{\ell} \) across varying velocities becomes algebraically tedious.
+</p>
+<p>
+Instead, we locate the <strong>Instantaneous Axis of Rotation (IAOR)</strong>. At any given instant, the entire rigid body appears to be in pure rotation about the IAOR with angular velocity \( \omega \).
+</p>
+<p>
+The potential difference between the IAOR and any point \( P \) on the conductor at a distance \( r \) from the IAOR is simply:
+</p>
+\[
+V_P - V_{IAOR} = \frac{1}{2} B \omega r^2
+\]
+<p>
+If we need the EMF between two ends \( A \) and \( B \) of the rod, we calculate their potentials relative to the IAOR and subtract:
+</p>
+\[
+V_A - V_B = (V_A - V_{IAOR}) - (V_B - V_{IAOR}) = \frac{1}{2} B \omega (r_A^2 - r_B^2)
+\]
+<div class="insightbox">
+<strong>Rolling Wheel Example:</strong><br>
+For a wheel of radius \( R \) rolling without slipping on the ground, the IAOR is the bottom contact point. <br>
+- The EMF between the bottom (IAOR, \( r=0 \)) and the center (\( r=R \)) is \( \frac{1}{2} B \omega R^2 \).<br>
+- The EMF between the bottom (IAOR) and the top (\( r=2R \)) is \( \frac{1}{2} B \omega (2R)^2 = 2 B \omega R^2 \).
+</div>
+</section>
+
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
