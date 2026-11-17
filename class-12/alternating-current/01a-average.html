@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Value | AC Quantities</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-ac-basics.html" class="back-btn">
+<span>&larr;</span> Back to AC Quantities
+</a>
+</nav>
+<h1>Average Value</h1>
+<p class="subtitle">
+Physical and Mathematical meaning of average quantity.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+A <strong>phasor</strong> is a mathematical tool used to add multiple sinusoidal quantities of the same frequency.
+</p>
+<p>
+It is used heavily in AC circuit analysis—for example, when applying Kirchhoff's Current Law at a junction, \( i_1(t) + i_2(t) + i_3(t) + i_4(t) = 0 \), or Kirchhoff's Voltage Law around a loop where every term is a sinusoid.
+</p>
+<p>
+While two sinusoids can be combined using standard trigonometric compound-angle identities, that approach becomes algebraically cumbersome when adding three or more sinusoids.
+</p>
+<p>
+Phasor analysis solves this by mapping each sinusoid onto a 2D vector (or Argand) plane using polar coordinates—encoding only its <strong>amplitude</strong> and <strong>initial phase</strong>:
+</p>
+\[
+v_1(t) = V_1 \sin(\omega t + \phi_1), \qquad v_2(t) = V_2 \sin(\omega t - \phi_2)
+\]
+<p>
+To compute \( v_1(t) + v_2(t) \), we represent them as 2D polar phasors \( \vec{V}_1 = (V_1, \phi_1) \) (often written \( V_1 \angle \phi_1 \)) and \( \vec{V}_2 = (V_2, -\phi_2) \), and add them like vectors.
+</p>
+<p>
+A <strong>phasor</strong> is a rotating vector whose magnitude equals the amplitude (peak value) of a sinusoidal quantity, and whose angle with the positive x-axis equals the instantaneous phase.
+</p>
+<p>
+The projection of the phasor onto the y-axis gives the instantaneous value of the sinusoid at time \( t \).
+</p>
+<p>
+For a voltage \( v = V_0\sin(\omega t + \phi) \):
+</p>
+<ul class="model-box">
+<li>The phasor has length \( V_0 \).</li>
+<li>It rotates anticlockwise with angular velocity \( \omega \).</li>
+<li>At \( t = 0 \), it makes angle \( \phi \) with the x-axis.</li>
+<li>Its y-projection at any time gives \( v(t) \).</li>
+</ul>
+<div class="insightbox">
+All phasors in a circuit rotate at the same angular frequency \( \omega \).<br>
+So we can "freeze" time and compare them at \( t = 0 \) — their relative positions (angles) give the phase differences, and their lengths give the amplitudes.<br>
+</div>
+</section>
+<section>
+<h2>Average Value</h2>
+<p>
+The average value of a function \( y = f(x) \) over the interval \( x_1 \to x_2 \) is defined as:
+</p>
+\[
+\langle y \rangle_{x_1}^{x_2} = \frac{\int_{x_1}^{x_2} f(x)\, dx}{\int_{x_1}^{x_2} dx} = \frac{1}{x_2 - x_1}\int_{x_1}^{x_2} f(x)\, dx
+\]
+<p>
+We know that area under curve is given by: \(\int_{x_1}^{x_2} f(x)\, dx\) . So, we can also write average as \(\text{Area Under Curve}/ \Delta x\) . 
+</p>
+<p>
+AC sinusoidal voltage is given by \(v(t) = V_0 \sin(\omega t)\) . There are specific time intervals against which we calculate average voltage.
+</p>
+<ul class="model-box">
+<li><strong>Over a full cycle (\( 0 \to T \)):</strong> The positive and negative half-cycles are symmetric and cancel out, so
+\[
+\langle v \rangle_{0}^{T} = \frac{1}{T}\int_{0}^{T} V_0\sin(\omega t)\, dt = 0 = \langle v \rangle
+\]
+</li>
+<li><strong>Over a positive half-cycle (\( 0 \to T/2 \)):</strong>
+\[
+\langle v \rangle_{0}^{T/2} = \frac{1}{T/2}\int_{0}^{T/2} V_0\sin(\omega t)\, dt = \frac{2V_0}{\pi} \approx 0.637\,V_0
+\]
+</li>
+</ul>
+<p>
+If time interval is not mentioned, then it is assumed to be over a full cycle: (\(\langle v \rangle_{0}^{T} = \langle v \rangle\)).
+</p>
+<p>
+A sinusoid is such that average over entire cycle can be taken from any \(t = t_1\) and not necessarily \(t = 0\) and it would still be zero.
+</p>
+\[
+\langle v \rangle_{t_1}^{t_1+T} = \langle v \rangle_{0}^{T} = \langle v \rangle = 0
+\]
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

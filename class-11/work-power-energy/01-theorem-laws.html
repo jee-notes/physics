@@ -19,50 +19,24 @@
 Relating Mathematical terms in Physics.
 </p>
 <section>
-<h2>Two New Physical Quantities</h2>
+<h2>Concept</h2>
 <p>
-This chapter introduces two important physical quantities:
-</p>
-<ul class="model-box">
-<li>Work</li>
-<li>Energy</li>
-</ul>
-<p>
-Although this chapter also introduces a third quantity called <b>Power</b>, our primary focus will be on Work and Energy.
-</p>
-<p>
-This is because these quantities play roles similar to quantities that we encountered earlier in Newton's Laws of Motion:
-</p>
-<ul class="model-box">
-<li>Work &harr; Impulse</li>
-<li>Energy &harr; Momentum</li>
-</ul>
-<p>
-In the previous chapter, the Impulse-Momentum Theorem allowed us to relate impulse with the change in momentum of a body.
-</p>
-<p>
-Similarly, in this chapter, the Work-Energy Theorem will allow us to relate work done on a body with the change in its kinetic energy.
-</p>
-<p>
-Just as a change in momentum indicates that an impulse has acted on a body, a change in kinetic energy indicates that work has been done on the body.
-</p>
-<p>
-The goal of this chapter is to develop this relationship between Work and Energy, just as Newton's Laws helped us develop the relationship between Impulse and Momentum.
-</p>
-</section>
-<section>
-<h2>What is a Theorem?</h2>
-<p>
-In Mathematics, a theorem is a statement that can be derived from a set of axioms using logical reasoning.
+In Mathematics, a theorem is a statement that can be derived (or proved) from a set of axioms, definitions and previously established results using logical reasoning.
 </p>
 <p>
 For example, the Pythagoras Theorem and Binomial Theorem are derived from more fundamental mathematical principles.
 </p>
 <p>
-Physics has a similar hierarchy. Instead of axioms, Physics begins with laws that are established through experiments and observations.
+As Physics adopts mathematics as a medium to express itself, it follows a similar hierarchy.
 </p>
 <p>
-From these laws, we can derive many useful results called theorems.
+However, in Physics, the starting points for deriving results are not limited to mathematical axioms. They include physical laws and principles, definitions of physical quantities, and assumptions of the physical model being used.
+</p>
+<p>
+Physical laws and principles are formulated on the basis of experiments and observations and are tested against them.
+</p>
+<p>
+By applying these laws, principles and definitions through mathematical reasoning, we can derive many useful results called theorems.
 </p>
 <p>
 Examples of theorems in Physics include:
@@ -73,10 +47,41 @@ Examples of theorems in Physics include:
 <li>Parallel Axis Theorem</li>
 <li>Perpendicular Axis Theorem</li>
 <li>Shell Theorem</li>
-<li>Gauss Theorem</li>
 </ul>
 <p>
-In this chapter, we study the Work-Energy Theorem. However, its source law is the same as that of the Impulse-Momentum Theorem. Both are mathematical consequences of Newton's Second Law.
+In this chapter, we study the Work-Energy Theorem. Its source law is the same as that of the Impulse-Momentum Theorem. Both are mathematical consequences of Newton's Second Law.
+</p>
+</section>
+<section>
+<h2>Two New Physical Quantities</h2>
+<p>
+Till last chapter, we learned about new physical quantities like Force, inertia, impulse and momentum.
+</p>
+<p>
+We studied the impulse-momentum theorem as derived from Newton's Second Law of Motion:
+</p>
+<p>
+The Impulse-Momentum Theorem allowed us to relate impulse on a body (\(\int_{t_i}^{t_f} \vec{F} \, dt\)) with the change in its momentum (\(\Delta \,\vec{p}\)).
+</p>
+<p>
+This chapter introduces two important physical quantities:
+</p>
+<ul class="model-box">
+<li>Work</li>
+<li>Energy</li>
+</ul>
+<p>
+Although this chapter also introduces a third quantity called <strong>Power</strong>, our primary focus will be on Work and Energy.
+</p>
+<p>
+This is because Work and Energy play a role <strong>mathematically analogous</strong> to Impulse and Momentum from Newton's Laws of Motion:
+</p>
+<ul class="model-box">
+<li>Work &harr; Impulse</li>
+<li>Energy &harr; Momentum</li>
+</ul>
+<p>
+The Work-Energy Theorem relates the net work done on a body (\(\int_{x_i}^{x_f} F_x \, dx\)) to the change in its kinetic energy (\(\Delta \,\text{KE}\)).
 </p>
 </section>
 <section>
@@ -88,33 +93,19 @@ Newton's Second Law relates force to the rate of change of momentum:
 \vec F = \frac{d\vec p}{dt}
 \]
 <p>
-For a particle of constant mass, this becomes:
+For a particle of constant mass, this becomes \(\vec F = m\vec a\) .
 </p>
-\[
-\vec F = m\vec a
-\]
-<p>
-In one-dimensional motion, we often write:
-</p>
-\[
-F = ma
-\]
 <p>
 From Kinematics, acceleration can be expressed in two equivalent forms:
 </p>
 \[
-a = \frac{dv}{dt}
+a = \frac{dv}{dt} \qquad a = v\frac{dv}{dx}
 \]
-\[
-a = v\frac{dv}{dx}
-\]
+<p>
 Substituting these into Newton's Second Law gives:
+</p>
 \[
-F = m\frac{dv}{dt}
-\]
-or
-\[
-F = mv\frac{dv}{dx}
+F = m\frac{dv}{dt} \qquad F = mv\frac{dv}{dx}
 \]
 <p>
 Integrating the same law with different variables produces different theorems.
@@ -127,7 +118,7 @@ F = m\frac{dv}{dt}
 \int F\,dt = m\int dv
 \]
 \[
-\int F\,dt = m(v_f-v_i)
+\int F\,dt = m(v_f-v_i) = \Delta p
 \]
 <p>
 The impulse delivered by a force equals the change in momentum.
@@ -140,7 +131,7 @@ F = mv\frac{dv}{dx}
 \int F\,dx = m\int v\,dv
 \]
 \[
-\int F\,dx = \frac12 m(v_f^2-v_i^2)
+\int F\,dx = \frac12 m(v_f^2-v_i^2) = \Delta \text{KE}
 \]
 <p>
 The work done by a force equals the change in kinetic energy.
@@ -153,51 +144,46 @@ Integrating with respect to time produces the Impulse-Momentum Theorem, while in
 </p>
 </section>
 <section>
-<h2>Impact on Sign</h2>
+<h2>Impact of Sign</h2>
 <p>
 Although Work-Energy and Impulse-Momentum are closely related, there is an important difference in how signs appear in the two frameworks.
 </p>
 <p>
-The Impulse-Momentum Theorem is:
+In one dimension, impulse is given by:
 </p>
 \[
 J = \int F\,dt
 \]
-Notice that time always moves forward, so:
-\[
-dt > 0
-\]
 <p>
-As a result, the sign of an infinitesimal impulse \(dJ = F\,dt\) is determined entirely by the sign of the force.
+Time always moves forward, so \(dt \ge 0\).
 </p>
-The Work-Energy Theorem is:
+<p>
+As a result, the sign of an infinitesimal impulse \(dJ = F\,dt\) is determined entirely by the sign of the force—it simply tells us the <strong>direction</strong> of the impulse.
+</p>
+<p>
+Work is given by:
+</p>
 \[
 W = \int F\,dx
 \]
-Unlike time, displacement does not have a preferred direction.
-\[
-dx > 0
-\]
-or
-\[
-dx \lt 0
-\]
-are both possible.
+<p>
+Unlike time, displacement can take place in either direction, so \(dx \le 0\) and \(dx \ge 0\) are both possible.
+</p>
 <p>
 Therefore, the sign of an infinitesimal work \(dW = F\,dx\) depends on both the force and the displacement.
 </p>
 <div class="insightbox">
-If \(u = x\,y\), then the sign of \(u\) depends on the sign of both \(x\) and \(y\).<br>
-Similarly, \(dW = F\,dx\), so the sign of work depends on both force and displacement.
+If \(u = x\,y\), then the sign of \(u\) depends on the signs of both \(x\) and \(y\).<br>
+Similarly, since \(dW = F\,dx\), the sign of work depends on the relative directions of force and displacement—not on how you choose your coordinate axes.
 </div>
 <p>
-When force and displacement are in the same direction, work is positive and kinetic energy increases.
+When the net force and displacement are in the same direction, net work is positive and kinetic energy increases.
 </p>
 <p>
-When force and displacement are in opposite directions, work is negative and kinetic energy decreases.
+When the net force and displacement are in opposite directions, net work is negative and kinetic energy decreases.
 </p>
 <p>
-This additional dependence on displacement is one of the major differences between the Impulse-Momentum and Work-Energy frameworks.
+This dependence on the direction of displacement—and the resulting shift from tracking vector direction to tracking energy gain or loss—is one of the key differences between Impulse-Momentum and Work-Energy.
 </p>
 </section>
 <footer>

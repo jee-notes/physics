@@ -1,121 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternating Current | JEE Physics Notes</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alternating Current | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
-
-        <h1>Alternating Current</h1>
-        <p class="subtitle">
-            Sinusoidal voltages, impedance, resonance — and how power travels across continents.
-        </p>
-
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                Alternating current (AC) is the form in which virtually all electrical power is generated and
-                distributed. Unlike direct current, the voltage and current in an AC system vary sinusoidally with time
-                — oscillating between positive and negative values at a fixed frequency (50 Hz in India).
-            </p>
-            <p>
-                The reason AC dominates power transmission is the transformer — a device that can step voltage up or
-                down almost without loss, using the principle of electromagnetic induction. High voltage, low current
-                transmission losses are minimal; local step-down makes it safe for homes.
-            </p>
-        </section>
-
-        <section>
-            <h2>The AC Source</h2>
-            <p>
-                An AC generator produces a sinusoidal EMF. The instantaneous voltage is:
-            </p>
-            \[
-            v(t) = V_0 \sin(\omega t + \phi)
-            \]
-            <p>
-                where \( V_0 \) is the peak voltage, \( \omega = 2\pi f \) is the angular frequency, and \( \phi \) is
-                the initial phase. The same sinusoidal form applies to the current \( i(t) = I_0\sin(\omega t + \phi')
-                \), but with (in general) a different phase \( \phi' \) — the phase difference \( \phi - \phi' \)
-                depends on the circuit elements.
-            </p>
-        </section>
-
-        <section>
-            <h2>Impedance — The AC Analogue of Resistance</h2>
-            <p>
-                In a DC circuit, Ohm's Law relates voltage, current, and resistance: \( V = IR \). In an AC circuit,
-                resistors, inductors, and capacitors all oppose current, but with important differences. The generalised
-                opposition is called <strong>impedance</strong> \( Z \):
-            </p>
-            \[
-            V_0 = I_0 Z, \quad Z = \sqrt{R^2 + (X_L - X_C)^2}
-            \]
-            <p>
-                where \( X_L = \omega L \) is the inductive reactance and \( X_C = 1/(\omega C) \) is the capacitive
-                reactance. Impedance depends on frequency — making AC circuits fundamentally frequency-dependent in a
-                way DC circuits are not.
-            </p>
-        </section>
-
-        <section>
-            <h2>Resonance</h2>
-            <p>
-                In a series RLC circuit, there exists a special frequency \( \omega_0 \) at which the inductive and
-                capacitive reactances exactly cancel:
-            </p>
-            \[
-            \omega_0 = \frac{1}{\sqrt{LC}}
-            \]
-            <p>
-                At this resonant frequency, the impedance is purely resistive (\( Z = R \)), the current is maximum, and
-                the phase difference between voltage and current is zero. Resonance is the basis of radio tuning, signal
-                filters, and oscillators.
-            </p>
-        </section>
-
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>AC Quantities</strong> — Instantaneous, peak, and RMS values; phase and angular frequency.
-                </li>
-                <li><strong>Phasor Representation</strong> — Rotating vectors to visualise amplitude and phase
-                    relationships.</li>
-                <li><strong>Pure R, L, C Circuits</strong> — Individual behaviour; reactance; phase relationships.</li>
-                <li><strong>Series RLC Circuit</strong> — Impedance triangle, phase angle, and phasor diagram.</li>
-                <li><strong>Resonance</strong> — Resonant frequency, bandwidth, and quality factor \( Q \).</li>
-                <li><strong>Power in AC</strong> — Instantaneous, average, reactive power; power factor.</li>
-                <li><strong>Transformers</strong> — Ideal transformer equations; AC power transmission.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-ac-basics.html">1. AC Quantities: Peak, RMS, and Phase</a>
-                <a href="./02-ac-circuits.html">2. Pure R, L, C in AC Circuits</a>
-                <a href="./03-series-rlc.html">3. Series RLC Circuit</a>
-                <a href="./04-power-in-ac.html">4. Power in AC Circuits</a>
-                <a href="./05-transformer.html">5. Transformers and AC Transmission</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Alternating Current</h1>
+<p class="subtitle">
+Sinusoidal voltages, impedance, resonance — and how power travels across continents.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+So far, under the chapter of <strong>Current Electricity</strong>, we have studied an electric circuit as a system involving the transfer, storage, and conversion of electromagnetic energy. We studied electrical components such as resistors, capacitors, and inductors connected in a circuit, along with a battery that supplies or absorbs electrical energy by converting it to or from chemical energy.
+</p>
+<p>
+The chemical cells that we studied have fixed polarity due to the chemicals physically present at their respective electrodes. This chemical arrangement is physically fixed within the cell, so the cell has fixed terminal polarity. Consequently, chemical cells act as sources of <strong>direct current (DC)</strong> power.
+</p>
+<p>
+Once <strong>electromagnetic induction</strong> was understood, electrical power could also be generated using generators that convert mechanical energy into electrical energy.
+</p>
+<p>
+In an AC generator, a coil rotates inside a magnetic field. As the coil rotates, the induced EMF reverses polarity after every half-cycle. When connected to an external circuit, this alternating EMF drives an <strong>alternating current (AC)</strong>, which periodically reverses its direction.
+</p>
+<p>
+Electrical power generation using electromagnetic induction could now be carried out on a massive scale to electrify cities and countries.
+</p>
+<p>
+However, large-scale power generation is often best suited to locations determined by the availability of natural resources and other geographical conditions, such as hydroelectric dams or coal supply sites. These locations may be far from residential and industrial centres where the generated electricity is actually consumed.
+</p>
+<p>
+This geographical separation between power generation and consumption led to a three-stage model of electric power economics:
+</p>
+<ul class="model-box">
+<li><strong>power generation</strong> (at suitable supply locations)</li>
+<li><strong>power transmission</strong> (over long distances using high-voltage transmission lines)</li>
+<li><strong>power consumption</strong> (near residential and industrial centres)</li>
+</ul>
+<p>
+The widespread use of <strong>alternating current (AC)</strong> in electrical power systems is largely because of the transformer. In conventional AC power networks, the supplied voltage varies sinusoidally with time, alternating between positive and negative values at a fixed frequency (50 Hz in India).
+</p>
+<p>
+Operating on the principle of electromagnetic induction, transformers can step voltage up or down with high efficiency. For a given power transmission, increasing the voltage reduces the current, thereby minimising heat losses in transmission lines, which are proportional to \(I^2R\).
+</p>
+<p>
+At the receiving end, transformers step the voltage down to levels suitable for local distribution and consumption.
+</p>
+</section>
+<section>
+<h2>The AC Source</h2>
+<p>
+An AC generator produces a sinusoidal EMF. The instantaneous voltage is:
+</p>
+\[
+v(t) = V_0 \sin(\omega t + \phi)
+\]
+<p>
+where \( V_0 \) is the peak voltage, \( \omega = 2\pi f \) is the angular frequency, and \( \phi \) is the initial phase. The same sinusoidal form applies to the current \( i(t) = I_0\sin(\omega t + \phi') \), but with (in general) a different phase \( \phi' \) — the phase difference \( \phi - \phi' \) depends on the circuit elements.
+</p>
+</section>
+<section>
+<h2>Impedance — The AC Analogue of Resistance</h2>
+<p>
+In a DC circuit, Ohm's Law relates voltage, current, and resistance: \( V = IR \). In an AC circuit, resistors, inductors, and capacitors all oppose current, but with important differences. The generalised opposition is called <strong>impedance</strong> \( Z \):
+</p>
+\[
+V_0 = I_0 Z, \quad Z = \sqrt{R^2 + (X_L - X_C)^2}
+\]
+<p>
+where \( X_L = \omega L \) is the inductive reactance and \( X_C = 1/(\omega C) \) is the capacitive reactance. Impedance depends on frequency — making AC circuits fundamentally frequency-dependent in a way DC circuits are not.
+</p>
+</section>
+<section>
+<h2>Resonance</h2>
+<p>
+In a series RLC circuit, there exists a special frequency \( \omega_0 \) at which the inductive and capacitive reactances exactly cancel:
+</p>
+\[
+\omega_0 = \frac{1}{\sqrt{LC}}
+\]
+<p>
+At this resonant frequency, the impedance is purely resistive (\( Z = R \)), the current is maximum, and the phase difference between voltage and current is zero. Resonance is the basis of radio tuning, signal filters, and oscillators.
+</p>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="model-box">
+<li><strong>AC Quantities</strong> — Instantaneous, peak, and RMS values; phase and angular frequency.
+</li>
+<li><strong>Phasor Representation</strong> — Rotating vectors to visualise amplitude and phase
+relationships.</li>
+<li><strong>Pure R, L, C Circuits</strong> — Individual behaviour; reactance; phase relationships.</li>
+<li><strong>Series RLC Circuit</strong> — Impedance triangle, phase angle, and phasor diagram.</li>
+<li><strong>Resonance</strong> — Resonant frequency, bandwidth, and quality factor \( Q \).</li>
+<li><strong>Power in AC</strong> — Instantaneous, average, reactive power; power factor.</li>
+<li><strong>Transformers</strong> — Ideal transformer equations; AC power transmission.</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-ac-basics.html">1. AC Quantities</a>
+<a href="./02-phasors.html">2. Phasors</a>
+<a href="./02-ac-circuits.html">2. Pure R, L, C in AC Circuits</a>
+<a href="./03-series-rlc.html">3. Series RLC Circuit</a>
+<a href="./04-power-in-ac.html">4. Power in AC Circuits</a>
+<a href="./05-transformer.html">5. Transformers and AC Transmission</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

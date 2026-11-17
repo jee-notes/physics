@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Stored in an Inductor | Electromagnetic Induction</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electromagnetic Induction
+</a>
+</nav>
+<h1>Energy Stored in an Inductor</h1>
+<p class="subtitle">
+The work done against back-EMF is stored as magnetic field energy.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+What do we understand by energy stored in an inductor? The idea is similar to energy storage in a capacitor.
+</p>
+<p>
+A capacitor and an inductor are passive electrical devices that can store energy supplied to them and provide that energy back to the circuit when required. The circuit arrangement and switching determine when these devices store energy and when they release it.
+</p>
+<p>
+A resistor, on the other hand, dissipates the electrical energy supplied to it. It does not store that energy for subsequent retrieval.
+</p>
+<p>
+The difference between a capacitor and an inductor is the type of field in which they store energy. A capacitor stores energy in an electric field in a region of space, whereas an inductor stores energy in a magnetic field in a region of space.
+</p>
+<p>
+There is a general confusion in energy dynamics in terms of energy stored vs energy dissipated and we study how to resolve this.
+</p>
+</section>
+<section>
+<h2>Stored Energy</h2>
+<p>
+A common confusion about the term "stored energy" is that we may think it represents the total work done throughout the process of establishing the current. Actually, stored energy refers to the energy possessed by the inductor at any particular instant.
+</p>
+<p>
+Think of the instantaneous kinetic energy of a block of mass \(m\), moving with instantaneous speed \(v\). Its kinetic energy at that instant is:
+</p>
+\[
+KE=\frac{1}{2}mv^2
+\]
+<p>
+Similarly, when an inductor carries an instantaneous current \(I\), the energy stored in its magnetic field at that instant is given by a corresponding expression.
+</p>
+<p>
+To derive this expression, we calculate the work required to establish the current from zero to \(I\). This is similar to calculating the kinetic energy of a block by finding the work done to increase its speed from zero to \(v\).
+</p>
+<p>
+The zero-current state is our chosen reference for the inductor's stored energy. We are calculating the energy relative to that state.
+</p>
+<h3>Derivation</h3>
+<p>
+When current through an inductor rises from zero to \(I\), the back EMF produced at any instant is:
+</p>
+\[
+V_L=-L\frac{di}{dt}
+\]
+<div class="insightbox">
+Notice that we write induced emf as \(\mathcal{E} = - \frac{d\Phi}{dt}\) .<br>
+But in case of Inductor \(L\) in a circuit, we denote it by \(V_L\) .<br>
+In an electric circuit - \(V_L\) is the same induced EMF that is called as back-EMF and it may not always be "back".
+</div>
+<p>
+The back EMF opposes the increase in current by Lenz's Law. Therefore, the external source must do work against this back EMF to establish the current.
+</p>
+<p>
+The voltage supplied by the external electric power source \(V_S\) to the ideal inductor is equal and opposite to the back EMF (\(V_S + V_L = 0\) by KVL. \(V_S = -V_L\)).
+</p>
+<p>
+Hence, the instantaneous power supplied by the source when the current is \(i\) is:
+</p>
+\[
+P_{\text{source}}=V_S \, i = -V_L i
+\]
+<p>
+The work supplied during a small time interval \(dt\) is:
+</p>
+\[
+dW_{\text{source}}=-V_L i\,dt =L\frac{di}{dt}\,i\,dt
+\]
+\[
+\boxed{dW_{\text{source}}=Li\,di}
+\]
+<p>
+This work is stored as energy in the magnetic field of the inductor.
+</p>
+<p>
+Total work done in establishing the current from zero to \(I\), and hence the energy stored at that current, is:
+</p>
+\[
+U=\int_0^I Li\,di
+\]
+\[
+\boxed{U=\frac{1}{2}LI^2}
+\]
+<div class="insightbox">
+The expression \(U=\frac12 LI^2\) gives the energy possessed by the inductor at the instant its current is \(I\).<br>
+It is not restricted to describing the entire process of increasing current from zero.<br>
+If the current changes with time, the stored energy at each instant is determined by the instantaneous current.<br>
+It is similar to how when voltage across a capacitor is non-zero, its an active / charged capacitor. Similarly, as long as current through an inductor is non-zero, its an active / charged inductor.
+</div>
+<p>
+This is similar to the kinetic energy of a block. Work done by an external force to increase the speed of a block from zero to \(v\) appears as kinetic energy. Similarly, work done by the source against the back EMF to increase current from zero to \(I\) appears as magnetic field energy.
+</p>
+<div class="insightbox">
+The energy stored in a capacitor is:
+\[
+U_C=\frac12 CV^2
+\]
+The energy stored in an inductor is:
+\[
+U_L=\frac12 LI^2
+\]
+The inductance \(L\) plays the mathematical role of capacitance \(C\), while current \(I\) plays the role of voltage \(V\).<br>
+The energy resides in the field established by the device: the electric field for a capacitor and the magnetic field for an inductor.
+</div>
+</section>
+<section>
+<h2>Energy Density of the Magnetic Field</h2>
+<p>
+For a solenoid of inductance \(L = \mu_0 n^2 lA\) carrying current \(I\), the stored energy is:
+</p>
+\[
+U = \frac{1}{2}LI^2 = \frac{1}{2}\mu_0 n^2 lA \cdot I^2
+\]
+<p>
+Since \( B = \mu_0 nI \) inside the solenoid, we have \( B^2 = \mu_0^2 n^2 I^2 \), so \( \mu_0 n^2 I^2 = B^2/\mu_0 \). Substituting:
+</p>
+\[
+U = \frac{B^2}{2\mu_0} \cdot (lA)
+\]
+<p>
+Since \( lA \) is the volume of the solenoid, the energy stored per unit volume — the <strong>magnetic energy density</strong> — is:
+</p>
+\[
+\boxed{u_B = \frac{B^2}{2\mu_0}}
+\]
+<p>
+This result is universal — it holds for any magnetic field configuration, not just solenoids. Compare with the electric energy density \( u_E = \frac{1}{2}\varepsilon_0 E^2 \).
+</p>
+</section>
+<section>
+<h2>Electric vs. Magnetic Energy Storage</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Capacitor (Electric)</th>
+<th>Inductor (Magnetic)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stored energy</td>
+<td>\( U = \frac{1}{2}CV^2 \)</td>
+<td>\( U = \frac{1}{2}LI^2 \)</td>
+</tr>
+<tr>
+<td>Energy density</td>
+<td>\( u_E = \frac{1}{2}\varepsilon_0 E^2 \)</td>
+<td>\( u_B = \dfrac{B^2}{2\mu_0} \)</td>
+</tr>
+<tr>
+<td>Opposes change in</td>
+<td>Voltage</td>
+<td>Current</td>
+</tr>
+<tr style="background:#fafafa;">
+<td>Characteristic quantity</td>
+<td>\( C \) (Farads)</td>
+<td>\( L \) (Henrys)</td>
+</tr>
+<tr>
+<td>Field stores the energy</td>
+<td>Electric field</td>
+<td>Magnetic field</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Growth and Decay of Current in an LR Circuit</h2>
+
+<p>
+When an inductor \(L\) is connected in series with a resistor
+\(R\) to an ideal EMF source \(V_S\), the current builds up
+exponentially:
+</p>
+
+\[
+I(t)=\frac{V_S}{R}\left(1-e^{-t/\tau}\right),
+\qquad \tau=\frac{L}{R}
+\]
+
+<p>
+When the source is disconnected and the inductor and resistor
+are left in a closed loop, the current decays:
+</p>
+
+\[
+I(t)=I_0e^{-t/\tau}
+\]
+
+<p>
+The growth and decay of current in an LR circuit is similar
+to the charging and discharging of a capacitor in an RC circuit.
+</p>
+
+<p>
+The time constant \(\tau=L/R\) governs how quickly the current
+responds to a change. Larger \(L\) or smaller \(R\) means a
+larger time constant and hence a slower response. The inductor
+effectively retains its current for longer.
+</p>
+
+<h3>Energy Dynamics</h3>
+
+<p>
+We study energy dynamics whenever we discuss the growth,
+decay, charging or discharging of circuit elements.
+</p>
+
+<p>
+This is similar to using the work-energy theorem in mechanics.
+We now consider the complete electrical system and examine
+how energy is transferred between its components.
+</p>
+
+<ul class="model-box">
+<li>The source can supply or absorb electrical energy.</li>
+<li>The capacitor and inductor can store energy and release
+it back into the circuit.</li>
+<li>The resistor dissipates electrical energy as heat.</li>
+</ul>
+
+<p>
+There is an interesting difference between the energy dynamics
+of an RC circuit and an LR circuit.
+</p>
+
+<p>
+In the standard RC charging process, an initially uncharged
+capacitor is connected to an ideal constant-voltage source
+through a resistor. The total energy supplied by the source
+is \(CV_S^2\). Half of this energy gets stored in the capacitor
+and the other half is dissipated as heat in the resistor.
+</p>
+
+\[
+U_C=\frac{1}{2}CV_S^2
+\]
+
+\[
+Q_R=\frac{1}{2}CV_S^2
+\]
+
+<p>
+Thus, there is a fixed 50–50 split between stored energy and
+energy dissipated as heat in this standard RC charging process.
+</p>
+
+<p>
+In an LR circuit, there is no such fixed split over an
+arbitrary period of operation. During current growth, the
+energy supplied by the source is divided between magnetic
+energy storage in the inductor and heat dissipation in the
+resistor.
+</p>
+
+<p>
+The energy stored in the inductor depends only on the
+instantaneous current:
+</p>
+
+\[
+U_L=\frac{1}{2}LI^2
+\]
+
+<p>
+However, the energy dissipated as heat in the resistor
+depends on the current history and the duration for which
+the circuit remains connected:
+</p>
+
+\[
+Q_R=\int I^2R\,dt
+\]
+
+<p>
+This distinction becomes particularly important once steady
+current is established. The inductor has reached its final
+stored energy and no longer absorbs power, but the source
+must continue supplying power to maintain the current
+against the resistance.
+</p>
+
+\[
+P_{\text{source}}=V_S I_0=I_0^2R
+\]
+
+<p>
+The magnetic energy stored in the inductor remains constant,
+while the resistor continues dissipating energy as heat.
+</p>
+
+<div class="insightbox">
+<strong>Energy Dynamics of an LR Circuit</strong><br><br>
+During current growth:
+<br>
+Source supplies energy → Inductor stores energy + Resistor dissipates energy.
+<br><br>
+At steady state:
+<br>
+Source supplies energy → Resistor dissipates energy.
+<br><br>
+During current decay after the source is removed:
+<br>
+Inductor releases stored magnetic energy → Resistor dissipates energy.
+</div>
+
+</section>
+<section>
+<h2>Growth and Decay of Current in an LR Circuit</h2>
+<p>
+When an inductor \(L\) is connected in series with a resistor \(R\) to an EMF source \(V_S\), the current builds up exponentially:
+</p>
+\[
+I(t) = \frac{V_S}{R}\left(1 - e^{-t/\tau}\right), \quad \tau = \frac{L}{R}
+\]
+<p>
+When the source is disconnected (short-circuited), the current decays:
+</p>
+\[
+I(t) = I_0 e^{-t/\tau}
+\]
+<p>
+The growth and decay of current in an LR circuit is mathematically analogous to the charging and discharging of a capacitor in an RC circuit.
+</p>
+<p>
+The time constant \(\tau = L/R\) governs how quickly the inductor responds. Larger \(L\) or smaller \(R\) means a slower response — the inductor "remembers" its current for longer (note that unlike an RC circuit where \(\tau = RC\), smaller \(R\) here increases \(\tau\) because less resistance drains the stored magnetic energy more slowly).
+</p>
+
+<h3>Energy Dynamics in an LR Circuit</h3>
+<p>
+Whenever we analyze growth/decay in an LR circuit or charging/discharging in an RC circuit, we are studying <strong>energy dynamics</strong> — much like applying the Work-Energy Theorem in mechanics. Across the circuit, each component plays a distinct role:
+</p>
+<ul class="model-box">
+<li><strong>Battery:</strong> Supplies or absorbs energy.</li>
+<li><strong>Inductor / Capacitor:</strong> Stores or releases energy.</li>
+<li><strong>Resistor:</strong> Irreversibly dissipates energy as heat.</li>
+</ul>
+<p>
+The crucial difference between an inductor and a capacitor lies in their energy split. In an RC circuit, charging a capacitor from zero always dissipates the exact same amount of energy as heat in the resistor as it stores in the capacitor (\(\frac{1}{2}CV^2\)) — a <strong>fixed 50–50 split</strong>.
+</p>
+<p>
+In an LR circuit, there is no such fixed split during current growth:
+</p>
+<ul class="model-box">
+<li>The <strong>energy stored</strong> in the inductor depends only on the final steady current: \(U_L = \frac{1}{2}LI_0^2\).</li>
+<li>The <strong>energy dissipated</strong> as heat in the resistor (\(\int i^2 R\,dt\)) depends on how long the circuit remains connected — even after steady state is reached, the battery must continuously supply power \(I_0^2 R\) just to maintain the current against resistance.</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

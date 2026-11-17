@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RMS Value | AC Quantities</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-ac-basics.html" class="back-btn">
+<span>&larr;</span> Back to AC Quantities
+</a>
+</nav>
+<h1>RMS Value</h1>
+<p class="subtitle">
+Physical and Mathematical meaning of RMS quantity.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+A <strong>phasor</strong> is a mathematical tool used to add multiple sinusoidal quantities of the same frequency.
+</p>
+<p>
+It is used heavily in AC circuit analysis—for example, when applying Kirchhoff's Current Law at a junction, \( i_1(t) + i_2(t) + i_3(t) + i_4(t) = 0 \), or Kirchhoff's Voltage Law around a loop where every term is a sinusoid.
+</p>
+<p>
+While two sinusoids can be combined using standard trigonometric compound-angle identities, that approach becomes algebraically cumbersome when adding three or more sinusoids.
+</p>
+<p>
+Phasor analysis solves this by mapping each sinusoid onto a 2D vector (or Argand) plane using polar coordinates—encoding only its <strong>amplitude</strong> and <strong>initial phase</strong>:
+</p>
+\[
+v_1(t) = V_1 \sin(\omega t + \phi_1), \qquad v_2(t) = V_2 \sin(\omega t - \phi_2)
+\]
+<p>
+To compute \( v_1(t) + v_2(t) \), we represent them as 2D polar phasors \( \vec{V}_1 = (V_1, \phi_1) \) (often written \( V_1 \angle \phi_1 \)) and \( \vec{V}_2 = (V_2, -\phi_2) \), and add them like vectors.
+</p>
+<p>
+A <strong>phasor</strong> is a rotating vector whose magnitude equals the amplitude (peak value) of a sinusoidal quantity, and whose angle with the positive x-axis equals the instantaneous phase.
+</p>
+<p>
+The projection of the phasor onto the y-axis gives the instantaneous value of the sinusoid at time \( t \).
+</p>
+<p>
+For a voltage \( v = V_0\sin(\omega t + \phi) \):
+</p>
+<ul class="model-box">
+<li>The phasor has length \( V_0 \).</li>
+<li>It rotates anticlockwise with angular velocity \( \omega \).</li>
+<li>At \( t = 0 \), it makes angle \( \phi \) with the x-axis.</li>
+<li>Its y-projection at any time gives \( v(t) \).</li>
+</ul>
+<div class="insightbox">
+All phasors in a circuit rotate at the same angular frequency \( \omega \).<br>
+So we can "freeze" time and compare them at \( t = 0 \) — their relative positions (angles) give the phase differences, and their lengths give the amplitudes.<br>
+</div>
+</section>
+<section>
+<h2>Root Mean Square (RMS) Values</h2>
+<p>
+The average of a sinusoid over a complete cycle is zero — so the average voltage or current is not a useful measure of power.
+</p>
+<p>
+Instead, we use the <strong>RMS value</strong>, defined as the square root of the time-average of the square:
+</p>
+\[
+V_{\text{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{1}{T}\int_0^T V_0^2\sin^2(\omega t)\,dt}
+\]
+<p>
+Since \( \langle \sin^2(\omega t) \rangle = 1/2 \):
+</p>
+\[
+\boxed{V_{\text{rms}} = \frac{V_0}{\sqrt{2}}}
+\]
+<div class="insightbox">
+The RMS value of an AC voltage is the DC voltage that would produce the same average power dissipation in a resistor.<br>
+When we say "230 V mains supply," we mean \( V_{\text{rms}} = 230 \) V — the peak voltage is \( V_0 = 230\sqrt{2} \approx 325 \) V.
+</div>
+</section>
+<section>
+<h2>Use Pre-Calculated Values</h2>
+<p>
+A major advantage of knowing standard full-cycle averages—such as \( \langle \sin(\omega t) \rangle = 0 \) and \( \langle \sin^2(\omega t) \rangle = 1/2 \)—is that we do not need to perform integration every time we analyze a composite waveform.
+</p>
+<div class="examplebox">
+<h3>Illustration</h3>
+<p>
+An alternating voltage is given by \( v(t) = V_0 + V_1 \sin(\omega t) \). Find its RMS value.
+</p>
+<h3>Solution</h3>
+<p>
+By definition, finding the RMS value requires taking the time-average of \( v(t)^2 \) over a full cycle and then taking the square root. Instead of integrating directly, we can expand the square and apply our pre-calculated averages.
+</p>
+<p>
+First, square the instantaneous voltage:
+</p>
+\[
+v(t)^2 = \big(V_0 + V_1 \sin(\omega t)\big)^2 = V_0^2 + V_1^2 \sin^2(\omega t) + 2 V_0 V_1 \sin(\omega t)
+\]
+<p>
+Taking the full-cycle time-average on both sides and using the linearity of the averaging operator (constants come outside \( \langle \cdot \rangle \)):
+</p>
+\[
+\langle v^2 \rangle = \langle V_0^2 \rangle + V_1^2 \langle \sin^2(\omega t) \rangle + 2 V_0 V_1 \langle \sin(\omega t) \rangle
+\]
+<p>
+Using the standard full-cycle results \( \langle V_0^2 \rangle = V_0^2 \), \( \langle \sin^2(\omega t) \rangle = 1/2 \), and \( \langle \sin(\omega t) \rangle = 0 \):
+</p>
+\[
+\langle v^2 \rangle = V_0^2 + \frac{V_1^2}{2} + 0 = V_0^2 + \frac{V_1^2}{2}
+\]
+<p>
+Thus, the RMS voltage is:
+</p>
+\[
+V_{\text{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{V_0^2 + \frac{V_1^2}{2}}
+\]
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

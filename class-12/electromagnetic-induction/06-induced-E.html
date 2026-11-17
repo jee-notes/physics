@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electromagnetic Induction | Induced Electric Field</title>
+<title>Induced Electric Field | Electromagnetic Induction</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -16,324 +16,315 @@
 </nav>
 <h1>Induced Electric Field</h1>
 <p class="subtitle">
-Non-Conservative Electric Fields.
+Transformer Induction Mechanism.
 </p>
 <section>
-<h2>Key Differences</h2>
+<h2>Concept</h2>
+<p>
+Electromagnetic induction is an observed phenomenon. Scientists have studied it to understand whether it is a fundamental process or a manifestation of underlying electromagnetic processes.
+</p>
+<p>
+In Motional EMF, we understood the mechanism of induction through the magnetic part of the <strong>Lorentz force</strong>. The magnetic force on moving charges explains how a moving conductor develops an EMF in a magnetic field.
+</p>
+<p>
+However, this explanation based on magnetic force alone is insufficient when the conductor is <strong>stationary</strong> and only the magnetic field changes with time, yet an EMF is still induced.
+</p>
+<p>
+Consider a region containing a spatially uniform magnetic field directed along \(\hat{k}\), whose magnitude changes with time. Now consider a stationary test charge placed at a point in this region where the induced electric field is non-zero.
+</p>
+<p>
+Since the charge is stationary, its velocity is zero. Therefore, the magnetic part of the Lorentz force is zero. Yet the charge experiences a force.
+</p>
+<p>
+This raises an important question: <strong>What field exerts a force on a stationary charge when the magnetic field changes with time?</strong>
+</p>
+<p>
+It cannot be the magnetic force, because the charge is stationary. There must therefore be an <strong>electric field</strong> produced by the time-varying magnetic field.
+</p>
+<p>
+This thus became a new fundamental process in electromagnetism — a time-varying magnetic field produces an electric field, and such a field is called an <strong>induced electric field</strong>.
+</p>
 <div class="insightbox">
-<strong>Motional EMF vs Induced Electric Field</strong>
-<br><br>
-• Motional EMF → due to Lorentz force \( q\vec{v} \times \vec{B} \)  
-• Induced field → due to \( \frac{dB}{dt} \)
-<br><br>
-• Motional EMF → requires motion of conductor  
-• Induced field → exists even in empty space  
-<br><br>
-• Motional EMF → local force on charges  
-• Induced field → global circulating field  
+Later we will study that a time-varying electric field produces a magnetic field.<br>
+Thus, we do not need a static charge or a static magnet to produce an electric and a magnetic field.<br>
+These fields can produce each other, and so light, which is an electromagnetic wave, does not require a medium for propagation.
 </div>
 </section>
 <section>
-<h2>Necessity of Electric Field</h2>
+<h2>Nature of Induced Electric Field</h2>
 <p>
-In motional EMF, when a conductor moves through a magnetic field, the induced EMF can be understood using the <strong>Lorentz force</strong>. Charges inside the conductor experience a magnetic force \( q\vec{v}\times\vec{B} \), which drives them along the conductor and produces current.
+To determine the exact mathematical nature of the induced electric field, we start from the fundamental definition of Electromotive Force (EMF).
 </p>
 <p>
-However, this explanation fails when the conductor is <strong>stationary</strong> and the magnetic field changes with time. In such a situation, an EMF is still induced in the circuit.
+By definition, the EMF \(\mathcal{E}\) around any closed circuit is the closed-loop line integral of the total force per unit charge (\(\vec{f} = \vec{F}/q\)) acting along the path at a given instant:
+</p>
+\[
+\mathcal{E} \equiv \oint \vec{f} \cdot d\vec{l}
+\]
+<h3>Contrast with a Chemical Battery</h3>
+<p>
+In a standard DC circuit driven by a battery, two distinct forces act on the charges:
+</p>
+<ul class="model-box">
+<li><strong>Inside the battery (from negative terminal \(A\) to positive terminal \(B\)):</strong> A localized non-electrostatic chemical force per unit charge, \(\vec{f}_{\text{chem}}\), pumps positive charges "uphill" from \(A\) to \(B\).</li>
+<li><strong>Everywhere in space (both inside the battery and along the external wires):</strong> Charges accumulated at the terminals and wire bends create an ordinary <strong>electrostatic field</strong>, \(\vec{E}_{\text{es}}\).</li>
+</ul>
+<p>
+Applying the definition of EMF around the complete closed loop:
+</p>
+\[
+\mathcal{E} = \oint \left(\vec{f}_{\text{chem}} + \vec{E}_{\text{es}}\right) \cdot d\vec{l} = \oint \vec{f}_{\text{chem}} \cdot d\vec{l} + \oint \vec{E}_{\text{es}} \cdot d\vec{l}
+\]
+<p>
+Because \(\vec{E}_{\text{es}}\) is conservative, its closed-loop circulation vanishes (\(\oint \vec{E}_{\text{es}} \cdot d\vec{l} = 0\)), and because \(\vec{f}_{\text{chem}}\) exists only inside the battery, the entire loop integral collapses to the interior of the battery:
+</p>
+\[
+\mathcal{E} = \int_A^B \vec{f}_{\text{chem}} \cdot d\vec{l}
+\]
+<p>
+In the external circuit outside the battery, the current is driven purely by the conservative electrostatic field \(\vec{E}_{\text{es}}\).
+</p>
+<h3>Circulation of the Induced Electric Field</h3>
+<p>
+Now consider a <strong>stationary</strong> closed loop in a time-varying magnetic field, with no battery present (\(\vec{f}_{\text{chem}} = 0\)) and no conductor motion (\(\vec{v} = 0 \implies \vec{v} \times \vec{B} = 0\)).
 </p>
 <p>
-This immediately raises an important question:
+The only force per unit charge acting along the loop is the total electric field \(\vec{E}\) (which can include both any electrostatic field \(\vec{E}_{\text{es}}\) from charge buildup and the induced electric field \(\vec{E}_{\text{ind}}\) from the changing magnetic field):
 </p>
+\[
+\mathcal{E} = \oint \vec{E} \cdot d\vec{l}
+\]
 <p>
-<strong>What force drives the charges if the conductor is not moving?</strong>
+Combining this with Faraday's Law (\(\mathcal{E} = -\frac{d\Phi}{dt}\)):
 </p>
+\[
+\boxed{\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi}{dt}}
+\]
 <p>
-A magnetic field cannot provide the answer, because magnetic force acts only on <strong>moving charges</strong>. Charges initially at rest inside a stationary conductor cannot be set into motion by a magnetic field alone.
+Since any electrostatic component satisfies \(\oint \vec{E}_{\text{es}} \cdot d\vec{l} = 0\), the non-zero closed-loop integral comes entirely from the induced electric field:
 </p>
-<p>
-Therefore, there must exist an <strong>electric field</strong> inside the conductor that pushes the charges around the circuit.
-</p>
-<p>
-This leads to a fundamental conclusion:
-</p>
-<p>
-<strong>A time-varying magnetic field produces an electric field.</strong>
-</p>
-<p>
-This electric field is called the <strong>induced electric field</strong>.
-</p>
+\[
+\oint \vec{E}_{\text{ind}} \cdot d\vec{l} = -\frac{d\Phi}{dt} \neq 0
+\]
 <div class="insightbox">
-Magnetic force explains motional EMF (moving conductor). Induced electric field explains EMF in stationary circuits. Both are different physical mechanisms, but both ultimately appear through Faraday's Law.
+<strong>Conservative vs. Non-Conservative Fields</strong><br>
+In a <strong>battery circuit</strong>, the non-conservative push (\(\vec{f}_{\text{chem}}\)) is trapped inside the battery box.<br>
+Everywhere in the external wires, the field is purely electrostatic (\(\oint \vec{E}_{\text{es}} \cdot d\vec{l} = 0\)), so potential \(V\) is uniquely defined.<br>
+In <strong>electromagnetic induction</strong>, the induced electric field \(\vec{E}_{\text{ind}}\) has a <strong>non-zero closed-loop circulation</strong> (\(\oint \vec{E}_{\text{ind}} \cdot d\vec{l} \neq 0\)).<br>
+Therefore, \(\vec{E}_{\text{ind}}\) is <strong>non-conservative</strong> and is distributed continuously throughout space rather than localized inside a battery.
+</div>
+<h3>Exhaustive Faraday's Law</h3>
+<p>
+The circulation equation
+</p>
+\[
+\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi}{dt}
+\]
+<p>
+holds strictly when the closed integration path is <strong>stationary</strong> in the observer's frame.
+</p>
+<p>
+When the loop moves or deforms in a time-varying magnetic field, the general flux rule \(\mathcal{E} = -\frac{d\Phi}{dt}\) remains valid because it automatically combines both mechanisms—the motional \(\vec{v} \times \vec{B}\) force and the induced electric field \(\vec{E}_{\text{ind}}\):
+</p>
+\[
+\mathcal{E} = \oint \left(\vec{v} \times \vec{B}\right) \cdot d\vec{l} - \iint_S \frac{\partial \vec{B}}{\partial t} \cdot d\vec{A}
+\]
+<p>
+For a planar loop of instantaneous area vector \(\vec{A}\) in a <strong>spatially uniform</strong> magnetic field \(\vec{B}(t)\), this simplifies to:
+</p>
+\[
+\boxed{\mathcal{E} = \oint \left(\vec{v} \times \vec{B}\right) \cdot d\vec{l} - \vec{A} \cdot \frac{d\vec{B}}{dt}}
+\]
+<div class="insightbox">
+Magnetic Lorentz force explains motional EMF when a conductor moves through a magnetic field.<br>
+An induced electric field explains induction when a magnetic field changes with time.<br>
+These are two distinct physical mechanisms, and Faraday's Law unifies their combined effect.
 </div>
 </section>
 <section>
-<h2>Non-Conservative Nature of Induced Electric Field</h2>
+<h2>Cylindrically Symmetric Magnetic Field</h2>
 <p>
-Consider a charge \( q \) moving once around a closed conducting loop. The total work done on it by the induced electric field must equal the energy supplied per unit charge, i.e. the EMF.
+As part of the syllabus, we deal with one primary geometric configuration for induced electric field problems: a time-varying magnetic field that has <strong>cylindrical symmetry</strong> about an axis (such as inside a long solenoid).
 </p>
 <p>
-Thus,
-</p>
-\[
-\text{Work per unit charge} = \mathcal{E}
-\]
-<p>
-But work done per unit charge by an electric field is given by the line integral:
-</p>
-\[
-\oint \vec{E} \cdot d\vec{l}
-\]
-<p>
-Therefore,
-</p>
-\[
-\oint \vec{E} \cdot d\vec{l} = \mathcal{E}
-\]
-<p>
-From Faraday's Law,
-</p>
-\[
-\mathcal{E} = -\frac{d\Phi_B}{dt}
-\]
-<p>
-Hence,
-</p>
-\[
-\boxed{\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}}
-\]
-<p>
-This result has a very important implication.
-</p>
-<div class="insightbox">
-The line integral of the induced electric field around a closed loop is <strong>not zero</strong>. Therefore, the induced electric field is <strong>non-conservative</strong>.
-</div>
-<h3>Important Note on Applicability</h3>
-<p>
-Faraday's Law in the form
-</p>
-\[
-\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}
-\]
-<p>
-is valid when the integration path (loop) is <strong>stationary</strong>.
+To determine the induced electric field produced by such a magnetic field, we use the circulation relation established earlier: \(\oint \vec{E}_{\text{ind}} \cdot d\vec{l} = -\frac{d\Phi}{dt}\).
 </p>
 <p>
-The general form
-</p>
-\[
-\mathcal{E} = -\frac{d\Phi_B}{dt}
-\]
-<p>
-is always valid, even when the loop itself is moving.
-</p>
-</section>
-<section>
-<h2>Example: Circular Loop</h2>
-<p>
-Consider a stationary circular loop of radius \( r \). The magnetic field is time-varying and has <strong>cylindrical symmetry</strong> about the axis of the loop (for example, a uniform magnetic field changing with time and directed perpendicular to the plane).
+Consider an imaginary stationary circular path of radius \(r\) coaxial with a cylindrically symmetric magnetic field confined to a cylindrical region of radius \(R\). The circular path is intentionally chosen to exploit this symmetry.
 </p>
 <p>
-Because the <strong>source (magnetic field)</strong> is symmetric under rotation about the axis, the induced electric field must also respect this symmetry.
+Because the source (\(\frac{d\vec{B}}{dt}\)) is cylindrically symmetric, the magnitude of the induced electric field \(\vec{E}\) (as well as its radial and tangential components) must be identical at all points along a circle of radius \(r\). By translational and reflection symmetry along the axis, there is no axial component (\(E_z = 0\)).
 </p>
 <p>
-Therefore, \( \vec{E} \) is the same at all points of the loop of given radius \( r \).
-</p>
-<p>
-At a general point P, we break \( \vec{E} \) into tangential and radial components and try to decipher their magnitudes.
+At a general point \(P\) on this circle, we resolve \(\vec{E}\) into a tangential component \(E_t\) and a radial component \(E_r\).
 </p>
 <h3>Step 1: Tangential Component from Faraday's Law</h3>
 <p>
-Faraday's Law states:
+Applying Faraday's Law around the stationary circular path of radius \(r\):
 </p>
 \[
-\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}
+\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi}{dt}
 \]
 <p>
-Since the magnetic flux is changing with time, the right-hand side is non-zero. Therefore,
+Since the magnetic flux through the circle is changing with time, the right-hand side is non-zero. Thus, the electric field must have a <strong>non-zero tangential component</strong> \(E_t\) along the circular path.
 </p>
-\[
-\oint \vec{E} \cdot d\vec{l} \neq 0
-\]
-<p>
-This means that the electric field must have a <strong>non-zero component along the path</strong>, i.e., a <strong>tangential component</strong>.
-</p>
-<div class="insightbox">
-Faraday's Law mandates that the induced electric field must have a <strong>non-zero tangential component</strong>, so that the circulation of \( \vec{E} \) around the loop is non-zero.
-</div>
 <h3>Step 2: Radial Component from Gauss's Law</h3>
 <p>
-Gauss's Law for electric fields states:
+Consider a closed cylindrical Gaussian surface of radius \(r\) and height \(dH\) coaxial with the magnetic field, with our circular path lying on its curved surface. By Gauss's Law for electricity:
 </p>
 \[
-\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}
+\oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}
 \]
 <p>
-In this situation, there is <strong>no charge present</strong> in space (\( \rho = 0 \)). Therefore,
+Because there is <strong>no net electric charge</strong> enclosed in space (\(Q_{\text{enc}} = 0\)), the total electric flux out of the closed cylinder is zero. With \(E_z = 0\), zero flux crosses the top and bottom flat caps, leaving only the curved surface flux \(E_r (2\pi r \, dH) = 0\). Thus, no field lines diverge outward or converge inward radially—the <strong>radial component is zero</strong> (\(E_r = 0\)).
 </p>
-\[
-\nabla \cdot \vec{E} = 0
-\]
-<p>
-This implies that the electric field has <strong>no sources or sinks</strong>.
-</p>
-<p>
-A radial component would correspond to field lines either emerging outward or converging inward, which would imply the presence of a source or sink of field lines (i.e., charge).
-</p>
-<p>
-Since no such charges exist, the radial component must be zero.
-</p>
-<div class="insightbox">
-Gauss's Law mandates that the induced electric field has <strong>no radial component</strong>, because there are no charges to act as sources or sinks.
-</div>
 <h3>Step 3: Final Form of the Field</h3>
 <p>
-Combining both results:
+Combining both laws:
 </p>
 <ul class="model-box">
-<li>Faraday's Law ⇒ tangential component ≠ 0</li>
-<li>Gauss's Law ⇒ radial component = 0</li>
+<li>Faraday's Law \(\Rightarrow\) tangential component \(E_t \neq 0\)</li>
+<li>Gauss's Law \(\Rightarrow\) radial component \(E_r = 0\)</li>
 </ul>
 <p>
-Therefore, the induced electric field must be purely tangential and form closed circular loops.
+Therefore, the induced electric field is purely tangential and forms <strong>closed concentric circular loops</strong> around the axis:
 </p>
 \[
-\oint \vec{E} \cdot d\vec{l} = E \cdot (2\pi r)
+\oint \vec{E} \cdot d\vec{l} = E_t (2\pi r) = -\frac{d\Phi}{dt}
+\]
+\[
+\boxed{E_t = -\frac{1}{2\pi r}\frac{d\Phi}{dt}}
 \]
 <p>
-Using Faraday's Law,
+Here, the minus sign indicates that the direction of \(\vec{E}_{\text{ind}}\) opposes the change in flux (given directly by Lenz's Law).
 </p>
-\[
-E \cdot 2\pi r = -\frac{d\Phi_B}{dt}
-\]
+<h3>Inside vs. Outside a Cylindrical Field of Radius \(R\)</h3>
 <p>
-Hence,
+If a spatially uniform magnetic field \(B(t)\) is confined to a cylinder of radius \(R\), the magnitude \(E\) of the induced electric field varies with radial distance \(r\) as:
 </p>
-\[
-E = -\frac{1}{2\pi r}\frac{d\Phi_B}{dt}
-\]
-<div class="insightbox">
-The induced electric field forms <strong>closed loops</strong> in space. It is fundamentally different from electrostatic fields, which originate from charges and are conservative.
-</div>
+<ul class="model-box">
+<li><strong>Inside (\(r \lt R\)):</strong> \(\Phi = B(\pi r^2) \implies E = \frac{r}{2}\left|\frac{dB}{dt}\right|\) (increases linearly, \(E \propto r\)).</li>
+<li><strong>Outside (\(r \gt R\)):</strong> \(\Phi = B(\pi R^2) \implies E = \frac{R^2}{2r}\left|\frac{dB}{dt}\right|\) (falls off as \(E \propto \frac{1}{r}\), even though \(B = 0\) outside!).</li>
+</ul>
 </section>
 <section>
 <h2>Faraday to KVL</h2>
 <p>
-In circuits with steady currents, we use Kirchhoff’s Voltage Law (KVL), which assumes that the electric field is conservative:
+In circuits with steady currents, we use Kirchhoff’s Voltage Law (KVL), which relies on the electrostatic field being conservative:
 </p>
 \[
 \oint \vec{E} \cdot d\vec{l} = 0
 \]
 <p>
-However, when the magnetic field varies with time, an induced electric field is created which is non-conservative.
+However, when a time-varying magnetic field threads a circuit, the induced electric field is non-conservative:
 </p>
 \[
-\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}
+\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi}{dt}
 \]
 <p>
-Thus KVL is replaced by:
+Thus, standard KVL is replaced by Faraday's loop law:
 </p>
-<div class="insightbox">
+<div class="math-block">
 \[
-\sum IR = \frac{d\Phi}{dt}
+\sum IR = -\frac{d\Phi}{dt}
 \]
 </div>
 <p>
-We usually add dummy battery and solve circuit using KVL. But fundamentally - we are using Faraday only.
+In circuit problems, we replace each loop's changing flux with a "dummy battery" of EMF \(\left|\frac{d\Phi}{dt}\right|\) (oriented according to Lenz's Law) and apply standard KVL.
 </p>
+<p>
+While this mathematical trick always yields the <strong>correct branch currents</strong>, remember that no localized battery exists—the EMF is distributed continuously along the wire.
+</p>
+<div class="insightbox">
+<strong>The Voltmeter Trap:</strong><br>
+Because \(\vec{E}_{\text{ind}}\) is non-conservative, potential difference \(V\) between two points of the circuit is not uniquely defined.<br>
+Two identical voltmeters connected across the exact same two nodes of a ring in a changing magnetic field will show <strong>different readings</strong> if their connecting leads enclose different amounts of magnetic flux!
+</div>
 </section>
 <section>
-<h3>Two Coupled Loops</h3>
+<h2>Solved Example: Two Coupled Loops</h2>
 <div class="examplebox">
 <h3>Question</h3>
 <p>
 A wire frame consists of two adjacent loops placed in a region where a uniform magnetic field is directed into the page. The magnetic field increases at a constant rate:
 </p>
-
 \[
 \frac{dB}{dt} = 1 \, \text{T/s}
 \]
 <ul class="model-box">
-<li>Resistance of wire = 1 Ω per meter</li>
-<li>Left loop: square of side 1 m</li>
-<li>Right loop: rectangle of dimensions 1 m × 0.5 m</li>
+<li>Resistance of wire = \(1\,\Omega\text{/m}\)</li>
+<li>Left loop (\(AEFD\)): square of side \(1\,\text{m}\)</li>
+<li>Right loop (\(EBCF\)): rectangle of dimensions \(1\,\text{m} \times 0.5\,\text{m}\)</li>
 </ul>
 <p>Find the current in each branch.</p>
 <div class="diagram">
 <svg width="420" height="260" viewBox="0 0 420 260">
-
 <!-- Left square -->
 <rect x="60" y="50" width="120" height="120"
 fill="none" stroke="#4da6ff" stroke-width="3"/>
-
 <!-- Right rectangle -->
 <rect x="180" y="50" width="60" height="120"
 fill="none" stroke="#4da6ff" stroke-width="3"/>
-
 <!-- Labels -->
 <text x="50" y="45">A</text>
 <text x="180" y="45">E</text>
 <text x="245" y="45">B</text>
-
 <text x="50" y="185">D</text>
 <text x="180" y="185">F</text>
 <text x="245" y="185">C</text>
-
 <!-- Magnetic field -->
 <text x="300" y="70">× × ×</text>
 <text x="300" y="110">× × ×</text>
 <text x="300" y="150">× × ×</text>
-
 <text x="285" y="190">B increasing</text>
-
 </svg>
 </div>
 <hr>
 <h4>Solution</h4>
-<p><strong>Step 1: Induced EMF</strong></p>
+<p><strong>Step 1: Induced EMF Magnitude in Each Loop</strong></p>
 \[
-A_1 = 1, \quad \mathcal{E}_1 = 1
+A_1 = 1\,\text{m}^2 \implies \mathcal{E}_1 = A_1 \frac{dB}{dt} = 1\,\text{V}
 \]
 \[
-A_2 = 0.5, \quad \mathcal{E}_2 = 0.5
+A_2 = 0.5\,\text{m}^2 \implies \mathcal{E}_2 = A_2 \frac{dB}{dt} = 0.5\,\text{V}
 \]
-<p><strong>Step 2: Direction</strong></p>
+
+<p><strong>Step 2: Direction of Loop Currents</strong></p>
 <p>
-Magnetic field increases into page → currents are anticlockwise.
+Since the magnetic field into the page is increasing, Lenz's Law requires the induced currents to produce a field out of the page. Thus, both loop currents circulate <strong>counter-clockwise (CCW)</strong>.
 </p>
 <p>
-Let \( I_1 \) = left loop, \( I_2 \) = right loop.
+Let \( I_1 \) be the CCW mesh current in the left loop (\(AEFD\)) and \( I_2 \) be the CCW mesh current in the right loop (\(EBCF\)). Along the shared branch \(EF\), \( I_1 \) flows downward (\(E \to F\)) while \( I_2 \) flows upward (\(F \to E\)).
 </p>
-<p><strong>Step 3: Apply Faraday (ΣIR = emf)</strong></p>
-<p><strong>Left loop:</strong></p>
+<p><strong>Step 3: Apply Faraday's Loop Law (\(\sum IR = \mathcal{E}\))</strong></p>
+<p><strong>Left loop (\(AEFD\), perimeter = \(4\,\text{m} \implies R_1 = 4\,\Omega\)):</strong></p>
 \[
-4I_1 - I_2 = 1
+3I_1 + 1(I_1 - I_2) = 1 \implies 4I_1 - I_2 = 1
 \]
-<p><strong>Right loop:</strong>
+<p><strong>Right loop (\(EBCF\), perimeter = \(3\,\text{m} \implies R_2 = 3\,\Omega\)):</strong></p>
+\[
+2I_2 + 1(I_2 - I_1) = 0.5 \implies -I_1 + 3I_2 = 0.5
+\]
+<p><strong>Step 4: Solve the Linear System</strong></p>
+<p>
+Multiplying the first equation by \(3\) and adding it to the second gives \(11I_1 = 3.5\), so:
 </p>
 \[
-- I_1 + 3I_2 = 0.5
-\]
-<p><strong>Step 4: Solve</strong></p>
-\[
-I_2 = \frac{3}{11}, \quad I_1 = \frac{7}{22}
+I_1 = \frac{7}{22}\,\text{A} \quad (\text{in branch } FDAE), \qquad I_2 = \frac{3}{11}\,\text{A} \quad (\text{in branch } EBCF)
 \]
 <p>
-Middle branch current:
+Current in the middle branch \(EF\):
 </p>
 \[
-I = I_1 - I_2 = \frac{1}{22}
+I_{EF} = I_1 - I_2 = \frac{7}{22} - \frac{6}{22} = \frac{1}{22}\,\text{A} \quad (\text{downward, from } E \text{ to } F)
 \]
 <div class="insightbox">
 <strong>Key Insight</strong><br><br>
-This problem demonstrates:
-<br>
-<br>
-• Electric field is non-conservative  
-• KVL does not apply in usual form  
-• Must use Faraday’s Law directly  
-<br>
-<br>
-Battery substitution is only a mathematical trick — not the physical origin.
+This problem demonstrates why you cannot assign a single scalar potential \(V_E\) and \(V_F\) to the junctions:<br><br>
+- The induced electric field is <strong>non-conservative</strong>.<br>
+- Standard KVL (\(\sum \Delta V = 0\)) does not apply.<br>
+- Applying Faraday’s Law directly to each closed mesh (\(\sum IR = \mathcal{E}\)) resolves the network cleanly.<br><br>
+Battery substitution is only a computational shortcut for finding currents — not the physical reality.
 </div>
 </div>
 </section>

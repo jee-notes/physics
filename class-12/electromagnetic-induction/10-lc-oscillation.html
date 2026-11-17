@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Oscillation | Electromagnetic Induction</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Electromagnetic Induction
+</a>
+</nav>
+<h1>LC Oscillation</h1>
+<p class="subtitle">
+SHM equation to describe LC oscillation.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+In the SHM chapter, we study mechanical oscillators such as a spring-block system and a simple pendulum. These are oscillating systems in the mechanical energy domain.
+</p>
+<p>
+In an ideal mechanical oscillator, energy continuously converts between kinetic energy and potential energy (elastic or gravitational), while the total mechanical energy remains constant.
+</p>
+<p>
+Similarly, we have electromagnetic oscillators, called <strong>LC oscillators</strong>.
+</p>
+<p>
+In an ideal LC circuit (zero resistance), two forms of electromagnetic energy continuously convert into each other:
+</p>
+<ul class="model-box">
+<li>Electric field energy stored in the capacitor (\(U_E = \dfrac{q^2}{2C}\)).</li>
+<li>Magnetic field energy stored in the inductor (\(U_B = \dfrac{1}{2}Li^2\)).</li>
+</ul>
+<p>
+Energy initially stored in the electric field of the capacitor transfers to the magnetic field of the inductor as the capacitor discharges. Once the capacitor is completely discharged, the inductor's back-EMF keeps driving current in the same direction, recharging the capacitor with <strong>opposite polarity</strong>. This continuous exchange of energy produces sustained electrical oscillations.
+</p>
+<p>
+Just as we describe a mechanical oscillator using its instantaneous position \(x\) and velocity \(v\), we describe an LC oscillator using its instantaneous charge \(q\) and current \(i\). These are the two state variables that specify the system at any instant.
+</p>
+<p>
+The natural angular frequency \(\omega\) is fixed by the physical components \(L\) and \(C\). The amplitude of a specific oscillation is determined by its total energy. For a given choice of initial condition, these two quantities are sufficient to characterize the oscillation.
+</p>
+</section>
+<section>
+<h2>Mathematical Derivation (SHM Equation)</h2>
+<p>
+Consider an ideal circuit consisting of a capacitor of capacitance \(C\) and an inductor of inductance \(L\).
+</p>
+<p>
+Suppose at a given instant \(t\), the upper plate of the capacitor carries a positive charge \(q\), and the capacitor is discharging so that current \(i\) flows clockwise.
+</p>
+<p>
+Because current \(i\) represents the rate at which charge leaves the positive plate, we must be careful with the sign:
+</p>
+\[
+i = -\frac{dq}{dt}
+\]
+<div class="insightbox">
+<strong>Sign Convention</strong><br>
+The variable \(q\) tracks the instantaneous charge on one specific, fixed plate of the capacitor (here, the upper plate).<br>
+If \(q\) becomes negative, it simply means that same upper plate now carries negative charge—we never switch which plate \(q\) refers to.<br>
+Similarly, \(i\) is the inductor current measured along a fixed reference direction (here, clockwise). A negative value of \(i\) simply means the current is flowing counter-clockwise.<br>
+Because both references stay fixed physically, the relation \(i = -\frac{dq}{dt}\) holds across the entire oscillation cycle.<br>
+We lock \(q\) to one specific reference plate (here, the upper plate) and lock \(i\) to one fixed reference direction (here, clockwise).<br>
+Whether we write \(i = -\frac{dq}{dt}\) or \(i = +\frac{dq}{dt}\) depends purely on whether our chosen positive current direction <strong>leaves</strong> or <strong>enters</strong> the \(+q\) reference plate.<br>
+Once fixed, the loop equation automatically compensates, always yielding the exact same differential equation \(\frac{d^2q}{dt^2} + \frac{1}{LC}q = 0\).
+</div>
+<p>
+Traversing the closed loop clockwise (in the direction of current \(i\)), the potential rise across the capacitor is \(+\frac{q}{C}\) and the induced EMF across the inductor is \(-L\frac{di}{dt}\). Since there is no resistor in the loop, Faraday's loop law gives:
+</p>
+\[
+\frac{q}{C} - L\frac{di}{dt} = 0
+\]
+<p>
+Substituting \(i = -\frac{dq}{dt}\), we have \(\frac{di}{dt} = -\frac{d^2q}{dt^2}\). Putting this into the loop equation:
+</p>
+\[
+\frac{q}{C} - L\left(-\frac{d^2q}{dt^2}\right) = 0 \implies L\frac{d^2q}{dt^2} + \frac{q}{C} = 0
+\]
+<div class="math-block">
+\[
+\boxed{\frac{d^2q}{dt^2} + \frac{1}{LC}q = 0}
+\]
+</div>
+<p>
+Comparing this with the standard differential equation of Simple Harmonic Motion, \(\frac{d^2x}{dt^2} + \omega^2 x = 0\), we identify the natural angular frequency of the LC oscillator:
+</p>
+\[
+\boxed{\omega = \frac{1}{\sqrt{LC}}}
+\]
+<p>
+If the capacitor starts fully charged with \(q(0) = Q_0\) and \(i(0) = 0\), the instantaneous charge and current vary sinusoidally with time:
+</p>
+\[
+q(t) = Q_0 \cos(\omega t), \qquad i(t) = -\frac{dq}{dt} = Q_0 \omega \sin(\omega t) = I_0 \sin(\omega t)
+\]
+<p>
+where the peak current is \(I_0 = Q_0 \omega = \dfrac{Q_0}{\sqrt{LC}}\).
+</p>
+</section>
+<section>
+<h2>Spring–Block vs. LC Oscillator Analogy</h2>
+<table>
+<thead>
+<tr>
+<th>Physical Quantity</th>
+<th>Spring–Block System</th>
+<th>LC Circuit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Displacement / State Variable</td>
+<td>Position \(x\)</td>
+<td>Charge \(q\)</td>
+</tr>
+<tr>
+<td>Rate of Change (Flow)</td>
+<td>Velocity \(v = \dfrac{dx}{dt}\)</td>
+<td>Current \(i = \dfrac{dq}{dt}\) (up to sign)</td>
+</tr>
+<tr>
+<td>Inertial Element</td>
+<td>Mass \(m\)</td>
+<td>Inductance \(L\)</td>
+</tr>
+<tr>
+<td>Restoring Stiffness</td>
+<td>Spring constant \(k\)</td>
+<td>Inverse capacitance \(\dfrac{1}{C}\)</td>
+</tr>
+<tr>
+<td>Differential Equation</td>
+<td>\(m\dfrac{d^2x}{dt^2} + kx = 0\)</td>
+<td>\(L\dfrac{d^2q}{dt^2} + \dfrac{1}{C}q = 0\)</td>
+</tr>
+<tr>
+<td>Angular Frequency</td>
+<td>\(\omega = \sqrt{\dfrac{k}{m}}\)</td>
+<td>\(\omega = \dfrac{1}{\sqrt{LC}}\)</td>
+</tr>
+<tr>
+<td>Potential / Electric Energy</td>
+<td>\(U_s = \dfrac{1}{2}kx^2\)</td>
+<td>\(U_E = \dfrac{q^2}{2C}\)</td>
+</tr>
+<tr>
+<td>Kinetic / Magnetic Energy</td>
+<td>\(KE = \dfrac{1}{2}mv^2\)</td>
+<td>\(U_B = \dfrac{1}{2}Li^2\)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Energy Conservation &amp; Phase Dynamics</h2>
+<p>
+At any instant \(t\), the total electromagnetic energy in the ideal LC circuit is the sum of electric and magnetic energies:
+</p>
+\[
+U_{\text{total}} = U_E + U_B = \frac{q^2}{2C} + \frac{1}{2}Li^2
+\]
+<p>
+Substituting \(q(t) = Q_0\cos(\omega t)\) and \(i(t) = Q_0\omega\sin(\omega t)\) with \(\omega^2 = \frac{1}{LC}\):
+</p>
+\[
+U_{\text{total}} = \frac{Q_0^2}{2C}\cos^2(\omega t) + \frac{1}{2}L\left(\frac{Q_0^2}{LC}\right)\sin^2(\omega t) = \frac{Q_0^2}{2C}\left(\cos^2\omega t + \sin^2\omega t\right) = \frac{Q_0^2}{2C} = \frac{1}{2}LI_0^2
+\]
+<p>
+Key Insights on LC Oscillations
+</p>
+<ul class="model-box">
+<li><strong>\(90^\circ\) Phase Difference:</strong> Charge \(q\) and current \(i\) are out of phase by \(\frac{\pi}{2}\). When \(|q|\) is maximum, \(i = 0\) (all energy is electric); when \(q = 0\), \(|i|\) is maximum (all energy is magnetic).</li>
+<li><strong>Equal Energy Sharing Point:</strong> When electric and magnetic energies are equal (\(U_E = U_B = \frac{1}{2}U_{\text{total}}\)), the charge is \(q = \pm \frac{Q_0}{\sqrt{2}}\) and current is \(i = \pm \frac{I_0}{\sqrt{2}}\) — identical to \(x = \pm \frac{A}{\sqrt{2}}\) in a spring-block oscillator.</li>
+<li><strong>Frequency of Energy Oscillation:</strong> Because \(U_E \propto \cos^2(\omega t)\) and \(U_B \propto \sin^2(\omega t)\), both energies oscillate at <strong>twice</strong> the frequency of charge/current (\(f_{\text{energy}} = 2f\)).</li>
+<li><strong>Arbitrary Initial Conditions:</strong> If a circuit starts with <em>both</em> an initial charge \(q_0\) on the capacitor and an initial current \(i_0\) in the inductor, find \(Q_0\) directly from energy conservation:
+\[
+\frac{Q_0^2}{2C} = \frac{q_0^2}{2C} + \frac{1}{2}Li_0^2 \implies Q_0 = \sqrt{q_0^2 + LCi_0^2}
+\]
+</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phasor Representation | Alternating Current</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to AC Alternating Current
+</a>
+</nav>
+<h1>Phasor Representation</h1>
+<p class="subtitle">
+Rotating vectors that encode amplitude and phase.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+A <strong>phasor</strong> is a mathematical tool used to add multiple sinusoidal quantities of the same frequency.
+</p>
+<p>
+It is used heavily in AC circuit analysis—for example, when applying Kirchhoff's Current Law at a junction, \( i_1(t) + i_2(t) + i_3(t) + i_4(t) = 0 \), or Kirchhoff's Voltage Law around a loop where every term is a sinusoid.
+</p>
+<p>
+While two sinusoids can be combined using standard trigonometric compound-angle identities, that approach becomes algebraically cumbersome when adding three or more sinusoids.
+</p>
+<p>
+Phasor analysis solves this by mapping each sinusoid onto a 2D vector (or Argand) plane using polar coordinates—encoding only its <strong>amplitude</strong> and <strong>initial phase</strong>:
+</p>
+\[
+v_1(t) = V_1 \sin(\omega t + \phi_1), \qquad v_2(t) = V_2 \sin(\omega t - \phi_2)
+\]
+<p>
+To compute \( v_1(t) + v_2(t) \), we represent them as 2D polar phasors \( \vec{V}_1 = (V_1, \phi_1) \) (often written \( V_1 \angle \phi_1 \)) and \( \vec{V}_2 = (V_2, -\phi_2) \), and add them like vectors.
+</p>
+<p>
+A <strong>phasor</strong> is a rotating vector whose magnitude equals the amplitude (peak value) of a sinusoidal quantity, and whose angle with the positive x-axis equals the instantaneous phase.
+</p>
+<p>
+The projection of the phasor onto the y-axis gives the instantaneous value of the sinusoid at time \( t \).
+</p>
+<p>
+For a voltage \( v = V_0\sin(\omega t + \phi) \):
+</p>
+<ul class="model-box">
+<li>The phasor has length \( V_0 \).</li>
+<li>It rotates anticlockwise with angular velocity \( \omega \).</li>
+<li>At \( t = 0 \), it makes angle \( \phi \) with the x-axis.</li>
+<li>Its y-projection at any time gives \( v(t) \).</li>
+</ul>
+<div class="insightbox">
+All phasors in a circuit rotate at the same angular frequency \( \omega \).<br>
+So we can "freeze" time and compare them at \( t = 0 \) — their relative positions (angles) give the phase differences, and their lengths give the amplitudes.<br>
+</div>
+</section>
+<section>
+<h2>Phasor Plane</h2>
+<p>
+The phasor plane can be viewed as an Argand plane or as a 2D vector plane where the four fundamental sinusoidal functions map onto the coordinate unit vectors (in the frozen \( t = 0 \) reference frame):
+</p>
+<ul class="model-box">
+<li>\( \sin(\omega t) \) represents \( \hat{i} \)</li>
+<li>\( \cos(\omega t) = \sin(\omega t + 90^\circ) \) represents \( \hat{j} \)</li>
+<li>\( -\sin(\omega t) = \sin(\omega t + 180^\circ) \) represents \( -\hat{i} \)</li>
+<li>\( -\cos(\omega t) = \sin(\omega t - 90^\circ) \) represents \( -\hat{j} \)</li>
+</ul>
+<h3>Why Does This Work?</h3>
+<p>
+This mapping works directly because of the trigonometric compound-angle identity. Consider \( v(t) = V\sin(\omega t + \phi) \). Expanding via \( \sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta \):
+</p>
+\[
+v(t) = V\sin(\omega t + \phi) = \big(V\cos\phi\big)\sin(\omega t) + \big(V\sin\phi\big)\cos(\omega t)
+\]
+<p>
+Identifying \( \sin(\omega t) \leftrightarrow \hat{i} \) and \( \cos(\omega t) \leftrightarrow \hat{j} \), and setting \( V_x = V\cos\phi \) and \( V_y = V\sin\phi \), we obtain the 2D phasor vector:
+</p>
+\[
+V\sin(\omega t + \phi) \rightleftharpoons V_x\,\hat{i} + V_y\,\hat{j}
+\]
+<p>
+<strong>A positive phase angle always indicates an anticlockwise rotation from the reference axis.</strong>
+</p>
+<p>
+Consider an example that highlights how the sign of the phase angle determines the sense of rotation: add \( v_1(t) = V_1\sin(\omega t + 30^\circ) \) and \( v_2(t) = V_2\sin(\omega t - 45^\circ) \).
+</p>
+<p>
+Using the compound-angle expansion above, we express \( v_1(t) = V_1\sin(\omega t + 30^\circ) \) in phasor form as:
+</p>
+\[
+V_1\sin(\omega t + 30^\circ) = V_1 \cos(30^\circ)\sin(\omega t) + V_1 \sin(30^\circ)\cos(\omega t)
+\]
+\[
+\vec{V}_1 = \left(\frac{\sqrt{3}}{2}V_1\right)\hat{i} + \left(\frac{1}{2}V_1\right)\hat{j}
+\]
+<p>
+In the phasor plane, \( \vec{V}_1 \) is a vector of magnitude:
+</p>
+\[
+\boxed{|\vec{V}_1| = \sqrt{V_{1x}^2 + V_{1y}^2}}, \qquad V_{1x} = V_1 \cos(30^\circ), \quad V_{1y} = V_1 \sin(30^\circ)
+\]
+<p>
+The angle made by \( \vec{V}_1 \) with the positive X-axis follows from right-triangle geometry:
+</p>
+\[
+\tan\phi_1 = \frac{V_{1y}}{V_{1x}} = \tan(30^\circ) \implies \phi_1 = +30^\circ
+\]
+<p>
+Thus, phasor \( \vec{V}_1 \) points at an angle of \( 30^\circ \) <strong>anticlockwise</strong> from the positive X-axis (\( \hat{i} \)).
+</p>
+<p>
+Applying the same logic to \( v_2(t) = V_2\sin(\omega t - 45^\circ) \):
+</p>
+\[
+V_2\sin(\omega t - 45^\circ) = V_2 \cos(-45^\circ)\sin(\omega t) + V_2 \sin(-45^\circ)\cos(\omega t)
+\]
+\[
+\vec{V}_2 = \left(\frac{V_2}{\sqrt{2}}\right)\hat{i} + \left(-\frac{V_2}{\sqrt{2}}\right)\hat{j}
+\]
+<p>
+In the phasor plane, the angle made by \( \vec{V}_2 \) with the positive X-axis is:
+</p>
+\[
+\tan\phi_2 = \frac{V_{2y}}{V_{2x}} = \tan(-45^\circ) \implies \phi_2 = -45^\circ, \qquad V_{2x} = V_2 \cos(-45^\circ), \quad V_{2y} = V_2 \sin(-45^\circ)
+\]
+<p>
+Thus, phasor \( \vec{V}_2 \) points at an angle of \( 45^\circ \) <strong>clockwise</strong> from the positive X-axis (\( \hat{i} \)).
+</p>
+<p>
+To add both vectors and find the resultant voltage \( v_R(t) = V_R\sin(\omega t + \phi_R) \), we compute the resultant vector \( \vec{V}_R = \vec{V}_1 + \vec{V}_2 \) by summing components along each axis:
+</p>
+\[
+V_{Rx} = V_{1x} + V_{2x} = \frac{\sqrt{3}}{2}V_1 + \frac{V_2}{\sqrt{2}}, \qquad V_{Ry} = V_{1y} + V_{2y} = \frac{V_1}{2} - \frac{V_2}{\sqrt{2}}
+\]
+<p>
+The resultant amplitude is \( V_R = |\vec{V}_R| = \sqrt{V_{Rx}^2 + V_{Ry}^2} \), and the angle made by \( \vec{V}_R \) with the positive X-axis (\( \hat{i} \)) is given by:
+</p>
+\[
+\tan\phi_R = \frac{V_{Ry}}{V_{Rx}}
+\]
+<p>
+Thus, the combined time-domain signal is \( v_R(t) = V_R\sin(\omega t + \phi_R) \), where the quadrant of \( (V_{Rx}, V_{Ry}) \) uniquely fixes \( \phi_R \).
+</p>
+</section>
+<section>
+<h2>Working with Other Axes</h2>
+<p>
+Next, let us verify why the remaining three basis sinusoids align with \( +\hat{j} \), \( -\hat{i} \), and \( -\hat{j} \) by converting each into standard \( +\sin(\omega t + \phi) \) form:
+</p>
+<ul class="model-box">
+<li>
+<strong>Positive Y-axis (\( +\hat{j} \)):</strong> Consider \( v_1(t) = V_1\cos(\omega t) \). Using \( \cos\theta = \sin(\theta + 90^\circ) \), we rewrite this equivalently as \( v_1(t) = V_1\sin(\omega t + 90^\circ) \). In the phasor plane, \( \vec{V}_1 \) points \( 90^\circ \) anticlockwise from the positive X-axis (\( \hat{i} \)), placing \( \cos(\omega t) \) along the <strong>positive Y-axis (\( \hat{j} \))</strong>.
+</li>
+<li>
+<strong>Negative X-axis (\( -\hat{i} \)):</strong> Consider \( v_1(t) = -V_1\sin(\omega t) \). Using \( -\sin\theta = \sin(\theta + 180^\circ) \), we rewrite this as \( v_1(t) = V_1\sin(\omega t + 180^\circ) \). In the phasor plane, \( \vec{V}_1 \) points \( 180^\circ \) anticlockwise from \( \hat{i} \), placing \( -\sin(\omega t) \) along the <strong>negative X-axis (\( -\hat{i} \))</strong>.
+</li>
+<li>
+<strong>Negative Y-axis (\( -\hat{j} \)):</strong> Consider \( v_1(t) = -V_1\cos(\omega t) \). First, \( \cos(\omega t) = \sin(\omega t + 90^\circ) \) rotates the phasor \( 90^\circ \) anticlockwise; then, applying the minus sign via \( -\sin\theta = \sin(\theta + 180^\circ) \) rotates it an additional \( 180^\circ \) anticlockwise:
+\[
+-\cos(\omega t) = -\sin(\omega t + 90^\circ) = \sin\big((\omega t + 90^\circ) + 180^\circ\big) = \sin(\omega t + 270^\circ)
+\]
+Thus, \( v_1(t) = V_1\sin(\omega t + 270^\circ) \) points \( 270^\circ \) anticlockwise (or \( 90^\circ \) clockwise) from \( \hat{i} \), placing \( -\cos(\omega t) \) along the <strong>negative Y-axis (\( -\hat{j} \))</strong>.
+</li>
+</ul>
+<h3>Angles with Other Axes</h3>
+<p>
+We don't need to convert every phasor to an angle measured from the positive X-axis (\( +\hat{i} \)) just to resolve it into components—that standard reference angle is only needed at the very end to state the resultant initial phase \( \phi_R \).
+</p>
+<p>
+Consider an example that shows how measuring angles directly from the nearest basis axis reveals geometry immediately: add \( v_1(t) = -V_1\sin(\omega t + 30^\circ) \) and \( v_2(t) = V_2\cos(\omega t - 60^\circ) \).
+</p>
+<p>
+In the phasor plane, the vectors \( \vec{V}_1 \) and \( \vec{V}_2 \) are collinear and antiparallel! Let's see why:
+</p>
+<p>
+Using the negative-sine shift from above:
+</p>
+\[
+v_1(t) = -V_1\sin(\omega t + 30^\circ) = V_1\sin(\omega t + 30^\circ + 180^\circ) = V_1\sin(\omega t + 210^\circ)
+\]
+<p>
+Instead of treating \( \vec{V}_1 \) as \( 210^\circ \) anticlockwise from \( +\hat{i} \), we can read it directly off the \( -\sin(\omega t) \) axis: \( \vec{V}_1 \) is oriented \( 30^\circ \) anticlockwise from \( -\hat{i} \) (into the 3rd quadrant).
+</p>
+<p>
+Similarly, for \( v_2(t) \):
+</p>
+\[
+v_2(t) = V_2\cos(\omega t - 60^\circ) = V_2\sin(\omega t - 60^\circ + 90^\circ) = V_2\sin(\omega t + 30^\circ)
+\]
+<p>
+Instead of converting to \( 30^\circ \) anticlockwise from \( +\hat{i} \), we can read \( v_2(t) \) directly off the \( +\cos(\omega t) \) axis: \( \vec{V}_2 \) is oriented \( 60^\circ \) clockwise from \( +\hat{j} \) (into the 1st quadrant).
+</p>
+<p>
+Since \( 60^\circ \) clockwise from \( +\hat{j} \) is \( 30^\circ \) anticlockwise from \( +\hat{i} \), \( \vec{V}_2 \) points directly opposite to \( \vec{V}_1 \) (\( 30^\circ \) anticlockwise from \( -\hat{i} \)). Thus, the angle between \( \vec{V}_1 \) and \( \vec{V}_2 \) is \( 180^\circ \), and their resultant magnitude is simply \( |V_2 - V_1| \) along the larger phasor!
+</p>
+</section>
+<section>
+<h2>Solved Example</h2>
+<div class="insightbox">
+<strong>Generalizing to \( N \) Phasors:</strong><br>
+For any number of sinusoids \( v_k(t) = V_k\sin(\omega t + \phi_k) \) of the same frequency,<br>
+resolve each into \( V_{kx} = V_k\cos\phi_k \) and \( V_{ky} = V_k\sin\phi_k \),<br>
+sum each axis (\( V_{Rx} = \sum V_{kx} \), \( V_{Ry} = \sum V_{ky} \)),<br>
+and reconstruct \( V_R = \sqrt{V_{Rx}^2 + V_{Ry}^2} \) and \( \tan\phi_R = V_{Ry}/V_{Rx} \)
+</div>
+<p>
+Rather than converting every cosine and negative term into sines via trigonometric identities, we can place each phasor <strong>directly</strong> on the phasor plane using the four basis directions (\( \pm\hat{i}, \pm\hat{j} \)) as local reference axes.
+</p>
+<div class="examplebox">
+<h3>Illustration</h3>
+<p>
+Find the resultant of the following five sinusoidal voltages:
+</p>
+<ul class="model-box">
+<li>\( v_1(t) = V_1 \sin(\omega t - 60^\circ) \)</li>
+<li>\( v_2(t) = V_2 \sin(\omega t + 60^\circ) \)</li>
+<li>\( v_3(t) = V_3 \cos(\omega t - 60^\circ) \)</li>
+<li>\( v_4(t) = V_4 \cos(\omega t + 60^\circ) \)</li>
+<li>\( v_5(t) = -V_5 \cos(\omega t + 45^\circ) \)</li>
+</ul>
+<h3>Solution</h3>
+<p>
+<strong>Step 1: Locate each phasor directly relative to its trigonometric basis axis</strong> (remembering that a positive angle rotates <em>anticlockwise</em> and a negative angle rotates <em>clockwise</em>):
+</p>
+<ul class="model-box">
+<li>
+<strong>Around the \( +\hat{i} \) axis (\( +\sin\omega t \)):</strong><br>
+\( \vec{V}_1 \) is oriented \( 60^\circ \) clockwise from \( +\hat{i} \) (4th quadrant), while \( \vec{V}_2 \) is oriented \( 60^\circ \) anticlockwise from \( +\hat{i} \) (1st quadrant)—distributed symmetrically around the X-axis.
+</li>
+<li>
+<strong>Around the \( +\hat{j} \) axis (\( +\cos\omega t \)):</strong><br>
+\( \vec{V}_3 \) is oriented \( 60^\circ \) clockwise from \( +\hat{j} \) (1st quadrant), while \( \vec{V}_4 \) is oriented \( 60^\circ \) anticlockwise from \( +\hat{j} \) (2nd quadrant)—distributed symmetrically around the Y-axis in the exact same way \( \vec{V}_1 \) and \( \vec{V}_2 \) are around the X-axis.
+</li>
+<li>
+<strong>Around the \( -\hat{j} \) axis (\( -\cos\omega t \)):</strong><br>
+\( \vec{V}_5 \) starts along \( -\hat{j} \) and rotates \( 45^\circ \) anticlockwise from \( -\hat{j} \) (pointing into the 4th quadrant).
+</li>
+</ul>
+<p>
+<strong>Step 2: Resolve each phasor directly from its local reference axis onto \( \hat{i} \) and \( \hat{j} \):</strong>
+</p>
+<ul class="model-box">
+<li>\( \vec{V}_1 \) (\( 60^\circ \) below \( +\hat{i} \)): \( \quad V_{1x} = +V_1\cos 60^\circ = \dfrac{V_1}{2}, \qquad V_{1y} = -V_1\sin 60^\circ = -\dfrac{\sqrt{3}}{2}V_1 \)</li>
+<li>\( \vec{V}_2 \) (\( 60^\circ \) above \( +\hat{i} \)): \( \quad V_{2x} = +V_2\cos 60^\circ = \dfrac{V_2}{2}, \qquad V_{2y} = +V_2\sin 60^\circ = +\dfrac{\sqrt{3}}{2}V_2 \)</li>
+<li>\( \vec{V}_3 \) (\( 60^\circ \) right of \( +\hat{j} \)): \( \quad V_{3x} = +V_3\sin 60^\circ = +\dfrac{\sqrt{3}}{2}V_3, \qquad V_{3y} = +V_3\cos 60^\circ = \dfrac{V_3}{2} \)</li>
+<li>\( \vec{V}_4 \) (\( 60^\circ \) left of \( +\hat{j} \)): \( \quad V_{4x} = -V_4\sin 60^\circ = -\dfrac{\sqrt{3}}{2}V_4, \qquad V_{4y} = +V_4\cos 60^\circ = \dfrac{V_4}{2} \)</li>
+<li>\( \vec{V}_5 \) (\( 45^\circ \) right of \( -\hat{j} \)): \( \quad V_{5x} = +V_5\sin 45^\circ = +\dfrac{V_5}{\sqrt{2}}, \qquad V_{5y} = -V_5\cos 45^\circ = -\dfrac{V_5}{\sqrt{2}} \)</li>
+</ul>
+<p>
+<strong>Step 3: Sum the \( \hat{i} \) and \( \hat{j} \) components separately:</strong>
+</p>
+\[
+V_{Rx} = \frac{V_1 + V_2}{2} + \frac{\sqrt{3}}{2}(V_3 - V_4) + \frac{V_5}{\sqrt{2}}
+\]
+\[
+V_{Ry} = \frac{\sqrt{3}}{2}(V_2 - V_1) + \frac{V_3 + V_4}{2} - \frac{V_5}{\sqrt{2}}
+\]
+<p>
+<strong>Step 4: Reconstruct the resultant voltage \( v_R(t) = V_R\sin(\omega t + \phi_R) \):</strong>
+</p>
+\[
+\boxed{V_R = \sqrt{V_{Rx}^2 + V_{Ry}^2}, \qquad \tan\phi_R = \frac{V_{Ry}}{V_{Rx}}}
+\]
+<p>
+<em>(Use the signs of \( V_{Rx} \) and \( V_{Ry} \) to fix the quadrant of \( \phi_R \).)</em>
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

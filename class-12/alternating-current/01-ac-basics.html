@@ -1,153 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternating Current | AC Quantities: Peak, RMS, and Phase</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AC Quantities | Alternating Current</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Alternating Current
-            </a>
-        </nav>
-
-        <h1>AC Quantities: Peak, RMS, and Phase</h1>
-        <p class="subtitle">
-            Describing the sinusoidal variation of voltage and current — and the RMS values that make sense of power.
-        </p>
-
-        <section>
-            <h2>Instantaneous and Peak Values</h2>
-            <p>
-                An AC source produces a voltage that varies sinusoidally with time:
-            </p>
-            \[
-            v(t) = V_0 \sin(\omega t)
-            \]
-            <p>
-                where \( V_0 \) is the <strong>peak voltage</strong> (amplitude) and \( \omega = 2\pi f \) is the
-                angular frequency (rad/s). For a purely resistive circuit, the current is in phase with the voltage:
-            </p>
-            \[
-            i(t) = I_0 \sin(\omega t), \quad I_0 = \frac{V_0}{R}
-            \]
-            <p>
-                The time period is \( T = 1/f = 2\pi/\omega \). For the Indian power grid: \( f = 50 \) Hz, \( T = 20 \)
-                ms, \( \omega = 100\pi \) rad/s.
-            </p>
-        </section>
-
-        <section>
-            <h2>Root Mean Square (RMS) Values</h2>
-            <p>
-                The average of a sinusoid over a complete cycle is zero — so the average voltage or current is not a
-                useful measure of power. Instead, we use the <strong>RMS value</strong>, defined as the square root of
-                the time-average of the square:
-            </p>
-            \[
-            V_{\text{rms}} = \sqrt{\langle v^2 \rangle} = \sqrt{\frac{1}{T}\int_0^T V_0^2\sin^2(\omega t)\,dt}
-            \]
-            <p>
-                Since \( \langle \sin^2(\omega t) \rangle = 1/2 \):
-            </p>
-            \[
-            \boxed{V_{\text{rms}} = \frac{V_0}{\sqrt{2}}, \qquad I_{\text{rms}} = \frac{I_0}{\sqrt{2}}}
-            \]
-            <div class="insightbox">
-                The RMS value of an AC voltage is the DC voltage that would produce the same average power dissipation
-                in a resistor. When we say "230 V mains supply," we mean \( V_{\text{rms}} = 230 \) V — the peak voltage
-                is \( V_0 = 230\sqrt{2} \approx 325 \) V.
-            </div>
-        </section>
-
-        <section>
-            <h2>Phase and Phase Difference</h2>
-            <p>
-                In the general sinusoidal form \( v(t) = V_0\sin(\omega t + \phi) \), the quantity \( \phi \) is the
-                <strong>initial phase</strong>. When two quantities oscillate at the same frequency but with different
-                initial phases:
-            </p>
-            \[
-            v = V_0\sin(\omega t + \phi_v), \quad i = I_0\sin(\omega t + \phi_i)
-            \]
-            <p>
-                the <strong>phase difference</strong> is \( \Delta\phi = \phi_v - \phi_i \).
-            </p>
-            <ul>
-                <li>If \( \Delta\phi > 0 \): voltage <strong>leads</strong> current (or current lags voltage) —
-                    inductive.</li>
-                <li>If \( \Delta\phi < 0 \): voltage <strong>lags</strong> current (or current leads voltage) —
-                        capacitive.</li>
-                <li>If \( \Delta\phi = 0 \): voltage and current are <strong>in phase</strong> — purely resistive.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Angular Frequency, Frequency, and Period</h2>
-            <div class="model-box">
-                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
-                    <thead>
-                        <tr style="border-bottom:2px solid #e0e0e0;">
-                            <th style="text-align:left; padding:8px;">Quantity</th>
-                            <th style="text-align:left; padding:8px;">Symbol</th>
-                            <th style="text-align:left; padding:8px;">Relation</th>
-                            <th style="text-align:left; padding:8px;">Unit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding:8px;">Time period</td>
-                            <td style="padding:8px;">\( T \)</td>
-                            <td style="padding:8px;">\( T = 1/f \)</td>
-                            <td style="padding:8px;">seconds (s)</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Frequency</td>
-                            <td style="padding:8px;">\( f \)</td>
-                            <td style="padding:8px;">\( f = \omega/2\pi \)</td>
-                            <td style="padding:8px;">Hertz (Hz)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:8px;">Angular frequency</td>
-                            <td style="padding:8px;">\( \omega \)</td>
-                            <td style="padding:8px;">\( \omega = 2\pi f \)</td>
-                            <td style="padding:8px;">rad/s</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Peak value</td>
-                            <td style="padding:8px;">\( V_0, I_0 \)</td>
-                            <td style="padding:8px;">Amplitude of sinusoid</td>
-                            <td style="padding:8px;">V, A</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:8px;">RMS value</td>
-                            <td style="padding:8px;">\( V_{\text{rms}}, I_{\text{rms}} \)</td>
-                            <td style="padding:8px;">\( = \text{Peak}/\sqrt{2} \)</td>
-                            <td style="padding:8px;">V, A</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section>
-            <h2>Core Sub-Topic</h2>
-            <div class="chapter-list">
-                <a href="./01a-phasors.html">1a. Phasor Representation</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Alternating Current
+</a>
+</nav>
+<h1>AC Quantities</h1>
+<p class="subtitle">
+Mathematical description of alternating physical quantities.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+Whenever we begin a new chapter, we first establish the mathematical framework required to analyze its physics.
+</p>
+<p>
+For Alternating Current, our syllabus focuses exclusively on <strong>sinusoidal</strong> electrical parameters.
+</p>
+<p>
+Handling AC circuits smoothly requires fluency with the defining parameters of a sinusoid — amplitude, frequency, angular frequency, time period, average value, RMS value, and phase.
+</p>
+<p>
+We have already encountered the basics of sinusoidal functions in Simple Harmonic Motion (SHM). Here, we build directly on that foundation and extend it to slightly more advanced mathematical tools.
+</p>
+</section>
+<section>
+<h2>Alternating Current</h2>
+<p>
+An AC source produces a voltage that varies sinusoidally with time:
+</p>
+\[
+v(t) = V_p \sin(\omega t + \phi)
+\]
+<p>
+This is the standard form used to represent a physical quantity that varies sinusoidally with time. Here, \( v(t) \) is the instantaneous value, and the remaining symbols define the waveform:
+</p>
+<ul class="model-box">
+<li><strong>Peak Voltage (\( V_p \)):</strong> Also called the <strong>amplitude</strong> (sometimes denoted \( V_0 \)), it represents the maximum magnitude reached by the oscillating voltage in either direction.</li>
+<li><strong>Angular Frequency (\( \omega \)):</strong> Appearing inside the trigonometric function as the coefficient of \( t \), it represents the phase angle swept per second. Its SI unit is radians per second (rad/s).</li>
+<li><strong>Frequency (\( f \)):</strong> Although not written explicitly in the expression, it is related to angular frequency by \( \omega = 2\pi f \). Its SI unit is cycles (or revolutions) per second, called Hertz (Hz).</li>
+<li><strong>Initial Phase (\( \phi \)):</strong> Sets the starting state (angle) of the sinusoid at \( t = 0 \), measured in radians (or degrees).</li>
+</ul>
+<p>
+Notice the contrast in how sources are specified in circuit problems. For DC, we simply state that a \( 5\text{ V} \) battery is connected across two terminals with a fixed polarity.
+</p>
+<p>
+For AC, because the polarity and magnitude constantly vary, a source is characterized by its frequency and amplitude — for example, a problem may state that <strong>"an AC source of frequency \( 50\text{ Hz} \) and peak voltage \( 10\text{ V} \) is connected in the circuit."</strong>
+</p>
+<p>
+Assuming zero initial phase (\( \phi = 0 \)), we write the instantaneous voltage as: \( v(t) = 10 \sin(100\pi t)\text{ V} \).
+</p>
+<h3>Time Period</h3>
+<p>
+The time period of one complete cycle is \( T = 1/f = 2\pi/\omega \).
+</p>
+<p>
+For the Indian power grid: \( f = 50\text{ Hz} \), \( T = 20\text{ ms} \), and \( \omega = 100\pi\text{ rad/s} \).
+</p>
+</section>
+<section>
+<h2>Phase</h2>
+<p>
+<strong>Phase</strong> is the most important parameter of a sinusoid—it represents the complete angular argument inside the trigonometric function:
+</p>
+\[
+v(t) = V_p \sin(\omega t + \phi)
+\]
+<p>
+That is, the instantaneous phase at any time \( t \) is \( \theta(t) = \omega t + \phi \).
+</p>
+<p>
+Evaluating this at \( t = 0 \) gives \( \theta(0) = \phi \), which is why \( \phi \) is called the <strong>initial phase</strong> (or epoch)—it specifies the starting state of the oscillation.
+</p>
+<h3>Phase Difference</h3>
+<p>
+When two quantities oscillate at the same angular frequency \( \omega \) with different initial phases:
+</p>
+\[
+v(t) = V_p\sin(\omega t + \phi_v), \qquad i(t) = I_p\sin(\omega t + \phi_i)
+\]
+<p>
+the <strong>phase difference</strong> between voltage and current is the difference between their instantaneous phases:
+</p>
+\[
+\Delta\phi = \theta_v(t) - \theta_i(t) = (\omega t + \phi_v) - (\omega t + \phi_i) = \phi_v - \phi_i
+\]
+<p>
+Because both oscillate at the same frequency, \( \omega t \) cancels out and \( \Delta\phi \) remains constant at all times:
+</p>
+<ul class="model-box">
+<li>If \( \Delta\phi \gt 0 \): voltage <strong>leads</strong> current (or current lags voltage)</li>
+<li>If \( \Delta\phi \lt 0 \): voltage <strong>lags</strong> current (or current leads voltage)</li>
+<li>If \( \Delta\phi = 0 \): voltage and current are <strong>in phase</strong></li>
+</ul>
+</section>
+<section>
+<h2>Angular Frequency, Frequency, and Period</h2>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>Relation</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time period</td>
+<td>\( T \)</td>
+<td>\( T = 1/f \)</td>
+<td>seconds (s)</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>\( f \)</td>
+<td>\( f = \omega/2\pi \)</td>
+<td>Hertz (Hz)</td>
+</tr>
+<tr>
+<td>Angular frequency</td>
+<td>\( \omega \)</td>
+<td>\( \omega = 2\pi f \)</td>
+<td>rad/s</td>
+</tr>
+<tr>
+<td>Peak value</td>
+<td>\( V_p, I_p \)</td>
+<td>Amplitude of sinusoid</td>
+<td>V, A</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section>
+<h2>Other Forms</h2>
+<p>
+The standard form for representing a sinusoid is \( v(t) = V_p \sin(\omega t + \phi) \), where the peak value \( V_p \) is strictly positive (\( V_p \gt 0 \)) and the trigonometric function is \( +\sin \).
+</p>
+<p>
+However, problems frequently present non-standard forms—for example, \( v(t) = -V_p \sin(\omega t + \phi_v) \) or \( v(t) = V_p \cos(\omega t + \phi_v) \) — which must first be converted into standard form before reading the phase.
+</p>
+<p>
+In \( v(t) = -V_p \sin(\omega t + \phi_v) \), the peak voltage is still \(V_p\) (never \(-V_p\)), and the angular frequency \(\omega\), frequency \(f\), and time period \(T\) remain completely unchanged.
+</p>
+<p>
+However, the true initial phase \(\phi = \theta(0)\) is <strong>not</strong> equal to \(\phi_v\) .
+</p>
+<p>
+To determine the true initial phase \( \phi \), we convert the expression into standard \( +\sin \) form using a <strong>sine-shifting rotation</strong>.
+</p>
+<h3>Sine-Shifting Rotation</h3>
+<p>
+A sine-shifting rotation is the angular phase shift introduced when converting non-standard sinusoidal expressions (involving \( \cos \) or negative signs) into the canonical \( +\sin(\omega t + \phi) \) form:
+</p>
+<ul class="model-box">
+<li><strong>Cosine to Sine (\( +\cos \to +\sin \)):</strong>
+\[
+V_p \cos(\omega t + \phi_0) = V_p \sin\!\left(\omega t + \phi_0 + \frac{\pi}{2}\right) \implies \phi = \phi_0 + 90^\circ
+\]
+</li>
+<li><strong>Negative Sine to Positive Sine (\( -\sin \to +\sin \)):</strong>
+\[
+-V_p \sin(\omega t + \phi_0) = V_p \sin(\omega t + \phi_0 + \pi) \implies \phi = \phi_0 + 180^\circ
+\]
+<strong>(Equivalently, \( \phi = \phi_0 - 180^\circ \), since \( \pm 180^\circ \) represents the exact same state.)</strong>
+</li>
+<li><strong>Negative Cosine to Positive Sine (\( -\cos \to +\sin \)):</strong>
+\[
+-V_p \cos(\omega t + \phi_0) = V_p \sin\!\left(\omega t + \phi_0 - \frac{\pi}{2}\right) \implies \phi = \phi_0 - 90^\circ
+\]
+<strong>(Equivalently, \( \phi = \phi_0 + 270^\circ \).)</strong>
+</li>
+</ul>
+<div class="insightbox">
+Never subtract phases directly until both \(v(t)\) and \(i(t)\) are written in standard \(+\sin(\omega t + \phi)\) form with positive amplitudes.<br>
+For instance, consider the phase difference between \(v(t) = V_p\cos(\omega t)\) and \(i(t) = I_p\sin(\omega t)\).<br>
+We cannot say that \(\Delta\phi = 0\) or voltage and current are in phase.<br>
+Rewriting \(v(t) = V_p\sin(\omega t + 90^\circ)\) immediately reveals \(\phi_v = +90^\circ\) and \(\phi_i = 0^\circ\), giving \( \Delta\phi = +90^\circ \) (voltage leads current by \( 90^\circ \)).
+</div>
+</section>
+<section>
+<h2>Core Sub-Topic</h2>
+<div class="chapter-list">
+<a href="./01a-average.html">1. Average Value</a>
+<a href="./01b-rms.html">2. RMS Value</a>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>
