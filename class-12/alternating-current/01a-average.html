@@ -21,47 +21,31 @@ Physical and Mathematical meaning of average quantity.
 <section>
 <h2>Concept</h2>
 <p>
-A <strong>phasor</strong> is a mathematical tool used to add multiple sinusoidal quantities of the same frequency.
-</p>
-<p>
-It is used heavily in AC circuit analysis—for example, when applying Kirchhoff's Current Law at a junction, \( i_1(t) + i_2(t) + i_3(t) + i_4(t) = 0 \), or Kirchhoff's Voltage Law around a loop where every term is a sinusoid.
-</p>
-<p>
-While two sinusoids can be combined using standard trigonometric compound-angle identities, that approach becomes algebraically cumbersome when adding three or more sinusoids.
-</p>
-<p>
-Phasor analysis solves this by mapping each sinusoid onto a 2D vector (or Argand) plane using polar coordinates—encoding only its <strong>amplitude</strong> and <strong>initial phase</strong>:
+In AC circuits, current changes continuously in magnitude and periodically reverses its direction. For a sinusoidal current, we represent it in standard form:
 </p>
 \[
-v_1(t) = V_1 \sin(\omega t + \phi_1), \qquad v_2(t) = V_2 \sin(\omega t - \phi_2)
+i(t) = I_p \sin(\omega t + \phi)
 \]
 <p>
-To compute \( v_1(t) + v_2(t) \), we represent them as 2D polar phasors \( \vec{V}_1 = (V_1, \phi_1) \) (often written \( V_1 \angle \phi_1 \)) and \( \vec{V}_2 = (V_2, -\phi_2) \), and add them like vectors.
+Since the instantaneous value keeps changing with time, we use characteristic numerical values, such as average and RMS values, to describe different aspects of the time-varying quantity.
 </p>
 <p>
-A <strong>phasor</strong> is a rotating vector whose magnitude equals the amplitude (peak value) of a sinusoidal quantity, and whose angle with the positive x-axis equals the instantaneous phase.
+These characteristic values also provide a common way of specifying AC supplies and electrical equipment.
 </p>
 <p>
-The projection of the phasor onto the y-axis gives the instantaneous value of the sinusoid at time \( t \).
+For example, the nominal single-phase AC supply voltage in India is \(220\text{ V}\). What does this value represent? Is it peak voltage? (It is NOT peak voltage!)
 </p>
 <p>
-For a voltage \( v = V_0\sin(\omega t + \phi) \):
+If not, then why do we specify the supply voltage using this value rather than its peak voltage?
 </p>
-<ul class="model-box">
-<li>The phasor has length \( V_0 \).</li>
-<li>It rotates anticlockwise with angular velocity \( \omega \).</li>
-<li>At \( t = 0 \), it makes angle \( \phi \) with the x-axis.</li>
-<li>Its y-projection at any time gives \( v(t) \).</li>
-</ul>
-<div class="insightbox">
-All phasors in a circuit rotate at the same angular frequency \( \omega \).<br>
-So we can "freeze" time and compare them at \( t = 0 \) — their relative positions (angles) give the phase differences, and their lengths give the amplitudes.<br>
-</div>
+<p>
+We investigate these questions through the mathematical concepts of average and RMS values.
+</p>
 </section>
 <section>
 <h2>Average Value</h2>
 <p>
-The average value of a function \( y = f(x) \) over the interval \( x_1 \to x_2 \) is defined as:
+The average value of a function \(y = f(x)\) over the interval \(x_1 \to x_2\) is defined as:
 </p>
 \[
 \langle y \rangle_{x_1}^{x_2} = \frac{\int_{x_1}^{x_2} f(x)\, dx}{\int_{x_1}^{x_2} dx} = \frac{1}{x_2 - x_1}\int_{x_1}^{x_2} f(x)\, dx

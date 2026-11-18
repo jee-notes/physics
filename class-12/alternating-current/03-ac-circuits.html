@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R, L, C in AC Circuits | Alternating Current</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Alternating Current
+</a>
+</nav>
+<h1>R, L, C in AC Circuits</h1>
+<p class="subtitle">
+How each circuit element individually responds to AC — resistance, reactance and phase.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+Analyzing pure \(R\), \(L\), and \(C\) in AC circuits means determining the \(V\text{--}I\) characteristics of each individual circuit element—resistor (\(R\)), inductor (\(L\)), and capacitor (\(C\))—under sinusoidal excitation.
+</p>
+<p>
+For every derivation, we assume an AC current in the branch given by:
+</p>
+\[
+i(t) = I_p\sin(\omega t)
+\]
+<p>
+and then determine the resulting instantaneous voltage \(v(t)\) across the element.
+</p>
+<p>
+We choose current as our common reference because <strong>series circuits</strong> are the most fundamental AC configuration, where every element carries the exact same current.
+</p>
+</section>
+<section>
+<h2>Pure Resistive Circuit (AC through R)</h2>
+<p>
+Consider an AC source connected across a pure resistor \(R\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\).
+</p>
+<p>
+For a resistor, Ohm's law holds at every instant, so the voltage across it is:
+</p>
+\[
+v_R(t) = i(t)\,R = I_p R\sin(\omega t) = V_p\sin(\omega t)
+\]
+<p>
+Comparing amplitudes gives the peak and RMS relations across the resistor:
+</p>
+\[
+V_p = I_p R, \qquad V_{\text{rms}} = I_{\text{rms}} R
+\]
+<p>
+<strong>Phase difference:</strong> Comparing \(v_R(t) = V_p\sin(\omega t)\) with \(i(t) = I_p\sin(\omega t)\), the voltage across the resistor and the current through it are <strong>in phase</strong>:
+</p>
+\[
+\Delta\phi = \phi_v - \phi_i = 0
+\]
+<div class="insightbox">
+A resistor behaves identically in DC and AC — its opposition \(R\) is independent of frequency, and it introduces zero phase shift.<br>
+It serves as the baseline reference element against which inductors and capacitors are compared.
+</div>
+</section>
+<section>
+<h2>Pure Inductive Circuit (AC through L)</h2>
+<p>
+Consider an AC source connected across a pure inductor \(L\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\).
+</p>
+<p>
+By Faraday's law of electromagnetic induction, the potential difference across an ideal inductor opposes the rate of change of current:
+</p>
+\[
+v_L(t) = L\frac{di}{dt} = L\frac{d}{dt}\big(I_p\sin\omega t\big) = I_p(\omega L)\cos(\omega t)
+\]
+<p>
+Applying the sine-shifting rotation \(\cos(\omega t) = \sin(\omega t + 90^\circ)\) to write \(v_L(t)\) in standard form:
+</p>
+\[
+v_L(t) = V_p\sin(\omega t + 90^\circ), \qquad \text{where } V_p = I_p(\omega L)
+\]
+<p>
+The quantity \(\omega L\) plays the role of effective opposition to AC current and is called <strong>inductive reactance</strong> (\(X_L\)):
+</p>
+\[
+X_L = \omega L = 2\pi f L \quad (\text{unit: } \Omega)
+\]
+<p>
+Thus, the peak and RMS voltage-current relations across the inductor are:
+</p>
+\[
+V_p = I_p X_L, \qquad V_{\text{rms}} = I_{\text{rms}} X_L
+\]
+<p>
+<strong>Phase difference:</strong> Comparing \(v_L(t) = V_p\sin(\omega t + 90^\circ)\) with \(i(t) = I_p\sin(\omega t)\), the voltage across a pure inductor <strong>leads</strong> the current by \(90^\circ\) (or current lags voltage by \(90^\circ\)):
+</p>
+\[
+\Delta\phi = \phi_v - \phi_i = +90^\circ = +\frac{\pi}{2}
+\]
+<div class="insightbox">
+<strong>Frequency Behaviour of an Inductor:</strong> Since \(X_L = 2\pi f L\), inductive opposition increases linearly with frequency.<br>
+For steady DC (\(f = 0\)), \(X_L = 0\) — an ideal inductor offers zero opposition to steady DC (acts as a short circuit), whereas it strongly opposes high-frequency AC.
+</div>
+</section>
+<section>
+<h2>Pure Capacitive Circuit (AC through C)</h2>
+<p>
+Consider an AC source connected across a pure capacitor \(C\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\).
+</p>
+<p>
+Since \(i(t) = dq/dt\), the instantaneous charge \(q(t)\) on the capacitor plates in the steady AC state (zero DC offset) is found by integrating \(i(t)\):
+</p>
+\[
+q(t) = \int i(t)\,dt = \int I_p\sin(\omega t)\,dt = -\frac{I_p}{\omega}\cos(\omega t)
+\]
+<p>
+Using \(v_C(t) = q(t)/C\), the instantaneous voltage across the capacitor is:
+</p>
+\[
+v_C(t) = -I_p\left(\frac{1}{\omega C}\right)\cos(\omega t)
+\]
+<p>
+Applying the sine-shifting rotation \(-\cos(\omega t) = \sin(\omega t - 90^\circ)\) to convert \(v_C(t)\) into standard form:
+</p>
+\[
+v_C(t) = V_p\sin(\omega t - 90^\circ), \qquad \text{where } V_p = I_p\left(\frac{1}{\omega C}\right)
+\]
+<p>
+The quantity \(1/(\omega C)\) measures the capacitor's opposition to AC current and is called <strong>capacitive reactance</strong> (\(X_C\)):
+</p>
+\[
+X_C = \frac{1}{\omega C} = \frac{1}{2\pi f C} \quad (\text{unit: } \Omega)
+\]
+<p>
+Thus, the peak and RMS voltage-current relations across the capacitor are:
+</p>
+\[
+V_p = I_p X_C, \qquad V_{\text{rms}} = I_{\text{rms}} X_C
+\]
+<p>
+<strong>Phase difference:</strong> Comparing \(v_C(t) = V_p\sin(\omega t - 90^\circ)\) with \(i(t) = I_p\sin(\omega t)\), the voltage across a pure capacitor <strong>lags</strong> the current by \(90^\circ\) (or current leads voltage by \(90^\circ\)):
+</p>
+\[
+\Delta\phi = \phi_v - \phi_i = -90^\circ = -\frac{\pi}{2}
+\]
+<div class="insightbox">
+<strong>Frequency Behaviour of a Capacitor:</strong> Since \(X_C = 1/(2\pi f C)\), capacitive opposition is inversely proportional to frequency.<br>
+For steady DC (\(f \to 0\)), \(X_C \to \infty\) — a capacitor blocks steady DC (acts as an open circuit), whereas it easily passes high-frequency AC.
+</div>
+</section>
+<section>
+<h2>Summary Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Opposition</th>
+<th>\(V\text{--}I\) Relation</th>
+<th>Phase Difference (\(\Delta\phi = \phi_v - \phi_i\))</th>
+<th>DC Limit (\(f = 0\))</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resistor (\(R\))</td>
+<td>\(R\)</td>
+<td>\(V_p = I_p R\)</td>
+<td>\(0^\circ\) (in phase)</td>
+<td>\(R\) (unchanged)</td>
+</tr>
+<tr>
+<td>Inductor (\(L\))</td>
+<td>\(X_L = \omega L\)</td>
+<td>\(V_p = I_p X_L\)</td>
+<td>\(+90^\circ\) (\(v\) leads \(i\))</td>
+<td>\(X_L = 0\) (short circuit)</td>
+</tr>
+<tr>
+<td>Capacitor (\(C\))</td>
+<td>\(X_C = \dfrac{1}{\omega C}\)</td>
+<td>\(V_p = I_p X_C\)</td>
+<td>\(-90^\circ\) (\(v\) lags \(i\))</td>
+<td>\(X_C \to \infty\) (open circuit)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
