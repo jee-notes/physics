@@ -21,90 +21,191 @@ Sinusoidal voltages, impedance, resonance — and how power travels across conti
 <section>
 <h2>Conceptual Overview</h2>
 <p>
-So far, under the chapter of <strong>Current Electricity</strong>, we have studied an electric circuit as a system involving the transfer, storage, and conversion of electromagnetic energy. We studied electrical components such as resistors, capacitors, and inductors connected in a circuit, along with a battery that supplies or absorbs electrical energy by converting it to or from chemical energy.
+So far, under the chapter of <strong>Current Electricity</strong>, we have studied an electric circuit as a system involving the transfer, storage, and conversion of electromagnetic energy.
 </p>
 <p>
-The chemical cells that we studied have fixed polarity due to the chemicals physically present at their respective electrodes. This chemical arrangement is physically fixed within the cell, so the cell has fixed terminal polarity. Consequently, chemical cells act as sources of <strong>direct current (DC)</strong> power.
+We studied electrical components such as resistors, capacitors, and inductors connected in a circuit, along with a battery that supplies or absorbs electrical energy by converting it to or from chemical energy.
 </p>
 <p>
-Once <strong>electromagnetic induction</strong> was understood, electrical power could also be generated using generators that convert mechanical energy into electrical energy.
+The chemical cells that we studied have fixed polarity due to the chemicals physically present at their respective electrodes. Because this chemical arrangement is fixed within the cell, the cell maintains a fixed terminal polarity and acts as a source of <strong>direct current (DC)</strong> power.
+</p>
+<p>
+Once <strong>electromagnetic induction (EMI)</strong> was understood, electrical power could also be generated using generators that convert mechanical energy into electrical energy.
 </p>
 <p>
 In an AC generator, a coil rotates inside a magnetic field. As the coil rotates, the induced EMF reverses polarity after every half-cycle. When connected to an external circuit, this alternating EMF drives an <strong>alternating current (AC)</strong>, which periodically reverses its direction.
 </p>
 <p>
-Electrical power generation using electromagnetic induction could now be carried out on a massive scale to electrify cities and countries.
+Electrical power generation using electromagnetic induction could now be carried out on a massive scale to electrify entire cities and countries.
 </p>
 <p>
-However, large-scale power generation is often best suited to locations determined by the availability of natural resources and other geographical conditions, such as hydroelectric dams or coal supply sites. These locations may be far from residential and industrial centres where the generated electricity is actually consumed.
+However, large-scale power generation is often best suited to locations determined by natural resources and geography — such as hydroelectric dams or coal supply sites — which may be far from the residential and industrial centres where the generated electricity is actually consumed.
 </p>
 <p>
-This geographical separation between power generation and consumption led to a three-stage model of electric power economics:
+This geographical separation between generation and consumption led to a three-stage model of electric power economics:
 </p>
 <ul class="model-box">
-<li><strong>power generation</strong> (at suitable supply locations)</li>
-<li><strong>power transmission</strong> (over long distances using high-voltage transmission lines)</li>
-<li><strong>power consumption</strong> (near residential and industrial centres)</li>
+<li><strong>Power generation</strong> (at suitable resource and supply locations)</li>
+<li><strong>Power transmission</strong> (over long distances using high-voltage transmission lines)</li>
+<li><strong>Power consumption</strong> (near residential and industrial centres)</li>
 </ul>
 <p>
-The widespread use of <strong>alternating current (AC)</strong> in electrical power systems is largely because of the transformer. In conventional AC power networks, the supplied voltage varies sinusoidally with time, alternating between positive and negative values at a fixed frequency (50 Hz in India).
+The widespread adoption of <strong>alternating current (AC)</strong> in electrical power systems is largely due to the transformer. In conventional AC power networks, the supplied voltage varies sinusoidally with time, alternating between positive and negative values at a fixed frequency (\(50\text{ Hz}\) in India).
 </p>
 <p>
-Operating on the principle of electromagnetic induction, transformers can step voltage up or down with high efficiency. For a given power transmission, increasing the voltage reduces the current, thereby minimising heat losses in transmission lines, which are proportional to \(I^2R\).
+Operating on the principle of electromagnetic induction, transformers can step voltage up or down with high efficiency. For a given transmitted power, stepping up the voltage reduces the current, thereby minimizing resistive heat losses in transmission lines, which scale as \(I^2R\).
 </p>
 <p>
-At the receiving end, transformers step the voltage down to levels suitable for local distribution and consumption.
+At the receiving end, transformers step the voltage back down to levels safe and suitable for local distribution and consumption.
 </p>
 </section>
 <section>
-<h2>The AC Source</h2>
+<h2>Electrical Machines</h2>
 <p>
-An AC generator produces a sinusoidal EMF. The instantaneous voltage is:
+From the perspective of science and technology, the central significance of this chapter lies in mainstream commercial electrical machines.
+</p>
+<p>
+Before electromagnetic induction, the use of electricity was confined to a privileged section of society relying on chemical cells. After EMI, electricity became a large-scale utility—arguably the foundational industry of modern nations, where a country's economic development became directly tied to its electrification.
+</p>
+<p>
+All three major electrical machines—<strong>generators</strong>, <strong>transformers</strong>, and <strong>motors</strong> — operate on the principles of electromagnetic induction. In that sense, Alternating Current represents the single largest practical application of EMI, as all three machines are built around AC power.
+</p>
+<p>
+In our syllabus, only the generator and the transformer are introduced at a foundational level; these machines are studied in great detail in electrical engineering.
+</p>
+<p>
+We begin with electric power generation. An AC generator produces a sinusoidal EMF whose instantaneous voltage is:
 </p>
 \[
-v(t) = V_0 \sin(\omega t + \phi)
+v(t) = V_p \sin(\omega t + \phi_v)
 \]
 <p>
-where \( V_0 \) is the peak voltage, \( \omega = 2\pi f \) is the angular frequency, and \( \phi \) is the initial phase. The same sinusoidal form applies to the current \( i(t) = I_0\sin(\omega t + \phi') \), but with (in general) a different phase \( \phi' \) — the phase difference \( \phi - \phi' \) depends on the circuit elements.
+where \(V_p\) is the peak voltage and \(\omega = 2\pi f\) is the angular frequency.
+</p>
+<p>
+When such a voltage source is connected in an electric circuit along with passive components such as a resistor, inductor, or capacitor, the resulting steady-state current is also alternating and sinusoidal:
+</p>
+\[
+i(t) = I_p \sin(\omega t + \phi_i)
+\]
+<p>
+However, a <strong>phase difference</strong> \(\Delta\phi = \phi_v - \phi_i\) develops between the voltage and the current — and both this phase difference and the peak current \(I_p\) depend on the circuit elements (\(R\), \(L\), and \(C\)) and the source frequency.
+</p>
+<p>
+In this chapter, we focus primarily on the circuit analysis of AC networks in terms of their \(V\text{--}I\) characteristics and power interactions, concluding with the working theory of transformers once our circuit foundation is complete.
+</p>
+</section>
+<section>
+<h2>Mathematical Tools</h2>
+<p>
+The mathematical tools introduced in this chapter—such as <strong>average value</strong>, <strong>RMS value</strong>, and <strong>phasors</strong>—are fundamental to analyzing physical quantities governed by trigonometric functions.
+</p>
+<p>
+Such smooth, continuous, oscillating physical quantities are called <strong>sinusoids</strong>.
+</p>
+<p>
+Physically, we deal exclusively with sine and cosine functions because they remain periodic and strictly bounded within a finite range (\([-1, 1]\)) for any value of the angle (\(-\infty \lt \theta \lt +\infty\)), without ever blowing up to infinity.
+</p>
+<p>
+To add, compare and compute power interactions of these oscillating quantities efficiently, we develop dedicated mathematical methods in this chapter.
+</p>
+<p>
+These same tools carry directly forward into later topics such as <strong>Electromagnetic Waves</strong> and <strong>Wave Optics</strong>.
+</p>
+<p>
+In terms of its underlying mathematics, Alternating Current is the direct electrical counterpart of <strong>Simple Harmonic Motion (SHM)</strong> and <strong>mechanical waves</strong> from the mechanics unit.
 </p>
 </section>
 <section>
 <h2>Impedance — The AC Analogue of Resistance</h2>
 <p>
-In a DC circuit, Ohm's Law relates voltage, current, and resistance: \( V = IR \). In an AC circuit, resistors, inductors, and capacitors all oppose current, but with important differences. The generalised opposition is called <strong>impedance</strong> \( Z \):
+In a steady-state DC circuit, Ohm's Law relates the voltage across a resistor (\(R\)) to the current through it as \(V = IR\).
 </p>
-\[
-V_0 = I_0 Z, \quad Z = \sqrt{R^2 + (X_L - X_C)^2}
-\]
 <p>
-where \( X_L = \omega L \) is the inductive reactance and \( X_C = 1/(\omega C) \) is the capacitive reactance. Impedance depends on frequency — making AC circuits fundamentally frequency-dependent in a way DC circuits are not.
+Meanwhile, an ideal capacitor and an ideal inductor have no such proportionality — in steady DC, they behave purely as an <strong>open circuit</strong> and a <strong>short circuit</strong> respectively, irrespective of their capacitance (\(C\)) or inductance (\(L\)) values.
 </p>
-</section>
-<section>
-<h2>Resonance</h2>
 <p>
-In a series RLC circuit, there exists a special frequency \( \omega_0 \) at which the inductive and capacitive reactances exactly cancel:
+In an AC circuit, however, a resistor, an inductor, and a capacitor all obey an Ohm's-law-like proportionality between their voltage and current amplitudes — though not in the exact same way as a resistor, because inductors and capacitors also introduce a \(90^\circ\) phase shift:
 </p>
-\[
-\omega_0 = \frac{1}{\sqrt{LC}}
-\]
-<p>
-At this resonant frequency, the impedance is purely resistive (\( Z = R \)), the current is maximum, and the phase difference between voltage and current is zero. Resonance is the basis of radio tuning, signal filters, and oscillators.
-</p>
-</section>
-<section>
-<h2>Core Topics</h2>
 <ul class="model-box">
-<li><strong>AC Quantities</strong> — Instantaneous, peak, and RMS values; phase and angular frequency.
-</li>
-<li><strong>Phasor Representation</strong> — Rotating vectors to visualise amplitude and phase
-relationships.</li>
-<li><strong>Pure R, L, C Circuits</strong> — Individual behaviour; reactance; phase relationships.</li>
-<li><strong>Series RLC Circuit</strong> — Impedance triangle, phase angle, and phasor diagram.</li>
-<li><strong>Resonance</strong> — Resonant frequency, bandwidth, and quality factor \( Q \).</li>
-<li><strong>Power in AC</strong> — Instantaneous, average, reactive power; power factor.</li>
-<li><strong>Transformers</strong> — Ideal transformer equations; AC power transmission.</li>
+<li><strong>Resistor (\(R\)):</strong> Behaves identically to DC, with \(V_R = I_R R\) (and instantaneous \(v_R = i_R R\)).</li>
+<li><strong>Inductor (\(L\)):</strong> Offers <strong>inductive reactance</strong> (\(X_L = \omega L\)), relating its peak (or RMS) voltage and current as \(V_L = I_L X_L\).</li>
+<li><strong>Capacitor (\(C\)):</strong> Offers <strong>capacitive reactance</strong> (\(X_C = \dfrac{1}{\omega C}\)), relating its peak (or RMS) voltage and current as \(V_C = I_C X_C\).</li>
 </ul>
+<p>
+When \(R\), \(L\), and \(C\) are combined in series, their individual oppositions combine vectorially (due to their phase differences) into a single generalized opposition called <strong>impedance</strong> (\(Z\)):
+</p>
+\[
+V_p = I_p Z, \qquad Z = \sqrt{R^2 + (X_L - X_C)^2}
+\]
+<p>
+Because \(X_L = \omega L\) and \(X_C = \dfrac{1}{\omega C}\) both vary with angular frequency \(\omega\), impedance is inherently <strong>frequency-dependent</strong> — making AC circuits respond to frequency in a way DC circuits never do.
+</p>
+</section>
+<section>
+<h2>Power Dynamics</h2>
+<p>
+This is the central theme of the chapter — why do we study all of these tools?
+</p>
+<p>
+Historically, there was a famous debate between AC and DC for powering the electric economy (the "War of the Currents"), and AC emerged as the undisputed winner.
+</p>
+<p>
+In a steady-state DC circuit, neither capacitors (\(I = 0\)) nor ideal inductors (\(V = 0\)) participate in continuous power transfer — we model bulbs and practical loads simply as pure resistors.
+</p>
+<p>
+In reality, however, almost all commercial electric power systems operate on AC, where inductors and capacitors play an active role in regulating, filtering, and controlling energy flow without wasting energy as heat.
+</p>
+<p>
+The most critical power phenomenon in AC circuits is <strong>resonance</strong>.
+</p>
+<p>
+In a series \(RLC\) circuit, there exists a specific angular frequency \(\omega_r\) at which the inductive and capacitive reactances exactly cancel (\(X_L = X_C\)):
+</p>
+\[
+\omega_r = \frac{1}{\sqrt{LC}}
+\]
+<p>
+At this resonant frequency, the circuit impedance drops to its purely resistive minimum (\(Z = R\)), the phase difference between voltage and current becomes zero (\(\Delta\phi = 0, \, \cos\phi = 1\)), and both the current and the average power transferred from the source to the load reach their <strong>maximum</strong>.
+</p>
+<p>
+Resonance forms the physical basis of radio tuning, signal filters, and electronic oscillators.
+</p>
+<h3>Wattless Current</h3>
+<p>
+In an AC circuit with a phase difference \(\phi\), the total current can be resolved into an active component (\(I_{\text{rms}}\cos\phi\)) that transfers useful average power, and a reactive component (\(I_{\text{rms}}\sin\phi\)) that oscillates energy back and forth without contributing any net energy transfer to the load.
+</p>
+<p>
+This reactive component is called <strong>wattless current</strong>.
+</p>
+<p>
+Even though it delivers zero net power to the load, it still flows through the connecting wires and causes real \(I^2R\) Joule heating losses in transmission lines — which is why minimizing wattless current (power factor correction) is vital in commercial power distribution.
+</p>
+<h3>Q Factor</h3>
+<p>
+The <strong>Quality Factor (\(Q\))</strong> characterizes the sharpness of resonance by comparing the resonant frequency to the circuit's bandwidth (\(Q = \omega_r / \Delta\omega\)) — measuring how selectively the circuit concentrates power transfer around \(\omega_r\) while minimizing resistive energy loss.
+</p>
+</section>
+<section>
+<h2>Transformer</h2>
+<p>
+The transformer ultimately settled the debate between AC and DC for large-scale electric power economics.
+</p>
+<p>
+A central challenge in power economics was transmitting electrical energy over long distances through conducting cables, where dissipative \(I^2R\) Joule heating losses severely reduced the efficiency of the power system.
+</p>
+<p>
+A <strong>transformer</strong> couples two electrically isolated circuits through a shared alternating magnetic flux, enabling electrical power to be transferred from one circuit to another without any direct metallic connection.
+</p>
+<p>
+The transformer works on the principle of mutual inductance.
+</p>
+<p>
+In an ideal transformer, the same average power (\(P = V_{\text{rms}} I_{\text{rms}}\cos\phi\)) is transferred from the primary coil to the secondary coil—meaning stepping up the voltage proportionally steps down the current.
+</p>
+<p>
+Consequently, at the generating station, voltage is raised using a <strong>step-up transformer</strong> so that long-distance transmission occurs at low current (minimizing \(I^2R\) line losses), and near the consumer end, voltage is lowered using a <strong>step-down transformer</strong> for safe local distribution.
+</p>
 </section>
 <section>
 <h2>Chapter Structure</h2>

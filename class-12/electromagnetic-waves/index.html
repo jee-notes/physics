@@ -1,116 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electromagnetic Waves | JEE Physics Notes</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electromagnetic Waves | JEE Physics Notes</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="../../index.html" class="back-btn">
-                <span>&larr;</span> Back to Syllabus
-            </a>
-        </nav>
+<div class="container">
+<nav class="top-nav">
+<a href="../../index.html" class="back-btn">
+<span>&larr;</span> Back to Syllabus
+</a>
+</nav>
+<h1>Electromagnetic Waves</h1>
+<p class="subtitle">
+Oscillating electric and magnetic fields travelling through space — light and radiation.
+</p>
+<section>
+<h2>Conceptual Overview</h2>
+<p>
+In 1865, James Clerk Maxwell unified electricity and magnetism into a single coherent theory.
+</p>
+<p>
+His equations predicted something remarkable: a changing electric field produces a changing magnetic field, which in turn produces a changing electric field — a self-sustaining oscillation that propagates through empty space as a wave.
+</p>
+<p>
+He calculated the speed of this wave and found it exactly matched the measured speed of light.
+</p>
+<p>
+Light, he concluded, is an electromagnetic wave.
+</p>
+<p>
+This was one of the greatest intellectual achievements in the history of physics.
+</p>
+<p>
+Maxwell's prediction was confirmed experimentally by Heinrich Hertz in 1888, who generated and detected radio waves in the laboratory.
+</p>
+</section>
+<section>
+<h2>The Missing Link — Displacement Current</h2>
+<p>
+Maxwell noticed an inconsistency in Ampere's Law: it only accounted for current due to moving charges, but not for the changing electric field in regions like the gap of a charging capacitor.
+</p>
+<p>
+He added a term — the <strong>displacement current</strong> — to fix this:
+</p>
+\[
+I_d = \varepsilon_0 \frac{d\Phi_E}{dt}
+\]
+<p>
+The modified Ampere's Law, with displacement current included, now reads:
+</p>
+\[
+\oint \vec{B} \cdot d\vec{l} = \mu_0 \left(I + I_d\right) = \mu_0 \left(I +\varepsilon_0\frac{d\Phi_E}{dt}\right)
+\]
+<p>
+This addition made the equations symmetric: a changing \( \vec{B} \) produces \( \vec{E} \) (Faraday), and a changing \( \vec{E} \) produces \( \vec{B} \) (modified Ampere). 
+</p>
+<p>
+Together, they predict self-propagating EM waves.
+</p>
+</section>
+<section>
+<h2>Speed of Electromagnetic Waves</h2>
+<p>
+From Maxwell's equations, the speed of electromagnetic waves in free space is:
+</p>
+\[
+c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} = 3 \times 10^8 \text{ m/s}
+\]
+<p>
+This is one of the most important constants in physics. In a medium of permittivity \( \varepsilon = K\varepsilon_0 \) and permeability \( \mu = \mu_r\mu_0 \):
+</p>
+\[
+v = \frac{1}{\sqrt{\mu\varepsilon}} = \frac{c}{\sqrt{K\mu_r}} = \frac{c}{n}
+\]
+<p>
+where \( n = \sqrt{K\mu_r} \) is the refractive index of the medium.
+</p>
+</section>
+<section>
+<h2>Core Topics</h2>
+<ul class="model-box">
+<li><strong>Displacement Current</strong> — Maxwell's correction to Ampere's Law; continuity of current through a capacitor gap.</li>
+<li><strong>Maxwell's Equations</strong> — The four laws that completely describe classical electromagnetism.</li>
+<li><strong>EM Wave Properties</strong> — Transverse nature, speed, energy, intensity, momentum, and radiation pressure.</li>
+<li><strong>The EM Spectrum</strong> — Classification from radio waves through gamma rays; wavelength, frequency, sources, and uses.</li>
+</ul>
+</section>
+<section>
+<h2>Chapter Structure</h2>
+<div class="chapter-list">
+<a href="./01-maxwells-equations.html">1. Maxwell's Equations</a>
+<a href="./02-em-wave-properties.html">2. Nature and Properties of EM Waves</a>
+<a href="./03-em-spectrum.html">3. The Electromagnetic Spectrum</a>
+</div>
+</section>
 
-        <h1>Electromagnetic Waves</h1>
-        <p class="subtitle">
-            Oscillating electric and magnetic fields travelling through space — light, radio, X-rays, and everything in
-            between.
-        </p>
-
-        <section>
-            <h2>Conceptual Overview</h2>
-            <p>
-                In 1865, James Clerk Maxwell unified electricity and magnetism into a single coherent theory. His
-                equations predicted something remarkable: a changing electric field produces a changing magnetic field,
-                which in turn produces a changing electric field — a self-sustaining oscillation that propagates through
-                empty space as a wave. He calculated the speed of this wave and found it exactly matched the measured
-                speed of light. Light, he concluded, is an electromagnetic wave.
-            </p>
-            <p>
-                This was one of the greatest intellectual achievements in the history of physics. Maxwell's prediction
-                was confirmed experimentally by Heinrich Hertz in 1888, who generated and detected radio waves in the
-                laboratory.
-            </p>
-        </section>
-
-        <section>
-            <h2>The Missing Link — Displacement Current</h2>
-            <p>
-                Maxwell noticed an inconsistency in Ampere's Law: it only accounted for current due to moving charges,
-                but not for the changing electric field in regions like the gap of a charging capacitor. He added a term
-                — the <strong>displacement current</strong> — to fix this:
-            </p>
-            \[
-            I_d = \varepsilon_0 \frac{d\Phi_E}{dt}
-            \]
-            <p>
-                The modified Ampere's Law, with displacement current included, now reads:
-            </p>
-            \[
-            \oint \vec{B} \cdot d\vec{l} = \mu_0 \left(I + I_d\right) = \mu_0 \left(I +
-            \varepsilon_0\frac{d\Phi_E}{dt}\right)
-            \]
-            <p>
-                This addition made the equations symmetric: a changing \( \vec{B} \) produces \( \vec{E} \) (Faraday),
-                and a changing \( \vec{E} \) produces \( \vec{B} \) (modified Ampere). Together, they predict
-                self-propagating EM waves.
-            </p>
-        </section>
-
-        <section>
-            <h2>Speed of Electromagnetic Waves</h2>
-            <p>
-                From Maxwell's equations, the speed of electromagnetic waves in free space is:
-            </p>
-            \[
-            c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} = 3 \times 10^8 \text{ m/s}
-            \]
-            <p>
-                This is one of the most important constants in physics. In a medium of permittivity \( \varepsilon =
-                K\varepsilon_0 \) and permeability \( \mu = \mu_r\mu_0 \):
-            </p>
-            \[
-            v = \frac{1}{\sqrt{\mu\varepsilon}} = \frac{c}{\sqrt{K\mu_r}} = \frac{c}{n}
-            \]
-            <p>
-                where \( n = \sqrt{K\mu_r} \) is the refractive index of the medium.
-            </p>
-        </section>
-
-        <section>
-            <h2>Core Topics</h2>
-            <ul class="points-list">
-                <li><strong>Displacement Current</strong> — Maxwell's correction to Ampere's Law; continuity of current
-                    through a capacitor gap.</li>
-                <li><strong>Maxwell's Equations</strong> — The four laws that completely describe classical
-                    electromagnetism.</li>
-                <li><strong>EM Wave Properties</strong> — Transverse nature, speed, energy, intensity, momentum, and
-                    radiation pressure.</li>
-                <li><strong>The EM Spectrum</strong> — Classification from radio waves through gamma rays; wavelength,
-                    frequency, sources, and uses.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Chapter Structure</h2>
-            <div class="chapter-list">
-                <a href="./01-maxwells-equations.html">1. Maxwell's Equations and Displacement Current</a>
-                <a href="./02-em-wave-properties.html">2. Nature and Properties of EM Waves</a>
-                <a href="./03-em-spectrum.html">3. The Electromagnetic Spectrum</a>
-            </div>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
 
 </html>

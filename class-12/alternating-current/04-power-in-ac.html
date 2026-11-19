@@ -1,160 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternating Current | Power in AC Circuits</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/math.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power in AC Circuits | Alternating Current</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
 </head>
-
 <body>
-    <div class="container">
-        <nav class="top-nav">
-            <a href="./index.html" class="back-btn">
-                <span>&larr;</span> Back to Alternating Current
-            </a>
-        </nav>
-
-        <h1>Power in AC Circuits</h1>
-        <p class="subtitle">
-            Instantaneous, average, and reactive power — and the crucial role of power factor.
-        </p>
-
-        <section>
-            <h2>Instantaneous Power</h2>
-            <p>
-                If voltage and current are \( v = V_0\sin(\omega t) \) and \( i = I_0\sin(\omega t - \phi) \), the
-                instantaneous power is:
-            </p>
-            \[
-            p(t) = v\cdot i = V_0 I_0\sin(\omega t)\sin(\omega t - \phi)
-            \]
-            <p>
-                Using the product-to-sum identity:
-            </p>
-            \[
-            p(t) = \frac{V_0 I_0}{2}[\cos\phi - \cos(2\omega t - \phi)]
-            \]
-            <p>
-                This oscillates at twice the supply frequency. The second term averages to zero over a full cycle.
-            </p>
-        </section>
-
-        <section>
-            <h2>Average Power</h2>
-            <p>
-                The average of the oscillating term over a cycle is zero. The average power is:
-            </p>
-            \[
-            P_{\text{avg}} = \frac{V_0 I_0}{2}\cos\phi = V_{\text{rms}} I_{\text{rms}}\cos\phi
-            \]
-            \[
-            \boxed{P = V_{\text{rms}} I_{\text{rms}}\cos\phi}
-            \]
-            <p>
-                where \( \phi \) is the phase angle between voltage and current.
-            </p>
-            <div class="insightbox">
-                The factor \( \cos\phi \) is called the <strong>power factor</strong>. It is dimensionless and lies
-                between 0 and 1. Only the resistive part of the circuit dissipates energy — purely reactive elements
-                (ideal L and C) consume zero average power.
-            </div>
-        </section>
-
-        <section>
-            <h2>Power Factor</h2>
-            <p>
-                The <strong>power factor</strong> \( \cos\phi \) indicates what fraction of the apparent power is
-                actually consumed:
-            </p>
-            \[
-            \cos\phi = \frac{R}{Z}
-            \]
-            <ul>
-                <li><strong>Pure resistance</strong> (\( \phi = 0 \)): \( \cos\phi = 1 \) — all apparent power is
-                    consumed.</li>
-                <li><strong>Pure inductance or capacitance</strong> (\( \phi = \pm 90° \)): \( \cos\phi = 0 \) — zero
-                    average power dissipated.</li>
-                <li><strong>Series RLC at resonance</strong> (\( \phi = 0 \)): \( \cos\phi = 1 \) — maximum power,
-                    purely resistive.</li>
-            </ul>
-            <p>
-                For a general series RLC circuit, since \( Z\cos\phi = R \):
-            </p>
-            \[
-            P = I_{\text{rms}}^2 R = I_{\text{rms}}^2 Z\cos\phi = V_{\text{rms}} I_{\text{rms}}\cos\phi
-            \]
-            <p>
-                All three forms are equivalent and useful depending on what is given.
-            </p>
-        </section>
-
-        <section>
-            <h2>Apparent, Active, and Reactive Power</h2>
-            <div class="model-box">
-                <table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
-                    <thead>
-                        <tr style="border-bottom:2px solid #e0e0e0;">
-                            <th style="text-align:left; padding:8px;">Type</th>
-                            <th style="text-align:left; padding:8px;">Symbol</th>
-                            <th style="text-align:left; padding:8px;">Formula</th>
-                            <th style="text-align:left; padding:8px;">Unit</th>
-                            <th style="text-align:left; padding:8px;">Meaning</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="padding:8px;">Apparent power</td>
-                            <td style="padding:8px;">\( S \)</td>
-                            <td style="padding:8px;">\( V_{\text{rms}}I_{\text{rms}} \)</td>
-                            <td style="padding:8px;">VA</td>
-                            <td style="padding:8px;">Total power supplied by source</td>
-                        </tr>
-                        <tr style="background:#fafafa;">
-                            <td style="padding:8px;">Active (real) power</td>
-                            <td style="padding:8px;">\( P \)</td>
-                            <td style="padding:8px;">\( S\cos\phi \)</td>
-                            <td style="padding:8px;">W</td>
-                            <td style="padding:8px;">Actually consumed (heat, work)</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:8px;">Reactive power</td>
-                            <td style="padding:8px;">\( Q \)</td>
-                            <td style="padding:8px;">\( S\sin\phi \)</td>
-                            <td style="padding:8px;">VAR</td>
-                            <td style="padding:8px;">Exchanged with L and C (not consumed)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p>
-                These form a right-angle power triangle: \( S^2 = P^2 + Q^2 \).
-            </p>
-        </section>
-
-        <section>
-            <h2>Wattless Current</h2>
-            <p>
-                The total current \( I_{\text{rms}} \) can be split into two components:
-            </p>
-            \[
-            I_{\text{rms}} = \underbrace{I_{\text{rms}}\cos\phi}_{\text{active (power) component}} +
-            \underbrace{I_{\text{rms}}\sin\phi}_{\text{reactive (wattless) component}}
-            \]
-            <p>
-                The <strong>wattless component</strong> \( I_{\text{rms}}\sin\phi \) is 90° out of phase with the
-                voltage — it carries no average power. For a purely inductive or capacitive load, the entire current is
-                wattless.
-            </p>
-        </section>
-
-        <footer>
-            <hr>
-            <p>By Hitendra K K</p>
-        </footer>
-    </div>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Alternating Current
+</a>
+</nav>
+<h1>Power in AC Circuits</h1>
+<p class="subtitle">
+Instantaneous, average, and reactive power — and the crucial role of power factor.
+</p>
+<section>
+<h2>Instantaneous Power</h2>
+<p>
+If voltage and current are \( v = V_0\sin(\omega t) \) and \( i = I_0\sin(\omega t - \phi) \), the
+instantaneous power is:
+</p>
+\[
+p(t) = v\cdot i = V_0 I_0\sin(\omega t)\sin(\omega t - \phi)
+\]
+<p>
+Using the product-to-sum identity:
+</p>
+\[
+p(t) = \frac{V_0 I_0}{2}[\cos\phi - \cos(2\omega t - \phi)]
+\]
+<p>
+This oscillates at twice the supply frequency. The second term averages to zero over a full cycle.
+</p>
+</section>
+<section>
+<h2>Average Power</h2>
+<p>
+The average of the oscillating term over a cycle is zero. The average power is:
+</p>
+\[
+P_{\text{avg}} = \frac{V_0 I_0}{2}\cos\phi = V_{\text{rms}} I_{\text{rms}}\cos\phi
+\]
+\[
+\boxed{P = V_{\text{rms}} I_{\text{rms}}\cos\phi}
+\]
+<p>
+where \( \phi \) is the phase angle between voltage and current.
+</p>
+<div class="insightbox">
+The factor \( \cos\phi \) is called the <strong>power factor</strong>. It is dimensionless and lies
+between 0 and 1. Only the resistive part of the circuit dissipates energy — purely reactive elements
+(ideal L and C) consume zero average power.
+</div>
+</section>
+<section>
+<h2>Power Factor</h2>
+<p>
+The <strong>power factor</strong> \( \cos\phi \) indicates what fraction of the apparent power is
+actually consumed:
+</p>
+\[
+\cos\phi = \frac{R}{Z}
+\]
+<ul>
+<li><strong>Pure resistance</strong> (\( \phi = 0 \)): \( \cos\phi = 1 \) — all apparent power is
+consumed.</li>
+<li><strong>Pure inductance or capacitance</strong> (\( \phi = \pm 90° \)): \( \cos\phi = 0 \) — zero
+average power dissipated.</li>
+<li><strong>Series RLC at resonance</strong> (\( \phi = 0 \)): \( \cos\phi = 1 \) — maximum power,
+purely resistive.</li>
+</ul>
+<p>
+For a general series RLC circuit, since \( Z\cos\phi = R \):
+</p>
+\[
+P = I_{\text{rms}}^2 R = I_{\text{rms}}^2 Z\cos\phi = V_{\text{rms}} I_{\text{rms}}\cos\phi
+\]
+<p>
+All three forms are equivalent and useful depending on what is given.
+</p>
+</section>
+<section>
+<h2>Apparent, Active, and Reactive Power</h2>
+<div class="model-box">
+<table style="width:100%; border-collapse:collapse; font-size:0.95rem;">
+<thead>
+<tr style="border-bottom:2px solid #e0e0e0;">
+<th style="text-align:left; padding:8px;">Type</th>
+<th style="text-align:left; padding:8px;">Symbol</th>
+<th style="text-align:left; padding:8px;">Formula</th>
+<th style="text-align:left; padding:8px;">Unit</th>
+<th style="text-align:left; padding:8px;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:8px;">Apparent power</td>
+<td style="padding:8px;">\( S \)</td>
+<td style="padding:8px;">\( V_{\text{rms}}I_{\text{rms}} \)</td>
+<td style="padding:8px;">VA</td>
+<td style="padding:8px;">Total power supplied by source</td>
+</tr>
+<tr style="background:#fafafa;">
+<td style="padding:8px;">Active (real) power</td>
+<td style="padding:8px;">\( P \)</td>
+<td style="padding:8px;">\( S\cos\phi \)</td>
+<td style="padding:8px;">W</td>
+<td style="padding:8px;">Actually consumed (heat, work)</td>
+</tr>
+<tr>
+<td style="padding:8px;">Reactive power</td>
+<td style="padding:8px;">\( Q \)</td>
+<td style="padding:8px;">\( S\sin\phi \)</td>
+<td style="padding:8px;">VAR</td>
+<td style="padding:8px;">Exchanged with L and C (not consumed)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>
+These form a right-angle power triangle: \( S^2 = P^2 + Q^2 \).
+</p>
+</section>
+<section>
+<h2>Wattless Current</h2>
+<p>
+The total current \( I_{\text{rms}} \) can be split into two components:
+</p>
+\[
+I_{\text{rms}} = \underbrace{I_{\text{rms}}\cos\phi}_{\text{active (power) component}} +
+\underbrace{I_{\text{rms}}\sin\phi}_{\text{reactive (wattless) component}}
+\]
+<p>
+The <strong>wattless component</strong> \( I_{\text{rms}}\sin\phi \) is 90° out of phase with the
+voltage — it carries no average power. For a purely inductive or capacitive load, the entire current is
+wattless.
+</p>
+</section>
+<section>
+<h2>Resonance</h2>
+<p>
+<strong>Resonance</strong> is a generic phenomenon that occurs whenever there is a periodic transfer of energy from a <strong>source</strong> to a <strong>receiver</strong>.
+</p>
+<p>
+It is the source that drives this transfer at a periodic frequency \(f_S\), while the receiver possesses its own natural (inherent) frequency \(f_R\) at which it prefers to absorb energy.
+</p>
+<p>
+The rate of energy transfer from the source to the receiver becomes <strong>maximum</strong> when the driving frequency matches the receiver's natural frequency (\(f_S = f_R\)).
+</p>
+<p>
+This condition of frequency matching, and the resulting sharp peak in response, is called <strong>resonance</strong>.
+</p>
+<ul class="model-box">
+<li>
+<strong>Pushing a Swing:</strong> A child on a swing has a natural frequency of oscillation \(f_R\) determined by the swing's length.<br>
+If a person pushes the swing periodically at that exact same frequency (\(f_S = f_R\)), every push acts in phase with the swing's motion—continuously pumping energy into it and building a large amplitude.<br>
+Pushing too fast or too slow causes pushes to fall out of step and occasionally oppose the motion.
+</li>
+<li>
+<strong>Teacher–Student Synchronization:</strong> Conceptually, effective teaching works the same way—when the teacher's pace of delivering ideas (\(f_S\)) matches the student's natural pace of absorbing and processing them (\(f_R\)), the transfer of understanding is maximum.<br>
+For example, if a teacher's concept-delivery frequency is \(10\text{ concepts/hour}\) while a student's absorption frequency is \(8\text{ concepts/hour}\), the student feels the class is moving too fast (and if \(f_S \lt f_R\), too slow).
+</li>
+</ul>
+<div class="insightbox">
+<strong>Connecting to AC Circuits:</strong> In a series \(RLC\) circuit, the AC generator acts as the <strong>source</strong> (driving at frequency \(f_S\)), while the \(LC\) tank acts as the <strong>receiver</strong> with its own natural oscillation frequency \(f_R = \dfrac{1}{2\pi\sqrt{LC}}\).<br>
+When \(f_S = f_R\), the circuit hits electrical resonance and draws maximum power from the source.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
 </body>
-
 </html>

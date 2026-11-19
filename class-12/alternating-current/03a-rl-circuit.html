@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RL circuit | R, L, C in AC Circuits</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./03-ac-circuits.html" class="back-btn">
+<span>&larr;</span> Back to R, L, C in AC Circuits
+</a>
+</nav>
+<h1>RL circuit</h1>
+<p class="subtitle">
+RL circuit and inductive impedance.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+We consider a resistor \(R\) and an inductor \(L\) connected in series across an alternating voltage source:
+</p>
+\[
+v_S(t) = V_p \sin(\omega t)
+\]
+<p>
+Our goal is to determine the steady-state AC current flowing through both components in series, as well as the instantaneous and peak potential differences across each individual component.
+</p>
+<p>
+We will also investigate the power dynamics of the circuit.
+</p>
+<p>
+Physically, a series \(RL\) circuit is realized by a <strong>choke coil</strong>—a coil formed by winding many turns of conducting wire to create an inductor.
+</p>
+<p>
+Because the conducting wire itself possesses finite electrical resistance, a real choke coil behaves electrically as an inductor \(L\) in series with a resistor \(R\).
+</p>
+<p>
+An <strong>ideal choke coil</strong> has zero winding resistance (\(R = 0\)).
+</p>
+</section>
+<section>
+<h2>Phasor Analysis and Impedance</h2>
+<p>
+Because the resistor and inductor are connected in series, the <strong>same instantaneous current</strong> flows through both elements. Let this steady-state current be:
+</p>
+\[
+i(t) = I_p \sin(\omega t - \phi)
+\]
+<p>
+where \(I_p\) is the peak current and \(\phi\) is the phase angle by which the source voltage leads the current (to be determined).
+</p>
+<p>
+Applying Kirchhoff's Voltage Law (KVL) around the loop at every instant (using the passive sign convention \(v = V_A - V_B\) across each element):
+</p>
+\[
+v_S(t) = v_R(t) + v_L(t)
+\]
+<p>
+From the individual \(V\text{--}I\) characteristics of \(R\) and \(L\) for a current of peak value \(I_p\):
+</p>
+<ul class="model-box">
+<li><strong>Voltage across \(R\):</strong> \(v_R(t) = V_{R,p}\sin(\omega t - \phi)\), where \(V_{R,p} = I_p R\) (<strong>in phase</strong> with \(i(t)\)).</li>
+<li><strong>Voltage across \(L\):</strong> \(v_L(t) = V_{L,p}\sin(\omega t - \phi + 90^\circ)\), where \(V_{L,p} = I_p X_L = I_p(\omega L)\) (<strong>leads</strong> \(i(t)\) by \(90^\circ\)).</li>
+</ul>
+<p>
+In the phasor plane, taking the current phasor \(\vec{I}\) as our reference direction:
+</p>
+<ul class="model-box">
+<li>The resistive voltage phasor \(\vec{V}_R\) points along \(\vec{I}\) with magnitude \(V_{R,p} = I_p R\).</li>
+<li>The inductive voltage phasor \(\vec{V}_L\) points \(90^\circ\) anticlockwise from \(\vec{I}\) with magnitude \(V_{L,p} = I_p X_L\).</li>
+</ul>
+<p>
+Since \(\vec{V}_R\) and \(\vec{V}_L\) are mutually perpendicular, the resultant source voltage phasor \(\vec{V}_S = \vec{V}_R + \vec{V}_L\) has peak magnitude:
+</p>
+\[
+V_p = \sqrt{V_{R,p}^2 + V_{L,p}^2} = \sqrt{(I_p R)^2 + (I_p X_L)^2} = I_p \sqrt{R^2 + X_L^2}
+\]
+<p>
+Defining the <strong>inductive impedance</strong> \(Z\) of the series \(RL\) circuit as the total effective opposition to AC current:
+</p>
+\[
+\boxed{Z = \sqrt{R^2 + X_L^2} = \sqrt{R^2 + (\omega L)^2}} \quad (\text{unit: } \Omega)
+\]
+<p>
+so that Ohm's law for peak and RMS values takes the compact form:
+</p>
+\[
+V_p = I_p Z, \qquad V_{\text{rms}} = I_{\text{rms}} Z
+\]
+<div class="insightbox">
+<strong>Why Peak Voltages Do Not Add Algebraically:</strong><br>
+At every instant, \(v_S(t) = v_R(t) + v_L(t)\) holds strictly. However, because \(v_R(t)\) and \(v_L(t)\) are \(90^\circ\) out of phase, they never reach their peaks at the same instant—so \(V_p \neq V_{R,p} + V_{L,p}\), and instead \(V_p = \sqrt{V_{R,p}^2 + V_{L,p}^2} \lt V_{R,p} + V_{L,p}\).
+</div>
+</section>
+<section>
+<h2>Current and Component Voltages</h2>
+<p>
+From the right-angled voltage phasor triangle, the angle \(\phi\) by which \(\vec{V}_S\) leads \(\vec{I}\) is given by:
+</p>
+\[
+\tan\phi = \frac{V_{L,p}}{V_{R,p}} = \frac{X_L}{R} = \frac{\omega L}{R}, \qquad \cos\phi = \frac{R}{Z}, \qquad \sin\phi = \frac{X_L}{Z}
+\]
+<p>
+Since \(R \gt 0\) and \(X_L \gt 0\), the phase angle always lies in the range \(0^\circ \lt \phi \lt 90^\circ\)—meaning the source voltage <strong>leads</strong> the circuit current by \(\phi\) (equivalently, current lags source voltage by \(\phi\)).
+</p>
+<p>
+For the given source \(v_S(t) = V_p\sin(\omega t)\), the steady-state current and individual element voltages are:
+</p>
+<ul class="model-box">
+<li><strong>Circuit current:</strong>
+\[
+i(t) = I_p\sin(\omega t - \phi), \qquad \text{where } I_p = \frac{V_p}{\sqrt{R^2 + (\omega L)^2}}
+\]
+</li>
+<li><strong>Voltage across resistor \(R\):</strong>
+\[
+v_R(t) = (I_p R)\sin(\omega t - \phi)
+\]
+</li>
+<li><strong>Voltage across inductor \(L\):</strong>
+\[
+v_L(t) = (I_p X_L)\sin(\omega t - \phi + 90^\circ) = (I_p \omega L)\cos(\omega t - \phi)
+\]
+</li>
+</ul>
+</section>
+<section>
+<h2>Power Dynamics in an RL Circuit</h2>
+<p>
+Using the passive sign convention (\(p = vi \gt 0\) for power absorbed), the instantaneous power supplied by the source is shared between the resistor and the inductor:
+</p>
+\[
+p_S(t) = v_S(t)\,i(t) = v_R(t)\,i(t) + v_L(t)\,i(t) = p_R(t) + p_L(t)
+\]
+<ul class="model-box">
+<li><strong>In the resistor (\(R\)):</strong> \(p_R(t) = i^2(t)R \ge 0\) at all instants. The resistor continuously dissipates electrical energy as Joule heat, with a full-cycle average power:
+\[
+\langle P_R \rangle = I_{\text{rms}}^2 R = V_{\text{rms}} I_{\text{rms}} \cos\phi
+\]
+</li>
+<li><strong>In the inductor (\(L\)):</strong> \(p_L(t) = v_L(t)\,i(t) = \frac{1}{2} V_{L,p} I_p \sin\big(2(\omega t - \phi)\big)\). During quarter-cycles when \(|i|\) increases, \(p_L \gt 0\) and the inductor absorbs energy to build its magnetic field (\(\frac{1}{2}Li^2\)); during quarter-cycles when \(|i|\) decreases, \(p_L \lt 0\) and it returns that stored energy back to the source. Over a complete cycle, the net average power absorbed by the ideal inductor is zero:
+\[
+\langle P_L \rangle = 0
+\]
+</li>
+</ul>
+<p>
+Consequently, all net average power drawn from the source in a series \(RL\) circuit is dissipated exclusively in the resistance \(R\):
+</p>
+\[
+\boxed{\langle P \rangle = \langle P_R \rangle = V_{\text{rms}} I_{\text{rms}} \cos\phi, \qquad \text{where } \cos\phi = \frac{R}{Z} = \frac{R}{\sqrt{R^2 + (\omega L)^2}}}
+\]
+<div class="insightbox">
+<strong>Why Choke Coils Are Used in AC Circuits:</strong><br>
+To limit AC current in a circuit using a pure resistor, large amounts of electrical energy would be wasted as heat (\(I_{\text{rms}}^2 R\)). An ideal choke coil (\(R \approx 0, \, \cos\phi \approx 0\)) limits current via its inductive reactance \(X_L = \omega L\) while consuming virtually <strong>zero average power</strong>—making it far more efficient than a rheostat for controlling AC current.
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

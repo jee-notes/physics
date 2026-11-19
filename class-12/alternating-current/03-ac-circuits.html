@@ -21,7 +21,7 @@ How each circuit element individually responds to AC — resistance, reactance a
 <section>
 <h2>Concept</h2>
 <p>
-Analyzing pure \(R\), \(L\), and \(C\) in AC circuits means determining the \(V\text{--}I\) characteristics of each individual circuit element—resistor (\(R\)), inductor (\(L\)), and capacitor (\(C\))—under sinusoidal excitation.
+Analyzing pure \(R\), \(L\), and \(C\) in AC circuits means determining the \(V\text{--}I\) characteristics of each individual circuit element — resistor (\(R\)), inductor (\(L\)), and capacitor (\(C\)) — under sinusoidal excitation.
 </p>
 <p>
 For every derivation, we assume an AC current in the branch given by:
@@ -30,19 +30,69 @@ For every derivation, we assume an AC current in the branch given by:
 i(t) = I_p\sin(\omega t)
 \]
 <p>
-and then determine the resulting instantaneous voltage \(v(t)\) across the element.
+We choose current as our common reference because in a <strong>series circuit</strong>, every element carries the same instantaneous current. We can therefore use this common current to determine and compare the voltage responses of individual elements.
+</p>
+<h3>Reference Direction and Polarity</h3>
+<p>
+Before determining the voltage-current relationship of an element, we must establish the reference direction of current and the reference polarity of voltage. In circuit analysis, these sign conventions are fundamentally built around <strong>power flow</strong> (\(p = vi\)) — each convention is chosen so that a positive value of \(p\) corresponds to the primary physical role of that component.
 </p>
 <p>
-We choose current as our common reference because <strong>series circuits</strong> are the most fundamental AC configuration, where every element carries the exact same current.
+Because passive elements such as resistors, inductors, and capacitors are meant to <em>absorb</em> electrical energy from a circuit, we define the <strong>passive sign convention</strong> so that \(p = vi \gt 0\) represents power absorption.
 </p>
+<p>
+Consider a passive element connected between terminals \(A\) and \(B\). We choose the reference direction of current from \(A\) to \(B\), meaning positive current enters the element at \(A\) and leaves at \(B\). Correspondingly, we define the voltage across the element as the potential drop from \(A\) to \(B\):
+</p>
+\[
+v = V_A - V_B = V_{A \to B}
+\]
+<p>
+Thus, terminal \(A\) is assigned the positive reference polarity and terminal \(B\) the negative reference polarity. Because the reference current enters through the positive reference terminal, \(p = vi \gt 0\) directly signifies power absorbed by the element.
+</p>
+<p>
+These reference choices do not imply that current must physically flow from \(A\) to \(B\) at every instant. In an AC circuit, current periodically reverses direction: a negative instantaneous current simply indicates that actual current flows opposite to the reference direction, and a negative voltage indicates that actual potential polarity is opposite to the reference polarity.
+</p>
+<p>
+Consequently, whenever we write \(v_R\), \(v_L\), or \(v_C\), we mean the voltage defined using this same reference polarity:
+</p>
+\[
+v_R = V_A - V_B \qquad v_L = V_A - V_B \qquad v_C = V_A - V_B
+\]
+<h3>Sign Convention for Sources</h3>
+<p>
+By contrast, an active source is meant to <em>supply</em> electrical energy to a circuit. Therefore, when describing sources, we define the <strong>active (generator) sign convention</strong> so that \(p = vi \gt 0\) represents power delivery.
+</p>
+<p>
+In this convention, the reference current is taken as leaving the positive terminal of the source — opposite to the passive sign convention, where current enters the positive reference terminal. Again, this is a reference convention for tracking energy flow, not a restriction on the physical direction of current.
+</p>
+<p>
+Because both conventions are anchored to \(p = vi \gt 0\) representing a component's natural role, a negative sign on instantaneous power immediately signals the reverse energy interaction:
+</p>
+<ul>
+<li>If \(p = vi \lt 0\) for an <strong>active component</strong> (a source), it is absorbing power from the circuit (for example, a battery being charged).</li>
+<li>If \(p = vi \lt 0\) for a <strong>passive component</strong> (\(R, L, C\)), it is releasing stored energy back into the circuit — which inductors and capacitors do during half of every AC cycle.</li>
+</ul>
+<div class="insightbox">
+<strong>Convention used throughout this section:</strong>
+<p>
+For the individual passive elements \(R\), \(L\), and \(C\), we consistently use the passive sign convention:
+</p>
+<ul>
+<li>Reference current enters the element at terminal \(A\) and leaves at terminal \(B\).</li>
+<li>Voltage is defined as the potential drop from \(A\) to \(B\): \(v = V_A - V_B\).</li>
+<li>Both current and voltage are signed instantaneous quantities, with \(p = vi \gt 0\) denoting power absorption.</li>
+</ul>
+<p>
+We maintain these same reference directions and polarities while deriving the voltage-current relationships of all three elements.
+</p>
+</div>
 </section>
 <section>
 <h2>Pure Resistive Circuit (AC through R)</h2>
 <p>
-Consider an AC source connected across a pure resistor \(R\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\).
+Consider an AC source connected across a pure resistor \(R\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\) from terminal \(A\) to terminal \(B\).
 </p>
 <p>
-For a resistor, Ohm's law holds at every instant, so the voltage across it is:
+For a resistor, Ohm's law holds at every instant, so the voltage across it (\(v_R = V_A - V_B = V_{A \to B}\)) is:
 </p>
 \[
 v_R(t) = i(t)\,R = I_p R\sin(\omega t) = V_p\sin(\omega t)
@@ -53,6 +103,9 @@ Comparing amplitudes gives the peak and RMS relations across the resistor:
 \[
 V_p = I_p R, \qquad V_{\text{rms}} = I_{\text{rms}} R
 \]
+<p>
+Note that \(v_R(t) = V_p\sin(\omega t)\) is as per the passive sign convention with current i.e. \(V_{A \to B} = R I_{A \to B}\).
+</p>
 <p>
 <strong>Phase difference:</strong> Comparing \(v_R(t) = V_p\sin(\omega t)\) with \(i(t) = I_p\sin(\omega t)\), the voltage across the resistor and the current through it are <strong>in phase</strong>:
 </p>
@@ -67,14 +120,20 @@ It serves as the baseline reference element against which inductors and capacito
 <section>
 <h2>Pure Inductive Circuit (AC through L)</h2>
 <p>
-Consider an AC source connected across a pure inductor \(L\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\).
+Consider an AC source connected across a pure inductor \(L\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\) from terminal \(A\) to terminal \(B\).
 </p>
 <p>
-By Faraday's law of electromagnetic induction, the potential difference across an ideal inductor opposes the rate of change of current:
+By Faraday's law of electromagnetic induction, an ideal inductor develops a self-induced EMF that opposes any change in current. Under our passive sign convention (\(V_{A \to B} = V_A - V_B\)), the potential drop across the inductor is:
 </p>
 \[
 v_L(t) = L\frac{di}{dt} = L\frac{d}{dt}\big(I_p\sin\omega t\big) = I_p(\omega L)\cos(\omega t)
 \]
+<p>
+This often feels counterintuitive at first because the polarity of \(v_L(t)\) is not determined by the direction of current alone, but by whether that current is <strong>increasing or decreasing</strong>.
+</p>
+<p>
+Following the exact same convention we established for the resistor (\(V_{A \to B} = V_A - V_B\)): when current entering terminal \(A\) is increasing (\(di/dt \gt 0\)), the inductor opposes this buildup and terminal \(A\) sits at a higher potential than terminal \(B\) (\(v_L \gt 0\)); when that same current is decreasing (\(di/dt \lt 0\)), the inductor opposes the drop and terminal \(A\) sits at a lower potential than terminal \(B\) (\(v_L \lt 0\)).
+</p>
 <p>
 Applying the sine-shifting rotation \(\cos(\omega t) = \sin(\omega t + 90^\circ)\) to write \(v_L(t)\) in standard form:
 </p>
@@ -107,14 +166,44 @@ For steady DC (\(f = 0\)), \(X_L = 0\) — an ideal inductor offers zero opposit
 <section>
 <h2>Pure Capacitive Circuit (AC through C)</h2>
 <p>
-Consider an AC source connected across a pure capacitor \(C\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\).
+Consider an AC source connected across a pure capacitor \(C\), carrying an instantaneous current \(i(t) = I_p\sin(\omega t)\) from terminal \(A\) to terminal \(B\).
 </p>
 <p>
-Since \(i(t) = dq/dt\), the instantaneous charge \(q(t)\) on the capacitor plates in the steady AC state (zero DC offset) is found by integrating \(i(t)\):
+This is often the most subtle of the three components for understanding the sign convention, because current and voltage are linked through an intermediate quantity—the instantaneous charge \(q(t)\) on plate \(A\):
 </p>
 \[
-q(t) = \int i(t)\,dt = \int I_p\sin(\omega t)\,dt = -\frac{I_p}{\omega}\cos(\omega t)
+i(t) = \frac{dq}{dt}, \qquad v_C(t) = v_{A \to B}(t) = \frac{q(t)}{C}
 \]
+<p>
+Following the exact same passive sign convention established for the resistor (\(V_{A \to B} = V_A - V_B\)): when current enters terminal \(A\) (\(i(t) \gt 0\)), positive charge accumulates on plate \(A\) (\(dq/dt \gt 0\)), so the potential of plate \(A\) rises relative to plate \(B\) and \(\dfrac{dv_C(t)}{dt} \gt 0\).
+</p>
+<p>
+To find \(q(t)\), we integrate \(i(t) = dq/dt\):
+</p>
+\[
+q(t) = \int i(t)\,dt = \int I_p\sin(\omega t)\,dt = -\frac{I_p}{\omega}\cos(\omega t) + q_0
+\]
+<p>
+where \(q_0\) is the constant of integration (any steady DC charge offset on the capacitor). In a pure AC steady state, there is no net DC bias across the capacitor, so the full-cycle average charge must be zero (\(\langle q \rangle = 0\)). Since \(\langle \cos(\omega t) \rangle = 0\), this requires \(q_0 = 0\), giving:
+</p>
+\[
+q(t) = -\frac{I_p}{\omega}\cos(\omega t)
+\]
+<h3>What Was the Charge at \(t = 0\)?</h3>
+<p>
+A very common student doubt is: <em>"If \(i(0) = 0\), shouldn't the charge at \(t = 0\) also be zero?"</em> Substituting \(t = 0\) into \(q(t)\) shows the opposite—at \(t = 0\), plate \(A\) is actually at its <strong>negative peak charge</strong>:
+</p>
+\[
+q(0) = -\frac{I_p}{\omega} = -Q_p, \qquad v_C(0) = -\frac{I_p}{\omega C} = -V_p
+\]
+<p>
+Why is plate \(A\) already negatively charged when we start our clock at \(t = 0\)? Because \(i(t) = I_p\sin(\omega t)\) describes an oscillation that is <strong>already in steady-state motion</strong>:
+</p>
+<ul class="model-box">
+<li><strong>Before \(t = 0\) (\(-T/2 \lt t \lt 0\)):</strong> Current was negative (\(i \lt 0\)), meaning positive charge was flowing <em>out</em> of plate \(A\) until \(i\) finally dropped to zero at \(t = 0\)—leaving plate \(A\) maximally negatively charged (\(q(0) = -Q_p\)).</li>
+<li><strong>First quarter-cycle (\(0 \lt t \lt T/4\)):</strong> Current turns positive (\(i \gt 0\)) and flows <em>into</em> plate \(A\), neutralizing its negative charge. At \(t = T/4\), when current reaches its positive peak (\(+I_p\)), the capacitor becomes completely uncharged (\(q = 0, \, v_C = 0\)).</li>
+<li><strong>Second quarter-cycle (\(T/4 \lt t \lt T/2\)):</strong> Current remains positive (though decreasing), continuing to pump positive charge onto plate \(A\) until \(q\) reaches its positive peak (\(+Q_p\)) at \(t = T/2\)—a full quarter-cycle (\(90^\circ\)) <em>after</em> the current peaked.</li>
+</ul>
 <p>
 Using \(v_C(t) = q(t)/C\), the instantaneous voltage across the capacitor is:
 </p>
@@ -186,6 +275,12 @@ For steady DC (\(f \to 0\)), \(X_C \to \infty\) — a capacitor blocks steady DC
 </tr>
 </tbody>
 </table>
+</section>
+<section>
+<h2>Sub-Topics</h2>
+<div class="chapter-list">
+<a href="./03a-rl-circuit.html">1. RL Circuit</a>
+</div>
 </section>
 <footer>
 <hr>

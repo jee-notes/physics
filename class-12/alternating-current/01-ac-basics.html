@@ -102,46 +102,6 @@ Because both oscillate at the same frequency, \( \omega t \) cancels out and \( 
 <li>If \( \Delta\phi \lt 0 \): voltage <strong>lags</strong> current (or current leads voltage)</li>
 <li>If \( \Delta\phi = 0 \): voltage and current are <strong>in phase</strong></li>
 </ul>
-</section>
-<section>
-<h2>Angular Frequency, Frequency, and Period</h2>
-<table>
-<thead>
-<tr>
-<th>Quantity</th>
-<th>Symbol</th>
-<th>Relation</th>
-<th>Unit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Time period</td>
-<td>\( T \)</td>
-<td>\( T = 1/f \)</td>
-<td>seconds (s)</td>
-</tr>
-<tr>
-<td>Frequency</td>
-<td>\( f \)</td>
-<td>\( f = \omega/2\pi \)</td>
-<td>Hertz (Hz)</td>
-</tr>
-<tr>
-<td>Angular frequency</td>
-<td>\( \omega \)</td>
-<td>\( \omega = 2\pi f \)</td>
-<td>rad/s</td>
-</tr>
-<tr>
-<td>Peak value</td>
-<td>\( V_p, I_p \)</td>
-<td>Amplitude of sinusoid</td>
-<td>V, A</td>
-</tr>
-</tbody>
-</table>
-</section>
 <section>
 <h2>Other Forms</h2>
 <p>
@@ -187,6 +147,50 @@ Never subtract phases directly until both \(v(t)\) and \(i(t)\) are written in s
 For instance, consider the phase difference between \(v(t) = V_p\cos(\omega t)\) and \(i(t) = I_p\sin(\omega t)\).<br>
 We cannot say that \(\Delta\phi = 0\) or voltage and current are in phase.<br>
 Rewriting \(v(t) = V_p\sin(\omega t + 90^\circ)\) immediately reveals \(\phi_v = +90^\circ\) and \(\phi_i = 0^\circ\), giving \( \Delta\phi = +90^\circ \) (voltage leads current by \( 90^\circ \)).
+</div>
+</section>
+<section>
+<h2>Why Is Phase Difference Important?</h2>
+<p>
+Phase difference becomes critical specifically when adding (or subtracting) two or more sinusoids of the same angular frequency.
+</p>
+<p>
+Consider two sinusoidal AC currents, \(i_1(t) = I_{p,1}\sin(\omega t + \phi_1)\) and \(i_2(t) = I_{p,2}\sin(\omega t + \phi_2)\), that need to be added:
+</p>
+\[
+i_R(t) = I_{p,R}\sin(\omega t + \phi_R) = i_1(t) + i_2(t)
+\]
+<p>
+Here, both the resultant peak current \(I_{p,R}\) and the resultant initial phase \(\phi_R\) depend on the individual amplitudes and phases:
+</p>
+\[
+I_{p,R} = f(I_{p,1},\, I_{p,2},\, \phi_1,\, \phi_2), \qquad \phi_R = g(I_{p,1},\, I_{p,2},\, \phi_1,\, \phi_2)
+\]
+<p>
+In particular, the resultant amplitude \(I_{p,R}\) lies between a minimum and a maximum bound:
+</p>
+\[
+|I_{p,1} - I_{p,2}| \le I_{p,R} \le I_{p,1} + I_{p,2}
+\]
+<p>
+and its exact value within this range is governed by the <strong>phase difference</strong>:
+</p>
+\[
+\Delta\phi = \phi_1 - \phi_2
+\]
+<p>
+This works identically to vector addition, where the magnitude of the resultant of two vectors lies between \(|A - B|\) and \(A + B\) depending on the angle between them:
+</p>
+<ul class="model-box">
+<li><strong>In phase (\(\Delta\phi = \phi_1 - \phi_2 = 0\)):</strong> The resultant amplitude is maximum, \(I_{p,R} = I_{p,1} + I_{p,2}\).</li>
+<li><strong>Out of phase by \(180^\circ\) (\(\Delta\phi = \phi_1 - \phi_2 = 180^\circ\)):</strong> The resultant amplitude is minimum, \(I_{p,R} = |I_{p,1} - I_{p,2}|\).</li>
+</ul>
+<p>
+This behavior can also be visualized by plotting the graphs of the two sinusoids, for arbitrary phase angles. To simplify this addition, we use dedicated mathematical tools like <strong>phasors</strong> to add sinusoids.
+</p>
+<div class="insightbox">
+The principle that the addition of sinusoids depends on their phase difference is used in other chapters as well, such as <strong>Wave Optics</strong>.<br>
+In that chapter, we relate phase difference to path difference to determine interference patterns.
 </div>
 </section>
 <section>
