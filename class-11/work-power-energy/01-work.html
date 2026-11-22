@@ -16,87 +16,161 @@
 </nav>
 <h1>Work</h1>
 <p class="subtitle">
-The bridge between force and energy — how a force produces a change in the state of motion.
+The bridge between force and energy — how force produces change in the state of motion.
 </p>
 <section>
-<h2>Understanding Work</h2>
+<h2>Concept</h2>
 <p>
-In everyday language, "work" usually refers to physical or mental effort. However, Physics requires precise definitions for physical quantities such as work, pressure, stress, strain, wave and energy.
+Work is a physical quantity defined to mathematically relate force to energy.
+</p>
+<p>
+Previously, we defined momentum and impulse to relate force to changes in motion over time. In a similar framework, we define work to relate force to energy across displacement.
+</p>
+<p>
+Later, when we study collisions, we will see how momentum and energy conservation laws govern mechanical interactions.
+</p>
+<p>
+In everyday language, "work" refers to any physical or mental effort—such as studying for an exam, holding a heavy bag, or going to an office.
+</p>
+<p>
+However, physics requires precise definitions for physical quantities such as work, pressure, stress, strain, wave, and energy.
 </p>
 <div class="insightbox">
 Science and common sense are not always the same.<br>
 For example, we commonly say that the Sun rises in the East.<br>
 Scientifically, the apparent motion of the Sun is caused by Earth's rotation from West to East.<br>
-The claim that the <strong>Sun rises in the East</strong> is perfectly valid as per common sense but is scientifically inaccurate.<br>
-Similarly, the scientific meaning of "work" is more precise than its everyday meaning.
+Similarly, the scientific meaning of "work" is far more specific than its everyday meaning.
 </div>
-<h3>Definition of Work</h3>
+</section>
+<section>
+<h2>Work</h2>
 <p>
-As per Physics, work is associated with a force that is acting on an object (particle body) while the object undergoes displacement.
+Work is said to be done by a force acting on an object (a particle body).
 </p>
 <p>
-If a force \(\vec{F}\) acts on an object and the object undergoes an infinitesimal displacement \(d\vec{s}\), then the infinitesimal work done by the force on the object is defined as:
+For example, when gravity acts on an object, we refer to the work done by the gravitational force on the object — or equivalently, the work done by Earth on the object, since Earth exerts that force.
+</p>
+<p>
+If a force \(\vec{F}\) acts on an object and the object undergoes an infinitesimal displacement \(d\vec{r}\), then the infinitesimal work done by that force is:
+</p>
+\[
+\delta W = \vec{F}\cdot d\vec{r}
+\]
+<p>
+Work is a scalar quantity.
+</p>
+<p>
+The infinitesimal work (\(\delta W\)) can be positive, negative or zero depending on the angle between the force (\(\vec{F}\)) and the infinitesimal displacement (\(d\vec{r}\)).
+</p>
+<p>
+The direction of infinitesimal displacement is determined by the direction of the instantaneous velocity at that position, since:
+</p>
+\[
+d\vec{r}=\vec{v}\,dt
+\]
+<p>
+The total work done by the force as the object moves from position \(\vec{r}_1\) to position \(\vec{r}_2\), along a specified path \(C\), is obtained by accumulating these infinitesimal contributions:
 </p>
 <div class="math-block">
 \[
-dW = \vec{F}\cdot d\vec{s}
+W_C = \int_C \vec{F}\cdot d\vec{r}
 \]
 </div>
 <p>
-Work is a scalar quantity. It can be positive, negative or zero depending on the angle between the force and the displacement.
-</p>
-<div class="insightbox">
-Work is not a property of the object alone.<br>
-It is a quantity associated with a force acting over a displacement.<br>
-Different forces acting on the same object can do different amounts of work.
-</div>
-<h3>Why Study Work?</h3>
-<p>
-Defining a new physical quantity is not enough. We must also understand why that quantity is useful or "Why are we putting an effort to define Work?".
+Notice that we specify the path \(C\), and not merely the initial and final positions. This is because, unlike displacement, work done by a general force can depend on the path followed.
 </p>
 <p>
-The importance of work becomes clear when we introduce another quantity called <strong>Energy</strong>.
+For displacement between two positions in space, the path taken does not matter:
+</p>
+\[
+\Delta\vec{r} = \int_C d\vec{r} = \vec{r}_2-\vec{r}_1
+\]
+<p>
+This result is the same for every possible path connecting \(\vec{r}_1\) and \(\vec{r}_2\).
 </p>
 <p>
-The central result of this chapter is the <strong>Work-Energy Theorem</strong>, which establishes a relationship between work done on a body and the change in its kinetic energy.
+But this need not be true for work. Consider two different paths \(C_1\) and \(C_2\), both starting at \(\vec{r}_1\) and ending at \(\vec{r}_2\).
 </p>
 <p>
-Therefore, work is not studied in isolation. It is introduced because it provides a powerful way to understand and calculate changes in energy.
+Let \(W_{C_1}\) be the work done by the force along path \(C_1\), and \(W_{C_2}\) be the work done by the same force along path \(C_2\):
+</p>
+\[
+W_{C_1} = \int_{C_1}\vec{F}\cdot d\vec{r} \qquad W_{C_2} = \int_{C_2}\vec{F}\cdot d\vec{r}
+\]
+<p>
+In general, it is possible that:
+</p>
+\[
+W_{C_1}\neq W_{C_2}
+\]
+<p>
+Consider the work done by kinetic friction in two cases. In the first case, an object moves directly from A to B along a straight path. In the second case, it moves from A to C and then returns from C to B, following a longer path.
 </p>
 <p>
-Just as successive displacements accumulate to determine the final position of a body, successive amounts of work accumulate to determine the change in its energy. This idea forms the foundation of the Work-Energy Theorem studied later in this chapter.
+Assuming constant kinetic friction, the work done by friction is negative in both cases because friction opposes the direction of motion. However, the longer path involves greater frictional work in magnitude. Thus, the work done in the two cases is different, even though the initial and final positions are identical.
 </p>
 <p>
-Position is a state quantity that changes through accumulated displacements. Similarly, energy is a state quantity that changes through accumulated work. This connection forms the foundation of the Work-Energy Theorem studied later in this chapter.
+In this sense, work and displacement represent different kinds of accumulated physical quantities. However, they share an important property:
+</p>
+<p>
+Neither displacement nor work is a quantity that an object possesses at a single point (or instant). Both are <strong>accumulated quantities</strong> associated with a change during motion:
+</p>
+\[
+\Delta\vec{r} = \int_C d\vec{r} \qquad W_C = \int_C \delta W
+\]
+<p>
+An accumulated quantity may be either path-independent or path-dependent. This distinction determines whether its accumulated value can be represented by a change in a state function.
+</p>
+<ul class="model-box">
+<li><strong>Position (\(\vec{r}\))</strong> is a state variable. Its change is determined by the accumulated infinitesimal displacements:
+\[
+\Delta\vec{r} = \int_C d\vec{r}=\vec{r}_2-\vec{r}_1
+\]
+The result depends only on the initial and final positions, irrespective of the path followed.
+</li>
+<li><strong>Kinetic Energy (\(\text{KE}\))</strong> is a state variable. Its change is determined by the accumulated net work, as established by the Work-Energy Theorem:
+\[
+\Delta\text{KE} = \int_C \delta W_{\text{net}}
+\]
+</li>
+</ul>
+<p>
+For a general force, the accumulated work up to an intermediate position may depend on the path followed to reach that position. Therefore, work is generally described as a <strong>path function</strong>, rather than a state function. For a conservative force, however, work is path-independent and can be expressed as a change in potential energy (with the appropriate sign).
+</p>
+<p>
+We study work because the <strong>Work-Energy Theorem</strong> directly connects the net work done on a body to the change in its kinetic energy, giving us a powerful way to analyze motion without always tracking acceleration over time.
 </p>
 </section>
 <section>
 <h2>Measuring Work</h2>
-<h3>Constant Force and Displacement</h3>
+<h3>Constant Force</h3>
 <p>
-To understand work quantitatively, let us begin with the simplest case: a constant force acting on a body that undergoes displacement.
-</p>
-<p>
-If a constant force \(\vec{F}\) acts on a body and the body undergoes a displacement \(\vec{s}\), then the work done by the force is defined as the dot product of the force and the displacement:
+To understand work quantitatively, we begin with the simplest case: a constant force acting on a body that undergoes displacement.
 </p>
 \[
-W = \vec{F}\cdot\vec{s}
+\vec{F}(\vec{r}) = \vec{F} \quad \text{(constant in both magnitude and direction)}
 \]
 <p>
-Using the definition of the dot product:
+In such a case, we can take the constant force vector outside the integral sign:
 </p>
 \[
-W = Fs\cos\theta
+W_C = \int_C \vec{F}\cdot d\vec{r} = \vec{F}\cdot \int_C d\vec{r} = \vec{F} \cdot \Delta \vec{r} = \vec{F} \cdot \vec{s}
+\]
+<p>
+Thus, the work done by a constant force is independent of the path taken.
+</p>
+<p>
+For any path, we simply take \(\vec{s}\) as the displacement vector joining the endpoints. Using the geometric definition of the dot product:
+</p>
+\[
+W = |\vec{F}|\,|\vec{s}|\,\cos\theta = Fs\cos\theta
 \]
 <p>
 where \(\theta\) is the angle between the force and the displacement.
 </p>
 <p>
-For the special case where force and displacement are in the same direction:
+For the special case where force and displacement are in the same direction (\(\theta = 0^\circ\)):
 </p>
-\[
-\theta = 0^\circ
-\]
 \[
 W = Fs
 \]
@@ -127,87 +201,67 @@ A useful way to visualize one joule is to imagine lifting a 100 g object vertica
 The sign of work carries important physical meaning because work is related to energy transfer.
 </p>
 <ul class="model-box">
-<li>
-<strong>Positive Work (\(\theta \lt 90^\circ\)):</strong> The force has a component in the direction of displacement. Energy is transferred to the object.
-</li>
-<li>
-<strong>Negative Work (\(90^\circ \lt \theta \le 180^\circ\)):</strong> The force has a component opposite to the displacement. Energy is removed from the object.
-</li>
-<li>
-<strong>Zero Work (\(\theta = 90^\circ\)):</strong> The force is perpendicular to the displacement. No energy transfer occurs through that force.
-</li>
+<li><strong>Positive Work (\(0^\circ \le \theta \lt 90^\circ\)):</strong> The force has a component in the direction of displacement. Energy is transferred to the object.</li>
+<li><strong>Negative Work (\(90^\circ \lt \theta \le 180^\circ\)):</strong> The force has a component opposite to the displacement. Energy is removed from the object.</li>
+<li><strong>Zero Work (\(\theta = 90^\circ\)):</strong> The force is perpendicular to the displacement. No energy transfer occurs through that force.</li>
 </ul>
 <div class="insightbox">
 The sign of (non-zero) work depends only on the angle between force and displacement.<br>
 Since
 \[
-dW = \vec{F}\cdot d\vec{s} = |\vec{F}| \cdot |d\vec{s}| \cdot \cos{\theta}
+\delta W = \vec{F}\cdot d\vec{r} = |\vec{F}| \cdot |d\vec{r}| \cdot \cos\theta
 \]
-Work is positive when force and displacement point in similar directions, negative when they point in opposite directions, and zero when they are perpendicular.<br>
-Thus, a force doing zero work does not necessarily imply that the force is absent (\(F = 0\)) or displacement is absent (\(ds = 0\) or \(v = 0\)).<br>
-For example, the centripetal force acting on a satellite continuously changes the direction of its velocity, yet it does no work because it is always perpendicular to the displacement.<br>
-In this case, \(F \neq 0\) ,  \(v \neq 0\) but still \(W = 0\) 
+work is positive when force and displacement point in similar directions, negative when they point in opposite directions, and zero when they are perpendicular.<br>
+Thus, a force doing zero work does not necessarily imply that the force is absent (\(F = 0\)) or motion is absent (\(dr = 0\) or \(v = 0\)).<br>
+For example, the gravitational (centripetal) force acting on a satellite in a circular orbit continuously changes the direction of its velocity, yet it does no work because it is always perpendicular to the instantaneous displacement.<br>
+In this case, \(F \neq 0\), \(v \neq 0\), yet \(W = 0\).<br>
+Thus, a force exerted on a body might change its momentum but still not change its energy.
 </div>
 </section>
 <section>
 <h2>Work Done by Multiple Forces</h2>
 <p>
-When several forces act simultaneously on an object, the work done by each force is computed separately using \(W = \vec{F} \cdot \vec{s}\). The total (net) work done on the object is the algebraic sum of works done by all individual forces:
+When several forces act simultaneously on a particle, the work done by each force is computed separately using:
 </p>
 \[
-W_{\text{net}} = W_1 + W_2 + \cdots + W_n
+W_{i,C} = \int_C \vec{F}_{i}\cdot d\vec{r}
 \]
 <p>
-Alternatively, since superposition holds, we may first find the net force and then compute its work:
+At any instant, all forces act on the same particle at its instantaneous position \(\vec{r}(t)\). Consequently, all forces share the same infinitesimal displacement \(d\vec{r}\) and the same trajectory \(C\).
+</p>
+<p>
+Using this, we calculate the work done by the individual forces along path \(C\):
 </p>
 \[
-W_{\text{net}} = \vec{F}_{\text{net}} \cdot \vec{s}
+W_{1,C} = \int_C \vec{F}_{1}\cdot d\vec{r} \qquad W_{2,C} = \int_C \vec{F}_{2}\cdot d\vec{r}\qquad \cdots
+\]
+<p>
+The total (net) work done on the particle is the algebraic sum of the works done by all individual forces:
+</p>
+\[
+W_{\text{net},C} = W_{1,C} + W_{2,C} + \cdots + W_{n,C}
+\]
+<p>
+Alternatively, because forces obey superposition (\(\vec{F}_{\text{net}} = \sum_i \vec{F}_i\)) and integration is linear, we may first find the net force at each position and then compute its work:
+</p>
+\[
+\begin{aligned}
+W_{\text{net},C}
+&= \sum_i W_{i,C}\\
+&= \sum_i \int_C \vec{F}_i\cdot d\vec{r}\\
+&= \int_C \left(\sum_i\vec{F}_i\right)\cdot d\vec{r}\\
+&= \int_C \vec{F}_{\text{net}}\cdot d\vec{r}
+\end{aligned}
 \]
 <div class="insightbox">
-Both approaches are equivalent when the displacement is the same for all force applications (i.e., a single rigid body). When computing individual force contributions, always use the full displacement vector, not just its component.
+Both approaches are equivalent when the object is modeled as a particle, or when an extended rigid body undergoes pure translational motion.<br>
+For a general extended body, different points of application may undergo different displacements.<br>
+In that case, each force must be evaluated using the displacement of its respective point of application:
+\[
+W_{\text{net}}=\sum_i\int\vec{F}_i\cdot d\vec{r}_i
+\]
+The simple expression using net force and a common displacement is generally not applicable.
 </div>
-</section>
-<section>
-<h2>Work Along a Curved Path</h2>
-<p>
-The relation
-</p>
-\[
-W=\vec{F}\cdot\vec{s}
-\]
-<p>
-is valid only when the force remains constant throughout the motion.
-</p>
-<p>
-In many situations, the force may change in magnitude, direction or both. The object itself may also move along a curved path rather than a straight line.
-</p>
-<p>
-To calculate work in such cases, we divide the motion into infinitesimally small displacements \(d\vec{r}\). Over each small segment, the work done is:
-</p>
-\[
-dW=\vec{F}\cdot d\vec{r}
-\]
-<p>
-The total work done is obtained by adding the contributions from all segments along the path:
-</p>
-\[
-W=\int_{\vec r_1}^{\vec r_2}\vec F\cdot d\vec r
-\]
-<div class="math-block">
-<strong>This is the most general definition of work.</strong>
-</div>
-<div class="insightbox">
-Just as a curved path can be viewed as a collection of infinitesimal displacements \(d\vec r\), the total work done can be viewed as the accumulation of infinitesimal works \(dW\).
-</div>
-<p>
-When the force remains constant throughout the displacement, the integral simplifies to:
-</p>
-\[
-W=\vec{F}\cdot\vec{s}
-\]
-<p>
-Thus, the familiar constant-force formula is a special case of the more general integral definition.
-</p>
 </section>
 <footer>
 <hr>

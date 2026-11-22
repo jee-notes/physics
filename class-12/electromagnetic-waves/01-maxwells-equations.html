@@ -19,88 +19,299 @@
 The four equations that unify electricity and magnetism.
 </p>
 <section>
-<h2>Maxwell's Four Equations</h2>
+<h2>Concept</h2>
 <p>
-Maxwell synthesised all of classical electromagnetism into four elegant equations (integral form):
+Electricity and magnetism were originally studied as two separate physical phenomena: electric charges exerted forces on other charges, while magnets and electric currents produced magnetic effects.
 </p>
-<h3>1. Gauss's Law for Electricity</h3>
+<p>
+Experiments by Oersted and Faraday had already established connections between the two phenomena. An electric current could produce a magnetic effect, and a changing magnetic field could produce an electric effect. However, a unified understanding of these phenomena was still missing.
+</p>
+<p>
+James Clerk Maxwell approached the problem using the concept of a <strong>field</strong>. Instead of describing electromagnetic interactions merely as forces between objects, he treated electric and magnetic fields as physical quantities distributed throughout space.
+</p>
+<p>
+Since both electric and magnetic fields can be represented as vector fields distributed throughout three-dimensional space, they can be studied under a common mathematical framework.
+</p>
+<p>
+Common mathematical tools used to study vector fields are <strong>line integrals and surface integrals</strong>, which allow us to examine how vector fields behave along paths and across surfaces.
+</p>
+<p>
+Expressing the known laws of electricity and magnetism under this field-based mathematical framework revealed deeper relationships between the two fields. A changing magnetic field produces an electric field, while a changing electric field also contributes to producing a magnetic field.
+</p>
+<p>
+Maxwell recognised that the existing mathematical description of electromagnetism was incomplete. By introducing the concept of <strong>displacement current</strong>, he completed the relationship and established a consistent theory in which electric and magnetic fields are dynamically coupled.
+</p>
+<p>
+An extraordinary consequence of this theory was the prediction of electromagnetic waves. A changing electric field and a changing magnetic field are coupled in such a way that an electromagnetic disturbance can propagate through empty space without requiring a material medium.
+</p>
+<p>
+Maxwell calculated the speed at which these waves should travel using the known electrical and magnetic constants of free space. The result closely matched the experimentally measured speed of light.
+</p>
+<p>
+Maxwell therefore concluded that light itself is an electromagnetic wave. What appeared to be separate phenomena — electricity, magnetism and light — could now be understood within a single electromagnetic theory.
+</p>
+<p>
+Thus, Maxwell's achievement was not merely bringing electricity and magnetism under the same set of equations. His approach revealed the relationships between electric and magnetic fields and ultimately connected electromagnetism with light.
+</p>
+</section>
+<section>
+<h2>Flux and Circulation</h2>
+<p>
+To study vector fields, we use two important mathematical tools:
+</p>
+<ul class="model-box">
+<li><strong>Surface Integral</strong> &rarr; <strong>Flux</strong></li>
+<li><strong>Line Integral</strong> &rarr; <strong>Circulation</strong> (for a closed path)</li>
+</ul>
+<p>
+Much like calculus provides mathematical tools to study functions, line integrals and surface integrals provide mathematical tools to study vector fields and understand how they behave across space.
+</p>
+<p>
+A field describes how an influence is distributed throughout space. Its magnitude and direction can vary from point to point.
+</p>
+<p>
+To examine such a vector field, we can consider two geometrical objects: <strong>surfaces</strong> and <strong>paths</strong>.
+</p>
+<p>
+A surface has an area, while a path has a length. But when dealing with vector fields, their orientations are equally important.
+</p>
+<p>
+A surface provides a normal direction, while a path lying along that surface provides a tangential direction. These two directions are mutually perpendicular.
+</p>
+<p>
+We represent an infinitesimal area and an infinitesimal path length using vectors:
+</p>
 \[
-\oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{enc}}}{\varepsilon_0}
+d\vec A = \hat n\,dA \qquad d\vec l = \hat t\,dl
 \]
 <p>
-Electric field lines originate from positive charges and terminate at negative charges.
+Here, \(\hat n\) is a unit vector normal to the surface, while \(\hat t\) is a unit vector tangential to the path.
 </p>
 <p>
-The total electric flux through any closed surface equals the enclosed charge divided by \( \varepsilon_0 \).
+This allows us to examine a 3D vector relative to the chosen surface by resolving it into two mutually perpendicular components: a normal component and a tangential component.
 </p>
-<h3>2. Gauss's Law for Magnetism</h3>
 \[
-\oint \vec{B} \cdot d\vec{A} = 0
+\vec F = \vec F_n + \vec F_t
 \]
 <p>
-Magnetic field lines form closed loops — there are no magnetic monopoles.
+The area vector selects the normal component, while the line element selects the component along its direction within the surface. We use the dot product to extract these respective components.
+</p>
+<h3>1. Flux: Examining a Field Through a Surface</h3>
+<p>
+Suppose we want to determine the overall contribution of a vector field through an entire surface. Since the field may vary from point to point, we need to account for its contribution across all parts of the surface.
 </p>
 <p>
-The net magnetic flux through any closed surface is always zero.
+A <strong>surface integral</strong> allows us to combine these contributions. Since we are interested in how much of the field passes through the surface, we consider its normal component.
 </p>
-<h3>3. Faraday's Law of Induction</h3>
+<p>
+The surface integral of this normal component is called <strong>flux</strong>:
+</p>
 \[
-\oint \vec{E} \cdot d\vec{l} = -\frac{d\Phi_B}{dt}
+\boxed{\Phi = \int_S \vec F\cdot d\vec A}
 \]
 <p>
-A changing magnetic flux induces an electric field (even in empty space).
+Thus, flux gives us a single measure of the net normal contribution of a vector field across an entire surface.
 </p>
 <p>
-This is the basis of electromagnetic induction and the electric generator.
+The orientation of the area vector determines the sign of flux. Contributions along the chosen normal are positive, while contributions in the opposite direction are negative.
 </p>
-<h3>4. Ampere's Law (Modified by Maxwell)</h3>
+<h3>2. Circulation: Examining a Field Along a Path</h3>
+<p>
+Similarly, suppose we want to determine the overall contribution of a vector field along an entire path. The field may vary from point to point along that path, so we need to account for its contribution along all its segments.
+</p>
+<p>
+A <strong>line integral</strong> allows us to combine these contributions. Since we are interested in the field's contribution along the path, we consider its tangential component in the direction of the path.
+</p>
+<p>
+When the path is closed, the line integral of this tangential component is called <strong>circulation</strong>:
+</p>
 \[
-\oint \vec{B} \cdot d\vec{l} = \mu_0\left(I + \varepsilon_0\frac{d\Phi_E}{dt}\right)
+\boxed{C = \oint_C \vec F\cdot d\vec l}
 \]
 <p>
-A current <em>or</em> a changing electric flux produces a magnetic field.
+Thus, circulation gives us a single measure of the accumulated tangential contribution of a vector field around a closed path.
 </p>
 <p>
-Maxwell's addition of the \(\varepsilon_0\,d\Phi_E/dt \) term (displacement current) was the key that made the equations consistent and predicted EM waves.
+The direction chosen to traverse the path determines the sign of circulation. Reversing the direction of traversal reverses the sign.
 </p>
 <div class="insightbox">
-Equations 3 and 4 taken together say: a changing \( \vec{B} \) creates \( \vec{E} \), and a changing \( \vec{E} \) creates \( \vec{B} \).<br>
-This mutual generation is what sustains a self-propagating electromagnetic wave.
+A surface integral allows us to examine the normal contribution of a vector field across an entire surface.<br>
+A line integral allows us to examine the tangential contribution of a vector field along an entire path.<br>
+Both operations allow us to combine the contributions of a vector field over an extended geometrical object and represent the result through a single mathematical quantity.
 </div>
 </section>
 <section>
-<h2>Symmetry of Maxwell's Equations</h2>
-<table>
-<thead>
-<tr>
-<th>Equation</th>
-<th>Physical Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Gauss (E)</td>
-<td>Charges are sources of \( \vec{E} \)</td>
-</tr>
-<tr>
-<td>Gauss (B)</td>
-<td>No magnetic monopoles; \( \vec{B} \) lines always close</td>
-</tr>
-<tr>
-<td>Faraday</td>
-<td>Changing \( \vec{B} \) → induced \( \vec{E} \)</td>
-</tr>
-<tr>
-<td>Ampere–Maxwell</td>
-<td>Current or changing \( \vec{E} \) → \( \vec{B} \)</td>
-</tr>
-</tbody>
-</table>
+<h2>Maxwell's Four Equations</h2>
 <p>
-The asymmetry between equations 1 and 2 (charges exist, monopoles don't) and between 3 and 4 (Faraday has no current source term on the right) reflects the observed asymmetry of nature.
+Maxwell's equations express the fundamental laws of electromagnetism using the common mathematical framework of fields, flux and circulation. They are conventionally written in the following integral forms:
+</p>
+<h3>1. Gauss's Law for Electricity</h3>
+\[
+\oint_S \vec E \cdot d\vec A = \frac{Q_{\text{enc}}}{\varepsilon_0}
+\]
+<p>
+Electric charges act as sources and sinks of electric flux.
 </p>
 <p>
-If magnetic monopoles existed, all four equations would be perfectly symmetric.
+Positive charges contribute outward flux, while negative charges contribute inward flux.
+</p>
+<p>
+The total electric flux through any closed surface depends on the net charge enclosed by that surface. It equals the enclosed charge divided by \(\varepsilon_0\).
+</p>
+<h3>2. Gauss's Law for Magnetism</h3>
+\[
+\oint_S \vec B \cdot d\vec A = 0
+\]
+<p>
+Unlike electric charges, isolated magnetic poles (magnetic monopoles) have not been observed.
+</p>
+<p>
+Magnetic field lines form closed loops rather than originating from or terminating at isolated magnetic charges.
+</p>
+<p>
+Consequently, the net magnetic flux through any closed surface is always zero.
+</p>
+<div class="insightbox">
+The first two equations are <strong>flux laws</strong>.<br>
+They describe the net electric and magnetic flux through closed surfaces.<br>
+Both laws hold for static as well as time-varying fields.
+</div>
+<h3>3. Faraday's Law of Induction</h3>
+\[
+\oint_C \vec E \cdot d\vec l=-\frac{d\Phi_B}{dt}
+\]
+<p>
+A changing magnetic flux through a surface produces circulation of the electric field around the closed boundary of that surface.
+</p>
+<p>
+This induced electric field can exist even in empty space, without a conducting wire.
+</p>
+<p>
+When a conductor is present, it can drive an electric current.
+</p>
+<p>
+This is the fundamental principle behind electromagnetic induction and electric generators.
+</p>
+<div class="insightbox">
+This equation applies to static electric fields (\(\vec{E}_{\text{st}}\)) as well as induced electric fields (\(\vec{E}_{\text{ind}}\)).<br>
+The net electric field at any point in space is the superposition of these fields (\(\vec{E} = \vec{E}_{\text{st}} + \vec{E}_{\text{ind}}\)).<br>
+Because the static electric field is conservative, \(\oint_C \vec{E}_{\text{st}} \cdot d\vec l = 0\).<br>
+Thus, \(\oint_C \vec{E} \cdot d\vec l = \oint_C (\vec{E}_{\text{st}} + \vec{E}_{\text{ind}}) \cdot d\vec l = 0 + \oint_C \vec{E}_{\text{ind}} \cdot d\vec l\).
+</div>
+<h3>4. Ampère's Law (Modified by Maxwell)</h3>
+\[
+\oint_C \vec B \cdot d\vec l=\mu_0\left(I_{\text{enc}}+\varepsilon_0\frac{d\Phi_E}{dt}\right)
+\]
+<p>
+An electric current produces magnetic-field circulation around it.
+</p>
+<p>
+Maxwell recognised that a changing electric flux also contributes to producing a magnetic field, even in regions where no conduction current flows.
+</p>
+<p>
+He introduced the concept of <strong>displacement current</strong> to account for this additional contribution.
+</p>
+<p>
+Thus, magnetic-field circulation is related to two contributions: conduction current and displacement current.
+</p>
+<p>
+Maxwell's addition made Ampère's law consistent with the changing-field description of electromagnetism and completed the mathematical framework needed to predict electromagnetic waves.
+</p>
+</section>
+<section>
+<h2>Symmetry in Maxwell's Equations</h2>
+<p>
+Consider a source-free region of vacuum, where there are no electric charges or conduction currents (\(\rho=0,\ \vec J=0\)).
+</p>
+<p>
+In this region, Maxwell's four equations exhibit a remarkable mathematical correspondence between electric and magnetic fields.
+</p>
+<p>
+The first two equations (Gauss's laws) reduce to:
+</p>
+\[
+\oint_S \vec E \cdot d\vec A = 0 \qquad \oint_S \vec B \cdot d\vec A = 0
+\]
+<p>
+Both electric and magnetic fields have zero net flux through any closed surface lying entirely within this source-free region.
+</p>
+<p>
+The other two equations (Faraday's law and the Ampère-Maxwell law) also exhibit a remarkable correspondence.
+</p>
+<p>
+Both relate the circulation of one field around a closed path to the rate of change of flux of the other field through the surface bounded by that path.
+</p>
+\[
+\oint_C \vec E \cdot d\vec l=-\frac{d}{dt}\int_S \vec B \cdot d\vec A
+\]
+\[
+\oint_C \vec B \cdot d\vec l=\mu_0\varepsilon_0\frac{d}{dt}\int_S \vec E \cdot d\vec A
+\]
+<div class="insightbox">
+A changing magnetic field is associated with an electric field, while a changing electric field contributes to producing a magnetic field.<br>
+This reciprocal relationship allows electromagnetic disturbances to propagate through empty space without requiring a material medium.
+</div>
+<h3>Electromagnetic Waves from an Oscillating Charge</h3>
+<p>
+Consider a point charge oscillating about the origin along the Y-axis. As the charge oscillates, it produces time-varying electric and magnetic fields in the surrounding space.
+</p>
+<p>
+To visualise how the electromagnetic disturbance propagates, imagine watching the process in slow motion, starting near the oscillating charge and moving outward along the X-axis.
+</p>
+<p>
+The changing magnetic field in the region near the source is associated with an induced electric field, as described by Faraday's law. This changing electric field, in turn, contributes to producing a magnetic field through the displacement current term in the Ampère-Maxwell law.
+</p>
+<p>
+As we move farther along the X-axis, this changing magnetic field is associated with another induced electric field. That changing electric field is again associated with a magnetic field in a still farther region. The process continues, with the electromagnetic disturbance extending progressively farther into space.
+</p>
+<p>
+Thus, we can visualise the propagation as a succession of changing electric and magnetic fields in neighbouring regions of space. The two fields remain coupled throughout this process, allowing the disturbance to propagate even in the absence of a material medium.
+</p>
+<p>
+This is somewhat analogous to a mechanical wave travelling along a stretched string: the tension associated with one displaced segment acts on the neighbouring segment, allowing the disturbance to travel along the string. In an electromagnetic wave, however, the coupling is between electric and magnetic fields themselves; no material particles are needed to carry the disturbance.
+</p>
+<p>
+For propagation along the X-axis, the radiated electric field oscillates along the Y-axis and the magnetic field along the Z-axis. Thus, the electric field, magnetic field and direction of propagation are mutually perpendicular.
+</p>
+<p>
+In this source-free region, Maxwell's equations combine to give the standard wave equations. For fields varying along the X-axis, they take the form:
+</p>
+\[
+\frac{\partial^2 E_y}{\partial x^2}=\mu_0\varepsilon_0\frac{\partial^2 E_y}{\partial t^2}
+\]
+\[
+\frac{\partial^2 B_z}{\partial x^2}=\mu_0\varepsilon_0\frac{\partial^2 B_z}{\partial t^2}
+\]
+<p>
+Comparing these with the standard wave equation, we obtain the speed of electromagnetic waves in vacuum:
+</p>
+\[
+\boxed{v=\frac{1}{\sqrt{\mu_0\varepsilon_0}}}
+\]
+<p>
+Notice that this speed depends only on the permittivity and permeability of free space, which are electromagnetic properties of vacuum.
+</p>
+<p>
+The same speed applies to both electric and magnetic field disturbances. This means that the two fields propagate together as a coupled electromagnetic wave.
+</p>
+<div class="insightbox">
+Maxwell's equations do more than describe how electric and magnetic fields are related.<br>
+They predict that a disturbance in these fields can propagate through empty space as an electromagnetic wave.
+</div>
+<p>
+This mathematical correspondence also extends directly to how we calculate electromagnetic fields.
+</p>
+<p>
+To determine magnetic-field circulation associated with displacement current, we use the Ampère-Maxwell law.
+</p>
+<p>
+Similarly, to determine electric-field circulation associated with changing magnetic flux, we use Faraday's law.
+</p>
+<p>
+In both cases, we use the same mathematical operation — a closed-path line integral — to study the circulation of the respective field.
+</p>
+<p>
+The difference lies in the physical quantity responsible for producing that circulation.
 </p>
 </section>
 <section>
