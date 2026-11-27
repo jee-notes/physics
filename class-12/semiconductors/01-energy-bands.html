@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Energy Bands in Solids | JEE Physics Notes</title>
+<title>Energy Bands in Solids | Semiconductors</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -16,79 +16,233 @@
 </nav>
 <h1>Energy Bands in Solids</h1>
 <p class="subtitle">
-Quantum mechanical origin of electrical classification in condensed matter.
+Classification of electrical behavior in solids based on the quantum band model.
 </p>
-
 <section>
-<h2>Classification of Solids: Conductors, Insulators, and Semiconductors</h2>
+<h2>Concept</h2>
 <p>
-Solids can be broadly categorized according to their electrical conductivity (\( \sigma \)) and resistivity (\( \rho = 1/\sigma \)) at room temperature (\( T \approx 300 \text{ K} \)):
+In metallic conductors, electrical conduction is attributed to a large number of mobile electrons moving through the metal. In electrolytic solutions, conduction occurs due to the movement of positive and negative ions through the bulk liquid.
 </p>
-<ul>
-<li><strong>Metals (Conductors):</strong> Possess extremely low resistivity and very high conductivity.
-\[ \rho \sim 10^{-2} \text{ to } 10^{-8} \ \Omega\cdot\text{m}, \quad \sigma \sim 10^{2} \text{ to } 10^{8} \ \text{S}\cdot\text{m}^{-1} \]
-</li>
-<li><strong>Insulators:</strong> Possess extremely high resistivity and negligible conductivity.
-\[ \rho \sim 10^{11} \text{ to } 10^{19} \ \Omega\cdot\text{m}, \quad \sigma \sim 10^{-11} \text{ to } 10^{-19} \ \text{S}\cdot\text{m}^{-1} \]
-</li>
-<li><strong>Semiconductors:</strong> Possess intermediate resistivity and conductivity that can be finely tuned.
-\[ \rho \sim 10^{-5} \text{ to } 10^{6} \ \Omega\cdot\text{m}, \quad \sigma \sim 10^{5} \text{ to } 10^{-6} \ \text{S}\cdot\text{m}^{-1} \]
-</li>
-</ul>
+<p>
+In semiconductors, however, electrical conduction has a different microscopic origin. It arises from the electronic structure of atoms arranged in a regular crystalline lattice.
+</p>
+<p>
+Consider a pure Silicon (\( \text{Si} \)) crystal, where each silicon atom forms four covalent bonds with its four nearest neighbours. Since the atoms are packed very closely, their electronic wavefunctions overlap and interact with one another.
+</p>
+<p>
+Consequently, the allowed energy levels of individual atoms split into a very large number of closely spaced energy levels, forming continuous ranges of allowed energies called <strong>energy bands</strong>.
+</p>
 <div class="insightbox">
-Elemental semiconductors include Silicon (\( \text{Si}, Z=14 \)) and Germanium (\( \text{Ge}, Z=32 \)). Compound semiconductors include inorganic compounds like \( \text{GaAs} \), \( \text{CdS} \), \( \text{InP} \), as well as organic semiconductors and polymers like polyaniline.
+In Bohr's atomic model, an electron in an isolated gaseous hydrogen atom occupies sharp, discrete energy levels—such as \( E_1 = -13.6 \text{ eV} \) for \( n = 1 \).<br>
+In general, electrons in an isolated atom can occupy only certain discrete energy levels.<br>
+However, when a very large number of atoms come together and are densely packed to form a solid crystal, interactions between neighbouring atoms cause these discrete atomic energy levels to split into a very large number of closely spaced allowed energy states.<br>
+In a macroscopic crystal, these closely spaced states form practically continuous ranges of allowed energies called <strong>energy bands</strong>.
 </div>
+<p>
+The lower energy band, occupied by the valence electrons involved in bonding, is called the <strong>valence band</strong>. Above it lies another allowed energy range called the <strong>conduction band</strong>. The energy region separating these two bands, in which no allowed electron states exist, is called the <strong>forbidden energy gap</strong>.
+</p>
+<p>
+When an electron gains sufficient energy, it can jump from the valence band into the conduction band. Once in the conduction band, it becomes a mobile charge carrier capable of contributing to electrical conduction. The vacancy left behind in the valence band behaves like a positively charged mobile particle called a <strong>hole</strong>.
+</p>
+<p>
+Thus, electrical conduction in a semiconductor occurs through two types of mobile charge carriers: negatively charged electrons in the conduction band and positively charged holes in the valence band.
+</p>
+<p>
+Even at ordinary temperatures, thermal energy can excite some electrons across the forbidden energy gap. These electrons leave behind holes, generating electron-hole pairs. At thermal equilibrium, electron-hole pairs are continuously generated and recombine, maintaining a characteristic concentration of mobile charge carriers.
+</p>
+<p>
+The important feature of semiconductors is that this carrier concentration is not fixed. We can control the number and type of mobile charge carriers using different methods:
+</p>
+<ul class="model-box">
+<li><strong>Temperature:</strong> Increasing temperature provides thermal energy to excite more electrons from the valence band into the conduction band, generating additional electron-hole pairs.</li>
+<li><strong>Light:</strong> Incident light can transfer energy to electrons, exciting them into the conduction band and generating electron-hole pairs. This is the basis of photodiodes and solar cells.</li>
+<li><strong>Impurity Doping:</strong> By deliberately introducing suitable impurity atoms into a semiconductor crystal, we can change the concentration of electrons and holes. This allows us to create n-type and p-type semiconductors.</li>
+<li><strong>Applied Voltage:</strong> An applied voltage can control the movement and distribution of charge carriers. In semiconductor devices such as diodes and transistors, it can also control the injection of carriers from one region into another.</li>
+</ul>
+<p>
+Thus, the central idea of semiconductor engineering is the ability to control the <strong>concentration, type and transport of charge carriers</strong>. By controlling these properties, we can design semiconductor devices with very different electrical characteristics and functions.
+</p>
+<p>
+For example, the temperature dependence of carrier concentration is exploited in thermistors, light-generated charge carriers are used in solar cells and photodiodes, electron-hole recombination produces light in LEDs, and controlled carrier transport through semiconductor junctions enables diodes and transistors.
+</p>
+<p>
+This ability to engineer the electrical behaviour of a material at the microscopic level is what makes semiconductors the foundation of modern electronic technology.
+</p>
 </section>
-
 <section>
 <h2>Energy Band Theory (Valence Band, Conduction Band, Forbidden Energy Gap)</h2>
 <p>
-In an isolated atom, electron energies occupy sharp, discrete quantum states according to the Bohr model. However, when \( N \) atoms come together to form a crystal lattice, the outer electron wavefunctions overlap. In accordance with the <strong>Pauli Exclusion Principle</strong>, each discrete atomic energy level splits into \( N \) closely spaced sub-levels, forming continuous <strong>energy bands</strong>.
+Consider a system of \( N \) identical, neutral isolated gaseous atoms, separated by sufficiently large distances that interactions between them are negligible. Each atom has its own discrete atomic energy levels. Since all the atoms are identical, the energy-level diagram of the entire system consists of the same discrete energy levels repeated \( N \) times. There are no energy bands in this situation.
+</p>
+<p>
+Now imagine bringing these \( N \) atoms closer together to form a solid crystal. As the interatomic separation decreases, interactions between neighbouring atoms become significant. Their electronic states begin to interact, causing the original discrete atomic energy levels to shift and split into a very large number of closely spaced energy levels.
+</p>
+<p>
+For a system containing \( N \) atoms, an original atomic energy level gives rise to approximately \( N \) closely spaced energy levels. Since \( N \) is enormously large in a macroscopic crystal, these levels can practically be treated as a continuous range of allowed energies called an <strong>energy band</strong>.
 </p>
 
-<div class="model-box">
+<!-- Visual Comparison of Energy Bands -->
+<svg viewBox="0 0 680 260" style="width: 100%; max-width: 680px; display: block; margin: 1.5rem auto; font-family: system-ui, sans-serif;" role="img" aria-label="Energy band diagrams comparing Conductors, Semiconductors, and Insulators">
+<!-- Y-Axis -->
+<line x1="45" y1="220" x2="45" y2="25" stroke="#64748b" stroke-width="2" />
+<polygon points="45,20 40,30 50,30" fill="#64748b" />
+<text x="22" y="125" fill="#475569" font-size="13" font-weight="600" transform="rotate(-90 22,125)" text-anchor="middle">Electron Energy (E)</text>
+
+<!-- 1. Conductor (Overlapping Bands) -->
+<rect x="90" y="55" width="130" height="75" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="4" />
+<text x="155" y="85" fill="#1e3a8a" font-size="12" font-weight="600" text-anchor="middle">Conduction Band</text>
+<rect x="90" y="110" width="130" height="85" fill="#fef3c7" fill-opacity="0.85" stroke="#d97706" stroke-width="1.5" rx="4" />
+<text x="155" y="162" fill="#92400e" font-size="12" font-weight="600" text-anchor="middle">Valence Band</text>
+<text x="155" y="123" fill="#b91c1c" font-size="11" font-weight="700" text-anchor="middle">Overlap (Eg &approx; 0)</text>
+<text x="155" y="220" fill="#1e293b" font-size="13" font-weight="700" text-anchor="middle">Conductor</text>
+
+<!-- 2. Semiconductor (Small Eg) -->
+<rect x="285" y="45" width="130" height="60" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="4" />
+<text x="350" y="79" fill="#1e3a8a" font-size="12" font-weight="600" text-anchor="middle">Conduction Band</text>
+<line x1="350" y1="107" x2="350" y2="133" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2" />
+<text x="350" y="124" fill="#dc2626" font-size="11" font-weight="700" text-anchor="middle">Eg &lt; 3 eV</text>
+<rect x="285" y="135" width="130" height="60" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" rx="4" />
+<text x="350" y="169" fill="#92400e" font-size="12" font-weight="600" text-anchor="middle">Valence Band</text>
+<text x="350" y="220" fill="#1e293b" font-size="13" font-weight="700" text-anchor="middle">Semiconductor</text>
+
+<!-- 3. Insulator (Large Eg) -->
+<rect x="480" y="30" width="130" height="45" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="4" />
+<text x="545" y="57" fill="#1e3a8a" font-size="12" font-weight="600" text-anchor="middle">Conduction Band</text>
+<line x1="545" y1="78" x2="545" y2="147" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="3,2" />
+<text x="545" y="116" fill="#dc2626" font-size="11" font-weight="700" text-anchor="middle">Eg &gt; 3 eV (Large)</text>
+<rect x="480" y="150" width="130" height="45" fill="#fef3c7" stroke="#d97706" stroke-width="1.5" rx="4" />
+<text x="545" y="177" fill="#92400e" font-size="12" font-weight="600" text-anchor="middle">Valence Band</text>
+<text x="545" y="220" fill="#1e293b" font-size="13" font-weight="700" text-anchor="middle">Insulator</text>
+</svg>
 <h3>Key Energy Bands</h3>
-<ul>
-<li><strong>Valence Band (VB):</strong> The energy band formed by the outermost valence electrons. It is completely or partially filled at \( 0 \text{ K} \). Electrons in this band do not contribute directly to conduction unless excited.</li>
-<li><strong>Conduction Band (CB):</strong> The lowest unfilled or partially filled energy band above the valence band. Electrons excited into this band are free to drift under an external electric field.</li>
-<li><strong>Forbidden Energy Gap (\( E_g \)):</strong> The energy separation between the top of the valence band (\( E_v \)) and the bottom of the conduction band (\( E_c \)):
-\[ E_g = E_c - E_v \]
-No allowed quantum states exist within this gap.
+<ul class="model-box">
+<li>
+<strong>Valence Band (VB):</strong> In semiconductors and insulators, the highest energy band occupied by electrons at \( 0 \text{ K} \) is called the valence band. It is completely filled at absolute zero in these materials.
+</li>
+<li>
+<strong>Conduction Band (CB):</strong> The next higher allowed energy band above the valence band. At \( 0 \text{ K} \), it is empty in an intrinsic semiconductor or insulator. Electrons excited into this band become mobile charge carriers and can contribute to electrical conduction.
+</li>
+<li>
+<strong>Forbidden Energy Gap (\( E_g \)):</strong> The energy region separating the valence band and conduction band, within which no allowed electron energy states exist. It is measured between the top of the valence band (\( E_v \)) and the bottom of the conduction band (\( E_c \)):
+\[
+E_g = E_c - E_v
+\]
 </li>
 </ul>
-</div>
-
 <p>
-The distinction between the three classes of solids lies directly in their bandgap magnitude:
+The electrical behaviour of a solid depends significantly on how its energy bands are occupied and on the magnitude of the forbidden energy gap between them.
 </p>
-<ol>
-<li><strong>Conductors:</strong> Either the conduction band is partially filled with electrons, or the conduction band overlaps with the valence band (\( E_g \approx 0 \)). A large pool of free electrons is readily available for conduction without thermal activation.</li>
-<li><strong>Insulators:</strong> A very large forbidden energy gap exists (\( E_g > 3 \text{ eV} \)). For instance, in Diamond, \( E_g \approx 5.4 \text{ eV} \). Thermal energy at room temperature (\( k_B T \approx 0.026 \text{ eV} \)) is insufficient to excite valence electrons across this gap, resulting in zero conductivity.</li>
-<li><strong>Semiconductors:</strong> Possess a small, finite forbidden energy gap (\( E_g < 3 \text{ eV} \)). At room temperature (\( 300 \text{ K} \)):
-\[ E_g(\text{Si}) \approx 1.1 \text{ eV}, \quad E_g(\text{Ge}) \approx 0.7 \text{ eV}, \quad E_g(\text{GaAs}) \approx 1.42 \text{ eV} \]
-Thermal energy excites a noticeable fraction of electrons from VB to CB, creating electrical conductivity.
+<ol class="model-box">
+<li>
+<strong>Conductors:</strong> In conductors, an allowed energy band may be partially filled, or the valence band may overlap with the conduction band (\( E_g \approx 0 \)). Consequently, electrons have nearby unoccupied energy states available to which they can move under an applied electric field. This makes electrical conduction possible without requiring thermal excitation across a forbidden energy gap.
+</li>
+<li>
+<strong>Insulators:</strong> Insulators have a completely filled valence band and an empty conduction band at \( 0 \text{ K} \), separated by a large forbidden energy gap (\( E_g \gt 3 \text{ eV} \) in the conventional introductory classification).
+<br>
+For example, in Diamond, \( E_g \approx 5.4 \text{ eV} \). At room temperature (\( 300 \text{ K} \)), the characteristic thermal energy is:
+\[
+k_B T \approx 0.026 \text{ eV}
+\]
+This is much smaller than the forbidden energy gap, so thermal excitation of electrons into the conduction band is extremely unlikely. Consequently, very few mobile charge carriers are available and electrical conductivity is negligible.
+</li>
+<li>
+<strong>Semiconductors:</strong> Semiconductors also have a completely filled valence band and an empty conduction band at \( 0 \text{ K} \), but the forbidden energy gap is comparatively small and finite (\( E_g \lt 3 \text{ eV} \) in the conventional introductory classification).
+<br>
+At room temperature (\( 300 \text{ K} \)), typical bandgap values are:
+\[
+E_g(\text{Si}) \approx 1.1 \text{ eV}
+\]
+\[
+E_g(\text{Ge}) \approx 0.7 \text{ eV}
+\]
+\[
+E_g(\text{GaAs}) \approx 1.42 \text{ eV}
+\]
+Thermal energy can excite a small fraction of valence electrons into the conduction band, generating electron-hole pairs. Although this fraction is small, it provides sufficient mobile charge carriers to produce measurable electrical conductivity.
 </li>
 </ol>
+<p>
+The distinction between conductors, semiconductors and insulators is therefore fundamentally connected to the availability of nearby allowed energy states for electron motion and the energy required to excite electrons into higher bands.
+</p>
 </section>
-
 <section>
-<h2>Temperature Dependence of Conductivity</h2>
+<h2>Classification of Solids: Conductors, Insulators, and Semiconductors</h2>
 <p>
-The electrical resistivity of semiconductors behaves fundamentally differently from that of metals:
+Solids can be broadly categorized according to their electrical conductivity (\( \sigma \)), resistivity (\( \rho = 1/\sigma \)) and energy-band structure. The following table compares their important electrical properties at room temperature (\( T \approx 300 \text{ K} \)):
 </p>
-<div class="concept-box">
-<strong>Semiconductors possess a Negative Temperature Coefficient of Resistance (\( \alpha < 0 \)):</strong><br>
-As temperature \( T \) increases, thermal agitation breaks covalent bonds, exponentially increasing the number density of free carriers \( n(T) \propto e^{-E_g / (2 k_B T)} \). The massive increase in carrier concentration overwhelmingly dominates over increased lattice scattering, causing resistivity to drop and electrical conductivity to surge:
-\[ \sigma(T) = \sigma_0 e^{-E_g / (2 k_B T)} \]
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Metals (Conductors)</th>
+<th>Semiconductors</th>
+<th>Insulators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resistivity (\( \rho \))</strong></td>
+<td>\(10^{-8}\) to \(10^{-2}\ \Omega\cdot\text{m}\)</td>
+<td>\(10^{-5}\) to \(10^{6}\ \Omega\cdot\text{m}\)</td>
+<td>\(10^{11}\) to \(10^{19}\ \Omega\cdot\text{m}\)</td>
+</tr>
+<tr>
+<td><strong>Conductivity (\( \sigma \))</strong></td>
+<td>\(10^{2}\) to \(10^{8}\ \text{S}\cdot\text{m}^{-1}\)</td>
+<td>\(10^{-6}\) to \(10^{5}\ \text{S}\cdot\text{m}^{-1}\)</td>
+<td>\(10^{-19}\) to \(10^{-11}\ \text{S}\cdot\text{m}^{-1}\)</td>
+</tr>
+<tr>
+<td><strong>Temperature Coefficient of Resistance (\( \alpha \))</strong></td>
+<td>Positive</td>
+<td>Negative</td>
+<td>Negative (generally)</td>
+</tr>
+<tr>
+<td><strong>Charge Carriers</strong></td>
+<td>Free electrons</td>
+<td>Electrons and holes</td>
+<td>Negligible</td>
+</tr>
+<tr>
+<td><strong>Forbidden Energy Gap (\( E_g \))</strong></td>
+<td>\(\approx 0\ \text{eV}\) (partially filled or overlapping bands)</td>
+<td>Small, finite gap (typically \(\lt 3\ \text{eV}\))</td>
+<td>Large gap (typically \(\gt 3\ \text{eV}\))</td>
+</tr>
+<tr>
+<td><strong>Typical Bandgap Values</strong></td>
+<td>No significant forbidden gap at the Fermi level</td>
+<td>
+Si: \(1.1\ \text{eV}\)<br>
+Ge: \(0.7\ \text{eV}\)<br>
+GaAs: \(1.42\ \text{eV}\)
+</td>
+<td>Diamond: \(\approx 5.4\ \text{eV}\)</td>
+</tr>
+<tr>
+<td><strong>Examples</strong></td>
+<td>Pt, Al, Cu, Ag</td>
+<td>Si, Ge, GaAs, CdS, InP</td>
+<td>Wood, plastic, diamond, mica</td>
+</tr>
+</tbody>
+</table>
+<div class="insightbox">
+<strong>Types of Semiconductors:</strong><br>
+Elemental semiconductors include Silicon (\( \text{Si}, Z=14 \)) and Germanium (\( \text{Ge}, Z=32 \)).<br>
+Compound semiconductors include inorganic compounds like \( \text{GaAs} \), \( \text{CdS} \), and \( \text{InP} \), as well as organic semiconductors and polymers like polyaniline.
 </div>
 <p>
-In contrast, metals have a fixed carrier concentration; rising temperature only increases electron-phonon lattice collisions, causing resistance to increase linearly (\( \alpha > 0 \)).
+<strong>Note:</strong> These resistivity and conductivity ranges are representative values and not rigid boundaries. The electrical properties of semiconductors, in particular, depend strongly on temperature, purity and impurity doping.
 </p>
-<div class="insightbox">
-At absolute zero (\( T = 0 \text{ K} \)), a pure semiconductor has all valence electrons locked in bonds and an empty conduction band. Thus, at \( 0 \text{ K} \), a semiconductor behaves as an ideal insulator.
+</section>
+<section>
+<h2>Sub-Topic</h2>
+<div class="chapter-list">
+<a href="./01a-temperature.html">1. Temperature Dependence</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

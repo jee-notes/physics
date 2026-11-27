@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work in a System | Work, Power & Energy</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Work, Power &amp; Energy
+</a>
+</nav>
+<h1>Work in a System</h1>
+<p class="subtitle">
+Work done by Internal Forces in a System.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+In the NLM chapter, we saw the advantage of the system approach, where we identified internal and external forces by choosing a system and examining the interactions between its components.
+</p>
+<p>
+Here, we learn how to use the system approach in energy analysis, just as we did in NLM-based situations.
+</p>
+<p>
+Specifically, we study four cases:
+</p>
+<ul class="model-box">
+<li>Work done by internal tension forces in a system.</li>
+<li>Work done by internal normal forces in a system.</li>
+<li>Work done by internal static friction forces in a system.</li>
+<li>Work done by internal kinetic friction forces in a system.</li>
+</ul>
+<p>
+Internal forces are interaction forces exerted by one part of the chosen system on another part. These interactions occur in action-reaction pairs.
+</p>
+<p>
+In this section, we study work done by ordinary, non-impulsive internal forces. Later, in the collision chapter, we will examine situations involving impulsive internal forces as well.
+</p>
+<p>
+We use the concept of work for extended bodies. When a force \(\vec{F}\) acts on an extended body at the point of application \(A\) on the body, then the work done by the force on the body is given by:
+</p>
+\[
+W = \int_{C} \vec{F} \cdot d\vec{s}_A 
+\]
+<p>
+where \(d\vec{s}_A\) is the infinitesimal displacement of the point of application.
+</p>
+</section>
+<section>
+<h2>Normal Force</h2>
+<div class="examplebox">
+<h3>Illustration</h3>
+<p>
+Consider two blocks, Block A (\(m_A = 5\,\text{kg}\)) and Block B (\(m_B = 3\,\text{kg}\)), placed side by side in contact on a flat, smooth horizontal surface from left to right. A horizontal force of \(F = 16\,\text{N}\) is applied to Block A toward the right, pushing both blocks together from rest. Calculate the work done by the contact normal force on each block, and the net work done by the internal normal force on the \((A+B)\) system, during the first \(t = 2\,\text{s}\).
+</p>
+<h3>Solution</h3>
+<p>
+<strong>Step 1: Find the common acceleration and displacement of the system.</strong><br>
+Since both blocks remain in contact and move together on a smooth surface, they share a common acceleration \(\vec{a}\):
+</p>
+\[
+\vec{a} = \frac{\vec{F}}{m_A + m_B} = \frac{16\,\hat{i}}{5 + 3} = 2\,\hat{i}\;\text{m/s}^2
+\]
+<p>
+Starting from rest (\(u = 0\)), the magnitude of displacement of both blocks in \(t = 2\,\text{s}\) is:
+</p>
+\[
+s = ut + \frac{1}{2}at^2 = 0 + \frac{1}{2}(2)(2)^2 = 4\,\text{m} \quad (\text{toward the right})
+\]
+<p>
+This is the key criterion: the displacement of both blocks is identical due to the contact constraint: \(\vec{s}_A = \vec{s}_B = 4\,\hat{i}\;\text{m}\).
+</p>
+<p>
+<strong>Step 2: Find the internal normal force between Block A and Block B.</strong><br>
+Isolating Block B, the only horizontal force acting on it is the normal force \(\vec{N}_{B/A}\) exerted by Block A toward the right (\(\hat{i}\)):
+</p>
+\[
+\vec{N}_{B/A} = m_B \vec{a}_B = (3)(2\,\hat{i}) = 6\,\hat{i}\;\text{N}
+\]
+<p>
+By Newton's Third Law, Block B exerts an equal and opposite normal force \(\vec{N}_{A/B} = -6\,\hat{i}\;\text{N}\) on Block A toward the left.
+</p>
+<p>
+<strong>Step 3: Calculate the work done by the normal force on each block.</strong><br>
+Taking the direction of motion (right) as positive:
+</p>
+<ul class="model-box">
+<li><strong>Work done by normal force on Block A:</strong> Since the normal force on A acts toward the left (\(\theta = 180^\circ\)):
+\[
+W_{N,A} = |\vec{N}_{A/B}|\,|\vec{s}_A|\cos 180^\circ = (6)(4)(-1) = -24\,\text{J}
+\]
+</li>
+<li><strong>Work done by normal force on Block B:</strong> Since the normal force on B acts toward the right (\(\theta = 0^\circ\)):
+\[
+W_{N,B} = |\vec{N}_{B/A}|\,|\vec{s}_B|\cos 0^\circ = (6)(4)(+1) = +24\,\text{J}
+\]
+</li>
+</ul>
+<p>
+<strong>Step 4: Net work done by the internal normal force on the \((A+B)\) system.</strong>
+</p>
+\[
+W_{N,\text{sys}} = W_{N,A} + W_{N,B} = -24\,\text{J} + 24\,\text{J} = 0
+\]
+</div>
+<h3>Other Concepts</h3>
+<div class="examplebox">
+<h3>Illustration</h3>
+<p>
+In the same problem, comment on the work done by all other forces and the system approach.
+</p>
+<h3>Solution</h3>
+<p>
+<strong>Step 1: Enumerate all external forces on the system.</strong><br>
+The system is not a single extended body, but two particle bodies in contact. Thus, the forces acting on the system are simply the forces acting on the individual bodies:
+</p>
+<ul class="model-box">
+<li>Horizontal force \(\vec{F} = 16\,\hat{i}\;\text{N}\) applied on Block A</li>
+<li>Gravitational force \(\vec{F}_{A/E} = -5g\,\hat{j}\;\text{N}\) applied on Block A by Earth</li>
+<li>Gravitational force \(\vec{F}_{B/E} = -3g\,\hat{j}\;\text{N}\) applied on Block B by Earth</li>
+<li>Normal force \(\vec{N}_{A/G} = 5g\,\hat{j}\;\text{N}\) applied on Block A by the ground</li>
+<li>Normal force \(\vec{N}_{B/G} = 3g\,\hat{j}\;\text{N}\) applied on Block B by the ground</li>
+</ul>
+<p>
+<strong>Step 2: Displacement of points of application.</strong><br>
+The displacements of the points of application are the displacements of the blocks themselves. Reusing our result from above: \(\vec{s}_A = \vec{s}_B = 4\,\hat{i}\;\text{m}\).
+</p>
+<p>
+<strong>Step 3: Work done by all forces.</strong><br>
+We find the net work done on the system to evaluate the change in kinetic energy of the system:
+</p>
+<ul class="model-box">
+<li>Work done by horizontal force: \(W_F = \vec{F} \cdot \vec{s}_A = +64\,\text{J}\) (we use \(\vec{s}_A\) because \(\vec{F}\) is applied on Block A).</li>
+<li>Work done by gravity on A: \(W_{A/E} = \vec{F}_{A/E} \cdot \vec{s}_A = 0\,\text{J}\) (\(\vec{s}_A\) and \(\vec{F}_{A/E}\) are perpendicular).</li>
+<li>Work done by gravity on B: \(W_{B/E} = \vec{F}_{B/E} \cdot \vec{s}_B = 0\,\text{J}\) (\(\vec{s}_B\) and \(\vec{F}_{B/E}\) are perpendicular).</li>
+<li>Work done by ground normal force on A: \(W_{N,A/G} = \vec{N}_{A/G} \cdot \vec{s}_A = 0\,\text{J}\) (\(\vec{s}_A\) and \(\vec{N}_{A/G}\) are perpendicular).</li>
+<li>Work done by ground normal force on B: \(W_{N,B/G} = \vec{N}_{B/G} \cdot \vec{s}_B = 0\,\text{J}\) (\(\vec{s}_B\) and \(\vec{N}_{B/G}\) are perpendicular).</li>
+</ul>
+<p>
+We must also include the work done by internal forces. Unlike in Newton's Laws, for the Work-Energy Theorem we cannot automatically exclude internal forces from the system:
+</p>
+<ul class="model-box">
+<li>Work done by internal normal force on A: \(W_{N,A/B} = \vec{N}_{A/B} \cdot \vec{s}_A = -24\,\text{J}\) (we use \(\vec{s}_A\) because \(\vec{N}_{A/B}\) acts on Block A).</li>
+<li>Work done by internal normal force on B: \(W_{N,B/A} = \vec{N}_{B/A} \cdot \vec{s}_B = +24\,\text{J}\) (we use \(\vec{s}_B\) because \(\vec{N}_{B/A}\) acts on Block B).</li>
+</ul>
+<p>
+<strong>Step 4: Add all the works.</strong><br>
+Summing the work done by every external and internal force gives the net work done on the \((A+B)\) system:
+</p>
+\[
+W_{\text{net}} = W_{\text{ext}} + W_{\text{int}} = (64 + 0 + 0 + 0 + 0) + (-24 + 24) = +64\,\text{J}
+\]
+<p>
+By the Work-Energy Theorem, this equals the change in kinetic energy of the system (\(\Delta \text{KE}_{\text{sys}} = \frac{1}{2}(m_A + m_B)v^2 = \frac{1}{2}(8)(4)^2 = +64\,\text{J}\)).
+</p>
+</div>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

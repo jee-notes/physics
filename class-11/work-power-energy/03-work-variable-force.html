@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work by a Variable Force | Work, Power & Energy</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./index.html" class="back-btn">
+<span>&larr;</span> Back to Work, Power &amp; Energy
+</a>
+</nav>
+<h1>Work by a Variable Force</h1>
+<p class="subtitle">
+Calculus involving Dot Product of Vectors.
+</p>
+<section>
+<h2>Vector Algebra of Work</h2>
+<p>
+The expression \(W = \vec{F}\cdot\vec{s}\) gives the work done when the force remains constant throughout the displacement.
+</p>
+<p>
+In many physical situations, however, the force changes from point to point—a situation called a <strong>variable force</strong>, where the force is different at different locations in space.
+</p>
+<p>
+Examples include a spring being compressed, a charge moving through a non-uniform field, or an object moving through a varying gravitational field.
+</p>
+<p>
+For a variable force situation, when we know the path connecting \(\vec{r}_1\) and \(\vec{r}_2\), we divide the path into infinitesimally small segments:
+</p>
+\[
+d\vec{s} = d\vec{r} = dx\,\hat{i} + dy\,\hat{j} + dz\,\hat{k}
+\]
+<p>
+Over each such segment \(d\vec{s}\), the variable force \(\vec{F} = F_x\hat{i} + F_y\hat{j} + F_z\hat{k}\) can be treated as approximately constant, allowing the work done over that infinitesimal displacement to be written as:
+</p>
+\[
+\delta W = \vec{F} \cdot d\vec{s} = F_x\,dx + F_y\,dy + F_z\,dz
+\]
+<p>
+The total work is obtained by summing the work done over all infinitesimal segments along the path:
+</p>
+\[
+W_C = \int_C \vec{F}\cdot d\vec{s} = \int_C \delta W
+\]
+<p>
+And now, the important question is how to write this integration so that it gives the accumulation of infinitesimal work done at each \(d\vec{s}\).
+</p>
+<p>
+We know \(\vec{r}_1\) and \(\vec{r}_2\) — the initial and final positions, given by:
+</p>
+\[
+\vec{r}_1 = x_1\hat{i} + y_1\hat{j} + z_1\hat{k} \qquad \vec{r}_2 = x_2\hat{i} + y_2\hat{j} + z_2\hat{k}
+\]
+<p>
+Using these, we put the appropriate coordinate limits:
+</p>
+\[
+W_C = \int_C \delta W = \int_{x_1}^{x_2} F_x\,dx + \int_{y_1}^{y_2} F_y\,dy + \int_{z_1}^{z_2} F_z\,dz
+\]
+<p>
+Notice that information about the path is <strong>not</strong> encoded in the limits. It is encoded in how \(F_x\), \(F_y\), and \(F_z\) vary along the path.
+</p>
+<p>
+Students are often confused about what \(F_x\) is. It is not that \(F_x\) must only be a function of \(x\)—it is simply the component of force along \(\hat{i}\), which in general can depend on \(x\), \(y\), and \(z\).
+</p>
+<p>
+Together, two things determine how the force components are evaluated during integration: the force-field relations (such as \(F_x = f(x,y,z)\)) and the geometric relation among the coordinates themselves along the path.
+</p>
+<div class="insightbox">
+Work by a variable force cannot be solved using the geometric definition of the dot product (\(\vec{F}\cdot\vec{s} = |\vec{F}|\,|\vec{s}|\,\cos\theta\)).<br>
+Calculus provides the summation tool to accumulate an infinite number of individual infinitesimal work contributions.
+</div>
+</section>
+<section>
+<h2>Where Is the Path Information?</h2>
+<div class="examplebox">
+<h3>Illustration</h3>
+<p>
+Consider a force field (in SI units): \(\vec{F}=x\hat{j}\). A particle moves from \(A=(0,0)\) to \(B=(1,1)\). We want to calculate the work done by this force along two different paths connecting these points: Path 1 along the straight line \(y=x\), and Path 2 along the curve \(y=x^2\).
+</p>
+<h3>Solution</h3>
+<p>
+Resolve the Cartesian components of force from the given expression (\(\vec{F}=x\hat{j}\)). We need 2D resolution only:
+</p>
+\[
+F_x=0 \qquad F_y = x
+\]
+<p>
+Therefore, the work integral becomes:
+</p>
+\[
+W_C = \int_{x_1}^{x_2} F_x\,dx + \int_{y_1}^{y_2} F_y\,dy = 0 + \int_{y_1}^{y_2} F_y\,dy = \int_0^1 x\,dy
+\]
+<p>
+The integration limits are determined by the initial and final \(y\)-coordinates:
+</p>
+\[
+A(x_1,y_1) = (0,0) \qquad B(x_2,y_2) = (1,1)
+\]
+<p>
+We cannot solve this integral without knowing the path equation.
+</p>
+<p>
+That is how we know the value of \(x\) at each point during the motion — from the information of the path followed.
+</p>
+<h3>Path 1: Straight-Line Path</h3>
+<p>
+The particle travels along the straight line \(y=x\).
+</p>
+<p>
+Substitute this path relation into the work integral:
+</p>
+\[
+\begin{aligned}
+W_1 &= \int_0^1 x\,dy \\
+&= \int_0^1 y\,dy \\
+&= \left[\frac{y^2}{2}\right]_0^1
+\end{aligned}
+\]
+\[
+\boxed{W_1 = \frac{1}{2}\,\text{J}}
+\]
+<h3>Path 2: Curved Path</h3>
+<p>
+The particle travels along the curve \(y=x^2\).
+</p>
+<p>
+Expressing \(x\) in terms of \(y\): \(x = \sqrt{y}\) (since \(x \ge 0\) along this path).
+</p>
+<p>
+Substitute this path relation into the same work integral:
+</p>
+\[
+\begin{aligned}
+W_2 &= \int_0^1 x\,dy \\
+&= \int_0^1 \sqrt{y}\,dy \\
+&= \left[\frac{2}{3}y^{3/2}\right]_0^1
+\end{aligned}
+\]
+\[
+\boxed{W_2 = \frac{2}{3}\,\text{J}}
+\]
+</div>
+<h3>What Have We Learned?</h3>
+<p>
+Notice that both cases have:
+</p>
+<ul class="model-box">
+<li>The same force field: \(\vec{F}=x\hat{j}\).</li>
+<li>The same initial position: \(A=(0,0)\).</li>
+<li>The same final position: \(B=(1,1)\).</li>
+<li>The same integration limits: \(0\) to \(1\), along the \(y\)-coordinate.</li>
+</ul>
+<p>
+Yet, the work done is different:
+</p>
+\[
+W_1 = \frac{1}{2}\,\text{J} \qquad W_2 = \frac{2}{3}\,\text{J}
+\]
+<p>
+<strong>So where did the path information enter the calculation?</strong>
+</p>
+<p>
+It entered through the relationship between \(x\) and \(y\) along the path. This relationship determined the value of the force component \(F_y=x\) at each point during the motion.
+</p>
+<div class="insightbox">
+The integration limits specify the initial and final coordinate values.<br>
+They do not, by themselves, specify the path.<br>
+The path information enters through the coordinate relationships used to evaluate the force components during integration.<br>
+Thus, even when the force field and the endpoints remain unchanged, changing the path can change the accumulated work.
+</div>
+</section>
+<section>
+<h2>Limits of Integration — Direction Information</h2>
+<p>
+It's not that the limits do not contain any information about displacement. The path information may be contained in the expressions, but information about the direction of traversal is determined by the limits.
+</p>
+<div class="examplebox">
+<h3>Illustration</h3>
+<p>
+Consider projectile motion along a parabolic path. A particle of mass \(m\) is projected ground-to-ground with speed \(u\) at an angle \(\theta\) with the horizontal. Calculate the work done by the gravitational force in two cases: when the particle moves from the ground to maximum height, and when the particle returns from maximum height back to the ground.
+</p>
+<h3>Solution</h3>
+<p>
+Formulate the expression for gravitational force in Cartesian component form: \(\vec{F}_g = -mg\hat{j}\). We need 2D resolution only:
+</p>
+\[
+F_x = 0 \qquad F_y = -mg
+\]
+<p>
+To formulate the work integral, we need the coordinates of the key points. The particle is projected from \(O(0,0)\). Let the range be \(R\) and maximum height be \(H\). The point of maximum height is \(A(R/2, H)\) and the landing point is \(B(R,0)\). We express \(R\) and \(H\) in terms of the given quantities \(u\) and \(\theta\):
+</p>
+\[
+H = \frac{u^2\sin^2\theta}{2g} \qquad R = \frac{4H}{\tan\theta}
+\]
+<p>
+Therefore, the work integral becomes:
+</p>
+\[
+W_C = \int_{x_1}^{x_2} F_x\,dx + \int_{y_1}^{y_2} F_y\,dy = 0 + \int_{y_1}^{y_2} -mg\,dy
+\]
+<p>
+<strong>The integration limits are determined by the initial and final coordinates, and hence they determine the direction of traversal along the path.</strong>
+</p>
+<h3>Path 1: From \(O\) to \(A\)</h3>
+<p>
+For Path 1, the coordinates are:
+</p>
+\[
+O(x_1,y_1) = (0,0) \qquad A(x_2,y_2) = (R/2,H)
+\]
+<p>
+Substitute these as limits into the work integral:
+</p>
+\[
+\begin{aligned}
+W_1 &= \int_{0}^{H} -mg\,dy \\
+&= -mg\,\int_{0}^{H} dy \\
+&= -mg\,\left[y\right]_{0}^{H}
+\end{aligned}
+\]
+\[
+\boxed{W_1 = -mgH = -\frac{1}{2}mu^2\sin^2\theta}
+\]
+<h3>Path 2: From \(A\) to \(B\)</h3>
+<p>
+For Path 2, the coordinates are:
+</p>
+\[
+A(x_1,y_1) = (R/2,H) \qquad B(x_2,y_2) = (R,0)
+\]
+<p>
+Substitute these as limits into the work integral:
+</p>
+\[
+\begin{aligned}
+W_2 &= \int_{H}^{0} -mg\,dy \\
+&= -mg\,\int_{H}^{0} dy \\
+&= -mg\,\left[y\right]_{H}^{0}
+\end{aligned}
+\]
+\[
+\boxed{W_2 = +mgH = +\frac{1}{2}mu^2\sin^2\theta}
+\]
+</div>
+<h3>What Have We Learned?</h3>
+<p>
+Notice that both cases had the same force, \(\vec{F}_g = -mg\hat{j}\), while the path and direction of vertical traversal were different.
+</p>
+<p>
+The differential \(dy\) represents a general signed infinitesimal displacement along \(\hat{j}\). We do <strong>not</strong> manually change its sign to \(-dy\) when the particle moves vertically downward.
+</p>
+<p>
+The direction of traversal is represented by the order of the integration limits.
+</p>
+<p>
+During upward motion, the y-coordinate increases, so the limits are from \(0\) to \(H\) and (\(dy \gt  0\)). During downward motion, the y-coordinate decreases, so the limits are from \(H\) to \(0\) and (\(dy \lt  0\)).
+</p>
+<p>
+Thus, the integration limits carry information about the direction of traversal along the coordinate axis.
+</p>
+<p>
+We let the variable force change its magnitude and direction as per the co-ordinate and let the limits decide the direction of traversal.
+</p>
+</section>
+<section>
+<h2>Variable Force \(F(x)\)</h2>
+<p>
+When we write a force as a function of position, such as the spring force
+</p>
+\[
+F(x)=-kx
+\]
+<p>
+many students interpret it as a scalar equation. However, it is actually a one-dimensional vector equation.
+</p>
+<p>
+The displacement coordinate \(x\) is a signed quantity. Its magnitude gives the distance from equilibrium, while its sign specifies the direction.
+</p>
+<p>
+Since the force depends on \(x\), both the magnitude and direction of the force are determined by the magnitude and sign of \(x\).
+</p>
+<p>
+For example, if \(x=2\text{ m}\), the object is located 2 m on the positive side of the chosen axis (lets say upwards).
+</p>
+<p>
+The spring force is then \(F = -2k\)
+</p>
+<p>
+That is actually a vector equation and it means that the force has magnitude \(2k\) and acts in the opposite direction of displacement (that is downwards).
+</p>
+<p>
+The sign carries the directional information.
+</p>
+<p>
+To make the vector nature explicit, let the positive direction be represented by the unit vector \(\hat{i}\). The spring force can then be written as
+</p>
+\[
+\vec{F}=-kx\,\hat{i} \text{ (same as: } F(x) = -kx \text{ )}
+\]
+<p>
+Consider a general infinitesimal displacement along the same axis:
+</p>
+\[
+d\vec{x}=dx\,\hat{i}.
+\]
+<p>
+The general variable quantity \(dx\) is signed (its a 1D vector variable). A positive value represents displacement along \(+\hat{i}\), while a negative value represents displacement along \(-\hat{i}\).
+<p>
+The infinitesimal work done by the force is
+</p>
+\[
+dW = \vec{F}\cdot d\vec{x} = -kx\hat{i} \cdot dx\hat{i} = -kxdx = F(x)dx 
+\]
+<p>
+Thus,
+</p>
+\[
+dW = F(x)\,dx
+\]
+<p>
+is simply the one-dimensional form of the vector dot product. The vector nature has not disappeared; it is encoded in the signs of \(F(x)\) and \(dx\).
+</p>
+<p>
+The sign of \(dx\) determines the direction of an infinitesimal displacement. The overall direction of motion is reflected in the limits of integration, which specify the initial and final positions of the motion.
+</p>
+</section>
+<section>
+<h2>Graphical Interpretation: Area Under the F–x Graph</h2>
+<p>
+The integral \(\int_{x_1}^{x_2} F(x)\,dx\) represents the area enclosed between the \(F\text{–}x\) curve, the \(x\)-axis, and the vertical lines at \(x = x_1\) and \(x = x_2\).
+</p>
+<ul>
+<li>If the curve lies above the \(x\)-axis (force in the direction of displacement), the work is positive.</li>
+<li>If the curve lies below the \(x\)-axis (force opposing displacement), the work is negative.</li>
+<li>The net work is the algebraic sum of all such areas.</li>
+</ul>
+<div class="insightbox">
+Graphical methods are extremely useful in JEE problems where \(F(x)\) is given as a piecewise linear function or a simple shape. Count the area above the axis as positive and below as negative.
+</div>
+</section>
+<section>
+<h2>The Spring Force: A Key Example</h2>
+<p>
+A spring obeying Hooke's Law exerts a restoring force proportional to its extension or compression:
+</p>
+\[F = -kx\]
+<p>
+Here, \(k\) is the spring constant (stiffness) and \(x\) is the displacement from the natural  (unstretched) length. The negative sign indicates the force is always directed back towards the equilibrium position.
+</p>
+<p>
+The work done by the spring force when the spring is compressed or stretched by \(x\) from its natural length is:
+</p>
+\[W_{\text{spring}} = \int_0^x (-kx')\,dx' = -\frac{1}{2}kx^2\]
+<p>
+The work done by an external agent stretching the spring from 0 to \(x\) is:
+</p>
+\[W_{\text{external}} = +\frac{1}{2}kx^2\]
+<div class="insightbox">
+The work done by the spring force is always negative when the spring is being deformed from its natural length, because the spring force opposes the displacement. This energy is stored as elastic potential energy.
+</div>
+</section>
+<section>
+<h2>General Work by Spring Between Two Positions</h2>
+<p>
+When a spring moves from compression/extension \(x_1\) to \(x_2\), the work done by the spring force is:
+</p>
+\[W_{\text{spring}} = \int_{x_1}^{x_2} (-kx)\,dx = \frac{1}{2}kx_1^2 - \frac{1}{2}kx_2^2\]
+<p>
+This equals the decrease in the spring's potential energy, which is the defining property of a conservative force.
+</p>
+</section>
+<section>
+<h2>Important Observations</h2>
+<ul>
+<li>Work depends on the path and the force law — for non-conservative forces, the same starting and ending positions can yield different work for different paths.</li>
+<li>For a linear force like the spring, the \(F\text{–}x\) graph is a straight line through the origin, and the area is a triangle: \(W = \frac{1}{2} \times \text{base} \times \text{height}\).</li>
+<li>When the displacement is in the same direction as the axis and the force is one-dimensional, the vector integral reduces to the scalar integral shown above.</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>

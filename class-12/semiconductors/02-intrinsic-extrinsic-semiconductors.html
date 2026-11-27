@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intrinsic and Extrinsic Semiconductors | JEE Physics Notes</title>
+<title>Semiconductor Types | Semiconductors</title>
 <link rel="stylesheet" href="./assets/css/style.css">
 <script src="./assets/js/math.js"></script>
 </head>
@@ -14,101 +14,133 @@
 <span>&larr;</span> Back to Semiconductors
 </a>
 </nav>
-<h1>Intrinsic and Extrinsic Semiconductors</h1>
+<h1>Semiconductor Types</h1>
 <p class="subtitle">
-Carrier dynamics, doping mechanisms, and electrical transport equations.
+Carrier dynamics, doping mechanisms, and electrical transport equations of Intrinsic and Extrinsic Semiconductors
 </p>
-
 <section>
-<h2>Intrinsic Semiconductors and Thermal Generation of Carriers</h2>
+<h2>Concept</h2>
 <p>
-An <strong>intrinsic semiconductor</strong> is a chemically pure semiconductor crystal devoid of any significant impurity atoms. Silicon (\( \text{Si} \)) and Germanium (\( \text{Ge} \)) have four valence electrons in their outermost shell (tetravalent) and crystallize in a diamond cubic lattice where each atom forms four symmetric covalent bonds with adjacent neighbors.
+In the previous section on conduction mechanisms in solids, we studied the valence band and conduction band—seeing how they overlap in conductors and are separated by a small forbidden energy gap in semiconductors.
 </p>
 <p>
-At absolute zero (\( T = 0 \text{ K} \)), all covalent bonds are intact. As temperature rises (\( T > 0 \text{ K} \)), thermal energy breaks some covalent bonds. When an electron breaks free, it jumps to the conduction band, leaving behind a vacant covalent bond state called a <strong>hole</strong>.
+Many semiconductor applications rely on how electrons are excited to jump from the <strong>valence band to the conduction band</strong> (such as by thermal energy, light, or an applied electric field).
 </p>
-
-<div class="model-box">
-<h3>The Concept of a Hole</h3>
 <p>
-A hole represents the absence of a valence electron. It behaves as an effective positive charge of magnitude \( +e = +1.6 \times 10^{-19} \text{ C} \). When an adjacent valence electron jumps into this vacancy, the vacancy shifts to the position the electron just vacated. Thus, holes act as independent mobile positive charge carriers in the valence band.
+At absolute zero (\( T = 0 \text{ K} \)), all valence electrons remain bound in the <strong>valence band</strong>, leaving the conduction band completely empty.
 </p>
-</div>
-
+<p>
+At room temperature (\( T \gt 0 \text{ K} \)), thermal energy excites some electrons across the forbidden gap into the conduction band, while some conduction electrons simultaneously recombine and drop back into the valence band. At a given temperature, a dynamic steady-state carrier concentration is established.
+</p>
+<p>
+However, what makes semiconductors truly distinctive is not merely the presence of a small energy gap. In a semiconductor, electric current flows simultaneously due to negatively charged electrons drifting in the conduction band <strong>and</strong> positively charged holes moving in the valence band.
+</p>
+<p>
+It is this dual-carrier mechanism—and our ability to independently alter electron and hole concentrations—that gives semiconductors their unique electronic versatility.
+</p>
+</section>
+<section>
+<h2>Intrinsic Semiconductors</h2>
+<p>
+An <strong>intrinsic semiconductor</strong> is a chemically pure semiconductor crystal devoid of any significant impurity atoms.
+</p>
+<p>
+Silicon (\( \text{Si} \)) and Germanium (\( \text{Ge} \)) have four valence electrons in their outermost shell (tetravalent) and crystallize in a diamond cubic lattice where each atom forms four symmetric covalent bonds with adjacent neighbors.
+</p>
+<p>
+At absolute zero (\( T = 0 \text{ K} \)), all covalent bonds are intact. As temperature rises (\( T \gt 0 \text{ K} \)), thermal energy breaks some covalent bonds.
+</p>
+<p>
+When an electron breaks free, it jumps to the conduction band, leaving behind a vacant covalent bond state called a <strong>hole</strong>.
+</p>
+<p>
+A hole represents the absence of a valence electron. It behaves as an effective positive charge of magnitude \( +e = +1.6 \times 10^{-19} \text{ C} \).
+</p>
+<p>
+When an adjacent valence electron jumps into this vacancy, the vacancy shifts to the position the electron just vacated. Thus, holes act as independent mobile positive charge carriers in the valence band.
+</p>
 <p>
 In an intrinsic semiconductor, electrons and holes are always created in pairs by thermal excitation. Therefore, the number density of free conduction electrons (\( n_e \)) equals the number density of valence holes (\( n_h \)), which equals the <strong>intrinsic carrier concentration</strong> (\( n_i \)):
 </p>
-\[ n_e = n_h = n_i \]
+<div class="math-block">
+\[
+n_e = n_h = n_i
+\]
+</div>
 <p>
-For pure Silicon at \( 300 \text{ K} \), \( n_i \approx 1.5 \times 10^{16} \text{ m}^{-3} \). Out of approximately \( 5 \times 10^{28} \text{ atoms/m}^3 \), only about 1 in \( 10^{12} \) atoms contributes an electron-hole pair, explaining the relatively low room-temperature conductivity of intrinsic semiconductors.
+For pure Silicon at \( 300 \text{ K} \), \( n_i \approx 1.5 \times 10^{16} \text{ m}^{-3} \).
 </p>
+<div class="insightbox">
+Out of approximately \( 5 \times 10^{28} \text{ atoms/m}^3 \), only about 1 in \( 10^{12} \) atoms contributes an electron-hole pair, explaining the relatively low room-temperature conductivity of intrinsic semiconductors.
+</div>
 </section>
-
 <section>
 <h2>Doping and Extrinsic Semiconductors</h2>
 <p>
 To significantly enhance and control conductivity, desirable impurities are intentionally introduced into the crystal lattice in tiny, precise proportions (typically 1 part in \( 10^6 \) to \( 10^9 \)). This process is termed <strong>doping</strong>, and the resulting impure semiconductor is called an <strong>extrinsic semiconductor</strong>.
 </p>
-<div class="concept-box">
+<p>
 <strong>Criteria for an Ideal Dopant:</strong>
-<ul>
+</p>
+<ul class="model-box">
 <li>The dopant atom must substitute a host semiconductor atom in the crystal lattice without distorting the overall crystal lattice geometry.</li>
 <li>The atomic size of the dopant must be very close to the host atom size (Si or Ge).</li>
 </ul>
-</div>
 <p>
 Dopants are divided into two main classes:
-<ol>
+</p>
+<ol class="model-box">
 <li><strong>Pentavalent Impurities (Valence = 5):</strong> Arsenic (\( \text{As} \)), Antimony (\( \text{Sb} \)), Phosphorus (\( \text{P} \)). These donate free conduction electrons, producing <strong>n-type</strong> semiconductors.</li>
 <li><strong>Trivalent Impurities (Valence = 3):</strong> Indium (\( \text{In} \)), Boron (\( \text{B} \)), Aluminum (\( \text{Al} \)), Gallium (\( \text{Ga} \)). These accept electrons, generating holes and producing <strong>p-type</strong> semiconductors.</li>
 </ol>
-</p>
 </section>
-
 <section>
 <h2>Carrier Concentration, Mobility, and Electrical Conductivity</h2>
 <p>
 When an external electric field \( E \) is applied across a semiconductor, both electrons in the conduction band and holes in the valence band drift, contributing to the total current.
 </p>
-
-<div class="model-box">
 <h3>Total Current and Drift Velocity</h3>
-\[ I = I_e + I_h \]
-Where:
-<ul>
+\[
+I = I_e + I_h
+\]
+<ul class="model-box">
 <li>\( I_e = n_e e A v_e \) is the electron drift current.</li>
 <li>\( I_h = n_h e A v_h \) is the hole drift current.</li>
 <li>\( v_e = \mu_e E \) and \( v_h = \mu_h E \) are the drift velocities.</li>
 <li>\( \mu_e, \mu_h \) represent the <strong>mobilities</strong> of electrons and holes.</li>
 </ul>
-</div>
-
 <p>
 <strong>Mobility (\( \mu \)):</strong> Defined as the magnitude of drift velocity acquired per unit applied electric field:
-\[ \mu = \frac{v_d}{E} \quad \left[\text{SI Unit: } \text{m}^2\cdot\text{V}^{-1}\cdot\text{s}^{-1}\right] \]
+\[
+\mu = \frac{v_d}{E} \quad \left[\text{SI Unit: } \text{m}^2\cdot\text{V}^{-1}\cdot\text{s}^{-1}\right]
+\]
 </p>
 <div class="insightbox">
-In any semiconductor crystal, the electron mobility is always strictly greater than the hole mobility (\( \mu_e > \mu_h \)). Electrons drift in the broad, nearly empty conduction band, while hole motion involves sequential electron transitions through tightly bound valence bonds.
+In any semiconductor crystal, the electron mobility is always strictly greater than the hole mobility (\( \mu_e \gt \mu_h \)).<br>
+Electrons drift in the broad, nearly empty conduction band, while hole motion involves sequential electron transitions through tightly bound valence bonds.
 </div>
-
 <p>
 The total current density \( J = I/A \) is:
-\[ J = e(n_e \mu_e + n_h \mu_h) E \]
+\[
+J = e(n_e \mu_e + n_h \mu_h) E
+\]
 Using Ohm's Law in microscopic form (\( J = \sigma E \)), we arrive at the fundamental <strong>electrical conductivity equation</strong> for a semiconductor:
 </p>
-<div class="model-box">
-\[ \sigma = e(n_e \mu_e + n_h \mu_h) \]
-\[ \rho = \frac{1}{\sigma} = \frac{1}{e(n_e \mu_e + n_h \mu_h)} \]
+<div class="math-block">
+\[
+\sigma = e(n_e \mu_e + n_h \mu_h)
+\]
+\[
+\rho = \frac{1}{\sigma} = \frac{1}{e(n_e \mu_e + n_h \mu_h)}
+\]
 </div>
 </section>
-
 <section>
 <h2>Sub-Topics</h2>
 <div class="chapter-list">
-<a href="./02a-p-and-n-type.html">2a. p-Type and n-Type Semiconductors</a>
+<a href="./02a-p-and-n-type.html">1. p-Type and n-Type Semiconductors</a>
 </div>
 </section>
-
 <footer>
 <hr>
 <p>By Hitendra K K</p>

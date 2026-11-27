@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Dependence | Energy Bands in Solids</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+<script src="./assets/js/math.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="top-nav">
+<a href="./01-energy-bands.html" class="back-btn">
+<span>&larr;</span> Back to Energy Bands in Solids
+</a>
+</nav>
+<h1>Temperature Dependence</h1>
+<p class="subtitle">
+Microscopic origin of how resistivity and conductivity vary with temperature in solids.
+</p>
+<section>
+<h2>Concept</h2>
+<p>
+In the previous section, we saw how energy bands arise in crystalline solids. That band framework is not unique to semiconductors—it applies to crystalline solids in general.
+</p>
+<p>
+Similarly, in the Current Electricity chapter, we derived the microscopic form of Ohm's law. The transport mechanism used in that derivation describes how conduction current flows through the bulk of a solid in general.
+</p>
+<p>
+We established two fundamental relations in that derivation:
+</p>
+<ul class="model-box">
+<li><strong>Current Density &amp; Drift Relation:</strong> Under steady-state conduction, the current and current density are given by:
+\[
+I = n \, e \, A \, v_d \implies J = n \, e \, v_d
+\]
+</li>
+<li><strong>Momentum Transfer (Drude Model):</strong> Using the average relaxation time \( \tau \) between collisions, the drift speed and carrier mobility \( \mu \) are:
+\[
+v_d = \frac{eE}{m} \, \tau \implies \mu = \frac{v_d}{E} = \frac{e}{m} \, \tau
+\]
+</li>
+</ul>
+<p>
+Both relations remain valid for charge carriers in a semiconductor. Combining them gives the microscopic expression for electrical conductivity \( \sigma \) (and resistivity \( \rho = 1/\sigma \)):
+\[
+J = \sigma \, E \quad \text{where} \quad \sigma = \frac{n \, e^2 \, \tau}{m} = n \, e \, \mu
+\]
+</p>
+<div class="insightbox">
+<strong>Two-Carrier Extension for Semiconductors:</strong><br>
+Unlike metals where only conduction electrons carry current, semiconductors have two mobile charge carriers—electrons (concentration \( n_e \), mobility \( \mu_e \)) and holes (concentration \( n_h \), mobility \( \mu_h \)). Both drift in opposite directions under an electric field \( E \), so their currents add up:
+\[
+\sigma = e \left( n_e \mu_e + n_h \mu_h \right)
+\]
+</div>
+</section>
+<section>
+<h2>Competing Effects of \( n(T) \) and \( \tau(T) \)</h2>
+<p>
+From the microscopic formula \( \sigma = \frac{n e^2 \tau}{m} \), the temperature dependence of conductivity in any solid is governed by how two microscopic quantities change with temperature \( T \):
+</p>
+<ol class="model-box">
+<li><strong>Carrier Concentration (\( n \)):</strong> The number of mobile charge carriers per unit volume available for conduction.</li>
+<li><strong>Relaxation Time (\( \tau \)):</strong> The average time interval between successive collisions of a carrier with vibrating lattice ions (phonons). As temperature rises, thermal agitation of the lattice increases, causing more frequent collisions and reducing \( \tau \) (and hence reducing mobility \( \mu \)).</li>
+</ol>
+<h3>1. Case of Metals (Conductors)</h3>
+<p>
+In metals, the conduction band is already partially filled or overlaps with the valence band, providing an enormous pool of free electrons (\( n \sim 10^{28}\text{ m}^{-3} \)).
+</p>
+<p>
+When temperature increases, \( n \) remains practically constant because no energy gap needs to be crossed. However, increased lattice vibrations cause \( \tau \) to decrease noticeably. Consequently, conductivity \( \sigma \) decreases and resistivity \( \rho \) increases with temperature—giving metals a <strong>positive temperature coefficient of resistance (\( \alpha \gt 0 \))</strong>.
+</p>
+<h3>2. Case of Semiconductors</h3>
+<p>
+In an intrinsic semiconductor, valence electrons must cross the forbidden energy gap \( E_g \) to become mobile carriers. As temperature \( T \) increases, thermal energy breaks more covalent bonds, causing the intrinsic carrier concentration \( n_i \) to grow <strong>exponentially</strong> with temperature:
+\[
+n_i(T) \propto T^{3/2} \, e^{-E_g / (2 k_B T)}
+\]
+</p>
+<p>
+Although rising temperature also increases lattice scattering and reduces \( \tau \) (typically following a weak power law like \( \tau \propto T^{-3/2} \)), the <strong>exponential surge in carrier concentration \( n_i(T) \) overwhelmingly dominates</strong> over the modest drop in relaxation time \( \tau(T) \).
+</p>
+<div class="concept-box">
+<strong>Negative Temperature Coefficient of Resistance (\( \alpha \lt 0 \)):</strong><br>
+Because the rapid exponential growth of \( n(T) \) outpaces the decrease in \( \tau(T) \), the net conductivity of a semiconductor increases rapidly with temperature, and its resistivity drops exponentially:
+\[
+\sigma(T) \approx \sigma_0 \, e^{-E_g / (2 k_B T)} \quad \text{and} \quad \rho(T) \approx \rho_0 \, e^{+E_g / (2 k_B T)}
+\]
+</div>
+</section>
+<section>
+<h2>Behaviour at Absolute Zero (\( T = 0\text{ K} \))</h2>
+<p>
+As \( T \to 0\text{ K} \), thermal agitation vanishes (\( k_B T \to 0 \)). No valence electrons possess sufficient energy to jump across the forbidden gap \( E_g \) into the conduction band.
+</p>
+<ul class="model-box">
+<li>The valence band is completely filled, and the conduction band is completely empty (\( n_e = n_h = 0 \)).</li>
+<li>With zero mobile charge carriers (\( \sigma = 0 \), \( \rho \to \infty \)), an intrinsic semiconductor behaves as an <strong>ideal insulator at \( 0\text{ K} \)</strong>.</li>
+</ul>
+</section>
+<footer>
+<hr>
+<p>By Hitendra K K</p>
+</footer>
+</div>
+</body>
+</html>
